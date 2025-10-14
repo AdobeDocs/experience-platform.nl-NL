@@ -32,7 +32,7 @@ U kunt gebruikersgegevens rechtstreeks migreren in de gebruikersinterface van Ex
 >
 >De migratie duurt 8 tot 10 seconden en kan niet worden geannuleerd als de toepassing eenmaal is gestart.
 
-![ de werkruimte van de Credentials van de Dienst van de Vraag met de Vragen, de Geloofsbrieven, en benadrukt Migrate.](../images/ui/migrate-jwt-to-oauth/migrate.png)
+![&#x200B; de werkruimte van de Credentials van de Dienst van de Vraag met de Vragen, de Geloofsbrieven, en benadrukt Migrate.](../images/ui/migrate-jwt-to-oauth/migrate.png)
 
 Na migratie werkt het systeem de referentie bij om OAuth Server-aan-Server authentificatie te gebruiken. De op JWT gebaseerde methode wordt automatisch verwijderd en de status wordt bijgewerkt naar **[!UICONTROL Migrated]** .
 

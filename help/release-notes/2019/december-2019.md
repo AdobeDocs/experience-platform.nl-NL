@@ -40,7 +40,7 @@ Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en 
 
 * Geen
 
-Voor meer informatie, gelieve te zien het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
+Voor meer informatie, gelieve te zien het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](../../segmentation/home.md).
 
 ## [!DNL Decisioning Service] {#decisioning}
 
@@ -73,7 +73,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 * Geen.
 
-Voor meer informatie over bronnen, zie het [ overzicht van bronnen ](../../sources/home.md).
+Voor meer informatie over bronnen, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).
 
 ## [!DNL Experience Data Model] (XDM)-systeem {#xdm}
 
@@ -96,4 +96,4 @@ XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht
 
 * Geen
 
-Om meer over het werken met XDM te leren gebruikend [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, te lezen gelieve de [ documentatie van het Systeem XDM ](../../xdm/home.md).
+Om meer over het werken met XDM te leren gebruikend [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, te lezen gelieve de [&#x200B; documentatie van het Systeem XDM &#x200B;](../../xdm/home.md).

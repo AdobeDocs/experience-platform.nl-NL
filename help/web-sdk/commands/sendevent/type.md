@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Met de eigenschap `eventType` kunt u het type gebeurtenis definiëren dat u verzendt met de SDK van het web. In dit veld wordt het veld `xdm.eventType` uiteindelijk gevuld. Het is nuttig wanneer u de gebeurtenistypen wilt onderscheiden die u naar Adobe verzendt.
 
-Adobe biedt enkele vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken. Zie [ Beschikbare waarden voor `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) in de XDM gebruikersgids voor een volledige lijst van vooraf bepaalde waarden. U kunt desgewenst ook uw eigen waarden gebruiken.
+Adobe biedt enkele vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken. Zie [&#x200B; Beschikbare waarden voor `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) in de XDM gebruikersgids voor een volledige lijst van vooraf bepaalde waarden. U kunt desgewenst ook uw eigen waarden gebruiken.
 
 Wanneer u zowel `type` hier als `xdm.eventType` in het [`xdm`](xdm.md) -object instelt, krijgt de waarde in dit veld prioriteit.
 
@@ -21,7 +21,7 @@ Wanneer u zowel `type` hier als `xdm.eventType` in het [`xdm`](xdm.md) -object i
 
 Stel het vervolgkeuzeveld **[!UICONTROL Type]** in binnen de handelingen van een labelregel.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.

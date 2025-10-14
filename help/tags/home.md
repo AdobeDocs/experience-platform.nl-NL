@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](./term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](./term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Tags in Adobe Experience Platform zijn de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met labels kunnen klanten eenvoudig alle analytische, marketing- en advertentietags implementeren en beheren die nodig zijn om relevante klantervaringen te stimuleren.
 
@@ -31,7 +31,7 @@ Tags worden aan [!DNL Adobe Experience Cloud] klanten aangeboden als een opgenom
 
 Gebruik de Help in het product in het rechterdeelvenster voor meer informatie over tags en om aanvullende beschikbare bronnen weer te geven.
 
-![ de eigenschappen van Markeringen in de Inzameling UI van Gegevens.](./images/ui/tags-overview/tags-properties.png)
+![&#x200B; de eigenschappen van Markeringen in de Inzameling UI van Gegevens.](./images/ui/tags-overview/tags-properties.png)
 
 ### Extensies {#extensions}
 
@@ -79,7 +79,7 @@ Automatiseer implementaties van individuele technologieën of een groep technolo
 
 ### Lichte, modulaire containertag {#modular-tag}
 
-De inhoud van de container wordt geminiatuurd, inclusief de aangepaste code. Alles is modulair. Als u geen punt nodig hebt, is het niet inbegrepen in uw bibliotheek. Het resultaat is een snelle en compacte implementatie. Zie [ Minificatie ](./ui/publishing/builds.md).
+De inhoud van de container wordt geminiatuurd, inclusief de aangepaste code. Alles is modulair. Als u geen punt nodig hebt, is het niet inbegrepen in uw bibliotheek. Het resultaat is een snelle en compacte implementatie. Zie [&#x200B; Minificatie &#x200B;](./ui/publishing/builds.md).
 
 ## Overige hooglichten {#other-highlights}
 

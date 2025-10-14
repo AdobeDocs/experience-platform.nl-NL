@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # [!UICONTROL Consent String] gegevenstype
 
-[!UICONTROL Consent String] is een standaard XDM gegevenstype dat een koordwaarde beschrijft die de toestemming van een klant vertegenwoordigt. Het omvat contextuele informatie zoals de norm voor het toestemmingskoord (bijvoorbeeld, [ IAB Transparantie en het Kader van de Toestemming (TCF) 2.0 ](../field-groups/profile/iab.md)).
+[!UICONTROL Consent String] is een standaard XDM gegevenstype dat een koordwaarde beschrijft die de toestemming van een klant vertegenwoordigt. Het omvat contextuele informatie zoals de norm voor het toestemmingskoord (bijvoorbeeld, [&#x200B; IAB Transparantie en het Kader van de Toestemming (TCF) 2.0 &#x200B;](../field-groups/profile/iab.md)).
 
 ![](../images/data-types/consent-string.png)
 
@@ -28,5 +28,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consentstring.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consentstring.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consentstring.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consentstring.schema.json)

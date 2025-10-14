@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Integreer IAB TCF 2.0 steun met de SDK van het Web van Experience Platform
 
-Deze handleiding laat zien hoe u het Interactieve Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0), kunt integreren met Adobe Experience Platform Web SDK zonder tags te gebruiken. Voor een overzicht van het integreren met IAB TCF 2.0, lees het [ overzicht ](./overview.md). Voor een gids op hoe te met markeringen te integreren, lees de [ gids IAB TCF 2.0 voor markeringen ](./with-tags.md).
+Deze handleiding laat zien hoe u het Interactieve Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0), kunt integreren met Adobe Experience Platform Web SDK zonder tags te gebruiken. Voor een overzicht van het integreren met IAB TCF 2.0, lees het [&#x200B; overzicht &#x200B;](./overview.md). Voor een gids op hoe te met markeringen te integreren, lees de [&#x200B; gids IAB TCF 2.0 voor markeringen &#x200B;](./with-tags.md).
 
 ## Aan de slag
 
@@ -24,7 +24,7 @@ In deze handleiding wordt de interface `__tcfapi` gebruikt voor toegang tot de i
 
 Als u IAB TCF 2.0 met tags en de Adobe Experience Platform Web SDK-extensie wilt gebruiken, moet u een XDM-schema beschikbaar hebben. Als u geen van beide instellingen hebt ingesteld, begint u met het weergeven van deze pagina voordat u verdergaat.
 
-Bovendien is voor deze handleiding een goed begrip van Adobe Experience Platform Web SDK vereist. Voor een snelle verfrisser, te lezen gelieve het [ overzicht van SDK van het Web van Adobe Experience Platform ](../../home.md) en [ vaak gestelde vragen ](../../faq.md) documentatie.
+Bovendien is voor deze handleiding een goed begrip van Adobe Experience Platform Web SDK vereist. Voor een snelle verfrisser, te lezen gelieve het [&#x200B; overzicht van SDK van het Web van Adobe Experience Platform &#x200B;](../../home.md) en [&#x200B; vaak gestelde vragen &#x200B;](../../faq.md) documentatie.
 
 ## Standaardtoestemming inschakelen
 
@@ -77,7 +77,7 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-Dit codeblok luistert naar de gebeurtenis `useractioncomplete` en stelt vervolgens de toestemming in, waarbij de toestemmingstekenreeks en de markering `gdprApplies` worden doorgegeven. Als u aangepaste id&#39;s voor uw klanten hebt, moet u de variabele `identityMap` invullen. Verwijs naar de gids op [ setConsent ](../../../web-sdk/commands/setconsent.md) voor meer informatie.
+Dit codeblok luistert naar de gebeurtenis `useractioncomplete` en stelt vervolgens de toestemming in, waarbij de toestemmingstekenreeks en de markering `gdprApplies` worden doorgegeven. Als u aangepaste id&#39;s voor uw klanten hebt, moet u de variabele `identityMap` invullen. Verwijs naar de gids op [&#x200B; setConsent &#x200B;](../../../web-sdk/commands/setconsent.md) voor meer informatie.
 
 ## Informatie over toestemming opnemen in sendEvent
 
@@ -106,4 +106,4 @@ De andere manier om de toestemmingsinformatie aan elk verzoek toe te voegen is m
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe u IAB TCF 2.0 met de uitbreiding van Experience Platform Web SDK kunt gebruiken, kunt u ook verkiezen om met andere oplossingen van Adobe zoals Adobe Analytics of Adobe Real-Time Customer Data Platform te integreren. Zie het [ IAB overzicht van de Transparantie &amp; van de Toestemming Kader 2.0 ](./overview.md) voor meer informatie.
+Nu u hebt geleerd hoe u IAB TCF 2.0 met de uitbreiding van Experience Platform Web SDK kunt gebruiken, kunt u ook verkiezen om met andere oplossingen van Adobe zoals Adobe Analytics of Adobe Real-Time Customer Data Platform te integreren. Zie het [&#x200B; IAB overzicht van de Transparantie &amp; van de Toestemming Kader 2.0 &#x200B;](./overview.md) voor meer informatie.

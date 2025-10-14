@@ -24,7 +24,7 @@ Lees de volgende secties voor de vereiste configuratie die u moet voltooien voor
 
 ### IP adres lijst van gewenste personen
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op of Azure of Amazon Web Services (AWS) aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform op Azure en AWS ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op of Azure of Amazon Web Services (AWS) aan te sluiten. Voor meer informatie, lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform op Azure en AWS &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ### Verifiëren voor Experience Platform in Azure {#azure}
 
@@ -44,7 +44,7 @@ Om het gebruiken van een combinatie OAuth 2.0 en basisauthentificatie voor authe
 | `refreshToken` | Met het token Vernieuwen kunt u nieuwe toegangstokens voor uw API verkrijgen. Toegangstokens hebben beperkte levensduur en kunnen verlopen tijdens de uitvoering van uw project. U kunt gebruiken verfrist teken om verdere toegangstokens voor uw project voor authentiek te verklaren en te verzoeken wanneer nodig. |
 | `largeResultsDataSetId` | (Optioneel) De vooraf gemaakte [!DNL Google BigQuery] dataset-id die vereist is om ondersteuning voor grote resultaatsets mogelijk te maken. |
 
-Voor gedetailleerde instructies op hoe te om OAuth 2.0 geloofsbrieven voor [!DNL Google] APIs te produceren, zie de volgende [[!DNL Google]  OAuth 2.0 authentificatiegids ](https://developers.google.com/identity/protocols/oauth2).
+Voor gedetailleerde instructies op hoe te om OAuth 2.0 geloofsbrieven voor [!DNL Google] APIs te produceren, zie de volgende [[!DNL Google]  OAuth 2.0 authentificatiegids &#x200B;](https://developers.google.com/identity/protocols/oauth2).
 
 >[!TAB  de authentificatie van de Dienst ]
 
@@ -55,10 +55,10 @@ Om het gebruiken van de dienstauthentificatie voor authentiek te verklaren, vers
 | Credentials | Beschrijving |
 | --- | --- |
 | `projectId` | De id van de [!DNL Google BigQuery] waarnaar u wilt zoeken. |
-| `keyFileContent` | Het sleuteldossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U kunt deze waarde van het [[!DNL Google Cloud service accounts]  dashboard ](https://console.cloud.google.com) terugwinnen. De inhoud van het sleutelbestand heeft de JSON-indeling. U moet dit coderen in [!DNL Base64] wanneer u autoriseert aan Experience Platform. |
+| `keyFileContent` | Het sleuteldossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U kunt deze waarde van het [[!DNL Google Cloud service accounts]  dashboard &#x200B;](https://console.cloud.google.com) terugwinnen. De inhoud van het sleutelbestand heeft de JSON-indeling. U moet dit coderen in [!DNL Base64] wanneer u autoriseert aan Experience Platform. |
 | `largeResultsDataSetId` | (Optioneel) De vooraf gemaakte [!DNL Google BigQuery] dataset-id die vereist is om ondersteuning voor grote resultaatsets mogelijk te maken. |
 
-Voor meer informatie bij het gebruiken van de dienstrekeningen in [!DNL Google BigQuery], lees de gids op [ gebruikend de dienstrekeningen in  [!DNL Google BigQuery] ](https://cloud.google.com/bigquery/docs/use-service-accounts).
+Voor meer informatie bij het gebruiken van de dienstrekeningen in [!DNL Google BigQuery], lees de gids op [&#x200B; gebruikend de dienstrekeningen in  [!DNL Google BigQuery] &#x200B;](https://cloud.google.com/bigquery/docs/use-service-accounts).
 
 >[!ENDTABS]
 
@@ -69,7 +69,7 @@ U moet de volgende gegevens opgeven om uw [!DNL Google BigQuery] -account te ver
 | Credentials | Beschrijving |
 | --- | --- |
 | `projectId` | De id van de [!DNL Google BigQuery] waarnaar u wilt zoeken. |
-| `keyFileContent` | Het sleuteldossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U kunt deze waarde van het [[!DNL Google Cloud service accounts]  dashboard ](https://console.cloud.google.com) terugwinnen. De inhoud van het sleutelbestand heeft de JSON-indeling. U moet dit coderen in [!DNL Base64] wanneer u autoriseert aan Experience Platform. |
+| `keyFileContent` | Het sleuteldossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U kunt deze waarde van het [[!DNL Google Cloud service accounts]  dashboard &#x200B;](https://console.cloud.google.com) terugwinnen. De inhoud van het sleutelbestand heeft de JSON-indeling. U moet dit coderen in [!DNL Base64] wanneer u autoriseert aan Experience Platform. |
 | `datasetId` | De [!DNL Google BigQuery] dataset-id. Deze id vertegenwoordigt de locatie van de gegevenstabellen. |
 
 ## Verbinden [!DNL Google BigQuery] met Experience Platform

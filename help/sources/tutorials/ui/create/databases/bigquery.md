@@ -22,16 +22,16 @@ Lees deze zelfstudie om te leren hoe u uw [!DNL Google BigQuery] -account kunt v
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL Google BigQuery] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/databases.md).
+Als u reeds een geldige [!DNL Google BigQuery] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/databases.md).
 
 ### Vereiste referenties verzamelen
 
-Lees de [[!DNL Google BigQuery]  authentificatiegids ](../../../../connectors/databases/bigquery.md#prerequisites) voor gedetailleerde stappen bij het verzamelen van uw vereiste geloofsbrieven.
+Lees de [[!DNL Google BigQuery]  authentificatiegids &#x200B;](../../../../connectors/databases/bigquery.md#prerequisites) voor gedetailleerde stappen bij het verzamelen van uw vereiste geloofsbrieven.
 
 ## Navigeren door de catalogus met bronnen {#navigate}
 
@@ -43,13 +43,13 @@ Als u [!DNL Google BigQuery] wilt gebruiken, selecteert u de **[!UICONTROL Googl
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus met Google BigQuery selecteerde.](../../../../images/tutorials/create/google-big-query/catalog.png)
+![&#x200B; de broncatalogus met Google BigQuery selecteerde.](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 ## Een bestaande account gebruiken {#existing}
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Google BigQuery] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ de bestaande rekeningspagina waar een lijst van bestaande rekeningen wordt voorgesteld.](../../../../images/tutorials/create/google-big-query/existing.png)
+![&#x200B; de bestaande rekeningspagina waar een lijst van bestaande rekeningen wordt voorgesteld.](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ## Een nieuwe account maken {#create}
 
@@ -57,7 +57,7 @@ Als u geen bestaand account hebt, moet u een nieuw account maken door de vereist
 
 Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam op en voegt u desgewenst een beschrijving voor uw account toe.
 
-![ de nieuwe rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/google-big-query/new.png)
+![&#x200B; de nieuwe rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/google-big-query/new.png)
 
 ### Verbinding maken met Experience Platform on Azure {#azure}
 
@@ -67,15 +67,15 @@ U kunt uw [!DNL Google BigQuery] -account op Azure aan Experience Platform koppe
 
 >[!TAB  Basisauthentificatie van het Gebruik ]
 
-Om basisauthentificatie te gebruiken, selecteer **[!UICONTROL Basic Authentication]** en verstrek waarden voor uw [ project, cliënt identiteitskaart, cliëntgeheim, verfrist teken, en (facultatieve) identiteitskaart van de resultaatdataset ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
+Om basisauthentificatie te gebruiken, selecteer **[!UICONTROL Basic Authentication]** en verstrek waarden voor uw [&#x200B; project, cliënt identiteitskaart, cliëntgeheim, verfrist teken, en (facultatieve) identiteitskaart van de resultaatdataset &#x200B;](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-![ de nieuwe rekeningsinterface waar de basisauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/basic-auth.png)
+![&#x200B; de nieuwe rekeningsinterface waar de basisauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/basic-auth.png)
 
 >[!TAB  de dienstauthentificatie van het Gebruik ]
 
-Om de dienstauthentificatie te gebruiken, selecteer **[!UICONTROL Service Authentication]** en verstrek waarden voor uw [ project identiteitskaart, zeer belangrijke dossierinhoud, en (facultatieve) grote identiteitskaart van de resultaatdataset ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
+Om de dienstauthentificatie te gebruiken, selecteer **[!UICONTROL Service Authentication]** en verstrek waarden voor uw [&#x200B; project identiteitskaart, zeer belangrijke dossierinhoud, en (facultatieve) grote identiteitskaart van de resultaatdataset &#x200B;](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-![ de nieuwe rekeningsinterface waar de dienstauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/service-auth.png)
+![&#x200B; de nieuwe rekeningsinterface waar de dienstauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/service-auth.png)
 
 >[!ENDTABS]
 
@@ -83,15 +83,15 @@ Om de dienstauthentificatie te gebruiken, selecteer **[!UICONTROL Service Authen
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../../../landing/multi-cloud.md).
 
 Als u een nieuwe [!DNL Google BigQuery] -account wilt maken en verbinding wilt maken met Experience Platform op AWS, controleert u of u zich in een VA6-sandbox bevindt en geeft u vervolgens de vereiste gegevens voor verificatie op.
 
 * **identiteitskaart van het Project**: Projectidentiteitskaart die met uw [!DNL Google BigQuery] rekening beantwoordt.
-* **Zeer belangrijke dossierinhoud**: Het zeer belangrijke dossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U kunt deze waarde van het [[!DNL Google Cloud service accounts]  dashboard ](https://console.cloud.google.com) terugwinnen. De inhoud van het sleutelbestand heeft de JSON-indeling. U moet dit coderen in [!DNL Base64] wanneer u autoriseert aan Experience Platform.
+* **Zeer belangrijke dossierinhoud**: Het zeer belangrijke dossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U kunt deze waarde van het [[!DNL Google Cloud service accounts]  dashboard &#x200B;](https://console.cloud.google.com) terugwinnen. De inhoud van het sleutelbestand heeft de JSON-indeling. U moet dit coderen in [!DNL Base64] wanneer u autoriseert aan Experience Platform.
 * **identiteitskaart van de Dataset**: [!DNL Google BigQuery] dataset identiteitskaart Deze id geeft aan waar uw gegevenstabellen zich bevinden en moet vooraf zijn gemaakt om ondersteuning voor grote resultaatsets mogelijk te maken.
 
-![ de nieuwe rekeningsinterface voor een verbinding van AWS.](../../../../images/tutorials/create/google-big-query/aws.png)
+![&#x200B; de nieuwe rekeningsinterface voor een verbinding van AWS.](../../../../images/tutorials/create/google-big-query/aws.png)
 
 ## Voorvertoning van voorbeeldgegevens overslaan {#skip-preview-of-sample-data}
 
@@ -101,4 +101,4 @@ De rest van de workflow blijft ongewijzigd. Het enige voorbehoud is dat bij het 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Google BigQuery] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/databases.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Google BigQuery] -account. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](../../dataflow/databases.md) te brengen.

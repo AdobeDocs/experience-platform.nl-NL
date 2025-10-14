@@ -19,7 +19,7 @@ In het volgende document worden de stappen beschreven voor het maken van een ver
 
 ## Aan de slag
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Artefacten verzamelen
 
@@ -53,7 +53,7 @@ Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
 
 Nadat u de benodigde bestanden hebt toegevoegd aan uw persoonlijke Git-opslagplaats, moet u een pull-aanvraag (PR) maken die door de Adobe kan worden gecontroleerd. Wanneer uw PR wordt goedgekeurd en samengevoegd, zult u van identiteitskaart worden voorzien die voor uw verbindingsspecificatie kan worden gebruikt om naar het etiket, de beschrijving, en het pictogram van uw bron te verwijzen.
 
-Voer vervolgens de onderstaande stappen uit om uw verbindingsspecificatie te configureren. Voor extra begeleiding op de verschillende functionaliteiten die u aan uw bron, zoals geavanceerde het plannen, douaneschema, of verschillende paginatietypen kunt toevoegen, te herzien gelieve de gids op [ vormend bronspecificaties ](../config/sourcespec.md).
+Voer vervolgens de onderstaande stappen uit om uw verbindingsspecificatie te configureren. Voor extra begeleiding op de verschillende functionaliteiten die u aan uw bron, zoals geavanceerde het plannen, douaneschema, of verschillende paginatietypen kunt toevoegen, te herzien gelieve de gids op [&#x200B; vormend bronspecificaties &#x200B;](../config/sourcespec.md).
 
 ## Sjabloon voor verbindingsspecificatie kopiëren
 
@@ -835,6 +835,6 @@ Een geslaagde reactie retourneert de zojuist gemaakte verbindingsspecificatie, i
 
 ## Volgende stappen
 
-Nu u een nieuwe verbindingsspecificatie hebt gecreeerd, moet u zijn overeenkomstige identiteitskaart van de verbindingsspecificatie aan een bestaande stroomspecificatie toevoegen. Zie het leerprogramma bij [ het bijwerken stroomspecificaties ](./update-flow-specs.md) voor meer informatie.
+Nu u een nieuwe verbindingsspecificatie hebt gecreeerd, moet u zijn overeenkomstige identiteitskaart van de verbindingsspecificatie aan een bestaande stroomspecificatie toevoegen. Zie het leerprogramma bij [&#x200B; het bijwerken stroomspecificaties &#x200B;](./update-flow-specs.md) voor meer informatie.
 
-Om wijzigingen in de verbindingsspecificatie te maken die u creeerde, zie het leerprogramma bij [ het bijwerken van verbindingsspecificaties ](./update-connection-specs.md).
+Om wijzigingen in de verbindingsspecificatie te maken die u creeerde, zie het leerprogramma bij [&#x200B; het bijwerken van verbindingsspecificaties &#x200B;](./update-connection-specs.md).

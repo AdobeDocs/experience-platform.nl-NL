@@ -27,4 +27,4 @@ Het document bevat aanwijzingen over:
 
 ## Volgende stappen
 
-Om gedetailleerde stappen en voorbeelden te onderzoeken, zie de [ volledige gids ](../advanced-statistics/examples/statistics-and-ml-bot-filtering.md).
+Om gedetailleerde stappen en voorbeelden te onderzoeken, zie de [&#x200B; volledige gids &#x200B;](../advanced-statistics/examples/statistics-and-ml-bot-filtering.md).

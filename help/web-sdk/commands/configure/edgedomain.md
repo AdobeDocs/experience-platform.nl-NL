@@ -11,15 +11,15 @@ ht-degree: 1%
 
 # `edgeDomain`
 
-Met de eigenschap `edgeDomain` kunt u het domein wijzigen waar de Web SDK gegevens verzendt. Dit bezit wordt vaak gebruikt door organisaties die [ eerste partijkoekjes ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=nl-NL) gebruiken. Het gegeven wordt verzonden naar het eigen domein van de organisatie, dan een verslag CNAME door:sturen die gegevens aan Adobe.
+Met de eigenschap `edgeDomain` kunt u het domein wijzigen waar de Web SDK gegevens verzendt. Dit bezit wordt vaak gebruikt door organisaties die [&#x200B; eerste partijkoekjes &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=nl-NL) gebruiken. Het gegeven wordt verzonden naar het eigen domein van de organisatie, dan een verslag CNAME door:sturen die gegevens aan Adobe.
 
-Uw organisatie bepaalt de correcte waarde voor dit bezit wanneer vestiging [ eerste partijkoekjes ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=nl-NL). Een organisatie gebruikt voor dit doel doorgaans een speciaal subdomein. Als u bijvoorbeeld het domein `example.com` gebruikt, kunt u cookies van eerste partijen instellen op `data.example.com` .
+Uw organisatie bepaalt de correcte waarde voor dit bezit wanneer vestiging [&#x200B; eerste partijkoekjes &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=nl-NL). Een organisatie gebruikt voor dit doel doorgaans een speciaal subdomein. Als u bijvoorbeeld het domein `example.com` gebruikt, kunt u cookies van eerste partijen instellen op `data.example.com` .
 
 ## Een Edge-domein configureren met de webSDK-tagextensie
 
-Plaats het **[!UICONTROL Edge domain]** tekstgebied wanneer [ vormend de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Plaats het **[!UICONTROL Edge domain]** tekstgebied wanneer [&#x200B; vormend de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.

@@ -20,12 +20,12 @@ Deze zelfstudie biedt stappen om een [!DNL Microsoft Dynamics] (hierna &quot;[!D
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL Dynamics] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow voor een bron van CRM ](../../dataflow/crm.md).
+Als u reeds een geldige [!DNL Dynamics] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow voor een bron van CRM &#x200B;](../../dataflow/crm.md).
 
 ### Vereiste referenties verzamelen
 
@@ -50,7 +50,7 @@ Als u de [!DNL Dynamics] -bron wilt verifiëren, moet u waarden opgeven voor de 
 
 >[!ENDTABS]
 
-Voor meer informatie bij het worden begonnen, verwijs naar [ dit  [!DNL Dynamics]  document ](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+Voor meer informatie bij het worden begonnen, verwijs naar [&#x200B; dit  [!DNL Dynamics]  document &#x200B;](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ## Sluit uw [!DNL Dynamics] -account aan
 
@@ -60,7 +60,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie [!UICONTROL CRM] de optie **[!UICONTROL Microsoft Dynamics]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ de geselecteerde broncatalogus met Microsoft Dynamics.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
+![&#x200B; de geselecteerde broncatalogus met Microsoft Dynamics.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
 De pagina **[!UICONTROL Connect Microsoft Dynamics account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -68,7 +68,7 @@ De pagina **[!UICONTROL Connect Microsoft Dynamics account]** wordt weergegeven.
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Dynamics] -account die u wilt gebruiken en selecteert u **[!UICONTROL Next]** in de rechterbovenhoek om door te gaan.
 
-![ de bestaande rekeningsinterface.](../../../../images/tutorials/create/ms-dynamics/existing.png)
+![&#x200B; de bestaande rekeningsinterface.](../../../../images/tutorials/create/ms-dynamics/existing.png)
 
 ### Nieuwe account
 
@@ -78,7 +78,7 @@ Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Dynamics] -acc
 
 Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en een optionele beschrijving voor uw nieuwe [!DNL Dynamics] -account.
 
-![ de nieuwe interface van de rekeningsverwezenlijking.](../../../../images/tutorials/create/ms-dynamics/new.png)
+![&#x200B; de nieuwe interface van de rekeningsverwezenlijking.](../../../../images/tutorials/create/ms-dynamics/new.png)
 
 Bij het maken van een [!DNL Dynamics] -account kunt u de basisverificatie of de service-principal en key-verificatie gebruiken.
 
@@ -90,7 +90,7 @@ Als u een [!DNL Dynamics] -account met basisverificatie wilt maken, selecteert u
 
 Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe account enige tijd beginnen.
 
-![ de basisauthentificatieinterface.](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
+![&#x200B; de basisauthentificatieinterface.](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
 
 >[!TAB  dienst-hoofd en zeer belangrijke authentificatie ]
 
@@ -98,10 +98,10 @@ Als u een [!DNL Dynamics] -account met service-principal en sleutelverificatie w
 
 Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe account enige tijd beginnen.
 
-![ de dienst-belangrijkste zeer belangrijke authentificatieinterface.](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
+![&#x200B; de dienst-belangrijkste zeer belangrijke authentificatieinterface.](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
 
 >[!ENDTABS]
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Dynamics] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/crm.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Dynamics] -account. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](../../dataflow/crm.md) te brengen.

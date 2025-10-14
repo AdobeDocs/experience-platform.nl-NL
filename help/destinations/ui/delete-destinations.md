@@ -28,52 +28,52 @@ Er zijn twee manieren waarop u doelen kunt verwijderen uit de map [!DNL Experien
 
 Voer de onderstaande stappen uit om een doel te verwijderen van het tabblad [!UICONTROL Browse] .
 
-1. Login aan [ UI van Experience Platform ](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
+1. Login aan [&#x200B; UI van Experience Platform &#x200B;](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
 
-   ![ doorbladert bestemmingen ](../assets/ui/delete-destinations/browse-destinations.png)
+   ![&#x200B; doorbladert bestemmingen &#x200B;](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Selecteer het filterpictogram ![&#x200B; filter-pictogram &#x200B;](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
-   ![ bestemmingen van de Filter ](../assets/ui/delete-destinations/filter-destinations.png)
+   ![&#x200B; bestemmingen van de Filter &#x200B;](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Selecteer de ![ Meer knoop ](/help/images/icons/more.png) in de kolom van de Naam en selecteer dan ![ knoop van de Schrapping ](/help/images/icons/delete.png) **[!UICONTROL Delete]** om een bestaande bestemmingsverbinding te verwijderen.
-   ![ schrapt bestemmingen ](../assets/ui/delete-destinations/delete-destinations.png)
+3. Selecteer de ![&#x200B; Meer knoop &#x200B;](/help/images/icons/more.png) in de kolom van de Naam en selecteer dan ![&#x200B; knoop van de Schrapping &#x200B;](/help/images/icons/delete.png) **[!UICONTROL Delete]** om een bestaande bestemmingsverbinding te verwijderen.
+   ![&#x200B; schrapt bestemmingen &#x200B;](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Selecteer **[!UICONTROL Delete]** om het verwijderen van de bestemmingsverbinding te bevestigen.
 
-   ![ Bevestig schrappingsbestemming ](../assets/ui/delete-destinations/delete-destinations-confirm.png)
+   ![&#x200B; Bevestig schrappingsbestemming &#x200B;](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
 ## Doelen verwijderen van de pagina met bestemmingsdetails{#delete-destination-details-page}
 
 Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina met doeldetails.
 
-1. Login aan [ UI van Experience Platform ](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
+1. Login aan [&#x200B; UI van Experience Platform &#x200B;](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
 
-   ![ doorbladert bestemmingen ](../assets/ui/delete-destinations/browse-destinations.png)
+   ![&#x200B; doorbladert bestemmingen &#x200B;](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
+2. Selecteer het filterpictogram ![&#x200B; filter-pictogram &#x200B;](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van gegevensstromen te zien verbonden aan de geselecteerde bestemming.
 
-   ![ bestemmingen van de Filter ](../assets/ui/delete-destinations/filter-destinations.png)
+   ![&#x200B; bestemmingen van de Filter &#x200B;](../assets/ui/delete-destinations/filter-destinations.png)
 
 3. Selecteer de naam van het doel dat u wilt verwijderen.
 
-   ![ Uitgezochte bestemming ](../assets/ui/delete-destinations/delete-destination-select.png)
+   ![&#x200B; Uitgezochte bestemming &#x200B;](../assets/ui/delete-destinations/delete-destination-select.png)
 
    * Als de bestemming bestaande gegevensstromen heeft, wordt u genomen aan [!UICONTROL Dataflow runs] tabel.
 
-     ![ de looppas van Dataflow lusje ](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![&#x200B; de looppas van Dataflow lusje &#x200B;](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Als het doel geen bestaande gegevensstromen heeft, wordt u genomen aan een lege pagina waar u het publiek kunt beginnen te activeren.
 
-     ![ de details van de Bestemming ](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![&#x200B; de details van de Bestemming &#x200B;](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. Selecteer **[!UICONTROL Delete]** in de rechtertrack.
 
-   ![ doel van de Schrapping ](../assets/ui/delete-destinations/delete-destinations-button.png)
+   ![&#x200B; doel van de Schrapping &#x200B;](../assets/ui/delete-destinations/delete-destinations-button.png)
 
 5. Selecteer **[!UICONTROL Delete]** in het bevestigingsdialoogvenster om het doel te verwijderen.
 
-   ![ de bestemming van de Schrapping bevestigt ](..//assets/ui/delete-destinations/delete-destinations-delete.png)
+   ![&#x200B; de bestemming van de Schrapping bevestigt &#x200B;](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
    >[!NOTE]
    >

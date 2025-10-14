@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Versnelde vragen eindpunt
 
-Als deel van Gegevens Distiller SKU, staat de [ Dienst API van de Vraag ](https://developer.adobe.com/experience-platform-apis/references/query-service/) u toe om stateless vragen aan de versnelde opslag te maken. De geretourneerde resultaten zijn gebaseerd op geaggregeerde gegevens. Door de afgenomen latentie van de resultaten is een meer interactieve uitwisseling van informatie mogelijk. Versnelde vragen APIs wordt ook gebruikt aan macht [ user-defined dashboards ](../../dashboards/standard-dashboards.md).
+Als deel van Gegevens Distiller SKU, staat de [&#x200B; Dienst API van de Vraag &#x200B;](https://developer.adobe.com/experience-platform-apis/references/query-service/) u toe om stateless vragen aan de versnelde opslag te maken. De geretourneerde resultaten zijn gebaseerd op geaggregeerde gegevens. Door de afgenomen latentie van de resultaten is een meer interactieve uitwisseling van informatie mogelijk. Versnelde vragen APIs wordt ook gebruikt aan macht [&#x200B; user-defined dashboards &#x200B;](../../dashboards/standard-dashboards.md).
 
-Alvorens met deze gids verder te gaan, zorg ervoor dat u de [ gids van de Dienst API van de Vraag ](./getting-started.md) gelezen en begrepen hebt om de Dienst API van de Vraag met succes te gebruiken.
+Alvorens met deze gids verder te gaan, zorg ervoor dat u de [&#x200B; gids van de Dienst API van de Vraag &#x200B;](./getting-started.md) gelezen en begrepen hebt om de Dienst API van de Vraag met succes te gebruiken.
 
 ## Aan de slag
 
-De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Gelieve te zien het [ verpakken ](../packaging.md) en [ guardrails ](../guardrails.md#query-accelerated-store), en [ verlenen van vergunningen ](../data-distiller/license-usage.md) documentatie die op het SKU van Gegevens Distiller betrekking heeft. Als u geen gegevens hebt Distiller SKU gelieve uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie te contacteren.
+De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Gelieve te zien het [&#x200B; verpakken &#x200B;](../packaging.md) en [&#x200B; guardrails &#x200B;](../guardrails.md#query-accelerated-store), en [&#x200B; verlenen van vergunningen &#x200B;](../data-distiller/license-usage.md) documentatie die op het SKU van Gegevens Distiller betrekking heeft. Als u geen gegevens hebt Distiller SKU gelieve uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie te contacteren.
 
 In de volgende secties worden de API-aanroepen beschreven die nodig zijn om de versnelde opslag zonder status te openen via de API voor Query-service. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
@@ -209,6 +209,6 @@ Een geslaagde reactie retourneert HTTP-status 200 met het ad-hocschema dat door 
 | `resultsMeta` | Dit object bevat de metagegevens voor elke kolom die in de resultaten wordt geretourneerd, zodat gebruikers de naam en het type van elke kolom weten. |
 | `resultsMeta._adhoc` | Een ad-hoc schema van de Gegevens van de Ervaring Model (XDM) met gebieden die namespaced voor gebruik slechts door één enkele dataset zijn. |
 | `resultsMeta._adhoc.type` | Het gegevenstype van het ad-hocschema. |
-| `resultsMeta._adhoc.meta:xdmType` | Dit is een systeemgegenereerde waarde voor het XDM-veldtype. Voor meer informatie over de beschikbare types zie de documentatie over [ beschikbare types XDM ](../../xdm/tutorials/custom-fields-api.md). |
+| `resultsMeta._adhoc.meta:xdmType` | Dit is een systeemgegenereerde waarde voor het XDM-veldtype. Voor meer informatie over de beschikbare types zie de documentatie over [&#x200B; beschikbare types XDM &#x200B;](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Dit zijn de kolomnamen van de gevraagde dataset. |
 | `resultsMeta._adhoc.results` | Dit zijn de rijnamen van de gevraagde dataset. Ze weerspiegelen elk van de geretourneerde kolommen. |

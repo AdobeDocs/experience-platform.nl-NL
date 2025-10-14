@@ -13,19 +13,19 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u hosts in de Reactor-API beheert. Voor meer algemene informatie over gastheren voor markeringen, zie de gids op [ gastheren overzicht ](../../ui/publishing/hosts/hosts-overview.md) in de het publiceren documentatie.
+>In dit document wordt beschreven hoe u hosts in de Reactor-API beheert. Voor meer algemene informatie over gastheren voor markeringen, zie de gids op [&#x200B; gastheren overzicht &#x200B;](../../ui/publishing/hosts/hosts-overview.md) in de het publiceren documentatie.
 
-In Reactor API, bepaalt een gastheer een bestemming waar de a [ bouwt ](./builds.md) kan worden geleverd.
+In Reactor API, bepaalt een gastheer een bestemming waar de a [&#x200B; bouwt &#x200B;](./builds.md) kan worden geleverd.
 
-Wanneer een bouwstijl door een markeringsgebruiker in Adobe Experience Platform wordt gevraagd, controleert het systeem de Bibliotheek om te bepalen welk [ milieu ](./environments.md) de bibliotheek zou moeten worden gebouwd aan. Elke omgeving heeft een relatie met een host die aangeeft waar de build moet worden geleverd.
+Wanneer een bouwstijl door een markeringsgebruiker in Adobe Experience Platform wordt gevraagd, controleert het systeem de Bibliotheek om te bepalen welk [&#x200B; milieu &#x200B;](./environments.md) de bibliotheek zou moeten worden gebouwd aan. Elke omgeving heeft een relatie met een host die aangeeft waar de build moet worden geleverd.
 
-Een gastheer behoort tot precies één [ bezit ](./properties.md), terwijl een bezit vele gastheren kan hebben. Een eigenschap moet ten minste één host hebben voordat u deze kunt publiceren.
+Een gastheer behoort tot precies één [&#x200B; bezit &#x200B;](./properties.md), terwijl een bezit vele gastheren kan hebben. Een eigenschap moet ten minste één host hebben voordat u deze kunt publiceren.
 
 Een host kan door meerdere omgevingen binnen een eigenschap worden gebruikt. Het is gemeenschappelijk om één enkele gastheer op een bezit te hebben, en alle milieu&#39;s op dat bezit te hebben gebruiken de zelfde gastheer.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met hosts ophalen {#list}
 
@@ -45,7 +45,7 @@ GET /properties/{PROPERTY_ID}/hosts
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde gastheren worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde gastheren worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -188,13 +188,13 @@ POST /properties/{PROPERTY_ID}/hosts
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | `id` van het [ bezit ](./properties.md) dat u de gastheer onder bepaalt. |
+| `PROPERTY_ID` | `id` van het [&#x200B; bezit &#x200B;](./properties.md) dat u de gastheer onder bepaalt. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe host voor de opgegeven eigenschap gemaakt. De aanroep koppelt de host ook aan een bestaande extensie via de eigenschap `relationships` . Zie de gids op [ verhoudingen ](../guides/relationships.md) voor meer informatie.
+Met het volgende verzoek wordt een nieuwe host voor de opgegeven eigenschap gemaakt. De aanroep koppelt de host ook aan een bestaande extensie via de eigenschap `relationships` . Zie de gids op [&#x200B; verhoudingen &#x200B;](../guides/relationships.md) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -223,7 +223,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes.name` | **(Vereist)** Een voor de mens leesbare naam voor de gastheer. |
-| `attributes.type_of` | **(Vereist)** Het type van gastheer. U kunt uit twee opties kiezen: <ul><li>`akamai` voor [ Adobe-geleide gastheren ](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` voor [ gastheren SFTP ](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.type_of` | **(Vereist)** Het type van gastheer. U kunt uit twee opties kiezen: <ul><li>`akamai` voor [&#x200B; Adobe-geleide gastheren &#x200B;](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` voor [&#x200B; gastheren SFTP &#x200B;](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
 | `attributes.encrypted_private_key` | Een optionele persoonlijke sleutel die moet worden gebruikt voor hostverificatie. |
 | `attributes.path` | Het pad dat moet worden toegevoegd aan de `server` URL. |
 | `attributes.port` | Een geheel getal dat de specifieke serverpoort aangeeft die moet worden gebruikt. |
@@ -396,9 +396,9 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder antwoord,
 
 ## Verwante bronnen voor een host ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een gastheer terug te winnen. Wanneer [ omhoog een gastheer ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een gastheer terug te winnen. Wanneer [&#x200B; omhoog een gastheer &#x200B;](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### De verwante eigenschap voor een host opzoeken {#property}
 

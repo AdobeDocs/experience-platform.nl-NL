@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # Toegangslabels toepassen om gebruikerstoegang tot brongegevens te beheren met behulp van de API
 
-U kunt de functies gebruiken die door [ op attributen-gebaseerde toegangscontrole ](../../../access-control/abac/overview.md) in Real-Time CDP worden verstrekt om etiketten op uw brongegevens toe te passen. Met deze eigenschap, kunt u ervoor zorgen dat slechts een ondergroep van gebruikers in uw organisatie toegang tot specifieke brongegevens krijgt.
+U kunt de functies gebruiken die door [&#x200B; op attributen-gebaseerde toegangscontrole &#x200B;](../../../access-control/abac/overview.md) in Real-Time CDP worden verstrekt om etiketten op uw brongegevens toe te passen. Met deze eigenschap, kunt u ervoor zorgen dat slechts een ondergroep van gebruikers in uw organisatie toegang tot specifieke brongegevens krijgt.
 
 Wanneer u een toegangslabel aan een bepaalde gegevensstroom toevoegt, slechts kunnen de gebruikers die toegang tot een rol hebben die dat etiket wordt toegewezen dat dataflow bekijken en uitgeven. Als een gegevensstroom van bronnen niet met om het even welke etiketten wordt gemerkt, is het zichtbaar aan alle gebruikers die tot uw organisatie behoren. Als u bijvoorbeeld het label C12 toepast op een gegevensstroom, kunnen gebruikers die zijn toegewezen aan een rol die niet het label C12 heeft, de gegevensstroom niet weergeven en bewerken met het label C12.
 
-Lees deze gids voor informatie over hoe te om toegangslabels op uw brongegevens toe te passen gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids voor informatie over hoe te om toegangslabels op uw brongegevens toe te passen gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 

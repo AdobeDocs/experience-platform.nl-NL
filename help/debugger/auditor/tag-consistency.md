@@ -15,12 +15,12 @@ Deze naslaggids bevat meer informatie over de manier waarop de controlefunctie i
 
 >[!NOTE]
 >
->Voor meer informatie over controleurstests in Debugger van Experience Platform, zie het [ overzicht van de controleeigenschap ](./overview.md).
+>Voor meer informatie over controleurstests in Debugger van Experience Platform, zie het [&#x200B; overzicht van de controleeigenschap &#x200B;](./overview.md).
 
 Bij het testen van de consistentie van tags wordt gezocht naar inconsistenties op alle gescande pagina&#39;s. Dit zijn waarden of configuraties die voor alle pagina&#39;s op de site hetzelfde moeten zijn om nauwkeurige gegevensverzameling te garanderen.
 
 | Testen | Dikte | Criteria | Aanbeveling |
 | --- | --- | --- | --- |
-| Adobe Analytics - Consistente codeversie | 5 | Er zijn meerdere versies van de Analytics-code gevonden. | Vervang alle instanties van Analytics door de huidige versie.<br><br>[ Aanvullende informatie ](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=nl-NL) |
+| Adobe Analytics - Consistente codeversie | 5 | Er zijn meerdere versies van de Analytics-code gevonden. | Vervang alle instanties van Analytics door de huidige versie.<br><br>[&#x200B; Aanvullende informatie &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=nl-NL) |
 
 {style="table-layout:auto"}

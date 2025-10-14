@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 In een markeringsregel, is een actie iets dat wordt uitgevoerd nadat de regelvoorwaarden evaluatie hebben overgegaan. Actietypen worden geleverd door extensies en de effecten ervan worden volledig gedefinieerd door de auteur van de extensie.
 
@@ -23,9 +23,9 @@ In dit document wordt beschreven hoe u actietypen voor een randextensie in Adobe
 
 >[!IMPORTANT]
 >
->Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ actietypen voor Webuitbreidingen ](../web/action-types.md).
+>Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids op [&#x200B; actietypen voor Webuitbreidingen &#x200B;](../web/action-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [&#x200B; het formatteren van de bibliotheekmodule &#x200B;](./format.md) alvorens aan deze gids terug te keren.
 
 Handelingstypen bestaan doorgaans uit:
 
@@ -77,6 +77,6 @@ module.exports = (context) {
 
 ## Handelingsresultaat
 
-Het resultaat dat door een actiemodule wordt geretourneerd, kan om het even welk zijn. Als de actie een asynchrone taak moet uitvoeren, kunt u a [ belofte ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) terugkeren die het resultaat terugkeert u wilt zodra het oplost.
+Het resultaat dat door een actiemodule wordt geretourneerd, kan om het even welk zijn. Als de actie een asynchrone taak moet uitvoeren, kunt u a [&#x200B; belofte &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) terugkeren die het resultaat terugkeert u wilt zodra het oplost.
 
-Het resultaat van de handeling wordt opgeslagen in een `ruleStash` -toets die via de `context` -parameter (`context.arc.ruleStash` ) beschikbaar wordt gemaakt voor alle modules. U kunt meer over `ruleStash` [ hier ](./context.md#rulestash) leren.
+Het resultaat van de handeling wordt opgeslagen in een `ruleStash` -toets die via de `context` -parameter (`context.arc.ruleStash` ) beschikbaar wordt gemaakt voor alle modules. U kunt meer over `ruleStash` [&#x200B; hier &#x200B;](./context.md#rulestash) leren.

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [!DNL Capillary Technologies] is een toonaangevend platform voor loyaliteit en betrokkenheid dat door meer dan 300 merken over de hele wereld wordt vertrouwd. Gebruik de [!DNL Capillary Streaming Events] -bron om uw bedrijf in staat te stellen probleemloos klantenprofielen, loyaliteitsgegevens en transactionele gebeurtenissen van [!DNL Capillary] naar Adobe Experience Platform te streamen. Sluit de [!DNL Capillary] -bron aan om realtime personalisatie, geavanceerde publiekssegmentatie en omnichannel campagneorchestratie mogelijk te maken.
 
@@ -42,7 +42,7 @@ U moet waarden opgeven voor de volgende referenties om uw [!DNL Capillary] -acco
 | Clientgeheim | Het clientgeheim dat is uitgegeven met de client-id | `xxxxxxxxxxxxxxxxxx` |
 | Org-id | Je Adobe-organisatie-id | `0A7D42FC5DB9D3360A495FD3@AdobeOrg` |
 
-Voor meer informatie bij het produceren van toegangstokens, lees de [ de authentificatiegids van Adobe ](https://developer.adobe.com/developer-console/docs/guides/authentication/).
+Voor meer informatie bij het produceren van toegangstokens, lees de [&#x200B; de authentificatiegids van Adobe &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/).
 
 ### Een toegangstoken genereren
 

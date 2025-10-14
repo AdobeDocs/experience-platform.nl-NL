@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten voor Data Science Workspace.
 
-Het volgende document bevat voorbeelden van hoe te om tot gegevens toegang te hebben gebruikend Spark voor gebruik in de Werkruimte van de Wetenschap van Gegevens. Voor informatie bij de toegang tot van gegevens gebruikend JupyterLab notibooks, bezoek de [ JupyterLab- notitieboekengegevenstoegang ](../jupyterlab/access-notebook-data.md) documentatie.
+Het volgende document bevat voorbeelden van hoe te om tot gegevens toegang te hebben gebruikend Spark voor gebruik in de Werkruimte van de Wetenschap van Gegevens. Voor informatie bij de toegang tot van gegevens gebruikend JupyterLab notibooks, bezoek de [&#x200B; JupyterLab- notitieboekengegevenstoegang &#x200B;](../jupyterlab/access-notebook-data.md) documentatie.
 
 ## Aan de slag
 

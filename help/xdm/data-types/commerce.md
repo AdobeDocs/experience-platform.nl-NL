@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Commerce] is een standaard XDM-gegevenstype (Experience Data Model) dat de records beschrijft die betrekking hebben op kopen en verkopen.
 
-![ een diagram van het [!UICONTROL Commerce] gegevenstype.](../images/data-types/commerce.png)
+![&#x200B; een diagram van het [!UICONTROL Commerce] gegevenstype.](../images/data-types/commerce.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |------------------------------------------|-----------------------|------------------------------------|----------------------------------------------------------------------------------------------------------|
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 [!UICONTROL billing] is een standaard XDM-gegevenstype (Experience Data Model) dat informatie bevat over factureringsdetails. Specifiek, concentreert het zich op het factureringsadres.
 
-![ A diagram van het het factureren gegevenstype.](../images/data-types/billing.png)
+![&#x200B; A diagram van het het factureren gegevenstype.](../images/data-types/billing.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-------------------------------|-----------------|-----------------|--------------------------|
@@ -59,5 +59,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype [!UICONTROL Commerce] :
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json)

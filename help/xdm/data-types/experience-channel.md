@@ -35,5 +35,5 @@ Er zijn veelvoudige ervaringskanalen, elk met verschillende beperkingen op hoe d
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)

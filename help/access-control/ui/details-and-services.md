@@ -15,11 +15,11 @@ ht-degree: 0%
 
 U kunt de details van een profiel en de toegang tot extra diensten van binnen het **[!UICONTROL Profile Settings]** menu vormen. Selecteer **[!UICONTROL Settings]** op de pagina **[!UICONTROL Product Profile]** om het menu te openen.
 
-![ montages ](../images/settings.png)
+![&#x200B; montages &#x200B;](../images/settings.png)
 
 Het menu **[!UICONTROL Edit product profile]** wordt weergegeven, vanaf de tab **[!UICONTROL Edit profile details]** . Op dit tabblad kunt u de naam en beschrijving van uw profiel invoeren en bewerken. U kunt ook de weergavenaam en de instellingen voor e-mailmeldingen voor uw account wijzigen.
 
-![ geef-product-profiel uit ](../images/edit-product-profile.png)
+![&#x200B; geef-product-profiel uit &#x200B;](../images/edit-product-profile.png)
 
 Selecteer **[!UICONTROL Next]** om de pagina van **[!UICONTROL Enable services]** te openen.
 
@@ -34,10 +34,10 @@ Klik op de schakeloptie aan de rechterkant van een bepaalde service om deze in o
 
 Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![ toelaten-diensten ](../images/enable-services.png)
+![&#x200B; toelaten-diensten &#x200B;](../images/enable-services.png)
 
 Klanten die recht hebben op de B2B- of B2P-editie hebben toegang tot de B2B-gebruikersinterface. B2B-gebruikersinterface kan via [!UICONTROL Enable services menu] worden ingericht. Selecteer de schakeloptie naast [!UICONTROL B2B UI] om de service voor een bepaald productprofiel in te schakelen en selecteer vervolgens **[!UICONTROL Save]** .
 
 Met de schakeloptie B2B-gebruikersinterface kunnen gebruikers B2B-workflows weergeven rondom het beheren van accounts en opportuniteiten en kunnen B2B-gerelateerde segmenten maken. Raadpleeg de documentatie bij [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md) voor meer informatie.
 
-![ toe:laten-b2b ](../images/enable-b2b.png)
+![&#x200B; toe:laten-b2b &#x200B;](../images/enable-b2b.png)

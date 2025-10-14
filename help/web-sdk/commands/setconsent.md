@@ -18,9 +18,9 @@ Web SDK ondersteunt de volgende standaarden:
 
 * **[norm Adobe](/help/landing/governance-privacy-security/consent/adobe/overview.md)**: Zowel worden 1.0 als 2.0 normen gesteund.
 * **[het Kader van de Transparantie &amp; van de Toestemming IAB](/help/landing/governance-privacy-security/consent/iab/overview.md)**: Als u deze norm gebruikt, wordt het Echte Profiel van de Klant van de bezoeker - tijd bijgewerkt met de toestemmingsinformatie als uw implementatie correct wordt gevormd:
-   1. Het XDM individuele profielschema bevat [ IAB TCF 2.0 de gebiedsgroep van de Toestemming ](/help/xdm/field-groups/profile/iab.md).
-   1. Het schema van de Gebeurtenis van de Ervaring bevat [ IAB TCF 2.0 de gebiedsgroep van de Toestemming ](/help/xdm/field-groups/event/iab.md).
-   1. U omvat IAB toestemmingsinformatie in het gebeurtenis [ voorwerp XDM ](sendevent/xdm.md). De SDK van het Web omvat automatisch niet de toestemmingsinformatie wanneer het verzenden van gebeurtenisgegevens.
+   1. Het XDM individuele profielschema bevat [&#x200B; IAB TCF 2.0 de gebiedsgroep van de Toestemming &#x200B;](/help/xdm/field-groups/profile/iab.md).
+   1. Het schema van de Gebeurtenis van de Ervaring bevat [&#x200B; IAB TCF 2.0 de gebiedsgroep van de Toestemming &#x200B;](/help/xdm/field-groups/event/iab.md).
+   1. U omvat IAB toestemmingsinformatie in het gebeurtenis [&#x200B; voorwerp XDM &#x200B;](sendevent/xdm.md). De SDK van het Web omvat automatisch niet de toestemmingsinformatie wanneer het verzenden van gebeurtenisgegevens.
 
 Nadat u deze opdracht hebt gebruikt, schrijft de Web SDK de gebruikersvoorkeuren naar een cookie. De volgende keer dat de gebruiker uw website in de browser laadt, haalt de SDK deze voorkeuren op om te bepalen of gebeurtenissen naar Adobe kunnen worden verzonden.
 
@@ -68,7 +68,7 @@ De volgende cookies worden ingesteld wanneer de configuratie van de toestemming 
 
 Het plaatsen van toestemming wordt uitgevoerd als actie binnen een regel in de de etiketteninterface van de Inzameling van Gegevens van Adobe Experience Platform.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -85,7 +85,7 @@ Voer het `setConsent` bevel in werking wanneer het roepen van uw gevormde instan
 
 * **`consent[]`**: een array van `consent` -objecten. Het bevestigingsobject wordt op een andere manier opgemaakt, afhankelijk van de standaard en versie die u kiest. Zie de onderstaande tabbladen voor voorbeelden van elk object permission, afhankelijk van de toestemmingsstandaard.
 * **`identityMap`**: Een object dat bepaalt hoe een ECID wordt gegenereerd en aan welke ID&#39;s toestemmingsinformatie is gekoppeld. Adobe raadt aan dit object op te nemen wanneer `setConsent` wordt uitgevoerd vóór andere opdrachten, zoals [`sendEvent`](sendevent/overview.md) .
-* **`edgeConfigOverrides`**: Een voorwerp dat [ datastreamconfiguratie met voeten treedt ](datastream-overrides.md) bevat.
+* **`edgeConfigOverrides`**: Een voorwerp dat [&#x200B; datastreamconfiguratie met voeten treedt &#x200B;](datastream-overrides.md) bevat.
 
 >[!BEGINTABS]
 
@@ -93,7 +93,7 @@ Voer het `setConsent` bevel in werking wanneer het roepen van uw gevormde instan
 
 ### Adobe 2.0 standard `consent` -object
 
-Als u Adobe Experience Platform gebruikt, moet u een veldgroep met het privacyschema in uw profielschema opnemen. Zie [ Bestuur, privacy, en veiligheid in Adobe Experience Platform ](../../landing/governance-privacy-security/overview.md) voor meer informatie over Adobe 2.0 norm. U kunt gegevens in het onderstaande waardeobject toevoegen die overeenkomen met het schema van het veld `consents` van de [!UICONTROL Consents and Preferences] -profielveldgroep.
+Als u Adobe Experience Platform gebruikt, moet u een veldgroep met het privacyschema in uw profielschema opnemen. Zie [&#x200B; Bestuur, privacy, en veiligheid in Adobe Experience Platform &#x200B;](../../landing/governance-privacy-security/overview.md) voor meer informatie over Adobe 2.0 norm. U kunt gegevens in het onderstaande waardeobject toevoegen die overeenkomen met het schema van het veld `consents` van de [!UICONTROL Consents and Preferences] -profielveldgroep.
 
 * **`standard`**: De toestemmingsnorm die u kiest. Stel deze eigenschap in op `"Adobe"` voor de Adobe 2.0-standaard.
 * **`version`**: Een tekenreeks die de versie van de toestemmingsstandaard vertegenwoordigt. Stel deze eigenschap in op `"2.0"` voor de Adobe 2.0-standaard.
@@ -125,9 +125,9 @@ alloy("setConsent", {
 
 Als u de voorkeuren voor gebruikerstoestemming wilt vastleggen die via de TCF-standaard (Interactive Advertising Bureau Europe) (IAB) Transparency and Consent Framework) zijn opgegeven, stelt u de verbindingstekenreeks in zoals hieronder wordt getoond.
 
-Wanneer de toestemming op deze manier wordt geplaatst, wordt het Real-Time Profiel van de Klant bijgewerkt met de toestemmingsinformatie. Voor dit aan werk, moet het profielXDM schema de [ het schemagroep van de Privacy van het Profiel ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) bevatten. Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het XDM-gebeurtenisobject. De Web SDK neemt automatisch niet de toestemmingsinformatie in de gebeurtenissen op.
+Wanneer de toestemming op deze manier wordt geplaatst, wordt het Real-Time Profiel van de Klant bijgewerkt met de toestemmingsinformatie. Voor dit aan werk, moet het profielXDM schema de [&#x200B; het schemagroep van de Privacy van het Profiel &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) bevatten. Bij het verzenden van gebeurtenissen moet de informatie over de IAB-toestemming handmatig worden toegevoegd aan het XDM-gebeurtenisobject. De Web SDK neemt automatisch niet de toestemmingsinformatie in de gebeurtenissen op.
 
-Als u toestemmingsinformatie in gebeurtenissen wilt verzenden, moet u de het gebiedsgroep van de Privacy van de Gebeurtenis van de Ervaring aan uw [!DNL Profile] - toegelaten [!DNL XDM ExperienceEvent] schema toevoegen. Zie de sectie op [ het bijwerken van het schema ExperienceEvent ](../../landing/governance-privacy-security/consent/iab/dataset.md#event-schema) in de gids van de datasetvoorbereiding voor stappen op hoe te om dit te vormen.
+Als u toestemmingsinformatie in gebeurtenissen wilt verzenden, moet u de het gebiedsgroep van de Privacy van de Gebeurtenis van de Ervaring aan uw [!DNL Profile] - toegelaten [!DNL XDM ExperienceEvent] schema toevoegen. Zie de sectie op [&#x200B; het bijwerken van het schema ExperienceEvent &#x200B;](../../landing/governance-privacy-security/consent/iab/dataset.md#event-schema) in de gids van de datasetvoorbereiding voor stappen op hoe te om dit te vormen.
 
 * **`standard`**: De toestemmingsnorm die u kiest. Stel deze eigenschap in op `"IAB TCF"` voor de IAB TCF 2.0-standaard.
 * **`version`**: Een tekenreeks die de versie van de toestemmingsstandaard vertegenwoordigt. Stel deze eigenschap in op `"2.0"` voor de IAB TCF 2.0-standaard.

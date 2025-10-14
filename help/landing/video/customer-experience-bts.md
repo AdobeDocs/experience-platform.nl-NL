@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Achter de schermen van een klantervaring van Experience Platform
 
-Na het letten van op de video die [ een klantenervaring tonen die door Experience Platform ](customer-experience.md) wordt aangedreven, ga achter de scènes om te zien hoe Adobe Experience Platform werd gebruikt om deze ervaring aan te drijven.
+Na het letten van op de video die [&#x200B; een klantenervaring tonen die door Experience Platform &#x200B;](customer-experience.md) wordt aangedreven, ga achter de scènes om te zien hoe Adobe Experience Platform werd gebruikt om deze ervaring aan te drijven.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)

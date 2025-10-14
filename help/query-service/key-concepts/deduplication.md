@@ -156,4 +156,4 @@ SELECT SUM(application.launches.value) AS num_launches FROM (
 
 ## Volgende stappen
 
-In dit document worden voorbeelden gegeven van gegevensdeduplicatie en wordt uitgelegd hoe u gegevensdeduplicatie kunt uitvoeren binnen Query Service. Voor meer beste praktijken wanneer het schrijven van vragen die de Dienst van de Vraag gebruiken, lees gelieve [ het schrijven van de gids van vragen ](../best-practices/writing-queries.md).
+In dit document worden voorbeelden gegeven van gegevensdeduplicatie en wordt uitgelegd hoe u gegevensdeduplicatie kunt uitvoeren binnen Query Service. Voor meer beste praktijken wanneer het schrijven van vragen die de Dienst van de Vraag gebruiken, lees gelieve [&#x200B; het schrijven van de gids van vragen &#x200B;](../best-practices/writing-queries.md).

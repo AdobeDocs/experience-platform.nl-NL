@@ -12,9 +12,9 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Deze functionaliteit is slechts beschikbaar aan gebruikers die [ Gegevens Distiller SKU ](../data-distiller/overview.md) hebben gekocht. Neem contact op met uw Adobe voor meer informatie.
+>Deze functionaliteit is slechts beschikbaar aan gebruikers die [&#x200B; Gegevens Distiller SKU &#x200B;](../data-distiller/overview.md) hebben gekocht. Neem contact op met uw Adobe voor meer informatie.
 
-Leer hoe u hyperkubussen kunt gebruiken in de Adobe Experience Platform Experience Query Service om geavanceerde gegevensanalyse met verbeterde efficiëntie uit te voeren. Dit document behandelt hoe te om geavanceerde functies van de [[!DNL Apache Datasketches]  bibliotheek ](https://datasketches.apache.org/) te gebruiken om afzonderlijke tellingen en complexe berekeningen incrementeel te behandelen, zonder het moeten historische gegevens telkens opnieuw verwerken.
+Leer hoe u hyperkubussen kunt gebruiken in de Adobe Experience Platform Experience Query Service om geavanceerde gegevensanalyse met verbeterde efficiëntie uit te voeren. Dit document behandelt hoe te om geavanceerde functies van de [[!DNL Apache Datasketches]  bibliotheek &#x200B;](https://datasketches.apache.org/) te gebruiken om afzonderlijke tellingen en complexe berekeningen incrementeel te behandelen, zonder het moeten historische gegevens telkens opnieuw verwerken.
 
 In de analyse van grote gegevens, impliceert het produceren van metriek zoals verschillende tellingen, aantallen, meest frequente punten, verbindingen, en grafiekanalyse vaak niet-additieve tellingen (waar de resultaten niet eenvoudig kunnen worden samengevat uit subgroepen). Traditionele methoden vereisen de opwerking van alle historische gegevens, die een intensieve en tijdrovende bron kunnen zijn. De schetsen van het gebruik, die compacte overzichten zijn die waarschijnlijkheden gebruiken om grote datasets te vertegenwoordigen, en de geavanceerde functies van de Dienst van de Vraag om dit proces te stroomlijnen door de behoefte aan herberekening te verminderen.
 
@@ -46,13 +46,13 @@ De Dienst van de vraag kan miljoenen of miljarden gegevenspunten (bijvoorbeeld, 
 
 In het onderstaande diagram ziet u hoe Commerce, Product Info en Web Dimension ExperienceEvents worden verwerkt in schetsen, die vervolgens worden gebruikt om unieke aantallen te benaderen.
 
-![ Infographic die de verwezenlijking van schetsen gebruikend de Dienst van de Vraag tonen. Het diagram illustreert hoe ExperienceEvents met Commerce, Info van het Product, en de afmetingen van het Web in schetsen worden verwerkt, die dan worden gebruikt om unieke tellingen te benaderen.](../images/hypercubes/hypercube-overview.png)
+![&#x200B; Infographic die de verwezenlijking van schetsen gebruikend de Dienst van de Vraag tonen. Het diagram illustreert hoe ExperienceEvents met Commerce, Info van het Product, en de afmetingen van het Web in schetsen worden verwerkt, die dan worden gebruikt om unieke tellingen te benaderen.](../images/hypercubes/hypercube-overview.png)
 
 ### Schetsen samenvoegen om gegevensanalyse sneller en eenvoudiger te maken
 
 U voorkomt herberekening en verbeterde verwerkingssnelheid door schetsen van verschillende categorieën of groepen samen te voegen. De Dienst van de vraag vereenvoudigt ook het ontwerp door uw gegevens in een hyperkubus te organiseren, waar elke rij een samenvatting van zijn verdeling (een inzameling van afmetingen) naast de schetskolom wordt. Elke rij van de hyperkubus bevat de dimensiecombinatie maar heeft geen onbewerkte gegevens. Wanneer het uitvoeren van een vraag, specificeer de dimensionele kolommen u voor de bouw van additieve metriek wilt gebruiken en de schetsen voor die rijen samenvoegen.
 
-![ het diagram toont hoe de schetsen van verschillende ExperienceEvents worden samengevoegd om tot benaderende unieke tellingen over diverse afmetingen te leiden.](../images/hypercubes/merge-sketches.png)
+![&#x200B; het diagram toont hoe de schetsen van verschillende ExperienceEvents worden samengevoegd om tot benaderende unieke tellingen over diverse afmetingen te leiden.](../images/hypercubes/merge-sketches.png)
 
 ### Kosteneffectiviteit {#cost-effectiveness}
 
@@ -370,6 +370,6 @@ Schetsen kunnen op dit moment niet worden bijgewerkt als ze eenmaal zijn gemaakt
 
 Door dit document te lezen, weet u nu hoe u hyperkubussen en bijbehorende schetsfuncties kunt gebruiken om efficiënte gegevensverwerking uit te voeren voor complexe, multidimensionale analyses zonder dat u historische gegevens opnieuw hoeft te verwerken. Deze aanpak bespaart tijd, verlaagt de kosten en biedt de flexibiliteit die nodig is voor interactieve realtime query&#39;s, waardoor deze een waardevol instrument zijn voor analyse van grote gegevens in Adobe Experience Platform.
 
-Daarna, onderzoek andere zeer belangrijke concepten zoals [ stijgende lading ](../key-concepts/incremental-load.md) en [ gegevensdeduplicatie ](../key-concepts/deduplication.md) om uw begrip van te verdiepen hoe te om deze functies effectief voor uw specifieke gegevensbehoeften te gebruiken.
+Daarna, onderzoek andere zeer belangrijke concepten zoals [&#x200B; stijgende lading &#x200B;](../key-concepts/incremental-load.md) en [&#x200B; gegevensdeduplicatie &#x200B;](../key-concepts/deduplication.md) om uw begrip van te verdiepen hoe te om deze functies effectief voor uw specifieke gegevensbehoeften te gebruiken.
 
 

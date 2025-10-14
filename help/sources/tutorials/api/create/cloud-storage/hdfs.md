@@ -16,18 +16,18 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De Apache HDFS-connector is in bèta. Zie het [ Bronoverzicht ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De Apache HDFS-connector is in bèta. Zie het [&#x200B; Bronoverzicht &#x200B;](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Apache Hadoop Distributed File System] tot stand te brengen (verder die als &quot; [!DNL HDFS] wordt bedoeld&quot;) gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Apache Hadoop Distributed File System] tot stand te brengen (verder die als &quot; [!DNL HDFS] wordt bedoeld&quot;) gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL HDFS] via de [!DNL Flow Service] API.
 
@@ -35,12 +35,12 @@ In de volgende secties vindt u aanvullende informatie die u moet weten voordat u
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
-| `url` | De URL definieert de auteparams die vereist zijn om anoniem verbinding te maken met [!DNL HDFS] . Voor meer informatie over hoe te om deze waarde te verkrijgen, verwijs naar [ dit  [!DNL HDFS]  document ](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `url` | De URL definieert de auteparams die vereist zijn om anoniem verbinding te maken met [!DNL HDFS] . Voor meer informatie over hoe te om deze waarde te verkrijgen, verwijs naar [&#x200B; dit  [!DNL HDFS]  document &#x200B;](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL AdWords] is: `54e221aa-d342-4707-bcff-7a4bceef0001` . |
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -100,4 +100,4 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL HDFS] -verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze identiteitskaart in het volgende leerprogramma gebruiken aangezien u leert [ een opslag van de derdewolk onderzoeken gebruikend de Dienst API van de Stroom ](../../explore/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL HDFS] -verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke id-waarde van de verbinding verkregen. U kunt deze identiteitskaart in het volgende leerprogramma gebruiken aangezien u leert [&#x200B; een opslag van de derdewolk onderzoeken gebruikend de Dienst API van de Stroom &#x200B;](../../explore/cloud-storage.md).

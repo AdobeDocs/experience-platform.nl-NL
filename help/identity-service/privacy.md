@@ -18,9 +18,9 @@ In dit document worden de belangrijkste concepten besproken die betrekking hebbe
 
 >[!NOTE]
 >
->In deze handleiding wordt alleen uitgelegd hoe u privacyaanvragen kunt indienen voor de opslag van identiteitsgegevens in Experience Platform. Als u ook van plan bent om privacyverzoeken voor het de gegevensmeer of [!DNL Real-Time Customer Profile] van Experience Platform te maken, verwijs naar de gids op [ verwerking van het privacyverzoek in het gegevens meer ](../catalog/privacy.md) en naar de gids op [ verwerking van het privacyverzoek voor Profiel ](../profile/privacy.md) naast dit leerprogramma.
+>In deze handleiding wordt alleen uitgelegd hoe u privacyaanvragen kunt indienen voor de opslag van identiteitsgegevens in Experience Platform. Als u ook van plan bent om privacyverzoeken voor het de gegevensmeer of [!DNL Real-Time Customer Profile] van Experience Platform te maken, verwijs naar de gids op [&#x200B; verwerking van het privacyverzoek in het gegevens meer &#x200B;](../catalog/privacy.md) en naar de gids op [&#x200B; verwerking van het privacyverzoek voor Profiel &#x200B;](../profile/privacy.md) naast dit leerprogramma.
 >
->Voor stappen op hoe te om privacyverzoeken voor andere toepassingen van Adobe Experience Cloud te maken, verwijs naar de [ documentatie van Privacy Service ](../privacy-service/experience-cloud-apps.md).
+>Voor stappen op hoe te om privacyverzoeken voor andere toepassingen van Adobe Experience Cloud te maken, verwijs naar de [&#x200B; documentatie van Privacy Service &#x200B;](../privacy-service/experience-cloud-apps.md).
 
 ## Aan de slag
 
@@ -36,15 +36,15 @@ Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identite
 
 De Dienst van de identiteit handhaaft een opslag van globaal bepaalde (standaard) en user-defined (douane) identiteitsnamespaces. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
-Voor meer informatie over identiteit namespaces in [!DNL Experience Platform], zie het [ overzicht van identiteitskaart namespace ](../identity-service/features/namespaces.md).
+Voor meer informatie over identiteit namespaces in [!DNL Experience Platform], zie het [&#x200B; overzicht van identiteitskaart namespace &#x200B;](../identity-service/features/namespaces.md).
 
 ## Verzoeken indienen {#submit}
 
-In de onderstaande secties wordt beschreven hoe u privacyverzoeken voor [!DNL Identity Service] kunt indienen met de API of UI van [!DNL Privacy Service] . Alvorens deze secties te lezen, adviseert men sterk dat u [ Privacy Service API ](../privacy-service/api/getting-started.md) of [ Privacy Service UI ](../privacy-service/ui/overview.md) documentatie voor volledige stappen op bekijkt hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om gebruikersgegevens in verzoeklading behoorlijk te formatteren.
+In de onderstaande secties wordt beschreven hoe u privacyverzoeken voor [!DNL Identity Service] kunt indienen met de API of UI van [!DNL Privacy Service] . Alvorens deze secties te lezen, adviseert men sterk dat u [&#x200B; Privacy Service API &#x200B;](../privacy-service/api/getting-started.md) of [&#x200B; Privacy Service UI &#x200B;](../privacy-service/ui/overview.md) documentatie voor volledige stappen op bekijkt hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om gebruikersgegevens in verzoeklading behoorlijk te formatteren.
 
 ### De API gebruiken
 
-Bij het maken van taakaanvragen in de API moeten alle id&#39;s in `userIDs` een specifieke `namespace` en `type` gebruiken. Een geldige [ identiteitskaart namespace ](#namespaces) die door [!DNL Identity Service] wordt erkend moet voor de `namespace` waarde worden verstrekt, terwijl `type` of `standard` of `unregistered` (voor standaard en douanenaamruimten, respectievelijk) moet zijn.
+Bij het maken van taakaanvragen in de API moeten alle id&#39;s in `userIDs` een specifieke `namespace` en `type` gebruiken. Een geldige [&#x200B; identiteitskaart namespace &#x200B;](#namespaces) die door [!DNL Identity Service] wordt erkend moet voor de `namespace` waarde worden verstrekt, terwijl `type` of `standard` of `unregistered` (voor standaard en douanenaamruimten, respectievelijk) moet zijn.
 
 Bovendien moet de `include` -array van de payload van de aanvraag de productwaarden voor de verschillende gegevensopslagruimten bevatten waarnaar de aanvraag wordt verzonden. Wanneer u [!DNL Identity] aanvraagt, moet de array de waarde `Identity` bevatten.
 
@@ -100,7 +100,7 @@ curl -X POST \
 
 Wanneer u taakaanvragen maakt in de gebruikersinterface, moet u **[!UICONTROL Identity]** onder **[!UICONTROL Products]** selecteren om taken voor gegevens te verwerken die zijn opgeslagen in [!DNL Identity Service] .
 
-![ identiteit-gdpr ](./images/identity-gdpr.png)
+![&#x200B; identiteit-gdpr &#x200B;](./images/identity-gdpr.png)
 
 ## Verzoek om verwerking verwijderen
 
@@ -115,8 +115,8 @@ Afhankelijk van of u ook het Profiel van de Klant in real time (`ProfileService`
 | `identity` en `aepDataLake` | De opgegeven identiteit wordt verwijderd zodra Experience Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen. Het profiel dat is samengesteld uit die identiteitsgrafiek blijft behouden, maar wordt niet bijgewerkt wanneer nieuwe gegevens worden ingevoerd omdat de identiteitskoppelingen nu worden verwijderd.<br><br> wanneer het product van het gegevensmeerproduct antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel soft-deleted en daarom niet toegankelijk door om het even welke [!DNL Experience Platform] dienst. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
 | `identity` , `ProfileService` en `aepDataLake` | De opgegeven identiteit wordt verwijderd zodra Experience Platform de bevestiging verzendt dat het verwijderingsverzoek is ontvangen.<br><br> wanneer het product van het gegevensmeerproduct antwoordt dat het verzoek werd ontvangen en momenteel verwerkt, worden de gegevens verbonden aan het profiel soft-deleted en daarom niet toegankelijk door om het even welke [!DNL Experience Platform] dienst. Zodra de baan wordt voltooid, worden de gegevens volledig verwijderd uit het gegevens meer. |
 
-Verwijs naar de [[!DNL Privacy Service]  documentatie ](../privacy-service/home.md#monitor) voor meer informatie bij het volgen van baanstatussen.
+Verwijs naar de [[!DNL Privacy Service]  documentatie &#x200B;](../privacy-service/home.md#monitor) voor meer informatie bij het volgen van baanstatussen.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u kennis genomen van de belangrijke concepten voor het verwerken van privacyverzoeken in [!DNL Identity Service] . Voor informatie bij het verwerken van privacyverzoeken voor andere [!DNL Experience Cloud] toepassingen, zie het document op [[!DNL Privacy Service]  en  [!DNL Experience Cloud]  toepassingen ](../privacy-service/experience-cloud-apps.md).
+Door dit document te lezen, hebt u kennis genomen van de belangrijke concepten voor het verwerken van privacyverzoeken in [!DNL Identity Service] . Voor informatie bij het verwerken van privacyverzoeken voor andere [!DNL Experience Cloud] toepassingen, zie het document op [[!DNL Privacy Service]  en  [!DNL Experience Cloud]  toepassingen &#x200B;](../privacy-service/experience-cloud-apps.md).

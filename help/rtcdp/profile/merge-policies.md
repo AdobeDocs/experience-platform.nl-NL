@@ -17,4 +17,4 @@ Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen samenvoegen e
 
 Via een RESTful-API en de Experience Platform-gebruikersinterface kunt u nieuwe beleidsregels voor samenvoegen maken, bestaand beleid beheren en een standaardbeleid voor samenvoegen voor uw organisatie instellen. U kunt ook voorkeuren opgeven voor gegevensbronnen en bepalen welke gegevens prioriteit hebben bij een conflict tijdens het samenvoegen.
 
-Om meer over fusiebeleid en de rol te leren zij binnen Experience Platform spelen, gelieve te beginnen door het [ overzicht van het fusiebeleid ](../../profile/merge-policies/overview.md) te lezen.
+Om meer over fusiebeleid en de rol te leren zij binnen Experience Platform spelen, gelieve te beginnen door het [&#x200B; overzicht van het fusiebeleid &#x200B;](../../profile/merge-policies/overview.md) te lezen.

@@ -15,9 +15,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Dit document behandelt de [!UICONTROL IAB TCF 2.0 Consent] schemagebiedgroep voor de klasse van het Profiel Individual XDM. Voor de gebiedsgroep voorgenomen voor de klasse XDM ExperienceEvent, verwijs in plaats daarvan naar het volgende [ document ](../event/iab.md).
+>Dit document behandelt de [!UICONTROL IAB TCF 2.0 Consent] schemagebiedgroep voor de klasse van het Profiel Individual XDM. Voor de gebiedsgroep voorgenomen voor de klasse XDM ExperienceEvent, verwijs in plaats daarvan naar het volgende [&#x200B; document &#x200B;](../event/iab.md).
 
-[!UICONTROL IAB TCF 2.0 Consent] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md) wordt gebruikt om een timestamped reeksenIAB toestemmingskoorden te vangen, om toestemming-verandering patronen in tijd te volgen die.
+[!UICONTROL IAB TCF 2.0 Consent] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../classes/individual-profile.md) wordt gebruikt om een timestamped reeksenIAB toestemmingskoorden te vangen, om toestemming-verandering patronen in tijd te volgen die.
 
 ![](../../images/field-groups/iab-profile.png)
 
@@ -56,9 +56,9 @@ Zoals in het voorbeeld wordt getoond, komt elke key op hoofdniveau van `xdm:iden
 >
 >Terwijl het bovenstaande voorbeeld één enkele namespace/waardepaar gebruikt om de identiteit van de klant te vertegenwoordigen, kunt u extra sleutels voor andere namespaces toevoegen, en elke namespace kan veelvoudige identiteitswaarden hebben, elk met hun eigen reeks toestemmingsvoorkeur TCF.
 
-Voor elke identiteitswaarde moet een eigenschap `identityIABConsent` worden opgegeven die de TCF-toestemmingswaarde voor de identiteit biedt. De waarde voor dit bezit moet met het [[!UICONTROL Consent String] gegevenstype ](../../data-types/consent-string.md) in overeenstemming zijn.
+Voor elke identiteitswaarde moet een eigenschap `identityIABConsent` worden opgegeven die de TCF-toestemmingswaarde voor de identiteit biedt. De waarde voor dit bezit moet met het [[!UICONTROL Consent String] gegevenstype &#x200B;](../../data-types/consent-string.md) in overeenstemming zijn.
 
-Zie de gids op [ IAB TCF 2.0 steun in Experience Platform ](../../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie over het gebruiksgeval van deze gebiedsgroep. Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep zelf:
+Zie de gids op [&#x200B; IAB TCF 2.0 steun in Experience Platform &#x200B;](../../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie over het gebruiksgeval van deze gebiedsgroep. Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep zelf:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

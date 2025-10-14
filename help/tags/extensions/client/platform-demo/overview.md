@@ -13,11 +13,11 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 >[!NOTE]
 >
->Deze uitbreiding is afgekeurd ten gunste van [ Adobe Experience Platform Web SDK ](../web-sdk/overview.md).
+>Deze uitbreiding is afgekeurd ten gunste van [&#x200B; Adobe Experience Platform Web SDK &#x200B;](../web-sdk/overview.md).
 
 De functies van deze extensie worden overgebracht naar een nieuwe extensie. Hier volgt een snelle vergelijking van de huidige functies.
 

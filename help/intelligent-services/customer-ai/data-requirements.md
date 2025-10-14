@@ -26,9 +26,9 @@ Hier volgen de stappen voor het samenstellen van nevenmodellen en het identifice
 
 2. Prioriteit geven aan gebruiksgevallen: welke zijn de hoogste prioriteiten voor het bedrijf?
 
-3. Bouw modellen in Klant AI: bekijk dit [ snelle leerprogramma ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=nl-NL) en verwijs naar onze [ gids UI ](../customer-ai/user-guide/configure.md) voor een geleidelijke proces om een model te bouwen.
+3. Bouw modellen in Klant AI: bekijk dit [&#x200B; snelle leerprogramma &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=nl-NL) en verwijs naar onze [&#x200B; gids UI &#x200B;](../customer-ai/user-guide/configure.md) voor een geleidelijke proces om een model te bouwen.
 
-4. [ bouwt segmenten ](../customer-ai/user-guide/create-segment.md) gebruikend modelresultaten.
+4. [&#x200B; bouwt segmenten &#x200B;](../customer-ai/user-guide/create-segment.md) gebruikend modelresultaten.
 
 5. Voer gerichte bedrijfsacties uit die op deze segmenten worden gebaseerd. De resultaten controleren en de acties doorlopen om deze te verbeteren.
 
@@ -47,33 +47,33 @@ In de volgende secties wordt een overzicht gegeven van de verschillende vereiste
 
 De AI van de klant werkt door de volgende datasets te analyseren om te voorspellen (wanneer een klant waarschijnlijk zal stoppen met het gebruik van het product) of de conversie (wanneer een klant waarschijnlijk een aankoop zal doen) eigenschapscores:
 
-- De gegevens van Adobe Analytics die de [ bron van Analytics schakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
-- Adobe Audience Manager gegevens die de [ bronVerbinding van Audience Manager gebruiken ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [ dataset van de Gebeurtenis van de Ervaring ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=nl-NL)
-- [ de dataset van de Gebeurtenis van de Ervaring van de consument ](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=nl-NL#cee-schema)
+- De gegevens van Adobe Analytics die de [&#x200B; bron van Analytics schakelaar &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
+- Adobe Audience Manager gegevens die de [&#x200B; bronVerbinding van Audience Manager gebruiken &#x200B;](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- [&#x200B; dataset van de Gebeurtenis van de Ervaring &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=nl-NL)
+- [&#x200B; de dataset van de Gebeurtenis van de Ervaring van de consument &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=nl-NL#cee-schema)
 
-U kunt veelvoudige datasets van verschillende bronnen toevoegen als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Voor meer informatie bij het toevoegen van veelvoudige datasets, bezoek de [ AI gebruikersgids van de Klant ](../customer-ai/user-guide/configure.md).
+U kunt veelvoudige datasets van verschillende bronnen toevoegen als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Voor meer informatie bij het toevoegen van veelvoudige datasets, bezoek de [&#x200B; AI gebruikersgids van de Klant &#x200B;](../customer-ai/user-guide/configure.md).
 
 >[!IMPORTANT]
 >
->Source-connectors hebben tot vier weken nodig om back-ups te maken van gegevens. Als u onlangs opstelling een schakelaar plaatst, zou u moeten verifiëren dat de dataset de minimumlengte van gegevens heeft die voor AI van de Klant wordt vereist. Gelieve te herzien de [ historische gegevens ](#data-requirements) sectie om te verifiëren u genoeg gegevens voor uw vooruitgangsdoel hebt.
+>Source-connectors hebben tot vier weken nodig om back-ups te maken van gegevens. Als u onlangs opstelling een schakelaar plaatst, zou u moeten verifiëren dat de dataset de minimumlengte van gegevens heeft die voor AI van de Klant wordt vereist. Gelieve te herzien de [&#x200B; historische gegevens &#x200B;](#data-requirements) sectie om te verifiëren u genoeg gegevens voor uw vooruitgangsdoel hebt.
 
 In de volgende tabel wordt een aantal gangbare terminologie beschreven die in dit document wordt gebruikt:
 
 | Term | Definitie |
 | --- | --- |
-| [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md) | XDM is het basiskader dat Adobe Experience Cloud, aangedreven door Adobe Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. Experience Platform gebruikt XDM System om gegevens op een bepaalde manier te organiseren die het voor de diensten van Experience Platform gemakkelijker maken te gebruiken. |
-| [ XDM Schema ](../../xdm/schema/composition.md) | Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens. Voordat gegevens in Experience Platform kunnen worden ingevoerd, moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basis-XDM-klasse en nul of meer schemaveldgroepen. |
-| [ klasse XDM ](../../xdm/schema/field-constraints.md) | Alle XDM-schema&#39;s beschrijven gegevens die als `Experience Event` kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen. |
+| [&#x200B; Model van de Gegevens van de Ervaring (XDM) &#x200B;](../../xdm/home.md) | XDM is het basiskader dat Adobe Experience Cloud, aangedreven door Adobe Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. Experience Platform gebruikt XDM System om gegevens op een bepaalde manier te organiseren die het voor de diensten van Experience Platform gemakkelijker maken te gebruiken. |
+| [&#x200B; XDM Schema &#x200B;](../../xdm/schema/composition.md) | Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens. Voordat gegevens in Experience Platform kunnen worden ingevoerd, moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basis-XDM-klasse en nul of meer schemaveldgroepen. |
+| [&#x200B; klasse XDM &#x200B;](../../xdm/schema/field-constraints.md) | Alle XDM-schema&#39;s beschrijven gegevens die als `Experience Event` kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen. |
 | [Veldengroepen](../../xdm/schema/composition.md) | Een component die een of meer velden in een schema definieert. Veldgroepen dwingen af hoe hun velden worden weergegeven in de hiërarchie van het schema en tonen daarom in elk schema dezelfde structuur aan waarin ze zijn opgenomen. Veldgroepen zijn alleen compatibel met specifieke klassen, zoals bepaald door het kenmerk `meta:intendedToExtend` ervan. |
-| [ Type van Gegevens ](../../xdm/schema/composition.md) | Een component die ook een of meer velden voor een schema kan bevatten. In tegenstelling tot veldgroepen worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn. De gegevenstypen die in dit document worden beschreven, worden ondersteund door zowel de CEE- als Adobe Analytics-schema&#39;s. |
-| [ Real-time het Profiel van de Klant ](../../profile/home.md) | Klantprofiel in realtime biedt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt. |
+| [&#x200B; Type van Gegevens &#x200B;](../../xdm/schema/composition.md) | Een component die ook een of meer velden voor een schema kan bevatten. In tegenstelling tot veldgroepen worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn. De gegevenstypen die in dit document worden beschreven, worden ondersteund door zowel de CEE- als Adobe Analytics-schema&#39;s. |
+| [&#x200B; Real-time het Profiel van de Klant &#x200B;](../../profile/home.md) | Klantprofiel in realtime biedt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd, en actioneerbare tijdstempelaccounts van gebeurtenissen waarbij de persoon is betrokken die hebben plaatsgevonden in een van de systemen die u met Experience Platform gebruikt. |
 
 ## Invoergegevens van AI van de klant {#customer-ai-input-data}
 
 Voor inputdatasets, zoals Adobe Analytics en Adobe Audience Manager, wijzen de respectieve bronschakelaars direct de gebeurtenissen in deze standaardgebiedsgroepen (Commerce, Web, Toepassing, en Onderzoek) door gebrek tijdens het verbindingsproces in kaart. In de onderstaande tabel worden de gebeurtenisvelden weergegeven in de standaardveldgroepen voor Klanten-AI.
 
-Voor meer informatie bij het in kaart brengen van de gegevens van Adobe Analytics of van Audience Manager, bezoek de het gebiedsafbeeldingen van Analytics of Audience Manager [ gebied in kaart brengen gids ](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
+Voor meer informatie bij het in kaart brengen van de gegevens van Adobe Analytics of van Audience Manager, bezoek de het gebiedsafbeeldingen van Analytics of Audience Manager [&#x200B; gebied in kaart brengen gids &#x200B;](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
 U kunt de Gebeurtenis van de Ervaring of de Gebeurtenis XDM schema&#39;s van de Ervaring voor inputdatasets gebruiken die niet via één van de bovengenoemde schakelaars worden bevolkt. Extra XDM gebiedsgroepen kunnen tijdens het proces van de schemaverwezenlijking worden toegevoegd. De veldgroepen kunnen door Adobe worden opgegeven, net als de standaardveldgroepen of een aangepaste veldgroep, die overeenkomt met de gegevensrepresentatie in de Experience Platform.
 
@@ -117,7 +117,7 @@ Bovendien kan de AI van de Klant abonnementsgegevens gebruiken om betere modelle
 
 ### Aangepaste gebeurtenissen en profielkenmerken toevoegen {#add-custom-events}
 
-Als u informatie hebt u wenst om naast de standaard [ standaardgebeurtenisgebieden ](#standard-events) te omvatten die door Klant AI worden gebruikt, kunt u de [ configuratie van de douanegebeurtenis ](./user-guide/configure.md#custom-events) gebruiken om de gegevens te verhogen die door het model worden gebruikt.
+Als u informatie hebt u wenst om naast de standaard [&#x200B; standaardgebeurtenisgebieden &#x200B;](#standard-events) te omvatten die door Klant AI worden gebruikt, kunt u de [&#x200B; configuratie van de douanegebeurtenis &#x200B;](./user-guide/configure.md#custom-events) gebruiken om de gegevens te verhogen die door het model worden gebruikt.
 
 #### Wanneer moet u aangepaste gebeurtenissen gebruiken?
 
@@ -209,11 +209,11 @@ Hoewel de AI van de Klant een minimumperiode vereist om de gegevens binnen het s
 
 ## AI-uitvoergegevens van klant {#customer-ai-output-data}
 
-De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een in real time Klantprofiel-Toegelaten dataset in real time hebt, kunt u inzichten van het Profiel van de Klant in real time in de [ Bouwer van het Segment ](../../segmentation/ui/segment-builder.md) verbruiken. Als u geen profiel-toegelaten dataset hebt, kunt u [ de output van de Klant AI ](./user-guide/download-scores.md) dataset downloaden beschikbaar op het gegevensmeer.
+De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een in real time Klantprofiel-Toegelaten dataset in real time hebt, kunt u inzichten van het Profiel van de Klant in real time in de [&#x200B; Bouwer van het Segment &#x200B;](../../segmentation/ui/segment-builder.md) verbruiken. Als u geen profiel-toegelaten dataset hebt, kunt u [&#x200B; de output van de Klant AI &#x200B;](./user-guide/download-scores.md) dataset downloaden beschikbaar op het gegevensmeer.
 
 U kunt de outputdataset in de Experience Platform **&#x200B;**&#x200B;werkruimte van Datasets vinden &lbrace;. Alle de outputdatasets beginnen van de Klant AI met de naam **Scores van de Klant - NAME_OF_APP**. Op dezelfde manier beginnen alle de outputschema&#39;s van AI van de Klant met het naam **Schema van de Klant AI - Name_of_app**.
 
-![ de noemende overeenkomst voor outputdatasets in Klant AI.](./images/user-guide/cai-schema-name-of-app.png)
+![&#x200B; de noemende overeenkomst voor outputdatasets in Klant AI.](./images/user-guide/cai-schema-name-of-app.png)
 
 In de onderstaande tabel worden de verschillende kenmerken beschreven die in de uitvoer van AI van de Klant zijn aangetroffen:
 
@@ -228,4 +228,4 @@ In de onderstaande tabel worden de verschillende kenmerken beschreven die in de 
 
 ## Volgende stappen {#next-steps}
 
-Zodra u uw gegevens voorbereidt en ervoor zorgt dat al uw geloofsbrieven en schema&#39;s op zijn plaats zijn, verwijs naar [ vorm een gids van de Instantie van de Klant AI ](./user-guide/configure.md), die u door een geleidelijke leerprogramma loopt om een instantie van de Klant te creëren AI.
+Zodra u uw gegevens voorbereidt en ervoor zorgt dat al uw geloofsbrieven en schema&#39;s op zijn plaats zijn, verwijs naar [&#x200B; vorm een gids van de Instantie van de Klant AI &#x200B;](./user-guide/configure.md), die u door een geleidelijke leerprogramma loopt om een instantie van de Klant te creëren AI.

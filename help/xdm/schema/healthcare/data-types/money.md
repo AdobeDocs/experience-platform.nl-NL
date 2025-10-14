@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!UICONTROL Money] is een standaard XDM-gegevenstype (Experience Data Model) dat een hoeveelheid economisch nut in een erkende valuta biedt. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ het gegevenstype van het Geld structuur ](../../../images/healthcare/data-types/money.png)
+![&#x200B; het gegevenstype van het Geld structuur &#x200B;](../../../images/healthcare/data-types/money.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -25,5 +25,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/money.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/money.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/money.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/money.schema.json)

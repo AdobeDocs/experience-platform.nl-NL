@@ -17,11 +17,11 @@ De configuratie voor het Web SDK wordt gedaan met het `configure` bevel. Het vor
 
 Voer de onderstaande stappen uit om de SDK van het Web te configureren via de tagextensie.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
-1. Ga naar de [ pagina van de de de taguitbreiding van SDK van het Web ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) voor gedetailleerde informatie over alle configuratieopties.
+1. Ga naar de [&#x200B; pagina van de de de taguitbreiding van SDK van het Web &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) voor gedetailleerde informatie over alle configuratieopties.
 
 Deze configuratiemontages worden geplaatst wanneer u de uitbreiding gebruikt om gegevens naar Adobe te verzenden.
 

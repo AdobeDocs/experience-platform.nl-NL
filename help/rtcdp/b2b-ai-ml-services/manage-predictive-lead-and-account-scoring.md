@@ -24,23 +24,23 @@ Dit leerprogramma begeleidt u door de stappen om scoredoelstellingen van de voor
 
 Als u een nieuwe score wilt maken, selecteert u **[!UICONTROL Services]** in het zijpaneel en selecteert u **[!UICONTROL Create score]** .
 
-![ plas-new-score ](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
+![&#x200B; plas-new-score &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
 Het scherm **[!UICONTROL Basic information]** wordt weergegeven en u wordt gevraagd een profieltype te selecteren, een naam en een optionele beschrijving in te voeren. Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ plas-enter-basis-informatie ](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
+![&#x200B; plas-enter-basis-informatie &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
 Het scherm **[!UICONTROL Define your goal]** wordt weergegeven. Selecteer de vervolgkeuzepijl en selecteer vervolgens een doeltype in het vervolgkeuzevenster dat wordt weergegeven.
 
-![ plas-selecteren-a-doel ](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
+![&#x200B; plas-selecteren-a-doel &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
 Het dialoogvenster **[!UICONTROL Goal specifics]** wordt geopend. Selecteer de vervolgkeuzepijl en selecteer vervolgens de naam van het doelveld in het vervolgkeuzevenster dat wordt weergegeven.
 
-![ plas-uitgezochte-a-doel-gebied-naam ](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
+![&#x200B; plas-uitgezochte-a-doel-gebied-naam &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
 De selectie van **[!UICONTROL Goal conditions]** wordt weergegeven. Selecteer de vervolgkeuzepijl en selecteer vervolgens de voorwaarde in het vervolgkeuzevenster dat wordt weergegeven.
 
-![ plas-doel-specificatie-voorwaarde ](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
+![&#x200B; plas-doel-specificatie-voorwaarde &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
 Het veld **[!UICONTROL Goal value]** wordt weergegeven. Configureer vervolgens de [!UICONTROL Goal specifics] . Selecteer het deelvenster [!UICONTROL Enter Field Value] en voer de waarde van uw doel in.
 
@@ -48,21 +48,21 @@ Het veld **[!UICONTROL Goal value]** wordt weergegeven. Configureer vervolgens d
 >
 >U kunt meerdere doelwaarden toevoegen.
 
-![ plas-doel-specifiek-gebied-waarde ](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
+![&#x200B; plas-doel-specifiek-gebied-waarde &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
 Selecteer **[!UICONTROL Add field]** als u aanvullende velden wilt toevoegen.
 
-![ plas-doel-specifiek-toe:voegen-gebeurtenis ](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
+![&#x200B; plas-doel-specifiek-toe:voegen-gebeurtenis &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
 Selecteer de vervolgkeuzepijl en selecteer vervolgens het gewenste tijdframe om de voorspelling te configureren.
 
-![ plas-voorspelling-timeframe ](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
+![&#x200B; plas-voorspelling-timeframe &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
 Het geselecteerde samenvoegbeleid bepaalt hoe de veldwaarden van een personenprofiel worden geselecteerd. Selecteer met de vervolgkeuzepijl het gewenste samenvoegbeleid en selecteer vervolgens **[!UICONTROL Finish]** .
 
 Het dialoogvenster **[!UICONTROL Scoring setup is complete]** wordt weergegeven met de bevestiging dat de nieuwe score is gemaakt. Selecteer **[!UICONTROL OK]**.
 
-![ plas-score-volledige ](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
+![&#x200B; plas-score-volledige &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 
 >[!NOTE]
 >
@@ -70,23 +70,23 @@ Het dialoogvenster **[!UICONTROL Scoring setup is complete]** wordt weergegeven 
 
 U keert terug naar het tabblad **[!UICONTROL Services]** waar u de nieuwe score kunt zien die is gemaakt in de lijst met scores.
 
-![ plas-score-gecreeerde ](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
+![&#x200B; plas-score-gecreeerde &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
 
 Selecteer de score om details en aanvullende informatie over de details van de laatste uitvoering weer te geven.
 
-![ plas-score-extra-informatie ](../assets/../b2b-ai-ml-services/assets/plas-score-info.png)
+![&#x200B; plas-score-extra-informatie &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-score-info.png)
 
-Voor meer gedetailleerde informatie over de foutencodes die onder de laatste looppasdetails kunnen worden gezien, gelieve naar de sectie op [ te verwijzen leidt AI de codes van de pijpleidingsfout ](#leads-ai-pipeline-error-codes) in dit document.
+Voor meer gedetailleerde informatie over de foutencodes die onder de laatste looppasdetails kunnen worden gezien, gelieve naar de sectie op [&#x200B; te verwijzen leidt AI de codes van de pijpleidingsfout &#x200B;](#leads-ai-pipeline-error-codes) in dit document.
 
 ## Een score bewerken
 
 Als u een score wilt bewerken, selecteert u een score op de tab **[!UICONTROL Services]** en selecteert u **[!UICONTROL Edit]** in het deelvenster Extra details aan de rechterkant van het scherm.
 
-![ plas-geef-score ](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png) uit
+![&#x200B; plas-geef-score &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png) uit
 
 Het dialoogvenster **[!UICONTROL Edit instance]** wordt weergegeven. Hier kunt u de beschrijving van de score bewerken. Breng de gewenste wijzigingen aan en selecteer **[!UICONTROL Save]** .
 
-![ plas-geef-sparen ](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
+![&#x200B; plas-geef-sparen &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
 
 >[!NOTE]
 >
@@ -98,11 +98,11 @@ U wordt teruggestuurd naar het tabblad **[!UICONTROL Services]** . Selecteer de 
 
 Als u een score wilt klonen, selecteert u een score op de tab **[!UICONTROL Services]** en selecteert u **[!UICONTROL Clone]** in het deelvenster Extra details aan de rechterkant van het scherm.
 
-![ plas-klone-score ](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
+![&#x200B; plas-klone-score &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
 Het scherm **[!UICONTROL Basic information]** wordt weergegeven. Het profieltype, de naam en de beschrijving worden gekloond op basis van de oorspronkelijke score. Wijzig deze details en selecteer **[!UICONTROL Next]** .
 
-![ plas-clone-basic-info ](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
+![&#x200B; plas-clone-basic-info &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
 
 Het scherm **[!UICONTROL Define your goal]** wordt weergegeven. Voltooi de doelsectie zoals u zou toen het creëren van een nieuwe score en selecteer **[!UICONTROL Finish]**.
 
@@ -116,11 +116,11 @@ U keert terug naar het tabblad **[!UICONTROL Services]** waar u de zojuist geklo
 
 Als u een score wilt verwijderen, selecteert u een score op de tab **[!UICONTROL Services]** en selecteert u **[!UICONTROL Delete]** in het deelvenster Extra details aan de rechterkant van het scherm.
 
-![ plas-schrapping-score ](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
+![&#x200B; plas-schrapping-score &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
 Het bevestigingsvenster van **[!UICONTROL Delete documentation]** wordt weergegeven. Selecteer **[!UICONTROL Delete]**.
 
-![ plas-schrapping-score-bevestiging ](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
+![&#x200B; plas-schrapping-score-bevestiging &#x200B;](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 
 >[!NOTE]
 >

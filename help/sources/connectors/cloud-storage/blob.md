@@ -21,7 +21,7 @@ Lees de volgende secties om de vereiste instellingen te voltooien voordat u uw [
 
 ### IP adres lijst van gewenste personen
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 - De folder en de dossiernamen kunnen niet met een voorwaartse schuine streep (`/`) beëindigen. Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 - De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?` .
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [&#x200B; RFC 2616, Sectie 2.2: BasisRegels &#x200B;](https://www.ietf.org/rfc/rfc2616.txt) en [&#x200B; RFC 3987 &#x200B;](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
 ### [!DNL Azure Blob Storage] verifiëren voor Experience Platform {#authentication}
@@ -59,7 +59,7 @@ Geef waarden op voor de volgende referenties om uw [!DNL Azure Blob Storage] -ac
 | `folderPath` | Het pad binnen de opgegeven container waarin de bestanden zich bevinden. Dit is een optioneel submappad (virtuele map) in de container. Indien leeg gelaten, wordt de hoofdmap van de container gebruikt. |
 | `connectionSpec.id` | De verbindingsSPC identiteitskaart keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecs op het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure Blob Storage] is `4c10e202-c428-4796-9208-5f1f5732b1cf` . **Nota**: Deze referentie wordt slechts vereist wanneer het verbinden door [!DNL Flow Service] API. |
 
-Meer over hoe te om rekeningszeer belangrijke authentificatie met [!DNL Azure Blob Storage] te gebruiken, lees de officiële [ Microsoft Azure authentificatiegids ](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#account-key-authentication).
+Meer over hoe te om rekeningszeer belangrijke authentificatie met [!DNL Azure Blob Storage] te gebruiken, lees de officiële [&#x200B; Microsoft Azure authentificatiegids &#x200B;](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#account-key-authentication).
 
 >[!TAB  Gedeelde toegangshandtekening ]
 
@@ -67,12 +67,12 @@ Geef waarden op voor de volgende referenties om uw [!DNL Azure Blob Storage] -ac
 
 | Credentials | Beschrijving |
 | --- | --- |
-| `SasURI` | De URI van de handtekening voor gedeelde toegang die u kunt gebruiken als alternatief verificatietype om uw account te verbinden. Het patroon van SAS URI is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}`. Voor meer informatie, zie dit [!DNL Azure] document op [ gedeelde toegangshandtekening URIs ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
+| `SasURI` | De URI van de handtekening voor gedeelde toegang die u kunt gebruiken als alternatief verificatietype om uw account te verbinden. Het patroon van SAS URI is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}`. Voor meer informatie, zie dit [!DNL Azure] document op [&#x200B; gedeelde toegangshandtekening URIs &#x200B;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 | `container` | De naam van de [!DNL Azure Blob Storage] -container waarin uw gegevensbestanden zijn opgeslagen. Een container ordent een set balken, vergelijkbaar met een map in een bestandssysteem. |
 | `folderPath` | Het pad binnen de opgegeven container waarin de bestanden zich bevinden. Dit is een optioneel submappad (virtuele map) in de container. Indien leeg gelaten, wordt de hoofdmap van de container gebruikt. |
 | `connectionSpec.id` | De verbindingsSPC identiteitskaart keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecs op het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Azure Blob Storage] is `4c10e202-c428-4796-9208-5f1f5732b1cf` . **Nota**: Deze referentie wordt slechts vereist wanneer het verbinden door [!DNL Flow Service] API. |
 
-Meer over leren hoe te om gedeelde toegangshandtekening met [!DNL Azure Blob Storage] te gebruiken, lees de officiële [ Microsoft Azure authentificatiegids ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).
+Meer over leren hoe te om gedeelde toegangshandtekening met [!DNL Azure Blob Storage] te gebruiken, lees de officiële [&#x200B; Microsoft Azure authentificatiegids &#x200B;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).
 
 >[!TAB  de dienst belangrijkste gebaseerde authentificatie ]
 
@@ -89,7 +89,7 @@ Geef waarden op voor de volgende referenties om uw [!DNL Azure Blob Storage] -ac
 | `folderPath` | Het pad binnen de opgegeven container waarin de bestanden zich bevinden. Dit is een optioneel submappad (virtuele map) in de container. Indien leeg gelaten, wordt de hoofdmap van de container gebruikt. |
 | `connectionSpec.id` | De verbindingsSPC identiteitskaart keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecs op het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor Azure Blob Storage is `4c10e202-c428-4796-9208-5f1f5732b1cf` . **Nota**: Deze referentie wordt slechts vereist wanneer het verbinden door [!DNL Flow Service] API. |
 
-Om meer over te leren hoe te om de dienst belangrijkste gebaseerde authentificatie met [!DNL Azure Blob Storage] te gebruiken, lees de officiële [ Microsoft Azure authentificatiegids ](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#service-principal-authentication).
+Om meer over te leren hoe te om de dienst belangrijkste gebaseerde authentificatie met [!DNL Azure Blob Storage] te gebruiken, lees de officiële [&#x200B; Microsoft Azure authentificatiegids &#x200B;](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#service-principal-authentication).
 
 >[!ENDTABS]
 

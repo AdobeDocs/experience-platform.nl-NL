@@ -19,7 +19,7 @@ Verschillende extractie-, transformatie- en laadprogramma&#39;s (ETL) verschille
 
 De volgende diagrammen verstrekken mock-ups van gemeenschappelijke acties ETL en een generische gebruikerservaring die op standaardinteractie wordt gebaseerd. Deze afbeeldingen kunnen eenvoudig worden aangepast voor een specifieke ETL-gebruikerservaring.
 
-De hieronder getoonde acties worden beschreven in de stappen die binnen de [ Gids van de Integratie ETL ](home.md) worden geschetst. In sommige stappen wordt verwezen naar specifieke figuren, in andere worden vergelijkbare acties beschreven als in de hier weergegeven workflow.
+De hieronder getoonde acties worden beschreven in de stappen die binnen de [&#x200B; Gids van de Integratie ETL &#x200B;](home.md) worden geschetst. In sommige stappen wordt verwezen naar specifieke figuren, in andere worden vergelijkbare acties beschreven als in de hier weergegeven workflow.
 
 ### Afbeelding 1 - Nieuwe Adobe Experience Platform-connector configureren:
 

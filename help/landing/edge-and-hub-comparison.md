@@ -50,7 +50,7 @@ De volgende services zijn beschikbaar voor Edge Network:
 
 De volgende sectie maakt een lijst van de plaatsen voor zowel hub als Edge Network.
 
-![ een diagram dat van de verschillende plaatsen voor zowel hub als servers van Edge Network een lijst maakt.](./images/servers/platform-server-locations.png)
+![&#x200B; een diagram dat van de verschillende plaatsen voor zowel hub als servers van Edge Network een lijst maakt.](./images/servers/platform-server-locations.png)
 
 **Hub**
 
@@ -71,7 +71,7 @@ De volgende sectie maakt een lijst van de plaatsen voor zowel hub als Edge Netwo
 - AUS3 (Australië)
 - JPN3 (Japan)
 
-De meer gedetailleerde informatie over de beschikbare serverplaatsen kan in het [ multi-wolkenoverzicht ](./multi-cloud.md#available-cloud-regions) worden gevonden.
+De meer gedetailleerde informatie over de beschikbare serverplaatsen kan in het [&#x200B; multi-wolkenoverzicht &#x200B;](./multi-cloud.md#available-cloud-regions) worden gevonden.
 
 ## Volgende stappen
 

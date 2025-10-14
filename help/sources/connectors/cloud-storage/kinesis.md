@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >- De [!DNL Amazon Kinesis] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->- U kunt nu de [!DNL Amazon Kinesis] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+>- U kunt nu de [!DNL Amazon Kinesis] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../landing/multi-cloud.md).
 
 
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure] . U kunt uw gegevens van deze systemen overbrengen naar [!DNL Experience Platform] .
@@ -71,7 +71,7 @@ In het onderstaande voorbeeld worden de minimale toegangsrechten weergegeven die
 | `kinesis:DescribeStream` | Een actie die informatie betreffende de stroom met inbegrip van de kaart terugkeert, die nodig is om een gedeelde identiteitskaart te produceren. |
 | `kinesis:ListStreams` | Een handeling die is vereist om beschikbare streams weer te geven die u kunt selecteren in de gebruikersinterface. |
 
-Voor meer informatie bij het controleren van toegang voor [!DNL Kinesis] gegevensstromen, zie het volgende [[!DNL Kinesis]  document ](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+Voor meer informatie bij het controleren van toegang voor [!DNL Kinesis] gegevensstromen, zie het volgende [[!DNL Kinesis]  document &#x200B;](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ### Type iterator configureren
 
@@ -87,7 +87,7 @@ Voor meer informatie bij het controleren van toegang voor [!DNL Kinesis] gegeven
 
 Een [!DNL Kinesis] UI-bron ondersteunt momenteel alleen `TRIM_HORIZON` , terwijl de API zowel `TRIM_HORIZON` als `LATEST` as-modi ondersteunt om gegevens op te halen. De standaardwaarde van de iterator die Experience Platform gebruikt voor de [!DNL Kinesis] -bron is `TRIM_HORIZON` .
 
-Voor meer informatie over iteratortypes, zie het volgende [[!DNL Kinesis]  document ](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
+Voor meer informatie over iteratortypes, zie het volgende [[!DNL Kinesis]  document &#x200B;](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
 ## Verbinden [!DNL Amazon Kinesis] met [!DNL Experience Platform]
 

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!UICONTROL Healthcare Provider] schemaveldgroep
 
-[!UICONTROL Healthcare Provider] is een standaardgroep van het schemagebied voor de [[!UICONTROL Provider] klasse ](../../classes/provider.md). Het biedt één objecttype veld `healthcareProvider` waarin eigenschappen worden vastgelegd die gerelateerd zijn aan een individuele gezondheidswerker of een organisatie van een gezondheidszorginstelling die een vergunning heeft om medische diagnoses en behandelingsdiensten te verrichten.
+[!UICONTROL Healthcare Provider] is een standaardgroep van het schemagebied voor de [[!UICONTROL Provider] klasse &#x200B;](../../classes/provider.md). Het biedt één objecttype veld `healthcareProvider` waarin eigenschappen worden vastgelegd die gerelateerd zijn aan een individuele gezondheidswerker of een organisatie van een gezondheidszorginstelling die een vergunning heeft om medische diagnoses en behandelingsdiensten te verrichten.
 
 ![](../../images/field-groups/healthcare-provider.png)
 
@@ -32,4 +32,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).

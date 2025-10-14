@@ -40,7 +40,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 ## Toegang [!DNL JupyterLab] en [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Navigeer in [[!DNL Experience Platform] ](https://platform.adobe.com) naar **[!UICONTROL Notebooks]** vanuit de linkernavigatiekolom. Laat JupyterLab even laden.
+1. Navigeer in [[!DNL Experience Platform] &#x200B;](https://platform.adobe.com) naar **[!UICONTROL Notebooks]** vanuit de linkernavigatiekolom. Laat JupyterLab even laden.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
@@ -104,7 +104,7 @@ Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldo
 
 Voer de volgende SQL-query&#39;s in afzonderlijke notebookcellen in. Voer een query uit door in de desbetreffende cel te selecteren, gevolgd door de knop **[!UICONTROL play]** te selecteren. De succesvolle vraagresultaten of foutenlogboeken worden getoond onder de uitgevoerde cel.
 
-Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] verbroken worden. In dergelijke gevallen, nieuw begin [!DNL JupyterLab] door de **knoop van het Begin** ![ nieuwe begin knoop ](/help/images/icons/restart.png) te selecteren die in de hoger-juiste hoek naast de machtsknoop wordt gevestigd.
+Wanneer een laptop gedurende langere tijd inactief is, kan de verbinding tussen de laptop en [!DNL Query Service] verbroken worden. In dergelijke gevallen, nieuw begin [!DNL JupyterLab] door de **knoop van het Begin** ![&#x200B; nieuwe begin knoop &#x200B;](/help/images/icons/restart.png) te selecteren die in de hoger-juiste hoek naast de machtsknoop wordt gevestigd.
 
 De notebookkernel wordt opnieuw ingesteld, maar de cellen blijven, en alle cellen worden opnieuw uitgevoerd om verder te gaan waar u was weggegaan.
 
@@ -282,4 +282,4 @@ LIMIT  10;
 
 ## Volgende stappen
 
-Deze zelfstudie laat een aantal voorbeelden zien waarin gebruik wordt gemaakt van [!DNL Query Service] in [!DNL Jupyter] -laptops. Volg [ analyseert uw gegevens gebruikend Jupyter Notitieboekjes ](./analyze-your-data.md) leerprogramma om te zien hoe de gelijkaardige verrichtingen gebruikend de Toegang SDK van Gegevens worden uitgevoerd.
+Deze zelfstudie laat een aantal voorbeelden zien waarin gebruik wordt gemaakt van [!DNL Query Service] in [!DNL Jupyter] -laptops. Volg [&#x200B; analyseert uw gegevens gebruikend Jupyter Notitieboekjes &#x200B;](./analyze-your-data.md) leerprogramma om te zien hoe de gelijkaardige verrichtingen gebruikend de Toegang SDK van Gegevens worden uitgevoerd.

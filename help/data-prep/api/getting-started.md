@@ -16,11 +16,11 @@ Deze handleiding voor ontwikkelaars bevat stappen voor het uitvoeren van verschi
 
 Voor het gebruik van de handleiding voor ontwikkelaars is een goed begrip vereist van de verschillende Adobe Experience Platform-services die betrokken zijn bij het werken met [!DNL Data Prep] . Voordat u begint te werken met de [!DNL Data Prep] API, raadpleegt u de documentatie voor de volgende services:
 
-- [ Prep van Gegevens ](../home.md): De Prep van Gegevens staat gegevensingenieurs toe om, gegevens in kaart te brengen om te transformeren en te bevestigen aan en van het Model van Gegevens van de Ervaring (XDM).
+- [&#x200B; Prep van Gegevens &#x200B;](../home.md): De Prep van Gegevens staat gegevensingenieurs toe om, gegevens in kaart te brengen om te transformeren en te bevestigen aan en van het Model van Gegevens van de Ervaring (XDM).
 - [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md): de methoden waarmee gegevens naar [!DNL Experience Platform] kunnen worden verzonden.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
-Om vraag aan [!DNL Data Prep] API eindpunten met succes te maken, te lezen gelieve de gids op [ begonnen wordt met Experience Platform APIs ](../../landing/api-guide.md) om over vereiste kopballen te leren en hoe te om steekproefAPI vraag te lezen.
+Om vraag aan [!DNL Data Prep] API eindpunten met succes te maken, te lezen gelieve de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../landing/api-guide.md) om over vereiste kopballen te leren en hoe te om steekproefAPI vraag te lezen.
 
 ## Volgende stappen
 

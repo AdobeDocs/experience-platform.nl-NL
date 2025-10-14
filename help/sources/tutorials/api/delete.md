@@ -14,28 +14,28 @@ ht-degree: 0%
 
 # Een account verwijderen met de Flow Service API
 
-U kunt bronrekeningen schrappen die fouten bevatten of verouderd zijn geworden gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+U kunt bronrekeningen schrappen die fouten bevatten of verouderd zijn geworden gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 Zie de volgende zelfstudie voor informatie over het verwijderen van een account met de API.
 
 ## Aan de slag
 
-Voor deze zelfstudie moet u een geldige verbinding-id hebben. Als u geen geldige verbindingsidentiteitskaart hebt, selecteer uw schakelaar van keus van het [ overzicht van bronnen ](../../home.md) en volg de stappen die alvorens dit leerprogramma te proberen worden geschetst.
+Voor deze zelfstudie moet u een geldige verbinding-id hebben. Als u geen geldige verbindingsidentiteitskaart hebt, selecteer uw schakelaar van keus van het [&#x200B; overzicht van bronnen &#x200B;](../../home.md) en volg de stappen die alvorens dit leerprogramma te proberen worden geschetst.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
 
 ## Account verwijderen
 
 >[!TIP]
 >
->Voordat u de bronaccount verwijdert, moet u eerst bestaande gegevensstromen verwijderen die aan de bronaccount zijn gekoppeld. Om bestaande dataflows te schrappen, verwijs naar het leerprogramma bij [ het schrappen van brondataflows ](./delete-dataflows.md).
+>Voordat u de bronaccount verwijdert, moet u eerst bestaande gegevensstromen verwijderen die aan de bronaccount zijn gekoppeld. Om bestaande dataflows te schrappen, verwijs naar het leerprogramma bij [&#x200B; het schrappen van brondataflows &#x200B;](./delete-dataflows.md).
 
 Als u een account wilt verwijderen, vraagt u een DELETE-aanvraag naar de [!DNL Flow Service] API en geeft u de basis-verbindings-id op die overeenkomt met het account dat u wilt verwijderen.
 
@@ -70,4 +70,4 @@ U kunt de verwijdering bevestigen door een opzoekverzoek (GET) in te dienen bij 
 
 Door deze zelfstudie te volgen, hebt u de API van [!DNL Flow Service] gebruikt om bestaande accounts te verwijderen.
 
-Voor stappen op hoe te om deze verrichtingen uit te voeren die het gebruikersinterface gebruiken, gelieve te verwijzen naar het leerprogramma op [ het schrappen van rekeningen in UI ](../../tutorials/ui/delete-accounts.md).
+Voor stappen op hoe te om deze verrichtingen uit te voeren die het gebruikersinterface gebruiken, gelieve te verwijzen naar het leerprogramma op [&#x200B; het schrappen van rekeningen in UI &#x200B;](../../tutorials/ui/delete-accounts.md).

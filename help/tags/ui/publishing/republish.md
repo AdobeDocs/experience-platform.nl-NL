@@ -13,7 +13,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 De vijf meest recente bibliotheken die aan uw productiemilieu op een bezit van het Web zijn gepubliceerd zijn beschikbaar voor recentere herwinning. Deze functie is handig wanneer u een probleem aantreft in uw productiebibliotheek en u onmiddellijk terug moet keren naar een bekende goede toestand.
 
@@ -51,7 +51,7 @@ Om deze reden, deelt Experience Platform u mee dat een bezit in een opnieuw gepu
 
 ### Een oudere bibliotheek opnieuw publiceren
 
-![ publiceer een bibliotheek ](images/retrieve_republish.png)
+![&#x200B; publiceer een bibliotheek &#x200B;](images/retrieve_republish.png)
 
 Vanuit het scherm Publiceren:
 
@@ -65,7 +65,7 @@ Het downloaden van een gearchiveerde bibliotheek is eenvoudiger. U verwijst niet
 
 ### Hoe te om een oudere bibliotheek te downloaden
 
-![ Download een bibliotheek ](images/retrieve_download.png)
+![&#x200B; Download een bibliotheek &#x200B;](images/retrieve_download.png)
 
 Vanuit het scherm Publiceren:
 

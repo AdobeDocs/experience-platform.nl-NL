@@ -26,4 +26,4 @@ Voor instructies op hoe te om de Registratie API van het Schema te gebruiken om 
 
 ## Volgende stappen
 
-Ga aan het volgende leerprogramma te werk aan [ identiteit van de lijstcluster ](./list-cluster-identites.md)
+Ga aan het volgende leerprogramma te werk aan [&#x200B; identiteit van de lijstcluster &#x200B;](./list-cluster-identites.md)

@@ -18,4 +18,4 @@ Als u wilt beginnen met het streamen van gegevens naar [!DNL Experience Platform
 
 Nadat u een streamingverbinding hebt geregistreerd, hebt u een unieke URL die kan worden gebruikt om gegevens te streamen naar [!DNL Experience Platform] .
 
-Leren hoe te om een het stromen verbinding tot stand te brengen, te lezen gelieve de [ bronUI gids van HTTP API ](../../sources/tutorials/ui/create/streaming/http.md).
+Leren hoe te om een het stromen verbinding tot stand te brengen, te lezen gelieve de [&#x200B; bronUI gids van HTTP API &#x200B;](../../sources/tutorials/ui/create/streaming/http.md).

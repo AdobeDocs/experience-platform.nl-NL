@@ -26,11 +26,11 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -42,7 +42,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 ## Foutendiagnostiek downloaden {#download-diagnostics}
 
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Reactie**
 
-Een succesvol antwoord retourneert JSON-objecten die `path` -objecten bevatten waarin wordt aangegeven waar de diagnostiek is opgeslagen. De reactie zal de `path` voorwerpen in [ JSON Lijnen ](https://jsonlines.readthedocs.io/en/latest/) formaat terugkeren.
+Een succesvol antwoord retourneert JSON-objecten die `path` -objecten bevatten waarin wordt aangegeven waar de diagnostiek is opgeslagen. De reactie zal de `path` voorwerpen in [&#x200B; JSON Lijnen &#x200B;](https://jsonlines.readthedocs.io/en/latest/) formaat terugkeren.
 
 ```json
 {"path": "F1.json"}
@@ -145,7 +145,7 @@ Als de partijen mislukkingen bevatten, zou u fouteninformatie over deze mislukki
 
 ### Status controleren {#check-status}
 
-Als u de status van de opgenomen batch wilt controleren, moet u de id van de batch opgeven in het pad van een GET-aanvraag. Om meer over het gebruiken van deze API vraag te leren, te lezen gelieve de [ gids van het cataloguseindpunt ](../../catalog/api/list-objects.md).
+Als u de status van de opgenomen batch wilt controleren, moet u de id van de batch opgeven in het pad van een GET-aanvraag. Om meer over het gebruiken van deze API vraag te leren, te lezen gelieve de [&#x200B; gids van het cataloguseindpunt &#x200B;](../../catalog/api/list-objects.md).
 
 **API formaat**
 
@@ -157,7 +157,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BATCH_ID}` | De `id` -waarde van de batch waarvan u de status wilt controleren. |
-| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. De veelvoudige parameters worden gescheiden door ampersands (`&`). Voor meer informatie, te lezen gelieve de gids over [ het filtreren gegevens van de Catalogus ](../../catalog/api/filter-data.md). |
+| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. De veelvoudige parameters worden gescheiden door ampersands (`&`). Voor meer informatie, te lezen gelieve de gids over [&#x200B; het filtreren gegevens van de Catalogus &#x200B;](../../catalog/api/filter-data.md). |
 
 **Verzoek**
 
@@ -295,7 +295,7 @@ Als de partij één of meerdere fouten heeft en toegelaten foutendiagnostiek hee
 
 ## Volgende stappen {#next-steps}
 
-Deze zelfstudie besprak hoe u fouten met gedeeltelijke inname van batch kunt controleren. Voor meer informatie over partijingestie, te lezen gelieve de [ gids van de partijontwikkelaar ](../batch-ingestion/api-overview.md).
+Deze zelfstudie besprak hoe u fouten met gedeeltelijke inname van batch kunt controleren. Voor meer informatie over partijingestie, te lezen gelieve de [&#x200B; gids van de partijontwikkelaar &#x200B;](../batch-ingestion/api-overview.md).
 
 ## Bijlage {#appendix}
 
@@ -311,11 +311,11 @@ Gedeeltelijke batch-opname heeft drie verschillende fouttypen bij het invoeren v
 
 ### Onleesbare bestanden {#unreadable}
 
-Als de ingesloten batch onleesbare bestanden bevat, worden de fouten van de batch toegevoegd aan de batch zelf. Meer informatie bij het terugwinnen van de ontbroken partij kan in [ worden gevonden het terugwinnen ontbroken partijgids ](../quality/retrieve-failed-batches.md).
+Als de ingesloten batch onleesbare bestanden bevat, worden de fouten van de batch toegevoegd aan de batch zelf. Meer informatie bij het terugwinnen van de ontbroken partij kan in [&#x200B; worden gevonden het terugwinnen ontbroken partijgids &#x200B;](../quality/retrieve-failed-batches.md).
 
 ### Ongeldige schema&#39;s of kopteksten {#schemas-headers}
 
-Als de partij ingesloten een ongeldig schema of ongeldige kopballen heeft, zullen de fouten van de partij op de partij zelf worden vastgemaakt. Meer informatie bij het terugwinnen van de ontbroken partij kan in [ worden gevonden het terugwinnen ontbroken partijgids ](../quality/retrieve-failed-batches.md).
+Als de partij ingesloten een ongeldig schema of ongeldige kopballen heeft, zullen de fouten van de partij op de partij zelf worden vastgemaakt. Meer informatie bij het terugwinnen van de ontbroken partij kan in [&#x200B; worden gevonden het terugwinnen ontbroken partijgids &#x200B;](../quality/retrieve-failed-batches.md).
 
 ### Onscheidbare rijen {#unparsable}
 
@@ -374,7 +374,7 @@ Een geslaagde reactie retourneert een lijst met bestanden met fouten.
 }
 ```
 
-U kunt gedetailleerde informatie over de fouten dan terugwinnen gebruikend het [ diagnostische herwinningseindpunt ](#retrieve-diagnostics).
+U kunt gedetailleerde informatie over de fouten dan terugwinnen gebruikend het [&#x200B; diagnostische herwinningseindpunt &#x200B;](#retrieve-diagnostics).
 
 Hieronder ziet u een voorbeeldreactie van het ophalen van het foutbestand:
 

@@ -27,18 +27,18 @@ Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle a
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
 - Toegang tot [!DNL Adobe Experience Platform] . Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform] , neemt u contact op met uw systeembeheerder voordat u verdergaat.
-- Autorisatie om [!DNL Experience Platform] API-aanroepen uit te voeren. Voltooi [ verifieer en toegang Adobe Experience Platform APIs ](https://www.adobe.com/go/platform-api-authentication-en) leerprogramma om de volgende waarden te verkrijgen om dit leerprogramma te voltooien:
+- Autorisatie om [!DNL Experience Platform] API-aanroepen uit te voeren. Voltooi [&#x200B; verifieer en toegang Adobe Experience Platform APIs &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) leerprogramma om de volgende waarden te verkrijgen om dit leerprogramma te voltooien:
    - Autorisatie: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{ORG_ID}`
    - Clientgeheim: `{CLIENT_SECRET}`
    - Clientcertificaat: `{PRIVATE_KEY}`
-- De gegevens van de steekproef en brondossiers voor [ Recipe van de Verkoop van de Kleinhandel ](../pre-built-recipes/retail-sales.md). Download de activa die voor dit en andere [!DNL Data Science Workspace] leerprogramma&#39;s van de [ Adobe openbare bewaarplaats van het Git ](https://github.com/adobe/experience-platform-dsw-reference/) worden vereist.
-- [ Python >= 2.7 ](https://www.python.org/downloads/) en de volgende [!DNL Python] pakketten:
-   - [ pip ](https://pypi.org/project/pip/)
-   - [ PyYAML ](https://pyyaml.org/)
-   - [ dictor ](https://pypi.org/project/dictor/)
-   - [ JWT ](https://pypi.org/project/jwt/)
+- De gegevens van de steekproef en brondossiers voor [&#x200B; Recipe van de Verkoop van de Kleinhandel &#x200B;](../pre-built-recipes/retail-sales.md). Download de activa die voor dit en andere [!DNL Data Science Workspace] leerprogramma&#39;s van de [&#x200B; Adobe openbare bewaarplaats van het Git &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/) worden vereist.
+- [&#x200B; Python >= 2.7 &#x200B;](https://www.python.org/downloads/) en de volgende [!DNL Python] pakketten:
+   - [&#x200B; pip &#x200B;](https://pypi.org/project/pip/)
+   - [&#x200B; PyYAML &#x200B;](https://pyyaml.org/)
+   - [&#x200B; dictor &#x200B;](https://pypi.org/project/dictor/)
+   - [&#x200B; JWT &#x200B;](https://pypi.org/project/jwt/)
 - Een goed begrip van de volgende concepten die in deze zelfstudie worden gebruikt:
    - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
    - [Basisbeginselen van de schemacompositie](../../xdm/schema/field-dictionary.md)
@@ -111,7 +111,7 @@ Het schema en de datasets van de Verkoop van de detailhandel worden gecreeerd au
 
 ## Volgende stappen
 
-Na succesvolle voltooiing van het laarzentrekkerscript kunnen de invoer- en uitvoerschema&#39;s en datasets van de detailhandel op [!DNL Experience Platform] worden weergegeven. Zie het [ leerprogramma van de voorproefschemagegevens ](./preview-schema-data.md)
+Na succesvolle voltooiing van het laarzentrekkerscript kunnen de invoer- en uitvoerschema&#39;s en datasets van de detailhandel op [!DNL Experience Platform] worden weergegeven. Zie het [&#x200B; leerprogramma van de voorproefschemagegevens &#x200B;](./preview-schema-data.md)
 voor meer informatie .
 
 U hebt ook met succes de gegevens van de steekproef van de Verkoop van de Handel in [!DNL Experience Platform] opgenomen gebruikend het verstrekte laarsmanuscript.

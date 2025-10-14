@@ -21,22 +21,22 @@ Om uw organisatie tegen potentiële risico&#39;s en verplichtingen te helpen bes
 >
 >Het beleid van de toestemming en de automatische handhaving van het toestemmingsbeleid zijn slechts beschikbaar voor organisaties die **het Schild van de Gezondheidszorg van Adobe** of **Privacy &amp; het Schild van de Veiligheid van Adobe** hebben gekocht.
 
-Dit document richt zich op de handhaving van het beleid inzake gegevensbeheer en instemming. Voor informatie over toegangsbeheerbeleid, verwijs naar de documentatie over [ op attribuut-gebaseerde toegangsbeheer ](../../access-control/abac/overview.md).
+Dit document richt zich op de handhaving van het beleid inzake gegevensbeheer en instemming. Voor informatie over toegangsbeheerbeleid, verwijs naar de documentatie over [&#x200B; op attribuut-gebaseerde toegangsbeheer &#x200B;](../../access-control/abac/overview.md).
 
 ## Vereisten
 
 Deze handleiding vereist een goed begrip van de Experience Platform-diensten die betrokken zijn bij automatische handhaving. Raadpleeg de volgende documentatie voor meer informatie voordat u doorgaat met deze handleiding:
 
-* [ het Beheer van Gegevens van Adobe Experience Platform ](../home.md): Het kader waardoor Experience Platform naleving van het gegevensgebruik door het gebruik van etiketten en beleid afdwingt.
-* [ Real-Time Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [ de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md): De segmenteringsmotor binnen [!DNL Experience Platform] wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
-* [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Experience Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en meer toestaan.
+* [&#x200B; het Beheer van Gegevens van Adobe Experience Platform &#x200B;](../home.md): Het kader waardoor Experience Platform naleving van het gegevensgebruik door het gebruik van etiketten en beleid afdwingt.
+* [&#x200B; Real-Time Profiel van de Klant &#x200B;](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [&#x200B; de Dienst van de Segmentatie van Adobe Experience Platform &#x200B;](../../segmentation/home.md): De segmenteringsmotor binnen [!DNL Experience Platform] wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
+* [&#x200B; Doelen &#x200B;](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Experience Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en meer toestaan.
 
 ## Handelingenstroom {#flow}
 
 Het volgende diagram illustreert hoe de beleidshandhaving in de gegevensstroom van publieksactivering wordt geïntegreerd:
 
-![ een illustratie van hoe de beleidshandhaving in de gegevensstroom van publieksactivering wordt geïntegreerd.](../images/enforcement/enforcement-flow.png)
+![&#x200B; een illustratie van hoe de beleidshandhaving in de gegevensstroom van publieksactivering wordt geïntegreerd.](../images/enforcement/enforcement-flow.png)
 
 Wanneer een publiek voor het eerst wordt geactiveerd, controleert [!DNL Policy Service] op het toepasselijke beleid op basis van de volgende factoren:
 
@@ -69,7 +69,7 @@ Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijd
 | Gegevenslijnfase | Rol bij de handhaving van beleid |
 | --- | --- |
 | Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op het niveau van het schemagebied of het volledige datasetniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt.<br><br> om het even welke toestemmingsattributen die van uw klanten worden verzameld worden ook opgeslagen in datasets. Als u toegang tot toestemmingsbeleid hebt, zullen om het even welke profielen die niet aan de vereisten van de toestemmingsattributen van uw beleid voldoen van publiek worden uitgesloten die aan een bestemming worden geactiveerd. |
-| Samenvoegbeleid | Het beleid van de fusie is de regels die Experience Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie het [ overzicht van het samenvoegingsbeleid ](../../profile/merge-policies/overview.md) voor meer informatie. |
+| Samenvoegbeleid | Het beleid van de fusie is de regels die Experience Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie het [&#x200B; overzicht van het samenvoegingsbeleid &#x200B;](../../profile/merge-policies/overview.md) voor meer informatie. |
 | Doelgroep | De regels van de segmentatie bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het publiek alle toegepaste gebruikslabels voor die velden over. Beleidsovertredingen treden op als u een publiek probeert te activeren waarvan de geërfte labels worden beperkt door het toepasselijke beleid van de doelbestemming, op basis van de Gebruiksscenario&#39;s voor marketingdoeleinden. |
 | Bestemming | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br> de schendingen van het het gebruiksbeleid van Gegevens komen voor als u probeert om een publiek te activeren de waarvan gebruiksetiketten voor de marketing van de doelbestemming actie beperkt zijn.<br><br> (Beta) Wanneer een publiek wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |
 
@@ -90,27 +90,27 @@ In de volgende secties worden de verschillende beleidshandhavingsberichten besch
 
 ### Beleidsschending gegevensgebruik {#data-usage-violation}
 
-Als een beleidsschending voorkomt van het proberen om een publiek (of [ te activeren die uitgeeft aan een reeds geactiveerd publiek ](#policy-enforcement-for-activated-audiences)) te activeren wordt de actie verhinderd en popover lijkt erop wijzend dat één of meerdere beleid zijn geschonden. Nadat een schending is geactiveerd, wordt de knop **[!UICONTROL Save]** uitgeschakeld voor de entiteit die u wijzigt, totdat de juiste componenten worden bijgewerkt om te voldoen aan het beleid voor gegevensgebruik.
+Als een beleidsschending voorkomt van het proberen om een publiek (of [&#x200B; te activeren die uitgeeft aan een reeds geactiveerd publiek &#x200B;](#policy-enforcement-for-activated-audiences)) te activeren wordt de actie verhinderd en popover lijkt erop wijzend dat één of meerdere beleid zijn geschonden. Nadat een schending is geactiveerd, wordt de knop **[!UICONTROL Save]** uitgeschakeld voor de entiteit die u wijzigt, totdat de juiste componenten worden bijgewerkt om te voldoen aan het beleid voor gegevensgebruik.
 
 Selecteer een beleidsnaam om details voor die schending te tonen.
 
-![ een dialoog die op een beleidsschending wijst is voorgekomen met de benadrukte beleidsnaam.](../images/enforcement/violation-policy-select.png)
+![&#x200B; een dialoog die op een beleidsschending wijst is voorgekomen met de benadrukte beleidsnaam.](../images/enforcement/violation-policy-select.png)
 
 Het schendingsbericht geeft een overzicht van het beleid dat is overtreden, met inbegrip van de voorwaarden het beleid wordt gevormd om te controleren, de specifieke actie die de schending teweegbracht, en een lijst van mogelijke resoluties voor de kwestie.
 
-![ de dialoog van de beleidsschending van A met de benadrukte geschonden schendingssamenvatting.](../images/enforcement/violation-summary.png)
+![&#x200B; de dialoog van de beleidsschending van A met de benadrukte geschonden schendingssamenvatting.](../images/enforcement/violation-summary.png)
 
 Een grafiek van de gegevenslijn wordt getoond onder de schendingssamenvatting, toestaand u om te visualiseren welke datasets, fusiebeleid, publiek, en bestemmingen betrokken bij de beleidsschending waren. De entiteit die u momenteel wijzigt, wordt in de grafiek gemarkeerd en geeft aan welk punt in de flow de schending veroorzaakt. U kunt een entiteitsnaam in de grafiek selecteren om de detailpagina voor de entiteit in kwestie te openen.
 
-![ dialoog van de beleidsschending van A met de benadrukte grafiek van de gegevenslijn.](../images/enforcement/data-lineage.png)
+![&#x200B; dialoog van de beleidsschending van A met de benadrukte grafiek van de gegevenslijn.](../images/enforcement/data-lineage.png)
 
-U kunt het **[!UICONTROL Filter]** pictogram (![ ook gebruiken A filterpictogram.](/help/images/icons/filter.png)) om de weergegeven entiteiten op categorie te filteren. U moet ten minste twee categorieën selecteren om de gegevens weer te geven.
+U kunt het **[!UICONTROL Filter]** pictogram (![&#x200B; ook gebruiken A filterpictogram.](/help/images/icons/filter.png)) om de weergegeven entiteiten op categorie te filteren. U moet ten minste twee categorieën selecteren om de gegevens weer te geven.
 
-![ dialoog van de beleidsschending van A met de benadrukte filter en drop-down menu van de gegevenslijn.](../images/enforcement/lineage-filter.png)
+![&#x200B; dialoog van de beleidsschending van A met de benadrukte filter en drop-down menu van de gegevenslijn.](../images/enforcement/lineage-filter.png)
 
 Selecteer **[!UICONTROL List view]** om de gegevenskoppeling als een lijst weer te geven. Selecteer **[!UICONTROL Path view]** om terug te schakelen naar de visuele grafiek.
 
-![ de dialoog van de beleidsschending van A met de benadrukte mening van de de wegweg van de gegevenslijn.](../images/enforcement/list-view.png)
+![&#x200B; de dialoog van de beleidsschending van A met de benadrukte mening van de de wegweg van de gegevenslijn.](../images/enforcement/list-view.png)
 
 #### Labels zijn toegepast {#labels-successfully-applied}
 
@@ -118,11 +118,11 @@ Als u het beleid van het gegevensgebruik creeert alvorens u uw schemagebieden et
 
 Gebruik het diagram van de gegevenslijn om te begrijpen welke andere configuratieveranderingen moeten worden aangebracht alvorens u het etiket aan uw schemagebied kunt toevoegen.
 
-![ dialoog van de beleidsschending van A met het [!UICONTROL Labels successfully applied] benadrukte lusje.](../images/enforcement/labels-successfully-applied.png)
+![&#x200B; dialoog van de beleidsschending van A met het [!UICONTROL Labels successfully applied] benadrukte lusje.](../images/enforcement/labels-successfully-applied.png)
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
-Wanneer het activeren van een publiek aan een bestemming, kunt u zien hoe uw [ toestemmingsbeleid ](../policies/user-guide.md) het bereik van uw publiek tijdens het [ overzichtsstadium van het [!UICONTROL Activate Destinations] werkschema ](#pre-activation-evaluation) beïnvloedt.
+Wanneer het activeren van een publiek aan een bestemming, kunt u zien hoe uw [&#x200B; toestemmingsbeleid &#x200B;](../policies/user-guide.md) het bereik van uw publiek tijdens het [&#x200B; overzichtsstadium van het [!UICONTROL Activate Destinations] werkschema &#x200B;](#pre-activation-evaluation) beïnvloedt.
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ Wanneer het activeren van een publiek aan een bestemming, kunt u zien hoe uw [ t
 
 #### Verbetering van het beleid voor goedkeuring voor betaalde media {#consent-policy-enhancement}
 
-Een verhoging om beleidshandhaving op [ partij ](../../destinations/destination-types.md#file-based) en [ het stromen ](../../destinations/destination-types.md#streaming-destinations) bestemmingen met inbegrip van betaalde media activering goed te keuren is gemaakt. Deze uitbreiding is beschikbaar voor klanten van het privacyschild en het beveiligingsschild of het gezondheidsschild en verwijdert proactief profielen van batch- en streamingbestemmingen als de status van toestemming verandert. Het zorgt er ook voor dat wijzigingen in de toestemming onmiddellijk worden doorgevoerd, zodat het juiste publiek altijd wordt aangewezen.
+Een verhoging om beleidshandhaving op [&#x200B; partij &#x200B;](../../destinations/destination-types.md#file-based) en [&#x200B; het stromen &#x200B;](../../destinations/destination-types.md#streaming-destinations) bestemmingen met inbegrip van betaalde media activering goed te keuren is gemaakt. Deze uitbreiding is beschikbaar voor klanten van het privacyschild en het beveiligingsschild of het gezondheidsschild en verwijdert proactief profielen van batch- en streamingbestemmingen als de status van toestemming verandert. Het zorgt er ook voor dat wijzigingen in de toestemming onmiddellijk worden doorgevoerd, zodat het juiste publiek altijd wordt aangewezen.
 
 Deze verbeteringen staan voor groter vertrouwen in uw marketing strategie toe aangezien het de behoefte voor marketers verwijdert om toestemmingsattributen aan hun segmentuitdrukking manueel toe te voegen. Dit zorgt ervoor dat er geen profielen onbedoeld worden gebruikt voor marketingervaringen wanneer de toestemming is ingetrokken of niet langer in aanmerking komt voor een toestemmingsbeleid. Het beleid van de marketingtoestemming dat regels vastlegt voor hoe toestemmings- of voorkeursgegevens moeten worden beheerd in verschillende marketingworkflows, wordt nu automatisch toegepast in activeringsworkflows in downstreamoplossingen.
 
@@ -140,21 +140,21 @@ Deze verbeteringen staan voor groter vertrouwen in uw marketing strategie toe aa
 
 #### Evaluatie vóór activering {#pre-activation-evaluation}
 
-Zodra u de **[!UICONTROL Review]** stap bereikt wanneer [ het activeren van een bestemming ](../../destinations/ui/activation-overview.md), selecteer **[!UICONTROL View applied policies]**.
+Zodra u de **[!UICONTROL Review]** stap bereikt wanneer [&#x200B; het activeren van een bestemming &#x200B;](../../destinations/ui/activation-overview.md), selecteer **[!UICONTROL View applied policies]**.
 
-![ Mening toegepaste beleidsknoop in activeert bestemmingswerkschema ](../images/enforcement/view-applied-policies.png)
+![&#x200B; Mening toegepaste beleidsknoop in activeert bestemmingswerkschema &#x200B;](../images/enforcement/view-applied-policies.png)
 
 Er wordt een dialoogvenster voor beleidscontrole weergegeven waarin u een voorbeeld kunt zien van de invloed die het beleid voor uw toestemming heeft op het publiek met instemming van het publiek dat moet worden geactiveerd.
 
-![ de dialoog van de de beleidscontrole van de toestemming in Experience Platform UI ](../images/enforcement/consent-policy-check.png)
+![&#x200B; de dialoog van de de beleidscontrole van de toestemming in Experience Platform UI &#x200B;](../images/enforcement/consent-policy-check.png)
 
 Het dialoogvenster toont het publiek met toestemming voor één publiek per keer. Om de beleidsevaluatie voor een verschillend publiek te bekijken, gebruik dropdown menu boven het diagram om van de lijst te selecteren.
 
-![ de publieksschakelaar in de dialoog van de beleidscontrole.](../images/enforcement/audience-switcher.png)
+![&#x200B; de publieksschakelaar in de dialoog van de beleidscontrole.](../images/enforcement/audience-switcher.png)
 
 Gebruik het linkerspoor om tussen het toepasselijke toestemmingsbeleid voor het geselecteerde publiek te schakelen. Het beleid dat niet wordt geselecteerd wordt vertegenwoordigd in &quot;[!UICONTROL Other policies]&quot;sectie van het diagram.
 
-![ de schakelaar van het Beleid in de dialoog van de beleidscontrole ](../images/enforcement/policy-switcher.png)
+![&#x200B; de schakelaar van het Beleid in de dialoog van de beleidscontrole &#x200B;](../images/enforcement/policy-switcher.png)
 
 In het diagram wordt de overlapping tussen drie groepen profielen weergegeven:
 
@@ -164,25 +164,25 @@ In het diagram wordt de overlapping tussen drie groepen profielen weergegeven:
 
 De profielen die voor alle drie bovengenoemde groepen in aanmerking komen, vertegenwoordigen het publiek met instemming, samengevat in het juiste spoor.
 
-![ Summiere sectie in de dialoog van de beleidscontrole ](../images/enforcement/summary.png)
+![&#x200B; Summiere sectie in de dialoog van de beleidscontrole &#x200B;](../images/enforcement/summary.png)
 
 Houd de muisaanwijzer boven een van de soorten publiek in het diagram om het aantal profielen in het diagram weer te geven.
 
-![ benadrukkend een diagramsectie in de dialoog van de beleidscontrole ](../images/enforcement/highlight-segment.png)
+![&#x200B; benadrukkend een diagramsectie in de dialoog van de beleidscontrole &#x200B;](../images/enforcement/highlight-segment.png)
 
 Het publiek met toestemming wordt vertegenwoordigd door de centrale overlapping van het diagram en kan worden gemarkeerd zoals de andere secties.
 
-![ benadrukkend het toegelaten publiek in het diagram ](../images/enforcement/consented-audience.png)
+![&#x200B; benadrukkend het toegelaten publiek in het diagram &#x200B;](../images/enforcement/consented-audience.png)
 
 #### Stroom run-handhaving
 
 Wanneer de gegevens aan een bestemming worden geactiveerd, tonen de gegevens van de stroomlooppas het aantal identiteiten die wegens actief toestemmingsbeleid werden uitgesloten.
 
-![ Uitgesloten identiteitsmetriek voor een dataflow looppas ](../images/enforcement/dataflow-run-enforcement.png)
+![&#x200B; Uitgesloten identiteitsmetriek voor een dataflow looppas &#x200B;](../images/enforcement/dataflow-run-enforcement.png)
 
 ## Beleidshandhaving voor geactiveerd publiek {#policy-enforcement-for-activated-audiences}
 
-De handhaving van het beleid is nog op publiek van toepassing nadat zij zijn geactiveerd, beperkt om het even welke veranderingen in een publiek of zijn bestemming die in een beleidsschending zouden resulteren. Wegens hoe [ gegevenslijn ](#lineage) in beleidshandhaving werkt, kunnen om het even welke volgende acties een schending potentieel teweegbrengen:
+De handhaving van het beleid is nog op publiek van toepassing nadat zij zijn geactiveerd, beperkt om het even welke veranderingen in een publiek of zijn bestemming die in een beleidsschending zouden resulteren. Wegens hoe [&#x200B; gegevenslijn &#x200B;](#lineage) in beleidshandhaving werkt, kunnen om het even welke volgende acties een schending potentieel teweegbrengen:
 
 * Labels voor gegevensgebruik bijwerken
 * Gegevenssets voor een publiek wijzigen
@@ -193,4 +193,4 @@ Als een van de bovenstaande acties een schending veroorzaakt, wordt die actie ve
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe automatische beleidshandhaving in Experience Platform werkt. Voor stappen op hoe te om beleidshandhaving in uw toepassingen programmatically te integreren gebruikend API vraag, zie de gids op [ op API-Gebaseerde handhaving ](./api-enforcement.md).
+In dit document wordt beschreven hoe automatische beleidshandhaving in Experience Platform werkt. Voor stappen op hoe te om beleidshandhaving in uw toepassingen programmatically te integreren gebruikend API vraag, zie de gids op [&#x200B; op API-Gebaseerde handhaving &#x200B;](./api-enforcement.md).

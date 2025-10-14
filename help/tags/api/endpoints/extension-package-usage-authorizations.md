@@ -11,13 +11,13 @@ ht-degree: 1%
 
 # Het eindpunt van de gebruiksautorisaties voor extensiepakketten
 
-Een uitbreidingspakket vertegenwoordigt een [ uitbreiding ](./extensions.md) zoals authored door een uitbreidingsontwikkelaar. Aanvullende functies die beschikbaar kunnen worden gesteld aan gebruikers van tags, worden gedefinieerd door een extensiepakket. Deze mogelijkheden kunnen belangrijkste modules en gedeelde modules omvatten, hoewel zij het vaakst als [ regelcomponenten ](./rule-components.md) (gebeurtenissen, voorwaarden, en acties) en [ gegevenselementen ](./data-elements.md) worden verstrekt.
+Een uitbreidingspakket vertegenwoordigt een [&#x200B; uitbreiding &#x200B;](./extensions.md) zoals authored door een uitbreidingsontwikkelaar. Aanvullende functies die beschikbaar kunnen worden gesteld aan gebruikers van tags, worden gedefinieerd door een extensiepakket. Deze mogelijkheden kunnen belangrijkste modules en gedeelde modules omvatten, hoewel zij het vaakst als [&#x200B; regelcomponenten &#x200B;](./rule-components.md) (gebeurtenissen, voorwaarden, en acties) en [&#x200B; gegevenselementen &#x200B;](./data-elements.md) worden verstrekt.
 
 Een uitbreidingspakket wordt bezeten door het bedrijf van de ontwikkelaar [&#128279;](./companies.md). Eigenaars van extensiepakketten kunnen andere bedrijven toestaan hun persoonlijke versies van de pakketten te gebruiken. Elke geautoriseerde onderneming krijgt een gebruiksvergunning voor één extensiepakket, dat geldig is voor alle toekomstige en huidige privéversies van het pakket.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Licenties voor het gebruik van extensiepakketten ophalen voor een extensiepakket {#list}
 
@@ -102,7 +102,7 @@ Een succesvolle reactie keert een lijst van uitbreidingspakketten terug.
 
 ## Een gebruiksvergunning voor een extensiepakket maken {#create}
 
-Creeer een vergunning van het het gebruikspakket van de extensiepakket voor elk [ uitbreidingspakket ](./extension-packages.md) en `{ORG_ID}` van de organisatie u wilt machtigen. Om een nieuwe vergunning van het het gebruikspakket van de extensiepakket tot stand te brengen, doe een verzoek van de POST aan het hieronder eindpunt.
+Creeer een vergunning van het het gebruikspakket van de extensiepakket voor elk [&#x200B; uitbreidingspakket &#x200B;](./extension-packages.md) en `{ORG_ID}` van de organisatie u wilt machtigen. Om een nieuwe vergunning van het het gebruikspakket van de extensiepakket tot stand te brengen, doe een verzoek van de POST aan het hieronder eindpunt.
 
 **API formaat**
 

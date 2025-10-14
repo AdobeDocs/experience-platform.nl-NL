@@ -13,15 +13,15 @@ ht-degree: 0%
 
 # Verlopen van gebeurtenissen beleven
 
-In Adobe Experience Platform, kunt u vervaltijden voor alle Gebeurtenissen van de Ervaring vormen die in een dataset worden opgenomen die voor [ in real time wordt toegelaten Profiel van de Klant ](./home.md). Hiermee kunt u automatisch gegevens verwijderen uit het profielarchief die niet meer geldig of nuttig zijn voor uw gebruiksgevallen.
+In Adobe Experience Platform, kunt u vervaltijden voor alle Gebeurtenissen van de Ervaring vormen die in een dataset worden opgenomen die voor [&#x200B; in real time wordt toegelaten Profiel van de Klant &#x200B;](./home.md). Hiermee kunt u automatisch gegevens verwijderen uit het profielarchief die niet meer geldig of nuttig zijn voor uw gebruiksgevallen.
 
-Leren hoe te om uw Verlopen van de Gebeurtenis van de Ervaring in uw datasets te beheren, lees de [ gids UI van de dataset ](../catalog/datasets/user-guide.md#data-retention-policy).
+Leren hoe te om uw Verlopen van de Gebeurtenis van de Ervaring in uw datasets te beheren, lees de [&#x200B; gids UI van de dataset &#x200B;](../catalog/datasets/user-guide.md#data-retention-policy).
 
-![ een dialoog die het gegevenssetbehoud evenals de beschikbare montages toont.](./images/event-expirations/set-data-retention-dialog.png) {width="500" zoomable="yes"}
+![&#x200B; een dialoog die het gegevenssetbehoud evenals de beschikbare montages toont.](./images/event-expirations/set-data-retention-dialog.png) {width="500" zoomable="yes"}
 
 >[!IMPORTANT]
 >
->Verlopen van de Gebeurtenis van de ervaring moeten niet met datasettermijnen worden verward, die de volledige dataset schrappen nadat de vervaldatum wordt bereikt. Deze worden manueel gevormd door [ Hygiene van Gegevens van Adobe Experience Platform ](../hygiene/home.md).
+>Verlopen van de Gebeurtenis van de ervaring moeten niet met datasettermijnen worden verward, die de volledige dataset schrappen nadat de vervaldatum wordt bereikt. Deze worden manueel gevormd door [&#x200B; Hygiene van Gegevens van Adobe Experience Platform &#x200B;](../hygiene/home.md).
 
 ## Geautomatiseerd vervalproces
 

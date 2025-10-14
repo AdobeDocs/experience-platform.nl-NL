@@ -48,9 +48,9 @@ Data Science Workspace maakt gebruik van machinaal leren en kunstmatige intellig
 
 | Functie | Beschrijving |
 | --- | --- |
-| JupyterLab EDA-laptop | De exploratieve gegevensanalyse (EDA) Python-laptop is nu beschikbaar in Jupyterlab. Deze laptop is ontworpen om u te helpen bij het ontdekken van patronen in gegevens, het controleren van de hygiëne van gegevens en het samenvatten van de relevante gegevens voor voorspellende modellen. Zie het leerprogramma op [ het onderzoeken van web-based gegevens voor voorspellende modellen ](../../data-science-workspace/jupyterlab/eda-notebook.md) voor meer informatie. |
+| JupyterLab EDA-laptop | De exploratieve gegevensanalyse (EDA) Python-laptop is nu beschikbaar in Jupyterlab. Deze laptop is ontworpen om u te helpen bij het ontdekken van patronen in gegevens, het controleren van de hygiëne van gegevens en het samenvatten van de relevante gegevens voor voorspellende modellen. Zie het leerprogramma op [&#x200B; het onderzoeken van web-based gegevens voor voorspellende modellen &#x200B;](../../data-science-workspace/jupyterlab/eda-notebook.md) voor meer informatie. |
 
-Voor meer algemene informatie over de Wetenschap van Gegevens Workspace, verwijs naar het [ overzicht van Workspace van de Wetenschap van Gegevens ](../../data-science-workspace/home.md).
+Voor meer algemene informatie over de Wetenschap van Gegevens Workspace, verwijs naar het [&#x200B; overzicht van Workspace van de Wetenschap van Gegevens &#x200B;](../../data-science-workspace/home.md).
 
 ## [!DNL Dataflows] {#dataflows}
 
@@ -62,9 +62,9 @@ Dataflows zijn een voorstelling van gegevenstaken die gegevens over Experience P
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuw dashboard voor bewaking | U kunt het controledashboard nu gebruiken voor cross-service transparantie en actionable inzichten voor brongegevensopname. Het nieuwe dashboard voor bewaking biedt een uitgebreide weergave van gegevens die zijn verwerkt van [!DNL Data Lake] naar [!DNL Identity Service] en [!DNL Profile] , terwijl u ook de innamesnelheden, successen en fouten kunt controleren. Zie het leerprogramma op [ controlerende brondataflows in UI ](../../dataflows/ui/monitor-sources.md) voor meer informatie. |
+| Nieuw dashboard voor bewaking | U kunt het controledashboard nu gebruiken voor cross-service transparantie en actionable inzichten voor brongegevensopname. Het nieuwe dashboard voor bewaking biedt een uitgebreide weergave van gegevens die zijn verwerkt van [!DNL Data Lake] naar [!DNL Identity Service] en [!DNL Profile] , terwijl u ook de innamesnelheden, successen en fouten kunt controleren. Zie het leerprogramma op [&#x200B; controlerende brondataflows in UI &#x200B;](../../dataflows/ui/monitor-sources.md) voor meer informatie. |
 
-Voor meer algemene informatie over dataflows, verwijs naar het [ dataflows overzicht ](../../dataflows/home.md).
+Voor meer algemene informatie over dataflows, verwijs naar het [&#x200B; dataflows overzicht &#x200B;](../../dataflows/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -88,9 +88,9 @@ XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht
 
 | Functie | Beschrijving |
 | --- | --- |
-| Bijgewerkte zoekinterface | Verbeterde zoekmogelijkheden zijn nu beschikbaar op het tabblad [!UICONTROL Browse] in de [!UICONTROL Schemas] -werkruimte en in het dialoogvenster voor het selecteren van groepen in schemavelden in het [!DNL Schema Editor] .<br><br> wanneer het zoeken naar een termijn eerder, zouden de resultaten slechts middelen XDM omvatten de waarvan naam de onderzoeksvraag aanpast. Nu, naast middelen de waarvan naam de vraag aanpast, zullen de middelen die individuele attributen bevatten die de termijn aanpassen ook worden omvat. Dit staat u toe om naar middelen te zoeken XDM die op de attributen worden gebaseerd zij eerder dan door middelnaam bevatten.<br><br> zie de documenten op [ het onderzoeken van middelen XDM ](../../xdm/ui/explore.md) en [ het leiden schema&#39;s ](../../xdm/ui/resources/schemas.md) in UI voor meer informatie. |
+| Bijgewerkte zoekinterface | Verbeterde zoekmogelijkheden zijn nu beschikbaar op het tabblad [!UICONTROL Browse] in de [!UICONTROL Schemas] -werkruimte en in het dialoogvenster voor het selecteren van groepen in schemavelden in het [!DNL Schema Editor] .<br><br> wanneer het zoeken naar een termijn eerder, zouden de resultaten slechts middelen XDM omvatten de waarvan naam de onderzoeksvraag aanpast. Nu, naast middelen de waarvan naam de vraag aanpast, zullen de middelen die individuele attributen bevatten die de termijn aanpassen ook worden omvat. Dit staat u toe om naar middelen te zoeken XDM die op de attributen worden gebaseerd zij eerder dan door middelnaam bevatten.<br><br> zie de documenten op [&#x200B; het onderzoeken van middelen XDM &#x200B;](../../xdm/ui/explore.md) en [&#x200B; het leiden schema&#39;s &#x200B;](../../xdm/ui/resources/schemas.md) in UI voor meer informatie. |
 
-Voor meer algemene informatie over XDM, verwijs naar het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Voor meer algemene informatie over XDM, verwijs naar het [&#x200B; XDM overzicht van het Systeem &#x200B;](../../xdm/home.md).
 
 ## [!DNL Identity Service] {#identity}
 
@@ -102,9 +102,9 @@ Met Adobe Experience Platform [!DNL Identity Service] kunt u uw klanten en hun g
 
 | Functie | Beschrijving |
 | --- | --- |
-| Naamgrafiekviewer | Met de viewer voor identiteitsgrafieken kunt u identiteiten valideren en visualiseren die in de gebruikersinterface aan elkaar zijn gekoppeld, zodat de foutopsporing en de transparantie kunnen worden verbeterd. Zie het [ document van de de grafiekkijker van de identiteitsgrafiek ](../../identity-service/features/identity-graph-viewer.md) voor meer informatie. |
+| Naamgrafiekviewer | Met de viewer voor identiteitsgrafieken kunt u identiteiten valideren en visualiseren die in de gebruikersinterface aan elkaar zijn gekoppeld, zodat de foutopsporing en de transparantie kunnen worden verbeterd. Zie het [&#x200B; document van de de grafiekkijker van de identiteitsgrafiek &#x200B;](../../identity-service/features/identity-graph-viewer.md) voor meer informatie. |
 
-Voor meer algemene informatie over [!DNL Identity Service], verwijs naar het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md).
+Voor meer algemene informatie over [!DNL Identity Service], verwijs naar het [&#x200B; overzicht van de Dienst van de Identiteit &#x200B;](../../identity-service/home.md).
 
 ## Realtime-klantenprofiel {#profile}
 
@@ -116,7 +116,7 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 | ------- | ----------- |
 | Berekende kenmerken (Alpha) | ***Nota: Deze functionaliteit is momenteel in alpha en niet beschikbaar aan alle gebruikers. De documentatie en de functionaliteit kunnen worden gewijzigd.*** <br/><br/> de Berekende attributen zijn functies die worden gebruikt om gebeurtenis-vlakke gegevens in profiel-vlakke attributen samen te voegen. Vervolgens kunt u de aggregaten in segmentatie, activering en personalisatie gebruiken. Voorbeelden van deze functies zijn count, sum, average, min, max, true/false. Berekende kenmerken zijn momenteel alleen beschikbaar via de API. |
 
-Voor meer informatie over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, gelieve te beginnen door het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md) te lezen.
+Voor meer informatie over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, gelieve te beginnen door het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../../profile/home.md) te lezen.
 
 ## [!DNL Sources] {#sources}
 
@@ -128,7 +128,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Google PubSub] | U kunt nu verbinding maken met [!DNL Google PubSub] via de [!DNL Experience Platform] API of de gebruikersinterface. [!DNL Flow Service] Zie het [[!DNL Google PubSub]  schakelaaroverzicht ](../../sources/connectors/cloud-storage/google-pubsub.md) voor meer informatie. |
-| [!DNL Oracle Object Storage] | U kunt nu verbinding maken met [!DNL Oracle Object Storage] via de [!DNL Experience Platform] API of de gebruikersinterface. [!DNL Flow Service] Zie het [[!DNL Oracle Object Storage]  schakelaaroverzicht ](../../sources/connectors/cloud-storage/oracle-object-storage.md) voor meer informatie. |
+| [!DNL Google PubSub] | U kunt nu verbinding maken met [!DNL Google PubSub] via de [!DNL Experience Platform] API of de gebruikersinterface. [!DNL Flow Service] Zie het [[!DNL Google PubSub]  schakelaaroverzicht &#x200B;](../../sources/connectors/cloud-storage/google-pubsub.md) voor meer informatie. |
+| [!DNL Oracle Object Storage] | U kunt nu verbinding maken met [!DNL Oracle Object Storage] via de [!DNL Experience Platform] API of de gebruikersinterface. [!DNL Flow Service] Zie het [[!DNL Oracle Object Storage]  schakelaaroverzicht &#x200B;](../../sources/connectors/cloud-storage/oracle-object-storage.md) voor meer informatie. |
 
-Voor meer algemene informatie over bronnen, verwijs naar het [ overzicht van bronnen ](../../sources/home.md).
+Voor meer algemene informatie over bronnen, verwijs naar het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

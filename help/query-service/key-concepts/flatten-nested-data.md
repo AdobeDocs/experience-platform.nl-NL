@@ -22,19 +22,19 @@ Met de instelling `FLATTEN` wordt de structuur van elk bladveld naar de hoofdmap
 
 Voor het gebruik van de instelling `FLATTEN` is een goed begrip van de volgende componenten van Adobe Experience Platform vereist:
 
-* [ XDM Systeem ](../../xdm/home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in Experience Platform.
+* [&#x200B; XDM Systeem &#x200B;](../../xdm/home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in Experience Platform.
 
-   * [ creeer een ad hoc schema ](../../xdm/tutorials/ad-hoc.md): Een schema XDM met gebieden die namespaced voor gebruik slechts door één enkele dataset zijn, wordt bedoeld als ad hoc schema. Ad-hocschema&#39;s worden gebruikt in verschillende workflows voor gegevensinvoer voor Experience Platform en het maken van bepaalde soorten bronverbindingen.
+   * [&#x200B; creeer een ad hoc schema &#x200B;](../../xdm/tutorials/ad-hoc.md): Een schema XDM met gebieden die namespaced voor gebruik slechts door één enkele dataset zijn, wordt bedoeld als ad hoc schema. Ad-hocschema&#39;s worden gebruikt in verschillende workflows voor gegevensinvoer voor Experience Platform en het maken van bepaalde soorten bronverbindingen.
 
-* [ Sandboxes ](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Sandboxes &#x200B;](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-* [ Genestelde gegevensstructuren ](./nested-data-structures.md): Dit document verstrekt voorbeelden van hoe te om, datasets met complexe gegevenstypes tot stand te brengen te verwerken of om te zetten met inbegrip van genestelde gegevensstructuren.
+* [&#x200B; Genestelde gegevensstructuren &#x200B;](./nested-data-structures.md): Dit document verstrekt voorbeelden van hoe te om, datasets met complexe gegevenstypes tot stand te brengen te verwerken of om te zetten met inbegrip van genestelde gegevensstructuren.
 
 ## Verbinding maken met een database met behulp van de FLATTEN-instelling {#connect-with-flatten}
 
 Met de instelling `FLATTEN` voegt u geneste gegevensstructuren samen tot afzonderlijke kolommen, waarbij de kenmerknaam de kolomnaam wordt die de rijwaarden bevat. Als u werkt met gegevens in BI-gereedschappen die geen ondersteuning bieden voor geneste gegevensstructuren, verbetert deze instelling de bruikbaarheid van ad-hocschema&#39;s en vermindert de benodigde werklast.
 
-Wanneer u verbinding maakt met de Query-service met een door u gekozen externe client, voegt u de instelling `FLATTEN` toe aan de databasenaam. Voor informatie over hoe te om een specifiek hulpmiddel van BI aan te sluiten, te zien gelieve zijn respectieve documentatie in [ cliënten aan het overzicht van de Dienst van de Vraag ](../clients/overview.md) verbinden. De verbindingstekenreeks moet het volgende bevatten:
+Wanneer u verbinding maakt met de Query-service met een door u gekozen externe client, voegt u de instelling `FLATTEN` toe aan de databasenaam. Voor informatie over hoe te om een specifiek hulpmiddel van BI aan te sluiten, te zien gelieve zijn respectieve documentatie in [&#x200B; cliënten aan het overzicht van de Dienst van de Vraag &#x200B;](../clients/overview.md) verbinden. De verbindingstekenreeks moet het volgende bevatten:
 
 * De naam van de sandbox.
 * Een dubbele punt, gevolgd door `all` of een specifieke gegevensset-id, weergave-id of databasenaam.
@@ -54,9 +54,9 @@ prod:all?FLATTEN
 
 ## Voorbeeld {#example}
 
-In het voorbeeldschema dat in deze handleiding wordt gebruikt, wordt de standaardveldgroep [!UICONTROL Commerce Details] gebruikt, die de `commerce` -objectstructuur en de `productListItems` -array gebruikt. Zie de documentatie XDM voor [ meer informatie over de [!UICONTROL Commerce Details] gebiedsgroep ](../../xdm/field-groups/event/commerce-details.md). In de onderstaande afbeelding ziet u een weergave van de schemastructuur.
+In het voorbeeldschema dat in deze handleiding wordt gebruikt, wordt de standaardveldgroep [!UICONTROL Commerce Details] gebruikt, die de `commerce` -objectstructuur en de `productListItems` -array gebruikt. Zie de documentatie XDM voor [&#x200B; meer informatie over de [!UICONTROL Commerce Details] gebiedsgroep &#x200B;](../../xdm/field-groups/event/commerce-details.md). In de onderstaande afbeelding ziet u een weergave van de schemastructuur.
 
-![ het schemadiagram van A van de het gebiedsgroep van Details van Commerce met inbegrip van `commerce` en `productListItems` structuren.](../images/key-concepts/commerce-details.png)
+![&#x200B; het schemadiagram van A van de het gebiedsgroep van Details van Commerce met inbegrip van `commerce` en `productListItems` structuren.](../images/key-concepts/commerce-details.png)
 
 Als uw hulpmiddel van BI geen genestelde gegevensstructuren steunt, kan het moeilijk zijn om van genestelde gebieden van verwijzingen te voorzien als zij geserialiseerde waarden (zoals `commerce` en `productListItems` in het voorbeeldschema) bevatten. Deze waarden kunnen verschijnen als delen van één gecodeerd `commerce` tekenreeksveld en zijn realistisch gezien niet onbruikbaar.
 
@@ -74,7 +74,7 @@ commerce.order.purchaseID
 commerce.purchases.value
 ```
 
-De instelling `FLATTEN` heeft bepaalde beperkingen wanneer u werkt met andere gegevensstructuren. De volledige details worden verstrekt in de [ sectie van beperkingen ](#limitations).
+De instelling `FLATTEN` heeft bepaalde beperkingen wanneer u werkt met andere gegevensstructuren. De volledige details worden verstrekt in de [&#x200B; sectie van beperkingen &#x200B;](#limitations).
 
 ### Aanhalingstekens gebruiken voor velden in query&#39;s {#quotation-marks}
 
@@ -111,8 +111,8 @@ Met de instelling `FLATTEN` worden momenteel de volgende gegevensstructuren niet
 
 Om zowel de Kaart als de beperkingen van de Serie op te lossen moet u de hulpmiddelen gebruiken BBI ruw SQL het uitgeven zoals de Geavanceerde Opties -> SQL Verklaring in Power BI.
 
-BI-gereedschappen, zoals onbewerkte SQL-bewerkingen, zijn nodig om zowel de map- als arraybeperkingen op te lossen. Zie de gids op hoe te [ gebruik Power BI geavanceerde opties om een douaneSQL vraag ](../clients/power-bi.md#import-tables-using-custom-sql) in de SQL verklaringssectie in te gaan.
+BI-gereedschappen, zoals onbewerkte SQL-bewerkingen, zijn nodig om zowel de map- als arraybeperkingen op te lossen. Zie de gids op hoe te [&#x200B; gebruik Power BI geavanceerde opties om een douaneSQL vraag &#x200B;](../clients/power-bi.md#import-tables-using-custom-sql) in de SQL verklaringssectie in te gaan.
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u geneste gegevensstructuren kunt afvlakken voor gebruik met externe BI-gereedschappen. Als u nog niet uw cliënt hebt verbonden, zie [ het overzicht van de cliëntverbinding ](../clients/overview.md) voor een lijst van gesteunde derdecliënten.
+In dit document wordt beschreven hoe u geneste gegevensstructuren kunt afvlakken voor gebruik met externe BI-gereedschappen. Als u nog niet uw cliënt hebt verbonden, zie [&#x200B; het overzicht van de cliëntverbinding &#x200B;](../clients/overview.md) voor een lijst van gesteunde derdecliënten.

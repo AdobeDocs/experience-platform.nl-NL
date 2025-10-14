@@ -24,13 +24,13 @@ Dit document biedt een stapsgewijze zelfstudie voor het verkrijgen van toegang t
 
 >[!TIP]
 >
->Naast de drie bovenstaande referenties, vereisen veel Experience Platform API&#39;s ook een geldig `{SANDBOX_NAME}` dat als header moet worden opgegeven. Zie het [ zandbakenoverzicht ](../sandboxes/home.md) voor meer informatie over zandbakken en het [ zandbakbeheereindpunt ](/help/sandboxes/api/sandboxes.md#list) documentatie voor informatie over het van een lijst maken van de zandbakken beschikbaar aan uw organisatie.
+>Naast de drie bovenstaande referenties, vereisen veel Experience Platform API&#39;s ook een geldig `{SANDBOX_NAME}` dat als header moet worden opgegeven. Zie het [&#x200B; zandbakenoverzicht &#x200B;](../sandboxes/home.md) voor meer informatie over zandbakken en het [&#x200B; zandbakbeheereindpunt &#x200B;](/help/sandboxes/api/sandboxes.md#list) documentatie voor informatie over het van een lijst maken van de zandbakken beschikbaar aan uw organisatie.
 
 Om de veiligheid van uw toepassingen en gebruikers te handhaven, moeten alle verzoeken aan Experience Platform APIs voor authentiek worden verklaard en worden gemachtigd gebruikend normen zoals OAuth.
 
 In deze zelfstudie wordt uitgelegd hoe u de vereiste referenties kunt verzamelen voor het verifiëren van Experience Platform API-aanroepen, zoals hieronder in het stroomschema wordt beschreven. U kunt de meeste vereiste geloofsbrieven in eerste éénmalige opstelling verzamelen. Het toegangstoken, echter, moet om de 24 uur worden verfrist.
 
-![ de vereisten van de authentificatiestroom voor de éénmalige aanvankelijke opstelling en elke verdere zitting.](./images/api-authentication/authentication-flowchart.png)
+![&#x200B; de vereisten van de authentificatiestroom voor de éénmalige aanvankelijke opstelling en elke verdere zitting.](./images/api-authentication/authentication-flowchart.png)
 
 ## Vereisten {#prerequisites}
 
@@ -42,7 +42,7 @@ Als u aanroepen naar Experience Platform API&#39;s wilt uitvoeren, moet u over h
 
 U moet ook over een Adobe ID beschikken om deze zelfstudie te voltooien. Als u geen Adobe ID hebt, kunt u er een maken door de volgende stappen uit te voeren:
 
-1. Ga naar [ Adobe Developer Console ](https://console.adobe.io).
+1. Ga naar [&#x200B; Adobe Developer Console &#x200B;](https://console.adobe.io).
 2. Selecteer **[!UICONTROL Create a new account]**.
 3. Voltooi het aanmeldingsproces.
 
@@ -52,21 +52,21 @@ Voordat u integratie op Adobe Developer Console kunt maken, moet uw account ontw
 
 ### Toegang voor ontwikkelaars verkrijgen {#gain-developer-access}
 
-Neem contact op met een Admin Console-beheerder in uw organisatie om u als ontwikkelaar toe te voegen aan een Experience Platform-productprofiel. Zie de documentatie van Admin Console voor specifieke instructies op hoe te [ ontwikkelaartoegang voor productprofielen ](https://helpx.adobe.com/nl/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) beheren.
+Neem contact op met een Admin Console-beheerder in uw organisatie om u als ontwikkelaar toe te voegen aan een Experience Platform-productprofiel. Zie de documentatie van Admin Console voor specifieke instructies op hoe te [&#x200B; ontwikkelaartoegang voor productprofielen &#x200B;](https://helpx.adobe.com/nl/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) beheren.
 
-Zodra u als ontwikkelaar wordt toegewezen, kunt u beginnen integraties in [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) tot stand te brengen. Deze integratie is een pijplijn van externe apps en services naar Adobe API&#39;s.
+Zodra u als ontwikkelaar wordt toegewezen, kunt u beginnen integraties in [&#x200B; Adobe Developer Console &#x200B;](https://www.adobe.com/go/devs_console_ui) tot stand te brengen. Deze integratie is een pijplijn van externe apps en services naar Adobe API&#39;s.
 
 ### Toegang tot gebruikers verkrijgen {#gain-user-access}
 
 Uw Admin Console-beheerder moet u ook als gebruiker toevoegen aan hetzelfde productprofiel. Met gebruikerstoegang, kunt u in UI het resultaat van de API verrichtingen zien die u uitvoert.
 
-Zie de gids op [ het leiden gebruikersgroepen in Admin Console ](https://helpx.adobe.com/nl/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) voor meer informatie.
+Zie de gids op [&#x200B; het leiden gebruikersgroepen in Admin Console &#x200B;](https://helpx.adobe.com/nl/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) voor meer informatie.
 
 ## Een API-sleutel (client-id) en organisatie-id genereren {#generate-credentials}
 
 >[!NOTE]
 >
->Als u dit document van de [ Privacy Service API gids ](../privacy-service/api/getting-started.md) volgt, kunt u aan die gids nu terugkeren om de toegangsgeloofsbrieven te produceren uniek aan [!DNL Privacy Service].
+>Als u dit document van de [&#x200B; Privacy Service API gids &#x200B;](../privacy-service/api/getting-started.md) volgt, kunt u aan die gids nu terugkeren om de toegangsgeloofsbrieven te produceren uniek aan [!DNL Privacy Service].
 
 Nadat u ontwikkelaars en gebruikers via Admin Console toegang hebt verleend tot Experience Platform, bestaat de volgende stap uit het genereren van uw `{ORG_ID}` - en `{API_KEY}` -referenties in Adobe Developer Console. Deze gegevens hoeven slechts eenmaal te worden gegenereerd en kunnen in toekomstige Experience Platform API-aanroepen opnieuw worden gebruikt.
 
@@ -76,7 +76,7 @@ Nadat u ontwikkelaars en gebruikers via Admin Console toegang hebt verleend tot 
 
 ### Experience Platform toevoegen aan een project {#add-platform-to-project}
 
-Ga naar [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) en teken binnen met uw Adobe ID. Daarna, volg de stappen die in het leerprogramma worden geschetst op [ creërend een leeg project ](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in de documentatie van Adobe Developer Console.
+Ga naar [&#x200B; Adobe Developer Console &#x200B;](https://www.adobe.com/go/devs_console_ui) en teken binnen met uw Adobe ID. Daarna, volg de stappen die in het leerprogramma worden geschetst op [&#x200B; creërend een leeg project &#x200B;](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in de documentatie van Adobe Developer Console.
 
 Wanneer u een nieuw project hebt gemaakt, selecteert u **[!UICONTROL Add API]** op het **[!UICONTROL Project Overview]** -scherm.
 
@@ -84,15 +84,15 @@ Wanneer u een nieuw project hebt gemaakt, selecteert u **[!UICONTROL Add API]** 
 >
 >Als u provisioned voor verscheidene organisaties bent, gebruik de organisatieselecteur in de hogere juiste hoek van de interface om ervoor te zorgen dat u in de organisatie bent u nodig hebt.
 
-![ het scherm van Developer Console met Add wordt benadrukt API optie.](./images/api-authentication/add-api.png)
+![&#x200B; het scherm van Developer Console met Add wordt benadrukt API optie.](./images/api-authentication/add-api.png)
 
 Het scherm **[!UICONTROL Add an API]** wordt weergegeven. Selecteer het productpictogram voor **[!UICONTROL Adobe Experience Platform]** en kies **[!UICONTROL Experience Platform API]** voordat u **[!UICONTROL Next]** selecteert.
 
-![ Uitgezochte Experience Platform API in Add een API scherm.](./images/api-authentication/platform-api.png)
+![&#x200B; Uitgezochte Experience Platform API in Add een API scherm.](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
->Selecteer de **[!UICONTROL View docs]** optie om in een afzonderlijk browser venster aan de volledige [ Experience Platform API verwijzingsdocumentatie ](https://developer.adobe.com/experience-platform-apis/) te navigeren.
+>Selecteer de **[!UICONTROL View docs]** optie om in een afzonderlijk browser venster aan de volledige [&#x200B; Experience Platform API verwijzingsdocumentatie &#x200B;](https://developer.adobe.com/experience-platform-apis/) te navigeren.
 
 ### Selecteer het verificatietype [!UICONTROL OAuth Server-to-Server] {#select-oauth-server-to-server}
 
@@ -100,9 +100,9 @@ Selecteer vervolgens het verificatietype **[!UICONTROL OAuth Server-to-Server]**
 
 >[!IMPORTANT]
 >
->De methode **[!UICONTROL OAuth Server-to-Server]** is de enige ondersteunde methode voor het genereren van tokens die vooruit gaat. De eerder ondersteunde **[!UICONTROL Service Account (JWT)]** -methode is vervangen en kan niet worden geselecteerd voor nieuwe integraties. Hoewel bestaande integratie met behulp van de JWT-verificatiemethode tot 30 juni 2025 blijft werken, raadt Adobe u ten zeerste aan om vóór die datum bestaande integratie te migreren naar de nieuwe [!UICONTROL OAuth Server-to-Server] -methode. Krijg meer informatie in de sectie [!BADGE &#x200B; Afgekeurde &#x200B;]{type=negative} [ produceert een Symbolisch van het Web JSON (JWT) ](#jwt).
+>De methode **[!UICONTROL OAuth Server-to-Server]** is de enige ondersteunde methode voor het genereren van tokens die vooruit gaat. De eerder ondersteunde **[!UICONTROL Service Account (JWT)]** -methode is vervangen en kan niet worden geselecteerd voor nieuwe integraties. Hoewel bestaande integratie met behulp van de JWT-verificatiemethode tot 30 juni 2025 blijft werken, raadt Adobe u ten zeerste aan om vóór die datum bestaande integratie te migreren naar de nieuwe [!UICONTROL OAuth Server-to-Server] -methode. Krijg meer informatie in de sectie [!BADGE &#x200B; Afgekeurde &#x200B;]{type=negative} [&#x200B; produceert een Symbolisch van het Web JSON (JWT) &#x200B;](#jwt).
 
-![ selecteer de server-aan-Server authentificatiemethode OAuth voor Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
+![&#x200B; selecteer de server-aan-Server authentificatiemethode OAuth voor Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Selecteer de productprofielen voor uw integratie {#select-product-profiles}
 
@@ -110,9 +110,9 @@ Selecteer in het scherm **[!UICONTROL Configure API]** de optie **[!UICONTROL AE
 
 >[!IMPORTANT]
 >
->Om toegang tot bepaalde eigenschappen in Experience Platform te krijgen, hebt u ook een systeembeheerder nodig om u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen te verlenen. Lees meer in de sectie [ krijgt de noodzakelijke op attributen-gebaseerde toegangsbeheertoestemmingen ](#get-abac-permissions).
+>Om toegang tot bepaalde eigenschappen in Experience Platform te krijgen, hebt u ook een systeembeheerder nodig om u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen te verlenen. Lees meer in de sectie [&#x200B; krijgt de noodzakelijke op attributen-gebaseerde toegangsbeheertoestemmingen &#x200B;](#get-abac-permissions).
 
-![ Uitgezochte productprofielen voor uw integratie.](./images/api-authentication/select-product-profiles.png)
+![&#x200B; Uitgezochte productprofielen voor uw integratie.](./images/api-authentication/select-product-profiles.png)
 
 Selecteer **[!UICONTROL Save configured API]** wanneer u klaar bent.
 
@@ -124,7 +124,7 @@ In de onderstaande videozelfstudie vindt u een analyse van de hierboven beschrev
 
 Zodra API aan het project is toegevoegd, **[!UICONTROL OAuth Server-to-Server]** toont de pagina voor het project de volgende geloofsbrieven die in alle vraag aan Experience Platform APIs worden vereist:
 
-![ de informatie van de Integratie na het toevoegen van API in de Console van de Ontwikkelaar.](./images/api-authentication/api-integration-information.png)
+![&#x200B; de informatie van de Integratie na het toevoegen van API in de Console van de Ontwikkelaar.](./images/api-authentication/api-integration-information.png)
 
 * `{API_KEY}` ([!UICONTROL Client ID])
 * `{ORG_ID}` ([!UICONTROL Organization ID])
@@ -145,27 +145,27 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 De volgende stap bestaat uit het genereren van een `{ACCESS_TOKEN}` -referentie voor gebruik in Experience Platform API-aanroepen. In tegenstelling tot de waarden voor `{API_KEY}` en `{ORG_ID}` , moet om de 24 uur een nieuw token worden gegenereerd om Experience Platform API&#39;s te kunnen blijven gebruiken. Selecteer **[!UICONTROL Generate access token]** die het toegangstoken produceert, zoals hieronder wordt getoond.
 
-![ toon hoe te om toegangstoken ](././images/api-authentication/generate-access-token.png) te produceren
+![&#x200B; toon hoe te om toegangstoken &#x200B;](././images/api-authentication/generate-access-token.png) te produceren
 
 >[!TIP]
 >
->U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [ gebruikend Postman om API vraag ](#use-postman) voor authentiek te verklaren en te testen.
+>U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [&#x200B; gebruikend Postman om API vraag &#x200B;](#use-postman) voor authentiek te verklaren en te testen.
 
 ## Verificatiegegevens rechtstreeks in de API-naslagdocumentatie maken en ophalen {#get-credentials-functionality}
 
-Vanaf de release van november 2024 van Experience Platform kunt u referenties ophalen om de Experience Platform API&#39;s rechtstreeks vanaf de API-referentiepagina&#39;s te gebruiken, zonder dat u naar [!UICONTROL Developer Console] hoeft te gaan. Bekijk het voorbeeld hieronder van de [ Dienst API van de Stroom - de pagina van Doelen ](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+Vanaf de release van november 2024 van Experience Platform kunt u referenties ophalen om de Experience Platform API&#39;s rechtstreeks vanaf de API-referentiepagina&#39;s te gebruiken, zonder dat u naar [!UICONTROL Developer Console] hoeft te gaan. Bekijk het voorbeeld hieronder van de [&#x200B; Dienst API van de Stroom - de pagina van Doelen &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 
-![ krijgt geloofsbrieven die bij de bovenkant van een API verwijzingspagina worden benadrukt.](././images/api-authentication/get-credentials-highlighted.png)
+![&#x200B; krijgt geloofsbrieven die bij de bovenkant van een API verwijzingspagina worden benadrukt.](././images/api-authentication/get-credentials-highlighted.png)
 
 Als u referenties wilt ophalen om Experience Platform API&#39;s aan te roepen, navigeert u naar een willekeurige Experience Platform API-referentiepagina en selecteert u **[!UICONTROL Sign in]** boven aan de pagina. Meld u aan met uw **[!UICONTROL Personal Account]** of **[!UICONTROL Company or School Account]** .
 
 Nadat u zich hebt aangemeld, selecteert u **[!UICONTROL Create new credential]** om een nieuwe set referenties te maken voor toegang tot Experience Platform API&#39;s.
 
-![ creeer nieuwe geloofsbrieven om tot Experience Platform APIs toegang te hebben.](././images/api-authentication/create-credentials.gif)
+![&#x200B; creeer nieuwe geloofsbrieven om tot Experience Platform APIs toegang te hebben.](././images/api-authentication/create-credentials.gif)
 
 Gebruik vervolgens de keuzelijst om het venster met referenties te openen, een toegangstoken te genereren en uw API-sleutel en organisatie-id op te halen. Kopieer de referenties naar de blokken [**[!UICONTROL Try it]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) op de API-referentiepagina&#39;s om te gaan werken met Experience Platform API&#39;s.
 
-![ gebruik dropdown selecteur om geloofsbrieven te bekijken en een toegangstoken te produceren.](././images/api-authentication/view-copy-credentials.gif)
+![&#x200B; gebruik dropdown selecteur om geloofsbrieven te bekijken en een toegangstoken te produceren.](././images/api-authentication/view-copy-credentials.gif)
 
 >[!TIP]
 >
@@ -175,11 +175,11 @@ Gebruik vervolgens de keuzelijst om het venster met referenties te openen, een t
 
 >[!WARNING]
 >
->De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe integraties moeten worden gecreeerd gebruikend de [ Server-aan-Server authentificatiemethode ](#select-oauth-server-to-server). Adobe vereist ook dat u uw bestaande integratie aan de methode OAuth tegen 30 juni 2025 migreert opdat uw integratie blijft werken. Lees de volgende belangrijke documentatie:
+>De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe integraties moeten worden gecreeerd gebruikend de [&#x200B; Server-aan-Server authentificatiemethode &#x200B;](#select-oauth-server-to-server). Adobe vereist ook dat u uw bestaande integratie aan de methode OAuth tegen 30 juni 2025 migreert opdat uw integratie blijft werken. Lees de volgende belangrijke documentatie:
 > 
-> * [ gids van de Migratie voor uw toepassingen van JWT aan OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-> * [ gids van de Implementatie voor nieuwe en oude toepassingen met OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-> * [ Voordelen om de Server-aan-Server geloofsbrieven te gebruiken OAuth methode ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+> * [&#x200B; gids van de Migratie voor uw toepassingen van JWT aan OAuth &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+> * [&#x200B; gids van de Implementatie voor nieuwe en oude toepassingen met OAuth &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+> * [&#x200B; Voordelen om de Server-aan-Server geloofsbrieven te gebruiken OAuth methode &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ Vervangen gegevens weergeven
 
@@ -189,7 +189,7 @@ De volgende stap bestaat uit het genereren van een JSON Web Token (JWT) op basis
 >
 >In deze zelfstudie wordt beschreven hoe u een JWT kunt genereren in Developer Console. Deze generatiemethode mag echter alleen voor test- en evaluatiedoeleinden worden gebruikt.
 >
->Voor normaal gebruik moet de JWT automatisch worden gegenereerd. Voor meer informatie over hoe te om JWTs programmatically te produceren, zie de [ gids van de de authentificatieauthentificatie van de de dienstrekening ](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) op Adobe Developer.
+>Voor normaal gebruik moet de JWT automatisch worden gegenereerd. Voor meer informatie over hoe te om JWTs programmatically te produceren, zie de [&#x200B; gids van de de authentificatieauthentificatie van de de dienstrekening &#x200B;](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) op Adobe Developer.
 
 Selecteer **[!UICONTROL Service Account (JWT)]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Generate JWT]** .
 
@@ -221,9 +221,9 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `{API_KEY}` | `{API_KEY}` ([!UICONTROL Client ID]) die u in a [ vorige stap ](#api-ims-secret) terugwende. |
-| `{SECRET}` | Het cliëntgeheim dat u in a [ vorige stap ](#api-ims-secret) terughaalde. |
-| `{JWT}` | JWT die u in a [ vorige stap ](#jwt) produceerde. |
+| `{API_KEY}` | `{API_KEY}` ([!UICONTROL Client ID]) die u in a [&#x200B; vorige stap &#x200B;](#api-ims-secret) terugwende. |
+| `{SECRET}` | Het cliëntgeheim dat u in a [&#x200B; vorige stap &#x200B;](#api-ims-secret) terughaalde. |
+| `{JWT}` | JWT die u in a [&#x200B; vorige stap &#x200B;](#jwt) produceerde. |
 
 >[!NOTE]
 >
@@ -249,7 +249,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 ## Toegangsreferenties testen {#test-credentials}
 
-Nadat u alle drie vereiste gegevens hebt verzameld (toegangstoken, API-sleutel en organisatie-id), kunt u de volgende API-aanroep proberen te maken. Deze vraag maakt een lijst van alle standaard [!DNL Experience Data Model] (XDM) klassen beschikbaar aan uw organisatie. De invoer en voert de vraag in [ Postman ](#use-postman) uit.
+Nadat u alle drie vereiste gegevens hebt verzameld (toegangstoken, API-sleutel en organisatie-id), kunt u de volgende API-aanroep proberen te maken. Deze vraag maakt een lijst van alle standaard [!DNL Experience Data Model] (XDM) klassen beschikbaar aan uw organisatie. De invoer en voert de vraag in [&#x200B; Postman &#x200B;](#use-postman) uit.
 
 >[!BEGINSHADEBOX]
 
@@ -294,7 +294,7 @@ Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw ge
 
 ## Krijg de noodzakelijke op attributen-gebaseerde toegangsbeheertoestemmingen {#get-abac-permissions}
 
-Om tot verscheidene middelen binnen Experience Platform toegang te hebben of te wijzigen, moet u de aangewezen toegangsbeheertoestemmingen hebben. De beheerders van het systeem kunnen u de [ toestemmingen verlenen u ](/help/access-control/ui/permissions.md) nodig hebt. Krijg meer informatie in de sectie over [ het leiden API geloofsbrieven voor een rol ](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
+Om tot verscheidene middelen binnen Experience Platform toegang te hebben of te wijzigen, moet u de aangewezen toegangsbeheertoestemmingen hebben. De beheerders van het systeem kunnen u de [&#x200B; toestemmingen verlenen u &#x200B;](/help/access-control/ui/permissions.md) nodig hebt. Krijg meer informatie in de sectie over [&#x200B; het leiden API geloofsbrieven voor een rol &#x200B;](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
 
 Gedetailleerde informatie over hoe een systeembeheerder de vereiste machtigingen voor toegang tot Experience Platform-bronnen via de API kan verlenen, is ook beschikbaar in de onderstaande videozelfstudie:
 
@@ -302,7 +302,7 @@ Gedetailleerde informatie over hoe een systeembeheerder de vereiste machtigingen
 
 ## Postman gebruiken om API-aanroepen te verifiëren en te testen {#use-postman}
 
-[ Postman ](https://www.postman.com/) is een populair hulpmiddel dat ontwikkelaars toestaat om RESTful APIs te onderzoeken en te testen. Met Experience Platform Postman-verzamelingen en -omgevingen kunt u uw werk versnellen met Experience Platform API&#39;s. Lees meer over [ het gebruiken van Postman in Experience Platform ](/help/landing/postman.md) en het worden begonnen met inzamelingen en milieu&#39;s.
+[&#x200B; Postman &#x200B;](https://www.postman.com/) is een populair hulpmiddel dat ontwikkelaars toestaat om RESTful APIs te onderzoeken en te testen. Met Experience Platform Postman-verzamelingen en -omgevingen kunt u uw werk versnellen met Experience Platform API&#39;s. Lees meer over [&#x200B; het gebruiken van Postman in Experience Platform &#x200B;](/help/landing/postman.md) en het worden begonnen met inzamelingen en milieu&#39;s.
 
 Gedetailleerde informatie over het gebruik van Postman met Experience Platform-verzamelingen en -omgevingen is ook beschikbaar in de volgende videozelfstudies:
 
@@ -312,7 +312,7 @@ Gedetailleerde informatie over het gebruik van Postman met Experience Platform-v
 
 **Gebruik een inzameling van Postman om toegangstokens** te produceren
 
-Download de [ inzameling van Postman van de Dienst van Identity Management ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims?lang=nl) en bekijk de video hieronder om te leren hoe te om toegangstokens te produceren.
+Download de [&#x200B; inzameling van Postman van de Dienst van Identity Management &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims?lang=nl) en bekijk de video hieronder om te leren hoe te om toegangstokens te produceren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
@@ -334,27 +334,27 @@ Voordat u integratie op Adobe Developer Console kunt maken, moet uw account ontw
 
 ### Ontwikkelaars toevoegen aan productprofiel {#add-developers-to-product-profile}
 
-Navigeer aan [ Admin Console ](https://adminconsole.adobe.com/) en teken binnen met uw Adobe ID.
+Navigeer aan [&#x200B; Admin Console &#x200B;](https://adminconsole.adobe.com/) en teken binnen met uw Adobe ID.
 
 Selecteer **[!UICONTROL Products]** op de navigatiebalk en selecteer vervolgens **[!UICONTROL Adobe Experience Platform]** in de lijst met producten.
 
-![ de productpagina op Adobe Admin Console met het benadrukte product van Adobe Experience Platform.](././images/api-authentication/products.png)
+![&#x200B; de productpagina op Adobe Admin Console met het benadrukte product van Adobe Experience Platform.](././images/api-authentication/products.png)
 
 Selecteer op het tabblad **[!UICONTROL Product Profiles]** de optie **[!UICONTROL AEP-Default-All-Users]** . U kunt ook de zoekbalk gebruiken om het productprofiel te zoeken door de naam in te voeren.
 
-![ de pagina van productprofielen met de onderzoeksbar en AEP-gebrek-Alle-Gebruikers benadrukte product.](././images/api-authentication/select-product-profile.png)
+![&#x200B; de pagina van productprofielen met de onderzoeksbar en AEP-gebrek-Alle-Gebruikers benadrukte product.](././images/api-authentication/select-product-profile.png)
 
 Selecteer de tab **[!UICONTROL Developers]** en selecteer vervolgens **[!UICONTROL Add Developer]** .
 
-![ het lusje van ontwikkelaars wordt getoond met de Add benadrukte ontwikkelaarsoptie, ](././images/api-authentication/add-developer1.png)
+![&#x200B; het lusje van ontwikkelaars wordt getoond met de Add benadrukte ontwikkelaarsoptie, &#x200B;](././images/api-authentication/add-developer1.png)
 
 Het dialoogvenster **[!UICONTROL Add developers]** wordt weergegeven. Voer de naam **[!UICONTROL Email or username]** van de ontwikkelaar in. Een geldige [!UICONTROL Email or username] geeft de details van de ontwikkelaar weer. Selecteer **[!UICONTROL Save]**.
 
-![ Add ontwikkelaars dialoog met een binnen gevulde ontwikkelaarsinformatie en sparen benadrukte optie.](././images/api-authentication/add-developer-email.png)
+![&#x200B; Add ontwikkelaars dialoog met een binnen gevulde ontwikkelaarsinformatie en sparen benadrukte optie.](././images/api-authentication/add-developer-email.png)
 
 De ontwikkelaar is toegevoegd en wordt weergegeven op het tabblad **[!UICONTROL Developers]** .
 
-![ het lusje dat van ontwikkelaars de lijst van alle toegevoegde ontwikkelaars met de onlangs toegevoegde benadrukte ontwikkelaar toont.](././images/api-authentication/developer-added.png)
+![&#x200B; het lusje dat van ontwikkelaars de lijst van alle toegevoegde ontwikkelaars met de onlangs toegevoegde benadrukte ontwikkelaar toont.](././images/api-authentication/developer-added.png)
 
 ### API-referenties toewijzen aan een rol
 
@@ -362,7 +362,7 @@ De ontwikkelaar is toegevoegd en wordt weergegeven op het tabblad **[!UICONTROL 
 >
 > Alleen een systeembeheerder kan API&#39;s toewijzen aan rollen in de gebruikersinterface van Experience Platform.
 
-Als een systeembeheerder bewerkingen op Experience Platform API&#39;s wil gebruiken en uitvoeren, moet hij de API-referenties toevoegen naast de machtigingen die een rol heeft gegeven. Krijg meer informatie in de sectie over [ het leiden API geloofsbrieven voor een rol ](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
+Als een systeembeheerder bewerkingen op Experience Platform API&#39;s wil gebruiken en uitvoeren, moet hij de API-referenties toevoegen naast de machtigingen die een rol heeft gegeven. Krijg meer informatie in de sectie over [&#x200B; het leiden API geloofsbrieven voor een rol &#x200B;](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
 
 Een analyse van de hierboven beschreven stappen voor het toevoegen van ontwikkelaars aan productprofielen en het toewijzen van APIs aan rollen is ook beschikbaar in de videozelfstudie hieronder:
 
@@ -372,12 +372,12 @@ Een analyse van de hierboven beschreven stappen voor het toevoegen van ontwikkel
 
 Raadpleeg de aanvullende bronnen die hieronder zijn gekoppeld voor meer hulp bij het starten met Experience Platform API&#39;s
 
-* [ verifieer en toegang Experience Platform APIs ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=nl) videoleerprogramma&#39;s pagina
-* [ de Inzameling van Postman van de Dienst van Identity Management ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims?lang=nl) voor het produceren van toegangstokens
-* [ Experience Platform API Postman Collections ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
+* [&#x200B; verifieer en toegang Experience Platform APIs &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=nl) videoleerprogramma&#39;s pagina
+* [&#x200B; de Inzameling van Postman van de Dienst van Identity Management &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims?lang=nl) voor het produceren van toegangstokens
+* [&#x200B; Experience Platform API Postman Collections &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
 
 ## Volgende stappen {#next-steps}
 
-Door dit document te lezen, hebt u uw toegangsgegevens voor Experience Platform API&#39;s verzameld en getest. U kunt nu samen met de voorbeeld API vraag volgen die door de [ documentatie ](../landing/documentation/overview.md) wordt verstrekt.
+Door dit document te lezen, hebt u uw toegangsgegevens voor Experience Platform API&#39;s verzameld en getest. U kunt nu samen met de voorbeeld API vraag volgen die door de [&#x200B; documentatie &#x200B;](../landing/documentation/overview.md) wordt verstrekt.
 
 Naast de verificatiewaarden die u in deze zelfstudie hebt verzameld, vereisen veel Experience Platform API&#39;s ook een geldig `{SANDBOX_NAME}` dat als koptekst moet worden opgegeven. Zie het [sandboxoverzicht](../sandboxes/home.md) voor meer informatie.

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 [!UICONTROL External Source System Audit Details] is een standaardveldgroep van het Gegevensmodel van de Ervaring (XDM) die het gegevenstype &quot;Externe Attributen van de Controle van het Systeem van Source&quot;uitbreidt door naar zijn eigenschappen te verwijzen en contextafhankelijke meta-gegevens toe te voegen. Dit maakt gedetailleerde controle en flexibele gegevensintegratie van externe bronnen mogelijk.
 
-![ het schemadiagram van A van de Externe het gebiedsgroep van de Details van de Controle van het Systeem van Source.](../../images/field-groups/shared/external-source-system-audit-details.png)
+![&#x200B; het schemadiagram van A van de Externe het gebiedsgroep van de Details van de Controle van het Systeem van Source.](../../images/field-groups/shared/external-source-system-audit-details.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | -------------------------------------------------| ---------------------------------------- | --------- | --- |
@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.json)

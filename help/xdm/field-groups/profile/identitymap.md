@@ -14,13 +14,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [ de naamupdates van de gebiedsgroep ](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [&#x200B; de naamupdates van de gebiedsgroep &#x200B;](../name-updates.md) voor meer informatie.
 
-[!UICONTROL IdentityMap] is een standaardgroep van het schemagebied voor de [[!UICONTROL XDM ExperienceEvent] klasse ](../../classes/experienceevent.md) en een compatibele gebiedsgroep voor de [[!UICONTROL XDM Individual Profile] klasse ](../../classes/individual-profile.md). De veldgroep bevat één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
+[!UICONTROL IdentityMap] is een standaardgroep van het schemagebied voor de [[!UICONTROL XDM ExperienceEvent] klasse &#x200B;](../../classes/experienceevent.md) en een compatibele gebiedsgroep voor de [[!UICONTROL XDM Individual Profile] klasse &#x200B;](../../classes/individual-profile.md). De veldgroep bevat één kaartveld dat een set gebruikersidentiteiten bevat die door naamruimte worden vastgehouden.
 
-![ A diagram van de [!UICONTROL IdentityMap] groep van het schemagebied ](../../images/field-groups/identitymap.png)
+![&#x200B; A diagram van de [!UICONTROL IdentityMap] groep van het schemagebied &#x200B;](../../images/field-groups/identitymap.png)
 
-Zie de sectie over identiteitskaarten in de [ grondbeginselen van schemacompositie ](../../schema/composition.md#identityMap) voor meer informatie over hun gebruiksgeval, met inbegrip van hun voordelen en nadelen.
+Zie de sectie over identiteitskaarten in de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../../schema/composition.md#identityMap) voor meer informatie over hun gebruiksgeval, met inbegrip van hun voordelen en nadelen.
 
 **voorbeeld**
 
@@ -38,4 +38,4 @@ Zie de sectie over identiteitskaarten in de [ grondbeginselen van schemacomposit
 }
 ```
 
-Voor meer details op de gebiedsgroep, verwijs naar het [ volledige schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) in de openbare bewaarplaats XDM.
+Voor meer details op de gebiedsgroep, verwijs naar het [&#x200B; volledige schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) in de openbare bewaarplaats XDM.

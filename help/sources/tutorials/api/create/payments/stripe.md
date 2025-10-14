@@ -12,22 +12,22 @@ ht-degree: 0%
 
 # Betalingsgegevens van uw [!DNL Stripe] -account aan Experience Platform toevoegen met behulp van API&#39;s
 
-Lees het volgende leerprogramma leren hoe te om uw betalingsgegevens van [!DNL Stripe] aan Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees het volgende leerprogramma leren hoe te om uw betalingsgegevens van [!DNL Stripe] aan Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Verificatie
 
-Lees het [[!DNL Stripe]  overzicht ](../../../../connectors/payments/stripe.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
+Lees het [[!DNL Stripe]  overzicht &#x200B;](../../../../connectors/payments/stripe.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Verbinden [!DNL Stripe] met Experience Platform
 
@@ -79,7 +79,7 @@ curl -X POST \
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw basisverbinding. |
 | `connectionSpec.id` | De verbindings-ID van de bron. De verbindingsspecificatie-id voor [!DNL Stripe] is `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3` en deze id is hersteld. |
 | `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Experience Platform. |
-| `auth.params.accessToken` | Het toegangstoken van uw [!DNL Stripe] account. Lees de [[!DNL Stripe]  authentificatiegids ](../../../../connectors/payments/stripe.md#prerequisites) voor stappen op hoe te om uw toegangstoken terug te winnen. |
+| `auth.params.accessToken` | Het toegangstoken van uw [!DNL Stripe] account. Lees de [[!DNL Stripe]  authentificatiegids &#x200B;](../../../../connectors/payments/stripe.md#prerequisites) voor stappen op hoe te om uw toegangstoken terug te winnen. |
 
 **Reactie**
 
@@ -461,15 +461,15 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 Als u de brongegevens in Experience Platform wilt gebruiken, moet u een doelschema maken om de brongegevens naar wens te structureren. Het doelschema wordt dan gebruikt om een dataset van Experience Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren.
+Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Registratie API van het Schema &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren.
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](../../../../../xdm/api/schemas.md#create-a-schema).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [&#x200B; creërend een schema gebruikend API &#x200B;](../../../../../xdm/api/schemas.md#create-a-schema).
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
+Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Dienst API van de Catalogus uit te voeren &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](../../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [&#x200B; het creëren van een dataset gebruikend API &#x200B;](../../../../../catalog/api/create-dataset.md).
 
 ### Een doelverbinding maken {#target-connection}
 
@@ -521,7 +521,7 @@ curl -X POST \
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
 | `connectionSpec.id` | De id van de verbindingsspecificatie die correspondeert met data Lake. Deze vaste id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` . |
 | `data.format` | De indeling van de [!DNL Stripe] -gegevens die u wilt invoeren. |
-| `params.dataSetId` | De id van uw doelgegevensset. Deze identiteitskaart wordt geproduceerd door [ het creëren van een doeldataset ](#target-dataset). |
+| `params.dataSetId` | De id van uw doelgegevensset. Deze identiteitskaart wordt geproduceerd door [&#x200B; het creëren van een doeldataset &#x200B;](#target-dataset). |
 
 **Reactie**
 
@@ -536,7 +536,7 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 
 ### Een toewijzing maken {#mapping}
 
-Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een POST- verzoek aan [[!DNL Data Prep]  API ](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
+Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een POST- verzoek aan [[!DNL Data Prep]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
 
 **API formaat**
 
@@ -785,10 +785,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `xdmSchema` | De id van uw doel-XDM-schema. Deze identiteitskaart wordt geproduceerd door a [ doelXDM schema ](#target-schema) te creëren. |
+| `xdmSchema` | De id van uw doel-XDM-schema. Deze identiteitskaart wordt geproduceerd door a [&#x200B; doelXDM schema &#x200B;](#target-schema) te creëren. |
 | `destinationXdmPath` | Het XDM-veld waaraan het bronkenmerk wordt toegewezen. |
 | `sourceAttribute` | Het brongegevensveld dat wordt toegewezen. |
-| `identity` | Een booleaanse waarde die bepaalt of het gebied in [ Dienst van de Identiteit ](../../../../../identity-service/home.md) zal worden voortgeduurd. |
+| `identity` | Een booleaanse waarde die bepaalt of het gebied in [&#x200B; Dienst van de Identiteit &#x200B;](../../../../../identity-service/home.md) zal worden voortgeduurd. |
 | `version` | De toewijzingsversie die u gebruikt. |
 
 +++
@@ -869,11 +869,11 @@ curl -X POST \
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw gegevensstroom. |
 | `flowSpec.id` | De flow specification-id die is vereist om een gegevensstroom te maken. Deze vaste id is: `6499120c-0b15-42dc-936e-847ea3c24d72` . |
 | `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde is standaard ingesteld op `1.0` . |
-| `sourceConnectionIds` | [ bron verbindingsidentiteitskaart ](#source-connection) die in een vroegere stap wordt geproduceerd. |
-| `targetConnectionIds` | De [ identiteitskaart van de doelverbinding ](#target-connection) die in een vroegere stap wordt geproduceerd. |
+| `sourceConnectionIds` | [&#x200B; bron verbindingsidentiteitskaart &#x200B;](#source-connection) die in een vroegere stap wordt geproduceerd. |
+| `targetConnectionIds` | De [&#x200B; identiteitskaart van de doelverbinding &#x200B;](#target-connection) die in een vroegere stap wordt geproduceerd. |
 | `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Experience Platform. |
 | `transformations.name` | De naam die aan de transformatie is toegewezen. |
-| `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt geproduceerd. |
+| `transformations.params.mappingId` | [&#x200B; afbeelding identiteitskaart &#x200B;](#mapping) die in een vroegere stap wordt geproduceerd. |
 | `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde is standaard ingesteld op `0` . |
 | `scheduleParams.startTime` | De tijd waarop uw gegevensstroom zal beginnen. U moet de begintijdwaarde opgeven in de notatie van een Unix-tijdstempel. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. U kunt de innamefrequentie configureren naar:  <ul><li>**Eenmaal**: Plaats uw frequentie aan `once` om eenmalig te creëren. Configuraties voor interval en backfill zijn niet beschikbaar wanneer u een eenmalige gegevensstroom maakt. Standaard wordt de planningsfrequentie ingesteld op één keer.</li><li>**Minuut**: Plaats uw frequentie aan `minute` om uw gegevensstroom te plannen om gegevens op een per-minieme basis in te voeren.</li><li>**Uur**:Set uw frequentie aan `hour` om uw gegevensstroom te plannen om gegevens op een per-uurbasis in te voeren.</li><li>**Dag**: Plaats uw frequentie aan `day` om uw gegevensstroom te plannen om gegevens op een per-dagbasis in te voeren.</li><li>**Week**: Plaats uw frequentie aan `week` om uw gegevensstroom te plannen om gegevens op een per-weekbasis in te voeren.</li></ul> |
@@ -896,20 +896,20 @@ In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor volledige API voorbeelden, lees de gids op [ controlerend uw brongegevens gebruikend API ](../../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor volledige API voorbeelden, lees de gids op [&#x200B; controlerend uw brongegevens gebruikend API &#x200B;](../../monitor.md).
 
 ### Uw gegevensstroom bijwerken
 
-Werk de details van uw gegevensstroom, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen bij, door een PATCH- verzoek aan het /flows eindpunt van [!DNL Flow Service] API te doen terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` gegevens van uw gegevensstroom opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken bronnen dataflows gebruikend API ](../../update-dataflows.md).
+Werk de details van uw gegevensstroom, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen bij, door een PATCH- verzoek aan het /flows eindpunt van [!DNL Flow Service] API te doen terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` gegevens van uw gegevensstroom opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [&#x200B; het bijwerken bronnen dataflows gebruikend API &#x200B;](../../update-dataflows.md).
 
 ### Uw account bijwerken
 
-Werk de naam, beschrijving en gegevens van uw bronaccount bij door een PATCH-aanvraag uit te voeren naar de [!DNL Flow Service] API en uw basis-verbindings-id op te geven als een queryparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` naam van uw bronaccount opgeven in de header van `If-Match` . Voor volledige API voorbeelden, lees de gids bij [ het bijwerken van uw bronrekening gebruikend API ](../../update.md).
+Werk de naam, beschrijving en gegevens van uw bronaccount bij door een PATCH-aanvraag uit te voeren naar de [!DNL Flow Service] API en uw basis-verbindings-id op te geven als een queryparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` naam van uw bronaccount opgeven in de header van `If-Match` . Voor volledige API voorbeelden, lees de gids bij [&#x200B; het bijwerken van uw bronrekening gebruikend API &#x200B;](../../update.md).
 
 ### Uw gegevensstroom verwijderen
 
-Verwijder uw gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de id opgeeft van de gegevensstroom die u wilt verwijderen als onderdeel van de queryparameter. Voor volledige API voorbeelden, lees de gids op [ schrappend uw dataflows gebruikend API ](../../delete-dataflows.md).
+Verwijder uw gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de id opgeeft van de gegevensstroom die u wilt verwijderen als onderdeel van de queryparameter. Voor volledige API voorbeelden, lees de gids op [&#x200B; schrappend uw dataflows gebruikend API &#x200B;](../../delete-dataflows.md).
 
 ### Uw account verwijderen
 
-Verwijder uw account door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de basis-verbindings-id opgeeft van het account dat u wilt verwijderen. Voor volledige API voorbeelden, lees de gids bij [ het schrappen van uw bronrekening gebruikend API ](../../delete.md).
+Verwijder uw account door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de basis-verbindings-id opgeeft van het account dat u wilt verwijderen. Voor volledige API voorbeelden, lees de gids bij [&#x200B; het schrappen van uw bronrekening gebruikend API &#x200B;](../../delete.md).

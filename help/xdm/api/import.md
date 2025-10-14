@@ -13,14 +13,14 @@ ht-degree: 0%
 
 Met het `/rpc/import` -eindpunt in de [!DNL Schema Registry] API kunt u XDM-bronnen (Experience Data Model) maken op basis van gegenereerde exportladingen. De ladingen van de uitvoer kunnen van twee bronnen worden gecreeerd:
 
-* Het [`/rpc/export` eindpunt ](./export.md) leidt tot de uitvoerlading van bestaande middelen XDM, toestaand u om middelen tussen zandbakken te delen.
-* Het [`/rpc/csv2schema` eindpunt ](./csv-to-schema.md) leidt tot de uitvoerlading van malplaatjes CSV.
+* Het [`/rpc/export` eindpunt &#x200B;](./export.md) leidt tot de uitvoerlading van bestaande middelen XDM, toestaand u om middelen tussen zandbakken te delen.
+* Het [`/rpc/csv2schema` eindpunt &#x200B;](./csv-to-schema.md) leidt tot de uitvoerlading van malplaatjes CSV.
 
 Wanneer u een exportlading hebt gemaakt, kunt u het `/rpc/import` eindpunt gebruiken om de bron (en alle afhankelijke bron) in de sandbox van uw keuze te genereren.
 
 ## Aan de slag
 
-Het `/rpc/import` eindpunt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het `/rpc/import` eindpunt maakt deel uit van [[!DNL Schema Registry]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 Het `/rpc/import` eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC-eindpunten geen extra kopteksten zoals `Accept` of `Content-Type` en gebruiken ze geen `CONTAINER_ID` . In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals wordt getoond in de API-aanroepen hieronder.
 
@@ -36,7 +36,7 @@ POST /rpc/import
 
 **Verzoek**
 
-Het volgende verzoek neemt de nuttige lading die van een vraag aan het [`/rpc/export` eindpunt ](./export.md) is teruggekeerd om een gebiedsgroep (`Restaurant`) in een nieuwe organisatie en zandbak in te voeren, zoals die door `x-gw-ims-org-id` en `x-sandbox-name` kopballen, respectievelijk wordt bepaald.
+Het volgende verzoek neemt de nuttige lading die van een vraag aan het [`/rpc/export` eindpunt &#x200B;](./export.md) is teruggekeerd om een gebiedsgroep (`Restaurant`) in een nieuwe organisatie en zandbak in te voeren, zoals die door `x-gw-ims-org-id` en `x-sandbox-name` kopballen, respectievelijk wordt bepaald.
 
 ```shell
 curl -X POST \

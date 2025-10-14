@@ -12,21 +12,21 @@ ht-degree: 0%
 
 # Overzicht van de API voor streaming-doeltests
 
-Als deel van Destination SDK, verstrekt de Adobe ontwikkelaarshulpmiddelen om u in het vormen van en het testen van uw bestemming te helpen. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen. Voor informatie over hoe te om een malplaatje van de berichttransformatie tot stand te brengen, lees [ creeer en test een malplaatje van de berichttransformatie ](../../testing-api/streaming-destinations/create-template.md).
+Als deel van Destination SDK, verstrekt de Adobe ontwikkelaarshulpmiddelen om u in het vormen van en het testen van uw bestemming te helpen. Deze pagina beschrijft hoe te om uw bestemmingsconfiguratie te testen. Voor informatie over hoe te om een malplaatje van de berichttransformatie tot stand te brengen, lees [&#x200B; creeer en test een malplaatje van de berichttransformatie &#x200B;](../../testing-api/streaming-destinations/create-template.md).
 
 Om **te testen als uw bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming** te verifiëren, gebruik het *testende hulpmiddel van de Bestemming*. Met dit hulpmiddel, kunt u uw bestemmingsconfiguratie testen door berichten naar uw REST API eindpunt te verzenden.
 
-Illustreerde hieronder is hoe het testen van uw bestemming in het [ werkschema van de bestemmingsconfiguratie ](../../guides/configure-destination-instructions.md) in Destination SDK past:
+Illustreerde hieronder is hoe het testen van uw bestemming in het [&#x200B; werkschema van de bestemmingsconfiguratie &#x200B;](../../guides/configure-destination-instructions.md) in Destination SDK past:
 
-![ Grafisch van waar de bestemming testende stap in het werkschema van de bestemmingsconfiguratie ](../../assets/testing-api/test-destination-step.png) past
+![&#x200B; Grafisch van waar de bestemming testende stap in het werkschema van de bestemmingsconfiguratie &#x200B;](../../assets/testing-api/test-destination-step.png) past
 
 ## Gereedschap voor het testen van de bestemming - Doel en voorwaarden {#destination-testing-tool}
 
-Gebruik het bestemmings testende hulpmiddel om uw bestemmingsconfiguratie te testen door berichten naar het partnereindpunt te verzenden u in de [ serverconfiguratie ](../../authoring-api/destination-server/create-destination-server.md) verstrekte.
+Gebruik het bestemmings testende hulpmiddel om uw bestemmingsconfiguratie te testen door berichten naar het partnereindpunt te verzenden u in de [&#x200B; serverconfiguratie &#x200B;](../../authoring-api/destination-server/create-destination-server.md) verstrekte.
 
 Controleer voordat u het gereedschap gebruikt of:
-* Vorm uw bestemming door de stappen te volgen die in het [ werkschema van de bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) worden geschetst en
-* Vestig een verbinding aan uw bestemming, zoals gedetailleerd in [ hoe te om identiteitskaart van de bestemmingsinstantie ](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id) te krijgen.
+* Vorm uw bestemming door de stappen te volgen die in het [&#x200B; werkschema van de bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) worden geschetst en
+* Vestig een verbinding aan uw bestemming, zoals gedetailleerd in [&#x200B; hoe te om identiteitskaart van de bestemmingsinstantie &#x200B;](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id) te krijgen.
 
 Met dit hulpmiddel, na het vormen van uw bestemming, kunt u:
 * Test of uw bestemming correct wordt gevormd;
@@ -36,16 +36,16 @@ Met dit hulpmiddel, na het vormen van uw bestemming, kunt u:
 
 >[!NOTE]
 >
->Voor volledige API verwijzingsdocumentatie, lees [ het testen van de Bestemming API verrichtingen ](../../testing-api/streaming-destinations/destination-testing-api.md).
+>Voor volledige API verwijzingsdocumentatie, lees [&#x200B; het testen van de Bestemming API verrichtingen &#x200B;](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 U kunt vraag aan het bestemmings het testen API eindpunt met of zonder profielen op het verzoek toe te voegen.
 
-Als u geen profielen aan het verzoek toevoegt, zal de Adobe die intern voor u produceren en hen toevoegen aan het verzoek. Als u profielen wilt produceren om in dit verzoek te gebruiken, verwijs naar de [ Bron van de profielgeneratie API van de Steekproef verwijzing ](../../testing-api/streaming-destinations/sample-profile-generation-api.md). U moet profielen produceren die op het bronXDM schema, zoals aangetoond in de [ API verwijzing ](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema) worden gebaseerd. Merk op dat het bronschema het [ verenigingsschema ](../../../../profile/ui/union-schema.md) van de zandbak is die u gebruikt.
+Als u geen profielen aan het verzoek toevoegt, zal de Adobe die intern voor u produceren en hen toevoegen aan het verzoek. Als u profielen wilt produceren om in dit verzoek te gebruiken, verwijs naar de [&#x200B; Bron van de profielgeneratie API van de Steekproef verwijzing &#x200B;](../../testing-api/streaming-destinations/sample-profile-generation-api.md). U moet profielen produceren die op het bronXDM schema, zoals aangetoond in de [&#x200B; API verwijzing &#x200B;](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema) worden gebaseerd. Merk op dat het bronschema het [&#x200B; verenigingsschema &#x200B;](../../../../profile/ui/union-schema.md) van de zandbak is die u gebruikt.
 
 De reactie bevat het resultaat van de verwerking van het bestemmingsverzoek. Het verzoek omvat drie belangrijke onderdelen:
 * Het verzoek dat door Adobe voor de bestemming wordt geproduceerd.
 * De reactie die van uw bestemming wordt ontvangen.
-* De lijst van profielen die in het verzoek worden verzonden, of de profielen [ door u in het verzoek ](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles) werden toegevoegd, of door Adobe werden geproduceerd als [ het lichaam van het bestemmings testende verzoek leeg ](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles) was.
+* De lijst van profielen die in het verzoek worden verzonden, of de profielen [&#x200B; door u in het verzoek &#x200B;](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles) werden toegevoegd, of door Adobe werden geproduceerd als [&#x200B; het lichaam van het bestemmings testende verzoek leeg &#x200B;](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles) was.
 
 >[!NOTE]
 >
@@ -228,8 +228,8 @@ De inhoud van de parameter `results.httpCalls` is specifiek voor uw REST API.
 }
 ```
 
-Voor beschrijvingen van de verzoek en reactieparameters, verwijs naar [ het testen van de Bestemming API verrichtingen ](../../testing-api/streaming-destinations/destination-testing-api.md).
+Voor beschrijvingen van de verzoek en reactieparameters, verwijs naar [&#x200B; het testen van de Bestemming API verrichtingen &#x200B;](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 ## Volgende stappen
 
-Na het testen van uw bestemming en het bevestigen dat het correct wordt gevormd, gebruik [ bestemmings het publiceren API ](../../publishing-api/create-publishing-request.md) om uw configuratie aan Adobe voor overzicht voor te leggen.
+Na het testen van uw bestemming en het bevestigen dat het correct wordt gevormd, gebruik [&#x200B; bestemmings het publiceren API &#x200B;](../../publishing-api/create-publishing-request.md) om uw configuratie aan Adobe voor overzicht voor te leggen.

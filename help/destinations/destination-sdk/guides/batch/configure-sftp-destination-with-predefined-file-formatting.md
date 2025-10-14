@@ -13,19 +13,19 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Deze pagina beschrijft hoe te om Destination SDK te gebruiken om een bestemming van SFTP met vooraf bepaalde, standaard [ dossier het formatteren opties ](configure-file-formatting-options.md) en een douane [ dossier te vormen - noem configuratie ](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
+Deze pagina beschrijft hoe te om Destination SDK te gebruiken om een bestemming van SFTP met vooraf bepaalde, standaard [&#x200B; dossier het formatteren opties &#x200B;](configure-file-formatting-options.md) en een douane [&#x200B; dossier te vormen - noem configuratie &#x200B;](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 Deze pagina toont alle configuratieopties beschikbaar voor bestemmingen SFTP. U kunt de configuraties bewerken die in de onderstaande stappen worden weergegeven, of u kunt desgewenst bepaalde onderdelen van de configuraties verwijderen.
 
-Voor gedetailleerde beschrijvingen van de hieronder gebruikte parameters, zie [ configuratieopties in Doelen SDK ](../../functionality/configuration-options.md).
+Voor gedetailleerde beschrijvingen van de hieronder gebruikte parameters, zie [&#x200B; configuratieopties in Doelen SDK &#x200B;](../../functionality/configuration-options.md).
 
 ## Vereisten {#prerequisites}
 
-Alvorens aan de hieronder geschetste stappen vooruit te gaan, te lezen gelieve de [ Destination SDK begonnen ](../../getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke de authentificatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
+Alvorens aan de hieronder geschetste stappen vooruit te gaan, te lezen gelieve de [&#x200B; Destination SDK begonnen &#x200B;](../../getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke de authentificatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
 
 ## Stap 1: Een server- en bestandsconfiguratie maken {#create-server-file-configuration}
 
-Begin door het `/destination-server` eindpunt te gebruiken [ creeer een server en dossierconfiguratie ](../../authoring-api/destination-server/create-destination-server.md).
+Begin door het `/destination-server` eindpunt te gebruiken [&#x200B; creeer een server en dossierconfiguratie &#x200B;](../../authoring-api/destination-server/create-destination-server.md).
 
 **API formaat**
 
@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Verzoek**
 
 Het volgende verzoek leidt tot een nieuwe configuratie van de bestemmingsserver, die door de parameters wordt gevormd die in de lading worden verstrekt.
-De nuttige lading omvat hieronder een generische configuratie SFTP, met vooraf bepaalde, standaard [ CSV dossier het formatteren ](../../functionality/destination-server/file-formatting.md) configuratieparameters die de gebruikers in het Experience Platform UI kunnen bepalen.
+De nuttige lading omvat hieronder een generische configuratie SFTP, met vooraf bepaalde, standaard [&#x200B; CSV dossier het formatteren &#x200B;](../../functionality/destination-server/file-formatting.md) configuratieparameters die de gebruikers in het Experience Platform UI kunnen bepalen.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -129,7 +129,7 @@ Een succesvolle reactie keert de nieuwe configuratie van de bestemmingsserver, m
 
 Na het creëren van de bestemmingsserver en de dossier het formatteren configuratie in de vorige stap, kunt u het `/destinations` API eindpunt nu gebruiken om een bestemmingsconfiguratie tot stand te brengen.
 
-Om de serverconfiguratie in [ stap 1 ](#create-server-file-configuration) aan deze bestemmingsconfiguratie aan te sluiten, vervang de `destinationServerId` waarde in het API verzoek hieronder met de waarde die wordt verkregen wanneer het creëren van uw bestemmingsserver in [ stap 1 ](#create-server-file-configuration).
+Om de serverconfiguratie in [&#x200B; stap 1 &#x200B;](#create-server-file-configuration) aan deze bestemmingsconfiguratie aan te sluiten, vervang de `destinationServerId` waarde in het API verzoek hieronder met de waarde die wordt verkregen wanneer het creëren van uw bestemmingsserver in [&#x200B; stap 1 &#x200B;](#create-server-file-configuration).
 
 **API formaat**
 
@@ -253,9 +253,9 @@ Een succesvolle reactie keert de nieuwe bestemmingsconfiguratie, met inbegrip va
 
 Op basis van de bovenstaande configuraties wordt in de catalogus met Experience Platforms nu een nieuwe persoonlijke doelkaart weergegeven die u kunt gebruiken.
 
-![ opname die van het Scherm de pagina van de bestemmingscatalogus met een geselecteerde bestemmingskaart toont.](../../assets/guides/batch/destination-card.gif)
+![&#x200B; opname die van het Scherm de pagina van de bestemmingscatalogus met een geselecteerde bestemmingskaart toont.](../../assets/guides/batch/destination-card.gif)
 
-In de beelden en de opnamen hieronder, neem nota hoe de opties in het [ activeringswerkschema voor op dossier-gebaseerde bestemmingen ](/help/destinations/ui/activate-batch-profile-destinations.md) de opties aanpassen die u in de bestemmingsconfiguratie selecteerde.
+In de beelden en de opnamen hieronder, neem nota hoe de opties in het [&#x200B; activeringswerkschema voor op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) de opties aanpassen die u in de bestemmingsconfiguratie selecteerde.
 
 Wanneer u details over de bestemming invult, ziet u hoe de velden omringd zijn de aangepaste gegevensvelden die u instelt in de configuratie.
 
@@ -263,15 +263,15 @@ Wanneer u details over de bestemming invult, ziet u hoe de velden omringd zijn d
 >
 >De orde waarin u de gebieden van douanegegevens aan de bestemmingsconfiguratie toevoegt wordt niet weerspiegeld in UI. De aangepaste gegevensvelden worden altijd weergegeven in de volgorde die wordt weergegeven in de onderstaande schermopname.
 
-![ vul bestemmingsdetails ](../../assets/guides/batch/file-configuration-options.gif) in
+![&#x200B; vul bestemmingsdetails &#x200B;](../../assets/guides/batch/file-configuration-options.gif) in
 
 Wanneer u exportintervallen wilt plannen, ziet u hoe de velden die u opgeeft, de velden zijn die u instelt in de `batchConfig` -configuratie.
-![ de uitvoer die opties plannen ](../../assets/guides/batch/file-export-scheduling.png)
+![&#x200B; de uitvoer die opties plannen &#x200B;](../../assets/guides/batch/file-export-scheduling.png)
 
 Wanneer u de opties voor de configuratie van bestandsnamen weergeeft, ziet u hoe de weergegeven velden de `filenameConfig` -opties vertegenwoordigen die u instelt in de configuratie.
-![ filename configuratieopties ](../../assets/guides/batch/file-naming-options.gif)
+![&#x200B; filename configuratieopties &#x200B;](../../assets/guides/batch/file-naming-options.gif)
 
-Als u om het even welke hierboven vermelde gebieden wilt aanpassen, herhaal [ stappen één ](#create-server-file-configuration) en [ twee ](#create-destination-configuration) om de configuraties volgens uw behoeften te wijzigen.
+Als u om het even welke hierboven vermelde gebieden wilt aanpassen, herhaal [&#x200B; stappen één &#x200B;](#create-server-file-configuration) en [&#x200B; twee &#x200B;](#create-destination-configuration) om de configuraties volgens uw behoeften te wijzigen.
 
 ## Stap 4: (Optioneel) Publish uw bestemming {#publish-destination}
 
@@ -279,7 +279,7 @@ Als u om het even welke hierboven vermelde gebieden wilt aanpassen, herhaal [ st
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Na het vormen van uw bestemming, gebruik [ bestemmings het publiceren API ](../../publishing-api/create-publishing-request.md) om uw configuratie voor overzicht voor te leggen aan Adobe.
+Na het vormen van uw bestemming, gebruik [&#x200B; bestemmings het publiceren API &#x200B;](../../publishing-api/create-publishing-request.md) om uw configuratie voor overzicht voor te leggen aan Adobe.
 
 ## Stap 5: (Optioneel) Documenteer uw bestemming {#document-destination}
 
@@ -287,8 +287,8 @@ Na het vormen van uw bestemming, gebruik [ bestemmings het publiceren API ](../.
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creërend a [ geproduceerde integratie ](../../overview.md#productized-custom-integrations) bent, gebruik het [ zelfbedienings documentatieproces ](../../docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in de [ catalogus van de bestemmingen van het Experience Platform ](../../../catalog/overview.md) tot stand te brengen.
+Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creërend a [&#x200B; geproduceerde integratie &#x200B;](../../overview.md#productized-custom-integrations) bent, gebruik het [&#x200B; zelfbedienings documentatieproces &#x200B;](../../docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in de [&#x200B; catalogus van de bestemmingen van het Experience Platform &#x200B;](../../../catalog/overview.md) tot stand te brengen.
 
 ## Volgende stappen {#next-steps}
 
-Door dit artikel te lezen, weet u nu hoe te om een bestemming van douaneSFTP te schrijven door Destination SDK te gebruiken. Daarna, kan uw team het [ activeringswerkschema voor op dossier-gebaseerde bestemmingen ](../../../ui/activate-batch-profile-destinations.md) gebruiken om gegevens naar de bestemming uit te voeren.
+Door dit artikel te lezen, weet u nu hoe te om een bestemming van douaneSFTP te schrijven door Destination SDK te gebruiken. Daarna, kan uw team het [&#x200B; activeringswerkschema voor op dossier-gebaseerde bestemmingen &#x200B;](../../../ui/activate-batch-profile-destinations.md) gebruiken om gegevens naar de bestemming uit te voeren.

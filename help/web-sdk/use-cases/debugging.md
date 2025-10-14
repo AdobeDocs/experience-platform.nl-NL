@@ -52,6 +52,6 @@ Deze methode is alleen van toepassing op uw lokale computer, zodat u foutopspori
 
 Het Adobe Experience Platform Debugger is een krachtig hulpmiddel dat uw Web-pagina&#39;s onderzoekt en u helpt uw implementatie van de producten van het Experience Cloud zuiveren. U kunt het zuiveren van het configuratielusje van de sectie van SDK van het Web van AEP toelaten.
 
-![ laat debugger ](../assets/enable-debugging.png) toe
+![&#x200B; laat debugger &#x200B;](../assets/enable-debugging.png) toe
 
-Zie [ overzicht van het Adobe Experience Platform Debugger ](/help/debugger/home.md) voor meer informatie.
+Zie [&#x200B; overzicht van het Adobe Experience Platform Debugger &#x200B;](/help/debugger/home.md) voor meer informatie.

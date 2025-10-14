@@ -57,7 +57,7 @@ Voor meer informatie over dashboards, met inbegrip van hoe u toegangsrechten ver
 | Functie | Beschrijving |
 | --- | --- |
 | [Verbeterde rapportagenauwkeurigheid voor streamingbestemmingen](../../dataflows/ui/monitor-destinations.md) | Vanaf maart 2025 brengt Adobe een update uit om de rapportagenauwkeurigheid voor streamingbestemmingen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de rapportage van de bestemmingsplatforms. <br> Vóór deze update werden alle activeringspogingen in **[!UICONTROL Identities failed]** opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal. <br> Deze verbetering geldt voor alle streamingbestemmingen. <br> Na deze verbetering kunnen gebruikers van streamingbestemmingen een daling in hun **[!UICONTROL Identities failed]**-aantal verwachten. |
-| [Ondersteuning voor het exporteren van kaartvelden voor ondernemings- en Edge-bestemmingen](/help/destinations/ui/export-arrays-maps-objects.md) | Wanneer het uitvoeren van gegevens naar de [ Kinesis van Amazon ](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [ HTTP API ](/help/destinations/catalog/streaming/http-destination.md), en [ Azure ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) bestemmingen van de Gebeurtenis van de Gebeurtenis, kunt u kaart-type gebieden voor uitvoer in de afbeeldingsstap van het activeringswerkschema nu selecteren. <br> ![Exporteer een kaartveld naar de ondernemingsbestemming.](../2025/assets/march/export-map.png "Exporteer kaartveld naar ondernemingsbestemming."){width="250" align="center" zoomable="yes"} |
+| [Ondersteuning voor het exporteren van kaartvelden voor ondernemings- en Edge-bestemmingen](/help/destinations/ui/export-arrays-maps-objects.md) | Wanneer het uitvoeren van gegevens naar de [&#x200B; Kinesis van Amazon &#x200B;](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [&#x200B; HTTP API &#x200B;](/help/destinations/catalog/streaming/http-destination.md), en [&#x200B; Azure &#x200B;](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) bestemmingen van de Gebeurtenis van de Gebeurtenis, kunt u kaart-type gebieden voor uitvoer in de afbeeldingsstap van het activeringswerkschema nu selecteren. <br> ![Exporteer een kaartveld naar de ondernemingsbestemming.](../2025/assets/march/export-map.png "Exporteer kaartveld naar ondernemingsbestemming."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destina
 
 ## Samenstelling van Federated-doelgroep {#federated-audience-composition}
 
-Voor informatie over de recentste updates voor Samenstelling van Federated-doelgroepen, raadpleegt u hier de [ specifieke aanvullende informatie](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes).
+Voor informatie over de recentste updates voor Samenstelling van Federated-doelgroepen, raadpleegt u hier de [&#x200B; specifieke aanvullende informatie](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes).
 
 ## Segmentatieservice {#segmentation-service}
 

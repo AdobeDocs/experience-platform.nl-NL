@@ -18,16 +18,16 @@ Afhankelijk van het soort middel in kwestie, worden sommige verhoudingen vereist
 Ongeacht of ze verplicht of optioneel zijn, worden relaties automatisch door het systeem tot stand gebracht wanneer relevante bronnen worden gemaakt, of ze moeten handmatig worden gemaakt. In het geval van het manueel creëren van verhoudingen, zijn er twee mogelijke methodes afhankelijk van de betrokken bron:
 
 * [Maken op basis van lading](#payload)
-* [ creeert door URL ](#url) (voor slechts bibliotheken)
+* [&#x200B; creeert door URL &#x200B;](#url) (voor slechts bibliotheken)
 
-Verwijs naar de sectie over [ relatievereisten ](#requirements) voor een lijst van de compatibele verhoudingen voor elk middeltype, en de methodes die worden vereist om die verhoudingen te vestigen waar toepasselijk.
+Verwijs naar de sectie over [&#x200B; relatievereisten &#x200B;](#requirements) voor een lijst van de compatibele verhoudingen voor elk middeltype, en de methodes die worden vereist om die verhoudingen te vestigen waar toepasselijk.
 
 ## Een relatie maken op basis van een payload {#payload}
 
 Sommige verhoudingen moeten manueel worden gevestigd wanneer u aanvankelijk een middel creeert. Hiervoor moet u een `relationship` -object opgeven in de payload van de aanvraag wanneer u de bovenliggende bron maakt. Voorbeelden van deze relaties zijn:
 
-* [ Creërend een gegevenselement ](../endpoints/data-elements.md#create) met de vereiste uitbreidingen
-* [ Creërend een milieu ](../endpoints/environments.md#create) met de vereiste gastheerverhouding
+* [&#x200B; Creërend een gegevenselement &#x200B;](../endpoints/data-elements.md#create) met de vereiste uitbreidingen
+* [&#x200B; Creërend een milieu &#x200B;](../endpoints/environments.md#create) met de vereiste gastheerverhouding
 
 **API formaat**
 
@@ -84,7 +84,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `relationships` | Een object dat moet worden opgegeven wanneer u relaties via een payload maakt. Elke sleutel in dit object vertegenwoordigt een specifiek relatietype. In het bovenstaande voorbeeld worden `extension` - en `rules` -relaties tot stand gebracht, die specifiek zijn voor `rule_components` . Voor meer informatie over compatibele relatietypen voor verschillende middelen, zie de sectie over [ relatievereisten door middel ](#relationship-requirements-by-resource). |
+| `relationships` | Een object dat moet worden opgegeven wanneer u relaties via een payload maakt. Elke sleutel in dit object vertegenwoordigt een specifiek relatietype. In het bovenstaande voorbeeld worden `extension` - en `rules` -relaties tot stand gebracht, die specifiek zijn voor `rule_components` . Voor meer informatie over compatibele relatietypen voor verschillende middelen, zie de sectie over [&#x200B; relatievereisten door middel &#x200B;](#relationship-requirements-by-resource). |
 | `data` | Elk relatietype dat onder het `relationship` -object wordt opgegeven, moet een `data` -eigenschap bevatten, die verwijst naar de `id` en `type` van de bron waarmee een relatie wordt ingesteld. U kunt een relatie maken met meerdere bronnen van hetzelfde type door de eigenschap `data` op te maken als een array van objecten, waarbij elk object de `id` en `type` van een toepasselijke bron bevat. |
 | `id` | De unieke id van een bron. Elke `id` moet vergezeld gaan van een eigenschap `type` sibling die het type van de bron in kwestie aangeeft. |
 | `type` | Het type resource waarnaar wordt verwezen door een verwant `id` veld. Tot de toegestane waarden behoren `data_elements`, `rules`, `extensions` en `environments` . |

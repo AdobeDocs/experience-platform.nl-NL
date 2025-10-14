@@ -21,7 +21,7 @@ Gegevenstypen worden op dezelfde manier als letterlijke basisvelden gebruikt als
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met gegevenstypen ophalen {#list}
 
@@ -29,7 +29,7 @@ U kunt alle gegevenstypen weergeven onder de container `global` of `tenant` door
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [&#x200B; vraagparameters &#x200B;](./appendix.md#query) in het bijlage document voor meer informatie.
 
 **API formaat**
 
@@ -40,7 +40,7 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CONTAINER_ID}` | De container waarvan u gegevenstypen wilt ophalen: `global` voor gegevenstypen die zijn gemaakt met een Adobe of `tenant` voor gegevenstypen die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [&#x200B; bijlage document &#x200B;](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
@@ -239,7 +239,7 @@ POST /tenant/datatypes
 
 In tegenstelling tot veldgroepen vereist het definiëren van een gegevenstype niet dat `meta:extends` - of `meta:intendedToExtend` -velden zijn vereist. Velden hoeven ook niet te zijn genest om conflicten te voorkomen.
 
-Wanneer u de veldstructuur van het gegevenstype zelf definieert, kunt u primitieve typen gebruiken (zoals `string` of `object` ) of kunt u naar andere bestaande gegevenstypen verwijzen via `$ref` -kenmerken. Zie de gids op [ bepalend douaneXDM gebieden in API ](../tutorials/custom-fields-api.md) voor gedetailleerde begeleiding op het verwachte formaat voor verschillende XDM gebiedstypes.
+Wanneer u de veldstructuur van het gegevenstype zelf definieert, kunt u primitieve typen gebruiken (zoals `string` of `object` ) of kunt u naar andere bestaande gegevenstypen verwijzen via `$ref` -kenmerken. Zie de gids op [&#x200B; bepalend douaneXDM gebieden in API &#x200B;](../tutorials/custom-fields-api.md) voor gedetailleerde begeleiding op het verwachte formaat voor verschillende XDM gebiedstypes.
 
 Met de volgende aanvraag wordt een gegevenstype &quot;Property Construction&quot; gemaakt met subeigenschappen `yearBuilt` , `propertyType` en `location` :
 
@@ -353,15 +353,15 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Het uitvoeren van een verzoek van de GET aan [ lijst alle gegevenstypes ](#list) in de huurderscontainer zou nu het gegevenstype van de Details van het Bezit omvatten, of u kunt [ een raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe gegevenstype direct te bekijken.
+Het uitvoeren van een verzoek van de GET aan [&#x200B; lijst alle gegevenstypes &#x200B;](#list) in de huurderscontainer zou nu het gegevenstype van de Details van het Bezit omvatten, of u kunt [&#x200B; een raadpleging (GET) verzoek &#x200B;](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe gegevenstype direct te bekijken.
 
 ## Een gegevenstype bijwerken {#put}
 
-U kunt een volledig gegevenstype door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gegevenstype door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuw gegevenstype ](#create) in een verzoek van de POST.
+U kunt een volledig gegevenstype door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gegevenstype door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [&#x200B; creërend een nieuw gegevenstype &#x200B;](#create) in een verzoek van de POST.
 
 >[!NOTE]
 >
->Als u slechts een deel van een gegevenstype wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [ het bijwerken van een gedeelte van een gegevenstype ](#patch).
+>Als u slechts een deel van een gegevenstype wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [&#x200B; het bijwerken van een gedeelte van een gegevenstype &#x200B;](#patch).
 
 **API formaat**
 
@@ -488,11 +488,11 @@ Een geslaagde reactie retourneert de details van het bijgewerkte gegevenstype.
 
 ## Een gedeelte van een gegevenstype bijwerken {#patch}
 
-U kunt een gedeelte van een gegevenstype bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
+U kunt een gedeelte van een gegevenstype bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [&#x200B; API fundamentals gids &#x200B;](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een gegevenstype gebruikend een verrichting van de PUT ](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [&#x200B; het vervangen van een gegevenstype gebruikend een verrichting van de PUT &#x200B;](#put).
 
 **API formaat**
 
@@ -660,4 +660,4 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de schrapping bevestigen door het verzoek van de a [ raadpleging (GET) ](#lookup) aan het gegevenstype te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat het gegevenstype is verwijderd uit de schemaregistratie.
+U kunt de schrapping bevestigen door het verzoek van de a [&#x200B; raadpleging (GET) &#x200B;](#lookup) aan het gegevenstype te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat het gegevenstype is verwijderd uit de schemaregistratie.

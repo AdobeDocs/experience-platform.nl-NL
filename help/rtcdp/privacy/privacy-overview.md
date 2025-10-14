@@ -19,7 +19,7 @@ De meeste [!DNL Real-Time CDP] -mogelijkheden worden aangestuurd door Adobe Expe
 
 ## Toegang tot en verwijderen van verzoeken van klanten respecteren
 
-Wettelijke privacyregels zoals de [!DNL General Data Protection Regulation] (GDPR) en de [!DNL California Consumer Privacy Act] (CCPA) geven klanten het recht om toegang te vragen tot of te verwijderen van de persoonsgegevens die u van hen verzamelt. Aangezien [!DNL Real-Time CDP] gebruikmaakt van [!DNL Experience Platform] -mogelijkheden voor gegevensverzameling en -opslag, moeten verzoeken van klanten om toegang tot en verwijdering van hun persoonlijke gegevens binnen [!DNL Experience Platform] worden beheerd. Zie het overzicht op [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md) voor meer informatie.
+Wettelijke privacyregels zoals de [!DNL General Data Protection Regulation] (GDPR) en de [!DNL California Consumer Privacy Act] (CCPA) geven klanten het recht om toegang te vragen tot of te verwijderen van de persoonsgegevens die u van hen verzamelt. Aangezien [!DNL Real-Time CDP] gebruikmaakt van [!DNL Experience Platform] -mogelijkheden voor gegevensverzameling en -opslag, moeten verzoeken van klanten om toegang tot en verwijdering van hun persoonlijke gegevens binnen [!DNL Experience Platform] worden beheerd. Zie het overzicht op [&#x200B; Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md) voor meer informatie.
 
 >[!IMPORTANT]
 >
@@ -29,13 +29,13 @@ Wettelijke privacyregels zoals de [!DNL General Data Protection Regulation] (GDP
 
 Met [!DNL Real-Time CDP] kunnen klanten ervoor kiezen hun persoonlijke gegevens niet op te nemen in gevallen waarin segmentatie wordt gebruikt. De voorkeuren voor de optie-uit van klanten worden vastgelegd en opgeslagen door [!DNL Real-Time Customer Profile] en kunnen worden afgedwongen door gebruikers uit te sluiten die met behulp van de Booleaanse logica (&quot;AND NOT&quot;) in de segmentvoorspelling hebben gekozen voor een publiek.
 
-Zie het document op [ het ontvangen opt-out verzoeken ](../../segmentation/tutorials/consents.md) in de documentatie van de Dienst van de Segmentatie van Adobe Experience Platform voor meer informatie.
+Zie het document op [&#x200B; het ontvangen opt-out verzoeken &#x200B;](../../segmentation/tutorials/consents.md) in de documentatie van de Dienst van de Segmentatie van Adobe Experience Platform voor meer informatie.
 
 ## IAB TCF 2.0-ondersteuning
 
-[!DNL Real-Time CDP] wordt voortgebouwd op Adobe Experience Platform, die deel van de geregistreerde [ verkoperslijst ](https://iabeurope.eu/vendor-list-tcf/) voor [!DNL Transparency & Consent Framework (TCF)] uitmaakt, zoals die door [!DNL Interactive Advertising Bureau (IAB)] wordt geschetst. In overeenstemming met de TCF 2.0-vereisten, kunt u met Experience Platform gedetailleerde gegevens over toestemming van klanten verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze gegevens over toestemming kunnen vervolgens worden meegenomen in de vraag of bepaalde profielen worden opgenomen in geëxporteerde soorten publiek, afhankelijk van het geval waarin ze worden gebruikt.
+[!DNL Real-Time CDP] wordt voortgebouwd op Adobe Experience Platform, die deel van de geregistreerde [&#x200B; verkoperslijst &#x200B;](https://iabeurope.eu/vendor-list-tcf/) voor [!DNL Transparency & Consent Framework (TCF)] uitmaakt, zoals die door [!DNL Interactive Advertising Bureau (IAB)] wordt geschetst. In overeenstemming met de TCF 2.0-vereisten, kunt u met Experience Platform gedetailleerde gegevens over toestemming van klanten verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze gegevens over toestemming kunnen vervolgens worden meegenomen in de vraag of bepaalde profielen worden opgenomen in geëxporteerde soorten publiek, afhankelijk van het geval waarin ze worden gebruikt.
 
-Zie het overzicht op [ IAB TCF 2.0 steun in Experience Platform ](../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie.
+Zie het overzicht op [&#x200B; IAB TCF 2.0 steun in Experience Platform &#x200B;](../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie.
 
 ## Volgende stappen
 

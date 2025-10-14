@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 In de context van de markeringen van de gegevensinzameling, is een actie iets dat wordt uitgevoerd nadat een regelgebeurtenis is voorgekomen en alle voorwaarden evaluatie hebben overgegaan.
 
@@ -23,13 +23,13 @@ In dit document wordt beschreven hoe u actietypen voor een webextensie in Adobe 
 
 >[!IMPORTANT]
 >
->In dit document worden actietypen voor webextensies besproken. Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ actietypen voor randuitbreidingen ](../edge/action-types.md).
+>In dit document worden actietypen voor webextensies besproken. Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [&#x200B; actietypen voor randuitbreidingen &#x200B;](../edge/action-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [&#x200B; het formatteren van de bibliotheekmodule &#x200B;](./format.md) alvorens aan deze gids terug te keren.
 
 Handelingstypen bestaan doorgaans uit:
 
-1. A [ mening ](./views.md) getoond binnen het Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de actie te wijzigen.
+1. A [&#x200B; mening &#x200B;](./views.md) getoond binnen het Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de actie te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en een actie uit te voeren.
 
 ```js

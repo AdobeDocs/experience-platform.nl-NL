@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!UICONTROL Codeable Concept] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een verwijzing van één middel aan een andere beschrijft. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ Codeable Concept gegevenstype structuur ](../../../images/healthcare/data-types/codeable-concept.png)
+![&#x200B; Codeable Concept gegevenstype structuur &#x200B;](../../../images/healthcare/data-types/codeable-concept.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -25,5 +25,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/codeablereference.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/codeableconcept.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/codeablereference.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/codeableconcept.schema.json)

@@ -12,22 +12,22 @@ ht-degree: 0%
 
 # Ontdek uw mappen voor cloudopslag met de API van [!DNL Flow Service]
 
-Deze zelfstudie bevat stappen voor het verkennen en voorvertonen van de structuur en inhoud van uw cloudopslag met de [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) -API.
+Deze zelfstudie bevat stappen voor het verkennen en voorvertonen van de structuur en inhoud van uw cloudopslag met de [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) -API.
 
 >[!NOTE]
 >
->Als u uw cloudopslag wilt verkennen, moet u al beschikken over een geldige basis-verbindings-id voor een bron voor cloudopslag. Als u dit identiteitskaart niet hebt, dan zie het [ overzicht van bronnen ](../../../home.md#cloud-storage) voor een lijst van de bronnen van de wolkenopslag die u een basisverbinding kunt tot stand brengen met.
+>Als u uw cloudopslag wilt verkennen, moet u al beschikken over een geldige basis-verbindings-id voor een bron voor cloudopslag. Als u dit identiteitskaart niet hebt, dan zie het [&#x200B; overzicht van bronnen &#x200B;](../../../home.md#cloud-storage) voor een lijst van de bronnen van de wolkenopslag die u een basisverbinding kunt tot stand brengen met.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../landing/api-guide.md).
 
 ## Ontdek uw mappen voor cloudopslag
 
@@ -114,7 +114,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}
 | `{BASE_CONNECTION_ID}` | De verbindings-id van de bronaansluiting voor de cloud. |
 | `{FILE_PATH}` | Het pad naar het bestand dat u wilt inspecteren. |
 | `{FILE_TYPE}` | Het type bestand. Tot de ondersteunde bestandstypen behoren:<ul><li><code> DELIMITED</code>: door scheidingstekens gescheiden waarde. DSV-bestanden moeten door komma&#39;s van elkaar worden gescheiden.</li><li><code> JSON</code>: JavaScript Object Notation. JSON-bestanden moeten XDM-compatibel zijn</li><li><code> PARQUET</code>: Apache Parquet. Parketbestanden moeten XDM-compatibel zijn.</li></ul> |
-| `{QUERY_PARAMS}` | Optionele queryparameters die kunnen worden gebruikt om resultaten te filteren. Zie de sectie over [ vraagparameters ](#query) voor meer informatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters die kunnen worden gebruikt om resultaten te filteren. Zie de sectie over [&#x200B; vraagparameters &#x200B;](#query) voor meer informatie. |
 
 **Verzoek**
 
@@ -158,7 +158,7 @@ Een succesvol antwoord geeft de structuur van het gevraagde dossier met inbegrip
 
 ## Query-parameters gebruiken {#query}
 
-[[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) steunt het gebruik van vraagparameters aan voorproef en inspecteer verschillende dossiertypes.
+[[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) steunt het gebruik van vraagparameters aan voorproef en inspecteer verschillende dossiertypes.
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
@@ -168,4 +168,4 @@ Een succesvol antwoord geeft de structuur van het gevraagde dossier met inbegrip
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw cloudopslagsysteem verkend, het pad gevonden van het bestand dat u wilt introduceren in [!DNL Experience Platform] en de structuur ervan bekeken. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw wolkenopslag verzamelen en het brengen in Experience Platform ](../collect/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u uw cloudopslagsysteem verkend, het pad gevonden van het bestand dat u wilt introduceren in [!DNL Experience Platform] en de structuur ervan bekeken. U kunt deze informatie in het volgende leerprogramma gebruiken [&#x200B; gegevens van uw wolkenopslag verzamelen en het brengen in Experience Platform &#x200B;](../collect/cloud-storage.md).

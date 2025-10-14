@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!UICONTROL Repeat] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een reeks regels verstrekt die beschrijven wanneer een gebeurtenis gepland is. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ herhalen gegevenstypestructuur ](../../../images/healthcare/data-types/reference.png)
+![&#x200B; herhalen gegevenstypestructuur &#x200B;](../../../images/healthcare/data-types/reference.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -40,5 +40,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/repeat.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/repeat.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/repeat.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/repeat.schema.json)

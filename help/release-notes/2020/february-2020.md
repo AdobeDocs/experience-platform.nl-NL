@@ -40,4 +40,4 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 * Geen
 
-Voor meer informatie over bronnen, zie het [ overzicht van bronnen ](../../sources/home.md).
+Voor meer informatie over bronnen, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

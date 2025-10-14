@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `documentUnloading`
 
-Met de eigenschap `documentUnloading` kunt u de JavaScript-methode [`sendBeacon` ](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) gebruiken om gegevens naar de Adobe te verzenden. Als een typisch verzoek te lang duurt, kan browser het verzoek annuleren. U kunt de SDK van het Web vertellen om `sendBeacon` te gebruiken zodat het verzoek op de achtergrond loopt nadat u vanaf de pagina navigeert. Schakel deze eigenschap in om te voorkomen dat gegevensaanvragen door de browser worden geannuleerd wanneer ze worden verwijderd.
+Met de eigenschap `documentUnloading` kunt u de JavaScript-methode [`sendBeacon` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) gebruiken om gegevens naar de Adobe te verzenden. Als een typisch verzoek te lang duurt, kan browser het verzoek annuleren. U kunt de SDK van het Web vertellen om `sendBeacon` te gebruiken zodat het verzoek op de achtergrond loopt nadat u vanaf de pagina navigeert. Schakel deze eigenschap in om te voorkomen dat gegevensaanvragen door de browser worden geannuleerd wanneer ze worden verwijderd.
 
 In verschillende browsers geldt een limiet van 64 kB voor de hoeveelheid gegevens die tegelijk met `sendBeacon` kan worden verzonden. Als browser de gebeurtenis verwerpt omdat de lading te groot is, valt SDK van het Web terug naar het gebruiken van zijn normale vervoermethode.
 
@@ -19,7 +19,7 @@ In verschillende browsers geldt een limiet van 64 kB voor de hoeveelheid gegeven
 
 Schakel het selectievakje **[!UICONTROL Document will unload]** in binnen de handelingen van een labelregel.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.

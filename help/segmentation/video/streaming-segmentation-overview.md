@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # Segmentering streamen in de gebruikersinterface van Experience Platform
 
-De volgende video is bedoeld om uw begrip van het stromen segmentatie te steunen. Hierin wordt een voorbeeld van een klantervaring weergegeven, gevolgd door een snelle rondleiding van de belangrijkste functies in de [!DNL Platform] -interface. Meer over het stromen segmentatie leren en hoe te om segmentatie in UI te stromen, te lezen gelieve de [ het stromen segmentatie UI gids ](../methods/streaming-segmentation.md).
+De volgende video is bedoeld om uw begrip van het stromen segmentatie te steunen. Hierin wordt een voorbeeld van een klantervaring weergegeven, gevolgd door een snelle rondleiding van de belangrijkste functies in de [!DNL Platform] -interface. Meer over het stromen segmentatie leren en hoe te om segmentatie in UI te stromen, te lezen gelieve de [&#x200B; het stromen segmentatie UI gids &#x200B;](../methods/streaming-segmentation.md).
 
-Als u in het stromen van segmentatie gebruikend de Segmentatie API geinteresseerd bent, te lezen gelieve de [ het stromen segmentatie API gids ](../methods/streaming-segmentation.md).
+Als u in het stromen van segmentatie gebruikend de Segmentatie API geinteresseerd bent, te lezen gelieve de [&#x200B; het stromen segmentatie API gids &#x200B;](../methods/streaming-segmentation.md).
 
 >[!NOTE]
 >
->De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [ het stromen segmentatie UI gids ](../methods/streaming-segmentation.md).
+>De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [&#x200B; het stromen segmentatie UI gids &#x200B;](../methods/streaming-segmentation.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

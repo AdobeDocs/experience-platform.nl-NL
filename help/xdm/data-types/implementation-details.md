@@ -13,7 +13,7 @@ ht-degree: 1%
 
 [!UICONTROL Implementation details] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een technologieimplementatie, zoals API of SDK beschrijft.
 
-![ het typestructuur van Gegevens ](../images/data-types/implementation-details.png)
+![&#x200B; het typestructuur van Gegevens &#x200B;](../images/data-types/implementation-details.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -25,5 +25,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)

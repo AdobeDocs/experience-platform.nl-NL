@@ -14,7 +14,7 @@ ht-degree: 0%
 [!UICONTROL Session Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model) dat gegevens bijhoudt die betrekking hebben op mediaflaysessies. De inzamelingsgebieden van media worden gebruikt om gegevens te vangen die naar andere diensten van Adobe voor verdere verwerking worden verzonden. Dit schema omvat een breed scala aan eigenschappen die kunnen worden gebruikt om inzichten in het gedrag van de gebruiker en de consumptiepatronen van de inhoud te bieden. Gebruik het gegevenstype [!UICONTROL Session Details] Verzameling om de betrokkenheid van de gebruiker vast te leggen door afspeelgebeurtenissen, interacties, voortgangsmarkeringen, pauzes en andere metriek te registreren.
 
 +++Select om een diagram van het gegevenstype van de Inzameling van de Details van de Zitting te tonen.
-![ A diagram van het gegevenstype van de Inzameling van de Details van de Zitting.](../images/data-types/session-details-collection.png)
+![&#x200B; A diagram van het gegevenstype van de Inzameling van de Details van de Zitting.](../images/data-types/session-details-collection.png)
 +++
 
 >[!NOTE]

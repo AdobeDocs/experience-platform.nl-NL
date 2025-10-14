@@ -18,15 +18,15 @@ Het systeem zorgt ervoor dat de analyse u begint naadloos door de volledige boor
 
 Als u een doorboor wilt maken, selecteert u eerst **[!UICONTROL Edit]** in de dashboardweergave.
 
-![ A douanedashboard met Edit benadrukte.](../images/sql-insights-query-pro-mode/drill-through.png)
+![&#x200B; A douanedashboard met Edit benadrukte.](../images/sql-insights-query-pro-mode/drill-through.png)
 
 Selecteer de ellips in het diagram dat u wilt doorlopen en selecteer vervolgens **[!UICONTROL Edit]** .
 
-![ een grafiek die het elliptische menu met uitgezocht geeft tonen.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
+![&#x200B; een grafiek die het elliptische menu met uitgezocht geeft tonen.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
 Gebruik in het deelvenster [!UICONTROL Properties] de schakeloptie om **[!UICONTROL Enable drill through]** in te schakelen en selecteer vervolgens de vervolgkeuzelijst **[!UICONTROL Target dashboard]** . Zorg ervoor dat de schakeloptie voor **[!UICONTROL Filter pass-through]** is ingeschakeld en selecteer vervolgens **[!UICONTROL Save and close]** .
 
-![ de eigenschappen van de Grafiek paneel met toelaten boor door, benadrukt het dashboard van het Doel, en de aangewezen pas-door van de Filter.](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
+![&#x200B; de eigenschappen van de Grafiek paneel met toelaten boor door, benadrukt het dashboard van het Doel, en de aangewezen pas-door van de Filter.](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
 
 >[!INFO]
 >
@@ -36,11 +36,11 @@ Gebruik in het deelvenster [!UICONTROL Properties] de schakeloptie om **[!UICONT
 
 Als u een boor wilt bekijken, selecteert u eerst de ovaal in het diagram in de dashboardweergave en vervolgens **[!UICONTROL Drill through]** .
 
-![ een grafiek die van A het elliptische menu met Boor door benadrukt toont.](../images/sql-insights-query-pro-mode/drill-through-chart-view.png)
+![&#x200B; een grafiek die van A het elliptische menu met Boor door benadrukt toont.](../images/sql-insights-query-pro-mode/drill-through-chart-view.png)
 
 De boor door doeldashboard wordt getoond. U kunt deze stap herhalen als u drillingcontroles op meerdere niveaus hebt.
 
-![ het doeldasboard dat met de boor door benadrukt wordt getoond.](../images/sql-insights-query-pro-mode/drill-through-target-dashboard.png)
+![&#x200B; het doeldasboard dat met de boor door benadrukt wordt getoond.](../images/sql-insights-query-pro-mode/drill-through-target-dashboard.png)
 
 >[!NOTE]
 >
@@ -50,16 +50,16 @@ De boor door doeldashboard wordt getoond. U kunt deze stap herhalen als u drilli
 
 Als u een boor wilt verwijderen, selecteert u eerst **[!UICONTROL Edit]** in de dashboardweergave.
 
-![ A douanedashboard met Edit benadrukte.](../images/sql-insights-query-pro-mode/drill-through.png)
+![&#x200B; A douanedashboard met Edit benadrukte.](../images/sql-insights-query-pro-mode/drill-through.png)
 
 Selecteer de ellips in het diagram waardoor u een boor wilt verwijderen en selecteer vervolgens **[!UICONTROL Edit]** .
 
-![ een grafiek die het elliptische menu met uitgezocht geeft tonen.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
+![&#x200B; een grafiek die het elliptische menu met uitgezocht geeft tonen.](../images/sql-insights-query-pro-mode/drill-through-chart-edit.png)
 
 Selecteer in het deelvenster [!UICONTROL Properties] de schakeloptie die u wilt uitschakelen **[!UICONTROL Enable drill through]** en selecteer vervolgens **[!UICONTROL Save and close]** .
 
-![ de eigenschappen van de Grafiek paneel met knevel voor [!UICONTROL Enable drill through] wordt onbruikbaar gemaakt benadrukt.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
+![&#x200B; de eigenschappen van de Grafiek paneel met knevel voor [!UICONTROL Enable drill through] wordt onbruikbaar gemaakt benadrukt.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een boor kunt maken voor het dashboard. U kunt ook leren hoe te om grafieken van bestaande gegevensmodellen in Adobe Experience Platform UI met de [ geleide gids van de ontwerpwijze ](../standard-dashboards.md) te produceren.
+Nadat u dit document hebt gelezen, weet u nu hoe u een boor kunt maken voor het dashboard. U kunt ook leren hoe te om grafieken van bestaande gegevensmodellen in Adobe Experience Platform UI met de [&#x200B; geleide gids van de ontwerpwijze &#x200B;](../standard-dashboards.md) te produceren.

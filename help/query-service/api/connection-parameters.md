@@ -20,7 +20,7 @@ In de volgende sectie wordt u door de API-aanroep geleid die u kunt maken met de
 
 ### Verbindingsparameters aanvragen
 
-U kunt uw verbindingsparameters terugwinnen door een verzoek van de GET tot het `/connection_parameters` eindpunt te richten. Voor meer informatie over cliënten die verbindingsparameters gebruiken om via de interactieve dienst te verbinden, te lezen gelieve de documentatie op [ de cliënten van de Dienst van de Vraag ](../clients/overview.md).
+U kunt uw verbindingsparameters terugwinnen door een verzoek van de GET tot het `/connection_parameters` eindpunt te richten. Voor meer informatie over cliënten die verbindingsparameters gebruiken om via de interactieve dienst te verbinden, te lezen gelieve de documentatie op [&#x200B; de cliënten van de Dienst van de Vraag &#x200B;](../clients/overview.md).
 
 **API formaat**
 

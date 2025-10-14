@@ -22,17 +22,17 @@ Deze zelfstudie vereist een praktische kennis van verschillende Adobe Experience
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] ervaringsgegevens ordent.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, consumentenprofiel in real-time op basis van geaggregeerde gegevens van meerdere bronnen.
-- [ de ontwikkelaarsgids van de Registratie van het Schema ](../../xdm/api/getting-started.md): Een uitvoerige gids die elk van de beschikbare eindpunten van [!DNL Schema Registry] API behandelt en hoe te om vraag aan hen te maken. Dit omvat het kennen van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te om schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
+- [&#x200B; de ontwikkelaarsgids van de Registratie van het Schema &#x200B;](../../xdm/api/getting-started.md): Een uitvoerige gids die elk van de beschikbare eindpunten van [!DNL Schema Registry] API behandelt en hoe te om vraag aan hen te maken. Dit omvat het kennen van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te om schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
 
-Bovendien is voor deze zelfstudie vereist dat u al een streamingverbinding hebt gemaakt. Voor meer informatie bij het creëren van een het stromen verbinding, te lezen gelieve [ een het stromen verbindingsleerprogramma ](./create-streaming-connection.md) creëren.
+Bovendien is voor deze zelfstudie vereist dat u al een streamingverbinding hebt gemaakt. Voor meer informatie bij het creëren van een het stromen verbinding, te lezen gelieve [&#x200B; een het stromen verbindingsleerprogramma &#x200B;](./create-streaming-connection.md) creëren.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../landing/api-guide.md).
 
 ## Stel een schema samen dat van de klasse XDM ExperienceEvent wordt gebaseerd
 
-Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM ExperienceEvent] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve de [ gids van de ontwikkelaar van de Registratie API van het Schema ](../../xdm/api/getting-started.md).
+Om een dataset tot stand te brengen, zult u eerst een nieuw schema moeten creëren dat de [!DNL XDM ExperienceEvent] klasse uitvoert. Voor meer informatie over hoe te om schema&#39;s tot stand te brengen, te lezen gelieve de [&#x200B; gids van de ontwikkelaar van de Registratie API van het Schema &#x200B;](../../xdm/api/getting-started.md).
 
 **API formaat**
 
@@ -155,13 +155,13 @@ Een succesvolle reactie keert status 201 van HTTP met details van uw onlangs gec
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{TENANT_ID}` | Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw organisatie bevinden. Voor meer informatie over identiteitskaart van de Aannemer, gelieve de [ gids van de schemaregistratie ](../../xdm/api/getting-started.md#know-your-tenant-id) te lezen. |
+| `{TENANT_ID}` | Deze id wordt gebruikt om ervoor te zorgen dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw organisatie bevinden. Voor meer informatie over identiteitskaart van de Aannemer, gelieve de [&#x200B; gids van de schemaregistratie &#x200B;](../../xdm/api/getting-started.md#know-your-tenant-id) te lezen. |
 
 Let op de attributen `$id` en `version` , aangezien beide worden gebruikt bij het maken van uw dataset.
 
 ## Een primaire identiteitsdescriptor instellen voor het schema
 
-Daarna, voeg een [ identiteitsbeschrijver ](../../xdm/api/descriptors.md) aan het hierboven gecreeerd schema toe, gebruikend het werk e-mailadresattribuut als primaire herkenningsteken. Dit leidt tot twee wijzigingen:
+Daarna, voeg een [&#x200B; identiteitsbeschrijver &#x200B;](../../xdm/api/descriptors.md) aan het hierboven gecreeerd schema toe, gebruikend het werk e-mailadresattribuut als primaire herkenningsteken. Dit leidt tot twee wijzigingen:
 
 1. Het werk-e-mailadres wordt een verplicht veld. Dit betekent dat berichten die zonder dit veld worden verzonden, niet worden gevalideerd en niet worden ingevoerd.
 
@@ -195,9 +195,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 >
 >&#x200B; **Codes Namespace van de Identiteit**
 >
-> Controleer of de codes geldig zijn. In het bovenstaande voorbeeld wordt &quot;email&quot; gebruikt, een naamruimte met een standaardidentiteit. Andere algemeen gebruikte standaardidentiteitsnamespaces kunnen binnen de [ Veelgestelde vragen van de Dienst van de Identiteit ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform) worden gevonden.
+> Controleer of de codes geldig zijn. In het bovenstaande voorbeeld wordt &quot;email&quot; gebruikt, een naamruimte met een standaardidentiteit. Andere algemeen gebruikte standaardidentiteitsnamespaces kunnen binnen de [&#x200B; Veelgestelde vragen van de Dienst van de Identiteit &#x200B;](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform) worden gevonden.
 >
-> Als u een douane zou willen tot stand brengen namespace, volg de stappen die in het [ overzicht van identiteitsnaamruimte ](../../identity-service/home.md) worden geschetst.
+> Als u een douane zou willen tot stand brengen namespace, volg de stappen die in het [&#x200B; overzicht van identiteitsnaamruimte &#x200B;](../../identity-service/home.md) worden geschetst.
 
 **Reactie**
 
@@ -271,7 +271,7 @@ Een geslaagde reactie retourneert HTTP-status 201 en een array met de id van de 
 
 Na het creëren van uw schema en dataset, zult u een het stromen verbinding moeten tot stand brengen om uw gegevens in te voeren.
 
-Voor meer informatie bij het creëren van een het stromen verbinding, te lezen gelieve [ een het stromen verbindingsleerprogramma ](./create-streaming-connection.md) creëren.
+Voor meer informatie bij het creëren van een het stromen verbinding, te lezen gelieve [&#x200B; een het stromen verbindingsleerprogramma &#x200B;](./create-streaming-connection.md) creëren.
 
 ## Gegevens uit tijdreeksen opnemen in de streamingverbinding
 
@@ -509,6 +509,6 @@ Een geslaagde reactie retourneert HTTP status 200 met details over de aangevraag
 
 ## Volgende stappen
 
-Door dit document te lezen, begrijpt u nu hoe u recordgegevens via streamingverbindingen in [!DNL Experience Platform] kunt opnemen. U kunt proberen meer vraag met verschillende waarden te maken en de bijgewerkte waarden terug te winnen. Bovendien kunt u uw ingesloten gegevens controleren via de gebruikersinterface van [!DNL Experience Platform] . Voor meer informatie, te lezen gelieve de [ controle gegevensopname ](../quality/monitor-data-ingestion.md) gids.
+Door dit document te lezen, begrijpt u nu hoe u recordgegevens via streamingverbindingen in [!DNL Experience Platform] kunt opnemen. U kunt proberen meer vraag met verschillende waarden te maken en de bijgewerkte waarden terug te winnen. Bovendien kunt u uw ingesloten gegevens controleren via de gebruikersinterface van [!DNL Experience Platform] . Voor meer informatie, te lezen gelieve de [&#x200B; controle gegevensopname &#x200B;](../quality/monitor-data-ingestion.md) gids.
 
-Voor meer informatie over het stromen ingestie in het algemeen, te lezen gelieve het [ stromen ingestitieoverzicht ](../streaming-ingestion/overview.md).
+Voor meer informatie over het stromen ingestie in het algemeen, te lezen gelieve het [&#x200B; stromen ingestitieoverzicht &#x200B;](../streaming-ingestion/overview.md).

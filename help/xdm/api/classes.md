@@ -20,13 +20,13 @@ Alle schema&#39;s van het Gegevensmodel van de Ervaring (XDM) moeten op een klas
 
 >[!NOTE]
 >
->Voor meer informatieklassen over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de [ grondbeginselen van schemacompositie ](../schema/composition.md).
+>Voor meer informatieklassen over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../schema/composition.md).
 
 Met het eindpunt `/classes` in de [!DNL Schema Registry] API kunt u klassen programmatisch beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met klassen ophalen {#list}
 
@@ -34,7 +34,7 @@ U kunt alle klassen onder de container `global` of `tenant` weergeven door een a
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [&#x200B; vraagparameters &#x200B;](./appendix.md#query) in het bijlage document voor meer informatie.
 
 **API formaat**
 
@@ -45,7 +45,7 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CONTAINER_ID}` | De container waarvan u klassen wilt ophalen: `global` voor klassen die zijn gemaakt met een Adobe of `tenant` voor klassen die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [&#x200B; bijlage document &#x200B;](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
@@ -252,9 +252,9 @@ U kunt een aangepaste klasse definiëren onder de `tenant` -container door een P
 
 >[!IMPORTANT]
 >
->Wanneer u een schema samenstelt dat is gebaseerd op een aangepaste klasse die u definieert, kunt u geen standaardveldgroepen gebruiken. Elke veldgroep definieert de klassen waarmee ze compatibel zijn in het kenmerk `meta:intendedToExtend` . Wanneer u begint met het definiëren van veldgroepen die compatibel zijn met uw nieuwe klasse (met behulp van `$id` van de nieuwe klasse in het veld `meta:intendedToExtend` van de veldgroep), kunt u deze veldgroepen telkens opnieuw gebruiken wanneer u een schema definieert dat de door u gedefinieerde klasse implementeert. Zie de secties op [ creërend gebiedsgroepen ](./field-groups.md#create) en [ creërend schema&#39;s ](./schemas.md#create) in hun respectieve eindpuntgidsen voor meer informatie.
+>Wanneer u een schema samenstelt dat is gebaseerd op een aangepaste klasse die u definieert, kunt u geen standaardveldgroepen gebruiken. Elke veldgroep definieert de klassen waarmee ze compatibel zijn in het kenmerk `meta:intendedToExtend` . Wanneer u begint met het definiëren van veldgroepen die compatibel zijn met uw nieuwe klasse (met behulp van `$id` van de nieuwe klasse in het veld `meta:intendedToExtend` van de veldgroep), kunt u deze veldgroepen telkens opnieuw gebruiken wanneer u een schema definieert dat de door u gedefinieerde klasse implementeert. Zie de secties op [&#x200B; creërend gebiedsgroepen &#x200B;](./field-groups.md#create) en [&#x200B; creërend schema&#39;s &#x200B;](./schemas.md#create) in hun respectieve eindpuntgidsen voor meer informatie.
 >
->Als u schema&#39;s wilt gebruiken die op douaneklassen in het Profiel van de Klant in real time worden gebaseerd, is het ook belangrijk om in mening te houden dat de verenigingsschema&#39;s slechts gebaseerd op schema&#39;s zijn die de zelfde klasse delen. Als u een schema van de douane-klasse in de unie voor een andere klasse zoals [!UICONTROL XDM Individual Profile] of [!UICONTROL XDM ExperienceEvent] wilt omvatten, moet u een verband met een ander schema vestigen dat die klasse gebruikt. Zie het leerprogramma op [ het vestigen van een verband tussen twee schema&#39;s in API ](../tutorials/relationship-api.md) voor meer informatie.
+>Als u schema&#39;s wilt gebruiken die op douaneklassen in het Profiel van de Klant in real time worden gebaseerd, is het ook belangrijk om in mening te houden dat de verenigingsschema&#39;s slechts gebaseerd op schema&#39;s zijn die de zelfde klasse delen. Als u een schema van de douane-klasse in de unie voor een andere klasse zoals [!UICONTROL XDM Individual Profile] of [!UICONTROL XDM ExperienceEvent] wilt omvatten, moet u een verband met een ander schema vestigen dat die klasse gebruikt. Zie het leerprogramma op [&#x200B; het vestigen van een verband tussen twee schema&#39;s in API &#x200B;](../tutorials/relationship-api.md) voor meer informatie.
 
 **API formaat**
 
@@ -264,7 +264,7 @@ POST /tenant/classes
 
 **Verzoek**
 
-De aanvraag om een klasse te maken (POST) moet een `allOf` -kenmerk bevatten met een `$ref` naar een van de volgende twee waarden: `https://ns.adobe.com/xdm/data/record` of `https://ns.adobe.com/xdm/data/time-series` . Deze waarden vertegenwoordigen het gedrag waarop de klasse is gebaseerd (record- of tijdreeks, respectievelijk). Voor meer informatie over de verschillen tussen verslaggegevens en tijdreeksgegevens, zie de sectie over gedragstypes binnen de [ grondbeginselen van schemacompositie ](../schema/composition.md).
+De aanvraag om een klasse te maken (POST) moet een `allOf` -kenmerk bevatten met een `$ref` naar een van de volgende twee waarden: `https://ns.adobe.com/xdm/data/record` of `https://ns.adobe.com/xdm/data/time-series` . Deze waarden vertegenwoordigen het gedrag waarop de klasse is gebaseerd (record- of tijdreeks, respectievelijk). Voor meer informatie over de verschillen tussen verslaggegevens en tijdreeksgegevens, zie de sectie over gedragstypes binnen de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../schema/composition.md).
 
 Wanneer u een klasse definieert, kunt u ook veldgroepen of aangepaste velden opnemen in de klassendefinitie. Hierdoor worden de toegevoegde veldgroepen en velden opgenomen in alle schema&#39;s die de klasse implementeren. In het volgende voorbeeldverzoek wordt een klasse met de naam &quot;Eigenschap&quot; gedefinieerd, die informatie vastlegt over verschillende eigenschappen die eigendom zijn van en worden beheerd door een bedrijf. De klasse bevat een `propertyId` -veld dat moet worden opgenomen telkens wanneer de klasse wordt gebruikt.
 
@@ -388,15 +388,15 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Het uitvoeren van een verzoek van de GET aan [ lijst alle klassen ](#list) in de `tenant` container zou nu de klasse van het Bezit omvatten. U kunt ook [ een raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerd `$id` om de nieuwe klasse direct te bekijken.
+Het uitvoeren van een verzoek van de GET aan [&#x200B; lijst alle klassen &#x200B;](#list) in de `tenant` container zou nu de klasse van het Bezit omvatten. U kunt ook [&#x200B; een raadpleging (GET) verzoek &#x200B;](#lookup) uitvoeren gebruikend URL-Gecodeerd `$id` om de nieuwe klasse direct te bekijken.
 
 ## Een klasse bijwerken {#put}
 
-U kunt een volledige klasse door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een klasse door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuwe klasse ](#create) in een verzoek van de POST.
+U kunt een volledige klasse door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een klasse door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [&#x200B; creërend een nieuwe klasse &#x200B;](#create) in een verzoek van de POST.
 
 >[!NOTE]
 >
->Als u slechts een deel van een klasse wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [ het bijwerken van een gedeelte van een klasse ](#patch).
+>Als u slechts een deel van een klasse wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [&#x200B; het bijwerken van een gedeelte van een klasse &#x200B;](#patch).
 
 **API formaat**
 
@@ -529,11 +529,11 @@ Een geslaagde reactie retourneert de details van de bijgewerkte klasse.
 
 ## Een gedeelte van een klasse bijwerken {#patch}
 
-U kunt een deel van een klasse bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
+U kunt een deel van een klasse bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [&#x200B; API fundamentals gids &#x200B;](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een klasse gebruikend een verrichting van de PUT ](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [&#x200B; het vervangen van een klasse gebruikend een verrichting van de PUT &#x200B;](#put).
 
 **API formaat**
 
@@ -664,4 +664,4 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de schrapping bevestigen door a [ raadpleging (GET) verzoek ](#lookup) voor de klasse te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat de klasse uit de schemaregistratie is verwijderd.
+U kunt de schrapping bevestigen door a [&#x200B; raadpleging (GET) verzoek &#x200B;](#lookup) voor de klasse te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat de klasse uit de schemaregistratie is verwijderd.

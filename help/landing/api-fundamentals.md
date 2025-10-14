@@ -19,7 +19,7 @@ Adobe Experience Platform API&#39;s maken gebruik van verschillende onderliggend
 
 ## JSON-aanwijzer {#json-pointer}
 
-JSON Aanwijzer is een gestandaardiseerde koordsyntaxis ([ RFC 6901 ](https://tools.ietf.org/html/rfc6901)) voor het identificeren van specifieke waarden binnen JSON documenten. Een JSON-aanwijzer is een tekenreeks met tokens die door `/` -tekens worden gescheiden. Hiermee worden objectsleutels of arrayindexen opgegeven. De tokens kunnen een tekenreeks of een getal zijn. JSON-aanwijzertekenreeksen worden gebruikt in vele PATCH-bewerkingen voor [!DNL Experience Platform] API&#39;s, zoals verderop in dit document wordt beschreven. Voor meer informatie over Aanwijzer JSON, gelieve te verwijzen naar de [ documentatie van het overzicht van de Aanwijzer JSON ](https://rapidjson.org/md_doc_pointer.html).
+JSON Aanwijzer is een gestandaardiseerde koordsyntaxis ([&#x200B; RFC 6901 &#x200B;](https://tools.ietf.org/html/rfc6901)) voor het identificeren van specifieke waarden binnen JSON documenten. Een JSON-aanwijzer is een tekenreeks met tokens die door `/` -tekens worden gescheiden. Hiermee worden objectsleutels of arrayindexen opgegeven. De tokens kunnen een tekenreeks of een getal zijn. JSON-aanwijzertekenreeksen worden gebruikt in vele PATCH-bewerkingen voor [!DNL Experience Platform] API&#39;s, zoals verderop in dit document wordt beschreven. Voor meer informatie over Aanwijzer JSON, gelieve te verwijzen naar de [&#x200B; documentatie van het overzicht van de Aanwijzer JSON &#x200B;](https://rapidjson.org/md_doc_pointer.html).
 
 ### Voorbeeld-JSON-schemaobject
 
@@ -94,11 +94,11 @@ De volgende JSON vertegenwoordigt een vereenvoudigd XDM-schema waarvan met behul
 
 >[!NOTE]
 >
->Wanneer het behandelen van `xdm:sourceProperty` en `xdm:destinationProperty` attributen van [!DNL Experience Data Model] (XDM) beschrijvers, moeten om het even welke `properties` sleutels **&#x200B;**&#x200B;van het koord van de Aanwijzer JSON worden uitgesloten. Zie de [!DNL Schema Registry] sub-gids van de ontwikkelaar van API op [ beschrijvers ](../xdm/api/descriptors.md) voor meer informatie.
+>Wanneer het behandelen van `xdm:sourceProperty` en `xdm:destinationProperty` attributen van [!DNL Experience Data Model] (XDM) beschrijvers, moeten om het even welke `properties` sleutels **&#x200B;**&#x200B;van het koord van de Aanwijzer JSON worden uitgesloten. Zie de [!DNL Schema Registry] sub-gids van de ontwikkelaar van API op [&#x200B; beschrijvers &#x200B;](../xdm/api/descriptors.md) voor meer informatie.
 
 ## JSON Patch {#json-patch}
 
-Er zijn veel PATCH-bewerkingen voor [!DNL Experience Platform] API&#39;s die JSON Patch-objecten accepteren voor hun aanvraag-lading. JSON Reparatie is een gestandaardiseerd formaat ([ RFC 6902 ](https://tools.ietf.org/html/rfc6902)) voor het beschrijven van veranderingen in een JSON- document. Hiermee kunt u gedeeltelijke updates voor JSON definiëren zonder dat u het gehele document in een aanvraaginstantie hoeft te verzenden.
+Er zijn veel PATCH-bewerkingen voor [!DNL Experience Platform] API&#39;s die JSON Patch-objecten accepteren voor hun aanvraag-lading. JSON Reparatie is een gestandaardiseerd formaat ([&#x200B; RFC 6902 &#x200B;](https://tools.ietf.org/html/rfc6902)) voor het beschrijven van veranderingen in een JSON- document. Hiermee kunt u gedeeltelijke updates voor JSON definiëren zonder dat u het gehele document in een aanvraaginstantie hoeft te verzenden.
 
 ### Voorbeeld van JSON Patch-object
 
@@ -116,14 +116,14 @@ Er zijn veel PATCH-bewerkingen voor [!DNL Experience Platform] API&#39;s die JSO
    * `copy`
    * `move`
    * `test`
-* `path`: Het deel van de structuur JSON dat moet worden bijgewerkt, gebruikend [ JSON ](#json-pointer) aantekening van de Aanwijzer wordt geïdentificeerd.
+* `path`: Het deel van de structuur JSON dat moet worden bijgewerkt, gebruikend [&#x200B; JSON &#x200B;](#json-pointer) aantekening van de Aanwijzer wordt geïdentificeerd.
 
-Afhankelijk van het type bewerking dat in `op` wordt aangegeven, heeft het JSON-object Patch mogelijk aanvullende eigenschappen nodig. Voor meer informatie over de verschillende verrichtingen van het Reparatie JSON en hun vereiste syntaxis, gelieve te verwijzen naar de [ documentatie van het Reparatie JSON ](https://datatracker.ietf.org/doc/html/rfc6902).
+Afhankelijk van het type bewerking dat in `op` wordt aangegeven, heeft het JSON-object Patch mogelijk aanvullende eigenschappen nodig. Voor meer informatie over de verschillende verrichtingen van het Reparatie JSON en hun vereiste syntaxis, gelieve te verwijzen naar de [&#x200B; documentatie van het Reparatie JSON &#x200B;](https://datatracker.ietf.org/doc/html/rfc6902).
 
 ## JSON Schema {#json-schema}
 
-JSON-schema is een indeling waarmee de structuur van JSON-gegevens wordt beschreven en gevalideerd. [ Model van de Gegevens van de Ervaring (XDM) ](../xdm/home.md) hefboomwerkingen JSON de mogelijkheden van het Schema om beperkingen op de structuur en het formaat van ingebedde gegevens van de klantenervaring af te dwingen. Voor meer informatie over Schema JSON, gelieve te verwijzen naar de [ officiële documentatie ](https://json-schema.org/).
+JSON-schema is een indeling waarmee de structuur van JSON-gegevens wordt beschreven en gevalideerd. [&#x200B; Model van de Gegevens van de Ervaring (XDM) &#x200B;](../xdm/home.md) hefboomwerkingen JSON de mogelijkheden van het Schema om beperkingen op de structuur en het formaat van ingebedde gegevens van de klantenervaring af te dwingen. Voor meer informatie over Schema JSON, gelieve te verwijzen naar de [&#x200B; officiële documentatie &#x200B;](https://json-schema.org/).
 
 ## Volgende stappen
 
-In dit document worden enkele technologieën en syntaxis geïntroduceerd die betrokken zijn bij het beheer van JSON-bronnen voor [!DNL Experience Platform] . Verwijs naar de [ begonnen gids ](api-guide.md) voor meer informatie bij het werken met Experience Platform APIs, met inbegrip van beste praktijken. Voor antwoorden op vaak gestelde vragen, verwijs naar de [ het oplossen van problemengids van Experience Platform ](troubleshooting.md).
+In dit document worden enkele technologieën en syntaxis geïntroduceerd die betrokken zijn bij het beheer van JSON-bronnen voor [!DNL Experience Platform] . Verwijs naar de [&#x200B; begonnen gids &#x200B;](api-guide.md) voor meer informatie bij het werken met Experience Platform APIs, met inbegrip van beste praktijken. Voor antwoorden op vaak gestelde vragen, verwijs naar de [&#x200B; het oplossen van problemengids van Experience Platform &#x200B;](troubleshooting.md).

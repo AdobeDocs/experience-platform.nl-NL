@@ -22,41 +22,41 @@ Deze zelfstudie bevat stappen voor het bijwerken van de details en gegevens van 
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-- [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+- [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Accounts bijwerken
 
-Login aan [ UI van Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatie om tot de [!UICONTROL Sources] werkruimte toegang te hebben. Selecteer **[!UICONTROL Accounts]** in de bovenste koptekst om bestaande accounts weer te geven.
+Login aan [&#x200B; UI van Experience Platform &#x200B;](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatie om tot de [!UICONTROL Sources] werkruimte toegang te hebben. Selecteer **[!UICONTROL Accounts]** in de bovenste koptekst om bestaande accounts weer te geven.
 
-![ catalogus ](../../images/tutorials/update/catalog.png)
+![&#x200B; catalogus &#x200B;](../../images/tutorials/update/catalog.png)
 
 De pagina **[!UICONTROL Accounts]** wordt weergegeven. Op deze pagina vindt u een lijst met weer te geven accounts, waaronder informatie over de bron, gebruikersnaam, het aantal gegevensstromen en de aanmaakdatum.
 
-Selecteer het filter ![ filter ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren.
+Selecteer het filter ![&#x200B; filter &#x200B;](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren.
 
-![ rekeningen-lijst ](../../images/tutorials/update/accounts-list.png)
+![&#x200B; rekeningen-lijst &#x200B;](../../images/tutorials/update/accounts-list.png)
 
 Het deelvenster Sorteren bevat een lijst met alle bronnen. U kunt meerdere bronnen in de lijst selecteren om een gefilterde selectie van accounts te openen die aan verschillende bronnen zijn gekoppeld.
 
 Selecteer de bron waarmee u wilt werken om een lijst met bestaande accounts weer te geven. Nadat u de account hebt geïdentificeerd die u wilt bijwerken, selecteert u de ovalen (`...`) naast de accountnaam.
 
-![ rekeningen-soort ](../../images/tutorials/update/accounts-sort.png)
+![&#x200B; rekeningen-soort &#x200B;](../../images/tutorials/update/accounts-sort.png)
 
 Er wordt een vervolgkeuzemenu weergegeven met opties voor **[!UICONTROL Add data]** , **[!UICONTROL Edit details]** en **[!UICONTROL Delete]** . Selecteer **[!UICONTROL Edit details]** in het menu om uw account bij te werken.
 
-![ update ](../../images/tutorials/update/update.png)
+![&#x200B; update &#x200B;](../../images/tutorials/update/update.png)
 
 In het dialoogvenster **[!UICONTROL Edit account details]** kunt u de naam, beschrijving en verificatiereferenties van een account bijwerken. Selecteer **[!UICONTROL Save]** als u de gewenste gegevens hebt bijgewerkt.
 
-![ geef-rekening-details uit ](../../images/tutorials/update/edit-account-details.png)
+![&#x200B; geef-rekening-details uit &#x200B;](../../images/tutorials/update/edit-account-details.png)
 
 Na enkele ogenblikken verschijnt onder aan het scherm een bevestigingsvak om te bevestigen dat de update is gelukt.
 
-![ update-bevestigde ](../../images/tutorials/update/update-confirmed.png)
+![&#x200B; update-bevestigde &#x200B;](../../images/tutorials/update/update-confirmed.png)
 
 ## Volgende stappen
 
 Aan de hand van deze zelfstudie hebt u de werkruimte van [!UICONTROL Sources] gebruikt om de gegevens van een bestaand bronaccount bij te werken.
 
-Voor stappen op hoe te om deze verrichtingen programmatically uit te voeren gebruikend [!DNL Flow Service] API, te verwijzen gelieve naar het leerprogramma op [ het bijwerken van verbindingsinformatie gebruikend de Dienst API van de Stroom ](../../tutorials/api/update.md).
+Voor stappen op hoe te om deze verrichtingen programmatically uit te voeren gebruikend [!DNL Flow Service] API, te verwijzen gelieve naar het leerprogramma op [&#x200B; het bijwerken van verbindingsinformatie gebruikend de Dienst API van de Stroom &#x200B;](../../tutorials/api/update.md).

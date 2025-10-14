@@ -43,7 +43,7 @@ ht-degree: 22%
    - [Beschikbare naamruimten weergeven](api/list-namespaces.md)
    - [Een aangepaste naamruimte maken](api/create-custom-namespace.md)
    - [Native id weergeven voor een identiteit](api/list-native-id.md)
-   - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/identity-service)
+   - [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Identiteitsvelden definiëren in de gebruikersinterface](label-identities.md)
 - [Verwerking van privacyverzoeken](privacy.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)

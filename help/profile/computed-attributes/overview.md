@@ -91,4 +91,4 @@ Met Snel vernieuwen kunt u uw kenmerken up-to-date houden. Als u deze optie insc
 
 ## Volgende stappen
 
-Om meer over het creëren van en het beheren van gegevens verwerkte attributen te leren, te lezen gelieve de [ gegevens verwerkte handleiding van attributen API ](./api.md) of [ gegevens verwerkte attributen UI gids ](./ui.md).
+Om meer over het creëren van en het beheren van gegevens verwerkte attributen te leren, te lezen gelieve de [&#x200B; gegevens verwerkte handleiding van attributen API &#x200B;](./api.md) of [&#x200B; gegevens verwerkte attributen UI gids &#x200B;](./ui.md).

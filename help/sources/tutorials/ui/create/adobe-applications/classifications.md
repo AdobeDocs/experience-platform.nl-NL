@@ -21,7 +21,7 @@ Lees deze zelfstudie voor stappen over hoe u uw Adobe Analytics-classificatiegeg
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Experience Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -37,13 +37,13 @@ Onder de *de toepassingen van Adobe* categorie, selecteer **[!UICONTROL Adobe An
 >
 >Bronnen in de broncatalogus geven de optie **[!UICONTROL Set up]** weer als er geen geverifieerde account is. Als een account eenmaal is geverifieerd, verandert de optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus in Experience Platform UI met de geselecteerde bron van Adobe Analytics.](../../../../images/tutorials/create/classifications/catalog.png)
+![&#x200B; de broncatalogus in Experience Platform UI met de geselecteerde bron van Adobe Analytics.](../../../../images/tutorials/create/classifications/catalog.png)
 
 Selecteer vervolgens [!UICONTROL Classifications] en selecteer de classificatiegegevens die u aan Experience Platform wilt toevoegen.
 
 U kunt tot 30 verschillende classificatiedatasets selecteren om in Experience Platform te brengen. Alle gegevenssets die u selecteert, worden weergegeven in de rechterrail. Als u klaar bent, selecteert u [!UICONTROL Next] om door te gaan.
 
-![ de classificatiepagina met verscheidene geselecteerde classificatiedatasets.](../../../../images/tutorials/create/classifications/select.png)
+![&#x200B; de classificatiepagina met verscheidene geselecteerde classificatiedatasets.](../../../../images/tutorials/create/classifications/select.png)
 
 ## Uw classificaties bekijken
 
@@ -55,7 +55,7 @@ De stap **[!UICONTROL Review]** verschijnt, die u toestaat om uw geselecteerde c
 
 Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Finish]** en laat u enige tijd over tot de gegevensstroom.
 
-![ de overzichtspagina voor de classificatiegegevens van Adobe Analytics.](../../../../images/tutorials/create/classifications/review.png)
+![&#x200B; de overzichtspagina voor de classificatiegegevens van Adobe Analytics.](../../../../images/tutorials/create/classifications/review.png)
 
 ## Volgende stappen
 
@@ -63,4 +63,4 @@ Door deze zelfstudie te volgen, hebt u een de classificatieconnector van Analyti
 
 * [Overzicht van Adobe Analytics-bronconnector](../../../../connectors/adobe-applications/analytics.md)
 * [Creeer een Analytics bronverbinding voor rapportgegevens in UI](./analytics.md)
-* [ Ongeveer classificaties ](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=nl-NL)
+* [&#x200B; Ongeveer classificaties &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=nl-NL)

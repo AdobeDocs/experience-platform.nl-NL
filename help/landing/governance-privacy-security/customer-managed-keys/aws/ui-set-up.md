@@ -15,7 +15,7 @@ Met deze handleiding kunt u CMK (Customer Managed Keys) inschakelen voor Experie
 
 >[!IMPORTANT]
 >
->Alvorens u met deze gids verdergaat, zorg ervoor u de opstelling hebt voltooid die in [ wordt gedetailleerd &quot;vormt AWS KMS voor CMK&quot;](./configure-kms.md) document.
+>Alvorens u met deze gids verdergaat, zorg ervoor u de opstelling hebt voltooid die in [&#x200B; wordt gedetailleerd &quot;vormt AWS KMS voor CMK&quot;](./configure-kms.md) document.
 
 ## Het sleutelbeleid van AWS bijwerken om de sleutel met Experience Platform te integreren
 
@@ -45,7 +45,7 @@ In het bovenstaande voorbeeld hebben alle bronnen (`"Resource": "*"`) binnen dez
 
 Ga in de gebruikersinterface van Experience Platform naar de sectie **[!UICONTROL Administration]** in de linkernavigatieregel en selecteer **[!UICONTROL Encryption]** . Selecteer **[!UICONTROL Configure]** in de [!UICONTROL Customer Managed Keys] -kaart in de [!UICONTROL Encryption Configuration] -werkruimte.
 
-![ de werkruimte van de Configuratie van de Encryptie van Experience Platform met Configure die in de Klant Beheerde Sleutelkaart wordt benadrukt.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![&#x200B; de werkruimte van de Configuratie van de Encryptie van Experience Platform met Configure die in de Klant Beheerde Sleutelkaart wordt benadrukt.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 De lus [!UICONTROL Customer Managed Keys configuration] wordt weergegeven. Kopieer het `statement` -object uit het CMK KMS-beleid dat wordt weergegeven in [!UICONTROL Customer Managed Keys] [!UICONTROL Encryption Configuration] .
 
@@ -53,13 +53,13 @@ De lus [!UICONTROL Customer Managed Keys configuration] wordt weergegeven. Kopie
 
 <!-- I cannot add the 'and the copy icon highlighted.' to the alt text below as i do not have access to this UI. -->
 
-![ de Klant Beheerde configuratie van Sleutels met het getoonde beleid CMK KMS.](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
+![&#x200B; de Klant Beheerde configuratie van Sleutels met het getoonde beleid CMK KMS.](../../../images/governance-privacy-security/key-management-service/copy-cmk-policy.png)
 
 <!-- This part of the workflow was in contention at the time of the demo.  -->
 
 Ga vervolgens terug naar de AWS KMS-werkruimte en werk het onderstaande sleutelbeleid bij.
 
-![ het stadium van het Overzicht van het werkschema met het bijgewerkte benadrukte beleid en Afwerking.](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
+![&#x200B; het stadium van het Overzicht van het werkschema met het bijgewerkte benadrukte beleid en Afwerking.](../../../images/governance-privacy-security/key-management-service/updated-cmk-policy.png)
 
 Voeg aan het standaardbeleid de vier instructies van de werkruimte [!UICONTROL Platform Encryption Configuration] toe, zoals hieronder wordt weergegeven: `Enable IAM User Permissions`, `CJA Flow IAM User Permissions`, `CJA Integrity IAM User Permissions`, `CJA Oberon IAM User Permissions` .
 
@@ -164,26 +164,26 @@ De bijgewerkte [!DNL Customer Managed Keys] werkruimte van de AWS [!DNL Key Mana
 
 Voeg vervolgens de Amazon Resource Name (ARN) van de sleutel aan uw Experience Platform [!UICONTROL Customer Managed Keys configuration] toe om codering in te schakelen. Selecteer in de sectie [!DNL Customer Managed Keys] van AWS de alias van de nieuwe sleutel in de lijst in [!DNL Key Management Service] .
 
-![ de Klant van AWS KMS Beheerde de werkruimte van Sleutels met de nieuwe belangrijke alias benadrukt.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+![&#x200B; de Klant van AWS KMS Beheerde de werkruimte van Sleutels met de nieuwe belangrijke alias benadrukt.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
 De details van uw sleutel worden getoond. Alles in AWS heeft een Amazon Resource Name (ARN) die
 is een unieke id die wordt gebruikt om bronnen op te geven voor verschillende AWS-services. De notatie volgt een gestandaardiseerde notatie: `arn:partition:service:region:account-id:resource`.
 
 Selecteer het kopieerpictogram om uw ARN te kopiëren. Er wordt een bevestigingsvenster weergegeven.
 
-![ de belangrijkste details van uw AWS KMS Klant Beheerde Sleutel met ARN benadrukte.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
+![&#x200B; de belangrijkste details van uw AWS KMS Klant Beheerde Sleutel met ARN benadrukte.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
 Navigeer nu terug naar de gebruikersinterface van Experience Platform [!UICONTROL Customer Managed Keys configuration] . Voeg in de sectie **[!UICONTROL Add AWS encryption key details]** een **[!UICONTROL Configuration name]** en de **[!UICONTROL KMS key ARN]** toe die u uit de gebruikersinterface van AWS hebt gekopieerd.
 
-![ de werkruimte van de Configuratie van de Encryptie van Experience Platform met de naam van de Configuratie en KMS zeer belangrijke ARN die in Add wordt benadrukt de zeer belangrijke sectie van de Gegevens van de encryptie van AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![&#x200B; de werkruimte van de Configuratie van de Encryptie van Experience Platform met de naam van de Configuratie en KMS zeer belangrijke ARN die in Add wordt benadrukt de zeer belangrijke sectie van de Gegevens van de encryptie van AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 Selecteer vervolgens **[!UICONTROL SAVE]** om de configuratienaam, de KMS-sleutel ARN en de validatie van de toets te starten.
 
-![ de werkruimte van de Configuratie van de Encryptie van Experience Platform met sparen benadrukt.](../../../images/governance-privacy-security/key-management-service/save.png)
+![&#x200B; de werkruimte van de Configuratie van de Encryptie van Experience Platform met sparen benadrukt.](../../../images/governance-privacy-security/key-management-service/save.png)
 
 U wordt teruggestuurd naar de werkruimte van [!UICONTROL Encryption Configurations] . De status van de coderingsconfiguratie wordt onder aan de **[!UICONTROL Customer Managed Keys]** -kaart weergegeven.
 
-![ de werkruimte van de Configuraties van de Encryptie in Experience Platform UI met Verwerking die op de Klant Beheerde Sleutelkaart wordt benadrukt.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![&#x200B; de werkruimte van de Configuraties van de Encryptie in Experience Platform UI met Verwerking die op de Klant Beheerde Sleutelkaart wordt benadrukt.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 Nadat de sleutel is gevalideerd, worden de sleutelvault-id&#39;s toegevoegd aan het dataroopbestand en de profieldatastores voor alle sandboxen.
 
@@ -204,11 +204,11 @@ Hier volgen enkele belangrijke overwegingen voor het intrekken van toetsen:
 
 Als u een toets wilt intrekken, navigeert u naar de AWS KMS-werkruimte. In de sectie **[!DNL Customer managed keys]** worden alle beschikbare sleutels voor uw AWS-account weergegeven. Selecteer de alias van uw sleutel in de lijst.
 
-![ de Klant van AWS KMS Beheerde de werkruimte van Sleutels met de nieuwe belangrijke alias benadrukt.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
+![&#x200B; de Klant van AWS KMS Beheerde de werkruimte van Sleutels met de nieuwe belangrijke alias benadrukt.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
 De details van uw sleutel worden getoond. Selecteer **[!DNL Key actions]** en **[!DNL Disable]** in het vervolgkeuzemenu om de toets uit te schakelen.
 
-![ de details van uw sleutel van AWS in AWS KMS UI met Zeer belangrijke acties en maak benadrukte onbruikbaar.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
+![&#x200B; de details van uw sleutel van AWS in AWS KMS UI met Zeer belangrijke acties en maak benadrukte onbruikbaar.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
 Er wordt een bevestigingsvenster weergegeven. Selecteer **[!DNL Disable key]** om uw keuze te bevestigen. Het effect van het uitschakelen van de sleutel moet binnen ongeveer vijf minuten worden weerspiegeld in Experience Platform-toepassingen en de gebruikersinterface.
 
@@ -216,15 +216,15 @@ Er wordt een bevestigingsvenster weergegeven. Selecteer **[!DNL Disable key]** o
 >
 >Nadat u de toets hebt uitgeschakeld, kunt u de toets weer inschakelen met dezelfde methode die hierboven is beschreven, als dat nodig is. Deze optie is beschikbaar in het vervolgkeuzemenu **[!DNL Key actions]** .
 
-![ onbruikbaar maken zeer belangrijk dialoog met onbruikbaar maakt benadrukte sleutel.](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
+![&#x200B; onbruikbaar maken zeer belangrijk dialoog met onbruikbaar maakt benadrukte sleutel.](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
 
 Als uw sleutel ook in andere services wordt gebruikt, kunt u de toegang voor Experience Platform rechtstreeks uit het sleutelbeleid verwijderen. Selecteer **[!UICONTROL Edit]** in de sectie **[!DNL Key Policy]** .
 
-![ de detailssectie van de sleutel van AWS met uitgezocht in de Belangrijkste beleidssectie.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
+![&#x200B; de detailssectie van de sleutel van AWS met uitgezocht in de Belangrijkste beleidssectie.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
 De pagina **[!DNL Edit key policy]** wordt weergegeven. Markeer en verwijder de beleidsinstructie, gekopieerd uit de gebruikersinterface van Experience Platform, om de machtigingen voor de door Klant beheerde toetsenapp te verwijderen. Selecteer vervolgens **[!DNL Save changes]** om het proces te voltooien.
 
-![ geeft zeer belangrijke beleidswerkruimte op AWS met de verklaringJSON voorwerp en sparen benadrukte veranderingen uit.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
+![&#x200B; geeft zeer belangrijke beleidswerkruimte op AWS met de verklaringJSON voorwerp en sparen benadrukte veranderingen uit.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 
 ## Toetsrotatie {#key-rotation}
 
@@ -234,7 +234,7 @@ AWS biedt automatisch en op aanvraag sleutelrotatie. Om het risico van zeer bela
 
 Automatisch roteren van toetsen is standaard uitgeschakeld. Als u automatische sleutelrotatie vanuit de KMS-werkruimte wilt plannen, selecteert u de tab **[!DNL Key rotation]** , gevolgd door **[!DNL Edit]** in de **[!DNL Automatic key rotation section]** .
 
-![ de detailssectie van de sleutel van AWS met Zeer belangrijke omwenteling en uitgezocht geeft uit.](../../../images/governance-privacy-security/key-management-service/key-rotation.png)
+![&#x200B; de detailssectie van de sleutel van AWS met Zeer belangrijke omwenteling en uitgezocht geeft uit.](../../../images/governance-privacy-security/key-management-service/key-rotation.png)
 
 De werkruimte van **[!DNL Edit automatic key rotation]** wordt weergegeven. Selecteer hier het keuzerondje om automatisch roteren van toetsen in of uit te schakelen. Kies vervolgens het tekstinvoerveld of het vervolgkeuzemenu om een tijdsperiode voor de toetsrotatie te kiezen. Selecteer **[!DNL Save]** om uw instellingen te bevestigen en terug te keren naar de werkruimte met de belangrijkste details.
 
@@ -242,13 +242,13 @@ De werkruimte van **[!DNL Edit automatic key rotation]** wordt weergegeven. Sele
 >
 >De minimale rotatieperiode is 90 dagen en het maximum is 2560 dagen.
 
-![ de Edit automatische zeer belangrijke werkruimte van de omwenteling met de omwentelingsperiode en sparen benadrukte.](../../../images/governance-privacy-security/key-management-service/automatic-key-rotation.png)
+![&#x200B; de Edit automatische zeer belangrijke werkruimte van de omwenteling met de omwentelingsperiode en sparen benadrukte.](../../../images/governance-privacy-security/key-management-service/automatic-key-rotation.png)
 
 ### Sleutelrotatie op aanvraag {#on-demand-key-rotation}
 
 Selecteer **[!DNL Rotate Now]** om een directe toetsrotatie uit te voeren als de huidige toets is ingedrukt. AWS beperkt deze functie tot tien rotaties. Voor regelmatig onderhoud moet u in plaats daarvan automatische toetsrotaties plannen.
 
-![ de detailssectie van de sleutel van AWS met nu benadrukt Roteren.](../../../images/governance-privacy-security/key-management-service/on-demand-key-rotation.png)
+![&#x200B; de detailssectie van de sleutel van AWS met nu benadrukt Roteren.](../../../images/governance-privacy-security/key-management-service/on-demand-key-rotation.png)
 
 ## Volgende stappen
 

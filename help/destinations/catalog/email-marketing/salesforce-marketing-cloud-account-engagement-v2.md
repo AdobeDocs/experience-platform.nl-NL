@@ -13,18 +13,18 @@ ht-degree: 1%
 
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement]-verbinding
 
-Met het doel [[!DNL Salesforce Marketing Cloud Account Engagement] ](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (voorheen bekend als [!DNL Pardot] ) kunt u uw Adobe Experience Platform-profielgegevens exporteren naar het Salesforce B2B-marketingautomatiseringsplatform.
+Met het doel [[!DNL Salesforce Marketing Cloud Account Engagement] &#x200B;](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (voorheen bekend als [!DNL Pardot] ) kunt u uw Adobe Experience Platform-profielgegevens exporteren naar het Salesforce B2B-marketingautomatiseringsplatform.
 
 Dankzij deze integratie kunt u uw klantprofielen in Adobe Experience Platform naadloos synchroniseren met uw marketingcampagnes in [!DNL Salesforce Marketing Cloud Account Engagement] .
 
-Deze bestemming gebruikt [[!DNL Salesforce Import API v5] ](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html) om de uitvoer van partijgegevens efficiënt te verwerken.
+Deze bestemming gebruikt [[!DNL Salesforce Import API v5] &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html) om de uitvoer van partijgegevens efficiënt te verwerken.
 
 
 >[!IMPORTANT]
 > 
-> Dit is de V2 versie van de [ 1&rbrace; bestemming van het Betrokkenheid van de Rekening van Marketing Cloud van Salesforce &lbrace;. ](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) Deze versie vervangt de vorige bestemming en is momenteel in Alpha-versie.
+> Dit is de V2 versie van de [&#x200B; 1&rbrace; bestemming van het Betrokkenheid van de Rekening van Marketing Cloud van Salesforce &lbrace;. &#x200B;](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) Deze versie vervangt de vorige bestemming en is momenteel in Alpha-versie.
 > &#x200B;> <br>
-> &#x200B;> Als u momenteel de vorige versie van de [ bestemming van de Rekening van Salesforce Marketing Cloud van ](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) gebruikt, moet u aan deze V2 versie vóór **Januari 2026** migreren. Na januari 2026 zal Adobe de vorige versie uit bedrijf nemen en is deze niet meer beschikbaar.
+> &#x200B;> Als u momenteel de vorige versie van de [&#x200B; bestemming van de Rekening van Salesforce Marketing Cloud van &#x200B;](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) gebruikt, moet u aan deze V2 versie vóór **Januari 2026** migreren. Na januari 2026 zal Adobe de vorige versie uit bedrijf nemen en is deze niet meer beschikbaar.
 
 
 ## Gebruiksscenario’s {#use-cases}
@@ -49,7 +49,7 @@ Raadpleeg de onderstaande secties voor alle voorwaarden die u in Experience Plat
 
 ### Experience Platform-voorwaarden {#prerequisites-in-experience-platform}
 
-Alvorens gegevens aan de [!DNL (V2) Marketing Cloud Account Engagement] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](../../../catalog/datasets/overview.md) hebben, en [ publiek ](../../../segmentation/types/overview.md) dat in [!DNL Experience Platform] wordt gecreeerd.
+Alvorens gegevens aan de [!DNL (V2) Marketing Cloud Account Engagement] bestemming te activeren, moet u a [&#x200B; schema &#x200B;](/help/xdm/schema/composition.md), a [&#x200B; dataset &#x200B;](../../../catalog/datasets/overview.md) hebben, en [&#x200B; publiek &#x200B;](../../../segmentation/types/overview.md) dat in [!DNL Experience Platform] wordt gecreeerd.
 
 ### [!DNL Salesforce Marketing Cloud Account Engagement] voorwaarden {#prerequisites-destination}
 
@@ -57,7 +57,7 @@ Houd rekening met de volgende voorwaarden om gegevens van Experience Platform na
 
 #### U moet een [!DNL Marketing Cloud Account Engagement] -account hebben {#prerequisites-account}
 
-Een [!DNL Marketing Cloud Account Engagement] rekening met een abonnement op het [ product van de Betrokkenheid van de Rekening van Marketing Cloud ](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) is verplicht te werk te gaan.
+Een [!DNL Marketing Cloud Account Engagement] rekening met een abonnement op het [&#x200B; product van de Betrokkenheid van de Rekening van Marketing Cloud &#x200B;](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) is verplicht te werk te gaan.
 
 #### [!DNL Marketing Cloud Account Engagement] gebruikersgegevens verzamelen {#gather-credentials}
 
@@ -65,13 +65,13 @@ Schrijf de onderstaande items naar beneden voordat u deze verifieert voor de bes
 
 | Credentials | Beschrijving |
 | --- | --- |
-| **[!UICONTROL Account Engagement Business Unit ID]** | Uw [!DNL Salesforce] ID van de Business Unit voor accountbetrokkenheid. Verwijs naar de Salesforce [ documentatie ](https://help.salesforce.com/s/articleView?id=000381973&type=1) om te leren hoe te om identiteitskaart te vinden. |
+| **[!UICONTROL Account Engagement Business Unit ID]** | Uw [!DNL Salesforce] ID van de Business Unit voor accountbetrokkenheid. Verwijs naar de Salesforce [&#x200B; documentatie &#x200B;](https://help.salesforce.com/s/articleView?id=000381973&type=1) om te leren hoe te om identiteitskaart te vinden. |
 
 {style="table-layout:auto"}
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL (V2) Marketing Cloud Account Engagement] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL (V2) Marketing Cloud Account Engagement] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 Als er een overeenkomst wordt gevonden met een van deze id&#39;s, wordt het perspectiefrecord voor Betrokkenheid van account bijgewerkt met de gegevens van Adobe Experience Platform. Als er geen overeenkomst wordt gevonden, wordt een nieuw perspectiefrecord gemaakt in Account Engagement.
 
@@ -98,23 +98,23 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
 
-![ het werkschema van de de bestemmingsverbinding van de Rekening van Salesforce van Marketing Cloud van de Rekening van Salesforce Marketing Cloud van het Betrokkenheid V2 het werkschema van de bestemmingsverbinding ](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/connect-to-destination.png "")
+![&#x200B; het werkschema van de de bestemmingsverbinding van de Rekening van Salesforce van Marketing Cloud van de Rekening van Salesforce Marketing Cloud van het Betrokkenheid V2 het werkschema van de bestemmingsverbinding &#x200B;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/connect-to-destination.png "")
 
 U wordt omgeleid naar de aanmeldingspagina van [!DNL Salesforce] . Voer uw [!DNL Marketing Cloud Account Engagement] -accountgegevens in en selecteer **[!UICONTROL Log In]** .
 
-![ Salesforce login pagina ](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png " Salesforce login pagina.")
+![&#x200B; Salesforce login pagina &#x200B;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png " Salesforce login pagina.")
 
 Daarna, uitgezochte **[!UICONTROL Allow]** om toestemmingen aan **Adobe Experience Platform** app te geven om tot uw [!DNL Salesforce Marketing Cloud Account Engagement] rekening toegang te hebben. *u moet dit slechts eenmaal doen*.
 
-![ het screenshot van Salesforce App pop-up om toestemmingen aan Experience Platform te geven app toegang tot de Betrokkenheid van de Rekening van Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
+![&#x200B; het screenshot van Salesforce App pop-up om toestemmingen aan Experience Platform te geven app toegang tot de Betrokkenheid van de Rekening van Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
 Als de verstrekte details geldig zijn, toont UI een bericht: *u met succes verbonden met (V2) de rekening van de Betrokkenheid van de Rekening van Salesforce Marketing Cloud* en a **[!UICONTROL Connected]** status met een groen vinkje.
 
@@ -130,7 +130,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -138,16 +138,16 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
 Als u publieksgegevens van Adobe Experience Platform naar de [!DNL (V2) Marketing Cloud Account Engagement] -bestemming wilt verzenden, moet u de XDM-schemavelden (Experience Data Model) toewijzen aan de corresponderende velden in de bestemming.
 
-Verwijs naar de [ Verwijzing API v5 documentatie van het Vooruitzicht van Salesforce ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html) voor een volledige lijst van gesteunde gebieden. Merk op dat [ douanegebieden ](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html) niet in de versie van Alpha worden gesteund.
+Verwijs naar de [&#x200B; Verwijzing API v5 documentatie van het Vooruitzicht van Salesforce &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html) voor een volledige lijst van gesteunde gebieden. Merk op dat [&#x200B; douanegebieden &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html) niet in de versie van Alpha worden gesteund.
 
 #### Ondersteunde kenmerken {#supported-attributes}
 
@@ -184,16 +184,16 @@ Voer de onderstaande stappen uit om de juiste velden toe te wijzen.
 1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk of kies de categorie **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
 1. Kies in het **[!UICONTROL Select target field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer een identiteit of kies **[!UICONTROL Select custom attributes]** -categorie en geef een waarde op in de lijst met standaardvelden voor het vooruitzicht van accountbetrokkenheid.
 
-![ Voorbeeld van het in kaart brengen van XDM gebieden en identiteiten XDM aan de gebieden van het Betrokkenheid van de Rekening van Salesforce Marketing Cloud V2 van de Rekening ](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/mapping.png " van de Verhouding van ") van XDM gebieden en identiteiten aan de gebieden van de Rekening van Salesforce Marketing Cloud
+![&#x200B; Voorbeeld van het in kaart brengen van XDM gebieden en identiteiten XDM aan de gebieden van het Betrokkenheid van de Rekening van Salesforce Marketing Cloud V2 van de Rekening &#x200B;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/mapping.png " van de Verhouding van ") van XDM gebieden en identiteiten aan de gebieden van de Rekening van Salesforce Marketing Cloud
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Navigeer naar een geselecteerd publiek. Selecteer het tabblad **[!DNL Activation data]**. In de kolom **[!UICONTROL Mapping ID]** wordt de naam weergegeven van het aangepaste veld dat op de pagina [!DNL Marketing Cloud Account Engagement Prospects] wordt gegenereerd.
-   ![ het het schermschot van Experience Platform UI die identiteitskaart van de Toewijzing voor een geselecteerd segment tonen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
+   ![&#x200B; het het schermschot van Experience Platform UI die identiteitskaart van de Toewijzing voor een geselecteerd segment tonen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. Meld u aan bij de [[!DNL Salesforce] ](https://login.salesforce.com/) -website. Navigeer vervolgens naar de pagina **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** en controleer of de perspectieven van het publiek zijn toegevoegd of bijgewerkt. U kunt ook toegang krijgen tot [[!DNL Account Engagement] ](https://pi.pardot.com/) en tot de pagina **[!DNL Prospects]** .
+1. Meld u aan bij de [[!DNL Salesforce] &#x200B;](https://login.salesforce.com/) -website. Navigeer vervolgens naar de pagina **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** en controleer of de perspectieven van het publiek zijn toegevoegd of bijgewerkt. U kunt ook toegang krijgen tot [[!DNL Account Engagement] &#x200B;](https://pi.pardot.com/) en tot de pagina **[!DNL Prospects]** .
    {het schermschot van 0} Salesforce UI die de pagina van Vooruitzichten toont.![](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. Om te controleren of de vooruitzichten zijn bijgewerkt, selecteer een vooruitzicht en verifieer of is het gebied van het douanevooruitzicht bijgewerkt met de het publieksstatus van Experience Platform.
@@ -201,10 +201,10 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-* [!DNL Marketing Cloud Account Engagement] [ API documentatie ](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html)
-* [ de Import API van Salesforce v5 Documentatie ](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html)
-* [ de Verhouding API van Salesforce v5 Documentatie ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)
+* [!DNL Marketing Cloud Account Engagement] [&#x200B; API documentatie &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html)
+* [&#x200B; de Import API van Salesforce v5 Documentatie &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html)
+* [&#x200B; de Verhouding API van Salesforce v5 Documentatie &#x200B;](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)

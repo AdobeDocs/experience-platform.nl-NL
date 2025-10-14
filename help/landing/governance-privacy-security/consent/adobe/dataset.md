@@ -17,11 +17,11 @@ ht-degree: 0%
 
 Adobe Experience Platform kan uw toestemming-/voorkeursgegevens van de klant alleen verwerken als die gegevens worden verzonden naar een gegevensset waarvan het schema velden bevat die betrekking hebben op toestemmingen en andere machtigingen. Specifiek, moet deze dataset op de [!DNL XDM Individual Profile] klasse worden gebaseerd, en voor gebruik in [!DNL Real-Time Customer Profile] worden toegelaten.
 
-Dit document bevat stappen voor het configureren van een gegevensset voor het verwerken van toestemmingsgegevens in Experience Platform. Voor een overzicht van het volledige werkschema voor verwerkingstoestemming/voorkeur gegevens in Experience Platform, verwijs naar het [ overzicht van de toestemmingsverwerking ](./overview.md).
+Dit document bevat stappen voor het configureren van een gegevensset voor het verwerken van toestemmingsgegevens in Experience Platform. Voor een overzicht van het volledige werkschema voor verwerkingstoestemming/voorkeur gegevens in Experience Platform, verwijs naar het [&#x200B; overzicht van de toestemmingsverwerking &#x200B;](./overview.md).
 
 >[!IMPORTANT]
 >
->De voorbeelden in deze gids gebruiken een gestandaardiseerde reeks gebieden om de waarden van de klantentoestemming te vertegenwoordigen, zoals die door de [[!UICONTROL Consent and Preference Details] groep van het schemagebied ](../../../../xdm/field-groups/profile/consents.md) worden bepaald. De structuur van deze velden is bedoeld om een efficiënt gegevensmodel te bieden voor een groot aantal gemeenschappelijke gevallen waarin toestemming wordt gegeven.
+>De voorbeelden in deze gids gebruiken een gestandaardiseerde reeks gebieden om de waarden van de klantentoestemming te vertegenwoordigen, zoals die door de [[!UICONTROL Consent and Preference Details] groep van het schemagebied &#x200B;](../../../../xdm/field-groups/profile/consents.md) worden bepaald. De structuur van deze velden is bedoeld om een efficiënt gegevensmodel te bieden voor een groot aantal gemeenschappelijke gevallen waarin toestemming wordt gegeven.
 >
 >U kunt echter ook uw eigen veldgroepen definiëren om toestemming te vertegenwoordigen op basis van uw eigen gegevensmodellen. Vraag uw juridische team om goedkeuring voor een gegevensmodel voor toestemming dat past bij uw bedrijfsbehoeften, op basis van de volgende opties:
 >
@@ -33,13 +33,13 @@ Dit document bevat stappen voor het configureren van een gegevensset voor het ve
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Model van de Gegevens van de Ervaring (XDM) ](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM.
-* [ Real-Time Profiel van de Klant ](../../../../profile/home.md): consolideert klantengegevens van verschillende bronnen in een volledige, verenigde mening terwijl het aanbieden van een actionable, timestamped rekening van elke klanteninteractie.
+* [&#x200B; Model van de Gegevens van de Ervaring (XDM) &#x200B;](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM.
+* [&#x200B; Real-Time Profiel van de Klant &#x200B;](../../../../profile/home.md): consolideert klantengegevens van verschillende bronnen in een volledige, verenigde mening terwijl het aanbieden van een actionable, timestamped rekening van elke klanteninteractie.
 
 >[!IMPORTANT]
 >
->In deze zelfstudie wordt ervan uitgegaan dat u het [!DNL Profile] -schema in Experience Platform kent dat u wilt gebruiken om kenmerkgegevens van klanten vast te leggen. Ongeacht de methode u gebruikt om toestemmingsgegevens te verzamelen, moet dit schema [ voor het Profiel van de Klant in real time ](../../../../xdm/ui/resources/schemas.md#profile) worden toegelaten. Bovendien kan de primaire identiteit van het schema geen direct identificeerbaar veld zijn dat niet mag worden gebruikt in op rente gebaseerde reclame, zoals een e-mailadres. Raadpleeg uw juridische adviseur als u niet zeker weet welke velden beperkt zijn.
+>In deze zelfstudie wordt ervan uitgegaan dat u het [!DNL Profile] -schema in Experience Platform kent dat u wilt gebruiken om kenmerkgegevens van klanten vast te leggen. Ongeacht de methode u gebruikt om toestemmingsgegevens te verzamelen, moet dit schema [&#x200B; voor het Profiel van de Klant in real time &#x200B;](../../../../xdm/ui/resources/schemas.md#profile) worden toegelaten. Bovendien kan de primaire identiteit van het schema geen direct identificeerbaar veld zijn dat niet mag worden gebruikt in op rente gebaseerde reclame, zoals een e-mailadres. Raadpleeg uw juridische adviseur als u niet zeker weet welke velden beperkt zijn.
 
 ## [!UICONTROL Consent and Preference Details] veldgroepstructuur {#structure}
 
@@ -92,7 +92,7 @@ De veldgroep biedt één objecttype veld, `consents`, waarvan de subeigenschappe
 
 >[!NOTE]
 >
->Zie het overzicht over de [[!UICONTROL Consent and Preference Details] veldgroep ](../../../../xdm/field-groups/profile/consents.md) voor meer informatie over de structuur en betekenis van de subeigenschappen in `consents` .
+>Zie het overzicht over de [[!UICONTROL Consent and Preference Details] veldgroep &#x200B;](../../../../xdm/field-groups/profile/consents.md) voor meer informatie over de structuur en betekenis van de subeigenschappen in `consents` .
 
 ## Vereiste veldgroepen toevoegen aan uw [!DNL Profile] -schema {#add-field-group}
 
@@ -101,13 +101,13 @@ Als u gegevens over toestemming wilt verzamelen met de Adobe-standaard, moet u e
 * [[!UICONTROL Consent and Preference Details]](../../../../xdm/field-groups/profile/consents.md)
 * [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (vereist als u toestemmingssignalen verzendt via het Experience Platform Web of Mobile SDK)
 
-Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie en selecteer vervolgens het tabblad **[!UICONTROL Browse]** om een lijst met bestaande schema&#39;s weer te geven. Van hier, selecteer de naam van [!DNL Profile] - toegelaten schema dat u toestemmingsgebieden aan wilt toevoegen. De schermafbeeldingen in deze sectie gebruiken het schema &quot;van de Leden van de Loyalty&quot;dat in het [ schemaverwezenlijking leerprogramma ](../../../../xdm/tutorials/create-schema-ui.md) als voorbeeld wordt gebouwd.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie en selecteer vervolgens het tabblad **[!UICONTROL Browse]** om een lijst met bestaande schema&#39;s weer te geven. Van hier, selecteer de naam van [!DNL Profile] - toegelaten schema dat u toestemmingsgebieden aan wilt toevoegen. De schermafbeeldingen in deze sectie gebruiken het schema &quot;van de Leden van de Loyalty&quot;dat in het [&#x200B; schemaverwezenlijking leerprogramma &#x200B;](../../../../xdm/tutorials/create-schema-ui.md) als voorbeeld wordt gebouwd.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
 >[!TIP]
 >
->U kunt de zoek- en filtermogelijkheden van de werkruimte gebruiken om uw schema gemakkelijker te vinden. Zie de gids bij [ het onderzoeken van middelen XDM ](../../../../xdm/ui/explore.md) voor meer informatie.
+>U kunt de zoek- en filtermogelijkheden van de werkruimte gebruiken om uw schema gemakkelijker te vinden. Zie de gids bij [&#x200B; het onderzoeken van middelen XDM &#x200B;](../../../../xdm/ui/explore.md) voor meer informatie.
 
 De [!DNL Schema Editor] wordt weergegeven en geeft de structuur van het schema in het canvas weer. Selecteer links op het canvas de optie **[!UICONTROL Add]** onder de sectie **[!UICONTROL Field groups]** .
 
@@ -121,15 +121,15 @@ Zoek vervolgens de veldgroep **[!UICONTROL IdentityMap]** in de lijst en selecte
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/identitymap.png)
 
-Het canvas verschijnt weer en geeft aan dat de velden `consents` en `identityMap` zijn toegevoegd aan de schemastructuur. Als u extra toestemming en voorkeursgebieden niet vereist die door de standaardgebiedsgroep worden gevangen, zie de bijlage sectie op [ toevoegend de gebieden van de douanetoestemming en voorkeur aan het schema ](#custom-consent). Anders selecteert u **[!UICONTROL Save]** om de wijzigingen in het schema te voltooien.
+Het canvas verschijnt weer en geeft aan dat de velden `consents` en `identityMap` zijn toegevoegd aan de schemastructuur. Als u extra toestemming en voorkeursgebieden niet vereist die door de standaardgebiedsgroep worden gevangen, zie de bijlage sectie op [&#x200B; toevoegend de gebieden van de douanetoestemming en voorkeur aan het schema &#x200B;](#custom-consent). Anders selecteert u **[!UICONTROL Save]** om de wijzigingen in het schema te voltooien.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
 >[!IMPORTANT]
 >
->Als u een nieuw schema creeert, of een bestaand schema uitgeeft dat niet voor Profiel is toegelaten, moet u [ het schema voor Profiel ](../../../../xdm/ui/resources/schemas.md#profile) toelaten alvorens op te slaan.
+>Als u een nieuw schema creeert, of een bestaand schema uitgeeft dat niet voor Profiel is toegelaten, moet u [&#x200B; het schema voor Profiel &#x200B;](../../../../xdm/ui/resources/schemas.md#profile) toelaten alvorens op te slaan.
 
-Als het bewerkte schema wordt gebruikt door de [!UICONTROL Profile Dataset] die is opgegeven in de Experience Platform Web SDK-gegevensstroom, bevat die gegevensset nu de nieuwe machtigingsvelden. U kunt nu aan de [ gids van de toestemmingsverwerking ](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Experience Platform te vormen om toestemmingsgegevens te verwerken. Als u geen dataset voor dit schema hebt gecreeerd, volg de stappen in de volgende sectie.
+Als het bewerkte schema wordt gebruikt door de [!UICONTROL Profile Dataset] die is opgegeven in de Experience Platform Web SDK-gegevensstroom, bevat die gegevensset nu de nieuwe machtigingsvelden. U kunt nu aan de [&#x200B; gids van de toestemmingsverwerking &#x200B;](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Experience Platform te vormen om toestemmingsgegevens te verwerken. Als u geen dataset voor dit schema hebt gecreeerd, volg de stappen in de volgende sectie.
 
 ## Een gegevensset maken op basis van uw toestemmingsschema {#dataset}
 
@@ -161,13 +161,13 @@ Selecteer ten slotte **[!UICONTROL Enable]** in de bevestigingspop-up om het sch
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-De gegevensset wordt nu opgeslagen en ingeschakeld voor gebruik in [!DNL Profile] . Als u het Web SDK van Experience Platform van plan bent om toestemmingsgegevens naar Profiel te verzenden, moet u deze dataset als [!UICONTROL Profile Dataset] selecteren wanneer vestiging uw [ datastream ](../../../../datastreams/overview.md).
+De gegevensset wordt nu opgeslagen en ingeschakeld voor gebruik in [!DNL Profile] . Als u het Web SDK van Experience Platform van plan bent om toestemmingsgegevens naar Profiel te verzenden, moet u deze dataset als [!UICONTROL Profile Dataset] selecteren wanneer vestiging uw [&#x200B; datastream &#x200B;](../../../../datastreams/overview.md).
 
 ## Volgende stappen
 
 Door deze zelfstudie te volgen, hebt u toestemmingsgebieden aan een [!DNL Profile] toegelaten schema toegevoegd, waarvan dataset zal worden gebruikt om toestemmingsgegevens in te voeren gebruikend het Web SDK van Experience Platform of directe opname XDM.
 
-U kunt nu aan het [ overzicht van de toestemmingsverwerking ](./overview.md#merge-policies) terugkeren blijven vormend Experience Platform om toestemmingsgegevens te verwerken.
+U kunt nu aan het [&#x200B; overzicht van de toestemmingsverwerking &#x200B;](./overview.md#merge-policies) terugkeren blijven vormend Experience Platform om toestemmingsgegevens te verwerken.
 
 ## Bijlage
 
@@ -179,7 +179,7 @@ Als u extra toestemmingssignalen buiten die moet vangen die door de standaard [!
 
 >[!IMPORTANT]
 >
->De Experience Platform Web en Mobiele SDKs steunen geen douanevelden in hun toestemming-verandering bevelen. Momenteel is de enige manier om de gebieden van de douanetoestemming in Profiel in te nemen door [ partij ingeslikt ](../../../../ingestion/batch-ingestion/overview.md) of a [ bronverbinding ](../../../../sources/home.md).
+>De Experience Platform Web en Mobiele SDKs steunen geen douanevelden in hun toestemming-verandering bevelen. Momenteel is de enige manier om de gebieden van de douanetoestemming in Profiel in te nemen door [&#x200B; partij ingeslikt &#x200B;](../../../../ingestion/batch-ingestion/overview.md) of a [&#x200B; bronverbinding &#x200B;](../../../../sources/home.md).
 
 U wordt ten zeerste aangeraden de veldgroep [!UICONTROL Consent and Preference Details] te gebruiken als basislijn voor de structuur van uw gegevens voor toestemming en zo nodig extra velden toe te voegen in plaats van de volledige structuur helemaal zelf te maken.
 
@@ -212,4 +212,4 @@ Het toestemmings- of voorkeursveld wordt toegevoegd aan de schemastructuur. De n
 
 Voer de bovenstaande stappen uit om door te gaan met het toevoegen van de toestemmings- en voorkeurvelden die u nodig hebt. Als u klaar bent, selecteert u **[!UICONTROL Save]** om uw wijzigingen te bevestigen.
 
-Als u geen dataset voor dit schema hebt gecreeerd, ga aan de sectie over [ voort creërend een dataset ](#dataset).
+Als u geen dataset voor dit schema hebt gecreeerd, ga aan de sectie over [&#x200B; voort creërend een dataset &#x200B;](#dataset).

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Return Item] is een standaard XDM-gegevenstype (Experience Data Model) waarmee essentiële details worden vastgelegd met betrekking tot het retourproces voor een aangeschaft item.
 
-![ A diagram van het gegevenstype van het Punt van de Terugkeer.](../images/data-types/return-item.png)
+![&#x200B; A diagram van het gegevenstype van het Punt van de Terugkeer.](../images/data-types/return-item.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-----------------------------|------------------------------|-----------|--------------------------------------------------------|
@@ -30,5 +30,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/returnitem.schema.json)

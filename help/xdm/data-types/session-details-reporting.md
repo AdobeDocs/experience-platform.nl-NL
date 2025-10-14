@@ -15,7 +15,7 @@ ht-degree: 0%
 Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden voor de verzameling van media die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd. Het schema omvat een breed scala aan eigenschappen die inzicht verschaffen in het gedrag van de gebruiker en de consumptiepatronen van de inhoud. Gebruik het gegevenstype [!UICONTROL Session Details] Rapportage om de betrokkenheid van de gebruiker vast te leggen door afspeelgebeurtenissen, interacties, voortgangsmarkeringen, pauzes en andere metriek te registreren.
 
 +++Select om een diagram van de Gegevens van de Zitting te tonen Meldend gegevenstype.
-![ een diagram van de Details van de Zitting Meldend gegevenstype.](../images/data-types/session-details-reporting.png)
+![&#x200B; een diagram van de Details van de Zitting Meldend gegevenstype.](../images/data-types/session-details-reporting.png)
 +++
 
 >[!NOTE]

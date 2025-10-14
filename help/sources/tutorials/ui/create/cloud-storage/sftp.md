@@ -17,20 +17,20 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL SFTP] -bronverbinding
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 >[!IMPORTANT]
 >
 >Het wordt aangeraden nieuwe regels of regeleinden te vermijden bij het invoeren van JSON-objecten met een [!DNL SFTP] -bronverbinding. Als u de beperking wilt omzeilen, gebruikt u één JSON-object per regel en gebruikt u meerdere regels voor het uitvoeren van bestanden.
 
-Als u reeds een geldige [!DNL SFTP] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/batch/cloud-storage.md).
+Als u reeds een geldige [!DNL SFTP] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/batch/cloud-storage.md).
 
 ### Vereiste referenties verzamelen
 
-Lees de [[!DNL SFTP]  authentificatiegids ](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) voor gedetailleerde stappen op hoe te om uw authentificatiegeloofsbrieven terug te winnen.
+Lees de [[!DNL SFTP]  authentificatiegids &#x200B;](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) voor gedetailleerde stappen op hoe te om uw authentificatiegeloofsbrieven terug te winnen.
 
 ## Verbinding maken met uw [!DNL SFTP] -server
 
@@ -40,7 +40,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie [!UICONTROL Cloud storage] de optie **[!UICONTROL SFTP]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ de de broncatalogus van Experience Platform met geselecteerde bron SFTP.](../../../../images/tutorials/create/sftp/catalog.png)
+![&#x200B; de de broncatalogus van Experience Platform met geselecteerde bron SFTP.](../../../../images/tutorials/create/sftp/catalog.png)
 
 De pagina **[!UICONTROL Connect to SFTP]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -48,7 +48,7 @@ De pagina **[!UICONTROL Connect to SFTP]** wordt weergegeven. Op deze pagina kun
 
 Als u een bestaande account wilt verbinden, selecteert u de FTP- of SFTP-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ een lijst van bestaande rekeningen SFTP op Experience Platform UI.](../../../../images/tutorials/create/sftp/existing.png)
+![&#x200B; een lijst van bestaande rekeningen SFTP op Experience Platform UI.](../../../../images/tutorials/create/sftp/existing.png)
 
 ### Nieuwe account
 
@@ -60,7 +60,7 @@ Als u een bestaande account wilt verbinden, selecteert u de FTP- of SFTP-account
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam en een optionele beschrijving voor uw nieuwe [!DNL SFTP] -account.
 
-![ het nieuwe rekeningsscherm voor SFTP ](../../../../images/tutorials/create/sftp/new.png)
+![&#x200B; het nieuwe rekeningsscherm voor SFTP &#x200B;](../../../../images/tutorials/create/sftp/new.png)
 
 De [!DNL SFTP] -bron ondersteunt zowel basisverificatie als verificatie via de openbare SSH-sleutel.
 
@@ -77,9 +77,9 @@ Als u basisverificatie wilt gebruiken, selecteert u **[!UICONTROL Password]** en
 
 Tijdens deze stap kunt u ook uw maximale gelijktijdige verbindingen configureren, het mappad definiëren en het koppelen voor uw [!DNL SFTP] -server in- of uitschakelen. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-Voor meer informatie over authentificatie, lees de gids over [ het verzamelen vereiste geloofsbrieven voor  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
+Voor meer informatie over authentificatie, lees de gids over [&#x200B; het verzamelen vereiste geloofsbrieven voor  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
-![ het nieuwe rekeningsscherm voor de bron SFTP die basisauthentificatie gebruiken ](../../../../images/tutorials/create/sftp/password.png)
+![&#x200B; het nieuwe rekeningsscherm voor de bron SFTP die basisauthentificatie gebruiken &#x200B;](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB  SSH openbare zeer belangrijke authentificatie ]
 
@@ -93,12 +93,12 @@ Als u SSH-gebruikersgegevens op basis van openbare sleutels wilt gebruiken, sele
 
 Tijdens deze stap kunt u ook uw maximale gelijktijdige verbindingen configureren, het mappad definiëren en het koppelen voor uw [!DNL SFTP] -server in- of uitschakelen. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-Voor meer informatie over authentificatie, lees de gids over [ het verzamelen vereiste geloofsbrieven voor  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
+Voor meer informatie over authentificatie, lees de gids over [&#x200B; het verzamelen vereiste geloofsbrieven voor  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
-![ het nieuwe rekeningsscherm voor de bron SFTP die SSH openbare sleutel gebruikt.](../../../../images/tutorials/create/sftp/ssh.png)
+![&#x200B; het nieuwe rekeningsscherm voor de bron SFTP die SSH openbare sleutel gebruikt.](../../../../images/tutorials/create/sftp/ssh.png)
 
 >[!ENDTABS]
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding met uw SFTP-account tot stand gebracht. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in Experience Platform ](../../dataflow/batch/cloud-storage.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding met uw SFTP-account tot stand gebracht. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens van uw wolkenopslag in Experience Platform &#x200B;](../../dataflow/batch/cloud-storage.md) te brengen.

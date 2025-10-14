@@ -21,9 +21,9 @@ Lees deze zelfstudie om te leren hoe u een [!DNL Acxiom Prospecting Data Import]
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [[!DNL Prospect Profile]](../../../../../profile/ui/prospect-profile.md): Leer hoe u een perspectiefprofiel maakt en gebruikt om informatie over onbekende klanten te verzamelen met behulp van informatie van derden.
 
@@ -40,7 +40,7 @@ Als u toegang wilt tot uw emmertje op Experience Platform, moet u geldige waarde
 
 >[!IMPORTANT]
 >
->U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Acxiom] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../../../access-control/ui/overview.md).
+>U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Acxiom] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [&#x200B; gids UI van de toegangscontrole &#x200B;](../../../../../access-control/ui/overview.md).
 
 ## Sluit uw [!DNL Acxiom] -account aan
 
@@ -54,13 +54,13 @@ Selecteer onder de categorie **[!UICONTROL Data & Identity Partners]** de optie 
 >
 >Een bronkaart die **[!UICONTROL Add data]** weergeeft, houdt in dat de bron al een geverifieerd account heeft. Een bronkaart die **[!UICONTROL Set up]** weergeeft, betekent daarentegen dat u aanmeldingsgegevens moet opgeven en een nieuwe account moet maken om die bron te kunnen gebruiken.
 
-![ de broncatalogus met geselecteerde bron van Acxiom.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
+![&#x200B; de broncatalogus met geselecteerde bron van Acxiom.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
 
 ### Een nieuwe account maken
 
 Selecteer **[!UICONTROL New account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Acxiom] -gegevens op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ de nieuwe rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
+![&#x200B; de nieuwe rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -80,13 +80,13 @@ Selecteer **[!UICONTROL Existing account]** als u een bestaande account wilt geb
 
 Selecteer een account in de lijst om details over dat account weer te geven. Nadat u een account hebt geselecteerd, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ de bestaande rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
+![&#x200B; de bestaande rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
 
 ## Gegevens selecteren
 
 Selecteer het bestand dat u wilt opnemen in het gewenste emmertje en de gewenste submap. U kunt een voorbeeld van de gegevens weergeven wanneer het scheidingsteken en het compressietype zijn gedefinieerd. Nadat u het bestand hebt geselecteerd, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ de uitgezochte gegevens en interface van de dossiervoorproef van het bronwerkschema.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
+![&#x200B; de uitgezochte gegevens en interface van de dossiervoorproef van het bronwerkschema.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
 
 >[!NOTE]
 >
@@ -104,13 +104,13 @@ Daarna, moet u informatie betreffende uw dataset en uw gegevensstroom verstrekke
 
 Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. De gegevens die met succes in Experience Platform worden opgenomen worden voortgeduurd binnen het gegevensmeer als datasets. Selecteer **[!UICONTROL New dataset]** als u een nieuwe gegevensset wilt gebruiken.
 
-![ de nieuwe datasetinterface.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
+![&#x200B; de nieuwe datasetinterface.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
 
 | Nieuwe gegevens gegevensset | Beschrijving |
 | --- | --- |
 | Naam uitvoergegevensset | De naam van de nieuwe dataset. |
 | Beschrijving | (Optioneel) Een korte toelichting van het doel van de gegevensset. |
-| Schema | Een vervolgkeuzelijst met schema&#39;s die in uw organisatie bestaan. U kunt ook uw eigen schema vóór het proces van de bronconfiguratie maken. Voor meer informatie, lees de gids op [ creërend schema in UI ](../../../../../xdm/tutorials/create-schema-ui.md). |
+| Schema | Een vervolgkeuzelijst met schema&#39;s die in uw organisatie bestaan. U kunt ook uw eigen schema vóór het proces van de bronconfiguratie maken. Voor meer informatie, lees de gids op [&#x200B; creërend schema in UI &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md). |
 
 >[!TAB  Gebruik een bestaande dataset ]
 
@@ -118,7 +118,7 @@ Selecteer **[!UICONTROL Existing dataset]** als u een bestaande gegevensset wilt
 
 U kunt **[!UICONTROL Advanced search]** selecteren om een venster van alle datasets te bekijken uw organisatie, met inbegrip van hun respectieve details zoals of zij voor opname aan het Profiel van de Klant in real time worden toegelaten.
 
-![ de bestaande datasetinterface.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
+![&#x200B; de bestaande datasetinterface.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
 
 >[!ENDTABS]
 
@@ -126,22 +126,22 @@ U kunt **[!UICONTROL Advanced search]** selecteren om een venster van alle datas
 
 Als tijdens deze stap uw gegevensset is ingeschakeld voor Profiel, kunt u de schakeloptie **[!UICONTROL Profile dataset]** selecteren om uw gegevens in te schakelen voor opnemen van profiel. U kunt ook [!UICONTROL Error diagnostics] en [!UICONTROL Partial ingestion] inschakelen.
 
-* **Diagnose van de Fout** - Uitgezochte **Diagnose van de Fout** om de bron op te dragen om foutendiagnostiek te veroorzaken die u kunt later van verwijzingen voorzien gebruikend APIs. Voor meer informatie, lees het [ overzicht van foutendiagnostiek ](../../../../../ingestion/quality/error-diagnostics.md)
-* **laat Gedeeltelijke Opname** toe - Gedeeltelijke partijingestie is de capaciteit om gegevens in te voeren die fouten bevatten, tot een bepaalde drempel. Met deze functie kunnen gebruikers al hun juiste gegevens in Adobe Experience Platform opnemen terwijl al hun onjuiste gegevens afzonderlijk worden opgeslagen, samen met informatie over waarom de gegevens ongeldig zijn.  Voor meer informatie, leest het [ Gedeeltelijke ingestitieoverzicht ](../../../../../ingestion/batch-ingestion/partial.md)
+* **Diagnose van de Fout** - Uitgezochte **Diagnose van de Fout** om de bron op te dragen om foutendiagnostiek te veroorzaken die u kunt later van verwijzingen voorzien gebruikend APIs. Voor meer informatie, lees het [&#x200B; overzicht van foutendiagnostiek &#x200B;](../../../../../ingestion/quality/error-diagnostics.md)
+* **laat Gedeeltelijke Opname** toe - Gedeeltelijke partijingestie is de capaciteit om gegevens in te voeren die fouten bevatten, tot een bepaalde drempel. Met deze functie kunnen gebruikers al hun juiste gegevens in Adobe Experience Platform opnemen terwijl al hun onjuiste gegevens afzonderlijk worden opgeslagen, samen met informatie over waarom de gegevens ongeldig zijn.  Voor meer informatie, leest het [&#x200B; Gedeeltelijke ingestitieoverzicht &#x200B;](../../../../../ingestion/batch-ingestion/partial.md)
 
-![ de interface van de dataflow detailsconfiguraties.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
+![&#x200B; de interface van de dataflow detailsconfiguraties.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
 
 | Dataflow-configuraties | Beschrijving |
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom.  Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties zijn allemaal een doorlopende gegevensstroom om deze waarschuwingen te activeren.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties zijn allemaal een doorlopende gegevensstroom om deze waarschuwingen te activeren.  Voor meer informatie, lees het [&#x200B; alarm overzicht &#x200B;](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 ## Toewijzing
 
-Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren.  Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md)
+Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren.  Voor meer informatie, lees de [&#x200B; kaartgids in UI &#x200B;](../../../../../data-prep/ui/mapping.md)
 
-![ de afbeeldingsinterface.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
+![&#x200B; de afbeeldingsinterface.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
 ## Plaats uw gegevensstroomopname
 
@@ -154,7 +154,7 @@ Gebruik de het plannen interface om het innameprogramma van uw dataflow te bepal
 | Begintijd | Het tijdstempel voor de geprojecteerde run, weergegeven in UTC-tijdzone. |
 | Achtergrond | Met Backfill wordt bepaald welke gegevens in eerste instantie worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als terugvullen is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
 
-![ de het plannen configuratieinterface.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
+![&#x200B; de het plannen configuratieinterface.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
 
 ## Controleer uw gegevensstroom
 
@@ -165,7 +165,7 @@ Gebruik de overzichtspagina voor een samenvatting van uw gegevensstroom voorafga
 * **Plannend** - toont die actieve periode, frequentie, en interval van het innameprogramma.
 Nadat u de gegevensstroom hebt gereviseerd, klikt u op Voltooien en wacht u enige tijd tot de gegevensstroom is gemaakt.
 
-![ De overzichtspagina.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-review.png)
+![&#x200B; De overzichtspagina.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-review.png)
 
 ## Volgende stappen
 
@@ -173,15 +173,15 @@ Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om batchgegeve
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [ controlerekeningen en dataflows in UI ](../../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [&#x200B; controlerekeningen en dataflows in UI &#x200B;](../../monitor.md).
 
 ### Uw gegevensstroom bijwerken
 
-Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [ bijwerken brondataflows in UI ](../../update-dataflows.md).
+Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [&#x200B; bijwerken brondataflows in UI &#x200B;](../../update-dataflows.md).
 
 ### Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [ het schrappen van dataflows in UI ](../../delete.md).
+U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [&#x200B; het schrappen van dataflows in UI &#x200B;](../../delete.md).
 
 ## Aanvullende bronnen {#additional-resources}
 

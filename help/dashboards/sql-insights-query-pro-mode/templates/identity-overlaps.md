@@ -14,9 +14,9 @@ Analyseer identiteitsoverlap voor geselecteerde doelgroepen met het [!UICONTROL 
 
 ## Doelgroepen filteren {#filter-audiences}
 
-Gebruik aangepaste filters voor gerichte analyse van specifieke doelgroepen en identiteitstypen om ervoor te zorgen dat de gepresenteerde gegevens worden afgestemd op je analysedoelen. Om uw analyse te beginnen, selecteer het filterpictogram (![ het filterpictogram.](../../../images/icons/filter-icon-white.png)).
+Gebruik aangepaste filters voor gerichte analyse van specifieke doelgroepen en identiteitstypen om ervoor te zorgen dat de gepresenteerde gegevens worden afgestemd op je analysedoelen. Om uw analyse te beginnen, selecteer het filterpictogram (![&#x200B; het filterpictogram.](../../../images/icons/filter-icon-white.png)).
 
-![ het Verlaten dashboard van de Identiteit van het publiek met het benadrukte filterpictogram.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filter-icon.png)
+![&#x200B; het Verlaten dashboard van de Identiteit van het publiek met het benadrukte filterpictogram.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filter-icon.png)
 
 Het dialoogvenster **[!UICONTROL Filters]** wordt weergegeven. In deze weergave kiest u de algemene filters om uw doelgroep te configureren, het samenvoegbeleid te bepalen en de identiteiten voor de vergelijking vast te stellen. Selecteer uw instellingen voor analyse in het vervolgkeuzemenu van elke sectie
 
@@ -25,7 +25,7 @@ Het dialoogvenster **[!UICONTROL Filters]** wordt weergegeven. In deze weergave 
 3. Selecteer een **[!UICONTROL Identity A]** en **[!UICONTROL &#x200B; Identity B]** ter vergelijking&#x200B;**: kies de twee identiteitstypen die u wilt vergelijken. In het voorbeeld, &#x200B;** Identiteit A **&#x200B; wordt geselecteerd als &quot;crmId&quot; en &#x200B;** Identiteit B** wordt geselecteerd als &quot;e-mail.&quot;
 4. **plaats een datumwaaier**: Kies een vooraf bepaalde waaier zoals &quot;vandaag&quot;of plaats manueel de begin en einddata gebruikend de kalendergebieden.
 
-![ de dialoog van Filters op het Dashboard van de Identiteit van het Publiek.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)
+![&#x200B; de dialoog van Filters op het Dashboard van de Identiteit van het Publiek.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)
 
 >[!TIP]
 >
@@ -33,7 +33,7 @@ Het dialoogvenster **[!UICONTROL Filters]** wordt weergegeven. In deze weergave 
 
 Nadat u de filters hebt gekozen, selecteert u **[!UICONTROL Apply]** om het dashboard te vernieuwen.
 
-![ de dialoog van Filters op het Dashboard van de Identiteit van het publiek met Toepassen benadrukte.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-apply-filters.png)
+![&#x200B; de dialoog van Filters op het Dashboard van de Identiteit van het publiek met Toepassen benadrukte.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-apply-filters.png)
 
 ## Beschikbare dashboardinzichten {#available-insights}
 
@@ -50,7 +50,7 @@ In de tabel **[!UICONTROL Audience Identity Overlaps]** worden op basis van uw g
 | **[!UICONTROL Overlap Count]** | Het aantal profielen waarbij beide identiteiten aanwezig zijn. Deze metric geeft inzicht in de mate van identiteitsoverlapping binnen het publiek. Deze informatie is van cruciaal belang om te beoordelen hoe effectief meerdere identiteiten worden opgelost in uniforme profielen, die op hun beurt de strategieën voor doelgerichtheid en personalisatie kunnen verbeteren. |
 | **[!UICONTROL Identity A Count]** | Het totale aantal profielen in het geselecteerde publiek dat **Identiteit A** bevat. Gebruik deze informatie om de prevalentie van het primaire identiteitstype binnen het publiek te begrijpen en de rol ervan in de overlappende analyse te beoordelen. |
 
-![ de Lijst van de Overlap van de Identiteit van het publiek op de identiteit van het Publiek overlapt dashboard.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-chart.png)
+![&#x200B; de Lijst van de Overlap van de Identiteit van het publiek op de identiteit van het Publiek overlapt dashboard.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-chart.png)
 
 ### Naamuitsplitsing {#identity-breakdown}
 
@@ -60,7 +60,7 @@ Het **[!UICONTROL Identity Breakdown]** -diagram toont de relatieve samenstellin
 >
 >Houd de muisaanwijzer boven de kolommen om de afzonderlijke aantallen profielen voor elk identiteitstype weer te geven.
 
-![ de grafiek van de Onderverdeling van de Identiteit.](../../images/sql-insights-query-pro-mode/templates/identity-breakdown-chart.png)
+![&#x200B; de grafiek van de Onderverdeling van de Identiteit.](../../images/sql-insights-query-pro-mode/templates/identity-breakdown-chart.png)
 
 ### Trends in de identiteit van het publiek {#audience-identity-trends}
 
@@ -70,17 +70,17 @@ Het **[!UICONTROL Audience Identity Trends]** -diagram geeft inzicht in hoe het 
 >
 >Houd de muis boven een datum in het diagram om het totale aantal identiteiten voor het publiek op een specifieke datum weer te geven.
 
-![ de grafiek van de Trends van de Identiteit van het publiek.](../../images/sql-insights-query-pro-mode/templates/audience-identity-trends-chart.png)
+![&#x200B; de grafiek van de Trends van de Identiteit van het publiek.](../../images/sql-insights-query-pro-mode/templates/audience-identity-trends-chart.png)
 
 ## Inzichten exporteren {#export-insights}
 
 Na het analyseren van identiteitsoverlappingen, kunt u de gegevens voor off-line analyse of rapportering uitvoeren. Als u uw gegevens wilt exporteren, selecteert u **[!UICONTROL Export]** rechtsboven in de tabel. Het dialoogvenster PDF wordt weergegeven, zodat u de visualiseerde gegevens kunt opslaan als een PDF of kunt afdrukken.
 
-![ het Overlappende dashboard van de Identiteit van het publiek met de Uitvoer benadrukte.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-export.png)
+![&#x200B; het Overlappende dashboard van de Identiteit van het publiek met de Uitvoer benadrukte.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-export.png)
 
 Het **dashboard van de Identiteit van het publiek 0&rbrace; &lbrace;overlapt essentiële inzichten in hoe de verschillende identiteiten over uw geselecteerde publiek snijden.** Door gebruik te maken van deze inzichten, kun je identiteitsverstikkende strategieën verfijnen, redundantie verminderen en ervoor zorgen dat je doelgroepsegmentatie nauwkeuriger en effectiever is.
 
 ## Volgende stappen
 
-Na het lezen van dit document, hebt u geleerd hoe te om waardevolle inzichten in identiteitsoverlap voor geselecteerde doelgroepen te verkrijgen gebruikend het **dashboard van de Identiteit van het publiek 0&rbrace; &lbrace;.** Om je inzicht in doelgroepsegmentatie en identiteitbeheer verder te verbeteren, verken je andere Data Distiller Templates die uitgebreide inzichten bieden. Verwijs naar de [ Trends van het Publiek ](./trends.md), [ Vergelijking van het Publiek ](./comparison.md), en [ Geavanceerde gidsen van de Overlapping van het Publiek ](./overlaps.md) UI om uw het richten en betrokkenheidsstrategieën verder te verbeteren.
+Na het lezen van dit document, hebt u geleerd hoe te om waardevolle inzichten in identiteitsoverlap voor geselecteerde doelgroepen te verkrijgen gebruikend het **dashboard van de Identiteit van het publiek 0&rbrace; &lbrace;.** Om je inzicht in doelgroepsegmentatie en identiteitbeheer verder te verbeteren, verken je andere Data Distiller Templates die uitgebreide inzichten bieden. Verwijs naar de [&#x200B; Trends van het Publiek &#x200B;](./trends.md), [&#x200B; Vergelijking van het Publiek &#x200B;](./comparison.md), en [&#x200B; Geavanceerde gidsen van de Overlapping van het Publiek &#x200B;](./overlaps.md) UI om uw het richten en betrokkenheidsstrategieën verder te verbeteren.
 

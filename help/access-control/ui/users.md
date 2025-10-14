@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Als u gebruikers wilt toewijzen aan of verwijderen uit een productprofiel, opent u de detailpagina van het profiel en gaat u naar het tabblad **[!UICONTROL Users]** . Selecteer **[!UICONTROL Add User]** van hier.
 
-![ de de detailpagina van het productprofiel die de gebruikers toont in [!UICONTROL Users] worden vermeld tabel.](../images/add-user.png)
+![&#x200B; de de detailpagina van het productprofiel die de gebruikers toont in [!UICONTROL Users] worden vermeld tabel.](../images/add-user.png)
 
 Het dialoogvenster **[!UICONTROL Add User]** wordt weergegeven. Met het zoekveld kunt u gebruikers opzoeken en toevoegen op naam of via e-mail. Terwijl u typt, verschijnen de overeenstemmende gebruikers in een automatisch voltooid venster onder het tekstvak.
 
@@ -25,7 +25,7 @@ Het dialoogvenster **[!UICONTROL Add User]** wordt weergegeven. Met het zoekveld
 
 Nadat u een gebruiker hebt geselecteerd, selecteert u **[!UICONTROL Save]** om deze aan het productprofiel toe te voegen.
 
-![ voeg gebruikers aan de pagina van het productprofiel toe die gebruikersdetails benadrukt.](../images/save-user.png)
+![&#x200B; voeg gebruikers aan de pagina van het productprofiel toe die gebruikersdetails benadrukt.](../images/save-user.png)
 
 De volgende video is bedoeld als ondersteuning voor uw begrip van het beheren van beheerders voor een productprofiel.
 
@@ -33,4 +33,4 @@ De volgende video is bedoeld als ondersteuning voor uw begrip van het beheren va
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om toegang tot de eigenschappen van Experience Platform door [!DNL Admin Console] te controleren, zie de bijlage sectie in het [ toegangsbeheeroverzicht ](../home.md) om meer over elke individuele toestemming en de functies van Experience Platform te leren zij toegang tot verlenen.
+Nu u hebt geleerd hoe te om toegang tot de eigenschappen van Experience Platform door [!DNL Admin Console] te controleren, zie de bijlage sectie in het [&#x200B; toegangsbeheeroverzicht &#x200B;](../home.md) om meer over elke individuele toestemming en de functies van Experience Platform te leren zij toegang tot verlenen.

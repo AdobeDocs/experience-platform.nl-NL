@@ -17,13 +17,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL Pinterest Ads] is in bèta. Lees het [ Bronoverzicht ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De bron [!DNL Pinterest Ads] is in bèta. Lees het [&#x200B; Bronoverzicht &#x200B;](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Tot de ondersteuning voor advertentieproviders behoren [!DNL Pinterest Ads] .
 
-[[!DNL Pinterest] ](https://www.pinterest.com) is een visuele ontdekkingsmotor voor het vinden van recepten, huisdécor, stijlinspiratie, en andere ideeën over het Web. Deze worden op kleine schaal weergegeven met afbeeldingen, geanimeerde GIF&#39;s en video&#39;s in pinboardindeling. [[!DNL Pinterest Ads] ](https://ads.pinterest.com/) staat u toe om uw zaken uit te breiden en 400 miljoen mensen te bereiken gebruikend [!DNL Pinterest].
+[[!DNL Pinterest] &#x200B;](https://www.pinterest.com) is een visuele ontdekkingsmotor voor het vinden van recepten, huisdécor, stijlinspiratie, en andere ideeën over het Web. Deze worden op kleine schaal weergegeven met afbeeldingen, geanimeerde GIF&#39;s en video&#39;s in pinboardindeling. [[!DNL Pinterest Ads] &#x200B;](https://ads.pinterest.com/) staat u toe om uw zaken uit te breiden en 400 miljoen mensen te bereiken gebruikend [!DNL Pinterest].
 
 Met [!DNL Pinterest Ads] kunt u gebruikers bereiken via gerichte advertenties om uw producten te ontdekken en te kopen. Spelden van [!DNL Pinterest Ads] worden gesponsord om extra blootstelling in relevante onderzoeksresultaten te ontvangen. Gebruikers met een abonnement op [!DNL Pinterest Business] kunnen bestaande best presterende punten promoten, een nieuw beeld of video maken of zelfs een afbeelding promoten die van een website is vastgezet. [!DNL Pinterest Ads] biedt verschillende advertentievormen aan om u te helpen uw specifieke campagnedoelstellingen te verwezenlijken.
 
@@ -31,15 +31,15 @@ Met [!DNL Pinterest Ads] kunt u gebruikers bereiken via gerichte advertenties om
 
 De [!DNL Pinterest Ads] -bron gebruikt de [!DNL Pinterest] API&#39;s om uw [!DNL Pinterest Ads] -gegevens op te halen, samen met alle prestaties en meetgegevens. De ondersteunde API-eindpunten zijn:
 
-* [ Analytics van de Campagne ](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
-* [ analyseert de Groep van de Advertentie ](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
-* [ Adds analyseert ](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
+* [&#x200B; Analytics van de Campagne &#x200B;](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
+* [&#x200B; analyseert de Groep van de Advertentie &#x200B;](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
+* [&#x200B; Adds analyseert &#x200B;](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
 
 Gebruik de [!DNL Pinterest Ads] -bron om uw gegevens van [!DNL Pinterest] naar Experience Platform te brengen, waar u vervolgens gegevensanalyses kunt uitvoeren. Gegevens worden geretourneerd vanaf de datum van inname gedurende een achterhaald bereik van 90 dagen. [!DNL Pinterest Ads] gebruikt tokens aan toonder als verificatiemechanisme om te communiceren met de API&#39;s van [!DNL Pinterest] .
 
 ## Vereisten {#prerequisites}
 
-De eerste stap bij het maken van een [!DNL Pinterest Ads] -bronverbinding is ervoor te zorgen dat u een Pinterest-ontwikkelaarsaccount hebt. Als u niet reeds hebt, bezoek de [ login ](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) pagina om uw rekening te registreren en te creëren.
+De eerste stap bij het maken van een [!DNL Pinterest Ads] -bronverbinding is ervoor te zorgen dat u een Pinterest-ontwikkelaarsaccount hebt. Als u niet reeds hebt, bezoek de [&#x200B; login &#x200B;](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) pagina om uw rekening te registreren en te creëren.
 
 ### Toepassing instellen [!DNL Pinterest] en toegangstoken genereren {#create-app-and-generate-token}
 
@@ -47,7 +47,7 @@ De eerste stap bij het maken van een [!DNL Pinterest Ads] -bronverbinding is erv
 >
 >Het wordt aanbevolen de API&#39;s van [!DNL Pinterest] te gebruiken om uw toegangstoken te genereren, omdat het genereren van uw toegangstoken in de gebruikersinterface een beperkte toegang biedt. Via de interface hebt u alleen toegang tot het volgende bereik: `pins:read`, `boards:read` en `user_accounts:read` . Deze beperking is niet geschikt voor gebruik met de eindpunten van analysemogelijkheden van de API [!DNL Pinterest] .
 
-Om uw toegangstoken te produceren, lees de [!DNL Pinterest] gidsen op [ vestiging uw app ](https://developers.pinterest.com/docs/getting-started/set-up-app/) en [ voor authentiek gebruikend OAuth 2.0 ](https://developers.pinterest.com/docs/getting-started/authentication/).
+Om uw toegangstoken te produceren, lees de [!DNL Pinterest] gidsen op [&#x200B; vestiging uw app &#x200B;](https://developers.pinterest.com/docs/getting-started/set-up-app/) en [&#x200B; voor authentiek gebruikend OAuth 2.0 &#x200B;](https://developers.pinterest.com/docs/getting-started/authentication/).
 
 ### Vereiste referenties verzamelen {#gather-required-credentials}
 
@@ -55,8 +55,8 @@ Als u [!DNL Pinterest Ads] wilt verbinden met Experience Platform, moet u waarde
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Toegangstoken | Het toegangstoken [!DNL Pinterest Ads] voor uw gebruikersaccount. De gebruikersaccount van het token moet de eigenaar zijn van de opgegeven [!DNL Pinterest Ad] -account of een van de benodigde rollen hebben die aan hen zijn toegekend via Business Access: Admin, Analyst of Campagne Manager. Voor meer informatie over het toegangstoken, gelieve te verwijzen naar de [[!DNL Pinterest]  gids bij het produceren van uw toegangstoken ](https://developers.pinterest.com/docs/getting-started/set-up-app/). |
-| ID advertentieaccount | De bijbehorende [!DNL Pinterest Ads] id van de advertentie voor uw bedrijfseenheid. Voor informatie over het ophalen van je account-id. Bezoek de [[!DNL Pinterest]  gids bij het vinden IDs in de Manager van Advertenties ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager). |
+| Toegangstoken | Het toegangstoken [!DNL Pinterest Ads] voor uw gebruikersaccount. De gebruikersaccount van het token moet de eigenaar zijn van de opgegeven [!DNL Pinterest Ad] -account of een van de benodigde rollen hebben die aan hen zijn toegekend via Business Access: Admin, Analyst of Campagne Manager. Voor meer informatie over het toegangstoken, gelieve te verwijzen naar de [[!DNL Pinterest]  gids bij het produceren van uw toegangstoken &#x200B;](https://developers.pinterest.com/docs/getting-started/set-up-app/). |
+| ID advertentieaccount | De bijbehorende [!DNL Pinterest Ads] id van de advertentie voor uw bedrijfseenheid. Voor informatie over het ophalen van je account-id. Bezoek de [[!DNL Pinterest]  gids bij het vinden IDs in de Manager van Advertenties &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager). |
 | Campagne, advertentiegroep of advertentie-id | De `campaign` -, `ad group` - of `ad` -id&#39;s die overeenkomen met de id van uw advertentieaccount. Om vereiste IDs te verkrijgen, navigeer aan de [!DNL Pinterest] pagina voor **Van Bedrijfs Pinterest Hub** > **Advertentieoverzicht van de Rekening** > **Campagnes** / **Advertentiegroepen** / **Advertenties** en kopieer de vereiste identiteitskaart wordt vermeld enkel onder elk van hun namen. |
 
 >[!NOTE]
@@ -99,7 +99,7 @@ Voor Experience Platform is de [!DNL Pinterest Ads] -bron intern geconfigureerd 
 
 >[!IMPORTANT]
 >
->Pinterest stelt een maximale snelheid van 1000 API-aanroepen per dag op voor de API om informatie te lezen van advertenties, ad-hocgroepen of advertentiecampagnes. Voor informatie over tariefgrenzen van toepassing op onderliggende API vraag, verwijs naar de [[!DNL Pinterest]  documentatie over tariefgrenzen ](https://developers.pinterest.com/docs/reference/ratelimits/).
+>Pinterest stelt een maximale snelheid van 1000 API-aanroepen per dag op voor de API om informatie te lezen van advertenties, ad-hocgroepen of advertentiecampagnes. Voor informatie over tariefgrenzen van toepassing op onderliggende API vraag, verwijs naar de [[!DNL Pinterest]  documentatie over tariefgrenzen &#x200B;](https://developers.pinterest.com/docs/reference/ratelimits/).
 
 ## Verbinden [!DNL Pinterest Ads] met Experience Platform {#connect-to-platform}
 

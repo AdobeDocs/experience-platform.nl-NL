@@ -15,11 +15,11 @@ Gebruik de Advanced Data Lifecycle Management UI en de Data Hygiene API om opsch
 
 ## Vereisten {#prerequisites}
 
-Deze gids vereist een werkend begrip van de werkruimte van de Levenscyclus van Gegevens en [ Hygiene API van Gegevens ](./api/overview.md). Alvorens dit document voort te zetten, vertrouwt u met de gidsen op [ het Geavanceerde Beheer van de Levenscyclus van Gegevens ](./home.md) en [ creërend verslagen schrapt verzoeken ](./ui/record-delete.md) of [ datasettermijnen in UI ](./ui/dataset-expiration.md), of door API.
+Deze gids vereist een werkend begrip van de werkruimte van de Levenscyclus van Gegevens en [&#x200B; Hygiene API van Gegevens &#x200B;](./api/overview.md). Alvorens dit document voort te zetten, vertrouwt u met de gidsen op [&#x200B; het Geavanceerde Beheer van de Levenscyclus van Gegevens &#x200B;](./home.md) en [&#x200B; creërend verslagen schrapt verzoeken &#x200B;](./ui/record-delete.md) of [&#x200B; datasettermijnen in UI &#x200B;](./ui/dataset-expiration.md), of door API.
 
 ## Richtlijnen voor het maken van werkorders {#work-order-creation-guidelines}
 
-U kunt het `/workorder` eindpunt in de API van de Hygiëne van Gegevens gebruiken om verslagen te beheren schrapt verzoeken in Experience Platform. Met dit eindpunt, kunt u een schrappingsverzoek tot stand brengen, zijn status controleren, of een bestaand verzoek bijwerken. Zie het [ document van het de ordeeindpunt van het Werk ](./api/workorder.md) leren hoe te om deze acties uit te voeren gebruikend API.
+U kunt het `/workorder` eindpunt in de API van de Hygiëne van Gegevens gebruiken om verslagen te beheren schrapt verzoeken in Experience Platform. Met dit eindpunt, kunt u een schrappingsverzoek tot stand brengen, zijn status controleren, of een bestaand verzoek bijwerken. Zie het [&#x200B; document van het de ordeeindpunt van het Werk &#x200B;](./api/workorder.md) leren hoe te om deze acties uit te voeren gebruikend API.
 
 >[!TIP]
 >
@@ -41,13 +41,13 @@ Als u een fout van 429 ontvangt, wijst het erop dat u het toegestane aantal verz
 
 ## Vervaldatum gegevensset {#dataset-expiration}
 
-Stel automatische gegevensset opschonen in voor gegevens van korte duur. Gebruik het `/ttl` eindpunt op de API van de Hygiëne van Gegevens om vervaldata voor datasets voor schoonmaakbeurt te plannen die op een gespecificeerde tijd of een datum wordt gebaseerd. Zie de het eindpuntgids van de Vervaldatum van de Dataset leren hoe te [ een datasetvervaldatum ](./api/dataset-expiration.md) en [ toegelaten vraagparameters ](./api/dataset-expiration.md#query-params) creëren.
+Stel automatische gegevensset opschonen in voor gegevens van korte duur. Gebruik het `/ttl` eindpunt op de API van de Hygiëne van Gegevens om vervaldata voor datasets voor schoonmaakbeurt te plannen die op een gespecificeerde tijd of een datum wordt gebaseerd. Zie de het eindpuntgids van de Vervaldatum van de Dataset leren hoe te [&#x200B; een datasetvervaldatum &#x200B;](./api/dataset-expiration.md) en [&#x200B; toegelaten vraagparameters &#x200B;](./api/dataset-expiration.md#query-params) creëren.
 
 ## Bewaking van werkorder en vervalstatus van gegevensset {#monitor}
 
 U kunt de vooruitgang van uw beheer van de gegevenslevenscyclus efficiënt controleren door het gebruik van **I/O Gebeurtenissen**. Een I/O-gebeurtenis is een mechanisme voor het ontvangen van realtime meldingen over wijzigingen of updates in verschillende services in Experience Platform.
 
-I/O-gebeurteniswaarschuwingen kunnen naar een geconfigureerde webhaak worden verzonden om de automatisering van activiteitencontrole mogelijk te maken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor Experience Platform-waarschuwingen in de Adobe Developer Console. Zie de gids op [ het intekenen aan de berichten van de Gebeurtenis van Adobe I/O ](../observability/alerts/subscribe.md) voor de gedetailleerde instructies.
+I/O-gebeurteniswaarschuwingen kunnen naar een geconfigureerde webhaak worden verzonden om de automatisering van activiteitencontrole mogelijk te maken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor Experience Platform-waarschuwingen in de Adobe Developer Console. Zie de gids op [&#x200B; het intekenen aan de berichten van de Gebeurtenis van Adobe I/O &#x200B;](../observability/alerts/subscribe.md) voor de gedetailleerde instructies.
 
 Gebruik de volgende methoden en richtlijnen voor de levenscyclus van gegevens om taakstatussen effectief op te halen en te controleren:
 

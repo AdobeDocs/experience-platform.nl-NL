@@ -26,7 +26,7 @@ Dit document bevat een reeks cloudgebaseerde laptops voor de computerleeromgevin
 
 Deze workflow vereist het gebruik van [!DNL Python] -laptops in een leeromgeving voor uw computer. Instructies om aan de slag te gaan met deze [!DNL Python] -laptops zijn opgenomen in de respectievelijke Lees mij-bestanden.
 
-Alvorens u met deze gids verdergaat, volg de stappen die in het [ worden geschetst AI/ML overzicht van eigenschappijpleidingen ](./overview.md) worden geschetst om het gebruik van de notitieboekjes van de steekproefPython toe te laten die in deze AI/ML de gebruiksgeval van de eigenschappijpleiding worden gebruikt.
+Alvorens u met deze gids verdergaat, volg de stappen die in het [&#x200B; worden geschetst AI/ML overzicht van eigenschappijpleidingen &#x200B;](./overview.md) worden geschetst om het gebruik van de notitieboekjes van de steekproefPython toe te laten die in deze AI/ML de gebruiksgeval van de eigenschappijpleiding worden gebruikt.
 
 ## Laptops voor de leeromgeving van cloudmachines {#cmle-notebooks}
 

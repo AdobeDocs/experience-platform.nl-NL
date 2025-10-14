@@ -18,11 +18,11 @@ De volgende secties bevatten aanvullende informatie die u moet weten om te kunne
 
 ## API-voorbeeldaanroepen lezen
 
-De MTLS Service API-documentatie biedt een voorbeeld-API-aanroep om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit omvat het pad, de vereiste kopteksten en de correct opgemaakte aanvraag voor lading. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
+De MTLS Service API-documentatie biedt een voorbeeld-API-aanroep om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit omvat het pad, de vereiste kopteksten en de correct opgemaakte aanvraag voor lading. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
 
 ## Vereiste koppen
 
-De API documentatie vereist u ook om het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) te hebben voltooid om vraag aan eindpunten van Experience Platform met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+De API documentatie vereist u ook om het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) te hebben voltooid om vraag aan eindpunten van Experience Platform met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -30,4 +30,4 @@ De API documentatie vereist u ook om het [ authentificatieleerprogramma ](https:
 
 ## Volgende stappen
 
-Aan het maken vraag gebruikend de Dienst MTLS API, selecteer de eindpuntgidsen of gebruikend de linkernavigatie of binnen het [ overzicht van de ontwikkelaarsgids ](./overview.md)
+Aan het maken vraag gebruikend de Dienst MTLS API, selecteer de eindpuntgidsen of gebruikend de linkernavigatie of binnen het [&#x200B; overzicht van de ontwikkelaarsgids &#x200B;](./overview.md)

@@ -17,6 +17,6 @@ Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals 
 
 Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar [!DNL Experience Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met [!DNL Experience Platform] kunt u gegevens uit [!DNL Azure Blob] en S3 doorhalen in batches.
 
-Voor meer informatie over de [!DNL Azure Blob] schakelaar, te lezen gelieve het [[!DNL Azure Blob]  schakelaaroverzicht ](./blob.md).
+Voor meer informatie over de [!DNL Azure Blob] schakelaar, te lezen gelieve het [[!DNL Azure Blob]  schakelaaroverzicht &#x200B;](./blob.md).
 
-Voor meer informatie over de [!DNL Amazon S3] schakelaar, te lezen gelieve het [[!DNL Amazon S3]  schakelaaroverzicht ](./s3.md).
+Voor meer informatie over de [!DNL Amazon S3] schakelaar, te lezen gelieve het [[!DNL Amazon S3]  schakelaaroverzicht &#x200B;](./s3.md).

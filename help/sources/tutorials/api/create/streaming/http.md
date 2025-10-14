@@ -15,7 +15,7 @@ ht-degree: 0%
 
 De Flow Service wordt gebruikt om klantgegevens van verschillende bronnen binnen Adobe Experience Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Dit leerprogramma gebruikt [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) om u door de stappen te lopen om een het stromen verbinding tot stand te brengen gebruikend [!DNL Flow Service] API.
+Dit leerprogramma gebruikt [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) om u door de stappen te lopen om een het stromen verbinding tot stand te brengen gebruikend [!DNL Flow Service] API.
 
 ## Aan de slag
 
@@ -24,11 +24,11 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] ervaringsgegevens ordent.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, consumentenprofiel in real-time op basis van geaggregeerde gegevens van meerdere bronnen.
 
-Bovendien, vereist het creëren van een het stromen verbinding u om een doelXDM schema en een dataset te hebben. Leren hoe te om deze tot stand te brengen, te lezen gelieve het leerprogramma op [ het stromen verslaggegevens ](../../../../../ingestion/tutorials/streaming-record-data.md) of het leerprogramma op [ het stromen tijdreeksgegevens ](../../../../../ingestion/tutorials/streaming-time-series-data.md).
+Bovendien, vereist het creëren van een het stromen verbinding u om een doelXDM schema en een dataset te hebben. Leren hoe te om deze tot stand te brengen, te lezen gelieve het leerprogramma op [&#x200B; het stromen verslaggegevens &#x200B;](../../../../../ingestion/tutorials/streaming-record-data.md) of het leerprogramma op [&#x200B; het stromen tijdreeksgegevens &#x200B;](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -334,15 +334,15 @@ Een succesvolle reactie keert status 201 van HTTP met gedetailleerde van de pas 
 
 Als u de brongegevens in Experience Platform wilt gebruiken, moet u een doelschema maken om de brongegevens naar wens te structureren. Het doelschema wordt dan gebruikt om een dataset van Experience Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://www.adobe.io/experience-platform-apis/references/schema-registry/) uit te voeren.
+Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Registratie API van het Schema &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/) uit te voeren.
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](../../../../../xdm/api/schemas.md).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [&#x200B; creërend een schema gebruikend API &#x200B;](../../../../../xdm/api/schemas.md).
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
+Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Dienst API van de Catalogus uit te voeren &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](../../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [&#x200B; het creëren van een dataset gebruikend API &#x200B;](../../../../../catalog/api/create-dataset.md).
 
 ## Een doelverbinding maken {#target}
 
@@ -398,7 +398,7 @@ Een succesvolle reactie keert status 201 van HTTP met details van de pas gecreë
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Om een mappingsreeks tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
+Om een mappingsreeks tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
 
 **API formaat**
 
@@ -548,9 +548,9 @@ curl -X POST \
 | `name` | De naam van uw gegevensstroom. Zorg ervoor dat de naam van uw gegevensstroom beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw gegevensstroom omhoog te kijken. |
 | `description` | (Optioneel) Een eigenschap die u kunt opnemen voor meer informatie over de gegevensstroom. |
 | `flowSpec.id` | De flowspecificatie-id voor [!DNL HTTP API] . Als u een gegevensstroom met transformaties wilt maken, moet u `c1a19761-d2c7-4702-b9fa-fe91f0613e81` gebruiken. Gebruik `d8a6f005-7eaf-4153-983e-e8574508b877` om een gegevensstroom zonder transformaties te maken. |
-| `sourceConnectionIds` | [ bron verbindingsidentiteitskaart ](#source) die in een vroegere stap wordt teruggewonnen. |
-| `targetConnectionIds` | De [ identiteitskaart van de doelverbinding ](#target) die in een vroegere stap wordt teruggewonnen. |
-| `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt teruggewonnen. |
+| `sourceConnectionIds` | [&#x200B; bron verbindingsidentiteitskaart &#x200B;](#source) die in een vroegere stap wordt teruggewonnen. |
+| `targetConnectionIds` | De [&#x200B; identiteitskaart van de doelverbinding &#x200B;](#target) die in een vroegere stap wordt teruggewonnen. |
+| `transformations.params.mappingId` | [&#x200B; afbeelding identiteitskaart &#x200B;](#mapping) die in een vroegere stap wordt teruggewonnen. |
 
 **Reactie**
 
@@ -696,9 +696,9 @@ Een geslaagde reactie retourneert HTTP status 200 met details van de nieuw opgen
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een het stromen verbinding van HTTP gecreeerd, toelatend u om het stromen eindpunt te gebruiken om gegevens in Experience Platform in te voeren. Voor instructies om een het stromen verbinding in UI tot stand te brengen, te lezen gelieve [ creërend een het stromen verbindingsleerprogramma ](../../../ui/create/streaming/http.md).
+Door deze zelfstudie te volgen, hebt u een het stromen verbinding van HTTP gecreeerd, toelatend u om het stromen eindpunt te gebruiken om gegevens in Experience Platform in te voeren. Voor instructies om een het stromen verbinding in UI tot stand te brengen, te lezen gelieve [&#x200B; creërend een het stromen verbindingsleerprogramma &#x200B;](../../../ui/create/streaming/http.md).
 
-Leren hoe te om gegevens aan Experience Platform te stromen, te lezen gelieve of het leerprogramma op [ het stromen tijdreeksgegevens ](../../../../../ingestion/tutorials/streaming-time-series-data.md) of het leerprogramma op [ het stromen verslaggegevens ](../../../../../ingestion/tutorials/streaming-record-data.md).
+Leren hoe te om gegevens aan Experience Platform te stromen, te lezen gelieve of het leerprogramma op [&#x200B; het stromen tijdreeksgegevens &#x200B;](../../../../../ingestion/tutorials/streaming-time-series-data.md) of het leerprogramma op [&#x200B; het stromen verslaggegevens &#x200B;](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Bijlage
 

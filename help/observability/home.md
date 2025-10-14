@@ -19,7 +19,7 @@ Met Adobe Experience Platform [!DNL Observability Insights] kunt u de Experience
 
 De API van [!DNL Observability Insights] is een RESTful API die u toestaat om zeer belangrijke waarneembaarheidsmetriek in Adobe Experience Platform bloot te stellen. Deze cijfers bieden inzicht in [!DNL Experience Platform] gebruiksstatistieken, health-checks voor [!DNL Experience Platform] -services, historische trends en prestatie-indicatoren voor verschillende [!DNL Experience Platform] -functies.
 
-Voor meer informatie bij het werken met API, zie de [[!DNL Observability Insights]  API ontwikkelaarsgids ](./api/overview.md).
+Voor meer informatie bij het werken met API, zie de [[!DNL Observability Insights]  API ontwikkelaarsgids &#x200B;](./api/overview.md).
 
 ## Waarschuwingen
 
@@ -27,7 +27,7 @@ Met Experience Platform kunt u zich abonneren op waarschuwingen op basis van spe
 
 Door op alarm in te tekenen, kunt u uw eigen stroomafwaartse protocollen opzetten voor wanneer een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke mislukkingen tijdens het proces voorkwamen.
 
-Zie het overzicht op [ alarm ](./alerts/overview.md) voor meer informatie.
+Zie het overzicht op [&#x200B; alarm &#x200B;](./alerts/overview.md) voor meer informatie.
 
 ## Volgende stappen
 

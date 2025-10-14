@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # [!UICONTROL Care Plan] schemaveldgroep
 
-[!UICONTROL Care Plan] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../../classes/individual-profile.md). Het biedt één objecttype veld `healthcareCarePlan` waarin een gezondheidszorgplan voor een patiënt of groep wordt vastgelegd.
+[!UICONTROL Care Plan] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../../classes/individual-profile.md). Het biedt één objecttype veld `healthcareCarePlan` waarin een gezondheidszorgplan voor een patiënt of groep wordt vastgelegd.
 
-![ de groepsstructuur van het Gebied ](../../../images/healthcare/field-groups/care-plan/care-plan.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../../images/healthcare/field-groups/care-plan/care-plan.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
-| [!UICONTROL Activity] | `activity` | Array van objecten | Identificeert een actie die is voorgekomen of gepland om als deel van het plan voor te komen. Zie de [ sectie hieronder ](#activity) voor meer informatie. |
+| [!UICONTROL Activity] | `activity` | Array van objecten | Identificeert een actie die is voorgekomen of gepland om als deel van het plan voor te komen. Zie de [&#x200B; sectie hieronder &#x200B;](#activity) voor meer informatie. |
 | [!UICONTROL Addresses] | `addresses` | Array van [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Identificeert de voorwaarden of betreffen de handvatten van het zorgplan. |
 | [!UICONTROL Based On] | `basedOn` | Array van [[!UICONTROL Reference]](../data-types/reference.md) | Een aanvraagbron op een hoger niveau die geheel of gedeeltelijk door dit zorgplan wordt vervuld. |
 | [!UICONTROL Care Team] | `careTeam` | Array van [[!UICONTROL Reference]](../data-types/reference.md) | Identificeert alle mensen en organisaties die naar verwachting betrokken zullen zijn bij de zorg die door dit plan wordt voorzien. |
@@ -46,14 +46,14 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/careplan.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/careplan.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/careplan.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/careplan.schema.json)
 
 ## `activity` {#activity}
 
 `activity` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ activiteitenstructuur ](../../../images/healthcare/field-groups/care-plan/activity.png)
+![&#x200B; activiteitenstructuur &#x200B;](../../../images/healthcare/field-groups/care-plan/activity.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

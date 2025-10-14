@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Experience Platform-tags (China)
 
-Wanneer u een [ Adobe-beheerde gastheer ](./hosts/managed-by-adobe-host.md) gebruikt om uw de markeringsactiva van Adobe Experience Platform op uw website te leveren, worden deze activa verdeeld onder diverse netwerken van de inhoudslevering (CDNs) rond de wereld om de snelste downloadsnelheid te leveren. Er zijn echter bepaalde gebieden waarvoor alle website-elementen moeten worden gerepliceerd en gehost op een server in dat gebied.
+Wanneer u een [&#x200B; Adobe-beheerde gastheer &#x200B;](./hosts/managed-by-adobe-host.md) gebruikt om uw de markeringsactiva van Adobe Experience Platform op uw website te leveren, worden deze activa verdeeld onder diverse netwerken van de inhoudslevering (CDNs) rond de wereld om de snelste downloadsnelheid te leveren. Er zijn echter bepaalde gebieden waarvoor alle website-elementen moeten worden gerepliceerd en gehost op een server in dat gebied.
 
 Om dit te verklaren, verstrekken de markeringen in Experience Platform een eigenschap van de Markeringen van het Experience Platform (China) die u toestaat om inhoud aan deze speciale gebieden te leveren.
 
@@ -27,7 +27,7 @@ Als Experience Platform Tags (China) is ingeschakeld, betekent dit niet dat de e
 
 >[!IMPORTANT]
 >
->Bibliotheken die zijn gebouwd voordat tags in China zijn toegestaan, zullen net zo blijven functioneren als nu. Dit is ook op bibliotheken van toepassing die niet door Adobe worden beheerd, aangezien [ gearchiveerde milieu&#39;s ](./environments.md#archive) slechts relatieve URLs voor hun activawegen gebruiken. Houd er rekening mee dat elke bibliotheek die u maakt en die niet door Adobe wordt beheerd, zich gedraagt alsof de functie Tags in China niet is ingeschakeld nadat u Experience Platform Tags (China) hebt ingeschakeld.
+>Bibliotheken die zijn gebouwd voordat tags in China zijn toegestaan, zullen net zo blijven functioneren als nu. Dit is ook op bibliotheken van toepassing die niet door Adobe worden beheerd, aangezien [&#x200B; gearchiveerde milieu&#39;s &#x200B;](./environments.md#archive) slechts relatieve URLs voor hun activawegen gebruiken. Houd er rekening mee dat elke bibliotheek die u maakt en die niet door Adobe wordt beheerd, zich gedraagt alsof de functie Tags in China niet is ingeschakeld nadat u Experience Platform Tags (China) hebt ingeschakeld.
 
 Als u tags hebt ingeschakeld in China en alle bibliotheken die u wilt gebruiken vanuit de nieuwe hostinggebieden opnieuw hebt samengesteld, kunt u de nieuwe insluitcodes van de hostingregio ophalen om deze toe te voegen aan uw websites.
 
@@ -37,10 +37,10 @@ Als u tags hebt ingeschakeld in China en alle bibliotheken die u wilt gebruiken 
 
 Ga naar de pagina **[!UICONTROL Environments]** of bekijk de instructies voor het installeren van de omgeving in het bewerkingsscherm van de bibliotheek om de nieuwe insluitcodes te vinden. Elk nieuw ondersteund hostinggebied wordt weergegeven na het [!UICONTROL Standard] -hostinggebied (wordt gebruikt voor gebieden in de wereld die worden ondersteund zonder Experience Platforms (China)). In de onderstaande schermafbeelding ziet u een insluitcode voor het Chinese gebied waarin `.cn` wordt gebruikt als het TLD-domein (top-level domain).
 
-![ bed code voor het gebied van China ](../../images/ui/publishing/premium-cdn/embed-codes.png) in
+![&#x200B; bed code voor het gebied van China &#x200B;](../../images/ui/publishing/premium-cdn/embed-codes.png) in
 
-Kies de juiste insluitcode voor de webpagina en plak deze in de `<head>` -tag van het document. Voor meer informatie die inbedt codes gebruikt om markeringsbibliotheken te installeren, gelieve te verwijzen naar de [ gids van milieu&#39;s UI ](./environments.md#installation).
+Kies de juiste insluitcode voor de webpagina en plak deze in de `<head>` -tag van het document. Voor meer informatie die inbedt codes gebruikt om markeringsbibliotheken te installeren, gelieve te verwijzen naar de [&#x200B; gids van milieu&#39;s UI &#x200B;](./environments.md#installation).
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u de functie Experience Platform Tags (China) voor de implementatie van tags kunt inschakelen en installeren. Voor meer informatie bij het installeren van en het testen van markeringsbibliotheken op uw Web en mobiele eigenschappen, verwijs naar het [ publiceren overzicht ](./overview.md).
+In deze handleiding wordt beschreven hoe u de functie Experience Platform Tags (China) voor de implementatie van tags kunt inschakelen en installeren. Voor meer informatie bij het installeren van en het testen van markeringsbibliotheken op uw Web en mobiele eigenschappen, verwijs naar het [&#x200B; publiceren overzicht &#x200B;](./overview.md).

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Op deze pagina wordt ervan uitgegaan dat het samenvoegbeleid de identiteitsgrafiek gebruikt. Voor meer informatie over samenvoegingsbeleid in het Profiel van de Klant in real time, lees de documentatie over [ samenvoegbeleid en identiteit het stitching ](../profile/merge-policies/overview.md#identity-stitching).
+>Op deze pagina wordt ervan uitgegaan dat het samenvoegbeleid de identiteitsgrafiek gebruikt. Voor meer informatie over samenvoegingsbeleid in het Profiel van de Klant in real time, lees de documentatie over [&#x200B; samenvoegbeleid en identiteit het stitching &#x200B;](../profile/merge-policies/overview.md#identity-stitching).
 
 Hoewel u identiteitsservice en realtime klantprofiel tegelijk kunt gebruiken, zijn de twee functies van Adobe Experience Platform inherent niet hetzelfde.
 
@@ -42,9 +42,9 @@ Lees de onderstaande stappen om meer inzicht te krijgen in het proces van het ma
 * Eerst verwijst het Real-Time Profiel van de Klant naar een identiteitsgrafiek en wint alle identiteiten terug.
 * Vervolgens haalt Profiel profielfragmenten op met primaire identiteiten in de identiteitsgrafiek.
 * Wanneer de bewerking voltooid is, voegt Profiel dan alle bestaande gebeurtenissen en kenmerken samen.
-   * Als er conflicterende kenmerkinformatie is, worden kenmerken gekozen op basis van de samenvoegmethode. Voor meer informatie, lees het [ overzicht van het samenvoegingsbeleid ](../profile/merge-policies/overview.md).
+   * Als er conflicterende kenmerkinformatie is, worden kenmerken gekozen op basis van de samenvoegmethode. Voor meer informatie, lees het [&#x200B; overzicht van het samenvoegingsbeleid &#x200B;](../profile/merge-policies/overview.md).
 
-![ A stroomdiagram die detailleert hoe de Dienst van de Identiteit en het Samenvoegen van het Profiel werken.](./images/merge-profile-process.png)
+![&#x200B; A stroomdiagram die detailleert hoe de Dienst van de Identiteit en het Samenvoegen van het Profiel werken.](./images/merge-profile-process.png)
 
 ## Een veld aanwijzen als identiteit
 

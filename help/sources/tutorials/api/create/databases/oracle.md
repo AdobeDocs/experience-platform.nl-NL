@@ -11,24 +11,24 @@ ht-degree: 0%
 
 # Verbinding maken met Experience Platform via de [!DNL Oracle DB] API[!DNL Flow Service]
 
-Lees deze gids om te leren hoe te om uw [!DNL Oracle DB] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om uw [!DNL Oracle DB] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Oracle] via de [!DNL Flow Service] API.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ### Vereiste referenties verzamelen
 
-Lees het [[!DNL Oracle DB]  overzicht ](../../../../connectors/databases/oracle.md#prerequisites) voor informatie over authentificatie.
+Lees het [[!DNL Oracle DB]  overzicht &#x200B;](../../../../connectors/databases/oracle.md#prerequisites) voor informatie over authentificatie.
 
 ## Verbind [!DNL Oracle DB] met Experience Platform op Azure {#azure}
 
@@ -103,7 +103,7 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../../../landing/multi-cloud.md).
 
 Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Oracle DB] -account kunt verbinden met Experience Platform op AWS.
 
@@ -166,7 +166,7 @@ curl -X POST \
 
 **Reactie**
 
-Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) en het overeenkomstige terug. U kunt identiteitskaart gebruiken om [ bronverbinding ](../../collect/database-nosql.md#create-a-source-connection) tot stand te brengen en `etag` om [ uw rekening ](../../update.md) bij te werken.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) en het overeenkomstige terug. U kunt identiteitskaart gebruiken om [&#x200B; bronverbinding &#x200B;](../../collect/database-nosql.md#create-a-source-connection) tot stand te brengen en `etag` om [&#x200B; uw rekening &#x200B;](../../update.md) bij te werken.
 
 +++reactie weergeven
 
@@ -182,4 +182,4 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 ## Een gegevensstroom maken voor [!DNL Oracle DB] -gegevens
 
-Nu u met succes uw [!DNL Oracle DB] rekening hebt verbonden, kunt u [ nu tot een dataflow leiden en gegevens van uw gegevensbestand in Experience Platform ](../../collect/database-nosql.md) opnemen.
+Nu u met succes uw [!DNL Oracle DB] rekening hebt verbonden, kunt u [&#x200B; nu tot een dataflow leiden en gegevens van uw gegevensbestand in Experience Platform &#x200B;](../../collect/database-nosql.md) opnemen.

@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!UICONTROL Period] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een tijdspanne verstrekt die door een begin en einddatum/tijd wordt bepaald. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ het gegevenstype van de Periode structuur ](../../../images/healthcare/data-types/period.png)
+![&#x200B; het gegevenstype van de Periode structuur &#x200B;](../../../images/healthcare/data-types/period.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -25,5 +25,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/period.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/period.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/period.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/period.schema.json)

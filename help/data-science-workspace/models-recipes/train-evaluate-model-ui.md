@@ -28,7 +28,7 @@ Deze zelfstudie doorloopt de stappen voor het maken, trainen en evalueren van ee
 
 Als u deze zelfstudie wilt voltooien, moet u toegang hebben tot [!DNL Experience Platform] . Als u in [!DNL Experience Platform] geen toegang hebt tot een organisatie, neemt u contact op met de systeembeheerder voordat u verdergaat.
 
-Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger hebt, volg de [ Invoer een verpakte Ontvanger in UI ](./import-packaged-recipe-ui.md) leerprogramma alvorens verder te gaan.
+Voor deze zelfstudie is een bestaande ontvanger vereist. Als u geen Ontvanger hebt, volg de [&#x200B; Invoer een verpakte Ontvanger in UI &#x200B;](./import-packaged-recipe-ui.md) leerprogramma alvorens verder te gaan.
 
 ## Een model maken
 
@@ -48,7 +48,7 @@ Als u een nieuwe set configuraties wilt opgeven, selecteert u **[!UICONTROL Uplo
 
 >[!NOTE]
 >
->Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [ verwijzings ](#reference) sectie voor een lijst van de Retail configuraties van het Ontvangstbericht van de Verkoop.
+>Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [&#x200B; verwijzings &#x200B;](#reference) sectie voor een lijst van de Retail configuraties van het Ontvangstbericht van de Verkoop.
 
 ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -72,7 +72,7 @@ De standaardconfiguraties die tijdens de creatie van het Model worden verstrekt 
 
 >[!NOTE]
 >
->Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [ verwijzings ](#reference) sectie voor een lijst van de Retail configuraties van het Ontvangstbericht van de Verkoop.
+>Configuraties zijn uniek en specifiek voor de beoogde recept. Dit betekent dat configuraties voor de Retail Sales Recipe niet werken voor de Product Recommendations Recipe. Zie de [&#x200B; verwijzings &#x200B;](#reference) sectie voor een lijst van de Retail configuraties van het Ontvangstbericht van de Verkoop.
 
 ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
@@ -81,31 +81,31 @@ De standaardconfiguraties die tijdens de creatie van het Model worden verstrekt 
 
 Selecteer in het Experience Platform de tab **[!UICONTROL Models]** in de linkernavigatie en selecteer vervolgens het tabblad Bladeren om uw bestaande modellen weer te geven. Zoek en selecteer de hyperlink die is gekoppeld aan de naam van het model dat u wilt evalueren.
 
-![ uitgezocht model ](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
+![&#x200B; uitgezocht model &#x200B;](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
 Alle bestaande trainingsruns met hun huidige trainingsstatus worden vermeld. Met veelvoudige voltooide trainingslooppas, kunnen de evaluatiemetrieken over verschillende opleidingslooppas in de Modelgrafiek van de Beoordeling worden vergeleken. Selecteer een evaluatiemetrisch met behulp van de vervolgkeuzelijst boven de grafiek.
 
 De gemiddelde absolute foutenpercentage (MAPE) metrisch drukt nauwkeurigheid als percentage van de fout uit. Hiermee wordt het best presterende experiment geïdentificeerd. Hoe lager de MAPE, hoe beter.
 
-![ overzicht van de opleiding looppas ](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
+![&#x200B; overzicht van de opleiding looppas &#x200B;](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
 De metrische &quot;Precisie&quot;beschrijft het percentage relevante Instanties vergeleken met het totaal *teruggewonnen* Instanties. Precisie kan worden gezien als de waarschijnlijkheid dat een willekeurig gekozen uitkomst correct is.
 
-![ lopende veelvoudige looppas ](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+![&#x200B; lopende veelvoudige looppas &#x200B;](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
 
 Het selecteren van een specifieke trainingslooppas verstrekt de details van die looppas door de evaluatiepagina te openen. Dit kan zelfs worden gedaan voordat de run is voltooid. Op de evaluatiepagina kunt u andere evaluatiemetrieken, configuratieparameters, en visualisaties zien specifiek voor de trainingslooppas.
 
-![ voorproeflogboeken ](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
+![&#x200B; voorproeflogboeken &#x200B;](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
 
 U kunt activiteitenlogboeken ook downloaden om de details van de looppas te zien. Logboeken zijn vooral handig voor mislukte runs om te zien wat er mis ging.
 
-![ activiteitenlogboeken ](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+![&#x200B; activiteitenlogboeken &#x200B;](../images/models-recipes/train-evaluate-ui/activity_logs.png)
 
 Hyperparameters kunnen niet worden getraind en een model moet worden geoptimaliseerd door verschillende combinaties van Hyperparameters te testen. Herhaal dit training- en evaluatieproces voor het model totdat u tot een geoptimaliseerd model bent gekomen.
 
 ## Volgende stappen
 
-Deze zelfstudie leidde u door het maken, trainen en evalueren van een model in [!DNL Data Science Workspace] . Zodra u bij een geoptimaliseerd Model bent aangekomen, kunt u het getrainde Model gebruiken om inzichten te produceren door de [ Score een Model in het UI ](./score-model-ui.md) leerprogramma te volgen.
+Deze zelfstudie leidde u door het maken, trainen en evalueren van een model in [!DNL Data Science Workspace] . Zodra u bij een geoptimaliseerd Model bent aangekomen, kunt u het getrainde Model gebruiken om inzichten te produceren door de [&#x200B; Score een Model in het UI &#x200B;](./score-model-ui.md) leerprogramma te volgen.
 
 ## Verwijzing {#reference}
 
@@ -126,7 +126,7 @@ Aanvullende parameters bepalen de technische eigenschappen van het model:
 | `ACP_DSW_INPUT_FEATURES` | Tekenreeks | Lijst met door komma&#39;s gescheiden invoerschemakenmerken. |
 | `ACP_DSW_TARGET_FEATURES` | Tekenreeks | Lijst met door komma&#39;s gescheiden uitvoerschemakenmerken. |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolean | Hiermee wordt bepaald of invoer- en uitvoerfuncties kunnen worden gewijzigd |
-| `tenantId` | Tekenreeks | Deze id zorgt ervoor dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw organisatie bevinden. [ volg hier de stappen ](../../xdm/api/getting-started.md#know-your-tenant_id) om uw huurdersidentiteitskaart te vinden. |
+| `tenantId` | Tekenreeks | Deze id zorgt ervoor dat bronnen die u maakt, op de juiste wijze worden benoemd en zich binnen uw organisatie bevinden. [&#x200B; volg hier de stappen &#x200B;](../../xdm/api/getting-started.md#know-your-tenant_id) om uw huurdersidentiteitskaart te vinden. |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | String | Het invoerschema dat wordt gebruikt voor het trainen van een model. |
 | `evaluation.labelColumn` | String | Kolomlabel voor evaluatievisualisaties. |
 | `evaluation.metrics` | String | Door komma&#39;s gescheiden lijst met evaluatiemetriek die moet worden gebruikt voor de evaluatie van een model. |

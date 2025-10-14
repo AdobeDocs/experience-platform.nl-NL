@@ -13,13 +13,13 @@ ht-degree: 1%
 
 # Standaardwaarschuwingsregels
 
-Adobe Experience Platform biedt verschillende vooraf gedefinieerde waarschuwingsregels die u voor uw organisatie kunt inschakelen. In dit document worden de details van deze door Adobe ingevoerde waarschuwingsregels besproken. Voor meer algemene informatie over alarm in Experience Platform, zie het [ alarm overzicht ](./overview.md).
+Adobe Experience Platform biedt verschillende vooraf gedefinieerde waarschuwingsregels die u voor uw organisatie kunt inschakelen. In dit document worden de details van deze door Adobe ingevoerde waarschuwingsregels besproken. Voor meer algemene informatie over alarm in Experience Platform, zie het [&#x200B; alarm overzicht &#x200B;](./overview.md).
 
-Wanneer [ het bekijken waakzame regels in Experience Platform UI ](./ui.md), kunt u aan elke regel individueel intekenen. Wanneer het intekenen op alarm door [ I/O de berichten van de Gebeurtenis ](./subscribe.md), echter, zijn de waakzame regels georganiseerd in verschillende abonnementspakketten. In de onderstaande tabellen wordt elke regel weergegeven met de corresponderende naam van het I/O-gebeurtenisabonnement.
+Wanneer [&#x200B; het bekijken waakzame regels in Experience Platform UI &#x200B;](./ui.md), kunt u aan elke regel individueel intekenen. Wanneer het intekenen op alarm door [&#x200B; I/O de berichten van de Gebeurtenis &#x200B;](./subscribe.md), echter, zijn de waakzame regels georganiseerd in verschillende abonnementspakketten. In de onderstaande tabellen wordt elke regel weergegeven met de corresponderende naam van het I/O-gebeurtenisabonnement.
 
 ## Bronnen {#sources}
 
-De volgende waakzame regels zijn specifiek voor [ Ingestie van Gegevens ](../../ingestion/home.md) en [ bronnen ](../../sources/home.md):
+De volgende waakzame regels zijn specifiek voor [&#x200B; Ingestie van Gegevens &#x200B;](../../ingestion/home.md) en [&#x200B; bronnen &#x200B;](../../sources/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving | Schemapayload |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ Als u zich eerder hebt geabonneerd op het volgende type waarschuwingen, ontvangt
 
 ## Identiteit {#identity}
 
-De volgende waakzame regels zijn specifiek voor [ Dienst van de Identiteit ](../../identity-service/home.md):
+De volgende waakzame regels zijn specifiek voor [&#x200B; Dienst van de Identiteit &#x200B;](../../identity-service/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving | Schema Payload |
 | --- | --- | --- | --- |
@@ -55,7 +55,7 @@ De volgende waakzame regels zijn specifiek voor [ Dienst van de Identiteit ](../
 
 ## Profiel {#profile}
 
-De volgende waakzame regels zijn specifiek voor [ in real time het Profiel van de Klant ](../../profile/home.md):
+De volgende waakzame regels zijn specifiek voor [&#x200B; in real time het Profiel van de Klant &#x200B;](../../profile/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving | Payloadschema |
 | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ De volgende waakzame regels zijn specifiek voor [ in real time het Profiel van d
 
 ## Segmentatie {#segmentation}
 
-De volgende waakzame regels zijn specifiek voor [ de Dienst van de Segmentatie ](../../segmentation/home.md):
+De volgende waakzame regels zijn specifiek voor [&#x200B; de Dienst van de Segmentatie &#x200B;](../../segmentation/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving | Payload-schema |
 | --- | --- | --- | --- |
@@ -84,7 +84,7 @@ De volgende waakzame regels zijn specifiek voor [ de Dienst van de Segmentatie ]
 
 ## Bestemmingen {#destinations}
 
-De volgende waakzame regels zijn specifiek voor [ bestemmingen ](../../destinations/home.md):
+De volgende waakzame regels zijn specifiek voor [&#x200B; bestemmingen &#x200B;](../../destinations/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving | Payloadschema |
 | --- | --- | --- | --- |
@@ -99,7 +99,7 @@ De volgende waakzame regels zijn specifiek voor [ bestemmingen ](../../destinati
 
 ## Queryservice {#query-services}
 
-De volgende waakzame regels zijn specifiek voor [ de Dienst van de Vraag ](../../query-service/home.md):
+De volgende waakzame regels zijn specifiek voor [&#x200B; de Dienst van de Vraag &#x200B;](../../query-service/home.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving | Payload-schema |
 | --- | --- | --- | --- |
@@ -111,7 +111,7 @@ De volgende waakzame regels zijn specifiek voor [ de Dienst van de Vraag ](../..
 
 ## Audit {#audit}
 
-De volgende waakzame regels zijn specifiek voor [ gebeurtenissen van de Controle ](../../landing/governance-privacy-security/audit-logs/overview.md):
+De volgende waakzame regels zijn specifiek voor [&#x200B; gebeurtenissen van de Controle &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving | Payload-schema |
 | --- | --- | --- | --- |
@@ -129,7 +129,7 @@ De volgende waakzame regels zijn specifiek voor [ gebeurtenissen van de Controle
 
 ## Capaciteit {#capacity}
 
-De volgende waakzame regels zijn specifiek voor [ capaciteitsbeheer ](../../landing/license-usage-and-guardrails/capacity.md):
+De volgende waakzame regels zijn specifiek voor [&#x200B; capaciteitsbeheer &#x200B;](../../landing/license-usage-and-guardrails/capacity.md):
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving | Payload-schema |
 | --- | --- | --- | --- |

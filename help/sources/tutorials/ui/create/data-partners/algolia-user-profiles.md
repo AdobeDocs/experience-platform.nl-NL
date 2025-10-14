@@ -18,16 +18,16 @@ Deze zelfstudie begeleidt u door via de gebruikersinterface gegevens van uw [!DN
 
 >[!IMPORTANT]
 >
->Alvorens u begint, zorg ervoor u de eerste vereisten hebt voltooid die in het [[!DNL Algolia User Profiles]  overzicht ](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites) worden geschetst.
+>Alvorens u begint, zorg ervoor u de eerste vereisten hebt voltooid die in het [[!DNL Algolia User Profiles]  overzicht &#x200B;](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites) worden geschetst.
 
 In deze zelfstudie wordt vertrouwd gemaakt met de volgende Experience Platform-componenten:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader Experience Platform gebruikt om de gegevens van de klantenervaring te organiseren.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader Experience Platform gebruikt om de gegevens van de klantenervaring te organiseren.
 
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over schemacompositie, met inbegrip van zeer belangrijke principes en beste praktijken.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over schemacompositie, met inbegrip van zeer belangrijke principes en beste praktijken.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Een verenigd, real-time klantprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [ Bronnen ](../../../../home.md): Samenvatting gegevens uit diverse bronnen en gebruik de diensten van Experience Platform om de gegevens te structureren, te etiketteren en te verbeteren.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Samenvatting gegevens uit diverse bronnen en gebruik de diensten van Experience Platform om de gegevens te structureren, te etiketteren en te verbeteren.
 
 ### Vereiste referenties verzamelen
 
@@ -38,7 +38,7 @@ Geef de volgende gegevens op als u [!DNL Algolia] wilt verbinden met Adobe Exper
 | Toepassings-id | De unieke id die aan uw [!DNL Algolia] -account is toegewezen. |
 | API-sleutel | De referentie voor het verifiëren en autoriseren van API-aanvragen bij de services van [!DNL Algolia] . |
 
-Voor meer informatie, verwijs naar de [!DNL Algolia] [ authentificatiedocumentatie ](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
+Voor meer informatie, verwijs naar de [!DNL Algolia] [&#x200B; authentificatiedocumentatie &#x200B;](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
 ## Sluit uw [!DNL Algolia] -account aan
 
@@ -50,7 +50,7 @@ Als u [!DNL Algolia] wilt verbinden, kiest u de **[!UICONTROL Algolia]** bronkaa
 >
 > Als een bron nog geen geverifieerd account heeft, wordt de optie **[!UICONTROL Set up]** weergegeven. Als de verificatie eenmaal is uitgevoerd, verandert deze in **[!UICONTROL Add data]** .
 
-![ de broncatalogus met de geselecteerde bron van Profielen van de Gebruiker van Algolië.](../../../../images/tutorials/create/algolia/user-profiles/catalog.png)
+![&#x200B; de broncatalogus met de geselecteerde bron van Profielen van de Gebruiker van Algolië.](../../../../images/tutorials/create/algolia/user-profiles/catalog.png)
 
 ## Verificatie
 
@@ -58,13 +58,13 @@ Als u [!DNL Algolia] wilt verbinden, kiest u de **[!UICONTROL Algolia]** bronkaa
 
 Als u een bestaande account wilt gebruiken, kiest u **[!UICONTROL Existing account]** en selecteert u de [!DNL Algolia User Profiles] -account die u wilt gebruiken. Selecteer vervolgens **[!UICONTROL Next]** .
 
-![ de bestaande rekeningsinterface.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
+![&#x200B; de bestaande rekeningsinterface.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
 ### Een nieuwe account maken
 
 Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en voert u vervolgens een naam, een optionele beschrijving en uw [!DNL Algolia] -referenties in. Selecteer **[!UICONTROL Connect to source]** en wacht tot de verbinding tot stand is gebracht.
 
-![ de nieuwe rekeningsinterface.](../../../../images/tutorials/create/algolia/user-profiles/new-account.png)
+![&#x200B; de nieuwe rekeningsinterface.](../../../../images/tutorials/create/algolia/user-profiles/new-account.png)
 
 ## Gegevens toevoegen
 
@@ -75,27 +75,27 @@ Nadat uw [!DNL Algolia User Profiles] -account is gemaakt, wordt de stap **[!UIC
 
 Selecteer vervolgens **[!UICONTROL Next]** .
 
-![ de uitgezochte gegevensstap van het werkschema.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
+![&#x200B; de uitgezochte gegevensstap van het werkschema.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
 ## Gegevens over gegevensstroom opgeven
 
 Als u een bestaande gegevensset gebruikt, kiest u een gegevensset die is gekoppeld aan een schema dat de veldgroep [!DNL Algolia Profile] bevat. Zorg ervoor dat het veld [!DNL Algolia User Token] de naamruimte [!DNL Algolia User Token] identity gebruikt.  Als [!DNL Algolia User Token] momenteel niet wordt gecreeerd of toegewezen, worden de instructies hieronder verstrekt.
 
-![ de bestaande datasetstap.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
+![&#x200B; de bestaande datasetstap.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
 
 Als u een nieuwe gegevensset maakt, selecteert u een schema met de veldgroep [!DNL Algolia Profile] .
 
-![ de nieuwe datasetstap.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
+![&#x200B; de nieuwe datasetstap.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
 ### Naamruimte [!DNL Algolia User Token] maken
 
 U moet de naamruimte [!DNL Algolia User Token] identity maken als deze nog niet bestaat in uw organisatie.
 
-Gebruik de linkernavigatie en selecteer **[!UICONTROL Identities]** om tot de [ werkruimte van de Dienst van de Identiteit ](../../../../../identity-service/home.md) UI toegang te hebben en dan **[!UICONTROL Create identity namespace]** te selecteren.
+Gebruik de linkernavigatie en selecteer **[!UICONTROL Identities]** om tot de [&#x200B; werkruimte van de Dienst van de Identiteit &#x200B;](../../../../../identity-service/home.md) UI toegang te hebben en dan **[!UICONTROL Create identity namespace]** te selecteren.
 
 Geef vervolgens een **[!UICONTROL Display Name]** en een **[!UICONTROL Identity Symbol]** op voor de aangepaste naamruimte. Tijdens deze stap, moet u het type van uw namespace ook vormen. Selecteer **[!UICONTROL Create]** als u klaar bent.
 
-![ creeer het scherm van identiteitskaart namespace.](../../../../images/tutorials/create/algolia/user-profiles/aep-identity-inputs.png)
+![&#x200B; creeer het scherm van identiteitskaart namespace.](../../../../images/tutorials/create/algolia/user-profiles/aep-identity-inputs.png)
 
 | Aangepaste naamruimte configureren | Waarde |
 | --- | --- |
@@ -105,29 +105,29 @@ Geef vervolgens een **[!UICONTROL Display Name]** en een **[!UICONTROL Identity 
 
 Nadat de naamruimte is toegevoegd, wordt deze in de lijst weergegeven. U kunt het nu toepassen in uw schema.
 
-![ Succesvolle verwezenlijking van Algolia Identiteit namespace.](../../../../images/tutorials/create/algolia/user-profiles/aep-algolia-user-token-identity.png)
+![&#x200B; Succesvolle verwezenlijking van Algolia Identiteit namespace.](../../../../images/tutorials/create/algolia/user-profiles/aep-algolia-user-token-identity.png)
 
 ### Uw naamruimte toepassen op uw schema
 
-Gebruik de linkernavigatie en selecteer **[!UICONTROL Schemas]** om tot de [ werkruimte van Schema&#39;s ](../../../../../xdm/ui/overview.md) UI toegang te hebben. Gebruik de schemawerkruimte om een schema met de [!DNL Algolia Profile Details] gebiedsgroep tot stand te brengen of bij te werken. Navigeer vervolgens naar het veld **[!UICONTROL User Token]** en selecteer het vak **[!UICONTROL Identity]** met behulp van de rechterrail. Gebruik bovendien het invoervak om de naamruimte [!DNL Algolia User Token] identity te definiëren. Selecteer **[!UICONTROL Save]** als u klaar bent.
+Gebruik de linkernavigatie en selecteer **[!UICONTROL Schemas]** om tot de [&#x200B; werkruimte van Schema&#39;s &#x200B;](../../../../../xdm/ui/overview.md) UI toegang te hebben. Gebruik de schemawerkruimte om een schema met de [!DNL Algolia Profile Details] gebiedsgroep tot stand te brengen of bij te werken. Navigeer vervolgens naar het veld **[!UICONTROL User Token]** en selecteer het vak **[!UICONTROL Identity]** met behulp van de rechterrail. Gebruik bovendien het invoervak om de naamruimte [!DNL Algolia User Token] identity te definiëren. Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![ vastgestelde identiteit op gebied.](../../../../images/tutorials/create/algolia/user-profiles/set-set-identity-on-field.png)
+![&#x200B; vastgestelde identiteit op gebied.](../../../../images/tutorials/create/algolia/user-profiles/set-set-identity-on-field.png)
 
 Nadat aan het veld **[!UICONTROL User Token]** de naamruimte [!DNL Algolia User Token] identity is toegewezen, wordt de identiteit in het gebruikersprofiel voor elk profiel weergegeven.
 
-![ de interface van het gebruikersprofiel.](../../../../images/tutorials/create/algolia/user-profiles/user-profile.png)
+![&#x200B; de interface van het gebruikersprofiel.](../../../../images/tutorials/create/algolia/user-profiles/user-profile.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
-Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan schemagebieden. Voor meer informatie, verwijs naar de [ kaartgids ](../../../../../data-prep/ui/mapping.md).
+Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan schemagebieden. Voor meer informatie, verwijs naar de [&#x200B; kaartgids &#x200B;](../../../../../data-prep/ui/mapping.md).
 
-![ de afbeeldingsstap.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
+![&#x200B; de afbeeldingsstap.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
 ## Planninguitvoering
 
 Daarna, gebruik de het plannen interface om het innameprogramma van uw dataflow te bepalen.
 
-![ de het plannen stap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/scheduling.png)
+![&#x200B; de het plannen stap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/scheduling.png)
 
 | Configuratie plannen | Beschrijving |
 | --- | --- |
@@ -146,7 +146,7 @@ Gebruik de overzichtspagina voor een samenvatting van uw gegevensstroom voorafga
 
 Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.
 
-![ de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/review.png)
+![&#x200B; de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/review.png)
 
 ## Volgende stappen
 
@@ -154,12 +154,12 @@ Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om intentgegev
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [ controlerekeningen en dataflows in UI ](../../../../../dataflows/ui/monitor-sources.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [&#x200B; controlerekeningen en dataflows in UI &#x200B;](../../../../../dataflows/ui/monitor-sources.md).
 
 ### Uw gegevensstroom bijwerken
 
-Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [ bijwerken brondataflows in UI ](../../update-dataflows.md).
+Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [&#x200B; bijwerken brondataflows in UI &#x200B;](../../update-dataflows.md).
 
 ### Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [ het schrappen van dataflows in UI ](../../delete.md).
+U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [&#x200B; het schrappen van dataflows in UI &#x200B;](../../delete.md).

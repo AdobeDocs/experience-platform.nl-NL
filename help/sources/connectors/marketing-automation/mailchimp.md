@@ -25,10 +25,10 @@ In de onderstaande documentatie vindt u informatie over het tot stand brengen va
 
 ## Verbinden [!DNL Mailchimp Campaigns] met Experience Platform
 
-* [ creeer een bronverbinding om  [!DNL Mailchimp Campaigns]  gegevens aan Experience Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-* [ creeer een bronverbinding om  [!DNL Mailchimp Campaigns]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface ](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+* [&#x200B; creeer een bronverbinding om  [!DNL Mailchimp Campaigns]  gegevens aan Experience Platform te brengen gebruikend APIs &#x200B;](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
+* [&#x200B; creeer een bronverbinding om  [!DNL Mailchimp Campaigns]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface &#x200B;](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
 ## Verbinden [!DNL Mailchimp Members] met Experience Platform
 
-* [ creeer een bronverbinding om  [!DNL Mailchimp Members]  gegevens aan Experience Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-* [ creeer een bronverbinding om  [!DNL Mailchimp Members]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface ](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+* [&#x200B; creeer een bronverbinding om  [!DNL Mailchimp Members]  gegevens aan Experience Platform te brengen gebruikend APIs &#x200B;](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+* [&#x200B; creeer een bronverbinding om  [!DNL Mailchimp Members]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface &#x200B;](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).

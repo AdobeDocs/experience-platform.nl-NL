@@ -57,7 +57,7 @@ U kunt resultaten filteren met de parameter `property` , die wordt gebruikt om e
 
 ## Compatibiliteitsmodus {#compatibility}
 
-[!DNL Experience Data Model] (XDM) is een openbaar gedocumenteerde specificatie, die door Adobe wordt gedreven om de interoperabiliteit, de expressiviteit, en de macht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [ open bronproject op GitHub ](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van de Objecten van JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van schema&#39;s XDM.
+[!DNL Experience Data Model] (XDM) is een openbaar gedocumenteerde specificatie, die door Adobe wordt gedreven om de interoperabiliteit, de expressiviteit, en de macht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [&#x200B; open bronproject op GitHub &#x200B;](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van de Objecten van JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van schema&#39;s XDM.
 
 Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, ziet u dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u ziet in [!DNL Experience Platform] , wordt Compatibiliteitsmodus genoemd en biedt een eenvoudige toewijzing tussen standaard-XDM en de manier waarop deze wordt gebruikt binnen [!DNL Experience Platform] .
 

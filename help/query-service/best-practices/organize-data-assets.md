@@ -17,13 +17,13 @@ Het is belangrijk om uw gegevenselementen logisch te ordenen binnen de Experienc
 
 ## Aan de slag
 
-Alvorens met dit document verder te gaan, zou u een goed begrip van [&#128279;](../home.md) eigenschappen van de Dienst van de Vraag moeten hebben  en de [ gids van het gebruikersinterface ](../ui/user-guide.md) gelezen.
+Alvorens met dit document verder te gaan, zou u een goed begrip van [&#128279;](../home.md) eigenschappen van de Dienst van de Vraag moeten hebben  en de [&#x200B; gids van het gebruikersinterface &#x200B;](../ui/user-guide.md) gelezen.
 
 ## Gegevens ordenen in Query Service
 
 In de volgende voorbeelden worden de constructies getoond die beschikbaar zijn via Adobe Experience Platform Query Service om uw gegevens logisch te ordenen met behulp van de standaard SQL-syntaxis. U moet eerst een database maken die fungeert als container voor uw gegevenspunten. Een gegevensbestand kan één of meerdere schema&#39;s bevatten, en elk schema kan één of meerdere verwijzingen naar een gegevenselement (datasets, meningen, tijdelijke lijsten, enz.) dan hebben. Deze verwijzingen omvatten om het even welke verhouding of associaties tussen de datasets.
 
-Zie de [ gebruikersgids van de Redacteur van de Vraag ](../ui/user-guide.md) voor gedetailleerde begeleiding op hoe te om de Dienst UI van de Vraag te gebruiken om SQL vragen tot stand te brengen.
+Zie de [&#x200B; gebruikersgids van de Redacteur van de Vraag &#x200B;](../ui/user-guide.md) voor gedetailleerde begeleiding op hoe te om de Dienst UI van de Vraag te gebruiken om SQL vragen tot stand te brengen.
 
 De volgende SQL-constructies om gegevenssets logisch te organiseren in een sandbox worden ondersteund.
 
@@ -56,7 +56,7 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 
 ## Gegevenselementen openen vanuit de gegevenscontainer
 
-Door de databasenaam correct te kwalificeren, kan elke [!DNL PostgreSQL] -client verbinding maken met elke gegevensstructuur die u hebt gemaakt met het trefwoord SHOW. Voor meer informatie over het SHOW sleutelwoord gelieve te zien [ TONEN sectie binnen de SQL syntaxisdocumentatie ](../sql/syntax.md#show).
+Door de databasenaam correct te kwalificeren, kan elke [!DNL PostgreSQL] -client verbinding maken met elke gegevensstructuur die u hebt gemaakt met het trefwoord SHOW. Voor meer informatie over het SHOW sleutelwoord gelieve te zien [&#x200B; TONEN sectie binnen de SQL syntaxisdocumentatie &#x200B;](../sql/syntax.md#show).
 
 &quot;all&quot; is de standaarddatabasenaam die elke database- en schemacontainer in een sandbox bevat. Wanneer u een [!DNL PostgreSQL] verbinding gebruikend `dbname="all"` maakt, kunt u tot **toegang hebben om het even welk** gegevensbestand en schema dat u hebt gecreeerd om uw gegevens logisch gezien te organiseren.
 
@@ -138,7 +138,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### Gegevenselementen verwijderen
 
-De [ DROP TABLE ](../sql/syntax.md#drop-table) functie verwijdert slechts fysisch een gegevenselement uit [!DNL Data Lake] wanneer één enkele verwijzing naar de lijst over alle gegevensbestanden in uw organisatie bestaat.
+De [&#x200B; DROP TABLE &#x200B;](../sql/syntax.md#drop-table) functie verwijdert slechts fysisch een gegevenselement uit [!DNL Data Lake] wanneer één enkele verwijzing naar de lijst over alle gegevensbestanden in uw organisatie bestaat.
 
 ```sql
 DROP TABLE databaseA.schema2.t1;
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu een beter inzicht in de beste praktijken betreffende de organisatie en de structuur van uw gegevensactiva voor gebruik met de Dienst van de Vraag van Adobe Experience Platform. Het wordt geadviseerd verder te leren over de beste praktijken van de Dienst van de Vraag door over [ documentatie van gegevensdeduplicatie ](../key-concepts/deduplication.md) te lezen.
+Door dit document te lezen, hebt u nu een beter inzicht in de beste praktijken betreffende de organisatie en de structuur van uw gegevensactiva voor gebruik met de Dienst van de Vraag van Adobe Experience Platform. Het wordt geadviseerd verder te leren over de beste praktijken van de Dienst van de Vraag door over [&#x200B; documentatie van gegevensdeduplicatie &#x200B;](../key-concepts/deduplication.md) te lezen.

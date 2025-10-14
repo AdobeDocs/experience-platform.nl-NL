@@ -19,9 +19,9 @@ Dit object heeft een maximumlimiet van 32 kB.
 
 ## Vorm het voorwerp XDM gebruikend de uitbreiding van SDK van het Web
 
-Stel het **[!UICONTROL XDM]** -object in binnen de handelingen van een labelregel. Het [ voorwerp XDM ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) verstrekt een intuïtieve interface om andere gegevenselementen aan hun respectieve gebieden in kaart te brengen XDM.
+Stel het **[!UICONTROL XDM]** -object in binnen de handelingen van een labelregel. Het [&#x200B; voorwerp XDM &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) verstrekt een intuïtieve interface om andere gegevenselementen aan hun respectieve gebieden in kaart te brengen XDM.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-Het volgende voorbeeld gebruikt de [ het schemagroep van Details van Commerce ](/help/xdm/field-groups/event/commerce-details.md):
+Het volgende voorbeeld gebruikt de [&#x200B; het schemagroep van Details van Commerce &#x200B;](/help/xdm/field-groups/event/commerce-details.md):
 
 ```javascript
 alloy("sendEvent",{

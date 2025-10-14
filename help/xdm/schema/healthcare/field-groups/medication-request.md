@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!UICONTROL Medication Request] schemaveldgroep
 
-[!UICONTROL Medication Request] is een standaardgroep van het schemagebied voor de [[!DNL Medication]  klasse ](../../../classes/medication.md), de [[!DNL XDM Individual Profile]  Klasse ](../../../classes/individual-profile.md), en [[!DNL Provider class]](../../../classes/provider.md). Het biedt één objecttype veld `healthcareMedicationDispense` waarin een bestelling of aanvraag voor zowel de verstrekking van de medicatie als de instructies voor de toediening van de medicatie aan een patiënt wordt vastgelegd.
+[!UICONTROL Medication Request] is een standaardgroep van het schemagebied voor de [[!DNL Medication]  klasse &#x200B;](../../../classes/medication.md), de [[!DNL XDM Individual Profile]  Klasse &#x200B;](../../../classes/individual-profile.md), en [[!DNL Provider class]](../../../classes/provider.md). Het biedt één objecttype veld `healthcareMedicationDispense` waarin een bestelling of aanvraag voor zowel de verstrekking van de medicatie als de instructies voor de toediening van de medicatie aan een patiënt wordt vastgelegd.
 
-![ de groepsstructuur van het Gebied ](../../../images/healthcare/field-groups/medication-request/medication-request.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../../images/healthcare/field-groups/medication-request/medication-request.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -24,7 +24,7 @@ ht-degree: 0%
 | [!UICONTROL Category] | `category` | Array van [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De indeling of groepering van het verzoek om medicatie. |
 | [!UICONTROL Course Of Therapy Type] | `courseOfTherapyType` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De beschrijving van het algehele patroon voor de toediening van het geneesmiddel aan de patiënt. |
 | [!UICONTROL Device] | `device` | Array van [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | Het type hulpmiddel dat gebruikt moet worden voor de toediening van het geneesmiddel. |
-| [!UICONTROL Dispense Request] | `dispenseRequest` | Object | Hiermee worden de specifieke details van het verzoek aangegeven, die vaak een medicatievolgorde worden genoemd. Zie de [ sectie hieronder ](#dispense-request) voor meer informatie. |
+| [!UICONTROL Dispense Request] | `dispenseRequest` | Object | Hiermee worden de specifieke details van het verzoek aangegeven, die vaak een medicatievolgorde worden genoemd. Zie de [&#x200B; sectie hieronder &#x200B;](#dispense-request) voor meer informatie. |
 | [!UICONTROL Dosage Instruction] | `dosageInstructions` | Array van [[!UICONTROL Dosage]](../data-types/dosage.md) | Specifieke instructies voor het gebruik van het geneesmiddel door de patiënt. |
 | [!UICONTROL Effective Dose Period] | `effectiveDosePeriod` | [[!UICONTROL Period]](../data-types/period.md) | De periode waarin het geneesmiddel moet worden ingenomen. Wanneer er meerdere `dosageInstruction` regels zijn (bijvoorbeeld bij het afbouwen van doses), is dit de vroegste datum en de laatste datum van de doseringsinstructies. |
 | [!UICONTROL Encounter] | `encounter` | [[!UICONTROL Reference]](../data-types/reference.md) | De gebeurtenis tijdens welke het verzoek werd gecreeerd. |
@@ -56,14 +56,14 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationrequest.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationrequest.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationrequest.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationrequest.schema.json)
 
 ## `dispenseRequest` {#dispense-request}
 
 `dispenseRequest` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ de structuur van het Verzoek van de Aflossing ](../../../images/healthcare/field-groups/medication-request/dispense-request.png)
+![&#x200B; de structuur van het Verzoek van de Aflossing &#x200B;](../../../images/healthcare/field-groups/medication-request/dispense-request.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

@@ -11,20 +11,20 @@ ht-degree: 0%
 
 # [!UICONTROL Upsell Details] schemaveldgroep
 
-[!UICONTROL Upsell Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een upsell marketing gebeurtenis, met inbegrip van details over de transactie en de verschillende manieren te vangen de aanbieding aan een klant werd getoond die.
+[!UICONTROL Upsell Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een upsell marketing gebeurtenis, met inbegrip van details over de transactie en de verschillende manieren te vangen de aanbieding aan een klant werd getoond die.
 
 De veldgroep bevat één objecttype veld, `upsells` . De eigenschappen in dit object worden hieronder uitgelegd.
 
-![ Upsell de structuur van Details ](../../images/field-groups/upsell-details.png)
+![&#x200B; Upsell de structuur van Details &#x200B;](../../images/field-groups/upsell-details.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `upsellImpressions` | Serie van [ Impressions ](../../data-types/impressions.md) | Een array die de opgenomen indrukken (digitale weergaven of overeenkomsten met de upsellaanbieding) voor de klant opsomt. |
-| `upsellTransaction` | [ Transactie ](../../data-types/transaction.md) | Beschrijft de valutatransactie voor upsell. |
+| `upsellImpressions` | Serie van [&#x200B; Impressions &#x200B;](../../data-types/impressions.md) | Een array die de opgenomen indrukken (digitale weergaven of overeenkomsten met de upsellaanbieding) voor de klant opsomt. |
+| `upsellTransaction` | [&#x200B; Transactie &#x200B;](../../data-types/transaction.md) | Beschrijft de valutatransactie voor upsell. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upsell-details.schema.json)

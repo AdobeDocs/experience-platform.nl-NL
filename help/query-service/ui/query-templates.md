@@ -17,7 +17,7 @@ Dit document verstrekt de informatie die wordt vereist om vraagmalplaatjes in de
 
 ## Vereisten
 
-U moet [!UICONTROL Manage queries] toestemming hebben om tot de Redacteur van de Vraag toegang te hebben en het dashboard van vragen binnen Experience Platform UI te bekijken. De toestemming wordt toegelaten door Adobe [ Admin Console ](https://adminconsole.adobe.com/). Neem contact op met de beheerder van uw organisatie als u geen beheerdersrechten hebt om deze machtiging in te schakelen. Zie de documentatie van de toegangscontrole voor [ volledige instructies bij het toevoegen van toestemmingen door Admin Console ](../../access-control/home.md).
+U moet [!UICONTROL Manage queries] toestemming hebben om tot de Redacteur van de Vraag toegang te hebben en het dashboard van vragen binnen Experience Platform UI te bekijken. De toestemming wordt toegelaten door Adobe [&#x200B; Admin Console &#x200B;](https://adminconsole.adobe.com/). Neem contact op met de beheerder van uw organisatie als u geen beheerdersrechten hebt om deze machtiging in te schakelen. Zie de documentatie van de toegangscontrole voor [&#x200B; volledige instructies bij het toevoegen van toestemmingen door Admin Console &#x200B;](../../access-control/home.md).
 
 ## Een querysjabloon maken
 
@@ -25,21 +25,21 @@ U kunt vraagmalplaatjes door twee methodes tot stand brengen, of door een POST- 
 
 ### Gebruik de Redacteur van de Vraag om een vraag te ontwerpen en als malplaatje op te slaan
 
-Zie de documentatie voor instructies op hoe te om de Redacteur van de Vraag te gebruiken [&#128279;](./user-guide.md#query-authoring) schrijven en [ sparen vragen ](./user-guide.md#saving-queries). Nadat u een naam hebt gegeven aan de query en deze hebt opgeslagen, kunt u deze opnieuw gebruiken als een querysjabloon op het tabblad [!UICONTROL Templates] .
+Zie de documentatie voor instructies op hoe te om de Redacteur van de Vraag te gebruiken [&#128279;](./user-guide.md#query-authoring) schrijven en [&#x200B; sparen vragen &#x200B;](./user-guide.md#saving-queries). Nadat u een naam hebt gegeven aan de query en deze hebt opgeslagen, kunt u deze opnieuw gebruiken als een querysjabloon op het tabblad [!UICONTROL Templates] .
 
 >[!TIP]
 >
->Als u een query opslaat in de Query Editor, verschijnt er een bevestigingsbericht om u op de hoogte te brengen van de geslaagde actie. Dit popup bericht bevat een verbinding die een geschikte manier verstrekt om aan de vragen te navigeren die werkruimte plannen. Zie de [ documentatie van planningsvragen ](./query-schedules.md) leren hoe te om vragen op een douanecadence in werking te stellen.
+>Als u een query opslaat in de Query Editor, verschijnt er een bevestigingsbericht om u op de hoogte te brengen van de geslaagde actie. Dit popup bericht bevat een verbinding die een geschikte manier verstrekt om aan de vragen te navigeren die werkruimte plannen. Zie de [&#x200B; documentatie van planningsvragen &#x200B;](./query-schedules.md) leren hoe te om vragen op een douanecadence in werking te stellen.
 
 ## Zoeksjablonen zoeken {#browse}
 
 Selecteer **[!UICONTROL Templates]** in de werkruimte Query&#39;s van de gebruikersinterface van Experience Platform om de lijst met beschikbare opgeslagen query&#39;s weer te geven.
 
-![ de werkruimte van vragen met het benadrukte lusje van Malplaatjes.](../images/ui/query-templates/query-templates.png)
+![&#x200B; de werkruimte van vragen met het benadrukte lusje van Malplaatjes.](../images/ui/query-templates/query-templates.png)
 
 Als u relevante sjabloongegevens wilt zoeken, selecteert u een querysjabloon in de lijst die beschikbaar is om het deelvenster Details te openen.
 
-![ het detailspaneel in de vraagwerkruimte met benadrukte vraagidentiteitskaart.](../images/ui/query-templates/details-panel.png)
+![&#x200B; het detailspaneel in de vraagwerkruimte met benadrukte vraagidentiteitskaart.](../images/ui/query-templates/details-panel.png)
 
 In het deelvenster Details kunt u de volgende handelingen uitvoeren:
 
@@ -51,7 +51,7 @@ In het deelvenster Details kunt u de volgende handelingen uitvoeren:
 
 ### Gebruik de API van de Dienst van de Vraag om een malplaatje te creëren
 
-Zie de documentatie voor instructies op [ hoe te om een vraagmalplaatje ](../api/query-templates.md#create-a-query-template) te maken gebruikend de Dienst API van de Vraag. De details voor een onlangs gecreeerd vraagmalplaatje zijn bevat in het reactievermogen.
+Zie de documentatie voor instructies op [&#x200B; hoe te om een vraagmalplaatje &#x200B;](../api/query-templates.md#create-a-query-template) te maken gebruikend de Dienst API van de Vraag. De details voor een onlangs gecreeerd vraagmalplaatje zijn bevat in het reactievermogen.
 
 >[!NOTE]
 >
@@ -59,6 +59,6 @@ Zie de documentatie voor instructies op [ hoe te om een vraagmalplaatje ](../api
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu een beter inzicht in hoe te om vraagmalplaatjes in de Dienst van de Vraag tot stand te brengen. Zie het [ overzicht UI ](./overview.md), of de [ gids van de Dienst API van de Vraag ](../api/getting-started.md) om meer over de mogelijkheden van de Dienst van de Vraag te leren.
+Door dit document te lezen, hebt u nu een beter inzicht in hoe te om vraagmalplaatjes in de Dienst van de Vraag tot stand te brengen. Zie het [&#x200B; overzicht UI &#x200B;](./overview.md), of de [&#x200B; gids van de Dienst API van de Vraag &#x200B;](../api/getting-started.md) om meer over de mogelijkheden van de Dienst van de Vraag te leren.
 
-Zie de [ geplande gids van het vraageindpunt ](../api/scheduled-queries.md) leren hoe te vragen gebruikend API, of de [ gids van de Redacteur van de Vraag ](./user-guide.md#scheduled-queries) voor UI te plannen.
+Zie de [&#x200B; geplande gids van het vraageindpunt &#x200B;](../api/scheduled-queries.md) leren hoe te vragen gebruikend API, of de [&#x200B; gids van de Redacteur van de Vraag &#x200B;](./user-guide.md#scheduled-queries) voor UI te plannen.

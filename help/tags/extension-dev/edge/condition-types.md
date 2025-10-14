@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+> Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 In een labelregel wordt een voorwaarde geëvalueerd nadat een gebeurtenis heeft plaatsgevonden. Alle voorwaarden moeten waar terugkeren opdat de regel verder verwerkt. Voorwaardetypen worden geleverd door extensies en evalueren of iets waar of onwaar is en een booleaanse waarde retourneert.
 
@@ -23,9 +23,9 @@ In dit document wordt beschreven hoe u voorwaardetypen voor een randextensie in 
 
 >[!IMPORTANT]
 >
->Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ voorwaardetypen voor Webuitbreidingen ](../web/condition-types.md).
+>Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids op [&#x200B; voorwaardetypen voor Webuitbreidingen &#x200B;](../web/condition-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [&#x200B; het formatteren van de bibliotheekmodule &#x200B;](./format.md) alvorens aan deze gids terug te keren.
 
 Voorwaardetypen bestaan gewoonlijk uit het volgende:
 
@@ -63,8 +63,8 @@ module.exports = (context) => {
 Het resultaat dat door een voorwaardenmodule wordt geretourneerd, kan een van de volgende zijn:
 
 1. Een booleaanse waarde (`true` of `false`).
-1. A [ belofte ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) die een booleaanse waarde eens terugkeert opgelost.
+1. A [&#x200B; belofte &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) die een booleaanse waarde eens terugkeert opgelost.
 
 ## Context van de module Bibliotheek
 
-Alle voorwaardemodules hebben toegang tot een variabele `context` die wordt verstrekt wanneer de module wordt geroepen. U kunt meer [ hier ](./context.md) leren.
+Alle voorwaardemodules hebben toegang tot een variabele `context` die wordt verstrekt wanneer de module wordt geroepen. U kunt meer [&#x200B; hier &#x200B;](./context.md) leren.

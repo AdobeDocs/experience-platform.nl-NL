@@ -13,14 +13,14 @@ ht-degree: 1%
 
 [!UICONTROL Media Event Information] is een standaard XDM-gegevenstype (Experience Data Model) waarmee mediadetails-informatie over de ervaringsgebeurtenis worden beschreven.
 
-![ een diagram van het gegevenstype van de Informatie van de Gebeurtenis van Media.](../images/data-types/media-event-information.png)
+![&#x200B; een diagram van het gegevenstype van de Informatie van de Gebeurtenis van Media.](../images/data-types/media-event-information.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `mediaCollection` | [!UICONTROL mediaDetails] | Informatie over mediagegevens met betrekking tot de ervaringsgebeurtenis. Dit gegevenstype wordt gebruikt voor zowel [ media gegevensinzameling ](./media-collection-details.md) als [ media gegevens die ](./media-reporting-details.md) melden. |
+| `mediaCollection` | [!UICONTROL mediaDetails] | Informatie over mediagegevens met betrekking tot de ervaringsgebeurtenis. Dit gegevenstype wordt gebruikt voor zowel [&#x200B; media gegevensinzameling &#x200B;](./media-collection-details.md) als [&#x200B; media gegevens die &#x200B;](./media-reporting-details.md) melden. |
 | `mediaEventTimestamp` | [!UICONTROL String] | Het tijdstip waarop een mediagebeurtenis heeft plaatsgevonden. |
 | `mediaEventType` | [!UICONTROL String] | Het type media-gebeurtenis. |
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json)
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json)

@@ -17,7 +17,7 @@ De logboeken van de controle worden gebruikt om details van gebruikersactiviteit
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Audit Query]  API ](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Audit Query]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Controles weergeven
 

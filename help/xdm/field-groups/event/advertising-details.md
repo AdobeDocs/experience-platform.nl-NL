@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # [!UICONTROL Advertising Details] schemaveldgroep
 
-[!UICONTROL Advertising Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). De veldgroep biedt één `advertising` -object aan een schema dat informatie vastlegt over advertenties, doorklikbewerkingen en attributie.
+[!UICONTROL Advertising Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md). De veldgroep biedt één `advertising` -object aan een schema dat informatie vastlegt over advertenties, doorklikbewerkingen en attributie.
 
-![ de groepsstructuur van het Gebied ](../../images/field-groups/advertising-details/structure.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../images/field-groups/advertising-details/structure.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `adAssetReference` | Object | Hiermee legt u elementgegevens over de advertentie vast. Zie de [ onderafdeling hieronder ](#adAssetReference) voor meer informatie over de structuur van dit voorwerp. |
-| `adAssetViewDetails` | Object | Hiermee legt u weergavedetails voor het afspelen van de advertentie vast. Zie de [ onderafdeling hieronder ](#adAssetViewDetails) voor meer informatie over de structuur van dit voorwerp. |
-| `adViewability` | Object | Vangt het aantal beelden die door eind - gebruikers zoals spelervolume, bibliotheekversie, vensterstatus, en de afmetingen van de advertentiepoort worden gezien. Zie de [ onderafdeling hieronder ](#adViewability) voor meer informatie over de structuur van dit voorwerp. |
+| `adAssetReference` | Object | Hiermee legt u elementgegevens over de advertentie vast. Zie de [&#x200B; onderafdeling hieronder &#x200B;](#adAssetReference) voor meer informatie over de structuur van dit voorwerp. |
+| `adAssetViewDetails` | Object | Hiermee legt u weergavedetails voor het afspelen van de advertentie vast. Zie de [&#x200B; onderafdeling hieronder &#x200B;](#adAssetViewDetails) voor meer informatie over de structuur van dit voorwerp. |
+| `adViewability` | Object | Vangt het aantal beelden die door eind - gebruikers zoals spelervolume, bibliotheekversie, vensterstatus, en de afmetingen van de advertentiepoort worden gezien. Zie de [&#x200B; onderafdeling hieronder &#x200B;](#adViewability) voor meer informatie over de structuur van dit voorwerp. |
 | `clicks` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal klikhandelingen op de advertentie. |
 | `completes` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een getimed media-element is gecontroleerd tot voltooiing. Dit betekent niet noodzakelijkerwijs dat de eindgebruiker de hele video heeft bekeken omdat deze mogelijk vooruit is overgeslagen. |
 | `conversions` | [[!UICONTROL Measure]](../../data-types/measure.md) | Het aantal keren dat een vooraf gedefinieerde actie (of acties) een gebeurtenis voor prestatiebeoordeling heeft geactiveerd. |
@@ -38,13 +38,13 @@ ht-degree: 0%
 
 Met het `adAssetReference` -object wordt elementinformatie over de advertentie vastgelegd.
 
-![ adAssetReference structure ](../../images/field-groups/advertising-details/adAssetReference.png)
+![&#x200B; adAssetReference structure &#x200B;](../../images/field-groups/advertising-details/adAssetReference.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `_dc.title` | String | De vriendelijke en leesbare naam van het advertentiemiddel. |
 | `_xmpDM.duration` | Geheel | De lengte of duur van het element in seconden. |
-| `_id` | String | Een uniek herkenningsteken van het advertentiemiddel, na de [ norm Ad-ID ](https://datatracker.ietf.org/doc/html/rfc8107). |
+| `_id` | String | Een uniek herkenningsteken van het advertentiemiddel, na de [&#x200B; norm Ad-ID &#x200B;](https://datatracker.ietf.org/doc/html/rfc8107). |
 | `advertiser` | String | De onderneming of het merk waarvan het product in de advertentie wordt vermeld. |
 | `campaign` | String | De id van de advertentiecampagne. |
 | `creativeID` | String | De id van de advertentie. |
@@ -58,7 +58,7 @@ Met het `adAssetReference` -object wordt elementinformatie over de advertentie v
 
 Met het `adAssetViewDetails` -object worden weergavedetails voor het afspelen van de advertentie vastgelegd.
 
-![ adAssetViewDetails structuur ](../../images/field-groups/advertising-details/adAssetViewDetails.png)
+![&#x200B; adAssetViewDetails structuur &#x200B;](../../images/field-groups/advertising-details/adAssetViewDetails.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ Met het `adAssetViewDetails` -object worden weergavedetails voor het afspelen va
 
 Met het `adViewability` -object wordt het aantal indrukken vastgelegd dat eindgebruikers kunnen zien, zoals spelervolume, bibliotheekversie, vensterstatus en viewportafmetingen.
 
-![ adViewability structuur ](../../images/field-groups/advertising-details/adViewability.png)
+![&#x200B; adViewability structuur &#x200B;](../../images/field-groups/advertising-details/adViewability.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -100,4 +100,4 @@ Met het `adViewability` -object wordt het aantal indrukken vastgelegd dat eindge
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).

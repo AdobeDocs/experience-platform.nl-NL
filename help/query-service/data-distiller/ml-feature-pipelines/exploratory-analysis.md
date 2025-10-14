@@ -15,7 +15,7 @@ Dit document bevat enkele basisvoorbeelden en aanbevolen procedures voor het geb
 
 ## Aan de slag
 
-Voordat u verdergaat met deze handleiding, moet u controleren of u een verbinding met Data Distiller hebt gemaakt in uw [!DNL Python] -laptop. Zie de documentatie voor instructies op hoe te [ a  [!DNL Python]  notitieboekje met Gegevens Distiller ](./establish-connection.md) verbinden.
+Voordat u verdergaat met deze handleiding, moet u controleren of u een verbinding met Data Distiller hebt gemaakt in uw [!DNL Python] -laptop. Zie de documentatie voor instructies op hoe te [&#x200B; a  [!DNL Python]  notitieboekje met Gegevens Distiller &#x200B;](./establish-connection.md) verbinden.
 
 ## Verkrijgen van basisstatistieken {#basic-statistics}
 
@@ -42,7 +42,7 @@ df
 
 ## Een gesamplede versie van grote gegevenssets maken {#create-dataset-sample}
 
-Als de dataset u wenst om te vragen zeer groot is, of als de nauwkeurige resultaten van verkennende vragen niet noodzakelijk zijn, gebruik de [ steekproeffunctionaliteit ](../../key-concepts/dataset-samples.md) beschikbaar voor de vragen van Distiller van Gegevens. Dit is een proces in twee stappen:
+Als de dataset u wenst om te vragen zeer groot is, of als de nauwkeurige resultaten van verkennende vragen niet noodzakelijk zijn, gebruik de [&#x200B; steekproeffunctionaliteit &#x200B;](../../key-concepts/dataset-samples.md) beschikbaar voor de vragen van Distiller van Gegevens. Dit is een proces in twee stappen:
 
 - Eerst, **analyseert** de dataset om een bemonsterde versie met een gespecificeerde steekproefverhouding tot stand te brengen
 - Daarna, vraag de bemonsterde versie van de dataset. Afhankelijk van de functies die u op de gesamplede dataset toepast, kunt u de uitvoer naar de getallen schalen naar de volledige dataset
@@ -152,7 +152,7 @@ fig.show()
 
 **de output van de Steekproef**
 
-![ een infografisch van de eventType e-mailtrechter.](../../images/data-distiller/email-funnel.png)
+![&#x200B; een infografisch van de eventType e-mailtrechter.](../../images/data-distiller/email-funnel.png)
 
 ## Gebeurteniscorrelaties {#event-correlations}
 
@@ -258,8 +258,8 @@ sns.barplot(data=corrdf.fillna(0), y="feature", x="pearsonCorrelation")
 ax.set_title("Pearson Correlation of Events with the outcome event")
 ```
 
-![ een staafgrafiek van de Correlatie van Pearson van gebeurtenissen van gebeurtenisresultaten ](../../images/data-distiller/pearson-correlations.png)
+![&#x200B; een staafgrafiek van de Correlatie van Pearson van gebeurtenissen van gebeurtenisresultaten &#x200B;](../../images/data-distiller/pearson-correlations.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe u Data Distiller kunt gebruiken om gegevens van een [!DNL Python] -laptop te verkennen en te analyseren. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren is [ ingenieurseigenschappen voor machine het leren ](./feature-engineering.md).
+Door dit document te lezen, hebt u geleerd hoe u Data Distiller kunt gebruiken om gegevens van een [!DNL Python] -laptop te verkennen en te analyseren. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren is [&#x200B; ingenieurseigenschappen voor machine het leren &#x200B;](./feature-engineering.md).

@@ -33,9 +33,9 @@ Dataflows zijn een voorstelling van gegevenstaken die gegevens over Experience P
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Transparantie voor gegevensstromen | U kunt gegevensstromen voor bronnen en bestemmingen controleren. Voor meer informatie, te lezen gelieve het [ leerprogramma op controlebronnen ](../../dataflows/ui/monitor-sources.md) of [ leerprogramma op controlebestemmingen ](../../dataflows/ui/monitor-destinations.md). |
+| Transparantie voor gegevensstromen | U kunt gegevensstromen voor bronnen en bestemmingen controleren. Voor meer informatie, te lezen gelieve het [&#x200B; leerprogramma op controlebronnen &#x200B;](../../dataflows/ui/monitor-sources.md) of [&#x200B; leerprogramma op controlebestemmingen &#x200B;](../../dataflows/ui/monitor-destinations.md). |
 
-Om meer over gegevensstromen te leren, te lezen gelieve [ dataflows overzicht ](../../dataflows/home.md).
+Om meer over gegevensstromen te leren, te lezen gelieve [&#x200B; dataflows overzicht &#x200B;](../../dataflows/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -59,7 +59,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Account- en verbindingsgegevens voor streamingbronnen bijwerken | U kunt de namen, beschrijvingen en referenties van bestaande streamingverbindingen nu bijwerken met de API van [!DNL Flow Service] en de gebruikersinterface. Voor meer informatie, zie het leerprogramma bij [ het bijwerken verbindingen gebruikend API ](../../sources/tutorials/api/update.md) en [ het uitgeven rekeningsdetails gebruikend UI ](../../sources/tutorials/ui/monitor.md). |
-| Gegevensstromen verwijderen | Streaming-gegevensstromen die fouten bevatten of onnodig zijn geworden, kunnen nu worden verwijderd met de API van [!DNL Flow Service] en de gebruikersinterface. Voor meer informatie, zie het leerprogramma bij [ het schrappen dataflows gebruikend API ](../../sources/tutorials/api/delete-dataflows.md) en [ het schrappen dataflows gebruikend UI ](../../sources/tutorials/ui/delete.md). |
+| Account- en verbindingsgegevens voor streamingbronnen bijwerken | U kunt de namen, beschrijvingen en referenties van bestaande streamingverbindingen nu bijwerken met de API van [!DNL Flow Service] en de gebruikersinterface. Voor meer informatie, zie het leerprogramma bij [&#x200B; het bijwerken verbindingen gebruikend API &#x200B;](../../sources/tutorials/api/update.md) en [&#x200B; het uitgeven rekeningsdetails gebruikend UI &#x200B;](../../sources/tutorials/ui/monitor.md). |
+| Gegevensstromen verwijderen | Streaming-gegevensstromen die fouten bevatten of onnodig zijn geworden, kunnen nu worden verwijderd met de API van [!DNL Flow Service] en de gebruikersinterface. Voor meer informatie, zie het leerprogramma bij [&#x200B; het schrappen dataflows gebruikend API &#x200B;](../../sources/tutorials/api/delete-dataflows.md) en [&#x200B; het schrappen dataflows gebruikend UI &#x200B;](../../sources/tutorials/ui/delete.md). |
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

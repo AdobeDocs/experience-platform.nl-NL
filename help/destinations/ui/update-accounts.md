@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Op het tabblad **[!UICONTROL Accounts]** ziet u details over de verbindingen die u hebt gemaakt met verschillende doelen. Verwijs naar het [ overzicht van Rekeningen ](../ui/destinations-workspace.md#accounts) voor alle informatie u op elke bestemmingsrekening kunt krijgen.
+Op het tabblad **[!UICONTROL Accounts]** ziet u details over de verbindingen die u hebt gemaakt met verschillende doelen. Verwijs naar het [&#x200B; overzicht van Rekeningen &#x200B;](../ui/destinations-workspace.md#accounts) voor alle informatie u op elke bestemmingsrekening kunt krijgen.
 
 Deze zelfstudie behandelt de stappen om de details van de bestemmingsrekening bij te werken door het Experience Platform UI te gebruiken.
 
@@ -23,41 +23,41 @@ U kunt de details van de bestemmingsrekening bijwerken om geloofsbrieven voor uw
 
 Voor batchbestemmingen kunt u de toegang of de geheime sleutel bijwerken als een van deze wijzigingen is gewijzigd. Als u uw bestanden verder wilt coderen, kunt u bovendien een openbare RSA-sleutel invoegen en worden uw geëxporteerde bestanden vervolgens versleuteld.
 
-![ Rekeningen tabel ](../assets/ui/update-accounts/destination-accounts.png)
+![&#x200B; Rekeningen tabel &#x200B;](../assets/ui/update-accounts/destination-accounts.png)
 
 ## Accounts bijwerken {#update}
 
 Voer de onderstaande stappen uit om verbindingsgegevens bij te werken naar bestaande doelen.
 
-1. Login aan het [ Experience Platform UI ](https://platform.adobe.com/) en selecteert **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Accounts]** in de bovenste koptekst om uw bestaande accounts weer te geven.
+1. Login aan het [&#x200B; Experience Platform UI &#x200B;](https://platform.adobe.com/) en selecteert **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Accounts]** in de bovenste koptekst om uw bestaande accounts weer te geven.
 
-   ![ Rekeningen tabel ](../assets/ui/update-accounts/accounts-tab.png)
+   ![&#x200B; Rekeningen tabel &#x200B;](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Selecteer het filterpictogram ![ filter-pictogram ](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van rekeningen te zien verbonden aan de geselecteerde bestemmingen.
+2. Selecteer het filterpictogram ![&#x200B; filter-pictogram &#x200B;](/help/images/icons/filter.png) op de bovenkant verlaten om het soortpaneel te lanceren. Het deelvenster Sorteren bevat een lijst met al uw doelen. U kunt meer dan één bestemming van de lijst selecteren om een gefilterde selectie van rekeningen te zien verbonden aan de geselecteerde bestemmingen.
 
-   ![ de bestemmingsrekeningen van de Filter ](../assets/ui/update-accounts/filter-accounts.png)
+   ![&#x200B; de bestemmingsrekeningen van de Filter &#x200B;](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Selecteer de ovalen (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]** , **[!UICONTROL Edit details]** en **[!UICONTROL Delete]** de account. Selecteer ![ uitgeven detailknoop ](/help/images/icons/edit.png) **[!UICONTROL Edit details]** knoop om de rekeningsinformatie uit te geven.
+3. Selecteer de ovalen (`...`) naast de naam van de account die u wilt bijwerken. Er verschijnt een pop-upvenster met opties voor **[!UICONTROL Activate audiences]** , **[!UICONTROL Edit details]** en **[!UICONTROL Delete]** de account. Selecteer ![&#x200B; uitgeven detailknoop &#x200B;](/help/images/icons/edit.png) **[!UICONTROL Edit details]** knoop om de rekeningsinformatie uit te geven.
 
-   ![ geef rekening ](../assets/ui/update-accounts/accounts-edit.png) uit
+   ![&#x200B; geef rekening &#x200B;](../assets/ui/update-accounts/accounts-edit.png) uit
 
 4. Voer uw bijgewerkte accountgegevens in.
 
    * Voor accounts die een `OAuth1` - of `OAuth2` verbindingstype gebruiken, selecteert u **[!UICONTROL Reconnect OAuth]** om uw accountgegevens te vernieuwen. U kunt ook de naam en beschrijving van uw account bijwerken.
 
-   ![ geef details OAuth ](../assets/ui/update-accounts/edit-details-oauth.png) uit
+   ![&#x200B; geef details OAuth &#x200B;](../assets/ui/update-accounts/edit-details-oauth.png) uit
 
    * Voor accounts die een verbindingstype `Access Key` of `ConnectionString` gebruiken, kunt u de verificatiegegevens van uw account bewerken, zoals toegang-id, geheime sleutels of verbindingstekenreeksen. U kunt ook de naam en beschrijving van uw account bijwerken.
 
-   ![ geef de Sleutel van de Toegang van details uit ](../assets/ui/update-accounts/edit-details-key.png)
+   ![&#x200B; geef de Sleutel van de Toegang van details uit &#x200B;](../assets/ui/update-accounts/edit-details-key.png)
 
    * Voor accounts die een verbindingstype `Bearer token` gebruiken, kunt u indien nodig een nieuw token voor toonder invoeren. U kunt ook de naam en beschrijving van uw account bijwerken.
 
-   ![ geeft het teken van de Details Drager uit ](../assets/ui/update-accounts/edit-details-bearer.png)
+   ![&#x200B; geeft het teken van de Details Drager uit &#x200B;](../assets/ui/update-accounts/edit-details-bearer.png)
 
    * Voor accounts die een verbindingstype `Server to server` gebruiken, kunt u de naam en beschrijving van uw account bijwerken.
 
-   ![ geeft details Server-aan-server ](../assets/ui/update-accounts/edit-details-s2s.png) uit
+   ![&#x200B; geeft details Server-aan-server &#x200B;](../assets/ui/update-accounts/edit-details-s2s.png) uit
 
 5. Selecteer **[!UICONTROL Save]** om de update van de accountdetails te voltooien.
 
@@ -65,4 +65,4 @@ Voer de onderstaande stappen uit om verbindingsgegevens bij te werken naar besta
 
 Door deze zelfstudie te volgen, hebt u de werkruimte van **[!UICONTROL destinations]** gebruikt om bestaande accounts bij te werken.
 
-Voor meer informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../catalog/overview.md).
+Voor meer informatie over bestemmingen, verwijs naar het [&#x200B; overzicht van bestemmingen &#x200B;](../catalog/overview.md).

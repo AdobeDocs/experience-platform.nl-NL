@@ -15,8 +15,8 @@ De Adobe Experience Platform Web SDK is een client-side JavaScript-bibliotheek w
 
 U kunt SDK van het Web op twee manieren uitvoeren:
 
-* De [ de markeringsuitbreiding van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Zie het leerprogramma op hoe te [ Adobe Experience Cloud met het Web SDK ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=nl-NL) voor meer informatie uitvoeren.
-* Handmatige implementatie die de [ bibliotheek van SDK van het Web JavaScript ](install/library.md) gebruikt.
+* De [&#x200B; de markeringsuitbreiding van SDK van het Web &#x200B;](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Zie het leerprogramma op hoe te [&#x200B; Adobe Experience Cloud met het Web SDK &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=nl-NL) voor meer informatie uitvoeren.
+* Handmatige implementatie die de [&#x200B; bibliotheek van SDK van het Web JavaScript &#x200B;](install/library.md) gebruikt.
 
 Deze handleiding bevat instructies voor het werken met Experience Cloud-oplossingen met zowel de Web SDK JavaScript-bibliotheek als de tagextensie.
 
@@ -27,8 +27,8 @@ Deze handleiding bevat instructies voor het werken met Experience Cloud-oplossin
 De Experience Platform Web SDK maakt deel uit van de Adobe Experience Platform Edge Network, die het volgende omvat:
 
 * **[Experience Platform Web SDK](#overview)**: Een bibliotheek en markeringsuitbreiding van JavaScript voor het vereenvoudigen van de technologieplaatsing van Adobe.
-* **[Experience Platform Mobile SDK ](https://developer.adobe.com/client-sdks/home/)**: Een uitbreiding aan v5 mobiele SDK voor de nieuwe plaatsingsmethodologie.
-* **[Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/)**: Een server-kant API voor gegevensinzameling, verpersoonlijking, reclame, en marketing gebruiksgevallen. U kunt het op servers, apparaten IoT, reeks-hoogste dozen, en andere apparaten gebruiken.
+* **[Experience Platform Mobile SDK &#x200B;](https://developer.adobe.com/client-sdks/home/)**: Een uitbreiding aan v5 mobiele SDK voor de nieuwe plaatsingsmethodologie.
+* **[Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/)**: Een server-kant API voor gegevensinzameling, verpersoonlijking, reclame, en marketing gebruiksgevallen. U kunt het op servers, apparaten IoT, reeks-hoogste dozen, en andere apparaten gebruiken.
 
 De Edge Network biedt gegevensverzameling met lage latentie, pluggable computergebruik en snelle gegevensactivering op alle adresseerbare kanalen. Het biedt één geconsolideerde SDK voor web, mobiel, en server-zijkanalen, die gegevens naar een gemeenschappelijk domein van Adobe (`adobedc.net`) verzenden en één enkele lading voor gegevens en ervaringslevering ontvangen.
 
@@ -51,7 +51,7 @@ Bekijk de onderstaande video voor een overzicht van de Adobe Experience Platform
 
 ## Bibliotheken die worden vervangen door de Web SDK {#sdks}
 
-De Web SDK is een nieuwe, open-bronbibliotheek die van kras wordt gebouwd om functionaliteit van bestaande bibliotheken te integreren. Het richt kwesties met markering het ontsteken orde, versie inconsistenties, en gebiedsdeelbeheer, die een nieuwe, [ open bron ](https://github.com/adobe/alloy) manier aanbieden om [!DNL Experience Cloud] uit te voeren.
+De Web SDK is een nieuwe, open-bronbibliotheek die van kras wordt gebouwd om functionaliteit van bestaande bibliotheken te integreren. Het richt kwesties met markering het ontsteken orde, versie inconsistenties, en gebiedsdeelbeheer, die een nieuwe, [&#x200B; open bron &#x200B;](https://github.com/adobe/alloy) manier aanbieden om [!DNL Experience Cloud] uit te voeren.
 
 De Web SDK vervangt:
 
@@ -68,7 +68,7 @@ Bekijk de onderstaande video om Adobe Experience Platform [!DNL Web SDK] en [!DN
 
 ## Migreren van bestaande bibliotheken naar Web SDK {#migrating-to-web-sdk}
 
-Adobe biedt een gestroomlijnde verbeteringsweg aan om uw migratie van om het even welke [ bestaande bibliotheken ](#sdks) aan Web SDK te vereenvoudigen. U kunt elke pagina van uw website afzonderlijk migreren zonder dat u de gehele site tegelijk hoeft te migreren. U kunt de Web SDK op sommige pagina&#39;s gebruiken terwijl de bestaande bibliotheken op anderen blijven, die voor een geleidelijke overgang toestaan.
+Adobe biedt een gestroomlijnde verbeteringsweg aan om uw migratie van om het even welke [&#x200B; bestaande bibliotheken &#x200B;](#sdks) aan Web SDK te vereenvoudigen. U kunt elke pagina van uw website afzonderlijk migreren zonder dat u de gehele site tegelijk hoeft te migreren. U kunt de Web SDK op sommige pagina&#39;s gebruiken terwijl de bestaande bibliotheken op anderen blijven, die voor een geleidelijke overgang toestaan.
 
 ### Overwegingen bij het migreren van `AT.js` naar Web SDK {#considerations}
 
@@ -81,7 +81,7 @@ Voordat u pagina&#39;s migreert met `AT.js` naar Web SDK, schakelt u de volgende
 >
 >De volgende doelfuncties worden niet ondersteund bij het migreren van `at.js` naar Web SDK:
 >
->* [ Redirect aanbiedingen ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=nl-NL)
->* [ CNAME en dwars-domeinsteun ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html?lang=nl-NL)
+>* [&#x200B; Redirect aanbiedingen &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=nl-NL)
+>* [&#x200B; CNAME en dwars-domeinsteun &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html?lang=nl-NL)
 
 Nadat u van `AT.js` naar de Web SDK hebt gemigreerd, verwijdert u de optie `targetMigrationEnabled` uit de configuratie.

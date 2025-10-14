@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!UICONTROL Healthcare medication] schemaveldgroep
 
-[!UICONTROL Healthcare medication] is een standaardgroep van het schemagebied voor de [[!UICONTROL Medication] klasse ](../../classes/medication.md). Dit veld bevat één objecttype `medication` waarin details worden vastgelegd, zoals de merknaam, het nummer van de partij en het aantal.
+[!UICONTROL Healthcare medication] is een standaardgroep van het schemagebied voor de [[!UICONTROL Medication] klasse &#x200B;](../../classes/medication.md). Dit veld bevat één objecttype `medication` waarin details worden vastgelegd, zoals de merknaam, het nummer van de partij en het aantal.
 
 ![](../../images/field-groups/healthcare-medication.png)
 
@@ -32,4 +32,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).

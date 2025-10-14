@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Overzicht van meerdere Adobe Experience Platform-cloud
 
-Adobe Experience Platform is een multi-wolkenproduct, dat u de keus tussen het lopen op [[!DNL Microsoft Azure] geeft ](https://azure.microsoft.com/en-us) of [[!DNL Amazon Web Services (AWS)] ](https://aws.amazon.com/). Dankzij deze flexibiliteit kunt u kiezen wat het beste past bij uw zakelijke en technische vereisten.
+Adobe Experience Platform is een multi-wolkenproduct, dat u de keus tussen het lopen op [[!DNL Microsoft Azure] geeft &#x200B;](https://azure.microsoft.com/en-us) of [[!DNL Amazon Web Services (AWS)] &#x200B;](https://aws.amazon.com/). Dankzij deze flexibiliteit kunt u kiezen wat het beste past bij uw zakelijke en technische vereisten.
 
 >[!AVAILABILITY]
 >
@@ -31,15 +31,15 @@ De keuze tussen Experience Platform in Azure of AWS is afhankelijk van verschill
 
 Gezien de bovenstaande factoren, gebruik deze vereenvoudigde beslissingstructuur om te helpen beslissen over de juiste cloud-implementatie voor uw bedrijfsbehoeften.
 
-![ Beeld dat de geografische distributie van het ontvangen plaatsen toont.](assets/multi-cloud/diagram-cloud.png){align="center" zoomable="yes"}
+![&#x200B; Beeld dat de geografische distributie van het ontvangen plaatsen toont.](assets/multi-cloud/diagram-cloud.png){align="center" zoomable="yes"}
 
 ## Hostlocaties {#available-cloud-regions}
 
 Het kiezen van de juiste wolkenregio is van cruciaal belang om te voldoen aan de vereisten voor gegevensresistentie en om optimale prestaties te garanderen.
 
-![ Beeld dat de geografische distributie van het ontvangen plaatsen toont.](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
+![&#x200B; Beeld dat de geografische distributie van het ontvangen plaatsen toont.](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
 
-Het Experience Platform is beschikbaar in zes Microsoft Azure het ontvangen plaatsen, één Amazon Web Services (AWS) het ontvangen plaats, en routegegevens aan de diensten van Adobe door zeven [ Edge Network knopen ](../collection/home.md#edge) die over de wereld worden verdeeld.
+Het Experience Platform is beschikbaar in zes Microsoft Azure het ontvangen plaatsen, één Amazon Web Services (AWS) het ontvangen plaats, en routegegevens aan de diensten van Adobe door zeven [&#x200B; Edge Network knopen &#x200B;](../collection/home.md#edge) die over de wereld worden verdeeld.
 
 ### Microsoft Azure-regio&#39;s {#azure-regions}
 
@@ -71,7 +71,7 @@ In de onderstaande tabel worden de AWS-gebieden aangegeven waar Experience Platf
 De Adobe streeft ernaar om functiepariteit aan te bieden op cloudplatforms, voor alle toepassingen die op het Experience Platform worden uitgevoerd, zoals:
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
-* [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/ajo-home)
+* [&#x200B; Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/ajo-home)
 * [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-landing)
 
 Bepaalde functies kunnen echter afwijken voor de implementaties van Azure en AWS. Deze verschillen worden beschreven in de onderstaande sectie en in andere delen van de productdocumentatie, indien van toepassing.
@@ -82,8 +82,8 @@ In de onderstaande tabel worden de belangrijkste verschillen aangegeven tussen h
 
 | Functionaliteit | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
-| [ naleving van HIPAA ](https://www.adobe.com/trust/compliance/hipaa-ready.html) | Ondersteund | Niet ondersteund |
-| [ Catalogus van bronschakelaars ](/help/sources/home.md) | Alle connectors in de broncatalogus worden ondersteund | Een beperkt aantal bronschakelaars is beschikbaar. Om het even welke bronschakelaars beschikbaar voor de implementaties van AWS worden geroepen uit in een top-of-page nota in hun respectieve documentatiepagina&#39;s. |
+| [&#x200B; naleving van HIPAA &#x200B;](https://www.adobe.com/trust/compliance/hipaa-ready.html) | Ondersteund | Niet ondersteund |
+| [&#x200B; Catalogus van bronschakelaars &#x200B;](/help/sources/home.md) | Alle connectors in de broncatalogus worden ondersteund | Een beperkt aantal bronschakelaars is beschikbaar. Om het even welke bronschakelaars beschikbaar voor de implementaties van AWS worden geroepen uit in een top-of-page nota in hun respectieve documentatiepagina&#39;s. |
 
 {style="table-layout:auto"}
 

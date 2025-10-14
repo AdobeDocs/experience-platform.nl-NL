@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees deze handleiding voor informatie over hoe u uw [!DNL Capillary] -database kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de Experience Platform-gebruikersinterface.
 
@@ -22,9 +22,9 @@ Lees deze handleiding voor informatie over hoe u uw [!DNL Capillary] -database k
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## Navigeren door de catalogus met bronnen
@@ -37,13 +37,13 @@ Als u [!DNL Capillary] wilt gebruiken, selecteert u de **[!UICONTROL Capillary S
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus in UI met Capillary die de kaart van Gebeurtenissen stroomt die.](../../../../images/tutorials/create/capillary/catalog.png)
+![&#x200B; de broncatalogus in UI met Capillary die de kaart van Gebeurtenissen stroomt die.](../../../../images/tutorials/create/capillary/catalog.png)
 
 ## Gegevens selecteren
 
 Gebruik vervolgens de interface van *[!UICONTROL Select data]* om een voorbeeld-JSON-bestand te uploaden om uw bronschema te definiëren. Tijdens deze stap kunt u de voorvertoningsinterface gebruiken om de bestandsstructuur van de laadbewerking weer te geven. Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ de uitgezochte gegevensstap van het bronwerkschema ](../../../../images/tutorials/create/capillary/select-data.png)
+![&#x200B; de uitgezochte gegevensstap van het bronwerkschema &#x200B;](../../../../images/tutorials/create/capillary/select-data.png)
 
 ## Gegevens gegevensstroom
 
@@ -72,25 +72,25 @@ Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan 
 
 Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegrip van een naam, een facultatieve beschrijving, en waakzame configuraties dan verstrekken.
 
-![ de dataflow detailinterface ](../../../../images/tutorials/create/capillary/dataflow-detail.png)
+![&#x200B; de dataflow detailinterface &#x200B;](../../../../images/tutorials/create/capillary/dataflow-detail.png)
 
 | Dataflow-configuraties | Beschrijving |
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom.  Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan waarschuwingen op basis van gebeurtenissen produceren waarop gebruikers zich kunnen abonneren. Met deze opties kan een actieve gegevensstroom deze waarschuwingen activeren.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan waarschuwingen op basis van gebeurtenissen produceren waarop gebruikers zich kunnen abonneren. Met deze opties kan een actieve gegevensstroom deze waarschuwingen activeren.  Voor meer informatie, lees het [&#x200B; alarm overzicht &#x200B;](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Toewijzing
 
-Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren. Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md).
+Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren. Voor meer informatie, lees de [&#x200B; kaartgids in UI &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 >[!TIP]
 >
->U kunt de [ Gebeurtenissen en afbeeldingen van het Profiel ](../../../../images/tutorials/create/capillary/mappings.zip) voor [!DNL Capillary] downloaden en [ de dossiers invoeren aan Prep van Gegevens ](../../../../../data-prep/ui/mapping.md#import-mapping) wanneer u bereid bent om uw gegevens in kaart te brengen.
+>U kunt de [&#x200B; Gebeurtenissen en afbeeldingen van het Profiel &#x200B;](../../../../images/tutorials/create/capillary/mappings.zip) voor [!DNL Capillary] downloaden en [&#x200B; de dossiers invoeren aan Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping) wanneer u bereid bent om uw gegevens in kaart te brengen.
 
-![ de kaartinterface voor Capillary.](../../../../images/tutorials/create/capillary/mappings.png)
+![&#x200B; de kaartinterface voor Capillary.](../../../../images/tutorials/create/capillary/mappings.png)
 
 ## Controleren
 
@@ -101,10 +101,10 @@ De stap *[!UICONTROL Review]* wordt weergegeven, zodat u de details van de gegev
 
 Selecteer **[!UICONTROL Finish]** nadat u hebt bevestigd dat de details juist zijn.
 
-![ de revisiestap in het bronwerkschema.](../../../../images/tutorials/create/capillary/review.png)
+![&#x200B; de revisiestap in het bronwerkschema.](../../../../images/tutorials/create/capillary/review.png)
 
 ## De URL van het streamingeindpunt ophalen
 
 Als de verbinding is gemaakt, wordt de pagina met brondetails weergegeven. Deze pagina bevat details van de zojuist gemaakte verbinding, waaronder eerder uitgevoerde dataflows, ID en URL van het streamingeindpunt.
 
-![ het stromen eindpunt URL.](../../../../images/tutorials/create/capillary/endpoint-url.png)
+![&#x200B; het stromen eindpunt URL.](../../../../images/tutorials/create/capillary/endpoint-url.png)

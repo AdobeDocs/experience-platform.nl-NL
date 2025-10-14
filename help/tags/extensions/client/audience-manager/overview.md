@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Met de de markeringsuitbreiding van de Audience Manager, kunt u de code integreren van de DIL die door Audience Manager met uw eigenschappen in Adobe Experience Platform wordt gebruikt.
 
@@ -21,7 +21,7 @@ Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het g
 
 >[!NOTE]
 >
->Deze extensie is niet bedoeld voor het doorsturen van gebeurtenissen van Adobe Analytics-gegevens. Voor gebeurtenis door:sturen, gebruik de [ uitbreiding van Adobe Analytics ](../analytics/overview.md).
+>Deze extensie is niet bedoeld voor het doorsturen van gebeurtenissen van Adobe Analytics-gegevens. Voor gebeurtenis door:sturen, gebruik de [&#x200B; uitbreiding van Adobe Analytics &#x200B;](../analytics/overview.md).
 
 ## De Adobe Audience Manager-extensie configureren
 
@@ -51,7 +51,7 @@ Laat Regex toe als URL een regelmatige uitdrukking is.
 
 #### DIL Site Catalyst-module gebruiken
 
-De [ module van de SiteCatalyst ](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_sc_init.html) werkt met DIL om de markeringselementen van de Analyse naar Audience Manager te verzenden.
+De [&#x200B; module van de SiteCatalyst &#x200B;](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_sc_init.html) werkt met DIL om de markeringselementen van de Analyse naar Audience Manager te verzenden.
 
 Gebruik de Code-editor om het bestand siteCatalyst.init te configureren.
 
@@ -59,15 +59,15 @@ U kunt ook een notitie maken met informatie over deze configuratie.
 
 #### Module DIL Googles Analytics gebruiken
 
-Laat de [ module van Googles Analytics ](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html) toe.
+Laat de [&#x200B; module van Googles Analytics &#x200B;](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html) toe.
 
 #### DIL.Initialisatie-eigenschappen maken
 
-Voeg initialisatieeigenschappen toe die door [ worden gebruikt DIL.create ](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html) en namespace subproperty voor het [ bezoekorService voorwerp ](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_visitor_service.html). In de codeopmerkingen in de Code-editor zijn twee voorbeelden van voorbeeldgebruik opgenomen.
+Voeg initialisatieeigenschappen toe die door [&#x200B; worden gebruikt DIL.create &#x200B;](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html) en namespace subproperty voor het [&#x200B; bezoekorService voorwerp &#x200B;](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_visitor_service.html). In de codeopmerkingen in de Code-editor zijn twee voorbeelden van voorbeeldgebruik opgenomen.
 
 Selecteer **[!UICONTROL Choose an Item]** om extra eigenschappen toe te voegen.
 
-Houd de muisaanwijzer boven de pictogrammen &#39;i&#39; om te zien wat elke eigenschap doet. U kunt meer informatie voor de eigenschappen in de [ documentatie van de DIL van de Audience Manager van de ](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html) vinden.
+Houd de muisaanwijzer boven de pictogrammen &#39;i&#39; om te zien wat elke eigenschap doet. U kunt meer informatie voor de eigenschappen in de [&#x200B; documentatie van de DIL van de Audience Manager van de &#x200B;](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html) vinden.
 
 Selecteer **[!UICONTROL Save]** wanneer u de extensie hebt geconfigureerd.
 

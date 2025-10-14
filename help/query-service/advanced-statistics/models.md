@@ -77,7 +77,7 @@ Gebruik SQL om naar de dataset te verwijzen die voor opleiding wordt gebruikt.
 
 >[!TIP]
 >
->Voor een volledige verwijzing op de `TRANSFORM` clausule, met inbegrip van gesteunde functies en gebruik over zowel `CREATE MODEL` als `CREATE TABLE`, zie de [`TRANSFORM` clausule in de SQL documentatie van de Syntaxis ](../sql/syntax.md#transform).
+>Voor een volledige verwijzing op de `TRANSFORM` clausule, met inbegrip van gesteunde functies en gebruik over zowel `CREATE MODEL` als `CREATE TABLE`, zie de [`TRANSFORM` clausule in de SQL documentatie van de Syntaxis &#x200B;](../sql/syntax.md#transform).
 
 ## Een model bijwerken {#update}
 
@@ -177,7 +177,7 @@ Hoewel deze functie de transparantie verbetert en functievalidatie ondersteunt, 
 
 - **Vectoroutput**: Als de transformatie vector-type output produceert, worden zij automatisch omgezet in series.
 - **de beperking van het hergebruik van de partij**: De Lijsten die met `TRANSFORM` worden gecreeerd kunnen transformaties tijdens lijstverwezenlijking slechts toepassen. De nieuwe partijen gegevens die met `INSERT INTO` worden opgenomen worden **niet automatisch getransformeerd**. Als u dezelfde transformatielogica wilt toepassen op nieuwe gegevens, moet u de tabel opnieuw maken met een nieuwe instructie `CREATE TABLE AS SELECT` (CTAS).
-- **Model heruse beperking**: De lijsten die het gebruiken van `TRANSFORM` worden gecreeerd kunnen niet direct in `CREATE MODEL` verklaringen worden gebruikt. U moet de `TRANSFORM` -logica opnieuw definiëren tijdens het maken van het model. Transformaties die uitvoer van vectortypen produceren, worden niet ondersteund tijdens modeltraining. Voor meer informatie, zie de [ types van de transformatieoutputgegevens van de Eigenschap ](./feature-transformation.md#available-transformations).
+- **Model heruse beperking**: De lijsten die het gebruiken van `TRANSFORM` worden gecreeerd kunnen niet direct in `CREATE MODEL` verklaringen worden gebruikt. U moet de `TRANSFORM` -logica opnieuw definiëren tijdens het maken van het model. Transformaties die uitvoer van vectortypen produceren, worden niet ondersteund tijdens modeltraining. Voor meer informatie, zie de [&#x200B; types van de transformatieoutputgegevens van de Eigenschap &#x200B;](./feature-transformation.md#available-transformations).
 
 >[!NOTE]
 >
@@ -285,4 +285,4 @@ DROP MODEL IF EXISTS modelName modelVersion ;
 
 ## Volgende stappen
 
-Na het lezen van dit document, begrijpt u nu de basisSQL syntaxis die wordt vereist om vertrouwde modellen tot stand te brengen, op te leiden en te beheren gebruikend Gegevens Distiller. Daarna, onderzoek het [ document van het Implementeren van geavanceerde statistische modellen ](./implement-models/implement-models.md) om over de diverse vertrouwde op beschikbare modellen te leren en hoe te om hen effectief binnen uw SQL werkschema uit te voeren. Als u niet reeds hebt, zorg ervoor om het [&#128279;](./feature-engineering.md) document van de Techniek van de Eigenschap te herzien 0&rbrace; om ervoor te zorgen dat uw gegevens optimaal voor modelopleiding worden voorbereid.
+Na het lezen van dit document, begrijpt u nu de basisSQL syntaxis die wordt vereist om vertrouwde modellen tot stand te brengen, op te leiden en te beheren gebruikend Gegevens Distiller. Daarna, onderzoek het [&#x200B; document van het Implementeren van geavanceerde statistische modellen &#x200B;](./implement-models/implement-models.md) om over de diverse vertrouwde op beschikbare modellen te leren en hoe te om hen effectief binnen uw SQL werkschema uit te voeren. Als u niet reeds hebt, zorg ervoor om het [&#128279;](./feature-engineering.md) document van de Techniek van de Eigenschap te herzien 0&rbrace; om ervoor te zorgen dat uw gegevens optimaal voor modelopleiding worden voorbereid.

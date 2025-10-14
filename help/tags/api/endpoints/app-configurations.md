@@ -19,7 +19,7 @@ Toepassingsconfiguraties staan toe dat referenties worden opgeslagen en opgehaal
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met toepassingsconfiguraties ophalen {#list}
 
@@ -31,13 +31,13 @@ GET /companies/{COMPANY_ID}/app_configurations
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `COMPANY_ID` | `id` van het [ bedrijf ](./companies.md) dat de toepassingsconfiguraties bezit. |
+| `COMPANY_ID` | `id` van het [&#x200B; bedrijf &#x200B;](./companies.md) dat de toepassingsconfiguraties bezit. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Met behulp van queryparameters kunnen de weergegeven toepassingsconfiguraties worden gefilterd op basis van de volgende kenmerken:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Met behulp van queryparameters kunnen de weergegeven toepassingsconfiguraties worden gefilterd op basis van de volgende kenmerken:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -176,7 +176,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `COMPANY_ID` | `id` van het [ bedrijf ](./companies.md) dat u de toepassingsconfiguratie onder bepaalt. |
+| `COMPANY_ID` | `id` van het [&#x200B; bedrijf &#x200B;](./companies.md) dat u de toepassingsconfiguratie onder bepaalt. |
 
 {style="table-layout:auto"}
 
@@ -213,7 +213,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `platform` | Het platform waarop de toepassing wordt uitgevoerd (web of mobiel). Dit bepaalt welke overseinendiensten beschikbaar zijn. |
-| `messaging_service` | De overseinendienst verbonden aan app, zoals [ de dienst van het Bericht van de Duw van Apple (APNs) ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) en [ het Overseinen van de Wolk van de Vuurbasis (FCM) ](https://firebase.google.com/docs/cloud-messaging). Hiermee bepaalt u welke sleuteltypen kunnen worden gebruikt. |
+| `messaging_service` | De overseinendienst verbonden aan app, zoals [&#x200B; de dienst van het Bericht van de Duw van Apple (APNs) &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) en [&#x200B; het Overseinen van de Wolk van de Vuurbasis (FCM) &#x200B;](https://firebase.google.com/docs/cloud-messaging). Hiermee bepaalt u welke sleuteltypen kunnen worden gebruikt. |
 | `key_type` | Vertegenwoordigt het protocol dat een leverancier van de drukkerij steunt en bepaalt het formaat van het `push_credential` voorwerp. Naarmate protocollen evolueren voor berichtenservices, worden nieuwe `key_type` -waarden gemaakt ter ondersteuning van de bijgewerkte protocollen. |
 | `push_credential` | De eigenlijke credentiewaarde, die in rust wordt gecodeerd. Dit veld wordt gewoonlijk niet gedecodeerd of opgenomen in API-reacties. Alleen bepaalde Adobe-services kunnen een antwoord krijgen met een gedecodeerde pushreferentie. |
 

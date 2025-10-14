@@ -20,7 +20,7 @@ Deze sjablonen zorgen voor consistentie en efficiëntie in uw analyseworkflows d
 
 Om te beginnen selecteert u het tabblad **[!UICONTROL Templates]** in de [!UICONTROL Dashboards] -werkruimte van de service en kiest u een sjabloonkaart in de beschikbare lijst.
 
-![ de werkruimte van de Diensten Dashboard met het benadrukte lusje van Malplaatjes.](../../images/sql-insights-query-pro-mode/templates/templates.png)
+![&#x200B; de werkruimte van de Diensten Dashboard met het benadrukte lusje van Malplaatjes.](../../images/sql-insights-query-pro-mode/templates/templates.png)
 
 ## Beschikbare sjablonen {#available-templates}
 
@@ -46,4 +46,4 @@ Gebruik het dashboard van [!UICONTROL Audience Identity Overlaps] om identiteits
 
 Nadat u dit document hebt gelezen, hebt u kennis genomen van de vier Distiller-sjablonen voor gegevens die beschikbaar zijn in de werkruimte van dashboards en van de manier waarop u deze sjablonen kunt gebruiken om de gegevens van het publiek te analyseren voor een betere besluitvorming. Deze malplaatjes verstrekken hulpmiddelen om publiekskruisingen te begrijpen, metriek te vergelijken, tendensen te volgen, en identiteitsoverlappingen te analyseren om segmentatie te verfijnen, overtolligheid te verminderen, en overeenkomst te verbeteren.
 
-Voor meer details op elk malplaatje, verwijs naar de respectieve gidsen voor [ Geavanceerde Overlappingen van het Publiek ](./overlaps.md), [ Vergelijking van het Publiek ](./comparison.md), [ Trends van het Publiek ](./trends.md), en [ de Overlappingen van de Identiteit van het Publiek ](./identity-overlaps.md).
+Voor meer details op elk malplaatje, verwijs naar de respectieve gidsen voor [&#x200B; Geavanceerde Overlappingen van het Publiek &#x200B;](./overlaps.md), [&#x200B; Vergelijking van het Publiek &#x200B;](./comparison.md), [&#x200B; Trends van het Publiek &#x200B;](./trends.md), en [&#x200B; de Overlappingen van de Identiteit van het Publiek &#x200B;](./identity-overlaps.md).

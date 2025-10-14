@@ -11,9 +11,9 @@ ht-degree: 1%
 
 # [!UICONTROL Bot Detection] veldgroep
 
-[!UICONTROL Bot Detection] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). De veldgroep biedt informatie over het door beide gegenereerde verkeer.
+[!UICONTROL Bot Detection] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md). De veldgroep biedt informatie over het door beide gegenereerde verkeer.
 
-![ A diagram van de [!UICONTROL Bot Detection] gebiedsgroep.](../../images/field-groups/bot-detection-information.png)
+![&#x200B; A diagram van de [!UICONTROL Bot Detection] gebiedsgroep.](../../images/field-groups/bot-detection-information.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |----------------------------|-----------------|-----------|---------------------------------------------------------|
@@ -24,5 +24,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.schema.json)

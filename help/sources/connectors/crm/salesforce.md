@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->U kunt nu de [!DNL Salesforce] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+>U kunt nu de [!DNL Salesforce] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../landing/multi-cloud.md).
 
 >[!WARNING]
 >
@@ -29,7 +29,7 @@ Volg de onderstaande stappen om te leren hoe u uw [!DNL Salesforce] -account voo
 
 ### IP adres lijst van gewenste personen voor verbinding aan Azure
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op Azure aan te sluiten. Het nalaten om uw gebied-specifieke IP adressen aan uw lijst van gewenste personen toe te voegen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Lees de [ IP pagina van de adreslijst van gewenste personen ](../../ip-address-allow-list.md) voor meer informatie.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op Azure aan te sluiten. Het nalaten om uw gebied-specifieke IP adressen aan uw lijst van gewenste personen toe te voegen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Lees de [&#x200B; IP pagina van de adreslijst van gewenste personen &#x200B;](../../ip-address-allow-list.md) voor meer informatie.
 
 >[!BEGINTABS]
 
@@ -226,10 +226,10 @@ Zie het volgende voor meer informatie over de regels voor veldmapping tussen [!D
 
 Als u de [!DNL Salesforce] bron wilt gebruiken als onderdeel van [!DNL B2B-CDP] , moet u eerst een hulpprogramma [!DNL Postman] instellen om automatisch uw [!DNL Salesforce] naamruimten en schema&#39;s te genereren. In de volgende documentatie vindt u aanvullende informatie over het instellen van het hulpprogramma [!DNL Postman] :
 
-- U kunt namespace en schema auto-generatie nutsinzameling en milieu van deze [ bewaarplaats GitHub ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) downloaden.
-- Voor informatie bij het gebruiken van Experience Platform APIs met inbegrip van details over hoe te om waarden voor vereiste kopballen te verzamelen en steekproefAPI vraag te lezen, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
-- Voor informatie over hoe te om uw geloofsbrieven voor Experience Platform APIs te produceren, zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang heeft ](../../../landing/api-authentication.md).
-- Voor informatie over hoe te opstelling [!DNL Postman] voor Experience Platform APIs, zie het leerprogramma op [ vestiging de console van de ontwikkelaar en  [!DNL Postman]](../../../landing/postman.md).
+- U kunt namespace en schema auto-generatie nutsinzameling en milieu van deze [&#x200B; bewaarplaats GitHub &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) downloaden.
+- Voor informatie bij het gebruiken van Experience Platform APIs met inbegrip van details over hoe te om waarden voor vereiste kopballen te verzamelen en steekproefAPI vraag te lezen, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
+- Voor informatie over hoe te om uw geloofsbrieven voor Experience Platform APIs te produceren, zie het leerprogramma op [&#x200B; voor authentiek verklaren en tot Experience Platform APIs toegang heeft &#x200B;](../../../landing/api-authentication.md).
+- Voor informatie over hoe te opstelling [!DNL Postman] voor Experience Platform APIs, zie het leerprogramma op [&#x200B; vestiging de console van de ontwikkelaar en  [!DNL Postman]](../../../landing/postman.md).
 
 Met een Experience Platform-ontwikkelaarsconsole en [!DNL Postman] -configuratie kunt u nu de juiste omgevingswaarden toepassen op uw [!DNL Postman] -omgeving.
 
@@ -239,21 +239,21 @@ De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vull
 
 | Variabele | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Een unieke id die wordt gebruikt om de `{ACCESS_TOKEN}` te genereren. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang hebben ](../../../landing/api-authentication.md) voor informatie over hoe te om uw `{CLIENT_SECRET}` terug te winnen. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON Web Token (JWT) is een verificatiereferentie die wordt gebruikt om uw {ACCESS_TOKEN} te genereren. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang hebben ](../../../landing/api-authentication.md) voor informatie over hoe te om uw `{JWT_TOKEN}` te produceren. | `{JWT_TOKEN}` |
-| `API_KEY` | Een unieke id die wordt gebruikt om aanroepen naar Experience Platform API&#39;s te verifiëren. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang hebben ](../../../landing/api-authentication.md) voor informatie over hoe te om uw `{API_KEY}` terug te winnen. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Het toestemmingstoken wordt vereist om vraag aan Experience Platform APIs te voltooien. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang hebben ](../../../landing/api-authentication.md) voor informatie over hoe te om uw `{ACCESS_TOKEN}` terug te winnen. | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Een unieke id die wordt gebruikt om de `{ACCESS_TOKEN}` te genereren. Zie het leerprogramma op [&#x200B; voor authentiek verklaren en tot Experience Platform APIs toegang hebben &#x200B;](../../../landing/api-authentication.md) voor informatie over hoe te om uw `{CLIENT_SECRET}` terug te winnen. | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | JSON Web Token (JWT) is een verificatiereferentie die wordt gebruikt om uw {ACCESS_TOKEN} te genereren. Zie het leerprogramma op [&#x200B; voor authentiek verklaren en tot Experience Platform APIs toegang hebben &#x200B;](../../../landing/api-authentication.md) voor informatie over hoe te om uw `{JWT_TOKEN}` te produceren. | `{JWT_TOKEN}` |
+| `API_KEY` | Een unieke id die wordt gebruikt om aanroepen naar Experience Platform API&#39;s te verifiëren. Zie het leerprogramma op [&#x200B; voor authentiek verklaren en tot Experience Platform APIs toegang hebben &#x200B;](../../../landing/api-authentication.md) voor informatie over hoe te om uw `{API_KEY}` terug te winnen. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Het toestemmingstoken wordt vereist om vraag aan Experience Platform APIs te voltooien. Zie het leerprogramma op [&#x200B; voor authentiek verklaren en tot Experience Platform APIs toegang hebben &#x200B;](../../../landing/api-authentication.md) voor informatie over hoe te om uw `{ACCESS_TOKEN}` terug te winnen. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Met betrekking tot [!DNL Marketo] is deze waarde vast en altijd ingesteld op: `ent_dataservices_sdk` . | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | De `global` container bevat alle standaard door Adobe en Experience Platform verschafte klassen, groepen met schemavelden, gegevenstypen en schema&#39;s. Met betrekking tot [!DNL Marketo] is deze waarde vast en altijd ingesteld op `global` . | `global` |
-| `PRIVATE_KEY` | Een referentie die wordt gebruikt om uw [!DNL Postman] -instantie te verifiëren voor Experience Platform API&#39;s. Zie het leerprogramma bij de console van de opstellingsontwikkelaar en [ vestiging de console van de opsteller en  [!DNL Postman]](../../../landing/postman.md) voor instructies op hoe te om uw {PRIVATE_KEY} terug te winnen. | `{PRIVATE_KEY}` |
+| `PRIVATE_KEY` | Een referentie die wordt gebruikt om uw [!DNL Postman] -instantie te verifiëren voor Experience Platform API&#39;s. Zie het leerprogramma bij de console van de opstellingsontwikkelaar en [&#x200B; vestiging de console van de opsteller en  [!DNL Postman]](../../../landing/postman.md) voor instructies op hoe te om uw {PRIVATE_KEY} terug te winnen. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Een referentie die wordt gebruikt om te integreren in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Het Identity Management System (IMS) biedt het framework voor verificatie van Adobe-services. Met betrekking tot [!DNL Marketo] is deze waarde vast en altijd ingesteld op: `ims-na1.adobelogin.com` . | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie het leerprogramma op [ vestiging de console van de ontwikkelaar en  [!DNL Postman]](../../../landing/postman.md) voor instructies op hoe te om uw `{ORG_ID}` informatie terug te winnen. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie het leerprogramma op [&#x200B; vestiging de console van de ontwikkelaar en  [!DNL Postman]](../../../landing/postman.md) voor instructies op hoe te om uw `{ORG_ID}` informatie terug te winnen. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | De naam van de virtuele sandboxpartitie die u gebruikt. | `prod` |
 | `TENANT_ID` | Een id die wordt gebruikt om ervoor te zorgen dat de bronnen die u maakt, correct worden genoemd en zich binnen uw organisatie bevinden. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Het URL-eindpunt waarnaar u API-aanroepen maakt. Deze waarde is vast en wordt altijd ingesteld op: `http://platform.adobe.io/` . | `http://platform.adobe.io/` |
-| `munchkinId` | De unieke id voor uw [!DNL Marketo] -account. Zie het leerprogramma op [ voor authentiek verklaren uw  [!DNL Marketo]  instantie ](../adobe-applications/marketo/marketo-auth.md) voor informatie over hoe te om uw `munchkinId` terug te winnen. | `123-ABC-456` |
-| `sfdc_org_id` | De organisatie-id voor uw [!DNL Salesforce] -account. Zie de volgende [[!DNL Salesforce]  gids ](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) voor meer informatie bij het verwerven van uw [!DNL Salesforce] organisatie identiteitskaart | `00D4W000000FgYJUA0` |
+| `munchkinId` | De unieke id voor uw [!DNL Marketo] -account. Zie het leerprogramma op [&#x200B; voor authentiek verklaren uw  [!DNL Marketo]  instantie &#x200B;](../adobe-applications/marketo/marketo-auth.md) voor informatie over hoe te om uw `munchkinId` terug te winnen. | `123-ABC-456` |
+| `sfdc_org_id` | De organisatie-id voor uw [!DNL Salesforce] -account. Zie de volgende [[!DNL Salesforce]  gids &#x200B;](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) voor meer informatie bij het verwerven van uw [!DNL Salesforce] organisatie identiteitskaart | `00D4W000000FgYJUA0` |
 | `has_abm` | Een booleaanse waarde die aangeeft of u bent geabonneerd op [!DNL Marketo Account-Based Marketing] . | `false` |
 | `has_msi` | Een booleaanse waarde die aangeeft of u bent geabonneerd op [!DNL Marketo Sales Insight] . | `false` |
 
@@ -267,11 +267,11 @@ Als de verzameling van [!DNL Postman] is ingesteld en de omgeving is ingesteld, 
 
 Selecteer in de interface [!DNL Postman] de hoofdmap van het hulpprogramma voor automatische generator en selecteer vervolgens **[!DNL Run]** in de bovenste koptekst.
 
-![ wortel-omslag ](../../images/tutorials/create/salesforce/root-folder.png)
+![&#x200B; wortel-omslag &#x200B;](../../images/tutorials/create/salesforce/root-folder.png)
 
 De interface [!DNL Runner] wordt weergegeven. Controleer van hieruit of alle selectievakjes zijn ingeschakeld en selecteer vervolgens **[!DNL Run Namespaces and Schemas Autogeneration Utility]** .
 
-![ looppas-generator ](../../images/tutorials/create/salesforce/run-generator.png)
+![&#x200B; looppas-generator &#x200B;](../../images/tutorials/create/salesforce/run-generator.png)
 
 Een succesvol verzoek leidt tot B2B namespaces en schema&#39;s volgens bètaspecificaties.
 
@@ -279,7 +279,7 @@ Een succesvol verzoek leidt tot B2B namespaces en schema&#39;s volgens bètaspec
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../landing/multi-cloud.md).
 
 Volg de onderstaande stappen om te leren hoe u uw [!DNL Salesforce] -account voor Experience Platform op Amazon Web Services (AWS) kunt instellen.
 
@@ -293,7 +293,7 @@ Als u uw [!DNL Salesforce] -account wilt koppelen aan Experience Platform in een
 
 ### IP adres lijst van gewenste personen voor verbinding op AWS
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op AWS aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform op AWS ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op AWS aan te sluiten. Voor meer informatie, lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform op AWS &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ### Een [!DNL Salesforce Connected App] maken
 
@@ -303,7 +303,7 @@ Gebruik eerst het volgende om een certificaat/sleutelpaar PEM-bestanden te maken
 openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
 ```
 
-1. In het [!DNL Salesforce] dashboard, uitgezochte montages (![ het montagespictogram.](/help/images/icons/settings.png) ) en selecteer vervolgens **[!DNL Setup]** .
+1. In het [!DNL Salesforce] dashboard, uitgezochte montages (![&#x200B; het montagespictogram.](/help/images/icons/settings.png) ) en selecteer vervolgens **[!DNL Setup]** .
 2. Navigeer naar [!DNL App Manager] en selecteer vervolgens **[!DNL New Connection App]** .
 3. Geef een naam op voor uw app en zorg dat de overige velden automatisch kunnen worden ingevuld.
 4. Schakel het vak voor [!DNL Enable OAuth Settings] in.

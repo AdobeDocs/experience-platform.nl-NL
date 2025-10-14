@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Dit document is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/multi-cloud).
+>Dit document is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/multi-cloud).
 >
->[ Klant Beheerde Sleutels ](../overview.md) (CMK) op AWS worden gesteund voor Privacy en het Schild van de Veiligheid maar zijn niet beschikbaar voor het Schild van de Gezondheidszorg. CMK on Azure wordt ondersteund voor zowel het privacyschild als het beveiligingsschild.
+>[&#x200B; Klant Beheerde Sleutels &#x200B;](../overview.md) (CMK) op AWS worden gesteund voor Privacy en het Schild van de Veiligheid maar zijn niet beschikbaar voor het Schild van de Gezondheidszorg. CMK on Azure wordt ondersteund voor zowel het privacyschild als het beveiligingsschild.
 
 Met deze handleiding kunt u uw gegevens beveiligen met Amazon Web Services (AWS) Key Management Service (KMS) door coderingssleutels voor Adobe Experience Platform te maken, te beheren en te beheren. Deze integratie vereenvoudigt naleving, stroomlijnt verrichtingen door automatisering, en elimineert de behoefte om uw eigen zeer belangrijke beheerinfrastructuur te handhaven.
 
-Voor Customer Journey Analytics-specifieke instructies, verwijs naar de [ documentatie van Customer Journey Analytics CMK ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-privacy/cmk)
+Voor Customer Journey Analytics-specifieke instructies, verwijs naar de [&#x200B; documentatie van Customer Journey Analytics CMK &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -31,14 +31,14 @@ Gebruik AWS KMS om de gegevensbeveiliging te verbeteren met geïntegreerd beheer
 
 Voordat u doorgaat met dit document, hebt u een goed inzicht in de volgende belangrijke concepten en mogelijkheden:
 
-- **de Zeer belangrijke Dienst van het Beheer van AWS (KMS)**: Begrijp de grondbeginselen van AWS KMS, met inbegrip van hoe te om, encryptiesleutels tot stand te brengen te beheren en te roteren. Verwijs naar de [ officiële documentatie van KMS ](https://docs.aws.amazon.com/kms/) om meer te leren.
+- **de Zeer belangrijke Dienst van het Beheer van AWS (KMS)**: Begrijp de grondbeginselen van AWS KMS, met inbegrip van hoe te om, encryptiesleutels tot stand te brengen te beheren en te roteren. Verwijs naar de [&#x200B; officiële documentatie van KMS &#x200B;](https://docs.aws.amazon.com/kms/) om meer te leren.
 - **Identiteit en het beleid van het Toegangsbeheer (IAM) in AWS**: IAM is de dienst die u toelaat om toegang tot de diensten en de middelen van AWS veilig te beheren. IAM gebruiken voor:
    - Bepaal welke gebruikers, groepen, en rollen toegang tot specifieke middelen hebben.
    - Geef op welke handelingen gebruikers mogen uitvoeren of mogen niet uitvoeren.
    - Voer fijnkorrelig toegangsbeheer door toestemmingen toe te wijzen gebruikend beleid IAM uit.
-Verwijs naar het [ IAM Beleid voor de officiële documentatie van AWS KMS ](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html) voor meer informatie.
-- **Veiligheid van Gegevens in Experience Platform**: Onderzoek hoe Experience Platform gegevensveiligheid verzekert en met de externe diensten zoals AWS KMS voor encryptie integreert. Experience Platform beschermt gegevens met HTTPS TLS v1.2 voor doorvoer, codering van cloudproviders in rust, geïsoleerde opslag en aanpasbare verificatie- en coderingsopties. Zie het [ bestuur, de privacy, en veiligheidsoverzicht ](../overview.md), of het document over [ gegevensencryptie in Experience Platform ](../../encryption.md) voor meer informatie over hoe uw gegevens veilig wordt gehouden.
-- **AWS Management Console**: Een centrale hub waar u tot al uw diensten van AWS van één Web-based toepassing kunt toegang hebben en leiden. Met de zoekbalk kunt u snel gereedschappen zoeken, meldingen controleren, uw account en facturering beheren en uw instellingen aanpassen. Verwijs naar de [ officiële documentatie van de de beheersconsole van AWS ](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) voor meer informatie.
+Verwijs naar het [&#x200B; IAM Beleid voor de officiële documentatie van AWS KMS &#x200B;](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html) voor meer informatie.
+- **Veiligheid van Gegevens in Experience Platform**: Onderzoek hoe Experience Platform gegevensveiligheid verzekert en met de externe diensten zoals AWS KMS voor encryptie integreert. Experience Platform beschermt gegevens met HTTPS TLS v1.2 voor doorvoer, codering van cloudproviders in rust, geïsoleerde opslag en aanpasbare verificatie- en coderingsopties. Zie het [&#x200B; bestuur, de privacy, en veiligheidsoverzicht &#x200B;](../overview.md), of het document over [&#x200B; gegevensencryptie in Experience Platform &#x200B;](../../encryption.md) voor meer informatie over hoe uw gegevens veilig wordt gehouden.
+- **AWS Management Console**: Een centrale hub waar u tot al uw diensten van AWS van één Web-based toepassing kunt toegang hebben en leiden. Met de zoekbalk kunt u snel gereedschappen zoeken, meldingen controleren, uw account en facturering beheren en uw instellingen aanpassen. Verwijs naar de [&#x200B; officiële documentatie van de de beheersconsole van AWS &#x200B;](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) voor meer informatie.
 
 ## Aan de slag {#get-started}
 
@@ -46,7 +46,7 @@ Deze handleiding vereist dat u al toegang hebt tot een Amazon Web Services-accou
 
 ### Selecteer een ondersteund gebied {#select-supported-region}
 
-AWS KMS is beschikbaar in specifieke gebieden. Zorg ervoor dat u werkt in een gebied waar KMS wordt ondersteund. U kunt een volledige lijst van gesteunde gebieden in de [ AWS KMS eindpunten en quotalijst ](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/) bekijken.
+AWS KMS is beschikbaar in specifieke gebieden. Zorg ervoor dat u werkt in een gebied waar KMS wordt ondersteund. U kunt een volledige lijst van gesteunde gebieden in de [&#x200B; AWS KMS eindpunten en quotalijst &#x200B;](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/) bekijken.
 
 Zorg ervoor dat uw AWS KMS-coderingssleutel zich in dezelfde regio bevindt als uw Adobe Experience Platform-exemplaar, zodat u voldoet aan de vereisten voor gegevensresidentie, de prestaties optimaliseert en extra kosten voor andere regio&#39;s vermijdt. Verkeerd uitgelijnde gebieden kunnen leiden tot ontoegankelijkheid van gegevens en mislukte integratie.
 
@@ -54,7 +54,7 @@ Zorg ervoor dat uw AWS KMS-coderingssleutel zich in dezelfde regio bevindt als u
 
 Zorg ervoor dat u over de benodigde AWS Identity and Access Management (IAM)-machtigingen beschikt voor het maken, beheren en gebruiken van coderingssleutels in KMS. Om uw toestemmingen te verifiëren:
 
-1. Heb toegang tot de [ Simulator van het Beleid IAM ](https://policysim.aws.amazon.com/).
+1. Heb toegang tot de [&#x200B; Simulator van het Beleid IAM &#x200B;](https://policysim.aws.amazon.com/).
 2. Selecteer uw gebruikersaccount of rol.
 3. Simuleer KMS-handelingen zoals `kms:CreateKey` of `kms:Encrypt` .
 
@@ -62,13 +62,13 @@ Als de simulatie een fout terugkeert of u bent onzeker over uw toestemmingen, ra
 
 ### De configuratie van uw AWS-account controleren
 
-Bevestig dat je AWS-account is ingeschakeld voor het gebruik van AWS KMS-services. De meeste rekeningen hebben toegang KMS die door gebrek wordt toegelaten, maar u kunt uw rekeningsopstelling herzien door de [ Console van het Beheer van AWS ](https://aws.amazon.com/console/) te bezoeken. Voor meer details, zie de [ gids van de Ontwikkelaar van de Dienst van het Beheer van AWS Zeer belangrijke ](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html).
+Bevestig dat je AWS-account is ingeschakeld voor het gebruik van AWS KMS-services. De meeste rekeningen hebben toegang KMS die door gebrek wordt toegelaten, maar u kunt uw rekeningsopstelling herzien door de [&#x200B; Console van het Beheer van AWS &#x200B;](https://aws.amazon.com/console/) te bezoeken. Voor meer details, zie de [&#x200B; gids van de Ontwikkelaar van de Dienst van het Beheer van AWS Zeer belangrijke &#x200B;](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html).
 
 ### Navigeren naar AWS KMS om sleutelinstellingen te starten
 
 Als u uw coderingssleutel wilt instellen en beheren, meldt u zich aan bij uw AWS-account en navigeert u naar de AWS Key Management Service (KMS). Van de Console van het Beheer van AWS en selecteer **Zeer belangrijke Dienst van het Beheer (KMS)** van het de dienstenmenu.
 
-![ het onderzoek drop-down menu van de Console van het Beheer van AWS met de Zeer belangrijke benadrukte Dienst van het Beheer.](../../../images/governance-privacy-security/key-management-service/navigate-to-kms.png)
+![&#x200B; het onderzoek drop-down menu van de Console van het Beheer van AWS met de Zeer belangrijke benadrukte Dienst van het Beheer.](../../../images/governance-privacy-security/key-management-service/navigate-to-kms.png)
 
 ## Een nieuwe sleutel maken {#create-a-key}
 
@@ -78,13 +78,13 @@ Als u uw coderingssleutel wilt instellen en beheren, meldt u zich aan bij uw AWS
 
 Selecteer **[!DNL Create a key]** in de [!DNL Key Management Service (KMS)] -werkruimte.
 
-![ de Belangrijke werkruimte van de Dienst van het Beheer met Create een benadrukt sleutel.](../../../images/governance-privacy-security/key-management-service/create-a-key.png)
+![&#x200B; de Belangrijke werkruimte van de Dienst van het Beheer met Create een benadrukt sleutel.](../../../images/governance-privacy-security/key-management-service/create-a-key.png)
 
 ## Sleutelinstellingen configureren {#configure-key}
 
 De [!DNL Configure Key] -workflow wordt weergegeven. Standaard is het toetstype ingesteld op **[!DNL Symmetric]** en wordt het sleutelgebruik ingesteld op **[!DNL Encrypt and Decrypt]** . Zorg ervoor dat deze opties zijn geselecteerd voordat u verdergaat.
 
-![ Stap één van het Configure zeer belangrijke werkschema met Symmetrisch en encrypt en ontsleutelt benadrukte basisopties.](../../../images/governance-privacy-security/key-management-service/configure-key-basic-options.png)
+![&#x200B; Stap één van het Configure zeer belangrijke werkschema met Symmetrisch en encrypt en ontsleutelt benadrukte basisopties.](../../../images/governance-privacy-security/key-management-service/configure-key-basic-options.png)
 
 Vouw het vervolgkeuzemenu **[!DNL Advanced options]** uit. U wordt aangeraden de optie **[!DNL KMS]** te gebruiken, waarmee AWS het sleutelmateriaal kan maken en beheren. De optie **[!DNL KMS]** is standaard geselecteerd.
 
@@ -98,7 +98,7 @@ Selecteer vervolgens de instelling [!DNL Regionality] , die het bereik van het g
 >
 >AWS past gebiedsbeperkingen voor KMS-sleutels toe. Deze gebiedsbeperking betekent dat de sleutel in het zelfde gebied moet zijn zoals uw Adobe rekening. Adobe heeft alleen toegang tot KMS-sleutels die zich in het gebied van uw account bevinden. Zorg ervoor dat het gebied dat u selecteert, overeenkomt met het gebied van uw Adobe-account voor één gebruiker.
 
-![ Stap één van het Configure zeer belangrijke werkschema met het gebied van AWS, KMS, en Één van één enkel gebied benadrukt gebied zeer belangrijke opties.](../../../images/governance-privacy-security/key-management-service/configure-key-advanced-options.png)
+![&#x200B; Stap één van het Configure zeer belangrijke werkschema met het gebied van AWS, KMS, en Één van één enkel gebied benadrukt gebied zeer belangrijke opties.](../../../images/governance-privacy-security/key-management-service/configure-key-advanced-options.png)
 
 ## Label en label uw sleutel {#add-labels-and-tags-to-key}
 
@@ -112,7 +112,7 @@ Tot slot wijs meta-gegevens aan uw sleutel toe door sleutel-waarde paren in de [
 
 Als u tevreden bent met de instellingen, selecteert u **[!DNL Next]** om door te gaan met de workflow.
 
-![ Stap twee van het Configure zeer belangrijke werkschema met Alias, Beschrijving, Markeringen, en daarna benadrukte.](../../../images/governance-privacy-security/key-management-service/add-labels.png)
+![&#x200B; Stap twee van het Configure zeer belangrijke werkschema met Alias, Beschrijving, Markeringen, en daarna benadrukte.](../../../images/governance-privacy-security/key-management-service/add-labels.png)
 
 ## Sleutelbeheermachtigingen definiëren {#define-key-admins}
 
@@ -126,7 +126,7 @@ Schakel in de sectie **[!DNL Key deletion]** het selectievakje in zodat belangri
 
 Selecteer **[!DNL Next]** om door te gaan met de workflow.
 
-![ bepaalt zeer belangrijke administratieve toestemmingenstadium van het werkschema, met checkboxes en volgende benadrukt.](../../../images/governance-privacy-security/key-management-service/define-key-admins.png)
+![&#x200B; bepaalt zeer belangrijke administratieve toestemmingenstadium van het werkschema, met checkboxes en volgende benadrukt.](../../../images/governance-privacy-security/key-management-service/define-key-admins.png)
 
 ## Toegang verlenen aan sleutelgebruikers {#assign-key-users}
 
@@ -136,7 +136,7 @@ Vanuit deze weergave kunt u ook [!DNL Add another AWS account] gebruiken. Het to
 
 Selecteer **[!DNL Next]** om door te gaan met de workflow.
 
-![ bepalen het belangrijkste gebied van gebruikstoestemmingen van het werkschema, met checkboxes en volgende benadrukt.](../../../images/governance-privacy-security/key-management-service/define-key-users.png)
+![&#x200B; bepalen het belangrijkste gebied van gebruikstoestemmingen van het werkschema, met checkboxes en volgende benadrukt.](../../../images/governance-privacy-security/key-management-service/define-key-users.png)
 
 ## Toetsconfiguratie controleren {#review}
 
@@ -146,10 +146,10 @@ De revisiefase van de sleutelconfiguratie wordt weergegeven. Controleer de belan
 >
 >Zorg ervoor dat het hoofdgebied hetzelfde is als het AWS-account.
 
-![ het stadium van het Overzicht van het werkschema met de Belangrijkste configuratie en Alias en beschrijvingssecties benadrukte.](../../../images/governance-privacy-security/key-management-service/review-key-configuration-details.png)
+![&#x200B; het stadium van het Overzicht van het werkschema met de Belangrijkste configuratie en Alias en beschrijvingssecties benadrukte.](../../../images/governance-privacy-security/key-management-service/review-key-configuration-details.png)
 
 Selecteer **[!DNL Confirm]** om het proces te voltooien. U bent teruggekeerd aan de KMS KlantBeheerde werkruimte van Sleutels die alle beschikbare sleutels een lijst maakt.
 
 ## Volgende stappen
 
-Nadat AWS KMS is geconfigureerd, voert u de integratie uit met de [!UICONTROL Platform Encryption Configuration] -gebruikersinterface of de Adobe Experience Platform-API. Om het eenmalig proces voor vestiging de Klant Beheerde eigenschap van Sleutels voort te zetten, ga met de [ UI opstellingsgids ](./ui-set-up.md) verder.
+Nadat AWS KMS is geconfigureerd, voert u de integratie uit met de [!UICONTROL Platform Encryption Configuration] -gebruikersinterface of de Adobe Experience Platform-API. Om het eenmalig proces voor vestiging de Klant Beheerde eigenschap van Sleutels voort te zetten, ga met de [&#x200B; UI opstellingsgids &#x200B;](./ui-set-up.md) verder.

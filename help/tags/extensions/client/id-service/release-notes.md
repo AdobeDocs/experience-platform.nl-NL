@@ -13,15 +13,15 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van het Experience Cloud zelf, gelieve te verwijzen naar de [ documentatie van de Dienst van de Identiteit ](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=nl-NL).
+In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van het Experience Cloud zelf, gelieve te verwijzen naar de [&#x200B; documentatie van de Dienst van de Identiteit &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=nl-NL).
 
 ## 17 okt. 2022
 
 ### Experience Cloud ID Extension 5.5.0
 
-* De uitbreiding steunt nu versie 5.5.0 van de [ Cliënt JS van de Bezoeker ](https://github.com/Adobe-Marketing-Cloud/id-service). Verwijs naar de [ de versienota&#39;s van de Bezoeker ](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) voor specifieke updates.
+* De uitbreiding steunt nu versie 5.5.0 van de [&#x200B; Cliënt JS van de Bezoeker &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service). Verwijs naar de [&#x200B; de versienota&#39;s van de Bezoeker &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) voor specifieke updates.
 
 ## 9 mrt. 2022
 
@@ -65,7 +65,7 @@ Deze config ondersteunt de volgende waarden voor het kenmerk `SameSite` :
    * `Lax`
    * `None`
 
-De details van deze attributenwaarden zijn op [ web.dev ](https://web.dev/samesite-cookies-explained/) en [ chroom ](https://www.chromium.org/updates/same-site)
+De details van deze attributenwaarden zijn op [&#x200B; web.dev &#x200B;](https://web.dev/samesite-cookies-explained/) en [&#x200B; chroom &#x200B;](https://www.chromium.org/updates/same-site)
 
 
 ## 13 augustus 2020

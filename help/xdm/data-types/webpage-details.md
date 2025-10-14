@@ -17,12 +17,12 @@ ht-degree: 0%
 
 Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van webtoepassingen van één pagina (SPA). Voor interactie die op een geladen pagina gebeuren die geen nieuwe paginading teweegbrengt, zie het [&#128279;](./web-interaction.md) gegevenstype van de 0&rbrace; Webinteractie &lbrace;.
 
-![ Web-pagina details ](../images/data-types/web-page-details.PNG){width="500"}
+![&#x200B; Web-pagina details &#x200B;](../images/data-types/web-page-details.PNG){width="500"}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `pageViews` | [[!UICONTROL Measure]](./measure.md) | Het aantal weergaven op een webpagina. |
-| `URL` | String | De normatieve of gebruikelijke URL van de webpagina. Dit kan al dan niet de daadwerkelijke URL zijn die wordt gebruikt om de pagina te bereiken. Gebruik `webLink` om de URL op te nemen die wordt gebruikt om de pagina te bereiken. Het formaat van URI zou [ RFC 3986 ](https://tools.ietf.org/html/rfc3986) norm moeten volgen. |
+| `URL` | String | De normatieve of gebruikelijke URL van de webpagina. Dit kan al dan niet de daadwerkelijke URL zijn die wordt gebruikt om de pagina te bereiken. Gebruik `webLink` om de URL op te nemen die wordt gebruikt om de pagina te bereiken. Het formaat van URI zou [&#x200B; RFC 3986 &#x200B;](https://tools.ietf.org/html/rfc3986) norm moeten volgen. |
 | `isErrorPage` | Boolean | Deze eigenschap gebruikt een markering om aan te geven of de pagina een foutpagina is of niet. Deze markering wordt gebruikt om webinteracties breed te categoriseren. De fout wordt gedefinieerd door de toepassing en kan overeenkomen met een pagina die wordt aangeboden met een HTTP-foutcode. |
 | `isHomePage` | Boolean | Deze eigenschap gebruikt een markering om aan te geven of de pagina een homepage is of niet. Deze markering wordt gebruikt om webinteracties breed te categoriseren. De definitie van de homepage wordt bepaald door de toepassing. |
 | `name` | String | De normatieve naam van de webpagina. Deze naam is niet noodzakelijkerwijs de paginatitel of is rechtstreeks gekoppeld aan pagina-inhoud, maar wordt gebruikt om de pagina&#39;s van een site te ordenen voor classificatiedoeleinden. |
@@ -34,5 +34,5 @@ Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.example.2.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.example.2.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.schema.json)

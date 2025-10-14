@@ -277,4 +277,4 @@ CREATE MODEL modelname OPTIONS(
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, weet u nu hoe u verschillende regressiealgoritmen kunt configureren en gebruiken. Daarna, verwijs naar de documenten op [ classificatie ](./classification.md) en [ groeperend ](./clustering.md) om over andere soorten geavanceerde statistische modellen te leren.
+Nadat u dit document hebt gelezen, weet u nu hoe u verschillende regressiealgoritmen kunt configureren en gebruiken. Daarna, verwijs naar de documenten op [&#x200B; classificatie &#x200B;](./classification.md) en [&#x200B; groeperend &#x200B;](./clustering.md) om over andere soorten geavanceerde statistische modellen te leren.

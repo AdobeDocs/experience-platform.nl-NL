@@ -20,7 +20,7 @@ Lees de volgende secties om de vereiste setup te voltooien voordat u de [!DNL Po
 
 ### IP adres lijst van gewenste personen
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op of Azure of Amazon Web Services (AWS) aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform op Azure en AWS ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op of Azure of Amazon Web Services (AWS) aan te sluiten. Voor meer informatie, lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform op Azure en AWS &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ### Verifiëren voor Experience Platform in Azure {#azure}
 
@@ -37,7 +37,7 @@ Geef waarden op voor de volgende gebruikersgegevens om uw [!DNL PostgreSQL] -dat
 | `connectionString` | De verbindingstekenreeks die aan uw [!DNL PostgreSQL] account is gekoppeld. Het patroon van de [!DNL PostgreSQL] verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}` . |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137` . Deze referentie is alleen vereist wanneer verbinding wordt gemaakt via de API van [!DNL Flow Service] . |
 
-Lees de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/current/) voor meer informatie.
+Lees de [[!DNL PostgreSQL]  documentatie &#x200B;](https://www.postgresql.org/docs/current/) voor meer informatie.
 
 >[!TAB  Basisauthentificatie ]
 
@@ -53,7 +53,7 @@ Geef waarden op voor de volgende gebruikersgegevens om uw [!DNL PostgreSQL] -dat
 | `sslMode` | De methode [!DNL Secure Sockets Layer] (SSL) die op uw verbinding moet worden toegepast. De beschikbare waarden zijn: <ul><li>`Disable`: Gebruik deze optie om SSL uit te schakelen. Als voor uw server een SSL-configuratie is vereist, mislukt de verbinding.</li><li>`Allow`: gebruik deze optie om SSL-verbindingen toe te staan. Niet-SSL verbindingen kunnen nog worden gebruikt als de server hen steunt.</li><li>`Prefer`: gebruik deze optie om SSL-verbindingen te verkiezen omdat de server deze ondersteunt. Met deze optie kunt u ook niet-SSL-verbindingen maken.</li><li>`Require`: Gebruik deze optie om SSL-verbindingen verplicht te maken. Als de server geen SSL ondersteunt, mislukken de verbindingen.</li><li>`Verify-Ca`: gebruik deze optie om servercertificaten te verifiëren wanneer er geen verbinding is als de server geen SSL ondersteunt.</li><li>`Verify-Full`: gebruik deze optie om servercertificaten met de naam van de host te verifiëren bij een verbroken verbinding als de server geen SSL ondersteunt.</li></ul> |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137` . Deze referentie is alleen vereist wanneer verbinding wordt gemaakt via de API van [!DNL Flow Service] . |
 
-Lees de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/current/) voor meer informatie.
+Lees de [[!DNL PostgreSQL]  documentatie &#x200B;](https://www.postgresql.org/docs/current/) voor meer informatie.
 
 >[!ENDTABS]
 
@@ -61,7 +61,7 @@ Lees de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/curre
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../landing/multi-cloud.md).
 
 Geef waarden op voor de volgende referenties om uw [!DNL PostgreSQL] -database op AWS aan te sluiten op Experience Platform met behulp van basisverificatie.
 
@@ -75,7 +75,7 @@ Geef waarden op voor de volgende referenties om uw [!DNL PostgreSQL] -database o
 | `sslMode` | Een Booleaanse waarde die bepaalt of SSL wordt afgedwongen, afhankelijk van uw serverondersteuning. Deze configuratie is standaard ingesteld op `false` . |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137` . Deze referentie is alleen vereist wanneer verbinding wordt gemaakt via de API van [!DNL Flow Service] . |
 
-Lees de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/current/) voor meer informatie.
+Lees de [[!DNL PostgreSQL]  documentatie &#x200B;](https://www.postgresql.org/docs/current/) voor meer informatie.
 
 ## Verbinding maken [!DNL PostgreSQL] met Experience Platform via API&#39;s
 

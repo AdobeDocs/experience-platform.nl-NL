@@ -25,10 +25,10 @@ Dit document biedt een zelfstudie om de toegang tot gevoelige gegevens te behere
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Model van de Gegevens van de Ervaring (XDM) Systeem ](../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+* [&#x200B; Model van de Gegevens van de Ervaring (XDM) Systeem &#x200B;](../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Leer hoe u schema&#39;s en andere bronnen maakt en beheert in de gebruikersinterface van Experience Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): Leer hoe u in [!DNL Data Governance] klantgegevens kunt beheren en hoe u ervoor kunt zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd.
-* [ op attributen-Gebaseerd toegangsbeheer ](../../access-control/abac/overview.md): Op attributen-gebaseerd toegangsbeheer is een vermogen van Adobe Experience Platform dat beheerders toelaat om toegang tot specifieke voorwerpen en/of mogelijkheden te controleren die op attributen worden gebaseerd. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een ad-hocveld of een regulier schemaveld wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
+* [&#x200B; op attributen-Gebaseerd toegangsbeheer &#x200B;](../../access-control/abac/overview.md): Op attributen-gebaseerd toegangsbeheer is een vermogen van Adobe Experience Platform dat beheerders toelaat om toegang tot specifieke voorwerpen en/of mogelijkheden te controleren die op attributen worden gebaseerd. Kenmerken kunnen metagegevens zijn die aan een object worden toegevoegd, zoals een label dat aan een ad-hocveld of een regulier schemaveld wordt toegevoegd. Een beheerder bepaalt toegangsbeleid dat attributen omvat om de toestemmingen van de gebruikerstoegang te beheren.
 
 ## Een ad-hocschema maken
 
@@ -42,13 +42,13 @@ Als u een gegevenslabel wilt toevoegen, navigeert u naar het tabblad Bladeren va
 
 ## Ontdek ad-hocschema&#39;s in de schemainventaris van de gebruikersinterface van Experience Platform {#discover-ad-hoc-schemas}
 
-Om de vertoning van ad hoc schema&#39;s in Experience Platform toe te laten UI, selecteer het filterpictogram (![ het filterpictogram van A.](/help/images/icons/filter.png)) links van het onderzoeksgebied, en selecteer dan ** [!UICONTROL Show adhoc schemas] in de linkerspoorlijn die verschijnt.
+Om de vertoning van ad hoc schema&#39;s in Experience Platform toe te laten UI, selecteer het filterpictogram (![&#x200B; het filterpictogram van A.](/help/images/icons/filter.png)) links van het onderzoeksgebied, en selecteer dan ** [!UICONTROL Show adhoc schemas] in de linkerspoorlijn die verschijnt.
 
-![ de optie van het de filterfilter van het Schema linkerspoor met toegelaten de knevel van het &quot;Wijs adhoc schema&quot;toe.](../images/data-governance/adhoc-schema-toggle.png)
+![&#x200B; de optie van het de filterfilter van het Schema linkerspoor met toegelaten de knevel van het &quot;Wijs adhoc schema&quot;toe.](../images/data-governance/adhoc-schema-toggle.png)
 
 Selecteer de naam van het onlangs gemaakte ad-hocschema in de beschikbare lijst. Er wordt een visualisatie van de structuur van het ad-hocschema weergegeven.
 
-![ het diagram van de model ad hoc schemastructuur.](../images/data-governance/adhoc-schema-structure-diagram.png)
+![&#x200B; het diagram van de model ad hoc schemastructuur.](../images/data-governance/adhoc-schema-structure-diagram.png)
 
 ## Regelgevingslabels bewerken
 
@@ -56,27 +56,27 @@ Als u gegevenslabels voor uw ad-hocschema wilt bewerken, selecteert u de tab [!U
 
 ## Labels voor het schema of veld bewerken
 
-Om de etiketten voor het volledige schema uit te geven, selecteer het potloodpictogram (![ het potloodpictogram van A.](/help/images/icons/edit.png) ) aan de kant van de naam van het schema onder de tab [!UICONTROL Labels] .
+Om de etiketten voor het volledige schema uit te geven, selecteer het potloodpictogram (![&#x200B; het potloodpictogram van A.](/help/images/icons/edit.png) ) aan de kant van de naam van het schema onder de tab [!UICONTROL Labels] .
 
-![ de etiketmening in de schemawerkruimte met het benadrukte potloodpictogram.](../images/data-governance/edit-entire-schema-labels.png)
+![&#x200B; de etiketmening in de schemawerkruimte met het benadrukte potloodpictogram.](../images/data-governance/edit-entire-schema-labels.png)
 
 Als u een label op een bestaand veld wilt toepassen, selecteert u een of meer velden in de lijst gevolgd door [!UICONTROL Edit governance labels] in de rechterzijbalk.
 
-![ de etikettenmening in de schemawerkruimte met de &quot;geeft governance etiketten&quot;optie uit die in het rechterzijpaneel wordt benadrukt.](../images/data-governance/edit-governance-labels.png)
+![&#x200B; de etikettenmening in de schemawerkruimte met de &quot;geeft governance etiketten&quot;optie uit die in het rechterzijpaneel wordt benadrukt.](../images/data-governance/edit-governance-labels.png)
 
 ## Pop-up Labels bewerken
 
 De pop-up [!UICONTROL Edit labels] wordt weergegeven. Vanuit deze weergave kunt u bestaande governancelabels maken of bewerken via de gebruikersinterface.
 
-![ Edit etiketten popover.](../images/data-governance/edit-labels-popover.png)
+![&#x200B; Edit etiketten popover.](../images/data-governance/edit-labels-popover.png)
 
-Zie de documentatie voor begeleiding op hoe te [ tot stand brengen of labels voor het geselecteerde schema of gebied ](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) uitgeven.
+Zie de documentatie voor begeleiding op hoe te [&#x200B; tot stand brengen of labels voor het geselecteerde schema of gebied &#x200B;](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) uitgeven.
 
 >[!NOTE]
 >
 >Voor het maken van een nieuw label of het bewerken van een bestaand label zijn beheerdersmachtigingen voor uw organisatie vereist. Als u geen beheerdersrechten hebt, neemt u contact op met uw systeembeheerder om de toegang te regelen.
 
-De etiketten kunnen ook worden gecreeerd gebruikend de toestemmingenwerkruimte. Zie de [ gids bij het creëren van etiketten in de toestemmingenwerkruimte ](../../access-control/abac/ui/labels.md) voor instructies.
+De etiketten kunnen ook worden gecreeerd gebruikend de toestemmingenwerkruimte. Zie de [&#x200B; gids bij het creëren van etiketten in de toestemmingenwerkruimte &#x200B;](../../access-control/abac/ui/labels.md) voor instructies.
 
 Zodra het aangewezen niveau van op attributen-gebaseerde toegangsbeheer is toegepast, is het volgende systeemgedrag op om het even welke vraag van toepassing die via de Dienst van de Vraag wordt uitgevoerd wanneer een gebruiker probeert om tot niet-toegankelijke gegevens toegang te hebben:
 

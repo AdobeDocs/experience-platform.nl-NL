@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten voor Data Science Workspace.
 
-Deze zelfstudie laat zien hoe u de API&#39;s kunt gebruiken om een experiment en een experimentele uitvoering te maken. Voor een lijst van alle eindpunten in de het Leren API van de Machine van Sensei, gelieve te verwijzen naar [ dit document ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+Deze zelfstudie laat zien hoe u de API&#39;s kunt gebruiken om een experiment en een experimentele uitvoering te maken. Voor een lijst van alle eindpunten in de het Leren API van de Machine van Sensei, gelieve te verwijzen naar [&#x200B; dit document &#x200B;](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Een geplande expert voor scores maken
 

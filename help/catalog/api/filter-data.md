@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Als u de prestaties wilt verbeteren en relevante resultaten wilt ophalen, gebruikt u queryparameters om [!DNL Catalog Service] API-responsgegevens te filteren.
 
-Leer meer over algemene filtermethoden voor [!DNL Catalog] -objecten in de API. Gebruik dit document naast de [ Gids van de Ontwikkelaar van de Catalogus ](getting-started.md) voor meer details op API interactie. Voor algemene [!DNL Catalog Service] informatie, zie het [[!DNL Catalog]  overzicht ](../home.md).
+Leer meer over algemene filtermethoden voor [!DNL Catalog] -objecten in de API. Gebruik dit document naast de [&#x200B; Gids van de Ontwikkelaar van de Catalogus &#x200B;](getting-started.md) voor meer details op API interactie. Voor algemene [!DNL Catalog Service] informatie, zie het [[!DNL Catalog]  overzicht &#x200B;](../home.md).
 
 ## Teruggestuurde objecten beperken {#limit-returned-objects}
 
@@ -158,7 +158,7 @@ Op basis van bovenstaande reactie kan het volgende worden afgeleid:
 
 >[!NOTE]
 >
->In het `schemaRef` bezit voor elke dataset, wijst het versieaantal op de recentste minder belangrijke versie van het schema. Zie de sectie over [ schema versioning ](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie.
+>In het `schemaRef` bezit voor elke dataset, wijst het versieaantal op de recentste minder belangrijke versie van het schema. Zie de sectie over [&#x200B; schema versioning &#x200B;](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie.
 
 ## Beginindex van verschuiving van reactielijst {#offset-starting-index}
 
@@ -454,8 +454,8 @@ Een geslaagde reactie bevat een lijst met [!DNL Catalog] -objecten die worden ge
 
 [!DNL Catalog] biedt twee methoden voor het filteren op eigenschap, die nader worden beschreven in de volgende secties:
 
-* [ Gebruikend eenvoudige filters ](#using-simple-filters): Filter door of een specifiek bezit een specifieke waarde aanpast.
-* [ Gebruikend de bezitsparameter ](#using-the-property-parameter): Gebruik voorwaardelijke uitdrukkingen aan filter gebaseerd of een bezit bestaat, of als de waarde van een bezit aanpast, benadert, of met een andere gespecificeerde waarde of regelmatige uitdrukking vergelijkt.
+* [&#x200B; Gebruikend eenvoudige filters &#x200B;](#using-simple-filters): Filter door of een specifiek bezit een specifieke waarde aanpast.
+* [&#x200B; Gebruikend de bezitsparameter &#x200B;](#using-the-property-parameter): Gebruik voorwaardelijke uitdrukkingen aan filter gebaseerd of een bezit bestaat, of als de waarde van een bezit aanpast, benadert, of met een andere gespecificeerde waarde of regelmatige uitdrukking vergelijkt.
 
 >[!NOTE]
 >

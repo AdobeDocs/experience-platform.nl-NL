@@ -14,7 +14,7 @@ ht-degree: 0%
 [!UICONTROL Advertising Details] Rapportage is een standaard XDM-gegevenstype (Experience Data Model) waarmee belangrijke kenmerken met betrekking tot advertenties worden vastgelegd. Het bevat informatie zoals de advertentie-id, adverteerder en campagne-id&#39;s, lengte, positie binnen een reeks, details over de speler die de advertentie rendert, enzovoort. U kunt dit gegevenstype gebruiken om verschillende aspecten van de prestaties en betrokkenheid van advertenties te volgen en te analyseren, en inzichten te verschaffen in de interactie van het publiek met en de reactie op verschillende advertenties.
 
 +++Selecteer om een diagram van het gegevenstype Advertising Details Reporting weer te geven.
-![ een diagram van de Details van Advertising die gegevenstype melden.](../images/data-types/advertising-details-information.png)
+![&#x200B; een diagram van de Details van Advertising die gegevenstype melden.](../images/data-types/advertising-details-information.png)
 +++
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
@@ -36,4 +36,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json)
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json)

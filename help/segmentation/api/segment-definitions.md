@@ -15,15 +15,15 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Het maken van soorten publiek met B2B-entiteiten die gebruikmaken van de Segmentation Service API is afgekeurd. U kunt geen publiek meer tot stand brengen gebruikend de volgende B2B entiteiten: Rekening, rekening-Persoonlijke Verhouding, Campagne, Lid van de Campagne, de Lijst van de Marketing, Lid van de Lijst van de Marketing, Kans, en Kans-Persoon Verhouding. Voor meer informatie, lees de gids over [ de architectuurverbeteringen van Real-Time CDP B2B edition ](../../rtcdp/b2b-architecture-upgrade.md).
+>Het maken van soorten publiek met B2B-entiteiten die gebruikmaken van de Segmentation Service API is afgekeurd. U kunt geen publiek meer tot stand brengen gebruikend de volgende B2B entiteiten: Rekening, rekening-Persoonlijke Verhouding, Campagne, Lid van de Campagne, de Lijst van de Marketing, Lid van de Lijst van de Marketing, Kans, en Kans-Persoon Verhouding. Voor meer informatie, lees de gids over [&#x200B; de architectuurverbeteringen van Real-Time CDP B2B edition &#x200B;](../../rtcdp/b2b-architecture-upgrade.md).
 
-Met Adobe Experience Platform kunt u segmentdefinities maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object dat een query omvat die is geschreven in [!DNL Profile Query Language] (PQL). Segmentdefinities worden toegepast op profielen om een publiek te maken. Dit object (segmentdefinitie) wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor de segmentdefinitie op basis van voorwaarden die gerelateerd zijn aan record- of tijdreeksgegevens die u aan [!DNL Real-Time Customer Profile] opgeeft. Zie de [ gids van PQL ](../pql/overview.md) voor meer informatie bij het schrijven van de vragen van PQL.
+Met Adobe Experience Platform kunt u segmentdefinities maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object dat een query omvat die is geschreven in [!DNL Profile Query Language] (PQL). Segmentdefinities worden toegepast op profielen om een publiek te maken. Dit object (segmentdefinitie) wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor de segmentdefinitie op basis van voorwaarden die gerelateerd zijn aan record- of tijdreeksgegevens die u aan [!DNL Real-Time Customer Profile] opgeeft. Zie de [&#x200B; gids van PQL &#x200B;](../pql/overview.md) voor meer informatie bij het schrijven van de vragen van PQL.
 
 Deze gids verstrekt informatie om u te helpen segmentdefinities beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met segmentdefinities ophalen {#list}
 
@@ -780,4 +780,4 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs omg
 
 ## Volgende stappen
 
-Na het lezen van deze gids hebt u nu een beter inzicht in hoe de segmentdefinities werken. Voor meer informatie bij het creëren van een segment, te lezen gelieve [ creërend een segment ](../tutorials/create-a-segment.md) leerprogramma.
+Na het lezen van deze gids hebt u nu een beter inzicht in hoe de segmentdefinities werken. Voor meer informatie bij het creëren van een segment, te lezen gelieve [&#x200B; creërend een segment &#x200B;](../tutorials/create-a-segment.md) leerprogramma.

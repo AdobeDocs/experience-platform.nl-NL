@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Player State Data Reporting] is een standaard XDM-gegevenstype (Experience Data Model) dat de verschillende statussen en hun voorvallen in een mediaspeler beschrijft. Gebruik het gegevenstype [!UICONTROL Player State Data Reporting] om verschillende spelerstatussen vast te leggen, zoals volledig scherm, dempen, ondertiteling, beeld-in-beeld en status in focus. Voor elke status wordt vastgelegd of de status is ingesteld, hoeveel exemplaren zijn geteld en hoe lang de status actief blijft tijdens het afspelen van media.
 
-![ een diagram van de Gegevens die van de Staat van de Speler gegevenstype melden.](../images/data-types/player-state-data-information.png)
+![&#x200B; een diagram van de Gegevens die van de Staat van de Speler gegevenstype melden.](../images/data-types/player-state-data-information.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-------------------|----------------|-----------|----------------------------------------------|
@@ -24,4 +24,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json)
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json)

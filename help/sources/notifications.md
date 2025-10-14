@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Experience Platform] -services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-[[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen [!DNL Experience Platform] te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen [!DNL Experience Platform] te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
 Met Adobe I/O Events kunt u zich abonneren op gebeurtenissen en websites gebruiken om meldingen te ontvangen over de status van uw flowuitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
 
@@ -23,15 +23,15 @@ In dit document worden stappen beschreven voor het abonneren op gebeurtenissen, 
 
 ## Aan de slag
 
-In deze zelfstudie wordt ervan uitgegaan dat u al ten minste één bronverbinding hebt gemaakt waarvan u de stroom wilt controleren. Als u nog geen bronverbinding hebt gevormd, begin door het [ bronoverzicht ](./home.md) te bezoeken om de bron van uw keus te vormen alvorens aan deze gids terug te keren.
+In deze zelfstudie wordt ervan uitgegaan dat u al ten minste één bronverbinding hebt gemaakt waarvan u de stroom wilt controleren. Als u nog geen bronverbinding hebt gevormd, begin door het [&#x200B; bronoverzicht &#x200B;](./home.md) te bezoeken om de bron van uw keus te vormen alvorens aan deze gids terug te keren.
 
-Dit document vereist ook een goed begrip van webhaken en hoe te om een webhaak van één toepassing aan een andere aan te sluiten. Verwijs naar de [[!DNL I/O Events]  documentatie ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) voor een inleiding aan webhooks.
+Dit document vereist ook een goed begrip van webhaken en hoe te om een webhaak van één toepassing aan een andere aan te sluiten. Verwijs naar de [[!DNL I/O Events]  documentatie &#x200B;](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) voor een inleiding aan webhooks.
 
 ## Webhaak registreren voor meldingen bij uitvoering van stroom
 
 Als u meldingen over flowuitvoering wilt ontvangen, moet u Adobe Developer Console gebruiken om een webhaak te registreren voor uw [!DNL Experience Platform] -integratie.
 
-Volg het leerprogramma op [ het intekenen aan [!DNL I/O Gebeurtenis] berichten ](../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.
+Volg het leerprogramma op [&#x200B; het intekenen aan [!DNL I/O Gebeurtenis] berichten &#x200B;](../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.
 
 >[!IMPORTANT]
 >
@@ -311,11 +311,11 @@ De volgende reactie is een voorbeeld van een mislukte stroomuitvoering, waarbij 
 
 >[!NOTE]
 >
->Zie [ bijlage ](#errors) voor meer informatie over foutenmeldingen.
+>Zie [&#x200B; bijlage &#x200B;](#errors) voor meer informatie over foutenmeldingen.
 
 ## Volgende stappen
 
-U kunt nu een abonnement nemen op gebeurtenissen waarmee u realtime meldingen kunt ontvangen over de status van uw flowuitvoering. Voor meer informatie over stroomlooppas en bronnen, zie het [ overzicht van bronnen ](./home.md).
+U kunt nu een abonnement nemen op gebeurtenissen waarmee u realtime meldingen kunt ontvangen over de status van uw flowuitvoering. Voor meer informatie over stroomlooppas en bronnen, zie het [&#x200B; overzicht van bronnen &#x200B;](./home.md).
 
 ## Bijlage
 

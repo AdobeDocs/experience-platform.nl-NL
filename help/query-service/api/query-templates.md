@@ -18,7 +18,7 @@ ht-degree: 0%
 
 In de volgende secties worden de verschillende API-aanroepen beschreven die u met de API [!DNL Query Service] kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
-Zie de [ documentatie van de vraagmalplaatjes UI ](../ui/query-templates.md) voor informatie bij het creëren van malplaatjes door Experience Platform UI.
+Zie de [&#x200B; documentatie van de vraagmalplaatjes UI &#x200B;](../ui/query-templates.md) voor informatie bij het creëren van malplaatjes door Experience Platform UI.
 
 ### Een lijst met querysjablonen ophalen
 
@@ -109,7 +109,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van vraagmalplaa
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw vraagmalplaatje &#x200B;](#delete-a-specified-query-template) te schrappen.
 
 ### Een querysjabloon maken
 
@@ -176,7 +176,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw vraagmalplaatje &#x200B;](#delete-a-specified-query-template) te schrappen.
 
 ### Een opgegeven querysjabloon ophalen
 
@@ -234,7 +234,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw gespecifice
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw vraagmalplaatje &#x200B;](#delete-a-specified-query-template) te schrappen.
 
 ### Een opgegeven querysjabloon bijwerken
 
@@ -310,7 +310,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met de bijgewer
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw vraagmalplaatje &#x200B;](#delete-a-specified-query-template) te schrappen.
 
 ### Een opgegeven querysjabloon verwijderen
 

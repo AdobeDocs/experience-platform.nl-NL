@@ -17,7 +17,7 @@ Wanneer u een XDM-veld (Experience Data Model) in de Adobe Experience Platform-g
 
 De inhoud van de array is afhankelijk van de geselecteerde [!UICONTROL Type] voor dat veld. Als een veld [!UICONTROL Type] bijvoorbeeld is ingesteld op &quot;[!UICONTROL String]&quot;, geeft het instellen van dat veld als een array het veld aan als een array van tekenreeksen. Als het gebied [!UICONTROL Type] aan een multi-gebiedsgegevenstype zoals &quot;[!UICONTROL Postal address]&quot;wordt geplaatst, dan zou het een serie van post-adresvoorwerpen worden die met het gegevenstype in overeenstemming zijn.
 
-Nadat u [ een nieuw gebied in UI ](./overview.md#define) hebt bepaald, kunt u het als seriegebied plaatsen door **[!UICONTROL Array]** checkbox in het juiste spoor te selecteren.
+Nadat u [&#x200B; een nieuw gebied in UI &#x200B;](./overview.md#define) hebt bepaald, kunt u het als seriegebied plaatsen door **[!UICONTROL Array]** checkbox in het juiste spoor te selecteren.
 
 ![](../../images/ui/fields/special/array.png)
 
@@ -43,4 +43,4 @@ Het canvas wordt bijgewerkt met de wijzigingen die in het veld zijn aangebracht.
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u een arrayveld in de gebruikersinterface definieert. Zie het overzicht op [ bepalende gebieden in UI ](./overview.md#special) leren hoe te om andere XDM gebiedstypes in [!DNL Schema Editor] te bepalen.
+In deze handleiding wordt beschreven hoe u een arrayveld in de gebruikersinterface definieert. Zie het overzicht op [&#x200B; bepalende gebieden in UI &#x200B;](./overview.md#special) leren hoe te om andere XDM gebiedstypes in [!DNL Schema Editor] te bepalen.

@@ -34,7 +34,7 @@ ht-degree: 0%
 | `region` | Het gebied, het graafschap, of het districtsgedeelte van het adres. |
 | `repositoryCreatedBy` | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | De id van de gebruiker die de record als laatste heeft gewijzigd. |
-| `stateProvince` | De staat of provincie van de observatie. Het formaat volgt [ ISO 3166-2 (land en onderverdeling) ](https://www.unece.org/cefact/locode/subdivisions.html) norm. |
+| `stateProvince` | De staat of provincie van de observatie. Het formaat volgt [&#x200B; ISO 3166-2 (land en onderverdeling) &#x200B;](https://www.unece.org/cefact/locode/subdivisions.html) norm. |
 | `status` | Geeft aan of het adres momenteel kan worden gebruikt. |
 | `statusReason` | Een beschrijving van de huidige `status` . |
 | `street1` - `street4` | Deze vier velden zijn bedoeld om informatie op het niveau van de primaire straat, het appartementnummer, het straatnummer en de straatnaam te bevatten. `street2` naar `street4` zijn optioneel. |
@@ -43,5 +43,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype van het postadres:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)

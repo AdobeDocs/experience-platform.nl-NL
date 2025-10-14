@@ -47,7 +47,7 @@ Als u de versnelde opslag buiten het beoogde doel gebruikt, loopt uw organisatie
 
 Adobe is niet aansprakelijk voor gevolgen die voortvloeien uit misbruik van deze functie.
 
-Meer over leren hoe te om gegevens in Experience Platform verantwoordelijk te beheren, zie [ Bestuur, privacy, en veiligheid in Experience Platform ](../../../landing/governance-privacy-security/overview.md). Deze pagina schetst de diensten en de hulpmiddelen die u helpen uw ervaringsgegevens controleren in overeenstemming met bedrijfsbeleid, wettelijke vereisten, en ontwikkelingsnormen. Voor verbindingen aan meer gedetailleerde begeleiding op gebruiksetikettering en beleidshandhaving, bezoek het [ overzicht van het Beleid van Gegevens ](../../../data-governance/home.md).
+Meer over leren hoe te om gegevens in Experience Platform verantwoordelijk te beheren, zie [&#x200B; Bestuur, privacy, en veiligheid in Experience Platform &#x200B;](../../../landing/governance-privacy-security/overview.md). Deze pagina schetst de diensten en de hulpmiddelen die u helpen uw ervaringsgegevens controleren in overeenstemming met bedrijfsbeleid, wettelijke vereisten, en ontwikkelingsnormen. Voor verbindingen aan meer gedetailleerde begeleiding op gebruiksetikettering en beleidshandhaving, bezoek het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](../../../data-governance/home.md).
 
 ## Best practices {#best-practices}
 
@@ -61,6 +61,6 @@ Om efficiënt en volgzaam gebruik van de versnelde opslag te verzekeren, volg de
 
 Door dit document te lezen, hebt u geleerd wat de versnelde opslag is, zijn voorgenomen gebruik voor samengevoegde gegevens in rapporteringsscenario&#39;s, en de governanceregels die moeten worden gevolgd om volgzaam gebruik te verzekeren. Om uw begrip te verdiepen en deze richtlijnen effectief toe te passen, verken de volgende middelen:
 
-- [ SQL overzicht van Inzichten ](./overview.md): Leer hoe SQL Inzichten prestaties-geoptimaliseerde rapportering gebruikend samengevoegde datasets toelaat.
-- [ verzendt versnelde vragen ](./send-accelerated-queries.md): Begrijp hoe te vragen tegen de versnelde opslag aan machtsafdashboards en widgets in werking te stellen.
-- [ het bestuur en de hygiëne van Gegevens ](../../data-governance/overview.md): Herzie het beleid van de gegevenshygiëne van Adobe en governancerichtlijnen om volgzaam gebruik te verzekeren.
+- [&#x200B; SQL overzicht van Inzichten &#x200B;](./overview.md): Leer hoe SQL Inzichten prestaties-geoptimaliseerde rapportering gebruikend samengevoegde datasets toelaat.
+- [&#x200B; verzendt versnelde vragen &#x200B;](./send-accelerated-queries.md): Begrijp hoe te vragen tegen de versnelde opslag aan machtsafdashboards en widgets in werking te stellen.
+- [&#x200B; het bestuur en de hygiëne van Gegevens &#x200B;](../../data-governance/overview.md): Herzie het beleid van de gegevenshygiëne van Adobe en governancerichtlijnen om volgzaam gebruik te verzekeren.

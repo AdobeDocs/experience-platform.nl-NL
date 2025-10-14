@@ -14,21 +14,21 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL RainFocus] is in bèta. Zie het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL RainFocus] is in bèta. Zie het [&#x200B; overzicht van bronnen &#x200B;](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Deze zelfstudie bevat stappen voor het verbinden van uw [!DNL RainFocus] -account en het streamen van gebeurtenisbeheer- en analysegegevens met Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Deze bronaansluiting en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL RainFocus] . Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij cliëntcare <span> te contacteren@rainfocus.com of het [[!DNL RainFocus]  Centrum van de Hulp ](https://help.rainfocus.com/hc/en-us) te bezoeken
+>Deze bronaansluiting en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL RainFocus] . Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij cliëntcare <span> te contacteren@rainfocus.com of het [[!DNL RainFocus]  Centrum van de Hulp &#x200B;](https://help.rainfocus.com/hc/en-us) te bezoeken
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Vereisten
@@ -49,7 +49,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie *[!UICONTROL Analytics]* de optie **[!UICONTROL RainFocus Experience]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ de broncatalogus op Experience Platform UI met geselecteerde bron RainFocus.](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+![&#x200B; de broncatalogus op Experience Platform UI met geselecteerde bron RainFocus.](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
 ## Gegevens selecteren
 
@@ -62,13 +62,13 @@ Selecteer **[!UICONTROL Upload files]** om een JSON-bestand van uw lokale systee
 
 Upload Steekproef JSON die nuttige lading van **RainFocus** wordt gedownload.
 
-![ de uitgezochte gegevensstap in het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-upload.png)
+![&#x200B; de uitgezochte gegevensstap in het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-upload.png)
 
 Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt het het gebiedsnut van het Onderzoek ook gebruiken om tot specifieke punten van binnen uw schema toegang te hebben.
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ de stap van de gegevensvoorproef van het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-preview.png)
+![&#x200B; de stap van de gegevensvoorproef van het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-json-preview.png)
 
 ## Gegevens
 
@@ -76,17 +76,17 @@ De **Dataflow detailstap** verschijnt, die u van opties voorzien om een bestaand
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ de dataflow detailstap van het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-setup.png)
+![&#x200B; de dataflow detailstap van het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-setup.png)
 
 ## Toewijzing {#mapping}
 
 De stap van de Afbeelding verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
-![ de afbeeldingsstap van het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mappings.png)
+![&#x200B; de afbeeldingsstap van het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mappings.png)
 
 ## Controleren
 
@@ -97,7 +97,7 @@ De **stap van het Overzicht** verschijnt, toestaand u om uw nieuwe dataflow te h
 
 Zodra u uw dataflow hebt herzien, uitgezochte **Afwerking** en laat wat tijd voor dataflow toe om worden gecreeerd.
 
-![ de overzichtsstap van het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-compelete.png)
+![&#x200B; de overzichtsstap van het bronwerkschema.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-compelete.png)
 
 ## Uw URL voor het streamingeindpunt ophalen {#get-your-streaming-endpoint-url}
 
@@ -105,14 +105,14 @@ Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingein
 
 Als u het streamingeindpunt wilt ophalen, gaat u naar de *[!UICONTROL Dataflow activity]* -pagina van de gegevensstroom die u net hebt gemaakt en kopieert u het eindpunt van de onderkant van het deelvenster *[!UICONTROL Properties]* .
 
-![ de dataflow activiteitenpagina in de bronwerkruimte, met het stromen eindpunt URL benadrukte.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
+![&#x200B; de dataflow activiteitenpagina in de bronwerkruimte, met het stromen eindpunt URL benadrukte.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
 
 ## Uw integratieprofiel activeren in RainFocus
 
 Nadat de gegevensstroom is voltooid en u de URL van het streamingeindpunt hebt opgehaald, kunt u de URL [!DNL Integration Profile] in [!DNL RainFocus] nu activeren.
 
-* Logboek in het [[!DNL RainFocus]  platform ](https://app.rainfocus.com). Selecteer **[!DNL Libraries]** en **[!DNL Integration Profiles]** in de primaire navigatie
-* Open [!DNL Integration Profile] dat u vroeger als deel van de [ eerste vereisten ](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus) creeerde.
+* Logboek in het [[!DNL RainFocus]  platform &#x200B;](https://app.rainfocus.com). Selecteer **[!DNL Libraries]** en **[!DNL Integration Profiles]** in de primaire navigatie
+* Open [!DNL Integration Profile] dat u vroeger als deel van de [&#x200B; eerste vereisten &#x200B;](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus) creeerde.
 * Plak **identiteitskaart Dataflow** en **Streaming Eindpunt** gekopieerd van Dataflow in Experience Platform en selecteer **sparen**
 
 ## Volgende stappen
@@ -123,8 +123,8 @@ Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht voor uw
 
 De volgende documenten bieden aanvullende informatie over nuances rond de [!DNL RainFocus] -bron.
 
-* [ RainFocus Help Center ](https://help.rainfocus.com/hc/en-us)
-* [ creeer een Rekening van de Dienst van Adobe (JWT) in het Portaal van Adobe Developer ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
+* [&#x200B; RainFocus Help Center &#x200B;](https://help.rainfocus.com/hc/en-us)
+* [&#x200B; creeer een Rekening van de Dienst van Adobe (JWT) in het Portaal van Adobe Developer &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [Een schema maken in de API](../../../../../xdm/tutorials/create-schema-api.md)
 * [Een schema maken in de gebruikersinterface](../../../../../xdm/tutorials/create-schema-ui.md)
-* [ bepaalt de Gebieden van de Identiteit in UI ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=nl-NL)
+* [&#x200B; bepaalt de Gebieden van de Identiteit in UI &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=nl-NL)

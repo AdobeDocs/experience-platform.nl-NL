@@ -85,4 +85,4 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 
 ## Volgende stappen
 
-Nu u zich van de beschikbare playbooks bewust bent, leest deze [ gids ](/help/use-case-playbooks/playbooks/choose.md) om te begrijpen hoe te beginnen met playbooks en juiste voor u in het gebruikersinterface te kiezen.
+Nu u zich van de beschikbare playbooks bewust bent, leest deze [&#x200B; gids &#x200B;](/help/use-case-playbooks/playbooks/choose.md) om te begrijpen hoe te beginnen met playbooks en juiste voor u in het gebruikersinterface te kiezen.

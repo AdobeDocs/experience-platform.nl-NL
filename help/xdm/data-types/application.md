@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Application] is een standaard XDM-gegevenstype (Experience Data Model) dat details beschrijft met betrekking tot interacties die door een toepassing worden gegenereerd. Een toepassing verwijst naar een softwareervaring, zoals een mobiele toepassing of bureaubladtoepassing die door een eindgebruiker kan worden geïnstalleerd, uitgevoerd, gesloten of verwijderd. De eigenschappen voor dit gegevenstype zijn niet bedoeld voor het beschrijven van agents zoals chatbots, browsergebaseerde plug-ins of andere ervaringen die niet van toepassing zijn op toepassingen.
 
-![ toepassingsbeeld ](../images/data-types/application.PNG) {width= 500}
+![&#x200B; toepassingsbeeld &#x200B;](../images/data-types/application.PNG) {width= 500}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -35,5 +35,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.schema.json)

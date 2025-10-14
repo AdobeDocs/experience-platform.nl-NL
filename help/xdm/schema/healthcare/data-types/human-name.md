@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!UICONTROL Human Name] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat informatie over de naam van een mens of een andere levende entiteit verstrekt. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ het gegevenstype van de Naam van het Mens structuur ](../../../images/healthcare/data-types/human-name.png)
+![&#x200B; het gegevenstype van de Naam van het Mens structuur &#x200B;](../../../images/healthcare/data-types/human-name.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -30,5 +30,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/humanname.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/humanname.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/humanname.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/humanname.schema.json)

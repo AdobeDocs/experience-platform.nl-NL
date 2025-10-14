@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u een CSV-bestand toewijst aan een bestaand XDM-schema. Voor informatie over hoe te om het AI-Gegenereerde hulpmiddel van de schemaaanbeveling (momenteel in bèta) te gebruiken, zie het document op [ in kaart brengend een Csv- dossier gebruikend machine-leert aanbevelingen ](./recommendations.md).
+>In dit document wordt beschreven hoe u een CSV-bestand toewijst aan een bestaand XDM-schema. Voor informatie over hoe te om het AI-Gegenereerde hulpmiddel van de schemaaanbeveling (momenteel in bèta) te gebruiken, zie het document op [&#x200B; in kaart brengend een Csv- dossier gebruikend machine-leert aanbevelingen &#x200B;](./recommendations.md).
 
 Als u CSV-gegevens in [!DNL Adobe Experience Platform] wilt invoeren, moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM)-schema. In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de gebruikersinterface van [!DNL Experience Platform] kunt toewijzen aan een XDM-schema.
 
@@ -25,14 +25,14 @@ Als u CSV-gegevens in [!DNL Adobe Experience Platform] wilt invoeren, moeten de 
 Deze zelfstudie vereist een goed begrip van de volgende componenten van [!DNL Experience Platform] :
 
 - [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
-- [ Inname van de Partij ](../../batch-ingestion/overview.md): De methode waardoor [!DNL Experience Platform] gegevens van user-provided gegevensbestanden opneemt.
-- [ Prep van Gegevens van Adobe Experience Platform ](../../batch-ingestion/overview.md): Een reeks mogelijkheden die u toestaan om opgenomen gegevens in kaart te brengen en om te zetten om met schema&#39;s in overeenstemming te zijn XDM. De documentatie over [ Prep functies van Gegevens ](../../../data-prep/functions.md) is bijzonder relevant voor schemaafbeelding.
+- [&#x200B; Inname van de Partij &#x200B;](../../batch-ingestion/overview.md): De methode waardoor [!DNL Experience Platform] gegevens van user-provided gegevensbestanden opneemt.
+- [&#x200B; Prep van Gegevens van Adobe Experience Platform &#x200B;](../../batch-ingestion/overview.md): Een reeks mogelijkheden die u toestaan om opgenomen gegevens in kaart te brengen en om te zetten om met schema&#39;s in overeenstemming te zijn XDM. De documentatie over [&#x200B; Prep functies van Gegevens &#x200B;](../../../data-prep/functions.md) is bijzonder relevant voor schemaafbeelding.
 
-Deze zelfstudie vereist ook dat u al een dataset hebt gemaakt om uw CSV-gegevens in te voeren. Voor stappen bij het creëren van een dataset in UI, zie [ gegevens ingest leerprogramma ](../ingest-batch-data.md).
+Deze zelfstudie vereist ook dat u al een dataset hebt gemaakt om uw CSV-gegevens in te voeren. Voor stappen bij het creëren van een dataset in UI, zie [&#x200B; gegevens ingest leerprogramma &#x200B;](../ingest-batch-data.md).
 
 ## Kies een bestemming
 
-Meld u aan bij [[!DNL Adobe Experience Platform] ](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk om de **[!UICONTROL Workflows]** -werkruimte te openen.
+Meld u aan bij [[!DNL Adobe Experience Platform] &#x200B;](https://platform.adobe.com) en selecteer vervolgens **[!UICONTROL Workflows]** in de linkernavigatiebalk om de **[!UICONTROL Workflows]** -werkruimte te openen.
 
 Selecteer in het scherm **[!UICONTROL Workflows]** de optie **[!UICONTROL Map CSV to XDM schema]** onder de sectie **[!UICONTROL Data ingestion]** en selecteer vervolgens **[!UICONTROL Launch]** .
 
@@ -101,7 +101,7 @@ Het deelvenster **[!UICONTROL Create calculated field]** wordt weergegeven. Het 
 | Tabtoets | Beschrijving |
 | --------- | ----------- |
 | Velden | Het tabblad Veld bevat velden en kenmerken die beschikbaar zijn in het bronschema. |
-| Functies | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. Om meer over de functies te leren u binnen berekende gebieden kunt gebruiken, te lezen gelieve de gids op [ gebruikend de functies van de Prep van Gegevens (Mapper) ](../../../data-prep/functions.md). |
+| Functies | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. Om meer over de functies te leren u binnen berekende gebieden kunt gebruiken, te lezen gelieve de gids op [&#x200B; gebruikend de functies van de Prep van Gegevens (Mapper) &#x200B;](../../../data-prep/functions.md). |
 | Operatoren | Het tabblad Operatoren bevat een lijst met operatoren die beschikbaar zijn om de gegevens te transformeren. |
 
 U kunt handmatig velden, functies en operatoren toevoegen met de expressieeditor in het midden. Selecteer de editor om een expressie te maken.
@@ -116,7 +116,7 @@ Het kaartscherm verschijnt weer met het nieuwe bronveld. Pas het desbetreffende 
 
 ## Gegevens bijhouden
 
-Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Voor meer informatie bij het controleren van gegevensopname, zie het leerprogramma op [ controle gegevensopname ](../../../ingestion/quality/monitor-data-ingestion.md).
+Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Voor meer informatie bij het controleren van gegevensopname, zie het leerprogramma op [&#x200B; controle gegevensopname &#x200B;](../../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Volgende stappen
 
@@ -124,4 +124,4 @@ Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan 
 
 >[!TIP]
 >
->U kunt machine het leren (ML) algoritmen ook gebruiken om **een schema van steekproefgegevens** van de werkruimte van het Schema te produceren. Deze workflow maakt automatisch een nieuw schema op basis van de structuur en inhoud van het bestand. Het schema moet overeenkomen met de indeling van uw gegevens. Zo bespaart u tijd en vergroot u de nauwkeurigheid bij het definiëren van de structuur, velden en gegevenstypen voor grote complexe gegevenssets. Zie de [ ML-Begeleidde van de schemaverwezenlijking ](../../../xdm/ui/ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.
+>U kunt machine het leren (ML) algoritmen ook gebruiken om **een schema van steekproefgegevens** van de werkruimte van het Schema te produceren. Deze workflow maakt automatisch een nieuw schema op basis van de structuur en inhoud van het bestand. Het schema moet overeenkomen met de indeling van uw gegevens. Zo bespaart u tijd en vergroot u de nauwkeurigheid bij het definiëren van de structuur, velden en gegevenstypen voor grote complexe gegevenssets. Zie de [&#x200B; ML-Begeleidde van de schemaverwezenlijking &#x200B;](../../../xdm/ui/ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.

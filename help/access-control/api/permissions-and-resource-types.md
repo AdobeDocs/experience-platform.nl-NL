@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Als een gebruikerstoken wordt overgegaan, dan moet de gebruiker van het teken een &quot;org admin&quot;rol voor gevraagde org hebben.
 
-U kunt een lijst maken van de namen van alle toestemmingen en middeltypes door een GET- verzoek aan het `/acl/reference` eindpunt te doen. Deze namen kunnen dan in API vraag worden gebruikt aan [ mening efficiënt toegangsbeheerbeleid ](./effective-policies.md) voor de huidige gebruiker.
+U kunt een lijst maken van de namen van alle toestemmingen en middeltypes door een GET- verzoek aan het `/acl/reference` eindpunt te doen. Deze namen kunnen dan in API vraag worden gebruikt aan [&#x200B; mening efficiënt toegangsbeheerbeleid &#x200B;](./effective-policies.md) voor de huidige gebruiker.
 
 Een toestemming is een beleid dat door Adobe Admin Console wordt beheerd, en kaarten aan nul of meer middel-type beleid. Een middeltype is een beleid dat lees toelaat, schrijft, en/of schrapt mogelijkheden voor een specifiek type van [!DNL Experience Platform] middel (zoals datasets of schema&#39;s).
 

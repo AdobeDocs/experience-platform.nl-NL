@@ -59,7 +59,7 @@ Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarsch
 
 | Functie | Beschrijving |
 | --- | --- |
-| Waarschuwing bij opnemen van streaming profiel | U kunt zich nu abonneren op twee nieuwe waarschuwingen voor het streamen van opname op gegevensstroomniveau: <ul><li>Streaming-insluitingsfout overschreden</li><li>Streaming inscriptie overgeslagen snelheid</li></ul> Waarschuwingen op het platform of in e-mailberichten geven een melding wanneer de drempelwaarden voor de standaarddrempel worden overschreden, of als er een aangepaste drempel wordt opgegeven. Voor meer informatie, lees het [ alarm van het Profiel ](../observability/alerts/rules.md#profile) gids. |
+| Waarschuwing bij opnemen van streaming profiel | U kunt zich nu abonneren op twee nieuwe waarschuwingen voor het streamen van opname op gegevensstroomniveau: <ul><li>Streaming-insluitingsfout overschreden</li><li>Streaming inscriptie overgeslagen snelheid</li></ul> Waarschuwingen op het platform of in e-mailberichten geven een melding wanneer de drempelwaarden voor de standaarddrempel worden overschreden, of als er een aangepaste drempel wordt opgegeven. Voor meer informatie, lees het [&#x200B; alarm van het Profiel &#x200B;](../observability/alerts/rules.md#profile) gids. |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 | ------- | ----------- |
 | Verbeteringen voor profielviewer | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde mening**: Attributen, gebeurtenissen, en inzichten zijn gecombineerd in één enkele mening.</li><li>**AI-Gegenereerde inzichten**: De pagina van profieldetails toont nu AI-Gegenereerde inzichten, latend u details die van uw profiel worden geproduceerd. Deze inzichten kunnen informatie omvatten zoals protiliteitsscores en trendanalyse.</li><li>**update van de Stijl**: De pagina van profieldetails is visueel verfrist.</li><li>**doorbladert**: U kunt uw profielen door een interactieve kaart-gebaseerde carrousel met onderzoek en aanpassing nu onderzoeken.</li></ul> |
 
-Voor meer informatie, lees het [ overzicht van het Profiel van de Klant in real time ](../profile/home.md).
+Voor meer informatie, lees het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../profile/home.md).
 
 ## Segmentatieservice {#segmentation-service}
 
@@ -136,7 +136,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe bronnen in algemene beschikbaarheid | De volgende bronnen zijn nu beschikbaar in algemene beschikbaarheid: verschillende bronconnectors zijn bijgewerkt van Beta naar GA: <ul><li>[ de Ingestie van Gegevens van Acxiom ](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[ de Ingestie van Gegevens van het Vooruitzicht van Acxiom ](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[ Merkury Onderneming ](../sources/connectors/data-partners/merkury.md)</li><li>[ SAP Commerce ](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Deze bronnen worden nu volledig ondersteund en zijn klaar voor gebruik bij de productie. |
+| Nieuwe bronnen in algemene beschikbaarheid | De volgende bronnen zijn nu beschikbaar in algemene beschikbaarheid: verschillende bronconnectors zijn bijgewerkt van Beta naar GA: <ul><li>[&#x200B; de Ingestie van Gegevens van Acxiom &#x200B;](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[&#x200B; de Ingestie van Gegevens van het Vooruitzicht van Acxiom &#x200B;](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[&#x200B; Merkury Onderneming &#x200B;](../sources/connectors/data-partners/merkury.md)</li><li>[&#x200B; SAP Commerce &#x200B;](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Deze bronnen worden nu volledig ondersteund en zijn klaar voor gebruik bij de productie. |
 | [!DNL Snowflake] ondersteuning voor sleutelpaarverificatie | Uitgebreide beveiliging voor Snowflake-verbindingen met ondersteuning voor sleutelpaarverificatie. De basisauthentificatie (gebruikersbenaming/wachtwoord) zal tegen November 2025 worden afgekeurd, zodat worden de klanten aangemoedigd om aan zeer belangrijk-paarauthentificatie voor betere veiligheid te migreren. |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../sources/home.md).

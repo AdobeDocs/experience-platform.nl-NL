@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Custom Metadata Details] Rapportering is een standaard XDM-gegevenstype (Experience Data Model) waarmee een structuur wordt gedefinieerd voor het opslaan van aangepaste metagegevens. In het gegevenstype [!UICONTROL Custom Metadata Details] Reporting worden gegevens vastgelegd, zoals de naam en waarde van aangepaste metagegevens die zijn gekoppeld aan inhoud of interacties. Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden voor de verzameling van media die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd.
 
-![ A diagram van de Details die van Meta-gegevens van de Douane gegevenstype melden.](../images/data-types/the-custom-metadata-reporting.png)
+![&#x200B; A diagram van de Details die van Meta-gegevens van de Douane gegevenstype melden.](../images/data-types/the-custom-metadata-reporting.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |--------------------------------------------|------------------|-----------|-----------------------------------------|

@@ -33,7 +33,7 @@ Met gegevensvoorbereiding kunnen gegevenstechnici gegevens toewijzen, transforme
 | `is_set` functie | Met de functie `is_set` kunt u de aanwezigheid van een kenmerk in de brongegevens controleren. `is_set` kan in combinatie met `is_empty` worden gebruikt om zowel de aanwezigheid van het kenmerk als de aanwezigheid van de waarde binnen het kenmerk te controleren. |
 | `get_values` functie | Met de functie `get_values` kunt u de waarden van de invoerkaart voor een bepaalde toets ophalen. |
 
-Voor meer informatie, te lezen gelieve het [ Prep overzicht van Gegevens ](../../data-prep/home.md).
+Voor meer informatie, te lezen gelieve het [&#x200B; Prep overzicht van Gegevens &#x200B;](../../data-prep/home.md).
 
 ## Realtime-klantenprofiel {#profile}
 
@@ -44,7 +44,7 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 | API-uitbreidingen voor voorvertoning van profiel | De voorproef API van het Profiel (`/previewsamplestatus`) omvat nu de capaciteit om een verdeling van totale profielfragmenten over uw organisatie te bekijken, evenals de distributie van profielfragmenten over identiteitsnamespaces. |
 | Updates van de Unieschemaweergave | In Experience Platform UI, kunnen de gebruikers gemakkelijker informatie betreffende alle schema&#39;s en datasets vinden die tot het unieschema bijdragen, evenals oppervlakte zeer belangrijke attributen zoals identiteit en relatievelden. Deze updates verbeteren de capaciteit om problemen op te lossen en te bevestigen dat de profielen correct worden gevormd, worden de identiteiten correct vastgemaakt, en de gegevens zijn met succes opgenomen. |
 
-Voor meer informatie over [!DNL Real-Time Customer Profile], met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, te lezen gelieve het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md).
+Voor meer informatie over [!DNL Real-Time Customer Profile], met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, te lezen gelieve het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../../profile/home.md).
 
 ## Segmentatieservice {#segmentation}
 
@@ -58,7 +58,7 @@ Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en 
 | ------- | ----------- |
 | Verwijdering segmentatielimiet streaming | De limiet van zeven dagen voor de terugzoekperiode is verwijderd. |
 
-Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [ overzicht van de Segmentatie ](../../segmentation/home.md)
+Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [&#x200B; overzicht van de Segmentatie &#x200B;](../../segmentation/home.md)
 
 ## Bronnen {#sources}
 
@@ -70,10 +70,10 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| SSH-verificatieondersteuning voor SFTP | U kunt uw SFTP-account verbinden met [!DNL Experience Platform] met behulp van RSA/DSA Open SSH-toetsen. Zie het [ overzicht van SFTP ](../../sources/connectors/cloud-storage/sftp.md) voor meer informatie. |
-| UX-verbeteringen | U kunt uw dataset voor [!DNL Profile] tijdens het proces van de gegevensopname toelaten. Zie het [ werkschema van de de gegevensstroom van de wolkenopslag ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) leerprogramma voor meer informatie. |
+| SSH-verificatieondersteuning voor SFTP | U kunt uw SFTP-account verbinden met [!DNL Experience Platform] met behulp van RSA/DSA Open SSH-toetsen. Zie het [&#x200B; overzicht van SFTP &#x200B;](../../sources/connectors/cloud-storage/sftp.md) voor meer informatie. |
+| UX-verbeteringen | U kunt uw dataset voor [!DNL Profile] tijdens het proces van de gegevensopname toelaten. Zie het [&#x200B; werkschema van de de gegevensstroom van de wolkenopslag &#x200B;](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) leerprogramma voor meer informatie. |
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).
 
 ## Tijd tot waarde {#time-to-value}
 

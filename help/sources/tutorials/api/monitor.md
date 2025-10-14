@@ -14,22 +14,22 @@ ht-degree: 0%
 
 # Bronnen controleren met behulp van de Flow Service API
 
-Dit leerprogramma behandelt de stappen voor de gegevens van de controlestroom in werking stellen voor volledigheid, fouten, en metriek gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma behandelt de stappen voor de gegevens van de controlestroom in werking stellen voor volledigheid, fouten, en metriek gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow identiteitskaart hebt, selecteer uw schakelaar van keus van het [ overzicht van bronnen ](../../home.md) en volg de stappen die worden geschetst om een dataflow tot stand te brengen alvorens dit leerprogramma te proberen.
+>Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow identiteitskaart hebt, selecteer uw schakelaar van keus van het [&#x200B; overzicht van bronnen &#x200B;](../../home.md) en volg de stappen die worden geschetst om een dataflow tot stand te brengen alvorens dit leerprogramma te proberen.
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
 
 ## Dataflows bewaken
 
@@ -235,4 +235,4 @@ Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u metrische gegevens en foutgegevens over uw gegevensstroom opgehaald met de API [!DNL Flow Service] . U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie het leerprogramma op [ controledata gebruikend het gebruikersinterface ](../ui/monitor.md)
+Aan de hand van deze zelfstudie hebt u metrische gegevens en foutgegevens over uw gegevensstroom opgehaald met de API [!DNL Flow Service] . U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie het leerprogramma op [&#x200B; controledata gebruikend het gebruikersinterface &#x200B;](../ui/monitor.md)

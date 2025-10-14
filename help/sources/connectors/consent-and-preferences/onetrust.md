@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL OneTrust Integration] ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en geen cookies. Voor kwesties met de bronschakelaar, de steun van het contact [[!DNL OneTrust]  ](https://support.onetrust.com).
+>De bron [!DNL OneTrust Integration] ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en geen cookies. Voor kwesties met de bronschakelaar, de steun van het contact [[!DNL OneTrust]  &#x200B;](https://support.onetrust.com).
 
 [!DNL OneTrust] is een platform voor privacy, beveiliging en vertrouwensbeheer dat is ontworpen om organisaties te helpen gegevens op een verantwoordelijke manier te beheren, aan de regelgeving te voldoen en vertrouwen te scheppen met klanten en belanghebbenden. Het biedt een uniforme reeks hulpmiddelen voor gegevensbeheer, risicobeheer en nalevingsautomatisering.
 

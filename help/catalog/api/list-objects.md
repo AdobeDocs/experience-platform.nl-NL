@@ -25,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{OBJECT_TYPE}` | Het type [!DNL Catalog] -object dat moet worden vermeld. Geldige objecten zijn: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. De veelvoudige parameters worden gescheiden door ampersands (`&`). Zie de gids bij [ het filtreren gegevens van de Catalogus ](filter-data.md) voor meer informatie. |
+| `{FILTER}` | Een queryparameter die wordt gebruikt om de resultaten te filteren die in de reactie worden geretourneerd. De veelvoudige parameters worden gescheiden door ampersands (`&`). Zie de gids bij [&#x200B; het filtreren gegevens van de Catalogus &#x200B;](filter-data.md) voor meer informatie. |
 
 **Verzoek**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Reactie**
 
-Een geslaagde reactie retourneert een lijst met [!DNL Catalog] -objecten in de vorm van sleutel-waardeparen, gefilterd op basis van de queryparameters die in de aanvraag zijn opgegeven. Voor elk zeer belangrijk-waardepaar, vertegenwoordigt de sleutel een uniek herkenningsteken voor het [!DNL Catalog] voorwerp in kwestie, dat dan in een andere vraag aan [ kan worden gebruikt mening dat specifiek voorwerp ](look-up-object.md) voor meer details.
+Een geslaagde reactie retourneert een lijst met [!DNL Catalog] -objecten in de vorm van sleutel-waardeparen, gefilterd op basis van de queryparameters die in de aanvraag zijn opgegeven. Voor elk zeer belangrijk-waardepaar, vertegenwoordigt de sleutel een uniek herkenningsteken voor het [!DNL Catalog] voorwerp in kwestie, dat dan in een andere vraag aan [&#x200B; kan worden gebruikt mening dat specifiek voorwerp &#x200B;](look-up-object.md) voor meer details.
 
 >[!NOTE]
 >

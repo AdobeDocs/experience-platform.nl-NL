@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> De bron [!DNL Generic REST API] is in bèta. Zie het [ Bronoverzicht ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+> De bron [!DNL Generic REST API] is in bèta. Zie het [&#x200B; Bronoverzicht &#x200B;](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Generic REST API] bronaansluiting met behulp van de Adobe Experience Platform-gebruikersinterface.
 
@@ -22,8 +22,8 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Generic REST API] bro
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Vereiste referenties verzamelen
 
@@ -59,7 +59,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie [!UICONTROL Protocols] de optie **[!UICONTROL Generic REST API]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ catalogus ](../../../../images/tutorials/create/generic-rest/catalog.png)
+![&#x200B; catalogus &#x200B;](../../../../images/tutorials/create/generic-rest/catalog.png)
 
 De pagina **[!UICONTROL Connect to Generic REST API]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -67,13 +67,13 @@ De pagina **[!UICONTROL Connect to Generic REST API]** wordt weergegeven. Op dez
 
 Als u een bestaande account wilt verbinden, selecteert u de algemene REST API-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ bestaand ](../../../../images/tutorials/create/generic-rest/existing.png)
+![&#x200B; bestaand &#x200B;](../../../../images/tutorials/create/generic-rest/existing.png)
 
 ### Nieuwe account
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u vervolgens een naam en een optiebeschrijving voor uw nieuwe [!DNL Generic REST API] -account.
 
-![ nieuw ](../../../../images/tutorials/create/generic-rest/new.png)
+![&#x200B; nieuw &#x200B;](../../../../images/tutorials/create/generic-rest/new.png)
 
 #### Verifiëren met OAuth 2-vernieuwingscode
 
@@ -89,4 +89,4 @@ Als u standaardverificatie wilt gebruiken, selecteert u **[!UICONTROL Basic auth
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw algemene REST API-account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/protocols.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw algemene REST API-account. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](../../dataflow/protocols.md) te brengen.

@@ -14,7 +14,7 @@ ht-degree: 1%
 
 [!UICONTROL Transaction] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat de details van een monetaire transactie beschrijft.
 
-![ structuur van de Transactie ](../images/data-types/transaction.png)
+![&#x200B; structuur van de Transactie &#x200B;](../images/data-types/transaction.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

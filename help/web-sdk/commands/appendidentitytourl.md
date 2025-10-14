@@ -23,7 +23,7 @@ De querytekenreeks die wordt gegenereerd en aan de URL wordt toegevoegd, is `ado
 
 Het toevoegen van een identiteit aan een URL wordt uitgevoerd als een actie binnen een regel in de interface van de markeringen van de Inzameling van Gegevens van Adobe Experience Platform.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -42,7 +42,7 @@ Triggers wanneer op een ankertag met een eigenschap `href` wordt geklikt.
 * **[!UICONTROL When the user clicks on]**: specifieke elementen
 * **[!UICONTROL Elements matching the CSS selector]**: `a[href]`
 
-![ gebeurtenis van de Regel ](../assets/id-sharing-event-configuration.png)
+![&#x200B; gebeurtenis van de Regel &#x200B;](../assets/id-sharing-event-configuration.png)
 
 +++
 
@@ -57,7 +57,7 @@ Triggers worden alleen op de gewenste domeinen geactiveerd.
 * **[!UICONTROL Operator]**: Komt overeen met Regex
 * **[!UICONTROL Right Operand]**: Een reguliere expressie die overeenkomt met de gewenste domeinen. Bijvoorbeeld: `adobe.com$|behance.com$`
 
-![ voorwaarde van de Regel ](../assets/id-sharing-condition-configuration.png)
+![&#x200B; voorwaarde van de Regel &#x200B;](../assets/id-sharing-condition-configuration.png)
 
 +++
 
@@ -68,7 +68,7 @@ Voeg de identiteit toe aan de URL.
 * **[!UICONTROL Extension]**: Adobe Experience Platform Web SDK
 * **[!UICONTROL Action Type]**: Omleiden met identiteit
 
-![ actie van de Regel ](../assets/id-sharing-action-configuration.png)
+![&#x200B; actie van de Regel &#x200B;](../assets/id-sharing-action-configuration.png)
 
 +++
 

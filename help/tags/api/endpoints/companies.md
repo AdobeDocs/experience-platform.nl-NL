@@ -11,13 +11,13 @@ ht-degree: 1%
 
 # Ondernemingen, eindpunt
 
-Een bedrijf vertegenwoordigt een klantenorganisatie, typisch een zaken. In de Reactor-API komen deze bedrijven overeen met 1:1 met de organisatie-id. API-gebruikers hebben alleen zichtbaarheid in de bedrijven waartoe ze toegang hebben. Een bedrijf kan vele [ eigenschappen ](./properties.md) bevatten. Een eigendom behoort tot precies één bedrijf.
+Een bedrijf vertegenwoordigt een klantenorganisatie, typisch een zaken. In de Reactor-API komen deze bedrijven overeen met 1:1 met de organisatie-id. API-gebruikers hebben alleen zichtbaarheid in de bedrijven waartoe ze toegang hebben. Een bedrijf kan vele [&#x200B; eigenschappen &#x200B;](./properties.md) bevatten. Een eigendom behoort tot precies één bedrijf.
 
 Het `/companies` eindpunt in Reactor API staat u toe om de bedrijven programmatically terug te winnen die u binnen uw ervaringstoepassing hebt toegang tot.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met bedrijven ophalen {#list}
 
@@ -31,7 +31,7 @@ GET /companies
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de beursgenoteerde bedrijven worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de beursgenoteerde bedrijven worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 

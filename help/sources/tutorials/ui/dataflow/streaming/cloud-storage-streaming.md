@@ -26,11 +26,11 @@ Voordat u deze zelfstudie kunt proberen, moet u eerst een geldige en geverifieer
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Dataflows ](../../../../../dataflows/home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd voor verschillende services, van bronnen tot [!DNL Identity Service] , [!DNL Profile] en [!DNL Destinations] .
-- [ Prep van Gegevens ](../../../../../data-prep/home.md): De Prep van Gegevens staat gegevensingenieurs toe om, gegevens in kaart te brengen om te transformeren en te bevestigen aan en van het Model van Gegevens van de Ervaring (XDM). De Prep van gegevens verschijnt als &quot;Kaart&quot;stap in de processen van de Ingestie van Gegevens, met inbegrip van CSV Ingestiewerkschema.
-- [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   - [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+- [&#x200B; Dataflows &#x200B;](../../../../../dataflows/home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd voor verschillende services, van bronnen tot [!DNL Identity Service] , [!DNL Profile] en [!DNL Destinations] .
+- [&#x200B; Prep van Gegevens &#x200B;](../../../../../data-prep/home.md): De Prep van Gegevens staat gegevensingenieurs toe om, gegevens in kaart te brengen om te transformeren en te bevestigen aan en van het Model van Gegevens van de Ervaring (XDM). De Prep van gegevens verschijnt als &quot;Kaart&quot;stap in de processen van de Ingestie van Gegevens, met inbegrip van CSV Ingestiewerkschema.
+- [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   - [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   - [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## Gegevens toevoegen
@@ -44,7 +44,7 @@ Nadat u uw streamingcloud-opslagaccount hebt gemaakt, wordt de stap **[!UICONTRO
 - Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 - In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
 
-![ interface ](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
+![&#x200B; interface &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
 
 Selecteer de gegevensstroom die u wilt gebruiken en selecteer **[!UICONTROL Choose file]** om een voorbeeldschema te uploaden.
 
@@ -52,13 +52,13 @@ Selecteer de gegevensstroom die u wilt gebruiken en selecteer **[!UICONTROL Choo
 >
 >Als uw gegevens XDM-compatibel zijn, kunt u het uploaden van een voorbeeldschema overslaan en **[!UICONTROL Next]** selecteren om verder te gaan.
 
-![ selecteren-stroom ](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-stream.png)
+![&#x200B; selecteren-stroom &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-stream.png)
 
 Zodra uw schema uploadt, werkt de voorproefinterface bij om een voorproef van het schema te tonen u uploadde. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt het hulpprogramma [!UICONTROL Search field] ook gebruiken om toegang te krijgen tot specifieke items binnen uw schema.
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ schema-voorproef ](../../../../images/tutorials/dataflow/cloud-storage/streaming/schema-preview.png)
+![&#x200B; schema-voorproef &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/schema-preview.png)
 
 ## Toewijzing
 
@@ -70,35 +70,35 @@ Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U k
 
 Als u gegevens in een nieuwe gegevensset wilt opnemen, selecteert u **[!UICONTROL New dataset]** en voert u een naam en beschrijving in voor de gegevensset in de opgegeven velden. Als u een schema wilt toevoegen, kunt u een bestaande schemanaam in het dialoogvenster **[!UICONTROL Select schema]** invoeren. U kunt ook **[!UICONTROL Schema advanced search]** selecteren om te zoeken naar een geschikt schema.
 
-![ nieuw-dataset ](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-dataset.png)
+![&#x200B; nieuw-dataset &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-dataset.png)
 
 Het [!UICONTROL Select schema] -venster wordt weergegeven en bevat een lijst met beschikbare schema&#39;s waaruit u kunt kiezen. Selecteer een schema in de lijst om de rechterrail bij te werken om details te tonen specifiek voor het schema u selecteerde, met inbegrip van informatie over of het schema voor [!DNL Profile] wordt toegelaten.
 
 Selecteer **[!UICONTROL Done]** als u het schema dat u wilt gebruiken hebt geïdentificeerd en geselecteerd.
 
-![ selecteren-schema ](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-schema.png)
+![&#x200B; selecteren-schema &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-schema.png)
 
 De pagina [!UICONTROL Target dataset] wordt bijgewerkt met het geselecteerde schema dat als onderdeel van de gegevensset wordt weergegeven. Tijdens deze stap, kunt u uw dataset voor [!DNL Profile] toelaten en een holistische mening van de attributen en het gedrag van een entiteit creëren. Gegevens van alle ingeschakelde gegevenssets worden opgenomen in [!DNL Profile] en wijzigingen worden toegepast wanneer u de gegevensstroom opslaat.
 
 Schakel de knop **[!UICONTROL Profile dataset]** in of uit om uw doelgegevensset in te schakelen voor [!DNL Profile] .
 
-![ nieuw-profiel ](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-profile.png)
+![&#x200B; nieuw-profiel &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-profile.png)
 
 ### Bestaande gegevensset
 
 Als u gegevens in een bestaande gegevensset wilt opnemen, selecteert u **[!UICONTROL Existing dataset]** en selecteert u vervolgens het pictogram van de gegevensset.
 
-![ bestaand-dataset ](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-dataset.png)
+![&#x200B; bestaand-dataset &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-dataset.png)
 
 Het dialoogvenster **[!UICONTROL Select dataset]** wordt weergegeven, waarin u een lijst met beschikbare gegevenssets kunt kiezen. Selecteer een dataset van de lijst om de juiste spoorlijn bij te werken om details te tonen specifiek voor de dataset u selecteerde, met inbegrip van informatie over of de dataset voor [!DNL Profile] kan worden toegelaten.
 
 Als u de gegevensset hebt geïdentificeerd en geselecteerd die u wilt gebruiken, selecteert u **[!UICONTROL Done]** .
 
-![ selecteren-dataset ](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-dataset.png)
+![&#x200B; selecteren-dataset &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-dataset.png)
 
 Nadat u de gegevensset hebt geselecteerd, selecteert u de schakeloptie [!DNL Profile] om de gegevensset in te schakelen voor [!DNL Profile] .
 
-![ bestaand-profiel ](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-profile.png)
+![&#x200B; bestaand-profiel &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-profile.png)
 
 ### Standaardvelden toewijzen
 
@@ -108,11 +108,11 @@ Met uw dataset en schema gevestigd, verschijnt de **[!UICONTROL Map standard fie
 >
 >Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
-Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens zijn toegewezen.
 
-![ afbeelding ](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
+![&#x200B; afbeelding &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
 
 ## Gegevens
 
@@ -120,7 +120,7 @@ De stap **[!UICONTROL Dataflow detail]** wordt weergegeven, zodat u een naam kun
 
 Geef waarden op voor de gegevensstroom en selecteer **[!UICONTROL Next]** .
 
-![ dataflow-detail ](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
+![&#x200B; dataflow-detail &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
 ### Controleren
 
@@ -131,11 +131,11 @@ De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstr
 
 Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.
 
-![ overzicht ](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
+![&#x200B; overzicht &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
 ## Uw gegevensstroom controleren en verwijderen
 
-Nadat u de gegevens voor de streaming cloud storage hebt gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Voor meer informatie bij het controleren van en het schrappen van het stromen dataflows, zie het leerprogramma bij [ controle het stromen dataflows ](../../monitor-streaming.md).
+Nadat u de gegevens voor de streaming cloud storage hebt gemaakt, kunt u de gegevens controleren die er doorheen worden ingevoerd. Voor meer informatie bij het controleren van en het schrappen van het stromen dataflows, zie het leerprogramma bij [&#x200B; controle het stromen dataflows &#x200B;](../../monitor-streaming.md).
 
 ## Volgende stappen
 

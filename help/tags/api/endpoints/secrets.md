@@ -13,11 +13,11 @@ ht-degree: 1%
 
 Een geheim is een middel dat slechts binnen gebeurtenis bestaat door:sturen eigenschappen (eigenschappen met een `platform` die attribuut aan `edge` wordt geplaatst). Zij staan gebeurtenis toe door:sturen om aan een ander systeem voor veilige gegevensuitwisseling voor authentiek te verklaren.
 
-In deze handleiding ziet u hoe u het `/secrets` -eindpunt in de Reactor-API aanroept. Voor een gedetailleerde verklaring van de verschillende geheime types en hoe te om hen te gebruiken, gelieve te verwijzen naar het overzicht op hoog niveau over [ geheimen ](../guides/secrets.md) alvorens aan deze gids terug te keren.
+In deze handleiding ziet u hoe u het `/secrets` -eindpunt in de Reactor-API aanroept. Voor een gedetailleerde verklaring van de verschillende geheime types en hoe te om hen te gebruiken, gelieve te verwijzen naar het overzicht op hoog niveau over [&#x200B; geheimen &#x200B;](../guides/secrets.md) alvorens aan deze gids terug te keren.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://developer.adobe.com/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met geheimen voor een eigenschap ophalen {#list-property}
 
@@ -353,7 +353,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Een unieke, beschrijvende naam voor het geheim. |
 | `type_of` | Het type van authentificatiereferentie het geheim vertegenwoordigt. Bevat drie toegestane waarden:<ul><li>`token`: Een tokenreeks.</li><li>`simple-http`: Een gebruikersnaam en wachtwoord.</li><li>`oauth2`: referenties die voldoen aan de OAuth-standaard.</li></ul> |
-| `credentials` | Een object dat de referentie-waarden voor het geheim bevat. Afhankelijk van het kenmerk `type_of` moeten verschillende eigenschappen worden opgegeven. Zie de sectie op [ geloofsbrieven ](../guides/secrets.md#credentials) in de geheimengids voor details op de vereisten voor elk type. |
+| `credentials` | Een object dat de referentie-waarden voor het geheim bevat. Afhankelijk van het kenmerk `type_of` moeten verschillende eigenschappen worden opgegeven. Zie de sectie op [&#x200B; geloofsbrieven &#x200B;](../guides/secrets.md#credentials) in de geheimengids voor details op de vereisten voor elk type. |
 | `relationships.environment` | Elk geheim moet met een milieu worden geassocieerd wanneer het eerst wordt gecreeerd. Het `data` -object in deze eigenschap moet de `id` -waarde bevatten van de omgeving waaraan het geheim wordt toegewezen, samen met de `type` -waarde `environments` . |
 | `type` | Het type resource dat wordt gemaakt. Voor deze aanroep moet de waarde `secrets` zijn. |
 
@@ -795,7 +795,7 @@ Met de Reactor-API kunt u notities toevoegen aan bepaalde bronnen, waaronder geh
 
 >[!NOTE]
 >
->Zie de [ gids van het Notitieeindpunt ](./notes.md) voor details op om nota&#39;s voor Reactor API middelen tot stand te brengen en uit te geven.
+>Zie de [&#x200B; gids van het Notitieeindpunt &#x200B;](./notes.md) voor details op om nota&#39;s voor Reactor API middelen tot stand te brengen en uit te geven.
 
 U kunt alle notities met betrekking tot een geheim ophalen door een GET-aanvraag in te dienen.
 
@@ -870,9 +870,9 @@ Een succesvol antwoord retourneert een lijst met notities die bij het geheim hor
 
 ## Gerelateerde bronnen ophalen voor een geheim {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een geheim terug te winnen. Wanneer [ omhoog een geheim ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een geheim terug te winnen. Wanneer [&#x200B; omhoog een geheim &#x200B;](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Opzoeken naar een verwante omgeving voor een geheim {#environment}
 

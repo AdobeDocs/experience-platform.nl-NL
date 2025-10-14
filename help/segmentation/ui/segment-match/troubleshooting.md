@@ -17,7 +17,7 @@ Deze handleiding bevat antwoorden op privacy- en juridische vragen die vaak word
 
 ## Welke gegevens worden gedeeld tijdens de schatting en hoe kan Adobe ervoor zorgen dat deze cijfers veilig worden verkregen?
 
-![ overlapping-report.png ](./images/overlap-report.png)
+![&#x200B; overlapping-report.png &#x200B;](./images/overlap-report.png)
 
 Er worden geen klant- of segmentgegevens over sandboxen verplaatst om deze schattingsgegevens voor overlappingen te verkrijgen. De door de klant geselecteerde, vooraf gehakte toepasselijke identiteiten in een bepaalde sandbox worden toegevoegd aan een probabilistische gegevensstructuur waarin de id&#39;s zelf in een gehakt formaat worden vertegenwoordigd.
 

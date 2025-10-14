@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # [!UICONTROL Dining Reservation] schemaveldgroep
 
-[!UICONTROL Dining Reservation] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een het dineren reserve te vangen die.
+[!UICONTROL Dining Reservation] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een het dineren reserve te vangen die.
 
 De veldgroep is een extensie van de veldgroep [!UICONTROL Reservation Details] en bevat dezelfde velden onder één objecttype, `reservations` . Naast deze algemene velden bevat [!UICONTROL Dining Reservation] ook `diningReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen met restaurantspecifieke eigenschappen te beschrijven.
 
 >[!NOTE]
 >
->In dit document worden de details van de array `diningReservations` besproken. Voor informatie over de andere gebieden die onder het `reservations` voorwerp worden verstrekt, gelieve te verwijzen naar [[!UICONTROL Reservation Details] de verwijzing van de gebiedsgroep ](./reservation-details.md).
+>In dit document worden de details van de array `diningReservations` besproken. Voor informatie over de andere gebieden die onder het `reservations` voorwerp worden verstrekt, gelieve te verwijzen naar [[!UICONTROL Reservation Details] de verwijzing van de gebiedsgroep &#x200B;](./reservation-details.md).
 
-![ het Dining de structuur van de Voorbehoud ](../../images/field-groups/dining-reservation/structure.png)
+![&#x200B; het Dining de structuur van de Voorbehoud &#x200B;](../../images/field-groups/dining-reservation/structure.png)
 
 ## `diningReservations`
 
@@ -28,7 +28,7 @@ De veldgroep is een extensie van de veldgroep [!UICONTROL Reservation Details] e
 
 Hieronder vindt u de structuur van elk object dat onder `diningReservations` wordt geleverd.
 
-![ diningReservations structuur ](../../images/field-groups/dining-reservation/diningReservations.png)
+![&#x200B; diningReservations structuur &#x200B;](../../images/field-groups/dining-reservation/diningReservations.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -61,5 +61,5 @@ Hieronder vindt u de structuur van elk object dat onder `diningReservations` wor
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-dining-reservation.schema.json)

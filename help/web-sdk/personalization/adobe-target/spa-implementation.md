@@ -19,7 +19,7 @@ Traditionele websites werkten aan navigatiemodellen &quot;van pagina tot pagina&
 
 De moderne Webtoepassingen, zoals enig-paginatoepassingen, hebben in plaats daarvan een model aangenomen dat snel gebruik van browser UI teruggeeft, die vaak onafhankelijk van paginaherladingen is. Deze ervaringen kunnen door klanteninteractie, zoals rollen, klikken, en curseurbewegingen worden teweeggebracht. Naarmate de paradigma&#39;s van het moderne web zijn geëvolueerd, werkt de relevantie van traditionele generieke gebeurtenissen, zoals het laden van een pagina, voor het implementeren van personalisatie en experimenten niet meer.
 
-![ Diagram die de levenscyclus van het KUUROORD in vergelijking met traditionele paginaleven tonen.](assets/spa-vs-traditional-lifecycle.png)
+![&#x200B; Diagram die de levenscyclus van het KUUROORD in vergelijking met traditionele paginaleven tonen.](assets/spa-vs-traditional-lifecycle.png)
 
 ## Voordelen van Experience Platform Web SDK voor SPA&#39;s
 
@@ -37,23 +37,23 @@ Om verder uit te leggen welke Weergaven zijn, gebruikt het volgende voorbeeld ee
 
 Na het navigeren naar de thuissite bevordert een hoofdafbeelding een paasverkoop en de nieuwste producten die op de site beschikbaar zijn. In dit geval kan een weergave worden gedefinieerd voor het gehele beginscherm. Deze weergave kan gewoon &#39;thuis&#39; worden genoemd.
 
-![ beeld van de Steekproef van een enig-paginatoepassing in een browser venster.](assets/example-views.png)
+![&#x200B; beeld van de Steekproef van een enig-paginatoepassing in een browser venster.](assets/example-views.png)
 
 Aangezien de klant meer in de producten geinteresseerd wordt die de zaken verkopen, besluiten zij om de **verbinding van Producten** te klikken. Net als op de thuissite kan de hele productsite worden gedefinieerd als een weergave. Deze weergave kan de naam &quot;products-all&quot; hebben.
 
-![ beeld van de Steekproef van een enig-paginatoepassing in browser venster, met alle getoonde producten.](assets/example-products-all.png)
+![&#x200B; beeld van de Steekproef van een enig-paginatoepassing in browser venster, met alle getoonde producten.](assets/example-products-all.png)
 
 Aangezien een Mening als volledige plaats of een groep visuele elementen op een plaats kan worden bepaald, zouden de vier producten die op de productplaats worden getoond als Mening kunnen worden gegroepeerd en worden beschouwd. Deze weergave kan &#39;producten&#39; worden genoemd.
 
-![ beeld van de Steekproef van een enig-paginatoepassing in een browser venster, met getoonde voorbeeldproducten.](assets/example-products.png)
+![&#x200B; beeld van de Steekproef van een enig-paginatoepassing in een browser venster, met getoonde voorbeeldproducten.](assets/example-products.png)
 
 Wanneer de klant besluit om de **Lading Meer** knoop te klikken om meer producten op de plaats te onderzoeken, verandert website URL niet in dit geval, maar een Mening kan hier worden gecreeerd om slechts de tweede rij van producten te vertegenwoordigen die worden getoond. De weergavenaam kan &#39;products-page-2&#39; zijn.
 
-![ beeld van de Steekproef van een enig-paginatoepassing in een browser venster, met voorbeeldproducten die op een extra pagina worden getoond.](assets/example-load-more.png)
+![&#x200B; beeld van de Steekproef van een enig-paginatoepassing in een browser venster, met voorbeeldproducten die op een extra pagina worden getoond.](assets/example-load-more.png)
 
 De klant besluit een paar producten van de site te kopen en gaat verder naar het uitcheckscherm. Op de uitchecksite krijgt de klant opties om normale levering of expreslevering te kiezen. Een weergave kan uit elke groep visuele elementen op een site bestaan. Een weergave kan dus worden gemaakt voor leveringsvoorkeuren en &quot;Leveringsvoorkeuren&quot; worden genoemd.
 
-![ beeld van de Steekproef van een enig-paginatoepassing controlepagina in een browser venster.](assets/example-check-out.png)
+![&#x200B; beeld van de Steekproef van een enig-paginatoepassing controlepagina in een browser venster.](assets/example-check-out.png)
 
 Het concept van standpunten kan veel verder worden uitgebreid. Dit zijn slechts een paar voorbeelden van weergaven die op een site kunnen worden gedefinieerd.
 
@@ -61,7 +61,7 @@ Het concept van standpunten kan veel verder worden uitgebreid. Dit zijn slechts 
 
 De meningen XDM kunnen in Adobe Target worden gebruikt om marketers toe te staan om tests A/B en XT op SPAs via Visual Experience Composer in werking te stellen. Hiervoor moeten de volgende stappen worden uitgevoerd om een eenmalige ontwikkelaarsinstelling te voltooien:
 
-1. Installeer [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/install/overview.md)
+1. Installeer [&#x200B; SDK van het Web van Adobe Experience Platform &#x200B;](/help/web-sdk/install/overview.md)
 2. Bepaal alle XDM-weergaven in uw toepassing voor één pagina die u wilt aanpassen.
 3. Nadat u de XDM-weergaven hebt gedefinieerd, implementeert u de functie `sendEvent()` met `renderDecisions` ingesteld op `true` en de bijbehorende XDM-weergave in uw toepassing voor één pagina om AB- of XT VEC-activiteiten te kunnen uitvoeren. De XDM-weergave moet worden doorgegeven in `xdm.web.webPageDetails.viewName` . Met deze stap kunnen marketers de Visual Experience Composer gebruiken om A/B- en XT-tests voor die XDM te starten.
 
@@ -90,7 +90,7 @@ Deze sectie schetst drie voorbeelden die tonen hoe te om de `sendEvent()` functi
 
 Het marketing team wil tests A/B op de volledige homepage in werking stellen.
 
-![ beeld van de Steekproef van een enig-paginatoepassing in een browser venster.](assets/use-case-1.png)
+![&#x200B; beeld van de Steekproef van een enig-paginatoepassing in een browser venster.](assets/use-case-1.png)
 
 Als u A/B-tests wilt uitvoeren op de hele thuissite, moet `sendEvent()` worden aangeroepen met de XDM `viewName` ingesteld op `home` :
 
@@ -134,7 +134,7 @@ history.listen(onViewChange);
 
 Het marketing team wil de tweede rij van producten personaliseren door de kleur van het prijsetiket in rood te veranderen nadat een gebruiker **Lading meer** klikt.
 
-![ beeld van de Steekproef van een enig-paginatoepassing in browser venster, tonend gepersonaliseerde aanbiedingen.](assets/use-case-2.png)
+![&#x200B; beeld van de Steekproef van een enig-paginatoepassing in browser venster, tonend gepersonaliseerde aanbiedingen.](assets/use-case-2.png)
 
 ```jsx
 function onViewChange(viewName) { 
@@ -172,7 +172,7 @@ class Products extends Component {
 
 Het marketing team wil een test A/B in werking stellen om te zien of het veranderen van de kleur van de knoop van blauw in rood wanneer **Uitdrukkelijke Levering** wordt geselecteerd omzettingen (in tegenstelling tot het houden van de knoopkleur blauw voor beide leveringsopties) kan verhogen.
 
-![ beeld van de Steekproef van een enig-paginatoepassing in browser venster, met het testen A/B.](assets/use-case-3.png)
+![&#x200B; beeld van de Steekproef van een enig-paginatoepassing in browser venster, met het testen A/B.](assets/use-case-3.png)
 
 Als u de inhoud op de site wilt aanpassen, afhankelijk van de gekozen leveringsvoorkeur, kunt u een weergave maken voor elke leveringsvoorkeur. Wanneer **Normale Levering** wordt geselecteerd, kan de Mening &quot;controle-normaal&quot;worden genoemd. Als **Uitdrukkelijke Levering** wordt geselecteerd, kan de Mening &quot;checkout-express&quot;worden genoemd.
 
@@ -221,19 +221,19 @@ Wanneer u klaar bent met het definiëren van uw XDM-weergaven en `sendEvent()` h
 
 >[!NOTE]
 >
->Om VEC voor uw SPA te gebruiken, moet u of de [ Firefox ](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) installeren en activeren of [ Chrome ](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
+>Om VEC voor uw SPA te gebruiken, moet u of de [&#x200B; Firefox &#x200B;](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) installeren en activeren of [&#x200B; Chrome &#x200B;](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 ### Deelvenster Wijzigingen
 
 In het deelvenster Wijzigingen worden de acties vastgelegd die voor een bepaalde weergave zijn gemaakt. Alle acties voor een weergave worden gegroepeerd onder die weergave.
 
-![ het paneel van Wijzigingen met de opties van de paginalading die in sidebar van het browser venster worden getoond.](assets/modifications-panel.png)
+![&#x200B; het paneel van Wijzigingen met de opties van de paginalading die in sidebar van het browser venster worden getoond.](assets/modifications-panel.png)
 
 ### Acties
 
 Wanneer u op een handeling klikt, wordt het element op de site gemarkeerd waarop deze handeling wordt toegepast. Elke actie VEC die onder een Mening wordt gecreeerd heeft de volgende pictogrammen: **Informatie**, **geeft** uit, **Kloon**, **Beweging**, en **Schrapping**. Deze pictogrammen worden nader toegelicht in de onderstaande tabel.
 
-![ pictogrammen van de Actie ](assets/action-icons.png)
+![&#x200B; pictogrammen van de Actie &#x200B;](assets/action-icons.png)
 
 | Pictogram | Beschrijving |
 |---|---|
@@ -256,7 +256,7 @@ Eerder in dit document is een weergave met de naam &quot;home&quot; gedefinieerd
 
 Om deze updates in VEC te maken, selecteer **stel** samen en pas die veranderingen op de &quot;huis&quot;mening toe.
 
-![ Visuele de steekproefpagina van de Composer van de Ervaring.](assets/vec-home.png)
+![&#x200B; Visuele de steekproefpagina van de Composer van de Ervaring.](assets/vec-home.png)
 
 ### Voorbeeld 2: productlabels wijzigen
 
@@ -270,7 +270,7 @@ Om deze updates in VEC te maken, zijn de volgende stappen vereist:
 4. Selecteer **samenstellen** in VEC.
 5. Pas acties toe om het tekstetiket in **de Prijs van de Verkoop** en de kleur aan rood te veranderen.
 
-![ Visuele de steekproefpagina van de Composer van de Ervaring met productetiketten.](assets/vec-products-page-2.png)
+![&#x200B; Visuele de steekproefpagina van de Composer van de Ervaring met productetiketten.](assets/vec-products-page-2.png)
 
 ### Voorbeeld 3: Opmaak van leveringsvoorkeuren aanpassen
 
@@ -290,4 +290,4 @@ Om deze updates in VEC te maken, zijn de volgende stappen vereist:
 >
 >De &quot;controle-uitdrukkelijke&quot;Mening verschijnt niet in het paneel van Veranderingen tot het **Uitdrukkelijke radioknoop van de Levering** wordt geselecteerd. Dit is omdat de `sendEvent()` functie wordt uitgevoerd wanneer het **Uitdrukkelijke 2&rbrace; radioknoop van de Levering &lbrace;wordt geselecteerd, daarom is VEC niet bewust van de &quot;controle-uit-uitdrukkelijke&quot;Mening tot het radioknoop wordt geselecteerd.**
 
-![ Visuele Composer die van de Ervaring leveringsvoorkeur selecteur tonen.](assets/vec-delivery-preference.png)
+![&#x200B; Visuele Composer die van de Ervaring leveringsvoorkeur selecteur tonen.](assets/vec-delivery-preference.png)

@@ -11,19 +11,19 @@ ht-degree: 4%
 
 # Adobe Experience Platform Assurance
 
-Adobe Experience Platform Assurance is een product van [ Adobe Experience Cloud ](https://www.adobe.com/experience-cloud.html) om u te helpen inspecteren, beproeven, simuleren, en bevestigen hoe u gegevens verzamelt of ervaringen in uw mobiele app dient.
+Adobe Experience Platform Assurance is een product van [&#x200B; Adobe Experience Cloud &#x200B;](https://www.adobe.com/experience-cloud.html) om u te helpen inspecteren, beproeven, simuleren, en bevestigen hoe u gegevens verzamelt of ervaringen in uw mobiele app dient.
 
 >[!IMPORTANT]
 >
 > Griffon van het project is nu gekend als **Assurance**!
 >
-> Griffon van het project is nu over het algemeen beschikbaar aan **alle** klanten van Adobe Experience Cloud als Assurance. Om meer over deze overgang te leren, te lezen gelieve de [ gids van de gebruikerstoegang ](./user-access.md).
+> Griffon van het project is nu over het algemeen beschikbaar aan **alle** klanten van Adobe Experience Cloud als Assurance. Om meer over deze overgang te leren, te lezen gelieve de [&#x200B; gids van de gebruikerstoegang &#x200B;](./user-access.md).
 
 >[!INFO]
 >
 >Assurance Public API&#39;s zijn beschikbaar!
 >
->[ Assurance APIs ](https://developer.adobe.com/adobe-assurance-public-apis/) is een inzameling van APIs die gebruikers machtigen om hun Web en mobiele apps te testen en te zuiveren, wanneer uitgerust met Adobe Assurance Mobile SDK.
+>[&#x200B; Assurance APIs &#x200B;](https://developer.adobe.com/adobe-assurance-public-apis/) is een inzameling van APIs die gebruikers machtigen om hun Web en mobiele apps te testen en te zuiveren, wanneer uitgerust met Adobe Assurance Mobile SDK.
 
 ## Algemene beschikbaarheid
 
@@ -31,9 +31,9 @@ Vanaf 15 oktober 2022 is Assurance algemeen beschikbaar voor alle Adobe Experien
 
 ### Wat verandert er?
 
-Op 15 oktober - de toegang tot Assurance wordt beheerd via Admin Console. Gelieve te lezen de [ gids van de gebruikerstoegang ](./user-access.md) om ervoor te zorgen u ononderbroken toegang blijft hebben.
+Op 15 oktober - de toegang tot Assurance wordt beheerd via Admin Console. Gelieve te lezen de [&#x200B; gids van de gebruikerstoegang &#x200B;](./user-access.md) om ervoor te zorgen u ononderbroken toegang blijft hebben.
 
-Er worden geen andere wijzigingen of onderbrekingen verwacht voor bestaande Assurance-integratie, -sessies en -gebeurtenissen. Assurance kan verder worden betreden via [ https://griffon.adobe.com ](https://griffon.adobe.com) **of** u kunt gebruiken (en referentie) [ https://experience.adobe.com/assurance ](https://experience.adobe.com/assurance).
+Er worden geen andere wijzigingen of onderbrekingen verwacht voor bestaande Assurance-integratie, -sessies en -gebeurtenissen. Assurance kan verder worden betreden via [&#x200B; https://griffon.adobe.com &#x200B;](https://griffon.adobe.com) **of** u kunt gebruiken (en referentie) [&#x200B; https://experience.adobe.com/assurance &#x200B;](https://experience.adobe.com/assurance).
 
 ## Wat kan Assurance voor je doen?
 
@@ -43,7 +43,7 @@ Ga snel aan de slag met weinig coderegels. Voor mobiele apps werkt Assurance sam
 
 ### Verbinding zonder probleem
 
-Met Assurance is het eenvoudig en betrouwbaar om uw app te verbinden met Experience Platform. U te hoeven om geen netwerkvolmachten, [ MiTM ](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) te gebruiken, en andere netwerk gymnastiek - verbindend uw app met Assurance is zo gemakkelijk zoals het aftasten van een code QR of het tikken van een knoop.
+Met Assurance is het eenvoudig en betrouwbaar om uw app te verbinden met Experience Platform. U te hoeven om geen netwerkvolmachten, [&#x200B; MiTM &#x200B;](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) te gebruiken, en andere netwerk gymnastiek - verbindend uw app met Assurance is zo gemakkelijk zoals het aftasten van een code QR of het tikken van een knoop.
 
 ![](./images/index/no-hassle-connection.png)
 
@@ -90,6 +90,6 @@ Assurance beschikt over de volgende beveiligingsmaatregelen:
 
 ## Aan de slag
 
-Als u Assurance wilt instellen, moet u eerst de Assurance-extensie in uw toepassing installeren. Leren hoe te om dit te doen, te lezen gelieve het leerprogramma op [ uitvoerend de uitbreiding van Assurance ](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
+Als u Assurance wilt instellen, moet u eerst de Assurance-extensie in uw toepassing installeren. Leren hoe te om dit te doen, te lezen gelieve het leerprogramma op [&#x200B; uitvoerend de uitbreiding van Assurance &#x200B;](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
-Nadat u Assurance aan uw app hebt toegevoegd, kunt u een Assurance-sessie maken die op uw apparaat kan worden aangesloten. Leren hoe te om Assurance te gebruiken, te lezen gelieve de [ gids bij het gebruiken van Assurance ](./tutorials/using-assurance.md).
+Nadat u Assurance aan uw app hebt toegevoegd, kunt u een Assurance-sessie maken die op uw apparaat kan worden aangesloten. Leren hoe te om Assurance te gebruiken, te lezen gelieve de [&#x200B; gids bij het gebruiken van Assurance &#x200B;](./tutorials/using-assurance.md).

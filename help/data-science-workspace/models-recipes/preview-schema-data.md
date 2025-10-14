@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Op succesvolle voltooiing van het laarzentrekkermanuscript van het [ detailhandelschema en dataset ](./create-retails-sales-dataset.md) leerprogramma. Uitvoerschema&#39;s en gegevenssets kunnen worden weergegeven op [!DNL Experience Platform] . Volg onderstaande stappen om de schema&#39;s en datasets weer te geven:
+Op succesvolle voltooiing van het laarzentrekkermanuscript van het [&#x200B; detailhandelschema en dataset &#x200B;](./create-retails-sales-dataset.md) leerprogramma. Uitvoerschema&#39;s en gegevenssets kunnen worden weergegeven op [!DNL Experience Platform] . Volg onderstaande stappen om de schema&#39;s en datasets weer te geven:
 
 Selecteer het tabblad **[!UICONTROL Schemas]** in de linkernavigatie en zoek het invoerschema dat door het bootstrap-script is gemaakt. De naam van het schema komt overeen met de naam die in `config.yaml` van de vorige stap is gedefinieerd. Bekijk de schemadetails en het is samenstelling door in het te klikken.
 

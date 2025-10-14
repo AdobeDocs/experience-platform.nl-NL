@@ -12,16 +12,16 @@ ht-degree: 0%
 
 # [!UICONTROL Reservation Details] schemaveldgroep
 
-[!UICONTROL Reservation Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een reserve, met inbegrip van lengte, wijziging, terugvorderbare status, en aantal ruimten te vangen die.
+[!UICONTROL Reservation Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een reserve, met inbegrip van lengte, wijziging, terugvorderbare status, en aantal ruimten te vangen die.
 
 De veldgroep bevat één objecttype veld, `reservations` . De eigenschappen in dit object worden hieronder uitgelegd.
 
-![ structuur van de Details van de Voorbehoud ](../../images/field-groups/reservation-details.png)
+![&#x200B; structuur van de Details van de Voorbehoud &#x200B;](../../images/field-groups/reservation-details.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `nonRefundableAmount` | [ Valuta ](../../data-types/currency.md) | Het bedrag van de reserveringsprijs dat als niet-terugvorderbaar is gemarkeerd. |
-| `transaction` | [ Transactie ](../../data-types/transaction.md) | Beschrijft de valutatransactie voor de reservering. |
+| `nonRefundableAmount` | [&#x200B; Valuta &#x200B;](../../data-types/currency.md) | Het bedrag van de reserveringsprijs dat als niet-terugvorderbaar is gemarkeerd. |
+| `transaction` | [&#x200B; Transactie &#x200B;](../../data-types/transaction.md) | Beschrijft de valutatransactie voor de reservering. |
 | `id` | String | Een unieke id voor de reservering. |
 | `cancellation` | Geheel | Deze waarde wordt vastgelegd wanneer een reservering is geannuleerd. |
 | `confirmationNumber` | String | Het bevestigingsnummer of de identificatiecode van de boeking. |
@@ -41,8 +41,8 @@ De veldgroep bevat één objecttype veld, `reservations` . De eigenschappen in d
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.schema.json)
 
 ## Industriespecifieke reserveringsgroepen
 

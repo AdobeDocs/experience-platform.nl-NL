@@ -28,11 +28,11 @@ Deel twee begint met een beschrijvende analyse van de geaggregeerde gegevens met
 
 ## Aan de slag
 
-Alvorens deze gids te lezen, te herzien gelieve de [[!DNL JupyterLab]  gebruikersgids ](./overview.md) voor een inleiding op hoog niveau aan [!DNL JupyterLab] en zijn rol binnen de Wetenschap van Gegevens Workspace. Bovendien, als u uw eigen gegevens gebruikt, te herzien gelieve de documentatie voor [ gegevenstoegang in  [!DNL Jupyterlab]  laptops ](./access-notebook-data.md). Deze handleiding bevat belangrijke informatie over de gegevenslimieten van laptops.
+Alvorens deze gids te lezen, te herzien gelieve de [[!DNL JupyterLab]  gebruikersgids &#x200B;](./overview.md) voor een inleiding op hoog niveau aan [!DNL JupyterLab] en zijn rol binnen de Wetenschap van Gegevens Workspace. Bovendien, als u uw eigen gegevens gebruikt, te herzien gelieve de documentatie voor [&#x200B; gegevenstoegang in  [!DNL Jupyterlab]  laptops &#x200B;](./access-notebook-data.md). Deze handleiding bevat belangrijke informatie over de gegevenslimieten van laptops.
 
 Deze laptop gebruikt een gegevensset met gemiddelde waarden in de vorm van Adobe Analytics Experience Events-gegevens in de Analytics Analysis Workspace. Als u de EDA-laptop wilt gebruiken, moet u de gegevenstabel met de volgende waarden definiëren `target_table` en `target_table_id` . Om het even welke middelwaarden dataset kan worden gebruikt.
 
-Om deze waarden te vinden, volg de stappen die in [ worden geschetst schrijven aan een dataset in python ](./access-notebook-data.md#write-python) sectie van de JupyterLab gids van de gegevenstoegang. De naam van de dataset (`target_table`) wordt gevestigd in de datasetfolder. Zodra u de dataset met de rechtermuisknop aanklikt om gegevens in een notitieboekje te onderzoeken of te schrijven, wordt een dataset identiteitskaart (`target_table_id`) verstrekt in de uitvoerbare codeingang.
+Om deze waarden te vinden, volg de stappen die in [&#x200B; worden geschetst schrijven aan een dataset in python &#x200B;](./access-notebook-data.md#write-python) sectie van de JupyterLab gids van de gegevenstoegang. De naam van de dataset (`target_table`) wordt gevestigd in de datasetfolder. Zodra u de dataset met de rechtermuisknop aanklikt om gegevens in een notitieboekje te onderzoeken of te schrijven, wordt een dataset identiteitskaart (`target_table_id`) verstrekt in de uitvoerbare codeingang.
 
 ## Gegevensdetectie
 
@@ -70,9 +70,9 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Verbinding maken met Adobe Experience Platform [!DNL Query Service]
 
-[!DNL JupyterLab] op Experience Platform staat u toe om SQL in a [!DNL Python] notitieboekje te gebruiken om tot gegevens door [ de Dienst van de Vraag ](https://www.adobe.com/go/query-service-home-en) toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan handig zijn voor het verwerken van grote gegevenssets vanwege de superieure runtime. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
+[!DNL JupyterLab] op Experience Platform staat u toe om SQL in a [!DNL Python] notitieboekje te gebruiken om tot gegevens door [&#x200B; de Dienst van de Vraag &#x200B;](https://www.adobe.com/go/query-service-home-en) toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan handig zijn voor het verwerken van grote gegevenssets vanwege de superieure runtime. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
 
-Alvorens u [!DNL Query Service] in [!DNL JupyterLab] gebruikt, zorg ervoor u een werkend begrip van de [[!DNL Query Service]  SQL syntaxis ](https://www.adobe.com/go/query-service-sql-syntax-en) hebt.
+Alvorens u [!DNL Query Service] in [!DNL JupyterLab] gebruikt, zorg ervoor u een werkend begrip van de [[!DNL Query Service]  SQL syntaxis &#x200B;](https://www.adobe.com/go/query-service-sql-syntax-en) hebt.
 
 Als u Query Service wilt gebruiken in JupyterLab, moet u eerst een verbinding maken tussen uw werkende Python-laptop en Query-service. Dit kan worden bereikt door de volgende cel uit te voeren.
 
@@ -110,7 +110,7 @@ order by Year, Month;
 
 Als u de cel uitvoert, wordt de volgende uitvoer geproduceerd:
 
-![ output van de vraagdatum ](../images/jupyterlab/eda/query-date-output.PNG)
+![&#x200B; output van de vraagdatum &#x200B;](../images/jupyterlab/eda/query-date-output.PNG)
 
 ### Datums configureren voor detectie van gegevenssets
 
@@ -146,7 +146,7 @@ Gebruik de volgende cel om de rijen van de gegevensset weer te geven. In dit voo
 Table.head(5)
 ```
 
-![ uitvoer van de lijstrij ](../images/jupyterlab/eda/data-table-overview.PNG)
+![&#x200B; uitvoer van de lijstrij &#x200B;](../images/jupyterlab/eda/data-table-overview.PNG)
 
 Zodra u een idee hebt van welke gegevens in de dataset bevat, kan het waardevol zijn om de dataset verder te verdelen. In dit voorbeeld worden de kolomnamen en gegevenstypen voor elk van de kolommen weergegeven, terwijl de uitvoer wordt gebruikt om te controleren of het gegevenstype correct is of niet.
 
@@ -157,7 +157,7 @@ ColumnNames_Types.columns = ["Column_Name", "Data_Type"]
 ColumnNames_Types
 ```
 
-![ kolomnaam en gegevenstypes lijst ](../images/jupyterlab/eda/data-columns.PNG)
+![&#x200B; kolomnaam en gegevenstypes lijst &#x200B;](../images/jupyterlab/eda/data-columns.PNG)
 
 ### Verkenning van trends in gegevenssets
 
@@ -180,7 +180,7 @@ GROUP  BY Hour
 ORDER  BY Hour;
 ```
 
-![ vraag 1 output ](../images/jupyterlab/eda/hour-count-raw.PNG)
+![&#x200B; vraag 1 output &#x200B;](../images/jupyterlab/eda/hour-count-raw.PNG)
 
 Na bevestiging van de vraagwerken, kunnen de gegevens in een univariate histogram van het plot voor visuele duidelijkheid worden voorgesteld.
 
@@ -203,7 +203,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![ de grafiekoutput van de bar voor vraag 1 ](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
+![&#x200B; de grafiekoutput van de bar voor vraag 1 &#x200B;](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
 
 **Hoogste 10 bekeken pagina&#39;s voor een bepaalde dag**
 
@@ -244,7 +244,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![ bovenkant tien bekeken pagina&#39;s ](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
+![&#x200B; bovenkant tien bekeken pagina&#39;s &#x200B;](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
 
 **Hoogste tien steden die door gebruikersactiviteit** worden gegroepeerd
 
@@ -285,7 +285,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![ top tien steden ](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
+![&#x200B; top tien steden &#x200B;](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
 
 **Hoogste tien bekeken producten**
 
@@ -329,7 +329,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![ top tien productmeningen ](../images/jupyterlab/eda/top-ten-viewed-products.png)
+![&#x200B; top tien productmeningen &#x200B;](../images/jupyterlab/eda/top-ten-viewed-products.png)
 
 Na het onderzoeken van de tendensen en de patronen van de gegevens, zou u een goed idee moeten hebben over welke eigenschappen u voor een voorspelling van een doel wilt bouwen. Skimming through lijsten kan snel de vorm van elk gegevensattribuut, duidelijke misvertegenwoordiging, en grote outliers in de waarden benadrukken en beginnen kandidaat verhoudingen voor te stellen om tussen attributen te onderzoeken.
 
@@ -469,7 +469,7 @@ Data.shape
 Data.head(5)
 ```
 
-![ voorbeeldlijst ](../images/jupyterlab/eda/raw-aggregate-data.PNG)
+![&#x200B; voorbeeldlijst &#x200B;](../images/jupyterlab/eda/raw-aggregate-data.PNG)
 
 In deze cel wordt het aantal unieke profielen afgedrukt.
 
@@ -513,7 +513,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![ Ontbrekende waarden ](../images/jupyterlab/eda/missing-values.png)
+![&#x200B; Ontbrekende waarden &#x200B;](../images/jupyterlab/eda/missing-values.png)
 
 Na het ontdekken van ontbrekende waarden, is het kritiek om uitschieters te identificeren. Parametrische statistieken zoals het gemiddelde, standaardafwijking en correlatie zijn zeer gevoelig voor uitschieters. Daarnaast zijn de aannames van gemeenschappelijke statistische procedures, zoals lineaire regressies, ook gebaseerd op deze statistieken. Dit betekent dat uitschieters een analyse echt kunnen verknoeien.
 
@@ -521,7 +521,7 @@ In dit voorbeeld wordt interkwartielbereik gebruikt om uitschieters te identific
 
 >[!TIP]
 >
->Het verbeteren van outliers vereist u om een inzicht in de zaken en de industrie te hebben u binnen werkt. Soms kun je een observatie niet neerzetten, alleen omdat het een uitbijter is. Uitschieters kunnen legitieme observaties zijn en zijn vaak de interessantste. Meer over het laten vallen van uitschieters leren, bezoek de [ facultatieve stap van de gegevensschoonmaak ](#optional-data-clean).
+>Het verbeteren van outliers vereist u om een inzicht in de zaken en de industrie te hebben u binnen werkt. Soms kun je een observatie niet neerzetten, alleen omdat het een uitbijter is. Uitschieters kunnen legitieme observaties zijn en zijn vaak de interessantste. Meer over het laten vallen van uitschieters leren, bezoek de [&#x200B; facultatieve stap van de gegevensschoonmaak &#x200B;](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -562,7 +562,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![ outliers grafiek ](../images/jupyterlab/eda/outliers.png)
+![&#x200B; outliers grafiek &#x200B;](../images/jupyterlab/eda/outliers.png)
 
 ### Univariële analyse
 
@@ -580,7 +580,7 @@ distribution.columns = ['Count', 'Mean', 'Min', '1st_perc','5th_perc','25th_perc
 distribution
 ```
 
-![ distributie van de eigenschappen ](../images/jupyterlab/eda/distribution-of-features.PNG)
+![&#x200B; distributie van de eigenschappen &#x200B;](../images/jupyterlab/eda/distribution-of-features.PNG)
 
 Als u de functies eenmaal hebt gedistribueerd, kunt u visualiseerde gegevensgrafieken maken met behulp van een array. De volgende cellen worden gebruikt om de bovenstaande tabel te visualiseren met numerieke gegevens.
 
@@ -595,7 +595,7 @@ for column in Data_numerical.columns[0:]:
     sns.distplot(Data_numerical[column], color = A, kde=False, bins=6, hist_kws={'alpha': 0.4});
 ```
 
-![ numerieke gegevensgrafieken ](../images/jupyterlab/eda/univaiate-graphs.png)
+![&#x200B; numerieke gegevensgrafieken &#x200B;](../images/jupyterlab/eda/univaiate-graphs.png)
 
 ### Categorische gegevens
 
@@ -616,7 +616,7 @@ for column in Data_categorical.columns[0:]:
         sns.countplot(x=column, data = Data_categorical, palette="Set2");
 ```
 
-![ catagorische kolommen ](../images/jupyterlab/eda/graph-category.PNG)
+![&#x200B; catagorische kolommen &#x200B;](../images/jupyterlab/eda/graph-category.PNG)
 
 ### Kolommen met slechts één afzonderlijke waarde verwijderen
 
@@ -727,9 +727,9 @@ else:
 
 Als u de cel uitvoert, worden de volgende uitvoerbestanden gegenereerd:
 
-![ percelen ](../images/jupyterlab/eda/bivariant-graphs.png)
+![&#x200B; percelen &#x200B;](../images/jupyterlab/eda/bivariant-graphs.png)
 
-![ heatmap ](../images/jupyterlab/eda/bi-graph10.PNG)
+![&#x200B; heatmap &#x200B;](../images/jupyterlab/eda/bi-graph10.PNG)
 
 **Categorische predikers**
 
@@ -769,7 +769,7 @@ else:
 
 Als u de cel uitvoert, wordt de volgende uitvoer geproduceerd:
 
-![ categorieverhouding ](../images/jupyterlab/eda/categorical-predictor.PNG)
+![&#x200B; categorieverhouding &#x200B;](../images/jupyterlab/eda/categorical-predictor.PNG)
 
 ### Belangrijke numerieke functies
 
@@ -790,7 +790,7 @@ else:
     print(Imp_features)
 ```
 
-![ belangrijke eigenschappen ](../images/jupyterlab/eda/important-feature-model.PNG)
+![&#x200B; belangrijke eigenschappen &#x200B;](../images/jupyterlab/eda/important-feature-model.PNG)
 
 ### Voorbeeld-insight
 
@@ -806,15 +806,15 @@ else:
     sns.lmplot("DAYS_SINCE_VISIT", "TOTAL_ORDER_REVENUE", Data, hue="TARGET", fit_reg=False);
 ```
 
-![ voorbeeld insight ](../images/jupyterlab/eda/insight.PNG)
+![&#x200B; voorbeeld insight &#x200B;](../images/jupyterlab/eda/insight.PNG)
 
 ## Optionele stap voor gegevensreiniging {#optional-data-clean}
 
 Het verbeteren van outliers vereist u om een inzicht in de zaken en de industrie te hebben u binnen werkt. Soms kun je een observatie niet neerzetten, alleen omdat het een uitbijter is. Uitschieters kunnen legitieme observaties zijn en zijn vaak de interessantste.
 
-Voor meer informatie over uitschieters en of om hen of niet te laten vallen, lees deze ingang van de [ analysemfactor ](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+Voor meer informatie over uitschieters en of om hen of niet te laten vallen, lees deze ingang van de [&#x200B; analysemfactor &#x200B;](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
-De volgende hoofdletters van voorbeeldcel en de punten van vloergegevens die uitschieters zijn gebruikend [ interkwartielwaaier ](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
+De volgende hoofdletters van voorbeeldcel en de punten van vloergegevens die uitschieters zijn gebruikend [&#x200B; interkwartielwaaier &#x200B;](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
 
 ```python
 TARGET = Data.TARGET
@@ -836,4 +836,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 Nadat u uw verkennende gegevensanalyse hebt voltooid, bent u bereid beginnen creërend een model. U kunt ook de gegevens en inzichten gebruiken die u hebt afgeleid om een dashboard te maken met gereedschappen zoals Power BI.
 
-Adobe Experience Platform scheidt het proces voor het maken van modellen in twee verschillende fasen: Recipes (een modelinstantie) en Modellen. Om met het proces van de recept verwezenlijking te beginnen, bezoek de documentatie voor [ creërend een recept in Notities JupyerLab ](./create-a-model.md). Dit document bevat informatie en voorbeelden voor het maken, trainen en scoren van een recept in [!DNL JupyterLab] -laptops.
+Adobe Experience Platform scheidt het proces voor het maken van modellen in twee verschillende fasen: Recipes (een modelinstantie) en Modellen. Om met het proces van de recept verwezenlijking te beginnen, bezoek de documentatie voor [&#x200B; creërend een recept in Notities JupyerLab &#x200B;](./create-a-model.md). Dit document bevat informatie en voorbeelden voor het maken, trainen en scoren van een recept in [!DNL JupyterLab] -laptops.

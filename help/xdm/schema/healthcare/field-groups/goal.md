@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!UICONTROL Goal] schemaveldgroep
 
-[!UICONTROL Goal] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../../classes/individual-profile.md) en [[!DNL Provider class]](../../../classes/provider.md). Het biedt één objecttype veld `healthcareGoal` waarin de beoogde doelstelling(en) voor een patiënt, groep of organisatie wordt beschreven.
+[!UICONTROL Goal] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../../classes/individual-profile.md) en [[!DNL Provider class]](../../../classes/provider.md). Het biedt één objecttype veld `healthcareGoal` waarin de beoogde doelstelling(en) voor een patiënt, groep of organisatie wordt beschreven.
 
-![ de groepsstructuur van het Gebied ](../../../images/healthcare/field-groups/goal/goal.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../../images/healthcare/field-groups/goal/goal.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -31,7 +31,7 @@ ht-degree: 0%
 | [!UICONTROL Source] | `source` | [[!UICONTROL Reference]](../data-types/reference.md) | Geeft de bron van het doel aan, zoals de patiënt of de arts. |
 | [!UICONTROL Start Codeable Concept] | `startCodeableConcept` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De gebeurtenis waarna het doel moet worden bereikt. |
 | [!UICONTROL Subject |]`subject` | [[!UICONTROL Reference]](../data-types/reference.md) | Identificeert de patiënt, groep of organisatie waarvoor het doel wordt vastgesteld. |
-| [!UICONTROL Target] | `target` | Array van objecten | Geeft de tijdlijn aan van specifieke stappen in het doel. Zie de [ sectie hieronder ](#target) voor meer informatie. |
+| [!UICONTROL Target] | `target` | Array van objecten | Geeft de tijdlijn aan van specifieke stappen in het doel. Zie de [&#x200B; sectie hieronder &#x200B;](#target) voor meer informatie. |
 | [!UICONTROL Continous] | `continous` | Boolean | Geeft aan of er na het bereiken van het doel doorlopende activiteit nodig is om het doel te ondersteunen. |
 | [!UICONTROL Lifecycle Status] | `lifecycleStatus` | String | De status van de levenscyclus van het doel. De waarde van deze eigenschap moet gelijk zijn aan een van de volgende bekende opsommingswaarden. <li> `proposed` </li> <li> `planned` </li> <li> `accepted` </li> <li> `active` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `cancelled` </li> <li> `entered-in-error` </li> <li> `rejected` </li> |
 | [!UICONTROL Start Date] | `startDate` | Datum | De datum waarna het doel moet worden nagestreefd. |
@@ -40,14 +40,14 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/goal.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/goal.example.1.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/goal.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/goal.example.1.json)
 
 ## `target` {#target}
 
 `target` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ doelstructuur ](../../../images/healthcare/field-groups/goal/target.png)
+![&#x200B; doelstructuur &#x200B;](../../../images/healthcare/field-groups/goal/target.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

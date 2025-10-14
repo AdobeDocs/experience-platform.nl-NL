@@ -16,17 +16,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Deze klasse zou slechts moeten worden gebruikt om informatie over segmentdefinities zelf te vangen. Om de informatie van het publiekslidmaatschap binnen uw profielgegevens te vangen, zou u de [ het gebiedsgroep van de Details van het Lidmaatschap van het Segment ](../field-groups/profile/segmentation.md) in uw [!UICONTROL XDM Individual Profile] schema moeten gebruiken.
+>Deze klasse zou slechts moeten worden gebruikt om informatie over segmentdefinities zelf te vangen. Om de informatie van het publiekslidmaatschap binnen uw profielgegevens te vangen, zou u de [&#x200B; het gebiedsgroep van de Details van het Lidmaatschap van het Segment &#x200B;](../field-groups/profile/segmentation.md) in uw [!UICONTROL XDM Individual Profile] schema moeten gebruiken.
 
 ![](../images/classes/segment-definition.png)
 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `_repo` | Een object dat de volgende [!UICONTROL DateTime] -velden bevat: <ul><li>`createDate`: De datum en tijd waarop de bron in de gegevensopslag is gemaakt, bijvoorbeeld wanneer de gegevens voor het eerst werden ingevoerd.</li><li>`modifyDate`: De datum en tijd waarop de bron voor het laatst is gewijzigd.</li></ul> |
-| `_id` | Een unieke, door het systeem gegenereerde tekenreeks-id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br> Aangezien dit gebied systeem-geproduceerd is, wordt het geen expliciete waarde geleverd tijdens gegevensopname. U kunt er echter desgewenst nog voor kiezen om uw eigen unieke id-waarden op te geven.<br><br> het is belangrijk om te onderscheiden dat dit gebied **niet** een identiteit met betrekking tot een individuele persoon vertegenwoordigt, maar eerder het verslag van gegevens zelf. Identiteitsgegevens met betrekking tot een persoon zouden aan [ identiteitsgebieden ](../schema/composition.md#identity) in plaats daarvan moeten worden beperkt. |
+| `_id` | Een unieke, door het systeem gegenereerde tekenreeks-id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br> Aangezien dit gebied systeem-geproduceerd is, wordt het geen expliciete waarde geleverd tijdens gegevensopname. U kunt er echter desgewenst nog voor kiezen om uw eigen unieke id-waarden op te geven.<br><br> het is belangrijk om te onderscheiden dat dit gebied **niet** een identiteit met betrekking tot een individuele persoon vertegenwoordigt, maar eerder het verslag van gegevens zelf. Identiteitsgegevens met betrekking tot een persoon zouden aan [&#x200B; identiteitsgebieden &#x200B;](../schema/composition.md#identity) in plaats daarvan moeten worden beperkt. |
 | `createdByBatchID` | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. |
 | `description` | Een beschrijving voor de segmentdefinitie. |
-| `identityMap` | Een kaartveld dat een set naamloze identiteiten bevat voor de personen waarop het publiek van toepassing is. Zie de sectie over identiteitskaarten in de [ grondbeginselen van schemacompositie ](../schema/composition.md#identityMap) voor meer informatie over hun gebruiksgeval. |
+| `identityMap` | Een kaartveld dat een set naamloze identiteiten bevat voor de personen waarop het publiek van toepassing is. Zie de sectie over identiteitskaarten in de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../schema/composition.md#identityMap) voor meer informatie over hun gebruiksgeval. |
 | `modifiedByBatchID` | De id van de laatst opgenomen batch die ervoor zorgde dat de record werd bijgewerkt. |
 | `repositoryCreatedBy` | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | De id van de gebruiker die de record als laatste heeft gewijzigd. |

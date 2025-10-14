@@ -15,7 +15,7 @@ ht-degree: 0%
 
 De Redacteur van de vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens te schrijven te bevestigen en in werking te stellen binnen het [!DNL Experience Platform] gebruikersinterface. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in [!DNL Experience Platform] te bevolken.
 
-Voor meer informatie over de concepten en de eigenschappen van de Dienst van de Vraag, zie het [ overzicht van de Dienst van de Vraag ](../home.md). Meer over leren hoe te om het gebruikersinterface van de Dienst van de Vraag op [!DNL Experience Platform] te navigeren, zie het [ overzicht UI van de Dienst van de Vraag ](./overview.md).
+Voor meer informatie over de concepten en de eigenschappen van de Dienst van de Vraag, zie het [&#x200B; overzicht van de Dienst van de Vraag &#x200B;](../home.md). Meer over leren hoe te om het gebruikersinterface van de Dienst van de Vraag op [!DNL Experience Platform] te navigeren, zie het [&#x200B; overzicht UI van de Dienst van de Vraag &#x200B;](./overview.md).
 
 ## Aan de slag {#getting-started}
 
@@ -25,13 +25,13 @@ De redacteur van de Vraag verstrekt flexibele uitvoering van vragen door met de 
 
 Selecteer in de gebruikersinterface van [!DNL Experience Platform] de optie **[!UICONTROL Queries]** in het navigatiemenu aan de linkerkant om de werkruimte van Query Service te openen. Selecteer vervolgens **[!UICONTROL Create Query]** rechtsboven in het scherm om query&#39;s te beginnen schrijven. Deze koppeling is beschikbaar op een van de pagina&#39;s in de werkruimte van de Query-service.
 
-![ het lusje van het overzicht van de werkruimte van Vragen met Create benadrukte vraag.](../images/ui/query-editor/create-query.png)
+![&#x200B; het lusje van het overzicht van de werkruimte van Vragen met Create benadrukte vraag.](../images/ui/query-editor/create-query.png)
 
 ### Verbinding maken met Query-service {#connecting-to-query-service}
 
 De redacteur van de Vraag neemt een paar seconden om met de Dienst van de Vraag te initialiseren en te verbinden wanneer het wordt geopend. De console vertelt u wanneer het wordt aangesloten, zoals hieronder getoond. Als u probeert om een vraag in werking te stellen alvorens de redacteur heeft verbonden, vertraagt het uitvoering tot de verbinding volledig is.
 
-![ de consoleoutput van de Redacteur van de Vraag op aanvankelijke verbinding.](../images/ui/query-editor/connect.png)
+![&#x200B; de consoleoutput van de Redacteur van de Vraag op aanvankelijke verbinding.](../images/ui/query-editor/connect.png)
 
 ### Hoe de vragen van de Redacteur van de Vraag in werking worden gesteld {#run-a-query}
 
@@ -45,7 +45,7 @@ Gebruikend de Redacteur van de Vraag, kunt u schrijven, uitvoeren en sparen vrag
 
 Selecteer een gegevensbestand aan vraag van het drop-down menu in het hoogste recht van de Redacteur van de Vraag. De geselecteerde database wordt weergegeven in de vervolgkeuzelijst.
 
-![ de Redacteur van de Vraag met het benadrukte gegevensbestanddropdown menu.](../images/ui/query-editor/database-dropdown.png)
+![&#x200B; de Redacteur van de Vraag met het benadrukte gegevensbestanddropdown menu.](../images/ui/query-editor/database-dropdown.png)
 
 ### Instellingen {#settings}
 
@@ -55,9 +55,9 @@ Een instellingenpictogram boven het invoerveld van de Query Editor bevat opties 
 >
 >U kunt [!UICONTROL Disable syntax auto complete] tijdens het ontwerpen van een query gebruiken zonder dat dit uw voortgang verliest.
 
-Om donkere of lichte thema&#39;s toe te laten, selecteer het montagespictogram (![ A montagespictogram.](/help/images/icons/settings.png)) gevolgd door de optie in het vervolgkeuzemenu dat wordt weergegeven.
+Om donkere of lichte thema&#39;s toe te laten, selecteer het montagespictogram (![&#x200B; A montagespictogram.](/help/images/icons/settings.png)) gevolgd door de optie in het vervolgkeuzemenu dat wordt weergegeven.
 
-![ de Redacteur van de Vraag met het montagespictogram en laat donkere benadrukte optie van het themdropdown menu toe.](../images/ui/query-editor/query-editor-settings.png)
+![&#x200B; de Redacteur van de Vraag met het montagespictogram en laat donkere benadrukte optie van het themdropdown menu toe.](../images/ui/query-editor/query-editor-settings.png)
 
 #### Automatisch aanvullen {#auto-complete}
 
@@ -68,7 +68,7 @@ De auto-volledige configuratie het plaatsen is per gebruiker en voor de opeenvol
 
 ### Meerdere opeenvolgende query&#39;s uitvoeren {#execute-multiple-sequential-queries}
 
-Gebruik de Uitgebreide Redacteur van de Vraag om meer dan één vraag te schrijven en alle vragen op een opeenvolgende manier uit te voeren. De uitvoering van veelvoudige vragen in een opeenvolging elk produceert een logboekingang. Nochtans, slechts de resultaten van de eerste vraagvertoning in de console van de Redacteur van de Vraag. Controleer het vraaglogboek als u de vragen moet problemen oplossen of bevestigen die werden uitgevoerd. Zie de [ documentatie van vraaglogboeken ](./query-logs.md) voor meer informatie.
+Gebruik de Uitgebreide Redacteur van de Vraag om meer dan één vraag te schrijven en alle vragen op een opeenvolgende manier uit te voeren. De uitvoering van veelvoudige vragen in een opeenvolging elk produceert een logboekingang. Nochtans, slechts de resultaten van de eerste vraagvertoning in de console van de Redacteur van de Vraag. Controleer het vraaglogboek als u de vragen moet problemen oplossen of bevestigen die werden uitgevoerd. Zie de [&#x200B; documentatie van vraaglogboeken &#x200B;](./query-logs.md) voor meer informatie.
 
 >[!NOTE]
 > 
@@ -79,17 +79,17 @@ Gebruik de Uitgebreide Redacteur van de Vraag om meer dan één vraag te schrijv
 Als u meerdere query&#39;s hebt geschreven maar slechts één query moet uitvoeren, kunt u de gekozen query markeren en de opdracht
 [!UICONTROL Run selected query] pictogram. Dit pictogram wordt standaard uitgeschakeld totdat u de querysyntaxis in de editor selecteert.
 
-![ de Redacteur van de Vraag met het [!UICONTROL Run selected query] benadrukte pictogram.](../images/ui/query-editor/run-selected-query.png)
+![&#x200B; de Redacteur van de Vraag met het [!UICONTROL Run selected query] benadrukte pictogram.](../images/ui/query-editor/run-selected-query.png)
 
 ### Query Editor-sessie annuleren {#cancel-query}
 
 Neem controle van vraaguitvoering en verbeter uw productiviteit door langdurige vragen te annuleren. Deze actie ontruimt de Redacteur van de Vraag tijdens een vraaglooppas. De query wordt op de achtergrond uitgevoerd. Als het een vraag CTAS is zal het nog een outputdataset produceren. Als u de uitvoering in de editor wilt annuleren en een SQL-instructie wilt blijven samenstellen, selecteert u **[!UICONTROL Cancel query]** nadat u een query hebt uitgevoerd.
 
-![ de Redacteur van de Vraag met [!UICONTROL Cancel query] benadrukt.](../images/ui/query-editor/cancel-query-run.png)
+![&#x200B; de Redacteur van de Vraag met [!UICONTROL Cancel query] benadrukt.](../images/ui/query-editor/cancel-query-run.png)
 
 Er wordt een bevestigingsvenster weergegeven. Selecteer **[!UICONTROL Confirm]** om de query uit te voeren.
 
-![ annuleer de dialoog van de vraagbevestiging met Bevestig benadrukte.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
+![&#x200B; annuleer de dialoog van de vraagbevestiging met Bevestig benadrukte.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### Resultaattelling {#result-count}
 
@@ -99,13 +99,13 @@ De redacteur van de Vraag heeft een maximum 50.000 rijoutput. U kunt het aantal 
 >
 >Aangezien de gebruikersinterface van Experience Platform maximaal 1000 rijen kan ondersteunen, wordt het doorgeven van een LIMIT-waarde van meer dan 1000 genegeerd.
 
-![ de Redacteur van de Vraag met de benadrukte drop-down van de resultaattelling.](../images/ui/query-editor/result-count.png)
+![&#x200B; de Redacteur van de Vraag met de benadrukte drop-down van de resultaattelling.](../images/ui/query-editor/result-count.png)
 
 ## Bezig met schrijven van query&#39;s {#writing-queries}
 
 [!UICONTROL Query Editor] is zo geordend dat het schrijven van query&#39;s zo eenvoudig mogelijk is. Het schermafbeelding hieronder toont hoe de redacteur in UI verschijnt, met het SQL ingangsgebied en **benadrukte Spel**.
 
-![ de Redacteur van de Vraag met het SQL benadrukte inputgebied en Spel.](../images/ui/query-editor/editor.png)
+![&#x200B; de Redacteur van de Vraag met het SQL benadrukte inputgebied en Spel.](../images/ui/query-editor/editor.png)
 
 Om uw ontwikkelingstijd te minimaliseren, wordt u geadviseerd om uw vragen met grenzen op het aantal teruggekeerde rijen te ontwikkelen. Bijvoorbeeld `SELECT fields FROM table WHERE conditions LIMIT number_of_rows` . Nadat u hebt geverifieerd dat uw vraag de verwachte output veroorzaakt, verwijder de grenzen en stel de vraag met `CREATE TABLE tablename AS SELECT` in werking om een dataset met de output te produceren.
 
@@ -119,9 +119,9 @@ Met de functie [!UICONTROL Format text] kunt u de query beter leesbaar maken doo
 
 >[!NOTE]
 >
->De functie [!UICONTROL Format text] werkt niet met anonieme blokken. Leren hoe te om één of meerdere SQL verklaringen opeenvolgend te ketenen, zie de [ anonieme blokdocumentatie ](../key-concepts/anonymous-block.md).
+>De functie [!UICONTROL Format text] werkt niet met anonieme blokken. Leren hoe te om één of meerdere SQL verklaringen opeenvolgend te ketenen, zie de [&#x200B; anonieme blokdocumentatie &#x200B;](../key-concepts/anonymous-block.md).
 
-![ de Redacteur van de Vraag met [!UICONTROL Format text] en de SQL benadrukte verklaringen.](../images/ui/query-editor/format-text.png)
+![&#x200B; de Redacteur van de Vraag met [!UICONTROL Format text] en de SQL benadrukte verklaringen.](../images/ui/query-editor/format-text.png)
 
 <!-- ### Undo text {#undo-text}
 
@@ -133,7 +133,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 Selecteer het kopieerpictogram om SQL van de Redacteur van de Vraag aan uw klembord te kopiëren. Deze kopieerfunctie is beschikbaar voor zowel querysjablonen als nieuwe query&#39;s in de Query Editor.
 
-![ de werkruimte van Vragen met een malplaatje van de voorbeeldvraag met het benadrukte exemplaarpictogram.](../images/ui/query-editor/copy-sql.png)
+![&#x200B; de werkruimte van Vragen met een malplaatje van de voorbeeldvraag met het benadrukte exemplaarpictogram.](../images/ui/query-editor/copy-sql.png)
 
 ### Query-details {#query-details}
 
@@ -141,21 +141,21 @@ Als u een query wilt weergeven in de Query-editor, selecteert u een opgeslagen s
 
 >[!NOTE]
 >
->De opties [!UICONTROL View schedule] , [!UICONTROL Add schedule] en [!UICONTROL Delete query] zijn alleen beschikbaar nadat de query als een sjabloon is opgeslagen. De optie [!UICONTROL Add schedule] neemt u rechtstreeks aan de planningsbouwer van de Redacteur van de Vraag. Met de optie [!UICONTROL View schedule] gaat u rechtstreeks naar de planningsinventaris voor die query. Zie de documentatie van vraagprogramma&#39;s leren hoe te [ vraagprogramma&#39;s in UI ](./query-schedules.md#create-schedule) creëren.
+>De opties [!UICONTROL View schedule] , [!UICONTROL Add schedule] en [!UICONTROL Delete query] zijn alleen beschikbaar nadat de query als een sjabloon is opgeslagen. De optie [!UICONTROL Add schedule] neemt u rechtstreeks aan de planningsbouwer van de Redacteur van de Vraag. Met de optie [!UICONTROL View schedule] gaat u rechtstreeks naar de planningsinventaris voor die query. Zie de documentatie van vraagprogramma&#39;s leren hoe te [&#x200B; vraagprogramma&#39;s in UI &#x200B;](./query-schedules.md#create-schedule) creëren.
 
-![ de Redacteur van de Vraag met het benadrukte paneel van vraagdetails.](../images/ui/query-editor/query-details.png)
+![&#x200B; de Redacteur van de Vraag met het benadrukte paneel van vraagdetails.](../images/ui/query-editor/query-details.png)
 
 Van het detailspaneel kunt u een outputdataset direct van UI produceren, schrapt of noemt de getoonde vraag, bekijkt het programma van de vraaglooppas, en voegt de vraag aan een programma toe.
 
-Selecteer **[!UICONTROL Run as CTAS]** om een uitvoergegevensset te genereren. Het dialoogvenster **[!UICONTROL Enter output dataset details]** wordt weergegeven. Voer een naam en beschrijving in en selecteer vervolgens **[!UICONTROL Run as CTAS]** . De nieuwe dataset wordt getoond in **[!UICONTROL Datasets]** doorbladeren tabel. Zie [ de documentatie van meningsdatasets ](../../catalog/datasets/user-guide.md#view-datasets) om meer over beschikbare datasets voor uw organisatie te leren.
+Selecteer **[!UICONTROL Run as CTAS]** om een uitvoergegevensset te genereren. Het dialoogvenster **[!UICONTROL Enter output dataset details]** wordt weergegeven. Voer een naam en beschrijving in en selecteer vervolgens **[!UICONTROL Run as CTAS]** . De nieuwe dataset wordt getoond in **[!UICONTROL Datasets]** doorbladeren tabel. Zie [&#x200B; de documentatie van meningsdatasets &#x200B;](../../catalog/datasets/user-guide.md#view-datasets) om meer over beschikbare datasets voor uw organisatie te leren.
 
 >[!NOTE]
 >
 >De [!UICONTROL Run as CTAS] optie is slechts beschikbaar als de vraag **niet** is gepland.
 
-![ de [!UICONTROL Enter output dataset details] dialoog.](../images/ui/query-editor/output-dataset-details.png)
+![&#x200B; de [!UICONTROL Enter output dataset details] dialoog.](../images/ui/query-editor/output-dataset-details.png)
 
-Nadat u de handeling **[!UICONTROL Run as CTAS]** hebt uitgevoerd, verschijnt er een bevestigingsbericht om u op de hoogte te brengen van de geslaagde actie. Dit popup bericht bevat een verbinding die een geschikte manier verstrekt om aan de werkruimte van vraaglogboeken te navigeren. Zie de [ documentatie van vraaglogboeken ](./query-logs.md) voor meer informatie over vraaglogboeken.
+Nadat u de handeling **[!UICONTROL Run as CTAS]** hebt uitgevoerd, verschijnt er een bevestigingsbericht om u op de hoogte te brengen van de geslaagde actie. Dit popup bericht bevat een verbinding die een geschikte manier verstrekt om aan de werkruimte van vraaglogboeken te navigeren. Zie de [&#x200B; documentatie van vraaglogboeken &#x200B;](./query-logs.md) voor meer informatie over vraaglogboeken.
 
 ### Vragen opslaan {#saving-queries}
 
@@ -163,9 +163,9 @@ De redacteur van de Vraag verstrekt sparen functie die u toestaat om een vraag t
 
 >[!NOTE]
 >
->Vragen die zijn genoemd en opgeslagen in de Query-editor zijn beschikbaar als sjablonen op het tabblad Query-dashboard [!UICONTROL Templates] . Zie de [ malplaatjedocumentatie ](./query-templates.md) voor meer informatie.
+>Vragen die zijn genoemd en opgeslagen in de Query-editor zijn beschikbaar als sjablonen op het tabblad Query-dashboard [!UICONTROL Templates] . Zie de [&#x200B; malplaatjedocumentatie &#x200B;](./query-templates.md) voor meer informatie.
 
-Als u een query opslaat in de Query Editor, verschijnt er een bevestigingsbericht om u op de hoogte te brengen van de geslaagde actie. Dit popup bericht bevat een verbinding die een geschikte manier verstrekt om aan de vragen te navigeren die werkruimte plannen. Zie de [ documentatie van planningsvragen ](./query-schedules.md) leren hoe te om vragen op een douanecadence in werking te stellen.
+Als u een query opslaat in de Query Editor, verschijnt er een bevestigingsbericht om u op de hoogte te brengen van de geslaagde actie. Dit popup bericht bevat een verbinding die een geschikte manier verstrekt om aan de vragen te navigeren die werkruimte plannen. Zie de [&#x200B; documentatie van planningsvragen &#x200B;](./query-schedules.md) leren hoe te om vragen op een douanecadence in werking te stellen.
 
 ### Geplande query&#39;s {#scheduled-queries}
 
@@ -175,18 +175,18 @@ Planningen worden ingesteld in de Query-editor. Wanneer het gebruiken van de Red
 
 >[!NOTE]
 >
->Geplande query&#39;s die mislukken op tien opeenvolgende regels worden automatisch in de status [!UICONTROL Quarantined] geplaatst. Voor een query met deze status is uw interventie vereist voordat verdere uitvoeringen kunnen plaatsvinden. Zie [ quarantined vragen ](./monitor-queries.md#quarantined-queries) documentatie voor meer details.
+>Geplande query&#39;s die mislukken op tien opeenvolgende regels worden automatisch in de status [!UICONTROL Quarantined] geplaatst. Voor een query met deze status is uw interventie vereist voordat verdere uitvoeringen kunnen plaatsvinden. Zie [&#x200B; quarantined vragen &#x200B;](./monitor-queries.md#quarantined-queries) documentatie voor meer details.
 
-Zie de documentatie van vraagprogramma&#39;s leren hoe te [ vraagprogramma&#39;s in UI ](./query-schedules.md) creëren. Alternatief, om te leren hoe te om programma&#39;s toe te voegen gebruikend API, lees de [ geplande gids van het vraageindpunt ](../api/scheduled-queries.md).
+Zie de documentatie van vraagprogramma&#39;s leren hoe te [&#x200B; vraagprogramma&#39;s in UI &#x200B;](./query-schedules.md) creëren. Alternatief, om te leren hoe te om programma&#39;s toe te voegen gebruikend API, lees de [&#x200B; geplande gids van het vraageindpunt &#x200B;](../api/scheduled-queries.md).
 
-Alle geplande query&#39;s worden toegevoegd aan de lijst op het tabblad [!UICONTROL Scheduled queries] . Van die werkruimte kunt u het statuut van alle geplande vraagbanen door UI controleren. Op het tabblad [!UICONTROL Scheduled queries] vindt u belangrijke informatie over de query-uitvoering en kunt u zich abonneren op waarschuwingen. De beschikbare informatie bevat de status, de planningsdetails en foutberichten/codes als een uitvoering is mislukt. Zie het [ Monitor geplande vraagdocument ](./monitor-queries.md) voor meer informatie.
+Alle geplande query&#39;s worden toegevoegd aan de lijst op het tabblad [!UICONTROL Scheduled queries] . Van die werkruimte kunt u het statuut van alle geplande vraagbanen door UI controleren. Op het tabblad [!UICONTROL Scheduled queries] vindt u belangrijke informatie over de query-uitvoering en kunt u zich abonneren op waarschuwingen. De beschikbare informatie bevat de status, de planningsdetails en foutberichten/codes als een uitvoering is mislukt. Zie het [&#x200B; Monitor geplande vraagdocument &#x200B;](./monitor-queries.md) voor meer informatie.
 
 
 ### Hoe te om vorige vragen te vinden {#previous-queries}
 
 Alle vragen die van de Redacteur van de Vraag worden uitgevoerd worden gevangen in de lijst van het Logboek. U kunt de zoekfunctionaliteit op het tabblad **[!UICONTROL Log]** gebruiken om query-uitvoeringen te zoeken. Opgeslagen query&#39;s worden weergegeven op het tabblad **[!UICONTROL Templates]** .
 
-Als een query was gepland, biedt het tabblad [!UICONTROL Scheduled Queries] betere zichtbaarheid via de interface voor die querytaken. Zie de [ vraag controledocumentatie ](./monitor-queries.md) voor meer informatie.
+Als een query was gepland, biedt het tabblad [!UICONTROL Scheduled Queries] betere zichtbaarheid via de interface voor die querytaken. Zie de [&#x200B; vraag controledocumentatie &#x200B;](./monitor-queries.md) voor meer informatie.
 
 >[!NOTE]
 >
@@ -198,9 +198,9 @@ Gebruik objecten browser aan gemakkelijk onderzoek en filterdatasets. De objecte
 
 Als u met de objectbrowser door de database wilt navigeren, voert u een tabelnaam in het zoekveld in of selecteert u **[!UICONTROL Tables]** om de lijst met beschikbare datasets en tabellen uit te vouwen. Wanneer u het zoekveld gebruikt, wordt de lijst met beschikbare tabellen dynamisch gefilterd op basis van uw invoer.
 
-Elke dataset bevat in [ uw geselecteerde gegevensbestand ](#database-dropdown) is vermeld in een navigatieregel links van de Redacteur van de Vraag.
+Elke dataset bevat in [&#x200B; uw geselecteerde gegevensbestand &#x200B;](#database-dropdown) is vermeld in een navigatieregel links van de Redacteur van de Vraag.
 
-![ De de gegevenssetnavigatieregel van de Redacteur van de Vraag met de benadrukte onderzoeksinput.](../images/ui/query-editor/search-tables.png)
+![&#x200B; De de gegevenssetnavigatieregel van de Redacteur van de Vraag met de benadrukte onderzoeksinput.](../images/ui/query-editor/search-tables.png)
 
 Het schema dat in de objectbrowser wordt weergegeven, is een waarneembaar schema. Dit betekent dat u het kunt gebruiken om veranderingen en updates in echt te controleren - tijd aangezien de veranderingen onmiddellijk zichtbaar zijn. De waarneembare schema&#39;s helpen gegevenssynchronisatie verzekeren en helpen bij het zuiveren of analytische taken.
 
@@ -212,13 +212,13 @@ Het systeem verwerkt opeenvolgend vragen, betekenend slechts één vraag kan teg
 
 Naast snelle zoekopdrachten hebt u nu gemakkelijk toegang tot metagegevens voor elke tabel door het pictogram &#39;i&#39; naast de tabelnaam te selecteren. Dit verstrekt u van gedetailleerde informatie over de geselecteerde lijst, die u helpt om geïnformeerde besluiten te nemen wanneer het schrijven van vragen.
 
-![ De de gegevenssetnavigatieregel van de Redacteur van de Vraag met de benadrukte onderzoeksinput.](../images/ui/query-editor/table-metadata.png)
+![&#x200B; De de gegevenssetnavigatieregel van de Redacteur van de Vraag met de benadrukte onderzoeksinput.](../images/ui/query-editor/table-metadata.png)
 
 #### Onderliggende tabellen verkennen
 
 Als u onderliggende of gekoppelde tabellen wilt verkennen, selecteert u de vervolgkeuzepijl naast de tabelnaam in de lijst. Dit breidt de lijst uit om het even welke bijbehorende kindlijsten te tonen, en geeft een duidelijke mening van de gegevensstructuur en staat voor complexere vraagconstructies toe. Het pictogram naast de veldnaam geeft het gegevenstype van de kolom aan, zodat u deze kunt identificeren tijdens complexe query&#39;s.
 
-![ de Redacteur van de Vraag met de gefiltreerde getoonde lijst.](../images/ui/query-editor/child-table-list.png)
+![&#x200B; de Redacteur van de Vraag met de gefiltreerde getoonde lijst.](../images/ui/query-editor/child-table-list.png)
 
 ## Vragen uitvoeren met de Query Editor {#executing-queries}
 
@@ -228,7 +228,7 @@ Om een vraag in de Redacteur van de Vraag in werking te stellen, kunt u SQL in d
 
 De console verstrekt informatie over de status en de verrichting van de Dienst van de Vraag. De console toont de verbindingsstatus aan de Dienst van de Vraag, vraagverrichtingen die, en om het even welke foutenmeldingen worden uitgevoerd die uit die vragen voortvloeien.
 
-![ het lusje van de Console van de console van de Redacteur van de Vraag.](../images/ui/query-editor/console.png)
+![&#x200B; het lusje van de Console van de console van de Redacteur van de Vraag.](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -236,9 +236,9 @@ De console verstrekt informatie over de status en de verrichting van de Dienst v
 
 ## Zoekresultaten {#query-results}
 
-Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad **[!UICONTROL Results]** , naast het tabblad **[!UICONTROL Console]** . Deze mening toont de tabelvormige output van uw vraag, die tussen 50 en 1000 rijen van resultaten afhankelijk van uw gekozen [ resultaattelling ](#result-count) toont. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met `CREATE TABLE tablename AS SELECT` in werking om een dataset met de output te produceren. Zie [ het produceren datasetleerprogramma ](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten in de Redacteur van de Vraag te produceren.
+Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad **[!UICONTROL Results]** , naast het tabblad **[!UICONTROL Console]** . Deze mening toont de tabelvormige output van uw vraag, die tussen 50 en 1000 rijen van resultaten afhankelijk van uw gekozen [&#x200B; resultaattelling &#x200B;](#result-count) toont. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met `CREATE TABLE tablename AS SELECT` in werking om een dataset met de output te produceren. Zie [&#x200B; het produceren datasetleerprogramma &#x200B;](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten in de Redacteur van de Vraag te produceren.
 
-![ het lusje van Resultaten van de console die van de Redacteur van de Vraag de resultaten van een vraaglooppas toont.](../images/ui/query-editor/query-results.png)
+![&#x200B; het lusje van Resultaten van de console die van de Redacteur van de Vraag de resultaten van een vraaglooppas toont.](../images/ui/query-editor/query-results.png)
 
 ### Zoekresultaten downloaden {#download-query-results}
 
@@ -254,7 +254,7 @@ Als u de queryresultaten wilt downloaden, selecteert u **[!UICONTROL Download]**
 >
 >Controleer de zoekresultaten als de knop **[!UICONTROL Download]** ontbreekt. De knop wordt alleen weergegeven wanneer records worden geretourneerd. Als er geen records worden geretourneerd, wordt op het tabblad **[!UICONTROL Result]** het bericht &#39;Geen resultaten&#39; weergegeven en is de downloadoptie uitgeschakeld.
 
-![ het resultatenlusje van de Redacteur van de Vraag met Gemarkeerde Download en dropdown menu.](../images/ui/overview/download-results.png)
+![&#x200B; het resultatenlusje van de Redacteur van de Vraag met Gemarkeerde Download en dropdown menu.](../images/ui/overview/download-results.png)
 
 >[!NOTE]
 >
@@ -270,19 +270,19 @@ Met de voorvertoning op volledig scherm kunt u gemakkelijk brede tabellen scanne
 >
 >De voorvertoning is alleen-lezen en wijzigt uw query of dataset niet.
 
-![ de dialoog van de volledig-schermvoorproef met de geselecteerde resultaten van de Mening.](../images/ui/overview/view-results-fullscreen.png)
+![&#x200B; de dialoog van de volledig-schermvoorproef met de geselecteerde resultaten van de Mening.](../images/ui/overview/view-results-fullscreen.png)
 
 ### Resultaten kopiëren {#copy-results}
 
 Gebruik de verbeterde exemplaareigenschap in de Redacteur van de Vraag om vraagresultaten als komma-gescheiden waarden (CSV) te kopiëren en hen te kleven in spreadsheethulpmiddelen zoals Excel voor directe bevestiging of het melden. Deze functionaliteit verbetert de leesbaarheid, behoudt de opmaak en stroomlijnt workflows zonder te vertrouwen op gereedschappen van derden.
 
-U kunt queryresultaten kopiëren via het tabblad [!UICONTROL Result] of vanuit de voorvertoning van de resultaten op het volledige scherm. Van het **[!UICONTROL Result]** lusje, selecteer het exemplaarpictogram (![ A exemplaarpictogram.](../../images/icons/copy.png)) om alle queryresultaten naar het klembord te kopiëren. Selecteer eerst een rij om het kopieerpictogram in te schakelen. U kunt afzonderlijke rijen selecteren of het selectievakje bovenaan gebruiken om alle rijen tegelijk te selecteren.
+U kunt queryresultaten kopiëren via het tabblad [!UICONTROL Result] of vanuit de voorvertoning van de resultaten op het volledige scherm. Van het **[!UICONTROL Result]** lusje, selecteer het exemplaarpictogram (![&#x200B; A exemplaarpictogram.](../../images/icons/copy.png)) om alle queryresultaten naar het klembord te kopiëren. Selecteer eerst een rij om het kopieerpictogram in te schakelen. U kunt afzonderlijke rijen selecteren of het selectievakje bovenaan gebruiken om alle rijen tegelijk te selecteren.
 
-![ het resultatenlusje van de Redacteur van de Vraag met het benadrukte exemplaarpictogram.](../images/ui/overview/query-editor-copy-icon.png)
+![&#x200B; het resultatenlusje van de Redacteur van de Vraag met het benadrukte exemplaarpictogram.](../images/ui/overview/query-editor-copy-icon.png)
 
-U kunt ook **[!UICONTROL View results]** selecteren om de voorvertoning op volledig scherm te openen. Van dit dialoog, uitgezochte individuele rijen of gebruik checkbox in de upper-left hoek om alle rijen te selecteren, dan het exemplaarpictogram (![ A exemplaarpictogram te selecteren.](../../images/icons/copy.png) ) om de geselecteerde gegevens te kopiëren.
+U kunt ook **[!UICONTROL View results]** selecteren om de voorvertoning op volledig scherm te openen. Van dit dialoog, uitgezochte individuele rijen of gebruik checkbox in de upper-left hoek om alle rijen te selecteren, dan het exemplaarpictogram (![&#x200B; A exemplaarpictogram te selecteren.](../../images/icons/copy.png) ) om de geselecteerde gegevens te kopiëren.
 
-![ de dialoog van de volledig-schermvoorproef met geselecteerde resultaatrijen en het benadrukte exemplaarpictogram.](../images/ui/overview/results-copy.png)
+![&#x200B; de dialoog van de volledig-schermvoorproef met geselecteerde resultaatrijen en het benadrukte exemplaarpictogram.](../images/ui/overview/results-copy.png)
 
 ### Oudere resultatentabel (beperkte beschikbaarheid) {#legacy-results-table}
 
@@ -296,11 +296,11 @@ Het steunt inheemse browser-gebaseerde belemmering selectie, zodat kunt u om het
 
 De gekopieerde gegevens worden gescheiden door tabs, dus wanneer u deze plakt in gereedschappen zoals Excel, blijven de kolommen uitgelijnd en leesbaar. Kolomkoppen worden ook opgenomen wanneer u met slepen en selecteren over de koptekstrij gaat.
 
-![ de vertoning van resultaten in de erfenisredacteur met eenvoudige belemmering-aan-uitgezochte benadrukte resultaten.](../images/ui/query-editor/legacy-results-table.png)
+![&#x200B; de vertoning van resultaten in de erfenisredacteur met eenvoudige belemmering-aan-uitgezochte benadrukte resultaten.](../images/ui/query-editor/legacy-results-table.png)
 
 ## Voorbeelden {#examples}
 
-De Dienst van de vraag verstrekt oplossingen aan een verscheidenheid van gebruiksgevallen over industrieën en bedrijfsscenario&#39;s. Deze voorbeelden tonen de flexibiliteit en het effect van de dienst in het aanpakken van diverse behoeften aan. Om [ te ontdekken hoe de Dienst van de Vraag waarde aan uw specifieke bedrijfsbehoeften ](../use-cases/overview.md) kan brengen, de uitvoerige inzameling van gebruiksgevaldocumenten onderzoeken. Leer hoe te om de Dienst van de Vraag te gebruiken om inzichten en oplossingen voor verbeterde operationele efficiency en bedrijfssucces te verstrekken.
+De Dienst van de vraag verstrekt oplossingen aan een verscheidenheid van gebruiksgevallen over industrieën en bedrijfsscenario&#39;s. Deze voorbeelden tonen de flexibiliteit en het effect van de dienst in het aanpakken van diverse behoeften aan. Om [&#x200B; te ontdekken hoe de Dienst van de Vraag waarde aan uw specifieke bedrijfsbehoeften &#x200B;](../use-cases/overview.md) kan brengen, de uitvoerige inzameling van gebruiksgevaldocumenten onderzoeken. Leer hoe te om de Dienst van de Vraag te gebruiken om inzichten en oplossingen voor verbeterde operationele efficiency en bedrijfssucces te verstrekken.
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 
@@ -316,4 +316,4 @@ In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Pl
 
 ## Volgende stappen
 
-Nu u weet welke eigenschappen in de Redacteur van de Vraag beschikbaar zijn en hoe te om de toepassing te navigeren, kunt u beginnen direct creërend uw eigen vragen in [!DNL Experience Platform]. Voor meer informatie over het runnen van SQL vragen tegen datasets in [!DNL Data Lake], zie de gids op [ lopende vragen ](../best-practices/writing-queries.md).
+Nu u weet welke eigenschappen in de Redacteur van de Vraag beschikbaar zijn en hoe te om de toepassing te navigeren, kunt u beginnen direct creërend uw eigen vragen in [!DNL Experience Platform]. Voor meer informatie over het runnen van SQL vragen tegen datasets in [!DNL Data Lake], zie de gids op [&#x200B; lopende vragen &#x200B;](../best-practices/writing-queries.md).

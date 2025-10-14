@@ -37,7 +37,7 @@ Momenteel ondersteunt het Model Insights Framework de volgende runtimes:
 - [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
-De code van de steekproef voor recepten kan in de [ ervaring-platform-dsw-verwijzing ](https://github.com/adobe/experience-platform-dsw-reference) bewaarplaats onder `recipes` worden gevonden. In deze zelfstudie wordt naar specifieke bestanden in deze opslagplaats verwezen.
+De code van de steekproef voor recepten kan in de [&#x200B; ervaring-platform-dsw-verwijzing &#x200B;](https://github.com/adobe/experience-platform-dsw-reference) bewaarplaats onder `recipes` worden gevonden. In deze zelfstudie wordt naar specifieke bestanden in deze opslagplaats verwezen.
 
 ### Scala {#scala}
 
@@ -115,7 +115,7 @@ Op dit moment zijn er geen standaardevaluatiemetriek voor [!DNL Python] of [!DNL
 
 Voor aangepaste evaluatiemetrieken zijn er twee hoofdmethoden die voor de evaluator moeten worden geïmplementeerd: `split()` en `evaluate()` .
 
-Voor [!DNL Python], zouden deze methodes in [ evaluator.py ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor de `Evaluator` klasse worden bepaald. Volg de {[&#128279;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) verbinding 0} beoordelator.py voor een voorbeeld van `Evaluator`.
+Voor [!DNL Python], zouden deze methodes in [&#x200B; evaluator.py &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor de `Evaluator` klasse worden bepaald. Volg de {[&#128279;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) verbinding 0} beoordelator.py voor een voorbeeld van `Evaluator`.
 
 Voor het maken van evaluatiemetriek in [!DNL Python] moet de gebruiker de methoden `evaluate()` en `split()` implementeren.
 
@@ -153,7 +153,7 @@ Vanaf nu, zijn er geen standaardevaluatiemetriek voor R. Als u dus de evaluatiem
 
 Het belangrijkste doel van `applicationEvaluator` is een JSON-object te retourneren dat sleutelwaardeparen metriek bevat.
 
-Dit [ applicationEvaluator.R ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) kan als voorbeeld worden gebruikt. In dit voorbeeld wordt `applicationEvaluator` gesplitst in drie vertrouwde secties:
+Dit [&#x200B; applicationEvaluator.R &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) kan als voorbeeld worden gebruikt. In dit voorbeeld wordt `applicationEvaluator` gesplitst in drie vertrouwde secties:
 - Gegevens laden
 - Gegevensvoorbereiding/functietechniek
 - Opgeslagen model ophalen en evalueren

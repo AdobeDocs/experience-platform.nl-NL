@@ -20,11 +20,11 @@ De dashboards [[!UICONTROL Profiles]](../guides/profiles.md#default-widgets) , [
 >
 >Alle updates van de dashboards worden uitgevoerd per organisatie en per sandbox.
 
-Meer over douanewidgets leren, te verwijzen gelieve naar de gids voor [ het creëren van douane widgets ](custom-widgets.md).
+Meer over douanewidgets leren, te verwijzen gelieve naar de gids voor [&#x200B; het creëren van douane widgets &#x200B;](custom-widgets.md).
 
 ## Widget-bibliotheek {#widget-library}
 
-Deze handleiding vereist toegang tot de [!UICONTROL Widget library] in Experience Platform. Meer over de widgetbibliotheek leren, en hoe te om tot het binnen UI toegang te hebben, gelieve te beginnen door het [ overzicht van de widgetbibliotheek te lezen ](widget-library.md).
+Deze handleiding vereist toegang tot de [!UICONTROL Widget library] in Experience Platform. Meer over de widgetbibliotheek leren, en hoe te om tot het binnen UI toegang te hebben, gelieve te beginnen door het [&#x200B; overzicht van de widgetbibliotheek te lezen &#x200B;](widget-library.md).
 
 ## Aan de slag met standaardwidgets {#standard-widgets}
 
@@ -38,7 +38,7 @@ De standaardwidgets voor de geselecteerde categorie worden weergegeven. Elke wid
 >
 >Widgets kunnen alleen worden toegevoegd aan het dashboard dat overeenkomt met de geselecteerde categorie. U kunt bijvoorbeeld alleen widgets uit de categorie [!UICONTROL Profiles] toevoegen aan het dashboard van [!UICONTROL Profiles] .
 
-![ de werkruimte van de widgetbibliotheek met het Standaard benadrukte lusje en beschikbare categorieën.](../images/customization/standard-widgets.png)
+![&#x200B; de werkruimte van de widgetbibliotheek met het Standaard benadrukte lusje en beschikbare categorieën.](../images/customization/standard-widgets.png)
 
 ## Standaardwidget toevoegen aan dashboard
 
@@ -50,8 +50,8 @@ Als u een standaardwidget wilt kiezen die u aan het dashboard wilt toevoegen, ma
 
 Selecteer **[!UICONTROL Add widget]** om de geselecteerde widgets aan het dashboard toe te voegen.
 
-![ De widgetbibliotheekwerkruimte met geselecteerde widget en voegt widget toe en annuleert benadrukt.](../images/customization/add-widget.png)
+![&#x200B; De widgetbibliotheekwerkruimte met geselecteerde widget en voegt widget toe en annuleert benadrukt.](../images/customization/add-widget.png)
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, kunt u de widgetbibliotheek openen en gebruiken om standaardwidgets aan een dashboard toe te voegen. Om de grootte en de plaats van widgets te wijzigen die in het dashboard verschijnen, gelieve te verwijzen naar [ wijzigen dashboardgids ](modify.md).
+Nadat u dit document hebt gelezen, kunt u de widgetbibliotheek openen en gebruiken om standaardwidgets aan een dashboard toe te voegen. Om de grootte en de plaats van widgets te wijzigen die in het dashboard verschijnen, gelieve te verwijzen naar [&#x200B; wijzigen dashboardgids &#x200B;](modify.md).

@@ -11,18 +11,18 @@ ht-degree: 0%
 
 # Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Microsoft Dynamics]
 
-Lees deze gids om te leren hoe u uw [!DNL Microsoft Dynamics] bron aan Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe u uw [!DNL Microsoft Dynamics] bron aan Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 De volgende secties bevatten aanvullende informatie die u moet weten om Experience Platform met succes te kunnen verbinden met een Dynamics-account met behulp van de [!DNL Flow Service] API.
 
@@ -49,7 +49,7 @@ De volgende secties bevatten aanvullende informatie die u moet weten om Experien
 
 >[!ENDTABS]
 
-Voor meer informatie bij het worden begonnen, verwijs naar [ dit  [!DNL Dynamics]  document ](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+Voor meer informatie bij het worden begonnen, verwijs naar [&#x200B; dit  [!DNL Dynamics]  document &#x200B;](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ## Een basisverbinding maken
 

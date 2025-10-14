@@ -24,7 +24,7 @@ De waarden die in dit gegevenstype worden vastgelegd, kunnen afwijken van de pro
 | `selectedOptions` | Array van objecten | Bevat aangepaste opties die zijn gekozen voor een configureerbaar product. Elk lijstitem is een object met de volgende eigenschappen:<ul><li>`attribute`: Een naam voor het configureerbare kenmerk.</li><li>`value`: De waarde van het kenmerk.</li></ul> |
 | `SKU` | [!UICONTROL String] | Stock keeping unit (SKU), de unieke identificator voor een product dat door de verkoper wordt gedefinieerd. |
 | `_id` | [!UICONTROL String] | The line item identifier for this product entry. Het product zelf wordt geïdentificeerd door `product`. |
-| `currencyCode` | [!UICONTROL String] | De [ ISO 4217 ](https://www.iso.org/iso-4217-currency-codes.html) alfabetische muntcode die voor het tarief van het product wordt gebruikt. |
+| `currencyCode` | [!UICONTROL String] | De [&#x200B; ISO 4217 &#x200B;](https://www.iso.org/iso-4217-currency-codes.html) alfabetische muntcode die voor het tarief van het product wordt gebruikt. |
 | `discountAmount` | [!UICONTROL Double] | Als het product wordt verdisconteerd, is dit het verschil tussen de normale prijs en de speciale prijs voor het product. |
 | `name` | [!UICONTROL String] | De weergavenaam van het product zoals deze aan de gebruiker wordt getoond voor deze productweergave. |
 | `priceTotal` | [!UICONTROL Double] | De totale prijs voor het item van de productlijn. |
@@ -32,11 +32,11 @@ De waarden die in dit gegevenstype worden vastgelegd, kunnen afwijken van de pro
 | `productAddMethod` | [!UICONTROL String] | De methode die door de bezoeker is gebruikt om een product-item aan de lijst toe te voegen. |
 | `productImageUrl` | [!UICONTROL String] | Een URL voor de hoofdafbeelding van het product. |
 | `quantity` | [!UICONTROL Integer] | Het aantal eenheden dat de klant heeft aangegeven van het product te verlangen. |
-| `unitOfMeasureCode` | [!UICONTROL String] | De standaard [ eenheid van metingscode ](https://ucum.org/ucum) voor het product zoals met betrekking tot het `quantity` bezit. |
+| `unitOfMeasureCode` | [!UICONTROL String] | De standaard [&#x200B; eenheid van metingscode &#x200B;](https://ucum.org/ucum) voor het product zoals met betrekking tot het `quantity` bezit. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype van het postadres:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json)

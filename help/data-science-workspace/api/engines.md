@@ -26,7 +26,7 @@ Motoren vormen de basis voor machinaal leren Modellen in Data Science Workspace.
 
 >[!TIP]
 >
->Als u geen Docker URL hebt, bezoek de [ brondossiers van het Pakket in een recept ](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een gastheer URL van de Docker.
+>Als u geen Docker URL hebt, bezoek de [&#x200B; brondossiers van het Pakket in een recept &#x200B;](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een gastheer URL van de Docker.
 
 Uw Docker-registergegevens zijn vereist voor het uploaden van een pakket Recipe-bestand, inclusief de URL van de Docker-host, gebruikersnaam en wachtwoord. U kunt deze informatie opzoeken door de volgende GET-aanvraag uit te voeren:
 
@@ -260,7 +260,7 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met motoren ophalen
 
-U kunt een lijst van Motoren terugwinnen door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst van Motoren terugwinnen door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [&#x200B; vraagparameters voor activaherwinning &#x200B;](./appendix.md#query).
 
 **API Formaat**
 
@@ -393,7 +393,7 @@ U kunt een bestaande Motor wijzigen en bijwerken door zijn eigenschappen door ee
 
 >[!NOTE]
 >
->Om het succes van dit verzoek van PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET uitvoert om [ de Motor door identiteitskaart ](#retrieve-specific) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET uitvoert om [&#x200B; de Motor door identiteitskaart &#x200B;](#retrieve-specific) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de naam en beschrijving van een engine bij terwijl deze in eerste instantie deze eigenschappen heeft:
 

@@ -41,5 +41,5 @@ ht-degree: 38%
    * [Beleid](api/policies.md)
    * [Marketingacties](api/marketing-actions.md)
    * [Evaluatie](api/evaluation.md)
-* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/policy-service/)
+* [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 * [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)

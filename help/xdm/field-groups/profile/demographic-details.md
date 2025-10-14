@@ -16,15 +16,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [ de naamupdates van de gebiedsgroep ](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [&#x200B; de naamupdates van de gebiedsgroep &#x200B;](../name-updates.md) voor meer informatie.
 
-[!UICONTROL Demographic Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md). De veldgroep biedt een `person` -object op hoofdniveau, waarvan de subvelden informatie over een individuele persoon beschrijven.
+[!UICONTROL Demographic Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../classes/individual-profile.md). De veldgroep biedt een `person` -object op hoofdniveau, waarvan de subvelden informatie over een individuele persoon beschrijven.
 
 ![](../../images/field-groups/demographic-details.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `person.name` | [ naam van de Persoon ](../../data-types/person-name.md) | Een object waarvan de subvelden verschillende elementen van de naam van een persoon beschrijven. |
+| `person.name` | [&#x200B; naam van de Persoon &#x200B;](../../data-types/person-name.md) | Een object waarvan de subvelden verschillende elementen van de naam van een persoon beschrijven. |
 | `person.birthDate` | Datum | De volledige datum waarop een persoon is geboren, in de vorm van een tijdstempel van ISO 8601. |
 | `person.birthDayAndMonth` | String | De dag en de maand waarin een persoon is geboren, in de notatie MM-DD. Dit veld moet worden gebruikt wanneer de dag en de maand van de geboorte van een persoon bekend is, maar niet het jaar. |
 | `person.birthYear` | Geheel | Het jaar waarin een persoon geboren is, inclusief de eeuw (zoals 1989). Dit veld moet worden gebruikt wanneer alleen de leeftijd van de persoon bekend is, niet de volledige geboortedatum. |
@@ -37,5 +37,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-person-details.schema.json)

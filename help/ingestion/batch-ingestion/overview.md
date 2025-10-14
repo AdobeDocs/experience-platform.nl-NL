@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in Experience Platform invoeren. Gegevens die worden ingesloten, kunnen profielgegevens zijn van een vlak bestand (zoals een Parquet-bestand) of gegevens die overeenkomen met een bekend schema in het XDM-register ([!DNL Experience Data Model] ).
 
-De [ Verwijzing van de Opname API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) verstrekt extra informatie over deze API vraag.
+De [&#x200B; Verwijzing van de Opname API van de Partij &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) verstrekt extra informatie over deze API vraag.
 
 Het volgende diagram schetst het proces van partijingestie:
 
@@ -23,7 +23,7 @@ Het volgende diagram schetst het proces van partijingestie:
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van [ de Ingestie API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [&#x200B; de Ingestie API van de Partij &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ### [!DNL Data Ingestion] voorwaarden
 
@@ -48,15 +48,15 @@ De gegevensinvoer in de batch heeft enkele beperkingen:
 
 >[!NOTE]
 >
->Als u een bestand wilt uploaden dat groter is dan 512 MB, moet het bestand in kleinere delen worden verdeeld. De instructies om een groot dossier te uploaden kunnen in de [ grote dossier worden gevonden uploadt sectie van dit document ](#large-file-upload---create-file).
+>Als u een bestand wilt uploaden dat groter is dan 512 MB, moet het bestand in kleinere delen worden verdeeld. De instructies om een groot dossier te uploaden kunnen in de [&#x200B; grote dossier worden gevonden uploadt sectie van dit document &#x200B;](#large-file-upload---create-file).
 
 ### Typen
 
-Bij het opnemen van gegevens is het belangrijk dat u begrijpt hoe [!DNL Experience Data Model] (XDM)-schema&#39;s werken. Voor meer informatie over hoe de types van XDM- gebied aan verschillende formaten in kaart brengen, gelieve de [ de ontwikkelaarsgids van de Registratie van het Schema ](../../xdm/api/getting-started.md) te lezen.
+Bij het opnemen van gegevens is het belangrijk dat u begrijpt hoe [!DNL Experience Data Model] (XDM)-schema&#39;s werken. Voor meer informatie over hoe de types van XDM- gebied aan verschillende formaten in kaart brengen, gelieve de [&#x200B; de ontwikkelaarsgids van de Registratie van het Schema &#x200B;](../../xdm/api/getting-started.md) te lezen.
 
 Er is enige flexibiliteit wanneer het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, mislukt de batch met een `TypeCompatibilityException` .
 
-JSON en CSV hebben bijvoorbeeld geen `date` - of `date-time` -type. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ ISO 8601 geformatteerde koorden ](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15 :05: 59.000-08 :00&quot;) of Unix Tijd die in milliseconden (1531263950 wordt geformatteerd (00) en worden bij inname omgezet in het doel-XDM-type.
+JSON en CSV hebben bijvoorbeeld geen `date` - of `date-time` -type. Dientengevolge, worden deze waarden uitgedrukt gebruikend [&#x200B; ISO 8601 geformatteerde koorden &#x200B;](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15 :05: 59.000-08 :00&quot;) of Unix Tijd die in milliseconden (1531263950 wordt geformatteerd (00) en worden bij inname omgezet in het doel-XDM-type.
 
 In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
 
@@ -146,11 +146,11 @@ U kunt bestanden uploaden met de API voor kleine bestanden uploaden. Als uw best
 
 >[!NOTE]
 >
->De opname van de partij kan worden gebruikt om gegevens in de opslag van het Profiel stapsgewijs bij te werken. Voor meer informatie, zie de sectie op [ het bijwerken van een partij ](#patch-a-batch) in de [ gids van de de partijontwikkelaar van de inname ](api-overview.md).
+>De opname van de partij kan worden gebruikt om gegevens in de opslag van het Profiel stapsgewijs bij te werken. Voor meer informatie, zie de sectie op [&#x200B; het bijwerken van een partij &#x200B;](#patch-a-batch) in de [&#x200B; gids van de de partijontwikkelaar van de inname &#x200B;](api-overview.md).
 
 >[!INFO]
 >
->De voorbeelden hieronder gebruiken het [ Apache 1&rbrace; dossierformaat van het Pakket &lbrace;. ](https://parquet.apache.org/docs/) Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ handleiding van de partijontwikkelaar ](api-overview.md) worden gevonden.
+>De voorbeelden hieronder gebruiken het [&#x200B; Apache 1&rbrace; dossierformaat van het Pakket &lbrace;. &#x200B;](https://parquet.apache.org/docs/) Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [&#x200B; handleiding van de partijontwikkelaar &#x200B;](api-overview.md) worden gevonden.
 
 ### Kleine bestandsupload
 

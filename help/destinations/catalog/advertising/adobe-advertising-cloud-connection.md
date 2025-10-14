@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Met de Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)-bestemming kunt u geverifieerde soorten publiek van de eerste partij delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne met DSP. Meer over de integratie van Real-Time CDP met DSP leren, zie [ Ongeveer het Activeren van Voor authentiek verklaard publiek van de Bronnen van het Publiek ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=nl-NL).
+Met de Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)-bestemming kunt u geverifieerde soorten publiek van de eerste partij delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne met DSP. Meer over de integratie van Real-Time CDP met DSP leren, zie [&#x200B; Ongeveer het Activeren van Voor authentiek verklaard publiek van de Bronnen van het Publiek &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=nl-NL).
 
 >[!IMPORTANT]
 >
@@ -35,13 +35,13 @@ Een mediabedrijf met een DSP account voert een herrichtingscampagne namens zijn 
 
 * DSP instellingen op accountniveau en op campagnereniveau om het delen van publiek met [!DNL LiveRamp RampID] mogelijk te maken. Hiermee worden klantgegevens naar [!DNL RampIDs] vertaald om doelgerichte segmenten te maken. Uw DSP accountteam zal deze configuratie uitvoeren. [!DNL RampID] is beschikbaar via een partnerschap tussen DSP en [!DNL LiveRamp] en u hebt geen eigen [!DNL LiveRamp] -lidmaatschap nodig om dit te gebruiken.
 * De organisatie-id van het Experience Cloud voor de account Experience Platform. U vindt uw id op de pagina met gebruikersprofielen van [!DNL Real-Time CDP] .
-* A [[!DNL Real-Time CDP]  bron in DSP ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) om publiek voor campagneactivering te ontvangen. Uw DSP accountteam zal de bron maken met uw organisatie-id van het Experience Cloud.
-* De bronsleutel voor de DSP rekening of adverteerder, die wordt geproduceerd wanneer de bron van a [[!DNL Real-Time CDP]  in DSP ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) wordt gecreeerd. Uw DSP accountteam zal deze sleutel met u delen. U zult het binnen Experience Platform gebruiken om een bestemmingsverbinding aan de bestemming van Advertising Cloud DSP tot stand te brengen, zoals [ hieronder verklaard ](#authenticate).
+* A [[!DNL Real-Time CDP]  bron in DSP &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) om publiek voor campagneactivering te ontvangen. Uw DSP accountteam zal de bron maken met uw organisatie-id van het Experience Cloud.
+* De bronsleutel voor de DSP rekening of adverteerder, die wordt geproduceerd wanneer de bron van a [[!DNL Real-Time CDP]  in DSP &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) wordt gecreeerd. Uw DSP accountteam zal deze sleutel met u delen. U zult het binnen Experience Platform gebruiken om een bestemmingsverbinding aan de bestemming van Advertising Cloud DSP tot stand te brengen, zoals [&#x200B; hieronder verklaard &#x200B;](#authenticate).
 * Klantgegevens die bestaan uit e-mails of gehashte e-mails.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De Adobe Advertising Cloud DSP-bestemming ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+De Adobe Advertising Cloud DSP-bestemming ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -56,7 +56,7 @@ Raadpleeg de volgende tabel voor informatie over het exporttype en de exportfreq
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail of gehashte e-mail) die in de Advertising Cloud DSP-bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -64,17 +64,17 @@ Raadpleeg de volgende tabel voor informatie over het exporttype en de exportfreq
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) voor Experience Platform nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) voor Experience Platform nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met de bestemming te verbinden, volg de instructies om [ een bestemmingsverbinding ](/help/destinations/ui/connect-destination.md) tot stand te brengen gebruikend het gebruikersinterface van het Experience Platform. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met de bestemming te verbinden, volg de instructies om [&#x200B; een bestemmingsverbinding &#x200B;](/help/destinations/ui/connect-destination.md) tot stand te brengen gebruikend het gebruikersinterface van het Experience Platform. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u verbinding wilt maken met het doel, geeft u de volgende parameter op in de sectie [!UICONTROL Connection type] en selecteert u vervolgens **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Account or Advertiser Key]**: Dit [!UICONTROL Source Key] wordt geproduceerd wanneer a [[!DNL Real-Time CDP]  bron in het DSP gebruikersinterface ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) wordt gecreeerd. Uw DSP accountteam zal deze sleutel met u delen nadat zij de bron hebben gemaakt.
+* **[!UICONTROL Account or Advertiser Key]**: Dit [!UICONTROL Source Key] wordt geproduceerd wanneer a [[!DNL Real-Time CDP]  bron in het DSP gebruikersinterface &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) wordt gecreeerd. Uw DSP accountteam zal deze sleutel met u delen nadat zij de bron hebben gemaakt.
 
-![ het typegebied van de Verbinding ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
+![&#x200B; het typegebied van de Verbinding &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -83,11 +83,11 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 
-![ de detailgebieden van de Bestemming ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+![&#x200B; de detailgebieden van de Bestemming &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -95,10 +95,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ## Gegevens exporteren valideren {#exported-data}
 
@@ -108,8 +108,8 @@ Controleer het volgende om te controleren of het gegevenspubliek met Advertising
 
 * In DSP is het publiek beschikbaar wanneer u een publiek maakt of bewerkt vanuit [!UICONTROL Audiences] > [!UICONTROL All Audiences] of vanuit de sectie [!UICONTROL Audience Targeting] met plaatsingsinstellingen. Het publiek moet zichtbaar zijn op het tabblad [!UICONTROL Adobe Segments] onder de map [!UICONTROL Real-Time CDP] .
 
-![ het publiek van Real-Time CDP in DSP publieksmontages ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![&#x200B; het publiek van Real-Time CDP in DSP publieksmontages &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).

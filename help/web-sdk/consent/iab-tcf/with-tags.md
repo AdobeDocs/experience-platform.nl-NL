@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont u hoe te opstelling een markeringsbezit voor het verzenden van IAB TCF 2.0 toestemmingsinformatie naar Adobe gebruikend de de marktextensie van SDK van het Web van Adobe Experience Platform.
 
-Als u niet wenst om markeringen te gebruiken, te verwijzen gelieve naar de gids op [ gebruikend IAB TCF 2.0 zonder markeringen ](./without-tags.md).
+Als u niet wenst om markeringen te gebruiken, te verwijzen gelieve naar de gids op [&#x200B; gebruikend IAB TCF 2.0 zonder markeringen &#x200B;](./without-tags.md).
 
 ## Aan de slag
 
 Om IAB TCF 2.0 met markeringen en de uitbreiding van SDK van het Web van Experience Platform te gebruiken, moet u een beschikbaar schema XDM en dataset hebben.
 
-Bovendien is voor deze handleiding een goed begrip van Adobe Experience Platform Web SDK vereist. Voor een snelle verfrisser, te lezen gelieve het [ overzicht van SDK van het Web van Adobe Experience Platform ](../../home.md) en [ vaak gestelde vragen ](../../faq.md) documentatie.
+Bovendien is voor deze handleiding een goed begrip van Adobe Experience Platform Web SDK vereist. Voor een snelle verfrisser, te lezen gelieve het [&#x200B; overzicht van SDK van het Web van Adobe Experience Platform &#x200B;](../../home.md) en [&#x200B; vaak gestelde vragen &#x200B;](../../faq.md) documentatie.
 
 ## Standaardtoestemming instellen
 
@@ -62,7 +62,7 @@ Deze aangepaste code doet twee dingen:
 * Waarde: &quot;%IAB TCF toestemming String%&quot;
 * GDPR is van toepassing: &quot;%IAB TCF Consent GDPR%&quot;
 
-![ IAB plaatste de Actie van de Toestemming ](../../assets/consent/iab-tcf/with-launch/iab-action.png)
+![&#x200B; IAB plaatste de Actie van de Toestemming &#x200B;](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-Deze code is identiek aan de vorige aangepaste code, behalve dat zowel `useractioncomplete` - als `tcloaded` -gebeurtenissen worden afgehandeld. De [ vorige douanecode ](#consent-code-1) brengt slechts teweeg wanneer de klant hun voorkeur voor het eerst kiest. Deze code wordt ook geactiveerd wanneer de klant al zijn voorkeuren heeft gekozen. Bijvoorbeeld op de tweede pagina laden.
+Deze code is identiek aan de vorige aangepaste code, behalve dat zowel `useractioncomplete` - als `tcloaded` -gebeurtenissen worden afgehandeld. De [&#x200B; vorige douanecode &#x200B;](#consent-code-1) brengt slechts teweeg wanneer de klant hun voorkeur voor het eerst kiest. Deze code wordt ook geactiveerd wanneer de klant al zijn voorkeuren heeft gekozen. Bijvoorbeeld op de tweede pagina laden.
 
 Voeg een actie &quot;Send Event&quot; toe vanuit de Experience Platform Web SDK-extensie. Kies in het XDM-veld het XDM-gegevenselement dat u in de vorige sectie hebt gemaakt.
 
@@ -121,4 +121,4 @@ Wanneer gebeurtenissen worden geactiveerd na de initiële Experience Event, zijn
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe u IAB TCF 2.0 met de uitbreiding van Experience Platform Web SDK kunt gebruiken, kunt u ook verkiezen om met andere oplossingen van Adobe zoals Adobe Analytics of Adobe Real-Time Customer Data Platform te integreren. Zie het [ IAB overzicht van de Transparantie &amp; van de Toestemming Kader 2.0 ](./overview.md) voor meer informatie.
+Nu u hebt geleerd hoe u IAB TCF 2.0 met de uitbreiding van Experience Platform Web SDK kunt gebruiken, kunt u ook verkiezen om met andere oplossingen van Adobe zoals Adobe Analytics of Adobe Real-Time Customer Data Platform te integreren. Zie het [&#x200B; IAB overzicht van de Transparantie &amp; van de Toestemming Kader 2.0 &#x200B;](./overview.md) voor meer informatie.

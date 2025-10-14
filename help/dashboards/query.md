@@ -19,13 +19,13 @@ Adobe Experience Platform verstrekt belangrijke informatie over het profiel van 
 
 Adobe Experience Platform [!DNL Query Service] ondersteunt marketers bij het verkrijgen van inzicht uit hun gegevens door het gebruik van standaard SQL voor het zoeken naar gegevens in het datumpeer mogelijk te maken. [!DNL Query Service] biedt een gebruikersinterface en een API aan die kunnen worden gebruikt om zich bij om het even welke dataset in het gegevensmeer aan te sluiten en de vraagresultaten als nieuwe datasets voor gebruik in rapportering, machine het leren, of voor opname in het Profiel van de Klant in real time vast te leggen.
 
-Meer over [!DNL Query Service] en zijn rol binnen Experience Platform leren, gelieve te beginnen door het [[!DNL Query Service]  overzicht ](../query-service/home.md) te lezen.
+Meer over [!DNL Query Service] en zijn rol binnen Experience Platform leren, gelieve te beginnen door het [[!DNL Query Service]  overzicht &#x200B;](../query-service/home.md) te lezen.
 
 ## Toegang tot beschikbare gegevenssets
 
 U kunt [!DNL Query Service] gebruiken om onbewerkte datasets voor profiel, publiek, en bestemmingsdashboards te vragen. Om uw beschikbare datasets, in het Experience Platform UI te bekijken, selecteer **Datasets** in de linkernavigatie om het dashboard van Datasets te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
 
-![ Dataset doorbladert dashboard met het lusje van Datasets dat in de linkernavigatie wordt benadrukt.](./images/query/browse-datasets.png)
+![&#x200B; Dataset doorbladert dashboard met het lusje van Datasets dat in de linkernavigatie wordt benadrukt.](./images/query/browse-datasets.png)
 
 ### Door het systeem gegenereerde gegevenssets {#system-generated-datasets}
 
@@ -33,13 +33,13 @@ U kunt [!DNL Query Service] gebruiken om onbewerkte datasets voor profiel, publi
 >
 >Door het systeem gegenereerde gegevenssets worden standaard verborgen. Standaard bevat het tabblad [!UICONTROL Browse] alleen gegevenssets waarin u gegevens hebt ingevoerd.
 
-Om systeem-geproduceerde datasets te bekijken, selecteer het filterpictogram (![ A filterpictogram.](/help/images/icons/filter.png) ) links van de zoekbalk.
+Om systeem-geproduceerde datasets te bekijken, selecteer het filterpictogram (![&#x200B; A filterpictogram.](/help/images/icons/filter.png) ) links van de zoekbalk.
 
-![ de Datasets doorbladeren lusje met het benadrukte filterpictogram.](./images/query/filter-datasets.png)
+![&#x200B; de Datasets doorbladeren lusje met het benadrukte filterpictogram.](./images/query/filter-datasets.png)
 
 Er wordt een zijbalk weergegeven met twee schakelingen, [!UICONTROL Included in Profile] en [!UICONTROL Show system datasets] . Selecteer de knevel voor [!UICONTROL Show system datasets] om systeem-geproduceerde datasets binnen de doorbladerbare lijst van datasets te omvatten.
 
-![ de Datasets doorbladeren lusje met de van de systeemdatasets van de Show benadrukte knevel.](./images/query/show-system-datasets.png)
+![&#x200B; de Datasets doorbladeren lusje met de van de systeemdatasets van de Show benadrukte knevel.](./images/query/show-system-datasets.png)
 
 ### Gegevensbestanden van profielkenmerken {#profile-attribute-datasets}
 
@@ -47,9 +47,9 @@ De dashboardinzichten van het profiel zijn gebonden aan fusiebeleid dat door uw 
 
 De noemende overeenkomst van deze datasets is **profiel-Snapshot-Uitvoer** die door een systeem-geproduceerde, willekeurige alpha numerieke waarde wordt gevolgd. Bijvoorbeeld: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f` .
 
-Om het volledige schema van elke de uitvoerdataset van de profielmomentopname te begrijpen, kunt u voorproef en de datasets [ onderzoeken gebruikend de datasetkijker ](../catalog/datasets/user-guide.md) in Experience Platform UI.
+Om het volledige schema van elke de uitvoerdataset van de profielmomentopname te begrijpen, kunt u voorproef en de datasets [&#x200B; onderzoeken gebruikend de datasetkijker &#x200B;](../catalog/datasets/user-guide.md) in Experience Platform UI.
 
-![ een voorproef van de profiel-Momentopname-Uitvoer dataset.](images/query/profile-attribute.png)
+![&#x200B; een voorproef van de profiel-Momentopname-Uitvoer dataset.](images/query/profile-attribute.png)
 
 #### Gegevenssets van profielkenmerken toewijzen om beleid-id&#39;s samen te voegen
 
@@ -62,7 +62,7 @@ De gegevensset `adwh_dim_merge_policies` bevat de volgende velden:
 * `merge_policy`
 * `dataset_id`
 
-Deze dataset kan worden onderzocht gebruikend de Redacteur UI van de Vraag in Experience Platform. Meer leren over het gebruiken van de Redacteur van de Vraag, verwijs naar de [ gids UI van de Redacteur van de Vraag ](../query-service/ui/user-guide.md).
+Deze dataset kan worden onderzocht gebruikend de Redacteur UI van de Vraag in Experience Platform. Meer leren over het gebruiken van de Redacteur van de Vraag, verwijs naar de [&#x200B; gids UI van de Redacteur van de Vraag &#x200B;](../query-service/ui/user-guide.md).
 
 ### Gegevensset met metagegevens van publiek
 
@@ -70,7 +70,7 @@ Er is een dataset van publieksmeta-gegevens beschikbaar in het gegevensmeer die 
 
 De noemende overeenkomst van deze dataset is **Segmentdefinition-momentopname-Uitvoer** die door een alpha numerieke waarde wordt gevolgd. Bijvoorbeeld: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets [ onderzoeken gebruikend de datasetkijker ](../catalog/datasets/user-guide.md) in Experience Platform UI.
+Om het volledige schema van elke de uitvoerdataset van de segmentdefinitiemomentopname te begrijpen, kunt u voorproef en de datasets [&#x200B; onderzoeken gebruikend de datasetkijker &#x200B;](../catalog/datasets/user-guide.md) in Experience Platform UI.
 
 ### Gegevensset met doelmetagegevens
 
@@ -78,15 +78,15 @@ De meta-gegevens voor elk van de geactiveerde bestemmingen van uw organisatie is
 
 De noemende overeenkomst van deze dataset is **DIM_Destination**.
 
-Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorproef en de dataset [ onderzoeken gebruikend de datasetkijker ](../catalog/datasets/user-guide.md) in Experience Platform UI.
+Om het volledige schema van de DIM bestemmingsdataset te begrijpen, kunt u voorproef en de dataset [&#x200B; onderzoeken gebruikend de datasetkijker &#x200B;](../catalog/datasets/user-guide.md) in Experience Platform UI.
 
-![ een voorproef van de dataset DIM_Destination.](images/query/destinations-metadata.png)
+![&#x200B; een voorproef van de dataset DIM_Destination.](images/query/destinations-metadata.png)
 
 ## CDP-inzichtsrapporten (Customer Data Platform)
 
 De eigenschap van de Modellen van Gegevens van Gegevens CDP van Inzichten stelt SQL bloot die de inzichten voor diverse profiel, bestemming en segmentatiewidgets drijft. U kunt deze SQl vraagmalplaatjes aanpassen om CDP- rapporten voor uw marketing en KPI gebruiksgevallen tot stand te brengen.
 
-CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met publiek en bestemmingen. Zie de CDP documentatie van het Model van Gegevens van Inzichten voor gedetailleerde informatie over hoe te [ de Modellen van Gegevens CDP van Inzichten op uw bijzondere KPI gebruiksgevallen ](./data-models/cdp-insights-data-model-b2c.md) toepassen.
+CDP het melden verstrekt inzichten in uw profielgegevens en zijn verhouding met publiek en bestemmingen. Zie de CDP documentatie van het Model van Gegevens van Inzichten voor gedetailleerde informatie over hoe te [&#x200B; de Modellen van Gegevens CDP van Inzichten op uw bijzondere KPI gebruiksgevallen &#x200B;](./data-models/cdp-insights-data-model-b2c.md) toepassen.
 
 ## Voorbeeldquery
 

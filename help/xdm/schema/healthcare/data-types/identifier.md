@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!UICONTROL Identifier] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een herkenningsteken voorgenomen voor berekening verstrekt. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ het gegevenstype van het Herkenningsteken structuur ](../../../images/healthcare/data-types/identifier.png)
+![&#x200B; het gegevenstype van het Herkenningsteken structuur &#x200B;](../../../images/healthcare/data-types/identifier.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -29,5 +29,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.schema.json)

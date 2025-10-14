@@ -22,4 +22,4 @@ In wezen vertelt een controlelogboek wie welke actie heeft uitgevoerd, en wannee
 
 Wanneer de eigenschap voor uw organisatie wordt toegelaten, worden de controlelogboeken automatisch verzameld aangezien de activiteit voorkomt. U te hoeven niet om logboekinzameling manueel toe te laten.
 
-Om controlelogboeken te bekijken en uit te voeren, moet u de de toegangsbeheertoestemming van de Toegang van Logboeken van de Controle in de Console van de Adobe hebben verleend. Leren hoe te om individuele toestemmingen voor de eigenschappen van AI van de Klant te beheren, gelieve te verwijzen naar de [ documentatie van de toegangscontrole ](../cai-data-governance/access-controls.md).
+Om controlelogboeken te bekijken en uit te voeren, moet u de de toegangsbeheertoestemming van de Toegang van Logboeken van de Controle in de Console van de Adobe hebben verleend. Leren hoe te om individuele toestemmingen voor de eigenschappen van AI van de Klant te beheren, gelieve te verwijzen naar de [&#x200B; documentatie van de toegangscontrole &#x200B;](../cai-data-governance/access-controls.md).

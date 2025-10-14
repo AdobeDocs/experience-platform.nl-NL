@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Een XDM-veld in de API verwijderen
 
-In het Model van Gegevens van de Ervaring (XDM), kunt u een gebied binnen een schema of douanemiddel verwerpen door de [ Registratie API van het Schema te gebruiken ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Als u een veld verwijdert, wordt dit verborgen in downstreamgebruikersinterface&#39;s zoals de [!UICONTROL Profiles] -werkruimte en -Customer Journey Analytics, maar anders is het een vaste wijziging die geen negatieve invloed heeft op bestaande gegevensstromen.
+In het Model van Gegevens van de Ervaring (XDM), kunt u een gebied binnen een schema of douanemiddel verwerpen door de [&#x200B; Registratie API van het Schema te gebruiken &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Als u een veld verwijdert, wordt dit verborgen in downstreamgebruikersinterface&#39;s zoals de [!UICONTROL Profiles] -werkruimte en -Customer Journey Analytics, maar anders is het een vaste wijziging die geen negatieve invloed heeft op bestaande gegevensstromen.
 
-In dit document wordt beschreven hoe velden voor verschillende XDM-bronnen moeten worden vervangen. Voor stappen bij het afschilderen van een XDM gebied gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform, zie het leerprogramma op [ afschilderend een XDM gebied in UI ](./field-deprecation-ui.md).
+In dit document wordt beschreven hoe velden voor verschillende XDM-bronnen moeten worden vervangen. Voor stappen bij het afschilderen van een XDM gebied gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform, zie het leerprogramma op [&#x200B; afschilderend een XDM gebied in UI &#x200B;](./field-deprecation-ui.md).
 
 ## Aan de slag
 
-Deze zelfstudie vereist het maken van aanroepen naar de Schemaregistratie-API. Gelieve te herzien de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om deze API vraag te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header `Accept` en de mogelijke waarden ervan).
+Deze zelfstudie vereist het maken van aanroepen naar de Schemaregistratie-API. Gelieve te herzien de [&#x200B; ontwikkelaarsgids &#x200B;](../api/getting-started.md) voor belangrijke informatie die u moet kennen om deze API vraag te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header `Accept` en de mogelijke waarden ervan).
 
 ## Een aangepast veld verwijderen {#custom}
 
@@ -27,9 +27,9 @@ Als u een veld in een aangepaste klasse, veldgroep of gegevenstype wilt vervange
 >
 >Raadpleeg de volgende documentatie voor algemene informatie over het bijwerken van aangepaste bronnen in XDM:
 >
->* [ werk een klasse ](../api/classes.md#patch) bij
->* [ werk een gebiedsgroep ](../api/field-groups.md#patch) bij
->* [ werk een gegevenstype ](../api/data-types.md#patch) bij
+>* [&#x200B; werk een klasse &#x200B;](../api/classes.md#patch) bij
+>* [&#x200B; werk een gebiedsgroep &#x200B;](../api/field-groups.md#patch) bij
+>* [&#x200B; werk een gegevenstype &#x200B;](../api/data-types.md#patch) bij
 
 Met de API-voorbeeldaanroep hieronder wordt een veld in een aangepast gegevenstype vervangen.
 
@@ -265,4 +265,4 @@ Wanneer de reactie met succes is uitgevoerd, worden de details van het schema ge
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u XDM-velden kunt vervangen met de API voor schemaregistratie. Voor meer informatie bij het vormen van gebieden voor douanemiddelen, zie de gids bij [ het bepalen van gebieden XDM in API ](./custom-fields-api.md). Voor meer informatie bij het beheren van beschrijvers, zie de [ gids van het beschrijvingseindpunt ](../api/descriptors.md).
+In dit document wordt beschreven hoe u XDM-velden kunt vervangen met de API voor schemaregistratie. Voor meer informatie bij het vormen van gebieden voor douanemiddelen, zie de gids bij [&#x200B; het bepalen van gebieden XDM in API &#x200B;](./custom-fields-api.md). Voor meer informatie bij het beheren van beschrijvers, zie de [&#x200B; gids van het beschrijvingseindpunt &#x200B;](../api/descriptors.md).

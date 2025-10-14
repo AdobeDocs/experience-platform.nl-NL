@@ -14,9 +14,9 @@ Krijg waardevolle inzichten om je doelgroepsegmentatie- en targetingstrategieën
 
 ## Soorten publiek filteren {#filter-audiences}
 
-Om specifieke doelgroepen voor overlappende analyse te filtreren, selecteer het filterpictogram (![ het filterpictogram.](../../../images/icons/filter-icon-white.png) ) om het dialoogvenster [!UICONTROL Filter] te openen. Van hieruit kun je doelgroepen toevoegen aan of verwijderen uit de overlap sjabloon om je analyse te verfijnen.
+Om specifieke doelgroepen voor overlappende analyse te filtreren, selecteer het filterpictogram (![&#x200B; het filterpictogram.](../../../images/icons/filter-icon-white.png) ) om het dialoogvenster [!UICONTROL Filter] te openen. Van hieruit kun je doelgroepen toevoegen aan of verwijderen uit de overlap sjabloon om je analyse te verfijnen.
 
-![ de Geavanceerde benadrukte mening van de Overlappingen van het publiek met het filterpictogram.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-filter-icon.png)
+![&#x200B; de Geavanceerde benadrukte mening van de Overlappingen van het publiek met het filterpictogram.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-filter-icon.png)
 
 Het dialoogvenster [!UICONTROL Filters] wordt weergegeven. Als u een publiek wilt kiezen voor overlappende analyse, selecteert u een doelgroepnaam in het vervolgkeuzemenu **[!UICONTROL Audience]** . De naam van een publiek dat u toevoegt, wordt weergegeven met een tag onder de vervolgkeuzelijst. Als u de X hebt toegevoegd, kunt u deze met hun naam verwijderen. Selecteer **[!UICONTROL Clear all]** als u alle toegepaste filters wilt verwijderen.
 
@@ -24,7 +24,7 @@ Het dialoogvenster [!UICONTROL Filters] wordt weergegeven. Als u een publiek wil
 
 Nadat een filter is toegepast ([!UICONTROL Amoxicilin Segment] in het screenshot-voorbeeld), worden de weergegeven doelgroepgegevens verkleind. Eventuele extra soorten publiek die u wilt toevoegen, worden weergegeven naast de [!UICONTROL Filtering by] -tag boven het [!UICONTROL Advanced Audience overlaps] -diagram.
 
-![ het Geavanceerde Gemengde dashboard van het Publiek met het Filtreren door Gemarkeerd Segment Amoxicilin.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-applied-filters.png)
+![&#x200B; het Geavanceerde Gemengde dashboard van het Publiek met het Filtreren door Gemarkeerd Segment Amoxicilin.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-applied-filters.png)
 
 ## Geavanceerde tabel voor doelgroepen {#advanced-audience-overlaps-table}
 
@@ -44,13 +44,13 @@ In de hoofdsectie van het dashboard wordt de tabel [!UICONTROL Advanced Audience
 
 Nadat u de doelgroepen hebt gefilterd en geanalyseerd, kunt u de gegevens exporteren voor verdere offline analyse- of rapportagedoeleinden. Als u uw inzichten wilt exporteren, selecteert u **[!UICONTROL Export]** rechtsboven in de tabel. Het dialoogvenster PDF wordt weergegeven, waarin u de gegevens kunt opslaan als een PDF of kunt afdrukken.
 
-![ de Geavanceerde benadrukte mening van de Overlappingen van het Publiek.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-export.png)
+![&#x200B; de Geavanceerde benadrukte mening van de Overlappingen van het Publiek.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-export.png)
 
 Selecteer **[!UICONTROL Templates]** om terug te keren naar het [!UICONTROL Template] -overzicht.
 
-![ de Geavanceerde benadrukte mening van de Overlappingen van het Publiek met Malplaatjes.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-navigation.png)
+![&#x200B; de Geavanceerde benadrukte mening van de Overlappingen van het Publiek met Malplaatjes.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-navigation.png)
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, hebt u geleerd hoe u de snijpunten van doelgroepen kunt analyseren en datagestuurde beslissingen kunt nemen met behulp van het **[!UICONTROL Advanced Audience Overlaps]** -dashboard. Om je doelgroepsegmentatie- en targetingstrategieën verder te optimaliseren, verken je andere Data Distiller-sjablonen die waardevolle inzichten bieden. Verwijs naar de [ Trends van het Publiek ](./trends.md), [ Vergelijking van het Publiek ](./comparison.md), en [ de Overlappingen van de Identiteit van het Publiek ](./identity-overlaps.md) UI gidsen om uw betrokkenheid en segmentatieinspanningen van het publiek verder te verbeteren.
+Nadat u dit document hebt gelezen, hebt u geleerd hoe u de snijpunten van doelgroepen kunt analyseren en datagestuurde beslissingen kunt nemen met behulp van het **[!UICONTROL Advanced Audience Overlaps]** -dashboard. Om je doelgroepsegmentatie- en targetingstrategieën verder te optimaliseren, verken je andere Data Distiller-sjablonen die waardevolle inzichten bieden. Verwijs naar de [&#x200B; Trends van het Publiek &#x200B;](./trends.md), [&#x200B; Vergelijking van het Publiek &#x200B;](./comparison.md), en [&#x200B; de Overlappingen van de Identiteit van het Publiek &#x200B;](./identity-overlaps.md) UI gidsen om uw betrokkenheid en segmentatieinspanningen van het publiek verder te verbeteren.
 

@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Identiteiten synchroniseren tussen Audience Manager en Experience Platform
 
-Adobe Experience Platform Web SDK steunt de capaciteit om klant IDs en hun authentificatiestatus via het [ te verklaren sendEvent ](./overview.md#syncing-identities) bevel.
+Adobe Experience Platform Web SDK steunt de capaciteit om klant IDs en hun authentificatiestatus via het [&#x200B; te verklaren sendEvent &#x200B;](./overview.md#syncing-identities) bevel.
 
-Kies uw namespaces van de [ Namespaces van de Dienst van de Identiteit ](../../identity/../identity-service/features/namespaces.md) om op de context te wijzen waarop een identiteit betrekking heeft, door de waarden in de kolom van het Symbool van de Identiteit te gebruiken:
+Kies uw namespaces van de [&#x200B; Namespaces van de Dienst van de Identiteit &#x200B;](../../identity/../identity-service/features/namespaces.md) om op de context te wijzen waarop een identiteit betrekking heeft, door de waarden in de kolom van het Symbool van de Identiteit te gebruiken:
 
-![ Mening van Namespaces UI ](../assets/identity/edge_namespaceUI_identity-symbol.png)
+![&#x200B; Mening van Namespaces UI &#x200B;](../assets/identity/edge_namespaceUI_identity-symbol.png)
 
 Als klant van Audience Manager, al uw bestaande Gegevensbronnen die het Type van identiteitskaart gebruiken: Het dwars-Apparaat heeft automatisch een overeenkomstige Namespace van de Identiteit. Als u de overeenkomende naamruimte voor uw Audience Manager Data Source wilt zoeken, meldt u zich aan bij Adobe Experience Platform en navigeert u naar de sectie Identiteiten.
 

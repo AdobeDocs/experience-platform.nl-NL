@@ -54,7 +54,7 @@ De volgende validaties worden uitgevoerd voor streaming invoer:
 | Gegevensset | Zorgt ervoor dat de dataset wordt gespecificeerd, toegelaten en niet is verwijderd. |
 | Koptekst | Zorgt ervoor dat de kopbal wordt gespecificeerd en geldig is. |
 
-Meer informatie over hoe [!DNL Experience Platform] controleert en gegevens bevestigt in de [ documentatie van de controlegegevensstromen kan worden gevonden ](./monitor-data-ingestion.md).
+Meer informatie over hoe [!DNL Experience Platform] controleert en gegevens bevestigt in de [&#x200B; documentatie van de controlegegevensstromen kan worden gevonden &#x200B;](./monitor-data-ingestion.md).
 
 ## Validatie van identiteitswaarden
 
@@ -65,4 +65,4 @@ In de volgende tabel worden de bestaande regels beschreven die u moet volgen om 
 | ECID | <ul><li>De identiteitswaarde van een ECID moet precies 38 tekens zijn.</li><li>De identiteitswaarde van een ECID mag alleen uit getallen bestaan.</li></ul> | <ul><li>Als de identiteitswaarde van ECID niet precies 38 tekens is, wordt de record overgeslagen.</li><li>Als de identiteitswaarde van ECID niet-numerieke tekens bevat, wordt de record overgeslagen.</li></ul> |
 | Niet-ECID | De identiteitswaarde mag niet langer zijn dan 1024 tekens. | Als de identiteitswaarde meer dan 1024 tekens bevat, wordt de record overgeslagen. |
 
-Voor meer informatie over [!DNL Identity Service] guardrails, zie het [[!DNL Identity Service]  guardrails overzicht ](../../identity-service/guardrails.md).
+Voor meer informatie over [!DNL Identity Service] guardrails, zie het [[!DNL Identity Service]  guardrails overzicht &#x200B;](../../identity-service/guardrails.md).

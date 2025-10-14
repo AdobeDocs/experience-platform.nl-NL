@@ -149,7 +149,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van looppas voor
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` gebruiken om [ een looppas voor een gespecificeerde geplande vraag ](#immediately-stop-a-run-for-a-specific-scheduled-query) tegen te houden.
+>U kunt de waarde van `_links.cancel` gebruiken om [&#x200B; een looppas voor een gespecificeerde geplande vraag &#x200B;](#immediately-stop-a-run-for-a-specific-scheduled-query) tegen te houden.
 
 ### Breng onmiddellijk een looppas voor een specifieke geplande vraag teweeg
 

@@ -13,21 +13,21 @@ ht-degree: 0%
 
 # Door de klant beheerde sleutels voor Azure instellen en configureren met behulp van de API
 
-In dit document worden de Azure-specifieke instructies besproken voor het inschakelen van Customer Managed Keys (CMK) in Adobe Experience Platform met behulp van de API. Voor instructies op hoe te om dit proces te voltooien gebruikend UI voor de ver*schonken instanties van Experience Platform, verwijs naar het [ UI CMK opstellingsdocument ](./ui-set-up.md).
+In dit document worden de Azure-specifieke instructies besproken voor het inschakelen van Customer Managed Keys (CMK) in Adobe Experience Platform met behulp van de API. Voor instructies op hoe te om dit proces te voltooien gebruikend UI voor de ver*schonken instanties van Experience Platform, verwijs naar het [&#x200B; UI CMK opstellingsdocument &#x200B;](./ui-set-up.md).
 
-Voor AWS-specifieke instructies, verwijs naar de [ opstellingsgids van AWS ](../aws/ui-set-up.md).
+Voor AWS-specifieke instructies, verwijs naar de [&#x200B; opstellingsgids van AWS &#x200B;](../aws/ui-set-up.md).
 
 ## Vereisten
 
 Als u de sectie [!UICONTROL Encryption] in Adobe Experience Platform wilt weergeven en bezoeken, moet u een rol hebben gemaakt en [!UICONTROL Manage Customer Managed Key] toestemming aan die rol hebben toegewezen. Elke gebruiker met de machtiging [!UICONTROL Manage Customer Managed Key] kan CMK inschakelen voor zijn of haar organisatie.
 
-Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [ vormen toestemmingendocumentatie ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=nl-NL).
+Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [&#x200B; vormen toestemmingendocumentatie &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=nl-NL).
 
-Om CMK voor ver*halen-ontvangen instanties van Experience Platform toe te laten, moet uw [[!DNL Azure]  Zeer belangrijke vault ](./azure-key-vault-config.md) met de volgende montages worden gevormd:
+Om CMK voor ver*halen-ontvangen instanties van Experience Platform toe te laten, moet uw [[!DNL Azure]  Zeer belangrijke vault &#x200B;](./azure-key-vault-config.md) met de volgende montages worden gevormd:
 
-* [ laat purgebescherming ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection) toe
-* [ laat zachte schrapping ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) toe
-* [ vorm toegang gebruikend  [!DNL Azure]  op rol-gebaseerde toegangscontrole ](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [&#x200B; laat purgebescherming &#x200B;](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection) toe
+* [&#x200B; laat zachte schrapping &#x200B;](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) toe
+* [&#x200B; vorm toegang gebruikend  [!DNL Azure]  op rol-gebaseerde toegangscontrole &#x200B;](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 * [Vorm een  [!DNL Azure]  Zeer belangrijke vault](./azure-key-vault-config.md)
 
 ## De CMK-toepassing instellen {#register-app}
@@ -36,7 +36,7 @@ Nadat u uw sleutelkluis hebt gevormd, is de volgende stap voor de toepassing te 
 
 ### Aan de slag
 
-Als u de CMK-toepassing registreert, moet u oproepen naar Experience Platform API&#39;s doen. Voor details op hoe te om de vereiste authentificatiekopballen te verzamelen om deze vraag te maken, zie de [ Experience Platform API authentificatiegids ](../../../api-authentication.md).
+Als u de CMK-toepassing registreert, moet u oproepen naar Experience Platform API&#39;s doen. Voor details op hoe te om de vereiste authentificatiekopballen te verzamelen om deze vraag te maken, zie de [&#x200B; Experience Platform API authentificatiegids &#x200B;](../../../api-authentication.md).
 
 Hoewel de verificatiegids instructies bevat over het genereren van uw eigen unieke waarde voor de vereiste `x-api-key` aanvraagheader, gebruiken alle API-bewerkingen in deze handleiding in plaats daarvan de statische waarde `acp_provisioning` . U moet echter wel uw eigen waarden opgeven voor `{ACCESS_TOKEN}` en `{ORG_ID}` .
 
@@ -72,13 +72,13 @@ Een geslaagde reactie retourneert een eigenschap `applicationRedirectUrl` die de
 
 Kopieer en plak het `applicationRedirectUrl` -adres in een browser om een verificatiedialoogvenster te openen. Selecteer **[!DNL Accept]** om de principal van de CMK-toepassingsservice aan de [!DNL Azure] -gebruiker toe te voegen.
 
-![ de dialoog van het de toestemmingsverzoek van Microsoft met [!UICONTROL Accept] benadrukt.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![&#x200B; de dialoog van het de toestemmingsverzoek van Microsoft met [!UICONTROL Accept] benadrukt.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 ### De CMK-toepassing toewijzen aan een rol {#assign-to-role}
 
 Navigeer na het voltooien van het verificatieproces terug naar de [!DNL Azure] Key Vault en selecteer **[!DNL Access control]** in de linkernavigatie. Selecteer hier **[!DNL Add]** gevolgd door **[!DNL Add role assignment]** .
 
-![ Microsoft Azure dashboard met [!DNL Add] en [!DNL Add role assignment] benadrukte.](../../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![&#x200B; Microsoft Azure dashboard met [!DNL Add] en [!DNL Add role assignment] benadrukte.](../../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 In het volgende scherm wordt u gevraagd een rol voor deze toewijzing te kiezen. Selecteer **[!DNL Key Vault Crypto Service Encryption User]** voordat u **[!DNL Next]** selecteert om door te gaan.
 
@@ -86,7 +86,7 @@ In het volgende scherm wordt u gevraagd een rol voor deze toewijzing te kiezen. 
 >
 >Als u de laag [!DNL Managed-HSM Key Vault] hebt, moet u de gebruikersrol **[!DNL Managed HSM Crypto Service Encryption User]** selecteren.
 
-![ Microsoft Azure dashboard met [!DNL Key Vault Crypto Service Encryption User] benadrukt.](../../../images/governance-privacy-security/customer-managed-keys/select-role.png)
+![&#x200B; Microsoft Azure dashboard met [!DNL Key Vault Crypto Service Encryption User] benadrukt.](../../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 Kies in het volgende scherm **[!DNL Select members]** om een dialoogvenster te openen in de rechtertrack. Gebruik de zoekbalk om de serviceprincipal voor de CMK-toepassing te zoeken en selecteer deze in de lijst. Selecteer **[!DNL Save]** als u klaar bent.
 
@@ -98,7 +98,7 @@ Kies in het volgende scherm **[!DNL Select members]** om een dialoogvenster te o
 
 Nadat u de CMK-toepassing op [!DNL Azure] hebt geïnstalleerd, kunt u de id van de coderingssleutel naar Adobe sturen. Selecteer **[!DNL Keys]** in de linkernavigatie, gevolgd door de naam van de sleutel u wilt verzenden.
 
-![ Microsoft Azure dashboard met het [!DNL Keys] voorwerp en de zeer belangrijke benadrukte naam.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
+![&#x200B; Microsoft Azure dashboard met het [!DNL Keys] voorwerp en de zeer belangrijke benadrukte naam.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Selecteer de meest recente versie van de sleutel en de detailpagina wordt weergegeven. Van hier, kunt u naar keuze de toegelaten verrichtingen voor de sleutel vormen.
 
@@ -108,7 +108,7 @@ Selecteer de meest recente versie van de sleutel en de detailpagina wordt weerge
 
 In het veld **[!UICONTROL Key Identifier]** wordt de URI-id voor de sleutel weergegeven. Kopieer deze URI-waarde voor gebruik in de volgende stap.
 
-![ Microsoft Azure Belangrijkste details van het dashboard met [!DNL Permitted operations] en de benadrukt secties van de exemplaarsleutel URL.](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+![&#x200B; Microsoft Azure Belangrijkste details van het dashboard met [!DNL Permitted operations] en de benadrukt secties van de exemplaarsleutel URL.](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
 Nadat u de sleutelvault-URI hebt verkregen, kunt u deze met een POST-aanvraag naar het CMK-configuratiepunt verzenden.
 
@@ -139,10 +139,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `name` | Een naam voor de configuratie. Zorg ervoor dat u deze waarde herinnert aangezien het wordt vereist om de status van de configuratie bij a [ later stap ](#check-status) te controleren. De waarde is hoofdlettergevoelig. |
+| `name` | Een naam voor de configuratie. Zorg ervoor dat u deze waarde herinnert aangezien het wordt vereist om de status van de configuratie bij a [&#x200B; later stap &#x200B;](#check-status) te controleren. De waarde is hoofdlettergevoelig. |
 | `type` | Het configuratietype. Moet worden ingesteld op `BYOK_CONFIG` . |
 | `imsOrgId` | Uw organisatie-id. Deze id moet dezelfde waarde hebben als de header `x-gw-ims-org-id` . |
-| `configData` | This property contains the following details about the configuration:<ul><li>`providerType` : moet worden ingesteld op `AZURE_KEYVAULT` .</li><li>`keyVaultKeyIdentifier`: De belangrijkste kluis URI die u [ vroeger ](#send-to-adobe) kopieerde.</li></ul> |
+| `configData` | This property contains the following details about the configuration:<ul><li>`providerType` : moet worden ingesteld op `AZURE_KEYVAULT` .</li><li>`keyVaultKeyIdentifier`: De belangrijkste kluis URI die u [&#x200B; vroeger &#x200B;](#send-to-adobe) kopieerde.</li></ul> |
 
 +++
 
@@ -230,4 +230,4 @@ Het kenmerk `status` kan een van vier waarden hebben met de volgende betekenisse
 
 Door de bovenstaande stappen te voltooien, hebt u CMK voor uw organisatie ingeschakeld. Voor Experience Platform-instanties die in Azure worden gehost, worden gegevens die in de primaire gegevensopslag worden ingevoerd, nu gecodeerd en gedecodeerd met de sleutel(s) in de [!DNL Azure] Key Vault.
 
-Meer over gegevensencryptie in Adobe Experience Platform leren, zie de [ encryptiedocumentatie ](../../encryption.md).
+Meer over gegevensencryptie in Adobe Experience Platform leren, zie de [&#x200B; encryptiedocumentatie &#x200B;](../../encryption.md).

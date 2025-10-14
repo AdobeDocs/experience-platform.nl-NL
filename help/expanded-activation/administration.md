@@ -19,7 +19,7 @@ Op deze pagina wordt uitgelegd hoe u een gebruikersaccount in de Admin Console m
 
 Voordat u [!DNL Audience Manager Expanded Activation] kunt gebruiken, moet u een gebruikersaccount maken.
 
-Om een gebruikersrekening voor [!DNL Expanded Activation] tot stand te brengen, volg de instructies op het leiden van gebruikers van de [ Adobe Admin Console ](https://helpx.adobe.com/nl/enterprise/using/manage-users-individually.html) documentatie.
+Om een gebruikersrekening voor [!DNL Expanded Activation] tot stand te brengen, volg de instructies op het leiden van gebruikers van de [&#x200B; Adobe Admin Console &#x200B;](https://helpx.adobe.com/nl/enterprise/using/manage-users-individually.html) documentatie.
 
 ## Gebruikers toevoegen aan machtigingsrol {#permissions}
 
@@ -27,15 +27,15 @@ Nadat u een gebruikersaccount hebt gemaakt, moet u deze toevoegen aan de machtig
 
 Ga naar **[!UICONTROL Administration]** -> **[!UICONTROL Permissions]** -> **[!UICONTROL Roles]** en selecteer de **[!UICONTROL Expanded Activation Default Role]** .
 
-![ Uitgebreide het gebruikersinterfacebeeld dat van de Activering de pagina van Rollen toont.](assets/expanded-activation-role.png)
+![&#x200B; Uitgebreide het gebruikersinterfacebeeld dat van de Activering de pagina van Rollen toont.](assets/expanded-activation-role.png)
 
 Ga naar de tab **[!UICONTROL Users]** en selecteer **[!UICONTROL Add Users]** .
 
-![ Uitgebreide het gebruikersinterfacebeeld dat van de Activering de pagina van Gebruikers toont.](assets/add-users.png)
+![&#x200B; Uitgebreide het gebruikersinterfacebeeld dat van de Activering de pagina van Gebruikers toont.](assets/add-users.png)
 
 Selecteer de nieuwe gebruiker in de beschikbare lijst en selecteer **[!UICONTROL Save]** .
 
-![ Uitgebreide het gebruikersinterfacebeeld dat van de Activering de Add pagina van Gebruikers toont.](assets/add-user.png)
+![&#x200B; Uitgebreide het gebruikersinterfacebeeld dat van de Activering de Add pagina van Gebruikers toont.](assets/add-user.png)
 
 De gebruikersaccount wordt nu gemaakt en toegewezen aan de juiste rol. Het is nu klaar om de gebruikersinterface van **[!UICONTROL Expanded Activation]** te openen.
 
@@ -45,7 +45,7 @@ Uw [!DNL Audience Manager Expanded Activation] -contract geeft het maximum aanta
 
 U vindt deze informatie op de pagina **[!UICONTROL Administration]** -> **[!UICONTROL License Usage]** .
 
-![ Uitgebreide het gebruikersinterfacebeeld dat van de Activering het scherm van het vergunningsgebruik toont.](assets/license-usage.png)
+![&#x200B; Uitgebreide het gebruikersinterfacebeeld dat van de Activering het scherm van het vergunningsgebruik toont.](assets/license-usage.png)
 
 Op deze pagina kunt u de volgende informatie vinden:
 
@@ -55,12 +55,12 @@ Op deze pagina kunt u de volgende informatie vinden:
 
   >[!TIP]
   >
-  >U neemt gehakte e-mails door de [ bronschakelaar van de Audience Manager ](../sources/connectors/adobe-applications/audience-manager.md) op. Zie de documentatie op [ hoe te om publiek ](activate-audiences.md) voor meer details te activeren.
+  >U neemt gehakte e-mails door de [&#x200B; bronschakelaar van de Audience Manager &#x200B;](../sources/connectors/adobe-applications/audience-manager.md) op. Zie de documentatie op [&#x200B; hoe te om publiek &#x200B;](activate-audiences.md) voor meer details te activeren.
 
 * **[!UICONTROL Usage]**: het aantal gehakte e-mails dat u hebt gegeten.
 * **[!UICONTROL Usage %]**: het percentage van het licentiebedrag dat u hebt gebruikt.
 
-Meer over vergunningsgebruik in Experience Platform leren, zie de [ documentatie van het vergunningsgebruik ](../dashboards/guides/license-usage.md).
+Meer over vergunningsgebruik in Experience Platform leren, zie de [&#x200B; documentatie van het vergunningsgebruik &#x200B;](../dashboards/guides/license-usage.md).
 
 ## Volgende stappen {#next-steps}
 

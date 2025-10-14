@@ -19,12 +19,12 @@ Deze pagina beschrijft hoe te om Destination SDK te gebruiken om dossier het for
 
 ## Vereisten {#prerequisites}
 
-Alvorens aan de hieronder geschetste stappen vooruit te gaan, te lezen gelieve de [ Destination SDK begonnen ](../../getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke de authentificatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
+Alvorens aan de hieronder geschetste stappen vooruit te gaan, te lezen gelieve de [&#x200B; Destination SDK begonnen &#x200B;](../../getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke de authentificatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
 
 Adobe raadt u ook aan de volgende documentatie te lezen en bekend te maken voordat u verdergaat:
 
-* Elke beschikbare dossier het formatteren optie wordt gedocumenteerd bij lengte in de [ dossier het formatteren configuratie ](../../functionality/destination-server/file-formatting.md) sectie.
-* Voltooi stappen om [ een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md) te vormen gebruikend Destination SDK.
+* Elke beschikbare dossier het formatteren optie wordt gedocumenteerd bij lengte in de [&#x200B; dossier het formatteren configuratie &#x200B;](../../functionality/destination-server/file-formatting.md) sectie.
+* Voltooi stappen om [&#x200B; een op dossier-gebaseerde bestemming &#x200B;](../../guides/configure-file-based-destination-instructions.md) te vormen gebruikend Destination SDK.
 
 ## Een server- en bestandsconfiguratie maken {#create-server-file-configuration}
 
@@ -108,17 +108,17 @@ Nadat u de gewenste opties voor bestandsindeling in de vorige stap hebt toegevoe
 
 >[!IMPORTANT]
 >
->Deze stap is optioneel en bepaalt alleen welke opties voor bestandsindeling gebruikers in de gebruikersinterface van het Experience Platform moeten krijgen. Als u opstellings dossier formatterende opties niet als gebieden van klantengegevens formatteert, zal de dossieruitvoer met de standaardwaarden te werk gaan die in de [ worden gevormd server en dossierconfiguratie ](#create-server-file-configuration).
+>Deze stap is optioneel en bepaalt alleen welke opties voor bestandsindeling gebruikers in de gebruikersinterface van het Experience Platform moeten krijgen. Als u opstellings dossier formatterende opties niet als gebieden van klantengegevens formatteert, zal de dossieruitvoer met de standaardwaarden te werk gaan die in de [&#x200B; worden gevormd server en dossierconfiguratie &#x200B;](#create-server-file-configuration).
 
 In deze stap kunt u de weergegeven opties groeperen in elke gewenste volgorde, u kunt aangepaste groepen, vervolgkeuzelijsten en voorwaardelijke groepen maken op basis van de geselecteerde bestandstypen. Al deze instellingen worden weergegeven in de opname en in de volgende secties.
 
-![ het registreren van het scherm die diverse dossier het formatteren opties voor partijdossiers tonen.](../../assets/guides/batch/file-formatting-options.gif)
+![&#x200B; het registreren van het scherm die diverse dossier het formatteren opties voor partijdossiers tonen.](../../assets/guides/batch/file-formatting-options.gif)
 
 ### De opties voor de bestandsindeling bepalen {#ordering}
 
 De volgorde waarin u de opmaakopties voor bestanden toevoegt als gegevensvelden van klanten in de doelconfiguratie, wordt weerspiegeld in de gebruikersinterface. De onderstaande configuratie wordt bijvoorbeeld dienovereenkomstig weergegeven in de gebruikersinterface, waarbij de opties worden weergegeven in de volgorde **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]** .
 
-![ Beeld dat de orde van dossier het formatteren opties in Experience Platform UI toont.](../../assets/guides/batch/file-formatting-order.png)
+![&#x200B; Beeld dat de orde van dossier het formatteren opties in Experience Platform UI toont.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -279,7 +279,7 @@ Hiertoe maakt u met `"type": "object"` de groep en verzamelt u de gewenste optie
 ]
 ```
 
-![ Beeld die de opties tonen CSV groeperen in UI.](../../assets/guides/batch/file-formatting-grouping.png)
+![&#x200B; Beeld die de opties tonen CSV groeperen in UI.](../../assets/guides/batch/file-formatting-grouping.png)
 
 ### Vervolgkeuzekiezers maken voor de opties voor de bestandsindeling {#dropdown-selectors}
 
@@ -324,7 +324,7 @@ Hiervoor gebruikt u het `namedEnum` -object zoals hieronder wordt weergegeven en
 ]
 ```
 
-![ het registreren van het Scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
+![&#x200B; het registreren van het Scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### Voorwaardelijke opties voor bestandsindeling maken {#conditional-options}
 
@@ -485,7 +485,7 @@ In een bredere context ziet u het veld `conditional` dat wordt gebruikt in de do
 
 Hieronder ziet u het resulterende UI-scherm op basis van de bovenstaande configuratie. Wanneer de gebruiker het bestandstype CSV selecteert, worden aanvullende opties voor bestandsindeling die verwijzen naar het CSV-bestandstype weergegeven in de gebruikersinterface.
 
-![ het registreren van het scherm die de voorwaardelijke dossier het formatteren optie voor Csv- dossiers tonen.](../../assets/guides/batch/conditional-file-formatting.gif)
+![&#x200B; het registreren van het scherm die de voorwaardelijke dossier het formatteren optie voor Csv- dossiers tonen.](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### Volledige API-aanvraag die alle hierboven weergegeven opties bevat
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Volgende stappen {#next-steps}
 
-Door dit artikel te lezen, weet u nu hoe u aangepaste opmaakopties voor bestanden voor geëxporteerde bestanden kunt instellen met behulp van Destination SDK. Daarna, kan uw team het [ activeringswerkschema voor op dossier-gebaseerde bestemmingen ](../../../ui/activate-batch-profile-destinations.md) gebruiken om gegevens naar de bestemming uit te voeren.
+Door dit artikel te lezen, weet u nu hoe u aangepaste opmaakopties voor bestanden voor geëxporteerde bestanden kunt instellen met behulp van Destination SDK. Daarna, kan uw team het [&#x200B; activeringswerkschema voor op dossier-gebaseerde bestemmingen &#x200B;](../../../ui/activate-batch-profile-destinations.md) gebruiken om gegevens naar de bestemming uit te voeren.

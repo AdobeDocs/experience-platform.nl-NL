@@ -17,10 +17,10 @@ Bekijk hieronder de types van publieksgegevens om over de verschillen tussen hen
 
 | Gegevenstype Publiek | Beschrijving | Gebruiksscenario’s |
 |---------|----------|---------|
-| [ het publiek van Mensen ](../../../../segmentation/types/people-audiences.md) | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [ publiek van de Rekening ](../../../../segmentation/types/account-audiences.md) | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [ Het publiek van het Vooruitzicht ](../../../../segmentation/types/prospect-audiences.md) | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [ de uitvoer van de Dataset ](../../../../catalog/datasets/overview.md) | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+| [&#x200B; het publiek van Mensen &#x200B;](../../../../segmentation/types/people-audiences.md) | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [&#x200B; publiek van de Rekening &#x200B;](../../../../segmentation/types/account-audiences.md) | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](../../../../segmentation/types/prospect-audiences.md) | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [&#x200B; de uitvoer van de Dataset &#x200B;](../../../../catalog/datasets/overview.md) | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
 
 Het ondersteunde type publieksgegevens is afhankelijk van het type doel dat u maakt.
 Verwijs naar de lijst hieronder om te begrijpen welke bestemmingstypes steunen welke types van publieksgegevens.
@@ -153,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 U kunt overwegen ondersteuning voor het accountpubliek toe te voegen aan uw bestemming wanneer u een [!DNL B2B] -bestemming wilt configureren voor marketing op basis van account. U kunt bijvoorbeeld op account gebaseerde soorten publiek gebruiken om records op te halen van alle accounts die geen contactgegevens hebben voor personen met de titel [!DNL Chief Operating Officer (COO)] of [!DNL Chief Marketing Officer (CMO)] .
 
-Om een bestemming te bouwen die de uitvoer van rekeningspubliek steunt, voeg het configuratiefragment hieronder aan uw [ bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) toe.
+Om een bestemming te bouwen die de uitvoer van rekeningspubliek steunt, voeg het configuratiefragment hieronder aan uw [&#x200B; bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) toe.
 
 ```json
 "sources":[
@@ -259,9 +259,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## Exportperspectief {#prospect}
 
-Overweeg het toevoegen van de steun van het perspectiefpubliek aan uw bestemming wanneer u individuen wilt richten die nog geen klanten maar eigenschappen met uw doelpubliek delen. Met perspectiefprofielen, kunt u uw klantenprofielen met attributen van vertrouwde op derdepartners aanvullen. Zie dit [ prospecterend gebruiksgeval ](../../../../rtcdp/partner-data/prospecting.md) voor meer informatie.
+Overweeg het toevoegen van de steun van het perspectiefpubliek aan uw bestemming wanneer u individuen wilt richten die nog geen klanten maar eigenschappen met uw doelpubliek delen. Met perspectiefprofielen, kunt u uw klantenprofielen met attributen van vertrouwde op derdepartners aanvullen. Zie dit [&#x200B; prospecterend gebruiksgeval &#x200B;](../../../../rtcdp/partner-data/prospecting.md) voor meer informatie.
 
-Om een bestemming te bouwen die de uitvoer van perspectiefpubliek steunt, voeg het configuratiefragment hieronder aan uw [ bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) toe.
+Om een bestemming te bouwen die de uitvoer van perspectiefpubliek steunt, voeg het configuratiefragment hieronder aan uw [&#x200B; bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) toe.
 
 
 ```json
@@ -395,7 +395,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 U kunt overwegen ondersteuning voor gegevenssetexport toe te voegen aan uw bestemming wanneer u onbewerkte gegevenssets wilt exporteren. Deze gegevenssets zijn niet gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. U kunt deze gegevens gebruiken voor rapportage, workflows voor gegevenswetenschap en vele andere gebruiksgevallen. Als beheerder, gegevensengineer of analist kunt u bijvoorbeeld gegevens uit Experience Platform exporteren om deze te synchroniseren met uw gegevensopslagruimte, te gebruiken in [!DNL BI] analyseprogramma&#39;s, externe cloud [!DNL ML] -gereedschappen of in uw systeem op te slaan voor opslagbehoeften op lange termijn.
 
-Om een bestemming te bouwen die de uitvoer van datasets steunt, voeg hieronder het configuratiefragment aan uw [ bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) toe.
+Om een bestemming te bouwen die de uitvoer van datasets steunt, voeg hieronder het configuratiefragment aan uw [&#x200B; bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) toe.
 
 ```json
 "sources":[

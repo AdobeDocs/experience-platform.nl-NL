@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Edge-segmentatiegids
 
-De segmentatie van Edge is de capaciteit om segmentdefinities in Adobe Experience Platform onmiddellijk [ op de rand ](../../landing/edge-and-hub-comparison.md) te evalueren, toelatend de zelfde pagina en volgende het gebruikscase van de paginaletterdheid.
+De segmentatie van Edge is de capaciteit om segmentdefinities in Adobe Experience Platform onmiddellijk [&#x200B; op de rand &#x200B;](../../landing/edge-and-hub-comparison.md) te evalueren, toelatend de zelfde pagina en volgende het gebruikscase van de paginaletterdheid.
 
 >[!IMPORTANT]
 >
@@ -31,12 +31,12 @@ Een vraag kan met randsegmentatie worden geëvalueerd als het aan om het even we
 
 | Type query | Details | Query | Voorbeeld |
 | ---------- | ------- | ----- | ------- |
-| Eén gebeurtenis binnen een tijdsvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen een tijdvenster van minder dan 24 uur. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van één enkele gebeurtenis binnen een relatief tijdvenster wordt getoond.](../images/methods/edge/single-event.png){zoomable="yes"} |
-| Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. | `homeAddress.country.equals("US", false)` | ![ een voorbeeld van een getoonde profielattributen.](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
-| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van één enkele gebeurtenis met een profielattribuut binnen een relatief tijdvenster wordt getoond.](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
-| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of randsegmenten bevat. **Nota:** als een segment van segmenten wordt gebruikt, zal de profielontzetting **elke 24 uren** gebeuren. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![ een voorbeeld van een segment van segmenten wordt getoond.](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
+| Eén gebeurtenis binnen een tijdsvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen een tijdvenster van minder dan 24 uur. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![&#x200B; een voorbeeld van één enkele gebeurtenis binnen een relatief tijdvenster wordt getoond.](../images/methods/edge/single-event.png){zoomable="yes"} |
+| Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. | `homeAddress.country.equals("US", false)` | ![&#x200B; een voorbeeld van een getoonde profielattributen.](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
+| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![&#x200B; een voorbeeld van één enkele gebeurtenis met een profielattribuut binnen een relatief tijdvenster wordt getoond.](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
+| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of randsegmenten bevat. **Nota:** als een segment van segmenten wordt gebruikt, zal de profielontzetting **elke 24 uren** gebeuren. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![&#x200B; een voorbeeld van een segment van segmenten wordt getoond.](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
 
-Bovendien, moet de segmentdefinitie **&#x200B;**&#x200B;aan een fusiebeleid worden gebonden dat op rand actief is. Voor meer informatie over samenvoegingsbeleid, te lezen gelieve de [ gids van het samenvoegingsbeleid ](../../profile/api/merge-policies.md).
+Bovendien, moet de segmentdefinitie **&#x200B;**&#x200B;aan een fusiebeleid worden gebonden dat op rand actief is. Voor meer informatie over samenvoegingsbeleid, te lezen gelieve de [&#x200B; gids van het samenvoegingsbeleid &#x200B;](../../profile/api/merge-policies.md).
 
 Een segmentdefinitie zal **niet** voor randsegmentatie in het volgende scenario in aanmerking komen:
 
@@ -48,7 +48,7 @@ Een segmentdefinitie zal **niet** voor randsegmentatie in het volgende scenario 
 
 U kunt een publiek tot stand brengen dat gebruikend randsegmentatie gebruikend of de Dienst API van de Segmentatie of door het Portaal van het Publiek in UI wordt geëvalueerd.
 
-Een segmentdefinitie kan rand-toegelaten zijn als het één van de [ in aanmerking komende vraagtypes ](#eligible-query-types) aanpast.
+Een segmentdefinitie kan rand-toegelaten zijn als het één van de [&#x200B; in aanmerking komende vraagtypes &#x200B;](#eligible-query-types) aanpast.
 
 >[!BEGINTABS]
 
@@ -147,23 +147,23 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 +++
 
-Meer informatie over het gebruiken van dit eindpunt kan in de [ gids van het het eindpunt van de segmentdefinitie ](../api/segment-definitions.md) worden gevonden.
+Meer informatie over het gebruiken van dit eindpunt kan in de [&#x200B; gids van het het eindpunt van de segmentdefinitie &#x200B;](../api/segment-definitions.md) worden gevonden.
 
 >[!TAB Audience Portal]
 
 Selecteer **[!UICONTROL Create audience]** in Audience Portal.
 
-![ Create publieksknoop wordt benadrukt in het Portaal van het Publiek.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
+![&#x200B; Create publieksknoop wordt benadrukt in het Portaal van het Publiek.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
 Er verschijnt een pop-up. Selecteer **[!UICONTROL Build rules]** om Segment Builder in te voeren.
 
-![ de knoop van de Regels van de Bouwstijl wordt benadrukt in creeer publiek popover.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
+![&#x200B; de knoop van de Regels van de Bouwstijl wordt benadrukt in creeer publiek popover.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-Binnen de Bouwer van het Segment, creeer een segmentdefinitie die één van de [ in aanmerking komende vraagtypes ](#eligible-query-types) aanpast. Als de segmentdefinitie in aanmerking komt voor randsegmentatie, kunt u **[!UICONTROL Edge]** selecteren als **[!UICONTROL Evaluation method]** .
+Binnen de Bouwer van het Segment, creeer een segmentdefinitie die één van de [&#x200B; in aanmerking komende vraagtypes &#x200B;](#eligible-query-types) aanpast. Als de segmentdefinitie in aanmerking komt voor randsegmentatie, kunt u **[!UICONTROL Edge]** selecteren als **[!UICONTROL Evaluation method]** .
 
-![ de segmentdefinitie wordt getoond. Het evaluatietype wordt benadrukt, die de segmentdefinitie tonen kan worden geëvalueerd gebruikend randsegmentatie.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
+![&#x200B; de segmentdefinitie wordt getoond. Het evaluatietype wordt benadrukt, die de segmentdefinitie tonen kan worden geëvalueerd gebruikend randsegmentatie.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
-Om meer over het creëren van segmentdefinities te leren, te lezen gelieve de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md)
+Om meer over het creëren van segmentdefinities te leren, te lezen gelieve de [&#x200B; gids van de Bouwer van het Segment &#x200B;](../ui/segment-builder.md)
 
 >[!ENDTABS]
 
@@ -289,21 +289,21 @@ Een succesvolle reactie keert status 200 van HTTP met een serie van segmentdefin
 }
 ```
 
-De meer gedetailleerde informatie over de gesegmenteerde teruggekeerde definitie kan in de [ gids van het de segmentdefinitiedetectietype ](../api/segment-definitions.md) worden gevonden.
+De meer gedetailleerde informatie over de gesegmenteerde teruggekeerde definitie kan in de [&#x200B; gids van het de segmentdefinitiedetectietype &#x200B;](../api/segment-definitions.md) worden gevonden.
 
 +++
 
 >[!TAB Audience Portal]
 
-U kunt al publiek terugwinnen dat voor randsegmentatie binnen uw organisatie door filters in het Portaal van de Publiek wordt toegelaten te gebruiken. Selecteer het ![ pictogram van de filterfilter ](../../images/icons/filter.png) pictogram om de lijst van filters te tonen.
+U kunt al publiek terugwinnen dat voor randsegmentatie binnen uw organisatie door filters in het Portaal van de Publiek wordt toegelaten te gebruiken. Selecteer het ![&#x200B; pictogram van de filterfilter &#x200B;](../../images/icons/filter.png) pictogram om de lijst van filters te tonen.
 
-![ het filterpictogram wordt benadrukt in het Portaal van het Publiek.](../images/methods/filter-audiences.png){zoomable="yes"}
+![&#x200B; het filterpictogram wordt benadrukt in het Portaal van het Publiek.](../images/methods/filter-audiences.png){zoomable="yes"}
 
 Binnen de beschikbare filters, ga naar **frequentie van de Update** en selecteer &quot;Edge&quot;. Met dit filter geeft u alle soorten publiek in uw organisatie weer die zijn geëvalueerd met behulp van randsegmentatie.
 
-![ de updatefrequentie van Edge wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend randsegmentatie worden geëvalueerd.](../images/methods/edge/filter-edge.png){zoomable="yes"}
+![&#x200B; de updatefrequentie van Edge wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend randsegmentatie worden geëvalueerd.](../images/methods/edge/filter-edge.png){zoomable="yes"}
 
-Meer over het bekijken van publiek in Experience Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
+Meer over het bekijken van publiek in Experience Platform leren, gelieve de [&#x200B; gids van het Portaal van het Publiek &#x200B;](../ui/audience-portal.md) te lezen.
 
 >[!ENDTABS]
 
@@ -313,7 +313,7 @@ U kunt details van een specifiek publiek bekijken die gebruikend randsegmentatie
 
 Na het selecteren van een publiek op de Portaal van de Publiek, verschijnt de pagina van publieksdetails. Dit toont informatie over het publiek, met inbegrip van een samenvatting van de publieksdetails, de hoeveelheid gekwalificeerde profielen in tijd, evenals de bestemmingen het publiek aan geactiveerd is.
 
-![ de pagina van publieksdetails wordt getoond voor een publiek geëvalueerd gebruikend randsegmentatie.](../images/methods/edge/audience-details.png)
+![&#x200B; de pagina van publieksdetails wordt getoond voor een publiek geëvalueerd gebruikend randsegmentatie.](../images/methods/edge/audience-details.png)
 
 Voor gebruikers met randfunctionaliteit wordt de **[!UICONTROL Profiles over time]** -kaart weergegeven. In deze kaart ziet u het totaal aantal gekwalificeerde personen en de nieuwe populaties die zijn bijgewerkt.
 
@@ -321,15 +321,15 @@ Voor gebruikers met randfunctionaliteit wordt de **[!UICONTROL Profiles over tim
 
 **[!UICONTROL New audience updated]** metrisch wordt vertegenwoordigd door een lijngrafiek die de verandering in publieksgrootte door randsegmentatie toont. U kunt het vervolgkeuzemenu aanpassen en de laatste 24 uur, vorige week of 30 dagen weergeven.
 
-![ De Profielen over tijdkaart wordt benadrukt.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
+![&#x200B; De Profielen over tijdkaart wordt benadrukt.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
-Voor meer details op publieksdetails, te lezen gelieve het [ Poortoverzicht van het Poort van het Publiek ](../ui/audience-portal.md#audience-details).
+Voor meer details op publieksdetails, te lezen gelieve het [&#x200B; Poortoverzicht van het Poort van het Publiek &#x200B;](../ui/audience-portal.md#audience-details).
 
 ## Volgende stappen
 
 In deze handleiding wordt uitgelegd welke randsegmentatie wordt toegepast en hoe u een segmentdefinitie maakt die kan worden geëvalueerd met behulp van randsegmentatie op Adobe Experience Platform.
 
-Om meer over het gebruiken van het gebruikersinterface van Experience Platform te leren, te lezen gelieve de [ gebruikersgids van de Segmentatie ](./overview.md).
+Om meer over het gebruiken van het gebruikersinterface van Experience Platform te leren, te lezen gelieve de [&#x200B; gebruikersgids van de Segmentatie &#x200B;](./overview.md).
 
-Voor vaak gestelde vragen over randsegmentatie, te lezen gelieve de [ sectie van de randsegmentatie van FAQ ](../faq.md#edge-segmentation).
+Voor vaak gestelde vragen over randsegmentatie, te lezen gelieve de [&#x200B; sectie van de randsegmentatie van FAQ &#x200B;](../faq.md#edge-segmentation).
 

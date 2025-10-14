@@ -13,8 +13,8 @@ ht-degree: 34%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 De extensie Adobe Experience Platform Web SDK verzendt gegevens naar de Adobe Experience Cloud vanuit wegeigenschappen via de Adobe Experience Platform Edge Network. Met de extensie Experience Platform Web SDK kunt u gegevens streamen naar een platform, identiteiten synchroniseren, inbellen en automatisch contextgegevens verzamelen.
 
-Voor details over het vormen van de uitbreiding van SDK van het Web van Experience Platform, zie [ de de markeringsuitbreiding van SDK van het Web ](web-sdk-extension-configuration.md) vormen.
+Voor details over het vormen van de uitbreiding van SDK van het Web van Experience Platform, zie [&#x200B; de de markeringsuitbreiding van SDK van het Web &#x200B;](web-sdk-extension-configuration.md) vormen.

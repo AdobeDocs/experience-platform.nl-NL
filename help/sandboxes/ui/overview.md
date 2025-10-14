@@ -13,8 +13,8 @@ ht-degree: 0%
 
 # Overzicht van sandbox-interface
 
-Adobe Experience Platform biedt virtuele sandboxen die één Experience Platform-instantie in afzonderlijke, geïsoleerde virtuele omgevingen verdelen. Het zandbakgebruikersinterface kan binnen [ worden gevonden Experience Platform UI ](https://platform.adobe.com).
+Adobe Experience Platform biedt virtuele sandboxen die één Experience Platform-instantie in afzonderlijke, geïsoleerde virtuele omgevingen verdelen. Het zandbakgebruikersinterface kan binnen [&#x200B; worden gevonden Experience Platform UI &#x200B;](https://platform.adobe.com).
 
-Zodra u aan Experience Platform UI hebt het programma geopend, gelieve te werk te gaan aan de [ gids van de zandbakgebruiker ](user-guide.md) voor stappen op hoe te om diverse taken in de zandbakwerkruimte uit te voeren.
+Zodra u aan Experience Platform UI hebt het programma geopend, gelieve te werk te gaan aan de [&#x200B; gids van de zandbakgebruiker &#x200B;](user-guide.md) voor stappen op hoe te om diverse taken in de zandbakwerkruimte uit te voeren.
 
-Voor stappen bij het uitvoeren van verschillende verrichtingen die Sandbox API gebruiken, zie de [ gids van de zandbakontwikkelaar ](../api/getting-started.md). Voor een overzicht op hoog niveau van zandbakken in Experience Platform, gelieve te verwijzen naar de [ overzichtsdocumentatie ](../home.md).
+Voor stappen bij het uitvoeren van verschillende verrichtingen die Sandbox API gebruiken, zie de [&#x200B; gids van de zandbakontwikkelaar &#x200B;](../api/getting-started.md). Voor een overzicht op hoog niveau van zandbakken in Experience Platform, gelieve te verwijzen naar de [&#x200B; overzichtsdocumentatie &#x200B;](../home.md).

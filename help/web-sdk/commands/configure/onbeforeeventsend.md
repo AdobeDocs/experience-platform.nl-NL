@@ -19,9 +19,9 @@ Met de callback van `onBeforeEventSend` kunt u een JavaScript-functie registrere
 
 ## Vorm vóór gebeurtenis verzend callback gebruikend de de markeringsuitbreiding van SDK van het Web {#tag-extension}
 
-Selecteer de **[!UICONTROL Provide on before event send callback code]** knoop wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Met deze knop opent u een modaal venster waarin u de gewenste code kunt invoegen.
+Selecteer de **[!UICONTROL Provide on before event send callback code]** knoop wanneer [&#x200B; het vormen van de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Met deze knop opent u een modaal venster waarin u de gewenste code kunt invoegen.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
@@ -31,8 +31,8 @@ Selecteer de **[!UICONTROL Provide on before event send callback code]** knoop w
 
 In de code-editor hebt u toegang tot de volgende variabelen:
 
-* **`content.xdm`**: De [ XDM ](../sendevent/xdm.md) nuttige lading voor de gebeurtenis.
-* **`content.data`**: De [ gegevens ](../sendevent/data.md) objecten lading voor de gebeurtenis.
+* **`content.xdm`**: De [&#x200B; XDM &#x200B;](../sendevent/xdm.md) nuttige lading voor de gebeurtenis.
+* **`content.data`**: De [&#x200B; gegevens &#x200B;](../sendevent/data.md) objecten lading voor de gebeurtenis.
 * **`return true`**: Sluit de callback onmiddellijk af en verzend gegevens naar de Adobe met de huidige waarden in het `content` -object.
 * **`return false`**: Sluit de callback onmiddellijk af en abort het verzenden van gegevens naar de Adobe.
 

@@ -26,11 +26,11 @@ ht-degree: 0%
 | `dmaID` | Geheel | Het Nielsen-mediaonderzoek heeft een marktgebied aangewezen. |
 | `msaID` | Geheel | Het statistische metropolitane gebied in de Verenigde Staten waar de waarneming plaatsvond. |
 | `postalCode` | String | De postcode van de locatie. Postcodes zijn niet voor alle landen beschikbaar. In sommige landen zal dit slechts een deel van de postcode bevatten. |
-| `stateProvince` | String | De staat of provincie van de observatie. Het formaat volgt [ ISO 3166-2 (land en onderverdeling) ](https://www.unece.org/cefact/locode/subdivisions.html) norm. |
+| `stateProvince` | String | De staat of provincie van de observatie. Het formaat volgt [&#x200B; ISO 3166-2 (land en onderverdeling) &#x200B;](https://www.unece.org/cefact/locode/subdivisions.html) norm. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)

@@ -16,14 +16,14 @@ ht-degree: 0%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Oracle Object Storage] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Oracle Object Storage] tot stand te brengen gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Oracle Object Storage] via de [!DNL Flow Service] API.
 
@@ -40,11 +40,11 @@ In de volgende secties vindt u aanvullende informatie die u moet weten voordat u
 | `folderPath` | Het toegestane mappad dat is vereist als de gebruiker de toegang heeft beperkt. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle Object Storage] is: `c85f9425-fb21-426c-ad0b-405e9bd8a46c` . |
 
-Voor meer informatie over hoe te om deze waarden te verkrijgen, verwijs naar de [ de authentificatiegids van de Opslag van de Objecten van Oracle ](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Voor meer informatie over hoe te om deze waarden te verkrijgen, verwijs naar de [&#x200B; de authentificatiegids van de Opslag van de Objecten van Oracle &#x200B;](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -112,4 +112,4 @@ Een geslaagde reactie retourneert de verbinding-id van de nieuwe verbinding. Dez
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Oracle Object Storage] -verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke verbindings-id ervan opgehaald. U kunt deze verbindingsidentiteitskaart gebruiken om [ wolkenopslag te onderzoeken gebruikend de Dienst API van de Stroom ](../../explore/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Oracle Object Storage] -verbinding gemaakt met de [!DNL Flow Service] API en hebt u de unieke verbindings-id ervan opgehaald. U kunt deze verbindingsidentiteitskaart gebruiken om [&#x200B; wolkenopslag te onderzoeken gebruikend de Dienst API van de Stroom &#x200B;](../../explore/cloud-storage.md).

@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Adobe Experience Platform staat u toe om de pijpleidingen van de douaneeigenschap te bouwen en tot stand te brengen om eigenschapengineering op schaal door Runtime van het Kader van het Leren van de Machine van Sensei (verder te brengen die als &quot;Runtime&quot;wordt bedoeld) uit te voeren.
 
-Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke leerprogramma voor het creëren van een pijpleiding van de douaneeigenschap gebruikend het [ ModelAuthoring SDK ](./sdk.md) in PySpark.
+Dit document beschrijft de diverse klassen die in een eigenschappijpleiding worden gevonden, en verstrekt een geleidelijke leerprogramma voor het creëren van een pijpleiding van de douaneeigenschap gebruikend het [&#x200B; ModelAuthoring SDK &#x200B;](./sdk.md) in PySpark.
 
 De volgende workflow vindt plaats wanneer een functiepijplijn wordt uitgevoerd:
 
@@ -45,7 +45,7 @@ Om een recept in om het even welke organisatie in werking te stellen, wordt het 
 - Een getransformeerd schema en een lege dataset die op dat schema wordt gebaseerd.
 - Een outputschema en een lege dataset die op dat schema wordt gebaseerd.
 
-Alle bovenstaande gegevenssets moeten worden geüpload naar de gebruikersinterface van [!DNL Experience Platform] . Om deze opstelling, gebruik het Adobe-Geleide [ laarzentrekkerscript ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
+Alle bovenstaande gegevenssets moeten worden geüpload naar de gebruikersinterface van [!DNL Experience Platform] . Om deze opstelling, gebruik het Adobe-Geleide [&#x200B; laarzentrekkerscript &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
 ## Klassen van de eigenschappijplijn
 
@@ -396,7 +396,7 @@ Nu u uw eigenschappijpleiding hebt ontworpen, moet u een beeld van het Dok tot s
 
 >[!TIP]
 >
->Als u geen Docker URL hebt, bezoek de [ brondossiers van het Pakket in een recept ](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een gastheer URL van de Docker.
+>Als u geen Docker URL hebt, bezoek de [&#x200B; brondossiers van het Pakket in een recept &#x200B;](../models-recipes/package-source-files-recipe.md) leerprogramma voor een geleidelijke analyse bij het creëren van een gastheer URL van de Docker.
 
 U kunt ook de volgende Postman-verzameling gebruiken om de API-workflow voor de functiepijplijn te voltooien.
 
@@ -404,11 +404,11 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Een pijplijnengine maken {#create-engine-api}
 
-Zodra u uw het beeldplaats van het Dock hebt, kunt u [ een motor van de eigenschappijpleiding ](../api/engines.md#feature-pipeline-docker) creëren gebruikend [!DNL Sensei Machine Learning] API door POST aan `/engines` uit te voeren. Succesvol het creëren van een motor van de eigenschappijpleiding voorziet u van een unieke herkenningsteken van de Motor (`id`). Sla deze waarde op voordat u doorgaat.
+Zodra u uw het beeldplaats van het Dock hebt, kunt u [&#x200B; een motor van de eigenschappijpleiding &#x200B;](../api/engines.md#feature-pipeline-docker) creëren gebruikend [!DNL Sensei Machine Learning] API door POST aan `/engines` uit te voeren. Succesvol het creëren van een motor van de eigenschappijpleiding voorziet u van een unieke herkenningsteken van de Motor (`id`). Sla deze waarde op voordat u doorgaat.
 
 ### Een MLInstance maken {#create-mlinstance}
 
-Gebruikend uw onlangs gecreeerd `engineID`, moet u [ een MLIstance ](../api/mlinstances.md#create-an-mlinstance) tot stand brengen door een POST- verzoek aan het `/mlInstance` eindpunt te maken. Een succesvolle reactie keert een lading terug die de details van pas gecreëerde MLInstance met inbegrip van zijn uniek herkenningsteken (`id`) bevat die in de volgende API vraag wordt gebruikt.
+Gebruikend uw onlangs gecreeerd `engineID`, moet u [&#x200B; een MLIstance &#x200B;](../api/mlinstances.md#create-an-mlinstance) tot stand brengen door een POST- verzoek aan het `/mlInstance` eindpunt te maken. Een succesvolle reactie keert een lading terug die de details van pas gecreëerde MLInstance met inbegrip van zijn uniek herkenningsteken (`id`) bevat die in de volgende API vraag wordt gebruikt.
 
 ### Een experiment maken {#create-experiment}
 
@@ -418,13 +418,13 @@ Daarna, moet u een Experiment [&#128279;](../api/experiments.md#create-an-experi
 
 Nadat u een experiment hebt gemaakt, moet u de modus Experimenteren wijzigen in `featurePipeline` . Als u de modus wilt wijzigen, voert u een aanvullende POST in op [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) met uw `EXPERIMENT_ID` en in de tekst send `{ "mode":"featurePipeline"}` om een Experimentele uitvoering van de functiepijpleiding op te geven.
 
-Zodra volledig, doe een verzoek van GET aan `/experiments/{EXPERIMENT_ID}` om [ de experimentstatus terug te winnen ](../api/experiments.md#retrieve-specific) en op de status van de Experiment te wachten om bij te werken om te voltooien.
+Zodra volledig, doe een verzoek van GET aan `/experiments/{EXPERIMENT_ID}` om [&#x200B; de experimentstatus terug te winnen &#x200B;](../api/experiments.md#retrieve-specific) en op de status van de Experiment te wachten om bij te werken om te voltooien.
 
 ### De trainingstaak voor het uitvoeren van de Experimentele taak opgeven {#training}
 
-Daarna, moet u [ specificeren de trainingstaak ](../api/experiments.md#experiment-training-scoring). Maak een POST aan `experiments/{EXPERIMENT_ID}/runs` en in het lichaam plaats de wijze aan `train` en verzend een serie van taken die uw trainingsparameters bevatten. Een geslaagde reactie retourneert een payload die de details van het gewenste experiment bevat.
+Daarna, moet u [&#x200B; specificeren de trainingstaak &#x200B;](../api/experiments.md#experiment-training-scoring). Maak een POST aan `experiments/{EXPERIMENT_ID}/runs` en in het lichaam plaats de wijze aan `train` en verzend een serie van taken die uw trainingsparameters bevatten. Een geslaagde reactie retourneert een payload die de details van het gewenste experiment bevat.
 
-Zodra volledig, doe een verzoek van GET aan `/experiments/{EXPERIMENT_ID}` om [ de experimentstatus terug te winnen ](../api/experiments.md#retrieve-specific) en op de status van de Experiment te wachten om bij te werken om te voltooien.
+Zodra volledig, doe een verzoek van GET aan `/experiments/{EXPERIMENT_ID}` om [&#x200B; de experimentstatus terug te winnen &#x200B;](../api/experiments.md#retrieve-specific) en op de status van de Experiment te wachten om bij te werken om te voltooien.
 
 ### De taak voor het uitvoeren van scoring op experimentele wijze opgeven {#scoring}
 
@@ -432,9 +432,9 @@ Zodra volledig, doe een verzoek van GET aan `/experiments/{EXPERIMENT_ID}` om [ 
 >
 > Als u deze stap wilt voltooien, moet u ten minste één voltooide training hebben die aan uw expert is gekoppeld.
 
-Na een succesvolle trainingslooppas, moet u [ de het scoren looppas taak ](../api/experiments.md#experiment-training-scoring) specificeren. Stel POST in op `experiments/{EXPERIMENT_ID}/runs` en stel in de hoofdtekst het kenmerk `mode` in op score. Hierdoor start u de uitvoering van uw studieprogramma Experimenteren.
+Na een succesvolle trainingslooppas, moet u [&#x200B; de het scoren looppas taak &#x200B;](../api/experiments.md#experiment-training-scoring) specificeren. Stel POST in op `experiments/{EXPERIMENT_ID}/runs` en stel in de hoofdtekst het kenmerk `mode` in op score. Hierdoor start u de uitvoering van uw studieprogramma Experimenteren.
 
-Zodra volledig, doe een verzoek van GET aan `/experiments/{EXPERIMENT_ID}` om [ de experimentstatus terug te winnen ](../api/experiments.md#retrieve-specific) en op de status van de Experiment te wachten om bij te werken om te voltooien.
+Zodra volledig, doe een verzoek van GET aan `/experiments/{EXPERIMENT_ID}` om [&#x200B; de experimentstatus terug te winnen &#x200B;](../api/experiments.md#retrieve-specific) en op de status van de Experiment te wachten om bij te werken om te voltooien.
 
 Zodra het scoren heeft voltooid, zou uw eigenschappijpleiding operationeel moeten zijn.
 

@@ -17,9 +17,9 @@ PSQL is een bevel-lijn interface die naast PostgreSQL op uw machine wordt geïns
 
 >[!IMPORTANT]
 >
->De Dienst van de vraag steunt het verbinden met versie PSQL 14.x slechts. Versies die ouder zijn dan 14.x (zoals 10.x tot en met 13.x) en latere versies (15.x en hoger) worden niet officieel ondersteund. Controleer of u een compatibele clientversie hebt geïnstalleerd. Voor verwijzing, zie [ PostSQL Dates van het Eind van het Leven ](https://endoflife.date/postgresql).
+>De Dienst van de vraag steunt het verbinden met versie PSQL 14.x slechts. Versies die ouder zijn dan 14.x (zoals 10.x tot en met 13.x) en latere versies (15.x en hoger) worden niet officieel ondersteund. Controleer of u een compatibele clientversie hebt geïnstalleerd. Voor verwijzing, zie [&#x200B; PostSQL Dates van het Eind van het Leven &#x200B;](https://endoflife.date/postgresql).
 
-Voordat u begint, moet u ervoor zorgen dat u toegang hebt tot PSQL en dat u vertrouwd bent met het gebruik van de client. Meer informatie over PSQL kan in de [ officiële documentatie PSQL ](https://www.postgresql.org/docs/current/app-psql.html) worden gevonden.
+Voordat u begint, moet u ervoor zorgen dat u toegang hebt tot PSQL en dat u vertrouwd bent met het gebruik van de client. Meer informatie over PSQL kan in de [&#x200B; officiële documentatie PSQL &#x200B;](https://www.postgresql.org/docs/current/app-psql.html) worden gevonden.
 
 >[!IMPORTANT]
 >
@@ -27,15 +27,15 @@ Voordat u begint, moet u ervoor zorgen dat u toegang hebt tot PSQL en dat u vert
 
 Zodra PSQL wordt geïnstalleerd, kunt u het met de Dienst van de Vraag verbinden. Ga terug naar de gebruikersinterface van Experience Platform en selecteer vervolgens **[!UICONTROL Queries]**, gevolgd door **[!UICONTROL Credentials]** .
 
-Onder de **[!UICONTROL PSQL Command]** sectie, selecteer het **[!UICONTROL Copy to clipboard]** pictogram (![ Pictogram van het Exemplaar ](/help/images/icons/copy.png)) om het bevelkoord te kopiëren.
+Onder de **[!UICONTROL PSQL Command]** sectie, selecteer het **[!UICONTROL Copy to clipboard]** pictogram (![&#x200B; Pictogram van het Exemplaar &#x200B;](/help/images/icons/copy.png)) om het bevelkoord te kopiëren.
 
-![ het lusje van Referenties van het dashboard van Vragen met het benadrukte exemplaarpictogram.](../images/clients/psql/copy-credentials.png)
+![&#x200B; het lusje van Referenties van het dashboard van Vragen met het benadrukte exemplaarpictogram.](../images/clients/psql/copy-credentials.png)
 
 Plak het bevelkoord in uw terminal en druk **binnengaan** op uw toetsenbord.
 
 >[!IMPORTANT]
 >
->Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord. Als u versie 12.0 of hoger gebruikt, moet u `PGGSSENCMODE=disable` aan uw verbindingstekenreeks toevoegen. Met deze instelling wordt GSSAPI-codering uitgeschakeld. Dit is niet nodig voor verbindingen met Query Service en kan verbindingsfouten veroorzaken.<br> bovendien, als u niet-vervallende geloofsbrieven gebruikt, zorg ervoor u het wachtwoordgebied met het niet-vervallende credentiewachtwoord vervangt. Om meer over niet-vervallende geloofsbrieven te leren, te lezen gelieve de [ geloofsbrieven gids ](../ui/credentials.md).
+>Als u op PC bent, gebruik een tekstredacteur om de lijnonderbrekingen in het bevelkoord te verwijderen, dan kopieer het koord. Als u versie 12.0 of hoger gebruikt, moet u `PGGSSENCMODE=disable` aan uw verbindingstekenreeks toevoegen. Met deze instelling wordt GSSAPI-codering uitgeschakeld. Dit is niet nodig voor verbindingen met Query Service en kan verbindingsfouten veroorzaken.<br> bovendien, als u niet-vervallende geloofsbrieven gebruikt, zorg ervoor u het wachtwoordgebied met het niet-vervallende credentiewachtwoord vervangt. Om meer over niet-vervallende geloofsbrieven te leren, te lezen gelieve de [&#x200B; geloofsbrieven gids &#x200B;](../ui/credentials.md).
 
 U zou een resultaat als dit moeten zien:
 
@@ -46,7 +46,7 @@ Type "help" for help.
 all=>
 ```
 
-Als u versie 14.x niet ziet, download en installeer een gesteunde versie 14.x van PSQL van de [ officiële downloadt PostSQL pagina ](https://www.postgresql.org/download/).
+Als u versie 14.x niet ziet, download en installeer een gesteunde versie 14.x van PSQL van de [&#x200B; officiële downloadt PostSQL pagina &#x200B;](https://www.postgresql.org/download/).
 
 >[!NOTE]
 >
@@ -54,4 +54,4 @@ Als u versie 14.x niet ziet, download en installeer een gesteunde versie 14.x va
 
 ## Volgende stappen
 
-Nu u met de Dienst van de Vraag hebt verbonden, kunt u PSQL gebruiken om vragen te schrijven. Zie de gids op [ lopende vragen ](../best-practices/writing-queries.md) voor meer informatie.
+Nu u met de Dienst van de Vraag hebt verbonden, kunt u PSQL gebruiken om vragen te schrijven. Zie de gids op [&#x200B; lopende vragen &#x200B;](../best-practices/writing-queries.md) voor meer informatie.

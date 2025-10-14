@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Eigenaars van extensiepakketten kunnen andere bedrijven toestemming geven om hun persoonlijke versies te gebruiken via de Reactor-API. Een gebruiksvergunning voor één uitbreidingspakket wordt verleend aan elk goedgekeurd bedrijf, en deze vergunning is goed voor alle huidige en toekomstige privé versies van het pakket.
 
-Deze gids verstrekt een overzicht op hoog niveau van hoe te om de vergunningen van het gebruiksgebruik van het uitbreidingspakket te vormen. Voor meer gedetailleerde begeleiding op hoe te om toestemmingen in Reactor API, met inbegrip van voorbeeld JSON van de structuur van een vergunning te beheren, verwijs naar de [ gids van het de vergunningseindpunt van het uitbreidingspakket ](../endpoints/extension-package-usage-authorizations.md).
+Deze gids verstrekt een overzicht op hoog niveau van hoe te om de vergunningen van het gebruiksgebruik van het uitbreidingspakket te vormen. Voor meer gedetailleerde begeleiding op hoe te om toestemmingen in Reactor API, met inbegrip van voorbeeld JSON van de structuur van een vergunning te beheren, verwijs naar de [&#x200B; gids van het de vergunningseindpunt van het uitbreidingspakket &#x200B;](../endpoints/extension-package-usage-authorizations.md).
 
 ## Een autorisatie maken {#create-authorization}
 

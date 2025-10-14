@@ -14,4 +14,4 @@ ht-degree: 0%
 
 De SDK van het Web van Adobe Experience Platform machtigt een grote verscheidenheid van het verpersoonlijkingsgebruik gevallen met andere oplossingen van de Adobe, zoals Adobe Analytics, Audience Manager, Doel, en Experience Platform.
 
-Voor gedetailleerde informatie bij het uitvoeren van gesteunde gebruiksgevallen, controleer hun overeenkomstige documentatie in de [ Web SDK projectpagina van de gebruiksgevallen ](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=).
+Voor gedetailleerde informatie bij het uitvoeren van gesteunde gebruiksgevallen, controleer hun overeenkomstige documentatie in de [&#x200B; Web SDK projectpagina van de gebruiksgevallen &#x200B;](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=).

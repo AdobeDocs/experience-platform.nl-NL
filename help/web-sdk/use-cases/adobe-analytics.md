@@ -14,20 +14,20 @@ ht-degree: 0%
 
 De SDK van het Web van het Experience Platform kan gegevens naar Adobe Analytics door de Edge Network van het Experience Platform verzenden. Adobe biedt verschillende opties voor het verzenden van gegevens naar Adobe Analytics met de SDK van Web:
 
-* Voeg [**[!UICONTROL Adobe Analytics ExperienceEvent field group]**](../../xdm/field-groups/event/analytics-full-extension.md) aan uw schema toe, dan gebruik [`XDM` voorwerp ](../commands/sendevent/xdm.md).
-* Gebruik het [`data` voorwerp ](../commands/sendevent/data.md) om gegevens naar Adobe Analytics zonder een schema te verzenden XDM.
-* Het gebruik automatisch geproduceerde [ variabelen van contextgegevens ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/page-vars/contextdata) en [ verwerkingsregels ](https://experienceleague.adobe.com/nl/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about).
+* Voeg [**[!UICONTROL Adobe Analytics ExperienceEvent field group]**](../../xdm/field-groups/event/analytics-full-extension.md) aan uw schema toe, dan gebruik [`XDM` voorwerp &#x200B;](../commands/sendevent/xdm.md).
+* Gebruik het [`data` voorwerp &#x200B;](../commands/sendevent/data.md) om gegevens naar Adobe Analytics zonder een schema te verzenden XDM.
+* Het gebruik automatisch geproduceerde [&#x200B; variabelen van contextgegevens &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/page-vars/contextdata) en [&#x200B; verwerkingsregels &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about).
 
 ## Het object `XDM` gebruiken {#use-xdm-object}
 
-Als u een vooraf bepaald schema specifiek voor Adobe Analytics wilt gebruiken, kunt u de [ groep van het het schemagebied van de ErvaringEvent van Adobe Analytics ](../../xdm/field-groups/event/analytics-full-extension.md) aan uw schema toevoegen. Zodra toegevoegd, kunt u dit schema bevolken gebruikend het `xdm` voorwerp in het Web SDK om gegevens naar een rapportreeks te verzenden. Wanneer de gegevens bij de Edge Network aankomen, zet het het voorwerp XDM in een formaat om dat Adobe Analytics begrijpt.
+Als u een vooraf bepaald schema specifiek voor Adobe Analytics wilt gebruiken, kunt u de [&#x200B; groep van het het schemagebied van de ErvaringEvent van Adobe Analytics &#x200B;](../../xdm/field-groups/event/analytics-full-extension.md) aan uw schema toevoegen. Zodra toegevoegd, kunt u dit schema bevolken gebruikend het `xdm` voorwerp in het Web SDK om gegevens naar een rapportreeks te verzenden. Wanneer de gegevens bij de Edge Network aankomen, zet het het voorwerp XDM in een formaat om dat Adobe Analytics begrijpt.
 
 U kunt gegevens op twee manieren via Web SDK naar Adobe Analytics verzenden:
 
-* [ verzendt gegevens naar Adobe Analytics gebruikend de de markeringsuitbreiding van SDK van het Web ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
-* [ verzendt gegevens naar Adobe Analytics gebruikend de bibliotheek van JavaScript van SDK van het Web ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
+* [&#x200B; verzendt gegevens naar Adobe Analytics gebruikend de de markeringsuitbreiding van SDK van het Web &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
+* [&#x200B; verzendt gegevens naar Adobe Analytics gebruikend de bibliotheek van JavaScript van SDK van het Web &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
 
-Zie [ XDM objecten veranderlijke afbeelding aan Adobe Analytics ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/xdm-var-mapping) in de de implementatiegids van Adobe Analytics voor een volledige verwijzing van XDM gebieden en hoe zij aan de variabelen van Analytics in kaart brengen.
+Zie [&#x200B; XDM objecten veranderlijke afbeelding aan Adobe Analytics &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/xdm-var-mapping) in de de implementatiegids van Adobe Analytics voor een volledige verwijzing van XDM gebieden en hoe zij aan de variabelen van Analytics in kaart brengen.
 
 ## Het object `data` gebruiken {#use-data-object}
 
@@ -35,14 +35,14 @@ Als alternatief voor het gebruik van het XDM-object kunt u in plaats daarvan het
 
 Afhankelijk van of u AppMeasurement of de de markeringsuitbreiding van de Analyse gebruikt, zie de volgende gidsen voor details op hoe te om aan Web SDK te migreren:
 
-* [ Migreer van de de markeringsuitbreiding van Adobe Analytics aan de de markeringsuitbreiding van SDK van het Web ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
-* [ Migreer van AppMeasurement aan het Web SDK ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
+* [&#x200B; Migreer van de de markeringsuitbreiding van Adobe Analytics aan de de markeringsuitbreiding van SDK van het Web &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
+* [&#x200B; Migreer van AppMeasurement aan het Web SDK &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
 
-Zie de documentatie over [ veranderlijke afbeelding van gegevensobjecten aan Adobe Analytics ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/data-var-mapping) in de de implementatiegids van Adobe Analytics voor een volledige verwijzing van gegevensobjecten gebieden en hoe zij aan de variabelen van Analytics in kaart brengen.
+Zie de documentatie over [&#x200B; veranderlijke afbeelding van gegevensobjecten aan Adobe Analytics &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/data-var-mapping) in de de implementatiegids van Adobe Analytics voor een volledige verwijzing van gegevensobjecten gebieden en hoe zij aan de variabelen van Analytics in kaart brengen.
 
 ## Contextgegevensvariabelen gebruiken {#use-context-data-variables}
 
-Om het even welke variabelen die niet automatisch in kaart worden gebracht zijn beschikbaar als [ variabelen van contextgegevens ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/page-vars/contextdata). U kunt [ verwerkingsregels ](https://experienceleague.adobe.com/nl/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) dan gebruiken om de variabelen van contextgegevens aan de variabelen van de Analyse in kaart te brengen. Stel dat u een aangepast XDM-schema had dat er als volgt uitziet:
+Om het even welke variabelen die niet automatisch in kaart worden gebracht zijn beschikbaar als [&#x200B; variabelen van contextgegevens &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/page-vars/contextdata). U kunt [&#x200B; verwerkingsregels &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) dan gebruiken om de variabelen van contextgegevens aan de variabelen van de Analyse in kaart te brengen. Stel dat u een aangepast XDM-schema had dat er als volgt uitziet:
 
 ```json
 {
@@ -84,7 +84,7 @@ a.x.objectarray.2.ad3 //600x50
 
 +++Hoe maak ik onderscheid tussen vraag van de paginamening van verbinding het volgen vraag in het Web SDK?
 
-Het AppMeasurement in Adobe Analytics gebruikt afzonderlijke methodevraag voor paginameningen ([`t()` methode ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/functions/t-method)) en verbinding het volgen vraag ([`tl()` methode ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/functions/tl-method)). De SDK van het Web verstrekt in plaats daarvan slechts het [`sendEvent`](../commands/sendevent/overview.md) bevel voor het verzenden van zowel paginameningen als verbinding het volgen. De gegevens die u in een gebeurtenis omvat bepalen als het a [ paginamening ](https://experienceleague.adobe.com/nl/docs/analytics/components/metrics/page-views) of a [ paginagebeurtenis ](https://experienceleague.adobe.com/nl/docs/analytics/components/metrics/page-events) in Adobe Analytics is.
+Het AppMeasurement in Adobe Analytics gebruikt afzonderlijke methodevraag voor paginameningen ([`t()` methode &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/functions/t-method)) en verbinding het volgen vraag ([`tl()` methode &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/functions/tl-method)). De SDK van het Web verstrekt in plaats daarvan slechts het [`sendEvent`](../commands/sendevent/overview.md) bevel voor het verzenden van zowel paginameningen als verbinding het volgen. De gegevens die u in een gebeurtenis omvat bepalen als het a [&#x200B; paginamening &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/components/metrics/page-views) of a [&#x200B; paginagebeurtenis &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/components/metrics/page-events) in Adobe Analytics is.
 
 Standaard worden alle gebeurtenissen beschouwd als paginaweergaven in Adobe Analytics. Als u een Web SDK-gebeurtenis wilt instellen op een Adobe Analytics-aanroep voor het bijhouden van koppelingen, stelt u de volgende velden in:
 
@@ -92,7 +92,7 @@ Standaard worden alle gebeurtenissen beschouwd als paginaweergaven in Adobe Anal
 * **voorwerp van Gegevens**: `data.__adobe.analytics.linkName`, `data.__adobe.analytics.linkType`, en `data.__adobe.analytics.linkURL`
 * **Contextgegevens**: Niet gesteund
 
-Zie de [`tl()` methode ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/functions/tl-method) in de de implementatiegids van Adobe Analytics voor meer informatie.
+Zie de [`tl()` methode &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/vars/functions/tl-method) in de de implementatiegids van Adobe Analytics voor meer informatie.
 
 Als u [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) inschakelt in de opdracht `configure` , worden deze velden voor u gevuld.
 

@@ -17,12 +17,12 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Google Cloud Storage]
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL Google Cloud Storage] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/batch/cloud-storage.md).
+Als u reeds een geldige [!DNL Google Cloud Storage] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/batch/cloud-storage.md).
 
 ### Ondersteunde bestandsindelingen
 
@@ -43,7 +43,7 @@ Als u toegang wilt krijgen tot uw [!DNL Google Cloud Storage] -gegevens op Exper
 | Naam van emmertje | De naam van uw [!DNL Google Cloud Storage] emmertje. U moet een emmernaam specificeren als u toegang tot specifieke subfolder in uw wolkenopslag wilt verlenen. |
 | Mappad | Het pad naar de map waartoe u toegang wilt verlenen. |
 
-Voor meer informatie over deze waarden, zie de [ de sleutels van HMAC van de Opslag van de Wolk van Google HMAC ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) gids. Voor stappen op hoe te om uw eigen toegangs zeer belangrijke identiteitskaart en geheime toegangssleutel te produceren, verwijs naar het [[!DNL Google Cloud Storage]  overzicht ](../../../../connectors/cloud-storage/google-cloud-storage.md).
+Voor meer informatie over deze waarden, zie de [&#x200B; de sleutels van HMAC van de Opslag van de Wolk van Google HMAC &#x200B;](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) gids. Voor stappen op hoe te om uw eigen toegangs zeer belangrijke identiteitskaart en geheime toegangssleutel te produceren, verwijs naar het [[!DNL Google Cloud Storage]  overzicht &#x200B;](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Google Cloud Storage] -account te koppelen aan Experience Platform.
 
@@ -55,7 +55,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie [!UICONTROL Cloud storage] de optie **[!UICONTROL Google Cloud Storage]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ het scherm van Experience Platform UI die de pagina van de broncatalogus toont.](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
+![&#x200B; het scherm van Experience Platform UI die de pagina van de broncatalogus toont.](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
 De pagina **[!UICONTROL Connect to Google Cloud Storage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -63,7 +63,7 @@ De pagina **[!UICONTROL Connect to Google Cloud Storage]** wordt weergegeven. Op
 
 Als u een bestaande account wilt verbinden, selecteert u de [!DNL Google Cloud Storage] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ het scherm UI van Experience Platform die de bestaande rekeningspagina voor een bron van de Opslag van de Wolk van Google toont ](../../../../images/tutorials/create/google-cloud-storage/existing.png)
+![&#x200B; het scherm UI van Experience Platform die de bestaande rekeningspagina voor een bron van de Opslag van de Wolk van Google toont &#x200B;](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ### Nieuwe account
 
@@ -71,9 +71,9 @@ Selecteer **[!UICONTROL New account]** als u nieuwe referenties gebruikt. Geef i
 
 Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ het scherm van UI van Experience Platform die de nieuwe rekeningspagina voor een bron van de Opslag van de Wolk van Google toont.](../../../../images/tutorials/create/google-cloud-storage/new.png)
+![&#x200B; het scherm van UI van Experience Platform die de nieuwe rekeningspagina voor een bron van de Opslag van de Wolk van Google toont.](../../../../images/tutorials/create/google-cloud-storage/new.png)
 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Google Cloud Storage] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in Experience Platform ](../../dataflow/batch/cloud-storage.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Google Cloud Storage] -account. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens van uw wolkenopslag in Experience Platform &#x200B;](../../dataflow/batch/cloud-storage.md) te brengen.

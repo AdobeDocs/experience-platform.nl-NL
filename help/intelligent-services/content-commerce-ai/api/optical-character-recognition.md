@@ -17,7 +17,7 @@ Met de OCR-service (Text Presence/Optical Character Recognition) kunt u aangeven
 
 De volgende afbeelding is gebruikt in de voorbeeldaanvraag die in dit document wordt weergegeven:
 
-![ Beeld van de Steekproef ](../images/sample_image.png)
+![&#x200B; Beeld van de Steekproef &#x200B;](../images/sample_image.png)
 
 **API formaat**
 

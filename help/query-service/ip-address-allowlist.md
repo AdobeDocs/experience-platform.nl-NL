@@ -47,7 +47,7 @@ De Adobe adviseert dat u de volgende gebied-specifieke IP waaiers aan een lijst 
 
 ## IP-gebaseerde beperkingen instellen {#set-ip-restrictions}
 
-Gebruik de [ Gidsen van de Vergunning API van Gegevens Distiller ](./auth-api/overview.md) aan opstelling op IP-Gebaseerde beperkingen. Deze op IP-Gebaseerde beperkingen zorgen ervoor dat slechts goedgekeurde netwerken en cliëntmachines tot gegevens via SQL in Adobe Experience Platform kunnen toegang hebben. Leer hoe te om IP beperkingen te vormen af te dwingen en te controleren om hoge veiligheidsnormen, met mogelijkheden voor toegang in real time te handhaven het volgen en het waarschuwen.
+Gebruik de [&#x200B; Gidsen van de Vergunning API van Gegevens Distiller &#x200B;](./auth-api/overview.md) aan opstelling op IP-Gebaseerde beperkingen. Deze op IP-Gebaseerde beperkingen zorgen ervoor dat slechts goedgekeurde netwerken en cliëntmachines tot gegevens via SQL in Adobe Experience Platform kunnen toegang hebben. Leer hoe te om IP beperkingen te vormen af te dwingen en te controleren om hoge veiligheidsnormen, met mogelijkheden voor toegang in real time te handhaven het volgen en het waarschuwen.
 
 * [Aan de slag-handleiding](./auth-api/getting-started.md)
 * [IP de gids van het Eindpunt van de Toegang](./auth-api/ip-access.md)

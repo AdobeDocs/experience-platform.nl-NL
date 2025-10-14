@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [&#x200B; bijlage document &#x200B;](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 **Verzoek**
 

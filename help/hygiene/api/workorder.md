@@ -16,11 +16,11 @@ Gebruik het `/workorder` eindpunt in de API voor gegevenshygiëne om werkorders 
 
 >[!IMPORTANT]
 >
->De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
+>De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [&#x200B; Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
 
 ## Aan de slag
 
-Alvorens u begint, zie het [ overzicht ](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
+Alvorens u begint, zie het [&#x200B; overzicht &#x200B;](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
 
 ## Quoten en verwerkingstijdlijnen {#quotas}
 
@@ -67,7 +67,7 @@ Als uw organisatie hogere limieten nodig heeft, neemt u contact op met uw Adobe-
 
 >[!TIP]
 >
->Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [ gids van de de verwijzingsverwijzing van de Quota ](../api/quota.md).
+>Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [&#x200B; gids van de de verwijzingsverwijzing van de Quota &#x200B;](../api/quota.md).
 
 ## Werkorders voor het verwijderen van records weergeven {#list}
 
@@ -247,7 +247,7 @@ In de volgende tabel worden de eigenschappen beschreven voor het maken van een w
 | `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
 | `action` | De gevraagde actie voor het verslag schrapt werkorde. Gebruik `delete_identity` om records te verwijderen die aan een bepaalde identiteit zijn gekoppeld. |
 | `datasetId` | De unieke id voor de gegevensset. Gebruik dataset ID voor een specifieke dataset, of `ALL` om alle datasets te richten. Datasets moeten een primaire identiteit of een identiteitskaart hebben. Als er een identiteitskaart bestaat, is deze aanwezig als een veld op hoofdniveau met de naam `identityMap` .<br> Merk op dat een datasetrij vele identiteiten in zijn identiteitskaart kan hebben, maar slechts één kan als primair worden gemerkt. `"primary": true` moet worden opgenomen om ervoor te zorgen dat de `id` overeenkomt met een primaire identiteit. |
-| `namespacesIdentities` | Een serie van voorwerpen, elk die:<br> bevatten<ul><li> `namespace`: Een object met een eigenschap `code` die de naamruimte voor identiteit opgeeft (bijvoorbeeld &quot;email&quot;).</li><li> `IDs`: een array met identiteitswaarden die voor deze naamruimte moeten worden verwijderd.</li></ul>Naamruimten bieden context voor identiteitsgegevens. U kunt de standaardnaamruimten van Experience Platform gebruiken of zelf naamruimten maken. Meer leren, zie de [ documentatie van identiteitsnamespace ](../../identity-service/features/namespaces.md) en de [ Dienst API specificatie van de Identiteit ](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `namespacesIdentities` | Een serie van voorwerpen, elk die:<br> bevatten<ul><li> `namespace`: Een object met een eigenschap `code` die de naamruimte voor identiteit opgeeft (bijvoorbeeld &quot;email&quot;).</li><li> `IDs`: een array met identiteitswaarden die voor deze naamruimte moeten worden verwijderd.</li></ul>Naamruimten bieden context voor identiteitsgegevens. U kunt de standaardnaamruimten van Experience Platform gebruiken of zelf naamruimten maken. Meer leren, zie de [&#x200B; documentatie van identiteitsnamespace &#x200B;](../../identity-service/features/namespaces.md) en de [&#x200B; Dienst API specificatie van de Identiteit &#x200B;](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Reactie**
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Error Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model) waarmee de details van fouten worden beschreven. Gebruik het gegevenstype [!UICONTROL Error Details] Verzameling om details voor de bron en identificatie van de fout vast te leggen. De fout-id identificeert de fout en de bron van de fout geeft aan of deze afkomstig is van de speler of van een externe bron.
 
-![ A diagram van het gegevenstype van de Informatie van de Details van de Fout.](../images/data-types/error-details-collection.png)
+![&#x200B; A diagram van het gegevenstype van de Informatie van de Details van de Fout.](../images/data-types/error-details-collection.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Vereist | Beschrijving |
 |----------------------------|--------------|-----------|----------|-----------------------------------------------|

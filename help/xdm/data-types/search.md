@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Search] is een standaard XDM-gegevenstype (Experience Data Model) dat informatie bevat over zoekactiviteiten op het web.
 
-![ onderzoeksbeeld ](../images/data-types/search.PNG) {width= 500}
+![&#x200B; onderzoeksbeeld &#x200B;](../images/data-types/search.PNG) {width= 500}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -31,5 +31,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)

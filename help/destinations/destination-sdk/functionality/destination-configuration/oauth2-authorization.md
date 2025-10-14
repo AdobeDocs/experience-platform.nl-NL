@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # OAuth 2-vergunning
 
-Destination SDK steunt verscheidene vergunningsmethodes aan uw bestemming. Onder deze is de optie om aan uw bestemming voor authentiek te verklaren door het [ OAuth 2 vergunningskader ](https://tools.ietf.org/html/rfc6749) te gebruiken.
+Destination SDK steunt verscheidene vergunningsmethodes aan uw bestemming. Onder deze is de optie om aan uw bestemming voor authentiek te verklaren door het [&#x200B; OAuth 2 vergunningskader &#x200B;](https://tools.ietf.org/html/rfc6749) te gebruiken.
 
 Deze pagina beschrijft de diverse OAuth 2 vergunningsstromen die door Destination SDK worden gesteund, en verstrekt instructies aan opstelling OAuth 2 vergunning voor uw bestemming.
 
@@ -46,7 +46,7 @@ Als onderdeel van deze configuratie in uw systeem hebt u de Adobe Experience Pla
 
 >[!IMPORTANT]
 >
->De stap om een redirect/callback URL voor Adobe Experience Platform in uw systeem te registreren wordt vereist slechts voor [ OAuth 2 met het type van de toelage van de Code van de Toestemming ](#authorization-code). Voor de andere twee gesteunde subsidietypes (wachtwoord en cliëntgeloofsbrieven), kunt u deze stap overslaan.
+>De stap om een redirect/callback URL voor Adobe Experience Platform in uw systeem te registreren wordt vereist slechts voor [&#x200B; OAuth 2 met het type van de toelage van de Code van de Toestemming &#x200B;](#authorization-code). Voor de andere twee gesteunde subsidietypes (wachtwoord en cliëntgeloofsbrieven), kunt u deze stap overslaan.
 
 Aan het eind van deze stap, zou u moeten hebben:
 * een client-id;
@@ -55,7 +55,7 @@ Aan het eind van deze stap, zou u moeten hebben:
 
 ### Wat u moet doen in Destination SDK {#to-do-in-destination-sdk}
 
-Aan opstelling OAuth 2 vergunning voor uw bestemming in Experience Platform, moet u uw OAuth 2 details aan de [ bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) toevoegen, onder de `customerAuthenticationConfigurations` parameter. Zie [ klantenauthentificatie ](../../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde voorbeelden. Specifieke instructies over welke gebieden u aan uw configuratiemalplaatje, afhankelijk van uw OAuth 2 type van vergunningsvergunning moet toevoegen, zijn verder hieronder op deze pagina.
+Aan opstelling OAuth 2 vergunning voor uw bestemming in Experience Platform, moet u uw OAuth 2 details aan de [&#x200B; bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) toevoegen, onder de `customerAuthenticationConfigurations` parameter. Zie [&#x200B; klantenauthentificatie &#x200B;](../../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde voorbeelden. Specifieke instructies over welke gebieden u aan uw configuratiemalplaatje, afhankelijk van uw OAuth 2 type van vergunningsvergunning moet toevoegen, zijn verder hieronder op deze pagina.
 
 ## Ondersteunde OAuth 2-subsidietypen {#oauth2-grant-types}
 
@@ -64,7 +64,7 @@ Experience Platform steunt de drie OAuth 2 subsidietypes in onderstaande lijst. 
 >[!IMPORTANT]
 >
 >* U geeft de invoerparameters op volgens de instructies in de onderstaande secties. De Adobe-interne systemen verbinden met het vergunningssysteem van uw platform en grijpen outputparameters, die worden gebruikt om de gebruiker voor authentiek te verklaren en vergunning aan uw bestemming te handhaven.
->* De invoerparameters die in de tabel vet worden gemarkeerd, zijn vereiste parameters in de OAuth 2-autorisatiestroom. De andere parameters zijn optioneel. Er zijn andere parameters van de douaneinput die niet hier worden getoond, maar bij lengte in de secties [ worden beschreven aanpassen uw configuratie OAuth 2 ](#customize-configuration) en [ het teken van de Toegang verfrist zich ](#access-token-refresh).
+>* De invoerparameters die in de tabel vet worden gemarkeerd, zijn vereiste parameters in de OAuth 2-autorisatiestroom. De andere parameters zijn optioneel. Er zijn andere parameters van de douaneinput die niet hier worden getoond, maar bij lengte in de secties [&#x200B; worden beschreven aanpassen uw configuratie OAuth 2 &#x200B;](#customize-configuration) en [&#x200B; het teken van de Toegang verfrist zich &#x200B;](#access-token-refresh).
 
 | OAuth 2 Grant | Invoer | Uitvoer |
 |---------|----------|---------|
@@ -85,7 +85,7 @@ Het systeem dat de Adobe heeft ontworpen voor OAuth 2-autorisatie:
 
 ## OAuth 2 met vergunningscode {#authorization-code}
 
-Als uw bestemming een standaardOAuth 2.0 stroom van de Code van de Vergunning steunt (lees de [ RFC normen specs ](https://tools.ietf.org/html/rfc6749#section-4.1)) of een variatie van het, raadpleeg de vereiste en facultatieve hieronder gebieden:
+Als uw bestemming een standaardOAuth 2.0 stroom van de Code van de Vergunning steunt (lees de [&#x200B; RFC normen specs &#x200B;](https://tools.ietf.org/html/rfc6749#section-4.1)) of een variatie van het, raadpleeg de vereiste en facultatieve hieronder gebieden:
 
 | OAuth 2 Grant | Invoer | Uitvoer |
 |---------|----------|---------|
@@ -93,7 +93,7 @@ Als uw bestemming een standaardOAuth 2.0 stroom van de Code van de Vergunning st
 
 {style="table-layout:auto"}
 
-Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie toe, wanneer u [ een bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) creeert:
+Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie toe, wanneer u [&#x200B; een bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) creeert:
 
 ```json
 {
@@ -129,7 +129,7 @@ Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijn
 
 ## OAuth 2 with Password Grant
 
-Voor OAuth 2 de subsidie van het Wachtwoord (lees de [ RFC normen specs ](https://tools.ietf.org/html/rfc6749#section-4.3)), vereist het Experience Platform de gebruikersbenaming en het wachtwoord van de gebruiker. In de vergunningsstroom, ruilt het Experience Platform deze geloofsbrieven voor een toegangstoken en, naar keuze, verfrist teken.
+Voor OAuth 2 de subsidie van het Wachtwoord (lees de [&#x200B; RFC normen specs &#x200B;](https://tools.ietf.org/html/rfc6749#section-4.3)), vereist het Experience Platform de gebruikersbenaming en het wachtwoord van de gebruiker. In de vergunningsstroom, ruilt het Experience Platform deze geloofsbrieven voor een toegangstoken en, naar keuze, verfrist teken.
 Adobe maakt gebruik van de standaardinvoer hieronder om bestemmingsconfiguratie te vereenvoudigen, met de capaciteit om waarden met voeten te treden:
 
 | OAuth 2 Grant | Invoer | Uitvoer |
@@ -142,7 +142,7 @@ Adobe maakt gebruik van de standaardinvoer hieronder om bestemmingsconfiguratie 
 >
 > U hoeft geen parameters voor `username` en `password` toe te voegen in de onderstaande configuratie. Wanneer u `"grant": "OAUTH2_PASSWORD"` in de bestemmingsconfiguratie toevoegt, zal het systeem de gebruiker verzoeken om een gebruikersbenaming en een wachtwoord in het Experience Platform UI te verstrekken, wanneer zij aan uw bestemming voor authentiek verklaren.
 
-Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie toe, wanneer u [ een bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) creeert:
+Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie toe, wanneer u [&#x200B; een bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) creeert:
 
 ```json
 {
@@ -172,7 +172,7 @@ Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijn
 
 ## OAuth 2 met Client Credentials Grant
 
-U kunt een OAuth 2 Credentials van de Cliënt vormen (lees de [ RFC normen specs ](https://tools.ietf.org/html/rfc6749#section-4.4)) bestemming, die de hieronder vermelde standaardinput en output steunt. U kunt de waarden aanpassen. Zie [ uw OAuth 2 configuratie ](#customize-configuration) voor details aanpassen.
+U kunt een OAuth 2 Credentials van de Cliënt vormen (lees de [&#x200B; RFC normen specs &#x200B;](https://tools.ietf.org/html/rfc6749#section-4.4)) bestemming, die de hieronder vermelde standaardinput en output steunt. U kunt de waarden aanpassen. Zie [&#x200B; uw OAuth 2 configuratie &#x200B;](#customize-configuration) voor details aanpassen.
 
 | OAuth 2 Grant | Invoer | Uitvoer |
 |---------|----------|---------|
@@ -180,7 +180,7 @@ U kunt een OAuth 2 Credentials van de Cliënt vormen (lees de [ RFC normen specs
 
 {style="table-layout:auto"}
 
-Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie toe, wanneer u [ een bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) creeert:
+Aan opstelling deze vergunningsmethode voor uw bestemming, voeg de volgende lijnen aan uw configuratie toe, wanneer u [&#x200B; een bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) creeert:
 
 ```json
 {
@@ -273,7 +273,7 @@ In dit voorbeeld, plaatst een partner - omhoog hun bestemming om speciaal te ver
 
 ### Voorbeeld 3: De gebruiker voert cliënt ID en cliëntgeheim in wanneer zij de bestemming vormen {#example-3}
 
-In dit voorbeeld, in plaats van het creëren van een globale cliëntidentiteitskaart en cliëntgeheim zoals aangetoond in de sectie [ Eerste vereisten in uw systeem ](#prerequisites), wordt de klant vereist om cliëntidentiteitskaart, cliëntgeheim, en rekeningsidentiteitskaart (identiteitskaart in te voeren die de klant gebruikt om in de bestemming te registreren)
+In dit voorbeeld, in plaats van het creëren van een globale cliëntidentiteitskaart en cliëntgeheim zoals aangetoond in de sectie [&#x200B; Eerste vereisten in uw systeem &#x200B;](#prerequisites), wordt de klant vereist om cliëntidentiteitskaart, cliëntgeheim, en rekeningsidentiteitskaart (identiteitskaart in te voeren die de klant gebruikt om in de bestemming te registreren)
 
 ```json
 {
@@ -470,7 +470,7 @@ U kunt de volgende parameters in `accessTokenRequest` gebruiken om uw token aan 
 
 ## Sjabloonconventies {#templating-conventions}
 
-Afhankelijk van de aanpassing van uw toestemming, zou u tot gegevensgebieden in de vergunningsreactie kunnen moeten toegang hebben, zoals aangetoond in de vorige sectie. Om dat te doen, gelieve zich met de [ Pebble het trillen taal ](https://pebbletemplates.io/) vertrouwd te maken die door Adobe wordt gebruikt en naar de malplaatjeverdrag hieronder te verwijzen om uw OAuth 2 implementatie aan te passen.
+Afhankelijk van de aanpassing van uw toestemming, zou u tot gegevensgebieden in de vergunningsreactie kunnen moeten toegang hebben, zoals aangetoond in de vorige sectie. Om dat te doen, gelieve zich met de [&#x200B; Pebble het trillen taal &#x200B;](https://pebbletemplates.io/) vertrouwd te maken die door Adobe wordt gebruikt en naar de malplaatjeverdrag hieronder te verwijzen om uw OAuth 2 implementatie aan te passen.
 
 
 | Voorvoegsel | Beschrijving | Voorbeeld |
@@ -485,4 +485,4 @@ Afhankelijk van de aanpassing van uw toestemming, zou u tot gegevensgebieden in 
 
 ## Volgende stappen {#next-steps}
 
-Door dit artikel te lezen, hebt u nu inzicht in de OAuth 2 toestemmingspatronen die door Adobe Experience Platform worden gesteund en weet hoe te om uw bestemming met OAuth 2 vergunningssteun te vormen. Vervolgens kunt u met Destination SDK de OAuth 2-ondersteunde bestemming instellen. Lees [ Destination SDK van het Gebruik om uw bestemming ](../../guides/configure-destination-instructions.md) voor volgende stappen te vormen.
+Door dit artikel te lezen, hebt u nu inzicht in de OAuth 2 toestemmingspatronen die door Adobe Experience Platform worden gesteund en weet hoe te om uw bestemming met OAuth 2 vergunningssteun te vormen. Vervolgens kunt u met Destination SDK de OAuth 2-ondersteunde bestemming instellen. Lees [&#x200B; Destination SDK van het Gebruik om uw bestemming &#x200B;](../../guides/configure-destination-instructions.md) voor volgende stappen te vormen.

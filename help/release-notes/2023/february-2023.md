@@ -34,11 +34,11 @@ Met Adobe Assurance kunt u controleren, testen, simuleren en valideren hoe u geg
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Openbare API&#39;s | De Adobe Assurance API&#39;s zijn nu beschikbaar. De Assurance API&#39;s zijn een verzameling API&#39;s die gebruikers de mogelijkheid bieden om hun eigen web- en mobiele apps te testen en er fouten in op te sporen, wanneer deze zijn uitgerust met de Adobe Assurance-extensie met Mobile SDK. Om meer over Assurance APIs te leren, te lezen gelieve het [ overzicht van Assurance API ](https://developer.adobe.com/adobe-assurance-public-apis/). |
+| Openbare API&#39;s | De Adobe Assurance API&#39;s zijn nu beschikbaar. De Assurance API&#39;s zijn een verzameling API&#39;s die gebruikers de mogelijkheid bieden om hun eigen web- en mobiele apps te testen en er fouten in op te sporen, wanneer deze zijn uitgerust met de Adobe Assurance-extensie met Mobile SDK. Om meer over Assurance APIs te leren, te lezen gelieve het [&#x200B; overzicht van Assurance API &#x200B;](https://developer.adobe.com/adobe-assurance-public-apis/). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over Assurance, te lezen gelieve de [ documentatie van Assurance ](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
+Voor meer informatie over Assurance, te lezen gelieve de [&#x200B; documentatie van Assurance &#x200B;](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -48,7 +48,7 @@ Voor meer informatie over Assurance, te lezen gelieve de [ documentatie van Assu
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| [ Verbetering van het Beleid van de Toestemming ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) voor integratie met [ op dossier-gebaseerde (partij) bestemmingen ](/help/destinations/destination-types.md#file-based) | <p> Wanneer profielen niet meer in aanmerking komen voor een beleid voor toestemming, geeft Experience Platform nu proactief aan dat het beleid is afgesloten naar bestandsbestemmingen. Dit volgt de [ versie in Februari 2023 ](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) van de zelfde functionaliteit voor het stromen bestemmingen. </p> <p> <b> Nota </b>: Deze functionaliteit is beschikbaar slechts aan klanten van **[!UICONTROL Privacy and Security Shield]**, en die van **[!UICONTROL Healthcare Shield]**. </p> |
+| [&#x200B; Verbetering van het Beleid van de Toestemming &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) voor integratie met [&#x200B; op dossier-gebaseerde (partij) bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based) | <p> Wanneer profielen niet meer in aanmerking komen voor een beleid voor toestemming, geeft Experience Platform nu proactief aan dat het beleid is afgesloten naar bestandsbestemmingen. Dit volgt de [&#x200B; versie in Februari 2023 &#x200B;](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) van de zelfde functionaliteit voor het stromen bestemmingen. </p> <p> <b> Nota </b>: Deze functionaliteit is beschikbaar slechts aan klanten van **[!UICONTROL Privacy and Security Shield]**, en die van **[!UICONTROL Healthcare Shield]**. </p> |
 
 {style="table-layout:auto"}
 
@@ -56,7 +56,7 @@ Voor meer informatie over Assurance, te lezen gelieve de [ documentatie van Assu
 
 | Documentatie | Beschrijving |
 | ----------- | ----------- |
-| Hoe werken de bestemmingen documentatie | <p>We hebben drie nieuwe artikelen gepubliceerd waarin wordt uitgelegd hoe bestemmingen werken, op basis van gemeenschappelijke vragen van gebruikers:</p> <p><ul><li>[ configureerbare en gemeenschappelijke uitvoermontages in bestemmingen ](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[ de uitvoergedrag van het Profiel voor verschillende bestemmingstypes ](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[ Identiteitsafhandeling in het werkschema van de bestemmingsactivering ](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+| Hoe werken de bestemmingen documentatie | <p>We hebben drie nieuwe artikelen gepubliceerd waarin wordt uitgelegd hoe bestemmingen werken, op basis van gemeenschappelijke vragen van gebruikers:</p> <p><ul><li>[&#x200B; configureerbare en gemeenschappelijke uitvoermontages in bestemmingen &#x200B;](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[&#x200B; de uitvoergedrag van het Profiel voor verschillende bestemmingstypes &#x200B;](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[&#x200B; Identiteitsafhandeling in het werkschema van de bestemmingsactivering &#x200B;](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
 
 Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
@@ -68,7 +68,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Functie | Beschrijving |
 | --- | --- |
-| Veldveroudering via de gebruikersinterface | U kunt [ gebieden van uw schema&#39;s nu verwerpen nadat het gegeven ](../../xdm/tutorials/field-deprecation-ui.md) is opgenomen. Met XDM-veldafleiding kunt u velden verwijderen uit de UI-weergave en deze voor gebruik behouden. Indien nodig kunt u afgekeurde velden opnieuw weergeven en worden alle segmenten, query&#39;s of downstreamoplossingen die verwijzen naar de velden, op de gebruikelijke wijze uitgevoerd. |
+| Veldveroudering via de gebruikersinterface | U kunt [&#x200B; gebieden van uw schema&#39;s nu verwerpen nadat het gegeven &#x200B;](../../xdm/tutorials/field-deprecation-ui.md) is opgenomen. Met XDM-veldafleiding kunt u velden verwijderen uit de UI-weergave en deze voor gebruik behouden. Indien nodig kunt u afgekeurde velden opnieuw weergeven en worden alle segmenten, query&#39;s of downstreamoplossingen die verwijzen naar de velden, op de gebruikelijke wijze uitgevoerd. |
 
 {style="table-layout:auto"}
 
@@ -84,15 +84,15 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Componenttype | Naam | Beschrijving |
 | --- | --- | --- |
-| Veldgroep | [!UICONTROL Frequency Capping Constraints] | De [!UICONTROL Frequency Capping Constraints] gebiedsgroep is [ bijgewerkt om herhalings en douanegebeurtenissen ](https://github.com/adobe/xdm/pull/1641/files) te steunen. |
-| Gegevenstype | [!UICONTROL Web referrer] | De verwijzingseigenschappen van het Web zijn [ bijgewerkt om `xdm:linkName` en `xdm:linkRegion` ](https://github.com/adobe/xdm/pull/1666/files) te omvatten. Dit zijn respectievelijk de naam en het gebied van het HTML-element dat op de vorige pagina is geselecteerd. |
-| Veldgroep | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction details] | [ het [!UICONTROL Tracker URL] gebied werd toegevoegd ](https://github.com/adobe/xdm/pull/1665/files) aan [!UICONTROL Adobe CJM ExperienceEvent]. Deze tracker bevat de URL die door de gebruiker is geselecteerd. |
-| Veldgroep | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail] | [ het lege `meta:enum` bezit werd verwijderd ](https://github.com/adobe/xdm/pull/1668/files) van het URL [!UICONTROL Tracking Type] gebied. |
-| Gegevenstype | [!UICONTROL Media information] | [ het regex patroon van het `videoSegment` bezit in [!UICONTROL Media information] datatype werd verwijderd ](https://github.com/adobe/xdm/pull/1667/files). |
+| Veldgroep | [!UICONTROL Frequency Capping Constraints] | De [!UICONTROL Frequency Capping Constraints] gebiedsgroep is [&#x200B; bijgewerkt om herhalings en douanegebeurtenissen &#x200B;](https://github.com/adobe/xdm/pull/1641/files) te steunen. |
+| Gegevenstype | [!UICONTROL Web referrer] | De verwijzingseigenschappen van het Web zijn [&#x200B; bijgewerkt om `xdm:linkName` en `xdm:linkRegion` &#x200B;](https://github.com/adobe/xdm/pull/1666/files) te omvatten. Dit zijn respectievelijk de naam en het gebied van het HTML-element dat op de vorige pagina is geselecteerd. |
+| Veldgroep | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction details] | [&#x200B; het [!UICONTROL Tracker URL] gebied werd toegevoegd &#x200B;](https://github.com/adobe/xdm/pull/1665/files) aan [!UICONTROL Adobe CJM ExperienceEvent]. Deze tracker bevat de URL die door de gebruiker is geselecteerd. |
+| Veldgroep | [!UICONTROL Adobe CJM ExperienceEvent - Message interaction detail] | [&#x200B; het lege `meta:enum` bezit werd verwijderd &#x200B;](https://github.com/adobe/xdm/pull/1668/files) van het URL [!UICONTROL Tracking Type] gebied. |
+| Gegevenstype | [!UICONTROL Media information] | [&#x200B; het regex patroon van het `videoSegment` bezit in [!UICONTROL Media information] datatype werd verwijderd &#x200B;](https://github.com/adobe/xdm/pull/1667/files). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Experience Platform, lees het [ XDM overzicht van het Systeem ](../../xdm/home.md). &#x200B;
+Voor meer informatie over XDM in Experience Platform, lees het [&#x200B; XDM overzicht van het Systeem &#x200B;](../../xdm/home.md). &#x200B;
 
 ## Query-service {#query-service}
 
@@ -102,10 +102,10 @@ Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gegevenssets inschakelen voor profiel met SQL | [ ETIKETTERSs van het Gebruik in CTAS vragen om een dataset &quot;toegelaten profiel&quot;te maken ](../../query-service/sql/syntax.md#create-table-as-select), of gebruik ALTER om bestaande datasets bij te werken om voor profiel worden toegelaten. U kunt dit uitgebreide SQL concept gebruiken om naadloze steun voor afgeleide datasets voor uw zaken van het bedrijfsgebruik van het Profiel van de Klant in real time te verlenen. Zie de [ naadloze SQL stroom voor afgeleid datasetdocument ](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) voor meer details. |
-| Geplande query&#39;s controleren | Gebruik het [ Geplande lusje van Vragen ](../../query-service/ui/monitor-queries.md) om belangrijke informatie over uw vraaglooppas te vinden en aan alarm in te tekenen. De vragen van de monitor voor planningsdetails, status, en foutenmeldingen/codes zouden moeten ontbreken. |
-| Functie voor automatisch aanvullen in-/uitschakelen | Elimineer bepaalde meta-gegevensbevelen en verbeter verwerkingstijden door [ van een knevel te voorzien van de Redacteur van de Vraag auto-volledige eigenschap ](../../query-service/ui/user-guide.md#auto-complete). Deze functie stelt automatisch potentiële SQL sleutelwoorden en lijstdetails voor de vraag voor aangezien u het schrijft. |
-| Gegevenssetvoorbeelden | Specificeer een steekproeftarief in uw vraag en [ de steekproeven van de gebruiksdataset om een eenvormige willekeurige steekproef ](../../query-service/key-concepts/dataset-samples.md) tot stand te brengen, of voorwaardelijke steekproeven tot stand te brengen die op specifieke criteria worden gebaseerd. |
+| Gegevenssets inschakelen voor profiel met SQL | [&#x200B; ETIKETTERSs van het Gebruik in CTAS vragen om een dataset &quot;toegelaten profiel&quot;te maken &#x200B;](../../query-service/sql/syntax.md#create-table-as-select), of gebruik ALTER om bestaande datasets bij te werken om voor profiel worden toegelaten. U kunt dit uitgebreide SQL concept gebruiken om naadloze steun voor afgeleide datasets voor uw zaken van het bedrijfsgebruik van het Profiel van de Klant in real time te verlenen. Zie de [&#x200B; naadloze SQL stroom voor afgeleid datasetdocument &#x200B;](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) voor meer details. |
+| Geplande query&#39;s controleren | Gebruik het [&#x200B; Geplande lusje van Vragen &#x200B;](../../query-service/ui/monitor-queries.md) om belangrijke informatie over uw vraaglooppas te vinden en aan alarm in te tekenen. De vragen van de monitor voor planningsdetails, status, en foutenmeldingen/codes zouden moeten ontbreken. |
+| Functie voor automatisch aanvullen in-/uitschakelen | Elimineer bepaalde meta-gegevensbevelen en verbeter verwerkingstijden door [&#x200B; van een knevel te voorzien van de Redacteur van de Vraag auto-volledige eigenschap &#x200B;](../../query-service/ui/user-guide.md#auto-complete). Deze functie stelt automatisch potentiële SQL sleutelwoorden en lijstdetails voor de vraag voor aangezien u het schrijft. |
+| Gegevenssetvoorbeelden | Specificeer een steekproeftarief in uw vraag en [&#x200B; de steekproeven van de gebruiksdataset om een eenvormige willekeurige steekproef &#x200B;](../../query-service/key-concepts/dataset-samples.md) tot stand te brengen, of voorwaardelijke steekproeven tot stand te brengen die op specifieke criteria worden gebaseerd. |
 
 {style="table-layout:auto"}
 
@@ -120,11 +120,11 @@ Real-Time CDP B2B edition is gebaseerd op Real-Time Customer Data Platform (Real
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gerelateerde accountservice inschakelen | Met de nieuwe schakelfunctie kunt u de verwante accountservice op uw account inschakelen. Voor meer informatie, lees de gids op [ toelatend de verwante rekeningendienst ](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
+| Gerelateerde accountservice inschakelen | Met de nieuwe schakelfunctie kunt u de verwante accountservice op uw account inschakelen. Voor meer informatie, lees de gids op [&#x200B; toelatend de verwante rekeningendienst &#x200B;](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style="table-layout:auto"}
 
-Meer over Real-Time CDP B2B edition leren, lees het [ overzicht van B2B edition van Real-Time CDP ](../../rtcdp/overview.md).
+Meer over Real-Time CDP B2B edition leren, lees het [&#x200B; overzicht van B2B edition van Real-Time CDP &#x200B;](../../rtcdp/overview.md).
 
 ## Bronnen {#sources}
 
@@ -136,9 +136,9 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Toegang op abonnementsniveau toewijzen met [!DNL Google PubSub] | U kunt toegang tot een specifiek onderwerpabonnement nu bepalen wanneer het gebruiken van de [!DNL Google PubSub] bron door abonnements identiteitskaart te verstrekken wanneer het voor authentiek verklaren. Voor meer informatie, lees het [!DNL Google PubSub] authentificatieleerprogramma [ gebruikend de Dienst API van de Stroom ](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) of [ Experience Platform UI ](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Aangepaste activiteitsgegevens verzamelen vanuit [!DNL Marketo] | U kunt nu aangepaste activiteitsgegevens van uw [!DNL Marketo] -instantie overbrengen naar Experience Platform. Om de gegevens van de douaneactiviteit in te voeren, moet u de groepen van het gebied van douaneactiviteiten in het B2B schema van Activiteiten opzetten en een dataflow creëren gebruikend de activiteitendataset. Zodra de gegevensstroom volledig is, zal de ingebedde dataset zowel standaard als douaneactiviteiten van uw [!DNL Marketo] instantie bevatten. U kunt [ Dienst van de Vraag ](../../query-service/home.md) dan gebruiken om tot uw verslagen van de douaneactiviteit op Experience Platform toegang te hebben. Voor meer informatie, lees de gids op [ creërend een dataflow voor de gegevens van de douaneactiviteit ](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
-| Niet-geclaimde accounts uitsluiten van [!DNL Marketo] | U kunt nu configureren of u niet-geclaimde accounts wilt uitsluiten of opnemen in de opname wanneer u een gegevensstroom voor bedrijfsgegevens maakt. Voor meer informatie, lees de gids bij [ het creëren van een bronverbinding en een dataflow voor  [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
+| Toegang op abonnementsniveau toewijzen met [!DNL Google PubSub] | U kunt toegang tot een specifiek onderwerpabonnement nu bepalen wanneer het gebruiken van de [!DNL Google PubSub] bron door abonnements identiteitskaart te verstrekken wanneer het voor authentiek verklaren. Voor meer informatie, lees het [!DNL Google PubSub] authentificatieleerprogramma [&#x200B; gebruikend de Dienst API van de Stroom &#x200B;](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) of [&#x200B; Experience Platform UI &#x200B;](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Aangepaste activiteitsgegevens verzamelen vanuit [!DNL Marketo] | U kunt nu aangepaste activiteitsgegevens van uw [!DNL Marketo] -instantie overbrengen naar Experience Platform. Om de gegevens van de douaneactiviteit in te voeren, moet u de groepen van het gebied van douaneactiviteiten in het B2B schema van Activiteiten opzetten en een dataflow creëren gebruikend de activiteitendataset. Zodra de gegevensstroom volledig is, zal de ingebedde dataset zowel standaard als douaneactiviteiten van uw [!DNL Marketo] instantie bevatten. U kunt [&#x200B; Dienst van de Vraag &#x200B;](../../query-service/home.md) dan gebruiken om tot uw verslagen van de douaneactiviteit op Experience Platform toegang te hebben. Voor meer informatie, lees de gids op [&#x200B; creërend een dataflow voor de gegevens van de douaneactiviteit &#x200B;](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Niet-geclaimde accounts uitsluiten van [!DNL Marketo] | U kunt nu configureren of u niet-geclaimde accounts wilt uitsluiten of opnemen in de opname wanneer u een gegevensstroom voor bedrijfsgegevens maakt. Voor meer informatie, lees de gids bij [&#x200B; het creëren van een bronverbinding en een dataflow voor  [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}
 

@@ -13,4 +13,4 @@ ht-degree: 0%
 
 Om het delen en manipuleren van gegevens te vereenvoudigen, kunt u verwerkte gegevens van uw Aangepaste Inzichten in Csv formaat uitvoeren. Gebruik de opties **[!UICONTROL Download CSV]** of **[!UICONTROL Send as email]** , beschikbaar onder **[!UICONTROL View more]** in de exportworkflow.
 
-Zie de sectie [[!UICONTROL View more] Exporteren ](./view-more.md#export) als u de verwerkte diagramgegevens als een CSV-bestand wilt exporteren of als een beveiligde downloadkoppeling via e-mail wilt verzenden.
+Zie de sectie [[!UICONTROL View more] Exporteren &#x200B;](./view-more.md#export) als u de verwerkte diagramgegevens als een CSV-bestand wilt exporteren of als een beveiligde downloadkoppeling via e-mail wilt verzenden.

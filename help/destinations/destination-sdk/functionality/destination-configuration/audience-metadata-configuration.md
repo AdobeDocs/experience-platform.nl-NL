@@ -15,7 +15,7 @@ Wanneer u gegevens van Experience Platform naar uw bestemming exporteert, hebt u
 
 Destination SDK biedt hulpprogramma&#39;s waarmee u doelgroepen in uw doelplatform via programmacode kunt maken, bijwerken of verwijderen.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een het stromen bestemming ](../../guides/configure-destination-instructions.md#create-destination-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [&#x200B; configuratieopties &#x200B;](../configuration-options.md) documentatie of zie de gids op hoe te [&#x200B; Destination SDK gebruiken om een het stromen bestemming &#x200B;](../../guides/configure-destination-instructions.md#create-destination-configuration) te vormen.
 
 U kunt de publieksmeta-gegevensmalplaatje via het `/authoring/audience-templates` eindpunt vormen. Nadat u de configuratie van de publieksmetagegevens hebt gemaakt, kunt u het `/authoring/destinations` -eindpunt gebruiken om de secties `segmentMappingConfig` en `audienceMetadataConfig` te configureren. Deze sectie vertelt uw bestemming welke publieksmeta-gegevens het aan uw publiekssjabloon zou moeten in kaart brengen.
 
@@ -59,7 +59,7 @@ Wanneer het creëren van uw configuratie van publieksmeta-gegevens, kunt u de pa
 | `mapExperiencePlatformSegmentName` | Boolean | Geeft aan of de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) -waarde in de doelactiveringsworkflow de Experience Platform-publieksnaam moet zijn. |
 | `mapExperiencePlatformSegmentId` | Boolean | Geeft aan of de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) -waarde in de workflow voor doelactivering de Experience Platform-gebruikers-id moet zijn. |
 | `mapUserInput` | Boolean | Schakelt gebruikersinvoer voor de [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) -waarde in of uit in de doelactiveringsworkflow. Indien ingesteld op `true` , kan `audienceTemplateId` niet aanwezig zijn. |
-| `audienceTemplateId` | String | `instanceId` van het [ malplaatje van publieksmeta-gegevens ](../../metadata-api/create-audience-template.md) dat voor uw bestemming wordt gebruikt. |
+| `audienceTemplateId` | String | `instanceId` van het [&#x200B; malplaatje van publieksmeta-gegevens &#x200B;](../../metadata-api/create-audience-template.md) dat voor uw bestemming wordt gebruikt. |
 
 {style="table-layout:auto"}
 

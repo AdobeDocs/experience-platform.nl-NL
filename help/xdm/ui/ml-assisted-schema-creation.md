@@ -22,43 +22,43 @@ Met het schemageneratie van ML, kunt u nieuwe gegevensbronnen snel integreren en
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de vereisten voor het maken van schema&#39;s. Alvorens met deze gids verder te gaan, zou u de [ gids UI aan het creëren van en het uitgeven van schema&#39;s ](./resources/schemas.md) moeten lezen.
+Deze zelfstudie vereist een goed begrip van de vereisten voor het maken van schema&#39;s. Alvorens met deze gids verder te gaan, zou u de [&#x200B; gids UI aan het creëren van en het uitgeven van schema&#39;s &#x200B;](./resources/schemas.md) moeten lezen.
 
-Deze gids verklaart hoe te om schema&#39;s tot stand te brengen gebruikend machine het leren (ML) algoritmen om een schema van steekproefgegevens te produceren. Zie de [ handgids van de schemaverwezenlijking ](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) voor informatie bij het creëren van schema&#39;s of het document op [ op gebied-gebaseerde werkschema&#39;s in de Redacteur van het Schema ](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/ui/field-based-workflows) om uw begrip van het proces van de schemaverwezenlijking te verbeteren.
+Deze gids verklaart hoe te om schema&#39;s tot stand te brengen gebruikend machine het leren (ML) algoritmen om een schema van steekproefgegevens te produceren. Zie de [&#x200B; handgids van de schemaverwezenlijking &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) voor informatie bij het creëren van schema&#39;s of het document op [&#x200B; op gebied-gebaseerde werkschema&#39;s in de Redacteur van het Schema &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/ui/field-based-workflows) om uw begrip van het proces van de schemaverwezenlijking te verbeteren.
 
 >[!NOTE]
 >
->U kunt ook een schema samenstellen met de API [!DNL Schema Registry] . Om een schema manueel tot stand te brengen gebruikend API, lees eerst de [[!DNL Schema Registry]  ontwikkelaarsgids ](../api/getting-started.md) alvorens de leerprogramma te proberen op [ creërend een schema gebruikend API ](../tutorials/create-schema-api.md).
+>U kunt ook een schema samenstellen met de API [!DNL Schema Registry] . Om een schema manueel tot stand te brengen gebruikend API, lees eerst de [[!DNL Schema Registry]  ontwikkelaarsgids &#x200B;](../api/getting-started.md) alvorens de leerprogramma te proberen op [&#x200B; creërend een schema gebruikend API &#x200B;](../tutorials/create-schema-api.md).
 
 ## Navigeren naar de workflow Schema maken {#navigate-to-schema-creation-workflow}
 
 Selecteer de werkruimte **[!UICONTROL Schemas]** in de linkernavigatie van de gebruikersinterface van Experience Platform. De werkruimte van **[!UICONTROL Schemas]** wordt weergegeven. Selecteer **[!UICONTROL Create schema]** om een nieuw schema toe te voegen om een werkschema voor het maken van schema&#39;s te beginnen.
 
-![ de werkruimte van Schema&#39;s met Schema in de linkernavigatie en leidt tot benadrukt schema.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
+![&#x200B; de werkruimte van Schema&#39;s met Schema in de linkernavigatie en leidt tot benadrukt schema.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 
 ## Een schema maken {#create-a-schema}
 
 Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. Selecteer de &rbrack;**schemaverwezenlijking 0&rbrace; ML-Begeleidde &#x200B;** [!UICONTROL Select]&#x200B;**optie, die door wordt gevolgd om uw keus te bevestigen.**&lbrack;
 
-![ de [!UICONTROL Create a schema] dialoog met [!UICONTROL ML- Assisted] benadrukte.](../images/ui/ml-schema-creation/use-sample-csv.png)
+![&#x200B; de [!UICONTROL Create a schema] dialoog met [!UICONTROL ML- Assisted] benadrukte.](../images/ui/ml-schema-creation/use-sample-csv.png)
 
 ### Een basisklasse selecteren {#select-base-class}
 
 De [!UICONTROL Create schema] -workflow wordt weergegeven. Selecteer een basisklasse voor het schema gevolgd door **[!UICONTROL Next]** .
 
-![ de de detailwerkruimte van het Schema met een klasse en daarna benadrukte.](../images/ui/ml-schema-creation/select-base-class.png)
+![&#x200B; de de detailwerkruimte van het Schema met een klasse en daarna benadrukte.](../images/ui/ml-schema-creation/select-base-class.png)
 
 ### Een CSV-bestand uploaden {#upload-csv}
 
 Het **[!UICONTROL Select data]** -werkgebied van de ontwerpworkflow wordt weergegeven. Selecteer in de sectie **[!UICONTROL Upload files]** de sectie **[!UICONTROL Choose files]** of **[!UICONTROL Drag and Drop files]** . Selecteer een .csv- dossier van uw computer om een schema te produceren.
 
-![ het Uitgezochte gegevensstadium van het Create werkschema van het Schema met de Upload benadrukte sectie van Dossiers.](../images/ui/ml-schema-creation/upload-files.png)
+![&#x200B; het Uitgezochte gegevensstadium van het Create werkschema van het Schema met de Upload benadrukte sectie van Dossiers.](../images/ui/ml-schema-creation/upload-files.png)
 
 ### Gegevens voorvertonen {#preview-data}
 
 In de sectie [!UICONTROL Upload file] wordt de naam weergegeven van het CSV-bestand dat u hebt geïmporteerd en in de sectie **[!UICONTROL Preview]** worden rijen met voorbeeldgegevens uit het bestand dat u hebt geüpload weergegeven. Selecteer **[!UICONTROL Next]** om door te gaan met de workflow.
 
-![ Rijen van steekproefgegevens die in de voorproefsectie worden benadrukt, en daarna benadrukte.](../images/ui/ml-schema-creation/preview-data.png)
+![&#x200B; Rijen van steekproefgegevens die in de voorproefsectie worden benadrukt, en daarna benadrukte.](../images/ui/ml-schema-creation/preview-data.png)
 
 ### Schema controleren en bewerken {#review-schema}
 
@@ -73,17 +73,17 @@ Het **[!UICONTROL Review and edit]** -werkgebied van de ontwerpworkflow wordt nu
 | [!UICONTROL Data Type] | Het type gegevens dat in het veld is opgeslagen (bijvoorbeeld `String` , `Date` ). |
 | [!UICONTROL Field Group] | Een categorisering van het veld op basis van het gebruik of de context (bijvoorbeeld [!UICONTROL Demographic Details], [!UICONTROL Commerce Details] ). |
 
-![ het Overzicht en geeft stadium van het schema creatiewerkschema uit.](../images/ui/ml-schema-creation/schema-recommendation.png)
+![&#x200B; het Overzicht en geeft stadium van het schema creatiewerkschema uit.](../images/ui/ml-schema-creation/schema-recommendation.png)
 
 #### Veld toevoegen {#add-field}
 
 Als u een veld aan het schema wilt toevoegen, selecteert u **[!UICONTROL Add new field]** .
 
-![ het Overzicht en geeft stadium van het schemaverwezenlijking werkschema met Add nieuw benadrukt gebied uit.](../images/ui/ml-schema-creation/add-new-field.png)
+![&#x200B; het Overzicht en geeft stadium van het schemaverwezenlijking werkschema met Add nieuw benadrukt gebied uit.](../images/ui/ml-schema-creation/add-new-field.png)
 
 Het dialoogvenster [!UICONTROL Select field] wordt weergegeven. Het dialoogvenster bevat een diagram van het schema zoals dat momenteel bestaat. Selecteer het gewenste gebied en selecteer **[Uitgezocht]** om een nieuw gebied aan het schema toe te voegen. Selecteer **[annuleert]** om de dialoog indien nodig te sluiten.
 
-![ het Uitgezochte gebied dialoog met een geselecteerd gebied en Uitgezocht benadrukte.](../images/ui/ml-schema-creation/select-field-dialog.png)
+![&#x200B; het Uitgezochte gebied dialoog met een geselecteerd gebied en Uitgezocht benadrukte.](../images/ui/ml-schema-creation/select-field-dialog.png)
 
 Er wordt een nieuwe rij weergegeven in het aanbevolen schema. U kunt het veld nu bewerken.
 
@@ -91,7 +91,7 @@ Er wordt een nieuwe rij weergegeven in het aanbevolen schema. U kunt het veld nu
 
 Als u een veld wilt bewerken, selecteert u het potloodpictogram van de rij die u wilt bewerken. Rechts wordt een deelvenster met details weergegeven waarin u de aangepaste veldtoewijzing kunt bewerken. Het deelvenster Details bevat de deelvensters [!UICONTROL Target field] , [!UICONTROL Display Name] , [!UICONTROL Data Type] en [!UICONTROL Field Group] . Breng de benodigde wijzigingen aan en selecteer **[!UICONTROL Apply]** om te bevestigen. Selecteer opnieuw het potloodpictogram om het detailpaneel te sluiten.
 
-![ het Overzicht en geeft stadium van het schemaverwezenlijking werkschema met het benadrukte potloodpictogram en detailspaneel uit.](../images/ui/ml-schema-creation/edit-field.png)
+![&#x200B; het Overzicht en geeft stadium van het schemaverwezenlijking werkschema met het benadrukte potloodpictogram en detailspaneel uit.](../images/ui/ml-schema-creation/edit-field.png)
 
 #### Een veld verwijderen {#remove-field}
 
@@ -101,28 +101,28 @@ Als u een veld wilt verwijderen, selecteert u het min-pictogram in een rij die u
 >
 >Er wordt geen bevestigingsvenster weergegeven wanneer u dit item verwijdert.
 
-![ het Overzicht en geeft stadium van het schemaverwezenlijking werkschema met het minteken benadrukte uit.](../images/ui/ml-schema-creation/remove-field.png)
+![&#x200B; het Overzicht en geeft stadium van het schemaverwezenlijking werkschema met het minteken benadrukte uit.](../images/ui/ml-schema-creation/remove-field.png)
 
 #### Uw aanbevolen schema goedkeuren {#approve}
 
 Om uw geadviseerd schema goed te keuren en het **[!UICONTROL Create schema]** werkschema voort te zetten, selecteer **[daarna]**.
 
-![ het Overzicht en geeft stadium van het schema creatiewerkschema met Volgende benadrukt uit.](../images/ui/ml-schema-creation/next.png)
+![&#x200B; het Overzicht en geeft stadium van het schema creatiewerkschema met Volgende benadrukt uit.](../images/ui/ml-schema-creation/next.png)
 
 ### Schema een naam geven en opslaan {#name-and-save}
 
 Het **[!UICONTROL Name and save]** -werkgebied van de ontwerpworkflow wordt weergegeven. Ga de vertoningsnaam van het a **[Schema]** en een facultatieve beschrijving in. Het **[geproduceerde Schema]** sectie verstrekt een diagram van het ML-geproduceerde schema. Selecteer **[Afwerking]** om het werkschema van de schemaverwezenlijking te voltooien.
 
-![ de Naam en sparen het stadium van het Schema van het werkschema van de schemaverwezenlijking met benadrukte Einde.](../images/ui/ml-schema-creation/name-and-save.png)
+![&#x200B; de Naam en sparen het stadium van het Schema van het werkschema van de schemaverwezenlijking met benadrukte Einde.](../images/ui/ml-schema-creation/name-and-save.png)
 
 ### Weergeven in de Schema-editor {#view-in-editor}
 
 De Schema-editor wordt weergegeven met het nieuwe schema dat op het canvas wordt weergegeven. Selecteer **[!UICONTROL Save]** om terug te keren naar de werkruimte van [!UICONTROL Schemas] .
 
-![ de Redacteur van het Schema die uw genoemd ML-Gegenereerd schema toont.](../images/ui/ml-schema-creation/schema-editor.png)
+![&#x200B; de Redacteur van het Schema die uw genoemd ML-Gegenereerd schema toont.](../images/ui/ml-schema-creation/schema-editor.png)
 
 ## Volgende stappen
 
 Na het creëren van uw schema, kunt u de Redacteur van het Schema gebruiken om verdere wijzigingen, indien nodig te maken. Uw nieuwe schema is nu klaar om met uw gegevensbronnen te worden geïntegreerd en voor gegevensanalyse worden gebruikt.
 
-Zie [ een bestaande schemagids ](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/ui/resources/schemas#edit) voor meer informatie uitgeven bij het gebruiken van de Redacteur van het Schema.
+Zie [&#x200B; een bestaande schemagids &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/ui/resources/schemas#edit) voor meer informatie uitgeven bij het gebruiken van de Redacteur van het Schema.

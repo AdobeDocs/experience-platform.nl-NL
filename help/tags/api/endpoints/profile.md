@@ -11,13 +11,13 @@ ht-degree: 1%
 
 # Profieleindpunt
 
-In de Reactor-API vertegenwoordigt een profiel een Adobe Experience Platform-gebruiker. Reactor API handhaaft zijn eigen gegevensbestand van gebruikers en toestemmingen niet, en baseert in plaats daarvan op Adobe IDs die door [ wordt beheerd het systeem van het identiteitsbeheer van de Adobe (IMS) ](https://helpx.adobe.com/nl/enterprise/using/identity.html).
+In de Reactor-API vertegenwoordigt een profiel een Adobe Experience Platform-gebruiker. Reactor API handhaaft zijn eigen gegevensbestand van gebruikers en toestemmingen niet, en baseert in plaats daarvan op Adobe IDs die door [&#x200B; wordt beheerd het systeem van het identiteitsbeheer van de Adobe (IMS) &#x200B;](https://helpx.adobe.com/nl/enterprise/using/identity.html).
 
 Een profiel bevat alle informatie over de aangemelde gebruiker, met inbegrip van alle organisaties waartot zij behoren, de productprofielen zij tot binnen elk Org behoren, en de rechten zij van elk productprofiel hebben.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Het huidige profiel ophalen {#lookup}
 

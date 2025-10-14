@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Self-Serve Sources Streaming SDK is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>Self-Serve Sources Streaming SDK is in bèta. Gelieve te lezen het [&#x200B; overzicht van bronnen &#x200B;](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Met Self-Serve Sources (Streaming SDK) kunt u uw eigen bron integreren en streaming gegevens naar Adobe Experience Platform overbrengen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) te maken.
+Met Self-Serve Sources (Streaming SDK) kunt u uw eigen bron integreren en streaming gegevens naar Adobe Experience Platform overbrengen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) te maken.
 
 ## Proces op hoog niveau
 
@@ -24,17 +24,17 @@ Het stapsgewijze proces voor het configureren van uw bron in Experience Platform
 
 ### Integratie
 
-* [ creeer een nieuwe verbindingsspecificatie voor het Streamen SDK ](create.md).
-* [ werk de het stromen stroomspecificatie met uw nieuwe identiteitskaart van de verbindingsspecificatie ](update-flow-specs.md) bij.
-* [ Test en leg uw het stromen bron ](submit.md) voor.
+* [&#x200B; creeer een nieuwe verbindingsspecificatie voor het Streamen SDK &#x200B;](create.md).
+* [&#x200B; werk de het stromen stroomspecificatie met uw nieuwe identiteitskaart van de verbindingsspecificatie &#x200B;](update-flow-specs.md) bij.
+* [&#x200B; Test en leg uw het stromen bron &#x200B;](submit.md) voor.
 
 ### Documentatie
 
-* Begin documenterend uw bron, lees het [ overzicht bij het creëren van documentatie voor Zelfbediening Bronnen ](../documentation/doc-overview.md).
-* Lees de gids op [ gebruikend de het Webinterface van GitHub ](../documentation/github.md) voor stappen op hoe te om documentatie tot stand te brengen die GitHub gebruikt.
-* Lees de gids op [ gebruikend een tekstredacteur ](../documentation/text-editor.md) voor stappen op hoe te om documentatie tot stand te brengen gebruikend uw lokale machine.
-* [ Gebruik het Streaming SDK API documentatiesjabloon om uw bron in API ](streaming-template-api.md) te documenteren.
-* [ gebruik het het stromen de documentatiemalplaatje van SDK UI om uw bron in UI ](streaming-template-ui.md) te documenteren.
+* Begin documenterend uw bron, lees het [&#x200B; overzicht bij het creëren van documentatie voor Zelfbediening Bronnen &#x200B;](../documentation/doc-overview.md).
+* Lees de gids op [&#x200B; gebruikend de het Webinterface van GitHub &#x200B;](../documentation/github.md) voor stappen op hoe te om documentatie tot stand te brengen die GitHub gebruikt.
+* Lees de gids op [&#x200B; gebruikend een tekstredacteur &#x200B;](../documentation/text-editor.md) voor stappen op hoe te om documentatie tot stand te brengen gebruikend uw lokale machine.
+* [&#x200B; Gebruik het Streaming SDK API documentatiesjabloon om uw bron in API &#x200B;](streaming-template-api.md) te documenteren.
+* [&#x200B; gebruik het het stromen de documentatiemalplaatje van SDK UI om uw bron in UI &#x200B;](streaming-template-ui.md) te documenteren.
 
 U kunt ook de onderstaande documentatiesjablonen downloaden:
 
@@ -51,16 +51,16 @@ Als u Self-Serve Sources (Streaming SDK) wilt gebruiken, moet u ervoor zorgen da
 
 Deze handleiding vereist ook een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## API-voorbeeldaanroepen lezen
 
-De Self-Serve Bronnen (Streaming SDK) en de [!DNL Flow Service] API-documentatie bieden voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
+De Self-Serve Bronnen (Streaming SDK) en de [!DNL Flow Service] API-documentatie bieden voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
 
 ## Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Experience Platform APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan Experience Platform APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -72,7 +72,7 @@ Alle bronnen in Experience Platform, inclusief die van [!DNL Flow Service] , zij
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in Experience Platform, zie de [ zandbakdocumentatie ](../../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in Experience Platform, zie de [&#x200B; zandbakdocumentatie &#x200B;](../../../sandboxes/home.md).
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -80,4 +80,4 @@ Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kop
 
 ## Volgende stappen
 
-Beginnen creërend een nieuwe bron met Zelfbediening Bronnen (het stromen SDK), zie het leerprogramma op [ creërend een nieuwe bron ](./create.md).
+Beginnen creërend een nieuwe bron met Zelfbediening Bronnen (het stromen SDK), zie het leerprogramma op [&#x200B; creërend een nieuwe bron &#x200B;](./create.md).

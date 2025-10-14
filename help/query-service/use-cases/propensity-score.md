@@ -19,9 +19,9 @@ In deze handleiding wordt uitgelegd hoe u de Query-service kunt gebruiken om geg
 
 Als onderdeel van dit proces moet u een model voor machinaal leren trainen, wordt in dit document uitgegaan van een praktische kennis van een of meer computerleeromgevingen.
 
-In dit voorbeeld wordt [!DNL Jupyter Notebook] gebruikt als een ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, wordt [!DNL Jupyter Notebook] aanbevolen omdat het een opensource webtoepassing is die lage computervereisten heeft. Het kan [ van de officiële plaats ](https://jupyter.org/) worden gedownload.
+In dit voorbeeld wordt [!DNL Jupyter Notebook] gebruikt als een ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, wordt [!DNL Jupyter Notebook] aanbevolen omdat het een opensource webtoepassing is die lage computervereisten heeft. Het kan [&#x200B; van de officiële plaats &#x200B;](https://jupyter.org/) worden gedownload.
 
-Als u dit nog niet hebt gedaan, volg de stappen [  [!DNL Jupyter Notebook]  met de Dienst van de Vraag van Adobe Experience Platform ](../clients/jupyter-notebook.md) verbinden alvorens met deze gids verder te gaan.
+Als u dit nog niet hebt gedaan, volg de stappen [&#x200B;  [!DNL Jupyter Notebook]  met de Dienst van de Vraag van Adobe Experience Platform &#x200B;](../clients/jupyter-notebook.md) verbinden alvorens met deze gids verder te gaan.
 
 De bibliotheken die in dit voorbeeld worden gebruikt, zijn:
 
@@ -37,13 +37,13 @@ tqdm
 
 ## Analytische tabellen importeren van Experience Platform naar [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Als u een model met de dichtheid wilt genereren, moet u een projectie van de analysegegevens die in Experience Platform zijn opgeslagen, importeren in [!DNL Jupyter Notebook] . Van een [!DNL Python] 3 [!DNL Jupyter Notebook] verbonden met de Dienst van de Vraag, voert de volgende bevelen een dataset van het klantengedrag van Luma, een fictieve kledingopslag in. Aangezien Experience Platform-gegevens worden opgeslagen met de XDM-indeling (Experience Data Model), moet een JSON-voorbeeldobject worden gegenereerd dat voldoet aan de structuur van het schema. Zie de documentatie voor instructies op hoe te [ het voorwerp van steekproefJSON ](../../xdm/ui/sample.md) produceren.
+Als u een model met de dichtheid wilt genereren, moet u een projectie van de analysegegevens die in Experience Platform zijn opgeslagen, importeren in [!DNL Jupyter Notebook] . Van een [!DNL Python] 3 [!DNL Jupyter Notebook] verbonden met de Dienst van de Vraag, voert de volgende bevelen een dataset van het klantengedrag van Luma, een fictieve kledingopslag in. Aangezien Experience Platform-gegevens worden opgeslagen met de XDM-indeling (Experience Data Model), moet een JSON-voorbeeldobject worden gegenereerd dat voldoet aan de structuur van het schema. Zie de documentatie voor instructies op hoe te [&#x200B; het voorwerp van steekproefJSON &#x200B;](../../xdm/ui/sample.md) produceren.
 
-![ het [!DNL Jupyter Notebook] dashboard met verscheidene benadrukte bevelen.](../images/use-cases/jupyter-commands.png)
+![&#x200B; het [!DNL Jupyter Notebook] dashboard met verscheidene benadrukte bevelen.](../images/use-cases/jupyter-commands.png)
 
 De uitvoer geeft een tabellarische weergave weer van alle kolommen in de gedragsgegevensset van Luma binnen het dashboard van [!DNL Jupyter Notebook] .
 
-![ de in tabelvorm gebrachte output van de ingevoerde dataset van het klantengedrag van Luma binnen [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
+![&#x200B; de in tabelvorm gebrachte output van de ingevoerde dataset van het klantengedrag van Luma binnen [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
 
 ## Gegevens voorbereiden voor leren van computers {#prepare-data-for-machine-learning}
 
@@ -100,7 +100,7 @@ y = df['target']
 
 De gegevens die als `X` worden gedefinieerd, worden als volgt in tabelvorm weergegeven:
 
-![ de in tabelvorm gebrachte output van X binnen [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
+![&#x200B; de in tabelvorm gebrachte output van X binnen [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
 
 
 Nu de benodigde gegevens voor machinetlering beschikbaar zijn, kunnen de vooraf geconfigureerde modellen voor machinetlering in de [!DNL Python] `sklearn` -bibliotheek worden geplaatst. [!DNL Logistics Regression] wordt gebruikt om het aandrijfmodel op te leiden en geeft u de nauwkeurigheid van de testgegevens weer. In dit geval is het ongeveer 85%.
@@ -155,7 +155,7 @@ plt.show()
 
 Hieronder ziet u een verticale visualisatie van de resultaten in het staafdiagram:
 
-![ de visualisatie van top 10 eigenschappen die een neiging om al dan niet te kopen bepalen te kopen.](../images/use-cases/visualized-results.png)
+![&#x200B; de visualisatie van top 10 eigenschappen die een neiging om al dan niet te kopen bepalen te kopen.](../images/use-cases/visualized-results.png)
 
 Uit het staafdiagram kunnen verschillende patronen worden afgeleid. De onderwerpen van het verkooppunt (POS) en van de Vraag van het kanaal als terugbetaling zijn de belangrijkste factoren die een aankoopgedrag bepalen. Terwijl de onderwerpen van de Vraag als klachten en facturen belangrijke rollen zijn om het niet het kopen gedrag te bepalen. Dit zijn kwantificeerbare, activeerbare inzichten die marketeers kunnen gebruiken om marketingcampagnes te voeren om de neiging tot aankoop van deze klanten aan te pakken.
 
@@ -251,7 +251,7 @@ pd.DataFrame(samples,columns=colnames)
 
 De resultaten met tabularisering geven de neiging aan om te kopen voor elke klantsessie met `0` wat betekent dat er geen koopneiging is en `1` wat een bevestigde koopneiging betekent.
 
-![ de in tabelvorm gemaakte resultaten van de gegevensbestandinvloed die SQL gebruiken.](../images/use-cases/inference-results.png)
+![&#x200B; de in tabelvorm gemaakte resultaten van de gegevensbestandinvloed die SQL gebruiken.](../images/use-cases/inference-results.png)
 
 ## Werken met gesamplede gegevens: Bootstrapping {#working-on-sampled-data}
 
@@ -326,6 +326,6 @@ bootstrap_accuracy = np.sort(bootstrap_accuracy)
 
 De nauwkeurigheid van het bootstrapped model wordt dan gesorteerd. Daarna worden de 10e en 90e kwantiteit van de nauwkeurigheid van het model een 95% betrouwbaarheidsinterval voor de nauwkeurigheid van het model met de aangegeven steekproefgrootte.
 
-![ het drukbevel om het betrouwbaarheidsinterval van de volheidsscore te tonen.](../images/use-cases/confidence-interval.png)
+![&#x200B; het drukbevel om het betrouwbaarheidsinterval van de volheidsscore te tonen.](../images/use-cases/confidence-interval.png)
 
 In het bovenstaande cijfer staat dat als u slechts 1000 rijen nodig hebt om uw modellen te trainen, u kunt verwachten dat de nauwkeurigheid tussen ongeveer 84% en 88% zal dalen. U kunt de `LIMIT` clausule in de vragen van de Dienst van de Vraag aanpassen die op uw behoeften worden gebaseerd om de prestaties van de modellen te verzekeren.

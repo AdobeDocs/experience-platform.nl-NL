@@ -18,9 +18,9 @@ Deze zelfstudie bevat stappen voor het maken van een streamingbronverbinding met
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   - [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+- [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   - [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   - [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## Een streamingverbinding maken
@@ -31,7 +31,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie **[!UICONTROL Streaming]** de optie **[!UICONTROL HTTP API]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ catalogus ](../../../../images/tutorials/create/http/catalog.png)
+![&#x200B; catalogus &#x200B;](../../../../images/tutorials/create/http/catalog.png)
 
 De pagina **[!UICONTROL Connect HTTP API account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -39,7 +39,7 @@ De pagina **[!UICONTROL Connect HTTP API account]** wordt weergegeven. Op deze p
 
 Als u een bestaande account wilt gebruiken, selecteert u het HTTP API-account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![ bestaand-rekening ](../../../../images/tutorials/create/http/existing.png)
+![&#x200B; bestaand-rekening &#x200B;](../../../../images/tutorials/create/http/existing.png)
 
 ### Nieuwe account
 
@@ -50,7 +50,7 @@ Selecteer **[!UICONTROL New account]** als u een nieuwe account maakt. Geef in h
 
 Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ nieuw-rekening ](../../../../images/tutorials/create/http/new.png)
+![&#x200B; nieuw-rekening &#x200B;](../../../../images/tutorials/create/http/new.png)
 
 ## Gegevens selecteren
 
@@ -58,11 +58,11 @@ Nadat u de HTTP API-verbinding hebt gemaakt, wordt de stap **[!UICONTROL Select 
 
 Selecteer **[!UICONTROL Upload files]** om uw gegevens te uploaden. U kunt uw gegevens ook naar het gedeelte [!UICONTROL Drag and drop files] van de interface slepen.
 
-![ toe:voegen-gegevens ](../../../../images/tutorials/create/http/add-data.png)
+![&#x200B; toe:voegen-gegevens &#x200B;](../../../../images/tutorials/create/http/add-data.png)
 
 Als uw gegevens zijn geüpload, kunt u de rechterkant van de interface gebruiken om een voorvertoning van de bestandshiërarchie weer te geven. Selecteer **[!UICONTROL Next]** om door te gaan.
 
-![ voorproef-steekproef-gegevens ](../../../../images/tutorials/create/http/preview-sample-data.png)
+![&#x200B; voorproef-steekproef-gegevens &#x200B;](../../../../images/tutorials/create/http/preview-sample-data.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
@@ -76,41 +76,41 @@ Kies een dataset voor binnenkomende gegevens waarin moeten worden opgenomen. U k
 
 Selecteer **[!UICONTROL New dataset]** als u een nieuwe gegevensset wilt maken. Voor de vorm die verschijnt, verstrek de naam, een facultatieve beschrijving, evenals het doelschema voor de dataset. Als u een [!DNL Profile] -schema selecteert, kunt u kiezen of de dataset ook [!DNL Profile] -enabled zou moeten zijn.
 
-![ nieuw-dataset ](../../../../images/tutorials/create/http/new-dataset.png)
+![&#x200B; nieuw-dataset &#x200B;](../../../../images/tutorials/create/http/new-dataset.png)
 
 ### Een bestaande gegevensset gebruiken
 
 Selecteer **[!UICONTROL Existing dataset]** als u een bestaande gegevensset wilt gebruiken. Selecteer in het formulier dat wordt weergegeven de gegevensset die u wilt gebruiken. Nadat u een gegevensset hebt geselecteerd, kunt u kiezen of de gegevensset [!DNL Profile] moet zijn ingeschakeld.
 
-![ bestaand-dataset ](../../../../images/tutorials/create/http/existing-dataset.png)
+![&#x200B; bestaand-dataset &#x200B;](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Standaardvelden toewijzen
 
-Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Selecteer **[!UICONTROL Add new mapping]** als u een nieuw bronveld wilt toevoegen.
 
-![ toe:voegen-nieuw-afbeelding ](../../../../images/tutorials/create/http/add-new-mapping.png)
+![&#x200B; toe:voegen-nieuw-afbeelding &#x200B;](../../../../images/tutorials/create/http/add-new-mapping.png)
 
 Er wordt een nieuw bronveld en een nieuwe koppeling naar een doelveld weergegeven. Als u een nieuw bronveld wilt toevoegen, selecteert u het pijlpictogram naast de invoerbalk van [!UICONTROL Select source field] .
 
-![ selecteren-bron-gebied ](../../../../images/tutorials/create/http/select-source-field.png)
+![&#x200B; selecteren-bron-gebied &#x200B;](../../../../images/tutorials/create/http/select-source-field.png)
 
 In het deelvenster [!UICONTROL Select attributes] kunt u de bestandshiërarchie verkennen en een specifiek bronveld selecteren om toe te wijzen aan een doel-XDM-veld. Als u het bronveld hebt geselecteerd dat u wilt toewijzen, selecteert u **[!UICONTROL Select]** om door te gaan.
 
-![ selecteren-attributen ](../../../../images/tutorials/create/http/select-attributes.png)
+![&#x200B; selecteren-attributen &#x200B;](../../../../images/tutorials/create/http/select-attributes.png)
 
 Als er een bronveld is geselecteerd, kunt u nu het juiste doel-XDM-veld identificeren waarnaar u de hyperlink wilt koppelen. Selecteer het schemapictogram onder de sectie van het doelgebied.
 
-![ selecteren-doel-gebied ](../../../../images/tutorials/create/http/select-target-field.png)
+![&#x200B; selecteren-doel-gebied &#x200B;](../../../../images/tutorials/create/http/select-target-field.png)
 
 Het [!UICONTROL Map source field to target field] venster verschijnt, die u van een interface voorzien om het schema van uw doeldataset te onderzoeken. Selecteer het doelveld dat overeenkomt met het bronveld en selecteer vervolgens **[!UICONTROL Select]** om door te gaan.
 
-![ kaart-aan-doel-gebied ](../../../../images/tutorials/create/http/map-to-target-field.png)
+![&#x200B; kaart-aan-doel-gebied &#x200B;](../../../../images/tutorials/create/http/map-to-target-field.png)
 
 Als alle bronvelden zijn toegewezen aan de juiste XDM-doelvelden, selecteert u **[!UICONTROL Next]**
 
-![ gegeven-prep-volledig ](../../../../images/tutorials/create/http/data-prep-complete.png)
+![&#x200B; gegeven-prep-volledig &#x200B;](../../../../images/tutorials/create/http/data-prep-complete.png)
 
 ## Gegevens
 
@@ -118,7 +118,7 @@ De stap **[!UICONTROL Dataflow detail]** wordt weergegeven. Op deze pagina kunt 
 
 Selecteer **[!UICONTROL Next]** nadat u details voor de gegevensstroom hebt opgegeven.
 
-![ dataflow-detail ](../../../../images/tutorials/create/http/dataflow-detail.png)
+![&#x200B; dataflow-detail &#x200B;](../../../../images/tutorials/create/http/dataflow-detail.png)
 
 ## Controleren
 
@@ -129,16 +129,16 @@ De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de details van de geg
 
 Selecteer **[!UICONTROL Finish]** nadat u hebt bevestigd dat de details juist zijn.
 
-![ overzicht ](../../../../images/tutorials/create/http/review.png)
+![&#x200B; overzicht &#x200B;](../../../../images/tutorials/create/http/review.png)
 
 ## URL voor streamingeindpunt ophalen
 
 Als de verbinding is gemaakt, wordt de pagina met brondetails weergegeven. Deze pagina bevat details van de zojuist gemaakte verbinding, waaronder eerder uitgevoerde dataflows, ID en URL van het streamingeindpunt.
 
-![ eindpunt ](../../../../images/tutorials/create/http/endpoint.png)
+![&#x200B; eindpunt &#x200B;](../../../../images/tutorials/create/http/endpoint.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een streaming HTTP-verbinding gemaakt, waarmee u het streaming eindpunt kunt gebruiken voor toegang tot diverse [!DNL Data Ingestion] API&#39;s. Voor instructies om een het stromen verbinding in API tot stand te brengen, te lezen gelieve [ creërend een het stromen verbindingsleerprogramma ](../../../api/create/streaming/http.md).
+Aan de hand van deze zelfstudie hebt u een streaming HTTP-verbinding gemaakt, waarmee u het streaming eindpunt kunt gebruiken voor toegang tot diverse [!DNL Data Ingestion] API&#39;s. Voor instructies om een het stromen verbinding in API tot stand te brengen, te lezen gelieve [&#x200B; creërend een het stromen verbindingsleerprogramma &#x200B;](../../../api/create/streaming/http.md).
 
-Leren hoe te om gegevens aan Experience Platform te stromen, te lezen gelieve of het leerprogramma op [ het stromen tijdreeksgegevens ](../../../../../ingestion/tutorials/streaming-time-series-data.md) of het leerprogramma op [ het stromen verslaggegevens ](../../../../../ingestion/tutorials/streaming-record-data.md).
+Leren hoe te om gegevens aan Experience Platform te stromen, te lezen gelieve of het leerprogramma op [&#x200B; het stromen tijdreeksgegevens &#x200B;](../../../../../ingestion/tutorials/streaming-time-series-data.md) of het leerprogramma op [&#x200B; het stromen verslaggegevens &#x200B;](../../../../../ingestion/tutorials/streaming-record-data.md).

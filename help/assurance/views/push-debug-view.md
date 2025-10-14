@@ -15,7 +15,7 @@ Met de Push Debug View in Adobe Experience Platform Assurance kunt u de Push-ins
 
 ## Clients
 
-![ Push Clients ](./images/push-debug-view/clients.png)
+![&#x200B; Push Clients &#x200B;](./images/push-debug-view/clients.png)
 
 Het vervolgkeuzemenu voor de client bevat een lijst met elke unieke client die verbinding heeft met deze betrouwbaarheidssessie. Een client is een uniek apparaat of een unieke toepassing die voor een apparaat wordt geïnstalleerd. Als bijvoorbeeld een Android-apparaat en een iOS-apparaat met de sessie zijn verbonden, worden deze clients weergegeven in het vervolgkeuzemenu Clients.
 
@@ -29,7 +29,7 @@ Het tabblad **[!UICONTROL Validate Setup]** valideert en biedt aanvullende infor
 
 Als iets niet werkt zoals verwacht, zal er een alarm met details over hoe te om dat probleem op te lossen zijn:
 
-![ Ongeldige Staat ](./images/push-debug-view/invalid-state.png)
+![&#x200B; Ongeldige Staat &#x200B;](./images/push-debug-view/invalid-state.png)
 
 ### Clientgegevens
 
@@ -43,7 +43,7 @@ Wanneer de client op de juiste wijze is ingesteld, controleert dit deelvenster o
 
 Indien geldig, zal het paneel ECID voor het apparaat, het duptoken, app identiteitskaart van uw toepassing, het overseinenplatform tonen, en of het duptoken is vermeld. Het token kan om verschillende redenen worden geweigerd, zoals dat de gebruiker de app heeft verwijderd of dat de gebruiker pushberichten voor de app heeft uitgeschakeld.
 
-![ Geblokkeerd ](./images/push-debug-view/deny-list-blocked.png)
+![&#x200B; Geblokkeerd &#x200B;](./images/push-debug-view/deny-list-blocked.png)
 
 Tot slot bevindt zich onder aan het deelvenster een koppeling waarmee dit specifieke profiel op een nieuw tabblad wordt geopend.
 
@@ -59,13 +59,13 @@ U kunt het tabblad **[!UICONTROL Send Test Push]** gebruiken om een testbericht 
 
 Er zijn verschillende deelvensters die kunnen worden geconfigureerd om verschillende iOS- en Android-pushfuncties te testen. Selecteer **[!UICONTROL Send Test Push Notification]** als u uw bericht wilt verzenden.
 
-![ verzend Duw ](./images/push-debug-view/send.png)
+![&#x200B; verzend Duw &#x200B;](./images/push-debug-view/send.png)
 
 ### Bericht
 
 In het deelvenster **[!UICONTROL Message]** kunt u een titel en tekst voor het bericht opgeven. De functie voor stille meldingen kan hier ook worden ingeschakeld.
 
-![ Pane van het Bericht ](./images/push-debug-view/message-pane.png)
+![&#x200B; Pane van het Bericht &#x200B;](./images/push-debug-view/message-pane.png)
 
 ### Push-doel
 
@@ -73,7 +73,7 @@ In het deelvenster **[!UICONTROL Push Target]** kunt u aanpassen welke push-toke
 
 Deze informatie wordt standaard verschaft als op het tabblad **[!UICONTROL Validate Setup]** drie groene vinkjes worden weergegeven. Nochtans, kunt u uw eigen duptoken en kanaalconfiguratie verstrekken, zelfs als uw app niet volledig wordt gevormd.
 
-![ Pane van het Doel ](./images/push-debug-view/target-pane.png)
+![&#x200B; Pane van het Doel &#x200B;](./images/push-debug-view/target-pane.png)
 
 ### Klikken, gedrag
 
@@ -81,13 +81,13 @@ In het deelvenster **[!UICONTROL Click Behavior]** kunt u kiezen wat het gedrag 
 
 Als u ervoor kiest een deplink te gebruiken, moet de ontwikkelaar van de app er een voor u maken.
 
-![ Pane van het Gedrag ](./images/push-debug-view/click-behavior.png)
+![&#x200B; Pane van het Gedrag &#x200B;](./images/push-debug-view/click-behavior.png)
 
 ### Rijke media
 
 In het deelvenster **[!UICONTROL Rich Media]** kunt u extra media toevoegen aan uw bericht, zoals een afbeelding, video of GIF. De ontwikkelaar van de app moet code aan de app toevoegen om deze functie in te schakelen.
 
-![ Rich Pane ](./images/push-debug-view/rich-pane.png)
+![&#x200B; Rich Pane &#x200B;](./images/push-debug-view/rich-pane.png)
 
 ### Knoppen
 
@@ -95,23 +95,23 @@ In het deelvenster **[!UICONTROL Buttons]** kunt u extra knoppen toevoegen aan d
 
 De ontwikkelaar van de app moet code aan de app toevoegen om deze functie in te schakelen.
 
-![ de Ruit van Knopen ](./images/push-debug-view/buttons-pane.png)
+![&#x200B; de Ruit van Knopen &#x200B;](./images/push-debug-view/buttons-pane.png)
 
 ### Aangepaste gegevens
 
 In het deelvenster **[!UICONTROL Custom Data]** kunt u aangepaste gegevens toevoegen aan de pushmelding. Elk sleutel/waardepaar wordt verzonden als meta-gegevens samen met het bericht en kan door ontwikkelaars worden gebruikt om krachtige ervaringen tot stand te brengen en extra het volgen toe te voegen.
 
-![ de Ruit van de Douane ](./images/push-debug-view/custom-pane.png)
+![&#x200B; de Ruit van de Douane &#x200B;](./images/push-debug-view/custom-pane.png)
 
 ## Testresultaten
 
 Nadat u een bericht hebt verzonden, ontvangt de sectie **[!UICONTROL Test Results]** gegevens van de pushservices voor het bericht. Hier kunt u zien of heeft het bericht aan de Google/iOS overseinendiensten gemaakt:
 
-![ Resultaten van de Test ](./images/push-debug-view/test-results.png)
+![&#x200B; Resultaten van de Test &#x200B;](./images/push-debug-view/test-results.png)
 
 Als er problemen zijn opgetreden, worden deze hier weergegeven:
 
-![ Fout van de Resultaten van de Test ](./images/push-debug-view/test-error.png)
+![&#x200B; Fout van de Resultaten van de Test &#x200B;](./images/push-debug-view/test-error.png)
 
 ## Geavanceerd
 
@@ -119,4 +119,4 @@ Als er problemen zijn opgetreden, worden deze hier weergegeven:
 
 Naast de knop **[!UICONTROL Send Test Push Notification]** bevindt zich een reeks ovalen met een pop-upmenu. Van hier, kunt u de berichtlading bekijken. Dit laat u het nauwkeurige bericht zien dat naar de verre overseinendienst zal worden verzonden. U kunt deze lading controleren of zelfs kopiëren en kleven het in een Desktop duw testend hulpmiddel.
 
-![ de Ruit van de Douane ](./images/push-debug-view/message-payload.png)
+![&#x200B; de Ruit van de Douane &#x200B;](./images/push-debug-view/message-payload.png)

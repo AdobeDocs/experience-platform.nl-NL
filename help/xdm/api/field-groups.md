@@ -17,7 +17,7 @@ De de gebiedsgroepen van het schema zijn herbruikbare componenten die één of m
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met veldgroepen ophalen {#list}
 
@@ -25,7 +25,7 @@ U kunt alle veldgroepen weergeven onder de container `global` of `tenant` door e
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [&#x200B; vraagparameters &#x200B;](./appendix.md#query) in het bijlage document voor meer informatie.
 
 **API formaat**
 
@@ -36,7 +36,7 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CONTAINER_ID}` | De container waarvan u veldgroepen wilt ophalen: `global` voor veldgroepen die zijn gemaakt door Adoben of `tenant` voor veldgroepen die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [&#x200B; bijlage document &#x200B;](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
@@ -231,7 +231,7 @@ Wanneer u een nieuwe veldgroep definieert, moet deze een `meta:intendedToExtend`
 
 >[!NOTE]
 >
->Voor details op hoe te om verschillende gebiedstypes te bepalen om in uw gebiedsgroep te omvatten, zie de gids op [ bepalend douanegebieden in API ](../tutorials/custom-fields-api.md#define-fields).
+>Voor details op hoe te om verschillende gebiedstypes te bepalen om in uw gebiedsgroep te omvatten, zie de gids op [&#x200B; bepalend douanegebieden in API &#x200B;](../tutorials/custom-fields-api.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -384,15 +384,15 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een lading met de
 }
 ```
 
-Het uitvoeren van een verzoek van de GET aan [ lijst alle gebiedsgroepen ](#list) in de huurderscontainer zou nu de het gebiedsgroep van de Details van het Bezit omvatten, of u kunt [ een raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-gecodeerde `$id` URI om de nieuwe gebiedsgroep direct te bekijken.
+Het uitvoeren van een verzoek van de GET aan [&#x200B; lijst alle gebiedsgroepen &#x200B;](#list) in de huurderscontainer zou nu de het gebiedsgroep van de Details van het Bezit omvatten, of u kunt [&#x200B; een raadpleging (GET) verzoek &#x200B;](#lookup) uitvoeren gebruikend URL-gecodeerde `$id` URI om de nieuwe gebiedsgroep direct te bekijken.
 
 ## Een veldgroep bijwerken {#put}
 
-U kunt een volledige gebiedsgroep door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gebiedsgroep door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuwe gebiedsgroep ](#create) in een verzoek van de POST.
+U kunt een volledige gebiedsgroep door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een gebiedsgroep door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [&#x200B; creërend een nieuwe gebiedsgroep &#x200B;](#create) in een verzoek van de POST.
 
 >[!NOTE]
 >
->Als u slechts een deel van een gebiedsgroep wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [ het bijwerken van een gedeelte van een gebiedsgroep ](#patch).
+>Als u slechts een deel van een gebiedsgroep wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [&#x200B; het bijwerken van een gedeelte van een gebiedsgroep &#x200B;](#patch).
 
 **API formaat**
 
@@ -573,11 +573,11 @@ Met een geslaagde reactie worden de details van de bijgewerkte veldgroep geretou
 
 ## Een gedeelte van een veldgroep bijwerken {#patch}
 
-U kunt een gedeelte van een veldgroep bijwerken met een PATCH-aanvraag. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
+U kunt een gedeelte van een veldgroep bijwerken met een PATCH-aanvraag. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [&#x200B; API fundamentals gids &#x200B;](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een gebiedsgroep gebruikend een verrichting van de PUT ](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [&#x200B; het vervangen van een gebiedsgroep gebruikend een verrichting van de PUT &#x200B;](#put).
 
 **API formaat**
 
@@ -745,4 +745,4 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de schrapping bevestigen door het verzoek van de a [ raadpleging (GET) ](#lookup) aan de gebiedsgroep te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat de veldgroep uit de schemaregistratie is verwijderd.
+U kunt de schrapping bevestigen door het verzoek van de a [&#x200B; raadpleging (GET) &#x200B;](#lookup) aan de gebiedsgroep te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat de veldgroep uit de schemaregistratie is verwijderd.

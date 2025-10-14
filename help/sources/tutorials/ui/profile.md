@@ -20,12 +20,12 @@ De binnenkomende gegevens van uw bronschakelaar kunnen aan het verrijken van en 
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]  Systeem ](../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   - [ Grondbeginselen van schemacompositie ](../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [ het leerprogramma van de Redacteur van het Schema ](../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+- [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   - [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   - [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [[!DNL Real-Time Customer Profile]](../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Bovendien, vereist dit leerprogramma dat u reeds een bronschakelaar hebt gecreeerd en gevormd.  Een lijst van leerprogramma&#39;s voor het creëren van verschillende schakelaars in UI kan in het [ overzicht van bronschakelaars ](../../home.md) worden gevonden.
+Bovendien, vereist dit leerprogramma dat u reeds een bronschakelaar hebt gecreeerd en gevormd.  Een lijst van leerprogramma&#39;s voor het creëren van verschillende schakelaars in UI kan in het [&#x200B; overzicht van bronschakelaars &#x200B;](../../home.md) worden gevonden.
 
 ## Uw [!DNL Real-Time Customer Profile] gegevens vullen
 
@@ -67,4 +67,4 @@ Als zowel het schema als de dataset voor [!DNL Profile] wordt toegelaten, zullen
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u de inkomende gegevens voor [!DNL Profile] bevolkingsgroep geactiveerd. Voor meer informatie, zie het [[!DNL Real-Time Customer Profile]  overzicht ](../../../profile/home.md).
+Aan de hand van deze zelfstudie hebt u de inkomende gegevens voor [!DNL Profile] bevolkingsgroep geactiveerd. Voor meer informatie, zie het [[!DNL Real-Time Customer Profile]  overzicht &#x200B;](../../../profile/home.md).

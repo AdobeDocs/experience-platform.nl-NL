@@ -142,7 +142,7 @@ Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvin
 | Openbare kiosk | Reizigers op een luchthaven melden zich aan met hun loyaliteitsidentiteitskaart om zakken in te checken en instapkaarten af te drukken. |
 | Bellen | Het personeel van het centrum van de vraag login op één enkel apparaat namens klanten die klantensteun roepen om kwesties op te lossen. |
 
-![ een diagram van sommige gemeenschappelijke gedeelde apparaten.](../images/identity-settings/shared-devices.png " een diagram van sommige gemeenschappelijke gedeelde apparaten."){zoomable="yes"}
+![&#x200B; een diagram van sommige gemeenschappelijke gedeelde apparaten.](../images/identity-settings/shared-devices.png " een diagram van sommige gemeenschappelijke gedeelde apparaten."){zoomable="yes"}
 
 In deze gevallen, vanuit grafiekstandpunt, zonder toegelaten grenzen, zal één enkele ECID met veelvoudige CRMIDs worden verbonden.
 
@@ -155,7 +155,7 @@ Met [!DNL Identity Graph Linking Rules] kunt u:
 
 Er zijn ook instanties van gebruikers die valse waarden als telefoonaantallen en/of e-mailadressen verstrekken wanneer het registreren. In deze gevallen, als de grenzen niet worden toegelaten, dan zal telefoon/e-mail verwante identiteiten uiteindelijk worden verbonden met veelvoudige verschillende CRMIDs.
 
-![ diagram van A dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt.](../images/identity-settings/invalid-email-phone.png " een diagram dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt."){zoomable="yes"}
+![&#x200B; diagram van A dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt.](../images/identity-settings/invalid-email-phone.png " een diagram dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt."){zoomable="yes"}
 
 Met [!DNL Identity Graph Linking Rules] kunt u:
 
@@ -172,7 +172,7 @@ Er zijn gevallen waarin niet-unieke, onjuiste identiteitswaarden in het systeem 
 
 Deze identiteiten zouden in de volgende grafieken kunnen resulteren, waar veelvoudige CRMIDs samen met de &quot;slechte&quot;identiteit worden samengevoegd:
 
-![ een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden.](../images/identity-settings/bad-data.png " een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden."){zoomable="yes"}
+![&#x200B; een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden.](../images/identity-settings/bad-data.png " een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden."){zoomable="yes"}
 
 Met [!DNL Identity Graph Linking Rules] kunt u de CRMID configureren als de unieke id om te voorkomen dat ongewenst profiel samenvouwt als gevolg van dit type gegevens.
 
@@ -229,10 +229,10 @@ Unieke naamruimten en naamruimteprioriteiten kunnen beide worden geconfigureerd 
 * **de prioriteit van Namespace is een numerieke waarde** die aan namespace wordt toegewezen die op zijn relatieve belang wijst. Dit is een eigenschap van een naamruimte.
 * **Primaire identiteit is de identiteit waarin een profielfragment tegen** wordt opgeslagen. Een profielfragment is een record met gegevens waarin informatie over een bepaalde gebruiker wordt opgeslagen: kenmerken (gewoonlijk opgenomen via CRM-records) of gebeurtenissen (gewoonlijk opgenomen via ervaringsgebeurtenissen of online gegevens).
 * De prioriteit Namespace bepaalt de primaire identiteit voor de fragmenten van de ervaringsgebeurtenis.
-   * Voor profielrecords kunt u de schemawerkruimte in de Experience Platform-gebruikersinterface gebruiken om identiteitsvelden te definiëren, inclusief de primaire identiteit. Lees de gids op [ bepalend identiteitsgebieden in UI ](../../xdm/ui/fields/identity.md) voor meer informatie.
+   * Voor profielrecords kunt u de schemawerkruimte in de Experience Platform-gebruikersinterface gebruiken om identiteitsvelden te definiëren, inclusief de primaire identiteit. Lees de gids op [&#x200B; bepalend identiteitsgebieden in UI &#x200B;](../../xdm/ui/fields/identity.md) voor meer informatie.
 * Als een ervaringsgebeurtenis twee of meer identiteiten van de hoogste namespace prioriteit in identityMap heeft, zal het van opname worden verworpen omdat het als &quot;slechte gegevens&quot;zal worden beschouwd. Als identityMap bijvoorbeeld `{ECID: 111, CRMID: John, CRMID: Jane}` bevat, wordt de gehele gebeurtenis als ongeldige gegevens afgewezen, omdat dit betekent dat de gebeurtenis tegelijkertijd aan zowel `CRMID: John` als `CRMID: Jane` wordt gekoppeld.
 
-Voor meer informatie, lees de gids over [ namespace prioriteit ](./namespace-priority.md).
+Voor meer informatie, lees de gids over [&#x200B; namespace prioriteit &#x200B;](./namespace-priority.md).
 
 ## Volgende stappen
 

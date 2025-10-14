@@ -17,24 +17,24 @@ ht-degree: 1%
 >
 >* De [!DNL Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* De bron [!DNL Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>* De bron [!DNL Databricks] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Lees deze gids om te leren hoe te om uw [!DNL Databricks] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om uw [!DNL Databricks] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Lees de gids op [ hoe te beginnen met Experience Platform APIs ](../../../../../landing/api-guide.md) voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken.
+Lees de gids op [&#x200B; hoe te beginnen met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md) voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken.
 
 ### Voorwaarden configureren
 
-Lees het [[!DNL Databricks]  overzicht ](../../../../connectors/databases/databricks.md) om over de in de eerste plaats vereiste configuraties te leren die moeten worden voltooid alvorens u uw rekening met Experience Platform kunt verbinden.
+Lees het [[!DNL Databricks]  overzicht &#x200B;](../../../../connectors/databases/databricks.md) om over de in de eerste plaats vereiste configuraties te leren die moeten worden voltooid alvorens u uw rekening met Experience Platform kunt verbinden.
 
 ### Vereiste referenties verzamelen
 

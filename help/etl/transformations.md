@@ -21,8 +21,8 @@ In dit artikel worden de volgende voorbeeldtransformaties getoond die een ETL-on
 
 Voorbeelden van CSV- en JSON-bestanden zijn beschikbaar in het openbare, door de Adobe bijgehouden rapport [!DNL GitHub] over de ETL-referentie:
 
-- [ CRM_profiles.csv ](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [ CRM_profiles.json ](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [&#x200B; CRM_profiles.csv &#x200B;](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [&#x200B; CRM_profiles.json &#x200B;](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### Voorbeeld-CSV
 

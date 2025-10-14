@@ -11,11 +11,11 @@ ht-degree: 2%
 
 # Verdien gelijkbare verslagen met hogere orde functies
 
-Gebruik Data Distiller-functies in hogere volgorde om een aantal veelvoorkomende gebruiksgevallen op te lossen. Om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen, gebruik de filter, transformatie, en verminder functies zoals die in deze gids worden beschreven. Leren hoe de hoog-ordefuncties kunnen worden gebruikt om complexe gegevenstypes te verwerken, zie de documentatie over hoe te [ serie en kaartgegevenstypes beheren ](../sql/higher-order-functions.md).
+Gebruik Data Distiller-functies in hogere volgorde om een aantal veelvoorkomende gebruiksgevallen op te lossen. Om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen, gebruik de filter, transformatie, en verminder functies zoals die in deze gids worden beschreven. Leren hoe de hoog-ordefuncties kunnen worden gebruikt om complexe gegevenstypes te verwerken, zie de documentatie over hoe te [&#x200B; serie en kaartgegevenstypes beheren &#x200B;](../sql/higher-order-functions.md).
 
 Gebruik deze handleiding om producten van verschillende datasets te identificeren die een significante gelijkenis in hun kenmerken of eigenschappen hebben. Deze methodologie biedt oplossingen voor onder andere gegevensdeduplicatie, koppeling van records, aanbevelingssystemen, het opvragen van informatie en tekstanalyse.
 
-In het document wordt beschreven hoe u een samenvoeging op basis van overeenkomsten implementeert. Vervolgens worden de functies in de hogere volgorde van Data Distiller gebruikt om de gelijkenis tussen gegevenssets te berekenen en deze op basis van geselecteerde kenmerken te filteren. SQL de codefragmenten en de verklaringen worden verstrekt voor elke stap van het proces. De workflow implementeert overeenkomsten op basis van gelijkenis met de Jaccard-maateenheid en tokenisering met behulp van Data Distiller-functies in hogere volgorde. Deze methodes worden dan gebruikt om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen die op gelijkenis metrisch worden gebaseerd. De zeer belangrijke secties van het proces omvatten: [ kenization die hoog-orde functies ](#data-transformation) gebruikt, [ dwars-toetreedt van unieke elementen ](#cross-join-unique-elements), de [ Jaccard gelijkenisberekening ](#compute-the-jaccard-similarity-measure), en het [ op drempel-gebaseerde filtreren ](#similarity-threshold-filter).
+In het document wordt beschreven hoe u een samenvoeging op basis van overeenkomsten implementeert. Vervolgens worden de functies in de hogere volgorde van Data Distiller gebruikt om de gelijkenis tussen gegevenssets te berekenen en deze op basis van geselecteerde kenmerken te filteren. SQL de codefragmenten en de verklaringen worden verstrekt voor elke stap van het proces. De workflow implementeert overeenkomsten op basis van gelijkenis met de Jaccard-maateenheid en tokenisering met behulp van Data Distiller-functies in hogere volgorde. Deze methodes worden dan gebruikt om gelijkaardige of verwante verslagen van één of meerdere datasets te identificeren en terug te winnen die op gelijkenis metrisch worden gebaseerd. De zeer belangrijke secties van het proces omvatten: [&#x200B; kenization die hoog-orde functies &#x200B;](#data-transformation) gebruikt, [&#x200B; dwars-toetreedt van unieke elementen &#x200B;](#cross-join-unique-elements), de [&#x200B; Jaccard gelijkenisberekening &#x200B;](#compute-the-jaccard-similarity-measure), en het [&#x200B; op drempel-gebaseerde filtreren &#x200B;](#similarity-threshold-filter).
 
 ## Vereisten
 
@@ -25,8 +25,8 @@ Voordat u doorgaat met dit document, moet u vertrouwd zijn met de volgende conce
    - **metrische Gelijksoortigheid van 0&rbrace;**: Een gelijkenis sluit zich aan bij baseert zich op vooraf bepaalde metrische gelijkenis of een maatregel. Dit zijn onder andere: de gelijkenis van het werkgebied, de cosingelijkenis, de bewerkingsafstand, enzovoort. De metrische waarde is afhankelijk van de aard van de gegevens en het gebruiksgeval. Deze metrische waarde kwantificeert hoe gelijkaardig of ongelijkaardig twee verslagen zijn.
    - **Drempel**: Een gelijkenisdrempel wordt gebruikt om te bepalen wanneer de twee verslagen als gelijkaardig genoeg worden beschouwd om in te sluiten bij resultaat. Records met een overeenkomstenscore die hoger is dan de drempel worden beschouwd als overeenkomsten.
 - De **gelijkenis van het Jaccard** index, of de gelijkenis van het Jaccard meting, is een statistiek die wordt gebruikt om de gelijkenis en de diversiteit van steekproefreeksen te meten. Dit wordt gedefinieerd als de grootte van de doorsnede gedeeld door de grootte van de samenvoeging van de steekproefreeksen. De overeenkomende JACARD-meting loopt van 0 tot en met 1. Een Jaccard-gelijkenis van nul geeft aan dat de sets niet gelijk zijn en een Jaccard-gelijkenis van één geeft aan dat de sets identiek zijn.
-  ![ A venn- diagram om de gelijkenismeting van het Jacard te illustreren.](../images/use-cases/jaccard-similarity.png)
-- **hoog-ordefuncties** in Gegevens Distiller zijn dynamische, gealigneerde hulpmiddelen die gegevens direct binnen SQL verklaringen verwerken en omzetten. Deze veelzijdige functies elimineren de behoefte aan veelvoudige stappen in gegevensmanipulatie, vooral wanneer [ het behandelen van complexe types zoals series en kaarten ](../sql/higher-order-functions.md). Door vraagefficiency te verbeteren en transformaties te vereenvoudigen, dragen de hogere ordefuncties aan flexibelere analyses en betere besluitvorming in diverse bedrijfsscenario&#39;s bij.
+  ![&#x200B; A venn- diagram om de gelijkenismeting van het Jacard te illustreren.](../images/use-cases/jaccard-similarity.png)
+- **hoog-ordefuncties** in Gegevens Distiller zijn dynamische, gealigneerde hulpmiddelen die gegevens direct binnen SQL verklaringen verwerken en omzetten. Deze veelzijdige functies elimineren de behoefte aan veelvoudige stappen in gegevensmanipulatie, vooral wanneer [&#x200B; het behandelen van complexe types zoals series en kaarten &#x200B;](../sql/higher-order-functions.md). Door vraagefficiency te verbeteren en transformaties te vereenvoudigen, dragen de hogere ordefuncties aan flexibelere analyses en betere besluitvorming in diverse bedrijfsscenario&#39;s bij.
 
 ## Aan de slag
 
@@ -423,7 +423,7 @@ De uitvoer bestaat uit een lijst subtekenreeksen van drie tekens lang, die worde
 
 ## De resultaten filteren {#filter-results}
 
-De `filter` functie, met verdere [ gegevenstransformaties ](#data-transformation), staat voor een meer verfijnde en nauwkeurige extractie van relevante informatie van tekstgegevens toe. Hierdoor kunt u inzichten afleiden, de gegevenskwaliteit verbeteren en betere besluitvormingsprocessen vergemakkelijken.
+De `filter` functie, met verdere [&#x200B; gegevenstransformaties &#x200B;](#data-transformation), staat voor een meer verfijnde en nauwkeurige extractie van relevante informatie van tekstgegevens toe. Hierdoor kunt u inzichten afleiden, de gegevenskwaliteit verbeteren en betere besluitvormingsprocessen vergemakkelijken.
 
 De functie `filter` in de volgende SQL-instructie dient om de volgorde van posities binnen de tekenreeks waaruit subtekenreeksen worden geëxtraheerd, te verfijnen en te beperken met behulp van de daaropvolgende transformatiefunctie.
 
@@ -451,7 +451,7 @@ De instructie `CASE` wordt gebruikt om subtekenreeksen op basis van hun lengte v
 
 >[!TIP]
 >
->U kunt de [ bepaalde van parameters voorzien malplaatjes ](../ui/parameterized-queries.md) eigenschap gebruiken om logica binnen uw vragen opnieuw te gebruiken en te onttrekken. Wanneer u bijvoorbeeld hulpprogrammafuncties voor algemene doeleinden maakt (zoals de hierboven weergegeven functie voor het tokeniseren van tekenreeksen), kunt u met Data Distiller geparameteriiseerde sjablonen gebruiken waarbij het aantal tekens een parameter zou zijn.
+>U kunt de [&#x200B; bepaalde van parameters voorzien malplaatjes &#x200B;](../ui/parameterized-queries.md) eigenschap gebruiken om logica binnen uw vragen opnieuw te gebruiken en te onttrekken. Wanneer u bijvoorbeeld hulpprogrammafuncties voor algemene doeleinden maakt (zoals de hierboven weergegeven functie voor het tokeniseren van tekenreeksen), kunt u met Data Distiller geparameteriiseerde sjablonen gebruiken waarbij het aantal tekens een parameter zou zijn.
 
 ## De cross-join van unieke elementen berekenen met twee functievectoren {#cross-join-unique-elements}
 
@@ -717,4 +717,4 @@ Door dit document te lezen, kunt u deze logica nu gebruiken om betekenisvolle re
 - Gegevensreiniging: verbeteren van de gegevenskwaliteit.
 - Marktmand-analyse: inzicht verschaffen in het gedrag van klanten, voorkeuren en potentiële mogelijkheden voor cross-selling.
 
-Als u dit nog niet hebt gedaan, wordt u geadviseerd om het [ AI/ML overzicht van de eigenschappijpleiding ](../data-distiller/ml-feature-pipelines/overview.md) te lezen. Met dit overzicht leert u hoe Data Distiller en het leren van uw voorkeurscomputer aangepaste gegevensmodellen kunnen maken die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen met behulp van Experience Platforms.
+Als u dit nog niet hebt gedaan, wordt u geadviseerd om het [&#x200B; AI/ML overzicht van de eigenschappijpleiding &#x200B;](../data-distiller/ml-feature-pipelines/overview.md) te lezen. Met dit overzicht leert u hoe Data Distiller en het leren van uw voorkeurscomputer aangepaste gegevensmodellen kunnen maken die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen met behulp van Experience Platforms.

@@ -17,14 +17,14 @@ In deze zelfstudie wordt de API van [!DNL Flow Service] gebruikt om de inhoud en
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een database van derden met de [!DNL Flow Service] API.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../landing/api-guide.md).
 
 ## Uw gegevenstabellen verkennen
 
@@ -134,4 +134,4 @@ Een geslaagde reactie retourneert de structuur van de opgegeven tabel. De detail
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u uw database verkend, het pad van de tabel gevonden die u in Experience Platform wilt opnemen en hebt u informatie gekregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw gegevensbestand verzamelen en het brengen in Experience Platform ](../collect/database-nosql.md).
+Door deze zelfstudie te volgen, hebt u uw database verkend, het pad van de tabel gevonden die u in Experience Platform wilt opnemen en hebt u informatie gekregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [&#x200B; gegevens van uw gegevensbestand verzamelen en het brengen in Experience Platform &#x200B;](../collect/database-nosql.md).

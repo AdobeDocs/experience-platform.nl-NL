@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Sommige opdrachten van Web SDK kunnen een object retourneren dat gegevens bevat die mogelijk nuttig zijn voor uw organisatie. U kunt desgewenst kiezen wat u met die gegevens wilt doen. De reacties van het bevel zijn waardevol voor voorstellen en bestemmingen, aangezien zij Edge Network gegevens vereisen effectief te werken.
 
-De reacties van het bevel gebruiken JavaScript [ beloften ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), handelend als volmacht voor een waarde die niet gekend is wanneer de belofte wordt gecreeerd. Zodra de waarde gekend is, wordt de belofte &quot;opgelost&quot;met de waarde.
+De reacties van het bevel gebruiken JavaScript [&#x200B; beloften &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), handelend als volmacht voor een waarde die niet gekend is wanneer de belofte wordt gecreeerd. Zodra de waarde gekend is, wordt de belofte &quot;opgelost&quot;met de waarde.
 
 ## Opdrachtreacties afhandelen met de web SDK-tagextensie
 
 Maak een regel die als onderdeel van een regel op de gebeurtenis **[!UICONTROL Send event complete]** wordt geabonneerd.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.

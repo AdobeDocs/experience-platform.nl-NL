@@ -17,13 +17,13 @@ In deze handleiding worden de aanbevolen procedures beschreven voor het efficië
 
 ## Aan de slag {#getting-started}
 
-Deze gids vereist een werkend begrip van [ Privacy Service ](./home.md) en hoe het u toestaat om toegang te beheren en verzoeken van uw gegevensproefpersonen (klanten) over de toepassingen van Adobe Experience Cloud te schrappen. U wordt ook geadviseerd om de gids te hebben gelezen op [ creërend een verzoek van de privacybaan in UI ](./ui/user-guide.md#create-a-new-privacy-job-request) of [ API ](./api/overview.md), en te begrijpen hoe te om deze verrichtingen programmatically uit te voeren.
+Deze gids vereist een werkend begrip van [&#x200B; Privacy Service &#x200B;](./home.md) en hoe het u toestaat om toegang te beheren en verzoeken van uw gegevensproefpersonen (klanten) over de toepassingen van Adobe Experience Cloud te schrappen. U wordt ook geadviseerd om de gids te hebben gelezen op [&#x200B; creërend een verzoek van de privacybaan in UI &#x200B;](./ui/user-guide.md#create-a-new-privacy-job-request) of [&#x200B; API &#x200B;](./api/overview.md), en te begrijpen hoe te om deze verrichtingen programmatically uit te voeren.
 
 ## Vereisten {#prerequisites}
 
 De toegang tot Adobe Experience Platform Privacy Service wordt gecontroleerd door granulaire op rol-gebaseerde toestemmingen in Adobe Admin Console. U hebt de relevante machtigingen in een productprofiel nodig om specifieke functies in de gebruikersinterface en de API van de Privacy Service te kunnen gebruiken. Neem contact op met de systeembeheerder als u aanvullende machtigingen nodig hebt.
 
-De beheerders kunnen naar de gids op [ verwijzen die toestemmingen voor Privacy Service ](./permissions.md) voor meer informatie beheert.
+De beheerders kunnen naar de gids op [&#x200B; verwijzen die toestemmingen voor Privacy Service &#x200B;](./permissions.md) voor meer informatie beheert.
 
 ## Richtlijnen voor het creëren van privacy-banen {#creation-guidelines}
 
@@ -47,11 +47,11 @@ Privacy Service biedt drie methoden om privacytaken effectief te controleren en 
 - **de opstelling van Webhaak:** opstelling webhooks om dupberichten te ontvangen wanneer de statusveranderingen voor voorgelegde banen voorkomen. Dit is een hulpmiddel bij realtimemonitoring.
 - **Meldingen:** Gebruik berichten op zowel het baan als productniveau helpen de vooruitgang van verzoeken controleren.
 
-Zie de documentatie op [ het intekenen aan de gebeurtenissen van de Privacy Service ](./privacy-events.md) voor instructies bij vestiging een gebeurtenisregistratie voor de berichten van de Privacy Service en hoe te om berichtlading te interpreteren.
+Zie de documentatie op [&#x200B; het intekenen aan de gebeurtenissen van de Privacy Service &#x200B;](./privacy-events.md) voor instructies bij vestiging een gebeurtenisregistratie voor de berichten van de Privacy Service en hoe te om berichtlading te interpreteren.
 
 ### Alle taken ophalen op basis van filters {#retrieve-filtered-responses-for-all-jobs}
 
-Om al uw gegevens van de privacybaan terug te winnen die op om het even welke gespecificeerde filters worden gebaseerd, **voert een verzoek van de GET aan het `/jobs` eindpunt** uit. Deze API-aanroep is handig om een weergave op hoog niveau te bieden van de huidige taakstatus voor grote sets met taak-id&#39;s met slechts één aanvraag. Het gebrek aan gedetailleerde productreacties, maar zij kunnen worden gevonden gebruikend het [`/jobs/{jobID}` eindpunt ](#retrieve-detailed-responses-for-specific-jobs).
+Om al uw gegevens van de privacybaan terug te winnen die op om het even welke gespecificeerde filters worden gebaseerd, **voert een verzoek van de GET aan het `/jobs` eindpunt** uit. Deze API-aanroep is handig om een weergave op hoog niveau te bieden van de huidige taakstatus voor grote sets met taak-id&#39;s met slechts één aanvraag. Het gebrek aan gedetailleerde productreacties, maar zij kunnen worden gevonden gebruikend het [`/jobs/{jobID}` eindpunt &#x200B;](#retrieve-detailed-responses-for-specific-jobs).
 
 Een verzoek van de GET aan het `/jobs` eindpunt wordt best gebruikt om de statusgegevens van een grote reeks baan IDs te verzamelen of te vergelijken maar **&#x200B;**&#x200B;bedoeld niet voor regelmatige het opiniepeilingstype activiteiten.
 
@@ -59,15 +59,15 @@ Een verzoek van de GET aan het `/jobs` eindpunt wordt best gebruikt om de status
 
 - **de parameters van de Vraag:** Gebruik specifieke filters om uw resultaten te versmallen, bijvoorbeeld: gegevenswaaiers, regelgevende types, en status (verwerking, volledig, etc.).
 
-U kunt een lijst van alle huidige privacybanen in uw organisatie door de UI van de Privacy Service bekijken. Zie [ het leiden privacybanen in de documentatie UI ](./ui/user-guide.md#job-requests) voor informatie over hoe te om de lijst van het baanverzoek te filtreren. Alternatief, zie de documentatie over het [ gebruik van het /job eindpunt in Privacy Service API ](./api/privacy-jobs.md).
+U kunt een lijst van alle huidige privacybanen in uw organisatie door de UI van de Privacy Service bekijken. Zie [&#x200B; het leiden privacybanen in de documentatie UI &#x200B;](./ui/user-guide.md#job-requests) voor informatie over hoe te om de lijst van het baanverzoek te filtreren. Alternatief, zie de documentatie over het [&#x200B; gebruik van het /job eindpunt in Privacy Service API &#x200B;](./api/privacy-jobs.md).
 
-De Privacy Service API documentatie bevat details op [ de beschikbare filters van de vraagparameter ](https://developer.adobe.com/experience-platform-apis/references/privacy-service/#tag/Privacy-jobs/operation/listPrivacyJobs).
+De Privacy Service API documentatie bevat details op [&#x200B; de beschikbare filters van de vraagparameter &#x200B;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/#tag/Privacy-jobs/operation/listPrivacyJobs).
 
 ### Gedetailleerde antwoorden ophalen voor één taak {#retrieve-detailed-responses-for-specific-jobs}
 
 Om gedetailleerde reacties voor één enkele baan terug te winnen, **voer een verzoek van de GET aan het /jobs/{jobID} eindpunt** uit. Deze methode is bedoeld voor het verdiepen van informatie, zoals productspecifieke reacties en succesberichten. Een vraag aan dit eindpunt is de beste manier om te zien welke producten hebben gereageerd en die nog hangend zijn, hoewel het **&#x200B;**&#x200B;niet &lbrace;voor regelmatige opiniepeilingsactiviteit bedoeld is.
 
-Zie de `/jobs/{JOB_ID}` eindpuntdocumentatie voor details op [ hoe te om het statuut van een specifieke baan ](./api/privacy-jobs.md#check-status) te controleren.
+Zie de `/jobs/{JOB_ID}` eindpuntdocumentatie voor details op [&#x200B; hoe te om het statuut van een specifieke baan &#x200B;](./api/privacy-jobs.md#check-status) te controleren.
 
 ### Ideal-scenario-voorbeeld {#ideal-scenario}
 
@@ -77,7 +77,7 @@ Als een bepaalde baan nog hangend is, of een fout heeft teruggekeerd, kunt u de 
 
 ## Toegang tot aanvraaggegevens {#access-request-data}
 
-Wanneer de gegevens-onderwerp informatie wordt gevraagd, keert elke dienst gegevens in een formaat terug dat met de manier verenigbaar is zij opslaan en die gegevens gebruiken. Nadat alle services de aanvraag hebben voltooid, wordt in de taakdetails een URL voor het ZIP-archiefbestand opgegeven, zodat deze gegevens kunnen worden gedownload. Zie de het oplossen van problemengids voor informatie over [ hoe te om de resultaten van de privacybaan ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=nl-NL#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F) te downloaden.
+Wanneer de gegevens-onderwerp informatie wordt gevraagd, keert elke dienst gegevens in een formaat terug dat met de manier verenigbaar is zij opslaan en die gegevens gebruiken. Nadat alle services de aanvraag hebben voltooid, wordt in de taakdetails een URL voor het ZIP-archiefbestand opgegeven, zodat deze gegevens kunnen worden gedownload. Zie de het oplossen van problemengids voor informatie over [&#x200B; hoe te om de resultaten van de privacybaan &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=nl-NL#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F) te downloaden.
 
 Hieronder volgt een overzicht van de belangrijkste opmerkingen met betrekking tot het beheer van het gegevensarchief:
 
@@ -96,8 +96,8 @@ Bij het invullen van een verzoek om Privacy Service moet u rekening houden met e
 - **Periode van het Behoud van Gegevens:** de maximumterugblik periode is 60 dagen voor om het even welke groep banen, en de maximumtijdspanwijdte voor een vraag is 30 dagen (van/aan data).
 - **onderbreking van de Gateway:** ben in gedachten dat uw verzoek van de gateway kan worden gelaten vallen als het 60 seconden overschrijdt.
 - **de Behandeling van de Fout:** de foutenmeldingen van het overzicht grondig en leggen verzoeken waar nodig opnieuw voor. Privacy Service verwerkt taken niet automatisch na een fout.
-- **Begrijpend HTTP 429 Fouten:** vertrouwt me met HTTP 429 foutenmeldingen en de noodzakelijke stappen om kwesties te verlichten. HTTP 429 fouten zijn het resultaat van &quot;Te veel verzoeken&quot;. Zie de [ Gemeenschappelijke foutenmeldingen ](./troubleshooting-guide.md#common-error-messages) sectie van de het oplossen van problemengids voor meer informatie over hoe te om de kwestie op te lossen.
+- **Begrijpend HTTP 429 Fouten:** vertrouwt me met HTTP 429 foutenmeldingen en de noodzakelijke stappen om kwesties te verlichten. HTTP 429 fouten zijn het resultaat van &quot;Te veel verzoeken&quot;. Zie de [&#x200B; Gemeenschappelijke foutenmeldingen &#x200B;](./troubleshooting-guide.md#common-error-messages) sectie van de het oplossen van problemengids voor meer informatie over hoe te om de kwestie op te lossen.
 
 ## Volgende stappen
 
-Door dit document te lezen beschikt u nu over de benodigde kennis en praktijken voor een efficiënt en doeltreffend gebruik van de Privacy Service. Daarna, zie de [ het oplossen van problemengids ](./troubleshooting-guide.md) voor antwoorden op vaak gestelde vragen over Privacy Service, en informatie over algemeen ondervonden fouten in API.
+Door dit document te lezen beschikt u nu over de benodigde kennis en praktijken voor een efficiënt en doeltreffend gebruik van de Privacy Service. Daarna, zie de [&#x200B; het oplossen van problemengids &#x200B;](./troubleshooting-guide.md) voor antwoorden op vaak gestelde vragen over Privacy Service, en informatie over algemeen ondervonden fouten in API.

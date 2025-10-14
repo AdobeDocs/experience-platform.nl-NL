@@ -54,7 +54,7 @@ Catalogusservice is het systeem voor het vastleggen van de locatie en herkomst v
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuw API-eindpunt | Beheer efficiënter uw gegevens van de dataset van Adobe Experience Platform met de nieuwe [ Dienst API /v2/dataSets/{DATASET_ID} eindpunt ](../../catalog/api/update-object.md#patch-v2-notation) van de Catalogus. U kunt eenvoudig complexe, diep geneste datasetkenmerken bijwerken, omdat het systeem automatisch ontbrekende padniveaus maakt. Zo bespaart u tijd, beperkt u het aantal handmatige stappen en minimaliseert u fouten. |
+| Nieuw API-eindpunt | Beheer efficiënter uw gegevens van de dataset van Adobe Experience Platform met de nieuwe [&#x200B; Dienst API /v2/dataSets/{DATASET_ID} eindpunt &#x200B;](../../catalog/api/update-object.md#patch-v2-notation) van de Catalogus. U kunt eenvoudig complexe, diep geneste datasetkenmerken bijwerken, omdat het systeem automatisch ontbrekende padniveaus maakt. Zo bespaart u tijd, beperkt u het aantal handmatige stappen en minimaliseert u fouten. |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 | Functie | Beschrijving |
 | --- | --- |
 | Ondersteuning voor weergaven in [!DNL Microsoft Dynamics] | U kunt nu `"entityType": "view"` toevoegen wanneer u de [!DNL Microsoft Dynamics]-bron gebruikt. Voor meer informatie kunt u de handleiding over het [verbinden van een [!DNL Microsoft Dynamics] bron met Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md) raadplegen. |
-| Nieuwe IP adressen aan lijst van gewenste personen | U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om de bronnen van Experience Platform met succes te gebruiken.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> <br></br> voor meer informatie, lees de [ bronIP gids van de lijst van gewenste personen van de bron ](../../sources/ip-address-allow-list.md). |
+| Nieuwe IP adressen aan lijst van gewenste personen | U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om de bronnen van Experience Platform met succes te gebruiken.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> <br></br> voor meer informatie, lees de [&#x200B; bronIP gids van de lijst van gewenste personen van de bron &#x200B;](../../sources/ip-address-allow-list.md). |
 
 {style="table-layout:auto"}
 

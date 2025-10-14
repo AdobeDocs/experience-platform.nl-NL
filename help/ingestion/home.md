@@ -23,7 +23,7 @@ Lees dit document voor een overzicht van de vele verschillende manieren waarop g
 
 U kunt streaming opname gebruiken om gegevens van client- en serverapparaten in real-time naar Experience Platform te verzenden. Experience Platform steunt het gebruik van gegevensinlaten aan stroom inkomende ervaringsgegevens, die in streaming-Toegelaten datasets binnen het gegevensmeer wordt voortgeduurd. De inlaten van gegevens kunnen worden gevormd om de gegevens automatisch voor authentiek te verklaren die zij verzamelen, ervoor zorgen dat de gegevens uit een vertrouwde op bron komen.
 
-Voor meer informatie, lees het [ stromen ingeslikt overzicht ](./streaming-ingestion/overview.md).
+Voor meer informatie, lees het [&#x200B; stromen ingeslikt overzicht &#x200B;](./streaming-ingestion/overview.md).
 
 ## Inname in batch {#batch}
 
@@ -31,7 +31,7 @@ In Experience Platform is een batch een reeks gegevens die over een bepaalde per
 
 Handmatig geüploade gegevensbestanden zoals standaard CSV-bestanden (toegewezen aan XDM-schema&#39;s) en parketbestanden moeten met deze methode worden opgenomen.
 
-Voor meer informatie, lees het [ overzicht van de partijingestitie ](./batch-ingestion/overview.md).
+Voor meer informatie, lees het [&#x200B; overzicht van de partijingestitie &#x200B;](./batch-ingestion/overview.md).
 
 ## Bronnen {#sources}
 
@@ -41,19 +41,19 @@ De bronnen worden gegroepeerd in verschillende categorieën zoals wolkenopslag, 
 
 Met bronnen kunt u gegevens uit een aantal verschillende gegevensbronnen en verschillende gebruikscategorieën invoeren. Bovendien, biedt gegevensopname via een bron u de kans om tegen de externe gegevensbron voor authentiek te verklaren, een innameschema te vormen, en innamevervoer te beheren.
 
-Voor meer informatie, lees het [ overzicht van bronnen ](../sources/home.md) voor meer informatie.
+Voor meer informatie, lees het [&#x200B; overzicht van bronnen &#x200B;](../sources/home.md) voor meer informatie.
 
 ### Met ML ondersteund schema maken {#ml-assisted-schema-creation}
 
 Om nieuwe gegevensbronnen snel te integreren, kunt u machine het leren algoritmen nu gebruiken om een schema van steekproefgegevens te produceren. Deze automatisering vereenvoudigt het creëren van nauwkeurige schema&#39;s, vermindert fouten, en versnelt het proces van gegevensinzameling aan analyse en inzichten.
 
-Zie de [ ML-Geassisteerde gids van de schemaverwezenlijking ](../xdm/ui/ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.
+Zie de [&#x200B; ML-Geassisteerde gids van de schemaverwezenlijking &#x200B;](../xdm/ui/ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.
 
 ## Gegevensvoorbereiding {#data-prep}
 
 Hoewel data prep geen methode van opname is, is het een belangrijk deel van het proces van gegevensopname. Gebruik prep-functies voor gegevens om gegevens toe te wijzen, te transformeren en te valideren van en naar het XDM-model (Experience Data Model) voordat u een gegevensstroom maakt om uw gegevens in te voeren in Experience Platform. De gegevenspprep wordt tijdens het invoeren van gegevens weergegeven als de stap Toewijzing in de Experience Platform-gebruikersinterface.
 
-Voor meer informatie, lees het [ overzicht van de gegevens prep ](../data-prep/home.md).
+Voor meer informatie, lees het [&#x200B; overzicht van de gegevens prep &#x200B;](../data-prep/home.md).
 
 ## Methoden voor streaming opnemen {#streaming-ingestion-methods}
 
@@ -298,7 +298,7 @@ In de volgende tabel wordt een overzicht gegeven van de verschillende methoden d
 
 ## Volgende stappen en extra bronnen
 
-In dit document vindt u een korte inleiding over de verschillende aspecten van [!DNL Data Ingestion] in [!DNL Experience Platform] . Lees verder de overzichtsdocumentatie voor elke innamemethode om vertrouwd te raken met hun verschillende mogelijkheden, gebruiksgevallen en beste praktijken. U kunt het leren ook aanvullen door de onderstaande video met het ingesloten overzicht te bekijken. Voor informatie over hoe [!DNL Experience Platform] de meta-gegevens voor opgenomen verslagen volgt, zie het [ overzicht van de Dienst van de Catalogus ](../catalog/home.md).
+In dit document vindt u een korte inleiding over de verschillende aspecten van [!DNL Data Ingestion] in [!DNL Experience Platform] . Lees verder de overzichtsdocumentatie voor elke innamemethode om vertrouwd te raken met hun verschillende mogelijkheden, gebruiksgevallen en beste praktijken. U kunt het leren ook aanvullen door de onderstaande video met het ingesloten overzicht te bekijken. Voor informatie over hoe [!DNL Experience Platform] de meta-gegevens voor opgenomen verslagen volgt, zie het [&#x200B; overzicht van de Dienst van de Catalogus &#x200B;](../catalog/home.md).
 
 >[!WARNING]
 >

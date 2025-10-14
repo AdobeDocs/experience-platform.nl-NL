@@ -17,7 +17,7 @@ Als u de unieke id voor een specifiek [!DNL Catalog] -object kent, kunt u een GE
 
 >[!NOTE]
 >
->Wanneer het bekijken van specifieke voorwerpen, is het nog beste praktijken aan [ filter door eigenschappen ](filter-data.md) en terugkeer slechts de eigenschappen u geinteresseerd bent in.
+>Wanneer het bekijken van specifieke voorwerpen, is het nog beste praktijken aan [&#x200B; filter door eigenschappen &#x200B;](filter-data.md) en terugkeer slechts de eigenschappen u geinteresseerd bent in.
 
 **API formaat**
 
@@ -65,4 +65,4 @@ Een succesvolle reactie keert de gespecificeerde dataset met slechts gevraagde `
 
 >[!NOTE]
 >
->Eigenschappen waarvan de waarden vooraf met `@` zijn ingesteld, vertegenwoordigen onderling verwante objecten. Zie de appendix sectie op [ het bekijken van onderling verwant voorwerpen ](appendix.md#view-interrelated-objects) voor stappen op hoe te om de details van deze voorwerpen te bekijken.
+>Eigenschappen waarvan de waarden vooraf met `@` zijn ingesteld, vertegenwoordigen onderling verwante objecten. Zie de appendix sectie op [&#x200B; het bekijken van onderling verwant voorwerpen &#x200B;](appendix.md#view-interrelated-objects) voor stappen op hoe te om de details van deze voorwerpen te bekijken.

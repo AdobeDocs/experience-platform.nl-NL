@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Ondersteunde transformatiefuncties in Destination SDK
 
-De Destination SDK van het Experience Platform gebruikt [[!DNL Pebble]  malplaatjes ](https://pebbletemplates.io/), toestaand u om de gegevens die van Experience Platform worden uitgevoerd in het formaat om te zetten dat door uw bestemming wordt vereist.
+De Destination SDK van het Experience Platform gebruikt [[!DNL Pebble]  malplaatjes &#x200B;](https://pebbletemplates.io/), toestaand u om de gegevens die van Experience Platform worden uitgevoerd in het formaat om te zetten dat door uw bestemming wordt vereist.
 
 De implementatie van het Experience Platform [!DNL Pebble] heeft enkele wijzigingen ten opzichte van de versie van het tekstvak die wordt geleverd door [!DNL Pebble] . Naast de functies die [!DNL Pebble] biedt voor &#39;out-of-the-box&#39;, heeft Adobe ook enkele extra functies gemaakt die u kunt gebruiken met Destination SDK.
 
@@ -21,43 +21,43 @@ De implementatie van het Experience Platform [!DNL Pebble] heeft enkele wijzigin
 
 ## Waar wordt het gebruikt? {#where-to-use}
 
-Gebruik de gesteunde die functies verder hieronder op deze pagina worden vermeld wanneer [ creërend een malplaatje van de berichttransformatie ](../../testing-api/streaming-destinations/create-template.md) voor de gegevens uit Experience Platform naar uw bestemming worden uitgevoerd.
+Gebruik de gesteunde die functies verder hieronder op deze pagina worden vermeld wanneer [&#x200B; creërend een malplaatje van de berichttransformatie &#x200B;](../../testing-api/streaming-destinations/create-template.md) voor de gegevens uit Experience Platform naar uw bestemming worden uitgevoerd.
 
-Het malplaatje van de berichttransformatie wordt gebruikt in de [ configuratie van de bestemmingsserver ](templating-specs.md) voor het stromen bestemmingen.
+Het malplaatje van de berichttransformatie wordt gebruikt in de [&#x200B; configuratie van de bestemmingsserver &#x200B;](templating-specs.md) voor het stromen bestemmingen.
 
 ## Vereisten {#prerequisites}
 
-Om de concepten en de functies in deze verwijzingspagina te begrijpen, lees eerst het [ document van het berichtformaat ](message-format.md). U moet de [ structuur van een profiel ](message-format.md#profile-structure) in Experience Platform begrijpen alvorens u [!DNL Pebble] malplaatjes kunt gebruiken om en de uitgevoerde gegevens te transformeren.
+Om de concepten en de functies in deze verwijzingspagina te begrijpen, lees eerst het [&#x200B; document van het berichtformaat &#x200B;](message-format.md). U moet de [&#x200B; structuur van een profiel &#x200B;](message-format.md#profile-structure) in Experience Platform begrijpen alvorens u [!DNL Pebble] malplaatjes kunt gebruiken om en de uitgevoerde gegevens te transformeren.
 
-Alvorens u aan de hieronder gedocumenteerde functies vooruitgaat, herzie de sjabloonvoorbeelden in de sectie [ Gebruikend een het malplaatjetaal voor de identiteit, de attributen, en de transformaties van het publiekslidmaatschap ](message-format.md#using-templating). De voorbeelden in dat verband beginnen zeer eenvoudig en nemen toe in complexiteit.
+Alvorens u aan de hieronder gedocumenteerde functies vooruitgaat, herzie de sjabloonvoorbeelden in de sectie [&#x200B; Gebruikend een het malplaatjetaal voor de identiteit, de attributen, en de transformaties van het publiekslidmaatschap &#x200B;](message-format.md#using-templating). De voorbeelden in dat verband beginnen zeer eenvoudig en nemen toe in complexiteit.
 
 ## Ondersteunde [!DNL Pebble] functies {#supported-functions}
 
 In de sectie [!DNL Pebble] -tags ondersteunt alleen Destination SDK:
 
-* [ filter ](https://pebbletemplates.io/wiki/tag/filter/)
-* [ for ](https://pebbletemplates.io/wiki/tag/for/)
-* [ als ](https://pebbletemplates.io/wiki/tag/if/)
-* [ plaats ](https://pebbletemplates.io/wiki/tag/set/)
+* [&#x200B; filter &#x200B;](https://pebbletemplates.io/wiki/tag/filter/)
+* [&#x200B; for &#x200B;](https://pebbletemplates.io/wiki/tag/for/)
+* [&#x200B; als &#x200B;](https://pebbletemplates.io/wiki/tag/if/)
+* [&#x200B; plaats &#x200B;](https://pebbletemplates.io/wiki/tag/set/)
 
 >[!TIP]
 >
 >Het gebruiken `for` is verschillend wanneer het herhalen door *serie* of *kaart* elementen in een malplaatje. Wanneer u een array doorloopt, kunt u het element rechtstreeks ophalen. Wanneer u door een kaart herhaalt, krijgt u elke kaartingang, die een zeer belangrijk-waardepaar heeft.
 >
-> * Voor een voorbeeld van een serieelement, denk over de identiteiten in [ identityMap ](message-format.md#identities) namespace, waar u door elementen zoals `identityMap.gaid` kon herhalen, `identityMap.email`, of gelijkaardig.
-> * Voor een voorbeeld van een kaartelement, denk over [ segmentMembership ](message-format.md#segment-membership).
+> * Voor een voorbeeld van een serieelement, denk over de identiteiten in [&#x200B; identityMap &#x200B;](message-format.md#identities) namespace, waar u door elementen zoals `identityMap.gaid` kon herhalen, `identityMap.email`, of gelijkaardig.
+> * Voor een voorbeeld van een kaartelement, denk over [&#x200B; segmentMembership &#x200B;](message-format.md#segment-membership).
 
 Vanuit de filtersectie [!DNL Pebble] biedt Destination SDK ondersteuning voor alle functies. In het onderstaande voorbeeld wordt getoond hoe de functie `date` binnen Destination SDK kan worden gebruikt.
 
-Van de [!DNL Pebble] functies sectie, steunt de Adobe ** niet de [ waaier ](https://pebbletemplates.io/wiki/function/range/) functie.
+Van de [!DNL Pebble] functies sectie, steunt de Adobe ** niet de [&#x200B; waaier &#x200B;](https://pebbletemplates.io/wiki/function/range/) functie.
 
 ## Voorbeeld van het gebruik van de functie `date` {#date-function}
 
-Om te verklaren hoe [!DNL Pebble] functies in Destination SDK worden gebruikt, zie onder hoe de datumfunctie ([ verbinding in de documentatie van de Beerbeurt ](https://pebbletemplates.io/wiki/filter/date/)) wordt gebruikt om het formaat van een timestamp om te zetten.
+Om te verklaren hoe [!DNL Pebble] functies in Destination SDK worden gebruikt, zie onder hoe de datumfunctie ([&#x200B; verbinding in de documentatie van de Beerbeurt &#x200B;](https://pebbletemplates.io/wiki/filter/date/)) wordt gebruikt om het formaat van een timestamp om te zetten.
 
 ### Gebruiksscenario
 
-U wilt `lastQualificationTime` timestamp van de standaard [ ISO 8601 ](https://en.wikipedia.org/wiki/ISO_8601) waarde veranderen die het Experience Platform naar een andere waarde uitvoert die door uw bestemming wordt voorkeur.
+U wilt `lastQualificationTime` timestamp van de standaard [&#x200B; ISO 8601 &#x200B;](https://en.wikipedia.org/wiki/ISO_8601) waarde veranderen die het Experience Platform naar een andere waarde uitvoert die door uw bestemming wordt voorkeur.
 
 ### Voorbeeld
 

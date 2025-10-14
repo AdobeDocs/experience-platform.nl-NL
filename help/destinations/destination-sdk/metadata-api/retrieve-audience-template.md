@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een sjabloon voor publieksmetagegevens op te halen met het API-eindpunt `/authoring/audience-templates` .
 
-Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [ beheer van publieksmeta-gegevens ](../functionality/audience-metadata-management.md).
+Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [&#x200B; beheer van publieksmeta-gegevens &#x200B;](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
@@ -25,7 +25,7 @@ Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpun
 
 ## Aan de slag met API-bewerkingen voor publiekssjablonen {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een publiekssjabloon ophalen {#retrieve}
 
@@ -317,8 +317,8 @@ Een succesvolle reactie keert status 200 van HTTP met de details van het publiek
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u details over de configuratie van de doelserver kunt ophalen met behulp van het API-eindpunt van `/authoring/destination-servers` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u details over de configuratie van de doelserver kunt ophalen met behulp van het API-eindpunt van `/authoring/destination-servers` . Lees [&#x200B; hoe te om Destination SDK te gebruiken om uw bestemming &#x200B;](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

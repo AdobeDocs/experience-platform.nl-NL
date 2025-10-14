@@ -15,11 +15,11 @@ Alle gebieden van de Gegevens van de Ervaring Model (XDM) worden bepaald gebruik
 
 >[!NOTE]
 >
->`meta:xdmType` is een systeem-geproduceerde waarde, en daarom wordt u vereist om dit bezit aan JSON voor uw gebied toe te voegen wanneer het gebruiken van API (behalve wanneer [ het creëren van de types van douanekaart ](#custom-maps)). De beste manier is om JSON-schematypen (zoals `string` en `integer` ) te gebruiken met de juiste min/max-beperkingen zoals gedefinieerd in de onderstaande tabel.
+>`meta:xdmType` is een systeem-geproduceerde waarde, en daarom wordt u vereist om dit bezit aan JSON voor uw gebied toe te voegen wanneer het gebruiken van API (behalve wanneer [&#x200B; het creëren van de types van douanekaart &#x200B;](#custom-maps)). De beste manier is om JSON-schematypen (zoals `string` en `integer` ) te gebruiken met de juiste min/max-beperkingen zoals gedefinieerd in de onderstaande tabel.
 
-In deze handleiding wordt de juiste opmaak beschreven voor het definiëren van verschillende veldtypen, inclusief die met optionele eigenschappen. Meer informatie betreffende facultatieve eigenschappen en type-specifieke sleutelwoorden is beschikbaar door de [ documentatie van het Schema JSON ](https://json-schema.org/understanding-json-schema/reference/type.html).
+In deze handleiding wordt de juiste opmaak beschreven voor het definiëren van verschillende veldtypen, inclusief die met optionele eigenschappen. Meer informatie betreffende facultatieve eigenschappen en type-specifieke sleutelwoorden is beschikbaar door de [&#x200B; documentatie van het Schema JSON &#x200B;](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Om te beginnen, het gewenste gebiedstype te vinden en de steekproefcode te gebruiken die wordt verstrekt om uw API verzoek voor [ te bouwen creërend een gebiedsgroep ](../api/field-groups.md#create) of [ creërend een gegevenstype ](../api/data-types.md#create).
+Om te beginnen, het gewenste gebiedstype te vinden en de steekproefcode te gebruiken die wordt verstrekt om uw API verzoek voor [&#x200B; te bouwen creërend een gebiedsgroep &#x200B;](../api/field-groups.md#create) of [&#x200B; creërend een gegevenstype &#x200B;](../api/data-types.md#create).
 
 ## [!UICONTROL String] {#string}
 
@@ -101,7 +101,7 @@ U kunt desgewenst labels voor klanten opgeven voor elke waarde onder een eigensc
 
 >[!NOTE]
 >
->De `meta:enum` waarde verklaart **&#x200B;**&#x200B;geen opsomming of drijft om het even welke gegevensbevestiging op zijn. In de meeste gevallen worden onder `meta:enum` verschafte tekenreeksen ook onder `enum` opgegeven om ervoor te zorgen dat er beperkingen gelden voor gegevens. Er zijn echter enkele gebruiksgevallen waarin `meta:enum` wordt geleverd zonder overeenkomende `enum` -array. Zie het leerprogramma op [ bepalend gesuggereerde waarden ](../tutorials/suggested-values.md) voor meer informatie.
+>De `meta:enum` waarde verklaart **&#x200B;**&#x200B;geen opsomming of drijft om het even welke gegevensbevestiging op zijn. In de meeste gevallen worden onder `meta:enum` verschafte tekenreeksen ook onder `enum` opgegeven om ervoor te zorgen dat er beperkingen gelden voor gegevens. Er zijn echter enkele gebruiksgevallen waarin `meta:enum` wordt geleverd zonder overeenkomende `enum` -array. Zie het leerprogramma op [&#x200B; bepalend gesuggereerde waarden &#x200B;](../tutorials/suggested-values.md) voor meer informatie.
 
 U kunt desgewenst een eigenschap `default` opgeven die de standaardwaarde `enum` aangeeft die het veld gebruikt wanneer geen waarde wordt opgegeven.
 
@@ -142,7 +142,7 @@ Nummervelden worden aangegeven door `type: number` en hebben geen andere vereist
 
 >[!NOTE]
 >
->`number` types worden gebruikt voor om het even welk numeriek type, of gehelen of drijvende puntaantallen, terwijl [`integer` types ](#integer) specifiek voor integrale aantallen worden gebruikt. Verwijs naar de [ documentatie van het Schema JSON over numerieke types ](https://json-schema.org/understanding-json-schema/reference/numeric.html) voor meer informatie over de gebruiksgevallen voor elk type.
+>`number` types worden gebruikt voor om het even welk numeriek type, of gehelen of drijvende puntaantallen, terwijl [`integer` types &#x200B;](#integer) specifiek voor integrale aantallen worden gebruikt. Verwijs naar de [&#x200B; documentatie van het Schema JSON over numerieke types &#x200B;](https://json-schema.org/understanding-json-schema/reference/numeric.html) voor meer informatie over de gebruiksgevallen voor elk type.
 
 ## [!UICONTROL Integer] {#integer}
 
@@ -158,7 +158,7 @@ Nummervelden worden aangegeven door `type: number` en hebben geen andere vereist
 
 >[!NOTE]
 >
->Hoewel `integer` types specifiek naar integrale aantallen verwijzen, [`number` types ](#number) worden gebruikt voor om het even welk numeriek type, of gehelen of drijvende puntaantallen. Verwijs naar de [ documentatie van het Schema JSON over numerieke types ](https://json-schema.org/understanding-json-schema/reference/numeric.html) voor meer informatie over de gebruiksgevallen voor elk type.
+>Hoewel `integer` types specifiek naar integrale aantallen verwijzen, [`number` types &#x200B;](#number) worden gebruikt voor om het even welk numeriek type, of gehelen of drijvende puntaantallen. Verwijs naar de [&#x200B; documentatie van het Schema JSON over numerieke types &#x200B;](https://json-schema.org/understanding-json-schema/reference/numeric.html) voor meer informatie over de gebruiksgevallen voor elk type.
 
 U kunt optioneel het bereik van het gehele getal beperken door eigenschappen `minimum` en `maximum` aan de definitie toe te voegen. Verschillende andere numerieke typen die door de Schema Builder-gebruikersinterface worden ondersteund, zijn `integer` -typen met specifieke `minimum` - en `maximum` -beperkingen, zoals [[!UICONTROL Long]](#long) , [[!UICONTROL Short]](#short) en [[!UICONTROL Byte]](#byte) .
 
@@ -174,7 +174,7 @@ U kunt optioneel het bereik van het gehele getal beperken door eigenschappen `mi
 
 ## [!UICONTROL Long] {#long}
 
-Het equivalent van een [!UICONTROL Long] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied ](#integer) met specifieke `minimum` en `maximum` waarden (`-9007199254740992` en `9007199254740992`, respectievelijk).
+Het equivalent van een [!UICONTROL Long] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied &#x200B;](#integer) met specifieke `minimum` en `maximum` waarden (`-9007199254740992` en `9007199254740992`, respectievelijk).
 
 ```json
 "sampleField": {
@@ -188,7 +188,7 @@ Het equivalent van een [!UICONTROL Long] gebied dat door de Bouwer van het Schem
 
 ## [!UICONTROL Short] {#short}
 
-Het equivalent van een [!UICONTROL Short] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied ](#integer) met specifieke `minimum` en `maximum` waarden (`-32768` en `32767`, respectievelijk).
+Het equivalent van een [!UICONTROL Short] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied &#x200B;](#integer) met specifieke `minimum` en `maximum` waarden (`-32768` en `32767`, respectievelijk).
 
 ```json
 "sampleField": {
@@ -202,7 +202,7 @@ Het equivalent van een [!UICONTROL Short] gebied dat door de Bouwer van het Sche
 
 ## [!UICONTROL Byte] {#byte}
 
-Het equivalent van een [!UICONTROL Byte] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied ](#integer) met specifieke `minimum` en `maximum` waarden (`-128` en `127`, respectievelijk).
+Het equivalent van een [!UICONTROL Byte] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied &#x200B;](#integer) met specifieke `minimum` en `maximum` waarden (`-128` en `127`, respectievelijk).
 
 ```json
 "sampleField": {
@@ -333,7 +333,7 @@ U kunt ook het gehele object definiëren door naar een gegevenstype te verwijzen
 
 ## [!UICONTROL Map] {#map}
 
-Een kaartgebied is hoofdzakelijk een [`object` - type gebied ](#object) met een onbeperkte reeks sleutels. Kaarten hebben net als objecten de waarde `type` `object` , maar hun `meta:xdmType` is expliciet ingesteld op `map` .
+Een kaartgebied is hoofdzakelijk een [`object` - type gebied &#x200B;](#object) met een onbeperkte reeks sleutels. Kaarten hebben net als objecten de waarde `type` `object` , maar hun `meta:xdmType` is expliciet ingesteld op `map` .
 
 Een kaart **moet** geen eigenschappen bepalen. Het **moet** één enkel `additionalProperties` schema bepalen om het type van waarden te beschrijven binnen de kaart (elke kaart kan slechts één enkel gegevenstype bevatten). De `type` -waarde moet `string` of `integer` zijn.
 
@@ -365,11 +365,11 @@ XDM stelt de volgende beperkingen op het gebruik van deze opslagwenk:
 
 Zorg ervoor dat u kaart-type gebieden wanneer absoluut noodzakelijk slechts gebruikt, aangezien zij de volgende prestatiesnadelen dragen:
 
-* De tijd van de reactie van [ de Dienst van de Vraag van Adobe Experience Platform ](../../query-service/home.md) degradeert van drie seconden aan tien seconden voor 100 miljoen verslagen.
+* De tijd van de reactie van [&#x200B; de Dienst van de Vraag van Adobe Experience Platform &#x200B;](../../query-service/home.md) degradeert van drie seconden aan tien seconden voor 100 miljoen verslagen.
 * Kaarten moeten minder dan 16 sleutels hebben of anders risico op verdere afbraak.
 
 De gebruikersinterface van Experience Platform heeft ook beperkingen in de manier waarop de sleutels van map-type gebieden kunnen halen. Terwijl objecttekstvelden kunnen worden uitgebreid, worden kaarten als één veld weergegeven.
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u verschillende veldtypen in de API definieert. Voor meer informatie hoe de XDM gebiedstypes geformatteerd zijn, zie de gids op [ XDM gebiedstype beperkingen ](../schema/field-constraints.md).
+In deze handleiding wordt beschreven hoe u verschillende veldtypen in de API definieert. Voor meer informatie hoe de XDM gebiedstypes geformatteerd zijn, zie de gids op [&#x200B; XDM gebiedstype beperkingen &#x200B;](../schema/field-constraints.md).

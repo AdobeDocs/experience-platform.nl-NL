@@ -19,7 +19,7 @@ Als u het gekozen dashboard wilt openen, selecteert u **[!UICONTROL Profiles]** 
 
 U kunt ook **[!UICONTROL Dashboards]** selecteren in de linkernavigatie gevolgd door de naam van het aangepaste dashboard. Het overzicht van het door de gebruiker gedefinieerde dashboard wordt weergegeven.
 
-![ UI van Experience Platform met [!UICONTROL Profiles], [!UICONTROL Audiences], [!UICONTROL Destinations], en [!UICONTROL Dashboards] benadrukte.](./images/view-sql/dashboard-navigation.png)
+![&#x200B; UI van Experience Platform met [!UICONTROL Profiles], [!UICONTROL Audiences], [!UICONTROL Destinations], en [!UICONTROL Dashboards] benadrukte.](./images/view-sql/dashboard-navigation.png)
 
 ## In-/uitschakelen van SQL weergeven {#toggle}
 
@@ -29,11 +29,11 @@ Een knevel is beschikbaar bij het overzicht van het Profiel, het Publiek, de Bes
 >
 >Als u de schakeloptie [!UICONTROL View SQL] inschakelt, kunt u de filters voor het algemene en widgetniveau pas wijzigen nadat u de functie hebt uitgeschakeld.
 
-![ de [!UICONTROL View SQL] benadrukte knevel.](./images/view-sql/view-sql-toggle.png)
+![&#x200B; de [!UICONTROL View SQL] benadrukte knevel.](./images/view-sql/view-sql-toggle.png)
 
 Schakel de schakeloptie in om [!UICONTROL View SQL] tekst weer te geven op elke afzonderlijke insight.
 
-![ een insight met [!UICONTROL View SQL] benadrukte.](./images/view-sql/insight-view-sql.png)
+![&#x200B; een insight met [!UICONTROL View SQL] benadrukte.](./images/view-sql/insight-view-sql.png)
 
 Selecteer **[!UICONTROL View SQL]** om een dialoogvenster te openen dat de SQL van de widget bevat.
 
@@ -43,20 +43,20 @@ Er wordt een dialoogvenster weergegeven met de titel van de insight en de SQL di
 
 >[!TIP]
 >
->U kunt de volledige SQL verklaring aan uw klembord kopiëren door het exemplaarpictogram te selecteren (![ het exemplaarpictogram.](/help/images/icons/copy.png) ) rechtsboven in het dialoogvenster.
+>U kunt de volledige SQL verklaring aan uw klembord kopiëren door het exemplaarpictogram te selecteren (![&#x200B; het exemplaarpictogram.](/help/images/icons/copy.png) ) rechtsboven in het dialoogvenster.
 
-![ een dialoog van insight met de SQL benadrukte verklaring.](./images/view-sql/sql-dialog.png)
+![&#x200B; een dialoog van insight met de SQL benadrukte verklaring.](./images/view-sql/sql-dialog.png)
 
 Selecteer **[!UICONTROL Run SQL]** om de Redacteur van de Vraag met de vraag te openen is pre-bevolkt.
 
-![ een dialoog van insight met [!UICONTROL Run SQL] benadrukt.](./images/view-sql/run-sql.png)
+![&#x200B; een dialoog van insight met [!UICONTROL Run SQL] benadrukt.](./images/view-sql/run-sql.png)
 
 ## Bestaande SQL bewerken {#edit-sql}
 
 De Query-editor wordt weergegeven. U kunt de instructie nu bewerken en vragen naar uw platformgegevens op een manier die beter aansluit bij uw rapportagebehoeften. Sla de nieuwe querysjabloon op onder de juiste naam.
 
-![ de Redacteur van de Vraag met uw gekozen insight SQL vooraf bevolkt.](./images/view-sql/edit-sql.png)
+![&#x200B; de Redacteur van de Vraag met uw gekozen insight SQL vooraf bevolkt.](./images/view-sql/edit-sql.png)
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, hebt u nu begrepen hoe u de SQL voor elke insight kunt openen in de standaarddashboards of een door de gebruiker gedefinieerd dashboard. Als u dit nog niet hebt gedaan, wordt u geadviseerd om het [ ModelDocument van Gegevens van Real-Time Customer Data Platform Inzichten ](./data-models/cdp-insights-data-model-b2c.md) te lezen. Dat document bevat inzichten over het aanpassen van SQL malplaatjes voor de rapporten van Real-Time CDP die aan uw marketing en KPI behoeften worden aangepast.
+Nadat u dit document hebt gelezen, hebt u nu begrepen hoe u de SQL voor elke insight kunt openen in de standaarddashboards of een door de gebruiker gedefinieerd dashboard. Als u dit nog niet hebt gedaan, wordt u geadviseerd om het [&#x200B; ModelDocument van Gegevens van Real-Time Customer Data Platform Inzichten &#x200B;](./data-models/cdp-insights-data-model-b2c.md) te lezen. Dat document bevat inzichten over het aanpassen van SQL malplaatjes voor de rapporten van Real-Time CDP die aan uw marketing en KPI behoeften worden aangepast.

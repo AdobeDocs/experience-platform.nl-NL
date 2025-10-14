@@ -42,15 +42,15 @@ Met Real-Time CDP kunt u:
 * Maak actionable inzichten en schaal publiek met AI en machine leren aangedreven door Adobe Sensei en gebouwd voor marketers.
 * Lever gepersonaliseerde ervaringen in real time over alle kanalen en bestemmingen.
 
-Voor meer informatie, zie de [ documentatie van Real-Time Customer Data Platform ](../../rtcdp/overview.md).
+Voor meer informatie, zie de [&#x200B; documentatie van Real-Time Customer Data Platform &#x200B;](../../rtcdp/overview.md).
 
 **Belangrijkste kenmerken**
 
 | Functie | Beschrijving |
 |---|---|
-| Bestemmingen | Vooraf gebouwde integratie met doelplatforms die worden ondersteund door Adobe [!DNL Real-Time Customer Data Platform] die gegevens naadloos voor deze partners activeren. Zie [ Doelen ](#destinations) hieronder voor meer informatie. |
-| Metrisch dashboard voor startpagina | De startpagina van Real-Time Customer Data Platform (Real-Time CDP) bevat een dashboard voor meetgegevens met informatie over profielen en segmenten. De homepage bevat ook koppelingen naar leermaterialen. Zie de sectie op [ metriek van Real-Time Customer Data Platform ](#real-time-customer-data-platform-metrics) hieronder. |
-| Bronnen | U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe Solutions, cloudopslag, software van derden en uw CRM. Zie de [ Bronnen ](#sources) hieronder sectie om meer te leren. |
+| Bestemmingen | Vooraf gebouwde integratie met doelplatforms die worden ondersteund door Adobe [!DNL Real-Time Customer Data Platform] die gegevens naadloos voor deze partners activeren. Zie [&#x200B; Doelen &#x200B;](#destinations) hieronder voor meer informatie. |
+| Metrisch dashboard voor startpagina | De startpagina van Real-Time Customer Data Platform (Real-Time CDP) bevat een dashboard voor meetgegevens met informatie over profielen en segmenten. De homepage bevat ook koppelingen naar leermaterialen. Zie de sectie op [&#x200B; metriek van Real-Time Customer Data Platform &#x200B;](#real-time-customer-data-platform-metrics) hieronder. |
+| Bronnen | U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe Solutions, cloudopslag, software van derden en uw CRM. Zie de [&#x200B; Bronnen &#x200B;](#sources) hieronder sectie om meer te leren. |
 
 **[!DNL Real-Time Customer Data Platform]metrics**
 
@@ -60,11 +60,11 @@ De homepage is slechts een van de plaatsen waar metrische kaarten verschijnen. R
 
 Als het systeem geen gegevens bevat wanneer u zich aanmeldt bij Real-Time CDP, wordt het dashboard op de startpagina niet weergegeven. In dit geval biedt de startpagina leermateriaal voor een eerste gebruikerservaring. Terwijl gegevens worden verzameld, wordt het dashboard automatisch bijgewerkt om informatie over die gegevens weer te geven.
 
-Meer leren, zie het [ metriek van Real-Time Customer Data Platform overzicht ](../../rtcdp/home-page-dashboards.md)
+Meer leren, zie het [&#x200B; metriek van Real-Time Customer Data Platform overzicht &#x200B;](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met doelplatforms die door Real-Time Customer Data Platform van Adobe worden ondersteund en die gegevens naadloos naar die partners activeren. Voor meer informatie, lees het [ overzicht van Doelen ](../../destinations/home.md) artikel.
+[!DNL Destinations] zijn vooraf gebouwde integratie met doelplatforms die door Real-Time Customer Data Platform van Adobe worden ondersteund en die gegevens naadloos naar die partners activeren. Voor meer informatie, lees het [&#x200B; overzicht van Doelen &#x200B;](../../destinations/home.md) artikel.
 
 **Beschikbare bestemmingen**
 
@@ -73,12 +73,12 @@ Met de versie van November, steunt Adobe Real-Time Customer Data Platform de vol
 * Advertising: [!DNL Google]
 * E-mailmarketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-Zie de [ bestemmingscatalogus ](../../destinations/catalog/overview.md) voor informatie over elk van de bestemmingen.
+Zie de [&#x200B; bestemmingscatalogus &#x200B;](../../destinations/catalog/overview.md) voor informatie over elk van de bestemmingen.
 
 **Bekende beperkingen**
 
 * Het besturingselement voor aangepaste activeringsschema&#39;s in de activeringsstroom (stap Planning) is niet beschikbaar bij de eerste release.
-* Er is momenteel geen manier om een bestemmingsconfiguratie uit te geven of te schrappen. Om rond deze beperking te werken, kunt u de bestemming in de hoogste juiste hoek van de [ pagina van bestemmingsdetails ](../../destinations/ui/destination-details-page.md) toelaten of onbruikbaar maken.
+* Er is momenteel geen manier om een bestemmingsconfiguratie uit te geven of te schrappen. Om rond deze beperking te werken, kunt u de bestemming in de hoogste juiste hoek van de [&#x200B; pagina van bestemmingsdetails &#x200B;](../../destinations/ui/destination-details-page.md) toelaten of onbruikbaar maken.
 * Er is momenteel geen validatie voor accountdetails, paden of referenties wanneer verbinding wordt gemaakt met uw doel- of opslagaccount. Controleer of u de juiste referenties invoert en dubbelklik op spelfouten of typefouten.
 * Er zijn geen referentie-verlengingen beschikbaar bij de eerste release. Als een account is verlopen of moet worden vernieuwd, moet u een nieuwe doelverbinding maken en de eerder toegewezen segmenten opnieuw toewijzen.
 
@@ -100,7 +100,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 * Source-connectors voor opslag in de cloud bieden geen ondersteuning voor het opnemen van gecomprimeerde bestanden.
 
-Voor meer informatie over bronnen, zie [ Overzicht van Bronnen ](../../sources/home.md).
+Voor meer informatie over bronnen, zie [&#x200B; Overzicht van Bronnen &#x200B;](../../sources/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -113,7 +113,7 @@ Met Adobe Experience Platform [!DNL Data Science Workspace] kunnen wetenschapper
 | Gegevenstoegang met [!DNL Experience Platform] SDK | De vooraf gebouwde Ontvangers en lanceerlaptops in [!DNL Python] gebruiken nu [!DNL Experience Platform] SDK voor de toegang tot van gegevens. |
 | Ondersteuning voor sandboxen | Ondersteuning voor aanstaande sandboxfunctionaliteit (momenteel in bèta), waaronder de mogelijkheid om laptops en recept te isoleren in ontwikkelings- of productiesandboxen. Zie het [sandboxoverzicht](../../sandboxes/home.md) voor meer informatie. |
 
-Voor meer informatie, zie het [ overzicht van Workspace van de Wetenschap van Gegevens ](../../data-science-workspace/home.md).
+Voor meer informatie, zie het [&#x200B; overzicht van Workspace van de Wetenschap van Gegevens &#x200B;](../../data-science-workspace/home.md).
 
 ## [!DNL Experience Data Model] (XDM)-systeem {#xdm}
 
@@ -136,7 +136,7 @@ XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht
 
 * Geen.
 
-Om meer over het werken met XDM te leren gebruikend [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, te lezen gelieve de [ documentatie van het Systeem XDM ](../../xdm/home.md).
+Om meer over het werken met XDM te leren gebruikend [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, te lezen gelieve de [&#x200B; documentatie van het Systeem XDM &#x200B;](../../xdm/home.md).
 
 ## [!DNL Real-Time Customer Profile] {#profile}
 
@@ -158,7 +158,7 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 * Geen.
 
-Voor meer informatie over [!DNL Real-Time Customer Profile], met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, te lezen gelieve het [ Real-Time Overzicht van het Profiel van de Klant ](../../profile/home.md).
+Voor meer informatie over [!DNL Real-Time Customer Profile], met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, te lezen gelieve het [&#x200B; Real-Time Overzicht van het Profiel van de Klant &#x200B;](../../profile/home.md).
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -187,4 +187,4 @@ Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterf
 
 * Geen.
 
-Meer over [!DNL Segmentation Service] leren, te lezen gelieve het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
+Meer over [!DNL Segmentation Service] leren, te lezen gelieve het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](../../segmentation/home.md).

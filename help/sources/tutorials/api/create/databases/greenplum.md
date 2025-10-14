@@ -16,14 +16,14 @@ ht-degree: 0%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL GreenPlum] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL GreenPlum] tot stand te brengen gebruikend [[!DNL Flow Service]  API &#x200B;](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL GreenPlum] via de [!DNL Flow Service] API.
 
@@ -32,11 +32,11 @@ In de volgende secties vindt u aanvullende informatie die u moet weten voordat u
 | `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met de instantie [!DNL GreenPlum] . Het patroon van de verbindingstekenreeks voor [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b` . |
 
-Voor meer informatie bij het verwerven van een verbindingskoord, verwijs naar [ dit document GreenPlum ](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
+Voor meer informatie bij het verwerven van een verbindingskoord, verwijs naar [&#x200B; dit document GreenPlum &#x200B;](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 

@@ -19,7 +19,7 @@ In dit document wordt uitgelegd hoe u de tagextensie configureert in de gebruike
 
 ## De Adobe Content Analytics-tagextensie installeren {#install}
 
-De de markeringsuitbreiding van Adobe Content Analytics wordt automatisch geïnstalleerd als deel van het markeringsbezit dat automatisch wordt gecreeerd wanneer het gebruiken van de [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided).
+De de markeringsuitbreiding van Adobe Content Analytics wordt automatisch geïnstalleerd als deel van het markeringsbezit dat automatisch wordt gecreeerd wanneer het gebruiken van de [&#x200B; Content Analytics geleide configuratietovenaar &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided).
 
 <!--
 ### Manual installation
@@ -50,9 +50,9 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Gegevensstromen configureren
 
-De [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided) selecteert automatisch de juiste waarde voor **[!UICONTROL Sandbox]** en **[!UICONTROL Production Datastream]**. U kunt desgewenst een extra **[!UICONTROL Staging Datastream]** en **[!UICONTROL Development Datastream]** configureren.
+De [&#x200B; Content Analytics geleide configuratietovenaar &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided) selecteert automatisch de juiste waarde voor **[!UICONTROL Sandbox]** en **[!UICONTROL Production Datastream]**. U kunt desgewenst een extra **[!UICONTROL Staging Datastream]** en **[!UICONTROL Development Datastream]** configureren.
 
-![ Beeld dat de configuratie van Datastreams van de de markeringsuitbreiding van Adobe Content Analytics in de Markeringen UI ](assets/aca-tag-datastreams.png) toont
+![&#x200B; Beeld dat de configuratie van Datastreams van de de markeringsuitbreiding van Adobe Content Analytics in de Markeringen UI &#x200B;](assets/aca-tag-datastreams.png) toont
 
 U kunt de automatische geselecteerde waarden voor **[!UICONTROL Sandbox]** en **[!UICONTROL Production Datastream]** overschrijven voor het geval u Content Analytics wilt gebruiken voor een andere sandbox en voor verschillende gegevensstreams. Als u dit doet, kunt u een sandbox en gegevensstreams selecteren in de beschikbare vervolgkeuzemenu&#39;s of **[!UICONTROL Enter values]** selecteren en een aangepaste gegevensstroom-id invoeren voor elke omgeving.
 
@@ -63,27 +63,27 @@ U kunt de automatische geselecteerde waarden voor **[!UICONTROL Sandbox]** en **
 >* de geselecteerde sandbox is nog niet gekoppeld aan een andere Content Analytics-configuratie, en
 >* Voor elke geselecteerde gegevensstroom is de Experience Platform-service geconfigureerd met een ingeschakelde Content Analytics Experience-gebeurtenisgegevensset.
 
-Zie de gids op [ gegevensstromen ](../../../../datastreams/overview.md) leren hoe te om een gegevensstroom te vormen.
+Zie de gids op [&#x200B; gegevensstromen &#x200B;](../../../../datastreams/overview.md) leren hoe te om een gegevensstroom te vormen.
 
 ## Vastleggen en definiëren van ervaring configureren
 
 In de sectie **[!UICONTROL Experience Capture & Definition]** kunt u **[!UICONTROL Include Experiences]** de mogelijkheid bieden ervaringen op te nemen bij het verzamelen van gegevens voor Content Analytics.
 
-![ Beeld dat de sectie van de Vangst en van de Definitie van de Ervaring in uitbreiding toont ](assets/aca-tag-experiencecapture.png)
+![&#x200B; Beeld dat de sectie van de Vangst en van de Definitie van de Ervaring in uitbreiding toont &#x200B;](assets/aca-tag-experiencecapture.png)
 
 1. Schakel **[!UICONTROL Include experiences]** in.
 1. Optioneel. Geef de parameters op voor de weergave van inhoud op uw website. De parameters zijn nul of meer combinaties van a **[!UICONTROL Domain regular expression]** en **[!UICONTROL Query parameters]**.
    1. Voer een **[!UICONTROL Domain regular expression]** in, bijvoorbeeld `^(?!.*\b(store|help|admin)\b)` .
    1. Geef bijvoorbeeld een door komma&#39;s gescheiden lijst op van **[!UICONTROL Query parameters]** . `outdoors, patio, kitchen`
-Gebruik ![ dicht ](./assets/CrossSize300.svg) om individuele parameters te schrappen, of **[!UICONTROL Clear all]** om alle parameters te schrappen.
+Gebruik ![&#x200B; dicht &#x200B;](./assets/CrossSize300.svg) om individuele parameters te schrappen, of **[!UICONTROL Clear all]** om alle parameters te schrappen.
 1. Selecteer **[!UICONTROL Remove]** als u een combinatie van de reguliere expressie van het domein en queryparameters wilt verwijderen.
 1. Selecteer **[!UICONTROL Add Regex]** als u een andere combinatie van een reguliere expressie en queryparameters wilt toevoegen.
 
 ## Gebeurtenisfiltering configureren
 
-In de sectie **[!UICONTROL Event Filtering]** kunt u de reguliere expressies wijzigen om te filteren **[!UICONTROL Page URLs]** en **[!UICONTROL Assets URLs]** wanneer u gegevens voor Content Analytics verzamelt. De regelmatige uitdrukkingen die u in de [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided) hebt bepaald worden automatisch bevolkt.
+In de sectie **[!UICONTROL Event Filtering]** kunt u de reguliere expressies wijzigen om te filteren **[!UICONTROL Page URLs]** en **[!UICONTROL Assets URLs]** wanneer u gegevens voor Content Analytics verzamelt. De regelmatige uitdrukkingen die u in de [&#x200B; Content Analytics geleide configuratietovenaar &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided) hebt bepaald worden automatisch bevolkt.
 
-![ Beeld dat de gebeurtenis het filtreren montages van de de markeringsuitbreiding van Adobe Content Analytics in de markeringen UI toont ](assets/aca-tag-eventfiltering.png)
+![&#x200B; Beeld dat de gebeurtenis het filtreren montages van de de markeringsuitbreiding van Adobe Content Analytics in de markeringen UI toont &#x200B;](assets/aca-tag-eventfiltering.png)
 
 
 ### Voorbeelden
@@ -93,5 +93,5 @@ In de sectie **[!UICONTROL Event Filtering]** kunt u de reguliere expressies wij
 
 Met **[!UICONTROL Test Regex]** kunt u de reguliere expressie testen in de **[!UICONTROL Regular Expression Tester]** .
 
-![ Beeld die het regelmatige uitdrukkingsmeetapparaat van de de markeringsuitbreiding van Adobe Content Analytics in Tags UI tonen ](assets/aca-tag-regextester.png)
+![&#x200B; Beeld die het regelmatige uitdrukkingsmeetapparaat van de de markeringsuitbreiding van Adobe Content Analytics in Tags UI tonen &#x200B;](assets/aca-tag-regextester.png)
 

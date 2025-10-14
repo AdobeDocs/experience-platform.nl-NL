@@ -11,21 +11,21 @@ ht-degree: 1%
 
 # Build-eindpunt
 
-Extensies, regels en gegevenselementen zijn de bouwstenen van tags in Adobe Experience Platform. Wanneer u uw toepassing wilt maken iets doen, worden deze bouwstenen toegevoegd aan a [ bibliotheek ](./libraries.md). Om een bibliotheek op uw ervaringstoepassing op te stellen, wordt de bibliotheek gecompileerd in een bouwstijl. Met het `/builds` -eindpunt in de Reactor-API kunt u builds programmatisch beheren binnen uw ervaringstoepassing.
+Extensies, regels en gegevenselementen zijn de bouwstenen van tags in Adobe Experience Platform. Wanneer u uw toepassing wilt maken iets doen, worden deze bouwstenen toegevoegd aan a [&#x200B; bibliotheek &#x200B;](./libraries.md). Om een bibliotheek op uw ervaringstoepassing op te stellen, wordt de bibliotheek gecompileerd in een bouwstijl. Met het `/builds` -eindpunt in de Reactor-API kunt u builds programmatisch beheren binnen uw ervaringstoepassing.
 
 Een build is het feitelijke bestand (of de bestanden) die in uw web- en mobiele toepassing zijn geladen. De inhoud van elke build varieert op basis van de volgende factoren:
 
 * De bronnen die in de bibliotheek zijn opgenomen
-* De configuratie van het [ milieu ](./environments.md) waarin de bibliotheek wordt gebouwd
-* Het platform van het [ bezit ](./properties.md) waartot de bouwstijl behoort
+* De configuratie van het [&#x200B; milieu &#x200B;](./environments.md) waarin de bibliotheek wordt gebouwd
+* Het platform van het [&#x200B; bezit &#x200B;](./properties.md) waartot de bouwstijl behoort
 
 Een build behoort tot precies één bibliotheek. Een bibliotheek kan veel builds bevatten.
 
-Voor meer algemene informatie over bouwt en hoe zij in het publiceren werkschema voor markeringen passen, gelieve te verwijzen naar het [ het publiceren overzicht ](../../ui/publishing/overview.md).
+Voor meer algemene informatie over bouwt en hoe zij in het publiceren werkschema voor markeringen passen, gelieve te verwijzen naar het [&#x200B; het publiceren overzicht &#x200B;](../../ui/publishing/overview.md).
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met builds ophalen {#list}
 
@@ -45,7 +45,7 @@ GET /libraries/{LIBRARY_ID}/builds
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde bouwstijlen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde bouwstijlen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -350,7 +350,7 @@ Een succesvolle reactie keert de details van nieuw gecreeerd bouwstijl terug.
 
 ## Een build opnieuw publiceren {#republish}
 
-U kunt opnieuw publiceren bouwt van a [ gepubliceerde bibliotheek ](./libraries.md#publish) door zijn identiteitskaart in de weg van een verzoek van de PATCH te omvatten.
+U kunt opnieuw publiceren bouwt van a [&#x200B; gepubliceerde bibliotheek &#x200B;](./libraries.md#publish) door zijn identiteitskaart in de weg van een verzoek van de PATCH te omvatten.
 
 **API formaat**
 
@@ -471,9 +471,9 @@ Een succesvolle reactie keert de details van opnieuw gepubliceerde bouwstijl ter
 
 ## Verwante middelen voor een build ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een bouwstijl terug te winnen. Wanneer [ kijkt omhoog bouwt ](#lookup), zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een bouwstijl terug te winnen. Wanneer [&#x200B; kijkt omhoog bouwt &#x200B;](#lookup), zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante gegevenselementen weergeven voor een build {#data-elements}
 

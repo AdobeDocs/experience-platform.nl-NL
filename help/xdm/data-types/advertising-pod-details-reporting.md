@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Advertising Pod Details Reporting] is een standaard XDM-gegevenstype (Experience Data Model). Hiermee definieert u een reeks of groep advertenties die normaal gesproken achtereenvolgens worden afgespeeld tijdens inhoudeinden. Gebruik het gegevenstype [!UICONTROL Advertising Pod Details Reporting] om details vast te leggen, zoals de id van het advertentie-einde, een vriendelijke naam voor het advertentieeinde, de index van advertenties binnen het einde en de verschuiving van het advertentierak binnen de tijdlijn van de inhoud in seconden.
 
-![ een diagram van de Details die van de Pod van Advertising gegevenstype melden.](../images/data-types/advertising-pod-details-information.png)
+![&#x200B; een diagram van de Details die van de Pod van Advertising gegevenstype melden.](../images/data-types/advertising-pod-details-information.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |----------------------------|------------------------|-----------|-------------------------------------------------------|
@@ -24,4 +24,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json)
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json)

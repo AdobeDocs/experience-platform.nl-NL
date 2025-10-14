@@ -21,7 +21,7 @@ In deze zelfstudie worden de stappen beschreven die nodig zijn om het rapport vo
 
 ## Aan de slag
 
-Om Adobe Experience Platform APIs te gebruiken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien om de waarden te verzamelen die u voor de vereiste kopballen nodig hebt. Meer over Experience Platform APIs leren, gelieve te verwijzen naar [ begonnen wordt met de documentatie van Experience Platform APIs ](../../landing/api-guide.md).
+Om Adobe Experience Platform APIs te gebruiken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien om de waarden te verzamelen die u voor de vereiste kopballen nodig hebt. Meer over Experience Platform APIs leren, gelieve te verwijzen naar [&#x200B; begonnen wordt met de documentatie van Experience Platform APIs &#x200B;](../../landing/api-guide.md).
 
 De vereiste kopballen voor alle API vraag in dit leerprogramma zijn:
 
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Reactie**
 
-Een succesvol verzoek keert HTTP status 200 (OK) en de dataset overlappen rapport terug. Het rapport bevat een `data` -object, dat door komma&#39;s gescheiden lijsten met gegevenssets en hun respectievelijke aantal profielen bevat. Voor details op hoe te om het rapport te lezen, zie de sectie over [ het interpreteren van de dataset overlappen rapportgegevens ](#interpret-the-report) later in dit leerprogramma.
+Een succesvol verzoek keert HTTP status 200 (OK) en de dataset overlappen rapport terug. Het rapport bevat een `data` -object, dat door komma&#39;s gescheiden lijsten met gegevenssets en hun respectievelijke aantal profielen bevat. Voor details op hoe te om het rapport te lezen, zie de sectie over [&#x200B; het interpreteren van de dataset overlappen rapportgegevens &#x200B;](#interpret-the-report) later in dit leerprogramma.
 
 ```json
 {
@@ -68,7 +68,7 @@ Een succesvol verzoek keert HTTP status 200 (OK) en de dataset overlappen rappor
 
 ### Rapport voor overlapping van gegevenssets genereren met Postman
 
-Postman is een samenwerkingsplatform voor API-ontwikkeling en is handig voor het visualiseren van API-aanroepen. Het kan gratis van de [ website van Postman ](https://www.postman.com) worden gedownload en verstrekt gemakkelijk om UI voor het uitvoeren van API vraag te gebruiken. In de volgende schermafbeeldingen wordt de Postman-interface gebruikt.
+Postman is een samenwerkingsplatform voor API-ontwikkeling en is handig voor het visualiseren van API-aanroepen. Het kan gratis van de [&#x200B; website van Postman &#x200B;](https://www.postman.com) worden gedownload en verstrekt gemakkelijk om UI voor het uitvoeren van API vraag te gebruiken. In de volgende schermafbeeldingen wordt de Postman-interface gebruikt.
 
 **Verzoek**
 
@@ -95,7 +95,7 @@ Nadat het verzoektype, de kopballen, de waarden, en de weg volledig zijn, verzen
 
 **Reactie**
 
-Een succesvol verzoek keert HTTP status 200 (OK) en de dataset overlappen rapport terug. Het rapport bevat een `data` -object, dat door komma&#39;s gescheiden lijsten met gegevenssets en hun respectievelijke aantal profielen bevat. Voor details op hoe te om het rapport te lezen, zie de sectie over [ het interpreteren van de dataset overlappen rapportgegevens ](#interpret-the-report).
+Een succesvol verzoek keert HTTP status 200 (OK) en de dataset overlappen rapport terug. Het rapport bevat een `data` -object, dat door komma&#39;s gescheiden lijsten met gegevenssets en hun respectievelijke aantal profielen bevat. Voor details op hoe te om het rapport te lezen, zie de sectie over [&#x200B; het interpreteren van de dataset overlappen rapportgegevens &#x200B;](#interpret-the-report).
 
 ![](../images/dataset-overlap-report/postman-response.png)
 
@@ -132,4 +132,4 @@ Dit rapport bevat de volgende informatie:
 
 ## Volgende stappen
 
-Na het voltooien van deze zelfstudie kunt u nu het rapport voor de overlapping van gegevenssets genereren met behulp van de Real-Time Customer Profile API. Meer over het werken met de gegevens van het Profiel in zowel API als Experience Platform UI leren, gelieve te beginnen door de [ het overzichtsdocumentatie van het Profiel ](../home.md) te lezen.
+Na het voltooien van deze zelfstudie kunt u nu het rapport voor de overlapping van gegevenssets genereren met behulp van de Real-Time Customer Profile API. Meer over het werken met de gegevens van het Profiel in zowel API als Experience Platform UI leren, gelieve te beginnen door de [&#x200B; het overzichtsdocumentatie van het Profiel &#x200B;](../home.md) te lezen.

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL Chatlio] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Chatlio] is in bèta. Gelieve te lezen het [&#x200B; overzicht van bronnen &#x200B;](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Chatlio] -bronverbinding met de Adobe Experience Platform-gebruikersinterface.
 
@@ -22,9 +22,9 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Chatlio] -bronverbind
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## Vereisten {#prerequisites}
@@ -50,9 +50,9 @@ Voordat u een [!DNL Chatlio] -bronverbinding maakt, moet u een bronschema opgeve
 
 ### Experience Platform-schema maken voor [!DNL Chatlio] {#create-platform-schema}
 
-U moet er ook voor zorgen dat u een Experience Platform-schema maakt dat u voor uw bron kunt gebruiken. Lees het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+U moet er ook voor zorgen dat u een Experience Platform-schema maakt dat u voor uw bron kunt gebruiken. Lees het leerprogramma op [&#x200B; creërend een schema van Experience Platform &#x200B;](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
-![ UI die van Experience Platform een voorbeeldschema voor Chatlio toont ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
+![&#x200B; UI die van Experience Platform een voorbeeldschema voor Chatlio toont &#x200B;](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
 ## Sluit uw [!DNL Chatlio] -account aan {#connect-account}
 
@@ -62,7 +62,7 @@ Gebruik het menu *[!UICONTROL Categories]* om bronnen op categorie te filteren. 
 
 Ga naar de categorie [!UICONTROL Marketing automation] om de [!DNL Chatlio] bronkaart te zien. Selecteer eerst **[!UICONTROL Add data]** .
 
-![ de catalogus UI van Experience Platform met Chatlio kaart ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
+![&#x200B; de catalogus UI van Experience Platform met Chatlio kaart &#x200B;](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## Gegevens selecteren {#select-data}
 
@@ -73,13 +73,13 @@ De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface wa
 
 Selecteer **[!UICONTROL Upload files]** om een JSON-bestand van uw lokale systeem te uploaden. U kunt ook het JSON-bestand dat u wilt uploaden naar het deelvenster [!UICONTROL Drag and drop files] slepen.
 
-![ voegt gegevensstap van het bronwerkschema toe.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/add-data.png)
+![&#x200B; voegt gegevensstap van het bronwerkschema toe.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/add-data.png)
 
 Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt het hulpprogramma [!UICONTROL Search field] ook gebruiken om toegang te krijgen tot specifieke items binnen uw schema.
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ de voorproefstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/preview.png)
+![&#x200B; de voorproefstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/preview.png)
 
 ## Gegevens {#dataflow-detail}
 
@@ -87,13 +87,13 @@ De **Dataflow detailstap** verschijnt, die u van opties voorzien om een bestaand
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ dataflow-detail stap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/dataflow-detail.png)
+![&#x200B; dataflow-detail stap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/dataflow-detail.png)
 
 ## Toewijzing {#mapping}
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 De onderstaande toewijzingen zijn verplicht en moeten worden ingesteld voordat u naar het [!UICONTROL Review] -werkgebied gaat.
 
@@ -103,7 +103,7 @@ De onderstaande toewijzingen zijn verplicht en moeten worden ingesteld voordat u
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
-![ de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/mapping.png)
+![&#x200B; de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/mapping.png)
 
 ## Controleren {#review}
 
@@ -114,7 +114,7 @@ De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstr
 
 Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.
 
-![ de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
+![&#x200B; de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 
 ## Uw URL voor het streamingeindpunt ophalen {#get-streaming-endpoint-url}
 
@@ -127,7 +127,7 @@ Als u de URL wilt maken die wordt gebruikt om de webhaak op [!DNL Chatlio] te co
 
 Als u de gegevens **[!UICONTROL Dataflow ID]** en **[!UICONTROL Streaming endpoint]** wilt ophalen, gaat u naar de [!UICONTROL Dataflow activity] pagina van de gegevensstroom die u net hebt gemaakt en kopieert u de gegevens onder aan het deelvenster [!UICONTROL Properties] .
 
-![ het stromen eindpunt in dataflow activiteit.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/endpoint-test.png)
+![&#x200B; het stromen eindpunt in dataflow activiteit.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/endpoint-test.png)
 
 Wanneer u het streamingeindpunt en de dataflow-id hebt opgehaald, maakt u een URL op basis van het volgende patroon: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}``` . Een geconstrueerde URL voor een webhaak ziet er bijvoorbeeld als volgt uit: ``https://dcs.adobedc.net/collection/d56b47ee3985104beaf724efcd78a3e1a863d720471a482bebac0acc1ab95983``
 
@@ -135,23 +135,23 @@ Wanneer u het streamingeindpunt en de dataflow-id hebt opgehaald, maakt u een UR
 
 Wanneer de URL van uw webhaak is gemaakt, kunt u de webhaak nu instellen via de gebruikersinterface van [!DNL Chatlio] .
 
-Login aan uw [[!DNL Chatlio] ](https://chatlio.com/) rekening en volg [ de gids op opstelling en installatie ](https://chatlio.com/docs/setup/) om een widget tot stand te brengen.
+Login aan uw [[!DNL Chatlio] &#x200B;](https://chatlio.com/) rekening en volg [&#x200B; de gids op opstelling en installatie &#x200B;](https://chatlio.com/docs/setup/) om een widget tot stand te brengen.
 
 Wanneer een widget is gemaakt, navigeert u naar de instellingenpagina van de widget om uw webhaak-URL aan die widget toe te voegen.
 
-![ de WebHaak montagespagina op Chatlio.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/widget-settings.png)
+![&#x200B; de WebHaak montagespagina op Chatlio.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/widget-settings.png)
 
 Selecteer vervolgens het tabblad **[!DNL Behavior]** en voeg de URL van de webhaak toe aan het veld *[!DNL Webhook when a new conversation starts]* en aan alle andere webhaakgebeurtenissen waarop u zich wilt abonneren.
 
-![ Chatlio UI die het gebied van het webhaakeindpunt toont.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/webhook.png)
+![&#x200B; Chatlio UI die het gebied van het webhaakeindpunt toont.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/webhook.png)
 
 >[!TIP]
 >
->U kunt zich abonneren op een aantal verschillende gebeurtenissen voor uw [!DNL Chatlio] -webhaak. Voor meer informatie over de verschillende gebeurtenissen, gelieve te verwijzen naar de [[!DNL Chatlio]  gebeurtenisdocumentatie ](https://chatlio.com/docs/webhooks/).
+>U kunt zich abonneren op een aantal verschillende gebeurtenissen voor uw [!DNL Chatlio] -webhaak. Voor meer informatie over de verschillende gebeurtenissen, gelieve te verwijzen naar de [[!DNL Chatlio]  gebeurtenisdocumentatie &#x200B;](https://chatlio.com/docs/webhooks/).
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Chatlio] -gegevens over te brengen naar Experience Platform. Om de gegevens te controleren die worden opgenomen, verwijs naar de gids bij [ controle die dataflows gebruikend Experience Platform UI ](../../monitor-streaming.md) stromen.
+Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Chatlio] -gegevens over te brengen naar Experience Platform. Om de gegevens te controleren die worden opgenomen, verwijs naar de gids bij [&#x200B; controle die dataflows gebruikend Experience Platform UI &#x200B;](../../monitor-streaming.md) stromen.
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -169,4 +169,4 @@ Voer de onderstaande stappen uit om te controleren of u de bron juist hebt inges
 
 {het schermschot van 0} Experience Platform UI die ingebedde gebeurtenissen ![&#128279;](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png) toont
 
-Voor extra informatie over [!DNL Chatlio], bezoek de [[!DNL Chatlio]  documentatie ](https://chatlio.com/docs/) en [ Veelgestelde vragen ](https://chatlio.com/pricing/#FAQ).
+Voor extra informatie over [!DNL Chatlio], bezoek de [[!DNL Chatlio]  documentatie &#x200B;](https://chatlio.com/docs/) en [&#x200B; Veelgestelde vragen &#x200B;](https://chatlio.com/pricing/#FAQ).

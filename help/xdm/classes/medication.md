@@ -13,7 +13,7 @@ ht-degree: 0%
 
 In de klasse Experience Data Model (XDM) legt de klasse [!UICONTROL Medication] de minimale reeks eigenschappen vast die een stof definiëren die wordt gebruikt voor medische behandeling, met name een geneesmiddel of geneesmiddel.
 
-![ structuur van de Klasse ](../images/classes/medication.png)
+![&#x200B; structuur van de Klasse &#x200B;](../images/classes/medication.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -23,4 +23,4 @@ In de klasse Experience Data Model (XDM) legt de klasse [!UICONTROL Medication] 
 
 {style="table-layout:auto"}
 
-De klasse kan met de [[!UICONTROL Healthcare medication] gebiedsgroep ](../field-groups/medication/healthcare-medication.md) worden uitgebreid om verdere details over het geneesmiddel of het geneesmiddel te beschrijven.
+De klasse kan met de [[!UICONTROL Healthcare medication] gebiedsgroep &#x200B;](../field-groups/medication/healthcare-medication.md) worden uitgebreid om verdere details over het geneesmiddel of het geneesmiddel te beschrijven.

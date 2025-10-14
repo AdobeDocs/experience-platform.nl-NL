@@ -36,7 +36,7 @@ Concepten om te begrijpen:
 
 ## Ontvanger maken
 
-Het maken van ontvangers begint met het verpakken van bronbestanden om een archiefbestand te maken. Source-bestanden definiëren de computerleerlogica en algoritmen die worden gebruikt om een specifiek probleem op te lossen en worden geschreven in [!DNL Python] , R, PySpark of Scala. Gebouwde archiefbestanden hebben de vorm van een Docker-afbeelding. Zodra gebouwd, wordt het verpakte archiefdossier ingevoerd in [!DNL Data Science Workspace] om een recept [ in UI ](./import-packaged-recipe-ui.md) tot stand te brengen of [ gebruikend API ](./import-packaged-recipe-api.md).
+Het maken van ontvangers begint met het verpakken van bronbestanden om een archiefbestand te maken. Source-bestanden definiëren de computerleerlogica en algoritmen die worden gebruikt om een specifiek probleem op te lossen en worden geschreven in [!DNL Python] , R, PySpark of Scala. Gebouwde archiefbestanden hebben de vorm van een Docker-afbeelding. Zodra gebouwd, wordt het verpakte archiefdossier ingevoerd in [!DNL Data Science Workspace] om een recept [&#x200B; in UI &#x200B;](./import-packaged-recipe-ui.md) tot stand te brengen of [&#x200B; gebruikend API &#x200B;](./import-packaged-recipe-api.md).
 
 ### Ontwerpmodel gebaseerd op docker {#docker-based-model-authoring}
 
@@ -44,7 +44,7 @@ Met een Docker-afbeelding kan een ontwikkelaar een toepassing verpakken met alle
 
 De ingebouwde Docker-afbeelding wordt naar het Azure Container-register gepusht met behulp van referenties die aan u worden geleverd tijdens de workflow voor het maken van het recept.
 
-Om uw Azure geloofsbrieven van de Registratie van de Container te verkrijgen, login in [ Adobe Experience Platform ](https://platform.adobe.com). Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]** . Selecteer **[!UICONTROL Import Recipe]** gevolgd door **[!UICONTROL Launch]** te selecteren. Zie de schermafbeelding hieronder ter referentie.
+Om uw Azure geloofsbrieven van de Registratie van de Container te verkrijgen, login in [&#x200B; Adobe Experience Platform &#x200B;](https://platform.adobe.com). Navigeer in de linkernavigatiekolom naar **[!UICONTROL Workflows]** . Selecteer **[!UICONTROL Import Recipe]** gevolgd door **[!UICONTROL Launch]** te selecteren. Zie de schermafbeelding hieronder ter referentie.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
@@ -71,7 +71,7 @@ Noteer de waarden voor Docker-host, gebruikersnaam en wachtwoord. Deze worden ge
 
 >[!NOTE]
 >
->De Source-URL wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiedossier wordt verklaard in verdere leerprogramma&#39;s die in [ worden gevonden volgende stappen ](#next-steps).
+>De Source-URL wordt opgegeven nadat de hieronder beschreven stappen zijn uitgevoerd. Het configuratiedossier wordt verklaard in verdere leerprogramma&#39;s die in [&#x200B; worden gevonden volgende stappen &#x200B;](#next-steps).
 
 ### De bronbestanden verpakken
 
@@ -109,7 +109,7 @@ Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossi
 {DOCKER_HOST}/ml-retailsales-python:{VERSION_TAG}
 ```
 
-Kopieer dit URL en ga op [ volgende stappen ](#next-steps).
+Kopieer dit URL en ga op [&#x200B; volgende stappen &#x200B;](#next-steps).
 
 ### R-afbeelding samenstellen [!DNL Docker] {#r-docker}
 
@@ -138,7 +138,7 @@ Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossi
 {DOCKER_HOST}/ml-retail-r:{VERSION_TAG}
 ```
 
-Kopieer dit URL en ga naar de [ volgende stappen ](#next-steps).
+Kopieer dit URL en ga naar de [&#x200B; volgende stappen &#x200B;](#next-steps).
 
 ### Afbeelding van PySpark Docker samenstellen {#pyspark-docker}
 
@@ -167,7 +167,7 @@ Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossi
 {DOCKER_HOST}/ml-retailsales-pyspark:{VERSION_TAG}
 ```
 
-Kopieer dit URL en ga naar de [ volgende stappen ](#next-steps).
+Kopieer dit URL en ga naar de [&#x200B; volgende stappen &#x200B;](#next-steps).
 
 ### Afbeelding van Scala Docker maken {#scala-docker}
 
@@ -177,7 +177,7 @@ Begin met het klonen van de [!DNL GitHub] repository op uw lokale systeem met de
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigeer vervolgens naar de map `experience-platform-dsw-reference/recipes/scala` waar u de scripts `login.sh` en `build.sh` kunt vinden. Deze scripts worden gebruikt om u aan te melden bij Docker en de Docker-afbeelding te maken. Als u uw [ geloofsbrieven van de Dokker ](#docker-based-model-authoring) klaar hebt, ga de volgende bevelen aan eind in orde in:
+Navigeer vervolgens naar de map `experience-platform-dsw-reference/recipes/scala` waar u de scripts `login.sh` en `build.sh` kunt vinden. Deze scripts worden gebruikt om u aan te melden bij Docker en de Docker-afbeelding te maken. Als u uw [&#x200B; geloofsbrieven van de Dokker &#x200B;](#docker-based-model-authoring) klaar hebt, ga de volgende bevelen aan eind in orde in:
 
 ```BASH
 # for logging in to Docker
@@ -200,7 +200,7 @@ Zodra het bouwstijlmanuscript volledig is, wordt u gegeven een van het brondossi
 {DOCKER_HOST}/ml-retailsales-spark:{VERSION_TAG}
 ```
 
-Kopieer dit URL en ga naar de [ volgende stappen ](#next-steps).
+Kopieer dit URL en ga naar de [&#x200B; volgende stappen &#x200B;](#next-steps).
 
 ## Volgende stappen {#next-steps}
 

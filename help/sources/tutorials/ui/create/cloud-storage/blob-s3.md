@@ -18,6 +18,6 @@ Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens
 
 Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar [!DNL Experience Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met [!DNL Experience Platform] kunt u gegevens van [!DNL Azure Blob] en [!DNL Amazon S3] tot en met batches inbrengen.
 
-Voor gedetailleerde instructies bij het gebruiken van de [!DNL Azure Blob] bronschakelaar, te lezen gelieve de [[!DNL Azure Blob]  gids van de bronschakelaar ](./blob.md).
+Voor gedetailleerde instructies bij het gebruiken van de [!DNL Azure Blob] bronschakelaar, te lezen gelieve de [[!DNL Azure Blob]  gids van de bronschakelaar &#x200B;](./blob.md).
 
-Voor gedetailleerde instructies bij het gebruiken van de [!DNL Amazon S3] bronschakelaar, te lezen gelieve de [[!DNL Amazon S3]  gids van de bronschakelaar ](./blob.md).
+Voor gedetailleerde instructies bij het gebruiken van de [!DNL Amazon S3] bronschakelaar, te lezen gelieve de [[!DNL Amazon S3]  gids van de bronschakelaar &#x200B;](./blob.md).

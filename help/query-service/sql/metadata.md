@@ -42,4 +42,4 @@ Voor meta-gegevens op uw dataset, worden de volgende [!DNL PostgreSQL] bevelen m
 
 Alle opdrachten die met `\d` beginnen, kunnen worden gecombineerd. U kunt `\dtsn` bijvoorbeeld uitgeven om een lijst van alle lijsten, opeenvolgingen, en schema&#39;s te tonen. In `\d` zelf worden alle zichtbare tabellen, weergaven, gematerialiseerde weergaven en reeksen weergegeven.
 
-Voor extra informatie over de hierboven vermelde bevelen, gelieve te verwijzen naar de documentatie bij [ postgresql.org ](https://www.postgresql.org/docs/10/app-psql.html). Niet alle opties in de [!DNL PostgreSQL] -documentatie worden echter ondersteund door [!DNL Experience Platform] .
+Voor extra informatie over de hierboven vermelde bevelen, gelieve te verwijzen naar de documentatie bij [&#x200B; postgresql.org &#x200B;](https://www.postgresql.org/docs/10/app-psql.html). Niet alle opties in de [!DNL PostgreSQL] -documentatie worden echter ondersteund door [!DNL Experience Platform] .

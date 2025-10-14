@@ -14,24 +14,24 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Lees deze gids om te leren hoe te om [!DNL Capillary Streaming Events] en [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) te gebruiken om gegevens van uw [!DNL Capillary] rekening aan Adobe Experience Platform te stromen.
+Lees deze gids om te leren hoe te om [!DNL Capillary Streaming Events] en [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) te gebruiken om gegevens van uw [!DNL Capillary] rekening aan Adobe Experience Platform te stromen.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Vereiste referenties verzamelen
 
-Lees het [[!DNL Capillary Streaming Events]  overzicht ](../../../../connectors/loyalty/capillary.md) voor informatie over authentificatie.
+Lees het [[!DNL Capillary Streaming Events]  overzicht &#x200B;](../../../../connectors/loyalty/capillary.md) voor informatie over authentificatie.
 
 ### Experience Platform API&#39;s gebruiken
 
-Lees de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md) voor informatie over hoe te met succes vraag aan Experience Platform APIs maken.
+Lees de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md) voor informatie over hoe te met succes vraag aan Experience Platform APIs maken.
 
 >[!BEGINSHADEBOX]
 
@@ -261,10 +261,10 @@ Je kunt je historische loyaliteit en transactiegegevens naar Experience Platform
 
 Een schema van de Gegevens van de Ervaring van het Model (XDM) verstrekt een gestandaardiseerde manier om gegevens van de klantenervaring binnen Experience Platform te organiseren en te beschrijven. Om uw brongegevens in Experience Platform in te voeren, moet u eerst een doelXDM schema tot stand brengen dat de structuur en de soorten gegevens bepaalt u wilt opnemen. Dit schema dient als blauwdruk voor de dataset van Experience Platform waar uw opgenomen gegevens zullen verblijven.
 
-Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren. Lees de volgende hulplijnen voor gedetailleerde stappen over het maken van een doel-XDM-schema:
+Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Registratie API van het Schema &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren. Lees de volgende hulplijnen voor gedetailleerde stappen over het maken van een doel-XDM-schema:
 
-* [ creeer een schema gebruikend API ](../../../../../xdm/api/schemas.md).
-* [ creeer een schema gebruikend UI ](../../../../../xdm/tutorials/create-schema-ui.md).
+* [&#x200B; creeer een schema gebruikend API &#x200B;](../../../../../xdm/api/schemas.md).
+* [&#x200B; creeer een schema gebruikend UI &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md).
 
 Zodra gecreeerd, zal het doelXDM schema `$id` later voor uw doeldataset en afbeelding worden vereist.
 
@@ -272,7 +272,7 @@ Zodra gecreeerd, zal het doelXDM schema `$id` later voor uw doeldataset en afbee
 
 Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch gestructureerd zoals een lijst met kolommen (schema) en rijen (gebieden). De gegevens die met succes in Experience Platform worden opgenomen worden opgeslagen binnen het gegevensmeer als datasets. Tijdens deze stap, kunt u of een nieuwe dataset tot stand brengen of bestaande gebruiken.
 
-U kunt een doeldataset tot stand brengen door een POST- verzoek aan de [ Dienst API van de Catalogus ](https://developer.adobe.com/experience-platform-apis/references/catalog/) te doen, terwijl het verstrekken van identiteitskaart van het doelschema binnen de nuttige lading. Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, lees de gids bij [ het creëren van een dataset gebruikend API ](../../../../../catalog/api/create-dataset.md).
+U kunt een doeldataset tot stand brengen door een POST- verzoek aan de [&#x200B; Dienst API van de Catalogus &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/) te doen, terwijl het verstrekken van identiteitskaart van het doelschema binnen de nuttige lading. Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, lees de gids bij [&#x200B; het creëren van een dataset gebruikend API &#x200B;](../../../../../catalog/api/create-dataset.md).
 
 
 ## Een doelverbinding maken {#target}
@@ -316,7 +316,7 @@ curl -X POST \
 
 ### Een toewijzing maken {#mapping}
 
-Daarna, kaart uw brongegevens aan het doelschema dat uw doeldataset volgt aan. Om een afbeelding tot stand te brengen, doe een POST verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Neem de doel-XDM-schema-id op en de details van de toewijzingssets die u wilt maken.
+Daarna, kaart uw brongegevens aan het doelschema dat uw doeldataset volgt aan. Om een afbeelding tot stand te brengen, doe een POST verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Neem de doel-XDM-schema-id op en de details van de toewijzingssets die u wilt maken.
 
 Wijs de Capillaire gebieden aan de overeenkomstige XDM schemagebieden als volgt toe:
 
@@ -330,7 +330,7 @@ Wijs de Capillaire gebieden aan de overeenkomstige XDM schemagebieden als volgt 
 
 >[!TIP]
 >
->U kunt de [ Gebeurtenissen en afbeeldingen van het Profiel ](../../../../images/tutorials/create/capillary/mappings.zip) voor [!DNL Capillary] downloaden en [ de dossiers invoeren aan Prep van Gegevens ](../../../../../data-prep/ui/mapping.md#import-mapping) wanneer u bereid bent om uw gegevens in kaart te brengen.
+>U kunt de [&#x200B; Gebeurtenissen en afbeeldingen van het Profiel &#x200B;](../../../../images/tutorials/create/capillary/mappings.zip) voor [!DNL Capillary] downloaden en [&#x200B; de dossiers invoeren aan Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md#import-mapping) wanneer u bereid bent om uw gegevens in kaart te brengen.
 
 ### Een gegevensstroom maken {#flow}
 
@@ -424,7 +424,7 @@ Voer de onderstaande stappen uit om te leren hoe u uw verbinding kunt testen:
 
 Bezoek de volgende documentatie voor hulplijnen voor extra bewerkingen
 
-* [ Dataflows van de Monitor ](../../../../../dataflows/ui/monitor-sources.md)
-* [ Update dataflows ](../../../ui/update-dataflows.md)
-* [ schrapping dataflows ](../../../ui/delete.md)
-* [ Bron van de Update rekening ](../../../ui/update.md)
+* [&#x200B; Dataflows van de Monitor &#x200B;](../../../../../dataflows/ui/monitor-sources.md)
+* [&#x200B; Update dataflows &#x200B;](../../../ui/update-dataflows.md)
+* [&#x200B; schrapping dataflows &#x200B;](../../../ui/delete.md)
+* [&#x200B; Bron van de Update rekening &#x200B;](../../../ui/update.md)

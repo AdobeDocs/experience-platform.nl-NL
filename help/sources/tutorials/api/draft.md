@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Concepten van uw [!DNL Flow Service] -entiteiten maken met de API
 
-U kunt de `mode=draft` vraagparameter in [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) gebruiken om uw [!DNL Flow Service] entiteiten zoals uw basisverbindingen, bronverbindingen, doelverbindingen, en dataflows aan een ontwerpstaat te plaatsen.
+U kunt de `mode=draft` vraagparameter in [[!DNL Flow Service]  API &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) gebruiken om uw [!DNL Flow Service] entiteiten zoals uw basisverbindingen, bronverbindingen, doelverbindingen, en dataflows aan een ontwerpstaat te plaatsen.
 
 Concepten kunnen later met nieuwe informatie worden bijgewerkt en vervolgens worden gepubliceerd zodra ze gereed zijn, met de parameter `op=publish` query.
 
@@ -21,12 +21,12 @@ Deze zelfstudie bevat stappen voor het instellen van [!DNL Flow Service] -entite
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
 
 ### Controleren op ondersteuning voor conceptmodus
 
@@ -953,4 +953,4 @@ Een geslaagde reactie retourneert de id en de bijbehorende `etag` gegevensstroom
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u geleerd hoe u concepten van uw [!DNL Flow Service] -entiteiten kunt maken en deze concepten kunt publiceren. Voor meer informatie over bronnen, te lezen gelieve het [ overzicht van bronnen ](../../home.md).
+Aan de hand van deze zelfstudie hebt u geleerd hoe u concepten van uw [!DNL Flow Service] -entiteiten kunt maken en deze concepten kunt publiceren. Voor meer informatie over bronnen, te lezen gelieve het [&#x200B; overzicht van bronnen &#x200B;](../../home.md).

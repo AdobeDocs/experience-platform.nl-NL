@@ -16,4 +16,4 @@ ht-degree: 0%
 
 Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren.
 
-Meer over het controleren van dataflows voor bronschakelaars, te lezen gelieve [ controledataflows in bronnen ](../../../dataflows/ui/monitor-sources.md) leerprogramma.
+Meer over het controleren van dataflows voor bronschakelaars, te lezen gelieve [&#x200B; controledataflows in bronnen &#x200B;](../../../dataflows/ui/monitor-sources.md) leerprogramma.

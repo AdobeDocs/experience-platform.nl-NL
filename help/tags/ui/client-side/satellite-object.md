@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Dit document fungeert als referentie voor het client-side `_satellite` -object en de verschillende functies die u ermee kunt uitvoeren.
 
@@ -100,7 +100,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-Als de extensie [!DNL Adobe Experience Cloud ID] op de eigenschap is geïnstalleerd, retourneert deze methode de instantie van de bezoeker-id. Zie de [ documentatie van de Dienst van identiteitskaart van het Experience Cloud ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL) voor meer informatie.
+Als de extensie [!DNL Adobe Experience Cloud ID] op de eigenschap is geïnstalleerd, retourneert deze methode de instantie van de bezoeker-id. Zie de [&#x200B; documentatie van de Dienst van identiteitskaart van het Experience Cloud &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL) voor meer informatie.
 
 ## `logger`
 
@@ -146,7 +146,7 @@ Dit registreert een waarschuwing aan de browser console. Het bericht wordt weerg
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` bevat functies voor het lezen en schrijven van cookies. Het is een belichte kopie van de externe bibliotheek js-cookie. Voor details op geavanceerder gebruik van deze bibliotheek, te herzien gelieve de [ js-koekjesdocumentatie ](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` bevat functies voor het lezen en schrijven van cookies. Het is een belichte kopie van de externe bibliotheek js-cookie. Voor details op geavanceerder gebruik van deze bibliotheek, te herzien gelieve de [&#x200B; js-koekjesdocumentatie &#x200B;](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Een cookie instellen {#cookie-set}
 
@@ -218,11 +218,11 @@ Dit object bevat informatie over de build van de huidige tagruntimebibliotheek. 
 
 ### `turbineVersion`
 
-Dit verstrekt de [ Turbine ](https://www.npmjs.com/package/@adobe/reactor-turbine) versie die binnen de huidige bibliotheek wordt gebruikt.
+Dit verstrekt de [&#x200B; Turbine &#x200B;](https://www.npmjs.com/package/@adobe/reactor-turbine) versie die binnen de huidige bibliotheek wordt gebruikt.
 
 ### `turbineBuildDate`
 
-ISO 8601 datum toen de versie van [ Turbine ](https://www.npmjs.com/package/@adobe/reactor-turbine) binnen de container werd gebruikt werd gebouwd.
+ISO 8601 datum toen de versie van [&#x200B; Turbine &#x200B;](https://www.npmjs.com/package/@adobe/reactor-turbine) binnen de container werd gebruikt werd gebouwd.
 
 ### `buildDate`
 

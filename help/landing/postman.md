@@ -25,29 +25,29 @@ De volgende videohandleiding geeft een overzicht van het maken en instellen van 
 
 ## Postman-verzamelingen {#collections}
 
-Een omslag die alle beschikbare inzamelingen van Postman bevat kan door worden gevonden, bezoekend de [ Postman steekproeven GitHub bewaarplaats van Experience Platform ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternatief, kan een de inzamelingsverbinding van Postman in elk individueel wagerdossier in de [ API verwijzingsdocumentatie ](https://www.adobe.com/go/platform-api-reference-en) op Adobe I/O worden gevonden.
+Een omslag die alle beschikbare inzamelingen van Postman bevat kan door worden gevonden, bezoekend de [&#x200B; Postman steekproeven GitHub bewaarplaats van Experience Platform &#x200B;](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternatief, kan een de inzamelingsverbinding van Postman in elk individueel wagerdossier in de [&#x200B; API verwijzingsdocumentatie &#x200B;](https://www.adobe.com/go/platform-api-reference-en) op Adobe I/O worden gevonden.
 
 Als u een Postman-verzameling wilt downloaden, selecteert u **[!DNL Raw]** op de GitHub-pagina om het onbewerkte JSON-bestand op een nieuw tabblad te laden. Klik vervolgens met de rechtermuisknop en selecteer **[!DNL Save as]** om het bestand op te slaan naar de gewenste lokale bestemming.
 
-![ ruwe JSON ](./images/api-guide/raw-collection.PNG)
+![&#x200B; ruwe JSON &#x200B;](./images/api-guide/raw-collection.PNG)
 
 ## Een Postman-verzameling importeren {#import}
 
-Om de inzameling van a [ Postman ](#collections) te gebruiken, moet u een milieu opstelling hebben. Nadat u de omgeving hebt ingesteld, selecteert u de **[!DNL Manage Environments]** -kiezer in de rechterbovenhoek.
+Om de inzameling van a [&#x200B; Postman &#x200B;](#collections) te gebruiken, moet u een milieu opstelling hebben. Nadat u de omgeving hebt ingesteld, selecteert u de **[!DNL Manage Environments]** -kiezer in de rechterbovenhoek.
 
-![ beheert milieu selecteur ](./images/api-guide/environment-selector.png)
+![&#x200B; beheert milieu selecteur &#x200B;](./images/api-guide/environment-selector.png)
 
 Er verschijnt een pop-upvenster met daarin al uw huidige omgevingen. Selecteer **[!DNL import]** als u een verzameling wilt importeren.
 
-![ de invoerknoop ](./images/api-guide/import-collection.png)
+![&#x200B; de invoerknoop &#x200B;](./images/api-guide/import-collection.png)
 
 U wordt gevraagd een bestand te kiezen dat u wilt importeren. Selecteer het Postman-verzamelingsbestand dat u wilt importeren. Als deze optie is geselecteerd, wordt de verzameling in de linkertrack gevuld onder het tabblad Verzamelingen.
 
-![ bevolkte inzameling ](./images/api-guide/imported-collection.png)
+![&#x200B; bevolkte inzameling &#x200B;](./images/api-guide/imported-collection.png)
 
-Elke inzameling heeft verschillende zeer belangrijk-waardeparen die kunnen worden vereist om een succesvolle verrichting uit te voeren CRUD. Gelieve te herzien de de ontwikkelaarsgids van de dienst [ API ](api-guide.md#api-guides) om over vereiste waarden, uiteinden te leren, en voorbeelden te zien.
+Elke inzameling heeft verschillende zeer belangrijk-waardeparen die kunnen worden vereist om een succesvolle verrichting uit te voeren CRUD. Gelieve te herzien de de ontwikkelaarsgids van de dienst [&#x200B; API &#x200B;](api-guide.md#api-guides) om over vereiste waarden, uiteinden te leren, en voorbeelden te zien.
 
-Meer over Postman UI en zijn beschikbare eigenschappen leren, bezoek de [ documentatie van Postman ](https://learning.postman.com/docs/getting-started/navigating-postman/).
+Meer over Postman UI en zijn beschikbare eigenschappen leren, bezoek de [&#x200B; documentatie van Postman &#x200B;](https://learning.postman.com/docs/getting-started/navigating-postman/).
 
 ### Een toegangstoken met Postman genereren voor niet-productiegebruik
 
@@ -55,10 +55,10 @@ Meer over Postman UI en zijn beschikbare eigenschappen leren, bezoek de [ docume
 >
 >Zoals genoteerd in de inzameling van Postman van de Dienst van Identity Management (IMS), zijn de gesignaleerde generatiemethodes geschikt voor **niet-productiegebruik**. Bij lokale ondertekening wordt een JavaScript-bibliotheek geladen van een externe host en bij externe ondertekening wordt de persoonlijke sleutel verzonden naar een webservice die eigendom is van en wordt beheerd door Adobe. Hoewel Adobe deze persoonlijke sleutel niet opslaat, mogen productietoetsen nooit met iemand worden gedeeld.
 
-De video gebruikt hieronder de [ inzameling van Postman van de Dienst van Identity Management (IMS) ](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) die van de openbare bewaarplaats GitHub kan worden gedownload.
+De video gebruikt hieronder de [&#x200B; inzameling van Postman van de Dienst van Identity Management (IMS) &#x200B;](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) die van de openbare bewaarplaats GitHub kan worden gedownload.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
 ## Volgende stappen
 
-In dit document worden Postman-omgevingen, -verzamelingen en hoe verzamelingen worden geïmporteerd. Nu u klaar Postman hebt, bezoek [ Experience Platform begonnen gids ](api-guide.md) voor informatie over vereiste kopballen, voorbeelden, en een lijst van [ API gidsen ](api-guide.md#api-guides) beschikbaar voor elke dienst van Experience Platform.
+In dit document worden Postman-omgevingen, -verzamelingen en hoe verzamelingen worden geïmporteerd. Nu u klaar Postman hebt, bezoek [&#x200B; Experience Platform begonnen gids &#x200B;](api-guide.md) voor informatie over vereiste kopballen, voorbeelden, en een lijst van [&#x200B; API gidsen &#x200B;](api-guide.md#api-guides) beschikbaar voor elke dienst van Experience Platform.

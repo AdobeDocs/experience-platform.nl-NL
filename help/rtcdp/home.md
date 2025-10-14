@@ -13,11 +13,11 @@ ht-degree: 14%
 
 # Adobe [!DNL Real-Time CDP] -documentatie {#rtcdp-documentation}
 
-Gebruik Adobe Real-Time Customer Data Platform (Real-Time CDP) om bekende en anonieme gegevens van meerdere bedrijfsbronnen samen te brengen om klantprofielen te maken die kunnen worden gebruikt om persoonlijke klantervaringen in real-time op alle kanalen en apparaten te bieden. Lees het [ overzicht van Real-Time CDP ](/help/rtcdp/overview.md) voor meer informatie.
+Gebruik Adobe Real-Time Customer Data Platform (Real-Time CDP) om bekende en anonieme gegevens van meerdere bedrijfsbronnen samen te brengen om klantprofielen te maken die kunnen worden gebruikt om persoonlijke klantervaringen in real-time op alle kanalen en apparaten te bieden. Lees het [&#x200B; overzicht van Real-Time CDP &#x200B;](/help/rtcdp/overview.md) voor meer informatie.
 
 ## Nieuwe functies {#whats-new}
 
-Bekijk de nieuwste verbeteringen in Real-Time CDP-producten en -documentatie. Bekijk voor een uitgebreide lijst met functies, verbeteringen en oplossingen de gedetailleerde [Aanvullende informatie](/help/release-notes/latest/latest.md). Blijf bijgewerkt met de recentste veranderingen in onze documentatie door de [ sectie van documentatieupdates van de maandelijkse versienota&#39;s ](/help/release-notes/latest/latest.md#documentation-updates) te bezoeken.
+Bekijk de nieuwste verbeteringen in Real-Time CDP-producten en -documentatie. Bekijk voor een uitgebreide lijst met functies, verbeteringen en oplossingen de gedetailleerde [Aanvullende informatie](/help/release-notes/latest/latest.md). Blijf bijgewerkt met de recentste veranderingen in onze documentatie door de [&#x200B; sectie van documentatieupdates van de maandelijkse versienota&#39;s &#x200B;](/help/release-notes/latest/latest.md#documentation-updates) te bezoeken.
 
 >[!BEGINTABS]
 
@@ -25,7 +25,7 @@ Bekijk de nieuwste verbeteringen in Real-Time CDP-producten en -documentatie. Be
 
 Samenstelling van Federated-doelgroep stelt ondernemingen in staat om gegevens samen te stellen voor een betere toepassing in diverse gebruikssecenario&#39;s. Met deze nieuwe aanpak kunt u als gebruiker van Adobe Real-Time Customer Data Platform en/of Adobe Journey Optimizer datasets rechtstreeks vanuit uw bestaande datawarehouse samenvoegen om Adobe Experience Platform-doelgroepen en -kenmerken in één systeem te maken en te verrijken.
 
-[![ beeld ](assets/do-not-localize/learn-more-button.svg) ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/home)
+[![&#x200B; beeld &#x200B;](assets/do-not-localize/learn-more-button.svg) &#x200B;](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/home)
 
 >[!TAB Van het Geval gebruik Playbooks]  
 
@@ -47,7 +47,7 @@ U kunt gebeurtenisgegevens eenvoudig samenvatten in profielkenmerken via een int
 
 >[!TAB  de uitvoer van Gegevens ]
 
-De functie voor het exporteren van gegevenssets is nu algemeen beschikbaar. Zie [ welke datasets u kunt uitvoeren gebaseerd op Experience Platform app ](../destinations/ui/export-datasets.md#datasets-to-export) u, kocht en de [ gidsen voor het uitvoeren van datasets ](/help/destinations/guardrails.md#dataset-exports) controleert.
+De functie voor het exporteren van gegevenssets is nu algemeen beschikbaar. Zie [&#x200B; welke datasets u kunt uitvoeren gebaseerd op Experience Platform app &#x200B;](../destinations/ui/export-datasets.md#datasets-to-export) u, kocht en de [&#x200B; gidsen voor het uitvoeren van datasets &#x200B;](/help/destinations/guardrails.md#dataset-exports) controleert.
 
 [![afbeelding](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
@@ -106,7 +106,7 @@ Begrijp de vier basispijlers van Adobe Real-Time CDP die u helpen:
 * Weet dat u gegevens beheert terwijl u zich aan diverse verordeningen, beperkingen, en beleid handhaaft die op gegevensgebruik van toepassing zijn;
 * Markeer uw klanten en pas hun ervaring op verschillende kanalen aan.
 
-![ Uittreksel van een dia die de vier pijlers van Adobe Real-Time CDP tonen.](/help/rtcdp/assets/rtcdp-four-pillars.png)
+![&#x200B; Uittreksel van een dia die de vier pijlers van Adobe Real-Time CDP tonen.](/help/rtcdp/assets/rtcdp-four-pillars.png)
 
 Verken de onderstaande koppelingen naar productdocumentatie om te begrijpen hoe de vier basispijlers van Adobe Real-Time CDP u kunnen helpen zaken voor uw bedrijfsgebruik te realiseren.
 

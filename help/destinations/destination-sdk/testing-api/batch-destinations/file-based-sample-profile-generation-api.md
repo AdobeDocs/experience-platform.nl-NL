@@ -18,17 +18,17 @@ Voorbeeldprofielen kunnen u helpen de JSON-structuur van een profiel te begrijpe
 
 ## Aan de slag {#getting-started}
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Vereisten {#prerequisites}
 
 Voordat u het eindpunt `/sample-profiles` kunt gebruiken, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* U hebt een bestaande op dossier-gebaseerde bestemming die door Destination SDK wordt gecreeerd en u kunt het in uw [ doelcatalogus ](../../../ui/destinations-workspace.md) zien.
-* U hebt ten minste één activeringsstroom voor uw doel gemaakt in de gebruikersinterface van Experience Platform. Het `/sample-profiles` eindpunt leidt tot profielen die op het bronschema worden gebaseerd dat u in uw activeringsstroom bepaalde. Zie het [ activeringsleerprogramma ](../../../ui/activate-batch-profile-destinations.md) leren hoe te om een activeringsstroom tot stand te brengen.
+* U hebt een bestaande op dossier-gebaseerde bestemming die door Destination SDK wordt gecreeerd en u kunt het in uw [&#x200B; doelcatalogus &#x200B;](../../../ui/destinations-workspace.md) zien.
+* U hebt ten minste één activeringsstroom voor uw doel gemaakt in de gebruikersinterface van Experience Platform. Het `/sample-profiles` eindpunt leidt tot profielen die op het bronschema worden gebaseerd dat u in uw activeringsstroom bepaalde. Zie het [&#x200B; activeringsleerprogramma &#x200B;](../../../ui/activate-batch-profile-destinations.md) leren hoe te om een activeringsstroom tot stand te brengen.
 * Als u de API-aanvraag met succes wilt uitvoeren, hebt u de id van de doelinstantie nodig die overeenkomt met de doelinstantie die u wilt testen. Krijg bestemmingsidentiteitskaart die u in de API vraag, van URL zou moeten gebruiken, wanneer het doorbladeren van een verbinding met uw bestemming in Experience Platform UI.
 
-  ![ beeld UI die hoe te om bestemmingsidentiteitskaart van URL te krijgen toont.](../../assets/testing-api/get-destination-instance-id.png)
+  ![&#x200B; beeld UI die hoe te om bestemmingsidentiteitskaart van URL te krijgen toont.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Voorbeeldprofielen genereren voor doeltesten {#generate-sample-profiles}
 
@@ -42,7 +42,7 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 
 | Query-parameters | Beschrijving |
 | -------- | ----------- |
-| `destinationInstanceId` | De id van de doelinstantie waarvoor u voorbeeldprofielen genereert. Zie de [ eerste vereisten ](#prerequisites) sectie voor details op hoe te om deze identiteitskaart te verkrijgen. |
+| `destinationInstanceId` | De id van de doelinstantie waarvoor u voorbeeldprofielen genereert. Zie de [&#x200B; eerste vereisten &#x200B;](#prerequisites) sectie voor details op hoe te om deze identiteitskaart te verkrijgen. |
 | `count` | *Facultatief*. Het aantal voorbeeldprofielen dat u wilt genereren. De parameter kan waarden aannemen tussen `1 - 1000` . Als deze eigenschap niet is gedefinieerd, genereert de API één voorbeeldprofiel. |
 
 **Verzoek**
@@ -101,23 +101,23 @@ Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal
 ]
 ```
 
-![ Beeld dat de afbeelding van UI aan de gebieden van de API reactie toont.](../../assets/testing-api/batch-destinations/sample-api-response-mapping.png)
+![&#x200B; Beeld dat de afbeelding van UI aan de gebieden van de API reactie toont.](../../assets/testing-api/batch-destinations/sample-api-response-mapping.png)
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segmentMembership` | A map object that describes the person&#39;s publiek membership. Voor meer informatie over `segmentMembership`, lees [ de Details van het Lidmaatschap van de Publiek ](../../../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | A map object that describes the person&#39;s publiek membership. Voor meer informatie over `segmentMembership`, lees [&#x200B; de Details van het Lidmaatschap van de Publiek &#x200B;](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
 | `status` | Een tekenreeksveld dat aangeeft of het publieklidmaatschap is gerealiseerd als onderdeel van de huidige aanvraag. De volgende waarden worden geaccepteerd: <ul><li>`realized`: Het profiel maakt deel uit van het segment.</li><li>`exited`: Het profiel sluit het publiek af als onderdeel van de huidige aanvraag.</li></ul> |
-| `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, zie [ basis van schemacompositie ](../../../../xdm/schema/composition.md#identityMap). |
+| `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, zie [&#x200B; basis van schemacompositie &#x200B;](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen
 
-Na het lezen van dit document, weet u nu hoe te om steekproefprofielen te produceren die op het bronschema worden gebaseerd dat u in uw bestemmings [ activeringsstroom ](../../../ui/activate-batch-profile-destinations.md) vormde.
+Na het lezen van dit document, weet u nu hoe te om steekproefprofielen te produceren die op het bronschema worden gebaseerd dat u in uw bestemmings [&#x200B; activeringsstroom &#x200B;](../../../ui/activate-batch-profile-destinations.md) vormde.
 
-U kunt deze profielen nu aanpassen of hen gebruiken aangezien zij door API zijn teruggekeerd, om [ uw op dossier-gebaseerde bestemmingsconfiguratie ](file-based-destination-testing-api.md) te testen.
+U kunt deze profielen nu aanpassen of hen gebruiken aangezien zij door API zijn teruggekeerd, om [&#x200B; uw op dossier-gebaseerde bestemmingsconfiguratie &#x200B;](file-based-destination-testing-api.md) te testen.

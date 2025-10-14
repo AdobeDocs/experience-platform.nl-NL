@@ -55,7 +55,7 @@ Met de Express Profile Service (XPS) worden de profielen aan de verschillende ra
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Voor meer informatie over de Ervaring Edge van de Adobe, te lezen gelieve het [ overzicht van de Edge Network ](../web-sdk/home.md#edge-network).
+Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Voor meer informatie over de Ervaring Edge van de Adobe, te lezen gelieve het [&#x200B; overzicht van de Edge Network &#x200B;](../web-sdk/home.md#edge-network).
 
 ## Bijlage
 

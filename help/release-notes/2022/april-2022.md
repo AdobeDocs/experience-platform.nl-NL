@@ -30,7 +30,7 @@ Experience Platform biedt meerdere dashboards waarmee u belangrijke informatie o
 
 De dashboards verstrekken pre-gevormde rapporteringsopties voor de gegevens van uw organisatie en zijn direct ingebouwd in de markeringswerkschema binnen Experience Platform. Deze dashboards zijn beschikbaar zonder de behoefte aan extra steun van IT of de tijd en de inspanning het anders zou vergen om gegevens met extra het opslagontwerp en implementatie van gegevens uit te voeren en te verwerken.
 
-De volgende widgets zijn beschikbaar via de widgetbibliotheek op hun respectieve dashboards. Zie de documentatie voor meer informatie over [ hoe te om widgets door de bibliotheek van Widget toe te voegen ](../../dashboards/customize/widget-library.md).
+De volgende widgets zijn beschikbaar via de widgetbibliotheek op hun respectieve dashboards. Zie de documentatie voor meer informatie over [&#x200B; hoe te om widgets door de bibliotheek van Widget toe te voegen &#x200B;](../../dashboards/customize/widget-library.md).
 
 **Nieuwe widgets**
 
@@ -69,9 +69,9 @@ Dataflows zijn een weergave van taken die gegevens over Experience Platform verp
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Segmentdashboard | U kunt het controledashboard nu gebruiken om de gegevensstromen voor segmenten te controleren. Om meer te leren, te lezen gelieve de gids op [ controlesegmenten in UI ](../../dataflows/ui/monitor-audiences.md) |
+| Segmentdashboard | U kunt het controledashboard nu gebruiken om de gegevensstromen voor segmenten te controleren. Om meer te leren, te lezen gelieve de gids op [&#x200B; controlesegmenten in UI &#x200B;](../../dataflows/ui/monitor-audiences.md) |
 
-Voor meer algemene informatie over dataflows, verwijs naar het [ dataflows overzicht ](../../dataflows/home.md). Meer over segmentatie leren, verwijs naar het [ segmentatieoverzicht ](../../segmentation/home.md).
+Voor meer algemene informatie over dataflows, verwijs naar het [&#x200B; dataflows overzicht &#x200B;](../../dataflows/home.md). Meer over segmentatie leren, verwijs naar het [&#x200B; segmentatieoverzicht &#x200B;](../../segmentation/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -81,8 +81,8 @@ Voor meer algemene informatie over dataflows, verwijs naar het [ dataflows overz
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor Adobe Analytics-bron | De Adobe Analytics-bron biedt nu ondersteuning voor functies voor het voorvertonen van gegevens, zodat u uw gegevens uit de Analytics-rapportenreeks kunt toewijzen aan een doel-XDM-schema wanneer u een gegevensstroom maakt. Zie het leerprogramma op [ creërend een Analytics bronverbinding ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie. |
-| Ondersteuning voor het importeren van bestaande toewijzingsregels | U kunt nu toewijzingsregels importeren uit een bestaande gegevensstroom om uw databaseconfiguraties te versnellen en fouten te beperken. Zie het leerprogramma bij [ het invoeren van bestaande toewijzingsregels ](../../data-prep/ui/mapping.md) voor meer informatie. |
+| Ondersteuning voor Adobe Analytics-bron | De Adobe Analytics-bron biedt nu ondersteuning voor functies voor het voorvertonen van gegevens, zodat u uw gegevens uit de Analytics-rapportenreeks kunt toewijzen aan een doel-XDM-schema wanneer u een gegevensstroom maakt. Zie het leerprogramma op [&#x200B; creërend een Analytics bronverbinding &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie. |
+| Ondersteuning voor het importeren van bestaande toewijzingsregels | U kunt nu toewijzingsregels importeren uit een bestaande gegevensstroom om uw databaseconfiguraties te versnellen en fouten te beperken. Zie het leerprogramma bij [&#x200B; het invoeren van bestaande toewijzingsregels &#x200B;](../../data-prep/ui/mapping.md) voor meer informatie. |
 
 Voor meer informatie over [!DNL Data Prep] raadpleegt u het [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
@@ -94,8 +94,8 @@ Voor meer informatie over [!DNL Data Prep] raadpleegt u het [[!DNL Data Prep] ov
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| Geavanceerde Enterprise-doelconnectors | Drie bedrijfsdoelconnectors zijn nu over het algemeen beschikbaar: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md) , [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) en [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md) . <br> De algemene beschikbaarheid van bedrijfsdoelconnectors omvat alle mogelijkheden die eerder in de Beta-fase werden aangeboden, en meer: <ul><li>De nieuwe authentificatiemogelijkheden, met inbegrip van [ Gedeelde Ondertekening van de Toegang in de Hubs van de Gebeurtenis van de Gebeurtenis van de Gebeurtenis ](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) en meer [ authentificatietypen ](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens aan tokens, OAuth 2) in de bestemming van HTTP API;</li><li>[ het Steunen van historische profielgegevens ](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (verzendend historische profielen die voor het segment worden gekwalificeerd wanneer eerst geactiveerd);</li><li>Dataflow loopmetriek wordt nu gesteund voor deze bestemmingen;</li><li>[ extra segmentmeta-gegevens ](../../destinations/catalog/streaming/http-destination.md#destination-details) inbegrepen in de gegevensuitkering, met inbegrip van segmentnamen en segmenttimestamps;</li><li>Steun voor [ statische IP adressen ](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor klanten die Experience Platform moeten lijsten van gewenste personen.</li></ul> |
-| In-context alarm voor bestemmingsdataflows | U kunt [ nu aan alarm ](../../destinations/ui/alerts.md) intekenen wanneer het creëren van een bestemmingsdataflow, om waakzame berichten betreffende de status, het succes, of de mislukking van uw dataflow looppas te ontvangen. U kunt ervoor kiezen waarschuwingen te ontvangen in de gebruikersinterface van Experience Platform of via e-mail. |
+| Geavanceerde Enterprise-doelconnectors | Drie bedrijfsdoelconnectors zijn nu over het algemeen beschikbaar: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md) , [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) en [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md) . <br> De algemene beschikbaarheid van bedrijfsdoelconnectors omvat alle mogelijkheden die eerder in de Beta-fase werden aangeboden, en meer: <ul><li>De nieuwe authentificatiemogelijkheden, met inbegrip van [&#x200B; Gedeelde Ondertekening van de Toegang in de Hubs van de Gebeurtenis van de Gebeurtenis van de Gebeurtenis &#x200B;](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) en meer [&#x200B; authentificatietypen &#x200B;](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens aan tokens, OAuth 2) in de bestemming van HTTP API;</li><li>[&#x200B; het Steunen van historische profielgegevens &#x200B;](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (verzendend historische profielen die voor het segment worden gekwalificeerd wanneer eerst geactiveerd);</li><li>Dataflow loopmetriek wordt nu gesteund voor deze bestemmingen;</li><li>[&#x200B; extra segmentmeta-gegevens &#x200B;](../../destinations/catalog/streaming/http-destination.md#destination-details) inbegrepen in de gegevensuitkering, met inbegrip van segmentnamen en segmenttimestamps;</li><li>Steun voor [&#x200B; statische IP adressen &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor klanten die Experience Platform moeten lijsten van gewenste personen.</li></ul> |
+| In-context alarm voor bestemmingsdataflows | U kunt [&#x200B; nu aan alarm &#x200B;](../../destinations/ui/alerts.md) intekenen wanneer het creëren van een bestemmingsdataflow, om waakzame berichten betreffende de status, het succes, of de mislukking van uw dataflow looppas te ontvangen. U kunt ervoor kiezen waarschuwingen te ontvangen in de gebruikersinterface van Experience Platform of via e-mail. |
 
 ### Geen proces voor geavanceerde bedrijfsdoelconnectors {#release-process-enterprise-destinations}
 
@@ -124,7 +124,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Functie | Beschrijving |
 | --- | --- |
-| Afzonderlijke standaardvelden voor een schema toevoegen of verwijderen | De Redacteur UI van het Schema staat u nu toe om gedeelten standaardgebiedsgroepen aan uw schema&#39;s toe te voegen, die meer flexibiliteit voor de gebieden verstrekken u verkiest te omvatten zonder het moeten douanemiddelen van kras bouwen.<br><br> u kunt nu ad hoc douanegebieden direct binnen de schemastructuur ook bepalen en hen toewijzen aan een nieuwe of bestaande groep van het douaneveld zonder het moeten tot stand brengen of de gebiedsgroep van tevoren uitgeven.<br><br> zie de gids op [ creërend en het uitgeven schema&#39;s in UI ](../../xdm/ui/resources/schemas.md) voor meer informatie over deze nieuwe werkschema&#39;s. |
+| Afzonderlijke standaardvelden voor een schema toevoegen of verwijderen | De Redacteur UI van het Schema staat u nu toe om gedeelten standaardgebiedsgroepen aan uw schema&#39;s toe te voegen, die meer flexibiliteit voor de gebieden verstrekken u verkiest te omvatten zonder het moeten douanemiddelen van kras bouwen.<br><br> u kunt nu ad hoc douanegebieden direct binnen de schemastructuur ook bepalen en hen toewijzen aan een nieuwe of bestaande groep van het douaneveld zonder het moeten tot stand brengen of de gebiedsgroep van tevoren uitgeven.<br><br> zie de gids op [&#x200B; creërend en het uitgeven schema&#39;s in UI &#x200B;](../../xdm/ui/resources/schemas.md) voor meer informatie over deze nieuwe werkschema&#39;s. |
 
 {style="table-layout:auto"}
 
@@ -169,7 +169,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Voor meer informatie over XDM in Experience Platform, zie het [&#x200B; XDM overzicht van het Systeem &#x200B;](../../xdm/home.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
@@ -183,7 +183,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leide
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. Attribution AI ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event. Voor meer informatie over MultiDataset steun in Attributie AI, verwijs naar de [ gebruikersgids van de Attributie AI ](../../intelligent-services/attribution-ai/user-guide.md). |
+| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. Attribution AI ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event. Voor meer informatie over MultiDataset steun in Attributie AI, verwijs naar de [&#x200B; gebruikersgids van de Attributie AI &#x200B;](../../intelligent-services/attribution-ai/user-guide.md). |
 
 Voor meer informatie over [!DNL Intelligent Services] raadpleegt u het [[!DNL Intelligent Services] overzicht](../../intelligent-services/home.md).
 
@@ -195,8 +195,8 @@ De in Real-Time Customer Data Platform beschikbare AI van de klant wordt gebruik
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. AI van de klant ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event en het Adobe Audience Manager-schema. Voor meer informatie over de MultiSteun van de Dataset in Klant AI, verwijs naar de [ gebruikersgids van de Klant AI ](../../intelligent-services/customer-ai/user-guide/configure.md). |
-| Nieuwe maatstaven voor modelevaluatie in Customer AI | Met nieuwe winstkaarten in AI-kaarten van klanten kunnen marketers de groepsgrootte bepalen op basis van hun budget- en ROI-doelstellingen. Met nieuwe diagrammen kunt u de kwaliteit van het model meten, zodat u een betere zichtbaarheid krijgt in de lift die ze boven willekeurige doelen kunnen plaatsen. Voor meer informatie, zie [ inzichten met het document van AI van de Klant ](../../intelligent-services/customer-ai/user-guide/discover-insights.md) ontdekken. |
+| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. AI van de klant ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event en het Adobe Audience Manager-schema. Voor meer informatie over de MultiSteun van de Dataset in Klant AI, verwijs naar de [&#x200B; gebruikersgids van de Klant AI &#x200B;](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Nieuwe maatstaven voor modelevaluatie in Customer AI | Met nieuwe winstkaarten in AI-kaarten van klanten kunnen marketers de groepsgrootte bepalen op basis van hun budget- en ROI-doelstellingen. Met nieuwe diagrammen kunt u de kwaliteit van het model meten, zodat u een betere zichtbaarheid krijgt in de lift die ze boven willekeurige doelen kunnen plaatsen. Voor meer informatie, zie [&#x200B; inzichten met het document van AI van de Klant &#x200B;](../../intelligent-services/customer-ai/user-guide/discover-insights.md) ontdekken. |
 
 Voor meer informatie over [!DNL Intelligent Services] raadpleegt u het [[!DNL Intelligent Services] overzicht](../../intelligent-services/home.md).
 
@@ -208,9 +208,9 @@ Real-Time CDP B2B edition is gebaseerd op Real-Time Customer Data Platform (Real
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor `isDeleted` -functionaliteit | Alle [!DNL Marketo] datasets behalve `Activities` ondersteunen nu de `isDeleted` -toewijzing. De nieuwe toewijzing wordt automatisch toegevoegd aan uw bestaande B2B dataflows. Met de toewijzing `isDeleted` kunt u records filteren die zijn verwijderd, zodat de gegevens in [!DNL Data Lake] consistent zijn met de brongegevens. Zie de [[!DNL Marketo]  gids van kaartgebieden ](../../sources/connectors/adobe-applications/mapping/marketo.md) voor meer informatie over `isDeleted`. |
+| Ondersteuning voor `isDeleted` -functionaliteit | Alle [!DNL Marketo] datasets behalve `Activities` ondersteunen nu de `isDeleted` -toewijzing. De nieuwe toewijzing wordt automatisch toegevoegd aan uw bestaande B2B dataflows. Met de toewijzing `isDeleted` kunt u records filteren die zijn verwijderd, zodat de gegevens in [!DNL Data Lake] consistent zijn met de brongegevens. Zie de [[!DNL Marketo]  gids van kaartgebieden &#x200B;](../../sources/connectors/adobe-applications/mapping/marketo.md) voor meer informatie over `isDeleted`. |
 
-Meer over Real-Time Customer Data Platform B2B edition leren, zie het [ B2B overzicht ](../../rtcdp/b2b-overview.md).
+Meer over Real-Time Customer Data Platform B2B edition leren, zie het [&#x200B; B2B overzicht &#x200B;](../../rtcdp/b2b-overview.md).
 
 ## Bronnen {#sources}
 
@@ -222,8 +222,8 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor [!DNL OneTrust Integration] | U kunt nu de [!DNL OneTrust Integration] -bron gebruiken om toestemmings- en voorkeursgegevens van uw [!DNL OneTrust] -account in te voeren in Experience Platform. Zie de documentatie bij [ het creëren van a  [!DNL OneTrust Integration]  bronverbinding ](../../sources/connectors/consent-and-preferences/onetrust.md) voor meer informatie. |
+| Ondersteuning voor [!DNL OneTrust Integration] | U kunt nu de [!DNL OneTrust Integration] -bron gebruiken om toestemmings- en voorkeursgegevens van uw [!DNL OneTrust] -account in te voeren in Experience Platform. Zie de documentatie bij [&#x200B; het creëren van a  [!DNL OneTrust Integration]  bronverbinding &#x200B;](../../sources/connectors/consent-and-preferences/onetrust.md) voor meer informatie. |
 | Ondersteuning voor [!DNL Square] | U kunt nu de [!DNL Square] -bron gebruiken om betalingsgegevens van uw [!DNL Square] -account in te voeren naar Experience Platform. |
 | Ondersteuning voor het verwijderen van klantkenmerkgegevensstromen | U kunt nu dataflows verwijderen die zijn gemaakt met de bronconnector Klantkenmerken. |
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

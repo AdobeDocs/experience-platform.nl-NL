@@ -79,4 +79,4 @@ De reactie bevat een array met objecten, waarbij elk object een beschikbare naam
 
 ## Volgende stappen
 
-Ga aan het volgende leerprogramma te werk om [ een douane te creëren namespace ](./create-custom-namespace.md)
+Ga aan het volgende leerprogramma te werk om [&#x200B; een douane te creëren namespace &#x200B;](./create-custom-namespace.md)

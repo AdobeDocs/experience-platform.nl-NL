@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `prehidingStyle`
 
-Met de eigenschap `prehidingStyle` kunt u een CSS-kiezer definiëren om gepersonaliseerde inhoud te verbergen totdat deze wordt geladen. Dit bezit is waardevol in synchrone implementaties van SDK van het Web om het flikkeren te vermijden. De Adobe adviseert het gebruiken van [ prehide fragment ](../../personalization/manage-flicker.md) voor asynchrone implementaties van SDK van het Web.
+Met de eigenschap `prehidingStyle` kunt u een CSS-kiezer definiëren om gepersonaliseerde inhoud te verbergen totdat deze wordt geladen. Dit bezit is waardevol in synchrone implementaties van SDK van het Web om het flikkeren te vermijden. De Adobe adviseert het gebruiken van [&#x200B; prehide fragment &#x200B;](../../personalization/manage-flicker.md) voor asynchrone implementaties van SDK van het Web.
 
 De CSS-kiezers die u in deze eigenschap definieert, beginnen inhoud te verbergen wanneer u de eerste opdracht [`sendEvent`](../sendevent/overview.md) op een pagina uitvoert. De inhoud is niet verborgen wanneer een reactie van de Adobe wordt ontvangen, die doorgaans gepersonaliseerde inhoud bevat. De inhoud wordt ook niet verborgen als de opdracht `sendEvent` mislukt of als de opdracht een keer wordt uitgevoerd.
 
@@ -19,9 +19,9 @@ Als u zowel `prehidingStyle` als het bovenliggende fragment in uw implementatie 
 
 ## Stijl vooraf verbergen met de webSDK-tagextensie
 
-Selecteer de **[!UICONTROL Provide prehiding style]** knoop wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Selecteer de **[!UICONTROL Provide prehiding style]** knoop wanneer [&#x200B; het vormen van de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.

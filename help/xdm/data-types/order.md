@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Order] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat de orde beschrijft die voor een productlijst wordt geplaatst.
 
-![ een diagram van het [!UICONTROL Order] gegevenstype.](../images/data-types/order.png)
+![&#x200B; een diagram van het [!UICONTROL Order] gegevenstype.](../images/data-types/order.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
@@ -38,5 +38,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.schema.json)

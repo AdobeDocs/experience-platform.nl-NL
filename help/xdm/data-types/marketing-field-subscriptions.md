@@ -16,18 +16,18 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Dit gegevenstype is bedoeld om te worden gebruikt om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend de [[!UICONTROL Consents and Preferences] gebiedsgroep ](../field-groups/profile/consents.md) als basislijn.
+>Dit gegevenstype is bedoeld om te worden gebruikt om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend de [[!UICONTROL Consents and Preferences] gebiedsgroep &#x200B;](../field-groups/profile/consents.md) als basislijn.
 >
->Als u geen a `subscriptions` kaart voor een bepaald marketing voorkeurgebied vereist, kunt u het [ basis marketing gebiedsgegevenstype ](./marketing-field.md) in plaats daarvan gebruiken.
+>Als u geen a `subscriptions` kaart voor een bepaald marketing voorkeurgebied vereist, kunt u het [&#x200B; basis marketing gebiedsgegevenstype &#x200B;](./marketing-field.md) in plaats daarvan gebruiken.
 
 ![](../images/data-types/marketing-field-subscriptions.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `reason` | String | Wanneer een klant kiest uit een geval van het marketinggebruik, vertegenwoordigt dit koordgebied de reden waarom de klant uit opteerde. |
-| `subscriptions` | Kaart | Een kaart van klant marketing voorkeur voor specifieke abonnementen. Zie de sectie op [ abonnementen ](#subscriptions) voor meer informatie. |
+| `subscriptions` | Kaart | Een kaart van klant marketing voorkeur voor specifieke abonnementen. Zie de sectie op [&#x200B; abonnementen &#x200B;](#subscriptions) voor meer informatie. |
 | `time` | DateTime | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. |
-| `val` | String | De door de klant opgegeven voorkeurskeuze voor dit marketinggeval. Zie de [ volgende sectie ](#val) voor erkende waarden en definities. |
+| `val` | String | De door de klant opgegeven voorkeurskeuze voor dit marketinggeval. Zie de [&#x200B; volgende sectie &#x200B;](#val) voor erkende waarden en definities. |
 
 {style="table-layout:auto"}
 
@@ -94,7 +94,7 @@ De volgende JSON vertegenwoordigt een voorbeeld marketing gebied voor een telefo
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `val` | De [ toestemmingswaarde ](#val) voor het abonnement. |
+| `val` | De [&#x200B; toestemmingswaarde &#x200B;](#val) voor het abonnement. |
 | `type` | Het abonnementstype. Dit kan elke beschrijvende tekenreeks zijn, op voorwaarde dat deze 15 tekens of minder is. |
 | `topics` | Een array van tekenreeksen die de gebieden vertegenwoordigen waarop een klant zich heeft geabonneerd, en die kan worden gebruikt om relevante inhoud te verzenden. |
 | `subscribers` | Een optioneel veld van het type map dat een set id&#39;s vertegenwoordigt (zoals e-mailadressen of telefoonnummers) die zijn geabonneerd op een bepaald abonnement. Elke sleutel in dit object vertegenwoordigt de id in kwestie en bevat twee subeigenschappen: <ul><li>`time`: Een tijdstempel volgens ISO 8601 van het moment waarop de identiteit is geabonneerd, indien van toepassing.</li><li>`source`: De bron waarvan de abonnee afkomstig is. Dit kan elke beschrijvende tekenreeks zijn, op voorwaarde dat deze 15 tekens of minder is.</li></ul> |
@@ -105,5 +105,5 @@ De volgende JSON vertegenwoordigt een voorbeeld marketing gebied voor een telefo
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.schema.json)

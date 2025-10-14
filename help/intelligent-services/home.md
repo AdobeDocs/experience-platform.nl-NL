@@ -44,7 +44,7 @@ Laat marketers meteen aan de slag met AI/ML en begin marketingrendement te verbe
 
 ### Ingest
 
-Gegevens van de klant worden opgenomen en getransformeerd met het XDM-model (Experience Data Model) op [!DNL Adobe Experience Platform] . Meer over XDM leren, bezoek het [ XDM overzicht ](../xdm/home.md).
+Gegevens van de klant worden opgenomen en getransformeerd met het XDM-model (Experience Data Model) op [!DNL Adobe Experience Platform] . Meer over XDM leren, bezoek het [&#x200B; XDM overzicht &#x200B;](../xdm/home.md).
 
 ### Configureren
 
@@ -60,4 +60,4 @@ Tot slot kunt u besluiten welke acties u met de voorspellingen wilt ondernemen, 
 
 ## Volgende stappen
 
-Intelligent Services biedt momenteel Attribution AI en Customer AI. Met Attribution AI kunnen marketers op intelligente wijze de marketingeffectiviteit op verschillende kanalen en campagnes stimuleren. Meer over Attributie AI leren, bezoek het [ overzicht van AI van de Attributie ](./attribution-ai/overview.md). Klantenservice-AI stelt marketers in staat hun klantervaringen te hyper-personaliseren. Meer over Klant AI leren, bezoek het [ overzicht van AI van de Klant ](./customer-ai/overview.md).
+Intelligent Services biedt momenteel Attribution AI en Customer AI. Met Attribution AI kunnen marketers op intelligente wijze de marketingeffectiviteit op verschillende kanalen en campagnes stimuleren. Meer over Attributie AI leren, bezoek het [&#x200B; overzicht van AI van de Attributie &#x200B;](./attribution-ai/overview.md). Klantenservice-AI stelt marketers in staat hun klantervaringen te hyper-personaliseren. Meer over Klant AI leren, bezoek het [&#x200B; overzicht van AI van de Klant &#x200B;](./customer-ai/overview.md).

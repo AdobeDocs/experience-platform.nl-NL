@@ -19,17 +19,17 @@ Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een be
 
 ## Aan de slag met API-bewerkingen voor doelconfiguratie {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een doelconfiguratie verwijderen {#delete}
 
-U kunt een [ bestaande ](create-destination-configuration.md) configuratie van de bestemmingsserver schrappen door a `DELETE` verzoek aan het `/authoring/destinations` eindpunt met `{INSTANCE_ID}` van de bestemmingsconfiguratie te maken die u wilt schrappen.
+U kunt een [&#x200B; bestaande &#x200B;](create-destination-configuration.md) configuratie van de bestemmingsserver schrappen door a `DELETE` verzoek aan het `/authoring/destinations` eindpunt met `{INSTANCE_ID}` van de bestemmingsconfiguratie te maken die u wilt schrappen.
 
 >[!TIP]
 >
 >**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een bestemmingsconfiguratie ](retrieve-destination-configuration.md).
+Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [&#x200B; het terugwinnen van een bestemmingsconfiguratie &#x200B;](retrieve-destination-configuration.md).
 
 **API formaat**
 
@@ -58,7 +58,7 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen
 

@@ -14,14 +14,14 @@ ht-degree: 0%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Lees dit leerprogramma leren hoe te om een basisverbinding voor [!DNL Microsoft SQL Server] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees dit leerprogramma leren hoe te om een basisverbinding voor [!DNL Microsoft SQL Server] tot stand te brengen gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Microsoft SQL Server] via de [!DNL Flow Service] API.
 
@@ -34,11 +34,11 @@ Als u verbinding wilt maken met [!DNL Microsoft SQL Server] , moet u de volgende
 | `connectionString` | De verbindingstekenreeks die aan uw [!DNL Microsoft SQL Server] account is gekoppeld. Het patroon van de verbindingstekenreeks is afhankelijk van de servernaam of de instantienaam van de gegevensbron:<ul><li>Verbindingstekenreeks met servernaam: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Verbindingstekenreeks met instantienaam:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Microsoft SQL Server] is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` . |
 
-Voor meer informatie over het verkrijgen van een verbindingskoord, verwijs naar dit [[!DNL Microsoft SQL Server]  document ](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
+Voor meer informatie over het verkrijgen van een verbindingskoord, verwijs naar dit [[!DNL Microsoft SQL Server]  document &#x200B;](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -81,7 +81,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `auth.params.connectionString` | De verbindingstekenreeks die aan uw [!DNL Microsoft SQL Server] account is gekoppeld. Lees de sectie over [ verzamelen vereiste geloofsbrieven ](#gather-required-credentials) voor meer informatie. |
+| `auth.params.connectionString` | De verbindingstekenreeks die aan uw [!DNL Microsoft SQL Server] account is gekoppeld. Lees de sectie over [&#x200B; verzamelen vereiste geloofsbrieven &#x200B;](#gather-required-credentials) voor meer informatie. |
 | `connectionSpec.id` | De [!DNL Microsoft SQL Server] -id van de verbindingsspecificatie is: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` . |
 
 **Reactie**

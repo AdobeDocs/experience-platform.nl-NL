@@ -20,11 +20,11 @@ Deze handleiding bevat stapsgewijze instructies voor het maken en toevoegen van 
 >
 >Alle updates van de dashboards worden uitgevoerd per organisatie en per sandbox.
 
-Meer over standaard widgets leren, gelieve te verwijzen naar de gids voor [ toevoegend standaardwidgets aan uw dashboards ](standard-widgets.md).
+Meer over standaard widgets leren, gelieve te verwijzen naar de gids voor [&#x200B; toevoegend standaardwidgets aan uw dashboards &#x200B;](standard-widgets.md).
 
 ## Widget-bibliotheek {#widget-library}
 
-Deze handleiding vereist toegang tot de [!UICONTROL Widget library] in Experience Platform. Meer over de widgetbibliotheek leren, en hoe te om tot het binnen UI toegang te hebben, gelieve te beginnen door het [ overzicht van de widgetbibliotheek te lezen ](widget-library.md).
+Deze handleiding vereist toegang tot de [!UICONTROL Widget library] in Experience Platform. Meer over de widgetbibliotheek leren, en hoe te om tot het binnen UI toegang te hebben, gelieve te beginnen door het [&#x200B; overzicht van de widgetbibliotheek te lezen &#x200B;](widget-library.md).
 
 ## Aan de slag met aangepaste widgets
 
@@ -36,19 +36,19 @@ In de widgetbibliotheek kunt u op het tabblad **[!UICONTROL Custom]** widgets ma
 
 Selecteer het tabblad **[!UICONTROL Custom]** om aangepaste widgets te maken of om aangepaste widgets weer te geven die uw organisatie al heeft gemaakt.
 
-![ de widgetbibliotheekwerkruimte met het benadrukte lusje van de Douane.](../images/customization/custom-widgets.png)
+![&#x200B; de widgetbibliotheekwerkruimte met het benadrukte lusje van de Douane.](../images/customization/custom-widgets.png)
 
 ## Een aangepaste widget maken
 
 Als u een aangepaste widget wilt maken, selecteert u **[!UICONTROL Create widget]** in de rechterbovenhoek van de widgetbibliotheek of selecteert u **[!UICONTROL Create]** in het midden van de widgetbibliotheek als dit de eerste aangepaste widget van uw organisatie is.
 
-![ het lusje van de Douane van de widgetbibliotheekwerkruimte met Create benadrukte.](../images/customization/create-widget.png)
+![&#x200B; het lusje van de Douane van de widgetbibliotheekwerkruimte met Create benadrukte.](../images/customization/create-widget.png)
 
 Geef in het dialoogvenster **[!UICONTROL Create widget]** een titel en een beschrijving voor de nieuwe widget op en kies het kenmerk dat u de widget wilt weergeven.
 
 >[!NOTE]
 >
->De lijst van beschikbare attributen hangt van het schema af dat voor uw organisatie is gevormd. Om meer over attributenselectie en schemaconfiguratie te leren, lees de gids bij [ het uitgeven van het schema om douanewidgets ](edit-schema.md) tot stand te brengen.
+>De lijst van beschikbare attributen hangt van het schema af dat voor uw organisatie is gevormd. Om meer over attributenselectie en schemaconfiguratie te leren, lees de gids bij [&#x200B; het uitgeven van het schema om douanewidgets &#x200B;](edit-schema.md) tot stand te brengen.
 
 Als u een kenmerk wilt kiezen, selecteert u het keuzerondje naast het kenmerk dat u wilt toevoegen.
 
@@ -56,7 +56,7 @@ Als u een kenmerk wilt kiezen, selecteert u het keuzerondje naast het kenmerk da
 >
 >Per widget kan slechts één kenmerk worden geselecteerd en per kenmerk kan slechts één widget worden gemaakt. Als er al een widget is gemaakt voor een kenmerk, wordt het kenmerk grijs weergegeven.
 
-![ creeer widgetdialoog.](../images/customization/create-widget-dialog.png)
+![&#x200B; creeer widgetdialoog.](../images/customization/create-widget-dialog.png)
 
 ## Selecteer een visualisatie
 
@@ -80,11 +80,11 @@ Afhankelijk van het kenmerk raadt de AI verschillende visualisatieopties aan. De
 
 Selecteer **[!UICONTROL Create]** om de nieuwe widget op te slaan en terug te keren naar de tab [!UICONTROL Custom] .
 
-![ creeer widgetdialoog met de visualisatieopties en creeer benadrukte.](../images/customization/create-widget-select-attribute.png)
+![&#x200B; creeer widgetdialoog met de visualisatieopties en creeer benadrukte.](../images/customization/create-widget-select-attribute.png)
 
 Uw nieuwe widget kan nu aan een dashboard worden toegevoegd door de widget in de bibliotheek te kiezen en **[!UICONTROL Add widget]** te selecteren.
 
-![ het lusje van de Douane van de widgetbibliotheekwerkruimte met nieuwe benadrukte widget en voeg widget toe.](../images/customization/custom-widgets-new.png)
+![&#x200B; het lusje van de Douane van de widgetbibliotheekwerkruimte met nieuwe benadrukte widget en voeg widget toe.](../images/customization/custom-widgets-new.png)
 
 ## Een aangepaste widget verbergen
 
@@ -96,13 +96,13 @@ Als u verborgen widgets wilt weergeven, selecteert u **[!UICONTROL Show hidden w
 >
 >Als u een widget verbergt in de bibliotheek, wordt de widget niet verwijderd uit de dashboards van individuele gebruikers. Als een widget niet meer in uw organisatie mag worden gebruikt, moet u dit rechtstreeks doorgeven aan alle Experience Platform-gebruikers, omdat deze de widget uit hun dashboards moeten verwijderen.
 
-![ het lusje van de Douane van de werkruimte van de widgetbibliotheek met de widget dropdown menuopties en tonen verborgen benadrukte widgets.](../images/customization/hide-widget.png)
+![&#x200B; het lusje van de Douane van de werkruimte van de widgetbibliotheek met de widget dropdown menuopties en tonen verborgen benadrukte widgets.](../images/customization/hide-widget.png)
 
 ## Een aangepaste widget bewerken
 
 U kunt aangepaste widgets in de widgetbibliotheek bewerken door de ellipsen (`...`) op de widgetkaart te selecteren en vervolgens **[!UICONTROL Edit]** te selecteren in het vervolgkeuzemenu.
 
-![ de widget dropdown menuopties met de ellipsen en geeft benadrukte uit.](../images/customization/custom-widget-edit.png)
+![&#x200B; de widget dropdown menuopties met de ellipsen en geeft benadrukte uit.](../images/customization/custom-widget-edit.png)
 
 In het dialoogvenster **[!UICONTROL Edit widget]** kunt u de titel en beschrijving van de widget bewerken, en een voorvertoning weergeven van verschillende visualisaties en deze selecteren. Nadat u de gewenste wijzigingen hebt aangebracht, selecteert u **[!UICONTROL Save]** om de wijzigingen op te slaan en terug te keren naar het tabblad Aangepaste widgets.
 
@@ -110,8 +110,8 @@ In het dialoogvenster **[!UICONTROL Edit widget]** kunt u de titel en beschrijvi
 >
 >Als u een widget in de bibliotheek bewerkt, wordt de widget niet voor individuele gebruikers bijgewerkt. Als een widget is bijgewerkt, moet u dit rechtstreeks doorgeven aan alle Experience Platform-gebruikers, aangezien deze de verouderde widget uit hun dashboards moeten verwijderen en vervolgens de bijgewerkte widget uit de widgetbibliotheek moeten selecteren en toevoegen.
 
-![ Edit widget dialoog.](../images/customization/edit-widget.png)
+![&#x200B; Edit widget dialoog.](../images/customization/edit-widget.png)
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, hebt u toegang tot de widgetbibliotheek en kunt u deze gebruiken om aangepaste widgets voor uw organisatie te maken en toe te voegen. Om de grootte en de plaats van widgets te wijzigen die in het dashboard verschijnen, gelieve te verwijzen naar [ wijzigen dashboardgids ](modify.md).
+Nadat u dit document hebt gelezen, hebt u toegang tot de widgetbibliotheek en kunt u deze gebruiken om aangepaste widgets voor uw organisatie te maken en toe te voegen. Om de grootte en de plaats van widgets te wijzigen die in het dashboard verschijnen, gelieve te verwijzen naar [&#x200B; wijzigen dashboardgids &#x200B;](modify.md).

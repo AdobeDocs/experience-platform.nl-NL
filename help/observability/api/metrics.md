@@ -17,11 +17,11 @@ De metriek van de waarneming verstrekt inzicht in gebruiksstatistieken, historis
 
 >[!NOTE]
 >
->De vorige versie van het metrieke eindpunt (V1) is afgekeurd. Dit document richt zich uitsluitend op de huidige versie (V2). Voor details op het V1 eindpunt voor erfenisimplementaties, gelieve te verwijzen naar de [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>De vorige versie van het metrieke eindpunt (V1) is afgekeurd. Dit document richt zich uitsluitend op de huidige versie (V2). Voor details op het V1 eindpunt voor erfenisimplementaties, gelieve te verwijzen naar de [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Observability Insights]  API ](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Observability Insights]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Metrische waarden voor waarneembaarheid ophalen
 
@@ -80,7 +80,7 @@ curl -X POST \
 | `end` | De recentste datum/tijd waarvan om metrische gegevens terug te winnen. |
 | `granularity` | Een optioneel veld waarmee het tijdsinterval wordt aangegeven waarbinnen metrische gegevens moeten worden verdeeld. De waarde `DAY` retourneert bijvoorbeeld meetgegevens voor elke dag tussen de datum `start` en `end` , terwijl de waarde `MONTH` de metrische resultaten per maand groepeert. |
 | `metrics` | Een array van objecten, één voor elke metrische waarde die u wilt ophalen. |
-| `name` | De naam van een metrische waarde die wordt erkend door Observability Insights. Zie [ bijlage ](#available-metrics) voor een volledige lijst van toegelaten metrische namen. |
+| `name` | De naam van een metrische waarde die wordt erkend door Observability Insights. Zie [&#x200B; bijlage &#x200B;](#available-metrics) voor een volledige lijst van toegelaten metrische namen. |
 | `filters` | Een facultatief gebied dat u toestaat om metriek door specifieke datasets te filtreren. Het veld is een array van objecten (één voor elk filter), waarbij elk object de volgende eigenschappen bevat: <ul><li>`name`: Het type entiteit waarop maatgegevens moeten worden gefilterd. Momenteel wordt alleen `dataSets` ondersteund.</li><li>`value`: De id van een of meer gegevenssets. De veelvoudige dataset IDs kan als één enkel koord worden verstrekt, met elke identiteitskaart die door verticale barkarakters (`\|`) wordt gescheiden.</li><li>`groupBy`: Wanneer ingesteld op true, geeft dit aan dat de corresponderende `value` meerdere gegevenssets vertegenwoordigt waarvan de metrische resultaten afzonderlijk moeten worden geretourneerd. Indien ingesteld op false, worden de metrische resultaten voor die datasets gegroepeerd.</li></ul> |
 | `aggregator` | Geeft de aggregatiefunctie aan die moet worden gebruikt om records met meerdere tijdreeksen te groeperen in één resultaat. De huidige ondersteunde aggregators zijn min, max, sum en avg, afhankelijk van de definitie van de metrische waarde. |
 
@@ -277,7 +277,7 @@ In de volgende tabel worden de verschillende foutcodes weergegeven die door de A
 
 | Foutcode | Titel | Beschrijving |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Ongeldige payload verzoek | Er is iets mis met de lading van de aanvraag. Zorg ervoor dat u precies het nuttige lading formatteren zoals getoond [ hierboven ](#v2) aanpast. Om het even welke mogelijke redenen kunnen deze fout teweegbrengen:<ul><li>Vereiste velden ontbreken, zoals `aggregator`</li><li>Ongeldige meetgegevens</li><li>De aanvraag bevat een ongeldige aggregator</li><li>Een begindatum vindt plaats na een einddatum</li><li>Het verzoek heeft een tijdbereik (tussen begin- en einddatum) van meer dan 32 dagen</li></ul> |
+| `INSGHT-1000-400` | Ongeldige payload verzoek | Er is iets mis met de lading van de aanvraag. Zorg ervoor dat u precies het nuttige lading formatteren zoals getoond [&#x200B; hierboven &#x200B;](#v2) aanpast. Om het even welke mogelijke redenen kunnen deze fout teweegbrengen:<ul><li>Vereiste velden ontbreken, zoals `aggregator`</li><li>Ongeldige meetgegevens</li><li>De aanvraag bevat een ongeldige aggregator</li><li>Een begindatum vindt plaats na een einddatum</li><li>Het verzoek heeft een tijdbereik (tussen begin- en einddatum) van meer dan 32 dagen</li></ul> |
 | `INSGHT-1001-400` | Metrische query mislukt | Er is een fout opgetreden bij het zoeken naar de metrische database, omdat een onjuiste aanvraag of de query zelf niet kan worden gescheiden. Zorg ervoor dat uw verzoek correct is geformatteerd alvorens opnieuw te proberen. |
 | `INSGHT-1001-500` | Metrische query mislukt | Er is een fout opgetreden tijdens het zoeken naar de metrieke-database vanwege een serverfout. Probeer het verzoek opnieuw. Neem contact op met de ondersteuning van Adobe als het probleem zich blijft voordoen. |
 | `INSGHT-1002-500` | Servicefout | De aanvraag kan niet worden verwerkt vanwege een interne fout. Probeer het verzoek opnieuw. Neem contact op met de ondersteuning van Adobe als het probleem zich blijft voordoen. |

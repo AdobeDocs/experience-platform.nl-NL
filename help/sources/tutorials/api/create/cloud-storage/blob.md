@@ -11,22 +11,22 @@ ht-degree: 0%
 
 # Verbind [!DNL Azure Blob Storage] met Experience Platform gebruikend API
 
-Lees deze gids om te leren hoe te om uw [!DNL Azure Blobg Storage] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om uw [!DNL Azure Blobg Storage] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ### Vereiste referenties verzamelen
 
-Lees het [[!DNL Azure Blob Storage]  overzicht ](../../../../connectors/cloud-storage/blob.md#authentication) voor informatie over authentificatie.
+Lees het [[!DNL Azure Blob Storage]  overzicht &#x200B;](../../../../connectors/cloud-storage/blob.md#authentication) voor informatie over authentificatie.
 
 ## Sluit uw [!DNL Azure Blob Storage] -account aan op Experience Platform {#connect}
 
@@ -190,4 +190,4 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een [!DNL Blob] -verbinding gemaakt met behulp van API&#39;s en is een unieke id verkregen als onderdeel van de hoofdtekst van de reactie. U kunt deze verbindingsidentiteitskaart gebruiken om [ wolkenopslag te onderzoeken gebruikend de Dienst API van de Stroom ](../../explore/cloud-storage.md).
+Door deze zelfstudie te volgen, hebt u een [!DNL Blob] -verbinding gemaakt met behulp van API&#39;s en is een unieke id verkregen als onderdeel van de hoofdtekst van de reactie. U kunt deze verbindingsidentiteitskaart gebruiken om [&#x200B; wolkenopslag te onderzoeken gebruikend de Dienst API van de Stroom &#x200B;](../../explore/cloud-storage.md).

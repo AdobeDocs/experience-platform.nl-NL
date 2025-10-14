@@ -61,7 +61,7 @@ Gelieve te merken op u **&#x200B;**&#x200B;toestemmingsinformatie met een extern
 
 ### Kan ik een extern gegenereerd publiek gebruiken om andere soorten publiek op te bouwen?
 
-Ja, zal om het even welk extern geproduceerd publiek binnen de publieksinventaris verschijnen en kan worden gebruikt wanneer het bouwen van publiek binnen de [ Bouwer van het Segment ](./ui/segment-builder.md).
+Ja, zal om het even welk extern geproduceerd publiek binnen de publieksinventaris verschijnen en kan worden gebruikt wanneer het bouwen van publiek binnen de [&#x200B; Bouwer van het Segment &#x200B;](./ui/segment-builder.md).
 
 ### Hoe vaak worden extern gegenereerde doelgroepen geëvalueerd?
 
@@ -75,7 +75,7 @@ De extern geproduceerde contextafhankelijke gegevens van het publiek, of verrijk
 
 Wanneer u uw publiek echter toewijst aan batchbestemmingen of op bestanden gebaseerde bestemmingen, kunt u deze extern gegenereerde verrijkingskenmerken gebruiken om uw publiek en verdere downstreamactiveringen te verhogen.
 
-Om meer over dit vermogen te leren, te lezen gelieve de gids op [ activerende publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../destinations/ui/activate-batch-profile-destinations.md#mapping).
+Om meer over dit vermogen te leren, te lezen gelieve de gids op [&#x200B; activerende publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](../destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ### Bestaat er een specifiek fusiebeleid voor extern gegenereerde doelgroepen?
 
@@ -152,7 +152,7 @@ Zodra een publiek wordt geschrapt, kan het **niet** worden uitgegeven.
 
 De mogelijke levenscyclus bepaalt dat een publiek kan worden verplaatst, afhankelijk van de huidige status van het publiek.
 
-![ A diagram dat de mogelijke overgangen van de levenscyclusstaat schetst die voor publiek beschikbaar zijn.](./images/faq/lifecycle-state-transition.png)
+![&#x200B; A diagram dat de mogelijke overgangen van de levenscyclusstaat schetst die voor publiek beschikbaar zijn.](./images/faq/lifecycle-state-transition.png)
 
 Als de doelgroep zich in de conceptstatus bevindt, kunt u de doelgroep publiceren of verwijderen als de doelgroep geen afhankelijke personen heeft.
 
@@ -240,23 +240,23 @@ De volgende sectie geeft een overzicht van vragen die betrekking hebben op de pu
 
 ### Heb ik extra toestemmingen nodig om de eigenschappen van de publieksinventaris te gebruiken?
 
-Nee, dat doe je niet. Als u over bewerkingsmachtigingen voor het publiek beschikt, kunt u uw mappen en tags maken, bijwerken en beheren in het Poortpubliek van het publiek. Voor meer informatie over het beheren van toestemmingen, te lezen gelieve [ toestemmingengids ](../access-control/ui/permissions.md) beheren.
+Nee, dat doe je niet. Als u over bewerkingsmachtigingen voor het publiek beschikt, kunt u uw mappen en tags maken, bijwerken en beheren in het Poortpubliek van het publiek. Voor meer informatie over het beheren van toestemmingen, te lezen gelieve [&#x200B; toestemmingengids &#x200B;](../access-control/ui/permissions.md) beheren.
 
 ### Is er een limiet voor het aantal mappen dat ik kan maken?
 
-Nee, er is geen limiet voor het aantal mappen dat u kunt maken. Voor meer informatie over omslagen, te lezen gelieve de [ sectie van de publieksinventaris ](./ui/audience-portal.md#folders) van het overzicht UI van de Dienst van de Segmentatie.
+Nee, er is geen limiet voor het aantal mappen dat u kunt maken. Voor meer informatie over omslagen, te lezen gelieve de [&#x200B; sectie van de publieksinventaris &#x200B;](./ui/audience-portal.md#folders) van het overzicht UI van de Dienst van de Segmentatie.
 
 ### Is er een limiet voor het aantal tags dat aan een publiek kan worden toegevoegd?
 
-Nee, er is geen limiet voor het aantal tags dat aan een publiek kan worden toegevoegd. Voor meer informatie over markeringen, te lezen gelieve de [ sectie van de publieksinventaris ](./ui/audience-portal.md#tags) van het overzicht UI van de Dienst van de Segmentatie.
+Nee, er is geen limiet voor het aantal tags dat aan een publiek kan worden toegevoegd. Voor meer informatie over markeringen, te lezen gelieve de [&#x200B; sectie van de publieksinventaris &#x200B;](./ui/audience-portal.md#tags) van het overzicht UI van de Dienst van de Segmentatie.
 
 ### Is er een limiet aan het aantal tags dat ik kan maken?
 
-Nee, er is geen limiet aan het aantal tags dat u kunt maken. Nochtans, kunt u tot een maximum van **100** categorieën leiden om voor de markeringen van toepassing te zijn. Voor meer informatie over markeringsbeheer, te lezen gelieve de [ Leidende gids van Markeringen ](../administrative-tags/ui/managing-tags.md).
+Nee, er is geen limiet aan het aantal tags dat u kunt maken. Nochtans, kunt u tot een maximum van **100** categorieën leiden om voor de markeringen van toepassing te zijn. Voor meer informatie over markeringsbeheer, te lezen gelieve de [&#x200B; Leidende gids van Markeringen &#x200B;](../administrative-tags/ui/managing-tags.md).
 
 ### Wanneer ik naar een publiek door naam of markering in een ouderomslag zoek, kan ik door de verwante kindomslagen ook zoeken?
 
-Nee, dit gedrag wordt niet ondersteund. Nochtans, kunt u de mening van de publieksinventaris veranderen om **Alle Soorten publiek** te bekijken, dan onderzoek over alle omslagen. Voor meer informatie bij het gebruiken van onderzoek in publieksinventaris, te lezen gelieve de [ onderzoekssectie ](./ui/audience-portal.md#search) van het overzicht van de Dienst UI van de Segmentatie.
+Nee, dit gedrag wordt niet ondersteund. Nochtans, kunt u de mening van de publieksinventaris veranderen om **Alle Soorten publiek** te bekijken, dan onderzoek over alle omslagen. Voor meer informatie bij het gebruiken van onderzoek in publieksinventaris, te lezen gelieve de [&#x200B; onderzoekssectie &#x200B;](./ui/audience-portal.md#search) van het overzicht van de Dienst UI van de Segmentatie.
 
 ### Kan ik een publiek automatisch toewijzen aan een map op het moment van het maken?
 
@@ -282,7 +282,7 @@ De volgende tabel illustreert het verschil tussen de twee services:
 | --------------- | -------------------- |
 | <ul><li>Eenmalige doelgroep</li><li>Creeert de basisblokken van publiek van profiel, tijdreeksen, en multi-entiteitsgegevens</li><li>Gebruikt om **één** publiek te creëren</li></ul> | <ul><li>Multi-stage publiek genereren, met gebruik van op set gebaseerde bewerkingen</li><li>Gebruikt het publiek dat door de Bouwer van de Segment wordt gecreeerd en past opties van de gegevensverrijking zoals het rangschikken van profielattributen en het verdelen in sub-publiek toe</li><li>Gebruikt om **veelvoud** publiek in één keer te creëren</li></ul> |
 
-Om meer over de Bouwer van het Segment te leren, te lezen gelieve de [ gids van de Bouwer van het Segment ](./ui/segment-builder.md). Meer over de Samenstelling van het Publiek leren, gelieve de [ gids van de Samenstelling van het Publiek ](./ui/audience-composition.md) te lezen.
+Om meer over de Bouwer van het Segment te leren, te lezen gelieve de [&#x200B; gids van de Bouwer van het Segment &#x200B;](./ui/segment-builder.md). Meer over de Samenstelling van het Publiek leren, gelieve de [&#x200B; gids van de Samenstelling van het Publiek &#x200B;](./ui/audience-composition.md) te lezen.
 
 ### Kan ik extern gegenereerd publiek gebruiken in Audience Composition?
 
@@ -320,7 +320,7 @@ Bovendien gelden de volgende beperkingen bij het gebruik van deze blokken:
 - Rank blok
    - Dit blok steunt **&#x200B;**&#x200B;geen verrijkingsattributen.
 
-Voor meer details over het gebruiken van de Samenstelling van het Publiek, gelieve de [ gids UI van de Samenstelling van het Publiek ](./ui/audience-composition.md) te lezen.
+Voor meer details over het gebruiken van de Samenstelling van het Publiek, gelieve de [&#x200B; gids UI van de Samenstelling van het Publiek &#x200B;](./ui/audience-composition.md) te lezen.
 
 ### Wanneer wordt het publiek gecreeerd gebruikend de Samenstelling van het Publiek bewaard en geëvalueerd?
 
@@ -348,11 +348,11 @@ Bij splitsing naar kenmerk is er sprake van wederzijdse exclusiviteit tussen de 
 
 Wanneer het splitsen door percentage, worden de spleten **willekeurig** gedaan. Dit betekent dat de profielen willekeurig worden toegewezen aan elk pad.
 
-Voor meer informatie over het Gesplitste blok, te lezen gelieve de [ gids UI van de Samenstelling van het publiek ](./ui/audience-composition.md#split).
+Voor meer informatie over het Gesplitste blok, te lezen gelieve de [&#x200B; gids UI van de Samenstelling van het publiek &#x200B;](./ui/audience-composition.md#split).
 
 ### Kan ik alle segmentatietypen in het werkschema van de Samenstelling van het Publiek gebruiken?
 
-Ja, worden alle segmentatietypen ([ partijsegmentatie, het stromen segmentatie, en randsegmentatie ](./home.md#evaluate-segments)) gesteund in het werkschema van de Samenstelling van het Publiek. Aangezien composities momenteel echter maar één keer per dag worden uitgevoerd, zelfs als streaming- of Edge-publiek wordt opgenomen, wordt het resultaat gebaseerd op het lidmaatschap van het publiek op het moment dat de compositie werd uitgevoerd.
+Ja, worden alle segmentatietypen ([&#x200B; partijsegmentatie, het stromen segmentatie, en randsegmentatie &#x200B;](./home.md#evaluate-segments)) gesteund in het werkschema van de Samenstelling van het Publiek. Aangezien composities momenteel echter maar één keer per dag worden uitgevoerd, zelfs als streaming- of Edge-publiek wordt opgenomen, wordt het resultaat gebaseerd op het lidmaatschap van het publiek op het moment dat de compositie werd uitgevoerd.
 
 ## Publiek lidmaatschap
 
@@ -416,7 +416,7 @@ Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ing
 
 ### Hoe worden segmenten gedefinieerd als batch- of streaming-segmentatie?
 
-Een segmentdefinitie wordt gedefinieerd als batch, streaming of randsegmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst waarvan de segmenten als het stromen segmentdefinitie zullen worden geëvalueerd kan in de [ het stromen sectie van de segmenteringsvraagtypes ](#query-types) worden gevonden.
+Een segmentdefinitie wordt gedefinieerd als batch, streaming of randsegmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst waarvan de segmenten als het stromen segmentdefinitie zullen worden geëvalueerd kan in de [&#x200B; het stromen sectie van de segmenteringsvraagtypes &#x200B;](#query-types) worden gevonden.
 
 Gelieve te merken op dat als een segmentdefinitie **zowel** een `inSegment` uitdrukking als een directe enige-gebeurtenisketting bevat, het niet voor het stromen segmentatie kan kwalificeren. Als u deze segmentdefinitie voor het stromen segmentatie wilt kwalificeren, zou u de directe enige-gebeurtenisketen zijn eigen segment moeten maken.
 

@@ -15,9 +15,9 @@ De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adob
 
 Begrijp uw profielinzichten door tot SQL toegang te hebben die hen macht, dan uw eigen inzichten produceert om uw klanten en hun ervaringen van de consument verder te onderzoeken die omhoog uw profielen maken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
-Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om uw inzichten&#39; SQL direct door Experience Platform UI aan te passen.
+Zie de [&#x200B; documentatie van de Mening SQL &#x200B;](../view-sql.md) voor meer informatie over hoe te om uw inzichten&#39; SQL direct door Experience Platform UI aan te passen.
 
-De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Profielen ](../guides/profiles.md) of een douane [ user-defined dashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
+De volgende inzichten zijn allen beschikbaar voor u als deel van het [&#x200B; dashboard van Profielen &#x200B;](../guides/profiles.md) of een douane [&#x200B; user-defined dashboard &#x200B;](../standard-dashboards.md) te gebruiken. Zie het [&#x200B; aanpassingsoverzicht &#x200B;](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [&#x200B; creeer en geef nieuwe widgets &#x200B;](../customize/custom-widgets.md) in de widgetbibliotheek en [&#x200B; user-defined dashboard &#x200B;](../standard-dashboards.md#create-widget) uit.
 
 ## Publiek overlapt door samenvoegbeleid {#audience-overlap-by-merge-policy}
 
@@ -64,7 +64,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Zie de [ overlap van het Publiek door de documentatie van de widget van het samenvoegbeleid ](../guides/profiles.md#audience-overlap-by-merge-policy) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; overlap van het Publiek door de documentatie van de widget van het samenvoegbeleid &#x200B;](../guides/profiles.md#audience-overlap-by-merge-policy) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Rapport publiek overlappen {#audience-overlap-report}
 
@@ -131,7 +131,7 @@ SELECT source_segment_name,
 
 +++
 
-Zie de [ documentatie van het het overlappende rapport van het publiek widget ](../guides/profiles.md#audience-overlap-report) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; documentatie van het het overlappende rapport van het publiek widget &#x200B;](../guides/profiles.md#audience-overlap-report) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Soorten publiek (aantal) {#audiences}
 
@@ -159,7 +159,7 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Zie de [ documentatie van widgets van het publiek ](../guides/profiles.md#audiences) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; documentatie van widgets van het publiek &#x200B;](../guides/profiles.md#audiences) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Soorten publiek toegewezen aan doelstatus {#audiences-mapped-to-destination-status}
 
@@ -191,7 +191,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Zie het [ publiek dat aan de documentatie van widget van de bestemmingsstatus ](../guides/profiles.md#audiences-mapped-to-destination-status) voor informatie over de verschijning en de functionaliteit van dit insight in kaart wordt gebracht.
+Zie het [&#x200B; publiek dat aan de documentatie van widget van de bestemmingsstatus &#x200B;](../guides/profiles.md#audiences-mapped-to-destination-status) voor informatie over de verschijning en de functionaliteit van dit insight in kaart wordt gebracht.
 
 ## Grootte publiek {#audiences-size}
 
@@ -224,7 +224,7 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Zie de [ documentatie van de de groottewidget van het publiek ](../guides/profiles.md#audiences-size) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; documentatie van de de groottewidget van het publiek &#x200B;](../guides/profiles.md#audiences-size) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## AI-distributie van scores door klant {#customer-ai-distribution-of-scores}
 
@@ -361,7 +361,7 @@ SELECT b.model_name,
 
 +++
 
-Zie de [ AI van de Klant distributie van de documentatie van de scores widget ](../guides/profiles.md#customer-ai-distribution-of-scores) voor informatie over de verschijning en de functionaliteit van deze insight.
+Zie de [&#x200B; AI van de Klant distributie van de documentatie van de scores widget &#x200B;](../guides/profiles.md#customer-ai-distribution-of-scores) voor informatie over de verschijning en de functionaliteit van deze insight.
 
 ## Overzicht van AI-scores van klant {#customer-ai-scoring-summary}
 
@@ -402,7 +402,7 @@ SELECT model_name,
 
 +++
 
-Zie de [ AI het scoren van de Klant summiere widget documentatie ](../guides/profiles.md#customer-ai-scoring-summary) voor informatie over de verschijning en de functionaliteit van deze insight.
+Zie de [&#x200B; AI het scoren van de Klant summiere widget documentatie &#x200B;](../guides/profiles.md#customer-ai-scoring-summary) voor informatie over de verschijning en de functionaliteit van deze insight.
 
 ## Identiteitsoverlapping {#identity-overlap}
 
@@ -459,7 +459,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Zie de [ documentatie van de Overlap van de Identiteit ](../guides/profiles.md#identity-overlap) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; documentatie van de Overlap van de Identiteit &#x200B;](../guides/profiles.md#identity-overlap) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Aantal profielen {#profile-count}
 
@@ -481,9 +481,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-De volledige informatie over de verschijning en de functionaliteit van dit insight kan in de [ gids van de tellingshoek van het Profiel ](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=nl-NL#profile-count) worden gevonden.
+De volledige informatie over de verschijning en de functionaliteit van dit insight kan in de [&#x200B; gids van de tellingshoek van het Profiel &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=nl-NL#profile-count) worden gevonden.
 
-Zie de [ documentatie van de tellingswidget van het Profiel ](../guides/profiles.md#profile-count) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; documentatie van de tellingswidget van het Profiel &#x200B;](../guides/profiles.md#profile-count) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Wijziging van aantal profielen {#profile-count-change}
 
@@ -528,7 +528,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Zie de [ documentatie van de de veranderingsverandering van het Aantal van het Profiel ](../guides/profiles.md#profile-count-change) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; documentatie van de de veranderingsverandering van het Aantal van het Profiel &#x200B;](../guides/profiles.md#profile-count-change) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Tendens van wijzigingen in aantal profielen {#profile-count-change-trend}
 
@@ -562,7 +562,7 @@ SELECT date_key,
 
 +++
 
-Zie de [ documentatie van de de veranderingstrend van het Aantal van het Profiel widget ](../guides/profiles.md#profile-count-change-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; documentatie van de de veranderingstrend van het Aantal van het Profiel widget &#x200B;](../guides/profiles.md#profile-count-change-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Tendens aantal profielen {#profile-count-trend}
 
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-Zie de [ documentatie van de de telendetrend van het Profiel widget ](../guides/profiles.md#profile-count-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; documentatie van de de telendetrend van het Profiel widget &#x200B;](../guides/profiles.md#profile-count-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Profielen op identiteit {#profiles-by-identity}
 
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Zie [ Profielen door de documentatie van de identiteitswidget ](../guides/profiles.md#profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie [&#x200B; Profielen door de documentatie van de identiteitswidget &#x200B;](../guides/profiles.md#profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Ontwikkeling van aantal profielen {#profiles-count-change-trend}
 
@@ -656,7 +656,7 @@ SELECT date_key,
 
 +++
 
-Zie de [ documentatie van de verandering trendverandering van het aantal Profielen widget ](../guides/profiles.md#profiles-count-change-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; documentatie van de verandering trendverandering van het aantal Profielen widget &#x200B;](../guides/profiles.md#profiles-count-change-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Tendens van verandering van aantal profielen door identiteit {#profiles-count-change-trend-by-identity}
 
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-Zie de [ trend van de verandering van de tellingen van Profielen door de documentatie van de identiteitswidget ](../guides/profiles.md#profiles-count-change-trend-by-identity) voor informatie over de verschijning en de functionaliteit van deze insight.
+Zie de [&#x200B; trend van de verandering van de tellingen van Profielen door de documentatie van de identiteitswidget &#x200B;](../guides/profiles.md#profiles-count-change-trend-by-identity) voor informatie over de verschijning en de functionaliteit van deze insight.
 
 ## Eén identiteitsprofiel {#single-identity-profiles}
 
@@ -722,7 +722,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Zie de [ Enige documentatie van de identiteitsprofielen widget ](../guides/profiles.md#single-identity-profiles) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; Enige documentatie van de identiteitsprofielen widget &#x200B;](../guides/profiles.md#single-identity-profiles) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Eén identiteitsprofiel op basis van identiteit {#single-identity-profiles-by-identity}
 
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Zie [ Enige identiteitsprofielen door de documentatie van identiteitskaart widget ](../guides/profiles.md#single-identity-profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie [&#x200B; Enige identiteitsprofielen door de documentatie van identiteitskaart widget &#x200B;](../guides/profiles.md#single-identity-profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Niet-gesegmenteerde profielen {#unsegmented-profiles}
 
@@ -773,12 +773,12 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Zie de [ Unsegmented de documentatie van de profielwidget ](../guides/profiles.md#unsegmented-profiles) voor informatie over de verschijning en de functionaliteit van dit insight.
+Zie de [&#x200B; Unsegmented de documentatie van de profielwidget &#x200B;](../guides/profiles.md#unsegmented-profiles) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Volgende stappen
 
 Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren.
 
-Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
+Zie de [&#x200B; documentatie van de Mening SQL &#x200B;](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-U kunt SQL ook lezen en begrijpen die inzichten voor het [ publiek ](./audiences.md), [ Profielen van de Rekening ](./account-profiles.md), en [ Doelen ](./destinations.md) dashboards van Doelen produceert.
+U kunt SQL ook lezen en begrijpen die inzichten voor het [&#x200B; publiek &#x200B;](./audiences.md), [&#x200B; Profielen van de Rekening &#x200B;](./account-profiles.md), en [&#x200B; Doelen &#x200B;](./destinations.md) dashboards van Doelen produceert.

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Commerciële variabelen uit analysegegevens retourneren en gebruiken
 
-De Dienst van de Vraag van het gebruik om de gegevens te beheren die van Adobe Analytics in Adobe Experience Platform als datasets worden opgenomen. De volgende secties verstrekken steekproefvragen die u kunt gebruiken om tot de het verhandelen variabelen in uw datasets van Analytics toegang te hebben. Zie de documentatie voor meer informatie over [ hoe te om de gegevens van Adobe Analytics in te voeren en in kaart te brengen ](../../sources/connectors/adobe-applications/mapping/analytics.md) door de bron van Analytics
+De Dienst van de Vraag van het gebruik om de gegevens te beheren die van Adobe Analytics in Adobe Experience Platform als datasets worden opgenomen. De volgende secties verstrekken steekproefvragen die u kunt gebruiken om tot de het verhandelen variabelen in uw datasets van Analytics toegang te hebben. Zie de documentatie voor meer informatie over [&#x200B; hoe te om de gegevens van Adobe Analytics in te voeren en in kaart te brengen &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) door de bron van Analytics
 
 ## Merchandiings-variabelen {#merchandising-variables}
 
@@ -26,7 +26,7 @@ In Adobe Analytics kunnen aangepaste productgegevens worden verzameld via specia
 
 Deze variabelen worden ook wel handelsvariabelen in de productsyntaxis genoemd. Op deze manier kunt u informatie verzamelen, zoals een &quot;kortingsbedrag&quot; per product of informatie over de &quot;locatie op pagina&quot; van het product in de zoekresultaten van de klant.
 
-Meer leren over het gebruiken van de productsyntaxis, te lezen gelieve de documentatie van Adobe Analytics op [ uitvoerend eVars gebruikend productsyntaxis ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=nl-NL#implement-using-product-syntax).
+Meer leren over het gebruiken van de productsyntaxis, te lezen gelieve de documentatie van Adobe Analytics op [&#x200B; uitvoerend eVars gebruikend productsyntaxis &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=nl-NL#implement-using-product-syntax).
 
 In de volgende secties worden de XDM-velden beschreven die nodig zijn voor toegang tot de variabelen voor handelsdoeleinden in uw gegevensset [!DNL Analytics] :
 
@@ -127,7 +127,7 @@ Bij het rapporteren zijn de bestellingen, opbrengsten, productweergaven en winke
 | intern zoeken:zomershirt | 19,99 | 1 | 1 | 1 |
 | interne zoekopdracht:winterhoed | 12,99 | 1 | 1 | 1 |
 
-Om meer over het gebruiken van de syntaxis van de omzetvariabele te leren, te lezen gelieve de documentatie van Adobe Analytics op [ uitvoerend eVars gebruikend de syntaxis van de omzettingsvariabele ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=nl-NL#implement-using-conversion-variable-syntax).
+Om meer over het gebruiken van de syntaxis van de omzetvariabele te leren, te lezen gelieve de documentatie van Adobe Analytics op [&#x200B; uitvoerend eVars gebruikend de syntaxis van de omzettingsvariabele &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=nl-NL#implement-using-conversion-variable-syntax).
 
 Hieronder worden de XDM-velden weergegeven die de syntaxis van de conversievariabele in uw [!DNL Analytics] -dataset produceren:
 
@@ -220,4 +220,4 @@ LIMIT 100
 
 Door dit document te lezen, zou u beter inzicht in moeten hebben hoe te om een koopvaardigende eVar terug te keren gebruikend productsyntaxis en een waarde aan een specifiek product met de syntaxis van de omzettingsvariabele te binden.
 
-Als u dit nog niet hebt gedaan, zou u de [ inzichten van Analytics voor Web en mobiele interactieverklaring ](./analytics-insights.md) daarna moeten lezen. Het verstrekt gemeenschappelijke gebruiksgevallen en toont hoe te om de Dienst van de Vraag te gebruiken om actionable inzichten van Web en mobiele gegevens van Adobe Analytics tot stand te brengen.
+Als u dit nog niet hebt gedaan, zou u de [&#x200B; inzichten van Analytics voor Web en mobiele interactieverklaring &#x200B;](./analytics-insights.md) daarna moeten lezen. Het verstrekt gemeenschappelijke gebruiksgevallen en toont hoe te om de Dienst van de Vraag te gebruiken om actionable inzichten van Web en mobiele gegevens van Adobe Analytics tot stand te brengen.

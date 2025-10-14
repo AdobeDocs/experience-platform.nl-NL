@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Het gegevenstype van het gegevenstype Verzameling van het Eind van de Lijst van Staten is een gegevenstype van de Gegevens van de Ervaring Model (XDM) dat voor het vertegenwoordigen van informatie met betrekking tot de beëindigende staat van diverse spelerattributen wordt ontworpen. Deze bevat de eigenschappen [!UICONTROL Player State Name] die de specifieke kenmerkstatus aangeven (bijvoorbeeld &quot;fullscreen&quot;, &quot;mute&quot;, &quot;closedCaptioning&quot;). Dit gegevenstype wordt gebruikt om de beginvoorwaarden van de verschillende spelerstatussen vast te leggen en te beschrijven.
 
-![ een diagram van Lijst van het gegevenstype van de Inzameling van het Eind van Staten.](../images/data-types/list-of-states-end-collection.png)
+![&#x200B; een diagram van Lijst van het gegevenstype van de Inzameling van het Eind van Staten.](../images/data-types/list-of-states-end-collection.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Vereist | Beschrijving |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|

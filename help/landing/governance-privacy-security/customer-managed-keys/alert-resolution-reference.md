@@ -47,7 +47,7 @@ Deze waarschuwing kan om de volgende redenen voorkomen:
 
 +++Als de toets is uitgeschakeld
 
-1. Navigeer aan de [ Azure Zeer belangrijke vault ](https://portal.azure.com/) die CMK bevat.
+1. Navigeer aan de [&#x200B; Azure Zeer belangrijke vault &#x200B;](https://portal.azure.com/) die CMK bevat.
 2. Selecteer de sleutel die aan Adobe Experience Platform is gekoppeld.
 3. Verifieer dat de status van de sleutel aan **Toegelaten** wordt geplaatst.
 4. Als de sleutel gehandicapt is, laat het toe gebruikend het Azure portaal of het CLI bevel `az keyvault key enable`.
@@ -196,4 +196,4 @@ Deze waarschuwing wordt weergegeven wanneer Adobe CMK een onbekend, niet-onderst
 
 ## Volgende stappen
 
-Om te begrijpen hoe het alarm wordt teweeggebracht en hoe te om IP voegend op lijst van gewenste personen voor [!DNL Azure] CMK te vormen, zie [ alarm en IP lijst van gewenste personen voor Azure CMK ](./azure/alerts-and-ip-access.md) gids vormen.
+Om te begrijpen hoe het alarm wordt teweeggebracht en hoe te om IP voegend op lijst van gewenste personen voor [!DNL Azure] CMK te vormen, zie [&#x200B; alarm en IP lijst van gewenste personen voor Azure CMK &#x200B;](./azure/alerts-and-ip-access.md) gids vormen.

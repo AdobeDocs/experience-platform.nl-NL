@@ -87,7 +87,7 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-Met het volgende Pandas-knooppunt kunt u elke `pd.DataFrame` -methode of elke algemene pandaserfunctie op hoofdniveau importeren. Meer over de methodes van Pandas leren, bezoek de [ Pandas methodedocumentatie ](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Voor meer informatie over hoogste niveaufuncties, bezoek de [ Pandas API verwijzingsgids voor algemene functies ](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+Met het volgende Pandas-knooppunt kunt u elke `pd.DataFrame` -methode of elke algemene pandaserfunctie op hoofdniveau importeren. Meer over de methodes van Pandas leren, bezoek de [&#x200B; Pandas methodedocumentatie &#x200B;](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Voor meer informatie over hoogste niveaufuncties, bezoek de [&#x200B; Pandas API verwijzingsgids voor algemene functies &#x200B;](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
 Het onderstaande knooppunt gebruikt `"import": "map"` om de methodenaam als een tekenreeks in de parameters te importeren, gevolgd door de parameters in te voeren als een kaartfunctie. In het onderstaande voorbeeld wordt dit gedaan met `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` . Nadat u de kaart hebt geplaatst, kunt u `inplace` instellen als `True` of `False` . Stel `inplace` in als `True` of `False` op basis van of u transformatie wilt toepassen. Standaard maakt `"inplace": False` een nieuwe kolom. Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` kan een enkele kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld wordt `device` opgegeven.
 
@@ -132,7 +132,7 @@ msg6 = model_train.process(msg5)
 | mode | Trein/test (tekenreeks). |
 | model_path | Pad naar het model lokaal opslaan in onx-indeling. |
 | params.model | Absoluut importpad naar het model (tekenreeks), bijv.: `sklearn.linear_model.LogisticRegression` . |
-| params.model_params | De modelhyperparameters, zien [ klearn API (kaart/dict) ](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentatie voor meer informatie. |
+| params.model_params | De modelhyperparameters, zien [&#x200B; klearn API (kaart/dict) &#x200B;](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentatie voor meer informatie. |
 | node_instance.process(data_message_from_previous_node) | De methode `process()` neemt DataMsg van de vorige knoop en past transformatie toe. Dit hangt van de huidige knoop af die wordt gebruikt. |
 
 ### Splitsen
@@ -146,4 +146,4 @@ msg5 = splitter.process(msg4)
 
 ## Volgende stappen
 
-De volgende stap bestaat uit het maken van knooppunten voor gebruik bij het scoren van een Real-Time Machine Learning-model. Voor meer informatie, bezoek de [ Real-time Machine Lerende notitieboekjecids ](./rtml-authoring-notebook.md).
+De volgende stap bestaat uit het maken van knooppunten voor gebruik bij het scoren van een Real-Time Machine Learning-model. Voor meer informatie, bezoek de [&#x200B; Real-time Machine Lerende notitieboekjecids &#x200B;](./rtml-authoring-notebook.md).

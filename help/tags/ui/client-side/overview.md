@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Deze sectie bevat informatie die nuttig is voor het beheer van client-side tagbewerkingen in Adobe Experience Platform.
 
@@ -23,6 +23,6 @@ Deze sectie bevat informatie die nuttig is voor het beheer van client-side tagbe
 
 * [**Asynchrone implementatie van Experience Cloud JavaScript**](asynchronous-deployment.md)
 
-  Prestaties en het niet blokkeren van de implementatie van de JavaScript-bibliotheken die onze producten vereisen, worden steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed] ](https://developers.google.com/speed/pagespeed/insights/) raden gebruikers aan hun manier van implementatie van de [!DNL Adobe] -bibliotheken op hun site te wijzigen. In dit artikel wordt uitgelegd hoe u de Adobe JavaScript-bibliotheken asynchroon kunt gebruiken.
+  Prestaties en het niet blokkeren van de implementatie van de JavaScript-bibliotheken die onze producten vereisen, worden steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed] &#x200B;](https://developers.google.com/speed/pagespeed/insights/) raden gebruikers aan hun manier van implementatie van de [!DNL Adobe] -bibliotheken op hun site te wijzigen. In dit artikel wordt uitgelegd hoe u de Adobe JavaScript-bibliotheken asynchroon kunt gebruiken.
 
 * [**het Beleid van de Veiligheid van de Inhoud**](content-security-policy.md) (CSP) is een hulpmiddel helpen bepaalde soorten op browser-gebaseerde aanvallen, zoals dwars-plaats scripting (XSS) ontdekken en verlichten.  In dit artikel wordt beschreven wat het effect van CSP is op de implementatie van tags en wat u eraan kunt doen.

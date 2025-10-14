@@ -19,7 +19,7 @@ ht-degree: 0%
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `address` | Het technische adres van e-mail zoals algemeen bepaald in RFC2822 en verdere normen (bijvoorbeeld, `name@domain.com`).<br><br> in XDM, moeten de e-mailadressen een geldig top-level domein bevatten om bevestiging over te gaan. Verwijs naar het volgende [ document ](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) voor een volledige lijst van geldige top-level domeinen zoals die door Internet worden bepaald Toegewezen Instantie van Aantallen (IANA). |
+| `address` | Het technische adres van e-mail zoals algemeen bepaald in RFC2822 en verdere normen (bijvoorbeeld, `name@domain.com`).<br><br> in XDM, moeten de e-mailadressen een geldig top-level domein bevatten om bevestiging over te gaan. Verwijs naar het volgende [&#x200B; document &#x200B;](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) voor een volledige lijst van geldige top-level domeinen zoals die door Internet worden bepaald Toegewezen Instantie van Aantallen (IANA). |
 | `label` | Aanvullende weergavegegevens die beschikbaar kunnen zijn. Als een e-mailbericht bijvoorbeeld een uitgebreide adresweergave van `John Smith smithjr@company.uk` in Microsoft Outlook heeft, wordt `John Smith` in dit veld geplaatst. |
 | `primary` | Geeft aan of dit het primaire e-mailadres van de betrokkene is. Een profiel kan slechts één `primary` e-mailadres op een bepaald tijdstip hebben. |
 | `status` | Geeft aan of het e-mailadres momenteel kan worden gebruikt |
@@ -31,5 +31,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype van het e-mailadres:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)

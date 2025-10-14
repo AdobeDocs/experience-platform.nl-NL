@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Het eindpunt van entiteiten (de toegang van het Profiel)
 
-Met Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie bij de toegang tot van profielen die [!DNL Experience Platform] UI gebruiken, gelieve te verwijzen naar de [ de gebruikersgids van het Profiel ](../ui/user-guide.md).
+Met Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie bij de toegang tot van profielen die [!DNL Experience Platform] UI gebruiken, gelieve te verwijzen naar de [&#x200B; de gebruikersgids van het Profiel &#x200B;](../ui/user-guide.md).
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] ](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] &#x200B;](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 >[!BEGINSHADEBOX]
 
@@ -67,7 +67,7 @@ Om tot een entiteit van het Profiel toegang te hebben, moet u **de volgende vraa
 - `entityId`: De id van de entiteit die u probeert op te halen.
 - `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
 
-Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
+Een volledige lijst van geldige parameters wordt verstrekt in de [&#x200B; sectie van vraagparameters &#x200B;](#query-parameters) van appendix.
 
 **Verzoek**
 
@@ -180,7 +180,7 @@ Om tot de B2B gegevens van de Rekening toegang te hebben, moet u **&#x200B;**&#x
 - `entityId`: De id van de entiteit die u probeert op te halen.
 - `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
 
-Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
+Een volledige lijst van geldige parameters wordt verstrekt in de [&#x200B; sectie van vraagparameters &#x200B;](#query-parameters) van appendix.
 
 **Verzoek**
 
@@ -272,7 +272,7 @@ Om tot een entiteit van de Kans B2B toegang te hebben, moet u **&#x200B;**&#x200
 - `entityId`: De id van de entiteit die u probeert op te halen.
 - `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
 
-Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
+Een volledige lijst van geldige parameters wordt verstrekt in de [&#x200B; sectie van vraagparameters &#x200B;](#query-parameters) van appendix.
 
 **Verzoek**
 
@@ -1257,7 +1257,7 @@ Een geslaagde reactie retourneert HTTP status 202 met een lege antwoordinstantie
 
 ## Volgende stappen
 
-In deze handleiding hebt u toegang tot gegevensvelden, profielen en gegevens uit de tijdreeks van [!DNL Real-Time Customer Profile] . Leren hoe te om tot andere gegevensmiddelen toegang te hebben die in [!DNL Experience Platform] worden opgeslagen, zie het [ overzicht van de Toegang van Gegevens ](../../data-access/home.md).
+In deze handleiding hebt u toegang tot gegevensvelden, profielen en gegevens uit de tijdreeks van [!DNL Real-Time Customer Profile] . Leren hoe te om tot andere gegevensmiddelen toegang te hebben die in [!DNL Experience Platform] worden opgeslagen, zie het [&#x200B; overzicht van de Toegang van Gegevens &#x200B;](../../data-access/home.md).
 
 ## Bijlage {#appendix}
 

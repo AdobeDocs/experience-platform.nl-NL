@@ -16,7 +16,7 @@ Voor meer beveiliging biedt Adobe Experience Platform [!DNL Query Service] nativ
 
 ## Vereisten
 
-In dit document wordt ervan uitgegaan dat u al een clienttoepassing van een andere fabrikant hebt gedownload voor gebruik met uw Experience Platform-gegevens. Specifieke instructies over hoe te om SSL veiligheid op te nemen wanneer het verbinden met een derdecliënt worden gevonden in hun respectieve documentatie van de verbindingsgids. Voor een lijst van alle [!DNL Query Service] gesteunde cliënten, zie het [ overzicht van cliëntverbindingen ](./overview.md).
+In dit document wordt ervan uitgegaan dat u al een clienttoepassing van een andere fabrikant hebt gedownload voor gebruik met uw Experience Platform-gegevens. Specifieke instructies over hoe te om SSL veiligheid op te nemen wanneer het verbinden met een derdecliënt worden gevonden in hun respectieve documentatie van de verbindingsgids. Voor een lijst van alle [!DNL Query Service] gesteunde cliënten, zie het [&#x200B; overzicht van cliëntverbindingen &#x200B;](./overview.md).
 
 ## Beschikbare SSL-opties {#available-ssl-options}
 
@@ -33,8 +33,8 @@ De verschillende `sslmode` -parameterwaarden bieden verschillende beveiligingsni
 | `allow` | Ja | Nee | Codering is vereist voor alle communicatie. Het netwerk wordt vertrouwd om met de correcte server te verbinden. |
 | `prefer` | Ja | Nee | Codering is vereist voor alle communicatie. Het netwerk wordt vertrouwd om met de correcte server te verbinden. |
 | `require` | Ja | Nee | Codering is vereist voor alle communicatie. Het netwerk wordt vertrouwd om met de correcte server te verbinden. ServerSSL-certificaatvalidatie is niet vereist. |
-| `verify-ca` | Ja | Afhankelijk van CA-beleid | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de [!DNL PostgreSQL] -thuismap. [ de Details worden verstrekt hieronder ](#instructions) |
-| `verify-full` | Ja | Ja | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de [!DNL PostgreSQL] -thuismap. [ Details worden verstrekt hieronder ](#instructions). |
+| `verify-ca` | Ja | Afhankelijk van CA-beleid | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de [!DNL PostgreSQL] -thuismap. [&#x200B; de Details worden verstrekt hieronder &#x200B;](#instructions) |
+| `verify-full` | Ja | Ja | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de [!DNL PostgreSQL] -thuismap. [&#x200B; Details worden verstrekt hieronder &#x200B;](#instructions). |
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ Wanneer u een verbinding van derden tot stand brengt met een Experience Platform
 
 >[!IMPORTANT]
 >
->De TLS/SSL-certificaten op productieomgevingen voor de API voor interactieve posters van Query Service zijn op woensdag 24 januari 2024 vernieuwd.<br> Hoewel dit een jaarlijks vereiste is, is het wortelcertificaat in de ketting ook veranderd aangezien de Adobe TLS/SSL certificaatleverancier hun certificaathiërarchie heeft bijgewerkt. Dit kan gevolgen hebben voor bepaalde klanten van Postgres als hun lijst van de Autoriteiten van het Certificaat de wortelcert mist. Een PSQL CLI-client moet bijvoorbeeld de basiscertificaten toevoegen aan een expliciet bestand `~/postgresql/root.crt` , anders kan dit resulteren in een fout. Bijvoorbeeld `psql: error: SSL error: certificate verify failed` . Zie de [ officiële documentatie PostgreSQL ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) voor meer informatie over deze kwestie.<br> het wortelcertificaat om toe te voegen kan van [ https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem) worden gedownload.
+>De TLS/SSL-certificaten op productieomgevingen voor de API voor interactieve posters van Query Service zijn op woensdag 24 januari 2024 vernieuwd.<br> Hoewel dit een jaarlijks vereiste is, is het wortelcertificaat in de ketting ook veranderd aangezien de Adobe TLS/SSL certificaatleverancier hun certificaathiërarchie heeft bijgewerkt. Dit kan gevolgen hebben voor bepaalde klanten van Postgres als hun lijst van de Autoriteiten van het Certificaat de wortelcert mist. Een PSQL CLI-client moet bijvoorbeeld de basiscertificaten toevoegen aan een expliciet bestand `~/postgresql/root.crt` , anders kan dit resulteren in een fout. Bijvoorbeeld `psql: error: SSL error: certificate verify failed` . Zie de [&#x200B; officiële documentatie PostgreSQL &#x200B;](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) voor meer informatie over deze kwestie.<br> het wortelcertificaat om toe te voegen kan van [&#x200B; https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem &#x200B;](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem) worden gedownload.
 
 Om een veilige verbinding te verzekeren, moet SSL gebruik op zowel de cliënt als de server worden gevormd alvorens de verbinding wordt gemaakt. Als SSL slechts op de server wordt gevormd, zou de cliënt gevoelige informatie zoals wachtwoorden kunnen verzenden alvorens het wordt gevestigd dat de server hoge veiligheid vereist.
 
@@ -64,10 +64,10 @@ Als u een strikter beveiligingsbeheer nodig hebt dan `sslmode=require` , kunt u 
 >
 >Er zijn veel opties beschikbaar om een SSL-certificaat te verkrijgen. Vanwege de toenemende trend in schurkencertificaten wordt DigiCert in deze handleiding gebruikt omdat deze wereldwijd een vertrouwde leverancier zijn van hoogwaardige TLS/SSL-, PKI-, IoT- en ondertekeningsoplossingen.
 
-1. Ga aan [ de lijst van beschikbare DigiCert wortelcertificaten ](https://www.digicert.com/kb/digicert-root-certificates.htm)
+1. Ga aan [&#x200B; de lijst van beschikbare DigiCert wortelcertificaten &#x200B;](https://www.digicert.com/kb/digicert-root-certificates.htm)
 1. Zoek naar &quot;[!DNL DigiCert Global Root G2]&quot;van de lijst van beschikbare certificaten.
 1. Selecteer [!DNL **PEM van de Download**] om het dossier aan uw lokale machine te downloaden.
-   ![ de lijst van beschikbare DigiCert wortelcertificaten met benadrukte Download PEM.](../images/clients/ssl-modes/digicert.png)
+   ![&#x200B; de lijst van beschikbare DigiCert wortelcertificaten met benadrukte Download PEM.](../images/clients/ssl-modes/digicert.png)
 1. Wijzig de naam van het beveiligingscertificaatbestand in `root.crt` .
 1. Kopieer het bestand naar de map [!DNL PostgreSQL] . Het vereiste bestandspad is afhankelijk van uw besturingssysteem. Als de map nog niet bestaat, maakt u de map.
    - Als u macOS gebruikt, is het pad `/Users/<username>/.postgresql`
@@ -83,4 +83,4 @@ Nadat het [!DNL DigiCert Global Root G2] CRT-bestand beschikbaar is in de [!DNL 
 
 Door dit document te lezen, hebt u een beter inzicht in de beschikbare SSL-opties voor het aansluiten van een client van derden op [!DNL Query Service] en ook in de manier waarop u de optie `verify-full` SSL kunt inschakelen om uw gegevens in beweging te coderen.
 
-Als u dit niet reeds hebt gedaan, volg de begeleiding bij [ verbindend een derdecliënt aan  [!DNL Query Service]](./overview.md).
+Als u dit niet reeds hebt gedaan, volg de begeleiding bij [&#x200B; verbindend een derdecliënt aan  [!DNL Query Service]](./overview.md).

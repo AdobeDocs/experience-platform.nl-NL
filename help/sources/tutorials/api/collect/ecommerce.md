@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Een gegevensstroom maken voor e-commercebronnen met de API [!DNL Flow Service]
 
-Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een e-commercebron en het brengen van hen aan Experience Platform gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een e-commercebron en het brengen van hen aan Experience Platform gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Om een gegevensstroom tot stand te brengen, moet u reeds een geldige identiteitskaart van de basisverbinding met een E-commercebron hebben. Als u dit identiteitskaart niet hebt, dan zie het [ bronoverzicht ](../../../home.md#ecommerce) voor een lijst van E-handelbronnen die u een basisverbinding met kunt tot stand brengen.
+>* Om een gegevensstroom tot stand te brengen, moet u reeds een geldige identiteitskaart van de basisverbinding met een E-commercebron hebben. Als u dit identiteitskaart niet hebt, dan zie het [&#x200B; bronoverzicht &#x200B;](../../../home.md#ecommerce) voor een lijst van E-handelbronnen die u een basisverbinding met kunt tot stand brengen.
 >* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC.
 
 ## Aan de slag
@@ -26,15 +26,15 @@ Dit leerprogramma behandelt de stappen voor het terugwinnen van gegevens van een
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde raamwerk waarmee Experience Platform gegevens over de ervaring van klanten organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ de Registratie API van het Schema ](../../../../xdm/api/getting-started.md): Leer hoe te met succes vraag aan de Registratie API van het Schema uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; de Registratie API van het Schema &#x200B;](../../../../xdm/api/getting-started.md): Leer hoe te met succes vraag aan de Registratie API van het Schema uitvoeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor de gegevenslocatie en -lijn binnen [!DNL Experience Platform] .
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): met de API voor batchverwerking kunt u gegevens in [!DNL Experience Platform] invoeren als batchbestanden.
 * [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../landing/api-guide.md).
 
 ## Een bronverbinding maken {#source}
 
@@ -116,15 +116,15 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 Als u de brongegevens in Experience Platform wilt gebruiken, moet u een doelschema maken om de brongegevens naar wens te structureren. Het doelschema wordt dan gebruikt om een dataset van Experience Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://www.adobe.io/experience-platform-apis/references/schema-registry/) uit te voeren.
+Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Registratie API van het Schema &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/) uit te voeren.
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](../../../../xdm/api/schemas.md).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [&#x200B; creërend een schema gebruikend API &#x200B;](../../../../xdm/api/schemas.md).
 
 ## Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
+Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Dienst API van de Catalogus uit te voeren &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [&#x200B; het creëren van een dataset gebruikend API &#x200B;](../../../../catalog/api/create-dataset.md).
 
 ## Een doelverbinding maken {#target-connection}
 
@@ -190,7 +190,7 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Om een mappingsreeks tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
+Om een mappingsreeks tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
 
 **API formaat**
 
@@ -621,10 +621,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `flowSpec.id` | De [ identiteitskaart van de stroomspecificatie ](#specs) die in de vorige stap wordt teruggewonnen. |
-| `sourceConnectionIds` | [ bron verbindingsidentiteitskaart ](#source) die in een vroegere stap wordt teruggewonnen. |
-| `targetConnectionIds` | De [ identiteitskaart van de doelverbinding ](#target-connection) die in een vroegere stap wordt teruggewonnen. |
-| `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt teruggewonnen. |
+| `flowSpec.id` | De [&#x200B; identiteitskaart van de stroomspecificatie &#x200B;](#specs) die in de vorige stap wordt teruggewonnen. |
+| `sourceConnectionIds` | [&#x200B; bron verbindingsidentiteitskaart &#x200B;](#source) die in een vroegere stap wordt teruggewonnen. |
+| `targetConnectionIds` | De [&#x200B; identiteitskaart van de doelverbinding &#x200B;](#target-connection) die in een vroegere stap wordt teruggewonnen. |
+| `transformations.params.mappingId` | [&#x200B; afbeelding identiteitskaart &#x200B;](#mapping) die in een vroegere stap wordt teruggewonnen. |
 | `transformations.params.mappingId` | De toewijzings-id die aan uw e-commercebron is gekoppeld. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
 | `scheduleParams.frequency` | De `frequency` waarbij de gegevensstroom gegevens verzamelt. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week` . |
@@ -643,7 +643,7 @@ Een geslaagde reactie retourneert de id `id` van de nieuwe gegevensstroom.
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [ controledataflows in API ](../monitor.md)
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [&#x200B; controledataflows in API &#x200B;](../monitor.md)
 
 ## Volgende stappen
 

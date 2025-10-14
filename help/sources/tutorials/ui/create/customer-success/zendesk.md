@@ -17,9 +17,9 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Zendesk] -bronverbind
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Vereiste referenties verzamelen
@@ -31,17 +31,17 @@ Als u toegang wilt krijgen tot uw [!DNL Zendesk] -account op Experience Platform
 | Subdomein | Het unieke domein dat specifiek is voor uw account dat tijdens het registratieproces is gemaakt. | `yoursubdomain` |
 | Toegangstoken | Zendesk API-token. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
-Voor meer informatie bij het voor authentiek verklaren van uw [!DNL Zendesk] bron, zie het [[!DNL Zendesk]  bronoverzicht ](../../../../connectors/customer-success/zendesk.md).
+Voor meer informatie bij het voor authentiek verklaren van uw [!DNL Zendesk] bron, zie het [[!DNL Zendesk]  bronoverzicht &#x200B;](../../../../connectors/customer-success/zendesk.md).
 
-![ het teken van Zendesk API ](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![&#x200B; het teken van Zendesk API &#x200B;](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 ### Experience Platform-schema maken voor [!DNL Zendesk]
 
-Voordat u een [!DNL Zendesk] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema voor uw bron maakt. Zie het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+Voordat u een [!DNL Zendesk] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema voor uw bron maakt. Zie het leerprogramma op [&#x200B; creërend een schema van Experience Platform &#x200B;](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
-Voor extra begeleiding op uw [!DNL Zendesk] schema dat voor [!DNL Zendesk Search API] wordt vereist, verwijs naar de [ grenzen ](#limits) hieronder sectie.
+Voor extra begeleiding op uw [!DNL Zendesk] schema dat voor [!DNL Zendesk Search API] wordt vereist, verwijs naar de [&#x200B; grenzen &#x200B;](#limits) hieronder sectie.
 
-![ creeer Schema ](../../../../images/tutorials/create/zendesk/schema.png)
+![&#x200B; creeer Schema &#x200B;](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## Sluit uw [!DNL Zendesk] -account aan
 
@@ -51,7 +51,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Onder de *categorie van het Succes van de Klant 0&rbrace; &lbrace;, selecteer **[!UICONTROL Zendesk]**, en selecteer dan **[!UICONTROL Add data]**.*
 
-![ catalogus ](../../../../images/tutorials/create/zendesk/catalog.png)
+![&#x200B; catalogus &#x200B;](../../../../images/tutorials/create/zendesk/catalog.png)
 
 De pagina **[!UICONTROL Connect Zendesk account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -59,23 +59,23 @@ De pagina **[!UICONTROL Connect Zendesk account]** wordt weergegeven. Op deze pa
 
 Om een bestaande rekening te gebruiken, selecteer *Zendesk* rekening u een nieuwe dataflow met wilt tot stand brengen, dan selecteren **[!UICONTROL Next]** te werk te gaan.
 
-![ bestaand ](../../../../images/tutorials/create/zendesk/existing.png)
+![&#x200B; bestaand &#x200B;](../../../../images/tutorials/create/zendesk/existing.png)
 
 ### Nieuwe account
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ nieuw ](../../../../images/tutorials/create/zendesk/new.png)
+![&#x200B; nieuw &#x200B;](../../../../images/tutorials/create/zendesk/new.png)
 
 ### Gegevens selecteren
 
 Nadat de bron is geverifieerd, wordt de pagina bijgewerkt in een interactieve schemastructuur waarmee u de hiërarchie van uw gegevens kunt verkennen en inspecteren. Selecteer **[!UICONTROL Next]** om door te gaan.
 
-![ selecteren-gegevens ](../../../../images/tutorials/create/zendesk/select-data.png)
+![&#x200B; selecteren-gegevens &#x200B;](../../../../images/tutorials/create/zendesk/select-data.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een bronverbinding gemaakt en geverifieerd tussen uw [!DNL Zendesk] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om de gegevens van het klantensucces in Experience Platform ](../../dataflow/customer-success.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een bronverbinding gemaakt en geverifieerd tussen uw [!DNL Zendesk] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow creëren om de gegevens van het klantensucces in Experience Platform &#x200B;](../../dataflow/customer-success.md) te brengen.
 
 ## Aanvullende bronnen
 
@@ -87,19 +87,19 @@ In de volgende overzichtsstappen kunt u controleren of u de [!DNL Zendesk] -bron
 
 Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Datasets]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Datasets] . In het scherm [!UICONTROL Dataset Activity] worden de details van uitvoeringen weergegeven.
 
-![ pagina van de Activiteit ](../../../../images/tutorials/create/zendesk/dataset-activity.png)
+![&#x200B; pagina van de Activiteit &#x200B;](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
 Vervolgens selecteert u de uitvoerings-id van de gegevensstroom die u wilt weergeven voor specifieke details over de gegevensstroom die wordt uitgevoerd.
 
-![ Dataflow pagina ](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
+![&#x200B; Dataflow pagina &#x200B;](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
 Selecteer ten slotte **[!UICONTROL Preview dataset]** om de gegevens weer te geven die zijn ingevoerd.
 
-![ de dataset van Zendesk ](../../../../images/tutorials/create/zendesk/preview-dataset.png)
+![&#x200B; de dataset van Zendesk &#x200B;](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
 U kunt uw Experience Platform-gegevens ook controleren aan de hand van de gegevens op uw pagina [!DNL Zendesk] > [!DNL Customers] .
 
-![ zendesk-klanten ](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
+![&#x200B; zendesk-klanten &#x200B;](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 
 ### Zendesk-schema
 
@@ -107,7 +107,7 @@ In de onderstaande tabel staan de ondersteunde toewijzingen die moeten worden in
 
 >[!TIP]
 >
->Zie [ het Onderzoek API van Zendesk > de Resultaten van het Onderzoek van de Uitvoer ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) voor meer informatie over API.
+>Zie [&#x200B; het Onderzoek API van Zendesk > de Resultaten van het Onderzoek van de Uitvoer &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) voor meer informatie over API.
 
 | Source | Type |
 |---|---|
@@ -152,8 +152,8 @@ In de onderstaande tabel staan de ondersteunde toewijzingen die moeten worden in
 
 ### Limieten {#limits}
 
-* Het [ Onderzoek API van Zendesk > de Resultaten van het Onderzoek van de Uitvoer ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) keert een maximum van 1000 verslagen per pagina terug.
+* Het [&#x200B; Onderzoek API van Zendesk > de Resultaten van het Onderzoek van de Uitvoer &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) keert een maximum van 1000 verslagen per pagina terug.
    * De waarde voor de parameter ``filter[type]`` wordt ingesteld op ``user`` en vandaar dat de Zendesk-verbinding alleen gebruikers retourneert.
    * Het aantal resultaten per pagina wordt beheerd door de parameter ``page[size]`` . De waarde wordt ingesteld op ``100`` . Dit wordt gedaan om de impact van de door Zendesk vastgestelde snelheidsbeperkingen te verminderen.
-   * Zie [ Beperkingen ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) en [ Paginering ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1).
-   * U kunt ook verwijzen naar [ het Pagineren door lijsten gebruikend curseurpaginering ](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).
+   * Zie [&#x200B; Beperkingen &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) en [&#x200B; Paginering &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1).
+   * U kunt ook verwijzen naar [&#x200B; het Pagineren door lijsten gebruikend curseurpaginering &#x200B;](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).

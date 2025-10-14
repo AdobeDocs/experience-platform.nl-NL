@@ -18,17 +18,17 @@ In deze stapsgewijze zelfstudie leert u hoe u in een gegevensset opgeslagen gege
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van hoe u een dataset maakt en vult. Zie het [ leerprogramma van de datasetverwezenlijking ](../../catalog/datasets/create.md) voor meer informatie.
+Deze zelfstudie vereist een goed begrip van hoe u een dataset maakt en vult. Zie het [&#x200B; leerprogramma van de datasetverwezenlijking &#x200B;](../../catalog/datasets/create.md) voor meer informatie.
 
 De volgende secties verstrekken extra informatie die u moet weten om met succes vraag aan Experience Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](../../landing/api-authentication.md) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](../../landing/api-authentication.md) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -40,7 +40,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -50,7 +50,7 @@ Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kop
 
 Deze zelfstudie volgt de stappen die in het onderstaande reeksdiagram worden beschreven en markeert de kernfunctionaliteit van de [!DNL Data Access] API.
 
-![ een opeenvolgingsdiagram van de de kernfunctionaliteit van de Toegang API van Gegevens.](../images/sequence_diagram.png)
+![&#x200B; een opeenvolgingsdiagram van de de kernfunctionaliteit van de Toegang API van Gegevens.](../images/sequence_diagram.png)
 
 Gebruik de API van [!DNL Catalog] om informatie over batches en bestanden op te halen. Gebruik de API [!DNL Data Access] om deze bestanden via HTTP te openen en te downloaden als volledige of gedeeltelijke downloads, afhankelijk van de grootte van het bestand.
 
@@ -61,7 +61,7 @@ Voordat u de API van [!DNL Data Access] kunt gaan gebruiken, moet u de locatie i
 - `GET /batches`: retourneert een lijst met batches in uw organisatie
 - `GET /dataSetFiles`: retourneert een lijst met bestanden binnen uw organisatie
 
-Voor een uitvoerige lijst van eindpunten in [!DNL Catalog] API, verwijs naar de [ API Verwijzing ](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Voor een uitvoerige lijst van eindpunten in [!DNL Catalog] API, verwijs naar de [&#x200B; API Verwijzing &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## Een lijst met batches in uw organisatie ophalen
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-Een volledige lijst van parameters en filters kan in de [ van de Catalogus API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/catalog/) worden gevonden.
+Een volledige lijst van parameters en filters kan in de [&#x200B; van de Catalogus API verwijzing &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/) worden gevonden.
 
 ## Een lijst ophalen van alle bestanden die tot een bepaalde batch behoren
 
@@ -418,7 +418,7 @@ Als de reactie is gelukt, wordt de inhoud van het bestand geretourneerd.
 
 Als u een specifiek bytebereik van een bestand wilt downloaden, geeft u een bereikkoptekst op tijdens een `GET /files/{FILE_ID}` -aanvraag naar de [!DNL Data Access] API. Als het bereik niet is opgegeven, downloadt de API standaard het gehele bestand.
 
-Het voorbeeld van HEAD in de [ vorige sectie ](#retrieve-the-metadata-of-a-file) geeft de grootte van een specifiek dossier in bytes.
+Het voorbeeld van HEAD in de [&#x200B; vorige sectie &#x200B;](#retrieve-the-metadata-of-a-file) geeft de grootte van een specifiek dossier in bytes.
 
 **API formaat**
 

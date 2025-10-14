@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Aanmelden bij Adobe Analytics for Target (A4T) via Experience Platform Web SDK
 
-Als u Adobe Target gebruikt voor personalisatie, kunt u kiezen welk systeem u wilt gebruiken voor het meten van de prestaties. Elk [ activiteit van het Doel ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=nl-NL) staat u toe om tussen Doel te selecteren rapporterend en Adobe Analytics rapporterend.
+Als u Adobe Target gebruikt voor personalisatie, kunt u kiezen welk systeem u wilt gebruiken voor het meten van de prestaties. Elk [&#x200B; activiteit van het Doel &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=nl-NL) staat u toe om tussen Doel te selecteren rapporterend en Adobe Analytics rapporterend.
 
 Als u Analytics-rapporten gebruikt, moet Adobe Target het volgende aan Analytics meedelen:
 
@@ -27,11 +27,11 @@ Adobe Experience Platform Web SDK steunt twee types van het registreren van Anal
 | Logmethode | Beschrijving |
 | --- | --- |
 | Logboekregistratie voor analyse op de server | Alle Analytics-resultaten die via de Edge Network worden verzonden, worden aangevuld met Target-gegevens aan de serverzijde, zonder dat u het detectieproces hoeft te doorlopen. |
-| Logboekregistratie voor clientanalyse | Het gegeven van het doel is teruggekeerd op de cliëntkant, toestaand u om gegevens aan Analytics manueel te verhogen en te verzenden gebruikend de [ Invoeging API van Gegevens ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=nl-NL). |
+| Logboekregistratie voor clientanalyse | Het gegeven van het doel is teruggekeerd op de cliëntkant, toestaand u om gegevens aan Analytics manueel te verhogen en te verzenden gebruikend de [&#x200B; Invoeging API van Gegevens &#x200B;](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=nl-NL). |
 
-De registrerenmethode wordt bepaald door of u Adobe Analytics hebt toegelaten op uw gevormde [ datastream ](../../../../datastreams/overview.md):
+De registrerenmethode wordt bepaald door of u Adobe Analytics hebt toegelaten op uw gevormde [&#x200B; datastream &#x200B;](../../../../datastreams/overview.md):
 
-![ Logging van de methodebeslissingsstroom ](../assets/analytics-logging.png)
+![&#x200B; Logging van de methodebeslissingsstroom &#x200B;](../assets/analytics-logging.png)
 
 ## Volgende stappen
 

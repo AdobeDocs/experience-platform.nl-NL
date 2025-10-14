@@ -60,7 +60,7 @@ Bekijk het volgende voorbeeld `users` array:
 
 De array bevat twee objecten die afzonderlijke gebruikers vertegenwoordigen die worden aangeduid met hun `key` -waarden (&quot;DavidSmith&quot; en &quot;user12345&quot;). &quot;DavidSmith&quot; heeft slechts één vermelde ID (hun e-mailadres), terwijl &quot;user12345&quot; twee ID (hun e-mailadres en ECID) heeft.
 
-Voor meer informatie bij het verstrekken van de informatie van de gebruikersidentiteit, zie de gids over [ identiteitsgegevens voor privacyverzoeken ](identity-data.md).
+Voor meer informatie bij het verstrekken van de informatie van de gebruikersidentiteit, zie de gids over [&#x200B; identiteitsgegevens voor privacyverzoeken &#x200B;](identity-data.md).
 
 
 ## Kan ik [!DNL Privacy Service] gebruiken om gegevens op te schonen die per ongeluk naar [!DNL Experience Platform] zijn verzonden?
@@ -77,11 +77,11 @@ Met de API of gebruikersinterface van [!DNL Privacy Service] kunt u gegevens ove
 
 ### De API gebruiken
 
-Om de status van een bepaalde baan terug te winnen die [!DNL Privacy Service] API gebruiken, doe een verzoek aan het wortel (`GET /`) eindpunt, gebruikend identiteitskaart van de baan in de verzoekweg. Voor meer details, zie de sectie op [ controlerend het statuut van een baan ](api/privacy-jobs.md#check-the-status-of-a-job) in de [!DNL Privacy Service] API gids.
+Om de status van een bepaalde baan terug te winnen die [!DNL Privacy Service] API gebruiken, doe een verzoek aan het wortel (`GET /`) eindpunt, gebruikend identiteitskaart van de baan in de verzoekweg. Voor meer details, zie de sectie op [&#x200B; controlerend het statuut van een baan &#x200B;](api/privacy-jobs.md#check-the-status-of-a-job) in de [!DNL Privacy Service] API gids.
 
 ### UI gebruiken
 
-Alle actieve taakaanvragen worden vermeld in de **[!UICONTROL Job Requests]** -widget op het [!DNL Privacy Service] UI-dashboard. De status voor elke taakaanvraag wordt weergegeven onder de kolom **[!UICONTROL Status]** . Voor meer informatie bij het bekijken van baanverzoeken in UI, gelieve te zien de [ gebruikersgids van Privacy Service ](ui/user-guide.md).
+Alle actieve taakaanvragen worden vermeld in de **[!UICONTROL Job Requests]** -widget op het [!DNL Privacy Service] UI-dashboard. De status voor elke taakaanvraag wordt weergegeven onder de kolom **[!UICONTROL Status]** . Voor meer informatie bij het bekijken van baanverzoeken in UI, gelieve te zien de [&#x200B; gebruikersgids van Privacy Service &#x200B;](ui/user-guide.md).
 
 ## Hoe kan ik de resultaten van mijn voltooide privacytaken downloaden?
 
@@ -91,11 +91,11 @@ De API van [!DNL Privacy Service] en de gebruikersinterface bieden beide methode
 
 Maak een verzoek aan het wortel (`GET /`) eindpunt in [!DNL Privacy Service] API, gebruikend identiteitskaart van de baan waarvan resultaten u in de verzoekweg wilt downloaden. Als de status van de taak is voltooid, neemt de API een attribuut `downloadURL` op in de hoofdtekst van de reactie. Dit kenmerk bevat een URL die u in de adresbalk van uw browser kunt plakken om het ZIP-bestand te downloaden.
 
-Voor meer details, zie de sectie op [ zoekend omhoog een baan door zijn identiteitskaart ](api/privacy-jobs.md#check-the-status-of-a-job) in de [!DNL Privacy Service] API gids.
+Voor meer details, zie de sectie op [&#x200B; zoekend omhoog een baan door zijn identiteitskaart &#x200B;](api/privacy-jobs.md#check-the-status-of-a-job) in de [!DNL Privacy Service] API gids.
 
 ### UI gebruiken
 
-Op het [!DNL Privacy Service] dashboard UI, vind de baan u van **de Verzoeken van de Baan** widget wilt downloaden. Selecteer de id van de taak om de pagina Taakdetails te openen. Van hier, uitgezochte **Download** in de hoger-juiste hoek om het dossier van het PIT te downloaden. Zie de [ gebruikersgids van Privacy Service ](ui/user-guide.md) voor meer gedetailleerde stappen.
+Op het [!DNL Privacy Service] dashboard UI, vind de baan u van **de Verzoeken van de Baan** widget wilt downloaden. Selecteer de id van de taak om de pagina Taakdetails te openen. Van hier, uitgezochte **Download** in de hoger-juiste hoek om het dossier van het PIT te downloaden. Zie de [&#x200B; gebruikersgids van Privacy Service &#x200B;](ui/user-guide.md) voor meer gedetailleerde stappen.
 
 ## Algemene foutberichten {#common-error-messages}
 
@@ -103,12 +103,12 @@ In de volgende tabel worden enkele algemene fouten in [!DNL Privacy Service] bes
 
 | Foutbericht | Beschrijving |
 | --- | --- |
-| Er zijn geen gebruikersnaam gevonden. | Sommige van de gebruikers-id&#39;s die in de aanvraag zijn opgegeven, zijn niet gevonden en overgeslagen. Zorg ervoor dat u de juiste naamruimte(n) en id-waarden gebruikt in de payload van de aanvraag. Zie het document over [ het verstrekken van identiteitsgegevens ](./identity-data.md) voor een meer gedetailleerde verklaring. |
-| Ongeldige naamruimte | Een opgegeven naamruimte voor de identiteit van een gebruiker-id is ongeldig. Zie de sectie op [ standaardidentiteitsnamespaces ](./api/appendix.md#standard-namespaces) in [!DNL Privacy Service] API gids bijlage voor een lijst van toegelaten namespaces. Als u een aangepaste naamruimte gebruikt, moet u ervoor zorgen dat de eigenschap `type` van de id is ingesteld op &#39;custom&#39;. |
+| Er zijn geen gebruikersnaam gevonden. | Sommige van de gebruikers-id&#39;s die in de aanvraag zijn opgegeven, zijn niet gevonden en overgeslagen. Zorg ervoor dat u de juiste naamruimte(n) en id-waarden gebruikt in de payload van de aanvraag. Zie het document over [&#x200B; het verstrekken van identiteitsgegevens &#x200B;](./identity-data.md) voor een meer gedetailleerde verklaring. |
+| Ongeldige naamruimte | Een opgegeven naamruimte voor de identiteit van een gebruiker-id is ongeldig. Zie de sectie op [&#x200B; standaardidentiteitsnamespaces &#x200B;](./api/appendix.md#standard-namespaces) in [!DNL Privacy Service] API gids bijlage voor een lijst van toegelaten namespaces. Als u een aangepaste naamruimte gebruikt, moet u ervoor zorgen dat de eigenschap `type` van de id is ingesteld op &#39;custom&#39;. |
 | Gedeeltelijk voltooid | De taak is voltooid, maar sommige gegevens zijn niet van toepassing op de opgegeven aanvraag en zijn overgeslagen. |
 | De gegevens hebben niet de vereiste indeling. | Een of meer gegevenswaarden voor de opgegeven toepassing zijn onjuist opgemaakt. Controleer de taakdetails voor meer informatie. |
 | De IMS-organisatie is niet ingericht. | Dit bericht treedt op wanneer uw organisatie niet is ingericht voor [!DNL Privacy Service] . Neem contact op met de beheerder voor meer informatie. |
 | Toegang en machtigingen zijn vereist. | Toegang en machtigingen zijn vereist om [!DNL Privacy Service] te kunnen gebruiken. Neem contact op met de beheerder om toegang te krijgen. |
 | Er is een probleem opgetreden bij het uploaden en archiveren van de toegangsgegevens. | Wanneer deze fout optreedt, uploadt u de toegangsgegevens opnieuw en probeert u het opnieuw. |
 | De werkbelasting is overschreden voor de huidige documentsnelheidlimiet. | Als deze fout optreedt, verlaagt u de verzendfrequentie en probeert u het opnieuw. |
-| Te veel verzoeken <br> (HTTP 429 fouten) | Als uw voorleggingspatronen de gecontroleerde grens van toegestane gegevensonderwerpbanen overschrijden, zult u een HTTP 429 fout in antwoord op voortgezet verkeer van uw organisatie ontvangen. Privacy Service is bedoeld voor de verwerking van privacyverzoeken van betrokkenen. Het mag niet worden gebruikt voor het opschonen van gegevens. Als u fouten van HTTP 429 ontvangt, worden vertragings en verzoekgrenzen uitgevoerd om Adobe tegen misbruik te beschermen dat wettige nalevingswerk in gevaar zou kunnen brengen.<br> Alternatieve methodes om uw gegevens te minimaliseren worden verstrekt door [ plaatsende datasetvervalprogramma&#39;s ](../hygiene/ui/dataset-expiration.md) en het gebruiken van [ verslag schrapt eigenschap ](../hygiene/ui/record-delete.md). Raadpleeg de documentatie bij deze pagina voor meer informatie over het toepassen van deze functies. |
+| Te veel verzoeken <br> (HTTP 429 fouten) | Als uw voorleggingspatronen de gecontroleerde grens van toegestane gegevensonderwerpbanen overschrijden, zult u een HTTP 429 fout in antwoord op voortgezet verkeer van uw organisatie ontvangen. Privacy Service is bedoeld voor de verwerking van privacyverzoeken van betrokkenen. Het mag niet worden gebruikt voor het opschonen van gegevens. Als u fouten van HTTP 429 ontvangt, worden vertragings en verzoekgrenzen uitgevoerd om Adobe tegen misbruik te beschermen dat wettige nalevingswerk in gevaar zou kunnen brengen.<br> Alternatieve methodes om uw gegevens te minimaliseren worden verstrekt door [&#x200B; plaatsende datasetvervalprogramma&#39;s &#x200B;](../hygiene/ui/dataset-expiration.md) en het gebruiken van [&#x200B; verslag schrapt eigenschap &#x200B;](../hygiene/ui/record-delete.md). Raadpleeg de documentatie bij deze pagina voor meer informatie over het toepassen van deze functies. |

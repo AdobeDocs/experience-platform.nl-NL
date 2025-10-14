@@ -14,11 +14,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/nl/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van de Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [&#x200B; productbeschrijvingen &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van de Adobe voor meer informatie.
 
 Voeg eerst-partijprofielen met attributen van vertrouwde op gegevenspartners toe om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te verkrijgen en betere publieksoptimalisering te bereiken.
 
-![ verrijkt profielen met partner-verstrekte attributen gebruiken geval hoog-vlakke visueel overzicht.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+![&#x200B; verrijkt profielen met partner-verstrekte attributen gebruiken geval hoog-vlakke visueel overzicht.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## Waarom dit gebruiksgeval overwegen {#why-this-use-case}
 
@@ -36,12 +36,12 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 
 * Denk aan de locatie waar de publiekslijst uit Real-Time CDP wordt geëxporteerd, zodat deze met de leverancier van gegevens kan worden gedeeld. Deze locatie moet het exporteren van bestanden ondersteunen.
 * Wat zijn de herkenningstekens die door de gegevensverkoper worden verwacht zodat kunnen zij op extra attributen laag?
-* Hoe zal het dossier dat partner-verstrekte attributen bevat terug in Real-Time CDP worden opgenomen? Bijvoorbeeld, kunnen de dossiers door de bronschakelaars van de wolkenopslag zoals [ Amazon S3 ](/help/sources/connectors/cloud-storage/s3.md) of [ SFTP ](/help/sources/connectors/cloud-storage/sftp.md) worden opgenomen.
+* Hoe zal het dossier dat partner-verstrekte attributen bevat terug in Real-Time CDP worden opgenomen? Bijvoorbeeld, kunnen de dossiers door de bronschakelaars van de wolkenopslag zoals [&#x200B; Amazon S3 &#x200B;](/help/sources/connectors/cloud-storage/s3.md) of [&#x200B; SFTP &#x200B;](/help/sources/connectors/cloud-storage/sftp.md) worden opgenomen.
 * Wat is het gemak waarmee u partner-verstrekte attributen om teruggebracht naar Real-Time CDP en verfrist verwacht te worden?
 
 >[!WARNING]
 >
->De extra partner-verstrekte attributen die in Real-Time CDP worden opgenomen beïnvloeden uw *totaal gegevensvolume*. Lees de [ Beschrijving van het Product van Real-time Customer Data Platform ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) voor meer informatie over totaal gegevensvolume.
+>De extra partner-verstrekte attributen die in Real-Time CDP worden opgenomen beïnvloeden uw *totaal gegevensvolume*. Lees de [&#x200B; Beschrijving van het Product van Real-time Customer Data Platform &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) voor meer informatie over totaal gegevensvolume.
 
 ## Video doorloopt {#video-walkthrough}
 
@@ -51,12 +51,12 @@ Bekijk hieronder het videoleerprogramma voor een analyse van hoe te om het eerst
 
 ## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 
-![ verrijkt profielen met partner-verstrekte attributen gebruiken geval hoog-vlakke visueel overzicht.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
+![&#x200B; verrijkt profielen met partner-verstrekte attributen gebruiken geval hoog-vlakke visueel overzicht.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. Als a **klant**, geeft u vergunningsattributen van de **gegevenspartner**.
 2. Als a **klant**, breidt u uw profielgegevens en governancemodel uit om **partner** - verstrekte attributen aan te passen.
 3. Als a **klant**, u op het publiek dat u met de gegevenspartner wilt worden verrijkt. Over het algemeen worden deze doelgroepen afgezet tegen invoer-id&#39;s, zoals PII-elementen (Personeel Identified Information), zoals e-mail, naam, adres of andere elementen.
-4. De **partner** voegt vergunning gegeven attributen voor de profielen toe die zij kunnen aanpassen tegen. Naar keuze, identiteitskaart van de a [ Partner ](/help/identity-service/features/namespaces.md) kan in partner worden omvat en worden opgenomen scoped identiteitskaart namespace.
+4. De **partner** voegt vergunning gegeven attributen voor de profielen toe die zij kunnen aanpassen tegen. Naar keuze, identiteitskaart van de a [&#x200B; Partner &#x200B;](/help/identity-service/features/namespaces.md) kan in partner worden omvat en worden opgenomen scoped identiteitskaart namespace.
 5. Als a **klant**, laadt u attributen van de gegevenspartner in klantenprofielen in Real-Time CDP.
 
 ## Hoe het gebruiksgeval te bereiken: Step-by-step instructies {#step-by-step-instructions}
@@ -65,7 +65,7 @@ Lees de onderstaande secties door, die koppelingen naar verdere documentatie bev
 
 ### De attributen van de vergunning van de partner {#license-attributes-from-partner}
 
-Deze stap wordt behandeld in de [ eerste vereisten ](#prerequisites-and-planning) en de Adobe veronderstelt dat u de juiste contractuele overeenkomsten op zijn plaats met vertrouwde op gegevensverkopers hebt om uw eerste-partijprofielen te verhogen.
+Deze stap wordt behandeld in de [&#x200B; eerste vereisten &#x200B;](#prerequisites-and-planning) en de Adobe veronderstelt dat u de juiste contractuele overeenkomsten op zijn plaats met vertrouwde op gegevensverkopers hebt om uw eerste-partijprofielen te verhogen.
 
 ### Breid uw profielgegevens en governancemodel uit om partner-verstrekte attributen aan te passen. {#extend-governance-model}
 
@@ -80,7 +80,7 @@ Lees de documentatiepagina&#39;s hieronder voor meer informatie:
 * [De grondbeginselen van de schemacompositie](/help/xdm/schema/composition.md)
 * [Overzicht van de klasse [!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md)
 * [Schema&#39;s maken en bewerken in de gebruikersinterface](/help/xdm/ui/resources/schemas.md)
-* [ creeer en geef de groepen van het schemagebied in UI uit ](/help/xdm/ui/resources/field-groups.md)
+* [&#x200B; creeer en geef de groepen van het schemagebied in UI uit &#x200B;](/help/xdm/ui/resources/field-groups.md)
 
 <!--
 
@@ -94,28 +94,28 @@ Commenting out links for now
 Ook in deze stap, denk over hoe uw model van gegevensbeheer verandert aangezien u uw gegevensbeheerstrategie uitbreidt om dergegevens te omvatten die door de partner worden verstrekt. Verken de overwegingen in de documentatiekoppelingen hieronder:
 
 * (**komende spoedig**) houd derdegegevens in een afzonderlijke dataset zodat het schrappen van het en het ongedaan maken van integraties gemakkelijk is.
-* (**komende spoedig**) Gebruik de [ functionaliteit van de gegevenssetvervaldatum ](/help/hygiene/ui/dataset-expiration.md) op de dataset voor cliënten die de toe:voegen-op van de gegevenshygiëne kochten.
+* (**komende spoedig**) Gebruik de [&#x200B; functionaliteit van de gegevenssetvervaldatum &#x200B;](/help/hygiene/ui/dataset-expiration.md) op de dataset voor cliënten die de toe:voegen-op van de gegevenshygiëne kochten.
 * (**komende spoedig**) oefent voorzichtigheid uit wanneer het creëren van afgeleide datasets die zich in derdegegevens trekken, omdat eens de enige oplossing samengevoegd om de derdegegevens te verwijderen de volledige afgeleide dataset moet schrappen.
 
 >[!TIP]
 >
 >Als u ervoor kiest om uw klantprofielen aan te vullen met een op personen gebaseerde id van de gegevensleverancier, kunt u een nieuw identiteitstype van het type **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)** maken.
 >
->Lees meer over identiteitskaart van de Partner in de [ sectie van identiteitstypes ](/help/identity-service/features/namespaces.md).
->Lees over [ hoe te om identiteitsgebieden ](/help/xdm/ui/fields/identity.md) in het gebruikersinterface van het Experience Platform te bepalen.
+>Lees meer over identiteitskaart van de Partner in de [&#x200B; sectie van identiteitstypes &#x200B;](/help/identity-service/features/namespaces.md).
+>Lees over [&#x200B; hoe te om identiteitsgebieden &#x200B;](/help/xdm/ui/fields/identity.md) in het gebruikersinterface van het Experience Platform te bepalen.
 
 ### Exporteer het publiek dat u wilt verrijken wanneer u PII (Personal Identified Information) of PII (hashed-PII) uitschakelt {#export-audiences}
 
 Exporteer het publiek dat de partner moet verrijken. Gebruik de cloudopslagbestemmingen van Real-Time CDP, zoals Amazon S3 of SFTP. Lees de volgende documentatiepagina&#39;s om deze stap te voltooien:
 
-* [ Amazon S3 bestemmings ](/help/destinations/catalog/cloud-storage/amazon-s3.md) documentatiepagina
-* [ SFTP bestemmings ](/help/destinations/catalog/cloud-storage/sftp.md) documentatiepagina
-* Hoe te [ met een bestemming ](/help/destinations/ui/connect-destination.md) verbinden
-* Hoe te [ gegevens naar een bestemming van de wolkenopslag uitvoeren ](/help/destinations/ui/activate-batch-profile-destinations.md)
+* [&#x200B; Amazon S3 bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md) documentatiepagina
+* [&#x200B; SFTP bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md) documentatiepagina
+* Hoe te [&#x200B; met een bestemming &#x200B;](/help/destinations/ui/connect-destination.md) verbinden
+* Hoe te [&#x200B; gegevens naar een bestemming van de wolkenopslag uitvoeren &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md)
 
 ### Uw gegevenspartner voegt erkende attributen voor de profielen toe die zij kunnen aanpassen {#partner-appends-attributes}
 
-In deze stap, voegt uw gegevenspartner vergunning gegeven attributen voor het uitgevoerde publiek toe. De uitvoer is over het algemeen beschikbaar als een plat bestand dat weer in Real-Time CDP kan worden ingevoerd. Lees meer over [ het opnemen van dossiers in Real-Time CDP ](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
+In deze stap, voegt uw gegevenspartner vergunning gegeven attributen voor het uitgevoerde publiek toe. De uitvoer is over het algemeen beschikbaar als een plat bestand dat weer in Real-Time CDP kan worden ingevoerd. Lees meer over [&#x200B; het opnemen van dossiers in Real-Time CDP &#x200B;](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP voegt verrijkte kenmerken toe aan het klantprofiel {#ingest-data}
 
@@ -130,12 +130,12 @@ Sommige geadviseerde bronschakelaars voor dit doel zouden kunnen zijn:
 
 Houd rekening met de volgende beperkingen wanneer u het op deze pagina beschreven gebruiksgeval bekijkt:
 
-* Als u uitgezocht om Partner IDs te gebruiken, me ervan bewust ben dat deze IDs niet wanneer het bouwen van uw [ identiteitsgrafiek ](/help/identity-service/features/identity-graph-viewer.md) wordt gebruikt.
+* Als u uitgezocht om Partner IDs te gebruiken, me ervan bewust ben dat deze IDs niet wanneer het bouwen van uw [&#x200B; identiteitsgrafiek &#x200B;](/help/identity-service/features/identity-graph-viewer.md) wordt gebruikt.
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 
 Verken verdere gebruiksgevallen die door de steun van partnergegevens in Real-Time CDP worden toegelaten:
 
-* De steun van de derdegegevens van het gebruik in Real-Time CDP om [ uw profielbasis met perspectiefprofielen van gegevenspartners uit te breiden en met hen in gesprek te gaan om nieuwe klanten ](/help/rtcdp/partner-data/prospecting.md) te verwerven of te bereiken.
-* [ Personaliseer onsite ervaringen voor onbekende bezoekers gebruikend partner-gesteunde bezoekerserkenning ](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder de gebruiker die of het hebben vroegere geschiedenis met uw merk voor authentiek verklaart.
-* [ Uitgebreide activering van perspectiefprofielen en perspectiefpubliek ](/help/destinations/ui/activate-prospect-audiences.md) om bestemmingen te selecteren.
+* De steun van de derdegegevens van het gebruik in Real-Time CDP om [&#x200B; uw profielbasis met perspectiefprofielen van gegevenspartners uit te breiden en met hen in gesprek te gaan om nieuwe klanten &#x200B;](/help/rtcdp/partner-data/prospecting.md) te verwerven of te bereiken.
+* [&#x200B; Personaliseer onsite ervaringen voor onbekende bezoekers gebruikend partner-gesteunde bezoekerserkenning &#x200B;](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder de gebruiker die of het hebben vroegere geschiedenis met uw merk voor authentiek verklaart.
+* [&#x200B; Uitgebreide activering van perspectiefprofielen en perspectiefpubliek &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) om bestemmingen te selecteren.

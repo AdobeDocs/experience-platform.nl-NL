@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Identificatie bezoeker
 
-Edge Network API steunt [ bezoekersidentificatie via identiteitskaart van de Eerste Partij ([!DNL FPID]) ](visitor-identification-fpid.md).
+Edge Network API steunt [&#x200B; bezoekersidentificatie via identiteitskaart van de Eerste Partij ([!DNL FPID]) &#x200B;](visitor-identification-fpid.md).
 
 Alle gebruikersidentiteiten moeten worden opgegeven in de veldgroep `identityMap` . Deze veldgroep is opgenomen in de mix AEP Web SDK `ExperienceEvent` .
 

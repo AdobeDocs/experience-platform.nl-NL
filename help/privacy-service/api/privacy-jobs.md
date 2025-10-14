@@ -20,11 +20,11 @@ ht-degree: 0%
 >
 >Werk uw integraties vóór deze deadline bij om mislukte aanvragen te voorkomen.
 
-In dit document wordt beschreven hoe u met privacytaken werkt met API-aanroepen. Het gaat specifiek over het gebruik van het eindpunt `/job` in de API van [!DNL Privacy Service] . Alvorens deze gids te lezen, verwijs naar [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+In dit document wordt beschreven hoe u met privacytaken werkt met API-aanroepen. Het gaat specifiek over het gebruik van het eindpunt `/job` in de API van [!DNL Privacy Service] . Alvorens deze gids te lezen, verwijs naar [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 >[!NOTE]
 >
->Als u om toestemmings of opt-out verzoeken van klanten probeert te beheren, verwijs naar de [ gids van het toestemmingspunten ](./consent.md).
+>Als u om toestemmings of opt-out verzoeken van klanten probeert te beheren, verwijs naar de [&#x200B; gids van het toestemmingspunten &#x200B;](./consent.md).
 
 ## Alle taken weergeven {#list}
 
@@ -48,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br> zie het overzicht op [ gesteunde verordeningen ](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
+| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br> zie het overzicht op [&#x200B; gesteunde verordeningen &#x200B;](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0` . |
 | `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `100` en het maximum is `1000` . Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
 | `{status}` | Standaard worden alle statussen opgenomen. Als u een statustype opgeeft, worden alleen privacytaken geretourneerd die overeenkomen met dat statustype. De toegestane waarden zijn onder meer: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -90,12 +90,12 @@ Voordat u een nieuwe taakaanvraag maakt, moet u eerst identificatiegegevens verz
 
 >[!NOTE]
 >
->Compatibele Adobe Experience Cloud-toepassingen gebruiken verschillende waarden voor het identificeren van betrokkenen. Zie de gids op [ Privacy Service en de toepassingen van Experience Cloud ](../experience-cloud-apps.md) voor meer informatie over vereiste herkenningstekens voor uw toepassing(en). Voor meer algemene begeleiding bij het bepalen van welke IDs naar [!DNL Privacy Service] te verzenden, zie het document op [ identiteitsgegevens in privacyverzoeken ](../identity-data.md).
+>Compatibele Adobe Experience Cloud-toepassingen gebruiken verschillende waarden voor het identificeren van betrokkenen. Zie de gids op [&#x200B; Privacy Service en de toepassingen van Experience Cloud &#x200B;](../experience-cloud-apps.md) voor meer informatie over vereiste herkenningstekens voor uw toepassing(en). Voor meer algemene begeleiding bij het bepalen van welke IDs naar [!DNL Privacy Service] te verzenden, zie het document op [&#x200B; identiteitsgegevens in privacyverzoeken &#x200B;](../identity-data.md).
 
 De API van [!DNL Privacy Service] ondersteunt twee soorten taakaanvragen voor persoonlijke gegevens:
 
-* [ toegang en/of schrapping ](#access-delete): Toegang (lees) of schrap persoonlijke gegevens.
-* [ Opt uit verkoop ](#opt-out): Teken persoonlijke gegevens als niet te verkopen.
+* [&#x200B; toegang en/of schrapping &#x200B;](#access-delete): Toegang (lees) of schrap persoonlijke gegevens.
+* [&#x200B; Opt uit verkoop &#x200B;](#opt-out): Teken persoonlijke gegevens als niet te verkopen.
 
 >[!IMPORTANT]
 >
@@ -175,12 +175,12 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `companyContexts` **(Required)** | Een array met verificatiegegevens voor uw organisatie. Elke weergegeven id bevat de volgende kenmerken: <ul><li>`namespace`: De naamruimte van een id.</li><li>`value`: De waarde van de id.</li></ul>Het wordt **vereist** dat één van de herkenningstekens `imsOrgId` als zijn `namespace` gebruikt, met zijn `value` die unieke identiteitskaart voor uw organisatie bevatten. <br/><br/> de Extra herkenningstekens kunnen product-specifieke bedrijfkwalificfiers (bijvoorbeeld, `Campaign`) zijn, die een integratie met een toepassing van Adobe identificeren die tot uw organisatie behoort. Mogelijke waarden zijn accountnamen, clientcodes, gebruikers-id&#39;s of andere toepassings-id&#39;s. |
-| `users` **(Required)** | Een array die een verzameling van ten minste één gebruiker bevat waarvan u de gegevens wilt openen of verwijderen. Een maximum van 1000 gebruikers kan in één enkel verzoek worden verstrekt. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later gemakkelijk naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array met de acties die moeten worden uitgevoerd op basis van de gegevens van de gebruiker. Afhankelijk van de handelingen die u wilt uitvoeren, moet deze array `access` , `delete` of beide bevatten.</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bestaat uit een `namespace` , een `value` , en een namespace kwalificfier (`type`). Zie [ bijlage ](appendix.md) voor meer details over deze vereiste eigenschappen.</li></ul> Voor een meer gedetailleerde verklaring van `users` en `userIDs`, zie de [ het oplossen van problemengids ](../troubleshooting-guide.md#user-ids). |
-| `include` **(Required)** | Een array met Adobe-producten die in uw verwerking moeten worden opgenomen. Als deze waarde ontbreekt of anderszins leeg is, wordt het verzoek afgewezen. Omvat slechts producten die uw organisatie een integratie met heeft. Zie de sectie op [ erkende productwaarden ](appendix.md) in het bijlage voor meer informatie. |
+| `users` **(Required)** | Een array die een verzameling van ten minste één gebruiker bevat waarvan u de gegevens wilt openen of verwijderen. Een maximum van 1000 gebruikers kan in één enkel verzoek worden verstrekt. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later gemakkelijk naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array met de acties die moeten worden uitgevoerd op basis van de gegevens van de gebruiker. Afhankelijk van de handelingen die u wilt uitvoeren, moet deze array `access` , `delete` of beide bevatten.</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bestaat uit een `namespace` , een `value` , en een namespace kwalificfier (`type`). Zie [&#x200B; bijlage &#x200B;](appendix.md) voor meer details over deze vereiste eigenschappen.</li></ul> Voor een meer gedetailleerde verklaring van `users` en `userIDs`, zie de [&#x200B; het oplossen van problemengids &#x200B;](../troubleshooting-guide.md#user-ids). |
+| `include` **(Required)** | Een array met Adobe-producten die in uw verwerking moeten worden opgenomen. Als deze waarde ontbreekt of anderszins leeg is, wordt het verzoek afgewezen. Omvat slechts producten die uw organisatie een integratie met heeft. Zie de sectie op [&#x200B; erkende productwaarden &#x200B;](appendix.md) in het bijlage voor meer informatie. |
 | `expandIDs` | Een optionele eigenschap die, indien ingesteld op `true`, een optimalisatie vertegenwoordigt voor het verwerken van de id&#39;s in de toepassingen (momenteel alleen ondersteund door [!DNL Analytics] ). Als deze waarde wordt weggelaten, wordt deze standaard ingesteld op `false` . |
 | `priority` | Een optionele eigenschap die door Adobe Analytics wordt gebruikt en die de prioriteit voor het verwerken van aanvragen instelt. Geaccepteerde waarden zijn `normal` en `low`. Wanneer `priority` wordt weggelaten, is het standaardgedrag `normal` . |
-| `mergePolicyId` | Wanneer het maken van privacyverzoeken voor het Profiel van de Klant in real time (`profileService`), kunt u naar keuze identiteitskaart van het specifieke [ fusiebeleid ](../../profile/merge-policies/overview.md) verstrekken dat u voor identiteitskaart het stitching wilt gebruiken. Door een samenvoegbeleid te specificeren, kunnen de privacyverzoeken publieksinformatie omvatten wanneer het terugkeren van gegevens over een klant. Per aanvraag kan slechts één samenvoegbeleid worden opgegeven. Als er geen samenvoegingsbeleid is opgegeven, wordt segmenteringsinformatie niet opgenomen in de reactie. |
-| `regulation` **(Required)** | De verordening voor de privacybaan. De volgende waarden worden geaccepteerd: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br> zie het overzicht op [ gesteunde verordeningen ](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
+| `mergePolicyId` | Wanneer het maken van privacyverzoeken voor het Profiel van de Klant in real time (`profileService`), kunt u naar keuze identiteitskaart van het specifieke [&#x200B; fusiebeleid &#x200B;](../../profile/merge-policies/overview.md) verstrekken dat u voor identiteitskaart het stitching wilt gebruiken. Door een samenvoegbeleid te specificeren, kunnen de privacyverzoeken publieksinformatie omvatten wanneer het terugkeren van gegevens over een klant. Per aanvraag kan slechts één samenvoegbeleid worden opgegeven. Als er geen samenvoegingsbeleid is opgegeven, wordt segmenteringsinformatie niet opgenomen in de reactie. |
+| `regulation` **(Required)** | De verordening voor de privacybaan. De volgende waarden worden geaccepteerd: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br> zie het overzicht op [&#x200B; gesteunde verordeningen &#x200B;](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
 
 {style="table-layout:auto"}
 
@@ -236,7 +236,7 @@ Een succesvol antwoord geeft de details van de nieuwe banen terug.
 
 {style="table-layout:auto"}
 
-Zodra u met succes het baanverzoek hebt voorgelegd, kunt u aan de volgende stap van [ te werk gaan controlerend de status van de baan ](#check-status).
+Zodra u met succes het baanverzoek hebt voorgelegd, kunt u aan de volgende stap van [&#x200B; te werk gaan controlerend de status van de baan &#x200B;](#check-status).
 
 ## De status van een taak controleren {#check-status}
 
@@ -254,7 +254,7 @@ GET /jobs/{JOB_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{JOB_ID}` | De id van de taak die u wilt opzoeken. Deze identiteitskaart is teruggekeerd onder `jobId` in succesvolle API reacties voor [ creërend een baan ](#create-job) en [ die van alle banen ](#list) een lijst maken. |
+| `{JOB_ID}` | De id van de taak die u wilt opzoeken. Deze identiteitskaart is teruggekeerd onder `jobId` in succesvolle API reacties voor [&#x200B; creërend een baan &#x200B;](#create-job) en [&#x200B; die van alle banen &#x200B;](#list) een lijst maken. |
 
 {style="table-layout:auto"}
 
@@ -347,7 +347,7 @@ Een geslaagde reactie retourneert de details van de opgegeven taak.
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `productStatusResponse` | Elk object in de array `productResponses` bevat informatie over de huidige status van de taak ten opzichte van een specifieke [!DNL Experience Cloud] -toepassing. |
-| `productStatusResponse.status` | De huidige statuscategorie van de taak. Zie de lijst hieronder voor een lijst van [ beschikbare statuscategorieën ](#status-categories) en hun overeenkomstige betekenissen. |
+| `productStatusResponse.status` | De huidige statuscategorie van de taak. Zie de lijst hieronder voor een lijst van [&#x200B; beschikbare statuscategorieën &#x200B;](#status-categories) en hun overeenkomstige betekenissen. |
 | `productStatusResponse.message` | De specifieke status van de taak, die overeenkomt met de statuscategorie. |
 | `productStatusResponse.responseMsgCode` | Een standaardcode voor productresponsberichten die worden ontvangen door [!DNL Privacy Service] . De details van het bericht worden onder `responseMsgDetail` verstrekt. |
 | `productStatusResponse.responseMsgDetail` | Een gedetailleerdere uitleg van de status van de baan. Berichten voor vergelijkbare statussen kunnen per product verschillen. |
@@ -375,4 +375,4 @@ In de volgende tabel worden de verschillende mogelijke taakstatuscategorieën en
 
 ## Volgende stappen
 
-U weet nu hoe u met de API [!DNL Privacy Service] privacytaken kunt maken en controleren. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie het [ overzicht van Privacy Service UI ](../ui/overview.md).
+U weet nu hoe u met de API [!DNL Privacy Service] privacytaken kunt maken en controleren. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie het [&#x200B; overzicht van Privacy Service UI &#x200B;](../ui/overview.md).

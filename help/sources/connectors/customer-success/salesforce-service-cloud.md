@@ -21,7 +21,7 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het nalaten om uw gebied-specifieke IP adressen aan uw lijst van gewenste personen toe te voegen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [ IP pagina van de lijst van gewenste personen van het adres ](../../ip-address-allow-list.md) voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het nalaten om uw gebied-specifieke IP adressen aan uw lijst van gewenste personen toe te voegen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#x200B; IP pagina van de lijst van gewenste personen van het adres &#x200B;](../../ip-address-allow-list.md) voor meer informatie.
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Salesforce Service Cloud] en [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
 

@@ -17,20 +17,20 @@ De **[!UICONTROL Edge Delivery]** weergave in **[!UICONTROL Adobe Experience Pla
 
 Controleer voordat u doorgaat of u toegang hebt tot de volgende services:
 
-- De [ UI van de Inzameling van Gegevens van Adobe Experience Platform ](https://experience.adobe.com/#/data-collection/)
-- [ de Verzekering van Adobe Experience Platform ](https://experience.adobe.com/assurance)
+- De [&#x200B; UI van de Inzameling van Gegevens van Adobe Experience Platform &#x200B;](https://experience.adobe.com/#/data-collection/)
+- [&#x200B; de Verzekering van Adobe Experience Platform &#x200B;](https://experience.adobe.com/assurance)
 
-Leren hoe te om **[!UICONTROL Assurance]** in uw toepassing te installeren, te lezen gelieve de [ het uitvoeren gids van de Verzekering ](../tutorials/implement-assurance.md).
+Leren hoe te om **[!UICONTROL Assurance]** in uw toepassing te installeren, te lezen gelieve de [&#x200B; het uitvoeren gids van de Verzekering &#x200B;](../tutorials/implement-assurance.md).
 
 ## Betrouwbaarheid gebruiken met Edge Delivery
 
 Nadat u een **[!UICONTROL Assurance]** -sessie hebt geopend, kunt u de **[!UICONTROL Edge Delivery]** weergave toevoegen aan **[!UICONTROL Assurance]** . Bij de bodem van het linkerpaneel, uitgezochte **[!UICONTROL Configure]** om de **[!UICONTROL Edge Delivery]** mening toe te voegen en **sparen** het.
 
-![ voeg stop-binnen toe door te selecteren vorm op de bodem verlaten ](./images/edge-delivery/add-plugin.png)
+![&#x200B; voeg stop-binnen toe door te selecteren vorm op de bodem verlaten &#x200B;](./images/edge-delivery/add-plugin.png)
 
 Nadat u de afbeelding hebt toegevoegd, selecteert u de **[!UICONTROL Edge Delivery]** -weergave in de **[!UICONTROL Adobe Journey Optimizer]** -sectie om de levering van de binnenkomende rand te valideren.
 
-![ Edge Delivery kan in de meningsgroep van Adobe Journey Optimizer worden betreden ](./images/edge-delivery/ajo-plugins.png)
+![&#x200B; Edge Delivery kan in de meningsgroep van Adobe Journey Optimizer worden betreden &#x200B;](./images/edge-delivery/ajo-plugins.png)
 
 ## Aanvraaglijst
 
@@ -45,7 +45,7 @@ Verzoeken worden geordend met een tijdstempel, met de meest recente aanvragen bo
 
 Verzoeken kunnen ook worden gefilterd door een zoekterm in te voeren in de zoekbalk boven aan de lijst. Dit is nuttig wanneer het filtreren door specifieke waarden, zoals IDs.
 
-![ de lijst van Binnenkomende verzoeken wordt getoond in de belangrijkste mening ](./images/edge-delivery/request-list.png)
+![&#x200B; de lijst van Binnenkomende verzoeken wordt getoond in de belangrijkste mening &#x200B;](./images/edge-delivery/request-list.png)
 
 ## Gedetailleerde aanvraagweergaven
 
@@ -55,38 +55,38 @@ Zodra een verzoek in de belangrijkste mening wordt geselecteerd, wordt gedetaill
 
 Deze sectie biedt een overzicht op hoog niveau van de geselecteerde aanvraag, inclusief [!UICONTROL Organization ID] , [!UICONTROL Edge cluster] , [!UICONTROL Request ID] en [!UICONTROL Request type] , [!UICONTROL Sandbox ID] , [!UICONTROL Sandbox name] en [!UICONTROL Datastream ID] , en de lijst met aanvraagoppervlakken voor het geval [!UICONTROL Experience Delivery] -aanvragen worden ingediend.
 
-![ de overzichtssectie van het Verzoek verstrekt high-level verzoekdetails ](./images/edge-delivery/request-overview.png)
+![&#x200B; de overzichtssectie van het Verzoek verstrekt high-level verzoekdetails &#x200B;](./images/edge-delivery/request-overview.png)
 
 ### Profiel
 
 Deze sectie biedt informatie over de profielgegevens die worden gebruikt tijdens de verwerking van de aanvraag, zoals de identiteitskaart, het lidmaatschap van een segment en de instellingen voor toestemming.\
 De sectie [!UICONTROL Profile] is zeer nuttig wanneer het oplossen van problemenkwesties zoals levering niet werkt zoals verwacht wegens ontbrekend of vertraagd segmentlidmaatschap of opt-out toestemmingsmontages.
 
-![ de sectie van het Profiel omvat de identiteitskaart, het segmentlidmaatschap, en toestemmingsmontages ](./images/edge-delivery/profile.png)
+![&#x200B; de sectie van het Profiel omvat de identiteitskaart, het segmentlidmaatschap, en toestemmingsmontages &#x200B;](./images/edge-delivery/profile.png)
 
 ### Gekwalificeerde activiteiten
 
-Deze sectie verstrekt een lijst van activiteiten die voor het geselecteerde verzoek, met inbegrip van het activiteitstype, IDs, identiteitsnamespace, oppervlakten, programma, en publiek werden gekwalificeerd. De meer gedetailleerde informatie over de activiteit kan in de [ ruwe sectie van het uitvoeringsspoor ](#execution) worden gevonden.
+Deze sectie verstrekt een lijst van activiteiten die voor het geselecteerde verzoek, met inbegrip van het activiteitstype, IDs, identiteitsnamespace, oppervlakten, programma, en publiek werden gekwalificeerd. De meer gedetailleerde informatie over de activiteit kan in de [&#x200B; ruwe sectie van het uitvoeringsspoor &#x200B;](#execution) worden gevonden.
 
-![ Gekwalificeerde activiteitensectie bevat de details van gekwalificeerde activiteiten ](./images/edge-delivery/qualified-activities.png)
+![&#x200B; Gekwalificeerde activiteitensectie bevat de details van gekwalificeerde activiteiten &#x200B;](./images/edge-delivery/qualified-activities.png)
 
 ### Ongekwalificeerde activiteiten
 
 Deze sectie bevat een lijst met activiteiten die zijn uitgesloten van kwalificatie. Naast het type activiteit, IDs, identiteitsnamespaces, oppervlakten, programma&#39;s, en publiek, omvat deze sectie ook een lijst van redenen de activiteit niet gekwalificeerd was.
 
-![ de Ongekwalificeerde activiteitensectie bevat ongekwalificeerde activiteitendetails en uitsluitingsredenen ](./images/edge-delivery/unqualified-activities.png)
+![&#x200B; de Ongekwalificeerde activiteitensectie bevat ongekwalificeerde activiteitendetails en uitsluitingsredenen &#x200B;](./images/edge-delivery/unqualified-activities.png)
 
 ### Berichtdetails
 
 Deze sectie verstrekt gedetailleerde informatie over de berichten die voor het geselecteerde verzoek werden geleverd. Het omvat bericht IDs, fragmenten, besluitvormingsbeleid, [!UICONTROL Offer Decisioning] parameters, evenals de context van de berichtselectie.
 
-![ Sectie die geleverde berichtdetails zoals bericht IDs en selectiecontext, fragmenten, besluitvormingsbeleid, en beslissingsparameters bevat ](./images/edge-delivery/message-details.png)
+![&#x200B; Sectie die geleverde berichtdetails zoals bericht IDs en selectiecontext, fragmenten, besluitvormingsbeleid, en beslissingsparameters bevat &#x200B;](./images/edge-delivery/message-details.png)
 
 ### Interacties
 
 Deze sectie bevat gedetailleerde informatie over de interacties die in de geselecteerde aanvraag zijn bijgehouden. Het bevat het interactietype (onder `propositionEventType` ) en de bijbehorende propositiemetagegevens, zoals de metagegevens over de activiteit (onder `scopeDetails.activity` ) en het token voor de propositiegebeurtenis (in `scopeDetails.characteristics.eventToken` ).
 
-![ de Interacties worden gevolgd via propositietokens en bijbehorende activiteitenmeta-gegevens ](./images/edge-delivery/interactions.png)
+![&#x200B; de Interacties worden gevolgd via propositietokens en bijbehorende activiteitenmeta-gegevens &#x200B;](./images/edge-delivery/interactions.png)
 
 ### Onbewerkte sporen
 
@@ -96,16 +96,16 @@ In deze sectie ziet u de onbewerkte sporen van de geselecteerde aanvraag. Het om
 
 Het aanvraagspoor omvat het volledige verzoek zoals het door **[!UICONTROL Inbound Delivery Service]** **[!UICONTROL Konductor]** upstream werd ontvangen. Het omvat de verzoekkopballen, het lichaam, en andere meta-gegevens. De XDM-lading van de aanvraag kan bijvoorbeeld worden gecontroleerd in het veld `event.body.xdm` .
 
-![ Gedetailleerde verzoekinformatie met inbegrip van kopballen en het lichaam kan in het verzoekspoor ](./images/edge-delivery/request.png) worden gevonden
+![&#x200B; Gedetailleerde verzoekinformatie met inbegrip van kopballen en het lichaam kan in het verzoekspoor &#x200B;](./images/edge-delivery/request.png) worden gevonden
 
 #### Execution
 
 De uitvoeringstrace bevat de volledige tracering van de aanvraag zoals deze is verwerkt door de **[!UICONTROL Inbound Delivery Service]** . Het toont de uitvoeringscontext, activiteitenkwalificatie, berichtselectie, en andere verwerkingsstappen. Eventuele fouten of waarschuwingen die tijdens de verwerking van de aanvraag zijn opgetreden, kunt u vinden in `context.messages` - en `context.exceptions` -velden. Gedetailleerde informatie over de activiteitkwalificatie vindt u in de velden `context.qualifiedActivitiesDetailed` en `context.unqualifiedActivitiesDetailed` .
 
-![ het spoor van de Uitvoering omvat uitvoeringscontext, activiteitenkwalificatie, berichtselectie, en andere verwerkingsdetails ](./images/edge-delivery/execution.png)
+![&#x200B; het spoor van de Uitvoering omvat uitvoeringscontext, activiteitenkwalificatie, berichtselectie, en andere verwerkingsdetails &#x200B;](./images/edge-delivery/execution.png)
 
 #### Antwoord
 
 Het reactiespoor omvat de volledige reactie aangezien het door **[!UICONTROL Inbound Delivery Service]** stroomafwaarts aan **[!UICONTROL Konductor]** werd teruggekeerd. Dit omvat de responsheaders, de hoofdtekst en andere metagegevens. De volledige antwoordinstantie kan worden geïnspecteerd door het bericht met id `1` naar het klembord te kopiëren met de knop **[!UICONTROL Copy Value]** en het in een JSON-viewer te plakken.
 
-![ spoor van de Reactie bevat het volledige reactielichaam stroomafwaarts is teruggekeerd ](./images/edge-delivery/response.png)
+![&#x200B; spoor van de Reactie bevat het volledige reactielichaam stroomafwaarts is teruggekeerd &#x200B;](./images/edge-delivery/response.png)

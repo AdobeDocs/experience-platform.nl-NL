@@ -18,6 +18,6 @@ ht-degree: 0%
 
 Deze video biedt een snelle inleiding op het Experience Platform en schetst enkele bedrijfsuitdagingen die het oplost.
 
-Om meer te leren, begin door het [ overzicht van het Experience Platform ](../home.md) te lezen.
+Om meer te leren, begin door het [&#x200B; overzicht van het Experience Platform &#x200B;](../home.md) te lezen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428498?quality=12&learn=on&captions=dut)

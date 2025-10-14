@@ -20,13 +20,13 @@ Het Adobe Real-Time CDP-publiek kan op twee manieren op het Magnite Streaming-pl
 
 1. Als u slechts één keer per dag een publiek wilt en/of wilt leveren, kunt u de Magnite: Batch-bestemming gebruiken, die het publiek via een dagelijkse levering van S3-batchbestanden naar Magnite Streaming stuurt. Dit publiek van de Partij wordt opgeslagen voor onbepaalde tijd in het platform van Magnite, in tegenstelling tot publiek in real time, die slechts voor een paar dagen worden opgeslagen.
 
-2. Nochtans, als u wilt of moet om publiek vaker leveren, zult u [ Magnite in real time ](/help/destinations/catalog/advertising/magnite-streaming.md) bestemming moeten gebruiken. Wanneer het gebruiken van de bestemming in real time, zal de Streaming van de Magnite publiek in real time ontvangen, maar de Magnite kan tijdelijk publiek in real time slechts opslaan in hun platform, en zij zullen uit het systeem binnen een paar dagen worden verwijderd. Om deze reden, als u de Magnite in real time bestemming wilt gebruiken, zult u *ook* moeten gebruiken Magnite: de bestemming van de partij - elk publiek dat u aan de bestemming in real time activeert, moet u ook aan de bestemming van de Partij activeren.
+2. Nochtans, als u wilt of moet om publiek vaker leveren, zult u [&#x200B; Magnite in real time &#x200B;](/help/destinations/catalog/advertising/magnite-streaming.md) bestemming moeten gebruiken. Wanneer het gebruiken van de bestemming in real time, zal de Streaming van de Magnite publiek in real time ontvangen, maar de Magnite kan tijdelijk publiek in real time slechts opslaan in hun platform, en zij zullen uit het systeem binnen een paar dagen worden verwijderd. Om deze reden, als u de Magnite in real time bestemming wilt gebruiken, zult u *ook* moeten gebruiken Magnite: de bestemming van de partij - elk publiek dat u aan de bestemming in real time activeert, moet u ook aan de bestemming van de Partij activeren.
 
 Om opnieuw op te nemen: Als u Adobe Real-Time CDP-publiek slechts eenmaal per dag wilt leveren, gebruikt u de Magnite: Alleen batchbestemming en het publiek wordt eenmaal per dag geleverd. Als u het publiek van Adobe Real-Time CDP in real time wilt leveren, zult u *zowel* Magnite gebruiken: De bestemming van de partij, en de bestemming van de Magnite Real-Time. Neem voor meer informatie contact op met Magnite: Streaming.
 
 
 Lees verder hieronder voor meer informatie over de Magnite: Batch-bestemming, hoe u er verbinding mee kunt maken en hoe u het Adobe Real-Time CDP-publiek activeert.
-Voor meer informatie over de bestemming in real time, zie [ deze documentatiepagina ](magnite-streaming.md) in plaats daarvan.
+Voor meer informatie over de bestemming in real time, zie [&#x200B; deze documentatiepagina &#x200B;](magnite-streaming.md) in plaats daarvan.
 
 >[!IMPORTANT]
 >
@@ -73,7 +73,7 @@ Magnite: De bestemming van de partij kan *om het even welke* identiteitsbronnen 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [&#128279;](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -82,7 +82,7 @@ Magnite: De bestemming van de partij kan *om het even welke* identiteitsbronnen 
 | Item | Type | Notities |
 |-----------------------------|----------|----------|
 | Exporttype | Publiek exporteren | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in de Magnite: Batchbestemming. |
-| Exportfrequentie | Batch | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over partij [ op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md). |
+| Exportfrequentie | Batch | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over partij [&#x200B; op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md). |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Als u al een bestaand account hebt, kunt u dit vinden door de optie Account te w
 
 Als u een nieuwe account wilt maken en deze voor het eerst wilt verifiëren bij de bestemming, vult u de velden &quot;S3-toegangssleutel&quot; en &quot;S3 geheime sleutel&quot; in (die u via uw accountmanager ontvangt) en selecteert u **[!UICONTROL Connect to destination]**
 
-![ ongevulde gebieden van de bestemmingsconfiguratie ](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
+![&#x200B; ongevulde gebieden van de bestemmingsconfiguratie &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
 >[!NOTE]
 >
@@ -116,9 +116,9 @@ doelverbinding/-instantie in de toekomst.
 
 >[!NOTE]
 >
->De bedrijfsnaam moet een koord zijn dat de naam van het Amazon S3 leveringsemmer aanpast u met Magnite en opstelling in [ voor authentiek verklaart aan bestemmings ](#authenticate) stap hebt gevormd. De ondersteunde tekens zijn &#39;a-z&#39;, &#39;A-Z&#39;, &#39;0-9&#39;, &#39;-&#39;(streepje) of &#39;_&#39;(onderstrepingsteken).
+>De bedrijfsnaam moet een koord zijn dat de naam van het Amazon S3 leveringsemmer aanpast u met Magnite en opstelling in [&#x200B; voor authentiek verklaart aan bestemmings &#x200B;](#authenticate) stap hebt gevormd. De ondersteunde tekens zijn &#39;a-z&#39;, &#39;A-Z&#39;, &#39;0-9&#39;, &#39;-&#39;(streepje) of &#39;_&#39;(onderstrepingsteken).
 
-![ gevulde gebieden van de bestemmingsconfiguratie ](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
+![&#x200B; gevulde gebieden van de bestemmingsconfiguratie &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
@@ -128,13 +128,13 @@ U kunt vervolgens doorgaan door **[!UICONTROL Next]** te selecteren
 
 Op het volgende scherm, getiteld &quot;Governance Policy and Enforcement Actions (Optional)&quot;, kunt u naar keuze om het even welk relevant beleid van het gegevensbeheer selecteren. De &quot;Uitvoer van Gegevens&quot;wordt over het algemeen geselecteerd voor Magneet: de bestemming van de partij.
 
-![ Facultatief beleid van het bestuur en handhavingsacties ](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
+![&#x200B; Facultatief beleid van het bestuur en handhavingsacties &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
 Selecteer **[!UICONTROL Create]** wanneer deze optie is geselecteerd of wanneer u dit optionele scherm wilt overslaan
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -142,18 +142,18 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
 In **[!UICONTROL Source field]**, kunt u om het even welk attribuut of identiteit voor uw apparaten selecteren. In dit voorbeeld hebben we een aangepaste IdentityMap met de naam &#39;DeviceId&#39; geselecteerd
-![ kaart gewenste gegevensgebieden aan het apparaat_id gebied ](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
+![&#x200B; kaart gewenste gegevensgebieden aan het apparaat_id gebied &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
 In de lus **[!UICONTROL Target field]** :
-![ selecteer de aangewezen doelidentiteit van het apparatentype ](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) zie [ Gesteunde Identiteiten ](#supported-identities) voor meer informatie.
+![&#x200B; selecteer de aangewezen doelidentiteit van het apparatentype &#x200B;](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) zie [&#x200B; Gesteunde Identiteiten &#x200B;](#supported-identities) voor meer informatie.
 In dit voorbeeld hebben we **[!UICONTROL Target field]**: magnite_deviceId_CUSTOM geselecteerd, omdat onze **[!UICONTROL Source field]** is gedefinieerd als een aangepaste IdentityMap: DeviceID.
 
 >[!NOTE]
@@ -183,8 +183,8 @@ Nadat uw publiek is geüpload, kunt u controleren of uw publiek op de juiste wij
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Voor extra hulpdocumentatie, bezoek het [ Centrum van de Hulp van de Magniet ](https://help.magnite.com/help).
+Voor extra hulpdocumentatie, bezoek het [&#x200B; Centrum van de Hulp van de Magniet &#x200B;](https://help.magnite.com/help).

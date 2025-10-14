@@ -16,16 +16,16 @@ ht-degree: 1%
 
 In specifieke omstandigheden, kan het noodzakelijk zijn om een [!DNL Experience Data Model] (XDM) schema met gebieden tot stand te brengen die namespaced voor gebruik slechts door één enkele dataset zijn. Dit wordt bedoeld als &quot;ad-hoc&quot;schema. Ad-hocschema&#39;s worden gebruikt in verschillende gegevensinvoerworkflows voor [!DNL Experience Platform] , waaronder het opnemen van CSV-bestanden en het maken van bepaalde soorten bronverbindingen.
 
-Dit document verstrekt algemene stappen voor het creëren van een ad hoc schema gebruikend de [ Registratie API van het Schema ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Het is bedoeld voor gebruik in combinatie met andere zelfstudies van [!DNL Experience Platform] waarvoor een ad-hocschema moet worden gemaakt als onderdeel van de workflow. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
+Dit document verstrekt algemene stappen voor het creëren van een ad hoc schema gebruikend de [&#x200B; Registratie API van het Schema &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Het is bedoeld voor gebruik in combinatie met andere zelfstudies van [!DNL Experience Platform] waarvoor een ad-hocschema moet worden gemaakt als onderdeel van de workflow. Elk van die documenten verstrekt gedetailleerde informatie over hoe te om een ad-hocschema voor zijn specifiek gebruiksgeval behoorlijk te vormen.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van [!DNL Experience Data Model] (XDM) Systeem. Lees de volgende XDM-documentatie voordat u deze zelfstudie start:
 
-- [ XDM Overzicht van het Systeem ](../home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in [!DNL Experience Platform].
-- [ Grondbeginselen van schemacompositie ](../schema/composition.md): Een overzicht van de basiscomponenten van schema&#39;s XDM.
+- [&#x200B; XDM Overzicht van het Systeem &#x200B;](../home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in [!DNL Experience Platform].
+- [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../schema/composition.md): Een overzicht van de basiscomponenten van schema&#39;s XDM.
 
-Alvorens dit leerprogramma te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Schema Registry] API met succes te maken. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
+Alvorens dit leerprogramma te beginnen, te herzien gelieve de [&#x200B; ontwikkelaarsgids &#x200B;](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Schema Registry] API met succes te maken. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 
 ## Een ad-hocklasse maken
 
@@ -227,7 +227,7 @@ Een succesvol antwoord retourneert de details van het nieuwe schema, inclusief d
 
 >[!NOTE]
 >
->Deze stap is optioneel. Als u niet wenst om de gebiedsstructuur van uw ad hoc schema te inspecteren, kunt u aan de [ volgende stappen ](#next-steps) sectie aan het eind van dit leerprogramma overslaan.
+>Deze stap is optioneel. Als u niet wenst om de gebiedsstructuur van uw ad hoc schema te inspecteren, kunt u aan de [&#x200B; volgende stappen &#x200B;](#next-steps) sectie aan het eind van dit leerprogramma overslaan.
 
 Nadat u het ad-hocschema hebt gemaakt, kunt u een opzoekverzoek (GET) indienen om het schema in het uitgebreide formulier weer te geven. Dit wordt gedaan door de aangewezen Accept- kopbal in het verzoek van de GET te gebruiken, zoals hieronder aangetoond.
 
@@ -311,4 +311,4 @@ Een succesvol antwoord retourneert de details van het schema, inclusief alle gen
 
 Door deze zelfstudie te volgen, hebt u een nieuw ad-hocschema gemaakt. Als u naar dit document bent overgebracht als onderdeel van een andere zelfstudie, kunt u nu de `$id` van uw ad-hocschema gebruiken om de workflow volgens de aanwijzingen te voltooien.
 
-Voor meer informatie bij het werken met [!DNL Schema Registry] API, gelieve te verwijzen naar de [ ontwikkelaarsgids ](../api/getting-started.md).
+Voor meer informatie bij het werken met [!DNL Schema Registry] API, gelieve te verwijzen naar de [&#x200B; ontwikkelaarsgids &#x200B;](../api/getting-started.md).

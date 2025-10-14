@@ -49,7 +49,7 @@ ht-degree: 27%
       - [Inzichten ontdekken](customer-ai/user-guide/discover-insights.md)
       - [Segmenten maken met behulp van AI-scores van de klant](customer-ai/user-guide/create-segment.md)
       - [Muziek downloaden](customer-ai/user-guide/download-scores.md)
-   - [ het oplossen van problemen van de Fout ](customer-ai/troubleshooting.md)
+   - [&#x200B; het oplossen van problemen van de Fout &#x200B;](customer-ai/troubleshooting.md)
    - Datagovernance {#cai-data-governance}
       - [Toegangsbesturingselementen](customer-ai/cai-data-governance/access-controls.md)
       - [Controlelogboeken](customer-ai/cai-data-governance/audit-logs.md)

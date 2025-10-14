@@ -39,7 +39,7 @@ Met Experience Platform kunt u gebruikersactiviteiten controleren op verschillen
 
 {style="table-layout:auto"}
 
-Voor meer informatie over controlelogboeken in Experience Platform, verwijs naar het [ overzicht van controlelogboeken ](../../landing/governance-privacy-security/audit-logs/overview.md).
+Voor meer informatie over controlelogboeken in Experience Platform, verwijs naar het [&#x200B; overzicht van controlelogboeken &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Verwante accounts in Real-Time CDP B2B edition {#related-accounts}
 
@@ -55,7 +55,7 @@ Meer informatie over de functie vindt u op de volgende documentatiepagina&#39;s:
 - [Het tabblad Verwante accounts in de gebruikersinterface voor het accountprofiel](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [Hoe verwant rekeningen in segmentdefinities gebruiken](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Meer over Real-Time CDP B2B edition leren, zie het [ overzicht ](../../rtcdp/overview.md).
+Meer over Real-Time CDP B2B edition leren, zie het [&#x200B; overzicht &#x200B;](../../rtcdp/overview.md).
 
 ## Waarschuwingen {#alerts}
 
@@ -65,11 +65,11 @@ Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarsch
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe waarschuwingsregels | Er zijn nu twee nieuwe waarschuwingsregels beschikbaar voor bronnen die te maken hebben met gegevensinvoer. Zie het overzicht op [ waakzame regels ](../../observability/alerts/rules.md) voor de bijgewerkte lijst van waakzame types. |
+| Nieuwe waarschuwingsregels | Er zijn nu twee nieuwe waarschuwingsregels beschikbaar voor bronnen die te maken hebben met gegevensinvoer. Zie het overzicht op [&#x200B; waakzame regels &#x200B;](../../observability/alerts/rules.md) voor de bijgewerkte lijst van waakzame types. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over alarm in Experience Platform, verwijs naar het [ alarm overzicht ](../../observability/alerts/overview.md).
+Voor meer informatie over alarm in Experience Platform, verwijs naar het [&#x200B; alarm overzicht &#x200B;](../../observability/alerts/overview.md).
 
 ## Dashboards {#dashboards}
 
@@ -83,14 +83,14 @@ Op het dashboard Profielen wordt een momentopname weergegeven van de kenmerkgege
 
 | Functie | Beschrijving |
 | --- | --- |
-| Widget niet-gesegmenteerde profielen | De widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Zie de [ documentatie van profielen standaard widgets ](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie. |
-| Trend-widget voor niet-gesegmenteerde profielen | Deze widget verschaft een lijngrafiekillustratie voor het aantal profielen dat gedurende een bepaalde tijdsperiode niet aan een segment is gekoppeld. De trend kan worden weergegeven over perioden van 30 dagen, 90 dagen en 12 maanden. Zie de [ documentatie van profielen standaard widgets ](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie. |
-| Gesegmenteerde profielen opheffen op identiteitswidget | Deze widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden weergegeven in een staafdiagram. Zie de [ documentatie van profielen standaard widgets ](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie. |
-| Widget enkele identiteitsprofielen | Deze widget bevat een telling van de profielen van uw organisatie die slechts één type id hebben dat tot hun identiteit leidt, of een e-mail of ECID. Zie de [ documentatie van profielen standaard widgets ](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie. |
+| Widget niet-gesegmenteerde profielen | De widget geeft het totale aantal profielen weer dat niet aan een segment is gekoppeld. Het gegenereerde nummer is nauwkeurig vanaf de laatste momentopname en biedt de mogelijkheid om het profiel in uw organisatie te activeren. Zie de [&#x200B; documentatie van profielen standaard widgets &#x200B;](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie. |
+| Trend-widget voor niet-gesegmenteerde profielen | Deze widget verschaft een lijngrafiekillustratie voor het aantal profielen dat gedurende een bepaalde tijdsperiode niet aan een segment is gekoppeld. De trend kan worden weergegeven over perioden van 30 dagen, 90 dagen en 12 maanden. Zie de [&#x200B; documentatie van profielen standaard widgets &#x200B;](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie. |
+| Gesegmenteerde profielen opheffen op identiteitswidget | Deze widget categoriseert het totale aantal niet-gesegmenteerde profielen op basis van hun unieke id. De gegevens worden weergegeven in een staafdiagram. Zie de [&#x200B; documentatie van profielen standaard widgets &#x200B;](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie. |
+| Widget enkele identiteitsprofielen | Deze widget bevat een telling van de profielen van uw organisatie die slechts één type id hebben dat tot hun identiteit leidt, of een e-mail of ECID. Zie de [&#x200B; documentatie van profielen standaard widgets &#x200B;](../../dashboards/guides/profiles.md#standard-widgets) voor meer informatie. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de dashboards van Profielen, verwijs naar het [ overzicht van de dashboards van Profielen ](../../dashboards/guides/profiles.md).
+Voor meer informatie over de dashboards van Profielen, verwijs naar het [&#x200B; overzicht van de dashboards van Profielen &#x200B;](../../dashboards/guides/profiles.md).
 
 ### Doeldashboards
 
@@ -100,11 +100,11 @@ Op het dashboard Doelen wordt een momentopname weergegeven van de doelen die uw 
 
 | Functie | Beschrijving |
 | --- | --- |
-| Widget aantal doelen | De widget geeft het totale aantal beschikbare eindpunten weer waarop een publiek kan worden geactiveerd en geleverd binnen het systeem. Dit aantal omvat zowel actieve als inactieve bestemmingen. Zie de [ documentatie van de bestemmingsstandaard widget ](../../dashboards/guides/destinations.md#standard-widgets) voor meer informatie. |
+| Widget aantal doelen | De widget geeft het totale aantal beschikbare eindpunten weer waarop een publiek kan worden geactiveerd en geleverd binnen het systeem. Dit aantal omvat zowel actieve als inactieve bestemmingen. Zie de [&#x200B; documentatie van de bestemmingsstandaard widget &#x200B;](../../dashboards/guides/destinations.md#standard-widgets) voor meer informatie. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over dashboards van Doelen in Experience Platform, verwijs naar het [ overzicht van dashboards van Doelen ](../../dashboards/guides/destinations.md).
+Voor meer informatie over dashboards van Doelen in Experience Platform, verwijs naar het [&#x200B; overzicht van dashboards van Doelen &#x200B;](../../dashboards/guides/destinations.md).
 
 ## Dataverzameling {#data-collection}
 
@@ -114,10 +114,10 @@ Experience Platform biedt een reeks technologieën waarmee u gegevens over klant
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geo-locatie, cookie van eerste-partijid en synchronisatie van externe id&#39;s. Zie de sectie op [ vormend een datastream ](../../datastreams/overview.md#create) in de gids UI van Gegevensstromen voor meer informatie. |
-| [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | Met de Edge Network API kunnen klanten met de Experience Platform Edge Network communiceren via een nieuw, geverifieerd eindpunt, zodat ze een groot aantal verschillende gebruiksgevallen voor gegevensverzameling, personalisatie, reclame en marketing kunnen aansturen. |
+| Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geo-locatie, cookie van eerste-partijid en synchronisatie van externe id&#39;s. Zie de sectie op [&#x200B; vormend een datastream &#x200B;](../../datastreams/overview.md#create) in de gids UI van Gegevensstromen voor meer informatie. |
+| [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | Met de Edge Network API kunnen klanten met de Experience Platform Edge Network communiceren via een nieuw, geverifieerd eindpunt, zodat ze een groot aantal verschillende gebruiksgevallen voor gegevensverzameling, personalisatie, reclame en marketing kunnen aansturen. |
 
-Voor meer informatie over gegevensinzameling in Experience Platform, te zien gelieve het [ overzicht van de gegevensinzameling ](../../collection/home.md).
+Voor meer informatie over gegevensinzameling in Experience Platform, te zien gelieve het [&#x200B; overzicht van de gegevensinzameling &#x200B;](../../collection/home.md).
 
 ## Query-service {#query-service}
 
@@ -127,11 +127,11 @@ Met [!DNL Query Service] kunt u standaard-SQL gebruiken om query&#39;s uit te vo
 
 | Functie | Beschrijving |
 | --- | --- |
-| `table_exists` | De nieuwe eigenschapbevel wordt gebruikt om te bevestigen of een lijst momenteel in het systeem bestaat of niet. Het bevel keert een booleaanse waarde terug: `true` als de lijst **&#x200B;**&#x200B;bestaat, en `false` als de lijst **niet** bestaat. Zie de [ SQL syntaxisdocumentatie ](../../query-service/sql/syntax.md) voor meer informatie. |
+| `table_exists` | De nieuwe eigenschapbevel wordt gebruikt om te bevestigen of een lijst momenteel in het systeem bestaat of niet. Het bevel keert een booleaanse waarde terug: `true` als de lijst **&#x200B;**&#x200B;bestaat, en `false` als de lijst **niet** bestaat. Zie de [&#x200B; SQL syntaxisdocumentatie &#x200B;](../../query-service/sql/syntax.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over beschikbare eigenschappen, verwijs naar het [ overzicht van de Dienst van de Vraag ](../../query-service/home.md).
+Voor meer informatie over beschikbare eigenschappen, verwijs naar het [&#x200B; overzicht van de Dienst van de Vraag &#x200B;](../../query-service/home.md).
 
 ## Bronnen {#sources}
 
@@ -143,10 +143,10 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe bronnen nu beschikbaar voor B2B-gebruik | U kunt nu alle beschikbare bronnen op Experience Platform voor B2B-gebruiksgevallen gebruiken. Zie de [ broncatalogus ](../../sources/home.md) voor een volledige lijst van beschikbare bronnen. |
-| Algemene beschikbaarheid van nieuwe [!DNL Oracle Eloqua] bron | U kunt nu de [!DNL Oracle Eloqua] -bron gebruiken om naadloos gegevens in te voeren van uw [!DNL Oracle Eloqua] -instantie (account, campagne, contactpersonen) naar Experience Platform. Zie de documentatie bij [ het creëren van een  [!DNL Oracle Eloqua]  bronverbinding ](../../sources/connectors/marketing-automation/oracle-eloqua.md) voor meer informatie. |
-| API-verbeteringen voor [!DNL Data Landing Zone] | De bron [!DNL Data Landing Zone] ondersteunt nu automatische detectie van bestandseigenschappen bij gebruik van de API van [!DNL Flow Service] . Zie de documentatie bij [ het creëren van a  [!DNL Data Landing Zone]  bronverbinding ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) voor meer informatie. |
+| Nieuwe bronnen nu beschikbaar voor B2B-gebruik | U kunt nu alle beschikbare bronnen op Experience Platform voor B2B-gebruiksgevallen gebruiken. Zie de [&#x200B; broncatalogus &#x200B;](../../sources/home.md) voor een volledige lijst van beschikbare bronnen. |
+| Algemene beschikbaarheid van nieuwe [!DNL Oracle Eloqua] bron | U kunt nu de [!DNL Oracle Eloqua] -bron gebruiken om naadloos gegevens in te voeren van uw [!DNL Oracle Eloqua] -instantie (account, campagne, contactpersonen) naar Experience Platform. Zie de documentatie bij [&#x200B; het creëren van een  [!DNL Oracle Eloqua]  bronverbinding &#x200B;](../../sources/connectors/marketing-automation/oracle-eloqua.md) voor meer informatie. |
+| API-verbeteringen voor [!DNL Data Landing Zone] | De bron [!DNL Data Landing Zone] ondersteunt nu automatische detectie van bestandseigenschappen bij gebruik van de API van [!DNL Flow Service] . Zie de documentatie bij [&#x200B; het creëren van a  [!DNL Data Landing Zone]  bronverbinding &#x200B;](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

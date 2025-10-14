@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Array, list en set-functies
 
-[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
+[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht &#x200B;](./overview.md) worden gevonden.
 
 ## In
 
@@ -286,7 +286,7 @@ De functie `head` wordt gebruikt om het eerste item in de array of lijst als een
 
 **Voorbeeld**
 
-De volgende PQL-query retourneert de eerste van de bovenste vijf bestellingen met de hoogste prijs. Meer informatie over de `topN` functie kan in [ eerst `n` in serie ](#first-n) sectie worden gevonden.
+De volgende PQL-query retourneert de eerste van de bovenste vijf bestellingen met de hoogste prijs. Meer informatie over de `topN` functie kan in [&#x200B; eerst `n` in serie &#x200B;](#first-n) sectie worden gevonden.
 
 ```sql
 orders.topN(price, 5).head()
@@ -294,4 +294,4 @@ orders.topN(price, 5).head()
 
 ## Volgende stappen
 
-Nu u over serie, lijst, en vastgestelde functies hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).
+Nu u over serie, lijst, en vastgestelde functies hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [&#x200B; overzicht van Profile Query Language &#x200B;](./overview.md).

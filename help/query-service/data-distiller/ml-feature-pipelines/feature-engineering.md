@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## Volgende stappen:
 
-Door dit document te lezen hebt u geleerd hoe u gegevens in Adobe Experience Platform kunt transformeren in functies, of variabelen, die door een model voor machinaal leren kunnen worden verbruikt. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren is [ eigenschapdatasets van de uitvoer ](./export-data.md).
+Door dit document te lezen hebt u geleerd hoe u gegevens in Adobe Experience Platform kunt transformeren in functies, of variabelen, die door een model voor machinaal leren kunnen worden verbruikt. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren is [&#x200B; eigenschapdatasets van de uitvoer &#x200B;](./export-data.md).

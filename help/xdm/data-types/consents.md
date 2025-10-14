@@ -20,8 +20,8 @@ In dit document worden de structuur en het beoogde gebruik beschreven van de vel
 
 Dit document vereist een goed begrip van XDM en het gebruik van de schema&#39;s in [!DNL Experience Platform]. Lees de volgende documentatie voordat u verdergaat:
 
-* [ XDM overzicht van het Systeem ](https://www.adobe.com/go/xdm-home-en)
-* [ Grondbeginselen van schemacompositie ](https://www.adobe.com/go/xdm-schema-best-practices-en)
+* [&#x200B; XDM overzicht van het Systeem &#x200B;](https://www.adobe.com/go/xdm-home-en)
+* [&#x200B; Grondbeginselen van schemacompositie &#x200B;](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Gegevenstypestructuur {#structure}
 
@@ -44,7 +44,7 @@ In de volgende schermafbeelding ziet u hoe de structuur van het gegevenstype wor
 
 >[!TIP]
 >
->Zie de gids op [ het onderzoeken van middelen XDM ](../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in Experience Platform UI te inspecteren.
+>Zie de gids op [&#x200B; het onderzoeken van middelen XDM &#x200B;](../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in Experience Platform UI te inspecteren.
 
 In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype [!UICONTROL Consents and Preferences] kan verwerken. In de volgende secties wordt informatie gegeven over het specifieke gebruik van elk van deze velden.
 
@@ -88,8 +88,8 @@ In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype
 >
 >U kunt voorbeeld-JSON-gegevens genereren voor elk XDM-schema dat u in Experience Platform definieert om te helpen visualiseren hoe de toestemming en voorkeursgegevens van uw klant moeten worden toegewezen. Raadpleeg de volgende documentatie voor meer informatie:
 >
->* [ produceer steekproefgegevens in UI ](../ui/sample.md)
->* [ produceer steekproefgegevens in API ](../api/sample-data.md)
+>* [&#x200B; produceer steekproefgegevens in UI &#x200B;](../ui/sample.md)
+>* [&#x200B; produceer steekproefgegevens in API &#x200B;](../api/sample-data.md)
 
 ## `consents` {#choices}
 
@@ -138,7 +138,7 @@ In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [ bijlage ](#choice-values) voor erkende waarden en definities. |
+| `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [&#x200B; bijlage &#x200B;](#choice-values) voor erkende waarden en definities. |
 
 {style="table-layout:auto"}
 
@@ -156,7 +156,7 @@ In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `idType` | Het advertentie-id-type, `IDFA` voor Apple-id voor adverteerders of `GAID` voor Google Advertiser-id, ook wel Android Advertiser-id (AID) genoemd. |
-| `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [ bijlage ](#choice-values) voor erkende waarden en definities. |
+| `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [&#x200B; bijlage &#x200B;](#choice-values) voor erkende waarden en definities. |
 
 {style="table-layout:auto"}
 
@@ -172,7 +172,7 @@ In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [ bijlage ](#choice-values) voor erkende waarden en definities. |
+| `val` | De klant-verstrekte toestemmingskeuze voor dit gebruiksgeval. Zie [&#x200B; bijlage &#x200B;](#choice-values) voor erkende waarden en definities. |
 
 {style="table-layout:auto"}
 
@@ -184,7 +184,7 @@ In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype
 >
 >`personalize` heeft geen betrekking op gevallen van marketinggebruik. Bijvoorbeeld, als een klant uit verpersoonlijking voor alle kanalen opteert, zouden zij niet moeten ophouden ontvangend mededelingen door die kanalen. De berichten die ze ontvangen, moeten eerder algemeen zijn en niet gebaseerd op hun profiel.
 >
->Door het zelfde voorbeeld, als een klant uit direct marketing voor alle kanalen (door `marketing` kiest, verklaard in de [ volgende sectie ](#marketing)), dan zou die klant geen berichten moeten ontvangen, zelfs als verpersoonlijking wordt toegelaten.
+>Door het zelfde voorbeeld, als een klant uit direct marketing voor alle kanalen (door `marketing` kiest, verklaard in de [&#x200B; volgende sectie &#x200B;](#marketing)), dan zou die klant geen berichten moeten ontvangen, zelfs als verpersoonlijking wordt toegelaten.
 
 ```json
 "personalize": {
@@ -197,7 +197,7 @@ In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `content` | Vertegenwoordigt de voorkeuren van de klant voor gepersonaliseerde inhoud op uw website of toepassing. |
-| `val` | De door de klant opgegeven voorkeur voor personalisatie voor het opgegeven gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis de personalisatie moet plaatsvinden. Zie [ bijlage ](#choice-values) voor erkende waarden en definities. |
+| `val` | De door de klant opgegeven voorkeur voor personalisatie voor het opgegeven gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis de personalisatie moet plaatsvinden. Zie [&#x200B; bijlage &#x200B;](#choice-values) voor erkende waarden en definities. |
 
 {style="table-layout:auto"}
 
@@ -226,12 +226,12 @@ In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `preferred` | Wijst op het aangewezen kanaal van de klant voor het ontvangen van mededelingen. Zie [ bijlage ](#preferred-values) voor toegelaten waarden. |
+| `preferred` | Wijst op het aangewezen kanaal van de klant voor het ontvangen van mededelingen. Zie [&#x200B; bijlage &#x200B;](#preferred-values) voor toegelaten waarden. |
 | `any` | Vertegenwoordigt de voorkeur van de klant voor directe marketing als geheel. De voorkeur voor toestemming die in dit veld wordt gegeven, wordt beschouwd als de voorkeur voor een marketingkanaal, tenzij deze wordt overschreven door extra subvelden die onder `marketing` worden opgegeven. Als u meer opties voor korreligheid wilt gebruiken, wordt u aangeraden dit veld uit te sluiten.<br><br> als de waarde aan `n` wordt geplaatst, dan zouden alle specifiekere verpersoonlijkingsmontages moeten worden genegeerd. Als de waarde is ingesteld op `y` , moeten alle verpersoonlijkingsopties met fijnere korrel ook worden behandeld als `y` , tenzij deze expliciet zijn ingesteld op `n` . Als de waarde unset is, dan zouden de waarden voor elke verpersoonlijkingsoptie moeten worden gehonoreerd zoals gespecificeerd. |
 | `email` | Geeft aan of de klant ermee instemt e-mailberichten te ontvangen. |
 | `push` | Geeft aan of de klant het ontvangen van pushberichten toestaat. |
 | `sms` | Geeft aan of de klant ermee instemt tekstberichten te ontvangen. |
-| `val` | De voorkeur van de klant voor het gespecificeerde gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis het geval van het gebruik in de handel moet plaatsvinden. Zie [ bijlage ](#choice-values) voor erkende waarden en definities. |
+| `val` | De voorkeur van de klant voor het gespecificeerde gebruiksgeval. In gevallen waarin de klant niet hoeft te worden gevraagd om toestemming te verlenen, moet in de waarde van dit veld worden aangegeven op welke basis het geval van het gebruik in de handel moet plaatsvinden. Zie [&#x200B; bijlage &#x200B;](#choice-values) voor erkende waarden en definities. |
 | `time` | Een tijdstempel volgens ISO 8601 van het tijdstip waarop de voorkeur voor het in de handel brengen werd gewijzigd, indien van toepassing. Als de tijdstempel voor een bepaalde voorkeur gelijk is aan de tijdstempel die is opgegeven onder `metadata` , hoeft u dit veld niet in te stellen voor die voorkeur. |
 | `reason` | Wanneer een klant kiest uit een geval van het marketinggebruik, vertegenwoordigt dit koordgebied de reden waarom de klant uit opteerde. |
 
@@ -257,17 +257,17 @@ In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype
 
 Als u het gegevenstype [!UICONTROL Consents and Preferences] wilt gebruiken om gegevens met toestemming van uw klanten in te voeren, moet u een dataset maken die is gebaseerd op een schema dat dat gegevenstype bevat.
 
-Zie het leerprogramma op [ creërend een schema in UI ](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gegevenstypes aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met het [!UICONTROL Consents and Preferences] gegevenstype bevat, verwijs naar de sectie over [ het creëren van een dataset ](../../catalog/datasets/user-guide.md#create) in de gids van de datasetgebruiker, na de stappen om een dataset met een bestaand schema tot stand te brengen.
+Zie het leerprogramma op [&#x200B; creërend een schema in UI &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gegevenstypes aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met het [!UICONTROL Consents and Preferences] gegevenstype bevat, verwijs naar de sectie over [&#x200B; het creëren van een dataset &#x200B;](../../catalog/datasets/user-guide.md#create) in de gids van de datasetgebruiker, na de stappen om een dataset met een bestaand schema tot stand te brengen.
 
 >[!IMPORTANT]
 >
 >Als u toestemmingsgegevens naar [!DNL Real-Time Customer Profile] wilt verzenden, is het vereist dat u een [!DNL Profile] -ingeschakeld schema maakt op basis van de [!DNL XDM Individual Profile] -klasse die het [!UICONTROL Consents and Preferences] -gegevenstype bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de zelfstudies die hierboven zijn gekoppeld voor specifieke stappen met betrekking tot [!DNL Real-Time Customer Profile] -vereisten voor schema&#39;s en gegevenssets.
 >
->Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [ fusiebeleid ](../../rtcdp/profile/merge-policies.md) voor meer informatie.
+>Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [&#x200B; fusiebeleid &#x200B;](../../rtcdp/profile/merge-policies.md) voor meer informatie.
 
 ## Verwerking van toestemmings- en preferenties
 
-Wanneer een klant hun toestemmingen of voorkeur op uw website verandert, zouden deze veranderingen moeten worden verzameld en onmiddellijk worden afgedwongen gebruikend het [ Web SDK van Adobe Experience Platform ](../../web-sdk/commands/setconsent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
+Wanneer een klant hun toestemmingen of voorkeur op uw website verandert, zouden deze veranderingen moeten worden verzameld en onmiddellijk worden afgedwongen gebruikend het [&#x200B; Web SDK van Adobe Experience Platform &#x200B;](../../web-sdk/commands/setconsent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
 
 ## Bijlage {#appendix}
 
@@ -317,4 +317,4 @@ In de volgende tabel worden de toegestane waarden voor `preferred` weergegeven. 
 
 ### Volledig schema [!UICONTROL Consents and Preferences] {#full-schema}
 
-Om het volledige schema voor het [!UICONTROL Consents and Preferences] gegevenstype te bekijken, verwijs naar de [ officiële bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).
+Om het volledige schema voor het [!UICONTROL Consents and Preferences] gegevenstype te bekijken, verwijs naar de [&#x200B; officiële bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).

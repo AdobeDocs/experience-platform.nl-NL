@@ -15,7 +15,7 @@ In Adobe Experience Platform zijn berekende kenmerken functies die worden gebrui
 
 ## Hoe krijg ik toegang tot berekende kenmerken?
 
-Om toegang tot gegevens verwerkte attributen te krijgen, zult u de aangewezen toestemmingen moeten hebben (**Mening Berekende attributen** en **beheert Gedetailleerde attributen**). Voor meer informatie over de vereiste toestemmingen, te lezen gelieve de [ documentatie van de toegangscontrole ](../../access-control/home.md). Leren hoe te om deze toestemmingen toe te passen, te lezen gelieve [ het leiden toestemmingengids ](../../access-control/ui/permissions.md).
+Om toegang tot gegevens verwerkte attributen te krijgen, zult u de aangewezen toestemmingen moeten hebben (**Mening Berekende attributen** en **beheert Gedetailleerde attributen**). Voor meer informatie over de vereiste toestemmingen, te lezen gelieve de [&#x200B; documentatie van de toegangscontrole &#x200B;](../../access-control/home.md). Leren hoe te om deze toestemmingen toe te passen, te lezen gelieve [&#x200B; het leiden toestemmingengids &#x200B;](../../access-control/ui/permissions.md).
 
 ## Welke datasets dragen bij tot berekende attributenberekeningen?
 
@@ -31,7 +31,7 @@ Laatst geëvalueerd verwijst naar de tijdstempel tot welke gebeurtenissen worden
 
 ## Kan ik de vernieuwingsfrequentie kiezen? Hoe wordt dit besloten?
 
-De vernieuwingsfrequentie wordt automatisch bepaald op basis van de terugzoekperiode van uw berekende kenmerk. Voor meer informatie over dit, te lezen gelieve de [ sectie van de raadplegingsperiode ](./overview.md#lookback-periods) van het gegevens verwerkte attributenoverzicht.
+De vernieuwingsfrequentie wordt automatisch bepaald op basis van de terugzoekperiode van uw berekende kenmerk. Voor meer informatie over dit, te lezen gelieve de [&#x200B; sectie van de raadplegingsperiode &#x200B;](./overview.md#lookback-periods) van het gegevens verwerkte attributenoverzicht.
 
 ## Hoe worden berekeningen beïnvloed door de gegevensvervaltijden van de Gebeurtenis van de Ervaring?
 
@@ -77,7 +77,7 @@ Als bijvoorbeeld een eerste evaluatie plaatsvindt op 9 oktober om 12.00 uur UTC,
 
 >[!IMPORTANT]
 >
->Dit is slechts het geval als snel verfrist zich **niet** toegelaten. Om te leren hoe de raadplegingsperiode verandert wanneer snel verfrist wordt toegelaten, te lezen gelieve [ snel sectie ](./overview.md#fast-refresh) verfrist.
+>Dit is slechts het geval als snel verfrist zich **niet** toegelaten. Om te leren hoe de raadplegingsperiode verandert wanneer snel verfrist wordt toegelaten, te lezen gelieve [&#x200B; snel sectie &#x200B;](./overview.md#fast-refresh) verfrist.
 
 Zowel de **wekelijkse** en **maandelijkse** vernieuwingen vinden op het begin van de **kalenderweek** (de Zondag van de nieuwe week) of het begin van de **kalendermaand** (de eerste van de nieuwe maand), in tegenstelling tot precies één week of één maand na de eerste datum van de tijdevaluatie plaats.
 
@@ -99,4 +99,4 @@ De gegevens verwerkte attributen leiden automatisch de etiketten van het gegeven
 
 ## Hoe gebruik ik berekende kenmerken met Adobe Journey Optimizer?
 
-Als u berekende kenmerken wilt gebruiken tijdens reizen, moet u de veldgroep `SystemComputedAttributes` toevoegen aan de gegevensbron van het Experience Platform. Voor meer informatie bij het vormen van de gegevensbron van het Experience Platform, te lezen gelieve de [ gegevensbrongids van Adobe Experience Platform ](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=nl-NL).
+Als u berekende kenmerken wilt gebruiken tijdens reizen, moet u de veldgroep `SystemComputedAttributes` toevoegen aan de gegevensbron van het Experience Platform. Voor meer informatie bij het vormen van de gegevensbron van het Experience Platform, te lezen gelieve de [&#x200B; gegevensbrongids van Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=nl-NL).

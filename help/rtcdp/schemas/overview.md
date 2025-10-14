@@ -16,4 +16,4 @@ Alle gegevens die in Adobe Real-Time Customer Data Platform worden ingevoerd, mo
 
 Na het creëren van schema&#39;s, kunt u de structuur van gegevens aan XDM in kaart brengen zodat het in het systeem kan worden opgenomen.
 
-Voor meer informatie over XDM en hoe te om schema&#39;s in UI te beheren, verwijs naar de [ documentatie XDM ](../../xdm/home.md). Als u in real time Experience Platform B2B edition van de Klant gebruikt, zie het document op [ schema&#39;s in Real-Time CDP B2B edition ](./b2b.md) voor informatie over B2B-specifieke toepassingen voor XDM.
+Voor meer informatie over XDM en hoe te om schema&#39;s in UI te beheren, verwijs naar de [&#x200B; documentatie XDM &#x200B;](../../xdm/home.md). Als u in real time Experience Platform B2B edition van de Klant gebruikt, zie het document op [&#x200B; schema&#39;s in Real-Time CDP B2B edition &#x200B;](./b2b.md) voor informatie over B2B-specifieke toepassingen voor XDM.

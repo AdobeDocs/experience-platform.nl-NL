@@ -37,10 +37,10 @@ Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiks
 
 Als u een nieuw label wilt maken, selecteert u de tab **[!UICONTROL Labels]** in het zijpaneel en selecteert u **[!UICONTROL Create Label]** .
 
-![ flac-new-label ](../../images/flac-ui/create-label.png)
+![&#x200B; flac-new-label &#x200B;](../../images/flac-ui/create-label.png)
 
 Het dialoogvenster **[!UICONTROL Create a new label]** wordt weergegeven, waarin u wordt gevraagd een naam, een optionele vriendelijke naam en een optionele beschrijving in te voeren.
 
-![ nieuw-label-info ](../../images/flac-ui/new-label-info.png)
+![&#x200B; nieuw-label-info &#x200B;](../../images/flac-ui/new-label-info.png)
 
 Selecteer **[!UICONTROL Confirm]** als u klaar bent.

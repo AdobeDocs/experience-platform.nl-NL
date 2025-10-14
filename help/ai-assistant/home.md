@@ -19,17 +19,17 @@ Lees dit document voor meer informatie over AI Assistant in Adobe Experience Pla
 
 AI-assistent in Adobe Experience Platform is een gesprekservaring waarmee u uw workflows in Adobe-applicaties kunt versnellen. Met AI-assistent krijgt u meer inzicht in productkennis, kunt u problemen oplossen of informatie doorzoeken en operationele inzichten verkrijgen. AI-assistent biedt ondersteuning voor Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
 
-![ de AI Hulp interface met de eerste getriggerde gebruikerservaring.](./images/ai-assistant-full.png)
+![&#x200B; de AI Hulp interface met de eerste getriggerde gebruikerservaring.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->U moet met a [ gebruikersovereenkomst ](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) akkoord gaan alvorens u AI Medewerker kunt gebruiken. De gebruikersovereenkomst bevat ook de openbare bètaovereenkomst. Dit is zodat u extra eigenschappen van AI Medewerker kunt gebruiken aangezien zij in een bètacapaciteit uitrollen.
+>U moet met a [&#x200B; gebruikersovereenkomst &#x200B;](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) akkoord gaan alvorens u AI Medewerker kunt gebruiken. De gebruikersovereenkomst bevat ook de openbare bètaovereenkomst. Dit is zodat u extra eigenschappen van AI Medewerker kunt gebruiken aangezien zij in een bètacapaciteit uitrollen.
 
 +++Selecteren om gebruikersovereenkomstinterface weer te geven
 
-![ de eerste pagina van de gebruikersovereenkomst.](./images/user-agreement-1.png)
+![&#x200B; de eerste pagina van de gebruikersovereenkomst.](./images/user-agreement-1.png)
 
-![ De laatste pagina van de gebruikersovereenkomst.](./images/user-agreement-2.png)
+![&#x200B; De laatste pagina van de gebruikersovereenkomst.](./images/user-agreement-2.png)
 
 +++
 
@@ -96,8 +96,8 @@ Bekijk de volgende video voor aanvullende informatie over operationele inzichten
 
 Momenteel is het bereik van AI Assistant als volgt:
 
-* [ de kennis van het Product ](./home.md#product-knowledge): De Medewerker van AI kan de vragen van de productkennis voor Experience Platform, Real-Time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook onderwerpen over productkennis voor Customer Journey Analytics bespreken, maar alleen via de interface van Customer Journey Analytics.
-* [ Operationele inzichten ](./home.md#operational-insights): U kunt AI Medewerker met vragen over operationele inzichten op de volgende gegevensvoorwerpen vragen: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen.
+* [&#x200B; de kennis van het Product &#x200B;](./home.md#product-knowledge): De Medewerker van AI kan de vragen van de productkennis voor Experience Platform, Real-Time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook onderwerpen over productkennis voor Customer Journey Analytics bespreken, maar alleen via de interface van Customer Journey Analytics.
+* [&#x200B; Operationele inzichten &#x200B;](./home.md#operational-insights): U kunt AI Medewerker met vragen over operationele inzichten op de volgende gegevensvoorwerpen vragen: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen.
 
 ## Volgende stappen
 

@@ -11,18 +11,18 @@ ht-degree: 0%
 
 # Verbinding maken met Experience Platform via de [!DNL Salesforce] API[!DNL Flow Service]
 
-Lees deze gids om te leren hoe u uw [!DNL Salesforce] bronrekening met Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe u uw [!DNL Salesforce] bronrekening met Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Verbinding maken [!DNL Salesforce] met Experience Platform op [!DNL Azure] {#azure}
 
@@ -51,7 +51,7 @@ Als u uw [!DNL Salesforce] -account wilt verbinden met [!DNL Flow Service] via b
 | `apiVersion` | (Optioneel) De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt Experience Platform automatisch de meest recente beschikbare versie. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` . |
 
-Voor meer informatie bij begonnen worden, bezoek [ dit document van Salesforce ](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+Voor meer informatie bij begonnen worden, bezoek [&#x200B; dit document van Salesforce &#x200B;](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
 >[!TAB  OAuth 2 de Credentials van de Cliënt ]
 
@@ -66,7 +66,7 @@ Als u uw [!DNL Salesforce] -account wilt verbinden met [!DNL Flow Service] via O
 | `includeDeletedObjects` | Een booleaanse waarde die wordt gebruikt om te bepalen of zachte verwijderde records moeten worden opgenomen. Als deze optie is ingesteld op true, kunnen elektronisch verwijderde records worden opgenomen in uw [!DNL Salesforce] -query en vanuit uw account worden opgenomen in Experience Platform. Als u de configuratie niet opgeeft, wordt deze waarde standaard ingesteld op `false` . |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` . |
 
-Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce]  gids over de Stroom van de Vergunning OAuth ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
+Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce]  gids over de Stroom van de Vergunning OAuth &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
 >[!ENDTABS]
 
@@ -205,13 +205,13 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding samen met de unieke 
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../../../landing/multi-cloud.md).
 
 Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Salesforce] -bron kunt verbinden met Experience Platform op AWS.
 
 ### Vereisten
 
-Voor informatie over hoe te opstelling uw [!DNL Salesforce] rekening om met Experience Platform op AWS te kunnen verbinden, lees het [[!DNL Salesforce]  overzicht ](../../../../connectors/crm/salesforce.md#aws).
+Voor informatie over hoe te opstelling uw [!DNL Salesforce] rekening om met Experience Platform op AWS te kunnen verbinden, lees het [[!DNL Salesforce]  overzicht &#x200B;](../../../../connectors/crm/salesforce.md#aws).
 
 ### Een basisverbinding maken voor [!DNL Salesforce] op Experience Platform op AWS
 
@@ -255,7 +255,7 @@ curl -X POST \
   }'
 ```
 
-Voor informatie over hoe te om uw [!DNL Salesforce] terug te winnen `jwtToken`, lees de gids op [ hoe te opstelling a  [!DNL Salesforce]  bron om met Experience Platform op AWS ](../../../../connectors/crm/salesforce.md#aws) te verbinden.
+Voor informatie over hoe te om uw [!DNL Salesforce] terug te winnen `jwtToken`, lees de gids op [&#x200B; hoe te opstelling a  [!DNL Salesforce]  bron om met Experience Platform op AWS &#x200B;](../../../../connectors/crm/salesforce.md#aws) te verbinden.
 
 +++
 

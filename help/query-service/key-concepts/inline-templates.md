@@ -17,7 +17,7 @@ Dit document behandelt het gebruik en de beperkingen van gealigneerde malplaatje
 
 ## Vereisten
 
-Inlinesjablonen worden ondersteund door zowel de UI als de API van de Query Service. Alvorens met deze gids verder te gaan, lees de documentatie over hoe te [ een vraagmalplaatje door API ](../api/query-templates.md#create-a-query-template) of met de [ Redacteur van de Vraag ](../ui/user-guide.md#query-authoring) creëren.
+Inlinesjablonen worden ondersteund door zowel de UI als de API van de Query Service. Alvorens met deze gids verder te gaan, lees de documentatie over hoe te [&#x200B; een vraagmalplaatje door API &#x200B;](../api/query-templates.md#create-a-query-template) of met de [&#x200B; Redacteur van de Vraag &#x200B;](../ui/user-guide.md#query-authoring) creëren.
 
 ## Inline sjabloonsyntaxis {#syntax}
 
@@ -44,10 +44,10 @@ U kunt sjablonen gebruiken om een of meerdere voorwaarden op te slaan. Ze hoeven
 
 >[!NOTE]
 >
->In de gebruikersinterface van Adobe Experience Platform worden inlinesjablonen in de vorm van geparameteriiseerde query&#39;s alleen op het hoofdniveau ondersteund. Dit betekent dat de parameters bepaalde vragen slechts werken wanneer gebruikt in het originele malplaatje. Het kindmalplaatje moet een statisch malplaatje zijn en kan geen dynamische parameters hebben. Zie de [ parameters bepaalde vragen documentatie ](../ui/parameterized-queries.md) om meer te leren.
+>In de gebruikersinterface van Adobe Experience Platform worden inlinesjablonen in de vorm van geparameteriiseerde query&#39;s alleen op het hoofdniveau ondersteund. Dit betekent dat de parameters bepaalde vragen slechts werken wanneer gebruikt in het originele malplaatje. Het kindmalplaatje moet een statisch malplaatje zijn en kan geen dynamische parameters hebben. Zie de [&#x200B; parameters bepaalde vragen documentatie &#x200B;](../ui/parameterized-queries.md) om meer te leren.
 
 ## Volgende stappen
 
 Na het lezen van dit document, weet u nu hoe te om andere malplaatjes binnen uw SQL, of in de Redacteur van de Vraag of door de Dienst API van de Vraag van verwijzingen te voorzien.
 
-Bovendien, zou u de [ anonieme blokgids ](./anonymous-block.md) moeten lezen, die verklaart hoe te om ontwikkelingsoverheadkosten te minimaliseren door één of meerdere SQL verklaringen te ketenen die in opeenvolging worden uitgevoerd.
+Bovendien, zou u de [&#x200B; anonieme blokgids &#x200B;](./anonymous-block.md) moeten lezen, die verklaart hoe te om ontwikkelingsoverheadkosten te minimaliseren door één of meerdere SQL verklaringen te ketenen die in opeenvolging worden uitgevoerd.

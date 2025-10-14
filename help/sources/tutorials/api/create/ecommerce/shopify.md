@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Shopify] tot stand te brengen (verder die als &quot; [!DNL Shopify] wordt bedoeld&quot;) gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Shopify] tot stand te brengen (verder die als &quot; [!DNL Shopify] wordt bedoeld&quot;) gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -37,11 +37,11 @@ In de volgende secties vindt u aanvullende informatie die u moet weten voordat u
 | `accessToken` | Het toegangstoken voor uw [!DNL Shopify] gebruikersaccount. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Shopify] is: `4f63aa36-bd48-4e33-bb83-49fbcd11c708` . |
 
-Voor meer informatie over begonnen worden, verwijs naar dit [ authentificatiedocument ](https://shopify.dev/concepts/about-apis/authentication) veranderen.
+Voor meer informatie over begonnen worden, verwijs naar dit [&#x200B; authentificatiedocument &#x200B;](https://shopify.dev/concepts/about-apis/authentication) veranderen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 

@@ -17,12 +17,12 @@ Lees deze handleiding voor meer informatie over het verbinden van uw [!DNL Sales
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een voor authentiek verklaarde [!DNL Salesforce] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow voor de gegevens van CRM ](../../dataflow/crm.md).
+Als u reeds een voor authentiek verklaarde [!DNL Salesforce] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow voor de gegevens van CRM &#x200B;](../../dataflow/crm.md).
 
 ### Vereiste referenties verzamelen {#gather-required-credentials}
 
@@ -46,7 +46,7 @@ U moet waarden opgeven voor de volgende referenties om uw [!DNL Salesforce] -acc
 | Beveiligingstoken | Het beveiligingstoken voor de gebruikersaccount van [!DNL Salesforce] . |
 | API-versie | (Optioneel) De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt Experience Platform automatisch de meest recente beschikbare versie. |
 
-Voor meer informatie over authentificatie, verwijs naar [ deze  [!DNL Salesforce]  authentificatiegids ](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+Voor meer informatie over authentificatie, verwijs naar [&#x200B; deze  [!DNL Salesforce]  authentificatiegids &#x200B;](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
 >[!TAB  OAuth2 Client Credential ]
 
@@ -60,7 +60,7 @@ U moet waarden opgeven voor de volgende referenties om uw [!DNL Salesforce] -acc
 | API-versie | De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt Experience Platform automatisch de meest recente beschikbare versie. |
 | Verwijderde objecten opnemen | Een booleaanse waarde die wordt gebruikt om te bepalen of zachte verwijderde records moeten worden opgenomen. Indien ingesteld op true, kunnen elektronisch verwijderde records worden opgenomen in uw [!DNL Salesforce] -query en van uw account worden opgenomen in Experience Platform. Als u de configuratie niet opgeeft, wordt deze waarde standaard ingesteld op `false` . |
 
-Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce]  gids over de Stroom van de Vergunning OAuth ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
+Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce]  gids over de Stroom van de Vergunning OAuth &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
 >[!ENDTABS]
 
@@ -76,7 +76,7 @@ Selecteer **[!DNL Salesforce]** onder de categorie *[!UICONTROL CRM]* en selecte
 >
 >In de catalogus met bronnen ziet u **[!UICONTROL Set up]** als er geen verbinding is met een account, of **[!UICONTROL Add data]** als er al een account is geverifieerd.
 
-![ de broncatalogus op Experience Platform UI met geselecteerde Salesforce bronkaart.](../../../../images/tutorials/create/salesforce/catalog.png)
+![&#x200B; de broncatalogus op Experience Platform UI met geselecteerde Salesforce bronkaart.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 De pagina **[!UICONTROL Connect to Salesforce]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -84,13 +84,13 @@ De pagina **[!UICONTROL Connect to Salesforce]** wordt weergegeven. Op deze pagi
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en selecteert u vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven. Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ een lijst van voor authentiek verklaarde rekeningen van Salesforce die reeds in uw organisatie bestaan.](../../../../images/tutorials/create/salesforce/existing.png)
+![&#x200B; een lijst van voor authentiek verklaarde rekeningen van Salesforce die reeds in uw organisatie bestaan.](../../../../images/tutorials/create/salesforce/existing.png)
 
 ### Een nieuwe account maken
 
 Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en een beschrijving voor uw nieuwe [!DNL Salesforce] -account.
 
-![ de interface waarin u een nieuwe rekening van Salesforce kunt tot stand brengen door de aangewezen authentificatiegeloofsbrieven te verstrekken.](../../../../images/tutorials/create/salesforce/new.png)
+![&#x200B; de interface waarin u een nieuwe rekening van Salesforce kunt tot stand brengen door de aangewezen authentificatiegeloofsbrieven te verstrekken.](../../../../images/tutorials/create/salesforce/new.png)
 
 Selecteer vervolgens het verificatietype dat u voor uw nieuwe account wilt gebruiken.
 
@@ -107,7 +107,7 @@ Selecteer **[!UICONTROL Basic authentication]** voor basisverificatie en geef wa
 
 Selecteer **[!UICONTROL Connect to source]** als u klaar bent.
 
-![ de basisauthentificatieinterface voor de rekeningsverwezenlijking van Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
+![&#x200B; de basisauthentificatieinterface voor de rekeningsverwezenlijking van Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
 
 >[!TAB  OAuth2 Client Credential ]
 
@@ -121,7 +121,7 @@ Selecteer **[!UICONTROL OAuth2 Client Credential]** voor OAuth 2 Client Credenti
 
 Selecteer **[!UICONTROL Connect to source]** als u klaar bent.
 
-![ de interface OAuth voor de rekeningsverwezenlijking van Salesforce.](../../../../images/tutorials/create/salesforce/oauth.png)
+![&#x200B; de interface OAuth voor de rekeningsverwezenlijking van Salesforce.](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 
@@ -133,4 +133,4 @@ De rest van de workflow blijft ongewijzigd. Het enige voorbehoud is dat bij het 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Salesforce] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/crm.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Salesforce] -account. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/crm.md) te brengen.

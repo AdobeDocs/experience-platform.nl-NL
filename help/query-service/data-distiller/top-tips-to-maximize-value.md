@@ -17,7 +17,7 @@ Door het casestudy van de Luma, zult u gebruikersgedragsgegevens analyseren en a
 
 ## Voorwaarde
 
-Om dit gebruiksgeval uit te voeren, moet uw instantie van Adobe Experience Platform voor [ Gegevens Distiller ](./overview.md) worden vergunning gegeven. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+Om dit gebruiksgeval uit te voeren, moet uw instantie van Adobe Experience Platform voor [&#x200B; Gegevens Distiller &#x200B;](./overview.md) worden vergunning gegeven. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
 U moet ook identiteitskaart van de huurder van uw **organisatie** kennen, die voor het uitvoeren van vragen wordt vereist. Uw huurder-id is het eerste deel van de URL wanneer u zich aanmeldt bij Experience Platform, dat direct na het symbool @ wordt weergegeven.
 
@@ -53,9 +53,9 @@ RFM-modellering kent echter beperkingen. Het veronderstelt uniformiteit binnen s
 
 De volgende informatie biedt een overzicht op hoog niveau van de workflow voor het maken van gebruikers van RFM SQL die in deze zelfstudie wordt beschreven.
 
-![ een infografisch genoemd &quot;RFM-Score-Gebaseerde SQL Audience&quot;die vier stappen illustreert: upload CSV, onderzoek gegevens, verrijk met de scores van RFM, en activeer het publiek.](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
+![&#x200B; een infografisch genoemd &quot;RFM-Score-Gebaseerde SQL Audience&quot;die vier stappen illustreert: upload CSV, onderzoek gegevens, verrijk met de scores van RFM, en activeer het publiek.](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
-Voordat u de Luminantiestudie start, moet u een voorbeeldgegevensset invoeren. Eerst, [ selecteer de verbinding om de `luma_web_data.zip` dataset plaatselijk ](../resources/luma_web_data.zip) te downloaden. De voorbeelddataset is een CSV-bestand met een gecomprimeerde ZIP-indeling dat kan worden uitgelijnd met het gebruiksscenario. Decomprimeer dit ZIP-bestand met Adobe Acrobat of een programma voor het ophalen van vertrouwde bestanden, zoals het ingebouwde hulpprogramma van uw besturingssysteem. In de praktijk zou u doorgaans gegevens van Adobe Analytics, Adobe Commerce of Adobe Web/Mobile SDK betrekken.
+Voordat u de Luminantiestudie start, moet u een voorbeeldgegevensset invoeren. Eerst, [&#x200B; selecteer de verbinding om de `luma_web_data.zip` dataset plaatselijk &#x200B;](../resources/luma_web_data.zip) te downloaden. De voorbeelddataset is een CSV-bestand met een gecomprimeerde ZIP-indeling dat kan worden uitgelijnd met het gebruiksscenario. Decomprimeer dit ZIP-bestand met Adobe Acrobat of een programma voor het ophalen van vertrouwde bestanden, zoals het ingebouwde hulpprogramma van uw besturingssysteem. In de praktijk zou u doorgaans gegevens van Adobe Analytics, Adobe Commerce of Adobe Web/Mobile SDK betrekken.
 
 Tijdens deze zelfstudie gebruikt u Data Distiller om relevante gebeurtenissen en velden op te halen in een gestandaardiseerde CSV-indeling. Het doel is alleen essentiële gebieden op te nemen en tegelijkertijd een uniforme gegevensstructuur te handhaven voor efficiëntie en gebruiksgemak.
 
@@ -71,13 +71,13 @@ Het deelvenster [!UICONTROL Configure Dataset] wordt weergegeven. Voer in het ve
 
 Het deelvenster [!UICONTROL Add data] wordt weergegeven. Sleep het CSV-bestand naar het vak **[!UICONTROL Add data]** of selecteer **[!UICONTROL Choose File]** om het bestand te zoeken en te uploaden.
 
-Om meer over dit proces te leren, verwijs naar het [ batch ingestion leerprogramma ](../../ingestion/tutorials/ingest-batch-data.md) en het [ werkschema van de datasetverwezenlijking ](../../catalog/datasets/user-guide.md#create) in de gids van de Dataset UI.
+Om meer over dit proces te leren, verwijs naar het [&#x200B; batch ingestion leerprogramma &#x200B;](../../ingestion/tutorials/ingest-batch-data.md) en het [&#x200B; werkschema van de datasetverwezenlijking &#x200B;](../../catalog/datasets/user-guide.md#create) in de gids van de Dataset UI.
 
 #### Het uploaden controleren en voltooien {#review-and-complete-upload}
 
 Zodra het bestand is geüpload, wordt onder aan de gebruikersinterface een gegevensvoorbeeld weergegeven. Selecteer **[!UICONTROL Finish]** om het uploaden te voltooien.
 
-![ de &quot;Add gegevens&quot;sectie van &quot;Create dataset van Csv- dossier&quot;werkschema met een gegevensvoorproef en &quot;Afwerking&quot;benadrukte.](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
+![&#x200B; de &quot;Add gegevens&quot;sectie van &quot;Create dataset van Csv- dossier&quot;werkschema met een gegevensvoorproef en &quot;Afwerking&quot;benadrukte.](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 De weergave van de gegevenssetactiviteiten voor de gegevensset &quot;luma_web_data&quot; wordt weergegeven. Het handmatig uploaden van het CSV-bestand
 wordt opgenomen als een batch en wordt geïdentificeerd door een [!UICONTROL Batch ID] . In een deelvenster aan de rechterkant wordt de tabelnaam weergegeven als `luma_web_data` .
@@ -86,7 +86,7 @@ wordt opgenomen als een batch en wordt geïdentificeerd door een [!UICONTROL Bat
 >
 >Wanneer het schrijven van vragen in Gegevens Distiller, gebruik de lijstnaam in plaats van de datasetnaam. De naam van de dataset wordt slechts gebruikt voor het doorbladeren in UI.
 
-![ het lusje van de &quot;activiteit van de Dataset&quot;voor de pas gecreëerde &quot;luma_web_data&quot;dataset met de lijstnaam, batch-identiteitskaart en &quot;Verbenadrukte dataset van de Voorproef&quot;.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
+![&#x200B; het lusje van de &quot;activiteit van de Dataset&quot;voor de pas gecreëerde &quot;luma_web_data&quot;dataset met de lijstnaam, batch-identiteitskaart en &quot;Verbenadrukte dataset van de Voorproef&quot;.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
 <!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
@@ -94,7 +94,7 @@ My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix
 
 Nadat de gegevens zijn verwerkt, selecteert u [!UICONTROL Preview dataset] in de rechterbovenhoek om een voorvertoning van de gegevensset weer te geven. Zo wordt de voorvertoning van de gegevensset weergegeven:
 
-![ de datasetvoorproef van de &quot;luma_web_data&quot;dataset.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
+![&#x200B; de datasetvoorproef van de &quot;luma_web_data&quot;dataset.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
 #### Schema-overwegingen {#schema-considerations}
 
@@ -128,9 +128,9 @@ SELECT * FROM luma_web_data;
 
 De resultaten van de query worden weergegeven onder de Query Editor op het tabblad **[!UICONTROL Results]** . Selecteer **[!UICONTROL View results]** als u de resultaten in een nieuw dialoogvenster wilt uitvouwen. De resultaten zien er ongeveer hetzelfde uit als de onderstaande afbeelding.
 
-![ de resultatendialoog van de Vraag voor de basisresultaten van de vraagexploratie.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
+![&#x200B; de resultatendialoog van de Vraag voor de basisresultaten van de vraagexploratie.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
-Zie de [ algemene begeleiding voor het document van de vraaguitvoering ](../best-practices/writing-queries.md) voor meer informatie.
+Zie de [&#x200B; algemene begeleiding voor het document van de vraaguitvoering &#x200B;](../best-practices/writing-queries.md) voor meer informatie.
 
 #### Focus op orders en sluit geannuleerde transacties uit {#focus-orders-exclude-cancelled}
 
@@ -200,7 +200,7 @@ WHERE event_type = 'order'
 
 De resultaten lijken op de onderstaande afbeelding.
 
-![ de de resultaatdialoog van de Vraag voor de gehaalde zeer belangrijke gebieden.](../images/data-distiller/top-tips-to-maximize-value/extract-key-fields-results.png)
+![&#x200B; de de resultaatdialoog van de Vraag voor de gehaalde zeer belangrijke gebieden.](../images/data-distiller/top-tips-to-maximize-value/extract-key-fields-results.png)
 
 Daarna, creeer a `TABLE` om de resultaten van de vorige vraag in een afgeleide dataset op te slaan. Kopieer en plak de volgende opdracht in de Query-editor om een `TABLE` -opdracht te maken.
 
@@ -218,7 +218,7 @@ CREATE TABLE IF NOT EXISTS order_data AS
 
 Het resultaat ziet er ongeveer hetzelfde uit als de volgende afbeelding, maar met een andere id voor de gegevensset.
 
-![ de resultatendialoog van de Vraag voor &quot;creeer een afgeleide dataset&quot;vraag.](../images/data-distiller/top-tips-to-maximize-value/create-table-derived-dataset.png)
+![&#x200B; de resultatendialoog van de Vraag voor &quot;creeer een afgeleide dataset&quot;vraag.](../images/data-distiller/top-tips-to-maximize-value/create-table-derived-dataset.png)
 
 Als beste praktijken, stel eenvoudig in werking onderzoeken vraag om de gegevens in de dataset te inspecteren. Gebruik de volgende verklaring om uw gegevens te bekijken.
 
@@ -226,7 +226,7 @@ Als beste praktijken, stel eenvoudig in werking onderzoeken vraag om de gegevens
 SELECT * FROM order_data;
 ```
 
-![ de resultatendialoog van de Vraag voor de inspect gegevensvraag.](../images/data-distiller/top-tips-to-maximize-value/inspect-data.png)
+![&#x200B; de resultatendialoog van de Vraag voor de inspect gegevensvraag.](../images/data-distiller/top-tips-to-maximize-value/inspect-data.png)
 
 #### De transacties samenvoegen om de RFM-waarden te genereren {#aggregate-transactions}
 
@@ -248,7 +248,7 @@ GROUP BY userid;
 
 De resultaten lijken op de onderstaande afbeelding.
 
-![ de de resultaatdialoog van de Vraag voor de gehaalde zeer belangrijke gebieden.](../images/data-distiller/top-tips-to-maximize-value/aggregate-transactions.png)
+![&#x200B; de de resultaatdialoog van de Vraag voor de gehaalde zeer belangrijke gebieden.](../images/data-distiller/top-tips-to-maximize-value/aggregate-transactions.png)
 
 Om query-efficiëntie en herbruikbaarheid te verbeteren, maakt u een `VIEW` waarin de samengevoegde RFM-waarden worden opgeslagen.
 
@@ -265,7 +265,7 @@ AS
 
 Het resultaat lijkt op de volgende afbeelding, maar heeft een andere id.
 
-![ de dialoog van de Resultaten van de Vraag die nieuw gecreeerd identiteitskaart van de MENING toont.](../images/data-distiller/top-tips-to-maximize-value/view-id.png)
+![&#x200B; de dialoog van de Resultaten van de Vraag die nieuw gecreeerd identiteitskaart van de MENING toont.](../images/data-distiller/top-tips-to-maximize-value/view-id.png)
 
 Nogmaals als beste praktijken, stel eenvoudig in werking onderzoeken vraag om de gegevens in de mening te inspecteren. Gebruik de volgende instructie.
 
@@ -275,7 +275,7 @@ SELECT * FROM rfm_values;
 
 De volgende schermafbeelding toont een voorbeeldresultaat van de query, waarbij de berekende RFM-waarden voor elke gebruiker worden weergegeven. Het resultaat komt overeen met de weergave-id van de query `CREATE VIEW` .
 
-![ de resultatendialoog van de Vraag voor de bijeengevoegde waarden RFM.](../images/data-distiller/top-tips-to-maximize-value/view-of-aggregated-rfm-values.png)
+![&#x200B; de resultatendialoog van de Vraag voor de bijeengevoegde waarden RFM.](../images/data-distiller/top-tips-to-maximize-value/view-of-aggregated-rfm-values.png)
 
 #### De multidimensionale RFM-kubus genereren {#generate-multi-dimensional-cube}
 
@@ -306,9 +306,9 @@ FROM rfm_values;
 
 De resultaten lijken op de onderstaande afbeeldingen.
 
-![ de de resultaatdialoog van de Vraag voor de multidimensionale kubus, deel 1 ](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-1.png)
+![&#x200B; de de resultaatdialoog van de Vraag voor de multidimensionale kubus, deel 1 &#x200B;](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-1.png)
 
-![ de de resultaatdialoog van de Vraag voor de multidimensionale kubus, deel 2 ](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-2.png)
+![&#x200B; de de resultaatdialoog van de Vraag voor de multidimensionale kubus, deel 2 &#x200B;](../images/data-distiller/top-tips-to-maximize-value/multi-dimensional-cube-results-2.png)
 
 Gebruik vervolgens de volgende instructie om een `VIEW` voor deze gegevens te maken.
 
@@ -335,7 +335,7 @@ AS
 
 Het resultaat ziet er ongeveer hetzelfde uit als de volgende afbeelding, maar met een andere weergave-id.
 
-![ de de resultaatdialoog van de Vraag voor de &quot;rfm_scores&quot;WEERGAVE.](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
+![&#x200B; de de resultaatdialoog van de Vraag voor de &quot;rfm_scores&quot;WEERGAVE.](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### Model-RFM-segmenten {#model-rfm-segments}
 
@@ -408,9 +408,9 @@ SELECT * FROM rfm_model_segment;
 
 In de volgende schermafbeeldingen wordt een voorbeeldresultaat van de query `SELECT * FROM rfm_model_segment;` weergegeven met de gesegmenteerde RFM-modelgegevens. De uitvoer weerspiegelt de structuur van de gegenereerde `VIEW` , inclusief toegewezen klantsegmenten op basis van RFM-scores.
 
-![ de de resultaatdialoog van de Vraag voor de verkennende vraag &quot;rfm_model_segment&quot;.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-1.png)
+![&#x200B; de de resultaatdialoog van de Vraag voor de verkennende vraag &quot;rfm_model_segment&quot;.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-1.png)
 
-![ de tweede dialoog van de Resultaten van de Vraag voor de verkennende vraag &quot;rfm_model_segment&quot;.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-2.png)
+![&#x200B; de tweede dialoog van de Resultaten van de Vraag voor de verkennende vraag &quot;rfm_model_segment&quot;.](../images/data-distiller/top-tips-to-maximize-value/rfm_model_segment-query-results-2.png)
 
 ### Stap 4: Gebruik SQL om RFM-gegevens in real-time klantprofiel te plaatsen {#sql-batch-ingest-rfm-data}
 
@@ -438,9 +438,9 @@ In deze SQL-instructie:
 
 >[!NOTE]
 >
->&quot;E-mail&quot;namespace is a [ standaardidentiteitsnamespace ](../../identity-service/features/namespaces.md#standard) in Adobe Experience Platform. Zorg er bij het definiëren van identiteitsvelden voor dat de juiste naamruimte is opgegeven om een nauwkeurige identiteitsresolutie mogelijk te maken. &#x200B;
+>&quot;E-mail&quot;namespace is a [&#x200B; standaardidentiteitsnamespace &#x200B;](../../identity-service/features/namespaces.md#standard) in Adobe Experience Platform. Zorg er bij het definiëren van identiteitsvelden voor dat de juiste naamruimte is opgegeven om een nauwkeurige identiteitsresolutie mogelijk te maken. &#x200B;
 >
->Voor meer informatie bij het bepalen van identiteitsgebieden en het werken met identiteit namespaces, verwijs naar de [ documentatie van de Dienst van de Identiteit ](../../identity-service/home.md) of de gids op [ het bepalen van een identiteitsgebied in Adobe Experience Platform UI ](../../xdm/ui/fields/identity.md).
+>Voor meer informatie bij het bepalen van identiteitsgebieden en het werken met identiteit namespaces, verwijs naar de [&#x200B; documentatie van de Dienst van de Identiteit &#x200B;](../../identity-service/home.md) of de gids op [&#x200B; het bepalen van een identiteitsgebied in Adobe Experience Platform UI &#x200B;](../../xdm/ui/fields/identity.md).
 
 Aangezien de Redacteur van de Vraag opeenvolgende uitvoering steunt, kunt u de lijstverwezenlijking en de vragen van de gegevenstoevoeging in één enkele zitting omvatten. In de volgende SQL-instructie wordt eerst een tabel gemaakt waarin Profiel is ingeschakeld en waarin de RFM-kenmerken worden opgeslagen. Vervolgens worden door RFM verrijkte klantgegevens uit `rfm_model_segment` ingevoegd in de `adls_rfm_profile` -tabel, waarbij elke record wordt gerangschikt onder de naamruimte die specifiek is voor de gebruiker in realtime.
 
@@ -472,11 +472,11 @@ Het resultaat van deze vraag lijkt op vorige dataset creaties in dit playbook ma
 
 Nadat u de gegevensset hebt gemaakt, navigeert u naar **[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile` om te controleren of de gegevensset leeg is.
 
-![ de datasetwerkruimte met de details van de &quot;adls_rfm_profile&quot;dataset getoond en de profiel-toegelaten knevel benadrukte.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
+![&#x200B; de datasetwerkruimte met de details van de &quot;adls_rfm_profile&quot;dataset getoond en de profiel-toegelaten knevel benadrukte.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
 U kunt ook naar **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` navigeren om het XDM-diagram Individueel profielschema van uw zojuist gemaakte gegevensset en de bijbehorende aangepaste veldgroepen weer te geven.
 
-![ de werkruimte XDM met het diagram &quot;adls_rfm_profile&quot;getoond in het schemacanvas.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
+![&#x200B; de werkruimte XDM met het diagram &quot;adls_rfm_profile&quot;getoond in het schemacanvas.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
 #### Gegevens invoegen in de nieuw gemaakte afgeleide dataset {#insert-data-into-derived-dataset}
 
@@ -507,13 +507,13 @@ Nadat u de SQL-instructies hebt opgeslagen, navigeert u naar het tabblad **[!UIC
 
 Selecteer **[!UICONTROL Add Schedule]** in de rechterzijbalk.
 
-![ de werkruimte van Vragen geeft lusje met Add benadrukt programma uit.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
+![&#x200B; de werkruimte van Vragen geeft lusje met Add benadrukt programma uit.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
 
 U kunt ook het tabblad **[!UICONTROL Schedules]** onder de sjabloonnaam selecteren en vervolgens **[!UICONTROL Add Schedule]** selecteren.
 
-![ het lusje van de Planningen van de werkruimte van Vragen met Add benadrukt Programma.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
+![&#x200B; het lusje van de Planningen van de werkruimte van Vragen met Add benadrukt Programma.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
 
-Voor meer details bij het plannen van vragen, verwijs naar de [ documentatie van de Planningen van de Vraag ](../ui/query-schedules.md).
+Voor meer details bij het plannen van vragen, verwijs naar de [&#x200B; documentatie van de Planningen van de Vraag &#x200B;](../ui/query-schedules.md).
 
 De weergave [!UICONTROL Schedule details] wordt weergegeven. Van hier, input de volgende details om het programma te vormen:
 
@@ -524,9 +524,9 @@ De weergave [!UICONTROL Schedule details] wordt weergegeven. Van hier, input de 
 
 Selecteer **[!UICONTROL Save]** om het schema te bevestigen.
 
-![ De planningsdetails met de gevormde montages en sparen benadrukte.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
+![&#x200B; De planningsdetails met de gevormde montages en sparen benadrukte.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
-Nadat u het schema hebt opgeslagen, kunt u naar het **[!UICONTROL Scheduled Queries]** lusje op om het even welk punt navigeren om geplande banen van Gegevens Distiller te controleren. Voor meer details bij [ het bekijken van de status van de vraaguitvoering, foutenmeldingen, en alarm ](../ui/monitor-queries.md), zie het document van de monitor geplande vragen.
+Nadat u het schema hebt opgeslagen, kunt u naar het **[!UICONTROL Scheduled Queries]** lusje op om het even welk punt navigeren om geplande banen van Gegevens Distiller te controleren. Voor meer details bij [&#x200B; het bekijken van de status van de vraaguitvoering, foutenmeldingen, en alarm &#x200B;](../ui/monitor-queries.md), zie het document van de monitor geplande vragen.
 
 Zodra gevormd, de SQL vraaglooppas automatisch bij de bepaalde intervallen, die ervoor zorgen dat de gegevens bijgewerkt blijven zonder handinterventie te vereisen.
 
@@ -545,13 +545,13 @@ Kies de benadering die het beste bij uw werkstroom past.
 
 Gebruik de opdracht `CREATE AUDIENCE AS SELECT` om een nieuw publiek te definiëren. Het gemaakte publiek wordt opgeslagen in een gegevensset en geregistreerd in de **[!UICONTROL Audiences]** -werkruimte onder **[!UICONTROL Data Distiller]** .
 
-Soorten publiek dat is gemaakt met de SQL-extensie, worden automatisch geregistreerd onder de oorsprong [!UICONTROL Data Distiller] in de werkruimte van [!UICONTROL Audiences] . Van [ Portaal van het Publiek ](../../segmentation/ui/audience-portal.md), kunt u, uw publiek bekijken beheren en activeren zoals nodig.
+Soorten publiek dat is gemaakt met de SQL-extensie, worden automatisch geregistreerd onder de oorsprong [!UICONTROL Data Distiller] in de werkruimte van [!UICONTROL Audiences] . Van [&#x200B; Portaal van het Publiek &#x200B;](../../segmentation/ui/audience-portal.md), kunt u, uw publiek bekijken beheren en activeren zoals nodig.
 
-![ het Portaal van het Publiek dat beschikbaar publiek toont.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+![&#x200B; het Portaal van het Publiek dat beschikbaar publiek toont.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![ het Portaal van het Publiek dat beschikbaar publiek met de geselecteerde filterzijbalk en Gegevens Distiller toont.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![&#x200B; het Portaal van het Publiek dat beschikbaar publiek met de geselecteerde filterzijbalk en Gegevens Distiller toont.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
-Voor meer details op SQL publiek, verwijs naar de [ documentatie van het publiek van Gegevens Distiller ](../data-distiller-audiences/overview.md). Leren hoe te om publiek in UI te beheren, zie het [ Poortoverzicht van het publiek Poorten ](../../segmentation/ui/audience-portal.md#audience-list).
+Voor meer details op SQL publiek, verwijs naar de [&#x200B; documentatie van het publiek van Gegevens Distiller &#x200B;](../data-distiller-audiences/overview.md). Leren hoe te om publiek in UI te beheren, zie het [&#x200B; Poortoverzicht van het publiek Poorten &#x200B;](../../segmentation/ui/audience-portal.md#audience-list).
 
 #### Een publiek maken {#create-an-audience}
 
@@ -648,29 +648,29 @@ Gebruik RFM-kenmerken om gebruikers te segmenteren op basis van hun gedrag en ke
 
 Navigeer naar **[!UICONTROL Customers]> [!UICONTROL Profiles] >[!UICONTROL Browse]** om te controleren of de gegevens zijn geladen in Real-Time klantprofiel. Selecteer **[!UICONTROL Identity Namespace]** als `Email` en voer `user0076@example.com` in. Controleer de profieldetails om te bevestigen dat het de verwachte attributen van RFM bevat.
 
-![ de werkruimte van Profielen die beschikbare profielen tonen met een primair toegepast filter van de E-mail identiteit en e-mailwaarde.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
+![&#x200B; de werkruimte van Profielen die beschikbare profielen tonen met een primair toegepast filter van de E-mail identiteit en e-mailwaarde.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
 
-![ de attributen van Profielen mening die de attributen van een specifiek profiel tonen.](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
+![&#x200B; de attributen van Profielen mening die de attributen van een specifiek profiel tonen.](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
 
 Als u door bestaande doelgroepen wilt bladeren, selecteert u **[!UICONTROL Audiences]** in het navigatievenster aan de linkerkant en zorgt u ervoor dat het tabblad **[!UICONTROL Browse]** is geselecteerd. De lijst met beschikbare soorten publiek in de sandbox wordt weergegeven. Als u een publiek selecteert, worden de beschrijving, de kwalificatieregels en het aantal opgenomen profielen weergegeven.
 
 Als u een nieuw publiek wilt maken, selecteert u **[!UICONTROL Create Audience]** in de rechterbovenhoek. Er wordt een dialoogvenster weergegeven met twee opties. Selecteer **[!UICONTROL Build Rule]** gevolgd door **[!UICONTROL Create]** .
 
-![ Create publieksdialoog met de geselecteerde regel van de Bouwstijl en leidt benadrukt tot.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
+![&#x200B; Create publieksdialoog met de geselecteerde regel van de Bouwstijl en leidt benadrukt tot.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
 
 De interface voor publiekscompositie biedt toegang tot profielkenmerken. Navigeer naar **[!UICONTROL Attributes]>[!UICONTROL XDM Individual Profile]** om de beschikbare kenmerken weer te geven.
 
-Voor meer details bij het gebruiken van de Samenstelling van het Publiek, zie de [ gids UI van de Samenstelling van het Publiek ](../../segmentation/ui/audience-composition.md). Voor meer details bij het gebruiken van de Bouwer van het Segment, zie de [ gids UI van de Bouwer van het Segment ](../../segmentation/ui/segment-builder.md).
+Voor meer details bij het gebruiken van de Samenstelling van het Publiek, zie de [&#x200B; gids UI van de Samenstelling van het Publiek &#x200B;](../../segmentation/ui/audience-composition.md). Voor meer details bij het gebruiken van de Bouwer van het Segment, zie de [&#x200B; gids UI van de Bouwer van het Segment &#x200B;](../../segmentation/ui/segment-builder.md).
 
-![ de Samenstelling UI van de Publiek met de individuele beschikbare attributen van het Profiel XDM.](../images/data-distiller/top-tips-to-maximize-value/audience-composer.png)
+![&#x200B; de Samenstelling UI van de Publiek met de individuele beschikbare attributen van het Profiel XDM.](../images/data-distiller/top-tips-to-maximize-value/audience-composer.png)
 
 Aangepaste kenmerken die in Data Distiller zijn gemaakt, worden opgeslagen in de map die overeenkomt met de naam van de naamruimte voor de huurder, die naast de naam van de sandbox wordt weergegeven. Deze attributen kunnen worden gebruikt om de criteria van de publiekssegmentatie te bepalen.
 
-![ de attributen van de Douane die in de Samenstelling UI van de Publiek worden getoond.](../images/data-distiller/top-tips-to-maximize-value/custom-attributes.png)
+![&#x200B; de attributen van de Douane die in de Samenstelling UI van de Publiek worden getoond.](../images/data-distiller/top-tips-to-maximize-value/custom-attributes.png)
 
 Als u een publiek wilt maken met gebruik van RFM-kenmerken, sleept u het kenmerk `Rfm_Model` naar de Audience Composer. Deze kenmerken kunnen worden gebruikt voor Edge, Streaming en Batch-soorten.
 
-![ Creërend een publiek in de Samenstelling UI van de Publiek.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
+![&#x200B; Creërend een publiek in de Samenstelling UI van de Publiek.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
 
 Als u het publiek wilt voltooien, selecteert u **[!UICONTROL Save and Publish]** in de rechterbovenhoek. Na het opslaan wordt het nieuwe publiek weergegeven in de [!UICONTROL Audiences] -werkruimte, waar u het overzicht en de kwalificatiecriteria kunt bekijken.
 

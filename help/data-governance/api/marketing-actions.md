@@ -20,7 +20,7 @@ U kunt marketing acties voor uw organisatie beheren door het `/marketingActions`
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van [[!DNL Policy Service]  API ](https://www.adobe.io/experience-platform-apis/references/policy-service/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [[!DNL Policy Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/policy-service/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Een lijst met marketingacties ophalen {#list}
 
@@ -48,7 +48,7 @@ curl -X GET \
 
 **Reactie**
 
-Een geslaagde reactie retourneert de details voor elke opgehaalde marketingactie, inclusief de acties `name` en `href` . De `href` waarde wordt gebruikt om de marketing actie te identificeren wanneer [ het creëren van een beleid van het gegevensgebruik ](policies.md#create-policy).
+Een geslaagde reactie retourneert de details voor elke opgehaalde marketingactie, inclusief de acties `name` en `href` . De `href` waarde wordt gebruikt om de marketing actie te identificeren wanneer [&#x200B; het creëren van een beleid van het gegevensgebruik &#x200B;](policies.md#create-policy).
 
 ```json
 {
@@ -102,8 +102,8 @@ Een geslaagde reactie retourneert de details voor elke opgehaalde marketingactie
 | --- | --- |
 | `_page.count` | Het totale aantal geretourneerde marketingacties. |
 | `children` | Een array met objecten die de details van de opgehaalde marketingacties bevatten. |
-| `name` | De naam van de marketing actie, die als zijn uniek herkenningsteken dienst doet wanneer [ omhoog een specifieke marketing actie ](#lookup) kijkt. |
-| `_links.self.href` | Een verwijzing van URI voor de marketing actie, die kan worden gebruikt om de `marketingActionsRefs` serie te voltooien wanneer [ het creëren van een beleid van het gegevensgebruik ](policies.md#create-policy). |
+| `name` | De naam van de marketing actie, die als zijn uniek herkenningsteken dienst doet wanneer [&#x200B; omhoog een specifieke marketing actie &#x200B;](#lookup) kijkt. |
+| `_links.self.href` | Een verwijzing van URI voor de marketing actie, die kan worden gebruikt om de `marketingActionsRefs` serie te voltooien wanneer [&#x200B; het creëren van een beleid van het gegevensgebruik &#x200B;](policies.md#create-policy). |
 
 ## Een specifieke marketingactie opzoeken {#lookup}
 
@@ -135,7 +135,7 @@ curl -X GET \
 
 **Reactie**
 
-Het reactievoorwerp bevat de details voor de marketing actie, met inbegrip van de weg (`_links.self.href`) nodig om de marketing actie te verwijzen wanneer [ het bepalen van een beleid van het gegevensgebruik ](policies.md#create-policy) (`marketingActionsRefs`).
+Het reactievoorwerp bevat de details voor de marketing actie, met inbegrip van de weg (`_links.self.href`) nodig om de marketing actie te verwijzen wanneer [&#x200B; het bepalen van een beleid van het gegevensgebruik &#x200B;](policies.md#create-policy) (`marketingActionsRefs`).
 
 ```JSON
 {
@@ -249,4 +249,4 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP Status 200 (OK) met een lege antwoordinstantie.
 
-U kunt de schrapping bevestigen door te proberen [ omhoog de marketing actie ](#look-up) te kijken. Er wordt een HTTP 404-fout (Niet gevonden) weergegeven als de marketingactie van het systeem is verwijderd.
+U kunt de schrapping bevestigen door te proberen [&#x200B; omhoog de marketing actie &#x200B;](#look-up) te kijken. Er wordt een HTTP 404-fout (Niet gevonden) weergegeven als de marketingactie van het systeem is verwijderd.

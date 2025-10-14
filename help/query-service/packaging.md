@@ -39,7 +39,7 @@ De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op 
 | Exportrecht voor gegevens | Uw totale exportmachtiging is afhankelijk van uw platformgebaseerde toepassingslicenties. Bijvoorbeeld Real-Time CDP, AJO, CJA enzovoort. | Ja - Er is een extra exportrecht om de uitvoer van afgeleide gegevenssets die zijn gemaakt met Data Distiller mogelijk te maken.<br> Uw jaarlijkse toelage van de gegevensuitvoer wordt gemeten in terabytes (TB) en hangt van de hoeveelheid Rekenuren af die u hebt gekocht. Zie de productbeschrijving voor meer informatie. |
 | Interface voor query-uitvoering | <ul><li>Gebruikersinterface Query Service</li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li></ul> | <ul><li>Gebruikersinterface Query Service </li><li>Gebruikersinterface van externe clients</li><li>[!DNL PostgresSQL] clientinterface</li><li>REST API&#39;s</li></ul> |
 | Zoekresultaten geretourneerd via | Gebruikersinterface client | Afgeleide dataset die in het gegevensmeer wordt opgeslagen |
-| Resulterende limiet | <ul><li>De Dienst UI van de vraag - het aantal outputrijen kan [ met een UI worden gevormd die ](./ui/user-guide.md#result-count) aan tussen 50-500 rijen plaatsen.</li><li>Externe klanten - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | CTAS en ITAS de vragen produceren slechts succesberichten aangezien de vraagoutput in afgeleide datasets wordt opgeslagen. |
+| Resulterende limiet | <ul><li>De Dienst UI van de vraag - het aantal outputrijen kan [&#x200B; met een UI worden gevormd die &#x200B;](./ui/user-guide.md#result-count) aan tussen 50-500 rijen plaatsen.</li><li>Externe klanten - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | CTAS en ITAS de vragen produceren slechts succesberichten aangezien de vraagoutput in afgeleide datasets wordt opgeslagen. |
 | Dataset-capaciteit lezen | Ja | Ja |
 | Gegevenscapaciteit schrijven | Nee | Ja |
 | Planningscapaciteit | Nee | Ja |
@@ -50,9 +50,9 @@ De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op 
 
 ## Toegangsbeheer {#access-control}
 
-De controle van de toegang voor Experience Platform wordt beheerd door [ Adobe Admin Console ](https://adminconsole.adobe.com/) waar de productprofielen gebruikers met toestemmingen en zandbakken verbinden. Zie het [ overzicht van de toegangscontrole ](../access-control/home.md) voor meer informatie.
+De controle van de toegang voor Experience Platform wordt beheerd door [&#x200B; Adobe Admin Console &#x200B;](https://adminconsole.adobe.com/) waar de productprofielen gebruikers met toestemmingen en zandbakken verbinden. Zie het [&#x200B; overzicht van de toegangscontrole &#x200B;](../access-control/home.md) voor meer informatie.
 
-Zie [ toestemmingen voor een productprofiel ](../access-control/ui/permissions.md) beheren en [ gebruikers voor een document van het productprofiel ](../access-control/ui/users.md) voor gedetailleerde instructies bij het verzoeken van toegang tot de toestemmingen van het productprofiel
+Zie [&#x200B; toestemmingen voor een productprofiel &#x200B;](../access-control/ui/permissions.md) beheren en [&#x200B; gebruikers voor een document van het productprofiel &#x200B;](../access-control/ui/users.md) voor gedetailleerde instructies bij het verzoeken van toegang tot de toestemmingen van het productprofiel
 
 ### De relevante toestemmingen van de Dienst van de Vraag {#query-service-permissions}
 
@@ -69,7 +69,7 @@ In de volgende tabel worden de effecten van de machtiging [!DNL Manage Queries] 
 
 ### Relevante SQL Insights-machtigingen {#sql-insights-permissions}
 
-Om de Gegevens Distiller [ SQL Inzichten ](./data-distiller/sql-insights/overview.md) binnen dashboards tot stand te brengen, moeten de volgende toestemmingen **&#x200B;**&#x200B;binnen Admin Console worden toegelaten.
+Om de Gegevens Distiller [&#x200B; SQL Inzichten &#x200B;](./data-distiller/sql-insights/overview.md) binnen dashboards tot stand te brengen, moeten de volgende toestemmingen **&#x200B;**&#x200B;binnen Admin Console worden toegelaten.
 
 | Machtiging | Functie |
 |---|---|
@@ -80,9 +80,9 @@ Om de Gegevens Distiller [ SQL Inzichten ](./data-distiller/sql-insights/overvie
 
 ## Sandbox-ondersteuning {#sandbox-support}
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke Experience Platform-instantie ondersteunt meerdere productie- en niet-productie sandboxen, elk met een eigen bibliotheek met Experience Platform-bronnen. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van zandbakken ](../sandboxes/home.md). Alle rechten van de Dienst van de Vraag worden gedeeld over alle zandbakken.
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke Experience Platform-instantie ondersteunt meerdere productie- en niet-productie sandboxen, elk met een eigen bibliotheek met Experience Platform-bronnen. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Voor meer informatie over zandbakken, zie het [&#x200B; overzicht van zandbakken &#x200B;](../sandboxes/home.md). Alle rechten van de Dienst van de Vraag worden gedeeld over alle zandbakken.
 
 ## Volgende stappen
 
-Door dit document te lezen, zou u een beter inzicht in de verschillende pakkettypes en mogelijkheden van de vraaguitvoering beschikbaar in de Dienst van de Vraag moeten hebben. Om meer over de Dienst van de Vraag, zoals bekende de gebruikscase van de industrie te leren, lees de [ documentatie van het gebruiksgeval ](./use-cases/abandoned-browse.md). Voor meer algemene informatie, bezoek het [ overzicht van de Dienst van de Vraag ](./home.md).
+Door dit document te lezen, zou u een beter inzicht in de verschillende pakkettypes en mogelijkheden van de vraaguitvoering beschikbaar in de Dienst van de Vraag moeten hebben. Om meer over de Dienst van de Vraag, zoals bekende de gebruikscase van de industrie te leren, lees de [&#x200B; documentatie van het gebruiksgeval &#x200B;](./use-cases/abandoned-browse.md). Voor meer algemene informatie, bezoek het [&#x200B; overzicht van de Dienst van de Vraag &#x200B;](./home.md).
 

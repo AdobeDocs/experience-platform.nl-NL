@@ -24,12 +24,12 @@ ht-degree: 0%
 | `lastActivityDate` | DateTime | De laatste activiteitsdatum voor het bronsysteem. |
 | `lastReferencedDate` | DateTime | De laatste datum waarnaar wordt verwezen voor het bronsysteem. |
 | `lastUpdatedBy` | String | De naam van de persoon die deze record het laatst heeft bijgewerkt. |
-| `lastUpdatedDate` | DateTime | De laatste bijgewerkte datum voor het bronsysteem. Deze waarde wordt gebruikt door het [ beleid van de attributensamenvoeging ](../../profile/api/merge-policies.md#attribute-merge) om prioriteit in het geval van fusieconflicten te bepalen. |
+| `lastUpdatedDate` | DateTime | De laatste bijgewerkte datum voor het bronsysteem. Deze waarde wordt gebruikt door het [&#x200B; beleid van de attributensamenvoeging &#x200B;](../../profile/api/merge-policies.md#attribute-merge) om prioriteit in het geval van fusieconflicten te bepalen. |
 | `lastViewedDate` | DateTime | De laatst bekeken datum voor het bronsysteem. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)

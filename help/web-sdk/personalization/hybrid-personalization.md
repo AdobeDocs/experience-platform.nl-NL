@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-De hybride verpersoonlijking beschrijft het proces om verpersoonlijkingsinhoud server-kant terug te winnen, gebruikend [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/), en het terug te geven cliënt-kant, gebruikend [ SDK van het Web ](../home.md).
+De hybride verpersoonlijking beschrijft het proces om verpersoonlijkingsinhoud server-kant terug te winnen, gebruikend [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/), en het terug te geven cliënt-kant, gebruikend [&#x200B; SDK van het Web &#x200B;](../home.md).
 
 U kunt hybride personalisatie met verpersoonlijkingsoplossingen zoals Adobe Target, Adobe Journey Optimizer, of Offer Decisioning gebruiken, het verschil is de inhoud van de [!UICONTROL Edge Network API] lading.
 
@@ -24,22 +24,22 @@ Controleer of u aan de volgende voorwaarden voldoet voordat u hybride personalis
 
 * U hebt besloten welke personalisatieoplossing u wilt gebruiken. Dit is van invloed op de inhoud van de [!UICONTROL Edge Network API] payload.
 * U hebt toegang tot een toepassingsserver waarmee u [!UICONTROL Edge Network API] aanroepen kunt uitvoeren.
-* U hebt toegang tot [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/).
-* U hebt correct [ gevormd ](/help/web-sdk/commands/configure/overview.md) en opgesteld SDK van het Web op de pagina&#39;s die u wilt personaliseren.
+* U hebt toegang tot [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/).
+* U hebt correct [&#x200B; gevormd &#x200B;](/help/web-sdk/commands/configure/overview.md) en opgesteld SDK van het Web op de pagina&#39;s die u wilt personaliseren.
 
 ## Stroomdiagram {#flow-diagram}
 
 In het onderstaande stroomdiagram wordt de volgorde beschreven van de stappen die zijn genomen om hybride personalisatie te leveren.
 
-![ Visueel stroomdiagram dat de orde van de genomen stappen toont om hybride verpersoonlijking te leveren.](assets/hybrid-personalization-diagram.png)
+![&#x200B; Visueel stroomdiagram dat de orde van de genomen stappen toont om hybride verpersoonlijking te leveren.](assets/hybrid-personalization-diagram.png)
 
 1. Eventuele bestaande cookies die eerder door de browser zijn opgeslagen, vooraf ingesteld door `kndctr_` , worden opgenomen in de browseraanvraag.
 1. De clientwebbrowser vraagt de webpagina op van uw toepassingsserver.
-1. Wanneer de toepassingsserver het paginaverzoek ontvangt, doet het a `POST` verzoek aan het [ Edge Network API interactieve eindpunt van de gegevensinzameling ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) om verpersoonlijkingsinhoud te halen. De aanvraag `POST` bevat een `event` en een `query` . De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de array `meta>state>entries` .
+1. Wanneer de toepassingsserver het paginaverzoek ontvangt, doet het a `POST` verzoek aan het [&#x200B; Edge Network API interactieve eindpunt van de gegevensinzameling &#x200B;](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) om verpersoonlijkingsinhoud te halen. De aanvraag `POST` bevat een `event` en een `query` . De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de array `meta>state>entries` .
 1. De Edge Network API retourneert de personalisatie-inhoud naar uw toepassingsserver.
-1. De toepassingsserver keert een reactie van HTML op cliëntbrowser terug, die de [ identiteit en clusterkoekjes ](#cookies) bevatten.
+1. De toepassingsserver keert een reactie van HTML op cliëntbrowser terug, die de [&#x200B; identiteit en clusterkoekjes &#x200B;](#cookies) bevatten.
 1. Op de clientpagina wordt de opdracht [!DNL Web SDK] `applyResponse` aangeroepen, waarbij de koppen en de hoofdtekst van het [!UICONTROL Edge Network API] -antwoord uit de vorige stap worden doorgegeven.
-1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
+1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
 1. Doelformuliergebaseerde [!DNL HTML]/[!DNL JSON] -aanbiedingen en Journey Optimizer-ervaringen op basis van code worden handmatig toegepast via de `applyProposition` -methode om de [!DNL DOM] bij te werken op basis van de personalisatie-inhoud in het voorstel.
 1. Voor op vorm-gebaseerde [!DNL HTML]/ [!DNL JSON] aanbiedingen van het Doel en op code-gebaseerde ervaringen van Journey Optimizer, moeten de vertoningsgebeurtenissen manueel worden verzonden om erop te wijzen wanneer de teruggekeerde inhoud is getoond. Dit gebeurt via de opdracht `sendEvent` .
 
@@ -98,7 +98,7 @@ Als er geen locatiehint (dus geen cookie) aanwezig is, gebruikt u de standaardho
 
 Bij het implementeren van hybride personalisatie moet u speciale aandacht besteden aan het tellen van pagina&#39;s in Analytics.
 
-Wanneer u [ een gegevensstroom ](../../datastreams/overview.md) voor Analytics vormt, door:sturen de gebeurtenissen automatisch zodat de paginareeksen worden gevangen.
+Wanneer u [&#x200B; een gegevensstroom &#x200B;](../../datastreams/overview.md) voor Analytics vormt, door:sturen de gebeurtenissen automatisch zodat de paginareeksen worden gevangen.
 
 Het voorbeeld van deze implementatie gebruikt twee verschillende gegevensstromen:
 
@@ -194,7 +194,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Ja. | De id van de gegevensstroom die u gebruikt om de interacties door te geven aan de Edge Network. Zie het [ overzicht van gegevensstromen ](../../datastreams/overview.md) leren hoe te om een gegevensstroom te vormen. |
+| `dataStreamId` | `String` | Ja. | De id van de gegevensstroom die u gebruikt om de interacties door te geven aan de Edge Network. Zie het [&#x200B; overzicht van gegevensstromen &#x200B;](../../datastreams/overview.md) leren hoe te om een gegevensstroom te vormen. |
 | `requestId` | `String` | Nee | Een willekeurige id voor correlerende interne serveraanvragen. Als er niets wordt opgegeven, genereert de Edge Network er een en retourneert deze het antwoord. |
 
 ### Proxyheaders {#proxy-headers}
@@ -230,7 +230,7 @@ Gebruik de volgende gebruiker-agent kopballen om het verzoek correct te verwerke
 * `Sec-CH-UA-Bitness`
 * `Sec-CH-UA-WoW64`
 
-Het verzoek moet worden verzonden zoals aangetoond in de [ Edge Network API specificatie ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/). Zie de [ verpersoonlijkingsdocumentatie ](https://developer.adobe.com/data-collection-apis/docs/getting-started/personalization/) als uw gebruiksgeval het vereist.
+Het verzoek moet worden verzonden zoals aangetoond in de [&#x200B; Edge Network API specificatie &#x200B;](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/). Zie de [&#x200B; verpersoonlijkingsdocumentatie &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/personalization/) als uw gebruiksgeval het vereist.
 
 ### Serverreactie {#server-response}
 
@@ -362,4 +362,4 @@ function sendDisplayEvent(decision) {
 
 ## Voorbeeldtoepassing {#sample-app}
 
-Om u te helpen experimenteren en meer te leren over dit type van verpersoonlijking, verstrekken wij een steekproeftoepassing die u voor het testen kunt downloaden en gebruiken. U kunt de toepassing, samen met gedetailleerde instructies op downloaden hoe te om het te gebruiken, van deze [ bewaarplaats GitHub ](https://github.com/adobe/alloy-samples).
+Om u te helpen experimenteren en meer te leren over dit type van verpersoonlijking, verstrekken wij een steekproeftoepassing die u voor het testen kunt downloaden en gebruiken. U kunt de toepassing, samen met gedetailleerde instructies op downloaden hoe te om het te gebruiken, van deze [&#x200B; bewaarplaats GitHub &#x200B;](https://github.com/adobe/alloy-samples).

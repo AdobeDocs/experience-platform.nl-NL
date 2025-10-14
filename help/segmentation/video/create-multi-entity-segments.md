@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # Meerdere entiteitssegmenten maken in de gebruikersinterface van Experience Platform
 
-De volgende video is bedoeld ter ondersteuning van uw begrip voor het maken van dynamische segmenten. Hierin wordt een voorbeeld van een klantervaring weergegeven, gevolgd door een snelle rondleiding van de belangrijkste functies in de [!DNL Platform] -interface. Meer over multi-entiteitsegmentatie leren, te lezen gelieve de gids op [ multi-entiteitsegmentatie ](../tutorials/multi-entity-segmentation.md).
+De volgende video is bedoeld ter ondersteuning van uw begrip voor het maken van dynamische segmenten. Hierin wordt een voorbeeld van een klantervaring weergegeven, gevolgd door een snelle rondleiding van de belangrijkste functies in de [!DNL Platform] -interface. Meer over multi-entiteitsegmentatie leren, te lezen gelieve de gids op [&#x200B; multi-entiteitsegmentatie &#x200B;](../tutorials/multi-entity-segmentation.md).
 
 >[!NOTE]
 >
->De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md).
+>De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [&#x200B; gids van de Bouwer van het Segment &#x200B;](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32179?quality=12&learn=on)

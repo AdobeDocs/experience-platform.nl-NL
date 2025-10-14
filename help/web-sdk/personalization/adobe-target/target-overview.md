@@ -11,31 +11,31 @@ ht-degree: 1%
 
 # [!DNL Adobe Target] en [!DNL Web SDK] gebruiken voor personalisatie
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen die in [!DNL Adobe Target] worden beheerd, leveren en renderen naar het webkanaal. U kunt een redacteur van WYSIWYG gebruiken, genoemd [ Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) (VEC), of een niet-visuele interface, [ op vorm-gebaseerde Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=nl-NL), om, uw activiteiten en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen die in [!DNL Adobe Target] worden beheerd, leveren en renderen naar het webkanaal. U kunt een redacteur van WYSIWYG gebruiken, genoemd [&#x200B; Visuele Composer van de Ervaring &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) (VEC), of een niet-visuele interface, [&#x200B; op vorm-gebaseerde Composer van de Ervaring &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=nl-NL), om, uw activiteiten en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
 
 >[!IMPORTANT]
 >
->Leer hoe te om uw implementatie van het Doel aan het Web SDK van Experience Platform met [ te migreren Migrate Doel van at.js 2.x aan het Web SDK van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=nl-NL) leerprogramma.
+>Leer hoe te om uw implementatie van het Doel aan het Web SDK van Experience Platform met [&#x200B; te migreren Migrate Doel van at.js 2.x aan het Web SDK van Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=nl-NL) leerprogramma.
 >
->Leer hoe te om Doel voor het eerst met [ uit te voeren Adobe Experience Cloud met het 1&rbrace; leerprogramma van SDK van het Web &lbrace;. ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=nl-NL) Voor informatie specifiek voor Doel, zie de tutorial sectie getiteld [ Vastgestelde Doel van de Opstelling met het Web SDK van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=nl-NL).
+>Leer hoe te om Doel voor het eerst met [&#x200B; uit te voeren Adobe Experience Cloud met het 1&rbrace; leerprogramma van SDK van het Web &lbrace;. &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=nl-NL) Voor informatie specifiek voor Doel, zie de tutorial sectie getiteld [&#x200B; Vastgestelde Doel van de Opstelling met het Web SDK van Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=nl-NL).
 
 
 De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target] :
 
-* [ Tests A/B ](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=nl-NL)
-* [ A4T Indruk en omzetting rapporterend ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=nl-NL)
-* [ de activiteiten van Automated Personalization ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=nl-NL)
-* [ Ervaring richtend activiteiten ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=nl-NL)
-* [ Multivariate Tests (MVT) ](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=nl-NL)
-* [ de activiteiten van Aanbevelingen ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=nl-NL)
-* [ Inheemse de indruk en omzetting van het Doel rapporterend ](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=nl-NL)
-* [ Steun VEC ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL)
+* [&#x200B; Tests A/B &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=nl-NL)
+* [&#x200B; A4T Indruk en omzetting rapporterend &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=nl-NL)
+* [&#x200B; de activiteiten van Automated Personalization &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=nl-NL)
+* [&#x200B; Ervaring richtend activiteiten &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=nl-NL)
+* [&#x200B; Multivariate Tests (MVT) &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=nl-NL)
+* [&#x200B; de activiteiten van Aanbevelingen &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=nl-NL)
+* [&#x200B; Inheemse de indruk en omzetting van het Doel rapporterend &#x200B;](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=nl-NL)
+* [&#x200B; Steun VEC &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL)
 
 ## [!DNL Web SDK] systeemdiagram
 
 In het volgende diagram krijgt u inzicht in de workflow voor het bepalen van randen in [!DNL Target] en [!DNL Web SDK] .
 
-![ Diagram van de randbeslissing van Adobe Target met SDK van het Web van Experience Platform ](assets/target-platform-web-sdk-new.png)
+![&#x200B; Diagram van de randbeslissing van Adobe Target met SDK van het Web van Experience Platform &#x200B;](assets/target-platform-web-sdk-new.png)
 
 | Bellen | Details |
 | --- | --- |
@@ -52,7 +52,7 @@ In het volgende diagram krijgt u inzicht in de workflow voor het bepalen van ran
 
 Ga als volgt te werk om [!DNL Target] in te schakelen:
 
-1. Laat [!DNL Target] in uw [ datastream ](../../../datastreams/overview.md) met de aangewezen cliëntcode toe.
+1. Laat [!DNL Target] in uw [&#x200B; datastream &#x200B;](../../../datastreams/overview.md) met de aangewezen cliëntcode toe.
 1. Voeg de optie `renderDecisions` toe aan uw gebeurtenissen.
 
 Vervolgens kunt u desgewenst ook de volgende opties toevoegen:
@@ -62,17 +62,17 @@ Vervolgens kunt u desgewenst ook de volgende opties toevoegen:
 
 ## Adobe Target VEC gebruiken
 
-Om VEC met a [!DNL Web SDK] implementatie te gebruiken, installeer en activeer of [ Firefox ](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [ de HelperUitbreiding van Chrome ](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC.
+Om VEC met a [!DNL Web SDK] implementatie te gebruiken, installeer en activeer of [&#x200B; Firefox &#x200B;](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) of [&#x200B; de HelperUitbreiding van Chrome &#x200B;](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC.
 
-Voor meer informatie, zie [ de helperuitbreiding van de Composer van de Visuele Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=nl-NL) in de *gids van Adobe Target*.
+Voor meer informatie, zie [&#x200B; de helperuitbreiding van de Composer van de Visuele Ervaring &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=nl-NL) in de *gids van Adobe Target*.
 
 ## Aangepaste inhoud renderen
 
-Zie [ teruggevend verpersoonlijkingsinhoud ](../rendering-personalization-content.md) voor meer informatie.
+Zie [&#x200B; teruggevend verpersoonlijkingsinhoud &#x200B;](../rendering-personalization-content.md) voor meer informatie.
 
 ## Soorten publiek in XDM
 
-Wanneer het bepalen van publiek voor uw [!DNL Target] activiteiten die via [!DNL Web SDK] worden geleverd, [ XDM ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) moet worden bepaald en worden gebruikt. Nadat u XDM schema&#39;s, klassen, en de groepen van het schemagebied bepaalt, kunt u een [!DNL Target] publieksregel tot stand brengen die door XDM gegevens voor het richten wordt bepaald. Binnen [!DNL Target] worden XDM-gegevens in de [!UICONTROL Audience Builder] weergegeven als een aangepaste parameter. De XDM wordt geserialiseerd met behulp van puntnotatie (bijvoorbeeld `web.webPageDetails.name` ).
+Wanneer het bepalen van publiek voor uw [!DNL Target] activiteiten die via [!DNL Web SDK] worden geleverd, [&#x200B; XDM &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl) moet worden bepaald en worden gebruikt. Nadat u XDM schema&#39;s, klassen, en de groepen van het schemagebied bepaalt, kunt u een [!DNL Target] publieksregel tot stand brengen die door XDM gegevens voor het richten wordt bepaald. Binnen [!DNL Target] worden XDM-gegevens in de [!UICONTROL Audience Builder] weergegeven als een aangepaste parameter. De XDM wordt geserialiseerd met behulp van puntnotatie (bijvoorbeeld `web.webPageDetails.name` ).
 
 Als u [!DNL Target] -activiteiten hebt met vooraf gedefinieerd publiek dat aangepaste parameters of een gebruikersprofiel gebruikt, worden deze niet correct via de SDK geleverd. In plaats van aangepaste parameters of het gebruikersprofiel te gebruiken, moet u in plaats daarvan XDM gebruiken. Er is echter een out-of-the-box publiek dat zich richt op velden die worden ondersteund via de [!DNL Web SDK] en die geen XDM vereisen. Deze velden zijn beschikbaar in de gebruikersinterface van [!DNL Target] waarvoor geen XDM vereist is:
 
@@ -85,7 +85,7 @@ Als u [!DNL Target] -activiteiten hebt met vooraf gedefinieerd publiek dat aange
 * verkeersbronnen
 * Tijdschema
 
-Voor meer informatie, zie [ Categorieën voor publiek ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=nl-NL) in de *gids van Adobe Target*.
+Voor meer informatie, zie [&#x200B; Categorieën voor publiek &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=nl-NL) in de *gids van Adobe Target*.
 
 ### Reactietokens
 
@@ -286,7 +286,7 @@ alloy("sendEvent", {
 
 ## Foutopsporing
 
-mboxTrace en mboxDebug zijn vervangen. Gebruik in plaats hiervan een methode van [ het zuiveren van SDK van het Web ](/help/web-sdk/use-cases/debugging.md).
+mboxTrace en mboxDebug zijn vervangen. Gebruik in plaats hiervan een methode van [&#x200B; het zuiveren van SDK van het Web &#x200B;](/help/web-sdk/use-cases/debugging.md).
 
 ## Terminologie
 

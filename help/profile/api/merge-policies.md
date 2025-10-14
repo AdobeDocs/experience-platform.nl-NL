@@ -20,11 +20,11 @@ Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerki
 
 Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met de API voor samenvoegbeleid.
 
-Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de [ gids UI van het samenvoegingsbeleid ](../merge-policies/ui-guide.md). Meer over samenvoegingsbeleid in het algemeen, en hun rol binnen Experience Platform leren, gelieve te beginnen door het [ overzicht van het fusiebeleid ](../merge-policies/overview.md) te lezen.
+Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de [&#x200B; gids UI van het samenvoegingsbeleid &#x200B;](../merge-policies/ui-guide.md). Meer over samenvoegingsbeleid in het algemeen, en hun rol binnen Experience Platform leren, gelieve te beginnen door het [&#x200B; overzicht van het fusiebeleid &#x200B;](../merge-policies/overview.md) te lezen.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] ](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] &#x200B;](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Componenten van samenvoegingsbeleid {#components-of-merge-policies}
 
@@ -72,10 +72,10 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `id` | Door het systeem gegenereerde unieke id die tijdens het maken is toegewezen |
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
-| `schema.name` | Het veld `name` bevat een deel van het object [`schema`](#schema) dat de XDM-schemaklasse bevat waarop het samenvoegbeleid betrekking heeft. Voor meer informatie over schema&#39;s en klassen, te lezen gelieve de [ documentatie XDM ](../../xdm/home.md). |
+| `schema.name` | Het veld `name` bevat een deel van het object [`schema`](#schema) dat de XDM-schemaklasse bevat waarop het samenvoegbeleid betrekking heeft. Voor meer informatie over schema&#39;s en klassen, te lezen gelieve de [&#x200B; documentatie XDM &#x200B;](../../xdm/home.md). |
 | `version` | [!DNL Experience Platform] bijgewerkte versie van het samenvoegbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
-| `identityGraph` | [ de grafiekvoorwerp van de Identiteit ](#identity-graph) die op de identiteitsgrafiek wijst waarvan verwante identiteiten zullen worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
-| `attributeMerge` | [ de fusie van Attributen ](#attribute-merge) die op de manier wijzen waarop het fusiebeleid profielattributen in het geval van gegevensconflicten voorrang zal geven. |
+| `identityGraph` | [&#x200B; de grafiekvoorwerp van de Identiteit &#x200B;](#identity-graph) die op de identiteitsgrafiek wijst waarvan verwante identiteiten zullen worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
+| `attributeMerge` | [&#x200B; de fusie van Attributen &#x200B;](#attribute-merge) die op de manier wijzen waarop het fusiebeleid profielattributen in het geval van gegevensconflicten voorrang zal geven. |
 | `isActiveOnEdge` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid aan de rand kan worden gebruikt. Deze waarde is standaard `false` . |
 | `default` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid de standaardinstelling is voor het opgegeven schema. |
 | `updateEpoch` | Datum van de laatste update van het samenvoegbeleid. |
@@ -105,7 +105,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 
 ### Identiteitsgrafiek {#identity-graph}
 
-[ de Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md) beheert de identiteitsgrafieken die globaal en voor elke organisatie op [!DNL Experience Platform] worden gebruikt. Het kenmerk `identityGraph` van het samenvoegbeleid definieert hoe de verwante identiteiten voor een gebruiker moeten worden bepaald.
+[&#x200B; de Dienst van de Identiteit van Adobe Experience Platform &#x200B;](../../identity-service/home.md) beheert de identiteitsgrafieken die globaal en voor elke organisatie op [!DNL Experience Platform] worden gebruikt. Het kenmerk `identityGraph` van het samenvoegbeleid definieert hoe de verwante identiteiten voor een gebruiker moeten worden bepaald.
 
 **identityGraph voorwerp**
 
@@ -190,7 +190,7 @@ Waar de waarde van `name` de naam van de klasse XDM is waarop het schema verbond
     }
 ```
 
-Om meer over XDM en het werken met schema&#39;s in Experience Platform te leren, begin door het [ overzicht van het Systeem XDM ](../../xdm/home.md) te lezen.
+Om meer over XDM en het werken met schema&#39;s in Experience Platform te leren, begin door het [&#x200B; overzicht van het Systeem XDM &#x200B;](../../xdm/home.md) te lezen.
 
 ## Beleid voor samenvoegen openen {#access-merge-policies}
 
@@ -245,7 +245,7 @@ Een succesvolle reactie retourneert de details van het samenvoegingsbeleid.
 }
 ```
 
-Zie de [ componenten van het beleid van de fusie ](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
+Zie de [&#x200B; componenten van het beleid van de fusie &#x200B;](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
 
 ### Hiermee worden meerdere samenvoegbeleidsregels via de id&#39;s opgehaald
 
@@ -344,7 +344,7 @@ Een succesvolle reactie keert de Status 207 van HTTP (multi-Status) en de detail
 }
 ```
 
-Zie de [ componenten van het beleid van de fusie ](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
+Zie de [&#x200B; componenten van het beleid van de fusie &#x200B;](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
 
 ### Meerdere vormen van samenvoegingsbeleid weergeven op basis van criteria
 
@@ -368,7 +368,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `start` | Paginaverschuiving - geef de eerste id op voor de gegevens die moeten worden opgehaald. Standaardwaarde: 0 |
 | `version` | Geef dit op als u een specifieke versie van het samenvoegbeleid wilt gebruiken. Standaard wordt de nieuwste versie gebruikt. |
 
-Voor meer informatie betreffende `schema.name`, `identityGraph.type`, en `attributeMerge.type`, verwijs naar de [ componenten van de sectie van het fusiebeleid ](#components-of-merge-policies) vroeger in deze gids wordt verstrekt.
+Voor meer informatie betreffende `schema.name`, `identityGraph.type`, en `attributeMerge.type`, verwijs naar de [&#x200B; componenten van de sectie van het fusiebeleid &#x200B;](#components-of-merge-policies) vroeger in deze gids wordt verstrekt.
 
 
 **Verzoek**
@@ -510,7 +510,7 @@ curl -X POST \
 | `isActiveOnEdge` | Geeft aan of dit samenvoegbeleid op de rand actief is. |
 | `default` | Geeft aan of dit samenvoegbeleid het standaardbeleid voor het schema is. |
 
-Verwijs naar de [ componenten van de sectie van het samenvoegbeleid ](#components-of-merge-policies) voor meer informatie.
+Verwijs naar de [&#x200B; componenten van de sectie van het samenvoegbeleid &#x200B;](#components-of-merge-policies) voor meer informatie.
 
 **Reactie**
 
@@ -547,7 +547,7 @@ Een geslaagde reactie retourneert de details van het nieuwe samenvoegbeleid.
 }
 ```
 
-Zie de [ componenten van het beleid van de fusie ](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
+Zie de [&#x200B; componenten van het beleid van de fusie &#x200B;](#components-of-merge-policies) sectie aan het begin van dit document voor details op elk van de individuele elementen die omhoog een fusiebeleid maken.
 
 ## Een samenvoegingsbeleid bijwerken {#update}
 
@@ -588,11 +588,11 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 |---|---|
-| `op` | Geeft de bewerking aan die moet worden uitgevoerd. De voorbeelden van andere verrichtingen van PATCH kunnen in de [ documentatie van het Reparatie JSON ](https://datatracker.ietf.org/doc/html/rfc6902) worden gevonden |
+| `op` | Geeft de bewerking aan die moet worden uitgevoerd. De voorbeelden van andere verrichtingen van PATCH kunnen in de [&#x200B; documentatie van het Reparatie JSON &#x200B;](https://datatracker.ietf.org/doc/html/rfc6902) worden gevonden |
 | `path` | Het pad van het veld dat moet worden bijgewerkt. Accepteerde waarden zijn: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot; |
 | `value` | De waarde waarop het opgegeven veld moet worden ingesteld. |
 
-Verwijs naar de [ componenten van de sectie van het samenvoegbeleid ](#components-of-merge-policies) voor meer informatie.
+Verwijs naar de [&#x200B; componenten van de sectie van het samenvoegbeleid &#x200B;](#components-of-merge-policies) voor meer informatie.
 
 
 **Reactie**
@@ -688,7 +688,7 @@ curl -X PUT \
 | `isActiveOnEdge` | Geeft aan of dit samenvoegbeleid op de rand actief is. |
 | `default` | Geeft aan of dit samenvoegbeleid het standaardbeleid voor het schema is. |
 
-Verwijs naar de [ componenten van de sectie van het samenvoegbeleid ](#components-of-merge-policies) voor meer informatie.
+Verwijs naar de [&#x200B; componenten van de sectie van het samenvoegbeleid &#x200B;](#components-of-merge-policies) voor meer informatie.
 
 **Reactie**
 
@@ -731,7 +731,7 @@ Een samenvoegingsbeleid kan worden geschrapt door een DELETE- verzoek aan het `/
 
 >[!NOTE]
 >
->Als het fusiebeleid `isActiveOnEdge` aan waar heeft, kan het fusiebeleid **niet** worden geschrapt. Gebruik of de [ PATCH ](#edit-individual-merge-policy-fields) of [ PUT ](#overwrite-a-merge-policy) eindpunten om het fusiebeleid bij te werken alvorens het te schrappen.
+>Als het fusiebeleid `isActiveOnEdge` aan waar heeft, kan het fusiebeleid **niet** worden geschrapt. Gebruik of de [&#x200B; PATCH &#x200B;](#edit-individual-merge-policy-fields) of [&#x200B; PUT &#x200B;](#overwrite-a-merge-policy) eindpunten om het fusiebeleid bij te werken alvorens het te schrappen.
 
 **API formaat**
 
@@ -764,4 +764,4 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege 
 
 Nu u weet hoe u samenvoegbeleid voor uw organisatie kunt maken en configureren, kunt u deze gebruiken om de weergave van klantprofielen in Experience Platform aan te passen en om publiek te maken op basis van uw [!DNL Real-Time Customer Profile] -gegevens.
 
-Gelieve te zien de [ documentatie van de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md) beginnen bepalend en werkend met publiek.
+Gelieve te zien de [&#x200B; documentatie van de Dienst van de Segmentatie van Adobe Experience Platform &#x200B;](../../segmentation/home.md) beginnen bepalend en werkend met publiek.

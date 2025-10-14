@@ -20,13 +20,13 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Een instantie MLInstance is het verpakken van een bestaande [ Motor ](./engines.md) met een aangewezen reeks configuraties die om het even welke opleidingsparameters, het scoren parameters, of configuraties van het hardwaremiddel bepaalt.
+Een instantie MLInstance is het verpakken van een bestaande [&#x200B; Motor &#x200B;](./engines.md) met een aangewezen reeks configuraties die om het even welke opleidingsparameters, het scoren parameters, of configuraties van het hardwaremiddel bepaalt.
 
 ## Een MLInstance maken {#create-an-mlinstance}
 
 U kunt een instantie tot stand brengen MLI door een verzoek van de POST uit te voeren terwijl het verstrekken van een verzoeklading die uit geldige identiteitskaart van de Motor (`{ENGINE_ID}`) en een aangewezen reeks standaardconfiguraties bestaat.
 
-Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Verwijs naar de appendix secties op [ PySpark en de het middelconfiguraties van de Vonk ](./appendix.md#resource-config) en [ Pypthon cpu en GPU configuraties ](./appendix.md#cpu-gpu-config) voor meer informatie.
+Als identiteitskaart van de Motor verwijzingen een PySpark of de Motor van de Vonk dan hebt u de capaciteit om de hoeveelheid berekeningsmiddelen zoals het aantal kernen of de hoeveelheid geheugen te vormen. Als er naar een Python-engine wordt verwezen, kunt u kiezen tussen het gebruik van een CPU of GPU voor trainings- en scoringdoeleinden. Verwijs naar de appendix secties op [&#x200B; PySpark en de het middelconfiguraties van de Vonk &#x200B;](./appendix.md#resource-config) en [&#x200B; Pypthon cpu en GPU configuraties &#x200B;](./appendix.md#cpu-gpu-config) voor meer informatie.
 
 **API Formaat**
 
@@ -136,7 +136,7 @@ Een succesvolle reactie keert een lading terug die de details van pas gecreëerd
 
 ## Een lijst met MLInstances ophalen
 
-U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie op [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst van instanties terugwinnen MLInstances door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie op [&#x200B; vraagparameters voor activaherwinning &#x200B;](./appendix.md#query).
 
 **API Formaat**
 
@@ -148,7 +148,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Één van de [ beschikbare vraagparameters ](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
+| `{QUERY_PARAMETER}` | Één van de [&#x200B; beschikbare vraagparameters &#x200B;](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
 | `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
 
 **Verzoek**
@@ -281,7 +281,7 @@ U kunt een bestaande HTMLInstance bijwerken door zijn eigenschappen door een ver
 
 >[!TIP]
 >
->om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET om [ uitvoert MLInstance door identiteitskaart ](#retrieve-specific) terug te winnen. Vervolgens past u het geretourneerde JSON-object aan en werkt u het bij en past u het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET om [&#x200B; uitvoert MLInstance door identiteitskaart &#x200B;](#retrieve-specific) terug te winnen. Vervolgens past u het geretourneerde JSON-object aan en werkt u het bij en past u het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de trainings- en scoringsparameters van een instantie bij terwijl deze eigenschappen in eerste instantie worden gebruikt:
 

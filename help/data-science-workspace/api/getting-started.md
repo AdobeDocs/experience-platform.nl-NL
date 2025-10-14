@@ -22,11 +22,11 @@ ht-degree: 5%
 
 De API van [!DNL Sensei Machine Learning] verstrekt een mechanisme voor gegevenswetenschappers om machine het leren diensten te organiseren en te beheren, van algoritme op het instappen door experimenteren en aan de dienstplaatsing.
 
-Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen te gebruiken [ het Leren API van de Machine van Sensei ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/), en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van Workspace van de Wetenschap van Gegevens aan.
+Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen te gebruiken [&#x200B; het Leren API van de Machine van Sensei &#x200B;](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/), en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van Workspace van de Wetenschap van Gegevens aan.
 
 ## Aan de slag
 
-U moet het [ authentificatie ](https://www.adobe.com/go/platform-api-authentication-en) leerprogramma hebben voltooid om toegang tot de volgende verzoekkopballen te hebben om vraag aan [!DNL Adobe Experience Platform] APIs te maken:
+U moet het [&#x200B; authentificatie &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) leerprogramma hebben voltooid om toegang tot de volgende verzoekkopballen te hebben om vraag aan [!DNL Adobe Experience Platform] APIs te maken:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -36,7 +36,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 

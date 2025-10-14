@@ -16,7 +16,7 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een toepassing voor klantsucces van derden. Tot de ondersteuning voor succesproviders van klanten behoren [!DNL Zendesk] .
 
-Deze Adobe Experience Platform [ bronnen ](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=nl) hefboomwerkingen [ het Onderzoek API van Zendesk > de Resultaten van het Onderzoek van de Uitvoer ](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) die gebruikersinformatie in Experience Platform van Zendesk voor verdere verwerking terugkeert.
+Deze Adobe Experience Platform [&#x200B; bronnen &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=nl) hefboomwerkingen [&#x200B; het Onderzoek API van Zendesk > de Resultaten van het Onderzoek van de Uitvoer &#x200B;](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) die gebruikersinformatie in Experience Platform van Zendesk voor verdere verwerking terugkeert.
 
 ## IP adres lijst van gewenste personen
 
@@ -28,14 +28,14 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 In deze sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd om uw [!DNL Zendesk] -account te verifiëren.
 
-* De eerste stap bij het verifiëren van uw [!DNL Zendesk] -account is ervoor te zorgen dat u over een [!DNL Zendesk] -ondersteuningsaccount beschikt. Als u niet hebt zie reeds de [[!DNL Zendesk]  registratiepagina ](https://www.zendesk.com/register/) om uw rekening van Zendesk te registreren en tot stand te brengen.
-* Zodra u met succes hebt geregistreerd, navigeer aan de [[!DNL Zendesk]  website ](https://www.zendesk.com/login/) en verstrek uw **subdomain**.
+* De eerste stap bij het verifiëren van uw [!DNL Zendesk] -account is ervoor te zorgen dat u over een [!DNL Zendesk] -ondersteuningsaccount beschikt. Als u niet hebt zie reeds de [[!DNL Zendesk]  registratiepagina &#x200B;](https://www.zendesk.com/register/) om uw rekening van Zendesk te registreren en tot stand te brengen.
+* Zodra u met succes hebt geregistreerd, navigeer aan de [[!DNL Zendesk]  website &#x200B;](https://www.zendesk.com/login/) en verstrek uw **subdomain**.
 * Selecteer vervolgens **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]** .
 * Ten slotte haalt u uw API-token op uit de sectie **[!DNL API token]** .
 
-![ het teken van Zendesk API ](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![&#x200B; het teken van Zendesk API &#x200B;](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-Zie [[!DNL Zendesk documentation on subdomains] ](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) voor informatie over hoe te om uw subdomain terug te winnen. Voor informatie bij het produceren van uw API teken, zie de [[!DNL Zendesk]  gids bij het produceren van een nieuw API teken ](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
+Zie [[!DNL Zendesk documentation on subdomains] &#x200B;](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) voor informatie over hoe te om uw subdomain terug te winnen. Voor informatie bij het produceren van uw API teken, zie de [[!DNL Zendesk]  gids bij het produceren van een nieuw API teken &#x200B;](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Zendesk] en Experience Platform via API&#39;s of de gebruikersinterface:
 

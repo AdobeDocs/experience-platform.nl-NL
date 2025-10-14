@@ -11,24 +11,24 @@ ht-degree: 1%
 
 # [!DNL Zendesk] Overzicht van de API-extensie voor gebeurtenissen
 
-[ Zendesk ](https://www.zendesk.com) is een oplossing van de klantendienst en verkoophulpmiddel. De gebeurtenis die van Zendesk [&#128279;](../../../ui/event-forwarding/overview.md) uitbreidingshoofdhefboomwerkingen [[!DNL Zendesk Events API] ](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) door:sturen gebeurtenissen van de Edge Network van Adobe Experience Platform naar Zendesk voor verdere verwerking. U kunt de uitbreiding gebruiken om de interactie van het klantenprofiel voor gebruik in stroomafwaartse analyse en actie te verzamelen.
+[&#x200B; Zendesk &#x200B;](https://www.zendesk.com) is een oplossing van de klantendienst en verkoophulpmiddel. De gebeurtenis die van Zendesk [&#128279;](../../../ui/event-forwarding/overview.md) uitbreidingshoofdhefboomwerkingen [[!DNL Zendesk Events API] &#x200B;](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) door:sturen gebeurtenissen van de Edge Network van Adobe Experience Platform naar Zendesk voor verdere verwerking. U kunt de uitbreiding gebruiken om de interactie van het klantenprofiel voor gebruik in stroomafwaartse analyse en actie te verzamelen.
 
 In dit document wordt beschreven hoe u de extensie in de gebruikersinterface kunt installeren en configureren.
 
 ## Vereisten
 
-U moet een Zendesk-account hebben om deze extensie te kunnen gebruiken. U kunt voor een rekening van Zendesk op de [ website van Zendesk ](https://www.zendesk.com/register/) registreren.
+U moet een Zendesk-account hebben om deze extensie te kunnen gebruiken. U kunt voor een rekening van Zendesk op de [&#x200B; website van Zendesk &#x200B;](https://www.zendesk.com/register/) registreren.
 
 U moet ook de volgende gegevens verzamelen voor uw Zendesk-configuratie:
 
 | Type toets | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Subdomein | Tijdens het registratieproces, wordt een uniek **subdomain** gecreeerd specifiek voor de rekening. Verwijs naar de [ documentatie van Zendesk ](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/) voor meer informatie. | `xxxxx.zendesk.com` (waarbij `xxxxx` de waarde is die is opgegeven tijdens het maken van de account) |
-| API-token | Zendesk gebruikt tokens aan toonder als verificatiemechanisme om te communiceren met de Zendesk-API. Nadat u zich hebt aangemeld bij de Zendesk-portal, genereert u een API-token. Verwijs naar de [ documentatie van Zendesk ](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token) voor meer informatie. | `cwWyOtHAv12w4dhpiulfe9BdZFTz3OKaTSzn2QvV` |
+| Subdomein | Tijdens het registratieproces, wordt een uniek **subdomain** gecreeerd specifiek voor de rekening. Verwijs naar de [&#x200B; documentatie van Zendesk &#x200B;](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/) voor meer informatie. | `xxxxx.zendesk.com` (waarbij `xxxxx` de waarde is die is opgegeven tijdens het maken van de account) |
+| API-token | Zendesk gebruikt tokens aan toonder als verificatiemechanisme om te communiceren met de Zendesk-API. Nadat u zich hebt aangemeld bij de Zendesk-portal, genereert u een API-token. Verwijs naar de [&#x200B; documentatie van Zendesk &#x200B;](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token) voor meer informatie. | `cwWyOtHAv12w4dhpiulfe9BdZFTz3OKaTSzn2QvV` |
 
 {style="table-layout:auto"}
 
-Tot slot moet u een gebeurtenis tot stand brengen die geheim voor het API teken door:sturen. Stel het geheime type in op **[!UICONTROL Token]** en stel de waarde in op het API-token dat u hebt opgehaald bij uw Zendesk-configuratie. Verwijs naar de documentatie over [ geheimen in gebeurtenis door:sturen ](../../../ui/event-forwarding/secrets.md) voor meer details bij het vormen van geheimen.
+Tot slot moet u een gebeurtenis tot stand brengen die geheim voor het API teken door:sturen. Stel het geheime type in op **[!UICONTROL Token]** en stel de waarde in op het API-token dat u hebt opgehaald bij uw Zendesk-configuratie. Verwijs naar de documentatie over [&#x200B; geheimen in gebeurtenis door:sturen &#x200B;](../../../ui/event-forwarding/secrets.md) voor meer details bij het vormen van geheimen.
 
 ## De extensie installeren {#install}
 
@@ -36,7 +36,7 @@ Om de uitbreiding van Zendesk in UI te installeren, navigeer aan **Gebeurtenis d
 
 Zodra u hebt geselecteerd of het gewenste bezit gecreeerd, navigeer aan **Uitbreidingen** > **Catalogus**. Zoek naar &quot;[!DNL Zendesk]&quot;, en selecteer dan **[!DNL Install]** op de Uitbreiding van Zendesk.
 
-![ installeer knoop voor de uitbreiding die van Zendesk in UI wordt geselecteerd ](../../../images/extensions/server/zendesk/install.png)
+![&#x200B; installeer knoop voor de uitbreiding die van Zendesk in UI wordt geselecteerd &#x200B;](../../../images/extensions/server/zendesk/install.png)
 
 ## De extensie configureren {#configure}
 
@@ -46,27 +46,27 @@ Zodra u hebt geselecteerd of het gewenste bezit gecreeerd, navigeer aan **Uitbre
 
 Selecteer **Uitbreidingen** in de linkernavigatie. Onder **Geïnstalleerde**, uitgezochte **vormt** op de uitbreiding van Zendesk.
 
-![ vorm knoop voor de uitbreiding van Zendesk die in UI wordt geselecteerd ](../../../images/extensions/server/zendesk/configure.png)
+![&#x200B; vorm knoop voor de uitbreiding van Zendesk die in UI wordt geselecteerd &#x200B;](../../../images/extensions/server/zendesk/configure.png)
 
 Voer onder **[!UICONTROL Zendesk Domain]** de waarde in voor uw Zendesk-subdomein. Selecteer onder **[!UICONTROL Zendesk Token]** het geheim dat u eerder hebt gemaakt en dat de API-token bevat.
 
-![ de opties van de Configuratie die in UI ](../../../images/extensions/server/zendesk/input.png) worden gevuld
+![&#x200B; de opties van de Configuratie die in UI &#x200B;](../../../images/extensions/server/zendesk/input.png) worden gevuld
 
 ## Vorm een gebeurtenis door:sturen regel
 
-Begin creërend een nieuwe gebeurtenis door:sturen regel [ regel ](../../../ui/managing-resources/rules.md) en vorm zijn voorwaarden zoals gewenst. Wanneer u de handelingen voor de regel selecteert, selecteert u de extensie [!UICONTROL Zendesk] en vervolgens het actietype [!UICONTROL Create Event] .
+Begin creërend een nieuwe gebeurtenis door:sturen regel [&#x200B; regel &#x200B;](../../../ui/managing-resources/rules.md) en vorm zijn voorwaarden zoals gewenst. Wanneer u de handelingen voor de regel selecteert, selecteert u de extensie [!UICONTROL Zendesk] en vervolgens het actietype [!UICONTROL Create Event] .
 
-![ bepaalt Regel ](../../../images/extensions/server/zendesk/rule.png)
+![&#x200B; bepaalt Regel &#x200B;](../../../images/extensions/server/zendesk/rule.png)
 
 Wanneer u de actieconfiguratie instelt, wordt u gevraagd gegevenselementen toe te wijzen aan de verschillende eigenschappen die naar Zendesk worden verzonden.
 
-![ bepalen de Configuratie van de Actie ](../../../images/extensions/server/zendesk/action-configurations.png)
+![&#x200B; bepalen de Configuratie van de Actie &#x200B;](../../../images/extensions/server/zendesk/action-configurations.png)
 
 Deze gegevenselementen moeten worden toegewezen zoals hieronder wordt vermeld.
 
 ### `event` toetsen
 
-`event` is een JSON-object dat de gebeurtenis vertegenwoordigt die door de gebruiker wordt geactiveerd. Verwijs naar het document van Zendesk op de [ anatomie van een gebeurtenis ](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/) voor details over de eigenschappen die door het `event` voorwerp worden gevangen.
+`event` is een JSON-object dat de gebeurtenis vertegenwoordigt die door de gebruiker wordt geactiveerd. Verwijs naar het document van Zendesk op de [&#x200B; anatomie van een gebeurtenis &#x200B;](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/) voor details over de eigenschappen die door het `event` voorwerp worden gevangen.
 
 Er kan binnen het `event` -object naar de volgende toetsen worden verwezen wanneer deze worden toegewezen aan gegevenselementen:
 
@@ -82,11 +82,11 @@ Er kan binnen het `event` -object naar de volgende toetsen worden verwezen wanne
 
 >[!NOTE]
 >
->Verwijs naar de [[!DNL Zendesk Events API]  documentatie ](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) voor extra begeleiding op gebeurteniseigenschappen.
+>Verwijs naar de [[!DNL Zendesk Events API]  documentatie &#x200B;](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) voor extra begeleiding op gebeurteniseigenschappen.
 
 ### `profile` toetsen
 
-`profile` is een JSON-object dat de gebruiker vertegenwoordigt die de gebeurtenis heeft geactiveerd. Verwijs naar het document van Zendesk op de [ anatomie van een profiel ](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/) voor details over de eigenschappen die door het `profile` voorwerp worden gevangen.
+`profile` is een JSON-object dat de gebruiker vertegenwoordigt die de gebeurtenis heeft geactiveerd. Verwijs naar het document van Zendesk op de [&#x200B; anatomie van een profiel &#x200B;](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/) voor details over de eigenschappen die door het `profile` voorwerp worden gevangen.
 
 Er kan binnen het `profile` -object naar de volgende toetsen worden verwezen wanneer deze worden toegewezen aan gegevenselementen:
 
@@ -96,8 +96,8 @@ Er kan binnen het `profile` -object naar de volgende toetsen worden verwezen wan
 | `type` | String | `arc.event.xdm._extconndev.profile_type` | Een naam voor het profieltype. U kunt dit veld gebruiken om verschillende soorten profielen voor een bepaalde bron te maken. U kunt bijvoorbeeld een set bedrijfsprofielen maken voor klanten en een andere voor werknemers. | Ja | De lengte van het profieltype mag niet langer zijn dan 40 tekens. |
 | `name` | String | `arc.event.xdm._extconndev.name` | De naam van de persoon uit het profiel | Nee | (N.v.t.) |
 | `user_id` | String | `arc.event.xdm._extconndev.user_id` | De gebruikersnaam van de persoon in Zendesk. | Nee | (N.v.t.) |
-| `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | Een array met ten minste één id. Elke id bestaat uit een type en een waarde. | Ja | Verwijs naar de [ documentatie van Zendesk ](https://developer.zendesk.com/api-reference/ticketing/users/profiles_api/profiles_api/#identifiers-array) voor meer informatie over de `identifiers` serie. Alle velden en waarden moeten uniek zijn. |
-| `attributes` | Object | `arc.event.xdm._extconndev.attrbutes` | Een object dat door de gebruiker gedefinieerde eigenschappen over de persoon bevat. | Nee | Verwijs naar de [ documentatie van Zendesk ](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/#attributes) voor meer informatie over profielattributen. |
+| `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | Een array met ten minste één id. Elke id bestaat uit een type en een waarde. | Ja | Verwijs naar de [&#x200B; documentatie van Zendesk &#x200B;](https://developer.zendesk.com/api-reference/ticketing/users/profiles_api/profiles_api/#identifiers-array) voor meer informatie over de `identifiers` serie. Alle velden en waarden moeten uniek zijn. |
+| `attributes` | Object | `arc.event.xdm._extconndev.attrbutes` | Een object dat door de gebruiker gedefinieerde eigenschappen over de persoon bevat. | Nee | Verwijs naar de [&#x200B; documentatie van Zendesk &#x200B;](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/#attributes) voor meer informatie over profielattributen. |
 
 {style="table-layout:auto"}
 
@@ -107,11 +107,11 @@ Als de gebeurtenisverzameling en Adobe Experience Platform-integratie succesvol 
 
 Profielen:
 
-![ pagina van Profielen Zendesk ](../../../images/extensions/server/zendesk/zendesk-profiles.png)
+![&#x200B; pagina van Profielen Zendesk &#x200B;](../../../images/extensions/server/zendesk/zendesk-profiles.png)
 
 Gebeurtenissen:
 
-![ pagina van Gebeurtenissen Zendesk ](../../../images/extensions/server/zendesk/zendesk-events.png)
+![&#x200B; pagina van Gebeurtenissen Zendesk &#x200B;](../../../images/extensions/server/zendesk/zendesk-events.png)
 
 ## Aanvraaglimieten {#limits}
 
@@ -127,7 +127,7 @@ Op basis van het accounttype kan Zendesk [!DNL Events API] het volgende aantal a
 
 {style="table-layout:auto"}
 
-Verwijs naar de [ documentatie van Zendesk ](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.) voor meer informatie over deze grenzen.
+Verwijs naar de [&#x200B; documentatie van Zendesk &#x200B;](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.) voor meer informatie over deze grenzen.
 
 ## Fouten en problemen oplossen {#errors-and-troubleshooting}
 
@@ -139,7 +139,7 @@ Tijdens het gebruik of het configureren van de extensie kunnen de onderstaande f
 | 401 | **niet gevonden Route:** Deze fout komt voor wanneer een ongeldig domein is geleverd. | Controleer of een geldig domein in de volgende indeling wordt opgegeven: `{subdomain}.zendesk.com` | `{"error": [{"description": "No route found for host {subdomain}.zendesk.com","title": "RouteNotFound"}]}` |
 | 401 | **Ongeldige of Ontbrekende Authentificatie:** Deze fout komt voor wanneer de toegang tot het teken ongeldig is, ontbreekt, of verlopen. | Controleer of het toegangstoken geldig is en niet verlopen is. | `{"error": [{"code":"MissingOrInvalidAuthentication","title": "Invalid or Missing Authentication"}]}` |
 | 403 | **Onvoldoende toestemmingen:** Deze fout komt voor wanneer de voldoende toestemmingen om tot het middel toegang te hebben niet worden verstrekt. | Controleer of de vereiste machtigingen zijn opgegeven. | `{"error": [{"code":"PermissionDenied","title": "Insufficient permisssions to perform operation"}]}` |
-| 429 | **Te veel Verzoeken:** Deze fout komt voor wanneer de grens van het eindpuntvoorwerp het verslag is overschreden. | Verwijs naar de sectie hierboven op [ verzoekgrenzen ](#limits) voor details op per-grensdrempels. | `{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}` |
+| 429 | **Te veel Verzoeken:** Deze fout komt voor wanneer de grens van het eindpuntvoorwerp het verslag is overschreden. | Verwijs naar de sectie hierboven op [&#x200B; verzoekgrenzen &#x200B;](#limits) voor details op per-grensdrempels. | `{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}` |
 
 {style="table-layout:auto"}
 
@@ -147,10 +147,10 @@ Tijdens het gebruik of het configureren van de extensie kunnen de onderstaande f
 
 In dit document wordt beschreven hoe u de Zendesk-gebeurtenis kunt installeren en configureren voor het doorsturen van de extensie in de gebruikersinterface. Raadpleeg de officiële documentatie voor meer informatie over het verzamelen van gebeurtenisgegevens in Zendesk:
 
-* [ Begonnen het worden met Gebeurtenissen ](https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events/)
-* [ Zendesk Gebeurtenissen API ](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
-* [ Ongeveer de Gebeurtenissen API ](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/)
-* [ Anatomie van een gebeurtenis ](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)
-* [ Zendesk Profiles API ](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
-* [ Ongeveer API van Profielen ](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
-* [ Anatomie van een profiel ](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)
+* [&#x200B; Begonnen het worden met Gebeurtenissen &#x200B;](https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events/)
+* [&#x200B; Zendesk Gebeurtenissen API &#x200B;](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
+* [&#x200B; Ongeveer de Gebeurtenissen API &#x200B;](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/)
+* [&#x200B; Anatomie van een gebeurtenis &#x200B;](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)
+* [&#x200B; Zendesk Profiles API &#x200B;](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
+* [&#x200B; Ongeveer API van Profielen &#x200B;](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
+* [&#x200B; Anatomie van een profiel &#x200B;](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

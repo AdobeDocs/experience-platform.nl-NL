@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Veelgestelde vragen {#faq}
 
-Dit document geeft antwoorden op veelgestelde vragen over de Catalogusservice en gegevenssets van Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van Experience Platform, met inbegrip van kwesties die over alle Experience Platform APIs worden ontmoet, gelieve te verwijzen naar de [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md).
+Dit document geeft antwoorden op veelgestelde vragen over de Catalogusservice en gegevenssets van Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van Experience Platform, met inbegrip van kwesties die over alle Experience Platform APIs worden ontmoet, gelieve te verwijzen naar de [&#x200B; het oplossen van problemengids van Experience Platform &#x200B;](../landing/troubleshooting.md).
 
 ## Beleid en regels voor bewaring {#retention-policies-and-rules}
 
@@ -66,7 +66,7 @@ Als u bijvoorbeeld op 15 mei een vervalbeleid van 30 dagen toepast, gebeurt het 
 
 +++Antwoord
 
-U kunt de nieuwste opslaggrootte op gegevensniveau in een datumpeer en profiel bekijken als afzonderlijke maatstaven op de inventarispagina van [!UICONTROL Datasets] . U kunt de kolommen ook sorteren om de grootste datasets te identificeren en ervoor te zorgen dat het behoudbeleid wordt toegepast. Het gebruik op het niveau van de zandbak is beschikbaar in het dashboard van het Gebruik van de Vergunning. Gelieve te verwijzen naar de [ documentatie van het Gebruik van de Vergunning ](../dashboards/guides/license-usage.md) voor details.
+U kunt de nieuwste opslaggrootte op gegevensniveau in een datumpeer en profiel bekijken als afzonderlijke maatstaven op de inventarispagina van [!UICONTROL Datasets] . U kunt de kolommen ook sorteren om de grootste datasets te identificeren en ervoor te zorgen dat het behoudbeleid wordt toegepast. Het gebruik op het niveau van de zandbak is beschikbaar in het dashboard van het Gebruik van de Vergunning. Gelieve te verwijzen naar de [&#x200B; documentatie van het Gebruik van de Vergunning &#x200B;](../dashboards/guides/license-usage.md) voor details.
 
 +++
 
@@ -74,7 +74,7 @@ U kunt de nieuwste opslaggrootte op gegevensniveau in een datumpeer en profiel b
 
 +++Antwoord
 
-U kunt timestamp van de laatste baan van het gegevensbehoud in de [ configuratie UI van het het behoud van de Dataset ](./datasets/user-guide.md#data-retention-policy) en op de [!UICONTROL Datasets] inventarispagina controleren. Rapporten voor historisch gegevenssetgebruik zijn momenteel niet beschikbaar maar zijn gepland voor toekomstige versies.
+U kunt timestamp van de laatste baan van het gegevensbehoud in de [&#x200B; configuratie UI van het het behoud van de Dataset &#x200B;](./datasets/user-guide.md#data-retention-policy) en op de [!UICONTROL Datasets] inventarispagina controleren. Rapporten voor historisch gegevenssetgebruik zijn momenteel niet beschikbaar maar zijn gepland voor toekomstige versies.
 
 +++
 

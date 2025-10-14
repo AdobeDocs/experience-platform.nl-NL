@@ -22,7 +22,7 @@ Criteo maakt betrouwbare en effectieve reclame mogelijk om elke consument op het
 
 ## Vereisten {#prerequisites}
 
-* U moet een beheerdergebruikersrekening op [ Centrum van het Beheer van de Nota ](https://marketing.criteo.com) hebben.
+* U moet een beheerdergebruikersrekening op [&#x200B; Centrum van het Beheer van de Nota &#x200B;](https://marketing.criteo.com) hebben.
 * U hebt uw advertentie-id voor de website nodig (vraag uw contactpersoon voor de website als u deze id niet hebt).
 * U moet [!DNL GUM caller ID] opgeven voor het geval u [!DNL GUM ID] als id wilt gebruiken.
 
@@ -35,7 +35,7 @@ Criteo maakt betrouwbare en effectieve reclame mogelijk om elke consument op het
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Criteo ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl-NL#getting-started).
+Criteo ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl-NL#getting-started).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 | --- | --- | --- |
@@ -49,7 +49,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 | --- | --- | --- |
 | Exporttype | Publiek exporteren | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL Criteo] -bestemming worden gebruikt. |
-| Exportfrequentie | Streaming | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](../../destination-types.md#streaming-destinations). |
+| Exportfrequentie | Streaming | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](../../destination-types.md#streaming-destinations). |
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -67,9 +67,9 @@ Wanneer bezoekers uw website verlaten, herinner hen wat zij met het herrichten v
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven.
 
 ### Verifiëren voor commissie
 
@@ -77,22 +77,22 @@ De stappen om te verbinden zijn als volgt:
 
 1. Meld u aan bij Adobe Experience Platform en maak verbinding met het doel Computer.
 
-   ![ Login ](../../assets/catalog/advertising/criteo/connect-destination.png)
+   ![&#x200B; Login &#x200B;](../../assets/catalog/advertising/criteo/connect-destination.png)
 
 1. U wordt omgeleid naar de website om de verbinding te autoriseren. Mogelijk moet u zich eerst aanmelden met uw verificatiegegevens:
 
-   ![ login van de citaat ](../../assets/catalog/advertising/criteo/log-in-1.png)
+   ![&#x200B; login van de citaat &#x200B;](../../assets/catalog/advertising/criteo/log-in-1.png)
 
-   ![ login van de citaat ](../../assets/catalog/advertising/criteo/log-in-2.png)
+   ![&#x200B; login van de citaat &#x200B;](../../assets/catalog/advertising/criteo/log-in-2.png)
 
-   ![ login van de citaat ](../../assets/catalog/advertising/criteo/log-in-3.png)
+   ![&#x200B; login van de citaat &#x200B;](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
 ### Verbindingsparameters {#connection-parameters}
 
 Vul de volgende verbindingsparameters in nadat u de bestemming hebt geverifieerd.
 
-![ de parameters van de Verbinding ](../../assets/catalog/advertising/criteo/connection-parameters.png)
+![&#x200B; de parameters van de Verbinding &#x200B;](../../assets/catalog/advertising/criteo/connection-parameters.png)
 
 | Veld | Beschrijving | Vereist |
 | --- | --- | --- |
@@ -103,7 +103,7 @@ Vul de volgende verbindingsparameters in nadat u de bestemming hebt geverifieerd
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -111,14 +111,14 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-U kunt het uitgevoerde publiek in het [ centrum van het Beheer van de Nota zien ](https://marketing.criteo.com/audience-manager/dashboard).
+U kunt het uitgevoerde publiek in het [&#x200B; centrum van het Beheer van de Nota zien &#x200B;](https://marketing.criteo.com/audience-manager/dashboard).
 
 De aanvraagtekst voor het toevoegen van een gebruikersprofiel dat door de [!DNL Criteo] -verbinding wordt ontvangen, ziet er ongeveer als volgt uit:
 
@@ -178,9 +178,9 @@ De aanvraagtekst voor het verwijderen van gebruikersprofielen die door de [!DNL 
 
 ## Gegevensgebruik en -beheer {#data-usage}
 
-Alle Adobe Experience Platform-doelen zijn bij het verwerken van uw gegevens compatibel met het beleid voor gegevensgebruik. Voor gedetailleerde informatie over hoe Adobe Experience Platform gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
+Alle Adobe Experience Platform-doelen zijn bij het verwerken van uw gegevens compatibel met het beleid voor gegevensgebruik. Voor gedetailleerde informatie over hoe Adobe Experience Platform gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
 
 ## Aanvullende bronnen
 
-* [ het Centrum van de Hulp van de Nota ](https://help.criteo.com/kb/en)
-* [ Portaal van de Ontwikkelaar van de Nota van de Nota van de Nota ](https://developers.criteo.com)
+* [&#x200B; het Centrum van de Hulp van de Nota &#x200B;](https://help.criteo.com/kb/en)
+* [&#x200B; Portaal van de Ontwikkelaar van de Nota van de Nota van de Nota &#x200B;](https://developers.criteo.com)

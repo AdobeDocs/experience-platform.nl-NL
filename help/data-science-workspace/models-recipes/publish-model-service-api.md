@@ -20,15 +20,15 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Deze zelfstudie behandelt het proces om een model als dienst te publiceren gebruikend [[!DNL Sensei Machine Learning API] ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+Deze zelfstudie behandelt het proces om een model als dienst te publiceren gebruikend [[!DNL Sensei Machine Learning API] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van Adobe Experience Platform Data Science Workspace. Alvorens met dit leerprogramma te beginnen, te herzien gelieve het [ overzicht van Workspace van de Wetenschap van Gegevens ](../home.md) voor een inleiding op hoog niveau aan de dienst.
+Deze zelfstudie vereist een goed begrip van Adobe Experience Platform Data Science Workspace. Alvorens met dit leerprogramma te beginnen, te herzien gelieve het [&#x200B; overzicht van Workspace van de Wetenschap van Gegevens &#x200B;](../home.md) voor een inleiding op hoog niveau aan de dienst.
 
-Om samen met dit leerprogramma te volgen, moet u een bestaande Motor van ML, Instantie van XML, en Experiment hebben. Voor stappen op hoe te om deze in API tot stand te brengen, zie het leerprogramma bij [ het invoeren van een verpakt recept ](./import-packaged-recipe-api.md).
+Om samen met dit leerprogramma te volgen, moet u een bestaande Motor van ML, Instantie van XML, en Experiment hebben. Voor stappen op hoe te om deze in API tot stand te brengen, zie het leerprogramma bij [&#x200B; het invoeren van een verpakt recept &#x200B;](./import-packaged-recipe-api.md).
 
-Tot slot alvorens dit leerprogramma te beginnen, te herzien gelieve [ begonnen wordt ](../api/getting-started.md) sectie van de ontwikkelaarsgids voor belangrijke informatie die u moet kennen om vraag aan [!DNL Sensei Machine Learning] API met succes te maken, met inbegrip van de vereiste kopballen die door dit leerprogramma worden gebruikt:
+Tot slot alvorens dit leerprogramma te beginnen, te herzien gelieve [&#x200B; begonnen wordt &#x200B;](../api/getting-started.md) sectie van de ontwikkelaarsgids voor belangrijke informatie die u moet kennen om vraag aan [!DNL Sensei Machine Learning] API met succes te maken, met inbegrip van de vereiste kopballen die door dit leerprogramma worden gebruikt:
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`
@@ -346,7 +346,7 @@ Een succesvolle reactie keert de details van de Dienst van ML terug.
 
 >[!NOTE]
 >
->Het terugwinnen van de verschillende Diensten van ML kan een reactie met meer of minder sleutel-waarde paren terugkeren. De bovengenoemde reactie is een vertegenwoordiging van de Dienst van a [ ML met zowel geplande opleiding als het scoren van de Runnen van de Experiment ](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>Het terugwinnen van de verschillende Diensten van ML kan een reactie met meer of minder sleutel-waarde paren terugkeren. De bovengenoemde reactie is een vertegenwoordiging van de Dienst van a [&#x200B; ML met zowel geplande opleiding als het scoren van de Runnen van de Experiment &#x200B;](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
 ## Training of scores plannen

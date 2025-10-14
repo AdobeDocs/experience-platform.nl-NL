@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # [!UICONTROL Lodging Reservation] schemaveldgroep
 
-[!UICONTROL Lodging Reservation] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een indienende reserve te vangen die.
+[!UICONTROL Lodging Reservation] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een indienende reserve te vangen die.
 
 De veldgroep is een extensie van de veldgroep [!UICONTROL Reservation Details] en bevat dezelfde velden onder één objecttype, `reservations` . Naast deze algemene velden bevat [!UICONTROL Lodging Reservation] ook `lodgingReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor het indienen van objecten.
 
 >[!NOTE]
 >
->In dit document worden de details van de array `lodgingReservations` besproken. Voor informatie over de andere gebieden die onder het `reservations` voorwerp worden verstrekt, gelieve te verwijzen naar [[!UICONTROL Reservation Details] de verwijzing van de gebiedsgroep ](./reservation-details.md).
+>In dit document worden de details van de array `lodgingReservations` besproken. Voor informatie over de andere gebieden die onder het `reservations` voorwerp worden verstrekt, gelieve te verwijzen naar [[!UICONTROL Reservation Details] de verwijzing van de gebiedsgroep &#x200B;](./reservation-details.md).
 
-![ Lodging de structuur van de Voorbehoud ](../../images/field-groups/lodging-reservation/structure.png)
+![&#x200B; Lodging de structuur van de Voorbehoud &#x200B;](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
@@ -28,7 +28,7 @@ De veldgroep is een extensie van de veldgroep [!UICONTROL Reservation Details] e
 
 Hieronder vindt u de structuur van elk object dat onder `lodgingReservations` wordt geleverd.
 
-![ lingReservations structuur ](../../images/field-groups/lodging-reservation/lodgingReservations.png)
+![&#x200B; lingReservations structuur &#x200B;](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -72,5 +72,5 @@ Hieronder vindt u de structuur van elk object dat onder `lodgingReservations` wo
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json)

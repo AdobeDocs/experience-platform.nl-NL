@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # [!UICONTROL Immunization] schemaveldgroep
 
-[!UICONTROL Immunization] is een standaardgroep van het schemagebied voor de [[!DNL XDM Experience Event]  klasse ](../../../classes/experienceevent.md). Het biedt één objecttype veld `healthcareImmunization` waarin informatie over immunisatiegebeurtenissen wordt vastgelegd.
+[!UICONTROL Immunization] is een standaardgroep van het schemagebied voor de [[!DNL XDM Experience Event]  klasse &#x200B;](../../../classes/experienceevent.md). Het biedt één objecttype veld `healthcareImmunization` waarin informatie over immunisatiegebeurtenissen wordt vastgelegd.
 
-![ de groepsstructuur van het Gebied ](../../../images/healthcare/field-groups/immunization/immunization.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../../images/healthcare/field-groups/immunization/immunization.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -31,10 +31,10 @@ ht-degree: 1%
 | [!UICONTROL Manufacturer] | `manufacturer` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | De fabrikant van het vaccin. |
 | [!UICONTROL Note] | `note` | Array van [[!UICONTROL Annotation]](../data-types/annotation.md) | Aanvullende immunisatienota&#39;s. |
 | [!UICONTROL Patient] | `patient` | [[!UICONTROL Reference]](../data-types/reference.md) | Wie was geïmmuniseerd. |
-| [!UICONTROL Batch] | `performer` | Array van objecten | Wie de immunisatiegebeurtenis heeft uitgevoerd. Zie de [ sectie hieronder ](#performer) voor meer informatie. |
-| [!UICONTROL Program Eligibility] | `programEligibility` | Array van objecten | De patiënt komt in aanmerking voor een specifiek vaccinatieprogramma. Zie de [ sectie hieronder ](#program-eligibility) voor meer informatie. |
-| [!UICONTROL Protocol Applied] | `protocolApplied` | Array van objecten | Het protocol dat door de leverancier wordt verstrekt. Zie de [ sectie hieronder ](#protocol-applied) voor meer informatie. |
-| [!UICONTROL Reaction] | `reaction` | Array van objecten | De details van een reactie na immunisatie. Zie de [ sectie hieronder ](#reaction) voor meer informatie. |
+| [!UICONTROL Batch] | `performer` | Array van objecten | Wie de immunisatiegebeurtenis heeft uitgevoerd. Zie de [&#x200B; sectie hieronder &#x200B;](#performer) voor meer informatie. |
+| [!UICONTROL Program Eligibility] | `programEligibility` | Array van objecten | De patiënt komt in aanmerking voor een specifiek vaccinatieprogramma. Zie de [&#x200B; sectie hieronder &#x200B;](#program-eligibility) voor meer informatie. |
+| [!UICONTROL Protocol Applied] | `protocolApplied` | Array van objecten | Het protocol dat door de leverancier wordt verstrekt. Zie de [&#x200B; sectie hieronder &#x200B;](#protocol-applied) voor meer informatie. |
+| [!UICONTROL Reaction] | `reaction` | Array van objecten | De details van een reactie na immunisatie. Zie de [&#x200B; sectie hieronder &#x200B;](#reaction) voor meer informatie. |
 | [!UICONTROL Reason] | `reason` | Array van [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | De reden voor de immunisatie. |
 | [!UICONTROL Route] | `route` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Hoe het vaccin in het lichaam is terechtgekomen. |
 | [!UICONTROL Site] | `site` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De plaats op het lichaam waar het vaccin werd toegediend |
@@ -52,14 +52,14 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/immunization.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/immunization.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/immunization.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/immunization.schema.json)
 
 ## `performer` {#performer}
 
 `performer` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ uitvoerderstructuur ](../../../images/healthcare/field-groups/immunization/performer.png)
+![&#x200B; uitvoerderstructuur &#x200B;](../../../images/healthcare/field-groups/immunization/performer.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `programEligibility` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ programEligibility structuur ](../../../images/healthcare/field-groups/immunization/program-eligibility.png)
+![&#x200B; programEligibility structuur &#x200B;](../../../images/healthcare/field-groups/immunization/program-eligibility.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -81,7 +81,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `protocolApplied` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ protocolApplied structure ](../../../images/healthcare/field-groups/immunization/protocol-applied.png)
+![&#x200B; protocolApplied structure &#x200B;](../../../images/healthcare/field-groups/immunization/protocol-applied.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `reaction` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ reactiestructuur ](../../../images/healthcare/field-groups/immunization/reaction.png)
+![&#x200B; reactiestructuur &#x200B;](../../../images/healthcare/field-groups/immunization/reaction.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

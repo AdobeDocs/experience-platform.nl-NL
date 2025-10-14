@@ -19,7 +19,7 @@ Deze extensie wordt aangedreven door een sleutelfunctie:
 
 ## Vereisten {#prerequisites}
 
-U moet een geldige [!DNL Algolia] -account hebben om deze extensie te kunnen gebruiken. Ga naar [[!DNL Algolia]  onderteken omhoog pagina ](https://dashboard.algolia.com/users/sign_up) om een rekening tot stand te brengen als u niet reeds hebt.
+U moet een geldige [!DNL Algolia] -account hebben om deze extensie te kunnen gebruiken. Ga naar [[!DNL Algolia]  onderteken omhoog pagina &#x200B;](https://dashboard.algolia.com/users/sign_up) om een rekening tot stand te brengen als u niet reeds hebt.
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 
@@ -27,8 +27,8 @@ Als u [!DNL Algolia] wilt verbinden met Adobe Experience Platform, hebt u de vol
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Toepassings-id | Uw identiteitskaart van de Toepassing kan in de [ API Sleutels ](https://www.algolia.com/account/api-keys/all) sectie van uw [!DNL Algolia] dashboard worden gevonden. | 0ABCDEFG12 |
-| API-sleutel zoeken | Uw Sleutel van Onderzoek API kan in de [ API Sleutels ](https://www.algolia.com/account/api-keys/all) sectie van uw [!DNL Algolia] dashboard worden gevonden. | 1234a12345678901b1234567890c1 |
+| Toepassings-id | Uw identiteitskaart van de Toepassing kan in de [&#x200B; API Sleutels &#x200B;](https://www.algolia.com/account/api-keys/all) sectie van uw [!DNL Algolia] dashboard worden gevonden. | 0ABCDEFG12 |
+| API-sleutel zoeken | Uw Sleutel van Onderzoek API kan in de [&#x200B; API Sleutels &#x200B;](https://www.algolia.com/account/api-keys/all) sectie van uw [!DNL Algolia] dashboard worden gevonden. | 1234a12345678901b1234567890c1 |
 
 ## De extensie [!DNL Algolia] Insights installeren en configureren {#install-configure}
 
@@ -42,8 +42,8 @@ In de configuratieweergave die wordt weergegeven, moet u de volgende details opg
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| [!UICONTROL Application ID] | Ga [!UICONTROL Application Id] in u eerder in de [ configuratiedetails ](#configuration-details) sectie vergaarde. |
-| [!UICONTROL Search API Key] | Ga [!UICONTROL Search API Key] in u eerder in de [ configuratiedetails ](#configuration-details) sectie vergaarde. |
+| [!UICONTROL Application ID] | Ga [!UICONTROL Application Id] in u eerder in de [&#x200B; configuratiedetails &#x200B;](#configuration-details) sectie vergaarde. |
+| [!UICONTROL Search API Key] | Ga [!UICONTROL Search API Key] in u eerder in de [&#x200B; configuratiedetails &#x200B;](#configuration-details) sectie vergaarde. |
 | [!UICONTROL Index Name] | [!UICONTROL Index Name] bevat de producten of inhoud.  Deze index wordt als standaard gebruikt. |
 | [!UICONTROL User Token Data Element] | Het gegevenselement dat het gebruikerstoken zal terugkeren. |
 | [!UICONTROL Authenticated User Token Data Element] | Stel het gegevenselement in dat het geverifieerde gebruikerstoken retourneert. |
@@ -91,8 +91,8 @@ Voeg de handeling **[!UICONTROL Click]** toe aan de tagregel om aangeklikte gebe
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
-Voor meer informatie over de gebeurteniscategorieën, zie [ Gecliceerde objecten IDs na onderzoek ](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)
-en [ klikte objecten IDs ](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/) gidsen.
+Voor meer informatie over de gebeurteniscategorieën, zie [&#x200B; Gecliceerde objecten IDs na onderzoek &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)
+en [&#x200B; klikte objecten IDs &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/) gidsen.
 
 ### Omgezet {#converted}
 
@@ -113,7 +113,7 @@ Voeg de handeling **[!UICONTROL Converted]** toe aan de labelregel om geconverte
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
-Voor meer informatie over de gebeurteniscategorieën, zie [ Omgezette objecten IDs na onderzoek ](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/) en [ Omgezette objecten IDs ](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/) gidsen.
+Voor meer informatie over de gebeurteniscategorieën, zie [&#x200B; Omgezette objecten IDs na onderzoek &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/) en [&#x200B; Omgezette objecten IDs &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/) gidsen.
 
 ### Toegevoegd aan winkelwagentje {#added-to-cart}
 
@@ -135,7 +135,7 @@ Voeg de handeling **[!UICONTROL Added to Cart]** toe aan de labelregel om toegev
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
-Voor meer informatie over de gebeurteniscategorieën, zie [ Toegevoegd aan kart voorwerp IDs na onderzoek ](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/) en [ Toegevoegd aan de gidsen van identiteitskaarts van het wortelvoorwerp ](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/).
+Voor meer informatie over de gebeurteniscategorieën, zie [&#x200B; Toegevoegd aan kart voorwerp IDs na onderzoek &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/) en [&#x200B; Toegevoegd aan de gidsen van identiteitskaarts van het wortelvoorwerp &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/).
 
 ### Aangeschaft {#purchased}
 
@@ -157,8 +157,8 @@ Voeg de handeling **[!UICONTROL Purchased]** toe aan de tagregel om aangeschafte
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
-Voor meer informatie over de gebeurteniscategorieën, zie [ Aangeschafte objecten IDs na onderzoek ](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids-after-search/)
-en [ Gekochte objecten IDs ](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids/) gidsen.
+Voor meer informatie over de gebeurteniscategorieën, zie [&#x200B; Aangeschafte objecten IDs na onderzoek &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids-after-search/)
+en [&#x200B; Gekochte objecten IDs &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids/) gidsen.
 
 ### Weergegeven {#viewed}
 
@@ -175,7 +175,7 @@ Voeg de handeling **[!UICONTROL Viewed]** toe aan de tagregel om aangeschafte ge
 
 ![](../../../images/extensions/client/algolia/viewed.png)
 
-Voor meer informatie over de meningsgebeurtenis, zie [ Bekeken voorwerp IDs ](https://www.algolia.com/doc/api-reference/api-methods/viewed-object-ids/) gids.
+Voor meer informatie over de meningsgebeurtenis, zie [&#x200B; Bekeken voorwerp IDs &#x200B;](https://www.algolia.com/doc/api-reference/api-methods/viewed-object-ids/) gids.
 
 ## [!DNL Algolia] Insights-gegevenselementen voor extensies {#data-elements}
 
@@ -278,17 +278,17 @@ Dit gegevenselement retourneert wat is opgeslagen in de Session Storage.
 
 *klikte na Onderzoek* of *na Onderzoek* gebeurtenissen vereist a `queryId`, en `position` wordt ook vereist voor *geklikt na Onderzoek*. Deze eigenschappen zijn beschikbaar wanneer de markering `insights` is ingeschakeld in zoekparameters van InstantSearch en/of AutoComplete. Raadpleeg de volgende bronnen voor informatie over het configureren van inzichten voor uw site:
 
-* [ Vestiging Inzichten op Autocomplete ](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
-* [ VestigingsInzichten op InstantSearch.js ](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
-* [ krijgen begonnen met klik en omzettingsgebeurtenissen ](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
-* [ Verzendend  [!DNL Algolia]  gebeurtenissen van Inzichten ](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
-* [[!DNL Algolia]  Opslagplaats van de Bewaarplaats van de Uitbreiding GitHub van de Lancering ](https://github.com/algolia/algolia-launch-extension)
-* [ Documentatie InstantSearch.js ](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
-* [[!DNL Algolia]  Inzichten API Documentatie ](https://www.algolia.com/doc/rest-api/insights/)
-* [ Algolië de Reparatie van de Code van de Uitbreiding van de Lancering ](https://github.com/algolia/algolia-launch-extension)
+* [&#x200B; Vestiging Inzichten op Autocomplete &#x200B;](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
+* [&#x200B; VestigingsInzichten op InstantSearch.js &#x200B;](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
+* [&#x200B; krijgen begonnen met klik en omzettingsgebeurtenissen &#x200B;](https://www.algolia.com/doc/guides/sending-events/implementing/how-to/sending-events-backend/)
+* [&#x200B; Verzendend  [!DNL Algolia]  gebeurtenissen van Inzichten &#x200B;](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
+* [[!DNL Algolia]  Opslagplaats van de Bewaarplaats van de Uitbreiding GitHub van de Lancering &#x200B;](https://github.com/algolia/algolia-launch-extension)
+* [&#x200B; Documentatie InstantSearch.js &#x200B;](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
+* [[!DNL Algolia]  Inzichten API Documentatie &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
+* [&#x200B; Algolië de Reparatie van de Code van de Uitbreiding van de Lancering &#x200B;](https://github.com/algolia/algolia-launch-extension)
 
 ## Volgende stappen {#next-steps}
 
-In deze handleiding wordt beschreven hoe u gegevens naar [!DNL Algolia] kunt verzenden met de tagextensie [!DNL Algolia Insights] . Als u op het verzenden van server-zijgebeurtenissen aan [!DNL Algolia] ook van plan bent, kunt u nu te werk gaan om de [[!DNL Conversions API]  gebeurtenis te installeren en te vormen door:sturen uitbreiding ](../../server/algolia/overview.md).
+In deze handleiding wordt beschreven hoe u gegevens naar [!DNL Algolia] kunt verzenden met de tagextensie [!DNL Algolia Insights] . Als u op het verzenden van server-zijgebeurtenissen aan [!DNL Algolia] ook van plan bent, kunt u nu te werk gaan om de [[!DNL Conversions API]  gebeurtenis te installeren en te vormen door:sturen uitbreiding &#x200B;](../../server/algolia/overview.md).
 
-Voor meer informatie over markeringen in Experience Platform, verwijs naar het [ overzicht van markeringen ](../../../home.md).
+Voor meer informatie over markeringen in Experience Platform, verwijs naar het [&#x200B; overzicht van markeringen &#x200B;](../../../home.md).

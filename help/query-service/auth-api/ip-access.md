@@ -29,7 +29,7 @@ Dit document behandelt de verzoeken en reacties die u kunt maken en ontvangen va
 
 >[!NOTE]
 >
->U moet een gebruikerstoken hebben om deze API te roepen. Zie [ begonnen gids ](./getting-started.md) voor informatie bij het verwerven van de vereiste waarden voor elk van de kopballen.
+>U moet een gebruikerstoken hebben om deze API te roepen. Zie [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor informatie bij het verwerven van de vereiste waarden voor elk van de kopballen.
 
 ## Alle IP-bereiken ophalen {#fetch-all-ip-ranges}
 

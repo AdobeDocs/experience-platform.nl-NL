@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Commerce Scope] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat herkenningstekens bepaalt voor waar een gebeurtenis binnen een handels ecosysteem voorkwam. Het onderscheidt omgevingen, websites, winkels en winkelweergaven.
 
-![ een diagram van het gegevenstype van het Bereik van Commerce.](../images/data-types/commerce-scope.png)
+![&#x200B; een diagram van het gegevenstype van het Bereik van Commerce.](../images/data-types/commerce-scope.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |---------------------------------|-------------------|-----------|-------------------------------------------------------|
@@ -26,5 +26,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/commercescope.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/commercescope.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/commercescope.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/commercescope.schema.json)

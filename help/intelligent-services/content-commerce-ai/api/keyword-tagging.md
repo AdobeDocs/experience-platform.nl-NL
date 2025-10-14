@@ -42,7 +42,7 @@ In het volgende verzoek worden trefwoorden uit een document geëxtraheerd op bas
 
 Zie de tabel onder de voorbeeldlading voor meer informatie over de getoonde inputparameters.
 
-Dit [ steekproef pdf ](../pdf-files/simple-text.pdf) dossier werd gebruikt in het voorbeeld dat in dit document wordt getoond.
+Dit [&#x200B; steekproef pdf &#x200B;](../pdf-files/simple-text.pdf) dossier werd gebruikt in het voorbeeld dat in dit document wordt getoond.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \

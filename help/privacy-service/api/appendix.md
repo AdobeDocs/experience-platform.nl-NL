@@ -18,7 +18,7 @@ De volgende secties bevatten aanvullende informatie voor het werken met de Adobe
 
 ## Standaardnaamruimten {#standard-namespaces}
 
-Alle identiteiten die naar [!DNL Privacy Service] worden verzonden, moeten onder een specifieke naamruimte worden opgegeven. Identiteitsnaamruimten zijn een component van [ Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md) die op de context wijzen waarop een identiteit betrekking heeft.
+Alle identiteiten die naar [!DNL Privacy Service] worden verzonden, moeten onder een specifieke naamruimte worden opgegeven. Identiteitsnaamruimten zijn een component van [&#x200B; Dienst van de Identiteit van Adobe Experience Platform &#x200B;](../../identity-service/home.md) die op de context wijzen waarop een identiteit betrekking heeft.
 
 De volgende tabel bevat een overzicht van diverse veelgebruikte, vooraf gedefinieerde identiteitstypen die door [!DNL Experience Platform] beschikbaar worden gesteld, samen met de bijbehorende `namespace` -waarden:
 
@@ -38,9 +38,9 @@ De volgende tabel bevat een overzicht van diverse veelgebruikte, vooraf gedefini
 
 >[!NOTE]
 >
->Elk identiteitstype heeft ook een `namespaceId` geheel-getalwaarde, die kan worden gebruikt in plaats van de `namespace` -tekenreeks wanneer de eigenschap `type` van de identiteit wordt ingesteld op &quot;namespaceId&quot;. Zie de sectie op [ namespace kwalificfiers ](#namespace-qualifiers) voor meer informatie.
+>Elk identiteitstype heeft ook een `namespaceId` geheel-getalwaarde, die kan worden gebruikt in plaats van de `namespace` -tekenreeks wanneer de eigenschap `type` van de identiteit wordt ingesteld op &quot;namespaceId&quot;. Zie de sectie op [&#x200B; namespace kwalificfiers &#x200B;](#namespace-qualifiers) voor meer informatie.
 
-U kunt een lijst ophalen met naamruimten die door uw organisatie worden gebruikt door een GET-aanvraag in te dienen bij het eindpunt `idnamespace/identities` in de [!DNL Identity Service] API. Zie de [ de ontwikkelaarsgids van de Dienst van de Identiteit ](../../identity-service/api/getting-started.md) voor meer informatie.
+U kunt een lijst ophalen met naamruimten die door uw organisatie worden gebruikt door een GET-aanvraag in te dienen bij het eindpunt `idnamespace/identities` in de [!DNL Identity Service] API. Zie de [&#x200B; de ontwikkelaarsgids van de Dienst van de Identiteit &#x200B;](../../identity-service/api/getting-started.md) voor meer informatie.
 
 ## Naamruimtetekens
 

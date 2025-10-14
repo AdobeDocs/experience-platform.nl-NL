@@ -19,10 +19,10 @@ Segmentatie met meerdere entiteiten is een geavanceerde functie die beschikbaar 
 De segmentatie van meerdere entiteiten vereist een goed begrip van de verschillende diensten van Adobe Experience Platform die bij segmentatie betrokken zijn. Lees de volgende documentatie voordat u doorgaat met deze handleiding:
 
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform consumentenprofiel in realtime, gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-   * [ de gidsen van het Profiel ](../../profile/guardrails.md): Beste praktijken voor het creëren van gegevensmodellen die door [!DNL Profile] worden gesteund.
+   * [&#x200B; de gidsen van het Profiel &#x200B;](../../profile/guardrails.md): Beste praktijken voor het creëren van gegevensmodellen die door [!DNL Profile] worden gesteund.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): hiermee kunt u soorten publiek maken op basis van [!DNL Real-Time Customer Profile] -gegevens.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde raamwerk waarmee Experience Platform gegevens over de ervaring van klanten organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../xdm/schema/composition.md#union): Leer beste praktijken voor het samenstellen van schema&#39;s die in Experience Platform moeten worden gebruikt. Om het beste gebruik van Segmentatie te maken, gelieve te verzekeren uw gegevens als profielen en gebeurtenissen volgens de [ beste praktijken voor gegevens modellering ](../../xdm/schema/best-practices.md) worden opgenomen.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../xdm/schema/composition.md#union): Leer beste praktijken voor het samenstellen van schema&#39;s die in Experience Platform moeten worden gebruikt. Om het beste gebruik van Segmentatie te maken, gelieve te verzekeren uw gegevens als profielen en gebeurtenissen volgens de [&#x200B; beste praktijken voor gegevens modellering &#x200B;](../../xdm/schema/best-practices.md) worden opgenomen.
 
 ## Gebruiksscenario’s
 
@@ -58,4 +58,4 @@ Zodra u de noodzakelijke verhoudingen XDM hebt bepaald, kunt u beginnen om een m
 
 ## Segmentdefinities met meerdere entiteiten evalueren en openen
 
-Nadat u een segmentdefinitie hebt gemaakt, kunt u de resultaten evalueren en openen met de segmentatie-API. Het evalueren van een definitie van een segment met meerdere entiteiten lijkt sterk op het evalueren van een standaardsegmentdefinitie. Dit proces kan alleen worden uitgevoerd met de segmentatie-API. Voor een gedetailleerde gids die tonen hoe te om API te gebruiken om en segmentdefinities te evalueren toegang te hebben, gelieve [ te lezen evaluerend en tot segmentdefinities ](./evaluate-a-segment.md) leerprogramma toegang te hebben.
+Nadat u een segmentdefinitie hebt gemaakt, kunt u de resultaten evalueren en openen met de segmentatie-API. Het evalueren van een definitie van een segment met meerdere entiteiten lijkt sterk op het evalueren van een standaardsegmentdefinitie. Dit proces kan alleen worden uitgevoerd met de segmentatie-API. Voor een gedetailleerde gids die tonen hoe te om API te gebruiken om en segmentdefinities te evalueren toegang te hebben, gelieve [&#x200B; te lezen evaluerend en tot segmentdefinities &#x200B;](./evaluate-a-segment.md) leerprogramma toegang te hebben.

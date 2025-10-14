@@ -25,7 +25,7 @@ Het deelvenster **[!UICONTROL Create calculated field]** wordt weergegeven. Het 
 
 | Tabtoets | Beschrijving |
 | --- | ----------- |
-| Functie | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. Om meer over de functies te leren u binnen berekende gebieden kunt gebruiken, te lezen gelieve de gids op [ gebruikend de functies van de Prep van Gegevens (Mapper) ](./functions.md). |
+| Functie | Op het tabblad Functies staan de functies die beschikbaar zijn voor het transformeren van de gegevens. Om meer over de functies te leren u binnen berekende gebieden kunt gebruiken, te lezen gelieve de gids op [&#x200B; gebruikend de functies van de Prep van Gegevens (Mapper) &#x200B;](./functions.md). |
 | Veld | Het tabblad Veld bevat velden en kenmerken die beschikbaar zijn in het bronschema. |
 | Operator | Het tabblad Operatoren bevat een lijst met operatoren die beschikbaar zijn om de gegevens te transformeren. |
 

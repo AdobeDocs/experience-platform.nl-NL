@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+> Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Alle bibliotheekmodules in randextensies krijgen een `context` -object wanneer ze worden uitgevoerd. In dit document worden de eigenschappen beschreven die door het `context` -object worden geboden en de rol die ze spelen in bibliotheekmodules.
 
@@ -104,7 +104,7 @@ De eigenschap `utils` vertegenwoordigt een object dat hulpprogramma&#39;s bevat 
 
 ### [!DNL logger]
 
-Het `logger` nut staat u toe om berichten te registreren die tijdens het zuiveren zittingen zullen worden getoond wanneer het gebruiken van [ Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+Het `logger` nut staat u toe om berichten te registreren die tijdens het zuiveren zittingen zullen worden getoond wanneer het gebruiken van [&#x200B; Adobe Experience Platform Debugger &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');
@@ -122,7 +122,7 @@ Het logger heeft de volgende methodes, waar `message` het bericht is u wilt regi
 
 ### [!DNL fetch]
 
-Dit nut voert [ Fetch API ](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) uit. U kunt de functie gebruiken om verzoeken aan derdeeindpunten te doen.
+Dit nut voert [&#x200B; Fetch API &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) uit. U kunt de functie gebruiken om verzoeken aan derdeeindpunten te doen.
 
 ```js
 context.utils.fetch('http://example.com/movies.json')
@@ -141,8 +141,8 @@ Het object bevat de volgende waarden:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `turbineVersion` | De [ Turbine ](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) versie die binnen de huidige bibliotheek wordt gebruikt. |
-| `turbineBuildDate` | ISO 8601 datum toen de versie van [ Turbine ](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) binnen de container werd gebruikt werd gebouwd. |
+| `turbineVersion` | De [&#x200B; Turbine &#x200B;](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) versie die binnen de huidige bibliotheek wordt gebruikt. |
+| `turbineBuildDate` | ISO 8601 datum toen de versie van [&#x200B; Turbine &#x200B;](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) binnen de container werd gebruikt werd gebouwd. |
 | `buildDate` | De ISO 8601-datum waarop de huidige bibliotheek is gemaakt. |
 | `environment` | De omgeving waarvoor deze bibliotheek is gemaakt. Mogelijke waarden zijn `development` , `staging` en `production.` |
 
@@ -159,7 +159,7 @@ In het volgende voorbeeld wordt een `getBuildInfo` -object getoond om de geretou
 
 ### [!DNL getExtensionSettings]
 
-Dit nut keert het `settings` voorwerp terug dat het laatst van de [ mening van de uitbreidingsconfiguratie ](../configuration.md) werd bewaard.
+Dit nut keert het `settings` voorwerp terug dat het laatst van de [&#x200B; mening van de uitbreidingsconfiguratie &#x200B;](../configuration.md) werd bewaard.
 
 ```js
 logger.log(context.utils.getExtensionSettings());

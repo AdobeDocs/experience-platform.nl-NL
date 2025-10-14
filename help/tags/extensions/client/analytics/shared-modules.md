@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-De [ uitbreiding van Adobe Analytics ](./overview.md) verstrekt twee verschillende [ gedeelde modules ](../../../extension-dev/web/shared.md) die u in uw ervaringstoepassing kunt integreren. Deze modules worden behandeld in de onderstaande secties.
+De [&#x200B; uitbreiding van Adobe Analytics &#x200B;](./overview.md) verstrekt twee verschillende [&#x200B; gedeelde modules &#x200B;](../../../extension-dev/web/shared.md) die u in uw ervaringstoepassing kunt integreren. Deze modules worden behandeld in de onderstaande secties.
 
 ## [!DNL get-tracker]
 
-Voordat Adobe Analytics bakens verzendt, moet het het tracker-object initialiseren. Het initialisatieproces begint door [ AppMeasurement ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL) te laden, die door een spoorboekvoorwerp te creëren wordt gevolgd.
+Voordat Adobe Analytics bakens verzendt, moet het het tracker-object initialiseren. Het initialisatieproces begint door [&#x200B; AppMeasurement &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL) te laden, die door een spoorboekvoorwerp te creëren wordt gevolgd.
 
 U kunt als volgt toegang krijgen tot het tracker-object nadat het volledig is geïnitialiseerd met de gedeelde module `get-tracker` :
 

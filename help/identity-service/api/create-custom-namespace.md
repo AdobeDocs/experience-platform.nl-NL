@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Met de API van [!DNL Identity Namespace] kunt u een naamruimte voor een aangepaste identiteit maken die alleen voor uw organisatie beschikbaar is.
 
-Voor aanbevelingen rond het creëren van douane namespaces, zie [ de documentatie van Veelgestelde vragen van de Dienst van de Identiteit ](../troubleshooting-guide.md).
+Voor aanbevelingen rond het creëren van douane namespaces, zie [&#x200B; de documentatie van Veelgestelde vragen van de Dienst van de Identiteit &#x200B;](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## Volgende stappen
 
-Ga aan het volgende leerprogramma te werk [ lijst inheemse identiteitskaart van een identiteit ](./list-native-id.md)
+Ga aan het volgende leerprogramma te werk [&#x200B; lijst inheemse identiteitskaart van een identiteit &#x200B;](./list-native-id.md)

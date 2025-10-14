@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Unions (of samenvoegingsweergaven) zijn door het systeem gegenereerde, alleen-lezen schema&#39;s die de velden samenvoegen van alle schema&#39;s die dezelfde klasse delen ([!DNL XDM ExperienceEvent] of [!DNL XDM Individual Profile] ) en die zijn ingeschakeld voor [[!DNL Real-Time Customer Profile]](../../profile/home.md) .
 
-Dit document behandelt essentiële concepten voor het werken met vakbonden in de API van de Registratie van het Schema, met inbegrip van steekproefvraag voor diverse verrichtingen. Voor meer algemene informatie over unies in XDM, zie de sectie over unies in de [ grondbeginselen van schemacompositie ](../schema/composition.md#union).
+Dit document behandelt essentiële concepten voor het werken met vakbonden in de API van de Registratie van het Schema, met inbegrip van steekproefvraag voor diverse verrichtingen. Voor meer algemene informatie over unies in XDM, zie de sectie over unies in de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../schema/composition.md#union).
 
 ## Unieschemavelden
 
@@ -23,7 +23,7 @@ Dit document behandelt essentiële concepten voor het werken met vakbonden in de
 
 ### Identiteitskaart
 
-Het schema van de unie `identityMap` is een vertegenwoordiging van de bekende identiteiten binnen de bijbehorende verslagschema&#39;s van de unie. In het identiteitsoverzicht worden identiteiten gescheiden in verschillende arrays die door naamruimte worden gebruikt. Elke vermelde identiteit is zelf een object dat een unieke `id` -waarde bevat. Zie de [ documentatie van de Dienst van de Identiteit ](../../identity-service/home.md) voor meer informatie.
+Het schema van de unie `identityMap` is een vertegenwoordiging van de bekende identiteiten binnen de bijbehorende verslagschema&#39;s van de unie. In het identiteitsoverzicht worden identiteiten gescheiden in verschillende arrays die door naamruimte worden gebruikt. Elke vermelde identiteit is zelf een object dat een unieke `id` -waarde bevat. Zie de [&#x200B; documentatie van de Dienst van de Identiteit &#x200B;](../../identity-service/home.md) voor meer informatie.
 
 ### Gebeurtenissen uit de tijdreeks
 
@@ -31,7 +31,7 @@ De array `timeSeriesEvents` is een lijst met tijdreeksgebeurtenissen die betrekk
 
 ### Segmentlidmaatschapstoewijzing
 
-In de `segmentMembership` -kaart worden de resultaten opgeslagen van de evaluatie van een segmentdefinitie. Wanneer de segmentbanen met succes gebruikend de [ Segmentatie API ](https://www.adobe.io/experience-platform-apis/references/segmentation/) in werking worden gesteld, wordt de kaart bijgewerkt. `segmentMembership` slaat ook vooraf beoordeelde soorten publiek op die in Experience Platform worden opgenomen, zodat ze kunnen worden geïntegreerd met andere oplossingen, zoals Adobe Audience Manager. Zie het leerprogramma op [ creërend publiek gebruikend APIs ](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
+In de `segmentMembership` -kaart worden de resultaten opgeslagen van de evaluatie van een segmentdefinitie. Wanneer de segmentbanen met succes gebruikend de [&#x200B; Segmentatie API &#x200B;](https://www.adobe.io/experience-platform-apis/references/segmentation/) in werking worden gesteld, wordt de kaart bijgewerkt. `segmentMembership` slaat ook vooraf beoordeelde soorten publiek op die in Experience Platform worden opgenomen, zodat ze kunnen worden geïntegreerd met andere oplossingen, zoals Adobe Audience Manager. Zie het leerprogramma op [&#x200B; creërend publiek gebruikend APIs &#x200B;](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
 
 ## Een lijst met vakbonden ophalen {#list}
 
@@ -180,7 +180,7 @@ De responsindeling is afhankelijk van de Accept-header die in de aanvraag wordt 
 
 ## Een schema voor samenvoeging inschakelen {#enable}
 
-Als u een schema voor de klasse wilt opnemen in de samenvoeging, moet u een tag `union` toevoegen aan het kenmerk `meta:immutableTags` van het schema. U kunt dit bereiken door een PATCH-verzoek in te dienen om een `meta:immutableTags` -array met een enkele tekenreekswaarde van `union` toe te voegen aan het desbetreffende schema. Zie de [ gids van het schemaeindpunt ](./schemas.md#union) voor een gedetailleerd voorbeeld.
+Als u een schema voor de klasse wilt opnemen in de samenvoeging, moet u een tag `union` toevoegen aan het kenmerk `meta:immutableTags` van het schema. U kunt dit bereiken door een PATCH-verzoek in te dienen om een `meta:immutableTags` -array met een enkele tekenreekswaarde van `union` toe te voegen aan het desbetreffende schema. Zie de [&#x200B; gids van het schemaeindpunt &#x200B;](./schemas.md#union) voor een gedetailleerd voorbeeld.
 
 ## Schema&#39;s weergeven in een union {#list-schemas}
 

@@ -16,14 +16,14 @@ ht-degree: 0%
 >
 >De [!DNL Azure Event Hubs] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Lees deze zelfstudie om te leren hoe te om [!DNL Azure Event Hubs] (verder als &quot;[!DNL Event Hubs]&quot;worden doorverwezen) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze zelfstudie om te leren hoe te om [!DNL Azure Event Hubs] (verder als &quot;[!DNL Event Hubs]&quot;worden doorverwezen) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-- [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [&#x200B; Bronnen &#x200B;](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+- [&#x200B; Sandboxen &#x200B;](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u [!DNL Event Hubs] met de API van [!DNL Flow Service] kunt verbinden met Experience Platform.
 
@@ -49,10 +49,10 @@ In de volgende secties vindt u aanvullende informatie die u moet weten voordat u
 | `sasKeyName` | De naam van de machtigingsregel, ook wel de SAS-sleutelnaam genoemd. |
 | `sasKey` | De primaire sleutel van de naamruimte [!DNL Event Hubs] . De `sasPolicy` die `sasKey` aansluit bij `manage` , moet rechten hebben geconfigureerd om de [!DNL Event Hubs] -lijst te vullen. |
 | `namespace` | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
-| `eventHubName` | Vul de naam [!DNL Azure Event Hub] in. Lees de [ documentatie van Microsoft ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) voor meer informatie over [!DNL Event Hub] namen. |
+| `eventHubName` | Vul de naam [!DNL Azure Event Hub] in. Lees de [&#x200B; documentatie van Microsoft &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) voor meer informatie over [!DNL Event Hub] namen. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De [!DNL Event Hubs] -id van de verbindingsspecificatie is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` . |
 
-Voor meer informatie over de authentificatie van gedeelde toegangshandtekeningen (SAS) voor [!DNL Event Hubs], lees de [[!DNL Azure]  gids bij het gebruiken van SAS ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Voor meer informatie over de authentificatie van gedeelde toegangshandtekeningen (SAS) voor [!DNL Event Hubs], lees de [[!DNL Azure]  gids bij het gebruiken van SAS &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 >[!TAB  Hub van de Gebeurtenis Azure Actieve Auth van de Folder ]
 
@@ -63,7 +63,7 @@ Voor meer informatie over de authentificatie van gedeelde toegangshandtekeningen
 | `clientSecretValue` | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via de [!DNL Microsoft Entra ID] -portal waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
 | `namespace` | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
 
-Voor meer informatie over [!DNL Azure Active Directory], lees de [ Azure gids bij het gebruiken van identiteitskaart van Microsoft Entra ](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+Voor meer informatie over [!DNL Azure Active Directory], lees de [&#x200B; Azure gids bij het gebruiken van identiteitskaart van Microsoft Entra &#x200B;](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
 
 >[!TAB  Hub Scoped Azure Actieve Auth van de Folder van de Gebeurtenis ]
 
@@ -73,15 +73,15 @@ Voor meer informatie over [!DNL Azure Active Directory], lees de [ Azure gids bi
 | `clientId` | De toepassings-id die aan uw app is toegewezen. U kunt deze id ophalen via de portal [!DNL Microsoft Entra ID] waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
 | `clientSecretValue` | Het clientgeheim dat naast de client-id wordt gebruikt om uw app te verifiëren. U kunt uw clientgeheim ophalen via de [!DNL Microsoft Entra ID] -portal waar u uw [!DNL Azure Active Directory] hebt geregistreerd. |
 | `namespace` | De naamruimte van de [!DNL Event Hub] die u opent. Een naamruimte [!DNL Event Hub] biedt een unieke container voor het bereik, waarin u een of meer naamruimten kunt maken [!DNL Event Hubs] . |
-| `eventHubName` | Vul de naam [!DNL Azure Event Hub] in. Lees de [ documentatie van Microsoft ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) voor meer informatie over [!DNL Event Hub] namen. |
+| `eventHubName` | Vul de naam [!DNL Azure Event Hub] in. Lees de [&#x200B; documentatie van Microsoft &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) voor meer informatie over [!DNL Event Hub] namen. |
 
 >[!ENDTABS]
 
-Voor meer informatie over deze waarden, verwijs naar [ dit document van de Hubs van deze Gebeurtenis ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Voor meer informatie over deze waarden, verwijs naar [&#x200B; dit document van de Hubs van deze Gebeurtenis &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -383,7 +383,7 @@ curl -X POST \
 | `params.eventHubName` | De naam voor de [!DNL Event Hubs] -bron. |
 | `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm` . |
 | `params.reset` | Deze parameter bepaalt hoe de gegevens worden gelezen. Gebruik `latest` om te beginnen met het lezen van de meest recente gegevens en gebruik `earliest` om te beginnen met het lezen van de eerste beschikbare gegevens in de stream. Deze parameter is optioneel en wordt standaard ingesteld op `earliest` als deze niet wordt opgegeven. |
-| `params.consumerGroup` | Het publicatie- of abonnementsmechanisme dat voor [!DNL Event Hubs] moet worden gebruikt. Deze parameter is optioneel en wordt standaard ingesteld op `$Default` als deze niet wordt opgegeven. Verwijs naar deze [[!DNL Event Hubs]  gids op gebeurtenisconsumenten ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) voor meer informatie. **Nota**: Een [!DNL Event Hubs] consumentengroep kan slechts voor één enkele stroom in een bepaalde tijd worden gebruikt. |
+| `params.consumerGroup` | Het publicatie- of abonnementsmechanisme dat voor [!DNL Event Hubs] moet worden gebruikt. Deze parameter is optioneel en wordt standaard ingesteld op `$Default` als deze niet wordt opgegeven. Verwijs naar deze [[!DNL Event Hubs]  gids op gebeurtenisconsumenten &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) voor meer informatie. **Nota**: Een [!DNL Event Hubs] consumentengroep kan slechts voor één enkele stroom in een bepaalde tijd worden gebruikt. |
 
 >[!NOTE]
 >
@@ -391,4 +391,4 @@ curl -X POST \
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Event Hubs] -bronverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze bron verbindingsidentiteitskaart in het volgende leerprogramma gebruiken om [ een het stromen dataflow tot stand te brengen gebruikend  [!DNL Flow Service]  API ](../../collect/streaming.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL Event Hubs] -bronverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze bron verbindingsidentiteitskaart in het volgende leerprogramma gebruiken om [&#x200B; een het stromen dataflow tot stand te brengen gebruikend  [!DNL Flow Service]  API &#x200B;](../../collect/streaming.md).

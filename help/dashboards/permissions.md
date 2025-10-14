@@ -13,13 +13,13 @@ ht-degree: 5%
 
 # Toegangsmachtigingen voor dashboards
 
-Als u gebruikers de mogelijkheid wilt geven om dashboards weer te geven, te bewerken en bij te werken, moet u eerst machtigingen inschakelen. In Adobe Experience Platform, wordt de toegangscontrole verstrekt door [ Adobe Admin Console ](https://adminconsole.adobe.com/). Gebruikers worden via productprofielen in de [!DNL Admin Console] gekoppeld aan machtigingen en sandboxen.
+Als u gebruikers de mogelijkheid wilt geven om dashboards weer te geven, te bewerken en bij te werken, moet u eerst machtigingen inschakelen. In Adobe Experience Platform, wordt de toegangscontrole verstrekt door [&#x200B; Adobe Admin Console &#x200B;](https://adminconsole.adobe.com/). Gebruikers worden via productprofielen in de [!DNL Admin Console] gekoppeld aan machtigingen en sandboxen.
 
-Dit document bevat een overzicht van de beschikbare machtigingen voor dashboards, inclusief de functies die ze kunnen gebruiken en de gebruikersfuncties die ze kunnen inschakelen. Voor gedetailleerde informatie bij het verkrijgen van en het toewijzen van toegangstoestemmingen, gelieve te beginnen door het [ overzicht van de toegangscontrole ](../access-control/home.md) te lezen.
+Dit document bevat een overzicht van de beschikbare machtigingen voor dashboards, inclusief de functies die ze kunnen gebruiken en de gebruikersfuncties die ze kunnen inschakelen. Voor gedetailleerde informatie bij het verkrijgen van en het toewijzen van toegangstoestemmingen, gelieve te beginnen door het [&#x200B; overzicht van de toegangscontrole &#x200B;](../access-control/home.md) te lezen.
 
 ## Vereisten
 
-Als u toegangsbeheer voor [!DNL Experience Platform] wilt configureren, moet u beheerdersrechten hebben voor een organisatie die een [!DNL Experience Platform] -productintegratie heeft. Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
+Als u toegangsbeheer voor [!DNL Experience Platform] wilt configureren, moet u beheerdersrechten hebben voor een organisatie die een [!DNL Experience Platform] -productintegratie heeft. Zie het artikel van het Centrum van de Hulp van Adobe op [&#x200B; administratieve rollen &#x200B;](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
 
 ## Beschikbare dashboardmachtigingen {#available-permissions}
 
@@ -27,9 +27,9 @@ De service [!DNL Dashboards] biedt drie machtigingen die, wanneer ze worden geco
 
 | Machtiging | Beschrijving |
 |---|---|
-| **beheert Standaard dashboards** | Deze toestemming is a **globale lees en schrijf toestemmingen**. Het staat u toe om douane widgets [&#128279;](./customize/custom-widgets.md) tot stand te brengen en [ het widgetschema ](./customize/edit-schema.md) door [!UICONTROL Widget library] uit te geven. |
+| **beheert Standaard dashboards** | Deze toestemming is a **globale lees en schrijf toestemmingen**. Het staat u toe om douane widgets [&#128279;](./customize/custom-widgets.md) tot stand te brengen en [&#x200B; het widgetschema &#x200B;](./customize/edit-schema.md) door [!UICONTROL Widget library] uit te geven. |
 | **Standaarddashboards van de Mening** | Dit verstrekt **read-only** functionaliteit voor [!UICONTROL Profiles], [!UICONTROL Destinations], en [!UICONTROL Segments] dashboards en verleent toegang tot hen door de linkernavigatie van Experience Platform. De code voegt ook [!UICONTROL Dashboards] toe aan de linkernavigatie en toegang tot het tabblad [!UICONTROL Dashboards] voorraad en integratie. |
-| **Dashboard van het Gebruik van de Vergunning van de Mening** | Deze toestemming staat gebruikers **read-only** toegang toe tot [ het dashboard van het vergunningsgebruik ](./guides/license-usage.md) binnen Experience Platform UI. |
+| **Dashboard van het Gebruik van de Vergunning van de Mening** | Deze toestemming staat gebruikers **read-only** toegang toe tot [&#x200B; het dashboard van het vergunningsgebruik &#x200B;](./guides/license-usage.md) binnen Experience Platform UI. |
 
 De categorie [!DNL Dashboard] bevat vijf machtigingen die mogelijk vereist zijn, afhankelijk van uw behoeften. In de volgende tabel worden de categorielocaties in de Admin Console weergegeven:
 
@@ -63,12 +63,12 @@ De volgende toegang-controle matrijs verstrekt een verdeling waarvan toestemming
 
 ## Machtigingen toevoegen aan uw productprofiel
 
-Met de bovenstaande informatie kunt u de juiste machtigingen aan het productprofiel toevoegen. Zie de documentatie voor volledige instructies op [ hoe te om toestemmingen door de toegangscontrole UI ](../access-control/ui/permissions.md) toe te voegen.
+Met de bovenstaande informatie kunt u de juiste machtigingen aan het productprofiel toevoegen. Zie de documentatie voor volledige instructies op [&#x200B; hoe te om toestemmingen door de toegangscontrole UI &#x200B;](../access-control/ui/permissions.md) toe te voegen.
 
-Voor beschrijvingen van de toestemmingen, gelieve te verwijzen naar de [ beschikbare toestemmingensectie ](#available-permissions) vroeger in dit document.
+Voor beschrijvingen van de toestemmingen, gelieve te verwijzen naar de [&#x200B; beschikbare toestemmingensectie &#x200B;](#available-permissions) vroeger in dit document.
 
 >[!NOTE]
 >
->U hoeft niet alle machtigingen voor alle gebruikers in te schakelen. Afhankelijk van de structuur van uw organisatie kunt u verschillende productprofielen voor bepaalde gebruikers maken en beperkte toegang (zoals alleen-lezen) verlenen. Zie de documentatie bij het beheren van gebruikers voor een productprofiel om [ te leren hoe te om toestemmingen voor specifieke gebruikers ](../access-control/ui/users.md) toe te wijzen.
+>U hoeft niet alle machtigingen voor alle gebruikers in te schakelen. Afhankelijk van de structuur van uw organisatie kunt u verschillende productprofielen voor bepaalde gebruikers maken en beperkte toegang (zoals alleen-lezen) verlenen. Zie de documentatie bij het beheren van gebruikers voor een productprofiel om [&#x200B; te leren hoe te om toestemmingen voor specifieke gebruikers &#x200B;](../access-control/ui/users.md) toe te wijzen.
 
 Zodra u de noodzakelijke toegangstoestemmingen hebt toegevoegd, kunnen de gebruikers binnen uw organisatie beginnen dashboards te bekijken binnen Experience Platform UI en andere acties uit te voeren die op de toestemmingen worden gebaseerd die u hebt toegewezen.

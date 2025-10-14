@@ -15,7 +15,7 @@ Met de weergave Gebeurtenistransformaties in Adobe Experience Platform Assurance
 
 ## De Verzekering van de opstelling voor het werkschema van de Edge Network
 
-Na [ opstellingsVerzekering ](../tutorials/implement-assurance.md), zorg ervoor dat u de recentste versies van de uitbreidingen van de Verzekering en van de Edge Network in uw app hebt uitgevoerd.
+Na [&#x200B; opstellingsVerzekering &#x200B;](../tutorials/implement-assurance.md), zorg ervoor dat u de recentste versies van de uitbreidingen van de Verzekering en van de Edge Network in uw app hebt uitgevoerd.
 
 Als u uw gebeurtenissen wilt weergeven, selecteert u in het linkermenu **[!UICONTROL Event Transactions]** onder de sectie **[!UICONTROL Adobe Experience Platform Edge]** .
 
@@ -27,7 +27,7 @@ In deze sectie leert u vertrouwd te raken met de weergave Gebeurtenistransactie 
 
 ### Stroom van gebeurtenisverwerking
 
-![ de transactiemening van de Gebeurtenis ](./images/event-transactions/event-transactions-view.png)
+![&#x200B; de transactiemening van de Gebeurtenis &#x200B;](./images/event-transactions/event-transactions-view.png)
 
 In de weergave Gebeurtenistransformaties worden drie kolommen weergegeven in de volgorde van de gebeurtenisverwerkingsstroom:
 
@@ -50,7 +50,7 @@ De gebeurtenissen die worden weergegeven in de weergave Gebeurtenistransacties b
 Als u een gebeurtenis wilt inspecteren, selecteert u de gewenste gebeurtenis in de weergave. Met deze handeling wordt de weergave **[!UICONTROL Event Details]** aan de rechterkant van het scherm uitgebreid.
 Geneste gegevens worden weergegeven in een boomstructuur. U kunt geneste sleutel-waarden inspecteren door **+** (plus) knoop links van de zeer belangrijke naam te selecteren.
 
-![ de details van de Gebeurtenis ](./images/event-transactions/event-details.png)
+![&#x200B; de details van de Gebeurtenis &#x200B;](./images/event-transactions/event-details.png)
 
 #### Inspect-waarschuwingen of -fouten
 
@@ -63,7 +63,7 @@ Elke gebeurtenisnaam wordt voorafgegaan door een pictogram dat de status op hoog
 
 U kunt de huidige ID van de gegevensstroom controleren door info tooltip naast de **[!UICONTROL Edge Network]** kolomkopbal te selecteren.
 
-![ toon gegevensstroom identiteitskaart ](./images/event-transactions/show-datastream-id.png)
+![&#x200B; toon gegevensstroom identiteitskaart &#x200B;](./images/event-transactions/show-datastream-id.png)
 
 >[!INFO]
 >

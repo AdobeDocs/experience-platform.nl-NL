@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # [!UICONTROL Patient] schemaveldgroep
 
-[!UICONTROL Patient] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../../classes/individual-profile.md). Het verstrekt één enkel voorwerp-type gebied `healthcarePatient` dat de demografie en andere administratieve details over een individu of een dier beschrijft die zorg of andere aan gezondheid gerelateerde diensten ontvangt.
+[!UICONTROL Patient] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../../classes/individual-profile.md). Het verstrekt één enkel voorwerp-type gebied `healthcarePatient` dat de demografie en andere administratieve details over een individu of een dier beschrijft die zorg of andere aan gezondheid gerelateerde diensten ontvangt.
 
-![ de groepsstructuur van het Gebied ](../../../images/healthcare/field-groups/patient/patient.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../../images/healthcare/field-groups/patient/patient.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
 | [!UICONTROL Address] | `address` | Array van [[!UICONTROL Address]](../data-types/address.md) | De adresgegevens van de patiënt. |
-| [!UICONTROL Communication] | `communication` | Array van objecten | Een taal die kan worden gebruikt om met de patiënt te communiceren over zijn of haar gezondheid. Zie de [ sectie hieronder ](#communication) voor meer informatie. |
-| [!UICONTROL Patient Contacts] | `contact` | Array van objecten | Een contactpartij van een patiënt, zoals voogd, partner of vriend. Zie de [ sectie hieronder ](#contact) voor meer informatie. |
+| [!UICONTROL Communication] | `communication` | Array van objecten | Een taal die kan worden gebruikt om met de patiënt te communiceren over zijn of haar gezondheid. Zie de [&#x200B; sectie hieronder &#x200B;](#communication) voor meer informatie. |
+| [!UICONTROL Patient Contacts] | `contact` | Array van objecten | Een contactpartij van een patiënt, zoals voogd, partner of vriend. Zie de [&#x200B; sectie hieronder &#x200B;](#contact) voor meer informatie. |
 | [!UICONTROL General Practitioner] | `generalPractioner` | Array van [[!UICONTROL Reference]](../data-types/reference.md) | De primaire zorgverlener van de patiënt. |
 | [!UICONTROL Identifier] | `identifier` | Array van [[!UICONTROL Identifier]](../data-types/identifier.md) | Een id voor de patiënt. |
-| [!UICONTROL Patient Link Details] | `link` | Array van objecten | Een link naar de bron van een patiënt of verwante persoon die betrekking heeft op dezelfde persoon. Zie de [ sectie hieronder ](#link) voor meer informatie. |
+| [!UICONTROL Patient Link Details] | `link` | Array van objecten | Een link naar de bron van een patiënt of verwante persoon die betrekking heeft op dezelfde persoon. Zie de [&#x200B; sectie hieronder &#x200B;](#link) voor meer informatie. |
 | [!UICONTROL Managing Organization] | `managingOrganization` | [[!UICONTROL Reference]](../data-types/reference.md) | De bewaarnemingsorganisatie van het patiëntendossier. |
 | [!UICONTROL Marital Status] | `maritalStatus` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De burgerlijke staat van de patiënt. |
 | [!UICONTROL Name] | `name` | Array van [[!UICONTROL Human name]](../data-types/human-name.md) | De naam die aan de patiënt is gekoppeld. |
@@ -40,14 +40,14 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/patient.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/patient.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/patient.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/patient.schema.json)
 
 ## `communication` {#communication}
 
 `communication` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ communicatie structuur ](../../../images/healthcare/field-groups/patient/communication.png)
+![&#x200B; communicatie structuur &#x200B;](../../../images/healthcare/field-groups/patient/communication.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -58,7 +58,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `contact` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ de structuur van het contact ](../../../images/healthcare/field-groups/patient/contact.png)
+![&#x200B; de structuur van het contact &#x200B;](../../../images/healthcare/field-groups/patient/contact.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -67,14 +67,14 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | [!UICONTROL Contact Organization] | `organization` | [[!UICONTROL Reference]](../data-types/reference.md) | De organisatie die met de contactpersoon is geassocieerd. |
 | [!UICONTROL Contact Period] | `period` | [[!UICONTROL Period]](../data-types/period.md) | De tijdsperiode waarin het contact was of in gebruik is. |
 | [!UICONTROL Relationship'] | `relationship` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De relatie tussen de patiënt en de contactpersoon. |
-| [!UICONTROL Contact Details] | `telecom` | Array van objecten | De contactgegevens van de contactpersoon. Zie de [ sectie hieronder ](#telecom) voor meer informatie. |
+| [!UICONTROL Contact Details] | `telecom` | Array van objecten | De contactgegevens van de contactpersoon. Zie de [&#x200B; sectie hieronder &#x200B;](#telecom) voor meer informatie. |
 | [!UICONTROL Gender] | `gender` | String | De genderidentiteit van de persoon. De waarde van deze eigenschap moet gelijk zijn aan een van de volgende bekende opsommingswaarden. <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
 
 ### `telecom` {#telecom}
 
 `telecom` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ telecommunicatiestructuur ](../../../images/healthcare/field-groups/patient/telecom.png)
+![&#x200B; telecommunicatiestructuur &#x200B;](../../../images/healthcare/field-groups/patient/telecom.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -84,7 +84,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `link` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ verbindingsstructuur ](../../../images/healthcare/field-groups/patient/link.png)
+![&#x200B; verbindingsstructuur &#x200B;](../../../images/healthcare/field-groups/patient/link.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

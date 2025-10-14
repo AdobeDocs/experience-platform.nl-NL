@@ -15,15 +15,15 @@ ht-degree: 1%
 >
 >De implementatie van het `/extension_packages` eindpunt is in flits aangezien de eigenschappen worden toegevoegd, verwijderd, en herwerkt.
 
-Een uitbreidingspakket vertegenwoordigt een [ uitbreiding ](./extensions.md) zoals authored door een uitbreidingsontwikkelaar. Een extensiepakket definieert aanvullende mogelijkheden die beschikbaar kunnen worden gemaakt voor gebruikers van tags. Meestal komen deze mogelijkheden in de vorm van [ regelcomponenten ](./rule-components.md) (gebeurtenissen, voorwaarden, en acties) en [ gegevenselementen ](./data-elements.md), maar kunnen belangrijkste modules en gedeelde modules ook omvatten.
+Een uitbreidingspakket vertegenwoordigt een [&#x200B; uitbreiding &#x200B;](./extensions.md) zoals authored door een uitbreidingsontwikkelaar. Een extensiepakket definieert aanvullende mogelijkheden die beschikbaar kunnen worden gemaakt voor gebruikers van tags. Meestal komen deze mogelijkheden in de vorm van [&#x200B; regelcomponenten &#x200B;](./rule-components.md) (gebeurtenissen, voorwaarden, en acties) en [&#x200B; gegevenselementen &#x200B;](./data-elements.md), maar kunnen belangrijkste modules en gedeelde modules ook omvatten.
 
 Extensiepakketten worden weergegeven in de extensiecatalogus in de gebruikersinterface van de gegevensverzameling en in de gebruikersinterface van Adobe Experience Platform. Het toevoegen van een extensiepakket aan een eigenschap wordt uitgevoerd door een extensie te maken met een koppeling naar het extensiepakket.
 
-Een uitbreidingspakket behoort tot het [ bedrijf ](./companies.md) van de ontwikkelaar die het creeerde.
+Een uitbreidingspakket behoort tot het [&#x200B; bedrijf &#x200B;](./companies.md) van de ontwikkelaar die het creeerde.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 Het is niet alleen van belang te begrijpen hoe u aanroepen van de Reactor-API kunt uitvoeren, maar ook te begrijpen hoe de kenmerken `status` en `availability` van een extensiepakket van invloed zijn op de handelingen die u erop kunt uitvoeren. Deze worden in de onderstaande secties uitgelegd.
 
@@ -63,7 +63,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde uitbreidingspakketten worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde uitbreidingspakketten worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -472,7 +472,7 @@ Een succesvol antwoord retourneert de details van het extensiepakket, inclusief 
 
 ## Een extensiepakket maken {#create}
 
-Extensiepakketten worden gemaakt met een basisgereedschap Node.js en opgeslagen op uw lokale computer voordat ze worden verzonden naar de Reactor-API. Voor meer informatie bij het vormen van een uitbreidingspakket, verwijs naar de gids bij [ begonnen wordt met uitbreidingsontwikkeling ](../../extension-dev/getting-started.md).
+Extensiepakketten worden gemaakt met een basisgereedschap Node.js en opgeslagen op uw lokale computer voordat ze worden verzonden naar de Reactor-API. Voor meer informatie bij het vormen van een uitbreidingspakket, verwijs naar de gids bij [&#x200B; begonnen wordt met uitbreidingsontwikkeling &#x200B;](../../extension-dev/getting-started.md).
 
 Nadat u het bestand met het extensiepakket hebt gemaakt, kunt u het verzenden naar de Reactor-API via een verzoek om POST.
 
@@ -721,7 +721,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **Verzoek**
 
-Zoals met [ het creëren van een uitbreidingspakket ](#create), moet een lokale versie van het bijgewerkte pakket via vormgegevens worden geupload.
+Zoals met [&#x200B; het creëren van een uitbreidingspakket &#x200B;](#create), moet een lokale versie van het bijgewerkte pakket via vormgegevens worden geupload.
 
 ```shell
 curl -X PATCH \
@@ -944,7 +944,7 @@ Een geslaagde reactie retourneert de details van het bijgewerkte extensiepakket.
 
 Nadat u het extensiepakket hebt getest, kunt u het persoonlijk loslaten. Dit maakt het beschikbaar aan om het even welk bezit binnen uw bedrijf.
 
-Nadat u privé hebt vrijgegeven, kunt u met het openbare vrijgaveproces beginnen door de [ vorm van het openbare vrijgaveverzoek ](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) te vullen.
+Nadat u privé hebt vrijgegeven, kunt u met het openbare vrijgaveproces beginnen door de [&#x200B; vorm van het openbare vrijgaveverzoek &#x200B;](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) te vullen.
 
 **API formaat**
 

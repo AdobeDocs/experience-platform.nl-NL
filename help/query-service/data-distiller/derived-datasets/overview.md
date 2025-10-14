@@ -50,4 +50,4 @@ U kunt bedrijfsmetriek als afgeleid attribuut ook berekenen en hen gebruiken sam
 
 ## Volgende stappen en gebruiksscenario&#39;s
 
-Door dit document te lezen, hebt u een beter inzicht in hoe de Dienst van de Vraag afgeleide datasets complexe gebruiksgevallen voor het maximaliseren van het nut van uw gegevens vergemakkelijken. Daarna, zou u het [ op decile-Gebaseerde afgeleide attributengebruik ](../../use-cases/deciles-use-case.md) moeten lezen om te zien hoe deze eigenschap in een real-world scenario wordt toegepast.
+Door dit document te lezen, hebt u een beter inzicht in hoe de Dienst van de Vraag afgeleide datasets complexe gebruiksgevallen voor het maximaliseren van het nut van uw gegevens vergemakkelijken. Daarna, zou u het [&#x200B; op decile-Gebaseerde afgeleide attributengebruik &#x200B;](../../use-cases/deciles-use-case.md) moeten lezen om te zien hoe deze eigenschap in een real-world scenario wordt toegepast.

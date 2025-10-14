@@ -17,19 +17,19 @@ Gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecode
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform ondersteunt Customer Managed Keys (CMK) voor zowel Microsoft Azure als Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Als uw implementatie op AWS wordt uitgevoerd, kunt u de Key Management Service (KMS) voor Experience Platform-gegevenscodering gebruiken. Voor meer informatie over de gesteunde infrastructuur, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/multi-cloud).
+>Adobe Experience Platform ondersteunt Customer Managed Keys (CMK) voor zowel Microsoft Azure als Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Als uw implementatie op AWS wordt uitgevoerd, kunt u de Key Management Service (KMS) voor Experience Platform-gegevenscodering gebruiken. Voor meer informatie over de gesteunde infrastructuur, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/multi-cloud).
 >
->Om over encryptie zeer belangrijke verwezenlijking en beheer in AWS KMS te leren, verwijs naar de [ handleiding van de gegevensencryptie van AWS KMS ](./aws/configure-kms.md). Voor Azure implementaties, zie de [ Azure Zeer belangrijke de configuratiegids van de Vault ](./azure/azure-key-vault-config.md).
+>Om over encryptie zeer belangrijke verwezenlijking en beheer in AWS KMS te leren, verwijs naar de [&#x200B; handleiding van de gegevensencryptie van AWS KMS &#x200B;](./aws/configure-kms.md). Voor Azure implementaties, zie de [&#x200B; Azure Zeer belangrijke de configuratiegids van de Vault &#x200B;](./azure/azure-key-vault-config.md).
 
 >[!NOTE]
 >
->Voor [!DNL Azure] gehoste Experience Platform-instanties worden de gegevens van het klantprofiel die zijn opgeslagen in Experience Platform [!DNL Azure Data Lake] en het [!DNL Azure Cosmos DB] Profile store, uitsluitend gecodeerd met CMK als deze eenmaal is ingeschakeld. De zeer belangrijke herroeping in primaire gegevensopslag kan overal van **een paar notulen aan 24 uren** en **tot 7 dagen** voor transient of secundaire gegevensopslag nemen. Voor extra details, verwijs naar de [ implicaties van het intrekken van zeer belangrijke toegangssectie ](#revoke-access).
+>Voor [!DNL Azure] gehoste Experience Platform-instanties worden de gegevens van het klantprofiel die zijn opgeslagen in Experience Platform [!DNL Azure Data Lake] en het [!DNL Azure Cosmos DB] Profile store, uitsluitend gecodeerd met CMK als deze eenmaal is ingeschakeld. De zeer belangrijke herroeping in primaire gegevensopslag kan overal van **een paar notulen aan 24 uren** en **tot 7 dagen** voor transient of secundaire gegevensopslag nemen. Voor extra details, verwijs naar de [&#x200B; implicaties van het intrekken van zeer belangrijke toegangssectie &#x200B;](#revoke-access).
 
 Dit document biedt een uitgebreid overzicht van het proces voor het inschakelen van de CMK-functie (Customer Managed Keys) in Experience Platform in [!DNL Azure] en AWS, samen met de vereiste informatie die vereist is om deze stappen te voltooien.
 
 >[!NOTE]
 >
->Voor klanten van Customer Journey Analytics, te volgen gelieve de instructies in de [ documentatie van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=nl-NL).
+>Voor klanten van Customer Journey Analytics, te volgen gelieve de instructies in de [&#x200B; documentatie van Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=nl-NL).
 
 ## Vereisten
 
@@ -39,22 +39,22 @@ Om CMK in te schakelen, moet de hostingomgeving van uw platform ([!DNL Azure] of
 
 Als u de sectie [!UICONTROL Encryption] in Adobe Experience Platform wilt weergeven en openen, moet u een rol hebben gemaakt en de machtiging [!UICONTROL Manage Customer Managed Key] aan die rol hebben toegewezen.  Elke gebruiker met de machtiging [!UICONTROL Manage Customer Managed Key] kan CMK inschakelen voor zijn of haar organisatie.
 
-Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [ vormen toestemmingendocumentatie ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=nl-NL).
+Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [&#x200B; vormen toestemmingendocumentatie &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=nl-NL).
 
 ### Azure-specifieke voorwaarden
 
 Voor Azure-gehoste implementaties configureert u de [!DNL Azure] Key Vault met de volgende instellingen:
 
-- [ laat purgebescherming ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection) toe
-- [ laat zachte schrapping ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) toe
-- [ vorm toegang gebruikend  [!DNL Azure]  op rol-gebaseerde toegangscontrole ](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+- [&#x200B; laat purgebescherming &#x200B;](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection) toe
+- [&#x200B; laat zachte schrapping &#x200B;](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) toe
+- [&#x200B; vorm toegang gebruikend  [!DNL Azure]  op rol-gebaseerde toegangscontrole &#x200B;](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ### AWS-specifieke voorwaarden
 
 Voor AWS-gehoste implementaties configureert u de AWS-omgeving als volgt:
 
-- Controleer of u rechten hebt om coderingssleutels te beheren met behulp van AWS Identity and Access Management (IAM). Voor details, zie het [ IAM Beleid voor AWS KMS ](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html).
-- Stel AWS KMS in met ondersteuning voor CMK. Verwijs naar de [ gids van de de gegevensencryptie van AWS KMS ](./aws/configure-kms.md).
+- Controleer of u rechten hebt om coderingssleutels te beheren met behulp van AWS Identity and Access Management (IAM). Voor details, zie het [&#x200B; IAM Beleid voor AWS KMS &#x200B;](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html).
+- Stel AWS KMS in met ondersteuning voor CMK. Verwijs naar de [&#x200B; gids van de de gegevensencryptie van AWS KMS &#x200B;](./aws/configure-kms.md).
 
 ## Procesoverzicht {#process-summary}
 
@@ -68,17 +68,17 @@ Het proces is als volgt:
 
 ### Voor Azure {#azure-process-summary}
 
-1. [ vorm een  [!DNL Azure]  Zeer belangrijke die vault ](./azure/azure-key-vault-config.md) op het beleid van uw organisatie wordt gebaseerd, dan [ produceert een encryptiesleutel ](./azure/azure-key-vault-config.md#generate-a-key) met Adobe te delen.
-1. Opstelling CMK app met uw [!DNL Azure] huurder door of [ API vraag ](./azure/api-set-up.md#register-app) of [ UI ](./azure/ui-set-up.md#register-app).
-1. Verzend uw encryptie zeer belangrijke identiteitskaart naar Adobe en begin het enablement proces voor de eigenschap, of [ in UI ](./azure/ui-set-up.md#send-to-adobe) of met een [ API vraag ](./azure/api-set-up.md#send-to-adobe).
-1. Controleer de status van de configuratie om te verifiëren of CMK, of [ in UI ](./azure/ui-set-up.md#check-status) of met een [ API vraag ](./azure/api-set-up.md#check-status) is toegelaten.
+1. [&#x200B; vorm een  [!DNL Azure]  Zeer belangrijke die vault &#x200B;](./azure/azure-key-vault-config.md) op het beleid van uw organisatie wordt gebaseerd, dan [&#x200B; produceert een encryptiesleutel &#x200B;](./azure/azure-key-vault-config.md#generate-a-key) met Adobe te delen.
+1. Opstelling CMK app met uw [!DNL Azure] huurder door of [&#x200B; API vraag &#x200B;](./azure/api-set-up.md#register-app) of [&#x200B; UI &#x200B;](./azure/ui-set-up.md#register-app).
+1. Verzend uw encryptie zeer belangrijke identiteitskaart naar Adobe en begin het enablement proces voor de eigenschap, of [&#x200B; in UI &#x200B;](./azure/ui-set-up.md#send-to-adobe) of met een [&#x200B; API vraag &#x200B;](./azure/api-set-up.md#send-to-adobe).
+1. Controleer de status van de configuratie om te verifiëren of CMK, of [&#x200B; in UI &#x200B;](./azure/ui-set-up.md#check-status) of met een [&#x200B; API vraag &#x200B;](./azure/api-set-up.md#check-status) is toegelaten.
 
-Zodra het installatieproces is voltooid voor Experience Platform-instanties die in Azure worden gehost, worden alle gegevens die in Experience Platform in alle sandboxen worden ingevoerd, gecodeerd met de toetsencombinatie [!DNL Azure] . Om CMK te gebruiken, zult u hefboomwerking [!DNL Microsoft Azure] functionaliteit die deel van hun [ openbaar voorproefprogramma ](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) kan uitmaken.
+Zodra het installatieproces is voltooid voor Experience Platform-instanties die in Azure worden gehost, worden alle gegevens die in Experience Platform in alle sandboxen worden ingevoerd, gecodeerd met de toetsencombinatie [!DNL Azure] . Om CMK te gebruiken, zult u hefboomwerking [!DNL Microsoft Azure] functionaliteit die deel van hun [&#x200B; openbaar voorproefprogramma &#x200B;](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) kan uitmaken.
 
 ### Voor AWS {#aws-process-summary}
 
-1. [ Opstelling AWS KMS ](./aws/configure-kms.md) door een encryptiesleutel te vormen die met Adobe moet worden gedeeld.
-2. Volg de AWS-specifieke instructies in de [ UI opstellingsgids ](./aws/ui-set-up.md).
+1. [&#x200B; Opstelling AWS KMS &#x200B;](./aws/configure-kms.md) door een encryptiesleutel te vormen die met Adobe moet worden gedeeld.
+2. Volg de AWS-specifieke instructies in de [&#x200B; UI opstellingsgids &#x200B;](./aws/ui-set-up.md).
 3. Valideer de instelling om te bevestigen dat Experience Platform-gegevens zijn versleuteld met de door AWS gehoste sleutel.
 
 <!--  Pending: or [API setup guide]() -->
@@ -89,7 +89,7 @@ Zodra het installatieproces is voltooid voor Experience Platform-instanties die 
 
 Als u de toegang tot de Key Vault-, Key- of CMK-toepassing in Azure of de coderingssleutel in AWS intrekt of uitschakelt, kan dit leiden tot aanzienlijke verstoringen, zoals het doorbreken van wijzigingen in uw Experience Platform-bewerkingen. Als toetsen eenmaal zijn uitgeschakeld, kunnen gegevens in Experience Platform ontoegankelijk worden en zullen downstreambewerkingen die op deze gegevens vertrouwen, niet meer werken. Het is van cruciaal belang dat u de downstreameffecten volledig begrijpt voordat u wijzigingen aanbrengt in uw sleutelconfiguraties.
 
-Als u de toegang van Experience Platform tot uw gegevens in [!DNL Azure] wilt intrekken, verwijdert u de gebruikersrol die aan de toepassing is gekoppeld uit de Key Vault. Voor AWS kunt u de toets uitschakelen of de beleidsinstructie bijwerken. Voor gedetailleerde instructies op het proces van AWS, verwijs naar de [ zeer belangrijke intrekkingssectie ](./aws/ui-set-up.md#key-revocation).
+Als u de toegang van Experience Platform tot uw gegevens in [!DNL Azure] wilt intrekken, verwijdert u de gebruikersrol die aan de toepassing is gekoppeld uit de Key Vault. Voor AWS kunt u de toets uitschakelen of de beleidsinstructie bijwerken. Voor gedetailleerde instructies op het proces van AWS, verwijs naar de [&#x200B; zeer belangrijke intrekkingssectie &#x200B;](./aws/ui-set-up.md#key-revocation).
 
 
 ### Tijdlijnen voor doorgave {#propagation-timelines}
@@ -109,11 +109,11 @@ Het dashboard Profiel zal bijvoorbeeld gegevens van zijn geheime voorgeheugen bl
 
 >[!TIP]
 >
->Er zijn twee gebruik-geval-specifieke uitzonderingen op de zeven dagen datasetvervaldatum op niet primaire (caching/transient) gegevens. Raadpleeg de documentatie bij deze pagina voor meer informatie over deze functies.<ul><li>[ Adobe Journey Optimizer URL Shortener ](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=nl-NL#message-preset-sms)</li><li>[ de Projecties van Edge ](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=nl-NL#edge-projections)</li></ul>
+>Er zijn twee gebruik-geval-specifieke uitzonderingen op de zeven dagen datasetvervaldatum op niet primaire (caching/transient) gegevens. Raadpleeg de documentatie bij deze pagina voor meer informatie over deze functies.<ul><li>[&#x200B; Adobe Journey Optimizer URL Shortener &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=nl-NL#message-preset-sms)</li><li>[&#x200B; de Projecties van Edge &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=nl-NL#edge-projections)</li></ul>
 
 ## Volgende stappen
 
 Het proces starten:
 
-- Voor Azure: Begin door [ vormend een  [!DNL Azure]  Zeer belangrijke Uitvault ](./azure/azure-key-vault-config.md) en [ produceert een encryptiesleutel ](./azure/azure-key-vault-config.md#generate-a-key) om met Adobe te delen.
-- Voor AWS: [ opstelling AWS KMS ](./aws/configure-kms.md) en verzekert juiste configuraties IAM en KMS alvorens aan UI of API opstellingshulplijnen te werk te gaan.
+- Voor Azure: Begin door [&#x200B; vormend een  [!DNL Azure]  Zeer belangrijke Uitvault &#x200B;](./azure/azure-key-vault-config.md) en [&#x200B; produceert een encryptiesleutel &#x200B;](./azure/azure-key-vault-config.md#generate-a-key) om met Adobe te delen.
+- Voor AWS: [&#x200B; opstelling AWS KMS &#x200B;](./aws/configure-kms.md) en verzekert juiste configuraties IAM en KMS alvorens aan UI of API opstellingshulplijnen te werk te gaan.

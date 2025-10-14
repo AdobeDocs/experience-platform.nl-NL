@@ -22,12 +22,12 @@ Lees deze handleiding voor informatie over hoe u uw [!DNL AWS Redshift] -account
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   - [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+- [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   - [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   - [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL AWS Redshift] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/databases.md).
+Als u reeds een geldige [!DNL AWS Redshift] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/databases.md).
 
 ## Navigeren door de catalogus met bronnen
 
@@ -39,7 +39,7 @@ Selecteer **[!DNL AWS Redshift]** onder de categorie *[!UICONTROL Databases]* en
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus van bronnen met de AWS Redshift geselecteerde bronkaart.](../../../../images/tutorials/create/redshift/catalog.png)
+![&#x200B; de broncatalogus van bronnen met de AWS Redshift geselecteerde bronkaart.](../../../../images/tutorials/create/redshift/catalog.png)
 
 ## Een bestaande account gebruiken {#existing}
 
@@ -47,7 +47,7 @@ Vervolgens gaat u naar de verificatiestap van de workflow voor bronnen. Hier kun
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL AWS Redshift] -account in de accountmap en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ de rekeningenfolder in het bronwerkschema hier zijn de bestaande rekeningen vermeld.](../../../../images/tutorials/create/redshift/existing.png)
+![&#x200B; de rekeningenfolder in het bronwerkschema hier zijn de bestaande rekeningen vermeld.](../../../../images/tutorials/create/redshift/existing.png)
 
 ## Een nieuwe account maken {#create}
 
@@ -59,7 +59,7 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 
 Als u uw [!DNL AWS Redshift] -account op Azure aan Experience Platform wilt koppelen, geeft u uw verificatiereferenties op in het invoerformulier en selecteert u vervolgens **([!UICONTROL Connect to source])** .
 
-![ de nieuwe rekeningsinterface om AWS opnieuw te verbinden aan Experience Platform op Azure.](../../../../images/tutorials/create/redshift/new.png)
+![&#x200B; de nieuwe rekeningsinterface om AWS opnieuw te verbinden aan Experience Platform op Azure.](../../../../images/tutorials/create/redshift/new.png)
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -69,17 +69,17 @@ Als u uw [!DNL AWS Redshift] -account op Azure aan Experience Platform wilt kopp
 | Wachtwoord | Het wachtwoord dat overeenkomt met de gebruikersaccount. |
 | Database | De [!DNL AWS Redshift] -database waaruit gegevens moeten worden opgehaald. |
 
-Voor meer informatie over begonnen worden, verwijs naar [ dit  [!DNL AWS Redshift]  document ](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
+Voor meer informatie over begonnen worden, verwijs naar [&#x200B; dit  [!DNL AWS Redshift]  document &#x200B;](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
 
 ### Verbinding maken met Experience Platform op AWS {#aws}
 
 >[!AVAILABILITY]
 >
->Deze sectie is op implementaties van Experience Platform van toepassing die op de Diensten van het Web van AWS (AWS) lopen. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+>Deze sectie is op implementaties van Experience Platform van toepassing die op de Diensten van het Web van AWS (AWS) lopen. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../../../landing/multi-cloud.md).
 
 Als u een nieuwe [!DNL AWS Redshift] -account wilt maken en verbinding wilt maken met Experience Platform op AWS, controleert u of u zich in een VA6-sandbox bevindt, geeft u de vereiste verificatiegegevens op en selecteert u **[!UICONTROL Connect to source]** .
 
-![ de nieuwe rekeningsinterface om AWS opnieuw te verbinden aan Experience Platform op AWS.](../../../../images/tutorials/create/redshift/aws-auth.png)
+![&#x200B; de nieuwe rekeningsinterface om AWS opnieuw te verbinden aan Experience Platform op AWS.](../../../../images/tutorials/create/redshift/aws-auth.png)
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -90,8 +90,8 @@ Als u een nieuwe [!DNL AWS Redshift] -account wilt maken en verbinding wilt make
 | Database | De [!DNL AWS Redshift] -database waaruit gegevens moeten worden opgehaald. |
 | Schema | De naam van het schema dat aan uw [!DNL AWS Redshift] database is gekoppeld. U moet ervoor zorgen dat de gebruiker u gegevensbestandtoegang tot wilt geven, ook toegang tot dit schema heeft. |
 
-Voor meer informatie over begonnen worden, verwijs naar [ dit  [!DNL AWS Redshift]  document ](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
+Voor meer informatie over begonnen worden, verwijs naar [&#x200B; dit  [!DNL AWS Redshift]  document &#x200B;](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht tussen uw [!DNL AWS Redshift] -database en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow tot stand brengen om gegevens van uw gegevensbestand aan Experience Platform ](../../dataflow/databases.md) in te voeren.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht tussen uw [!DNL AWS Redshift] -database en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow tot stand brengen om gegevens van uw gegevensbestand aan Experience Platform &#x200B;](../../dataflow/databases.md) in te voeren.

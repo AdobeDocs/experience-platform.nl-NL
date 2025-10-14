@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Tags in Adobe Experience Platform worden gebaseerd op een systeem dat is gebaseerd op regels. Ze zoeken naar gebruikersinteractie en bijbehorende gegevens. Wanneer wordt voldaan aan de criteria in uw regels, wordt de door u geïdentificeerde extensie-, script- of client-side code geactiveerd.
 
@@ -29,7 +29,7 @@ U kunt meer gebeurtenistypen toevoegen. De veelvoudige gebeurtenissen worden aan
 
 >[!IMPORTANT]
 >
->De veranderingen treden niet van kracht tot zij [ worden gepubliceerd ](../publishing/overview.md).
+>De veranderingen treden niet van kracht tot zij [&#x200B; worden gepubliceerd &#x200B;](../publishing/overview.md).
 
 ### Gebeurtenissen en voorwaarden (indien van toepassing)
 
@@ -41,7 +41,7 @@ Als een opgegeven gebeurtenis plaatsvindt, worden de voorwaarden geëvalueerd en
 
 * **Voorwaarden**: Verklein de gebeurtenis door om het even welke voorwaarden te vormen die voor een gebeurtenis waar moeten zijn om de regel teweeg te brengen. Een uitzondering wordt gedefinieerd als een NIET-voorwaarde. Meerdere voorwaarden worden samengevoegd door een AND.
 
-Welke gebeurtenissen beschikbaar zijn, zijn afhankelijk van de geïnstalleerde extensies. Voor informatie over de gebeurtenissen in de uitbreiding van de Kern, zie [ de types van de uitbreidingsgebeurtenis van de Kern ](../../extensions/client/core/overview.md#core-extension-event-types).
+Welke gebeurtenissen beschikbaar zijn, zijn afhankelijk van de geïnstalleerde extensies. Voor informatie over de gebeurtenissen in de uitbreiding van de Kern, zie [&#x200B; de types van de uitbreidingsgebeurtenis van de Kern &#x200B;](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Handelingen (dan)
 
@@ -93,7 +93,7 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
 1. Selecteer het pictogram Voorwaarden **[!UICONTROL Add]** en selecteer vervolgens een logicatype, extensie, type voorwaarde en configureer de instellingen voor uw voorwaarde. Selecteer vervolgens **[!UICONTROL Keep Changes]** .
 
-   ![ de configuratiepagina van de voorwaardenconfiguratie van Regels.](../../images/condition-settings.png)
+   ![&#x200B; de configuratiepagina van de voorwaardenconfiguratie van Regels.](../../images/condition-settings.png)
 
    De beschikbare voorwaardetypen hangen van de uitbreiding af u hebt geselecteerd. Voorwaarde-instellingen verschillen op basis van het type voorwaarde.
 
@@ -121,7 +121,7 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
    Later, wanneer u [&#128279;](../publishing/overview.md) publiceert, zult u deze regel aan een bibliotheek toevoegen en het opstellen.
 
-Wanneer het creëren van of het uitgeven van regels, kunt u sparen en aan uw [ actieve bibliotheek ](../publishing/libraries.md#active-library) bouwen. Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven.
+Wanneer het creëren van of het uitgeven van regels, kunt u sparen en aan uw [&#x200B; actieve bibliotheek &#x200B;](../publishing/libraries.md#active-library) bouwen. Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven.
 
 ## Regelvolgorde {#rule-ordering}
 
@@ -171,9 +171,9 @@ Het gedrag van de runtime-omgeving is afhankelijk van het feit of **[!UICONTROL 
 
 >[!IMPORTANT]
 >
->Dit het plaatsen bepaalt slechts hoe de voorwaarden en de acties binnen elke regel worden geëvalueerd, en beïnvloedt niet de opeenvolging waarin de regels zelf op uw bezit worden uitgevoerd. Verwijs naar de vorige sectie op [ regel die ](#rule-ordering) voor meer informatie opdracht geeft tot hoe te om de uitvoeringsorde voor veelvoudige regels te bepalen.
+>Dit het plaatsen bepaalt slechts hoe de voorwaarden en de acties binnen elke regel worden geëvalueerd, en beïnvloedt niet de opeenvolging waarin de regels zelf op uw bezit worden uitgevoerd. Verwijs naar de vorige sectie op [&#x200B; regel die &#x200B;](#rule-ordering) voor meer informatie opdracht geeft tot hoe te om de uitvoeringsorde voor veelvoudige regels te bepalen.
 >
->In [ gebeurtenis die ](../event-forwarding/overview.md) eigenschappen door:sturen, worden de regelacties altijd opeenvolgend uitgevoerd en dit het plaatsen is niet beschikbaar. Controleer of de volgorde correct is wanneer u de regel maakt.
+>In [&#x200B; gebeurtenis die &#x200B;](../event-forwarding/overview.md) eigenschappen door:sturen, worden de regelacties altijd opeenvolgend uitgevoerd en dit het plaatsen is niet beschikbaar. Controleer of de volgorde correct is wanneer u de regel maakt.
 
 ### Ingeschakeld
 

@@ -16,7 +16,7 @@ De looppas van de stroom vertegenwoordigt een geval van stroomuitvoering. Bijvoo
 
 Op bestelling kunt u een stroom maken die tegen een gegeven gegevensstroom wordt uitgevoerd. Dit staat uw gebruikers toe om een stroomlooppas tot stand te brengen, die op bepaalde parameters wordt gebaseerd en een opnamecyclus, zonder de diensttekenen tot stand te brengen. Ondersteuning voor inname op aanvraag is alleen beschikbaar voor batchbronnen.
 
-Dit leerprogramma behandelt de stappen op hoe te om op bestelling ingestie te gebruiken en een stroom tot stand te brengen die [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) gebruikt.
+Dit leerprogramma behandelt de stappen op hoe te om op bestelling ingestie te gebruiken en een stroom tot stand te brengen die [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) gebruikt.
 
 ## Aan de slag
 
@@ -26,12 +26,12 @@ Dit leerprogramma behandelt de stappen op hoe te om op bestelling ingestie te ge
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
 
 ## Een doorloop maken die wordt uitgevoerd voor een op tabellen gebaseerde bron
 
@@ -102,7 +102,7 @@ Een geslaagde reactie retourneert de details van de nieuw gemaakte flow, inclusi
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De id van de nieuwe flow-run. Zie de gids bij [ het terugwinnen van stroomspecificaties ](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
+| `id` | De id van de nieuwe flow-run. Zie de gids bij [&#x200B; het terugwinnen van stroomspecificaties &#x200B;](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
 | `etag` | De middelversie van de stroomlooppas. |
 
 <!-- 
@@ -184,9 +184,9 @@ Een geslaagde reactie retourneert de details van de nieuw gemaakte flow, inclusi
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De id van de nieuwe flow-run. Zie de gids bij [ het terugwinnen van stroomspecificaties ](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
+| `id` | De id van de nieuwe flow-run. Zie de gids bij [&#x200B; het terugwinnen van stroomspecificaties &#x200B;](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
 | `etag` | De middelversie van de stroomlooppas. |
 
 ## De stroomuitvoering controleren
 
-Zodra uw stroomlooppas is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Om uw stroomlooppas te controleren die API gebruiken, zie het leerprogramma op [ controledataflows in API ](./monitor.md). Om uw stroomlooppas te controleren die Experience Platform UI gebruiken, zie de gids op [ gegevensstroom controlemogelijkheden gebruikend het controledashboard ](../../../dataflows/ui/monitor-sources.md).
+Zodra uw stroomlooppas is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Om uw stroomlooppas te controleren die API gebruiken, zie het leerprogramma op [&#x200B; controledataflows in API &#x200B;](./monitor.md). Om uw stroomlooppas te controleren die Experience Platform UI gebruiken, zie de gids op [&#x200B; gegevensstroom controlemogelijkheden gebruikend het controledashboard &#x200B;](../../../dataflows/ui/monitor-sources.md).

@@ -28,9 +28,9 @@ Er zijn drie typen gegevens beschikbaar via [!DNL The Weather Channel] :
 Voordat u weergegevens gebruikt, moet u controleren of aan de volgende voorwaarden is voldaan:
 
 * U moet een licentie geven voor de weergegevens die u gebruikt vanuit [!DNL The Weather Channel] . Ze zullen het dan inschakelen op je account.
-* Weer-gegevens zijn alleen beschikbaar via gegevensstreams. Om weergegevens te gebruiken, moet u [!DNL Web SDK] gebruiken, [!DNL Mobile Edge Extension] of [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/) om deze gegevens te omvatten.
+* Weer-gegevens zijn alleen beschikbaar via gegevensstreams. Om weergegevens te gebruiken, moet u [!DNL Web SDK] gebruiken, [!DNL Mobile Edge Extension] of [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/) om deze gegevens te omvatten.
 * Voor uw gegevensstroom moet [[!UICONTROL Geo Location]](../configure.md#advanced-options) zijn ingeschakeld.
-* Voeg de [ groep van het weergebied ](#schema-configuration) aan het schema toe dat u gebruikt.
+* Voeg de [&#x200B; groep van het weergebied &#x200B;](#schema-configuration) aan het schema toe dat u gebruikt.
 
 ## Inrichting {#provisioning}
 
@@ -56,32 +56,32 @@ Zodra u beschikt over een licentie en de gegevens beschikbaar zijn, kunt u deze 
 
 In [!DNL Adobe Analytics] zijn de weergegevens beschikbaar voor toewijzing via verwerkingsregels, samen met de rest van het [!DNL XDM] -schema.
 
-U kunt de lijst van gebieden vinden die u in de [ Web van de weerverwijzing ](weather-reference.md) pagina kunt in kaart brengen. Net als bij alle schema&#39;s van [!DNL XDM] , worden de toetsen voorafgegaan door `a.x` . Een veld met de naam `weather.current.temperature.farenheit` wordt bijvoorbeeld weergegeven in [!DNL Analytics] as `a.x.weather.current.temperature.farenheit` .
+U kunt de lijst van gebieden vinden die u in de [&#x200B; Web van de weerverwijzing &#x200B;](weather-reference.md) pagina kunt in kaart brengen. Net als bij alle schema&#39;s van [!DNL XDM] , worden de toetsen voorafgegaan door `a.x` . Een veld met de naam `weather.current.temperature.farenheit` wordt bijvoorbeeld weergegeven in [!DNL Analytics] as `a.x.weather.current.temperature.farenheit` .
 
-![ Interface van de Regel van de Verwerking ](../assets/data-enrichment/weather/processing-rules.png)
+![&#x200B; Interface van de Regel van de Verwerking &#x200B;](../assets/data-enrichment/weather/processing-rules.png)
 
 ### Adobe Customer Journey Analytics {#cja}
 
-In [!DNL Adobe Customer Journey Analytics] zijn de weergegevens beschikbaar in de gegevensset die in de gegevensstroom is opgegeven. Zolang de weerattributen [ aan uw schema ](#prerequisites-prerequisites) worden toegevoegd, zijn zij beschikbaar aan [ toevoegen aan een gegevensmening ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=nl-NL) in [!DNL Customer Journey Analytics].
+In [!DNL Adobe Customer Journey Analytics] zijn de weergegevens beschikbaar in de gegevensset die in de gegevensstroom is opgegeven. Zolang de weerattributen [&#x200B; aan uw schema &#x200B;](#prerequisites-prerequisites) worden toegevoegd, zijn zij beschikbaar aan [&#x200B; toevoegen aan een gegevensmening &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=nl-NL) in [!DNL Customer Journey Analytics].
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-De gegevens van het Weer zijn beschikbaar in [ Real-Time Customer Data Platform ](../../rtcdp/overview.md), voor gebruik in publiek. Weezelgegevens worden gekoppeld aan gebeurtenissen.
+De gegevens van het Weer zijn beschikbaar in [&#x200B; Real-Time Customer Data Platform &#x200B;](../../rtcdp/overview.md), voor gebruik in publiek. Weezelgegevens worden gekoppeld aan gebeurtenissen.
 
-![ de Bouwer van het Element die Weer Gebeurtenissen ](../assets/data-enrichment/weather/schema-builder.png) toont
+![&#x200B; de Bouwer van het Element die Weer Gebeurtenissen &#x200B;](../assets/data-enrichment/weather/schema-builder.png) toont
 
 Aangezien de weersomstandigheden vaak veranderen, raadt Adobe u aan om tijdbeperkingen in te stellen voor het publiek, zoals in het bovenstaande voorbeeld wordt getoond. Een koude dag in de laatste twee is veel impacter dan een koude dag zes maanden geleden.
 
-Zie [ weerverwijzing ](weather-reference.md) voor de beschikbare gebieden.
+Zie [&#x200B; weerverwijzing &#x200B;](weather-reference.md) voor de beschikbare gebieden.
 
 ### Adobe Target {#target}
 
 In [!DNL Adobe Target] kunt u weergegevens gebruiken om in real-time te personaliseren. Weezelgegevens worden doorgegeven aan [!DNL Target] als [!UICONTROL mBox] -parameters en u kunt deze benaderen via een aangepaste [!UICONTROL mBox] -parameter.
 
-![ de Bouwer van het publiek van het Doel ](../assets/data-enrichment/weather/target-audience-builder.png)
+![&#x200B; de Bouwer van het publiek van het Doel &#x200B;](../assets/data-enrichment/weather/target-audience-builder.png)
 
-De parameter is het [!DNL XDM] -pad naar een specifiek veld. Zie de [ weerverwijzing ](weather-reference.md) voor de beschikbare gebieden en hun overeenkomstige wegen.
+De parameter is het [!DNL XDM] -pad naar een specifiek veld. Zie de [&#x200B; weerverwijzing &#x200B;](weather-reference.md) voor de beschikbare gebieden en hun overeenkomstige wegen.
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van dit document hebt u nu een beter inzicht in hoe u weergegevens kunt gebruiken voor verschillende Adobe-oplossingen. Meer over de afbeelding van het het gebied van weergegevens leren, zie de [ verwijzing van de gebiedstoewijzing ](weather-reference.md).
+Na het lezen van dit document hebt u nu een beter inzicht in hoe u weergegevens kunt gebruiken voor verschillende Adobe-oplossingen. Meer over de afbeelding van het het gebied van weergegevens leren, zie de [&#x200B; verwijzing van de gebiedstoewijzing &#x200B;](weather-reference.md).

@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Binnen het gebruikersinterface van Real-time Customer Data Platform, kunt u alle datasets bekijken en beheren die uw organisatie heeft gemaakt, evenals nieuwe tot stand brengen. Selecteer **[!UICONTROL Datasets]** in de navigatie aan de linkerkant om door de gegevenssets in de gebruikersinterface te bladeren. Het tabblad **[!UICONTROL Browse]** bevat een lijst met gegevenssets, inclusief kolommen met de naam, het gemaakte bestand (datum en tijd), de bron, het schema en de laatste batchstatus, plus de datum en tijd waarop de gegevensset voor het laatst is bijgewerkt.
 
-Voor informatie over Datasets in [!DNL Experience Platform], begin door het [ overzicht van Datasets ](../../catalog/datasets/overview.md) te lezen.
+Voor informatie over Datasets in [!DNL Experience Platform], begin door het [&#x200B; overzicht van Datasets &#x200B;](../../catalog/datasets/overview.md) te lezen.

@@ -22,9 +22,9 @@ Er worden een aantal bekende beperkingen weergegeven wanneer u een instantie van
 
 * Voor geproduceerde schema&#39;s, als een schema in één geval van playbook wordt geproduceerd, en u het uitgeeft, dan zal een ander schema *niet* worden geproduceerd als u een andere instantie van playbook toelaat. Gebruik in plaats daarvan ook het schema dat u in de instantie hebt bewerkt.
 
-* Wanneer het gebruiken van de [ functionaliteit van het gegevensbewustzijn ](/help/use-case-playbooks/playbooks/data-awareness.md) om het schema van de inspirerende zandbak aan de ontwikkelingszandbak te bevorderen, zou u sommige fouten kunnen zien gelijkend op hieronder:
+* Wanneer het gebruiken van de [&#x200B; functionaliteit van het gegevensbewustzijn &#x200B;](/help/use-case-playbooks/playbooks/data-awareness.md) om het schema van de inspirerende zandbak aan de ontwikkelingszandbak te bevorderen, zou u sommige fouten kunnen zien gelijkend op hieronder:
 
-![ Fouten die in het werkschema van de schemaafbeelding worden getoond.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
+![&#x200B; Fouten die in het werkschema van de schemaafbeelding worden getoond.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 Dit komt doordat sommige velden die zijn gegenereerd vanuit uw schema, niet aanwezig zijn in het schema in de ontwikkelingssandbox waarnaar u kopieert. Kijk eens wat die velden zijn. Ga vervolgens terug naar de ontwikkelingssandbox waar u kunt:
 

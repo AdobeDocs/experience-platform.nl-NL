@@ -19,19 +19,19 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Data Science Workspace] . Voor vragen en het oplossen van problemen betreffende [!DNL Experience Platform] APIs in het algemeen, zie de [ het oplossen van problemengids van Adobe Experience Platform API ](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Data Science Workspace] . Voor vragen en het oplossen van problemen betreffende [!DNL Experience Platform] APIs in het algemeen, zie de [&#x200B; het oplossen van problemengids van Adobe Experience Platform API &#x200B;](../landing/troubleshooting.md).
 
 ## JupyterLab-laptopquerystatus zit vast in uitvoeringsstatus
 
 Een JupyterLab-laptop geeft mogelijk aan dat een cel zich in de uitvoeringsstatus bevindt, voor onbepaalde tijd, in sommige gevallen onder onvoldoende geheugen. Bijvoorbeeld, wanneer het vragen van een grote dataset of het uitvoeren van veelvoudige verdere vragen kan de Notitie JupyterLab uit beschikbaar geheugen weglopen om het resulterende dataframe voorwerp op te slaan. Er zijn enkele indicatoren die in deze situatie zichtbaar zijn. Eerst wordt de kernel de status Niet-actief weergegeven, ook al wordt aangegeven dat de cel wordt uitgevoerd met het pictogram [`*`] naast de cel. Bovendien geeft de onderste balk de hoeveelheid gebruikte/beschikbare RAM-geheugen aan.
 
-![ Beschikbaar ram ](./images/jupyterlab/user-guide/allocate-ram.png)
+![&#x200B; Beschikbaar ram &#x200B;](./images/jupyterlab/user-guide/allocate-ram.png)
 
 Tijdens het lezen van de gegevens, kan het geheugen groeien tot het uw maximumhoeveelheid toegewezen geheugen bereikt. Het geheugen wordt vrijgemaakt zodra het maximale geheugen is bereikt en de kernel opnieuw wordt opgestart. Dit betekent het gebruikte geheugen in dit scenario als zeer laag kan tonen toe te schrijven aan het kernel opnieuw beginnen terwijl net vóór het nieuwe begin, het geheugen zeer dicht aan het maximum toegewezen RAM zou geweest zijn.
 
 U lost dit probleem op door het tandwielpictogram rechtsboven in JupyterLab te selecteren en de schuifregelaar naar rechts te schuiven, gevolgd door **[!UICONTROL Update configs]** om meer RAM-geheugen toe te wijzen. Bovendien, als u veelvoudige vragen in werking stelt en uw waarde van RAM het maximum toegewezen bedrag nadert, tenzij u de resultaten van vorige vragen nodig hebt, nieuw kernel om de beschikbare hoeveelheid RAM terug te stellen. Dit zorgt ervoor dat u de maximumhoeveelheid RAM beschikbaar aan de huidige vraag hebt.
 
-![ wijs meer grafiek ](./images/jupyterlab/user-guide/notebook-gpu-config.png) toe
+![&#x200B; wijs meer grafiek &#x200B;](./images/jupyterlab/user-guide/notebook-gpu-config.png) toe
 
 In de gebeurtenis u de maximumhoeveelheid geheugen (RAM) toewijst en nog steeds deze kwestie ontmoet, kunt u uw vraag wijzigen om op een kleinere datasetgrootte te werken door de kolommen of de waaier van gegevens te verminderen. Als u de volledige hoeveelheid gegevens wilt gebruiken, kunt u het beste een Spark-laptop gebruiken.
 
@@ -47,17 +47,17 @@ Voer de volgende stappen uit om dit probleem op te lossen:
 
 In uw [!DNL Chrome] browser, navigeer aan top-right en selecteer **Montages** (alternatief kunt u &quot;chrome://settings/&quot;in de adresbar kopiëren en kleven). Daarna, scrol aan de bodem van de pagina en klik **Geavanceerde** dropdown.
 
-![ geavanceerd chroom ](./images/faq/chrome-advanced.png)
+![&#x200B; geavanceerd chroom &#x200B;](./images/faq/chrome-advanced.png)
 
 De **privacy en veiligheid** sectie verschijnt. Daarna, klik op **montages van de Plaats** die door **Cookies en plaatsgegevens** worden gevolgd.
 
-![ geavanceerd chroom ](./images/faq/privacy-security.png)
+![&#x200B; geavanceerd chroom &#x200B;](./images/faq/privacy-security.png)
 
-![ geavanceerd chroom ](./images/faq/cookies.png)
+![&#x200B; geavanceerd chroom &#x200B;](./images/faq/cookies.png)
 
 Schakel ten slotte &quot;Cookies van derden blokkeren&quot; in op &quot;UIT&quot;.
 
-![ geavanceerd chroom ](./images/faq/toggle-off.png)
+![&#x200B; geavanceerd chroom &#x200B;](./images/faq/toggle-off.png)
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ Schakel ten slotte &quot;Cookies van derden blokkeren&quot; in op &quot;UIT&quot
 
 Ga naar &quot;chrome://flags/&quot; op de adresbalk. Zoek naar en maak de vlag genoemd *&quot;SameSite door standaardkoekjes&quot;onbruikbaar* door het dropdown menu op het recht te gebruiken.
 
-![ maak de zelfde vlag ](./images/faq/samesite-flag.png) onbruikbaar
+![&#x200B; maak de zelfde vlag &#x200B;](./images/faq/samesite-flag.png) onbruikbaar
 
 Na Stap 2 wordt u gevraagd uw browser opnieuw te starten. Nadat u de toepassing opnieuw hebt gestart, is [!DNL Jupyterlab] toegankelijk.
 
@@ -75,15 +75,15 @@ Safari schakelt cookies van derden standaard uit in Safari &lt; 12. Aangezien de
 
 Voor Safari 12, moet u uw Agent van de Gebruiker op &quot;[!DNL Chrome]&quot;of &quot;[!DNL Firefox]&quot;schakelen. Om uw Agent van de Gebruiker te schakelen, begin door het *Safari* menu te openen en **Voorkeur** te selecteren. Het voorkeurenvenster wordt weergegeven.
 
-![ voorkeur Safari ](./images/faq/preferences.png)
+![&#x200B; voorkeur Safari &#x200B;](./images/faq/preferences.png)
 
 Binnen het de voorkeurenvenster van Safari, uitgezochte **Geavanceerd**. Dan controleer *tonen ontwikkelt menu in menubar* doos. U kunt het voorkeurenvenster sluiten nadat deze stap is voltooid.
 
-![ Geavanceerde Safari ](./images/faq/advanced.png)
+![&#x200B; Geavanceerde Safari &#x200B;](./images/faq/advanced.png)
 
 Daarna, van de hoogste navigatiebar selecteren **ontwikkelt** menu. Van binnen **ontwikkel** dropdown, beweeg over **Agent van de Gebruiker**. U kunt de tekenreeks **[!DNL Chrome]** of **[!DNL Firefox]** Gebruikersagent selecteren die u wilt gebruiken.
 
-![ ontwikkelt menu ](./images/faq/user-agent.png)
+![&#x200B; ontwikkelt menu &#x200B;](./images/faq/user-agent.png)
 
 ## Waarom zie ik een &#39;403 Verboden&#39; bericht als ik een bestand probeer te uploaden of te verwijderen in [!DNL JupyterLab] ?
 
@@ -103,13 +103,13 @@ De [!DNL Python] kernel wordt vooraf geïnstalleerd met veel populaire bibliothe
 !pip install {LIBRARY_NAME}
 ```
 
-Voor een volledige lijst van vooraf geïnstalleerde [!DNL Python] bibliotheken, zie de [ appendix sectie van de Gids van de Gebruiker JupyterLab ](./jupyterlab/overview.md#supported-libraries).
+Voor een volledige lijst van vooraf geïnstalleerde [!DNL Python] bibliotheken, zie de [&#x200B; appendix sectie van de Gids van de Gebruiker JupyterLab &#x200B;](./jupyterlab/overview.md#supported-libraries).
 
 ## Kan ik aangepaste PySpark-bibliotheken installeren?
 
 Helaas kunt u geen extra bibliotheken voor de PySpark-kernel installeren. U kunt echter contact opnemen met uw Adobe-medewerker van de klantenservice om aangepaste PySpark-bibliotheken voor u te laten installeren.
 
-Voor een lijst van vooraf geïnstalleerde bibliotheken PySpark, zie de [ bijlage sectie van de Gids van de Gebruiker JupyterLab ](./jupyterlab/overview.md#supported-libraries).
+Voor een lijst van vooraf geïnstalleerde bibliotheken PySpark, zie de [&#x200B; bijlage sectie van de Gids van de Gebruiker JupyterLab &#x200B;](./jupyterlab/overview.md#supported-libraries).
 
 ## Is het mogelijk om [!DNL Spark] clusterbronnen voor [!DNL JupyterLab] [!DNL Spark] of PySpark kernel te configureren?
 
@@ -129,11 +129,11 @@ U kunt bronnen configureren door het volgende blok toe te voegen aan de eerste c
 }
 ```
 
-Voor meer informatie over [!DNL Spark] configuratie van het clustermiddel, met inbegrip van de volledige lijst van configureerbare eigenschappen, zie de [ Gids van de Gebruiker JupyterLab ](./jupyterlab/overview.md#kernels).
+Voor meer informatie over [!DNL Spark] configuratie van het clustermiddel, met inbegrip van de volledige lijst van configureerbare eigenschappen, zie de [&#x200B; Gids van de Gebruiker JupyterLab &#x200B;](./jupyterlab/overview.md#kernels).
 
 ## Waarom ontvang ik een fout wanneer het proberen bepaalde taken voor grotere datasets uitvoert?
 
-Als u een fout ontvangt om een reden als `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` , heeft dit doorgaans tot gevolg dat het geheugen van het stuurprogramma of de uitvoerder bijna vol is. Zie de JupyterLab Notitieboekjes [ gegevenstoegang ](./jupyterlab/access-notebook-data.md) documentatie voor meer informatie over gegevensgrenzen en hoe te om taken op grote datasets uit te voeren. Deze fout kan meestal worden opgelost door de `mode` van `interactive` in `batch` te wijzigen.
+Als u een fout ontvangt om een reden als `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` , heeft dit doorgaans tot gevolg dat het geheugen van het stuurprogramma of de uitvoerder bijna vol is. Zie de JupyterLab Notitieboekjes [&#x200B; gegevenstoegang &#x200B;](./jupyterlab/access-notebook-data.md) documentatie voor meer informatie over gegevensgrenzen en hoe te om taken op grote datasets uit te voeren. Deze fout kan meestal worden opgelost door de `mode` van `interactive` in `batch` te wijzigen.
 
 Bovendien, terwijl het schrijven van grote datasets Spark/PySpark, caching van uw gegevens (`df.cache()`) alvorens schrijven code uit te voeren kan prestaties zeer verbeteren.
 
@@ -163,4 +163,4 @@ Vanaf 20 november, 2020, gingen de tariefgrenzen voor anoniem en vrij voor authe
 
 Momenteel, zal deze grens slechts uw organisatie beïnvloeden als u probeert om 100 Notitieboekje aan Ontvangers binnen de periode van zes uur te bouwen of als u op Vonk gebaseerde Notities binnen de Wetenschap van Gegevens Workspace gebruikt die vaak omhoog en neer schrapen. Dit is echter onwaarschijnlijk, aangezien de cluster deze twee uur actief blijft voordat ze uitvallen. Hierdoor wordt het aantal vereiste pulls verminderd wanneer de cluster actief is. Als u een van de bovenstaande fouten ontvangt, moet u wachten tot de limiet van [!DNL Docker] opnieuw is ingesteld.
 
-Voor meer informatie over [!DNL Docker Hub] tariefgrenzen, bezoek de [ documentatie DockerHub ](https://www.docker.com/increase-rate-limits). Hieraan wordt gewerkt en in een volgende release wordt een oplossing verwacht.
+Voor meer informatie over [!DNL Docker Hub] tariefgrenzen, bezoek de [&#x200B; documentatie DockerHub &#x200B;](https://www.docker.com/increase-rate-limits). Hieraan wordt gewerkt en in een volgende release wordt een oplossing verwacht.

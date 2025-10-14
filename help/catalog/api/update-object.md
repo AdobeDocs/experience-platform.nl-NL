@@ -67,9 +67,9 @@ Een succesvolle reactie keert een serie terug die identiteitskaart van de bijgew
 
 ## Bijwerken met JSON Patch-notatie {#patch-notation}
 
-De volgende voorbeeldvraag toont aan hoe te om een voorwerp bij te werken gebruikend Reparatie JSON, zoals die in [ wordt geschetst rFC-6902 ](https://tools.ietf.org/html/rfc6902).
+De volgende voorbeeldvraag toont aan hoe te om een voorwerp bij te werken gebruikend Reparatie JSON, zoals die in [&#x200B; wordt geschetst rFC-6902 &#x200B;](https://tools.ietf.org/html/rfc6902).
 
-Voor meer informatie over de syntaxis van het Reparatie JSON, zie de [ API grondbeginselen gids ](../../landing/api-fundamentals.md#json-patch).
+Voor meer informatie over de syntaxis van het Reparatie JSON, zie de [&#x200B; API grondbeginselen gids &#x200B;](../../landing/api-fundamentals.md#json-patch).
 
 **API formaat**
 

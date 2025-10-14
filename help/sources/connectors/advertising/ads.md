@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL Google Ads] is in bèta. Zie het [ Bronoverzicht ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
+>De bron [!DNL Google Ads] is in bèta. Zie het [&#x200B; Bronoverzicht &#x200B;](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
@@ -27,7 +27,7 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 ### Machtigingen configureren voor Experience Platform
 
-U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Google Ads] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
+U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Google Ads] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [&#x200B; gids UI van de toegangscontrole &#x200B;](../../../access-control/ui/overview.md).
 
 ### Vereiste referenties verzamelen
 
@@ -36,8 +36,8 @@ U moet de juiste waarden opgeven voor de volgende referenties om uw [!DNL Google
 | Credentials | Beschrijving |
 | --- | --- |
 | `clientCustomerId` | De klant-id is het accountnummer dat overeenkomt met de [!DNL Google Ads] client-account die u wilt beheren met de [!DNL Google Ads] -API. Deze id volgt de sjabloon van `123-456-7890` . |
-| `loginCustomerId` | De inlogklant-id is het accountnummer dat overeenkomt met uw [!DNL Google Ads] manager-account en wordt gebruikt om rapportgegevens van een specifieke operationele klant op te halen. Voor meer informatie over login klant identiteitskaart, lees de [[!DNL Google Ads]  API documentatie ](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
-| `developerToken` | Met de ontwikkelaarstoken hebt u toegang tot de API van [!DNL Google Ads] . Met dezelfde ontwikkelaarstoken kunt u aanvragen indienen voor al uw [!DNL Google Ads] -accounts. Haal uw ontwikkelaarstoken door [ het programma openen aan uw managerrekening ](https://ads.google.com/home/tools/manager-accounts/) op en navigeert dan aan de [!DNL API Center] pagina. |
+| `loginCustomerId` | De inlogklant-id is het accountnummer dat overeenkomt met uw [!DNL Google Ads] manager-account en wordt gebruikt om rapportgegevens van een specifieke operationele klant op te halen. Voor meer informatie over login klant identiteitskaart, lees de [[!DNL Google Ads]  API documentatie &#x200B;](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
+| `developerToken` | Met de ontwikkelaarstoken hebt u toegang tot de API van [!DNL Google Ads] . Met dezelfde ontwikkelaarstoken kunt u aanvragen indienen voor al uw [!DNL Google Ads] -accounts. Haal uw ontwikkelaarstoken door [&#x200B; het programma openen aan uw managerrekening &#x200B;](https://ads.google.com/home/tools/manager-accounts/) op en navigeert dan aan de [!DNL API Center] pagina. |
 | `refreshToken` | Het token Vernieuwen maakt deel uit van [!DNL OAuth2] -verificatie. Dit teken staat u toe om uw toegangstokens na het verlopen opnieuw te produceren. |
 | `clientId` | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van [!DNL OAuth2] -verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Google] . |
 | `clientSecret` | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van [!DNL OAuth2] -verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Google] . |

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # `data`
 
-Met het `data` -object kunt u een payload naar een Adobe verzenden die niet overeenkomt met een XDM-schema. Het is handig in niet-XDM-scenario&#39;s, zoals het rechtstreeks verzenden van gegevens naar Adobe Analytics, Adobe Target of Adobe Audience Manager. Wanneer de gegevens bij de gegevensstroom aankomen, kunt u [ Afbeelding van de Prep van Gegevens gebruiken ](/help/data-prep/ui/mapping.md) om gebieden XDM aan elk gebied in het `data` voorwerp toe te wijzen.
+Met het `data` -object kunt u een payload naar een Adobe verzenden die niet overeenkomt met een XDM-schema. Het is handig in niet-XDM-scenario&#39;s, zoals het rechtstreeks verzenden van gegevens naar Adobe Analytics, Adobe Target of Adobe Audience Manager. Wanneer de gegevens bij de gegevensstroom aankomen, kunt u [&#x200B; Afbeelding van de Prep van Gegevens gebruiken &#x200B;](/help/data-prep/ui/mapping.md) om gebieden XDM aan elk gebied in het `data` voorwerp toe te wijzen.
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ Met het `data` -object kunt u een payload naar een Adobe verzenden die niet over
 
 Geef een gegevenselement op in het veld **[!UICONTROL Data]** binnen de handelingen van een labelregel.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -48,4 +48,4 @@ alloy("sendEvent", {
 
 ## Het object `data` gebruiken met Adobe Analytics {#analytics}
 
-U kunt het `data` -object met Adobe Analytics gebruiken om gegevens naar een rapportsuite zonder een XDM-schema te verzenden. Variabelen zijn geconfigureerd om dezelfde syntaxis te gebruiken als [!DNL AppMeasurement] variabelen, waardoor het upgradeproces naar de SDK van het web wordt vereenvoudigd. Zie [ objecten van Gegevens veranderlijke afbeelding aan Adobe Analytics ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/data-var-mapping) in de de implementatiegids van Adobe Analytics voor meer informatie.
+U kunt het `data` -object met Adobe Analytics gebruiken om gegevens naar een rapportsuite zonder een XDM-schema te verzenden. Variabelen zijn geconfigureerd om dezelfde syntaxis te gebruiken als [!DNL AppMeasurement] variabelen, waardoor het upgradeproces naar de SDK van het web wordt vereenvoudigd. Zie [&#x200B; objecten van Gegevens veranderlijke afbeelding aan Adobe Analytics &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/data-var-mapping) in de de implementatiegids van Adobe Analytics voor meer informatie.

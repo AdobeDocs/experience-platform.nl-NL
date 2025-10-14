@@ -23,20 +23,20 @@ Real-Time CDP is gebouwd op Experience Platform en gebruikt veel van de belangri
 
 ## Profielverbeteringen voor Real-Time CDP, B2B edition
 
-Naast de profielmogelijkheden die door Real-Time CDP worden ondersteund, kunt u Real-Time CDP en B2B edition gebruiken om te bladeren naar belangrijke informatie die aan een individu is gekoppeld, zoals een account en mogelijkheden. Om meer over profielverhogingen voor Real-Time CDP, B2B edition te leren, begin door het [ profiel te lezen doorbladert gids ](profile-browse.md).
+Naast de profielmogelijkheden die door Real-Time CDP worden ondersteund, kunt u Real-Time CDP en B2B edition gebruiken om te bladeren naar belangrijke informatie die aan een individu is gekoppeld, zoals een account en mogelijkheden. Om meer over profielverhogingen voor Real-Time CDP, B2B edition te leren, begin door het [&#x200B; profiel te lezen doorbladert gids &#x200B;](profile-browse.md).
 
 ## Identiteiten en naamruimten
 
-Aangezien de klantengegevens samenkomen wordt het samengevoegd in één enkel profiel door het gebruik van identiteiten, en de capaciteit om deze identiteiten samen te binden aangezien meer informatie over elke klant wordt gekend. Meer over identiteiten en identiteitsnamespaces leren, zie het [ overzicht van identiteiten ](identities-overview.md).
+Aangezien de klantengegevens samenkomen wordt het samengevoegd in één enkel profiel door het gebruik van identiteiten, en de capaciteit om deze identiteiten samen te binden aangezien meer informatie over elke klant wordt gekend. Meer over identiteiten en identiteitsnamespaces leren, zie het [&#x200B; overzicht van identiteiten &#x200B;](identities-overview.md).
 
 ## Beleid samenvoegen
 
-Wanneer het brengen van klantengegevens samen, zijn het fusiebeleid de regels die Experience Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Voor meer informatie over fusiebeleid, zie het [ overzicht van het fusiebeleid ](merge-policies.md).
+Wanneer het brengen van klantengegevens samen, zijn het fusiebeleid de regels die Experience Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Voor meer informatie over fusiebeleid, zie het [&#x200B; overzicht van het fusiebeleid &#x200B;](merge-policies.md).
 
 ## Profile Viewer
 
-Met Experience Platform kunt u eenvoudig klantprofielen bekijken en naar specifieke profielen zoeken met behulp van verschillende kenmerken. Voor details betreffende hoe te om profielen binnen Experience Platform te bekijken, gelieve te zien doorbladert het [ profiel overzicht ](profile-browse.md).
+Met Experience Platform kunt u eenvoudig klantprofielen bekijken en naar specifieke profielen zoeken met behulp van verschillende kenmerken. Voor details betreffende hoe te om profielen binnen Experience Platform te bekijken, gelieve te zien doorbladert het [&#x200B; profiel overzicht &#x200B;](profile-browse.md).
 
 ## Volgende stappen
 
-Door gegevens uit verschillende bronnen samen te voegen, kunt u een volledig beeld van elk van uw individuele klanten zien, die u toestaan om uw marketing campagnes op een volledig nieuw niveau te brengen. Voor meer gedetailleerde informatie, met inbegrip van beste praktijken en leerprogramma&#39;s voor het werken met de gegevens van het Profiel van de Klant in real time in het gebruikersinterface en via APIs, gelieve te verwijzen naar de [ documentatie van het Profiel van de Klant in real time ](../../profile/home.md).
+Door gegevens uit verschillende bronnen samen te voegen, kunt u een volledig beeld van elk van uw individuele klanten zien, die u toestaan om uw marketing campagnes op een volledig nieuw niveau te brengen. Voor meer gedetailleerde informatie, met inbegrip van beste praktijken en leerprogramma&#39;s voor het werken met de gegevens van het Profiel van de Klant in real time in het gebruikersinterface en via APIs, gelieve te verwijzen naar de [&#x200B; documentatie van het Profiel van de Klant in real time &#x200B;](../../profile/home.md).

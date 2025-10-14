@@ -17,10 +17,10 @@ Lees dit document voor meer informatie over de vertrouwensgerichte mogelijkheden
 
 * De AI Assistant gebruikt momenteel geen persoonsgegevens, zelfs niet voor opleidingsdoeleinden.
 * AI Assistant is niet op de hoogte van consumentengegevens.
-* Al bestaand [ toegangsbeheer ](../access-control/home.md) beleid zal door AI Medewerker worden gerespecteerd.
+* Al bestaand [&#x200B; toegangsbeheer &#x200B;](../access-control/home.md) beleid zal door AI Medewerker worden gerespecteerd.
    * Om het even welk nieuw op attributen-gebaseerd toegangsbeheerbeleid wordt weerspiegeld in AI Medewerker na een maximum van 24 uren*
 * U moet expliciete toestemming worden verleend om met AI Medewerker in wisselwerking te staan.
-   * U kunt toestemmingen voor Experience Platform en Journey Optimizer verschillend plaatsen gebruikend [ Toestemmingen UI ](../access-control/abac/ui/permissions.md) en u kunt de [ Admin Console ](../access-control/ui/browse.md) gebruiken om toestemmingen voor Customer Journey Analytics toe te wijzen.
+   * U kunt toestemmingen voor Experience Platform en Journey Optimizer verschillend plaatsen gebruikend [&#x200B; Toestemmingen UI &#x200B;](../access-control/abac/ui/permissions.md) en u kunt de [&#x200B; Admin Console &#x200B;](../access-control/ui/browse.md) gebruiken om toestemmingen voor Customer Journey Analytics toe te wijzen.
    * De toestemmingen zijn korrelig en uw zandbakbeheerder kan vormen welke van uw gebruikers verschillende vraagcategorieën (product kennisgebaseerde vragen met AI Medewerker of vragen over operationele inzichten) kunnen stellen.
 * AI Assistant is een functie die gereed is voor HIPAA in combinatie met het Adobe Experience Platform Healthcare Shield.
 * U kunt een logboek van uw vorige interactie met AI Medewerker met een beleid van het 30 dagbehoud bekijken.

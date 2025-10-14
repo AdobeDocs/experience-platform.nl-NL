@@ -58,7 +58,7 @@ Het trefwoord `"placeContext"` verzamelt informatie over de locatie van de gebru
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
-| Lokale tijd | Lokale timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [ formaat van ISO 8601 ](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
+| Lokale tijd | Lokale timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [&#x200B; formaat van ISO 8601 &#x200B;](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Verschuiving lokale tijdzone | Het aantal minuten dat de gebruiker wordt verschoven ten opzichte van GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
 | Landcode | De landcode van de eindgebruiker. | `xdm.placeContext.geo.countryCode` | `US` |
 | Provincie | De provinciecode van de eindgebruiker. | `xdm.placeContext.geo.stateProvince` | `CA` |
@@ -74,7 +74,7 @@ Het trefwoord `timestamp` verzamelt informatie over de tijdstempel van de gebeur
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
-| Tijdstempel van de gebeurtenis | UTC timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [ formaat van ISO 8601 ](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+| Tijdstempel van de gebeurtenis | UTC timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [&#x200B; formaat van ISO 8601 &#x200B;](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
 
 {style="table-layout:auto"}
 
@@ -93,11 +93,11 @@ Het trefwoord `implementationDetails` verzamelt informatie over de SDK-versie di
 
 >[!TIP]
 >
->Zie de documentatie over [ de wenken van de gebruikersagent ](../../use-cases/client-hints.md) voor gedetailleerde informatie over hoe te om hen te vormen.
+>Zie de documentatie over [&#x200B; de wenken van de gebruikersagent &#x200B;](../../use-cases/client-hints.md) voor gedetailleerde informatie over hoe te om hen te vormen.
 
 Het trefwoord `"highEntropyUserAgentHints"` verzamelt gedetailleerde informatie over het apparaat van de gebruiker. Deze gegevens worden opgenomen in de HTTP-header van het verzoek dat naar de Adobe wordt verzonden. Nadat de gegevens binnen het netwerk van Edge zijn aangekomen, bevolkt het voorwerp XDM zijn respectieve weg XDM. Als u het respectieve pad XDM in uw `sendEvent` vraag plaatst, neemt het belangrijkheid over de kopbalwaarde van HTTP.
 
-Als u apparatenraadplegingen gebruikt wanneer [ vormend uw datastream ](/help/datastreams/configure.md), kunnen de gegevens worden ontruimd ten gunste van de waarden van de apparatenraadpleging. Bepaalde velden voor client-hint en opzoekvelden van apparaten kunnen niet bestaan in dezelfde hit.
+Als u apparatenraadplegingen gebruikt wanneer [&#x200B; vormend uw datastream &#x200B;](/help/datastreams/configure.md), kunnen de gegevens worden ontruimd ten gunste van de waarden van de apparatenraadpleging. Bepaalde velden voor client-hint en opzoekvelden van apparaten kunnen niet bestaan in dezelfde hit.
 
 | Eigenschap | Beschrijving | HTTP-header | XDM-pad | Voorbeeld |
 | --- | --- | --- | --- | --- |
@@ -113,9 +113,9 @@ Als u apparatenraadplegingen gebruikt wanneer [ vormend uw datastream ](/help/da
 
 ## Verzamel contextinformatie gebruikend de de markeringsuitbreiding van SDK van het Web
 
-Het plaatsen van contextinformatie is een combinatie radioknopen en controledozen wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Elk selectievakje verwijst naar een contexttrefwoord.
+Het plaatsen van contextinformatie is een combinatie radioknopen en controledozen wanneer [&#x200B; het vormen van de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Elk selectievakje verwijst naar een contexttrefwoord.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.

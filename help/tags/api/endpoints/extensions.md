@@ -11,13 +11,13 @@ ht-degree: 1%
 
 # Extensies, eindpunt
 
-In Reactor API, vertegenwoordigt een uitbreiding de geïnstalleerde instantie van een [ uitbreidingspakket ](./extension-packages.md). Een uitbreiding maakt de eigenschappen die door een uitbreidingspakket worden bepaald beschikbaar aan a [ bezit ](./properties.md). Deze eigenschappen worden leveraged wanneer het creëren van [ uitbreidingen ](./data-elements.md) en [ regelcomponenten ](./rule-components.md).
+In Reactor API, vertegenwoordigt een uitbreiding de geïnstalleerde instantie van een [&#x200B; uitbreidingspakket &#x200B;](./extension-packages.md). Een uitbreiding maakt de eigenschappen die door een uitbreidingspakket worden bepaald beschikbaar aan a [&#x200B; bezit &#x200B;](./properties.md). Deze eigenschappen worden leveraged wanneer het creëren van [&#x200B; uitbreidingen &#x200B;](./data-elements.md) en [&#x200B; regelcomponenten &#x200B;](./rule-components.md).
 
 Een extensie behoort tot exact één eigenschap. Een eigenschap kan vele extensies hebben, maar niet meer dan één geïnstalleerde instantie van een opgegeven extensiepakket.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met extensies ophalen {#list}
 
@@ -37,7 +37,7 @@ GET properties/{PROPERTY_ID}/extensions
 
 >[!NOTE]
 >
->Met behulp van queryparameters kunnen weergegeven extensies worden gefilterd op basis van de volgende kenmerken:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Met behulp van queryparameters kunnen weergegeven extensies worden gefilterd op basis van de volgende kenmerken:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -280,7 +280,7 @@ Een geslaagde reactie retourneert de details van de extensie.
 
 ## Een extensie maken of bijwerken {#create}
 
-De uitbreidingen worden gecreeerd door een [ uitbreidingspakket ](./extension-packages.md) van verwijzingen te voorzien en de geïnstalleerde uitbreiding toe te voegen aan een bezit. Wanneer de installatietaak is voltooid, wordt een antwoord geretourneerd dat aangeeft of de extensie is geïnstalleerd.
+De uitbreidingen worden gecreeerd door een [&#x200B; uitbreidingspakket &#x200B;](./extension-packages.md) van verwijzingen te voorzien en de geïnstalleerde uitbreiding toe te voegen aan een bezit. Wanneer de installatietaak is voltooid, wordt een antwoord geretourneerd dat aangeeft of de extensie is geïnstalleerd.
 
 **API formaat**
 
@@ -326,7 +326,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `relationships.extension_package` | **(Vereist)** Een voorwerp dat verwijzingen identiteitskaart van het uitbreidingspakket dat wordt geïnstalleerd. |
-| `attributes.delegate_descriptor_id` | Als uw extensie aangepaste instellingen nodig heeft, is ook een id voor de gedelegeerde descriptor vereist. Zie de gids op [ de beschrijver IDs van de afgevaardigde ](../guides/delegate-descriptor-ids.md) voor meer informatie. |
+| `attributes.delegate_descriptor_id` | Als uw extensie aangepaste instellingen nodig heeft, is ook een id voor de gedelegeerde descriptor vereist. Zie de gids op [&#x200B; de beschrijver IDs van de afgevaardigde &#x200B;](../guides/delegate-descriptor-ids.md) voor meer informatie. |
 | `attributes.enabled` | Een Booleaanse waarde die aangeeft of de extensie is ingeschakeld. |
 | `attributes.settings` | A settings JSON object represented as a string. |
 
@@ -442,7 +442,7 @@ PATCH /extensions/{EXTENSION_ID}
 
 **Verzoek**
 
-Zoals met [ het creëren van een uitbreiding ](#create), moet een lokale versie van het herziene pakket via vormgegevens worden geupload.
+Zoals met [&#x200B; het creëren van een uitbreiding &#x200B;](#create), moet een lokale versie van het herziene pakket via vormgegevens worden geupload.
 
 ```shell
 curl -X PATCH \
@@ -596,13 +596,13 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder hoofdteks
 
 ## Notities voor een extensie beheren {#notes}
 
-Extensies zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor uitbreidingen en andere compatibele middelen beheren.
+Extensies zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [&#x200B; gids van het Notitieeindpunt &#x200B;](./notes.md) voor meer informatie over hoe te nota&#39;s voor uitbreidingen en andere compatibele middelen beheren.
 
 ## Gerelateerde bronnen ophalen voor een extensie {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een uitbreiding terug te winnen. Wanneer [ omhoog kijkt een uitbreiding ](#lookup), zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een uitbreiding terug te winnen. Wanneer [&#x200B; omhoog kijkt een uitbreiding &#x200B;](#lookup), zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante bibliotheken weergeven voor een extensie {#libraries}
 

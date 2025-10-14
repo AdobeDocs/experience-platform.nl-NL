@@ -13,7 +13,7 @@ ht-degree: 1%
 
 [!UICONTROL Ad break] is een standaard gegevenstype van het Model van de Gegevens van de Ervaring (XDM) dat beschrijft hoe een getimed advertentie in een getimed stuk media wordt opgenomen.
 
-![ het typestructuur van Gegevens ](../images/data-types/ad-break.png)
+![&#x200B; het typestructuur van Gegevens &#x200B;](../images/data-types/ad-break.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -25,5 +25,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/advertising-break.schema.json)

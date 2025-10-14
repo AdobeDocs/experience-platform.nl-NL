@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL Geo Circle] gegevenstype
 
-[!UICONTROL Geo Circle] is een standaard XDM gegevenstype dat cirkelvormig geografisch gebied beschrijft, gegeven een bepaalde straal gecentreerd op een specifieke reeks coördinaten. Dit gegevenstype is gebaseerd op de openbare die specificatie op [ wordt gedocumenteerd schema.org ](https://schema.org/GeoCircle).
+[!UICONTROL Geo Circle] is een standaard XDM gegevenstype dat cirkelvormig geografisch gebied beschrijft, gegeven een bepaalde straal gecentreerd op een specifieke reeks coördinaten. Dit gegevenstype is gebaseerd op de openbare die specificatie op [&#x200B; wordt gedocumenteerd schema.org &#x200B;](https://schema.org/GeoCircle).
 
 ![](../images/data-types/geo-circle.png){width=400}
 
@@ -21,5 +21,5 @@ ht-degree: 0%
 | --- | --- | --- |
 | `_schema.coordinates` | [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Beschrijft de geografische coördinaten van het centrum van de cirkel. |
 | `_schema.description` | String | Een beschrijving van wat de cirkel bevat. |
-| `_schema.radius` | Dubbel | De lengte van de straal van de cirkel. Deze waarde is aan het [ WGS84 ](https://gisgeography.com/wgs84-world-geodetic-system/) gegeven en in meters gemeten. |
+| `_schema.radius` | Dubbel | De lengte van de straal van de cirkel. Deze waarde is aan het [&#x200B; WGS84 &#x200B;](https://gisgeography.com/wgs84-world-geodetic-system/) gegeven en in meters gemeten. |
 | `_id` | String | Een unieke, door het systeem gegenereerde id voor de cirkel. |

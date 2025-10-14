@@ -15,10 +15,10 @@ U kunt gecodeerde gegevensbestanden via batchbronnen voor cloudopslag opnemen in
 
 De gecodeerde gegevensinvoer verloopt als volgt:
 
-1. [ creeer een encryptiesleutel gebruikend Experience Platform APIs ](#create-encryption-key-pair). Het sleutelpaar bestaat uit een persoonlijke sleutel en een openbare sleutel. Als u een id hebt gemaakt, kunt u de openbare sleutel samen met de bijbehorende id voor de openbare sleutel en de Vervaltijd kopiëren of downloaden. Tijdens dit proces wordt de persoonlijke sleutel door Experience Platform in een veilige kluis opgeslagen. **NOTA:** de openbare sleutel in de reactie is Base64-Gecodeerd en moet voorafgaand aan het gebruiken worden gedecodeerd.
+1. [&#x200B; creeer een encryptiesleutel gebruikend Experience Platform APIs &#x200B;](#create-encryption-key-pair). Het sleutelpaar bestaat uit een persoonlijke sleutel en een openbare sleutel. Als u een id hebt gemaakt, kunt u de openbare sleutel samen met de bijbehorende id voor de openbare sleutel en de Vervaltijd kopiëren of downloaden. Tijdens dit proces wordt de persoonlijke sleutel door Experience Platform in een veilige kluis opgeslagen. **NOTA:** de openbare sleutel in de reactie is Base64-Gecodeerd en moet voorafgaand aan het gebruiken worden gedecodeerd.
 2. Gebruik de openbare sleutel om het gegevensbestand te coderen dat u wilt opnemen.
 3. Plaats het gecodeerde bestand in de cloudopslag.
-4. Zodra het gecodeerde dossier klaar is, [ creeer een bronverbinding en een dataflow voor uw bron van de wolkenopslag ](#create-a-dataflow-for-encrypted-data). Tijdens de stap voor het maken van flow moet u een parameter `encryption` opgeven en uw openbare-sleutelid opnemen.
+4. Zodra het gecodeerde dossier klaar is, [&#x200B; creeer een bronverbinding en een dataflow voor uw bron van de wolkenopslag &#x200B;](#create-a-dataflow-for-encrypted-data). Tijdens de stap voor het maken van flow moet u een parameter `encryption` opgeven en uw openbare-sleutelid opnemen.
 5. Experience Platform haalt de persoonlijke sleutel uit de beveiligde kluis op om de gegevens te decoderen op het moment van inname.
 
 >[!IMPORTANT]
@@ -31,13 +31,13 @@ Dit document bevat stappen voor het genereren van een sleutelpaar voor codering 
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-   * [ de opslagbronnen van de Wolk ](../api/collect/cloud-storage.md): Creeer een gegevensstroom om partijgegevens van uw bron van de wolkenopslag aan Experience Platform te brengen.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+   * [&#x200B; de opslagbronnen van de Wolk &#x200B;](../api/collect/cloud-storage.md): Creeer een gegevensstroom om partijgegevens van uw bron van de wolkenopslag aan Experience Platform te brengen.
+* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
 
 ### Ondersteunde bestandsextensies voor gecodeerde bestanden {#supported-file-extensions-for-encrypted-files}
 
@@ -337,7 +337,7 @@ Eerst moet u een basisverbinding maken om uw bron te verifiëren met Experience 
 * [Oracle Object Storage](../api/create/cloud-storage/oracle-object-storage.md)
 * [SFTP](../api/create/cloud-storage/sftp.md)
 
-Na het creëren van een basisverbinding, moet u dan de stappen volgen die in het leerprogramma voor [ worden geschetst creërend een bronverbinding voor een bron van de wolkenopslag ](../api/collect/cloud-storage.md) om een bronverbinding, een doelverbinding, en een afbeelding tot stand te brengen.
+Na het creëren van een basisverbinding, moet u dan de stappen volgen die in het leerprogramma voor [&#x200B; worden geschetst creërend een bronverbinding voor een bron van de wolkenopslag &#x200B;](../api/collect/cloud-storage.md) om een bronverbinding, een doelverbinding, en een afbeelding tot stand te brengen.
 
 ## Een gegevensstroom maken voor gecodeerde gegevens {#create-a-dataflow-for-encrypted-data}
 
@@ -345,10 +345,10 @@ Na het creëren van een basisverbinding, moet u dan de stappen volgen die in het
 >
 >U moet over het volgende beschikken om een gegevensstroom voor gecodeerde gegevensinvoer te kunnen maken:
 >
->* [ Openbare zeer belangrijke identiteitskaart ](#create-encryption-key-pair)
->* [ de verbindingsidentiteitskaart van Source ](../api/collect/cloud-storage.md#source)
->* [ identiteitskaart van de Verbinding van het Doel ](../api/collect/cloud-storage.md#target)
->* [ Uitwisselingsidentiteitskaart ](../api/collect/cloud-storage.md#mapping)
+>* [&#x200B; Openbare zeer belangrijke identiteitskaart &#x200B;](#create-encryption-key-pair)
+>* [&#x200B; de verbindingsidentiteitskaart van Source &#x200B;](../api/collect/cloud-storage.md#source)
+>* [&#x200B; identiteitskaart van de Verbinding van het Doel &#x200B;](../api/collect/cloud-storage.md#target)
+>* [&#x200B; Uitwisselingsidentiteitskaart &#x200B;](../api/collect/cloud-storage.md#mapping)
 
 Als u een gegevensstroom wilt maken, dient u een POST-aanvraag in bij het eindpunt `/flows` van de [!DNL Flow Service] API. Als u gecodeerde gegevens wilt invoeren, moet u een `encryption` -sectie toevoegen aan de eigenschap `transformations` en de `publicKeyId` opnemen die in een eerdere stap is gemaakt.
 
@@ -624,4 +624,4 @@ In dit scenario, zal de stroomlooppas ontbreken en een foutenmelding terugkeren 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een sleutelpaar voor codering van uw gegevens voor cloudopslag gemaakt en een gegevensstroom voor het opnemen van gecodeerde gegevens via de [!DNL Flow Service API] . Voor statusupdates op de volledigheid van uw gegevensstroom, fouten, en metriek, lees de gids op [ controle uw gegevensstroom gebruikend  [!DNL Flow Service]  API ](./monitor.md).
+Aan de hand van deze zelfstudie hebt u een sleutelpaar voor codering van uw gegevens voor cloudopslag gemaakt en een gegevensstroom voor het opnemen van gecodeerde gegevens via de [!DNL Flow Service API] . Voor statusupdates op de volledigheid van uw gegevensstroom, fouten, en metriek, lees de gids op [&#x200B; controle uw gegevensstroom gebruikend  [!DNL Flow Service]  API &#x200B;](./monitor.md).

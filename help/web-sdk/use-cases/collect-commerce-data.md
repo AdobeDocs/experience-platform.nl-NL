@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Als uw organisatie producten of diensten verkoopt, kunt u deze pagina als gids voor gebruiken hoe te om die producten en de diensten te volgen.
 
-Deze pagina gebruikt de XDM [ gebiedsgroep van het Schema van Commerce 0&rbrace; &lbrace;.](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md)
+Deze pagina gebruikt de XDM [&#x200B; gebiedsgroep van het Schema van Commerce 0&rbrace; &lbrace;.](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md)
 
 Deze veldgroep bestaat uit twee hoofddelen:
 
@@ -30,7 +30,7 @@ In deze sectie worden de velden beschreven die beschikbaar zijn in het `commerce
 
 >[!TIP]
 >
->Een maat heeft twee velden: `id` en `value` . Meestal gebruikt u alleen het veld `value` (bijvoorbeeld `'value':1` ). In het veld `id` kunt u een unieke id voor bijhouden instellen wanneer de maatregel is verzonden. Zie de documentatie XDM voor [ Maatregel ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) voor meer informatie.
+>Een maat heeft twee velden: `id` en `value` . Meestal gebruikt u alleen het veld `value` (bijvoorbeeld `'value':1` ). In het veld `id` kunt u een unieke id voor bijhouden instellen wanneer de maatregel is verzonden. Zie de documentatie XDM voor [&#x200B; Maatregel &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) voor meer informatie.
 
 | Meetlat | Aanbeveling | Beschrijving |
 |---|---|---|
@@ -77,11 +77,11 @@ In deze sectie worden alle velden beschreven die door het object `order` worden 
 
 | Veld | Optie | Aanbeveling | Beschrijving |
 |---|---|---|---|
-| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmcurrencycode) |  |  | De [ ISO 4217 ](https://en.wikipedia.org/wiki/ISO_4217) munt voor het ordertotaal. |
-| [`payments[]`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpayments) |  |  | De lijst met betalingen op een bestelling. A [ paymentItem ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md) omvat het volgende. |
-|  | [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmcurrencycode) | Optioneel | De [ ISO 4217 ](https://en.wikipedia.org/wiki/ISO_4217) munt voor deze betalingsmethode. |
+| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmcurrencycode) |  |  | De [&#x200B; ISO 4217 &#x200B;](https://en.wikipedia.org/wiki/ISO_4217) munt voor het ordertotaal. |
+| [`payments[]`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpayments) |  |  | De lijst met betalingen op een bestelling. A [&#x200B; paymentItem &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md) omvat het volgende. |
+|  | [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmcurrencycode) | Optioneel | De [&#x200B; ISO 4217 &#x200B;](https://en.wikipedia.org/wiki/ISO_4217) munt voor deze betalingsmethode. |
 |  | [`paymentAmount`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymentamount) | Zeer aanbevolen | De waarde van de betaling in de opgegeven valutacode. |
-|  | [`paymentType`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype) | Zeer aanbevolen | Het type betaling (bijvoorbeeld `credit_card` , `gift_card` , `paypal` ). Zie de lijst van [ gekende waarden ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype-known-values) voor details. |
+|  | [`paymentType`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype) | Zeer aanbevolen | Het type betaling (bijvoorbeeld `credit_card` , `gift_card` , `paypal` ). Zie de lijst van [&#x200B; gekende waarden &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmpaymenttype-known-values) voor details. |
 |  | [`transactionID`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md#xdmtransactionid) | Optioneel | Een unieke id voor deze betalingstransactie. |
 | [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpricetotal) |  | Zeer aanbevolen | Het totaal voor deze bestelling nadat alle kortingen en belastingen zijn toegepast. |
 | [`purchaseID`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpurchaseid) |  | Zeer aanbevolen | De unieke id die door de verkoper is toegewezen voor deze aankoop. |
@@ -135,11 +135,11 @@ alloy("sendEvent",{
 
 ## Het object productlijst {#product-list-object}
 
-De productlijst geeft aan welke producten gerelateerd zijn aan de corresponderende actie. Het is een lijst van [ productListItems ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md). Elk product heeft verschillende optionele velden.
+De productlijst geeft aan welke producten gerelateerd zijn aan de corresponderende actie. Het is een lijst van [&#x200B; productListItems &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md). Elk product heeft verschillende optionele velden.
 
 | Veld | Aanbeveling | Beschrijving |
 |---|---|---|
-| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode) | Optioneel | De [ ISO 4217 ](https://en.wikipedia.org/wiki/ISO_4217) munt voor het product. Dit veld is doorgaans alleen van toepassing wanneer de productlijst meerdere producten bevat met verschillende valutacodes. |
+| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode) | Optioneel | De [&#x200B; ISO 4217 &#x200B;](https://en.wikipedia.org/wiki/ISO_4217) munt voor het product. Dit veld is doorgaans alleen van toepassing wanneer de productlijst meerdere producten bevat met verschillende valutacodes. |
 | [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal) | Zeer aanbevolen | Stel dit veld alleen in, indien van toepassing. Het is bijvoorbeeld mogelijk niet in te stellen op de gebeurtenis `productView` omdat verschillende variaties van het product verschillende prijzen kunnen hebben, maar op een gebeurtenis `productListAdds` . |
 | [`product`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproduct) | Zeer aanbevolen | De XDM-id voor het product. |
 | [`productAddMethod`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproductaddmethod) | Zeer aanbevolen | De methode die door de bezoeker is gebruikt om een product-item aan de lijst toe te voegen. Stel dit in met `productListAdds` maten en gebruik het alleen wanneer een product aan de lijst wordt toegevoegd. Voorbeelden zijn `add to cart button` , `quick add` en `upsell` . |

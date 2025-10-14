@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Toegangslabels toepassen om gebruikerstoegang tot brongegevens in UI te beheren
 
-U kunt de functies gebruiken die door [ op attributen-gebaseerde toegangscontrole ](../../../access-control/abac/overview.md) in Real-Time CDP worden verstrekt om etiketten op uw brongegevens toe te passen. Met deze eigenschap, kunt u ervoor zorgen dat slechts een ondergroep van gebruikers in uw organisatie toegang tot specifieke brongegevens krijgt.
+U kunt de functies gebruiken die door [&#x200B; op attributen-gebaseerde toegangscontrole &#x200B;](../../../access-control/abac/overview.md) in Real-Time CDP worden verstrekt om etiketten op uw brongegevens toe te passen. Met deze eigenschap, kunt u ervoor zorgen dat slechts een ondergroep van gebruikers in uw organisatie toegang tot specifieke brongegevens krijgt.
 
 Wanneer u een toegangslabel aan een bepaalde gegevensstroom toevoegt, slechts kunnen de gebruikers die toegang tot een rol hebben die dat etiket wordt toegewezen dat dataflow bekijken en uitgeven. Als een gegevensstroom van bronnen niet met om het even welke etiketten wordt gemerkt, is het zichtbaar aan alle gebruikers die tot uw organisatie behoren. Als u bijvoorbeeld het label C12 toepast op een gegevensstroom, kunnen gebruikers die zijn toegewezen aan een rol die niet het label C12 heeft, de gegevensstroom niet weergeven en bewerken met het label C12.
 
@@ -38,11 +38,11 @@ Als u toegangslabels wilt toepassen op de gegevensstroom van uw bronnen, navigee
 
 Selecteer vervolgens de ellips (`...`) in de [!UICONTROL Name] -kolom en selecteer **[!UICONTROL Apply access labels]** om labels voor de geselecteerde gegevensstroom toe te voegen en te beheren.
 
-![ dataflows pagina in bronnen met de &quot;Apply toegangsetiketten&quot;geselecteerde optie.](../../images/tutorials/labels/apply_access_labels.png)
+![&#x200B; dataflows pagina in bronnen met de &quot;Apply toegangsetiketten&quot;geselecteerde optie.](../../images/tutorials/labels/apply_access_labels.png)
 
 Het venster [!UICONTROL Apply access and data governance labels] wordt weergegeven. Gebruik dit venster om de etiketten te selecteren die u op uw gegevensstroom wilt toepassen. U kunt labels ook filteren op het type. Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![ het venster van de etiketten van het gegevensbeheer met het C2 geselecteerde etiket.](../../images/tutorials/labels/labels_window.png)
+![&#x200B; het venster van de etiketten van het gegevensbeheer met het C2 geselecteerde etiket.](../../images/tutorials/labels/labels_window.png)
 
 Zodra u met succes toegangslabels aan uw gegevensstroom hebt gevormd, om het even welke gebruiker die geen toegang tot dat etiket heeft kan niet meer dataflow terugwinnen. U kunt ook de kolom [!UICONTROL Access Labels] gebruiken om de labels weer te geven die op een bepaalde gegevensstroom zijn toegepast.
 

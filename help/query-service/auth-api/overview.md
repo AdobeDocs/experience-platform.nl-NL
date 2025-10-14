@@ -25,7 +25,7 @@ Met deze API kunt u IP-beperkingen configureren, afdwingen en controleren voor t
 De volgende eigenschappen laten u toe om op IP-Gebaseerde toegangsbeperkingen te bepalen, toegangspogingen te controleren, en de montages van de netwerkveiligheid voor de Dienst van de Vraag aan te passen:
 
 - **bepaalt op netwerk-gebaseerde controles van de gegevenstoegang**: Specificeer toegestane IP waaiers voor de toegang van de Dienst van de Vraag. Deze beperking is specifiek op SQL gegevensbestandverbindingen, met inbegrip van die gemaakt door de hulpmiddelen van Business Intelligence (BI), gegevensbestandcliënten, of programmeringsinterfaces zoals JDBC.
-- **laat uitvoerige controle en alarm** toe: Alle toegangspogingen, met inbegrip van ontkende verbindingen, worden geregistreerd en verzonden naar de [ Logboeken van de Controle van Adobe Experience Platform ](../../landing/governance-privacy-security/audit-logs/overview.md) voor het volgen in real time. Gebruik dit vermogen om toegangspatronen te controleren en potentiële veiligheidsbreuken te ontdekken.
+- **laat uitvoerige controle en alarm** toe: Alle toegangspogingen, met inbegrip van ontkende verbindingen, worden geregistreerd en verzonden naar de [&#x200B; Logboeken van de Controle van Adobe Experience Platform &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) voor het volgen in real time. Gebruik dit vermogen om toegangspatronen te controleren en potentiële veiligheidsbreuken te ontdekken.
 - **vorm flexibele IP beperkingen**: Specificeer toegestane IPs in zowel individuele IP als het blokformaten CIDR. Deze instellingen gelden per sandbox, zodat u de netwerkbeperkingen kunt aanpassen aan uw specifieke beveiligingsbehoeften.
 
 ## Functies voor controle en toezicht
@@ -35,12 +35,12 @@ Om veilige gegevenstoegang te steunen, registreert de Dienst van de Vraag alle c
 - **Realtime Controle**: De op IP-Gebaseerde toegangspatronen van het spoor om naleving te verzekeren.
 - **het Alarm op Onbevoegde Toegang**: Identificeer en antwoordt aan toegangspogingen van onbevoegde IPs.
 
-Verwijs naar het [ overzicht van de Logboeken van de Controle ](../../landing/governance-privacy-security/audit-logs/overview.md) voor meer details.
+Verwijs naar het [&#x200B; overzicht van de Logboeken van de Controle &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md) voor meer details.
 
 ## Volgende stappen
 
-Krijg begonnen met de Vergunning API van Distiller van Gegevens door de [ Begonnen gids van het Worden ](./getting-started.md) voor essentiële opstellingsstappen, met inbegrip van vereiste kopballen en API vraagovereenkomsten te herzien. Dan, onderzoek de eindpunt-specifieke gidsen op [ IP Toegang ](./ip-access.md) en [ IP Bevestiging ](./validate.md) voor het vormen en het beheren van veilige gegevenstoegang.
+Krijg begonnen met de Vergunning API van Distiller van Gegevens door de [&#x200B; Begonnen gids van het Worden &#x200B;](./getting-started.md) voor essentiële opstellingsstappen, met inbegrip van vereiste kopballen en API vraagovereenkomsten te herzien. Dan, onderzoek de eindpunt-specifieke gidsen op [&#x200B; IP Toegang &#x200B;](./ip-access.md) en [&#x200B; IP Bevestiging &#x200B;](./validate.md) voor het vormen en het beheren van veilige gegevenstoegang.
 
-Verwijs naar de [ de verwijzingsdocumentatie van OpenAPI van de Vergunning van Distiller van Gegevens ](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) om een gestandaardiseerd, machine-leesbaar formaat voor gemakkelijkere integratie, het testen, en de exploratie te bekijken.
+Verwijs naar de [&#x200B; de verwijzingsdocumentatie van OpenAPI van de Vergunning van Distiller van Gegevens &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) om een gestandaardiseerd, machine-leesbaar formaat voor gemakkelijkere integratie, het testen, en de exploratie te bekijken.
 
-Voor informatie over de diverse reactieparameters voor elke teruggekeerde dataset, verwijs naar de [ API ontwikkelaarsdocumentatie van Datasets ](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
+Voor informatie over de diverse reactieparameters voor elke teruggekeerde dataset, verwijs naar de [&#x200B; API ontwikkelaarsdocumentatie van Datasets &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).

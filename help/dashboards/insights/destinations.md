@@ -15,9 +15,9 @@ De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adob
 
 Begrijp uw bestemmingsinzicht door tot SQL toegang te hebben die hen macht, dan uw eigen inzichten produceert om de activering van gegevens van Adobe Experience Platform aan uw bestemmingsplatforms verder te onderzoeken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
-Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
+Zie de [&#x200B; documentatie van de Mening SQL &#x200B;](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Doelen ](../guides/destinations.md) of een douane [ user-defined dashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
+De volgende inzichten zijn allen beschikbaar voor u als deel van het [&#x200B; dashboard van Doelen &#x200B;](../guides/destinations.md) of een douane [&#x200B; user-defined dashboard &#x200B;](../standard-dashboards.md) te gebruiken. Zie het [&#x200B; aanpassingsoverzicht &#x200B;](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [&#x200B; creeer en geef nieuwe widgets &#x200B;](../customize/custom-widgets.md) in de widgetbibliotheek en [&#x200B; user-defined dashboard &#x200B;](../standard-dashboards.md#create-widget) uit.
 
 ## Geactiveerd publiek {#activated-audiences}
 
@@ -48,7 +48,7 @@ WHERE
 
 +++
 
-Zie de [ Geactiveerde documentatie van publiek widget ](../guides/destinations.md#activated-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; Geactiveerde documentatie van publiek widget &#x200B;](../guides/destinations.md#activated-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Geactiveerd publiek voor alle bestemmingen {#activated-audiences-across-all-destinations}
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-Zie het [ Geactiveerde publiek over alle documentatie van bestemmingen widget ](../guides/destinations.md#activated-audiences-across-all-destinations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie het [&#x200B; Geactiveerde publiek over alle documentatie van bestemmingen widget &#x200B;](../guides/destinations.md#activated-audiences-across-all-destinations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Actieve bestemmingen door bestemmingsplatform {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Zie de [ Actieve bestemmingen door de documentatie van de widget van het bestemmingsplatform ](../guides/destinations.md#active-destinations-by-destination-platform) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; Actieve bestemmingen door de documentatie van de widget van het bestemmingsplatform &#x200B;](../guides/destinations.md#active-destinations-by-destination-platform) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Ontwikkeling van de omvang van het publiek {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-Zie de [ documentatie van de de groottewidget van de Grootte van het Publiek ](../guides/destinations.md#audience-size-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; documentatie van de de groottewidget van de Grootte van het Publiek &#x200B;](../guides/destinations.md#audience-size-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Algemeen publiek {#common-audiences}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-Zie de [ Gemeenschappelijke documentatie van publiek widget ](../guides/destinations.md#common-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; Gemeenschappelijke documentatie van publiek widget &#x200B;](../guides/destinations.md#common-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Status van bestemming {#destination-status}
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Zie de [ documentatie van de statuswidget van de Bestemming ](../guides/destinations.md#destination-status) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; documentatie van de statuswidget van de Bestemming &#x200B;](../guides/destinations.md#destination-status) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Aantal doelen {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Zie de [ documentatie van de de tellingswidget van Doelen ](../guides/destinations.md#destinations-count) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; documentatie van de de tellingswidget van Doelen &#x200B;](../guides/destinations.md#destinations-count) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Gewijzigde volksgezondheid {#mapped-audience-health}
 
@@ -325,7 +325,7 @@ SELECT destination_name,
 
 +++
 
-Zie de [ In kaart gebrachte documentatie van de publieksgezondheid widget ](../guides/destinations.md#mapped-audience-health) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; In kaart gebrachte documentatie van de publieksgezondheid widget &#x200B;](../guides/destinations.md#mapped-audience-health) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Toegewezen publiek {#mapped-audiences}
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Zie de [ In kaart gebrachte documentatie van publiek widget ](../guides/destinations.md#mapped-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; In kaart gebrachte documentatie van publiek widget &#x200B;](../guides/destinations.md#mapped-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 <!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
@@ -393,7 +393,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Zie de [ Meest gebruikte documentatie van bestemmingen widget ](../guides/destinations.md#most-used-destinations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; Meest gebruikte documentatie van bestemmingen widget &#x200B;](../guides/destinations.md#most-used-destinations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Onlangs geactiveerd publiek {#recently-activated-audiences}
 
@@ -424,7 +424,7 @@ LIMIT
 
 +++
 
-Zie de [ onlangs geactiveerde documentatie van publiek widget ](../guides/destinations.md#recently-activated-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; onlangs geactiveerde documentatie van publiek widget &#x200B;](../guides/destinations.md#recently-activated-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Onlangs geactiveerd publiek naar bestemming {#recently-activated-audiences-by-destination}
 
@@ -455,7 +455,7 @@ SELECT c.destination_name,
 
 +++
 
-Zie het [ onlangs geactiveerde publiek door de documentatie van bestemmingswidget ](../guides/destinations.md#recently-activated-audiences-by-destination) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie het [&#x200B; onlangs geactiveerde publiek door de documentatie van bestemmingswidget &#x200B;](../guides/destinations.md#recently-activated-audiences-by-destination) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 ## Onlangs gemaakte doelen {#recently-created-destinations}
 
@@ -484,7 +484,7 @@ LIMIT
 
 +++
 
-Zie de [ onlangs gecreeerde documentatie van de bestemmingswidget ](../guides/destinations.md#recently-created-destinations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [&#x200B; onlangs gecreeerde documentatie van de bestemmingswidget &#x200B;](../guides/destinations.md#recently-created-destinations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
 
 <!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
 
@@ -511,6 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt deze SQL-query&#39;s nu bewerken en doorlopen om uw eigen inzichten te genereren.
 
-Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
+Zie de [&#x200B; documentatie van de Mening SQL &#x200B;](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-U kunt SQL ook lezen en begrijpen die inzichten voor [ Profielen ](./profiles.md), [ Profielen van de Rekening ](./account-profiles.md) en [ Publiek ](./audiences.md) dashboards produceert.
+U kunt SQL ook lezen en begrijpen die inzichten voor [&#x200B; Profielen &#x200B;](./profiles.md), [&#x200B; Profielen van de Rekening &#x200B;](./account-profiles.md) en [&#x200B; Publiek &#x200B;](./audiences.md) dashboards produceert.

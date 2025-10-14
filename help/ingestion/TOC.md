@@ -46,6 +46,6 @@ ht-degree: 20%
    - [Validatie van gestreamde invoer](quality/streaming-validation.md)
 - [Guardrails voor gegevensinvoer](guardrails.md)
 - [Source-connectors](source-connectors.md)
-- [ Verwijzing van de Opname API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
-- [ Streaming Ingestie API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
+- [&#x200B; Verwijzing van de Opname API van de Partij &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [&#x200B; Streaming Ingestie API verwijzing &#x200B;](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)

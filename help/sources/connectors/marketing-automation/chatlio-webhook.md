@@ -14,15 +14,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL Chatlio] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Chatlio] is in bèta. Gelieve te lezen het [&#x200B; overzicht van bronnen &#x200B;](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens in streaming toepassingen. Tot de ondersteuning voor streamingproviders behoren [!DNL Chatlio] .
 
-[[!DNL Chatlio] ](https://chatlio.com/) is een live chat-app die volledig is geïntegreerd met [!DNL Slack] en die meerdere ondersteuningsagents mogelijk maakt om een individuele sitebezoeker tegelijkertijd te helpen. [!DNL Chatlio] gebruikt [!DNL Chatio Zapier App] om verbinding te maken [!DNL Chatlio] met meer dan 2000 verschillende apps en services.
+[[!DNL Chatlio] &#x200B;](https://chatlio.com/) is een live chat-app die volledig is geïntegreerd met [!DNL Slack] en die meerdere ondersteuningsagents mogelijk maakt om een individuele sitebezoeker tegelijkertijd te helpen. [!DNL Chatlio] gebruikt [!DNL Chatio Zapier App] om verbinding te maken [!DNL Chatlio] met meer dan 2000 verschillende apps en services.
 
-De [!DNL Chatlio] bron staat u toe om gesteunde schema&#39;s van de webhaakgebeurtenis en hun bijbehorende gebeurtenisgegevens van [!DNL Chatlio.com] in te voeren gebruikend [[!DNL Chatlio]  Webhooks ](https://chatlio.com/docs/webhooks/).
+De [!DNL Chatlio] bron staat u toe om gesteunde schema&#39;s van de webhaakgebeurtenis en hun bijbehorende gebeurtenisgegevens van [!DNL Chatlio.com] in te voeren gebruikend [[!DNL Chatlio]  Webhooks &#x200B;](https://chatlio.com/docs/webhooks/).
 
 De ondersteunde webhaken zijn:
 
@@ -36,14 +36,14 @@ De ondersteunde webhaken zijn:
 
 Voordat u een [!DNL Chatlio] -bronverbinding kunt maken, moet u eerst controleren of:
 
-* Een [!DNL Chatlio] account. Als u niet één hebt reeds bezoek de [[!DNL Chatlio]  aanmeldingspagina ](https://chatlio.com/app/#/signup) om uw rekening te registreren en tot stand te brengen.
-* Nadat u met succes een rekening hebt geregistreerd, volg de [[!DNL Chatlio]  opstellingsdocumentatie ](https://chatlio.com/docs/setup/) om uw rekeningsopstelling te voltooien.
+* Een [!DNL Chatlio] account. Als u niet één hebt reeds bezoek de [[!DNL Chatlio]  aanmeldingspagina &#x200B;](https://chatlio.com/app/#/signup) om uw rekening te registreren en tot stand te brengen.
+* Nadat u met succes een rekening hebt geregistreerd, volg de [[!DNL Chatlio]  opstellingsdocumentatie &#x200B;](https://chatlio.com/docs/setup/) om uw rekeningsopstelling te voltooien.
 
 ### WebHaak instellen [!DNL Chatlio] {#set-up-webhook}
 
 Nadat u de gegevensstroom hebt gemaakt, moet u een webhaak instellen om Experience Platform op de hoogte te brengen van [!DNL Chatlio] -gebeurtenissen. Webhooks kunnen u onmiddellijk op de hoogte stellen wanneer de klantkenmerken veranderen of wanneer mensen uw berichten openen en deze gegevens naar uw [!DNL Chatlio] -bron verzenden.
 
-Voor meer informatie, lees de leerprogramma&#39;s op [ die uw het stromen eindpunt URL ](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint) krijgen en [ vestiging a  [!DNL Chatlio]  Webhaak ](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook).
+Voor meer informatie, lees de leerprogramma&#39;s op [&#x200B; die uw het stromen eindpunt URL &#x200B;](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint) krijgen en [&#x200B; vestiging a  [!DNL Chatlio]  Webhaak &#x200B;](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook).
 
 ## Verbinden [!DNL Chatlio] met Experience Platform {#connect-to-platform}
 

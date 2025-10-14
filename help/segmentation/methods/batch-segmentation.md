@@ -120,23 +120,23 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 +++
 
-Meer informatie over het gebruiken van dit eindpunt kan in de [ gids van het het eindpunt van de segmentdefinitie ](../api/segment-definitions.md) worden gevonden.
+Meer informatie over het gebruiken van dit eindpunt kan in de [&#x200B; gids van het het eindpunt van de segmentdefinitie &#x200B;](../api/segment-definitions.md) worden gevonden.
 
 >[!TAB Audience Portal]
 
 Selecteer **[!UICONTROL Create audience]** in Audience Portal.
 
-![ Create publieksknoop wordt benadrukt in het Portaal van het Publiek.](../images/methods/batch/select-create-audience.png)
+![&#x200B; Create publieksknoop wordt benadrukt in het Portaal van het Publiek.](../images/methods/batch/select-create-audience.png)
 
 Er verschijnt een pop-up. Selecteer **[!UICONTROL Build rules]** om Segment Builder in te voeren.
 
-![ de knoop van de Regels van de Bouwstijl wordt benadrukt in creeer publiek popover.](../images/methods/batch/select-build-rules.png)
+![&#x200B; de knoop van de Regels van de Bouwstijl wordt benadrukt in creeer publiek popover.](../images/methods/batch/select-build-rules.png)
 
 Nadat u de segmentdefinitie hebt gemaakt, selecteert u **[!UICONTROL Batch]** als **[!UICONTROL Evaluation method]** .
 
-![ de segmentdefinitie wordt getoond. Het evaluatietype wordt benadrukt, die de segmentdefinitie tonen kan worden geëvalueerd gebruikend het stromen segmentatie.](../images/methods/batch/batch-evaluation-method.png)
+![&#x200B; de segmentdefinitie wordt getoond. Het evaluatietype wordt benadrukt, die de segmentdefinitie tonen kan worden geëvalueerd gebruikend het stromen segmentatie.](../images/methods/batch/batch-evaluation-method.png)
 
-Om meer over het creëren van segmentdefinities te leren, te lezen gelieve de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md)
+Om meer over het creëren van segmentdefinities te leren, te lezen gelieve de [&#x200B; gids van de Bouwer van het Segment &#x200B;](../ui/segment-builder.md)
 
 >[!ENDTABS]
 
@@ -265,21 +265,21 @@ Een succesvolle reactie keert status 200 van HTTP met een serie van segmentdefin
 }
 ```
 
-De meer gedetailleerde informatie over de gesegmenteerde teruggekeerde definitie kan in de [ gids van het de segmentdefinitiedetectietype ](../api/segment-definitions.md) worden gevonden.
+De meer gedetailleerde informatie over de gesegmenteerde teruggekeerde definitie kan in de [&#x200B; gids van het de segmentdefinitiedetectietype &#x200B;](../api/segment-definitions.md) worden gevonden.
 
 +++
 
 >[!TAB Audience Portal]
 
-U kunt al publiek terugwinnen dat voor partijsegmentatie binnen uw organisatie door filters in het Portaal van de Publiek wordt toegelaten te gebruiken. Selecteer het ![ pictogram van de filterfilter ](../../images/icons/filter.png) pictogram om de lijst van filters te tonen.
+U kunt al publiek terugwinnen dat voor partijsegmentatie binnen uw organisatie door filters in het Portaal van de Publiek wordt toegelaten te gebruiken. Selecteer het ![&#x200B; pictogram van de filterfilter &#x200B;](../../images/icons/filter.png) pictogram om de lijst van filters te tonen.
 
-![ het filterpictogram wordt benadrukt in het Portaal van het Publiek.](../images/methods/filter-audiences.png)
+![&#x200B; het filterpictogram wordt benadrukt in het Portaal van het Publiek.](../images/methods/filter-audiences.png)
 
 Ga binnen de beschikbare filters naar **[!UICONTROL Update frequency]** en selecteer &quot;[!UICONTROL Batch]&quot;. Als u dit filter gebruikt, worden alle soorten publiek in uw organisatie weergegeven die met batchsegmentatie zijn geëvalueerd.
 
-![ de updatefrequentie van de Partij wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend partijsegmentatie worden geëvalueerd.](../images/methods/batch/filter-batch.png)
+![&#x200B; de updatefrequentie van de Partij wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend partijsegmentatie worden geëvalueerd.](../images/methods/batch/filter-batch.png)
 
-Meer over het bekijken van publiek in Experience Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
+Meer over het bekijken van publiek in Experience Platform leren, gelieve de [&#x200B; gids van het Portaal van het Publiek &#x200B;](../ui/audience-portal.md) te lezen.
 
 >[!ENDTABS]
 
@@ -287,6 +287,6 @@ Meer over het bekijken van publiek in Experience Platform leren, gelieve de [ gi
 
 Deze gids verklaart hoe te om een segmentdefinitie tot stand te brengen die kan worden geëvalueerd gebruikend partijsegmentatie op Adobe Experience Platform.
 
-Om meer over het gebruiken van het gebruikersinterface van Experience Platform te leren, te lezen gelieve de [ gebruikersgids van de Segmentatie ](../ui/overview.md).
+Om meer over het gebruiken van het gebruikersinterface van Experience Platform te leren, te lezen gelieve de [&#x200B; gebruikersgids van de Segmentatie &#x200B;](../ui/overview.md).
 
-Voor vaak gestelde vragen over partijsegmentatie, te lezen gelieve de [ sectie van de partijsegmentatie van FAQ ](../faq.md#batch-segmentation).
+Voor vaak gestelde vragen over partijsegmentatie, te lezen gelieve de [&#x200B; sectie van de partijsegmentatie van FAQ &#x200B;](../faq.md#batch-segmentation).

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de bron Analytics. Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes worden in kaart gebracht.
 
-![ een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
+![&#x200B; een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
 
 ## Streaming media-parameters
 
@@ -291,9 +291,9 @@ Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen 
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) die gegevens bevatten nadat Adobe de waarden ervan heeft aangepast met de verwerkingsregels, de VISTA-regels en de opzoektabellen. De meeste postwaarden hebben een vooraf verwerkte tegenhanger.
 
-De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
-Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
 +++Selecteren om een afgekeurde geavanceerde toewijzingsvelden weer te geven
 

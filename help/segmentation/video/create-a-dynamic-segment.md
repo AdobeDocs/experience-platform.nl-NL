@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # Een dynamisch segment maken in de gebruikersinterface van het Experience Platform
 
-De volgende video is bedoeld ter ondersteuning van uw begrip voor het maken van dynamische segmenten. Hierin wordt een voorbeeld van een klantervaring weergegeven, gevolgd door een snelle rondleiding van de belangrijkste functies in de [!DNL Platform] -interface. Meer over segmentatie leren en hoe te om segmenten in UI tot stand te brengen, gelieve de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md) te lezen.
+De volgende video is bedoeld ter ondersteuning van uw begrip voor het maken van dynamische segmenten. Hierin wordt een voorbeeld van een klantervaring weergegeven, gevolgd door een snelle rondleiding van de belangrijkste functies in de [!DNL Platform] -interface. Meer over segmentatie leren en hoe te om segmenten in UI tot stand te brengen, gelieve de [&#x200B; gids van de Bouwer van het Segment &#x200B;](../ui/segment-builder.md) te lezen.
 
-Als u in het creëren van een segment gebruikend de Segmentatie API geinteresseerd bent, te lezen gelieve [ een segment API gids ](../tutorials/create-a-segment.md) creëren.
+Als u in het creëren van een segment gebruikend de Segmentatie API geinteresseerd bent, te lezen gelieve [&#x200B; een segment API gids &#x200B;](../tutorials/create-a-segment.md) creëren.
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md).
+>De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te verwijzen naar de [&#x200B; gids van de Bouwer van het Segment &#x200B;](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # [!DNL Data Prep] gids voor probleemoplossing
 
-Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Data Prep] en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemeninformatie betreffende Experience Platform APIs in het algemeen, zie de [ het oplossen van problemengids van Adobe Experience Platform API ](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Data Prep] en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemeninformatie betreffende Experience Platform APIs in het algemeen, zie de [&#x200B; het oplossen van problemengids van Adobe Experience Platform API &#x200B;](../landing/troubleshooting.md).
 
 ## Veelgestelde vragen
 
@@ -46,7 +46,7 @@ Als de functies van Data Prep worden gebruikt, zorg er dan voor dat de transform
 
 U kunt de de kaartinterface van de Prep van Gegevens gebruiken om kolom-vlakke het filtreren uit te voeren door slechts kolommen in kaart te brengen die vereiste gegevens hebben. U kunt berekende velden ook gebruiken om de gegevens te transformeren met de ondersteuningsfuncties.
 
-Het rij-vlakke filtreren is momenteel beschikbaar slechts voor de [ bron van Adobe Analytics schakelaar ](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering).
+Het rij-vlakke filtreren is momenteel beschikbaar slechts voor de [&#x200B; bron van Adobe Analytics schakelaar &#x200B;](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering).
 
 Na inname kunt u de gegevens opschonen, vormgeven en manipuleren met SQL. Nochtans, zal dit proces de schrapping van de partij met de slechte verslagen vereisen, en het opnieuw opnemen van een nieuwe partij die van het resultaat van SQL wordt gecreeerd.
 

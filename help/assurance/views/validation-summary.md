@@ -15,9 +15,9 @@ Met de validatie-editor kunt u snel en eenvoudig JavaScript-functies beheren om 
 
 ## Aan de slag met de validatie-editor
 
-Na [ vestiging Verzekering ](../tutorials/implement-assurance.md), op de **[!UICONTROL Home]** mening, selecteer **[!UICONTROL Validation Editor]**.
+Na [&#x200B; vestiging Verzekering &#x200B;](../tutorials/implement-assurance.md), op de **[!UICONTROL Home]** mening, selecteer **[!UICONTROL Validation Editor]**.
 
-![ bevestiging-redacteur-scherm-opname ](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
+![&#x200B; bevestiging-redacteur-scherm-opname &#x200B;](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
 ## Een validatiefunctie schrijven
 
@@ -68,7 +68,7 @@ De resultaten van de functie worden weergegeven in de resultatensectie onder de 
 * Oranje - onbekend
 * Rood - niet overeenkomend
 
-![ timing-Bevestiging-hoogtepunten-scherm-heet ](https://user-images.githubusercontent.com/6597105/198681412-93d10a5a-3212-4e85-850a-aeaf5caf0521.png)
+![&#x200B; timing-Bevestiging-hoogtepunten-scherm-heet &#x200B;](https://user-images.githubusercontent.com/6597105/198681412-93d10a5a-3212-4e85-850a-aeaf5caf0521.png)
 
 ## Problemen oplossen
 
@@ -76,4 +76,4 @@ U kunt `console.log()` in uw functie toevoegen om punten aan de ontwikkelaarscon
 
 Als er een fout optreedt in de JavaScript-code-editor, wordt naast de reden een foutstatus weergegeven.
 
-Om meer over bevestigingen te leren, gelieve te bezoeken de [ Validaties van de Verzekering van Adobe Experience Platform ](https://github.com/adobe/griffon-validation-plugins) GitHub. Hier vindt u voorbeelden van validaties die eigendom zijn van de Adobe. Zie [ wiki ](https://github.com/adobe/griffon-validation-plugins/wiki) voor meer gedetailleerde beschrijvingen van bevestigingen.
+Om meer over bevestigingen te leren, gelieve te bezoeken de [&#x200B; Validaties van de Verzekering van Adobe Experience Platform &#x200B;](https://github.com/adobe/griffon-validation-plugins) GitHub. Hier vindt u voorbeelden van validaties die eigendom zijn van de Adobe. Zie [&#x200B; wiki &#x200B;](https://github.com/adobe/griffon-validation-plugins/wiki) voor meer gedetailleerde beschrijvingen van bevestigingen.

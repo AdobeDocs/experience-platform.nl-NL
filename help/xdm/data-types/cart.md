@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Cart] is een standaard XDM-gegevenstype (Experience Data Model) dat eigenschappen biedt die verwant zijn aan een winkelwagentje. Gebruik dit gegevenstype om de unieke id vast te leggen die door de verkoper (`Cart ID`) is toegewezen en de bron (`Cart Source`) waar een of meer producten aan het winkelwagentje zijn toegevoegd.
 
-![ een diagram van het [!UICONTROL Cart] gegevenstype.](../images/data-types/cart.png)
+![&#x200B; een diagram van het [!UICONTROL Cart] gegevenstype.](../images/data-types/cart.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |----------------|-------------------|-----------|------------------------------------------------------------|
@@ -24,5 +24,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json)

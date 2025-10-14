@@ -27,7 +27,7 @@ Lees de volgende secties om de vereiste instellingen te voltooien voordat u uw [
 
 ### IP adres lijst van gewenste personen
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ### Machtigingen configureren
 
@@ -36,7 +36,7 @@ Als u uw bronaccount wilt verbinden met Experience Platform, moet voor uw accoun
 * **Bronnen van de Mening**
 * **beheert Bronnen**
 
-Als u deze toestemmingen niet hebt, contacteer uw productbeheerder om toegang te verzoeken. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
+Als u deze toestemmingen niet hebt, contacteer uw productbeheerder om toegang te verzoeken. Voor meer informatie, lees de [&#x200B; gids UI van de toegangscontrole &#x200B;](../../../access-control/ui/overview.md).
 
 ### Verifiëren voor Experience Platform
 
@@ -55,14 +55,14 @@ Geef waarden op voor de volgende gebruikersgegevens om uw [!DNL Azure Synapse An
 
 >[!TAB  de belangrijkste zeer belangrijke authentificatie van de Dienst ]
 
-Om uw geloofsbrieven voor de dienst belangrijkste zeer belangrijke authentificatie terug te winnen, aan [[!DNL Microsfot Entra admin center] ](https://entra.microsoft.com/#home) te navigeren en waarden voor het volgende terug te winnen:
+Om uw geloofsbrieven voor de dienst belangrijkste zeer belangrijke authentificatie terug te winnen, aan [[!DNL Microsfot Entra admin center] &#x200B;](https://entra.microsoft.com/#home) te navigeren en waarden voor het volgende terug te winnen:
 
 * Toepassings-id
 * Weergavenaam
 * Geheim
 * Tenant-id
 
-Daarna, navigeer aan uw [[!DNL Azure Synapse Analytics]  instantie ](https://azure.microsoft.com/en-ca/products/synapse-analytics) en selecteer dan de optie om een gebruiker van een externe leverancier tot stand te brengen. Van hier, verstrek de aangewezen toestemmingen voor het de diensthoofd op het schema. **NOTA:**: U moet &quot;UITGEZOCHT&quot;omvatten aangezien het voor schemavoorproef, gelijkend op &quot;KOPIE&quot;wordt vereist. Een voorbeeldopdracht kan bijvoorbeeld:
+Daarna, navigeer aan uw [[!DNL Azure Synapse Analytics]  instantie &#x200B;](https://azure.microsoft.com/en-ca/products/synapse-analytics) en selecteer dan de optie om een gebruiker van een externe leverancier tot stand te brengen. Van hier, verstrek de aangewezen toestemmingen voor het de diensthoofd op het schema. **NOTA:**: U moet &quot;UITGEZOCHT&quot;omvatten aangezien het voor schemavoorproef, gelijkend op &quot;KOPIE&quot;wordt vereist. Een voorbeeldopdracht kan bijvoorbeeld:
 
 ```SQL
 GRANT SELECT ON SCHEMA::dbo TO {APP_ID};
@@ -79,7 +79,7 @@ Geef waarden op voor de volgende referenties om uw [!DNL Azure Synapse Analytics
 | Sleutelsleutel service | Het cliëntgeheim of wachtwoord verbonden aan het de diensthoofd. |
 | Verbinding, specificatie-id | **verbindingsspecificatie** verstrekt de schakelaareigenschappen van een gegevensbron. Dit omvat details zoals authentificatiespecificaties en vereisten voor het creëren van zowel **basis** als **bron** verbindingen. Voor [!DNL Azure Synapse Analytics] is de specificatie-id van de verbinding: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` . **Nota:** Deze referentie is slechts noodzakelijk wanneer het verbinden via APIs. |
 
-Voor meer informatie, lees de [[!DNL Azure]  documentatie bij het beheren van identiteiten voor  [!DNL Azure Synapse Analytics] ](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-service-identity).
+Voor meer informatie, lees de [[!DNL Azure]  documentatie bij het beheren van identiteiten voor  [!DNL Azure Synapse Analytics] &#x200B;](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-service-identity).
 
 >[!ENDTABS]
 

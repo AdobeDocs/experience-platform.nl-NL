@@ -20,13 +20,13 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen. Verwijs naar [ dit document ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) voor een gedetailleerde lijst van API documentatie.
+In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen. Verwijs naar [&#x200B; dit document &#x200B;](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) voor een gedetailleerde lijst van API documentatie.
 
 ## Vereisten
 
-Volg de [ Invoer een verpakte Ontvanger gebruikend API ](./import-packaged-recipe-api.md) voor het creëren van een Motor, die wordt vereist om een Model te trainen en te evalueren gebruikend API.
+Volg de [&#x200B; Invoer een verpakte Ontvanger gebruikend API &#x200B;](./import-packaged-recipe-api.md) voor het creëren van een Motor, die wordt vereist om een Model te trainen en te evalueren gebruikend API.
 
-Volg het [ Experience Platform API authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) beginnen API vraag te maken.
+Volg het [&#x200B; Experience Platform API authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) beginnen API vraag te maken.
 
 In de zelfstudie hebt u nu de volgende waarden:
 
@@ -55,7 +55,7 @@ We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor dez
 
 ### Een MLInstance maken
 
-Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U zult `{ENGINE_ID}` gebruiken die toen het creëren van een Motor van [ was teruggekeerd invoert een verpakte Ontvanger gebruikend de API ](./import-packaged-recipe-ui.md) leerprogramma.
+Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U zult `{ENGINE_ID}` gebruiken die toen het creëren van een Motor van [&#x200B; was teruggekeerd invoert een verpakte Ontvanger gebruikend de API &#x200B;](./import-packaged-recipe-ui.md) leerprogramma.
 
 **Verzoek**
 
@@ -526,4 +526,4 @@ Hier volgt de reactie waarbij wordt gemeld dat het experiment is verwijderd.
 
 ## Volgende stappen
 
-In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentele runtime en getrainde modellen. In de [ volgende oefening ](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het hoogste uitvoerend getrainde model.
+In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentele runtime en getrainde modellen. In de [&#x200B; volgende oefening &#x200B;](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het hoogste uitvoerend getrainde model.

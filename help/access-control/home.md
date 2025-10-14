@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Overzicht van toegangsbeheer
 
-De controle van de toegang voor Adobe Experience Platform wordt verstrekt door **[!UICONTROL Permissions]** in [ Adobe Experience Cloud ](https://experience.adobe.com/). Deze functionaliteit gebruikt rollen en beleid, die gebruikers met toestemmingen en zandbakken verbinden.
+De controle van de toegang voor Adobe Experience Platform wordt verstrekt door **[!UICONTROL Permissions]** in [&#x200B; Adobe Experience Cloud &#x200B;](https://experience.adobe.com/). Deze functionaliteit gebruikt rollen en beleid, die gebruikers met toestemmingen en zandbakken verbinden.
 
 ## Toegangsbeheerhiërarchie en -workflow
 
-Om toegangsbeheer voor Experience Platform te configureren, moet u systeem- of productbeheerdersrechten hebben voor een organisatie die een Experience Platform-product heeft. De minimumrol die toestemmingen kan verlenen of intrekken is een productbeheerder. Andere beheerderrollen die toestemmingen kunnen beheren zijn systeembeheerders (geen beperkingen). Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
+Om toegangsbeheer voor Experience Platform te configureren, moet u systeem- of productbeheerdersrechten hebben voor een organisatie die een Experience Platform-product heeft. De minimumrol die toestemmingen kan verlenen of intrekken is een productbeheerder. Andere beheerderrollen die toestemmingen kunnen beheren zijn systeembeheerders (geen beperkingen). Zie het artikel van het Centrum van de Hulp van Adobe op [&#x200B; administratieve rollen &#x200B;](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
 
 >[!NOTE]
 >
@@ -26,13 +26,13 @@ Om toegangsbeheer voor Experience Platform te configureren, moet u systeem- of p
 Een werkschema op hoog niveau voor het verkrijgen en toewijzen van toegangsmachtigingen kan als volgt worden samengevat:
 
 - Nadat u een licentie hebt verleend aan Adobe Experience Platform of een toepassings-/toepassingsservice die gebruikmaakt van Experience Platform, wordt een e-mail verzonden naar de beheerder die tijdens de licentie is opgegeven.
-- De beheerder het programma opent aan [ Adobe Admin Console ](#adobe-admin-console) en selecteert **Adobe Experience Platform** van de lijst van producten op de overzichtspagina.
+- De beheerder het programma opent aan [&#x200B; Adobe Admin Console &#x200B;](#adobe-admin-console) en selecteert **Adobe Experience Platform** van de lijst van producten op de overzichtspagina.
 - Als u toegang wilt verlenen tot Experience Platform, wordt aangeraden dat de beheerder gebruikers toevoegt aan het standaardproductprofiel: `AEP-Default-All-Users` .
 - In de Toestemmingen van Experience Platform, kan de beheerder nieuwe rollen tot stand brengen of de toestemmingen en de gebruikers voor om het even welke bestaande rollen uitgeven.
 - Wanneer het creëren van of het uitgeven van een rol, voegt de beheerder gebruikers aan de rol toe gebruikend het **[!UICONTROL users]** lusje, en verleent toestemmingen aan deze gebruikers (zoals &quot; [!UICONTROL Read Datasets]&quot; of &quot;[!UICONTROL Manage Schemas]&quot;) door de toestemmingen van de rol uit te geven. Op dezelfde manier kan de beheerder toegang tot sandboxen toewijzen met dezelfde bewerkingsoptie.
 - Wanneer gebruikers zich aanmelden bij de gebruikersinterface van Experience Platform, wordt hun toegang tot Experience Platform-mogelijkheden bepaald door de machtigingen die hun uit de vorige stap zijn verleend. Als een gebruiker bijvoorbeeld niet beschikt over de machtiging [!UICONTROL View Datasets] , is de tab **[!UICONTROL Datasets]** in het zijmenu niet zichtbaar voor die gebruiker.
 
-Voor meer gedetailleerde stappen op hoe te om toegangsbeheer in Experience Platform te beheren, zie de [ gebruikershandleiding van de toegangscontrole ](./ui/overview.md).
+Voor meer gedetailleerde stappen op hoe te om toegangsbeheer in Experience Platform te beheren, zie de [&#x200B; gebruikershandleiding van de toegangscontrole &#x200B;](./ui/overview.md).
 
 Alle aanroepen naar Experience Platform API&#39;s worden gevalideerd voor machtigingen en retourneren fouten als de juiste machtigingen niet worden gevonden in de huidige gebruikerscontext. Binnen UI, zullen de elementen worden verborgen of worden veranderd afhankelijk van toestemmingen die aan de huidige gebruiker worden verleend.
 
@@ -57,11 +57,11 @@ Experience Platform wordt geleverd met twee vooraf geconfigureerde standaardroll
 
 Niet-productiesandboxen zijn een vorm van gegevensvirtualisatie waarmee u gegevens kunt isoleren van andere sandboxen. Deze sandboxen worden doorgaans gebruikt voor ontwikkelingsexperimenten, -tests of -tests. Rolmachtigingen geven gebruikers van de rol toegang tot Experience Platform-functies binnen de sandboxomgevingen waartoe ze toegang hebben. Een Experience Platform-standaardlicentie geeft u vijf sandboxen (één productie en vier niet-productie). U kunt in totaal maximaal 75 sandboxen toevoegen aan pakketten van tien niet-productiesandboxen. Neem voor meer informatie contact op met de beheerder van uw organisatie of uw Adobe-vertegenwoordiger.
 
-Voor meer informatie over zandbakken in Experience Platform, gelieve te verwijzen naar het [ zandbakenoverzicht ](../sandboxes/home.md).
+Voor meer informatie over zandbakken in Experience Platform, gelieve te verwijzen naar het [&#x200B; zandbakenoverzicht &#x200B;](../sandboxes/home.md).
 
 ### Toegang tot sandboxen
 
-De toegang tot sandboxen wordt beheerd via rollen. Voor gedetailleerde stappen op hoe te om toegang tot een zandbak voor een rol toe te laten, zie de [ attributen gebaseerde gids van de toegangsbeheerrollen ](./abac/ui/roles.md).
+De toegang tot sandboxen wordt beheerd via rollen. Voor gedetailleerde stappen op hoe te om toegang tot een zandbak voor een rol toe te laten, zie de [&#x200B; attributen gebaseerde gids van de toegangsbeheerrollen &#x200B;](./abac/ui/roles.md).
 
 Gebruikers kunnen toegang krijgen tot een of meer sandboxen binnen een rol. Als één gebruiker in twee of meer rollen inbegrepen is, zal die gebruiker toegang tot alle zandbakken hebben inbegrepen in die rollen.
 
@@ -73,7 +73,7 @@ De toestemmingen van het middel verlenen toegang tot specifieke mogelijkheden va
 
 In [!UICONTROL Permissions] worden in de werkruimte met rolbronnen de sandboxen en machtigingen weergegeven die actief zijn voor die rol:
 
-![ het middelwerkruimte van A rol met een lijst van geselecteerde categorieën en toestemmingen.](./images/permissions.png)
+![&#x200B; het middelwerkruimte van A rol met een lijst van geselecteerde categorieën en toestemmingen.](./images/permissions.png)
 
 De volgende lijst schetst de beschikbare middelcategorieën voor zowel Experience Platform als toepassingen die door Toestemmingen worden beheerd:
 
@@ -121,7 +121,7 @@ De volgende lijst schetst de beschikbare middelcategorieën voor zowel Experienc
 | [!DNL Traits Configuration] | Configureer de functies voor beheren en weergeven via de gebruikersinterface voor berekende kenmerken. |
 | [!DNL Translation Services] | Configureer beheer- en weergavemachtigingen voor vertaalservices voor projecten, taken, revisies, interne instellingen en providers. |
 
-In de volgende tabel worden de beschikbare machtigingen voor Experience Platform in de rol beschreven, met beschrijvingen van de specifieke Experience Platform-mogelijkheden waartoe deze toegang verleent. Voor gedetailleerde stappen op hoe te om toestemmingen aan een rol toe te voegen, zie de [ attributen gebaseerde gids van de toegangsbeheerrollen ](./abac/ui/roles.md).
+In de volgende tabel worden de beschikbare machtigingen voor Experience Platform in de rol beschreven, met beschrijvingen van de specifieke Experience Platform-mogelijkheden waartoe deze toegang verleent. Voor gedetailleerde stappen op hoe te om toestemmingen aan een rol toe te voegen, zie de [&#x200B; attributen gebaseerde gids van de toegangsbeheerrollen &#x200B;](./abac/ui/roles.md).
 
 | Categorie | Machtiging | Beschrijving |
 | --- | --- | --- |
@@ -132,7 +132,7 @@ In de volgende tabel worden de beschikbare machtigingen voor Experience Platform
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | De capaciteit om planconfiguraties te bekijken en te wijzigen. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Alleen-lezen toegang tot planningsconfiguraties. |
 | [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Mogelijkheid om de [[!DNL [AI assistant]]](../ai-assistant/access.md) vragen te stellen. |
-| [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Toegang om reacties op [ operationele inzichten ](../ai-assistant/home.md##operational-insights) vragen te verkrijgen. |
+| [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Toegang om reacties op [&#x200B; operationele inzichten &#x200B;](../ai-assistant/home.md##operational-insights) vragen te verkrijgen. |
 | [!DNL AI Assistant] | [!UICONTROL Generate Content] | Gebruikers toestaan inhoud te genereren met de [!DNL AI Assistant] . |
 | [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Laat gebruikers toe om merkrichtlijnen tot stand te brengen gebruikend [!DNL AI Assistant]. |
 | [!DNL Alerts] | [!UICONTROL View Alerts History] | Alleen-lezen toegang voor waarschuwingsgeschiedenis. |
@@ -203,7 +203,7 @@ In de volgende tabel worden de beschikbare machtigingen voor Experience Platform
 | [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Toegang tot het lezen, maken, bewerken en verwijderen van beleidsregels voor gegevensgebruik. |
 | [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Alleen-lezen toegang voor beleidsregels voor gegevensgebruik die tot uw organisatie behoren. |
-| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only toegang tot mening registreerde [ controlelogboeken ](../landing/governance-privacy-security/audit-logs/overview.md) van de activiteiten van Experience Platform. |
+| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only toegang tot mening registreerde [&#x200B; controlelogboeken &#x200B;](../landing/governance-privacy-security/audit-logs/overview.md) van de activiteiten van Experience Platform. |
 | [!DNL Data Governance] | [!UICONTROL View Privacy Console] | Alleen-lezen toegang tot privacyconsoles. |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Toegang tot bronnen lezen, maken, bewerken en uitschakelen. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en geverifieerde bronnen op het tabblad **[!UICONTROL Browse]** . |
@@ -228,9 +228,9 @@ In de volgende tabel worden de beschikbare machtigingen voor Experience Platform
 | [!DNL Destinations] | [!UICONTROL View Destinations] | Alleen-lezen toegang om beschikbare doelen op het tabblad **[!UICONTROL Catalog]** en geverifieerde doelen op het tabblad **[!UICONTROL Browse]** weer te geven. |
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | Toegang tot het lezen, creëren, en schrappen van bestemmingsverbindingen en bestemmingsrekeningen. |
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Mogelijkheid om gegevens te activeren naar actieve doelen die zijn gemaakt. Deze toestemming vereist ook [!UICONTROL View Destinations] of [!UICONTROL Manage Destinations] om aan de gebruiker te worden verleend die bestemmingen zal activeren. |
-| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | De capaciteit om publiek aan bestaande bestemmingen te activeren, zonder de [ toewijzingsstap ](../destinations/ui/activate-batch-profile-destinations.md#mapping) te tonen. Gebruikers kunnen doelgroepen toevoegen aan en verwijderen uit activeringsworkflows, maar kunnen toegewezen kenmerken of identiteiten niet toevoegen of verwijderen. Deze toestemming vereist ook dat de [!UICONTROL View Destinations] toestemming wordt verleend aan de gebruiker die gegevens aan bestemmingen zal activeren. |
+| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | De capaciteit om publiek aan bestaande bestemmingen te activeren, zonder de [&#x200B; toewijzingsstap &#x200B;](../destinations/ui/activate-batch-profile-destinations.md#mapping) te tonen. Gebruikers kunnen doelgroepen toevoegen aan en verwijderen uit activeringsworkflows, maar kunnen toegewezen kenmerken of identiteiten niet toevoegen of verwijderen. Deze toestemming vereist ook dat de [!UICONTROL View Destinations] toestemming wordt verleend aan de gebruiker die gegevens aan bestemmingen zal activeren. |
 | [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Mogelijkheid om gegevenssets te lezen, te maken, te bewerken en uit te schakelen. Mogelijkheid om gegevens ook te activeren naar actieve datasets die zijn gemaakt. Deze toestemming vereist ook dat de [!UICONTROL View Destinations] toestemming wordt verleend aan de gebruiker die gegevens aan bestemmingen zal activeren. |
-| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Mogelijkheid aan auteursbestemmingen gebruikend [ Adobe Experience Platform Destination SDK ](../destinations/destination-sdk/overview.md). |
+| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Mogelijkheid aan auteursbestemmingen gebruikend [&#x200B; Adobe Experience Platform Destination SDK &#x200B;](../destinations/destination-sdk/overview.md). |
 | [!DNL Federated Data] | [!UICONTROL Manage Federated Data] | De capaciteit om tot alle gefederaliseerde gegevenseigenschappen zoals het creëren van schema&#39;s, modellen, en samenstellingen toegang te hebben. |
 | [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Toegang tot het lezen, maken, bewerken en verwijderen van naamruimten. |
 | [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Alleen-lezen toegang voor naamruimten. |
@@ -307,4 +307,4 @@ In de volgende tabel worden de beschikbare machtigingen voor Experience Platform
 
 ## Volgende stappen
 
-Door deze gids te lezen, bent u geïntroduceerd in de belangrijkste principes van toegangscontrole in Experience Platform. U kunt nu aan de [ attributen gebaseerde gebruikershandleiding van de toegangscontrole ](./abac/overview.md) voor gedetailleerde stappen op hoe gebruik Experience Cloud blijven om rollen tot stand te brengen en toestemmingen voor Experience Platform toe te wijzen.
+Door deze gids te lezen, bent u geïntroduceerd in de belangrijkste principes van toegangscontrole in Experience Platform. U kunt nu aan de [&#x200B; attributen gebaseerde gebruikershandleiding van de toegangscontrole &#x200B;](./abac/overview.md) voor gedetailleerde stappen op hoe gebruik Experience Cloud blijven om rollen tot stand te brengen en toestemmingen voor Experience Platform toe te wijzen.

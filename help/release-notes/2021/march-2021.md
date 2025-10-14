@@ -31,7 +31,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 | `add_to_array` functie | Bijgewerkte functionaliteit om arrays als parameter te ondersteunen. |
 | `to_array` functie | Bijgewerkte functionaliteit om objecten als parameter te ondersteunen. |
 
-Voor meer informatie, gelieve te zien het [[!DNL Data Prep]  overzicht ](../../data-prep/home.md).
+Voor meer informatie, gelieve te zien het [[!DNL Data Prep]  overzicht &#x200B;](../../data-prep/home.md).
 
 ## Segmentatieservice {#segmentation}
 
@@ -43,7 +43,7 @@ Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| (Beta) Edge-segmentatie | Edge-segmentatie evalueert segmenten in real-time, zodat dezelfde pagina en volgende pagina kunnen worden gebruikt. Meer informatie over randsegmentatie kan in het [ overzicht van de Segmentatie UI ](../../segmentation/ui/overview.md) worden gevonden. |
+| (Beta) Edge-segmentatie | Edge-segmentatie evalueert segmenten in real-time, zodat dezelfde pagina en volgende pagina kunnen worden gebruikt. Meer informatie over randsegmentatie kan in het [&#x200B; overzicht van de Segmentatie UI &#x200B;](../../segmentation/ui/overview.md) worden gevonden. |
 | (Beta) Incrementele segmentatie | Verhoogt de versheid van bestaande segmentdefinities die in partijsegmentatie worden geëvalueerd tot een uur. |
 
 Voor meer informatie over [!DNL Segmentation Service], raadpleegt u het [overzicht van segmentatie](../../segmentation/home.md).
@@ -57,7 +57,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Beta-bronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
-| API-ondersteuning voor gecomprimeerde bestandsopname | U kunt nu gecomprimeerde JSON- of gescheiden bestanden voorvertonen en opnemen met bronnen voor cloudopslag. Voor meer informatie, zie het leerprogramma over [ het verzamelen van gegevens van de wolkenopslag gebruikend APIs ](../../sources/tutorials/api/collect/cloud-storage.md). |
-| UI-ondersteuning voor het uploaden van recursieve bestanden | U kunt nu volledige mappen recursief invoeren wanneer u een bron voor cloudopslag gebruikt. Wanneer u een volledige map opgeeft, moet u ervoor zorgen dat de inhoud ervan hetzelfde schema deelt. Voor meer informatie, zie het leerprogramma op [ vormend een dataflow voor de schakelaars van de wolkenopslag in UI ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| API-ondersteuning voor gecomprimeerde bestandsopname | U kunt nu gecomprimeerde JSON- of gescheiden bestanden voorvertonen en opnemen met bronnen voor cloudopslag. Voor meer informatie, zie het leerprogramma over [&#x200B; het verzamelen van gegevens van de wolkenopslag gebruikend APIs &#x200B;](../../sources/tutorials/api/collect/cloud-storage.md). |
+| UI-ondersteuning voor het uploaden van recursieve bestanden | U kunt nu volledige mappen recursief invoeren wanneer u een bron voor cloudopslag gebruikt. Wanneer u een volledige map opgeeft, moet u ervoor zorgen dat de inhoud ervan hetzelfde schema deelt. Voor meer informatie, zie het leerprogramma op [&#x200B; vormend een dataflow voor de schakelaars van de wolkenopslag in UI &#x200B;](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

@@ -11,24 +11,24 @@ ht-degree: 0%
 
 # Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL MySQL]
 
-Lees deze gids om te leren hoe te om uw [!DNL MySQL] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om uw [!DNL MySQL] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL MySQL] via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Lees het [[!DNL MySQL]  overzicht ](../../../../connectors/databases/mysql.md#prerequisites) voor informatie over authentificatie.
+Lees het [[!DNL MySQL]  overzicht &#x200B;](../../../../connectors/databases/mysql.md#prerequisites) voor informatie over authentificatie.
 
 ### Experience Platform API&#39;s gebruiken
 
-Lees de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md) voor informatie over hoe te met succes vraag aan Experience Platform APIs maken.
+Lees de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md) voor informatie over hoe te met succes vraag aan Experience Platform APIs maken.
 
 ## Verbind [!DNL MySQL] met Experience Platform op Azure {#azure}
 
@@ -171,7 +171,7 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../../../landing/multi-cloud.md).
 
 Lees de onderstaande stappen voor informatie over hoe u uw [!DNL MySQL] -account kunt verbinden met Experience Platform op AWS.
 
@@ -246,4 +246,4 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 ## Een gegevensstroom maken voor [!DNL MySQL] -gegevens
 
-Nu u met succes uw [!DNL MySQL] gegevensbestand hebt verbonden, kunt u [ nu tot een dataflow leiden en gegevens van uw gegevensbestand in Experience Platform ](../../collect/database-nosql.md) opnemen.
+Nu u met succes uw [!DNL MySQL] gegevensbestand hebt verbonden, kunt u [&#x200B; nu tot een dataflow leiden en gegevens van uw gegevensbestand in Experience Platform &#x200B;](../../collect/database-nosql.md) opnemen.

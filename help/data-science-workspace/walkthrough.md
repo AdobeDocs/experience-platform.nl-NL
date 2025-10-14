@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Dit document biedt een beschrijving van de verwachte leerresultaten in de Adobe Experience Platform Data Science Workspace-cursus. U moet zich bij het Experience League aanmelden met uw Adobe ID om de cursus te kunnen bekijken.
 
-De [ die met de Werkruimte van de Wetenschap van Gegevens voor de cursus van de Wetenschappers van Gegevens ](https://experienceleague.adobe.com/?lang=nl&recommended=ExperiencePlatform-U-1-2021.1.dsw) wordt ontworpen voor gegevenswetenschappers die willen leren hoe te om JupyterLab Notities te gebruiken om inzichten en vraaggegevens af te leiden, profiel-toegelaten datasets tot stand te brengen, geautomatiseerde machine het leren modellen te publiceren, en machine-geleerde inzichten aan zowel Adobe als niet-Adobe toepassingen te activeren.
+De [&#x200B; die met de Werkruimte van de Wetenschap van Gegevens voor de cursus van de Wetenschappers van Gegevens &#x200B;](https://experienceleague.adobe.com/?lang=nl&recommended=ExperiencePlatform-U-1-2021.1.dsw) wordt ontworpen voor gegevenswetenschappers die willen leren hoe te om JupyterLab Notities te gebruiken om inzichten en vraaggegevens af te leiden, profiel-toegelaten datasets tot stand te brengen, geautomatiseerde machine het leren modellen te publiceren, en machine-geleerde inzichten aan zowel Adobe als niet-Adobe toepassingen te activeren.
 
 ## Cursusvoorwaarden
 
@@ -71,7 +71,7 @@ De cursus Data Science Workspace bestaat uit vijf lessen.
 
 ## Volgende stappen
 
-Na de voltooiing van de cursus van de Werkruimte van de Wetenschap van Gegevens, bezoek de [ Machine Leren API gidsen ](./api/getting-started.md) om te leren hoe te om RESTful APIs te gebruiken om alles te doen u enkel en meer leerde.
+Na de voltooiing van de cursus van de Werkruimte van de Wetenschap van Gegevens, bezoek de [&#x200B; Machine Leren API gidsen &#x200B;](./api/getting-started.md) om te leren hoe te om RESTful APIs te gebruiken om alles te doen u enkel en meer leerde.
 
 
 

@@ -16,18 +16,18 @@ ht-degree: 0%
 >
 >De [!DNL AWS Redshift] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Lees deze gids om te leren hoe u uw [!DNL AWS Redshift] bronrekening met Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe u uw [!DNL AWS Redshift] bronrekening met Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Verbind [!DNL AWS Redshift] met Experience Platform op Azure {#azure}
 
@@ -45,7 +45,7 @@ Lees de onderstaande stappen voor informatie over hoe u uw [!DNL AWS Redshift] -
 | `database` | De [!DNL AWS Redshift] -database waaruit gegevens moeten worden opgehaald. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL AWS Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff` . |
 
-Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL AWS Redshift]  document ](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
+Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL AWS Redshift]  document &#x200B;](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
 
 ### Creeer een basisverbinding voor [!DNL AWS Redshift] op Experience Platform op Azure [ #azure-base ]
 
@@ -127,7 +127,7 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 
 >[!AVAILABILITY]
 >
->Deze sectie is op implementaties van Experience Platform van toepassing die op de Diensten van het Web van AWS (AWS) lopen. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+>Deze sectie is op implementaties van Experience Platform van toepassing die op de Diensten van het Web van AWS (AWS) lopen. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../../../landing/multi-cloud.md).
 
 Lees de onderstaande stappen voor informatie over hoe u uw [!DNL AWS Redshift] -bron kunt verbinden met Experience Platform op AWS.
 

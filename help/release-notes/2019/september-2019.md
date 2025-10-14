@@ -32,7 +32,7 @@ Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren
 | ----------- | ---------- |
 | Nieuw domein voor streaming invoer | Het `dcs.data.adobe.net` -domein is verplaatst naar het nieuwe gemeenschappelijke domein voor gegevensverzameling `dcs.adobedc.net` . Gebruikers dienen hun implementaties bij te werken volgens de herziene documentatie over het inslikken van Adobe Experience Platform. Alle documentatie met betrekking tot het stroomsgewijs opnemen van Adobe Experience Platform is bijgewerkt en gebruikt nu het nieuwe domein. |
 
-Voor meer informatie, bezoek de [ documentatie van de Ingestie van Gegevens ](../../ingestion/home.md).
+Voor meer informatie, bezoek de [&#x200B; documentatie van de Ingestie van Gegevens &#x200B;](../../ingestion/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -48,11 +48,11 @@ Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde
 
 **Bekende kwesties**
 
-* Er is momenteel geen toegankelijke manier in [!DNL Service Gallery] om een bestaande service te verwijderen. Ondertussen, gelieve te verwijzen naar de [ het Leren API van de Machine van Sensei verwijzing ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) om een bestaande Dienst door API vraag te schrappen.
+* Er is momenteel geen toegankelijke manier in [!DNL Service Gallery] om een bestaande service te verwijderen. Ondertussen, gelieve te verwijzen naar de [&#x200B; het Leren API van de Machine van Sensei verwijzing &#x200B;](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) om een bestaande Dienst door API vraag te schrappen.
 * [!DNL Service Gallery] heeft geen pagineringssteun om de opleiding en het scoring looppas van de Dienst te filtreren.
 * Wanneer u de geplande training of scoring configureert, wordt de frequentie op uur ingesteld, zodat het programma niet wordt toegepast. [!DNL Service Gallery]
 
-Voor meer informatie, bezoek het [ Overzicht van Workspace van de Wetenschap van Gegevens ](../../data-science-workspace/home.md).
+Voor meer informatie, bezoek het [&#x200B; Overzicht van Workspace van de Wetenschap van Gegevens &#x200B;](../../data-science-workspace/home.md).
 
 ## [!DNL Query Service] {#query}
 
@@ -69,4 +69,4 @@ Met [!DNL Query Service] kunt u gegevensanalysecosystemen samenstellen, zodat u 
 | Verbeteringen in SQL-syntaxis | Ondersteuning voor ilike-syntaxis. |
 | Gegevenssets genereren met een gedefinieerd XDM-schema | Een nieuwe clausule in Create Lijst als Uitgezochte vragen (CTAS) toegevoegd die u toestaat om een doelschema te specificeren. |
 
-Voor meer informatie, verwijs naar de [ documentatie van de Dienst van de Vraag ](../../query-service/home.md).
+Voor meer informatie, verwijs naar de [&#x200B; documentatie van de Dienst van de Vraag &#x200B;](../../query-service/home.md).

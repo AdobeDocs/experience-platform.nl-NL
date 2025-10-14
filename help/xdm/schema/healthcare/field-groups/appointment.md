@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!UICONTROL Appointment] schemaveldgroep
 
-[!UICONTROL Appointment] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../../classes/individual-profile.md) en [[!DNL Provider class]](../../../classes/provider.md). Het biedt één objecttype veld `healthcareAppointment` dat informatie bevat over het boeken van een gezondheidszorggebeurtenis onder patiënten, artsen, verwante personen en/of apparaten voor een bepaalde datum en tijd.
+[!UICONTROL Appointment] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../../classes/individual-profile.md) en [[!DNL Provider class]](../../../classes/provider.md). Het biedt één objecttype veld `healthcareAppointment` dat informatie bevat over het boeken van een gezondheidszorggebeurtenis onder patiënten, artsen, verwante personen en/of apparaten voor een bepaalde datum en tijd.
 
-![ het schemadiagram van A van de structuur van de groep van het benoemingsgebied.](../../../images/healthcare/field-groups/appointment/appointment.png)
+![&#x200B; het schemadiagram van A van de structuur van de groep van het benoemingsgebied.](../../../images/healthcare/field-groups/appointment/appointment.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -28,12 +28,12 @@ ht-degree: 0%
 | [!UICONTROL Identifier] | `identifier` | Array van [[!UICONTROL Identifier]](../data-types/identifier.md) | Een lijst met unieke id&#39;s die aan de afspraak zijn gekoppeld. Deze herkenningstekens worden toegewezen gebaseerd op bedrijfsregels of wanneer een directe verbinding URL aan de benoeming niet geschikt is. |
 | [!UICONTROL Note] | `note` | Array van [[!UICONTROL Annotation]](../data-types/annotation.md) | Aanvullende opmerkingen of opmerkingen over de afspraak. |
 | [!UICONTROL Originating Appointment] | `originatingAppointment` | [[!UICONTROL Reference]](../data-types/reference.md) | De oorspronkelijke afspraak in een terugkerende reeks van verwante benoemingen. |
-| [!UICONTROL Participant] | `participant` | Array van objecten | Een lijst van deelnemers die betrokken zijn bij de benoeming. Zie de [ sectie hieronder ](#participant) voor meer informatie. |
+| [!UICONTROL Participant] | `participant` | Array van objecten | Een lijst van deelnemers die betrokken zijn bij de benoeming. Zie de [&#x200B; sectie hieronder &#x200B;](#participant) voor meer informatie. |
 | [!UICONTROL Patient Instruction] | `patientInstruction` | Array van [[!UICONTROL Codeable Reference]](../data-types/reference.md) | De diagnose die relevant is voor de aanstelling. |
 | [!UICONTROL Previous Appointment] | `previousAppointment` | [[!UICONTROL Reference]](../data-types/reference.md) | De vorige aanstelling in een reeks van daarmee verband houdende benoemingen. |
 | [!UICONTROL Priority] | `priority` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De prioriteit van de benoeming die kan worden gebruikt om geïnformeerde beslissingen te nemen indien benoemingen opnieuw prioriteit moeten krijgen. De iCal-standaard geeft `0` aan als ongedefinieerd, `1` als hoogste prioriteit en `9` als laagste prioriteit. |
 | [!UICONTROL Reason] | `reason` | Array van [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De reden waarom de afspraak gepland is, wat doorgaans een voorwaarde of procedure is. |
-| [!UICONTROL Reccurence Template] | `recurrenceTemplate` | Array van objecten | Bevat de details van het terugkeringspatroon of het malplaatje dat worden gebruikt om terugkomende benoemingen tot stand te brengen.  Zie de [ sectie hieronder ](#recurrence) voor meer informatie. |
+| [!UICONTROL Reccurence Template] | `recurrenceTemplate` | Array van objecten | Bevat de details van het terugkeringspatroon of het malplaatje dat worden gebruikt om terugkomende benoemingen tot stand te brengen.  Zie de [&#x200B; sectie hieronder &#x200B;](#recurrence) voor meer informatie. |
 | [!UICONTROL Replaces] | `replaces` | Array van [[!UICONTROL Reference]](../data-types/reference.md) | De benoeming wordt vervangen door deze benoeming. In gevallen waarin er sprake is van annulering, vindt u de details van de annulering in de eigenschap `cancellationReason` op de resource waarnaar wordt verwezen. |
 | [!UICONTROL Requested Period] | `requestedPeriod` | Array van [[!UICONTROL Period]](../data-types/period.md) | Een reeks datumwaaiers (eventueel met inbegrip van tijden) waarin de benoeming verkiest te worden gepland. |
 | [!UICONTROL Service Category] | `serviceCategory` | Array van [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Een brede categorisering van de dienst die tijdens de benoeming moet worden verricht. |
@@ -56,14 +56,14 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/appointment.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/appointment.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/appointment.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/appointment.schema.json)
 
 ## `participant` {#participant}
 
 `participant` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ het schemadiagram van A van de structuur van het deelnemervoorwerp.](../../../images/healthcare/field-groups/appointment/participant.png)
+![&#x200B; het schemadiagram van A van de structuur van het deelnemervoorwerp.](../../../images/healthcare/field-groups/appointment/participant.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -77,14 +77,14 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `recurrenceTemplate` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ het schemadiagram van A van de de objecten van het reccurence malplaatje structuur.](../../../images/healthcare/field-groups/appointment/recurrence-template.png)
+![&#x200B; het schemadiagram van A van de de objecten van het reccurence malplaatje structuur.](../../../images/healthcare/field-groups/appointment/recurrence-template.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
-| [!UICONTROL Monthly Template] | `monthlyTemplate` | Array van objecten | Informatie over maandelijkse terugkerende benoemingen. Zie de [ sectie hieronder ](#monthly-template) voor meer informatie. |
+| [!UICONTROL Monthly Template] | `monthlyTemplate` | Array van objecten | Informatie over maandelijkse terugkerende benoemingen. Zie de [&#x200B; sectie hieronder &#x200B;](#monthly-template) voor meer informatie. |
 | [!UICONTROL Recurrence Type] | `recurrenceType` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Hoe vaak de aanstellingsreeksen, zoals wekelijks, maandelijks, of jaarlijks moeten terugkeren. |
 | [!UICONTROL Timezone] | `timezone` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De tijdzone van de terugkerende benoeming. |
-| [!UICONTROL Weekly Template] | `weeklyTemplate` | Array van objecten | Informatie over wekelijkse terugkerende afspraken. Zie de [ sectie hieronder ](#weekly-template) voor meer informatie. |
+| [!UICONTROL Weekly Template] | `weeklyTemplate` | Array van objecten | Informatie over wekelijkse terugkerende afspraken. Zie de [&#x200B; sectie hieronder &#x200B;](#weekly-template) voor meer informatie. |
 | [!UICONTROL Yearly Template] | `yearlyTemplate` | Object | Informatie over jaarlijkse periodieke benoemingen. Bevat één eigenschap, `yearInterval` , die een geheel-getalwaarde bevat die elk jaar aangeeft dat de afspraak opnieuw wordt uitgevoerd. |
 | [!UICONTROL Excluding Date] | `excludingDate` | Array met datums | Datums, zoals feestdagen, die van de herhaling moeten worden uitgesloten. |
 | [!UICONTROL Excluding Recurrence Id] | `excludingRecurrenceId` | Array van gehele getallen | Herhalings-id&#39;s die van de herhaling moeten worden uitgesloten. Dit is een alternatief voor `excludingDate` , waarin u de `reccurenceID` van de afspraak aangeeft die moet worden uitgesloten. |
@@ -96,7 +96,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `weeklyTemplate` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ het schemadiagram van A van de wekelijkse malplaatjeobjecten structuur.](../../../images/healthcare/field-groups/appointment/weekly-template.png)
+![&#x200B; het schemadiagram van A van de wekelijkse malplaatjeobjecten structuur.](../../../images/healthcare/field-groups/appointment/weekly-template.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `monthlyTemplate` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ het schemadiagram van A van de maandelijkse malplaatjeobjecten structuur.](../../../images/healthcare/field-groups/appointment/monthly-template.png)
+![&#x200B; het schemadiagram van A van de maandelijkse malplaatjeobjecten structuur.](../../../images/healthcare/field-groups/appointment/monthly-template.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

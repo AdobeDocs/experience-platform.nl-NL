@@ -19,7 +19,7 @@ Dit document bevat algemene stappen voor het maken van een gegevensset met Adobe
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Inname van de Partij ](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] staat u toe om gegevens als partijdossiers in te voeren.
+* [&#x200B; Inname van de Partij &#x200B;](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] staat u toe om gegevens als partijdossiers in te voeren.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -27,11 +27,11 @@ De volgende secties bevatten aanvullende informatie die u moet weten om aanroepe
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -43,7 +43,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 Voor alle aanvragen die een payload (POST, PUT, PATCH) bevatten, is een extra `Content-Type: application/json` -header vereist. Voor JSON+PATCH-aanvragen moet de waarde `Content-Type` `application/json-patch+json` zijn.
 
@@ -51,7 +51,7 @@ Voor alle aanvragen die een payload (POST, PUT, PATCH) bevatten, is een extra `C
 
 Om een dataset tot stand te brengen, moet een schema eerst worden bepaald. Een schema is een reeks regels helpen gegevens vertegenwoordigen. Naast het beschrijven van de structuur van gegevens, verstrekken de schema&#39;s beperkingen en verwachtingen die kunnen worden toegepast en worden gebruikt om gegevens te bevestigen aangezien het tussen systemen wordt bewogen.
 
-Deze standaarddefinities maken het mogelijk dat gegevens consistent worden geïnterpreteerd, ongeacht de oorsprong, en verwijderen de noodzaak van vertaling in verschillende toepassingen. Voor meer informatie over het samenstellen van schema&#39;s, zie de gids op de [ grondbeginselen van schemacompositie ](../../xdm/schema/composition.md)
+Deze standaarddefinities maken het mogelijk dat gegevens consistent worden geïnterpreteerd, ongeacht de oorsprong, en verwijderen de noodzaak van vertaling in verschillende toepassingen. Voor meer informatie over het samenstellen van schema&#39;s, zie de gids op de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../../xdm/schema/composition.md)
 
 ## Een gegevenssetschema opzoeken
 
@@ -207,11 +207,11 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `schemaRef.id` | De URI `$id`-waarde voor het XDM-schema waarop de gegevensset wordt gebaseerd. |
-| `schemaRef.contentType` | Geeft de indeling en versie van het schema aan. Zie de sectie over [ schema versioning ](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie. |
+| `schemaRef.contentType` | Geeft de indeling en versie van het schema aan. Zie de sectie over [&#x200B; schema versioning &#x200B;](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie. |
 
 >[!NOTE]
 >
->Dit leerprogramma gebruikt het [&#128279;](https://parquet.apache.org/docs/) dossierformaat van het Pakket van 0&rbrace; Apache &lbrace;voor al zijn voorbeelden.  Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ gids van de de partijontwikkelaar van de batch ingestitie ](../../ingestion/batch-ingestion/api-overview.md) worden gevonden
+>Dit leerprogramma gebruikt het [&#128279;](https://parquet.apache.org/docs/) dossierformaat van het Pakket van 0&rbrace; Apache &lbrace;voor al zijn voorbeelden.  Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [&#x200B; gids van de de partijontwikkelaar van de batch ingestitie &#x200B;](../../ingestion/batch-ingestion/api-overview.md) worden gevonden
 
 **Reactie**
 
@@ -462,14 +462,14 @@ Met de batch-id kunt u de API voor gegevenstoegang gebruiken om terug te lezen e
 
 U kunt de API voor gegevenstoegang ook gebruiken om de naam, grootte in bytes en een koppeling te retourneren om het bestand of de map te downloaden.
 
-De gedetailleerde stappen voor het werken met de Toegang API van Gegevens kunnen in de [ de ontwikkelaarsgids van de Toegang van Gegevens ](../../data-access/home.md) worden gevonden.
+De gedetailleerde stappen voor het werken met de Toegang API van Gegevens kunnen in de [&#x200B; de ontwikkelaarsgids van de Toegang van Gegevens &#x200B;](../../data-access/home.md) worden gevonden.
 
 ## Het schema van de gegevensset bijwerken
 
 U kunt velden toevoegen en aanvullende gegevens invoeren in gegevenssets die u hebt gemaakt. Hiervoor moet u eerst het schema bijwerken door extra eigenschappen toe te voegen die de nieuwe gegevens definiëren. Dit kan worden gedaan gebruikend de verrichtingen van PATCH en/of van PUT om het bestaande schema bij te werken.
 
-Voor meer informatie over het bijwerken van schema&#39;s, zie de [ Gids van de Ontwikkelaar van de Registratie API van het Schema ](../../xdm/api/getting-started.md).
+Voor meer informatie over het bijwerken van schema&#39;s, zie de [&#x200B; Gids van de Ontwikkelaar van de Registratie API van het Schema &#x200B;](../../xdm/api/getting-started.md).
 
 Nadat u het schema hebt bijgewerkt, kunt u de stappen in deze zelfstudie opnieuw volgen om nieuwe gegevens in te voeren die voldoen aan het herziene schema.
 
-Het is belangrijk om te herinneren dat de schemaevolutie zuiver additief is, betekenend kunt u geen het breken verandering in een schema introduceren zodra het aan de registratie is bewaard en voor gegevensopname gebruikt. Meer over beste praktijken leren voor het samenstellen van schema voor gebruik met Adobe Experience Platform, zie de gids op de [ grondbeginselen van schemacompositie ](../../xdm/schema/composition.md).
+Het is belangrijk om te herinneren dat de schemaevolutie zuiver additief is, betekenend kunt u geen het breken verandering in een schema introduceren zodra het aan de registratie is bewaard en voor gegevensopname gebruikt. Meer over beste praktijken leren voor het samenstellen van schema voor gebruik met Adobe Experience Platform, zie de gids op de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../../xdm/schema/composition.md).

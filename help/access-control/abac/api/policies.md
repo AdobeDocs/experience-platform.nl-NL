@@ -22,11 +22,11 @@ Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen o
 
 >[!IMPORTANT]
 >
->Dit eindpunt moet niet met het `/policies` eindpunt in de [ Dienst API van het Beleid ](../../../data-governance/api/policies.md) worden verward, dat wordt gebruikt om het beleid van het gegevensgebruik te beheren.
+>Dit eindpunt moet niet met het `/policies` eindpunt in de [&#x200B; Dienst API van het Beleid &#x200B;](../../../data-governance/api/policies.md) worden verward, dat wordt gebruikt om het beleid van het gegevensgebruik te beheren.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met beleidsregels ophalen {#list}
 

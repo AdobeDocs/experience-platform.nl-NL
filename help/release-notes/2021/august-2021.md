@@ -43,7 +43,7 @@ Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelij
 | Functie | Beschrijving |
 | --- | --- |
 | [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform Destination SDK is een reeks van configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De configuraties worden opgeslagen in Experience Platform en kunnen via API worden opgehaald voor extra updates. |
-| [ de verbeteringen van de Bruikbaarheid aan Doelen ](../../destinations/ui/activation-overview.md) | De verbeteringen van de bruikbaarheid aan bestemmingen laten marketers toe om segmenten aan bestaande bestemmingen naadloos te activeren. |
+| [&#x200B; de verbeteringen van de Bruikbaarheid aan Doelen &#x200B;](../../destinations/ui/activation-overview.md) | De verbeteringen van de bruikbaarheid aan bestemmingen laten marketers toe om segmenten aan bestaande bestemmingen naadloos te activeren. |
 
 Voor meer algemene informatie over bestemmingen raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
@@ -55,9 +55,9 @@ Met behulp van Observability Insights kunt u de Experience Platform-activiteiten
 
 | Functie | Beschrijving |
 | --- | --- |
-| Waarschuwingen | U kunt nu een abonnement nemen op belangrijke waarschuwingen met betrekking tot workflows die op Experience Platform worden uitgevoerd. Nadat u zich hebt geabonneerd op specifieke waarschuwingsregels, ontvangt u meldingen en e-mails in de gebruikersinterface wanneer een belangrijke levenscyclusgebeurtenis plaatsvindt (zoals het opnemen van gegevens) of als er problemen zijn die uw aandacht vereisen (zoals het mislukken van een innamestroom of het langer duren dan u had verwacht van een segmenttaak). Voor meer informatie, zie het [ alarm overzicht ](../../observability/alerts/overview.md). |
+| Waarschuwingen | U kunt nu een abonnement nemen op belangrijke waarschuwingen met betrekking tot workflows die op Experience Platform worden uitgevoerd. Nadat u zich hebt geabonneerd op specifieke waarschuwingsregels, ontvangt u meldingen en e-mails in de gebruikersinterface wanneer een belangrijke levenscyclusgebeurtenis plaatsvindt (zoals het opnemen van gegevens) of als er problemen zijn die uw aandacht vereisen (zoals het mislukken van een innamestroom of het langer duren dan u had verwacht van een segmenttaak). Voor meer informatie, zie het [&#x200B; alarm overzicht &#x200B;](../../observability/alerts/overview.md). |
 
-Zie het [ overzicht van de Inzichten van de Waarneming ](../../observability/home.md) voor meer informatie over de dienst.
+Zie het [&#x200B; overzicht van de Inzichten van de Waarneming &#x200B;](../../observability/home.md) voor meer informatie over de dienst.
 
 ## Realtime-klantenprofiel {#profile}
 
@@ -65,9 +65,9 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bladeren door profielen op samenvoegbeleid of identiteit | Wanneer u in Experience Platform door profielen bladert, kunt u nu door samenvoegbeleid bladeren om een voorvertoning weer te geven van 20 voorbeeldprofielen op basis van het geselecteerde samenvoegbeleid. U kunt ook op identiteit bladeren om naar een specifiek profiel te zoeken dat een naamruimte van de identiteit en verwante identiteitswaarde gebruikt. Voor meer informatie, zie de [ Realtime gids UI van het Profiel van de Klant ](../../profile/ui/user-guide.md). |
+| Bladeren door profielen op samenvoegbeleid of identiteit | Wanneer u in Experience Platform door profielen bladert, kunt u nu door samenvoegbeleid bladeren om een voorvertoning weer te geven van 20 voorbeeldprofielen op basis van het geselecteerde samenvoegbeleid. U kunt ook op identiteit bladeren om naar een specifiek profiel te zoeken dat een naamruimte van de identiteit en verwante identiteitswaarde gebruikt. Voor meer informatie, zie de [&#x200B; Realtime gids UI van het Profiel van de Klant &#x200B;](../../profile/ui/user-guide.md). |
 
-Meer over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met profielgegevens leren, gelieve te beginnen door het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md) te lezen.
+Meer over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met profielgegevens leren, gelieve te beginnen door het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../../profile/home.md) te lezen.
 
 ## Bronnen {#sources}
 
@@ -77,6 +77,6 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bronaansluiting voor lokale bestandsupload | De categorie voor het opnemen van bestanden is hernoemd naar het lokale systeem, zodat u lokale bestanden rechtstreeks naar Experience Platform kunt overbrengen via de lokale connector voor het uploaden van bestanden. De gegevens die door deze schakelaar worden opgenomen kunnen door het Dashboard van de Controle worden gecontroleerd. Zie het [ lokale dossier uploadt bronoverzicht ](../../sources/connectors/local-system/local-file-upload.md) voor meer informatie. |
+| Bronaansluiting voor lokale bestandsupload | De categorie voor het opnemen van bestanden is hernoemd naar het lokale systeem, zodat u lokale bestanden rechtstreeks naar Experience Platform kunt overbrengen via de lokale connector voor het uploaden van bestanden. De gegevens die door deze schakelaar worden opgenomen kunnen door het Dashboard van de Controle worden gecontroleerd. Zie het [&#x200B; lokale dossier uploadt bronoverzicht &#x200B;](../../sources/connectors/local-system/local-file-upload.md) voor meer informatie. |
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

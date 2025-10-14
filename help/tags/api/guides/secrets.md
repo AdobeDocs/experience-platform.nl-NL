@@ -19,15 +19,15 @@ Het attribuut `type_of` bevat momenteel drie ondersteunde geheime typen:
 | --- | --- |
 | `token` | Een enkele tekenreeks met tekens die een verificatietoken-waarde vertegenwoordigt die door beide systemen bekend en begrepen is. |
 | `simple-http` | Bevat respectievelijk twee tekenreekskenmerken voor een gebruikersnaam en wachtwoord. |
-| `oauth2-client_credentials` | Bevat verscheidene attributen om [ OAuth ](https://datatracker.ietf.org/doc/html/rfc6749) authentificatiespecic te steunen. De gebeurtenis die u door:sturen vraagt om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
+| `oauth2-client_credentials` | Bevat verscheidene attributen om [&#x200B; OAuth &#x200B;](https://datatracker.ietf.org/doc/html/rfc6749) authentificatiespecic te steunen. De gebeurtenis die u door:sturen vraagt om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 
 {style="table-layout:auto"}
 
-Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor gebruik in gebeurtenis te vormen die door:sturen. Voor gedetailleerde begeleiding op hoe te om geheimen in Reactor API, met inbegrip van voorbeeld JSON van de structuur van een geheim te beheren, verwijs naar de [ geheimen eindpuntgids ](../endpoints/secrets.md).
+Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor gebruik in gebeurtenis te vormen die door:sturen. Voor gedetailleerde begeleiding op hoe te om geheimen in Reactor API, met inbegrip van voorbeeld JSON van de structuur van een geheim te beheren, verwijs naar de [&#x200B; geheimen eindpuntgids &#x200B;](../endpoints/secrets.md).
 
 ## Credentials
 
-Elk geheim bevat een attribuut `credentials` dat zijn respectieve referentie waarden houdt. Wanneer [ creërend een geheim in API ](../endpoints/secrets.md#create), heeft elk type van geheim verschillende vereiste attributen zoals aangetoond in de hieronder secties:
+Elk geheim bevat een attribuut `credentials` dat zijn respectieve referentie waarden houdt. Wanneer [&#x200B; creërend een geheim in API &#x200B;](../endpoints/secrets.md#create), heeft elk type van geheim verschillende vereiste attributen zoals aangetoond in de hieronder secties:
 
 * [&quot;token&quot;](#token)
 * [` simple-http`](#simple-http)
@@ -69,7 +69,7 @@ Bij geheimen met een `type_of` waarde van `oauth2-client_credentials` zijn de vo
 | `client_secret` | String | Het clientgeheim voor de OAuth-integratie. Deze waarde wordt niet opgenomen in de API-reactie. |
 | `token_url` | String | De autorisatie-URL voor de OAuth-integratie. |
 | `refresh_offset` | Geheel | *(Facultatief)* de waarde, in seconden, om te compenseren verfrist verrichting door. Als dit kenmerk wordt weggelaten tijdens het maken van het geheim, wordt de waarde standaard ingesteld op `14400` (vier uur). |
-| `options` | Object | *(Facultatief)* specificeert extra opties voor de integratie OAuth:<ul><li>`scope`: Een koord dat [ OAuth 2.0 werkingsgebied ](https://oauth.net/2/scope/) voor de geloofsbrieven vertegenwoordigt.</li><li>`audience`: Een koord dat een [ Auth0 toegangstoken ](https://auth0.com/docs/protocols/protocol-oauth2) vertegenwoordigt.</li></ul> |
+| `options` | Object | *(Facultatief)* specificeert extra opties voor de integratie OAuth:<ul><li>`scope`: Een koord dat [&#x200B; OAuth 2.0 werkingsgebied &#x200B;](https://oauth.net/2/scope/) voor de geloofsbrieven vertegenwoordigt.</li><li>`audience`: Een koord dat een [&#x200B; Auth0 toegangstoken &#x200B;](https://auth0.com/docs/protocols/protocol-oauth2) vertegenwoordigt.</li></ul> |
 
 Wanneer een `oauth2-client_credentials` -geheim wordt gemaakt of bijgewerkt, worden de `client_id` en `client_secret` (en mogelijk `options` ) uitgewisseld in een verzoek van de POST aan de `token_url` , volgens de Client Credentials-stroom van het OAuth-protocol.
 
@@ -105,7 +105,7 @@ Bij geheimen met een `type_of` value of `oauth2-google` is het volgende kenmerk 
 
 | Referentiekenmerk | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `scopes` | Array | Hiermee geeft u de Google-productbereiken voor verificatie weer. Het volgende bereik wordt ondersteund:<ul><li>[ Advertentie Google ](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[ Google Pub/Sub ](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+| `scopes` | Array | Hiermee geeft u de Google-productbereiken voor verificatie weer. Het volgende bereik wordt ondersteund:<ul><li>[&#x200B; Advertentie Google &#x200B;](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[&#x200B; Google Pub/Sub &#x200B;](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
 Nadat u het geheim `oauth2-google` hebt gemaakt, bevat de reactie een eigenschap `meta.authorization_url` . U moet deze URL kopiëren en in browser plakken om de Google-verificatiestroom te voltooien.
 
@@ -113,11 +113,11 @@ Nadat u het geheim `oauth2-google` hebt gemaakt, bevat de reactie een eigenschap
 
 De autorisatie-URL voor een `oauth2-google` -geheim verloopt één uur nadat het geheim is gemaakt (zoals aangegeven door `meta.authorization_url_expires_at` ). Na deze tijd, moet het geheim opnieuw worden geautoriseerd om het authentificatieproces te vernieuwen.
 
-Verwijs naar de [ geheimen eindpuntgids ](../endpoints/secrets.md#reauthorize) voor details op hoe opnieuw goedkeurt een `oauth2-google` geheim door een verzoek van de PATCH aan Reactor API te doen.
+Verwijs naar de [&#x200B; geheimen eindpuntgids &#x200B;](../endpoints/secrets.md#reauthorize) voor details op hoe opnieuw goedkeurt een `oauth2-google` geheim door een verzoek van de PATCH aan Reactor API te doen.
 
 ## Omgevingsrelatie
 
-Wanneer u een geheim creeert, moet u het [ milieu ](../endpoints/environments.md) specificeren waarin het zal bestaan. Geheimen worden onmiddellijk ingezet in de omgeving waarin ze zijn gemaakt.
+Wanneer u een geheim creeert, moet u het [&#x200B; milieu &#x200B;](../endpoints/environments.md) specificeren waarin het zal bestaan. Geheimen worden onmiddellijk ingezet in de omgeving waarin ze zijn gemaakt.
 
 Een geheim kan slechts aan één milieu worden geassocieerd. Zodra het verband tussen een geheim en een milieu wordt gevestigd, kan het geheim niet uit het milieu worden ontruimd, en het geheim kan niet met een verschillend milieu worden geassocieerd.
 
@@ -127,13 +127,13 @@ Een geheim kan slechts aan één milieu worden geassocieerd. Zodra het verband t
 
 Nadat de geloofsbrieven van een geheim met succes zijn geruild, voor een geheim om met een milieu worden geassocieerd, wordt het uitwisselingsartefact (het symbolische koord voor `token`, het Base64 gecodeerde koord voor `simple-http`, of het toegangstoken voor `oauth2-client_credentials`) veilig bewaard op het milieu.
 
-Nadat het uitwisselingsartefact met succes op het milieu wordt bewaard, wordt het `activated_at` attribuut van het geheim geplaatst aan de huidige tijd UTC, en kan nu worden van verwijzingen voorzien gebruikend een gegevenselement. Zie de [ volgende sectie ](#referencing-secrets) voor meer informatie bij het van verwijzingen voorzien geheimen.
+Nadat het uitwisselingsartefact met succes op het milieu wordt bewaard, wordt het `activated_at` attribuut van het geheim geplaatst aan de huidige tijd UTC, en kan nu worden van verwijzingen voorzien gebruikend een gegevenselement. Zie de [&#x200B; volgende sectie &#x200B;](#referencing-secrets) voor meer informatie bij het van verwijzingen voorzien geheimen.
 
 ## Verwijzen naar geheimen {#referencing-secrets}
 
-Om naar een geheim te verwijzen, moet u een gegevenselement van type &quot;[!UICONTROL Secret]&quot;tot stand brengen (door de [[!UICONTROL Core] uitbreiding ](../../extensions/client/core/overview.md) wordt verstrekt) op een gebeurtenis die bezit door:sturen. Wanneer het vormen van dit gegevenselement, wordt u ertoe aangezet om te wijzen op welk geheim aan gebruik voor elk milieu. U kunt dan regels tot stand brengen die naar een geheim gegevenselement, zoals binnen de kopbal voor een vraag van HTTP verwijzen.
+Om naar een geheim te verwijzen, moet u een gegevenselement van type &quot;[!UICONTROL Secret]&quot;tot stand brengen (door de [[!UICONTROL Core] uitbreiding &#x200B;](../../extensions/client/core/overview.md) wordt verstrekt) op een gebeurtenis die bezit door:sturen. Wanneer het vormen van dit gegevenselement, wordt u ertoe aangezet om te wijzen op welk geheim aan gebruik voor elk milieu. U kunt dan regels tot stand brengen die naar een geheim gegevenselement, zoals binnen de kopbal voor een vraag van HTTP verwijzen.
 
-![ Geheime gegevenselement ](../../images/api/guides/secrets/data-element.png)
+![&#x200B; Geheime gegevenselement &#x200B;](../../images/api/guides/secrets/data-element.png)
 
 >[!NOTE]
 >
@@ -143,4 +143,4 @@ Tijdens runtime wordt het element met geheime gegevens vervangen door het corres
 
 ## Volgende stappen
 
-In deze handleiding werden de basisprincipes van het werken met geheimen in de Reactor-API besproken. Voor details op hoe te om geheimen te beheren gebruikend API vraag, zie de [ geheimen eindpuntgids ](../endpoints/secrets.md).
+In deze handleiding werden de basisprincipes van het werken met geheimen in de Reactor-API besproken. Voor details op hoe te om geheimen te beheren gebruikend API vraag, zie de [&#x200B; geheimen eindpuntgids &#x200B;](../endpoints/secrets.md).

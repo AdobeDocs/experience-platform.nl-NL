@@ -31,15 +31,15 @@ Deze zelfstudie behandelt de stappen voor het maken en bewerken van aangepaste g
 
 ## Vereisten {#prerequisites}
 
-Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het ecosysteem van Experience Platform, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) voor hoe de gegevenstypes aan schema&#39;s bijdragen XDM.
+Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [&#x200B; XDM overzicht &#x200B;](../../home.md) voor een inleiding aan de rol van XDM binnen het ecosysteem van Experience Platform, en de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../../schema/composition.md) voor hoe de gegevenstypes aan schema&#39;s bijdragen XDM.
 
-Terwijl niet vereist voor deze gids, wordt het geadviseerd dat u ook het leerprogramma volgt op [ samenstellend een schema in UI ](../../tutorials/create-schema-ui.md) om zich met de diverse mogelijkheden van [!DNL Schema Editor] vertrouwd te maken.
+Terwijl niet vereist voor deze gids, wordt het geadviseerd dat u ook het leerprogramma volgt op [&#x200B; samenstellend een schema in UI &#x200B;](../../tutorials/create-schema-ui.md) om zich met de diverse mogelijkheden van [!DNL Schema Editor] vertrouwd te maken.
 
 ## Open de lus [!DNL Schema Editor] voor een gegevenstype {#data-type}
 
 Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de werkruimte van [!UICONTROL Schemas] te openen en selecteer vervolgens het tabblad **[!UICONTROL Data types]** . Er wordt een lijst met beschikbare gegevenstypen weergegeven. De lijst met gegevenstypen wordt automatisch gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de gegevenstypen weergegeven die door Adobe zijn gedefinieerd. U kunt de lijst ook filteren om de lijsten weer te geven die door uw organisatie zijn gemaakt.
 
-![ de [!UICONTROL Schemas] werkruimte met [!UICONTROL Schemas] in de linkernavigatie en [!UICONTROL Data types] benadrukte.](../../images/ui/resources/data-types/data-types-tab.png)
+![&#x200B; de [!UICONTROL Schemas] werkruimte met [!UICONTROL Schemas] in de linkernavigatie en [!UICONTROL Data types] benadrukte.](../../images/ui/resources/data-types/data-types-tab.png)
 
 Hier hebt u de volgende opties:
 
@@ -51,7 +51,7 @@ Hier hebt u de volgende opties:
 
 Selecteer op het tabblad **[!UICONTROL Data types]** de optie **[!UICONTROL Create data type]**.
 
-![ het [!UICONTROL Schemas] werkruimte [!UICONTROL Data types] lusje met [!UICONTROL Create data type] benadrukte.](../../images/ui/resources/data-types/create.png)
+![&#x200B; het [!UICONTROL Schemas] werkruimte [!UICONTROL Data types] lusje met [!UICONTROL Create data type] benadrukte.](../../images/ui/resources/data-types/create.png)
 
 De lus [!DNL Schema Editor] wordt weergegeven en geeft de huidige structuur van het nieuwe gegevenstype op het canvas weer. Aan de rechterkant van de editor kunt u een weergavenaam en een optionele beschrijving voor het gegevenstype opgeven. Zorg ervoor dat u een unieke en beknopte naam voor uw gegevenstype opgeeft, omdat dit zo is dat het wordt geïdentificeerd wanneer u het aan een schema toevoegt.
 
@@ -59,19 +59,19 @@ Deze zelfstudie maakt een gegevenstype dat een restauratie-eigenschap beschrijft
 
 ![](../../images/ui/resources/data-types/data-type-properties.png)
 
-Van hier, kunt u vooruit aan de [ volgende sectie ](#add-fields) overslaan beginnen gebieden aan het nieuwe gegevenstype toe te voegen.
+Van hier, kunt u vooruit aan de [&#x200B; volgende sectie &#x200B;](#add-fields) overslaan beginnen gebieden aan het nieuwe gegevenstype toe te voegen.
 
 ### Gegevenstypen filteren {#filter}
 
 De lijst met beschikbare gegevenstypen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties [!UICONTROL Standard] en [!UICONTROL Custom] . De optie [!UICONTROL Standard] geeft entiteiten weer die door Adobe zijn gemaakt en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
 
-![ het [!UICONTROL Data types] lusje van de [!UICONTROL Schemas] werkruimte met [!UICONTROL Standard] en [!UICONTROL Custom] benadrukte.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+![&#x200B; het [!UICONTROL Data types] lusje van de [!UICONTROL Schemas] werkruimte met [!UICONTROL Standard] en [!UICONTROL Custom] benadrukte.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
 ### Een bestaand gegevenstype bewerken {#edit}
 
 >[!NOTE]
 >
->Zodra een bestaand gegevenstype in een schema wordt gebruikt dat voor gebruik in het Profiel van de Klant in real time is toegelaten, slechts kunnen niet-destructieve veranderingen daarna in dat gegevenstype worden aangebracht. Zie de [ regels van schemaevolutie ](../../schema/composition.md#evolution) voor meer informatie.
+>Zodra een bestaand gegevenstype in een schema wordt gebruikt dat voor gebruik in het Profiel van de Klant in real time is toegelaten, slechts kunnen niet-destructieve veranderingen daarna in dat gegevenstype worden aangebracht. Zie de [&#x200B; regels van schemaevolutie &#x200B;](../../schema/composition.md#evolution) voor meer informatie.
 
 Alleen aangepaste gegevenstypen die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Selecteer **[!UICONTROL Custom]** om alleen aangepaste gegevenstypen weer te geven die eigendom zijn van uw organisatie.
 
@@ -79,7 +79,7 @@ Selecteer in de lijst het gegevenstype dat u wilt bewerken om de rechtertrack te
 
 Selecteer de naam van het gegevenstype in de rechterrail om de structuur ervan te openen in de [!DNL Schema Editor] .
 
-![ het [!UICONTROL Data types] lusje van de [!UICONTROL Schemas] werkruimte, met een gegevenstype, [!UICONTROL Custom] en het benadrukte gegevenstype [!UICONTROL Name].](../../images/ui/resources/data-types/edit.png)
+![&#x200B; het [!UICONTROL Data types] lusje van de [!UICONTROL Schemas] werkruimte, met een gegevenstype, [!UICONTROL Custom] en het benadrukte gegevenstype [!UICONTROL Name].](../../images/ui/resources/data-types/edit.png)
 
 ## Velden toevoegen aan het gegevenstype {#add-fields}
 
@@ -87,7 +87,7 @@ Begin gebieden aan het gegevenstype toe te voegen, selecteer **plus (+)** pictog
 
 ![](../../images/ui/resources/data-types/new-field.png)
 
-Gebruik de besturingselementen in het rechterspoor om de details van het nieuwe veld te configureren. Zie de gids op [ definiërend gebieden in UI ](../fields/overview.md#define) voor specifieke stappen op om het gebied aan het gegevenstype te vormen en toe te voegen.
+Gebruik de besturingselementen in het rechterspoor om de details van het nieuwe veld te configureren. Zie de gids op [&#x200B; definiërend gebieden in UI &#x200B;](../fields/overview.md#define) voor specifieke stappen op om het gebied aan het gegevenstype te vormen en toe te voegen.
 
 Het gegevenstype Restaurant vereist een tekenreeksveld voor de naam van het restaurant. Als zodanig wordt [!UICONTROL Field name] ingesteld als &quot;name&quot; en [!UICONTROL Type] als &quot;[!UICONTROL String]&quot;. Selecteer **[!UICONTROL Apply]** om de wijzigingen toe te passen op het veld.
 
@@ -109,7 +109,7 @@ Nadat u alle velden aan het gegevenstype hebt toegevoegd, selecteert u **[!UICON
 
 Nadat u een gegevenstype hebt gemaakt, kunt u het in uw schema&#39;s gebruiken. Aangezien XDM-schema&#39;s bestaan uit een klasse en nul of meer veldgroepen, kunnen velden die door een gegevenstype worden verschaft, niet rechtstreeks aan een schema worden toegevoegd. In plaats daarvan moeten ze worden opgenomen in een klasse of een veldgroep.
 
-Begin door de stappen te volgen betrokken met [ toevoegend een gebied aan een klasse ](./classes.md#add-fields) of [ toevoegend een gebied aan een gebiedsgroep ](./field-groups.md#add-fields). Alternatief, kunt u [ beginnen toevoegend een gebied direct aan een schema ](./schemas.md#add-individual-fields) en de ouderklasse of de gebiedsgroep kiezen van daar. Wanneer u **[!UICONTROL Type]** voor het nieuwe gebied kiest, selecteer de naam van uw gegevenstype van het drop-down menu.
+Begin door de stappen te volgen betrokken met [&#x200B; toevoegend een gebied aan een klasse &#x200B;](./classes.md#add-fields) of [&#x200B; toevoegend een gebied aan een gebiedsgroep &#x200B;](./field-groups.md#add-fields). Alternatief, kunt u [&#x200B; beginnen toevoegend een gebied direct aan een schema &#x200B;](./schemas.md#add-individual-fields) en de ouderklasse of de gebiedsgroep kiezen van daar. Wanneer u **[!UICONTROL Type]** voor het nieuwe gebied kiest, selecteer de naam van uw gegevenstype van het drop-down menu.
 
 ## Een object met meerdere velden omzetten in een gegevenstype {#convert}
 
@@ -125,6 +125,6 @@ Het canvas werkt het gegevenstype van het gebied van &quot;[!UICONTROL Object]&q
 
 ## Volgende stappen {#next-steps}
 
-In deze handleiding wordt beschreven hoe u gegevenstypen kunt maken en bewerken met de gebruikersinterface van Experience Platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
+In deze handleiding wordt beschreven hoe u gegevenstypen kunt maken en bewerken met de gebruikersinterface van Experience Platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte &#x200B;](../overview.md).
 
-Leren hoe te om gegevenstypes te beheren gebruikend [!DNL Schema Registry] API, zie de [ gids van het gegevenstypepunteindpunt ](../../api/data-types.md).
+Leren hoe te om gegevenstypes te beheren gebruikend [!DNL Schema Registry] API, zie de [&#x200B; gids van het gegevenstypepunteindpunt &#x200B;](../../api/data-types.md).

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Gebruik een &#39;vage&#39; match op je Adobe Experience Platform-gegevens om de meest waarschijnlijke, bijna overeenkomende overeenkomsten te retourneren zonder dat er naar tekenreeksen met identieke tekens moet worden gezocht. Hierdoor kunt u uw gegevens veel flexibeler doorzoeken en uw gegevens toegankelijker maken door tijd en moeite te besparen.
 
-In plaats van te proberen om de onderzoekskoorden opnieuw te formatteren om hen aan te passen, analyseert de vage gelijke de verhouding van gelijkenis tussen twee opeenvolgingen en keert het percentage van gelijkenis terug. [[!DNL FuzzyWuzzy] ](https://pypi.org/project/fuzzywuzzy/) wordt geadviseerd voor dit proces aangezien zijn functies geschikter zijn helpen koorden in complexere situaties in vergelijking met [!DNL regex] of [!DNL difflib] aanpassen.
+In plaats van te proberen om de onderzoekskoorden opnieuw te formatteren om hen aan te passen, analyseert de vage gelijke de verhouding van gelijkenis tussen twee opeenvolgingen en keert het percentage van gelijkenis terug. [[!DNL FuzzyWuzzy] &#x200B;](https://pypi.org/project/fuzzywuzzy/) wordt geadviseerd voor dit proces aangezien zijn functies geschikter zijn helpen koorden in complexere situaties in vergelijking met [!DNL regex] of [!DNL difflib] aanpassen.
 
 Het voorbeeld dat in dit gebruiksgeval wordt gegeven, is gericht op het afstemmen van vergelijkbare kenmerken van een zoekopdracht in een hotelkamer in twee verschillende gegevensbestanden voor reisbureaus. In het document wordt weergegeven hoe tekenreeksen op basis van de mate van overeenkomst met grote, afzonderlijke gegevensbronnen moeten worden vergeleken. In dit voorbeeld vergelijkt de wazzy match de zoekresultaten met de functies van een kamer van de reisbureaus Luma en Acme.
 
@@ -21,7 +21,7 @@ Het voorbeeld dat in dit gebruiksgeval wordt gegeven, is gericht op het afstemme
 
 Als onderdeel van dit proces moet u een model voor machinaal leren trainen, wordt in dit document uitgegaan van een praktische kennis van een of meer computerleeromgevingen.
 
-In dit voorbeeld worden [!DNL Python] en de [!DNL Jupyter Notebook] -ontwikkelomgeving gebruikt. Hoewel er veel opties beschikbaar zijn, wordt [!DNL Jupyter Notebook] aanbevolen omdat het een opensource webtoepassing is die lage computervereisten heeft. Het kan van [ de officiële plaats van Jupyter ](https://jupyter.org/) worden gedownload.
+In dit voorbeeld worden [!DNL Python] en de [!DNL Jupyter Notebook] -ontwikkelomgeving gebruikt. Hoewel er veel opties beschikbaar zijn, wordt [!DNL Jupyter Notebook] aanbevolen omdat het een opensource webtoepassing is die lage computervereisten heeft. Het kan van [&#x200B; de officiële plaats van Jupyter &#x200B;](https://jupyter.org/) worden gedownload.
 
 Voordat u begint, moet u de benodigde bibliotheken importeren. [!DNL FuzzyWuzzy] is een opensource [!DNL Python] -bibliotheek die boven op de [!DNL difflib] -bibliotheek is gemaakt en wordt gebruikt om tekenreeksen overeen te laten komen. [!DNL Levenshtein Distance] wordt gebruikt om de verschillen tussen reeksen en patronen te berekenen. [!DNL FuzzyWuzzy] heeft de volgende vereisten:
 
@@ -40,11 +40,11 @@ Of gebruik de volgende opdracht om [!DNL Python-Levenshtein] ook te installeren:
 pip install fuzzywuzzy[speedup]
 ```
 
-De meer technische informatie over [!DNL Fuzzywuzzy] kan in hun [ officiële documentatie ](https://pypi.org/project/fuzzywuzzy/) worden gevonden.
+De meer technische informatie over [!DNL Fuzzywuzzy] kan in hun [&#x200B; officiële documentatie &#x200B;](https://pypi.org/project/fuzzywuzzy/) worden gevonden.
 
 ### Verbinding maken met Query-service
 
-U moet het model van het machinleren aan de Dienst van de Vraag verbinden door uw verbindingsgeloofsbrieven te verstrekken. Zowel kunnen het verlopen als niet-het verlopen geloofsbrieven worden verstrekt. Gelieve te zien de [ geloofsbrieven gids ](../ui/credentials.md) voor meer informatie over hoe te om de noodzakelijke geloofsbrieven te verwerven. Als u [!DNL Jupyter Notebook] gebruikt, te lezen gelieve de volledige gids op [ hoe te met de Dienst van de Vraag ](../clients/jupyter-notebook.md) te verbinden.
+U moet het model van het machinleren aan de Dienst van de Vraag verbinden door uw verbindingsgeloofsbrieven te verstrekken. Zowel kunnen het verlopen als niet-het verlopen geloofsbrieven worden verstrekt. Gelieve te zien de [&#x200B; geloofsbrieven gids &#x200B;](../ui/credentials.md) voor meer informatie over hoe te om de noodzakelijke geloofsbrieven te verwerven. Als u [!DNL Jupyter Notebook] gebruikt, te lezen gelieve de volledige gids op [&#x200B; hoe te met de Dienst van de Vraag &#x200B;](../clients/jupyter-notebook.md) te verbinden.
 
 Ook moet u het [!DNL numpy] -pakket importeren in de [!DNL Python] -omgeving om lineaire algebra in te schakelen.
 

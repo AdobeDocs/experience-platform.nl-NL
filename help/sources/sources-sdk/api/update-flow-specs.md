@@ -20,7 +20,7 @@ In het volgende document worden stappen beschreven voor het ophalen en bijwerken
 
 ## Aan de slag
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een stroomspecificatie opzoeken {#lookup}
 
@@ -610,4 +610,4 @@ Een geslaagde reactie retourneert de details van de aangevraagde flowspecificati
 
 ## Volgende stappen
 
-Als de nieuwe verbindingsspecificatie aan de juiste stroomspecificatie is toegevoegd, kunt u nu doorgaan met testen en uw nieuwe bron verzenden. Zie de gids op [ het testen en het voorleggen van een nieuwe bron ](./submit.md) voor meer informatie.
+Als de nieuwe verbindingsspecificatie aan de juiste stroomspecificatie is toegevoegd, kunt u nu doorgaan met testen en uw nieuwe bron verzenden. Zie de gids op [&#x200B; het testen en het voorleggen van een nieuwe bron &#x200B;](./submit.md) voor meer informatie.

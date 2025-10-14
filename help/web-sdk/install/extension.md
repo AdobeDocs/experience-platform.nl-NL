@@ -13,18 +13,18 @@ ht-degree: 0%
 
 De Adobe biedt een specifieke markeringsuitbreiding aan om het Web SDK uit te voeren en te vormen. Deze implementatiemethode is de belangrijkste methode die door de Adobe wordt aanbevolen voor het implementeren en onderhouden van code voor gegevensverzameling.
 
-Zodra u aan de [ eerste vereisten ](overview.md) voldoet, kunt u de de markeringsuitbreiding van SDK van het Web opstellen door de volgende stappen te gebruiken:
+Zodra u aan de [&#x200B; eerste vereisten &#x200B;](overview.md) voldoet, kunt u de de markeringsuitbreiding van SDK van het Web opstellen door de volgende stappen te gebruiken:
 
 ## De extensie in een tag installeren
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap voor de tag of maak een eigenschap voor de tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en selecteer vervolgens de tab **[!UICONTROL Catalog]** .
 1. Zoek en installeer de extensie **[!UICONTROL Adobe Experience Platform Web SDK]** .
 1. Selecteer de juiste sandbox en datastream voor elke omgeving en klik op **[!UICONTROL Save]** .
 
-Zie de documentatie op hoe te [ de de markeringsuitbreiding van SDK van het Web ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) voor meer informatie vormen.
+Zie de documentatie op hoe te [&#x200B; de de markeringsuitbreiding van SDK van het Web &#x200B;](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) voor meer informatie vormen.
 
 ## De labelcode naar ontwikkeling Publish
 
@@ -43,4 +43,4 @@ Nu de tagcode is gepubliceerd, kunt u de code van de tagloader aan uw website to
 
 ## Implementatie invullen en publiceren naar productie
 
-Zie het [ de uitbreidingsoverzicht van SDK van het Web ](../../tags/extensions/client/web-sdk/overview.md) voor meer informatie rond de uitbreiding zelf, en [ overzicht van Markeringen ](../../tags/home.md) voor meer informatie rond het navigeren van de markeringsinterface.
+Zie het [&#x200B; de uitbreidingsoverzicht van SDK van het Web &#x200B;](../../tags/extensions/client/web-sdk/overview.md) voor meer informatie rond de uitbreiding zelf, en [&#x200B; overzicht van Markeringen &#x200B;](../../tags/home.md) voor meer informatie rond het navigeren van de markeringsinterface.

@@ -39,7 +39,7 @@ De API van [!DNL Sensei Machine Learning] biedt ondersteuning voor queryparamete
 
 ## Python CPU- en GPU-configuraties {#cpu-gpu-config}
 
-De Motoren van de Python hebben de capaciteit om tussen of cpu of een GPU voor zijn opleiding of het scoren doeleinden te kiezen, en op een [ MLInstance ](./mlinstances.md) als taakspecificatie (`tasks.specification`) bepaald.
+De Motoren van de Python hebben de capaciteit om tussen of cpu of een GPU voor zijn opleiding of het scoren doeleinden te kiezen, en op een [&#x200B; MLInstance &#x200B;](./mlinstances.md) als taakspecificatie (`tasks.specification`) bepaald.
 
 Hieronder volgt een voorbeeldconfiguratie die het gebruik van een CPU voor training en een GPU voor scoring opgeeft:
 
@@ -90,7 +90,7 @@ Spark Engines hebben de mogelijkheid om computerresources aan te passen voor tra
 | uitvoerderCores | Aantal door de uitvoerder gebruikte kernen | int |
 | numExecutors | Aantal executoren | int |
 
-De middelen kunnen op een [ MLInstance ](./mlinstances.md) als of (A) individuele opleiding of het scoren parameters, of (B) binnen een extra specificatievoorwerp (`specification`) worden gespecificeerd. De volgende bronnenconfiguraties zijn bijvoorbeeld hetzelfde voor zowel training als scoring:
+De middelen kunnen op een [&#x200B; MLInstance &#x200B;](./mlinstances.md) als of (A) individuele opleiding of het scoren parameters, of (B) binnen een extra specificatievoorwerp (`specification`) worden gespecificeerd. De volgende bronnenconfiguraties zijn bijvoorbeeld hetzelfde voor zowel training als scoring:
 
 ```json
 [

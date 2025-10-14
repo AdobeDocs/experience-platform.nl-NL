@@ -17,7 +17,7 @@ In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteun
 
 >[!NOTE]
 >
->De definities voor de diverse termijnen die in dit document worden gebruikt kunnen in de [ terminologie van de privacyverordening ](terminology.md) gids worden gevonden.
+>De definities voor de diverse termijnen die in dit document worden gebruikt kunnen in de [&#x200B; terminologie van de privacyverordening &#x200B;](terminology.md) gids worden gevonden.
 
 ## Algemene vragen
 
@@ -25,7 +25,7 @@ De volgende vragen hebben betrekking op alle privacyregels die door het Experien
 
 ### Welke gevolgen hebben de ondersteunde privacyregels?
 
-De [ privacyverordeningen die door Experience Cloud ](./overview.md) worden gesteund zijn op alle organisaties van toepassing die de persoonsgegevens van burgers opslaan en verwerken binnen de respectieve jurisdicties van verordeningen, ongeacht de geografische plaats van de organisatie.
+De [&#x200B; privacyverordeningen die door Experience Cloud &#x200B;](./overview.md) worden gesteund zijn op alle organisaties van toepassing die de persoonsgegevens van burgers opslaan en verwerken binnen de respectieve jurisdicties van verordeningen, ongeacht de geografische plaats van de organisatie.
 
 ### Wat zijn persoonlijke gegevens?
 
@@ -107,7 +107,7 @@ Als de gegevensbewerkingen van uw organisatie onder de rechtsbevoegdheid van de 
 
 ### Hoe kan ik verzoeken om privacy van consumenten ondersteunen als ik gegevens bijhoud die onder privacyregels vallen?
 
-Zodra u de noodzakelijke stappen hebt genomen om consumenten te verifiëren die binnen de toepasselijke wettelijke jurisdicties vallen, staat Adobe Experience Platform Privacy Service u toe om verzoeken van de consument om de privacy van de consument aan compatibele toepassingen van de Experience Cloud te voorleggen. Zie het [[!DNL Privacy Service]  overzicht ](../home.md) voor meer informatie. Voor informatie over hoe uw bijzondere toepassingen van het Experience Cloud privacyverzoeken kunnen respecteren, gelieve te verwijzen naar de gids op [ Privacy Service en de toepassingen van het Experience Cloud ](../experience-cloud-apps.md).
+Zodra u de noodzakelijke stappen hebt genomen om consumenten te verifiëren die binnen de toepasselijke wettelijke jurisdicties vallen, staat Adobe Experience Platform Privacy Service u toe om verzoeken van de consument om de privacy van de consument aan compatibele toepassingen van de Experience Cloud te voorleggen. Zie het [[!DNL Privacy Service]  overzicht &#x200B;](../home.md) voor meer informatie. Voor informatie over hoe uw bijzondere toepassingen van het Experience Cloud privacyverzoeken kunnen respecteren, gelieve te verwijzen naar de gids op [&#x200B; Privacy Service en de toepassingen van het Experience Cloud &#x200B;](../experience-cloud-apps.md).
 
 >[!NOTE]
 >

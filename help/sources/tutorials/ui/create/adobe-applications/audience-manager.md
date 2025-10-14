@@ -22,45 +22,45 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder [!UICONTROL Adobe Application] de optie **[!UICONTROL Adobe Audience Manager]** en selecteer vervolgens **[!UICONTROL Set up]** .
 
-![ catalogus ](../../../../images/tutorials/create/aam/catalog.png)
+![&#x200B; catalogus &#x200B;](../../../../images/tutorials/create/aam/catalog.png)
 
 ### Kenmerken en segmenten selecteren
 
 >[!NOTE]
 >
->U kunt geen regionale gegevens van de bron van Audience Manager aan Experience Platform opnemen. Als u Analytics gebruiksgevallen hebt die regionale gegevens vereisen, dan gelieve te gebruiken de [ bron van Analytics schakelaar ](../adobe-applications/analytics.md).
+>U kunt geen regionale gegevens van de bron van Audience Manager aan Experience Platform opnemen. Als u Analytics gebruiksgevallen hebt die regionale gegevens vereisen, dan gelieve te gebruiken de [&#x200B; bron van Analytics schakelaar &#x200B;](../adobe-applications/analytics.md).
 
 De stap [!UICONTROL Select traits and segments] verschijnt, die u van een interactieve interface voorzien om uw eigenschappen, segmenten, en gegevens te onderzoeken en te selecteren.
 
 * Het linkerdeelvenster van de interface bevat de [!UICONTROL Select traits and segments] -opties en een hiërarchische map met alle segmenten die voor u beschikbaar zijn.
 * De juiste helft van de interface staat u toe om met geselecteerde segmenten in wisselwerking te staan en door specifieke gegevens te kiezen u wilt gebruiken.
 
-![ toe:voegen-gegevens ](../../../../images/tutorials/create/aam/add-data.png)
+![&#x200B; toe:voegen-gegevens &#x200B;](../../../../images/tutorials/create/aam/add-data.png)
 
 Als u door beschikbare segmenten wilt navigeren, selecteert u in het deelvenster [!UICONTROL All Segments] de map die u wilt openen. Als u een map selecteert, kunt u de hiërarchie van een map doorlopen en krijgt u een lijst met segmenten om door te filteren.
 
-![ segment-omslag ](../../../../images/tutorials/create/aam/segment-folder.png)
+![&#x200B; segment-omslag &#x200B;](../../../../images/tutorials/create/aam/segment-folder.png)
 
 Nadat u de gewenste segmenten hebt geïdentificeerd en geselecteerd, wordt aan de rechterkant een nieuw deelvenster weergegeven met de lijst met geselecteerde items. U kunt tot verschillende omslagen blijven toegang hebben en verschillende segmenten voor uw verbinding selecteren. Als u meer segmenten selecteert, wordt het deelvenster aan de rechterkant bijgewerkt.
 
-![ selecteren-gegevens ](../../../../images/tutorials/create/aam/select-data.png)
+![&#x200B; selecteren-gegevens &#x200B;](../../../../images/tutorials/create/aam/select-data.png)
 
 U kunt ook de vakken **[!UICONTROL Select all segments]** en **[!UICONTROL Select all traits]** selecteren. Als u alle segmenten selecteert, worden de Audience Manager-segmenten naar Experience Platform gebracht. Als u alle kenmerken selecteert, worden alle eerste-partijkenmerken vanuit Audience Manager ingeschakeld.
 
 >[!WARNING]
 >
->De opname van grote Audience Manager-segmentpopulaties heeft een directe invloed op het totale aantal profielen wanneer u eerst een Audience Manager-segment naar Experience Platform verzendt met de Audience Manager-bron. Dit betekent dat het selecteren van alle segmenten kan leiden tot een aantal profielen dat groter is dan uw gebruiksrechten voor licenties. Gelieve te herzien uw [ gebruikstoelage van de vergunning ](../../../../../dashboards/guides/license-usage.md) alvorens te werk te gaan.
+>De opname van grote Audience Manager-segmentpopulaties heeft een directe invloed op het totale aantal profielen wanneer u eerst een Audience Manager-segment naar Experience Platform verzendt met de Audience Manager-bron. Dit betekent dat het selecteren van alle segmenten kan leiden tot een aantal profielen dat groter is dan uw gebruiksrechten voor licenties. Gelieve te herzien uw [&#x200B; gebruikstoelage van de vergunning &#x200B;](../../../../../dashboards/guides/license-usage.md) alvorens te werk te gaan.
 
 Selecteer **[!UICONTROL Next]** wanneer u klaar bent
 
-![ alle-segmenten ](../../../../images/tutorials/create/aam/all-segments.png)
+![&#x200B; alle-segmenten &#x200B;](../../../../images/tutorials/create/aam/all-segments.png)
 
 De stap [!UICONTROL Review] wordt weergegeven, zodat u de geselecteerde kenmerken en segmenten kunt bekijken voordat ze met Experience Platform worden verbonden. De details worden gegroepeerd in de volgende categorieën:
 
 * **[!UICONTROL Connection]**: geeft het bronplatform en de status van de verbinding weer.
 * **[!UICONTROL Selected data]** - Geeft het aantal geselecteerde segmenten en de ingeschakelde kenmerken weer.
 
-![ overzicht ](../../../../images/tutorials/create/aam/review.png)
+![&#x200B; overzicht &#x200B;](../../../../images/tutorials/create/aam/review.png)
 
 Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.
 

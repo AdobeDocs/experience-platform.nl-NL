@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # Een datumfilter maken {#create-date-filter}
 
-Om uw inzichten door datum te filtreren, moet u parameters aan uw SQL vragen toevoegen die datumbeperkingen kunnen goedkeuren. Dit wordt gedaan als deel van het bevel van de vraag pro wijze inzicht creatiewerkschema. Zie de [ vraag pro wijzedocumentatie ](../overview.md#query-pro-mode) leren hoe te om SQL voor uw inzichten in te gaan.
+Om uw inzichten door datum te filtreren, moet u parameters aan uw SQL vragen toevoegen die datumbeperkingen kunnen goedkeuren. Dit wordt gedaan als deel van het bevel van de vraag pro wijze inzicht creatiewerkschema. Zie de [&#x200B; vraag pro wijzedocumentatie &#x200B;](../overview.md#query-pro-mode) leren hoe te om SQL voor uw inzichten in te gaan.
 
 Met queryparameters kunt u werken met dynamische gegevens zoals deze fungeren als plaatsaanduidingen voor de waarden die u toevoegt tijdens de uitvoering. Deze plaatsaanduidingswaarden kunnen worden bijgewerkt via de gebruikersinterface en stellen minder technische gebruikers in staat de inzichten bij te werken die op datumbereiken zijn gebaseerd.
 
-Als u met vraagparameters onbekend bent, zie de documentatie voor [ begeleiding op hoe te om geparameterized vragen ](../../../query-service/ui/parameterized-queries.md) uit te voeren.
+Als u met vraagparameters onbekend bent, zie de documentatie voor [&#x200B; begeleiding op hoe te om geparameterized vragen &#x200B;](../../../query-service/ui/parameterized-queries.md) uit te voeren.
 
 ## Een datumfilter toepassen op het dashboard {#apply-date-filter}
 
 Als u een datumfilter wilt toepassen, selecteert u **[!UICONTROL Add filter]** en vervolgens **[!UICONTROL Date Filter]** in het vervolgkeuzemenu van de dashboardweergave.
 
-![ A douanedashboard met Add filter en zijn dropdown benadrukt menu.](../../images/sql-insights-query-pro-mode/add-filter.png)
+![&#x200B; A douanedashboard met Add filter en zijn dropdown benadrukt menu.](../../images/sql-insights-query-pro-mode/add-filter.png)
 
 U krijgt de volgende filteropties voor de datum te zien.
 
@@ -31,17 +31,17 @@ U krijgt de volgende filteropties voor de datum te zien.
 | Aangepast datumbereik | Selecteer een of meer aangepaste datums met meerdere vooraf ingestelde waarden of geef een aangepast datumbereik op. |
 | Aangepaste datum | Selecteer een van de vooraf ingestelde waarden of geef de begindatum voor het dashboard op. |
 
-![ creeer de dialoog van de datumfilter met de drie benadrukte opties van de plukker van de douanedatum.](../../images/sql-insights-query-pro-mode/create-date-filter.png)
+![&#x200B; creeer de dialoog van de datumfilter met de drie benadrukte opties van de plukker van de douanedatum.](../../images/sql-insights-query-pro-mode/create-date-filter.png)
 
 ### Geen aangepast datumfilter maken
 
 Als u een vooraf gedefinieerd datumfilter wilt toepassen, selecteert u **[!UICONTROL No custom date]** en selecteert u vervolgens de vooraf gedefinieerde datumopties die u wilt opnemen. Gebruik ten slotte het vervolgkeuzemenu om het standaarddatumbereik te selecteren en selecteer vervolgens **[!UICONTROL Save]** .
 
-![ creeer de dialoog van de datumfilter met de filter van de no douanedatum en sparen benadrukte.](../../images/sql-insights-query-pro-mode/no-custom-date-filter.png)
+![&#x200B; creeer de dialoog van de datumfilter met de filter van de no douanedatum en sparen benadrukte.](../../images/sql-insights-query-pro-mode/no-custom-date-filter.png)
 
 U keert terug naar het dashboard, dat het standaarddatumbereik toont u eerder selecteerde. Gebruik het vervolgkeuzemenu om een ander vooraf ingesteld datumbereik te selecteren.
 
-![ een douanedashboard die van A de standaarddatumwaaier met benadrukt dropdown tonen.](../../images/sql-insights-query-pro-mode/no-custom-date-filter-results.png)
+![&#x200B; een douanedashboard die van A de standaarddatumwaaier met benadrukt dropdown tonen.](../../images/sql-insights-query-pro-mode/no-custom-date-filter-results.png)
 
 ### Een aangepast datumbereikfilter maken
 
@@ -51,11 +51,11 @@ Als u een filter voor een aangepast datumbereik wilt toepassen, selecteert u **[
 >
 >U hoeft geen vooraf gedefinieerde datumopties te selecteren.
 
-![ creeer de dialoog van de datumfilter met de filter van de de waaier van de douanedatum, douane, en sparen benadrukte.](../../images/sql-insights-query-pro-mode/custom-date-range-filter.png)
+![&#x200B; creeer de dialoog van de datumfilter met de filter van de de waaier van de douanedatum, douane, en sparen benadrukte.](../../images/sql-insights-query-pro-mode/custom-date-range-filter.png)
 
 U keert terug naar het dashboard, dat de waaier van douanegegevens toont u eerder specificeerde. Gebruik het vervolgkeuzemenu om een ander vooraf ingesteld datumbereik te selecteren.
 
-![ een douanedashboard die de standaarddatumwaaier met de benadrukte douanedatum tonen.](../../images/sql-insights-query-pro-mode/custom-date-range-filter-results.png)
+![&#x200B; een douanedashboard die de standaarddatumwaaier met de benadrukte douanedatum tonen.](../../images/sql-insights-query-pro-mode/custom-date-range-filter-results.png)
 
 ### Een aangepast datumfilter maken
 
@@ -65,21 +65,21 @@ Als u een aangepast datumfilter wilt toepassen, selecteert u **[!UICONTROL Custo
 >
 >U hoeft geen vooraf gedefinieerde datumopties te selecteren.
 
-![ creeer de dialoog van de datumfilter met de filter van de douanedatum, douane, en sparen benadrukte.](../../images/sql-insights-query-pro-mode/custom-date-filter.png)
+![&#x200B; creeer de dialoog van de datumfilter met de filter van de douanedatum, douane, en sparen benadrukte.](../../images/sql-insights-query-pro-mode/custom-date-filter.png)
 
 U keert terug naar het dashboard, dat de douanegegevens toont u eerder specificeerde. Gebruik het vervolgkeuzemenu om een andere datum te selecteren.
 
-![ een douanedashboard die de standaarddatumwaaier met de benadrukte douanedatum tonen.](../../images/sql-insights-query-pro-mode/custom-date-filter-results.png)
+![&#x200B; een douanedashboard die de standaarddatumwaaier met de benadrukte douanedatum tonen.](../../images/sql-insights-query-pro-mode/custom-date-filter-results.png)
 
 ## Een datumfilter verwijderen {#delete-date-filter}
 
-Om uw datumfilter te verwijderen selecteer het pictogram van de schrappingsfilter (![ het schrap filterpictogram.](/help/images/icons/filter-delete.png)).
+Om uw datumfilter te verwijderen selecteer het pictogram van de schrappingsfilter (![&#x200B; het schrap filterpictogram.](/help/images/icons/filter-delete.png)).
 
-![ A douanedashboard met het benadrukte pictogram van de filterschrapping.](../../images/sql-insights-query-pro-mode/delete-date-filter.png)
+![&#x200B; A douanedashboard met het benadrukte pictogram van de filterschrapping.](../../images/sql-insights-query-pro-mode/delete-date-filter.png)
 
 ## SQL bewerken om parameters voor datumquery op te nemen {#include-date-parameters}
 
-Zorg er daarna voor dat uw SQL queryparameters bevat die een datumbereik toestaan. Als u query-parameters nog niet hebt opgenomen in uw SQL, bewerkt u uw inzichten om deze parameters op te nemen. Zie de documentatie voor instructies op hoe te [ een inzicht ](../overview.md#edit) uitgeven.
+Zorg er daarna voor dat uw SQL queryparameters bevat die een datumbereik toestaan. Als u query-parameters nog niet hebt opgenomen in uw SQL, bewerkt u uw inzichten om deze parameters op te nemen. Zie de documentatie voor instructies op hoe te [&#x200B; een inzicht &#x200B;](../overview.md#edit) uitgeven.
 
 >[!TIP]
 >
@@ -114,18 +114,18 @@ In de onderstaande schermafbeelding worden de datumbeperkingen gemarkeerd die zi
 >
 >Wanneer het samenstellen van uw verklaring op vraag pro wijze, moet u steekproefwaarden voor elke parameter verstrekken om de SQL verklaring uit te voeren en de grafiek te bouwen. De samplewaarden die u opgeeft wanneer u de instructie samenstelt, worden vervangen door de werkelijke waarden die u selecteert voor het datumfilter (of algemene filter) bij uitvoering.
 
-![ de dialoog [!UICONTROL Enter SQL] met de datumparameters die in SQL worden benadrukt.](../../images/sql-insights-query-pro-mode/sql-date-parameters.png)
+![&#x200B; de dialoog [!UICONTROL Enter SQL] met de datumparameters die in SQL worden benadrukt.](../../images/sql-insights-query-pro-mode/sql-date-parameters.png)
 
 ## Datumparameters inschakelen in elk inzicht {#enable-date-parameters}
 
-Nadat u de juiste parameters hebt opgenomen in de SQL van uw inzichten, zijn de variabelen `Start_date` en `End_date` nu beschikbaar als een schakeloptie in de widgetcomposer. Zie de [ vraag pro wijze de bevolkingssectie van widgets ](../overview.md#populate-widget) voor info over hoe te om een inzicht uit te geven.
+Nadat u de juiste parameters hebt opgenomen in de SQL van uw inzichten, zijn de variabelen `Start_date` en `End_date` nu beschikbaar als een schakeloptie in de widgetcomposer. Zie de [&#x200B; vraag pro wijze de bevolkingssectie van widgets &#x200B;](../overview.md#populate-widget) voor info over hoe te om een inzicht uit te geven.
 
 Selecteer in de widgetcomposer de optie Schakelen om de parameters `Start_date` en `End_date` in te schakelen.
 
-![ Widget composer met de benadrukte toggles Start_date en End_date.](../../images/sql-insights-query-pro-mode/widget-composer-date-filter-toggles.png)
+![&#x200B; Widget composer met de benadrukte toggles Start_date en End_date.](../../images/sql-insights-query-pro-mode/widget-composer-date-filter-toggles.png)
 
 Selecteer vervolgens de juiste queryparameters in de vervolgkeuzemenu&#39;s.
 
-![ Widget composer met het Web_date dropdown benadrukte menu.](../../images/sql-insights-query-pro-mode/widget-composer-date-filter-dropdown.png)
+![&#x200B; Widget composer met het Web_date dropdown benadrukte menu.](../../images/sql-insights-query-pro-mode/widget-composer-date-filter-dropdown.png)
 
 Selecteer ten slotte **[!UICONTROL Save and close]** om terug te keren naar het dashboard. Datumfilters zijn nu ingeschakeld voor alle inzichten met begin- en einddatumparameters.

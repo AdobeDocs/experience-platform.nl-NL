@@ -24,7 +24,7 @@ Een model is een exemplaar van een machine-learningrecept dat is opgeleid met be
 
 ## Een lijst met modellen ophalen
 
-U kunt een lijst met Modeldetails ophalen die bij alle Modellen horen door één enkele GET-aanvraag bij /modellen uit te voeren. Standaard wordt in deze lijst de volgorde van het oudste gemaakte model bepaald en worden de resultaten beperkt tot 25. U kunt resultaten filteren door enkele queryparameters op te geven. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie op [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst met Modeldetails ophalen die bij alle Modellen horen door één enkele GET-aanvraag bij /modellen uit te voeren. Standaard wordt in deze lijst de volgorde van het oudste gemaakte model bepaald en worden de resultaten beperkt tot 25. U kunt resultaten filteren door enkele queryparameters op te geven. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie op [&#x200B; vraagparameters voor activaherwinning &#x200B;](./appendix.md#query).
 
 **API formaat**
 
@@ -106,7 +106,7 @@ Een succesvolle reactie keert een lading terug die de details van uw Modellen me
 
 ## Een specifiek model ophalen
 
-U kunt een lijst ophalen met Modeldetails die bij een bepaald model horen door één aanvraag voor een GET uit te voeren en een geldige model-id op te geven in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst ophalen met Modeldetails die bij een bepaald model horen door één aanvraag voor een GET uit te voeren en een geldige model-id op te geven in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [&#x200B; vraagparameters voor activaherwinning &#x200B;](./appendix.md#query).
 
 **API Formaat**
 
@@ -361,7 +361,7 @@ curl -X POST \
 
 **Reactie**
 
-Een geslaagde reactie retourneert een payload die een JSON-object met de informatie van de transcodering bevat. Dit omvat het unieke herkenningsteken van transcoderingen (`id`) dat in [ wordt gebruikt het terugwinnen van een specifiek getranscodeerd Model ](#retrieve-transcoded-model).
+Een geslaagde reactie retourneert een payload die een JSON-object met de informatie van de transcodering bevat. Dit omvat het unieke herkenningsteken van transcoderingen (`id`) dat in [&#x200B; wordt gebruikt het terugwinnen van een specifiek getranscodeerd Model &#x200B;](#retrieve-transcoded-model).
 
 ```json
 {

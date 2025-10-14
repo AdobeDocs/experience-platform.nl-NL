@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Gebruik het `/content` eindpunt om *toegangsinformatie* veilig terug te winnen (de informatie die een privacyonderwerp kan met recht verzoeken om toegang) voor uw klanten. De download-URL in het antwoord op een `/jobs/{JOB_ID}` GET-aanvraag verwijst naar een Adobe-servicedetail. U kunt vervolgens een GET-aanvraag indienen bij `/jobs/:JOB_ID/content` om uw klantgegevens in JSON-indeling te retourneren. Deze toegangsmethode voert veelvoudige lagen van authentificatie en toegangsbeheer uit om veiligheid te verbeteren.
 
-Alvorens deze gids te gebruiken, gelieve te verwijzen naar [ begonnen gids ](./getting-started.md) voor informatie over de vereiste authentificatiekopballen die in de voorbeeld API hieronder vraag worden voorgesteld.
+Alvorens deze gids te gebruiken, gelieve te verwijzen naar [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor informatie over de vereiste authentificatiekopballen die in de voorbeeld API hieronder vraag worden voorgesteld.
 
 >[!TIP]
 >
->Als u momenteel niet baanidentiteitskaart voor de toegangsinformatie kent u vereist, maak een vraag aan het `/jobs` eindpunt en gebruik extra vraagparameters om de resultaten te filtreren. Een volledige lijst van de beschikbare vraagparameters kan in de [ gids van het de baaneindpunt van de privacy ](./privacy-jobs.md) worden gevonden.
+>Als u momenteel niet baanidentiteitskaart voor de toegangsinformatie kent u vereist, maak een vraag aan het `/jobs` eindpunt en gebruik extra vraagparameters om de resultaten te filtreren. Een volledige lijst van de beschikbare vraagparameters kan in de [&#x200B; gids van het de baaneindpunt van de privacy &#x200B;](./privacy-jobs.md) worden gevonden.
 
 ## Taakgegevens over privacy ophalen
 
@@ -111,7 +111,7 @@ Om de &quot;toegangsinformatie&quot;te krijgen die in antwoord op de vraag van u
 
 >[!TIP]
 >
->U hebt een specifieke taak-id nodig om deze aanvraag in te dienen. Als u de specifieke baan ID moet terugwinnen, doe eerst een verzoek van de GET aan het `/jobs` eindpunt en gebruik extra vraagparameters om de resultaten te filtreren. De gedetailleerde informatie met inbegrip van de toegestane vraagparameters kan in de [ gids van het de baaneindpunt van de privacy ](./privacy-jobs.md) worden gevonden.
+>U hebt een specifieke taak-id nodig om deze aanvraag in te dienen. Als u de specifieke baan ID moet terugwinnen, doe eerst een verzoek van de GET aan het `/jobs` eindpunt en gebruik extra vraagparameters om de resultaten te filtreren. De gedetailleerde informatie met inbegrip van de toegestane vraagparameters kan in de [&#x200B; gids van het de baaneindpunt van de privacy &#x200B;](./privacy-jobs.md) worden gevonden.
 
 **API formaat**
 

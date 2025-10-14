@@ -25,35 +25,35 @@ Elke rij in de gegevens vertegenwoordigt een conversie, waarbij informatie voor 
 
 Selecteer **[!UICONTROL Datasets]** in de gebruikersinterface van Adobe Experience Platform in de linkernavigatie. De pagina **[!UICONTROL Datasets]** wordt weergegeven. Selecteer vervolgens het tabblad **[!UICONTROL Browse]** en zoek de uitvoergegevensset voor uw Attribution AI-scores.
 
-![ Toegang hebbend tot uw model ](./images/aai-query/datasets_browse.png)
+![&#x200B; Toegang hebbend tot uw model &#x200B;](./images/aai-query/datasets_browse.png)
 
 Selecteer uw uitvoerdataset. De pagina met gegevenssetactiviteiten wordt weergegeven.
 
-![ de activiteitenpagina van de dataset ](./images/aai-query/select_preview.png)
+![&#x200B; de activiteitenpagina van de dataset &#x200B;](./images/aai-query/select_preview.png)
 
 Selecteer **[!UICONTROL Preview dataset]** in de rechterbovenhoek van de activiteitenpagina van de gegevensset om een voorvertoning van uw gegevens weer te geven en ervoor te zorgen dat de gegevens op de verwachte manier zijn opgenomen.
 
-![ voorproefdataset ](./images/aai-query/preview_dataset.JPG)
+![&#x200B; voorproefdataset &#x200B;](./images/aai-query/preview_dataset.JPG)
 
 Nadat u een voorvertoning van uw gegevens hebt weergegeven, selecteert u het schema in de rechtertrack. Er verschijnt een pop-up met de schemanaam en de beschrijving. Selecteer de hyperlink naar de schemanaam om deze om te leiden naar het scoreschema.
 
-![ selecteer het schema ](./images/aai-query/select_schema.png)
+![&#x200B; selecteer het schema &#x200B;](./images/aai-query/select_schema.png)
 
 Met het scoreschema kunt u een waarde selecteren of zoeken. Als deze optie is geselecteerd, wordt de **[!UICONTROL Field properties]** side-rail geopend, waarmee u het pad kunt kopiëren en query&#39;s kunt maken.
 
-![ kopieer de weg ](./images/aai-query/copy_path.png)
+![&#x200B; kopieer de weg &#x200B;](./images/aai-query/copy_path.png)
 
 ## Access Query Service
 
 Als u Query Service wilt openen vanuit de gebruikersinterface van Experience Platform, selecteert u **[!UICONTROL Queries]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Browse]** . Er wordt een lijst met eerder opgeslagen query&#39;s geladen.
 
-![ doorbladeren van de vraagdienst ](./images/aai-query/query_tab.png)
+![&#x200B; doorbladeren van de vraagdienst &#x200B;](./images/aai-query/query_tab.png)
 
 Selecteer vervolgens **[!UICONTROL Create query]** in de rechterbovenhoek. De Query-editor wordt geladen. Met behulp van de Query-editor kunt u query&#39;s maken met behulp van uw score-gegevens.
 
-![ vraagredacteur ](./images/aai-query/query_example.png)
+![&#x200B; vraagredacteur &#x200B;](./images/aai-query/query_example.png)
 
-Voor meer informatie over de Redacteur van de Vraag, bezoek de [ gebruikersgids van de Redacteur van de Vraag ](../../query-service/ui/user-guide.md).
+Voor meer informatie over de Redacteur van de Vraag, bezoek de [&#x200B; gebruikersgids van de Redacteur van de Vraag &#x200B;](../../query-service/ui/user-guide.md).
 
 ## Zoeksjablonen voor analyse van de toewijzingsscore
 

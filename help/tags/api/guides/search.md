@@ -15,7 +15,7 @@ Met het `/search` -eindpunt in de Reactor-API kunt u gestructureerde query&#39;s
 
 >[!NOTE]
 >
->Alvorens deze gids te lezen, gelieve te verwijzen naar de [ gids van het onderzoekseindpunt ](../endpoints/search.md) voor informatie over toegelaten vraagsyntaxis en andere gebruiksrichtlijnen.
+>Alvorens deze gids te lezen, gelieve te verwijzen naar de [&#x200B; gids van het onderzoekseindpunt &#x200B;](../endpoints/search.md) voor informatie over toegelaten vraagsyntaxis en andere gebruiksrichtlijnen.
 
 ## Basisquery-strategieën
 

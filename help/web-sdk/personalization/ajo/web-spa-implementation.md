@@ -17,7 +17,7 @@ Traditionele websites werken met navigatiemodellen &quot;van pagina tot pagina&q
 
 De moderne Webtoepassingen, zoals enig-paginatoepassingen (SPA), hebben in plaats daarvan een model aangenomen dat snel gebruik van browser UI teruggeeft, die vaak van paginaatherladingen onafhankelijk is. Deze ervaringen kunnen door klanteninteractie, zoals rollen, klikken, en curseurbewegingen worden teweeggebracht. Naarmate de paradigma&#39;s van het moderne web zijn geëvolueerd, werkt de relevantie van traditionele generieke gebeurtenissen, zoals het laden van een pagina, voor het implementeren van personalisatie en experimenten niet meer.
 
-![ diagram van de levenscyclus van de Pagina.](assets/web-spa-vs-traditional-lifecycle.png)
+![&#x200B; diagram van de levenscyclus van de Pagina.](assets/web-spa-vs-traditional-lifecycle.png)
 
 ## Voordelen van het gebruik van Web SDK voor SPA {#web-spa-benefits}
 
@@ -37,21 +37,21 @@ In het volgende voorbeeld wordt een hypothetische online e-commercesite gebruikt
 
 * Na het navigeren aan de huisplaats, bevordert een heldenbeeld seizoensgebonden inzamelingen evenals de verschillende productcatalogi beschikbaar op de plaats. In dit geval kan een weergave voor het gehele beginscherm worden gedefinieerd. Deze mening zou eenvoudig &quot;thuis&quot;kunnen worden genoemd.
 
-  ![ beeld van de website die van de steekproef een homepage toont.](assets/web-spa-home.png)
+  ![&#x200B; beeld van de website die van de steekproef een homepage toont.](assets/web-spa-home.png)
 
 * Aangezien de klant meer in de producten geinteresseerd wordt die de zaken verkopen, besluiten zij om de **1&rbrace; verbinding van Mannen &lbrace;te klikken.** Gelijkaardig aan de homepage, kan de volledige **Mannen** pagina als mening worden bepaald. Deze mening zou &quot;mannen&quot;kunnen worden genoemd.
 
-  ![ beeld van de website die van de steekproef een specifieke mening toont.](assets/web-spa-men.png)
+  ![&#x200B; beeld van de website die van de steekproef een specifieke mening toont.](assets/web-spa-men.png)
 
 * Aangezien een weergave kan worden gedefinieerd als een hele site of een groep visuele elementen op een site, kunnen de vier producten die op de productsite worden weergegeven, worden gegroepeerd en als een weergave worden beschouwd. Deze weergave zou &quot;producten&quot; kunnen worden genoemd.
 
-  ![ beeld van de website die van de steekproef een specifieke mening toont.](assets/web-spa-men-products.png)
+  ![&#x200B; beeld van de website die van de steekproef een specifieke mening toont.](assets/web-spa-men-products.png)
 
 * Wanneer de klant besluit om de **ALLE PRODUCTEN VAN MANNEN** knoop te klikken om meer producten op de plaats te onderzoeken, verandert website URL niet in dit geval, maar een mening kan hier worden gecreeerd om slechts de tweede rij van producten te vertegenwoordigen die worden getoond. De weergavenaam kan &#39;products-page-2&#39; zijn.
 
 * De klant besluit een paar producten van de site te kopen en gaat verder naar het uitcheckscherm. Het kaartscherm zelf kan worden gekoppeld aan een weergave met de naam &quot;kar&quot;. U kunt ook een andere weergave in het kasscherm gebruiken om de aanbevolen producten hieronder af te handelen.
 
-  ![ beeld van de website die van de steekproef een specifieke mening toont.](assets/web-spa-cart.png)
+  ![&#x200B; beeld van de website die van de steekproef een specifieke mening toont.](assets/web-spa-cart.png)
 
 Het concept van de standpunten kan veel verder worden uitgebreid. Dit zijn slechts een paar voorbeelden van weergaven die op een site kunnen worden gedefinieerd.
 
@@ -61,7 +61,7 @@ XDM-weergaven kunnen in Adobe Journey Optimizer worden gebruikt om marketers in 
 
 Hiervoor moeten de volgende stappen worden uitgevoerd om een eenmalige ontwikkelaarsinstelling te voltooien:
 
-1. Installeer [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/install/overview.md) en controleer de [ pre-veelheden van het Webkanaal ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=nl-NL) pagina.
+1. Installeer [&#x200B; SDK van het Web van Adobe Experience Platform &#x200B;](/help/web-sdk/install/overview.md) en controleer de [&#x200B; pre-veelheden van het Webkanaal &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=nl-NL) pagina.
 
 2. Bepaal alle XDM meningen in uw enig-paginatoepassing die u wilt personaliseren.
 
@@ -92,7 +92,7 @@ Deze sectie schetst twee voorbeelden die tonen hoe te om de `sendEvent()` functi
 
 Het marketing team wil tests A/B op de volledige homepage in werking stellen.
 
-![ Enige-pagina de steekproefpagina van de toepassingssteekproef.](assets/web-spa-home.png)
+![&#x200B; Enige-pagina de steekproefpagina van de toepassingssteekproef.](assets/web-spa-home.png)
 
 Als u A/B-tests wilt uitvoeren op de hele thuissite, moet `sendEvent()` worden aangeroepen met de XDM `viewName` ingesteld op `home` :
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 Het marketingteam wil de tweede rij producten aanpassen door de kleur van het prijsetiket in rood te veranderen nadat een gebruiker klikt om alle producten van Men te zien.
 
-![ Enige-pagina de steekproefpagina van de toepassingssteekproef met gepersonaliseerde producten.](assets/web-spa-men-products.png)
+![&#x200B; Enige-pagina de steekproefpagina van de toepassingssteekproef met gepersonaliseerde producten.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

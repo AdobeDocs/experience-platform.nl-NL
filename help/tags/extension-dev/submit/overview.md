@@ -13,7 +13,7 @@ ht-degree: 19%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Het indienen van een extensie voor de catalogus voor gegevensverzameling in Adobe Experience Platform kan een enorme opgave zijn. In dit document wordt stapsgewijs uitgelegd hoe u uw extensie kunt verzenden met behulp van afzonderlijke opeenvolgende hulplijnen. Als u de extensie wilt verzenden, moet u de volgende stappen uitvoeren:
 
@@ -29,7 +29,7 @@ Selecteer de gewenste koppeling voor meer informatie over elk van deze stappen.
 
 ## Ondersteuning
 
-Ondersteuning is beschikbaar via de werkruimte voor Slacks van de tagontwikkelaar terwijl u uw extensie maakt en test. De werkruimte van de Slack is een online gemeenschap waar de auteurs van de uitbreiding elkaar steunen. U kunt toegang verzoeken gebruikend de volgende [ online vorm ](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+Ondersteuning is beschikbaar via de werkruimte voor Slacks van de tagontwikkelaar terwijl u uw extensie maakt en test. De werkruimte van de Slack is een online gemeenschap waar de auteurs van de uitbreiding elkaar steunen. U kunt toegang verzoeken gebruikend de volgende [&#x200B; online vorm &#x200B;](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >

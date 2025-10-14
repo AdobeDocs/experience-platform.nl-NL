@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een bronverbinding voor klantkenmerken maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een bronverbinding in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform. Voor meer informatie over de Attributen van de Klant, zie het [ overzicht van de Attributen van de Klant ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=nl-NL).
+Deze zelfstudie bevat stappen voor het maken van een bronverbinding in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform. Voor meer informatie over de Attributen van de Klant, zie het [&#x200B; overzicht van de Attributen van de Klant &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=nl-NL).
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie [!UICONTROL Adobe applications] de optie **[!UICONTROL Customer Attributes]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ catalogus ](../../../../images/tutorials/create/customer-attributes/catalog.png)
+![&#x200B; catalogus &#x200B;](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
 ### Gegevensbron van klantkenmerken selecteren
 
@@ -46,23 +46,23 @@ De evolutie van het schema wordt niet gesteund door de bron van klantenattribute
 
 >[!IMPORTANT]
 >
->Terwijl u een gegevens van klantenattributen kunt schrappen dataflow, zal zijn overeenkomstige dataset zelfs na schrapping van dataflow blijven. Zie de gids bij [ het schrappen van een dataset ](../../../../../catalog/datasets/user-guide.md) voor stappen op hoe te om een dataset manueel te schrappen.
+>Terwijl u een gegevens van klantenattributen kunt schrappen dataflow, zal zijn overeenkomstige dataset zelfs na schrapping van dataflow blijven. Zie de gids bij [&#x200B; het schrappen van een dataset &#x200B;](../../../../../catalog/datasets/user-guide.md) voor stappen op hoe te om een dataset manueel te schrappen.
 
 Als u een nieuwe verbinding wilt maken, selecteert u een gegevensbron in de lijst en selecteert u vervolgens **[!UICONTROL Next]** .
 
-![ toe:voegen-gegevens ](../../../../images/tutorials/create/customer-attributes/add-data.png)
+![&#x200B; toe:voegen-gegevens &#x200B;](../../../../images/tutorials/create/customer-attributes/add-data.png)
 
 ### Gegevens over gegevensstroom opgeven
 
 De stap [!UICONTROL Dataflow detail] wordt weergegeven, zodat u een naam en een korte beschrijving voor de gegevensstroom kunt opgeven. Tijdens dit proces kunt u ook instellingen configureren voor [!UICONTROL Error diagnostics] , [!UICONTROL Partial ingestion] en [!UICONTROL Alerts] .
 
-In [!UICONTROL Error diagnostics] kunnen gedetailleerde foutberichten worden gegenereerd voor onjuiste records in de gegevensstroom, terwijl u in [!UICONTROL Partial ingestion] gegevens met fouten kunt invoeren tot een bepaalde drempel die u handmatig definieert. Zie het [ gedeeltelijke overzicht van partijingestie ](../../../../../ingestion/batch-ingestion/partial.md) voor meer informatie.
+In [!UICONTROL Error diagnostics] kunnen gedetailleerde foutberichten worden gegenereerd voor onjuiste records in de gegevensstroom, terwijl u in [!UICONTROL Partial ingestion] gegevens met fouten kunt invoeren tot een bepaalde drempel die u handmatig definieert. Zie het [&#x200B; gedeeltelijke overzicht van partijingestie &#x200B;](../../../../../ingestion/batch-ingestion/partial.md) voor meer informatie.
 
-U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bronalarm gebruikend UI ](../../alerts.md).
+U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bronalarm gebruikend UI &#x200B;](../../alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor de gegevensstroom, selecteert u **[!UICONTROL Next]** .
 
-![ dataflow-detail ](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
+![&#x200B; dataflow-detail &#x200B;](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
 
 ### Gegevensstroom controleren
 
@@ -71,7 +71,7 @@ De stap [!UICONTROL Review] wordt weergegeven, zodat u de nieuwe gegevensstroom 
 * **[!UICONTROL Connection]**: geeft het brontype, het relevante pad van het gekozen bronbestand en het aantal kolommen in dat bronbestand weer.
 * **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt aan.
 
-![ overzicht ](../../../../images/tutorials/create/customer-attributes/review.png)
+![&#x200B; overzicht &#x200B;](../../../../images/tutorials/create/customer-attributes/review.png)
 
 ## Volgende stappen
 

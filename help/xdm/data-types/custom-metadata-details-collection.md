@@ -13,7 +13,7 @@ ht-degree: 1%
 
 [!UICONTROL Custom Metadata Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model) dat een structuur definieert voor het opslaan van aangepaste metagegevens. Gebruik het gegevenstype [!UICONTROL Custom Metadata Details] Verzameling om details vast te leggen, zoals de naam en waarde van aangepaste metagegevens die zijn gekoppeld aan inhoud of interacties.
 
-![ A diagram van het gegevenstype van de Inzameling van de Details van Meta van de Douane.](../images/data-types/the-custom-metadata-collection.png)
+![&#x200B; A diagram van het gegevenstype van de Inzameling van de Details van Meta van de Douane.](../images/data-types/the-custom-metadata-collection.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Vereist | Beschrijving |
 |--------------------------------------------|------------------|-----------|----------|-------------------------------|

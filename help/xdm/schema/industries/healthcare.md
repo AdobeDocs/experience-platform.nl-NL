@@ -15,21 +15,21 @@ Het volgende entiteitsrelatiediagram (ERD) vertegenwoordigt een gestandaardiseer
 
 >[!NOTE]
 >
->De ERD zoals beschreven is een aanbeveling voor hoe u uw gegevens moet modelleren voor deze branche-gebruikscase. Om van dit gegevensmodel in Experience Platform gebruik te maken, moet u de geadviseerde schema&#39;s en hun verhoudingen zelf construeren. Zie de gidsen bij het beheren van [ schema&#39;s ](../../ui/resources/schemas.md) en [ verhoudingen ](../../tutorials/relationship-ui.md) in UI voor meer informatie.
+>De ERD zoals beschreven is een aanbeveling voor hoe u uw gegevens moet modelleren voor deze branche-gebruikscase. Om van dit gegevensmodel in Experience Platform gebruik te maken, moet u de geadviseerde schema&#39;s en hun verhoudingen zelf construeren. Zie de gidsen bij het beheren van [&#x200B; schema&#39;s &#x200B;](../../ui/resources/schemas.md) en [&#x200B; verhoudingen &#x200B;](../../tutorials/relationship-ui.md) in UI voor meer informatie.
 
 Gebruik de volgende legenda om dit ERD te interpreteren:
 
-* Elke entiteit die binnen wordt getoond is gebaseerd op een onderliggende [ Model van de Gegevens van de Ervaring (XDM) klasse ](../composition.md#class).
+* Elke entiteit die binnen wordt getoond is gebaseerd op een onderliggende [&#x200B; Model van de Gegevens van de Ervaring (XDM) klasse &#x200B;](../composition.md#class).
 * Velden die onder een bovenliggend veld zijn ingesprongen, vertegenwoordigen een onderliggend veld, of subveld, dat tot de veldgroep van het bovenliggende veld behoort.
 * De belangrijkste velden voor een bepaalde entiteit worden rood gemarkeerd.
 * Alle eigenschappen die zouden kunnen worden gebruikt om individuele klanten te identificeren zijn duidelijk als &quot;identiteit&quot;, met één van deze eigenschappen duidelijk als &quot;primaire identiteit&quot;.
 * Entiteitsrelaties zijn gemarkeerd als niet-afhankelijk, omdat op cookies gebaseerde gebeurtenissen vaak niet kunnen bepalen wie de transactie heeft uitgevoerd.
 
-![ Een voorbeeld ERD voor een model van de de gezondheidszorgindustrie gegevens ](../../images/industries/healthcare.png)
+![&#x200B; Een voorbeeld ERD voor een model van de de gezondheidszorgindustrie gegevens &#x200B;](../../images/industries/healthcare.png)
 
 >[!NOTE]
 >
->Elke entiteit bevat een veld &quot;_ID&quot;, dat het unieke tekenreekskenmerk (`_id`) voor de desbetreffende record of gebeurtenis vertegenwoordigt. Dit veld wordt gebruikt om de uniciteit van de afzonderlijke record of gebeurtenis te volgen, om te voorkomen dat gegevens worden herhaald en om die gegevens in downstreamdiensten op te zoeken. In sommige gevallen, `_id` kan a [ Universally Unique Identifier (UUID) ](https://tools.ietf.org/html/rfc4122) of [ globally Unieke Identifier (GUID) ](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) zijn.<br><br> het is belangrijk om te onderscheiden dat **dit gebied geen identiteit met betrekking tot een individuele persoon** vertegenwoordigt, maar eerder het verslag van gegevens zelf. De gegevens van de identiteit met betrekking tot een persoon, een gebeurtenis, of een bedrijfsentiteit zouden aan [ identiteitsgebieden ](../composition.md#identity) moeten worden beperkt die door compatibele gebiedsgroepen in plaats daarvan worden verstrekt.
+>Elke entiteit bevat een veld &quot;_ID&quot;, dat het unieke tekenreekskenmerk (`_id`) voor de desbetreffende record of gebeurtenis vertegenwoordigt. Dit veld wordt gebruikt om de uniciteit van de afzonderlijke record of gebeurtenis te volgen, om te voorkomen dat gegevens worden herhaald en om die gegevens in downstreamdiensten op te zoeken. In sommige gevallen, `_id` kan a [&#x200B; Universally Unique Identifier (UUID) &#x200B;](https://tools.ietf.org/html/rfc4122) of [&#x200B; globally Unieke Identifier (GUID) &#x200B;](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) zijn.<br><br> het is belangrijk om te onderscheiden dat **dit gebied geen identiteit met betrekking tot een individuele persoon** vertegenwoordigt, maar eerder het verslag van gegevens zelf. De gegevens van de identiteit met betrekking tot een persoon, een gebeurtenis, of een bedrijfsentiteit zouden aan [&#x200B; identiteitsgebieden &#x200B;](../composition.md#identity) moeten worden beperkt die door compatibele gebiedsgroepen in plaats daarvan worden verstrekt.
 
 ## [!UICONTROL Healthcare] gebruik gevallen
 

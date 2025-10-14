@@ -18,4 +18,4 @@ Registratie voor streamingverbindingen is vereist om te beginnen met het streame
 
 Nadat u een streamingverbinding hebt geregistreerd, beschikt u als producent van gegevens over een unieke URL waarmee u gegevens kunt streamen naar Experience Platform.
 
-Leren hoe te om een voor authentiek verklaarde het stromen verbinding tot stand te brengen, te lezen gelieve de [ bron API van HTTP gids ](../../sources/tutorials/api/create/streaming/http.md).
+Leren hoe te om een voor authentiek verklaarde het stromen verbinding tot stand te brengen, te lezen gelieve de [&#x200B; bron API van HTTP gids &#x200B;](../../sources/tutorials/api/create/streaming/http.md).

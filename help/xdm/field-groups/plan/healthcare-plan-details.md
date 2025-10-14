@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!UICONTROL Healthcare Plan Details] schemaveldgroep
 
-[!UICONTROL Healthcare Plan Details] is een standaardgroep van het schemagebied voor de [[!UICONTROL Plan] klasse ](../../classes/plan.md). Het verstrekt één enkel voorwerp-type gebied `healthcarePlanDetails` dat eigenschappen met betrekking tot een medisch plan vangt.
+[!UICONTROL Healthcare Plan Details] is een standaardgroep van het schemagebied voor de [[!UICONTROL Plan] klasse &#x200B;](../../classes/plan.md). Het verstrekt één enkel voorwerp-type gebied `healthcarePlanDetails` dat eigenschappen met betrekking tot een medisch plan vangt.
 
 ![](../../images/field-groups/plan/healthcare-plan-details.png)
 
@@ -29,4 +29,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json).

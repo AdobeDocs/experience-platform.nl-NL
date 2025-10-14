@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Bepaalde voorschriften vereisen uitdrukkelijke toestemming van de klant voordat de persoonsgegevens kunnen worden verzameld. Met het `/consent` -eindpunt in de [!DNL Privacy Service] API kunt u verzoeken om toestemming van klanten verwerken en deze integreren in uw privacyworkflow.
 
-Alvorens deze gids te gebruiken, gelieve te verwijzen naar [ begonnen ](./getting-started.md) gids voor informatie over de vereiste authentificatiekopballen die in de voorbeeld API hieronder vraag worden voorgesteld.
+Alvorens deze gids te gebruiken, gelieve te verwijzen naar [&#x200B; begonnen &#x200B;](./getting-started.md) gids voor informatie over de vereiste authentificatiekopballen die in de voorbeeld API hieronder vraag worden voorgesteld.
 
 ## Een verzoek om toestemming van een klant verwerken
 
@@ -63,14 +63,14 @@ curl -X POST \
 | --- | --- |
 | `optOutOfSale` | Wanneer deze waarde is ingesteld op true, geven de gebruikers die onder `entities` worden aangeboden, aan dat ze de verkoop of het delen van hun persoonlijke gegevens willen weigeren. |
 | `entities` | Een array met objecten die aangeven op welke gebruikers de aanvraag voor toestemming van toepassing is. Elk object bevat een `namespace` en een array van `values` die overeenkomen met afzonderlijke gebruikers met die naamruimte. |
-| `nameSpace` | Elk voorwerp in de `entities` serie moet één van [ standaard identiteitsnamespaces ](./appendix.md#standard-namespaces) bevatten die door Privacy Service API wordt erkend. |
+| `nameSpace` | Elk voorwerp in de `entities` serie moet één van [&#x200B; standaard identiteitsnamespaces &#x200B;](./appendix.md#standard-namespaces) bevatten die door Privacy Service API wordt erkend. |
 | `values` | Een array van waarden voor elke gebruiker, die overeenkomt met de opgegeven `nameSpace` . |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Voor meer informatie over hoe te om te bepalen welke waarden van de klantenidentiteit om naar [!DNL Privacy Service] te verzenden, zie de gids over [ het verstrekken van identiteitsgegevens ](../identity-data.md).
+>Voor meer informatie over hoe te om te bepalen welke waarden van de klantenidentiteit om naar [!DNL Privacy Service] te verzenden, zie de gids over [&#x200B; het verstrekken van identiteitsgegevens &#x200B;](../identity-data.md).
 
 **Reactie**
 

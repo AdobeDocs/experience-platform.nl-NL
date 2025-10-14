@@ -18,11 +18,11 @@ Met labels voor gegevensgebruik kunt u gegevens indelen volgens het gebruiksbele
 
 >[!NOTE]
 >
->Het `/labels` eindpunt wordt alleen gebruikt om gegevensgebruikslabels op te halen, te maken en bij te werken. U kunt labels niet verwijderen. Nochtans, kunt u etiketten aan datasets en gebieden toevoegen of verwijderen gebruikend API vraag. Verwijs naar de gids op [ het leiden datasetetiketten ](../labels/dataset-api.md) document voor instructies.
+>Het `/labels` eindpunt wordt alleen gebruikt om gegevensgebruikslabels op te halen, te maken en bij te werken. U kunt labels niet verwijderen. Nochtans, kunt u etiketten aan datasets en gebieden toevoegen of verwijderen gebruikend API vraag. Verwijs naar de gids op [&#x200B; het leiden datasetetiketten &#x200B;](../labels/dataset-api.md) document voor instructies.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Policy Service API] ](https://www.adobe.io/experience-platform-apis/references/policy-service/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Policy Service API] &#x200B;](https://www.adobe.io/experience-platform-apis/references/policy-service/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Een lijst met labels ophalen {#list}
 
@@ -166,7 +166,7 @@ Als u een aangepast label wilt maken of bijwerken, moet u een aanvraag voor een 
 
 >[!NOTE]
 >
->Als u etiketten uit een dataset wilt verwijderen, kunt u het verzoek van de a [ PUT op de Dienst API van de Dataset ](../labels/dataset-api.md#remove) uitvoeren, of het gebruiken van [ Datasets UI ](../labels/user-guide.md#remove-labels-from-a-dataset).
+>Als u etiketten uit een dataset wilt verwijderen, kunt u het verzoek van de a [&#x200B; PUT op de Dienst API van de Dataset &#x200B;](../labels/dataset-api.md#remove) uitvoeren, of het gebruiken van [&#x200B; Datasets UI &#x200B;](../labels/user-guide.md#remove-labels-from-a-dataset).
 
 **API formaat**
 
@@ -232,4 +232,4 @@ Een geslaagde reactie retourneert de details van het aangepaste label, met HTTP-
 
 ## Volgende stappen
 
-Deze gids behandelde het gebruik van het `/labels` eindpunt in de Dienst API van het Beleid. Voor stappen op hoe te om etiketten op datasets en gebieden toe te passen, verwijs naar de [ dataset etiketten API gids ](../labels/dataset-api.md).
+Deze gids behandelde het gebruik van het `/labels` eindpunt in de Dienst API van het Beleid. Voor stappen op hoe te om etiketten op datasets en gebieden toe te passen, verwijs naar de [&#x200B; dataset etiketten API gids &#x200B;](../labels/dataset-api.md).

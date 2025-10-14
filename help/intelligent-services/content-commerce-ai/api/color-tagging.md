@@ -32,7 +32,7 @@ Naast de hierboven vermelde varianten, kunt u de dienst vormen om een histogram 
 
 De volgende afbeelding is gebruikt in het voorbeeld dat in dit document wordt weergegeven:
 
-![ testbeeld ](../images/QQAsset1.jpg)
+![&#x200B; testbeeld &#x200B;](../images/QQAsset1.jpg)
 
 **API formaat**
 

@@ -47,7 +47,7 @@ Adobe Experience Platform-datagovernance is een reeks strategieën en technologi
 
 * Geen
 
-Voor meer informatie over het Beleid van Gegevens, zie het [ overzicht van het Beleid van Gegevens ](../../data-governance/home.md).
+Voor meer informatie over het Beleid van Gegevens, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](../../data-governance/home.md).
 
 ## Gegevensopname {#ingestion}
 
@@ -57,18 +57,18 @@ Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren
 
 | Functie | Beschrijving |
 |------- | -----------|
-| Gedeeltelijke batch ingestie | Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren, tot een bepaalde drempel. Met deze functie kunnen gebruikers al hun juiste gegevens in Adobe Experience Platform opnemen terwijl al hun onjuiste gegevens afzonderlijk worden opgeslagen. Details worden toegevoegd aan batches die niet zijn gelukt om uit te leggen waarom deze niet zijn geslaagd voor validatie. Meer informatie over gedeeltelijke partijingestie kan in de [ gedeeltelijke partijingestitiedocumentatie ](../../ingestion/batch-ingestion/partial.md) worden gevonden. |
+| Gedeeltelijke batch ingestie | Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren, tot een bepaalde drempel. Met deze functie kunnen gebruikers al hun juiste gegevens in Adobe Experience Platform opnemen terwijl al hun onjuiste gegevens afzonderlijk worden opgeslagen. Details worden toegevoegd aan batches die niet zijn gelukt om uit te leggen waarom deze niet zijn geslaagd voor validatie. Meer informatie over gedeeltelijke partijingestie kan in de [&#x200B; gedeeltelijke partijingestitiedocumentatie &#x200B;](../../ingestion/batch-ingestion/partial.md) worden gevonden. |
 
 **Bekende kwesties**
 
 * Geen
 
-Meer over het opnemen van gegevens in Experience Platform leren, bezoek de [ documentatie van de Ingestie van Gegevens ](../../ingestion/home.md).
+Meer over het opnemen van gegevens in Experience Platform leren, bezoek de [&#x200B; documentatie van de Ingestie van Gegevens &#x200B;](../../ingestion/home.md).
 
 
 ## Bestemmingen {#destinations}
 
-In [ Real-Time Customer Data Platform ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [&#x200B; Real-Time Customer Data Platform &#x200B;](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
@@ -79,7 +79,7 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 | Opslagdoelen voor cloud | Real-Time CDP kan uw segmenten nu als gegevensbestanden leveren aan uw [!DNL Amazon S3] - of SFTP-locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV-bestanden of bestanden met tabs als scheidingsteken. |
 | Advertising-bestemmingen | De [!DNL Google] -doelkaart wordt nu gesplitst in drie doelkaarten voor de drie verschillende [!DNL Google] -platforms die momenteel worden ondersteund in Real-Time CDP: [!DNL Google Ads] , [!DNL Google Ad Manager] , [!DNL Google] Display &amp; Video 360. |
 
-Meer leren, bezoek het [ overzicht van bestemmingen ](../../destinations/home.md)
+Meer leren, bezoek het [&#x200B; overzicht van bestemmingen &#x200B;](../../destinations/home.md)
 
 ## [!DNL Identity Service] {#identity}
 
@@ -97,7 +97,7 @@ Met Adobe Experience Platform [!DNL Identity Service] kunt u uw klanten en hun g
 
 * Geen
 
-Voor meer informatie over [!DNL Identity Service], zie het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md).
+Voor meer informatie over [!DNL Identity Service], zie het [&#x200B; overzicht van de Dienst van de Identiteit &#x200B;](../../identity-service/home.md).
 
 ## Bronnen {#sources}
 
@@ -120,4 +120,4 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 * Geen
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

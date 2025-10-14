@@ -17,7 +17,7 @@ In de weergave Berichten in de app in Adobe Experience Platform Assurance kunt u
 
 Boven aan het tabblad **[!UICONTROL Messages on Device]** bevindt zich een **[!UICONTROL Message]** -vervolgkeuzelijst. Dit omvat alle berichten die in de zitting van de Verzekering zijn ontvangen. Als een bericht niet in deze lijst voorkomt, betekent dit dat de app het nooit heeft ontvangen.
 
-![ Bericht ](./images/in-app-messaging/message.png)
+![&#x200B; Bericht &#x200B;](./images/in-app-messaging/message.png)
 
 Als u een bericht selecteert, wordt veel informatie over dat bericht weergegeven, zoals in de onderstaande secties wordt beschreven.
 
@@ -25,13 +25,13 @@ Als u een bericht selecteert, wordt veel informatie over dat bericht weergegeven
 
 In het rechterdeelvenster bevindt zich een **[!UICONTROL Message Preview]** -deelvenster, waarin een voorbeeld van het bericht wordt weergegeven. Als u **[!UICONTROL Simulate on Device]** selecteert, wordt dat bericht verzonden naar alle apparaten die op dat moment met de sessie zijn verbonden.
 
-![ Voorproef ](./images/in-app-messaging/preview.png)
+![&#x200B; Voorproef &#x200B;](./images/in-app-messaging/preview.png)
 
 ### Berichtgedrag
 
 Onder het deelvenster **[!UICONTROL Message Preview]** bevindt zich de tab **[!UICONTROL Message Behavior]** . Dit heeft alle details rond hoe het bericht wordt getoond. Deze informatie omvat plaatsingsinformatie, animaties, veeggebaren, en verschijningsmontages.
 
-![ Gedrag ](./images/in-app-messaging/gestures.png)
+![&#x200B; Gedrag &#x200B;](./images/in-app-messaging/gestures.png)
 
 ### Tabblad Info
 
@@ -39,21 +39,21 @@ In de linkersectie, zijn er vier lusjes die details over het bericht tonen. Op h
 
 U kunt ook **[!UICONTROL View campaign]** selecteren om het bericht te openen in AJO voor inspectie of bewerking.
 
-![ Info ](./images/in-app-messaging/info.png)
+![&#x200B; Info &#x200B;](./images/in-app-messaging/info.png)
 
 ### Tabblad Regels
 
 Het tabblad **[!UICONTROL Rules]** geeft aan wat er moet gebeuren voordat dit bericht wordt weergegeven. Dit geeft inzicht in precies wat een bericht zal teweegbrengen om worden getoond. Kijk naar dit voorbeeld:
 
-![ Regels ](./images/in-app-messaging/rules.png)
+![&#x200B; Regels &#x200B;](./images/in-app-messaging/rules.png)
 
 In het voorbeeld worden drie verschillende voorwaarden voor de regel weergegeven. Als u een gebeurtenis selecteert (uit een lijst met gebeurtenissen, het tabblad Analyseren of in de tijdlijn), wordt die gebeurtenis aan de hand van deze regels geëvalueerd. Als de gebeurtenis overeenkomt met een voorwaarde, wordt een groen vinkje weergegeven:
 
-![ Overeenkomst van de Regel ](./images/in-app-messaging/rule-match.png)
+![&#x200B; Overeenkomst van de Regel &#x200B;](./images/in-app-messaging/rule-match.png)
 
 Als de gebeurtenis niet overeenkomt, wordt een rood pictogram weergegeven:
 
-![ Verkeerde de Regel ](./images/in-app-messaging/rule-mismatch.png)
+![&#x200B; Verkeerde de Regel &#x200B;](./images/in-app-messaging/rule-mismatch.png)
 
 Als alle drie voorwaarden overeenkomen met de huidige gebeurtenis, wordt het bericht weergegeven.
 
@@ -61,13 +61,13 @@ Als alle drie voorwaarden overeenkomen met de huidige gebeurtenis, wordt het ber
 
 Het tabblad **[!UICONTROL Analyze]** biedt aanvullende inzichten in de regels. Hier, filtreren wij elke gebeurtenis in de zitting op hoe dicht onze berichtregel de gebeurtenis aanpast.
 
-![ analyseert ](./images/in-app-messaging/analyze.png)
+![&#x200B; analyseert &#x200B;](./images/in-app-messaging/analyze.png)
 
 In het voorbeeld in de sectie **[!UICONTROL Rules Tab]** zijn er drie voorwaarden in de regel. Op dit tabblad ziet u welk percentage van de regel elke gebeurtenis overeenkomt. De meeste gebeurtenissen komen overeen met 33% (een van de drie voorwaarden) en de rest komt overeen met 100%.
 
 Dientengevolge, kunt u gebeurtenissen vinden die dicht aan aanpassing maar niet volledig de regel aanpassen.
 
-![ Drempel ](./images/in-app-messaging/threshold.png)
+![&#x200B; Drempel &#x200B;](./images/in-app-messaging/threshold.png)
 
 Met de schuifregelaar **[!UICONTROL Match Threshold]** kunt u filteren welke gebeurtenissen moeten worden weergegeven. Dit kan bijvoorbeeld worden ingesteld op 50% - 90% om een lijst met gebeurtenissen op te halen die precies overeenkomen met twee van de drie voorwaarden.
 
@@ -75,7 +75,7 @@ Met de schuifregelaar **[!UICONTROL Match Threshold]** kunt u filteren welke geb
 
 Het tabblad **[!UICONTROL Interactions]** bevat een lijst met interactiegebeurtenissen die voor traceringsdoeleinden naar de Edge zijn verzonden.
 
-![ Interacties ](./images/in-app-messaging/interactions.png)
+![&#x200B; Interacties &#x200B;](./images/in-app-messaging/interactions.png)
 
 Er zijn gewoonlijk vier interactiegebeurtenissen wanneer een bericht wordt getoond:
 
@@ -91,13 +91,13 @@ De validatiekolom geeft aan of de interactiegebeurtenis correct is ontvangen en 
 
 Op het tabblad **[!UICONTROL Validation]** worden validaties uitgevoerd op basis van uw huidige sessie. Hierbij wordt gecontroleerd of de app correct is geconfigureerd voor berichtgeving in de app:
 
-![ Bevestiging ](./images/in-app-messaging/validation.png)
+![&#x200B; Bevestiging &#x200B;](./images/in-app-messaging/validation.png)
 
 Als er fouten worden gevonden, worden er details weergegeven over de manier waarop deze fouten moeten worden gecorrigeerd.
 
 ## Gebeurtenislijst
 
-![ Bevestiging ](./images/in-app-messaging/event-list.png)
+![&#x200B; Bevestiging &#x200B;](./images/in-app-messaging/event-list.png)
 
 Het tabblad **[!UICONTROL Event List]** biedt een snelle weergave van alle gebeurtenissen in de Betrouwbaarheidssessie die betrekking hebben op In-App Messaging. Enkele gebeurtenissen die u hier ziet zijn:
 

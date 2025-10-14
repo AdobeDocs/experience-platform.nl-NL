@@ -17,7 +17,7 @@ Met de eigenschap `renderDecisions` kunt u de SDK van het web dwingen gepersonal
 
 Selecteer het selectievakje **[!UICONTROL Render visual personalization decisions]** binnen de handelingen van een labelregel.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.

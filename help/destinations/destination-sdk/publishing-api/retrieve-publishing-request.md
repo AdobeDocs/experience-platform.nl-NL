@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Nadat u de bestemming hebt geconfigureerd en getest, kunt u deze naar Adobe verzenden voor revisie en publicatie. Lees [ voorlegt voor overzicht een bestemming die in Destination SDK ](../guides/submit-destination.md) voor alle andere stappen wordt geschreven u als deel van het proces van de bestemmingsvoorlegging moet doen.
+Nadat u de bestemming hebt geconfigureerd en getest, kunt u deze naar Adobe verzenden voor revisie en publicatie. Lees [&#x200B; voorlegt voor overzicht een bestemming die in Destination SDK &#x200B;](../guides/submit-destination.md) voor alle andere stappen wordt geschreven u als deel van het proces van de bestemmingsvoorlegging moet doen.
 
 Gebruik het API-eindpunt voor publicatiedoelen om een publicatieverzoek in te dienen wanneer:
 
@@ -32,7 +32,7 @@ Gebruik het API-eindpunt voor publicatiedoelen om een publicatieverzoek in te di
 
 ## Aan de slag met API-bewerkingen voor doelpublicatie {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Publicatieverzoeken voor bestemming weergeven {#retrieve-list}
 
@@ -183,4 +183,4 @@ Als u een `DESTINATION_ID` in de API-aanroep hebt doorgegeven, retourneert de re
 
 ## API-foutafhandeling
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.

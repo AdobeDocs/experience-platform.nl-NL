@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 ## v0.20.3 (23 januari 2024)
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 ## v0.14 (14 mei 2021)
 
-- Toegevoegd een nieuw doel van de actielading met [ Beslissing op Apparaat ](./overview.md#load-target-with-on-device-decisioning), dat &lbrace;2.5 met de mogelijkheden van het Beslissen op Apparaat laadt`at.js`
+- Toegevoegd een nieuw doel van de actielading met [&#x200B; Beslissing op Apparaat &#x200B;](./overview.md#load-target-with-on-device-decisioning), dat &lbrace;2.5 met de mogelijkheden van het Beslissen op Apparaat laadt`at.js`
 - Bijgewerkt `at.js` naar 2.5
 
 

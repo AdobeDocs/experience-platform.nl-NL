@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-De server-zijverpersoonlijking impliceert het gebruiken van [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/getting-started/) om de klantenervaring op uw Webeigenschappen te personaliseren.
+De server-zijverpersoonlijking impliceert het gebruiken van [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/) om de klantenervaring op uw Webeigenschappen te personaliseren.
 
 In het voorbeeld dat in dit artikel wordt beschreven, wordt personalisatie-inhoud opgehaald op de server met behulp van de Edge Network API. Vervolgens wordt de HTML op de server gerenderd op basis van de opgehaalde personalisatie-inhoud.
 
@@ -22,7 +22,7 @@ In de onderstaande tabel ziet u een voorbeeld van gepersonaliseerde en niet-gepe
 
 | Voorbeeldpagina zonder personalisatie | Voorbeeldpagina met personalisatie |
 |---|---|
-| ![ Web-pagina van het voorbeeld zonder verpersoonlijking ](assets/plain.png) | ![ Web-pagina van het voorbeeld met verpersoonlijking ](assets/personalized.png) |
+| ![&#x200B; Web-pagina van het voorbeeld zonder verpersoonlijking &#x200B;](assets/plain.png) | ![&#x200B; Web-pagina van het voorbeeld met verpersoonlijking &#x200B;](assets/personalized.png) |
 
 ## Overwegingen {#considerations}
 
@@ -56,7 +56,7 @@ Open hiertoe het `.env` -bestand in de hoofdmap van de opslagplaats en wijzig de
 
 Voer de onderstaande stappen uit om de voorbeeld-app uit te voeren.
 
-1. Kloon [ deze bewaarplaats ](https://github.com/adobe/alloy-samples) aan uw lokale machine.
+1. Kloon [&#x200B; deze bewaarplaats &#x200B;](https://github.com/adobe/alloy-samples) aan uw lokale machine.
 2. Open een terminal en navigeer naar de map `personalization-server-side` .
 3. Voer `npm install` uit.
 4. Voer `npm start` uit.
@@ -66,9 +66,9 @@ Voer de onderstaande stappen uit om de voorbeeld-app uit te voeren.
 
 In deze sectie worden de stappen beschreven die worden gebruikt voor het ophalen van de inhoud van de personalisatie.
 
-1. [ Uitdrukkelijke ](https://expressjs.com/) wordt gebruikt voor een lee server-kant implementatie. Dit behandelt basisserververzoeken en het verpletteren.
+1. [&#x200B; Uitdrukkelijke &#x200B;](https://expressjs.com/) wordt gebruikt voor een lee server-kant implementatie. Dit behandelt basisserververzoeken en het verpletteren.
 2. De browser vraagt om de webpagina. Alle cookies die eerder door de browser zijn opgeslagen, vooraf ingesteld door `kndctr_` , worden opgenomen.
-3. Wanneer de pagina van de toepassingsserver wordt gevraagd, wordt een gebeurtenis verzonden naar het [ interactieve eindpunt van de gegevensinzameling ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) om verpersoonlijkingsinhoud te halen. De steekproef app gebruikt helpermethodes om het bouwen van en het verzenden van verzoeken naar API (zie [ aepEdgeClient.js ](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)) te vereenvoudigen. De aanvraag `POST` bevat een `event` en een `query` . De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de array `meta>state>entries` .
+3. Wanneer de pagina van de toepassingsserver wordt gevraagd, wordt een gebeurtenis verzonden naar het [&#x200B; interactieve eindpunt van de gegevensinzameling &#x200B;](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) om verpersoonlijkingsinhoud te halen. De steekproef app gebruikt helpermethodes om het bouwen van en het verzenden van verzoeken naar API (zie [&#x200B; aepEdgeClient.js &#x200B;](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)) te vereenvoudigen. De aanvraag `POST` bevat een `event` en een `query` . De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de array `meta>state>entries` .
 
    ```js
    fetch(

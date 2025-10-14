@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Lees dit document voor een set voorbeeldvragen die u kunt gebruiken bij het opvragen van AI Assistant.
 
-U kunt dit document ook gebruiken om uiteinden op [ te leren hoe te om uw vragen ](#phrasing-your-questions) te formuleren om optimale reacties van AI Medewerker te krijgen.
+U kunt dit document ook gebruiken om uiteinden op [&#x200B; te leren hoe te om uw vragen &#x200B;](#phrasing-your-questions) te formuleren om optimale reacties van AI Medewerker te krijgen.
 
 ## Op doelstellingen gebaseerde vragen {#objectives-questions}
 
@@ -32,7 +32,7 @@ De volgende voorbeeldvragen worden gegroepeerd op doelstellingen die u kunt verw
 
 ## Operationele inzichten per entiteit en productkennisvragen{#objects-questions}
 
-De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [ operationele inzichten ](./home.md#operational-insights) of [ productkennis ](./home.md#product-knowledge) geclassificeerd.
+De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [&#x200B; operationele inzichten &#x200B;](./home.md#operational-insights) of [&#x200B; productkennis &#x200B;](./home.md#product-knowledge) geclassificeerd.
 
 ![](./images/prompt.png)
 
@@ -232,4 +232,4 @@ Hieronder volgt een lijst met voorbeelden van vragen die momenteel niet worden o
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu inzicht in hoe u uw vragen kunt optimaliseren voor AI Assistant. Voor informatie over hoe te om de eigenschap tijdens uw werkschema&#39;s te gebruiken, lees de [ AI Hulp UI gids ](ui-guide.md).
+Door dit document te lezen, hebt u nu inzicht in hoe u uw vragen kunt optimaliseren voor AI Assistant. Voor informatie over hoe te om de eigenschap tijdens uw werkschema&#39;s te gebruiken, lees de [&#x200B; AI Hulp UI gids &#x200B;](ui-guide.md).

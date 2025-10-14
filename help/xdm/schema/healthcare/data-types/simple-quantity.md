@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!UICONTROL Simple Quantity] is een standaard XDM-gegevenstype (Experience Data Model) dat een gemeten of meetbare hoeveelheid biedt. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ Eenvoudige structuur van het gegevenstype van de Hoeveelheid ](../../../images/healthcare/data-types/simple-quantity.png)
+![&#x200B; Eenvoudige structuur van het gegevenstype van de Hoeveelheid &#x200B;](../../../images/healthcare/data-types/simple-quantity.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -27,5 +27,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.schema.json)

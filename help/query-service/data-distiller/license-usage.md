@@ -11,18 +11,18 @@ ht-degree: 0%
 
 # Gebruik van batch-query&#39;s controleren {#monitor-license-usage}
 
-Het licentiegebruiksdashboard biedt gedetailleerde rapporten over het gebruik van de Query Service-licentie en gebruiksmaatstaven van uw organisatie voor elk aangeschaft product. Om meer over de beschikbare metriek te leren die in het dashboard wordt getoond, bezoek de [ gids van het gebruiksdashboard van de vergunning ](../../dashboards/guides/license-usage.md#available-metrics).
+Het licentiegebruiksdashboard biedt gedetailleerde rapporten over het gebruik van de Query Service-licentie en gebruiksmaatstaven van uw organisatie voor elk aangeschaft product. Om meer over de beschikbare metriek te leren die in het dashboard wordt getoond, bezoek de [&#x200B; gids van het gebruiksdashboard van de vergunning &#x200B;](../../dashboards/guides/license-usage.md#available-metrics).
 
 Het dashboard biedt gebruiksmaatstaven voor elk aangeschaft product, het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruiksmaatstaven van een specifieke sandbox. De hier weergegeven informatie wordt vastgelegd tijdens een dagelijkse momentopname van uw Experience Platform-exemplaar.
 
 >[!NOTE]
 >
->Het dashboard voor licentiegebruik is niet standaard ingeschakeld. Gebruikers moeten de machtiging &#39;Dashboard voor licentiegebruik weergeven&#39; hebben om het dashboard te kunnen weergeven. Voor stappen bij het verlenen van toegangstoestemmingen voor het bekijken van het dashboard van het vergunningsgebruik, verwijs naar de [ gids van de toestemmingen van het dashboard ](../../dashboards/permissions.md).
+>Het dashboard voor licentiegebruik is niet standaard ingeschakeld. Gebruikers moeten de machtiging &#39;Dashboard voor licentiegebruik weergeven&#39; hebben om het dashboard te kunnen weergeven. Voor stappen bij het verlenen van toegangstoestemmingen voor het bekijken van het dashboard van het vergunningsgebruik, verwijs naar de [&#x200B; gids van de toestemmingen van het dashboard &#x200B;](../../dashboards/permissions.md).
 
 ## Rekenuren {#compute-hours}
 
 [!UICONTROL Compute hours] metrisch is slechts van toepassing op klanten met de vergunning van Gegevens Distiller voor partijvragen. [!UICONTROL Compute hours] is de maatregel van tijd die door de motoren van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevenspeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd.
 
-![ het dashboard van het vergunningsgebruik met metrische benadrukt gegevens verwerkt uren.](../images/data-distiller/compute-hours.png)
+![&#x200B; het dashboard van het vergunningsgebruik met metrische benadrukt gegevens verwerkt uren.](../images/data-distiller/compute-hours.png)
 
-Om meer informatie over de metriek beschikbaar te vinden beschikbaar voor uw organisatie die op de gekochte vergunning van uw organisatie wordt gebaseerd, zie de [ handleiding van het dashboard van het vergunningsgebruik ](../../dashboards/guides/license-usage.md).
+Om meer informatie over de metriek beschikbaar te vinden beschikbaar voor uw organisatie die op de gekochte vergunning van uw organisatie wordt gebaseerd, zie de [&#x200B; handleiding van het dashboard van het vergunningsgebruik &#x200B;](../../dashboards/guides/license-usage.md).

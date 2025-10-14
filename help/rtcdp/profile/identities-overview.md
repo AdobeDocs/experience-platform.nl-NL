@@ -19,7 +19,7 @@ Nu, in plaats van vijf afzonderlijke klanten die met uw merk over vijf verschill
 
 ## Identiteitsnaamruimten
 
-Naamruimten zijn een onderdeel van [!DNL Identity Service] en dienen als indicatoren die extra context bieden aan de identiteit van de klant. Een voorbeeld van een veelgebruikte naamruimte voor id is &#39;E-mail&#39;, waarbij u met hetzelfde e-mailadres voor meerdere websites verschillende identiteiten kunt samenvoegen, elk met een unieke klant-id, zoals u eigenlijk bij dezelfde klant hoort. Met [!DNL Experience Platform] kunt u naamruimten gebruiken om te zoeken naar afzonderlijke profielen in de gebruikersinterface. Voor meer informatie bij het bekijken van profielen, gelieve te zien doorbladert het [ profiel overzicht ](profile-browse.md). Meer over identiteit namespaces leren, zie het [ overzicht van identiteitsnamespace ](../../identity-service/features/namespaces.md).
+Naamruimten zijn een onderdeel van [!DNL Identity Service] en dienen als indicatoren die extra context bieden aan de identiteit van de klant. Een voorbeeld van een veelgebruikte naamruimte voor id is &#39;E-mail&#39;, waarbij u met hetzelfde e-mailadres voor meerdere websites verschillende identiteiten kunt samenvoegen, elk met een unieke klant-id, zoals u eigenlijk bij dezelfde klant hoort. Met [!DNL Experience Platform] kunt u naamruimten gebruiken om te zoeken naar afzonderlijke profielen in de gebruikersinterface. Voor meer informatie bij het bekijken van profielen, gelieve te zien doorbladert het [&#x200B; profiel overzicht &#x200B;](profile-browse.md). Meer over identiteit namespaces leren, zie het [&#x200B; overzicht van identiteitsnamespace &#x200B;](../../identity-service/features/namespaces.md).
 
 ## Identiteitsgrafieken
 
@@ -29,4 +29,4 @@ Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identi
 
 ## Volgende stappen
 
-De identiteiten en de onderlinge relaties worden door [!DNL Identity Service] gedefinieerd en onderhouden en door [!DNL Real-Time Customer Profile] gebruikt om een volledig beeld van elke individuele klant en zijn interacties te maken. Om meer te leren, gelieve de [ documentatie van de Dienst van de Identiteit ](../../identity-service/home.md) te bezoeken.
+De identiteiten en de onderlinge relaties worden door [!DNL Identity Service] gedefinieerd en onderhouden en door [!DNL Real-Time Customer Profile] gebruikt om een volledig beeld van elke individuele klant en zijn interacties te maken. Om meer te leren, gelieve de [&#x200B; documentatie van de Dienst van de Identiteit &#x200B;](../../identity-service/home.md) te bezoeken.

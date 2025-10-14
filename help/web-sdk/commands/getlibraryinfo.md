@@ -33,7 +33,7 @@ alloy("getLibraryInfo").then(function(result) {
 
 ## Object Response
 
-Als u besluit om [ reacties ](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
+Als u besluit om [&#x200B; reacties &#x200B;](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
 
 * **`libraryInfo.commands`**: Een array met opdrachten die door deze versie van de Web SDK worden ondersteund.
 * **`libraryInfo.configs`**: Een array met configuratie-instellingen die door deze versie van de Web SDK wordt ondersteund.

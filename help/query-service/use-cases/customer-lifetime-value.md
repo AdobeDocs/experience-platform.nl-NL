@@ -15,28 +15,28 @@ U kunt Real-Time Customer Data Platform gebruiken om de waarde van het klantenle
 
 De volgende infografische weergave toont de cyclus van gegevensverzameling, manipulatie, analyse en actuatie die krachtige gegevens genereert om uw marketingcampagnes te verbeteren.
 
-![ de ronde reis infographic van gegevens van observatie aan analyse aan actie.](../images/use-cases/infographic-use-case-cycle.png)
+![&#x200B; de ronde reis infographic van gegevens van observatie aan analyse aan actie.](../images/use-cases/infographic-use-case-cycle.png)
 
 Dit gebruiksgeval van begin tot eind toont aan hoe de gegevenssignalen kunnen worden gevangen en worden gewijzigd om de waarde afgeleide van de klantenlevensduur te berekenen. Deze afgeleide datasets kunnen dan op uw het profielgegevens van Real-Time CDP worden toegepast en zijn beschikbaar voor gebruik met user-defined dashboards om een dashboard voor de analyse van insight te bouwen. Via Data Distiller kunt u het Real-Time CDP-gegevensmodel voor inzichten uitbreiden en de op CLV gebaseerde datasets en dashboardinzichten gebruiken om een nieuw publiek te maken en het te activeren naar een gewenst doel. Deze krachtige doelgroepen kunnen dan worden gebruikt om uw volgende marketingcampagne te ondersteunen.
 
 Deze gids wordt ontworpen om u te helpen uw klantenervaring beter begrijpen door gegevenssignalen over zeer belangrijke aanraakpunten te meten die CLV drijven en een gelijkaardig gebruiksgeval in uw milieu uitvoeren. Het volledige proces wordt samengevat in de onderstaande afbeelding.
 
-![ Infographic van de brede stappen die worden vereist om de waarde van het klantenleven te gebruiken.](../images/use-cases/implementation-steps.png)
+![&#x200B; Infographic van de brede stappen die worden vereist om de waarde van het klantenleven te gebruiken.](../images/use-cases/implementation-steps.png)
 
 ## Aan de slag {#getting-started}
 
 Voor deze handleiding is een goed begrip vereist van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Dienst van de Vraag ](../home.md): Verstrekt een gebruikersinterface en RESTful API waar u SQL vragen kunt gebruiken om uw gegevens te analyseren en te verrijken.
-* [ de Dienst van de Segmentatie ](../../segmentation/home.md): Staat u toe om publiek van uw gegevens van het Profiel van de Klant in real time te produceren.
+* [&#x200B; Dienst van de Vraag &#x200B;](../home.md): Verstrekt een gebruikersinterface en RESTful API waar u SQL vragen kunt gebruiken om uw gegevens te analyseren en te verrijken.
+* [&#x200B; de Dienst van de Segmentatie &#x200B;](../../segmentation/home.md): Staat u toe om publiek van uw gegevens van het Profiel van de Klant in real time te produceren.
 
 ## Vereisten
 
-Deze gids vereist u om [ Gegevens Distiller ](../data-distiller/overview.md) SKU als deel van uw pakket te hebben dat aanbiedt. Neem contact op met uw vertegenwoordiger van de Adobe-service als u niet zeker weet of u dit doet.
+Deze gids vereist u om [&#x200B; Gegevens Distiller &#x200B;](../data-distiller/overview.md) SKU als deel van uw pakket te hebben dat aanbiedt. Neem contact op met uw vertegenwoordiger van de Adobe-service als u niet zeker weet of u dit doet.
 
 ## Een afgeleide gegevensset maken {#create-derived-dataset}
 
-De eerste stap in het vestigen van uw CLV is een afgeleide dataset van de gegevenssignalen tot stand te brengen die van gebruikersacties worden gevangen. Deze specifieke gebruikszaak wordt vastgelegd in een afzonderlijk document over een loyaliteitsregeling voor luchtvaartmaatschappijen. Zie de gids om te leren hoe te [ de Dienst van de Vraag gebruiken om op decile-Gebaseerde afgeleide datasets voor gebruik met uw profielgegevens ](./deciles-use-case.md) tot stand te brengen. Het document bevat volledige voorbeelden en uitleg waarin de volgende stappen worden toegelicht:
+De eerste stap in het vestigen van uw CLV is een afgeleide dataset van de gegevenssignalen tot stand te brengen die van gebruikersacties worden gevangen. Deze specifieke gebruikszaak wordt vastgelegd in een afzonderlijk document over een loyaliteitsregeling voor luchtvaartmaatschappijen. Zie de gids om te leren hoe te [&#x200B; de Dienst van de Vraag gebruiken om op decile-Gebaseerde afgeleide datasets voor gebruik met uw profielgegevens &#x200B;](./deciles-use-case.md) tot stand te brengen. Het document bevat volledige voorbeelden en uitleg waarin de volgende stappen worden toegelicht:
 
 * Creeer een schema om voor het decile emmering toe te staan.
 * Gebruik Query Service om deciles te maken.
@@ -47,7 +47,7 @@ De eerste stap in het vestigen van uw CLV is een afgeleide dataset van de gegeve
 
 ## Het gegevensmodel en de planningsupdates van inzichten uitbreiden {#extend-data-model-and-set-refresh-schedule}
 
-Vervolgens moet u een aangepast gegevensmodel maken of een bestaand Adobe Real-Time CDP-gegevensmodel uitbreiden voor de toepassing van uw CLV-rapporteringsinzichten. Zie de documentatie leren hoe te [ een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards ](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model) bouwen. De zelfstudie behandelt de volgende stappen:
+Vervolgens moet u een aangepast gegevensmodel maken of een bestaand Adobe Real-Time CDP-gegevensmodel uitbreiden voor de toepassing van uw CLV-rapporteringsinzichten. Zie de documentatie leren hoe te [&#x200B; een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards &#x200B;](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model) bouwen. De zelfstudie behandelt de volgende stappen:
 
 * Een model maken voor het rapporteren van inzichten met Data Distiller.
 * Tabellen, relaties en gegevens vullen.
@@ -56,24 +56,24 @@ Vervolgens moet u een aangepast gegevensmodel maken of een bestaand Adobe Real-T
 * Maak dimensietabellen om uw rapporteringsinzichten-model uit te breiden.
 * Vraag uw uitgebreide versnelde opslagrapportering van inzichten gegevensmodel
 
-Gelieve te zien de documentatie van het Model van Gegevens van de Gegevens van Real-Time Customer Data Platform van Inzichten leren hoe te [ uw SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen ](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+Gelieve te zien de documentatie van het Model van Gegevens van de Gegevens van Real-Time Customer Data Platform van Inzichten leren hoe te [&#x200B; uw SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen &#x200B;](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
-Zorg ervoor om een programma te plaatsen om uw model van douanegegevens op een regelmatige kadentie te verfrissen. Dit zorgt ervoor dat de gegevens terug binnen als deel van uw innamepijplijn zoals nodig komen, en bevolkt uw user-defined dashboards. Zie de [ gids van de programmavragen ](../ui/query-schedules.md#create-schedule) leren hoe te opstelling uw programma.
+Zorg ervoor om een programma te plaatsen om uw model van douanegegevens op een regelmatige kadentie te verfrissen. Dit zorgt ervoor dat de gegevens terug binnen als deel van uw innamepijplijn zoals nodig komen, en bevolkt uw user-defined dashboards. Zie de [&#x200B; gids van de programmavragen &#x200B;](../ui/query-schedules.md#create-schedule) leren hoe te opstelling uw programma.
 
 ## Een dashboard maken om inzichten vast te leggen {#build-a-custom-dashboard}
 
-Nu u uw model van douanegegevens hebt gecreeerd, bent u bereid om uw gegevens met douanevragen en user-defined dashboards te visualiseren. Zie het user-defined dashboards overzicht voor volledige begeleiding op hoe te [ een douanedashboard ](../../dashboards/standard-dashboards.md) bouwen. De UI-handleiding bevat informatie over:
+Nu u uw model van douanegegevens hebt gecreeerd, bent u bereid om uw gegevens met douanevragen en user-defined dashboards te visualiseren. Zie het user-defined dashboards overzicht voor volledige begeleiding op hoe te [&#x200B; een douanedashboard &#x200B;](../../dashboards/standard-dashboards.md) bouwen. De UI-handleiding bevat informatie over:
 
 * Een widget maken.
 * De widgetcomposer gebruiken.
 
 Voorbeelden van aangepaste CLV-widgets die gebruik maken van decile-emmers, zijn hieronder te zien.
 
-![ de inzameling van A van douane decile-based widgets CLTV.](../images/use-cases/deciles-user-defined-dashboard.png)
+![&#x200B; de inzameling van A van douane decile-based widgets CLTV.](../images/use-cases/deciles-user-defined-dashboard.png)
 
 ## Krachtig publiek maken en activeren {#create-and-activate-audiences}
 
-De volgende stap is een segmentdefinitie te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Zie de gids UI van de Bouwer van het Segment leren hoe te [ tot publiek in Experience Platform ](../../segmentation/ui/segment-builder.md) leiden en activeren. De gids verstrekt secties over hoe te:
+De volgende stap is een segmentdefinitie te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Zie de gids UI van de Bouwer van het Segment leren hoe te [&#x200B; tot publiek in Experience Platform &#x200B;](../../segmentation/ui/segment-builder.md) leiden en activeren. De gids verstrekt secties over hoe te:
 
 * Maak segmentdefinities met een combinatie van kenmerken, gebeurtenissen en bestaand publiek als bouwstenen.
 * Gebruik het canvas en de containers van de regelbouwer om de orde te controleren waarin de segmenteringsregels worden uitgevoerd.
@@ -81,29 +81,29 @@ De volgende stap is een segmentdefinitie te bouwen en publiek van uw gegevens va
 * Schakel alle segmentdefinities in voor geplande segmentatie.
 * Hiermee kunt u opgegeven segmentdefinities voor streaming segmentatie inschakelen.
 
-Alternatief, is er ook de videoleerprogramma&#39;s van de a [ segmentbouwer ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=nl-NL) beschikbaar voor meer informatie.
+Alternatief, is er ook de videoleerprogramma&#39;s van de a [&#x200B; segmentbouwer &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=nl-NL) beschikbaar voor meer informatie.
 
 ## Uw publiek activeren voor een e-mailcampagne {#activate-audience-for-campaign}
 
 Nadat u het publiek hebt samengesteld, kunt u het activeren op een bestemming. Experience Platform biedt ondersteuning voor diverse ESP&#39;s (Email Service Providers) waarmee u uw marketingactiviteiten voor e-mail kunt beheren, zoals het verzenden van promotionele e-mailcampagnes.
 
-Controleer het [ e-mailmarketing bestemmingsoverzicht ](../../destinations/catalog/email-marketing/overview.md#connect-destination) voor een lijst van de gesteunde bestemmingen die u gegevens aan (bijvoorbeeld de [ Oracle Eloqua ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) pagina) wilt uitvoeren.
+Controleer het [&#x200B; e-mailmarketing bestemmingsoverzicht &#x200B;](../../destinations/catalog/email-marketing/overview.md#connect-destination) voor een lijst van de gesteunde bestemmingen die u gegevens aan (bijvoorbeeld de [&#x200B; Oracle Eloqua &#x200B;](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) pagina) wilt uitvoeren.
 
 ## Bekijk de geretourneerde analysegegevens van uw campagne {#post-campaign-data-analysis}
 
-De gegevens van bronnen kunnen nu [ incrementeel verwerkt ](../key-concepts/incremental-load.md) als deel van gepland zijn verfrissen zich aan uw gegevensmodel in de versnelde gegevensopslag. Alle responsgebeurtenissen van klanten kunnen in Adobe Experience Platform worden opgenomen, zoals ze plaatsvinden of in batches. Afhankelijk van uw instellingen of bronconnectors, kan uw gegevensmodel één keer of meerdere keren per dag worden vernieuwd. Zie het [ partij ingestie API overzicht ](../../ingestion/batch-ingestion/api-overview.md) of het [ stromen ingestitieoverzicht ](../../ingestion/streaming-ingestion/overview.md) voor meer informatie.
+De gegevens van bronnen kunnen nu [&#x200B; incrementeel verwerkt &#x200B;](../key-concepts/incremental-load.md) als deel van gepland zijn verfrissen zich aan uw gegevensmodel in de versnelde gegevensopslag. Alle responsgebeurtenissen van klanten kunnen in Adobe Experience Platform worden opgenomen, zoals ze plaatsvinden of in batches. Afhankelijk van uw instellingen of bronconnectors, kan uw gegevensmodel één keer of meerdere keren per dag worden vernieuwd. Zie het [&#x200B; partij ingestie API overzicht &#x200B;](../../ingestion/batch-ingestion/api-overview.md) of het [&#x200B; stromen ingestitieoverzicht &#x200B;](../../ingestion/streaming-ingestion/overview.md) voor meer informatie.
 
 Zodra uw gegevensmodel wordt bijgewerkt, verstrekken uw douane dashboardwidgets zinvolle signalen die u toestaan om de waarde van het klantenleven te meten en te visualiseren.
 
-![ een douane widget om het aantal e-mails te tonen die volgens hun publiek en e-mailcampagne worden geopend.](../images/use-cases/post-activation-and-email-response-kpis.png)
+![&#x200B; een douane widget om het aantal e-mails te tonen die volgens hun publiek en e-mailcampagne worden geopend.](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 Er zijn verschillende visualisatieopties beschikbaar voor uw aangepaste analyse.
 
-![ e-mail die door campagne wordt geopend emmers widget.](../images/use-cases/email-opened-by-campaign-buckets.png)
+![&#x200B; e-mail die door campagne wordt geopend emmers widget.](../images/use-cases/email-opened-by-campaign-buckets.png)
 
 Deze inzichten kunnen u beurtelings helpen uw bedrijfsstrategieën voor verdere campagnes ontwikkelen.
 
-![ een inzameling van vier aangepaste widgets die de resultaten van de e-mailcampagne in detail beschrijven.](../images/use-cases/example-widgets.png)
+![&#x200B; een inzameling van vier aangepaste widgets die de resultaten van de e-mailcampagne in detail beschrijven.](../images/use-cases/example-widgets.png)
 
 ## Volgende stappen
 

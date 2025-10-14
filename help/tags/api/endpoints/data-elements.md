@@ -11,17 +11,17 @@ ht-degree: 1%
 
 # Gegevenselementen, eindpunt
 
-Een gegevenselement werkt als een variabele die naar een belangrijk stuk gegevens binnen uw toepassing verwijst. De elementen van gegevens worden gebruikt binnen [ regels ](./rules.md) en [ uitbreiding ](./extensions.md) configuraties. Wanneer een regel wordt geactiveerd bij uitvoering in een browser of toepassing, wordt de waarde van het gegevenselement opgelost en gebruikt binnen de regel. De elementen van gegevens functioneren het zelfde voor uitbreidingsconfiguraties.
+Een gegevenselement werkt als een variabele die naar een belangrijk stuk gegevens binnen uw toepassing verwijst. De elementen van gegevens worden gebruikt binnen [&#x200B; regels &#x200B;](./rules.md) en [&#x200B; uitbreiding &#x200B;](./extensions.md) configuraties. Wanneer een regel wordt geactiveerd bij uitvoering in een browser of toepassing, wordt de waarde van het gegevenselement opgelost en gebruikt binnen de regel. De elementen van gegevens functioneren het zelfde voor uitbreidingsconfiguraties.
 
 Als u meerdere gegevenselementen tegelijk gebruikt, resulteert dit in een gegevenswoordenboek of een gegevenskaart. Dit woordenboek vertegenwoordigt de gegevens die Adobe Experience Platform kent en kan gebruiken.
 
-Een gegevenselement behoort tot precies één [ bezit ](./properties.md). Een eigenschap kan veel gegevenselementen bevatten.
+Een gegevenselement behoort tot precies één [&#x200B; bezit &#x200B;](./properties.md). Een eigenschap kan veel gegevenselementen bevatten.
 
-Voor meer algemene informatie over gegevenselementen en hun gebruik in markeringen, zie de [ gids van gegevenselementen ](../../ui/managing-resources/data-elements.md) in de documentatie UI.
+Voor meer algemene informatie over gegevenselementen en hun gebruik in markeringen, zie de [&#x200B; gids van gegevenselementen &#x200B;](../../ui/managing-resources/data-elements.md) in de documentatie UI.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met gegevenselementen ophalen {#list}
 
@@ -41,7 +41,7 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde gegevenselementen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde gegevenselementen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -314,13 +314,13 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | `id` van het [ bezit ](./properties.md) dat u het gegevenselement onder bepaalt. |
+| `PROPERTY_ID` | `id` van het [&#x200B; bezit &#x200B;](./properties.md) dat u het gegevenselement onder bepaalt. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuw gegevenselement voor de opgegeven eigenschap gemaakt. De aanroep koppelt het gegevenselement ook aan een bestaande extensie via de eigenschap `relationships` . Zie de gids op [ verhoudingen ](../guides/relationships.md) voor meer informatie.
+Met de volgende aanvraag wordt een nieuw gegevenselement voor de opgegeven eigenschap gemaakt. De aanroep koppelt het gegevenselement ook aan een bestaande extensie via de eigenschap `relationships` . Zie de gids op [&#x200B; verhoudingen &#x200B;](../guides/relationships.md) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -356,7 +356,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `attributes.name` | **(Vereist)** Een voor de mens leesbare naam voor het gegevenselement. |
-| `attributes.delegate_descriptor_id` | **(Vereist)** Een geformatteerde koord dat het gegevenselement met een uitbreidingspakket associeert. Alle gegevenselementen moeten met een uitbreidingspakket worden geassocieerd wanneer zij eerst worden gecreeerd, aangezien elk uitbreidingspakket de compatibele types voor zijn elementen van gedelegeerde gegevens, evenals hun voorgenomen gedrag bepaalt. Zie de gids op [ de beschrijver IDs van de afgevaardigde ](../guides/delegate-descriptor-ids.md) voor meer informatie. |
+| `attributes.delegate_descriptor_id` | **(Vereist)** Een geformatteerde koord dat het gegevenselement met een uitbreidingspakket associeert. Alle gegevenselementen moeten met een uitbreidingspakket worden geassocieerd wanneer zij eerst worden gecreeerd, aangezien elk uitbreidingspakket de compatibele types voor zijn elementen van gedelegeerde gegevens, evenals hun voorgenomen gedrag bepaalt. Zie de gids op [&#x200B; de beschrijver IDs van de afgevaardigde &#x200B;](../guides/delegate-descriptor-ids.md) voor meer informatie. |
 | `attributes.settings` | A settings JSON object represented as a string. |
 | `attributes.default_value` | Een standaardwaarde die moet worden geretourneerd als het gegevenselement `undefined` oplevert. |
 | `attributes.enabled` | Een booleaanse waarde die aangeeft of het gegevenselement is ingeschakeld. |
@@ -508,7 +508,7 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [ creërend een gegevenselement ](#create) voor een lijst van attributen en hun gebruiksgeval. |
+| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [&#x200B; creërend een gegevenselement &#x200B;](#create) voor een lijst van attributen en hun gebruiksgeval. |
 | `id` | De `id` van het gegevenselement dat u wilt bijwerken. Dit moet overeenkomen met de `{DATA_ELEMENT_ID}` -waarde in het aanvraagpad. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `data_elements` zijn. |
 
@@ -659,7 +659,7 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [ creërend een gegevenselement ](#create) voor een lijst van attributen en hun gebruiksgeval. |
+| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor het gegevenselement moeten worden bijgewerkt. Alle kenmerken van gegevenselementen kunnen worden bijgewerkt. Zie de voorbeeldvraag voor [&#x200B; creërend een gegevenselement &#x200B;](#create) voor een lijst van attributen en hun gebruiksgeval. |
 | `meta.action` | Wanneer deze eigenschap is opgenomen met de waarde `revise` , geeft deze aan dat een nieuwe revisie voor het gegevenselement moet worden gemaakt. |
 | `id` | De `id` van het gegevenselement dat u wilt herzien. Dit moet overeenkomen met de `{DATA_ELEMENT_ID}` -waarde in het aanvraagpad. |
 | `type` | Het type bron dat wordt herzien. Voor dit eindpunt moet de waarde `data_elements` zijn. |
@@ -800,13 +800,13 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responsie
 
 ## Notities beheren voor een gegevenselement {#notes}
 
-Gegevenselementen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor gegevenselementen en andere compatibele middelen beheren.
+Gegevenselementen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [&#x200B; gids van het Notitieeindpunt &#x200B;](./notes.md) voor meer informatie over hoe te nota&#39;s voor gegevenselementen en andere compatibele middelen beheren.
 
 ## Gerelateerde bronnen voor een gegevenselement ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een gegevenselement terug te winnen. Wanneer [ omhoog een gegevenselement ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een gegevenselement terug te winnen. Wanneer [&#x200B; omhoog een gegevenselement &#x200B;](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante bibliotheken weergeven voor een gegevenselement {#libraries}
 

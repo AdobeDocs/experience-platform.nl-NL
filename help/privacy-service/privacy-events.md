@@ -37,7 +37,7 @@ Raadpleeg de volgende documentatie bij de Privacy Service voordat u deze zelfstu
 
 Als u [!DNL Privacy Service Events] wilt ontvangen, moet u Adobe Developer Console gebruiken om een webhaak te registreren voor uw [!DNL Privacy Service] -integratie.
 
-Volg het leerprogramma op [ het intekenen aan [!DNL I/O Gebeurtenis] berichten ](../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken. Zorg ervoor dat u **[!UICONTROL Privacy Service Events]** als uw gebeurtenisprovider kiest om toegang te krijgen tot de hierboven vermelde gebeurtenissen.
+Volg het leerprogramma op [&#x200B; het intekenen aan [!DNL I/O Gebeurtenis] berichten &#x200B;](../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken. Zorg ervoor dat u **[!UICONTROL Privacy Service Events]** als uw gebeurtenisprovider kiest om toegang te krijgen tot de hierboven vermelde gebeurtenissen.
 
 ## [!DNL Privacy Service Event] meldingen ontvangen
 
@@ -74,4 +74,4 @@ De volgende JSON is een voorbeeld van een [!DNL Privacy Service Event] berichtla
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u Privacy Service-gebeurtenissen kunt registreren voor een geconfigureerde webhaak en hoe u berichtladingen kunt interpreteren. Leren hoe te om privacybanen te volgen gebruikend het gebruikersinterface, zie de [ gebruikersgids van de Privacy Service ](./ui/user-guide.md).
+In dit document wordt beschreven hoe u Privacy Service-gebeurtenissen kunt registreren voor een geconfigureerde webhaak en hoe u berichtladingen kunt interpreteren. Leren hoe te om privacybanen te volgen gebruikend het gebruikersinterface, zie de [&#x200B; gebruikersgids van de Privacy Service &#x200B;](./ui/user-guide.md).

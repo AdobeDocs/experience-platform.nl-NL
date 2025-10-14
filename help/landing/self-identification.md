@@ -20,7 +20,7 @@ De zelfidentificatiecode-enquête is een korte vragenlijst die wordt weergegeven
 
 Dit document biedt informatie over hoe u de zelfidentificatiecode-enquête in de gebruikersinterface van Experience Platform kunt gebruiken om relevante inhoud te ontvangen op basis van uw doelstellingen en taken, en over hoe u uw persoonlijke profielkenmerken opnieuw kunt configureren met behulp van de gebruikersinterface.
 
-Meer over Adobe Experience Platform leren, gelieve het [ overzicht van Experience Platform ](home.md) te lezen.
+Meer over Adobe Experience Platform leren, gelieve het [&#x200B; overzicht van Experience Platform &#x200B;](home.md) te lezen.
 
 ## Zelfidentificatieonderzoek in de gebruikersinterface van Experience Platform
 
@@ -28,7 +28,7 @@ De prompt voor zelfidentificatie van de enquête wordt rechtsonder op de startpa
 
 Selecteer **[!UICONTROL Start]** om met de enquête te beginnen.
 
-![ de homepage UI van Experience Platform met het pop-upbericht die u ertoe aanzetten om het zelf-identificatieonderzoek te beginnen.](./images/survey/survey-prompt.png)
+![&#x200B; de homepage UI van Experience Platform met het pop-upbericht die u ertoe aanzetten om het zelf-identificatieonderzoek te beginnen.](./images/survey/survey-prompt.png)
 
 Voor de eerste enquêtevraag selecteert u de functie die het beste uw werk beschrijft.
 
@@ -46,7 +46,7 @@ De beschikbare opties zijn:
 
 Selecteer de functie(s) die het beste uw huidige werk beschrijft en selecteer vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![ het zelf-identificatieonderzoek met twee geselecteerde baanfuncties.](./images/survey/select-functions.png)
+![&#x200B; het zelf-identificatieonderzoek met twee geselecteerde baanfuncties.](./images/survey/select-functions.png)
 
 Selecteer vervolgens de specifieke doelstelling(en) die het beste op uw werk van toepassing is.
 
@@ -67,11 +67,11 @@ De lijst met beschikbare doelstellingen omvat:
 
 Selecteer **[!UICONTROL Submit]** als u klaar bent.
 
-![ het zelf-identificatieonderzoek dat een lijst van doelstellingen toont die u van kunt selecteren.](./images/survey/select-objectives.png)
+![&#x200B; het zelf-identificatieonderzoek dat een lijst van doelstellingen toont die u van kunt selecteren.](./images/survey/select-objectives.png)
 
 Selecteer **[!UICONTROL Done]** terwijl uw zelfidentificatiecode-enquête is voltooid.
 
-![ de definitieve, bevestigingsstap van het zelf-identificatieonderzoek.](./images/survey/survey-complete.png)
+![&#x200B; de definitieve, bevestigingsstap van het zelf-identificatieonderzoek.](./images/survey/survey-complete.png)
 
 >[!NOTE]
 >
@@ -81,16 +81,16 @@ Selecteer **[!UICONTROL Done]** terwijl uw zelfidentificatiecode-enquête is vol
 
 Werk uw taakfuncties en objecten bij met het voorkeurenmenu van Experience Cloud. Als u het voorkeurenmenu wilt openen, selecteert u het profielpictogram in de bovenste navigatie en selecteert u vervolgens **[!UICONTROL Preferences]** .
 
-![ de homepage UI van Experience Platform met het profielpictogram en de geselecteerde voorkeurenknoppen.](./images/survey/preferences.png)
+![&#x200B; de homepage UI van Experience Platform met het profielpictogram en de geselecteerde voorkeurenknoppen.](./images/survey/preferences.png)
 
 Selecteer vervolgens **[!UICONTROL Update your job functions and objectives]** in de sectie [!UICONTROL General] van het menu met uw profielvoorkeuren.
 
-![ de algemene sectie van de het profielvoorkeur van Experience Platform UI pagina ](./images/survey/update.png)
+![&#x200B; de algemene sectie van de het profielvoorkeur van Experience Platform UI pagina &#x200B;](./images/survey/update.png)
 
 De zelfidentificatiecode wordt weergegeven, zodat u de reacties opnieuw kunt configureren en uw profiel kunt bijwerken.
 
-![ de pagina van de het profielvoorkeur van Experience Platform UI die het zelf-identificatieonderzoek toont om een gebruiker toe te staan om hun persoonlijk profiel bij te werken.](./images/survey/new-survey.png)
+![&#x200B; de pagina van de het profielvoorkeur van Experience Platform UI die het zelf-identificatieonderzoek toont om een gebruiker toe te staan om hun persoonlijk profiel bij te werken.](./images/survey/new-survey.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu informatie over uw functies en doelstellingen verzonden en bijgewerkt om meer relevante inhoud te ontvangen wanneer u de gebruikersinterface van Experience Platform gebruikt. Voor meer informatie over Experience Platform UI, lees het [ overzicht van Experience Platform ](home.md).
+Door dit document te lezen, hebt u nu informatie over uw functies en doelstellingen verzonden en bijgewerkt om meer relevante inhoud te ontvangen wanneer u de gebruikersinterface van Experience Platform gebruikt. Voor meer informatie over Experience Platform UI, lees het [&#x200B; overzicht van Experience Platform &#x200B;](home.md).

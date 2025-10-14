@@ -22,7 +22,7 @@ Modellen-gebaseerde schema&#39;s verstrekken een flexibel, gecontroleerd modelle
 
 >[!IMPORTANT]
 >
->De overwegingen van de schrapping van gegevens zijn op alle op model-gebaseerde schemaimplementaties van toepassing. Toepassingen die deze schema&#39;s gebruiken moeten begrijpen hoe schrappingen verwante datasets, nalevingsvereisten, en stroomafwaartse processen beïnvloeden. Plan voor schrappingsscenario&#39;s en herzie [ begeleiding van de gegevenshygiëne ](../../hygiene/ui/record-delete.md#model-based-record-delete) vóór implementatie.
+>De overwegingen van de schrapping van gegevens zijn op alle op model-gebaseerde schemaimplementaties van toepassing. Toepassingen die deze schema&#39;s gebruiken moeten begrijpen hoe schrappingen verwante datasets, nalevingsvereisten, en stroomafwaartse processen beïnvloeden. Plan voor schrappingsscenario&#39;s en herzie [&#x200B; begeleiding van de gegevenshygiëne &#x200B;](../../hygiene/ui/record-delete.md#model-based-record-delete) vóór implementatie.
 
 >[!NOTE]
 >
@@ -38,9 +38,9 @@ Gebruik modelgebaseerde schema&#39;s om:
 
 ## Hoe model-gebaseerde schema&#39;s van standaardXDM schema&#39;s verschillen
 
-De standaard XDM- schema&#39;s in Experience Platform volgen één van drie gegevensgedrag: Verslag, tijdreeks, of ad hoc. Voor definities en details, zie [ XDM gegevensgedrag ](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/home#data-behaviors).
+De standaard XDM- schema&#39;s in Experience Platform volgen één van drie gegevensgedrag: Verslag, tijdreeks, of ad hoc. Voor definities en details, zie [&#x200B; XDM gegevensgedrag &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/home#data-behaviors).
 
-In het traditionele model, nemen het verslag en de tijd-reeksen schema&#39;s aan [ verenigingsschema&#39;s ](../api/unions.md) deel (zie ook de [ gids UI van het unieschema ](../../profile/ui/union-schema.md)). Deze schema&#39;s evolueren automatisch als gedeelde [ gebiedsgroepen ](./composition.md#field-group) worden bijgewerkt en de douanegebieden moeten onder een huurdersnamespace worden genest. Hoewel dit model krachtig is, kan het instappen vertragen, overdreven complexe schema&#39;s met ongebruikte gebieden produceren, en extra gegevenstoewijzing of transformatie vereisen. Deze factoren verhogen de leercurve en de voortdurende onderhoudsinspanningen.
+In het traditionele model, nemen het verslag en de tijd-reeksen schema&#39;s aan [&#x200B; verenigingsschema&#39;s &#x200B;](../api/unions.md) deel (zie ook de [&#x200B; gids UI van het unieschema &#x200B;](../../profile/ui/union-schema.md)). Deze schema&#39;s evolueren automatisch als gedeelde [&#x200B; gebiedsgroepen &#x200B;](./composition.md#field-group) worden bijgewerkt en de douanegebieden moeten onder een huurdersnamespace worden genest. Hoewel dit model krachtig is, kan het instappen vertragen, overdreven complexe schema&#39;s met ongebruikte gebieden produceren, en extra gegevenstoewijzing of transformatie vereisen. Deze factoren verhogen de leercurve en de voortdurende onderhoudsinspanningen.
 
 Model-gebaseerde schema&#39;s verwijderen de gebiedsdelen van het unieschema, die automatische updates uit gedeelde gebiedsgroepen elimineren en directe gebiedsdefinities zonder huurdersnaamruimtebeperkingen toestaat. U krijgt expliciete controle over primaire sleutels, verhoudingen, en aanvankelijke schemaontwerp, die het gemakkelijker maken om gegevens te modelleren om uw behoeften in aanmaaktijd te passen.
 
@@ -122,7 +122,7 @@ Voor tijdreeksschema&#39;s, bepaal een timestamp beschrijver (herkenningsteken) 
 >
 >Descriptors maken deel uit van de metagegevens van de schemadefinitie en worden niet opgeslagen in gegevensrijen.
 
-Voor instructies bij het creëren van beschrijvers in de Redacteur van het Schema, zie [ beschrijvers in de Redacteur van het Schema ](../tutorials/relationship-ui.md) creëren. Voor op API-Gebaseerde verwezenlijking, zie [ beschrijvers creëren gebruikend API ](../tutorials/relationship-api.md).
+Voor instructies bij het creëren van beschrijvers in de Redacteur van het Schema, zie [&#x200B; beschrijvers in de Redacteur van het Schema &#x200B;](../tutorials/relationship-ui.md) creëren. Voor op API-Gebaseerde verwezenlijking, zie [&#x200B; beschrijvers creëren gebruikend API &#x200B;](../tutorials/relationship-api.md).
 
 ## Relatieondersteuning {#relationship-support}
 
@@ -167,7 +167,7 @@ Should these be `@type: "xdm:descriptorRelationship",` This could be a copy-past
 }
 ```
 
-Voor een lijst van de types en syntaxis van relatiebeschrijver, zie de [ beschrijvers API verwijzing ](../api/descriptors.md).Leren hoe te om deze concepten in praktijk toe te passen, de leerprogramma&#39;s volgen om [ een verhouding in API ](../tutorials/relationship-api.md) te bepalen of [ een verhouding in UI ](../tutorials/relationship-ui.md) tot stand te brengen.
+Voor een lijst van de types en syntaxis van relatiebeschrijver, zie de [&#x200B; beschrijvers API verwijzing &#x200B;](../api/descriptors.md).Leren hoe te om deze concepten in praktijk toe te passen, de leerprogramma&#39;s volgen om [&#x200B; een verhouding in API &#x200B;](../tutorials/relationship-api.md) te bepalen of [&#x200B; een verhouding in UI &#x200B;](../tutorials/relationship-ui.md) tot stand te brengen.
 
 >[!NOTE]
 >
@@ -195,7 +195,7 @@ Alle toepassingen die model-gebaseerde schema&#39;s gebruiken moeten nadenken:
 * **consistentie van Gegevens**: De verwante datasets moeten consistentie tijdens schrappingsverrichtingen handhaven
 * **planning van de Schrapping**: Rekening voor stroomafwaartse gevolgen over alle verbonden datasets en toepassingen tijdens de ontwerpfase
 
-Voor implementatierichtlijnen, zie [ het Schrappen van verslagen van op model-gebaseerde datasets ](../../hygiene/ui/record-delete.md#model-based-record-delete).
+Voor implementatierichtlijnen, zie [&#x200B; het Schrappen van verslagen van op model-gebaseerde datasets &#x200B;](../../hygiene/ui/record-delete.md#model-based-record-delete).
 
 ## Beperkingen en overwegingen {#limitations}
 

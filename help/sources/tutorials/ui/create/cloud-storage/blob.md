@@ -17,12 +17,12 @@ Lees deze gids om te leren hoe te om uw [!DNL Azure Blob Storage] instantie met 
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader voor het organiseren van de gegevens van de klantenervaring in Experience Platform.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader voor het organiseren van de gegevens van de klantenervaring in Experience Platform.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL Azure Blob Storage] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/batch/cloud-storage.md).
+Als u reeds een geldige [!DNL Azure Blob Storage] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/batch/cloud-storage.md).
 
 ### Ondersteunde bestandsindelingen
 
@@ -34,7 +34,7 @@ Experience Platform ondersteunt de volgende bestandsindelingen die door externe 
 
 ### Vereiste referenties verzamelen
 
-Lees het [[!DNL Azure Blob Storage]  overzicht ](../../../../connectors/cloud-storage/blob.md#authentication) voor informatie over authentificatie.
+Lees het [[!DNL Azure Blob Storage]  overzicht &#x200B;](../../../../connectors/cloud-storage/blob.md#authentication) voor informatie over authentificatie.
 
 ## Navigeren door de catalogus met bronnen
 
@@ -46,13 +46,13 @@ Als u verbinding wilt maken met [!DNL Azure Blob Storage] , gaat u naar de categ
 >
 >Bronnen tonen **[!UICONTROL Set up]** voor nieuwe verbindingen en **[!UICONTROL Add data]** als er al een account bestaat.
 
-![ de broncatalogus met de Azure Blob Geselecteerde bron van de Opslag.](../../../../images/tutorials/create/blob/catalog.png)
+![&#x200B; de broncatalogus met de Azure Blob Geselecteerde bron van de Opslag.](../../../../images/tutorials/create/blob/catalog.png)
 
 ## Een bestaande account gebruiken
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL Azure Blob Storage] -account die u wilt gebruiken.
 
-![ de bestaande broninterface voor de opslag van Azure Blob.](../../../../images/tutorials/create/blob/existing.png)
+![&#x200B; de bestaande broninterface voor de opslag van Azure Blob.](../../../../images/tutorials/create/blob/existing.png)
 
 ## Een nieuwe account maken
 
@@ -68,22 +68,22 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 
 Selecteer **[!UICONTROL Account key authentication]** en voer de opties `connectionString` , `container` en `folderPath` in. Selecteer vervolgens **[!UICONTROL Connect to source]** en wacht even tot de verbinding tot stand is gebracht.
 
-![ de optie van de rekeningszeer belangrijke authentificatie in de nieuwe stap van de rekeningsverwezenlijking.](../../../../images/tutorials/create/blob/account-key.png)
+![&#x200B; de optie van de rekeningszeer belangrijke authentificatie in de nieuwe stap van de rekeningsverwezenlijking.](../../../../images/tutorials/create/blob/account-key.png)
 
 >[!TAB  Gedeelde toegangshandtekening ]
 
 Selecteer **[!UICONTROL Shared access signature]** en voer de opties `sasUri` , `container` en `folderPath` in. Selecteer vervolgens **[!UICONTROL Connect to source]** en wacht even tot de verbinding tot stand is gebracht.
 
-![ de gedeelde optie van de de authentificatieauthentificatie van de toegangshandtekening in de nieuwe stap van de rekeningsverwezenlijking.](../../../../images/tutorials/create/blob/sas.png)
+![&#x200B; de gedeelde optie van de de authentificatieauthentificatie van de toegangshandtekening in de nieuwe stap van de rekeningsverwezenlijking.](../../../../images/tutorials/create/blob/sas.png)
 
 >[!TAB  de dienst belangrijkste gebaseerde authentificatie ]
 
 Selecteer **[!UICONTROL Service principal based authentication]** en geef de opties `serviceEndpoint` , `servicePrincipalId` , `servicePrincipalKey` , `accountKind` , `tenant` , `container` en `folderPath` op. Selecteer vervolgens **[!UICONTROL Connect to source]** en wacht even tot de verbinding tot stand is gebracht.
 
-![ de dienst belangrijkste gebaseerde authentificatieoptie in de nieuwe stap van de rekeningsverwezenlijking.](../../../../images/tutorials/create/blob/service-principal.png)
+![&#x200B; de dienst belangrijkste gebaseerde authentificatieoptie in de nieuwe stap van de rekeningsverwezenlijking.](../../../../images/tutorials/create/blob/service-principal.png)
 
 >[!ENDTABS]
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Azure Blob Storage] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in Experience Platform ](../../dataflow/batch/cloud-storage.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Azure Blob Storage] -account. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens van uw wolkenopslag in Experience Platform &#x200B;](../../dataflow/batch/cloud-storage.md) te brengen.

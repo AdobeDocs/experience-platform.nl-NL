@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # De Web SDK installeren met het NPM-pakket
 
-SDK van het Web van Adobe Experience Platform is beschikbaar als [ NPM pakket ](https://www.npmjs.com). Door het NPM-pakket te installeren, hebt u controle over het constructieproces voor de Adobe Experience Platform Web SDK JavaScript-bibliotheek. Het NPM-pakket stelt EcmaScript versie 5-modules of EcmaScript versie 2015 (ES6)-modules beschikbaar die in de browser moeten worden uitgevoerd.
+SDK van het Web van Adobe Experience Platform is beschikbaar als [&#x200B; NPM pakket &#x200B;](https://www.npmjs.com). Door het NPM-pakket te installeren, hebt u controle over het constructieproces voor de Adobe Experience Platform Web SDK JavaScript-bibliotheek. Het NPM-pakket stelt EcmaScript versie 5-modules of EcmaScript versie 2015 (ES6)-modules beschikbaar die in de browser moeten worden uitgevoerd.
 
 ```bash
 npm install @adobe/alloy
@@ -30,7 +30,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->Het pakket NPM baseert zich op modules CommonJS; daarom, wanneer het gebruiken van een bundelaar, zorg ervoor dat de bundelaar modules CommonJS steunt. Sommige bundels, zoals [ Rollup ](https://rollupjs.org), vereisen a [ stop ](https://www.npmjs.com/package/@rollup/plugin-commonjs) die steun CommonJS verleent.
+>Het pakket NPM baseert zich op modules CommonJS; daarom, wanneer het gebruiken van een bundelaar, zorg ervoor dat de bundelaar modules CommonJS steunt. Sommige bundels, zoals [&#x200B; Rollup &#x200B;](https://rollupjs.org), vereisen a [&#x200B; stop &#x200B;](https://www.npmjs.com/package/@rollup/plugin-commonjs) die steun CommonJS verleent.
 
 ## Het pakket gebruiken als een ECMAScript 5-module
 

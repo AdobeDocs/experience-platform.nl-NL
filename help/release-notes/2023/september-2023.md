@@ -23,17 +23,17 @@ Updates van bestaande functies in Experience Platform:
 - [Dashboards](#dashboards)
 - [Dataverzameling](#data-collection)
 - [Datagovernance](#data-governance)
-- [ hygiëne van Gegevens ](#hygiene)
+- [&#x200B; hygiëne van Gegevens &#x200B;](#hygiene)
 - [Bestemmingen](#destinations)
 - [Experience-datamodel (XDM)](#xdm)
 - [Identiteitsservice](#identity-service)
 - [Query-service](#query-service)
 - [Segmentatieservice](#segmentation)
-- [ Bronnen ](#sources)
+- [&#x200B; Bronnen &#x200B;](#sources)
 
 ## Berekende kenmerken {#computed-attributes}
 
-Met behulp van berekende kenmerken kunt u gebeurtenisgegevens eenvoudig samenvatten in profielkenmerken via een intuïtieve gebruikersinterface voor verbeterde op gedrag gebaseerde segmentatie, personalisatie en activering. Met deze functie kunt u berekende kenmerken maken op een manier die zichzelf aanbiedt, deze beheren en ze in segmentatie, Real-Time CDP-doelen of Adobe Journey Optimizer gebruiken. Bovendien vereenvoudigen de berekende kenmerken de segmentatie en de workflows voor reizen, zodat u probleemloos relevante ervaringen kunt opdoen. Om meer over gegevens verwerkte attributen te leren, te lezen gelieve [ gegevens verwerkt attributenoverzicht ](../../profile/computed-attributes/overview.md).
+Met behulp van berekende kenmerken kunt u gebeurtenisgegevens eenvoudig samenvatten in profielkenmerken via een intuïtieve gebruikersinterface voor verbeterde op gedrag gebaseerde segmentatie, personalisatie en activering. Met deze functie kunt u berekende kenmerken maken op een manier die zichzelf aanbiedt, deze beheren en ze in segmentatie, Real-Time CDP-doelen of Adobe Journey Optimizer gebruiken. Bovendien vereenvoudigen de berekende kenmerken de segmentatie en de workflows voor reizen, zodat u probleemloos relevante ervaringen kunt opdoen. Om meer over gegevens verwerkte attributen te leren, te lezen gelieve [&#x200B; gegevens verwerkt attributenoverzicht &#x200B;](../../profile/computed-attributes/overview.md).
 
 ## Waarschuwingen {#alerts}
 
@@ -43,11 +43,11 @@ Met Experience Platform kunt u zich abonneren op waarschuwingen die zijn gebasee
 
 | Functie | Beschrijving |
 | --- | --- |
-| Tabblad Waarschuwingsgeschiedenis | Het tabblad Waarschuwingen [!UICONTROL History] bevat nu alle gebeurtenissen, zoals vertragingen, het starten, het voltooien en mislukken. Lees het [ alarm UI documentatie ](../../observability/alerts/ui.md) voor meer informatie over het geschiedenislusje. |
+| Tabblad Waarschuwingsgeschiedenis | Het tabblad Waarschuwingen [!UICONTROL History] bevat nu alle gebeurtenissen, zoals vertragingen, het starten, het voltooien en mislukken. Lees het [&#x200B; alarm UI documentatie &#x200B;](../../observability/alerts/ui.md) voor meer informatie over het geschiedenislusje. |
 
 {style="table-layout:auto"}
 
-Om meer over alarm te leren, te lezen gelieve het [[!DNL Observability Insights]  overzicht ](../../observability/home.md).
+Om meer over alarm te leren, te lezen gelieve het [[!DNL Observability Insights]  overzicht &#x200B;](../../observability/home.md).
 
 ## Dashboards {#dashboards}
 
@@ -55,11 +55,11 @@ Adobe Experience Platform biedt meerdere [!DNL dashboards] waarmee u belangrijke
 
 | Functie | Beschrijving |
 | --- | --- |
-| [ de verbetering van het gebruiksdashboard van de Vergunning ](../../dashboards/guides/license-usage.md) | Houd controle over uw licentieovereenkomsten met verbeterde rapportering en belangrijke metrische visualisaties met betrekking tot het gebruik van uw licentie. Deze verbeteringen bieden een hoge mate van granulariteit ten opzichte van de maatstaven voor het gebruik van uw licentie voor alle Experience Platform-producten die u hebt aangeschaft. |
+| [&#x200B; de verbetering van het gebruiksdashboard van de Vergunning &#x200B;](../../dashboards/guides/license-usage.md) | Houd controle over uw licentieovereenkomsten met verbeterde rapportering en belangrijke metrische visualisaties met betrekking tot het gebruik van uw licentie. Deze verbeteringen bieden een hoge mate van granulariteit ten opzichte van de maatstaven voor het gebruik van uw licentie voor alle Experience Platform-producten die u hebt aangeschaft. |
 
 {style="table-layout:auto"}
 
-Meer over het dashboard van het vergunningsgebruik leren, zie het [ overzicht van het het dashboard van het vergunningsgebruik ](../../dashboards/guides/destinations.md).
+Meer over het dashboard van het vergunningsgebruik leren, zie het [&#x200B; overzicht van het het dashboard van het vergunningsgebruik &#x200B;](../../dashboards/guides/destinations.md).
 
 ## Dataverzameling {#data-collection}
 
@@ -69,8 +69,8 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Gegevensstromen | Ondersteuning voor opzoeken van apparaten | Wanneer het vormen van een gegevensstroom, kunt u het niveau van apparaat raadplegingsinformatie nu selecteren die moet worden verzameld. De opzoekinformatie van het apparaat omvat gegevens over het apparaat, de hardware, het besturingssysteem en de browser die worden gebruikt om met uw pagina te communiceren. <br> Opzoekgegevens van apparaten kunnen niet worden verzameld samen met gebruikersagent- en clienthints. Als u ervoor kiest apparaatinformatie te verzamelen, wordt de verzameling van gebruikersagent- en clienthints uitgeschakeld en andersom. Alle opzoekgegevens van het apparaat worden opgeslagen in de veldgroep `xdm:device` . Leer meer van de documentatie bij [ het vormen gegevensstromen ](../../datastreams/configure.md#geolocation-device-lookup). |
-| Extensies | [!DNL TikTok] API-extensie voor webgebeurtenissen | De [[!DNL TikTok]  API van de Gebeurtenissen van het Web ](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) uitbreiding staat u aan hefboomwerkings gegevens toe die in Adobe Experience Platform Edge Network worden gevangen en het verzenden naar [!DNL TikTok] in de vorm van server-zijgebeurtenissen gebruikend [!DNL TikTok] de Gebeurtenissen API van het Web. |
+| Gegevensstromen | Ondersteuning voor opzoeken van apparaten | Wanneer het vormen van een gegevensstroom, kunt u het niveau van apparaat raadplegingsinformatie nu selecteren die moet worden verzameld. De opzoekinformatie van het apparaat omvat gegevens over het apparaat, de hardware, het besturingssysteem en de browser die worden gebruikt om met uw pagina te communiceren. <br> Opzoekgegevens van apparaten kunnen niet worden verzameld samen met gebruikersagent- en clienthints. Als u ervoor kiest apparaatinformatie te verzamelen, wordt de verzameling van gebruikersagent- en clienthints uitgeschakeld en andersom. Alle opzoekgegevens van het apparaat worden opgeslagen in de veldgroep `xdm:device` . Leer meer van de documentatie bij [&#x200B; het vormen gegevensstromen &#x200B;](../../datastreams/configure.md#geolocation-device-lookup). |
+| Extensies | [!DNL TikTok] API-extensie voor webgebeurtenissen | De [[!DNL TikTok]  API van de Gebeurtenissen van het Web &#x200B;](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) uitbreiding staat u aan hefboomwerkings gegevens toe die in Adobe Experience Platform Edge Network worden gevangen en het verzenden naar [!DNL TikTok] in de vorm van server-zijgebeurtenissen gebruikend [!DNL TikTok] de Gebeurtenissen API van het Web. |
 
 {style="table-layout:auto"}
 
@@ -84,11 +84,11 @@ Adobe Experience Platform-datagovernance is een reeks strategieën en technologi
 
 | Functie | Beschrijving |
 | --- | --- |
-| De nieuwe etiketten van het Ecosysteem van de Partner voor derdegegevens | Er zijn nieuwe labels voor gegevensgebruik beschikbaar voor verrijking en prospectie door derden. Zie de [ documentatie over de etiketten van het Ecosysteem van de Partner ](../../data-governance/labels/reference.md#partner) voor meer informatie. |
+| De nieuwe etiketten van het Ecosysteem van de Partner voor derdegegevens | Er zijn nieuwe labels voor gegevensgebruik beschikbaar voor verrijking en prospectie door derden. Zie de [&#x200B; documentatie over de etiketten van het Ecosysteem van de Partner &#x200B;](../../data-governance/labels/reference.md#partner) voor meer informatie. |
 
 {style="table-layout:auto"}
 
-Meer over gegevensbeheer leren, lees het [ overzicht van het gegevensbeheer ](../../data-governance/home.md).
+Meer over gegevensbeheer leren, lees het [&#x200B; overzicht van het gegevensbeheer &#x200B;](../../data-governance/home.md).
 
 ## Gegevenshygiëne {#hygiene}
 
@@ -98,12 +98,12 @@ Experience Platform biedt een reeks mogelijkheden voor gegevenshygiëne waarmee 
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;] {type=Informative} Verslag schrap (beperkte versie) | Beheer uw levenscyclus van gegevens in alle gegevensopslagruimten om te voldoen aan de verplichtingen van de klant en licentieovereenkomsten met de geavanceerde functies voor levenscyclusbeheer van gegevens in Adobe Experience Platform: automatische gegevenssetvervaldatum en verwijdering van records.<br> met geautomatiseerde datasetafloop, kunt u volledige datasets schrappen en een datum en een tijd voor de dataset plaatsen om worden geschrapt.<br> Schrapping van het Verslag staat u toe om individuele consumentenprofielen te schrappen door hun primaire identiteiten te richten. U kunt de primaire identiteiten individueel door UI of via CSV/JSON- dossierupload verstrekken. Zie de [ documentatie van de Schrapping van het Verslag ](../../hygiene/ui/record-delete.md) voor meer informatie |
-| Verlopen gegevensset | Beperk uw gegevens tot een minimum en houd de controle over uw licentieovereenkomsten met de automatische gegevenssetvervaldatum. Verminder gegevensvolumes door volledige datasets te schrappen en plaats een datum en een tijd voor de dataset om worden geschrapt. Zie de [ documentatie van de datasetvervaldatums ](../../hygiene/ui/dataset-expiration.md) voor meer informatie. |
+| [!BADGE &#x200B; Beta &#x200B;] {type=Informative} Verslag schrap (beperkte versie) | Beheer uw levenscyclus van gegevens in alle gegevensopslagruimten om te voldoen aan de verplichtingen van de klant en licentieovereenkomsten met de geavanceerde functies voor levenscyclusbeheer van gegevens in Adobe Experience Platform: automatische gegevenssetvervaldatum en verwijdering van records.<br> met geautomatiseerde datasetafloop, kunt u volledige datasets schrappen en een datum en een tijd voor de dataset plaatsen om worden geschrapt.<br> Schrapping van het Verslag staat u toe om individuele consumentenprofielen te schrappen door hun primaire identiteiten te richten. U kunt de primaire identiteiten individueel door UI of via CSV/JSON- dossierupload verstrekken. Zie de [&#x200B; documentatie van de Schrapping van het Verslag &#x200B;](../../hygiene/ui/record-delete.md) voor meer informatie |
+| Verlopen gegevensset | Beperk uw gegevens tot een minimum en houd de controle over uw licentieovereenkomsten met de automatische gegevenssetvervaldatum. Verminder gegevensvolumes door volledige datasets te schrappen en plaats een datum en een tijd voor de dataset om worden geschrapt. Zie de [&#x200B; documentatie van de datasetvervaldatums &#x200B;](../../hygiene/ui/dataset-expiration.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de mogelijkheden van de gegevenshygiëne van Experience Platform, verwijs naar het [ overzicht van de gegevenshygiëne ](../../hygiene/home.md).
+Voor meer informatie over de mogelijkheden van de gegevenshygiëne van Experience Platform, verwijs naar het [&#x200B; overzicht van de gegevenshygiëne &#x200B;](../../hygiene/home.md).
 
 ## Bestemmingen {#destinations}
 
@@ -113,9 +113,9 @@ Voor meer informatie over de mogelijkheden van de gegevenshygiëne van Experienc
 
 | Bestemming | Nieuw of Bijgewerkt | Beschrijving |
 | ----------- |----------------|----------- |
-| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nieuw | Activeer het publiek dat voorheen aan [!DNL LiveRamp] was toegewezen voor topuitgevers op mobiele media, het web, displays en aangesloten tv-media. <br> Na onboarding publiek aan uw [!DNL LiveRamp] rekening door [ LiveRamp - on boarding ](../../destinations/catalog/advertising/liveramp-onboarding.md) verbinding, gebruik de nieuwe [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) verbinding om het publiek aan stroomafwaartse bestemmingen te activeren. |
-| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nieuw | [[!DNL HubSpot] ](https://www.hubspot.com) is een platform van CRM met alle software, integratie, en middelen u marketing, verkoop, inhoudsbeheer, en de klantendienst moet verbinden. Het staat u toe om uw gegevens, teams, en klanten op één platform van CRM te verbinden. |
-| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Bijgewerkt | Extra ondersteuning voor [!DNL Dynamics 365] aangepaste veldvoorvoegsels voor aangepaste velden die niet zijn gemaakt in de standaardoplossing van [!DNL Dynamics 365] . Een nieuw inputgebied, **[!UICONTROL Customization Prefix]**, is toegevoegd in [ Vul de stap van bestemmingsdetails ](#destination-details). |
+| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nieuw | Activeer het publiek dat voorheen aan [!DNL LiveRamp] was toegewezen voor topuitgevers op mobiele media, het web, displays en aangesloten tv-media. <br> Na onboarding publiek aan uw [!DNL LiveRamp] rekening door [&#x200B; LiveRamp - on boarding &#x200B;](../../destinations/catalog/advertising/liveramp-onboarding.md) verbinding, gebruik de nieuwe [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) verbinding om het publiek aan stroomafwaartse bestemmingen te activeren. |
+| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nieuw | [[!DNL HubSpot] &#x200B;](https://www.hubspot.com) is een platform van CRM met alle software, integratie, en middelen u marketing, verkoop, inhoudsbeheer, en de klantendienst moet verbinden. Het staat u toe om uw gegevens, teams, en klanten op één platform van CRM te verbinden. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Bijgewerkt | Extra ondersteuning voor [!DNL Dynamics 365] aangepaste veldvoorvoegsels voor aangepaste velden die niet zijn gemaakt in de standaardoplossing van [!DNL Dynamics 365] . Een nieuw inputgebied, **[!UICONTROL Customization Prefix]**, is toegevoegd in [&#x200B; Vul de stap van bestemmingsdetails &#x200B;](#destination-details). |
 | [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Bijgewerkt | De bestemming van het publiek van Experience Cloud is nu algemeen beschikbaar. Met deze bestemming activeert u het publiek van Real-Time CDP naar Audience Manager en Adobe Analytics. U hebt een Audience Manager-licentie nodig om het publiek naar Adobe Analytics te sturen. |
 
 {style="table-layout:auto"}
@@ -133,14 +133,14 @@ Add these to release notes as they go out
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Uitvoer van gegevens in Real-Time CDP | De [ uitvoer ](../../destinations/ui/export-datasets.md) functionaliteit van de dataset is nu over het algemeen beschikbaar. Zie [ welke datasets u kunt uitvoeren gebaseerd op Experience Platform app ](../../destinations/ui/export-datasets.md#datasets-to-export) u, kocht en de [ gidsen voor het uitvoeren van datasets ](/help/destinations/guardrails.md#dataset-exports) controleert. |
-| (Beta) Ondersteuning voor het exporteren van arraytype-objecten | Exporteer arrays met primitieve waarden (tekenreeks, int of booleaanse waarden) als platte schemabestanden naar de opslagdoelen van de cloud. Lees meer over de functionaliteit in de [ documentatie ](../../destinations/ui/export-arrays-maps-objects.md). |
-| Dynamische dropdown-kiezers in Destination SDK | Wanneer het creëren van een bestemming door Destination SDK, kunt u [ dynamische dropdown selecteurs ](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) nu gebruiken om de gebieden van een dropdown selecteur met waarden te bevolken die van API worden teruggewonnen. |
+| Uitvoer van gegevens in Real-Time CDP | De [&#x200B; uitvoer &#x200B;](../../destinations/ui/export-datasets.md) functionaliteit van de dataset is nu over het algemeen beschikbaar. Zie [&#x200B; welke datasets u kunt uitvoeren gebaseerd op Experience Platform app &#x200B;](../../destinations/ui/export-datasets.md#datasets-to-export) u, kocht en de [&#x200B; gidsen voor het uitvoeren van datasets &#x200B;](/help/destinations/guardrails.md#dataset-exports) controleert. |
+| (Beta) Ondersteuning voor het exporteren van arraytype-objecten | Exporteer arrays met primitieve waarden (tekenreeks, int of booleaanse waarden) als platte schemabestanden naar de opslagdoelen van de cloud. Lees meer over de functionaliteit in de [&#x200B; documentatie &#x200B;](../../destinations/ui/export-arrays-maps-objects.md). |
+| Dynamische dropdown-kiezers in Destination SDK | Wanneer het creëren van een bestemming door Destination SDK, kunt u [&#x200B; dynamische dropdown selecteurs &#x200B;](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) nu gebruiken om de gebieden van een dropdown selecteur met waarden te bevolken die van API worden teruggewonnen. |
 
 **Opgeloste problemen en verbeteringen** {#destinations-fixes-and-enhancements}
 
-- Maak gebruik van [ controletransparantie ](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) nu beschikbaar voor ondernemingsbestemmingen ([ HTTP API ](../../destinations/catalog/streaming/http-destination.md), [ Amazon Kinesis ](../../destinations/catalog/cloud-storage/amazon-kinesis.md) en [ Azure Event Hubs ](../../destinations/catalog/cloud-storage/azure-event-hubs.md)) op het dataflow loopniveau om activeringsmetriek en status in de [ dataflow detailmening ](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page), met extra informatie via foutencodes en berichten voor het oplossen van problemen te controleren.
-- Wanneer u de naam van publiek bijwerkt dat aan [ wordt in kaart gebracht Google Ad Manager ](../../destinations/catalog/advertising/google-ad-manager.md), [ de Vertoning van Google &amp; Video 360 ](../../destinations/catalog/advertising/google-dv360.md), en andere bestemmingen die [ malplaatjes van de publieksupdate ](../../destinations/destination-sdk/metadata-api/update-audience-template.md) gebruiken, worden deze naamveranderingen nu weerspiegeld stroomafwaarts in de bestemming.
+- Maak gebruik van [&#x200B; controletransparantie &#x200B;](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) nu beschikbaar voor ondernemingsbestemmingen ([&#x200B; HTTP API &#x200B;](../../destinations/catalog/streaming/http-destination.md), [&#x200B; Amazon Kinesis &#x200B;](../../destinations/catalog/cloud-storage/amazon-kinesis.md) en [&#x200B; Azure Event Hubs &#x200B;](../../destinations/catalog/cloud-storage/azure-event-hubs.md)) op het dataflow loopniveau om activeringsmetriek en status in de [&#x200B; dataflow detailmening &#x200B;](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page), met extra informatie via foutencodes en berichten voor het oplossen van problemen te controleren.
+- Wanneer u de naam van publiek bijwerkt dat aan [&#x200B; wordt in kaart gebracht Google Ad Manager &#x200B;](../../destinations/catalog/advertising/google-ad-manager.md), [&#x200B; de Vertoning van Google &amp; Video 360 &#x200B;](../../destinations/catalog/advertising/google-dv360.md), en andere bestemmingen die [&#x200B; malplaatjes van de publieksupdate &#x200B;](../../destinations/destination-sdk/metadata-api/update-audience-template.md) gebruiken, worden deze naamveranderingen nu weerspiegeld stroomafwaarts in de bestemming.
 
 Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
@@ -152,14 +152,14 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Functie | Beschrijving |
 | --- | --- |
-| Snelle acties toegevoegd aan de Schema-editor | Er zijn nieuwe snelle acties toegevoegd aan het canvas van de Schema-editor. U kunt nu de JSON-structuur kopiëren of het schema rechtstreeks uit de editor verwijderen.<br>![ de snelle acties in de Redacteur van het Schema.](../2023/assets/schema-editor-copy-json.png " de Redacteur van Schema met Meer en het Exemplaar aan benadrukt JSON."){width="100" zoomable="yes"} |
-| XDM-bronnen filteren op basis van aangepaste of standaardmaker | De lijsten met beschikbare schema&#39;s, veldgroepen, gegevenstypen en klassen worden nu vooraf gefilterd op basis van de methode waarmee ze zijn gemaakt. Hierdoor kunt u bronnen filteren op basis van het feit of ze op maat zijn gemaakt of door Adobe zijn gemaakt.<br>![ de Standaard en filters van de Douane in de werkruimte van Schema&#39;s.](../2023/assets/standard-and-custom-classes.png " de werkruimte van Schema&#39;s met de Standaard en Gemarkeerde filters van de Douane."){width="100" zoomable="yes"} <br> zie [ creeer en geef middelendocumentatie ](../../xdm/ui/resources/classes.md#filter.md) voor meer informatie uit. |
+| Snelle acties toegevoegd aan de Schema-editor | Er zijn nieuwe snelle acties toegevoegd aan het canvas van de Schema-editor. U kunt nu de JSON-structuur kopiëren of het schema rechtstreeks uit de editor verwijderen.<br>![&#x200B; de snelle acties in de Redacteur van het Schema.](../2023/assets/schema-editor-copy-json.png " de Redacteur van Schema met Meer en het Exemplaar aan benadrukt JSON."){width="100" zoomable="yes"} |
+| XDM-bronnen filteren op basis van aangepaste of standaardmaker | De lijsten met beschikbare schema&#39;s, veldgroepen, gegevenstypen en klassen worden nu vooraf gefilterd op basis van de methode waarmee ze zijn gemaakt. Hierdoor kunt u bronnen filteren op basis van het feit of ze op maat zijn gemaakt of door Adobe zijn gemaakt.<br>![&#x200B; de Standaard en filters van de Douane in de werkruimte van Schema&#39;s.](../2023/assets/standard-and-custom-classes.png " de werkruimte van Schema&#39;s met de Standaard en Gemarkeerde filters van de Douane."){width="100" zoomable="yes"} <br> zie [&#x200B; creeer en geef middelendocumentatie &#x200B;](../../xdm/ui/resources/classes.md#filter.md) voor meer informatie uit. |
 
 **Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Bijgewerkte workflow voor het maken van schema&#39;s | Er is een nieuwe workflow voor het maken van schema&#39;s geïmplementeerd om het proces te stroomlijnen. <br> ![ de nieuwe schemaverwezenlijking UI.](../2023/assets/schema-class-options.png " de Nieuwe benadrukte selecteur van schemadetails."){width="100" zoomable="yes"} <br> zie de [ documentatie van de schemaverwezenlijking ](../../xdm/ui/resources/schemas.md#create) voor meer informatie. |
+| Bijgewerkte workflow voor het maken van schema&#39;s | Er is een nieuwe workflow voor het maken van schema&#39;s geïmplementeerd om het proces te stroomlijnen. <br> ![&#x200B; de nieuwe schemaverwezenlijking UI.](../2023/assets/schema-class-options.png " de Nieuwe benadrukte selecteur van schemadetails."){width="100" zoomable="yes"} <br> zie de [&#x200B; documentatie van de schemaverwezenlijking &#x200B;](../../xdm/ui/resources/schemas.md#create) voor meer informatie. |
 
 **Nieuwe componenten XDM**
 
@@ -174,13 +174,13 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Componenttype | Naam | Beschrijving bijwerken |
 | --- | --- | --- |
-| Extensie | [!UICONTROL AJO Entity Fields] | [[!UICONTROL flag for multi-variant] ](https://github.com/adobe/xdm/pull/1774/files) werd toegevoegd aan [!UICONTROL AJO Entity Fields] om te identificeren als de variant al dan niet een multi-variant is. |
-| Gegevenstype | [!UICONTROL Product list item] | [[!UICONTROL Return Item] ](https://github.com/adobe/xdm/pull/1773/files) werd toegevoegd om de informatie van de Autorisatie van de Goederen van de Terugkeer te omvatten. |
-| Gegevenstype | Volgorde | [[!UICONTROL Return Info] ](https://github.com/adobe/xdm/pull/1773/files) werd toegevoegd om uitgegeven RMA (de Vergunning van de Terugkeer Merchandise) te omvatten. |
+| Extensie | [!UICONTROL AJO Entity Fields] | [[!UICONTROL flag for multi-variant] &#x200B;](https://github.com/adobe/xdm/pull/1774/files) werd toegevoegd aan [!UICONTROL AJO Entity Fields] om te identificeren als de variant al dan niet een multi-variant is. |
+| Gegevenstype | [!UICONTROL Product list item] | [[!UICONTROL Return Item] &#x200B;](https://github.com/adobe/xdm/pull/1773/files) werd toegevoegd om de informatie van de Autorisatie van de Goederen van de Terugkeer te omvatten. |
+| Gegevenstype | Volgorde | [[!UICONTROL Return Info] &#x200B;](https://github.com/adobe/xdm/pull/1773/files) werd toegevoegd om uitgegeven RMA (de Vergunning van de Terugkeer Merchandise) te omvatten. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md)
+Voor meer informatie over XDM in Experience Platform, zie het [&#x200B; XDM overzicht van het Systeem &#x200B;](../../xdm/home.md)
 
 ## Identiteitsservice {#identity-service}
 
@@ -190,8 +190,8 @@ Met Adobe Experience Platform Identity Service krijgt u een compleet beeld van u
 
 | Functie | Beschrijving |
 | --- | --- |
-| Verbeteringen in de gebruikersinterface van Identity Service | Met het verbeterde gereedschap voor het maken van aangepaste naamruimten in de gebruikersinterface van Experience Platform kunt u aangepaste naamruimten en de bijbehorende identiteitstypen beter beheren. De verbeterde interface van de Identiteitsdienst voorziet u van: <ul><li>Contextuele Ervaring: Visuele aanwijzingen, helderheid, en context aan wat een identiteitsnamespace is en identiteitstypes zijn.</li><li>Nauwkeurigheid: betere foutafhandeling, zonder dubbele identiteitsnamen.</li><li>Detectie: toegang tot documentatie vanuit een productdialoogvenster.</li></ul> Voor meer informatie, leest de gids bij [ het creëren van douane namespaces ](../../identity-service/features/namespaces.md#create-namespaces). |
-| Wijzigingen in limieten van identiteitsgrafieken | De limiet voor identiteitsgrafieken is gewijzigd van 150 identiteiten in 50 identiteiten. Wanneer een nieuwe identiteit wordt opgenomen in een volledige grafiek, wordt de oudste identiteit op basis van de tijdstempel en het identiteitstype van de inname verwijderd. Identiteitstypen van cookies krijgen prioriteit voor verwijdering. Neem contact op met uw Adobe-accountteam om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat: <ul><li>een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRM-id&#39;s) zijn geconfigureerd als cookie-/apparaatidentiteitstype.</li><li>een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.</li></ul> Adobe-engineering verwerkt deze aanvragen handmatig. Voor meer informatie, lees de [ gidsen voor de gegevens van de Dienst van de Identiteit ](../../identity-service/guardrails.md) en gids over [ best practices van de de vergunningsrechten van het gegevensbeheer ](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
+| Verbeteringen in de gebruikersinterface van Identity Service | Met het verbeterde gereedschap voor het maken van aangepaste naamruimten in de gebruikersinterface van Experience Platform kunt u aangepaste naamruimten en de bijbehorende identiteitstypen beter beheren. De verbeterde interface van de Identiteitsdienst voorziet u van: <ul><li>Contextuele Ervaring: Visuele aanwijzingen, helderheid, en context aan wat een identiteitsnamespace is en identiteitstypes zijn.</li><li>Nauwkeurigheid: betere foutafhandeling, zonder dubbele identiteitsnamen.</li><li>Detectie: toegang tot documentatie vanuit een productdialoogvenster.</li></ul> Voor meer informatie, leest de gids bij [&#x200B; het creëren van douane namespaces &#x200B;](../../identity-service/features/namespaces.md#create-namespaces). |
+| Wijzigingen in limieten van identiteitsgrafieken | De limiet voor identiteitsgrafieken is gewijzigd van 150 identiteiten in 50 identiteiten. Wanneer een nieuwe identiteit wordt opgenomen in een volledige grafiek, wordt de oudste identiteit op basis van de tijdstempel en het identiteitstype van de inname verwijderd. Identiteitstypen van cookies krijgen prioriteit voor verwijdering. Neem contact op met uw Adobe-accountteam om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat: <ul><li>een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRM-id&#39;s) zijn geconfigureerd als cookie-/apparaatidentiteitstype.</li><li>een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.</li></ul> Adobe-engineering verwerkt deze aanvragen handmatig. Voor meer informatie, lees de [&#x200B; gidsen voor de gegevens van de Dienst van de Identiteit &#x200B;](../../identity-service/guardrails.md) en gids over [&#x200B; best practices van de de vergunningsrechten van het gegevensbeheer &#x200B;](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
 
@@ -205,8 +205,8 @@ Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren
 
 | Functie | Beschrijving |
 | --- | --- |
-| UI-updates voor het filteren van logbestanden | Het betere filtreren van het vraaglogboek verbetert zicht voor user-generated logboeken voor controle, het beheer, en het oplossen van problemen. U kunt de lijst met querylogbestanden filteren op basis van verschillende instellingen. <br> ![ de de filtermontages van het vraaglogboek.](../2023/assets/log-filter-settings.png " de Nieuwe filters van het vraaglogboek worden benadrukt."){width="100" zoomable="yes"} <br> zie de [ documentatie van vraaglogboeken ](../../query-service/ui/query-logs.md#filter-logs) voor meer informatie. |
-| UI-updates van Multiple Query Editor | U kunt veelvoudige opeenvolgende vragen in de Redacteur van de Vraag nu uitvoeren of meer dan één vraag schrijven en alle vragen op een opeenvolgende manier uitvoeren. Om meer flexibiliteit aan uw vraaguitvoering toe te voegen, kunt u uw gekozen vraag benadrukken en die specifieke vraag selecteren om onafhankelijk van anderen te lopen. Zie de [ gids UI van de Redacteur van de Vraag ](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) voor meer informatie. |
+| UI-updates voor het filteren van logbestanden | Het betere filtreren van het vraaglogboek verbetert zicht voor user-generated logboeken voor controle, het beheer, en het oplossen van problemen. U kunt de lijst met querylogbestanden filteren op basis van verschillende instellingen. <br> ![&#x200B; de de filtermontages van het vraaglogboek.](../2023/assets/log-filter-settings.png " de Nieuwe filters van het vraaglogboek worden benadrukt."){width="100" zoomable="yes"} <br> zie de [&#x200B; documentatie van vraaglogboeken &#x200B;](../../query-service/ui/query-logs.md#filter-logs) voor meer informatie. |
+| UI-updates van Multiple Query Editor | U kunt veelvoudige opeenvolgende vragen in de Redacteur van de Vraag nu uitvoeren of meer dan één vraag schrijven en alle vragen op een opeenvolgende manier uitvoeren. Om meer flexibiliteit aan uw vraaguitvoering toe te voegen, kunt u uw gekozen vraag benadrukken en die specifieke vraag selecteren om onafhankelijk van anderen te lopen. Zie de [&#x200B; gids UI van de Redacteur van de Vraag &#x200B;](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -220,10 +220,10 @@ Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Exp
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Aanpasbare kolommen | U kunt de lay-out van het Portaal van de Publiek met re-sizable kolommen nu aanpassen. Voor meer informatie over deze eigenschap, te lezen gelieve het [ Poortoverzicht van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md#customize). |
-| Uitsplitsing naar frequentie bijwerken | U kunt nu een verdeling van de updatefrequenties van het publiek in uw organisatie bekijken. Voor meer informatie over deze eigenschap, te lezen gelieve de [ gids van de segmentatie UI ](../../segmentation/ui/overview.md#browse). |
+| Aanpasbare kolommen | U kunt de lay-out van het Portaal van de Publiek met re-sizable kolommen nu aanpassen. Voor meer informatie over deze eigenschap, te lezen gelieve het [&#x200B; Poortoverzicht van het Poort van het Publiek &#x200B;](../../segmentation/ui/audience-portal.md#customize). |
+| Uitsplitsing naar frequentie bijwerken | U kunt nu een verdeling van de updatefrequenties van het publiek in uw organisatie bekijken. Voor meer informatie over deze eigenschap, te lezen gelieve de [&#x200B; gids van de segmentatie UI &#x200B;](../../segmentation/ui/overview.md#browse). |
 
-Om meer over de Dienst van de Segmentatie te leren, te lezen gelieve het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
+Om meer over de Dienst van de Segmentatie te leren, te lezen gelieve het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
@@ -233,8 +233,8 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe parameters voor `offset` paginering in Self-Serve Sources (Batch SDK) | U kunt nu een `endConditionName` en `endConditionValue` voor uw bron opgeven wanneer u `offset` paginering gebruikt. Met deze parameters kunt u de voorwaarde aangeven die de pagineringslus in de volgende HTTP-aanvraag beëindigt. Voor meer informatie, lees de [ pagineringsgids voor Zelfbediening Bronnen (Partij SDK) ](../../sources/sources-sdk/config/sourcespec.md#pagination). |
+| Nieuwe parameters voor `offset` paginering in Self-Serve Sources (Batch SDK) | U kunt nu een `endConditionName` en `endConditionValue` voor uw bron opgeven wanneer u `offset` paginering gebruikt. Met deze parameters kunt u de voorwaarde aangeven die de pagineringslus in de volgende HTTP-aanvraag beëindigt. Voor meer informatie, lees de [&#x200B; pagineringsgids voor Zelfbediening Bronnen (Partij SDK) &#x200B;](../../sources/sources-sdk/config/sourcespec.md#pagination). |
 
 {style="table-layout:auto"}
 
-Om meer over bronnen te leren, te lezen gelieve het [ overzicht van bronnen ](../../sources/home.md).
+Om meer over bronnen te leren, te lezen gelieve het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

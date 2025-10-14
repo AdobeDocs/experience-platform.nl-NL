@@ -23,7 +23,7 @@ Eenvoudig gesteld, [!DNL Catalog] dienst als meta-gegevensopslag of &quot;catalo
 * Hoeveel gegevens zijn verwerkt?
 * Welke fouten zijn tijdens de verwerking opgetreden?
 
-[!DNL Catalog] biedt een RESTful-API waarmee u [!DNL Experience Platform] -metagegevens programmatisch kunt beheren met behulp van standaard-CRUD-bewerkingen. Zie de [ de ontwikkelaarsgids van de Catalogus ](api/getting-started.md) voor meer informatie.
+[!DNL Catalog] biedt een RESTful-API waarmee u [!DNL Experience Platform] -metagegevens programmatisch kunt beheren met behulp van standaard-CRUD-bewerkingen. Zie de [&#x200B; de ontwikkelaarsgids van de Catalogus &#x200B;](api/getting-started.md) voor meer informatie.
 
 ## [!DNL Catalog] en [!DNL Experience Platform] services
 
@@ -35,7 +35,7 @@ De bronnen die [!DNL Catalog Service] tracks gebruiken, worden door meerdere [!D
 
 Wanneer gegevens in [!DNL Experience Platform] worden opgenomen, wordt de structuur van die gegevens toegewezen aan een XDM-schema en in [!DNL Data Lake] opgeslagen als onderdeel van een dataset. De meta-gegevens voor elke dataset worden gevolgd door [!DNL Catalog Service], die een verwijzing naar het XDM schema omvat dat de dataset met in overeenstemming is.
 
-Voor meer algemene informatie over Systeem XDM, gelieve te zien het [ XDM overzicht van het Systeem ](../xdm/home.md).
+Voor meer algemene informatie over Systeem XDM, gelieve te zien het [&#x200B; XDM overzicht van het Systeem &#x200B;](../xdm/home.md).
 
 ### [!DNL Data Ingestion]
 
@@ -43,7 +43,7 @@ Voor meer algemene informatie over Systeem XDM, gelieve te zien het [ XDM overzi
 
 Wanneer u de batchinvoermethode gebruikt, worden in [!DNL Catalog] ook aanvullende metagegevens voor batchbestanden bijgehouden. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. [!DNL Catalog] volgt de meta-gegevens voor deze partijdossiers, evenals de datasets zij binnen na opname worden voortgeduurd. De meta-gegevens van de partij omvatten informatie over het aantal met succes opgenomen verslagen, evenals om het even welke ontbroken verslagen en bijbehorende foutenmeldingen.
 
-Zie het [ overzicht van de gegevensopname ](../ingestion/home.md) voor meer informatie.
+Zie het [&#x200B; overzicht van de gegevensopname &#x200B;](../ingestion/home.md) voor meer informatie.
 
 ## [!DNL Catalog] objecten
 
@@ -54,9 +54,9 @@ In de volgende tabel worden de verschillende objecttypen weergegeven die worden 
 | Object | API-eindpunt | Definitie |
 |---|---|---|
 | Batch | `/batches` | Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Een batchobject in [!DNL Catalog] beschrijft de innamemetriek van de batch (zoals het aantal verwerkte records of de grootte op schijf) en kan ook koppelingen bevatten naar gegevenssets, weergaven en andere bronnen die door de batchbewerking zijn beïnvloed. |
-| Gegevensset | `/dataSets` | Een dataset is een opslag en beheersconstructie die voor de inzameling van gegevens (typisch een lijst) wordt gebruikt die een schema (kolommen) en gebieden (rijen) bevat. Zie het [ overzicht van datasets ](./datasets/overview.md) voor meer informatie. |
+| Gegevensset | `/dataSets` | Een dataset is een opslag en beheersconstructie die voor de inzameling van gegevens (typisch een lijst) wordt gebruikt die een schema (kolommen) en gebieden (rijen) bevat. Zie het [&#x200B; overzicht van datasets &#x200B;](./datasets/overview.md) voor meer informatie. |
 | Gegevensbestand | `/datasetFiles` | Gegevensbestanden vertegenwoordigen gegevensblokken die zijn opgeslagen op [!DNL Experience Platform] . Als verslagen van letterlijke dossiers, zijn deze waar u de grootte van het dossier, het aantal verslagen kunt vinden het bevat, en een verwijzing naar de partij die het dossier opnam. |
 
 ## Volgende stappen
 
-Dit document biedt een inleiding tot [!DNL Catalog Service] en de manier waarop het werkt binnen het grotere bereik van [!DNL Experience Platform] . Zie de [[!DNL Catalog]  ontwikkelaarsgids ](api/getting-started.md) voor stappen bij het in wisselwerking staan met de verschillende eindpunten van dat [!DNL Catalog] API. Het wordt geadviseerd dat u ook naar de gids op [ het filtreren gegevens van de Catalogus ](api/filter-data.md) verwijst om beste praktijken te volgen voor het beperken van de gegevens die in API reacties zijn teruggekeerd.
+Dit document biedt een inleiding tot [!DNL Catalog Service] en de manier waarop het werkt binnen het grotere bereik van [!DNL Experience Platform] . Zie de [[!DNL Catalog]  ontwikkelaarsgids &#x200B;](api/getting-started.md) voor stappen bij het in wisselwerking staan met de verschillende eindpunten van dat [!DNL Catalog] API. Het wordt geadviseerd dat u ook naar de gids op [&#x200B; het filtreren gegevens van de Catalogus &#x200B;](api/filter-data.md) verwijst om beste praktijken te volgen voor het beperken van de gegevens die in API reacties zijn teruggekeerd.

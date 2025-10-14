@@ -458,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 De volgende voorbeelden van hoger-ordefuncties worden verklaard als deel van terugwinnen gelijkaardig archiefgebruiksgeval. Een voorbeeld en uitleg van het gebruik van elke functie worden gegeven in de desbetreffende sectie van dat document.
 
-Het [`transform` functievoorbeeld ](../use-cases/retrieve-similar-records.md#length-adjustment) behandelt de verdeling van een productlijst.
+Het [`transform` functievoorbeeld &#x200B;](../use-cases/retrieve-similar-records.md#length-adjustment) behandelt de verdeling van een productlijst.
 
-Het [`filter` functievoorbeeld ](../use-cases/retrieve-similar-records.md#filter-results) toont een verfijnde en nauwkeurige extractie van relevante informatie van tekstgegevens aan.
+Het [`filter` functievoorbeeld &#x200B;](../use-cases/retrieve-similar-records.md#filter-results) toont een verfijnde en nauwkeurige extractie van relevante informatie van tekstgegevens aan.
 
-De [`reduce` functie ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) verstrekt een manier om cumulatieve waarden of aggregaten af te leiden, die in diverse analytische en planningsprocessen kunnen centraal zijn.
+De [`reduce` functie &#x200B;](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) verstrekt een manier om cumulatieve waarden of aggregaten af te leiden, die in diverse analytische en planningsprocessen kunnen centraal zijn.

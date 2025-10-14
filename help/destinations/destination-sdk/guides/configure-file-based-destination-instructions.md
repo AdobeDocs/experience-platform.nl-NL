@@ -13,21 +13,21 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Deze pagina beschrijft hoe te om de informatie in [ opties van de Configuratie in Doelen SDK ](../functionality/configuration-options.md) en in andere functionaliteit van Destination SDK en API verwijzingsdocumenten te gebruiken om a [ op dossier-gebaseerde bestemming ](../../destination-types.md#file-based) te vormen. De stappen worden in de onderstaande volgorde weergegeven.
+Deze pagina beschrijft hoe te om de informatie in [&#x200B; opties van de Configuratie in Doelen SDK &#x200B;](../functionality/configuration-options.md) en in andere functionaliteit van Destination SDK en API verwijzingsdocumenten te gebruiken om a [&#x200B; op dossier-gebaseerde bestemming &#x200B;](../../destination-types.md#file-based) te vormen. De stappen worden in de onderstaande volgorde weergegeven.
 
 ## Vereisten {#prerequisites}
 
-Alvorens aan de hieronder getoonde stappen vooruit te gaan, te lezen gelieve [ Destination SDK begonnen ](../getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke de authentificatiegeloofsbrieven van Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
+Alvorens aan de hieronder getoonde stappen vooruit te gaan, te lezen gelieve [&#x200B; Destination SDK begonnen &#x200B;](../getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke de authentificatiegeloofsbrieven van Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
 
 ## Stappen om de configuratieopties in Destination SDK aan opstelling te gebruiken uw bestemming {#steps}
 
-![ geïllustreerde stappen om eindpunten van Destination SDK te gebruiken ](../assets/guides/destination-sdk-steps-batch.png)
+![&#x200B; geïllustreerde stappen om eindpunten van Destination SDK te gebruiken &#x200B;](../assets/guides/destination-sdk-steps-batch.png)
 
 ## Stap 1: Een server- en bestandsconfiguratie maken {#create-server-file-configuration}
 
-Begin door [ creërend een server en dossierconfiguratie ](../authoring-api/destination-server/create-destination-server.md) gebruikend het `/destinations-server` eindpunt.
+Begin door [&#x200B; creërend een server en dossierconfiguratie &#x200B;](../authoring-api/destination-server/create-destination-server.md) gebruikend het `/destinations-server` eindpunt.
 
-Hieronder ziet u een voorbeeldconfiguratie voor een [!DNL Amazon S3] -doel. Voor meer details over de gebieden die in de configuratie worden gebruikt en om andere soorten op dossier-gebaseerde bestemmingen te vormen, zie hun overeenkomstige [ serverconfiguraties ](../functionality/destination-server/server-specs.md).
+Hieronder ziet u een voorbeeldconfiguratie voor een [!DNL Amazon S3] -doel. Voor meer details over de gebieden die in de configuratie worden gebruikt en om andere soorten op dossier-gebaseerde bestemmingen te vormen, zie hun overeenkomstige [&#x200B; serverconfiguraties &#x200B;](../functionality/destination-server/server-specs.md).
 
 **API formaat**
 
@@ -255,7 +255,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Stap 3: configuratie van publiekmetagegevens maken {#create-audience-metadata-configuration}
 
-Voor sommige bestemmingen, vereist Destination SDK dat u een configuratie van publieksmeta-gegevens vormt om publiek in uw bestemming programmatically tot stand te brengen bij te werken of te schrappen. Verwijs naar [ het meta-gegevensbeheer van het publiek ](../functionality/audience-metadata-management.md) voor informatie over wanneer u aan opstelling deze configuratie en hoe te om het te doen moet.
+Voor sommige bestemmingen, vereist Destination SDK dat u een configuratie van publieksmeta-gegevens vormt om publiek in uw bestemming programmatically tot stand te brengen bij te werken of te schrappen. Verwijs naar [&#x200B; het meta-gegevensbeheer van het publiek &#x200B;](../functionality/audience-metadata-management.md) voor informatie over wanneer u aan opstelling deze configuratie en hoe te om het te doen moet.
 
 Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bestemmingsconfiguratie verbinden u in stap 2 creeerde. Voeg de instantie-id van de configuratie van de publieksmetagegevens als `audienceTemplateId` toe aan de doelconfiguratie.
 
@@ -413,16 +413,16 @@ Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"auth
    * [SFTP-verificatie met SSH-sleutel](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [SFTP-verificatie met wachtwoord](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"` selecteerde, moet u de configuratie van de a [ geloofsbrieven ](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van het credentievoorwerp in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
+* Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"` selecteerde, moet u de configuratie van de a [&#x200B; geloofsbrieven &#x200B;](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van het credentievoorwerp in de `authenticationId` parameter in de [&#x200B; configuratie van de bestemmingslevering &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
 
 ## Stap 5: Test uw bestemming {#test-destination}
 
-Na vestiging kunt uw bestemming die de configuratieeindpunten in de vorige stappen gebruiken, u het [ bestemmings testende hulpmiddel ](../testing-api/batch-destinations/file-based-destination-testing-overview.md) gebruiken om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
+Na vestiging kunt uw bestemming die de configuratieeindpunten in de vorige stappen gebruiken, u het [&#x200B; bestemmings testende hulpmiddel &#x200B;](../testing-api/batch-destinations/file-based-destination-testing-overview.md) gebruiken om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
 
 Als onderdeel van het proces om uw bestemming te testen, moet u Experience Platform UI gebruiken om publiek tot stand te brengen, dat u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van soorten publiek in Experience Platform:
 
 * [Een publiek maken - documentatiepagina](/help/segmentation/ui/audience-portal.md#create-audience)
-* [ creeer een publiek - videoanalyse ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL)
+* [&#x200B; creeer een publiek - videoanalyse &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL)
 
 ## Stap 6: Uw doel publiceren {#publish-destination}
 
@@ -430,7 +430,7 @@ Als onderdeel van het proces om uw bestemming te testen, moet u Experience Platf
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Na het vormen van en het testen van uw bestemming, gebruik [ bestemmings het publiceren API ](../publishing-api/create-publishing-request.md) om uw configuratie voor overzicht naar Adobe voor te leggen.
+Na het vormen van en het testen van uw bestemming, gebruik [&#x200B; bestemmings het publiceren API &#x200B;](../publishing-api/create-publishing-request.md) om uw configuratie voor overzicht naar Adobe voor te leggen.
 
 ## Stap 7: Documenteer uw bestemming {#document-destination}
 
@@ -438,7 +438,7 @@ Na het vormen van en het testen van uw bestemming, gebruik [ bestemmings het pub
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creërend a [ geproduceerde integratie ](../overview.md#productized-custom-integrations) bent, gebruik het [ zelfbedienings documentatieproces ](../docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in de [ de bestemmingscatalogus van Experience Platform ](/help/destinations/catalog/overview.md) tot stand te brengen.
+Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creërend a [&#x200B; geproduceerde integratie &#x200B;](../overview.md#productized-custom-integrations) bent, gebruik het [&#x200B; zelfbedienings documentatieproces &#x200B;](../docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in de [&#x200B; de bestemmingscatalogus van Experience Platform &#x200B;](/help/destinations/catalog/overview.md) tot stand te brengen.
 
 ## Stap 8: Doel verzenden voor Adobe-revisie {#submit-for-review}
 
@@ -446,4 +446,4 @@ Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Sy
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Tot slot alvorens de bestemming in de catalogus van Experience Platform kan worden gepubliceerd en aan alle klanten van Experience Platform zichtbaar, moet u de bestemming officieel voorleggen voor de controle van Adobe. Vind volledige informatie over hoe te [ voor overzicht voorleggen een geproduceerde die bestemming in Destination SDK ](../guides/submit-destination.md) wordt authored.
+Tot slot alvorens de bestemming in de catalogus van Experience Platform kan worden gepubliceerd en aan alle klanten van Experience Platform zichtbaar, moet u de bestemming officieel voorleggen voor de controle van Adobe. Vind volledige informatie over hoe te [&#x200B; voor overzicht voorleggen een geproduceerde die bestemming in Destination SDK &#x200B;](../guides/submit-destination.md) wordt authored.

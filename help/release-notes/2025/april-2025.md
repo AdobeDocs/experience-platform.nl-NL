@@ -141,7 +141,7 @@ Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldw
 
 {style="table-layout:auto"}
 
-Voor meer informatie over sandboxes, raadpleegt u het [ overzicht van sandboxes](../../sandboxes/home.md).
+Voor meer informatie over sandboxes, raadpleegt u het [&#x200B; overzicht van sandboxes](../../sandboxes/home.md).
 
 ## Bronnen {#sources}
 

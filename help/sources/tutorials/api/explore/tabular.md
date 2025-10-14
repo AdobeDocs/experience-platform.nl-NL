@@ -12,22 +12,22 @@ ht-degree: 1%
 
 # Gegevenstabellen verkennen met de API [!DNL Flow Service]
 
-Deze zelfstudie biedt stappen voor het verkennen en voorvertonen van de structuur en inhoud van uw gegevenstabellen met behulp van de [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+Deze zelfstudie biedt stappen voor het verkennen en voorvertonen van de structuur en inhoud van uw gegevenstabellen met behulp van de [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
 
 >[!NOTE]
 >
-> Als u uw gegevenstabellen wilt verkennen, moet u al over een geldige basis-verbindings-id voor een tabelbron beschikken. Als u deze id niet hebt, raadpleegt u de volgende zelfstudies voor stappen voor het maken van een basis-verbindings-id voor een tabelbron: <ul><li>[ Advertising ](../../../home.md#advertising)</li><li>[ CRM ](../../../home.md#customer-relationship-management)</li><li>[ succes van de Klant ](../../../home.md#customer-success)</li><li>[Database](../../../home.md#database)</li><li>[ e-commerce ](../../../home.md#ecommerce)</li><li>[ de automatisering van de Marketing ](../../../home.md#marketing-automation)</li><li>[ Betalingen ](../../../home.md#payments)</li><li>[ Protocollen ](../../../home.md#protocols)</li></ul>
+> Als u uw gegevenstabellen wilt verkennen, moet u al over een geldige basis-verbindings-id voor een tabelbron beschikken. Als u deze id niet hebt, raadpleegt u de volgende zelfstudies voor stappen voor het maken van een basis-verbindings-id voor een tabelbron: <ul><li>[&#x200B; Advertising &#x200B;](../../../home.md#advertising)</li><li>[&#x200B; CRM &#x200B;](../../../home.md#customer-relationship-management)</li><li>[&#x200B; succes van de Klant &#x200B;](../../../home.md#customer-success)</li><li>[Database](../../../home.md#database)</li><li>[&#x200B; e-commerce &#x200B;](../../../home.md#ecommerce)</li><li>[&#x200B; de automatisering van de Marketing &#x200B;](../../../home.md#marketing-automation)</li><li>[&#x200B; Betalingen &#x200B;](../../../home.md#payments)</li><li>[&#x200B; Protocollen &#x200B;](../../../home.md#protocols)</li></ul>
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../landing/api-guide.md).
 
 ## Uw gegevenstabellen verkennen
 

@@ -23,13 +23,13 @@ Elke ondersteunde kernel biedt ingebouwde functies waarmee u Experience Platform
 
 ## Aan de slag
 
-Alvorens deze gids te lezen, te herzien gelieve de [[!DNL JupyterLab]  gebruikersgids ](./overview.md) voor een inleiding op hoog niveau aan [!DNL JupyterLab] en zijn rol binnen de Wetenschap van Gegevens Workspace.
+Alvorens deze gids te lezen, te herzien gelieve de [[!DNL JupyterLab]  gebruikersgids &#x200B;](./overview.md) voor een inleiding op hoog niveau aan [!DNL JupyterLab] en zijn rol binnen de Wetenschap van Gegevens Workspace.
 
 ## Gegevenslimieten voor laptops {#notebook-data-limits}
 
 >[!IMPORTANT]
 >
->Voor PySpark- en Scala-laptops als u een fout ontvangt met de reden &quot;Remote RPC client disassociated&quot;. Dit betekent doorgaans dat de bestuurder of een uitvoerder onvoldoende geheugen heeft. Probeer over te schakelen op [ &quot;partij&quot;wijze ](#mode) om deze fout op te lossen.
+>Voor PySpark- en Scala-laptops als u een fout ontvangt met de reden &quot;Remote RPC client disassociated&quot;. Dit betekent doorgaans dat de bestuurder of een uitvoerder onvoldoende geheugen heeft. Probeer over te schakelen op [&#x200B; &quot;partij&quot;wijze &#x200B;](#mode) om deze fout op te lossen.
 
 De volgende informatie definieert de maximale hoeveelheid gegevens die kan worden gelezen, het type gegevens dat is gebruikt en het geschatte tijdsbestek waarin de gegevens worden gelezen.
 
@@ -43,7 +43,7 @@ De ad-hocschemagegevens zijn vooraf verwerkt met [!DNL Query Service] Tabel make
 
 Wanneer het lezen van datasets met PySpark en Nota&#39;s Scala, hebt u de optie om interactieve wijze of partijwijze te gebruiken om de dataset te lezen. Interactief wordt gemaakt voor snelle resultaten terwijl de partijwijze voor grote datasets is.
 
-- Voor PySpark- en Scala-laptops moet de batchmodus worden gebruikt wanneer 5 miljoen rijen gegevens of meer worden gelezen. Voor meer informatie over de efficiency van elke wijze, zie [ PySpark ](#pyspark-data-limits) of [ Scala ](#scala-data-limits) hieronder lijsten van de gegevensgrens.
+- Voor PySpark- en Scala-laptops moet de batchmodus worden gebruikt wanneer 5 miljoen rijen gegevens of meer worden gelezen. Voor meer informatie over de efficiency van elke wijze, zie [&#x200B; PySpark &#x200B;](#pyspark-data-limits) of [&#x200B; Scala &#x200B;](#scala-data-limits) hieronder lijsten van de gegevensgrens.
 
 ### [!DNL Python] gegevenslimieten voor laptops
 
@@ -175,9 +175,9 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### Query-gegevens uitvoeren met [!DNL Query Service] in [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab] op [!DNL Experience Platform] staat u toe om SQL in a [!DNL Python] notitieboekje te gebruiken om tot gegevens door [ de Dienst van de Vraag van Adobe Experience Platform ](https://www.adobe.com/go/query-service-home-en) toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan handig zijn voor het verwerken van grote gegevenssets vanwege de superieure runtime. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
+[!DNL JupyterLab] op [!DNL Experience Platform] staat u toe om SQL in a [!DNL Python] notitieboekje te gebruiken om tot gegevens door [&#x200B; de Dienst van de Vraag van Adobe Experience Platform &#x200B;](https://www.adobe.com/go/query-service-home-en) toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan handig zijn voor het verwerken van grote gegevenssets vanwege de superieure runtime. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
 
-Alvorens u [!DNL Query Service] in [!DNL JupyterLab] gebruikt, zorg ervoor u een werkend begrip van de [[!DNL Query Service]  SQL syntaxis ](https://www.adobe.com/go/query-service-sql-syntax-en) hebt.
+Alvorens u [!DNL Query Service] in [!DNL JupyterLab] gebruikt, zorg ervoor u een werkend begrip van de [[!DNL Query Service]  SQL syntaxis &#x200B;](https://www.adobe.com/go/query-service-sql-syntax-en) hebt.
 
 Voor het aanvragen van gegevens met [!DNL Query Service] moet u de naam van de doelgegevensset opgeven. U kunt de noodzakelijke codecellen produceren door de gewenste dataset te vinden gebruikend **[!UICONTROL Data explorer]**. Klik met de rechtermuisknop op de gegevenssetlijst en klik op **[!UICONTROL Query Data in Notebook]** om twee codecellen in uw notitieboekje te genereren. Deze twee cellen worden hieronder gedetailleerder beschreven.
 
@@ -189,7 +189,7 @@ Als u [!DNL Query Service] in [!DNL JupyterLab] wilt gebruiken, moet u eerst een
 qs_connect()
 ```
 
-In de tweede gegenereerde cel moet de eerste regel worden gedefinieerd vóór de SQL-query. Door gebrek, bepaalt de geproduceerde cel een facultatieve variabele (`df0`) die de vraagresultaten als dataframe van de Pandas bewaart. <br> het `-c QS_CONNECTION` argument is verplicht en vertelt de kernel om de SQL vraag tegen [!DNL Query Service] uit te voeren. Zie [ bijlage ](#optional-sql-flags-for-query-service) voor een lijst van extra argumenten.
+In de tweede gegenereerde cel moet de eerste regel worden gedefinieerd vóór de SQL-query. Door gebrek, bepaalt de geproduceerde cel een facultatieve variabele (`df0`) die de vraagresultaten als dataframe van de Pandas bewaart. <br> het `-c QS_CONNECTION` argument is verplicht en vertelt de kernel om de SQL vraag tegen [!DNL Query Service] uit te voeren. Zie [&#x200B; bijlage &#x200B;](#optional-sql-flags-for-query-service) voor een lijst van extra argumenten.
 
 ```python
 %%read_sql df0 -c QS_CONNECTION
@@ -361,7 +361,7 @@ spark = SparkSession.builder.getOrCreate()
 
 ### %dataset gebruiken om te lezen en te schrijven met een PySpark 3-laptop {#magic}
 
-Met de introductie van [!DNL Spark] 2.4, wordt `%dataset` magie geleverd voor gebruik in PySpark 3 ([!DNL Spark] 2.4) laptops. Voor meer details op magische bevelen beschikbaar in de pit IPython, bezoek de [ IPython magische documentatie ](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
+Met de introductie van [!DNL Spark] 2.4, wordt `%dataset` magie geleverd voor gebruik in PySpark 3 ([!DNL Spark] 2.4) laptops. Voor meer details op magische bevelen beschikbaar in de pit IPython, bezoek de [&#x200B; IPython magische documentatie &#x200B;](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
 
 
 **Gebruik**
@@ -383,7 +383,7 @@ Een aangepaste toveropdracht [!DNL Data Science Workspace] voor het lezen of sch
 
 >[!TIP]
 >
->Herzie de PySpark lijsten binnen de [ sectie van de notitieboekjegegevens ](#notebook-data-limits) om te bepalen als `mode` aan `interactive` of `batch` zou moeten worden geplaatst.
+>Herzie de PySpark lijsten binnen de [&#x200B; sectie van de notitieboekjegegevens &#x200B;](#notebook-data-limits) om te bepalen als `mode` aan `interactive` of `batch` zou moeten worden geplaatst.
 
 **Voorbeelden**
 
@@ -398,7 +398,7 @@ Een aangepaste toveropdracht [!DNL Data Science Workspace] voor het lezen of sch
 > - Externe RPC-client uitgeschakeld en andere geheugenfouten.
 > - Slechte prestaties bij het lezen en schrijven van datasets.
 > 
-> Zie de [ het oplossen van problemengids ](../troubleshooting-guide.md) voor meer informatie.
+> Zie de [&#x200B; het oplossen van problemengids &#x200B;](../troubleshooting-guide.md) voor meer informatie.
 
 U kunt de bovenstaande voorbeelden automatisch genereren bij het aanschaffen van JupyterLab met de volgende methode:
 
@@ -498,7 +498,7 @@ In Scala kunt u `clientContext` importeren om Experience Platform-waarden op te 
 > - Externe RPC-client uitgeschakeld en andere geheugenfouten.
 > - Slechte prestaties bij het lezen en schrijven van datasets.
 > 
-> Zie de [ het oplossen van problemengids ](../troubleshooting-guide.md) voor meer informatie.
+> Zie de [&#x200B; het oplossen van problemengids &#x200B;](../troubleshooting-guide.md) voor meer informatie.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -530,7 +530,7 @@ df1.show(10)
 
 >[!TIP]
 >
->Herzie de lijsten Scala binnen de [ sectie van de notitieboekjegegevens ](#notebook-data-limits) om te bepalen als `mode` aan `interactive` of `batch` zou moeten worden geplaatst.
+>Herzie de lijsten Scala binnen de [&#x200B; sectie van de notitieboekjegegevens &#x200B;](#notebook-data-limits) om te bepalen als `mode` aan `interactive` of `batch` zou moeten worden geplaatst.
 
 U kunt het bovenstaande voorbeeld automatisch genereren bij het aanschaffen van JupyterLab met de volgende methode:
 
@@ -553,7 +553,7 @@ In Scala kunt u `clientContext` importeren om Experience Platform-waarden op te 
 > - Externe RPC-client uitgeschakeld en andere geheugenfouten.
 > - Slechte prestaties bij het lezen en schrijven van datasets.
 > 
-> Zie de [ het oplossen van problemengids ](../troubleshooting-guide.md) voor meer informatie.
+> Zie de [&#x200B; het oplossen van problemengids &#x200B;](../troubleshooting-guide.md) voor meer informatie.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -582,7 +582,7 @@ df1.write.format("com.adobe.platform.query")
 
 >[!TIP]
 >
->Herzie de lijsten Scala binnen de [ sectie van de notitieboekjegegevens ](#notebook-data-limits) om te bepalen als `mode` aan `interactive` of `batch` zou moeten worden geplaatst.
+>Herzie de lijsten Scala binnen de [&#x200B; sectie van de notitieboekjegegevens &#x200B;](#notebook-data-limits) om te bepalen als `mode` aan `interactive` of `batch` zou moeten worden geplaatst.
 
 ### een lokaal dataframe maken {#scala-create-dataframe}
 
@@ -641,7 +641,7 @@ timedf.show()
 
 ## Volgende stappen
 
-In dit document worden de algemene richtlijnen besproken voor toegang tot gegevenssets met JupyterLab-laptops. Voor meer diepgaande voorbeelden bij het vragen van datasets, bezoek de [ Dienst van de Vraag in JupyterLab notitieboekjes ](./query-service.md) documentatie. Voor meer informatie over om uw datasets te onderzoeken en visualiseren, bezoek het document op [ het analyseren van uw gegevens gebruikend laptops ](./analyze-your-data.md).
+In dit document worden de algemene richtlijnen besproken voor toegang tot gegevenssets met JupyterLab-laptops. Voor meer diepgaande voorbeelden bij het vragen van datasets, bezoek de [&#x200B; Dienst van de Vraag in JupyterLab notitieboekjes &#x200B;](./query-service.md) documentatie. Voor meer informatie over om uw datasets te onderzoeken en visualiseren, bezoek het document op [&#x200B; het analyseren van uw gegevens gebruikend laptops &#x200B;](./analyze-your-data.md).
 
 ## Optionele SQL-markeringen voor [!DNL Query Service] {#optional-sql-flags-for-query-service}
 

@@ -11,21 +11,21 @@ ht-degree: 1%
 
 # `datastreamId`
 
-Het `datastreamId` bezit is een koord dat bepaalt welke [ datastream ](../../../datastreams/overview.md) in Adobe Experience Platform u gegevens naar wilt verzenden. Dit bezit wordt vereist wanneer het verzenden van gegevens naar Adobe. Web SDK-versies 2.20.0 of eerder gebruiken `edgeConfigId` .
+Het `datastreamId` bezit is een koord dat bepaalt welke [&#x200B; datastream &#x200B;](../../../datastreams/overview.md) in Adobe Experience Platform u gegevens naar wilt verzenden. Dit bezit wordt vereist wanneer het verzenden van gegevens naar Adobe. Web SDK-versies 2.20.0 of eerder gebruiken `edgeConfigId` .
 
 Een gegevensstroom-id zoeken:
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
-1. Gebruik het onderzoeksgebied om van de gewenste gegevensstroom de plaats te bepalen, dan selecteren **[!UICONTROL Copy]** ![ Exemplaar ](../../assets/copy.png) naast gegevensstroom identiteitskaart
+1. Gebruik het onderzoeksgebied om van de gewenste gegevensstroom de plaats te bepalen, dan selecteren **[!UICONTROL Copy]** ![&#x200B; Exemplaar &#x200B;](../../assets/copy.png) naast gegevensstroom identiteitskaart
 
 U kunt ook de gewenste gegevensstroomnaam selecteren en de gegevensstroom-id verschijnt in de rechterkolom voor kopiëren.
 
 ## Selecteer de gegevensstroom-id met de web SDK-tagextensie
 
-Kies van een lijst van beschikbare gegevensstromen, of ga direct een gegevensstroomidentiteitskaart in wanneer [ vormend de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Kies van een lijst van beschikbare gegevensstromen, of ga direct een gegevensstroomidentiteitskaart in wanneer [&#x200B; vormend de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.

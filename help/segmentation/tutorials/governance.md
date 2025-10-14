@@ -20,23 +20,23 @@ Deze zelfstudie behandelt de stappen voor het afdwingen van de naleving van gege
 Deze zelfstudie vereist een goed begrip van de volgende componenten van [!DNL Adobe Experience Platform] :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] is een algemene opslag van opzoekentiteiten en wordt gebruikt om [!DNL Experience Data Model (XDM)] -gegevens te beheren binnen [!DNL Experience Platform] . Het profiel voegt gegevens over diverse activa van ondernemingsgegevens samen en verleent toegang tot die gegevens in een verenigde presentatie.
-   - [ beleid van de Fusie ](../../profile/api/merge-policies.md): Regels die door [!DNL Real-Time Customer Profile] worden gebruikt om te bepalen welke gegevens in een verenigde mening onder bepaalde voorwaarden kunnen worden samengevoegd. Het beleid van de fusie kan voor de doeleinden van het Beleid van Gegevens worden gevormd.
+   - [&#x200B; beleid van de Fusie &#x200B;](../../profile/api/merge-policies.md): Regels die door [!DNL Real-Time Customer Profile] worden gebruikt om te bepalen welke gegevens in een verenigde mening onder bepaalde voorwaarden kunnen worden samengevoegd. Het beleid van de fusie kan voor de doeleinden van het Beleid van Gegevens worden gevormd.
 - [[!DNL Segmentation]](../home.md): Hoe [!DNL Real-Time Customer Profile] een grote groep personen in het archief Profiel verdeelt in kleinere groepen die vergelijkbare kenmerken hebben en op dezelfde manier reageren op marketingstrategieën.
-- [ Beheer van Gegevens ](../../data-governance/home.md): Het Beleid van gegevens verstrekt de infrastructuur voor het etiketteren en de handhaving van het gegevensgebruik, gebruikend de volgende componenten:
-   - [ de gebruiksetiketten van Gegevens ](../../data-governance/labels/user-guide.md): De etiketten die worden gebruikt om datasets en gebieden in termen van het niveau van gevoeligheid te beschrijven waarmee om hun respectieve gegevens te behandelen.
-   - [ het gebruiksbeleid van Gegevens ](../../data-governance/policies/overview.md): Configuraties die wijzen op welke marketing acties op gegevens worden toegestaan die door de bijzondere etiketten van het gegevensgebruik worden gecategoriseerd.
-   - [ de handhaving van het Beleid ](../../data-governance/enforcement/overview.md): Staat u toe om het beleid van het gegevensgebruik af te dwingen en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
-- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [&#x200B; Beheer van Gegevens &#x200B;](../../data-governance/home.md): Het Beleid van gegevens verstrekt de infrastructuur voor het etiketteren en de handhaving van het gegevensgebruik, gebruikend de volgende componenten:
+   - [&#x200B; de gebruiksetiketten van Gegevens &#x200B;](../../data-governance/labels/user-guide.md): De etiketten die worden gebruikt om datasets en gebieden in termen van het niveau van gevoeligheid te beschrijven waarmee om hun respectieve gegevens te behandelen.
+   - [&#x200B; het gebruiksbeleid van Gegevens &#x200B;](../../data-governance/policies/overview.md): Configuraties die wijzen op welke marketing acties op gegevens worden toegestaan die door de bijzondere etiketten van het gegevensgebruik worden gecategoriseerd.
+   - [&#x200B; de handhaving van het Beleid &#x200B;](../../data-governance/enforcement/overview.md): Staat u toe om het beleid van het gegevensgebruik af te dwingen en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
+- [&#x200B; Sandboxen &#x200B;](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om aanroepen naar de API&#39;s van [!DNL Experience Platform] te kunnen uitvoeren.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -48,7 +48,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -124,7 +124,7 @@ Een succesvolle reactie keert de details van de segmentdefinitie terug.
 
 ## Vind de brondatasets van het fusiebeleid {#datasets}
 
-Het beleid van de fusie bevat informatie over hun brondatasets, die beurtelings de etiketten van het gegevensgebruik bevatten. U kunt de details van een samenvoegbeleid opzoeken door de id van het samenvoegbeleid op te geven in een GET-aanvraag naar de [!DNL Profile] API. Meer informatie over fusiebeleid kan in de [ gids van het het eindpunt van samenvoegingsbeleid ](../../profile/api/merge-policies.md) worden gevonden.
+Het beleid van de fusie bevat informatie over hun brondatasets, die beurtelings de etiketten van het gegevensgebruik bevatten. U kunt de details van een samenvoegbeleid opzoeken door de id van het samenvoegbeleid op te geven in een GET-aanvraag naar de [!DNL Profile] API. Meer informatie over fusiebeleid kan in de [&#x200B; gids van het het eindpunt van samenvoegingsbeleid &#x200B;](../../profile/api/merge-policies.md) worden gevonden.
 
 **API formaat**
 
@@ -134,7 +134,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | Identiteitskaart van het samenvoegbeleid dat in de [ vorige stap ](#merge-policy) wordt verkregen. |
+| `{MERGE_POLICY_ID}` | Identiteitskaart van het samenvoegbeleid dat in de [&#x200B; vorige stap &#x200B;](#merge-policy) wordt verkregen. |
 
 **Verzoek**
 
@@ -183,9 +183,9 @@ Een succesvolle reactie retourneert de details van het samenvoegingsbeleid.
 
 >[!NOTE]
 >
-> In deze stap wordt ervan uitgegaan dat u ten minste één actief beleid voor gegevensgebruik hebt dat voorkomt dat specifieke marketingacties worden uitgevoerd op gegevens die bepaalde labels bevatten. Als u geen toepasselijk gebruiksbeleid voor de datasets hebt die worden geëvalueerd, te volgen gelieve het [ leerprogramma van de beleidsverwezenlijking ](../../data-governance/policies/create.md) om tot één te leiden alvorens met deze stap verder te gaan.
+> In deze stap wordt ervan uitgegaan dat u ten minste één actief beleid voor gegevensgebruik hebt dat voorkomt dat specifieke marketingacties worden uitgevoerd op gegevens die bepaalde labels bevatten. Als u geen toepasselijk gebruiksbeleid voor de datasets hebt die worden geëvalueerd, te volgen gelieve het [&#x200B; leerprogramma van de beleidsverwezenlijking &#x200B;](../../data-governance/policies/create.md) om tot één te leiden alvorens met deze stap verder te gaan.
 
-Zodra u IDs van de brondatasets van het fusiebeleid hebt verkregen, kunt u de [ Dienst API van het Beleid ](https://www.adobe.io/experience-platform-apis/references/policy-service/) gebruiken om die datasets tegen specifieke marketing acties te evalueren om voor de schendingen van het gegevensgebruiksbeleid te controleren.
+Zodra u IDs van de brondatasets van het fusiebeleid hebt verkregen, kunt u de [&#x200B; Dienst API van het Beleid &#x200B;](https://www.adobe.io/experience-platform-apis/references/policy-service/) gebruiken om die datasets tegen specifieke marketing acties te evalueren om voor de schendingen van het gegevensgebruiksbeleid te controleren.
 
 Om de datasets te evalueren, moet u de naam van de marketing actie in de weg van een POST- verzoek verstrekken, terwijl het verstrekken van dataset IDs binnen het verzoeklichaam, zoals aangetoond in het voorbeeld hieronder.
 
@@ -202,7 +202,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 **Verzoek**
 
-Het volgende verzoek test de `exportToThirdParty` marketing actie tegen datasets die in de [ vorige stap ](#datasets) worden verkregen. De aanvraaglading is een serie die IDs van elke dataset bevat.
+Het volgende verzoek test de `exportToThirdParty` marketing actie tegen datasets die in de [&#x200B; vorige stap &#x200B;](#datasets) worden verkregen. De aanvraaglading is een serie die IDs van elke dataset bevat.
 
 ```shell
 curl -X POST \
@@ -369,7 +369,7 @@ Als uw segmentdefinitie geen evaluatie overgaat, kunt u de gegevens aanpassen in
 
 ### Het samenvoegbeleid van de segmentdefinitie bijwerken
 
-Het bijwerken van het samenvoegbeleid van een segmentdefinitie zal de datasets en de gebieden aanpassen die zullen worden omvat wanneer de segmentbaan in werking wordt gesteld. Zie de sectie over [ het bijwerken van een bestaand fusiebeleid ](../../profile/api/merge-policies.md#update) in de API zelfstudie van het fusiebeleid voor meer informatie.
+Het bijwerken van het samenvoegbeleid van een segmentdefinitie zal de datasets en de gebieden aanpassen die zullen worden omvat wanneer de segmentbaan in werking wordt gesteld. Zie de sectie over [&#x200B; het bijwerken van een bestaand fusiebeleid &#x200B;](../../profile/api/merge-policies.md#update) in de API zelfstudie van het fusiebeleid voor meer informatie.
 
 ### Specifieke gegevensvelden beperken bij het exporteren van de segmentdefinitie
 
@@ -377,8 +377,8 @@ Wanneer u een segmentdefinitie naar een gegevensset exporteert met de API [!DNL 
 
 Overweeg een segmentdefinitie die gegevensvelden met de naam &quot;A&quot;, &quot;B&quot; en &quot;C&quot; heeft. Als u alleen veld C wilt exporteren, bevat de parameter `fields` alleen veld C. Op deze manier worden de velden A en B uitgesloten bij het exporteren van de segmentdefinitie.
 
-Zie de sectie over [ het uitvoeren van een segmentdefinitie ](./evaluate-a-segment.md#export) in het segmenteringsleerprogramma voor meer informatie.
+Zie de sectie over [&#x200B; het uitvoeren van een segmentdefinitie &#x200B;](./evaluate-a-segment.md#export) in het segmenteringsleerprogramma voor meer informatie.
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de etiketten van het gegevensgebruik verbonden aan een segmentdefinitie opgezocht en hen getest op beleidsschendingen tegen specifieke marketing acties. Voor meer informatie over het Beleid van Gegevens in [!DNL Experience Platform], gelieve het overzicht voor [ het Beleid van Gegevens ](../../data-governance/home.md) te lezen.
+Door deze zelfstudie te volgen, hebt u de etiketten van het gegevensgebruik verbonden aan een segmentdefinitie opgezocht en hen getest op beleidsschendingen tegen specifieke marketing acties. Voor meer informatie over het Beleid van Gegevens in [!DNL Experience Platform], gelieve het overzicht voor [&#x200B; het Beleid van Gegevens &#x200B;](../../data-governance/home.md) te lezen.

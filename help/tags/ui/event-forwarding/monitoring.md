@@ -18,11 +18,11 @@ ht-degree: 0%
 
 Het **[!UICONTROL Monitoring]** lusje in de UI van de Inzameling van Gegevens staat u toe om gebruikspatronen, fouten te controleren, en tijd van uw gebeurtenis te berekenen door:sturen eigenschappen. Deze gids verstrekt een overzicht op hoog niveau van hoe te om de rapporten te bekijken en te begrijpen die in het lusje worden getoond.
 
-![ Beeld dat het controlelusje in de Inzameling UI van Gegevens toont ](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
+![&#x200B; Beeld dat het controlelusje in de Inzameling UI van Gegevens toont &#x200B;](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
 
 ## Vereisten
 
-Deze gids veronderstelt dat u gebeurtenis hebt gekocht door:sturen en dat u een werkend inzicht in hebt hoe gebeurtenis het door:sturen werkt. Zie de [ gebeurtenis door:sturen overzicht ](./overview.md) voor meer informatie.
+Deze gids veronderstelt dat u gebeurtenis hebt gekocht door:sturen en dat u een werkend inzicht in hebt hoe gebeurtenis het door:sturen werkt. Zie de [&#x200B; gebeurtenis door:sturen overzicht &#x200B;](./overview.md) voor meer informatie.
 
 ## Video-overzicht
 
@@ -36,7 +36,7 @@ U kunt metriek binnen een individuele milieu en een bezit, of over alle eigensch
 
 Als u metrische gegevens voor één eigenschap wilt weergeven, selecteert u het vervolgkeuzemenu voor de eigenschap en kiest u de eigenschap of interest in de lijst. Nadat u een eigenschap hebt gekozen, kunt u ook het vervolgkeuzemenu voor de omgeving gebruiken om een belangwekkende omgeving te selecteren.
 
-![ Beeld dat de menu&#39;s van het bezitsmilieu dropdown in UI toont ](../../images/ui/event-forwarding/monitoring/property-environment.png)
+![&#x200B; Beeld dat de menu&#39;s van het bezitsmilieu dropdown in UI toont &#x200B;](../../images/ui/event-forwarding/monitoring/property-environment.png)
 
 ## [!UICONTROL Usage]
 
@@ -52,7 +52,7 @@ Het **[!UICONTROL Error Events]** rapport toont fouten in aggregaat, en uitgespl
 
 De fouten worden weergegeven voor een bepaalde periode, die kan worden aangepast in het beschikbare vervolgkeuzemenu.
 
-![ Beeld dat het tijdperiode dropdown menu voor het rapport van de Gebeurtenissen van de Fout toont ](../../images/ui/event-forwarding/monitoring/error-time.png)
+![&#x200B; Beeld dat het tijdperiode dropdown menu voor het rapport van de Gebeurtenissen van de Fout toont &#x200B;](../../images/ui/event-forwarding/monitoring/error-time.png)
 
 Het onderzoeksvakje voor de foutengebeurtenis staat u toe om gebeurtenis te vragen door:sturen om fouten voor een bepaald eindpuntdomein te begrijpen. U moet het exacte domein invoeren, omdat de zoekfunctie geen benaderingen of &quot;vage&quot; overeenkomsten accepteert. Zodra u een nauwkeurig domein verstrekt waarvoor er uitgaande foutengegevens zijn, druk binnengaan en het rapport verfrist zich om uitgaande fouten voor dat domein te tonen. Als u bijvoorbeeld fouten wilt zien bij het eindpunt van de Facebook Conversions API, moet het domein worden geschreven als `https://graph.facebook.com` .
 

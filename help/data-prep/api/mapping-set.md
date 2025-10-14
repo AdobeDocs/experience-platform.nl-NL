@@ -217,7 +217,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | De id van het XDM-schema waarnaar u verwijst. |
-| `outputSchema.schemaRef.contentType` | Bepaalt het reactieformaat van het referenced schema. Meer informatie over dit gebied kan in de [ de ontwikkelaarsgids van de Registratie van het Schema ](../../xdm/api/schemas.md#lookup) worden gevonden. |
+| `outputSchema.schemaRef.contentType` | Bepaalt het reactieformaat van het referenced schema. Meer informatie over dit gebied kan in de [&#x200B; de ontwikkelaarsgids van de Registratie van het Schema &#x200B;](../../xdm/api/schemas.md#lookup) worden gevonden. |
 | `mappings.sourceType` | Het brontype beschrijft hoe de waarde uit de bron aan de bestemming zal worden gehaald. Het brontype ondersteunt twee mogelijke waarden: <ul><li>`ATTRIBUTE`: Het brontype `ATTRIBUTE` wordt gebruikt wanneer het invoerkenmerk afkomstig is uit een bronschema.</li><li>`EXPRESSION`: Het brontype `EXPRESSION` wordt gebruikt wanneer de toewijzing met een berekend veld wordt voltooid.</li></ul> **WAARSCHUWING**: Het onjuist plaatsen van de waarden van het brontype kan uw toewijzingensets onbewerkbaar teruggeven. |
 | `mappings.source` | De locatie waar u de gegevens wilt toewijzen. |
 | `mappings.destination` | De locatie waar de gegevens moeten worden toegewezen. |

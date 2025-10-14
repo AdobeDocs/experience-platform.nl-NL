@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # Waarschuwingen en IP-lijst van gewenste personen configureren voor [!DNL Azure] CMK
 
-Om transparantie te verbeteren, verleent Adobe de dienst van de a [ controle ](../../../../observability/alerts/ui.md){target="_blank"} die de toegangsstatus van uw zeer belangrijke kluis controleert en alarm in werking stelt als de kwesties voorkomen. Met deze waarschuwingen kunt u snel reageren en onderbreking van de service voorkomen. Om deze dienst toe te laten, lijst van gewenste personen Adobe het statische IP adres.
+Om transparantie te verbeteren, verleent Adobe de dienst van de a [&#x200B; controle &#x200B;](../../../../observability/alerts/ui.md){target="_blank"} die de toegangsstatus van uw zeer belangrijke kluis controleert en alarm in werking stelt als de kwesties voorkomen. Met deze waarschuwingen kunt u snel reageren en onderbreking van de service voorkomen. Om deze dienst toe te laten, lijst van gewenste personen Adobe het statische IP adres.
 
 >[!IMPORTANT]
 >
@@ -42,12 +42,12 @@ Platformwaarschuwingen geven u een melding van problemen die sleuteltoegang kunn
 
 <!-- For a complete list of alert types and recommended resolutions, see the [CMK alert resolution reference](../alert-resolution-reference.md). -->
 
-Meld u aan voor Adobe I/O-gebeurtenismeldingen om real-time waarschuwingen te ontvangen in uw controleprogramma&#39;s. Voor opstellingsinstructies, zie [ aan de berichten van de Gebeurtenis van Adobe I/O ](../../../../observability/alerts/subscribe.md) intekenen. U kunt ook naar de [ gids van het alarm UI ](../../../../observability/alerts/ui.md) verwijzen om te leren hoe te om alarm binnen Experience Platform te bekijken en te beheren.
+Meld u aan voor Adobe I/O-gebeurtenismeldingen om real-time waarschuwingen te ontvangen in uw controleprogramma&#39;s. Voor opstellingsinstructies, zie [&#x200B; aan de berichten van de Gebeurtenis van Adobe I/O &#x200B;](../../../../observability/alerts/subscribe.md) intekenen. U kunt ook naar de [&#x200B; gids van het alarm UI &#x200B;](../../../../observability/alerts/ui.md) verwijzen om te leren hoe te om alarm binnen Experience Platform te bekijken en te beheren.
 
 ## Volgende stappen
 
 U hebt nu IP voegende op lijst van gewenste personen en waakzame controle voor uw [!DNL Azure] Zeer belangrijke vault gevormd. Volg deze configuratiehandleidingen om de installatie van door de klant beheerde sleutels in [!DNL Azure] te voltooien.
 
-- [ vorm een  [!DNL Azure]  Zeer belangrijke Uitvault ](./azure-key-vault-config.md)
-- [ Gebruik API aan opstelling CMK ](./api-set-up.md)
+- [&#x200B; vorm een  [!DNL Azure]  Zeer belangrijke Uitvault &#x200B;](./azure-key-vault-config.md)
+- [&#x200B; Gebruik API aan opstelling CMK &#x200B;](./api-set-up.md)
 - [De gebruikersinterface gebruiken om CMK in te stellen](./ui-set-up.md)

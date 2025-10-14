@@ -24,18 +24,18 @@ Met [!UICONTROL Permission Manager] kunt u zoeken op basis van:
 
 U kunt uw zoekopdracht beperken door specifieke bronnen, handelingen en sandboxen te selecteren.
 
-Als u [!UICONTROL Permission Manager] for [!DNL Experience Platform] wilt openen, moet u een beheerder zijn voor een organisatie die toegang heeft tot Experience Platform. Hoewel Adobe aanpasbare beheerderhiërarchieën binnen uw organisatie toestaat, moet u een productbeheerder voor [!DNL Adobe Experience Platform] zijn. Voor verdere details, verwijs naar het artikel van het Centrum van de Hulp van Adobe op [ beleidsrollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html).
+Als u [!UICONTROL Permission Manager] for [!DNL Experience Platform] wilt openen, moet u een beheerder zijn voor een organisatie die toegang heeft tot Experience Platform. Hoewel Adobe aanpasbare beheerderhiërarchieën binnen uw organisatie toestaat, moet u een productbeheerder voor [!DNL Adobe Experience Platform] zijn. Voor verdere details, verwijs naar het artikel van het Centrum van de Hulp van Adobe op [&#x200B; beleidsrollen &#x200B;](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html).
 
-Login aan [ Adobe Experience Platform ](https://experience.adobe.com/) gebruikend uw [!DNL Adobe] geloofsbrieven.  Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overview]** voor uw organisatie weergegeven. Op deze pagina worden de producten weergegeven waarop uw organisatie is geabonneerd. Selecteer **[!UICONTROL Permissions]** om de op kenmerken gebaseerde werkruimte voor toegangsbeheer voor platformintegratie te starten.
+Login aan [&#x200B; Adobe Experience Platform &#x200B;](https://experience.adobe.com/) gebruikend uw [!DNL Adobe] geloofsbrieven.  Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overview]** voor uw organisatie weergegeven. Op deze pagina worden de producten weergegeven waarop uw organisatie is geabonneerd. Selecteer **[!UICONTROL Permissions]** om de op kenmerken gebaseerde werkruimte voor toegangsbeheer voor platformintegratie te starten.
 
-![ overzicht Adobe Experience Platform die toestemmingen benadrukken.](../../images/flac-ui/flac-select-product.png)
+![&#x200B; overzicht Adobe Experience Platform die toestemmingen benadrukken.](../../images/flac-ui/flac-select-product.png)
 
 De op attributen-gebaseerde werkruimte van het toegangsbeheer voor Experience Platform verschijnt, die op de **[!UICONTROL Overview]** pagina opent. Op deze pagina kunt u alle rollen weergeven en verschillende instellingen beheren zoals in dit document wordt beschreven.
 
 Selecteer **[!UICONTROL Permission Manager]** in de linkernavigatie.
 
-![ het het onderzoeksscherm van de Manager van de Toestemming die beschikbare filters tonen.](../../images/permission-manager/permission-manager.png)
+![&#x200B; het het onderzoeksscherm van de Manager van de Toestemming die beschikbare filters tonen.](../../images/permission-manager/permission-manager.png)
 
 ## Volgende stappen
 
-Zodra u aan de [!UICONTROL Permission Manager] werkruimte hebt genavigeerd, ga aan de volgende stap te werk om meer over te leren hoe u [ onderzoeksgebruikers en rollen ](./permissions.md) kunt.
+Zodra u aan de [!UICONTROL Permission Manager] werkruimte hebt genavigeerd, ga aan de volgende stap te werk om meer over te leren hoe u [&#x200B; onderzoeksgebruikers en rollen &#x200B;](./permissions.md) kunt.

@@ -21,11 +21,11 @@ Terwijl u een segmentdefinitie ontwikkelt, kunt u de schatting- en voorvertoning
 
 >[!NOTE]
 >
->Om tot gelijkaardige metriek met betrekking tot de gegevens van het Profiel van de Klant in real time, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke namespaces of de de gegevensopslag van het Profiel als geheel toegang te hebben, gelieve te verwijzen naar de [ gids van de profielvoorproef (de status van de voorproefsteekproef) ](../../profile/api/preview-sample-status.md), een deel van de de ontwikkelaarsgids van het Profiel API.
+>Om tot gelijkaardige metriek met betrekking tot de gegevens van het Profiel van de Klant in real time, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke namespaces of de de gegevensopslag van het Profiel als geheel toegang te hebben, gelieve te verwijzen naar de [&#x200B; gids van de profielvoorproef (de status van de voorproefsteekproef) &#x200B;](../../profile/api/preview-sample-status.md), een deel van de de ontwikkelaarsgids van het Profiel API.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Hoe schattingen worden gegenereerd
 
@@ -193,7 +193,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De verstrekte verbindingen kunnen worden gebruikt om de gespecificeerde entiteiten omhoog te kijken, gebruikend het [ API eindpunt van de profieltoegang ](../../profile/api/entities.md). |
+| `results` | Een lijst met entiteit-id&#39;s, samen met de bijbehorende id&#39;s. De verstrekte verbindingen kunnen worden gebruikt om de gespecificeerde entiteiten omhoog te kijken, gebruikend het [&#x200B; API eindpunt van de profieltoegang &#x200B;](../../profile/api/entities.md). |
 
 +++
 
@@ -273,4 +273,4 @@ Een succesvolle reactie retourneert HTTP status 200 met details van de geschatte
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u een beter inzicht in hoe u met voorvertoningen en schattingen werkt met de segmentatie-API. Leer hoe te om tot metriek met betrekking tot uw gegevens van het Profiel van de Klant in real time, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke namespaces of de gegevensopslag van het Profiel als geheel toegang te hebben, gelieve de [ voorproef van het profielmonster (`/previewsamplestatus`) eindpuntgids ](../../profile/api/preview-sample-status.md) te bezoeken.
+Nadat u deze handleiding hebt gelezen, hebt u een beter inzicht in hoe u met voorvertoningen en schattingen werkt met de segmentatie-API. Leer hoe te om tot metriek met betrekking tot uw gegevens van het Profiel van de Klant in real time, zoals het totale aantal profielfragmenten en samengevoegde profielen binnen specifieke namespaces of de gegevensopslag van het Profiel als geheel toegang te hebben, gelieve de [&#x200B; voorproef van het profielmonster (`/previewsamplestatus`) eindpuntgids &#x200B;](../../profile/api/preview-sample-status.md) te bezoeken.

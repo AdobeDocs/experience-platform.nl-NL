@@ -20,15 +20,15 @@ In het Model van Gegevens van de Ervaring (XDM), bepalen het gedrag de aard van 
 
 >[!NOTE]
 >
->Er zijn enkele gebruiksgevallen in Experience Platform die het gebruik vereisen van een schema dat geen van de bovenstaande gedragingen gebruikt. In deze gevallen is een derde &quot;ad-hocgedrag&quot; beschikbaar. Zie het leerprogramma op [ creërend een ad hoc schema ](../tutorials/ad-hoc.md) voor meer informatie.
+>Er zijn enkele gebruiksgevallen in Experience Platform die het gebruik vereisen van een schema dat geen van de bovenstaande gedragingen gebruikt. In deze gevallen is een derde &quot;ad-hocgedrag&quot; beschikbaar. Zie het leerprogramma op [&#x200B; creërend een ad hoc schema &#x200B;](../tutorials/ad-hoc.md) voor meer informatie.
 >
->Voor meer algemene informatie over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de gids op de [ grondbeginselen van schemacompositie ](../schema/composition.md).
+>Voor meer algemene informatie over gegevensgedrag in termen van hoe zij schemacompositie beïnvloeden, verwijs naar de gids op de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../schema/composition.md).
 
 Met het eindpunt `/behaviors` in de [!DNL Schema Registry] API kunt u beschikbare gedragingen in de `global` -container weergeven.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Een lijst met gedragingen ophalen {#list}
 
@@ -172,4 +172,4 @@ Een geslaagde reactie retourneert de details van het gedrag, inclusief de versie
 
 ## Volgende stappen
 
-Deze handleiding behandelde het gebruik van het eindpunt `/behaviors` in de API van [!DNL Schema Registry] . Leren hoe te om een gedrag aan een klasse toe te wijzen die API gebruiken, zie de [ gids van het klassen eindpunt ](./classes.md).
+Deze handleiding behandelde het gebruik van het eindpunt `/behaviors` in de API van [!DNL Schema Registry] . Leren hoe te om een gedrag aan een klasse toe te wijzen die API gebruiken, zie de [&#x200B; gids van het klassen eindpunt &#x200B;](./classes.md).

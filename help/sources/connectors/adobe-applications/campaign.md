@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-Adobe Campaign Managed Cloud Services biedt een Managed Services-platform voor het ontwerpen van ervaringen met klanten over meerdere kanalen en biedt een omgeving voor visuele campagneorchestratie, realtime interactiebeheer en uitvoering via meerdere kanalen. Bezoek de [ documentatie van Adobe Campaign v8 ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=nl) voor meer informatie.
+Adobe Campaign Managed Cloud Services biedt een Managed Services-platform voor het ontwerpen van ervaringen met klanten over meerdere kanalen en biedt een omgeving voor visuele campagneorchestratie, realtime interactiebeheer en uitvoering via meerdere kanalen. Bezoek de [&#x200B; documentatie van Adobe Campaign v8 &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=nl) voor meer informatie.
 
 Met de Adobe Campaign Managed Cloud Services-bron kunt u Adobe Campaign v8-leveringslogboeken en -logboekgegevens naar Adobe Experience Platform overbrengen.
 
@@ -30,23 +30,23 @@ Voordat u een bronverbinding kunt maken om uw campagne v8 naar Experience Platfo
 
 >[!IMPORTANT]
 >
->U moet toegang hebben tot de Adobe Campaign v8 Client Console om uw logboekgegevens in Campagne te bekijken. Bezoek de [ documentatie van de Campagne v8 ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=nl-NL) voor informatie over hoe te om de cliëntconsole te downloaden en te installeren.
+>U moet toegang hebben tot de Adobe Campaign v8 Client Console om uw logboekgegevens in Campagne te bekijken. Bezoek de [&#x200B; documentatie van de Campagne v8 &#x200B;](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=nl-NL) voor informatie over hoe te om de cliëntconsole te downloaden en te installeren.
 
 Meld u via de clientconsole aan bij uw Campagne v8-exemplaar. Selecteer [!DNL Administration] onder de tab [!DNL Explorer] en selecteer vervolgens [!DNL Configuration] . Selecteer vervolgens [!DNL Data schemas] en pas vervolgens het filter `broadLog` toe voor de naam of het label. Selecteer in de lijst die wordt weergegeven, het bronschema voor de logbestand van de geadresseerde met de naam `broadLogRcp` .
 
-![ de de cliëntconsole van Adobe Campaign v8 met het geselecteerde lusje van de Ontdekkingsreiziger, het Beleid, de Configuratie, en de schemaknopen van Gegevens breidden uit en het filtreren plaatste aan &quot;breed&quot;.](./images/campaign/explorer.png)
+![&#x200B; de de cliëntconsole van Adobe Campaign v8 met het geselecteerde lusje van de Ontdekkingsreiziger, het Beleid, de Configuratie, en de schemaknopen van Gegevens breidden uit en het filtreren plaatste aan &quot;breed&quot;.](./images/campaign/explorer.png)
 
 Daarna, selecteer de **Gegevens** tabel.
 
-![ de Adobe Campaign v8 cliëntconsole met het geselecteerde gegevenslusje.](./images/campaign/data.png)
+![&#x200B; de Adobe Campaign v8 cliëntconsole met het geselecteerde gegevenslusje.](./images/campaign/data.png)
 
 Klik met de rechtermuisknop of toetsaanslag in het deelvenster Gegevens om het contextmenu te openen. Van hier, uitgezochte **vormt lijst...**
 
-![ de Adobe Campaign v8 cliëntconsole met het contextafhankelijke open menu en de Configure geselecteerde lijstoptie.](./images/campaign/configure.png)
+![&#x200B; de Adobe Campaign v8 cliëntconsole met het contextafhankelijke open menu en de Configure geselecteerde lijstoptie.](./images/campaign/configure.png)
 
 Het lijstconfiguratievenster verschijnt, die u van een interface voorzien waar u om het even welke gewenste gebieden aan de reeds bestaande lijst kunt toevoegen om de gegevens in het gegevenspaneel te bekijken.
 
-![ een lijst van configuraties voor ontvankelijke leveringslogboeken die voor het bekijken kunnen worden toegevoegd.](./images/campaign/list-configuration.png)
+![&#x200B; een lijst van configuraties voor ontvankelijke leveringslogboeken die voor het bekijken kunnen worden toegevoegd.](./images/campaign/list-configuration.png)
 
 Nu kunt u uw ontvankelijke leveringslogboeken, met inbegrip van de configuratiegebieden bekijken die in de vorige stap worden toegevoegd.
 
@@ -54,7 +54,7 @@ Nu kunt u uw ontvankelijke leveringslogboeken, met inbegrip van de configuratieg
 >
 >U kunt dezelfde stappen herhalen, maar filtreer voor `tracking` om de gegevens van het trackinglogboek weer te geven.
 
-![ de ontvankelijke leveringslogboeken die met informatie over zijn laatste gewijzigde naam, leveringskanaal, interne leveringsnaam, en etiket worden getoond.](./images/campaign/recipient-delivery-logs.png)
+![&#x200B; de ontvankelijke leveringslogboeken die met informatie over zijn laatste gewijzigde naam, leveringskanaal, interne leveringsnaam, en etiket worden getoond.](./images/campaign/recipient-delivery-logs.png)
 
 ### Een schema maken {#create-a-schema}
 
@@ -64,17 +64,17 @@ Maak vervolgens een XDM ExperienceEvent-schema voor zowel leveringslogboeken als
 >
 >Uw XDM ExperienceEvent-schema moet geschikt zijn voor profiel om uw Campagnegegevens in te voeren op [!DNL Real-Time Customer Profile] .
 
-Voor gedetailleerde instructies op hoe te om een schema tot stand te brengen, lees de gids bij [ creërend een schema XDM in UI ](../../../xdm/tutorials/create-schema-ui.md).
+Voor gedetailleerde instructies op hoe te om een schema tot stand te brengen, lees de gids bij [&#x200B; creërend een schema XDM in UI &#x200B;](../../../xdm/tutorials/create-schema-ui.md).
 
 ### Een gegevensset maken {#create-a-dataset}
 
-Tot slot moet u een dataset voor uw schema&#39;s tot stand brengen. Voor gedetailleerde instructies op hoe te om een dataset tot stand te brengen, lees de gids bij [ het creëren van een dataset in UI ](../../../catalog/datasets/user-guide.md).
+Tot slot moet u een dataset voor uw schema&#39;s tot stand brengen. Voor gedetailleerde instructies op hoe te om een dataset tot stand te brengen, lees de gids bij [&#x200B; het creëren van een dataset in UI &#x200B;](../../../catalog/datasets/user-guide.md).
 
 ## Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de interface van Experience Platform
 
 Nu u uw gegevenslogboeken in de de cliëntconsole van de Campagne hebt betreden, creeerde een schema, en een dataset, kunt u nu te werk gaan om een bronverbinding tot stand te brengen om uw gegevens van Managed Services van de Campagne aan Experience Platform te brengen.
 
-Voor gedetailleerde instructies op hoe te om uw de leveringslogboeken van de Campagne v8 en het volgen logboekgegevens aan het Platfrom van de Ervaring te brengen, lees de gids op [ creërend een Gecampagneerde Managed Services bronverbinding in UI ](../../tutorials/ui/create/adobe-applications/campaign.md).
+Voor gedetailleerde instructies op hoe te om uw de leveringslogboeken van de Campagne v8 en het volgen logboekgegevens aan het Platfrom van de Ervaring te brengen, lees de gids op [&#x200B; creërend een Gecampagneerde Managed Services bronverbinding in UI &#x200B;](../../tutorials/ui/create/adobe-applications/campaign.md).
 
 >[!IMPORTANT]
 >

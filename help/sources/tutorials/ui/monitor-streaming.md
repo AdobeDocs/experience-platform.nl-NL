@@ -18,10 +18,10 @@ In deze zelfstudie worden de stappen beschreven voor het controleren van gegeven
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Dataflows ](../../../dataflows/home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
-   * [ looppas Dataflow ](../../notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Dataflows &#x200B;](../../../dataflows/home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+   * [&#x200B; looppas Dataflow &#x200B;](../../notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
+* [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Dataflows controleren voor streamingbronnen
 
@@ -29,13 +29,13 @@ Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTR
 
 Als u bestaande gegevensstromen voor streamingbronnen wilt weergeven, selecteert u **[!UICONTROL Dataflows]** in de bovenste koptekst.
 
-![ catalogus ](../../images/tutorials/monitor-streaming/catalog.png)
+![&#x200B; catalogus &#x200B;](../../images/tutorials/monitor-streaming/catalog.png)
 
 De pagina [!UICONTROL Dataflows] bevat een lijst met alle bestaande gegevensstromen in uw organisatie, inclusief informatie over hun brongegevens, accountnaam en status van de gegevensstroom.
 
 Selecteer de naam van de gegevensstroom u wilt bekijken.
 
-![ dataflows ](../../images/tutorials/monitor-streaming/dataflows.png)
+![&#x200B; dataflows &#x200B;](../../images/tutorials/monitor-streaming/dataflows.png)
 
 De volgende lijst bevat meer informatie over dataflow looppas statussen:
 
@@ -49,17 +49,17 @@ De volgende lijst bevat meer informatie over dataflow looppas statussen:
 
 Op de pagina [!UICONTROL Dataflow Activity] wordt specifieke informatie over uw streaminggegevensstroom weergegeven. De bovenste banner bevat het cumulatieve aantal records dat wordt opgenomen en records die zijn mislukt voor al uw streaming dataflow-uitvoering in het geselecteerde datumbereik.
 
-![ dataflow-activity ](../../images/tutorials/monitor-streaming/dataflow-activity.png)
+![&#x200B; dataflow-activity &#x200B;](../../images/tutorials/monitor-streaming/dataflow-activity.png)
 
 Standaard bevatten de weergegeven gegevens de innamesnelheden van de laatste zeven dagen. Selecteer **[!UICONTROL Last 7 days]** om het tijdkader van getoonde verslagen aan te passen.
 
 Er wordt een kalenderpop-upvenster weergegeven met opties voor alternatieve ingstijd. U kunt het dataflow runtime kader vormen om stroomlooplooppas van de vorige zeven dagen of de laatste 30 dagen te bekijken. U kunt ook de interactieve kalender configureren om een aangepast tijdframe van uw keuze in te stellen. Selecteer **[!UICONTROL Apply]** als u klaar bent.
 
-![ kalender ](../../images/tutorials/monitor-streaming/calendar.png)
+![&#x200B; kalender &#x200B;](../../images/tutorials/monitor-streaming/calendar.png)
 
 In de onderste helft van de pagina wordt informatie weergegeven over het aantal records dat per flowuitvoering is ontvangen, opgenomen en mislukt. Elke stroomrun wordt opgenomen binnen een uurvenster.
 
-![ dataflow-run ](../../images/tutorials/monitor-streaming/dataflow-run.png)
+![&#x200B; dataflow-run &#x200B;](../../images/tutorials/monitor-streaming/dataflow-run.png)
 
 ### Metrische gegevens voor gegevensstroomuitvoering {#dataflow-run-metrics}
 
@@ -102,7 +102,7 @@ De [!UICONTROL Dataflow run overview] pagina bevat extra informatie over uw gege
 
 Een stroom met fouten bevat ook het deelvenster [!UICONTROL Dataflow run errors] , waarin de specifieke fout wordt weergegeven die tot het mislukken van de uitvoering heeft geleid, en het totale aantal records dat is mislukt.
 
-![ dataflow-run-overview ](../../images/tutorials/monitor-streaming/dataflow-run-overview.png)
+![&#x200B; dataflow-run-overview &#x200B;](../../images/tutorials/monitor-streaming/dataflow-run-overview.png)
 
 ### Records met waarschuwingen weergeven {#warnings}
 
@@ -116,11 +116,11 @@ Standaard worden alle maptransformatiefouten beschouwd als waarschuwingen, behal
 
 Selecteer **[!UICONTROL Preview error diagnostics]** om foutdiagnostiek weer te geven.
 
-![ verslagen-met-waarschuwingen ](../../images/tutorials/monitor-streaming/records-with-warnings.png)
+![&#x200B; verslagen-met-waarschuwingen &#x200B;](../../images/tutorials/monitor-streaming/records-with-warnings.png)
 
 In het venster [!UICONTROL Error diagnostics preview] kunt u maximaal 100 fouten en/of waarschuwingen met betrekking tot uw gegevensstroom voorvertonen. Vanaf hier kunt u het foutmanifest voor inname ook downloaden voor meer informatie met de API [!DNL Data Access] .
 
-![ diagnostiek ](../../images/tutorials/monitor-streaming/diagnostics.png)
+![&#x200B; diagnostiek &#x200B;](../../images/tutorials/monitor-streaming/diagnostics.png)
 
 ## Volgende stappen
 

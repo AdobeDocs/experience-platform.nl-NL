@@ -43,7 +43,7 @@ Adobe raadt u aan de volgende IP-bereiken aan een lijst van gewenste personen to
 
 ## Amerikaanse klanten die op AWS draaien {#aws}
 
-Het onderstaande IP-bereik is van toepassing op Experience Platform-klanten die op Amazon Web Services (AWS) draaien. Zie het [ overzicht van de Multi-Cloud van Experience Platform ](../../../landing/multi-cloud.md) voor meer informatie.
+Het onderstaande IP-bereik is van toepassing op Experience Platform-klanten die op Amazon Web Services (AWS) draaien. Zie het [&#x200B; overzicht van de Multi-Cloud van Experience Platform &#x200B;](../../../landing/multi-cloud.md) voor meer informatie.
 
 >[!NOTE]
 >

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Datum- en tijdfuncties
 
-Datum- en tijdfuncties worden gebruikt om datum- en tijdbewerkingen uit te voeren op waarden binnen [!DNL Profile Query Language] (PQL). Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
+Datum- en tijdfuncties worden gebruikt om datum- en tijdbewerkingen uit te voeren op waarden binnen [!DNL Profile Query Language] (PQL). Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht &#x200B;](./overview.md) worden gevonden.
 
 ## Huidige maand
 
@@ -139,7 +139,7 @@ De functie `occurs` kan met een van de volgende indelingen worden geschreven:
 
 | Argument | Beschrijving |
 | --------- | ----------- |
-| `{COMPARISON}` | Een vergelijkingsoperator. Kan een van de volgende operatoren zijn: `>`, `>=`, `<`, `<=`, `=`, `!=` . Meer informatie over de vergelijkingsfuncties kan in het [ document van vergelijkingsfuncties worden gevonden ](./comparison-functions.md). |
+| `{COMPARISON}` | Een vergelijkingsoperator. Kan een van de volgende operatoren zijn: `>`, `>=`, `<`, `<=`, `=`, `!=` . Meer informatie over de vergelijkingsfuncties kan in het [&#x200B; document van vergelijkingsfuncties worden gevonden &#x200B;](./comparison-functions.md). |
 | `{INTEGER}` | Een positief geheel getal. |
 | `{TIME_UNIT}` | Een tijdseenheid. Kan een van de volgende woorden zijn: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia` . |
 | `{DIRECTION}` | Een voorstelling waarin wordt beschreven wanneer de datum moet worden vergeleken met. Kan een van de volgende woorden zijn: `before`, `after`, `from` . |
@@ -189,4 +189,4 @@ person.birthday occurs = 3 days before today
 
 ## Volgende stappen
 
-Nu u over datum en tijdfuncties hebt geleerd, kunt u deze gebruiken in uw PQL-query&#39;s. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).
+Nu u over datum en tijdfuncties hebt geleerd, kunt u deze gebruiken in uw PQL-query&#39;s. Voor meer informatie over andere functies van PQL, te lezen gelieve het [&#x200B; overzicht van Profile Query Language &#x200B;](./overview.md).

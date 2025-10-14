@@ -31,17 +31,17 @@ Om de beperkingen van de veilige gegevenstoegang in de Dienst van de Vraag toe t
 
 >[!NOTE]
 >
->De Beheerders van het systeem kunnen opstellings gebruikerstoestemmingen van Adobe [ Admin Console ](https://adminconsole.adobe.com/). Voor meer informatie, zie de [ gebruikersgids van Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
+>De Beheerders van het systeem kunnen opstellings gebruikerstoestemmingen van Adobe [&#x200B; Admin Console &#x200B;](https://adminconsole.adobe.com/). Voor meer informatie, zie de [&#x200B; gebruikersgids van Admin Console &#x200B;](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
 De volgende functies zijn beschikbaar met de machtiging **[!UICONTROL Manage Allowed List]** :
 
 - **bepaalt toegestane IP waaiers**: Slechts IP adressen of de blokken CIDR van deze bepaalde waaiers kunnen tot gegevens in Experience Platform toegang hebben gebruikend SQL door de Dienst van de Vraag.
 - **afdwingen IP waaiercontroles**: De verbindingen van IPs buiten de toegestane waaiers worden ontkend.
-- **Controle en alarmerende mogelijkheden**: Alle toegangspogingen, met inbegrip van ontkende verbindingen, worden geregistreerd als controlegebeurtenissen. Deze gebeurtenissen zijn beschikbaar in de [ Logboeken van de Controle van Adobe Experience Platform ](../../landing/governance-privacy-security/audit-logs/overview.md), toelatend controle van potentiële veiligheidsbreuken.
+- **Controle en alarmerende mogelijkheden**: Alle toegangspogingen, met inbegrip van ontkende verbindingen, worden geregistreerd als controlegebeurtenissen. Deze gebeurtenissen zijn beschikbaar in de [&#x200B; Logboeken van de Controle van Adobe Experience Platform &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md), toelatend controle van potentiële veiligheidsbreuken.
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Om vraag aan de Vergunning API van Distiller van Gegevens te maken, moet u het [ Experience Platform API authentificatieleerprogramma ](../../landing/api-authentication.md) voltooien, dat waarden voor vereiste kopballen in API vraag verstrekt. Neem de volgende kopteksten op in elke aanvraag:
+Om vraag aan de Vergunning API van Distiller van Gegevens te maken, moet u het [&#x200B; Experience Platform API authentificatieleerprogramma &#x200B;](../../landing/api-authentication.md) voltooien, dat waarden voor vereiste kopballen in API vraag verstrekt. Neem de volgende kopteksten op in elke aanvraag:
 
 - **Vergunning**: `Bearer {ACCESS_TOKEN}`
 - **x-api-sleutel**: `{API_KEY}`
@@ -50,7 +50,7 @@ Om vraag aan de Vergunning API van Distiller van Gegevens te maken, moet u het [
 
 >[!NOTE]
 >
-> Voor meer informatie over zandbakken, zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+> Voor meer informatie over zandbakken, zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen ook deze kopbal:
 
@@ -65,6 +65,6 @@ Met de vereiste toestemmingen en verzamelde kopbalwaarden, bent u bereid beginne
 
 Elk API vraagvoorbeeld toont aan hoe te om verzoeken te formatteren en reacties te interpreteren, die u veilige toegang tot uw gegevens in de Dienst van de Vraag helpen afdwingen.
 
-Voor specifieke instructies bij het vormen van en het bevestigen van IP beperkingen, verwijs naar de [ IP documentatie van het eindpunt van de Toegang ](./ip-access.md) en de [ IP documentatie van het eindpunt van de Bevestiging ](./validate.md).
+Voor specifieke instructies bij het vormen van en het bevestigen van IP beperkingen, verwijs naar de [&#x200B; IP documentatie van het eindpunt van de Toegang &#x200B;](./ip-access.md) en de [&#x200B; IP documentatie van het eindpunt van de Bevestiging &#x200B;](./validate.md).
 
-Verwijs naar de [ de verwijzingsdocumentatie van OpenAPI van de Vergunning van Distiller van Gegevens ](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) om een gestandaardiseerd, machine-leesbaar formaat voor gemakkelijkere integratie, het testen, en de exploratie te bekijken.
+Verwijs naar de [&#x200B; de verwijzingsdocumentatie van OpenAPI van de Vergunning van Distiller van Gegevens &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) om een gestandaardiseerd, machine-leesbaar formaat voor gemakkelijkere integratie, het testen, en de exploratie te bekijken.

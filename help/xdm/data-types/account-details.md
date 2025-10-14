@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Account Details] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat details met betrekking tot een bedrijfsorganisatie beschrijft.
 
-![ het typestructuur van Gegevens ](../images/data-types/account-details.png)
+![&#x200B; het typestructuur van Gegevens &#x200B;](../images/data-types/account-details.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -42,5 +42,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/account-organization.schema.json)

@@ -17,8 +17,8 @@ Als u weergavegebeurtenissen verzendt, wordt de nauwkeurigheid van personalisati
 
 Web SDK staat u toe om vertoningsgebeurtenissen op twee manieren te verzenden:
 
-* [ automatisch ](#send-automatically), onmiddellijk nadat de gepersonaliseerde inhoud op de pagina wordt teruggegeven. Zie de documentatie over hoe te [ gepersonaliseerde inhoud ](rendering-personalization-content.md) voor meer informatie teruggeven.
-* [ manueel ](#send-sendEvent-calls), door verdere `sendEvent` vraag.
+* [&#x200B; automatisch &#x200B;](#send-automatically), onmiddellijk nadat de gepersonaliseerde inhoud op de pagina wordt teruggegeven. Zie de documentatie over hoe te [&#x200B; gepersonaliseerde inhoud &#x200B;](rendering-personalization-content.md) voor meer informatie teruggeven.
+* [&#x200B; manueel &#x200B;](#send-sendEvent-calls), door verdere `sendEvent` vraag.
 
 >[!NOTE]
 >

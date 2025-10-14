@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Healthcare Member Details] schemaveldgroep
 
-[!UICONTROL Healthcare Member Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md) die details van een persoon vangt die medische dienst of zorg, zoals contactinformatie, primaire zorgarts, en planinformatie heeft of zal ontvangen.
+[!UICONTROL Healthcare Member Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../classes/individual-profile.md) die details van een persoon vangt die medische dienst of zorg, zoals contactinformatie, primaire zorgarts, en planinformatie heeft of zal ontvangen.
 
-![ de groepsstructuur van het Gebied ](../../images/field-groups/healthcare-member-details/structure.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../images/field-groups/healthcare-member-details/structure.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ ht-degree: 0%
 | `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Het thuisadres van de persoon. |
 | `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het telefoonnummer van de persoon thuis. |
 | `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Het postadres van de persoon. |
-| `memberDetails` | Object | Een object dat gedetailleerde informatie bevat over de aan gezondheidszorg gerelateerde kenmerken en relaties van de persoon. Zie de [ onderafdeling hieronder ](#memberDetails) voor meer informatie over de structuur van de objecten. |
+| `memberDetails` | Object | Een object dat gedetailleerde informatie bevat over de aan gezondheidszorg gerelateerde kenmerken en relaties van de persoon. Zie de [&#x200B; onderafdeling hieronder &#x200B;](#memberDetails) voor meer informatie over de structuur van de objecten. |
 | `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het mobiele telefoonnummer van de persoon. |
 | `person` | [[!UICONTROL Person]](../../data-types/person.md) | Een individuele actor, contactpersoon of eigenaar in verband met het lidmaatschap van de gezondheidszorg van de persoon. |
 | `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Het persoonlijke e-mailadres van de persoon. |
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 `memberDetails` is een object dat gedetailleerde informatie bevat over de kenmerken en relaties van de persoon in de gezondheidszorg. De structuur van `memberDetails` wordt hieronder beschreven.
 
-![ memberDetails structuur ](../../images/field-groups/healthcare-member-details/memberDetails.png)
+![&#x200B; memberDetails structuur &#x200B;](../../images/field-groups/healthcare-member-details/memberDetails.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
-Verwijs naar de documentatie van het industrieschema voor meer informatie over hoe deze gebiedsgroep kan worden gebruikt om gemeenschappelijke [ het gebruiksgevallen van de gezondheidszorgindustrie te dienen ](../../schema/industries/healthcare.md).
+Verwijs naar de documentatie van het industrieschema voor meer informatie over hoe deze gebiedsgroep kan worden gebruikt om gemeenschappelijke [&#x200B; het gebruiksgevallen van de gezondheidszorgindustrie te dienen &#x200B;](../../schema/industries/healthcare.md).

@@ -17,14 +17,14 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over AI Assistan
 
 De gegevens in de antwoorden van AI Assistant worden dagelijks bijgewerkt. Dit betekent dat gegevens in reacties tot 24 uur ouder kunnen zijn dan de gegevens die u op het moment van de reactie op de Experience Platform-gebruikersinterface kunt zien.
 
-Dezelfde beginselen gelden voor toegangscontrole. Het kan AI Medewerker tot 24 uren vergen om op om het even welke veranderingen te wijzen die in toegangsbeheer en toestemmingsconfiguraties worden aangebracht. Voor meer informatie, lees de gids op [ privacy in AI Medewerker ](./privacy.md).
+Dezelfde beginselen gelden voor toegangscontrole. Het kan AI Medewerker tot 24 uren vergen om op om het even welke veranderingen te wijzen die in toegangsbeheer en toestemmingsconfiguraties worden aangebracht. Voor meer informatie, lees de gids op [&#x200B; privacy in AI Medewerker &#x200B;](./privacy.md).
 
 ## Welke Adobe-toepassingen wordt door AI Assistant ondersteund?
 
 Momenteel is het bereik van AI Assistant als volgt:
 
-* [ de kennis van het Product ](./home.md#product-knowledge): De Medewerker van AI kan de vragen van de productkennis voor Experience Platform, Real-Time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook onderwerpen over productkennis voor Customer Journey Analytics bespreken, maar alleen via de interface van Customer Journey Analytics.
-* [ Operationele inzichten ](./home.md#operational-insights): U kunt AI Medewerker met vragen over operationele inzichten op de volgende gegevensvoorwerpen vragen: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen.
+* [&#x200B; de kennis van het Product &#x200B;](./home.md#product-knowledge): De Medewerker van AI kan de vragen van de productkennis voor Experience Platform, Real-Time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook onderwerpen over productkennis voor Customer Journey Analytics bespreken, maar alleen via de interface van Customer Journey Analytics.
+* [&#x200B; Operationele inzichten &#x200B;](./home.md#operational-insights): U kunt AI Medewerker met vragen over operationele inzichten op de volgende gegevensvoorwerpen vragen: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen.
 
 ## Wat zijn de mogelijkheden van AI Assistant?
 

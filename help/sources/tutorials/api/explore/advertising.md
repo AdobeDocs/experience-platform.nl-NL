@@ -15,24 +15,24 @@ ht-degree: 0%
 
 Als er een basisverbinding is gemaakt, kunt u nu de unieke basis-verbindings-id gebruiken om te navigeren en de gegevensstructuur en inhoud van uw bron te verkennen. Zo kunt u de specifieke items en hun respectievelijke gegevenstypen en indelingen identificeren voordat u een gegevensstroom maakt en deze naar Adobe Experience Platform overbrengt.
 
-Dit leerprogramma gebruikt [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) om reclamesystemen te onderzoeken.
+Dit leerprogramma gebruikt [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) om reclamesystemen te onderzoeken.
 
 ## Aan de slag
 
 >[!IMPORTANT]
 >
->Voor deze zelfstudie moet u beschikken over de unieke basis-verbindings-id voor uw advertentiebron. Als u dit identiteitskaart niet hebt, zie het leerprogramma op [ verbindend een reclamebron met Experience Platform ](../../api/create/advertising/ads.md) leerprogramma.
+>Voor deze zelfstudie moet u beschikken over de unieke basis-verbindings-id voor uw advertentiebron. Als u dit identiteitskaart niet hebt, zie het leerprogramma op [&#x200B; verbindend een reclamebron met Experience Platform &#x200B;](../../api/create/advertising/ads.md) leerprogramma.
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een advertentiesysteem met de API [!DNL Flow Service] .
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../landing/api-guide.md).
 
 ## Uw gegevenstabellen verkennen
 
@@ -170,4 +170,4 @@ Een geslaagde reactie retourneert de structuur van een tabel. De details betreff
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw advertentiesysteem verkend, het pad van de tabel gevonden die u wilt doorgeven aan [!DNL Experience Platform] en hebt u informatie gekregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw reclamesysteem verzamelen en het brengen in Experience Platform ](../collect/advertising.md).
+Aan de hand van deze zelfstudie hebt u uw advertentiesysteem verkend, het pad van de tabel gevonden die u wilt doorgeven aan [!DNL Experience Platform] en hebt u informatie gekregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [&#x200B; gegevens van uw reclamesysteem verzamelen en het brengen in Experience Platform &#x200B;](../collect/advertising.md).

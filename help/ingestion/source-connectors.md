@@ -17,4 +17,4 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 [!DNL Experience Platform] biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw opslagsystemen en de diensten van CRM voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
-Meer informatie over deze bronschakelaars kan in de [ documentatie van bronschakelaars ](../sources/home.md) worden gevonden.
+Meer informatie over deze bronschakelaars kan in de [&#x200B; documentatie van bronschakelaars &#x200B;](../sources/home.md) worden gevonden.

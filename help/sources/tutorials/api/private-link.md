@@ -41,12 +41,12 @@ De machtigingsgegevens voor het gebruik van licenties voor ondersteuning van per
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Platform APIs &#x200B;](../../../landing/api-guide.md).
 
 ## Een privé-eindpunt maken {#create-private-endpoint}
 
@@ -87,9 +87,9 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De naam van uw privé eindpunt. |
-| `subscriptionId` | De id die is gekoppeld aan uw [!DNL Azure] -abonnement. Voor meer informatie, lees de [!DNL Azure] gids op [ het terugwinnen van uw abonnement en huurder IDs van  [!DNL Azure Portal] ](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
-| `resourceGroupName` | De naam van de bronnengroep op [!DNL Azure] . Een resourcegroep bevat gerelateerde bronnen voor een [!DNL Azure] -oplossing. Voor meer informatie, lees de [!DNL Azure] gids over [ het leiden middelgroepen ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
-| `resourceName` | De naam van uw bron. In [!DNL Azure] verwijst een bron naar instanties zoals virtuele machines, webapps en databases. Voor meer informatie, lees de [!DNL Azure] gids op [ die de  [!DNL Azure]  middelmanager ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) begrijpt. |
+| `subscriptionId` | De id die is gekoppeld aan uw [!DNL Azure] -abonnement. Voor meer informatie, lees de [!DNL Azure] gids op [&#x200B; het terugwinnen van uw abonnement en huurder IDs van  [!DNL Azure Portal] &#x200B;](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
+| `resourceGroupName` | De naam van de bronnengroep op [!DNL Azure] . Een resourcegroep bevat gerelateerde bronnen voor een [!DNL Azure] -oplossing. Voor meer informatie, lees de [!DNL Azure] gids over [&#x200B; het leiden middelgroepen &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
+| `resourceName` | De naam van uw bron. In [!DNL Azure] verwijst een bron naar instanties zoals virtuele machines, webapps en databases. Voor meer informatie, lees de [!DNL Azure] gids op [&#x200B; die de  [!DNL Azure]  middelmanager &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) begrijpt. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van de bron die u gebruikt. |
 | `connectionSpec.version` | De versie van de verbindingsspecificatie-id die u gebruikt. |
 
@@ -120,9 +120,9 @@ Een geslaagde reactie retourneert het volgende:
 | --- | --- |
 | `id` | Identiteitskaart van uw onlangs gecreeerd privé eindpunt. |
 | `name` | De naam van uw privé eindpunt. |
-| `subscriptionId` | De id die is gekoppeld aan uw [!DNL Azure] -abonnement. Voor meer informatie, lees de [!DNL Azure] gids op [ het terugwinnen van uw abonnement en huurder IDs van  [!DNL Azure Portal] ](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
-| `resourceGroupName` | De naam van de bronnengroep op [!DNL Azure] . Een resourcegroep bevat gerelateerde bronnen voor een [!DNL Azure] -oplossing. Voor meer informatie, lees de [!DNL Azure] gids over [ het leiden middelgroepen ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
-| `resourceName` | De naam van uw bron. In [!DNL Azure] verwijst een bron naar instanties zoals virtuele machines, webapps en databases. Voor meer informatie, lees de [!DNL Azure] gids op [ die de  [!DNL Azure]  middelmanager ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) begrijpt. |
+| `subscriptionId` | De id die is gekoppeld aan uw [!DNL Azure] -abonnement. Voor meer informatie, lees de [!DNL Azure] gids op [&#x200B; het terugwinnen van uw abonnement en huurder IDs van  [!DNL Azure Portal] &#x200B;](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
+| `resourceGroupName` | De naam van de bronnengroep op [!DNL Azure] . Een resourcegroep bevat gerelateerde bronnen voor een [!DNL Azure] -oplossing. Voor meer informatie, lees de [!DNL Azure] gids over [&#x200B; het leiden middelgroepen &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
+| `resourceName` | De naam van uw bron. In [!DNL Azure] verwijst een bron naar instanties zoals virtuele machines, webapps en databases. Voor meer informatie, lees de [!DNL Azure] gids op [&#x200B; die de  [!DNL Azure]  middelmanager &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) begrijpt. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van de bron die u gebruikt. |
 | `connectionSpec.version` | De versie van de verbindingsspecificatie-id die u gebruikt. |
 | `state` | De huidige staat van uw privé eindpunt. Geldige statussen zijn: <ul><li>`Pending`</li><li>`Failed`</li><li>`Approved`</li><li>`Rejected`</li></ul> |
@@ -535,7 +535,7 @@ Een geslaagde reactie retourneert HTTP-status 200 (Voltooid). U kunt de verwijde
 
 ## Flow Service {#flow-service}
 
-Lees de volgende secties voor informatie over hoe u privé eindpunten samen met [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) kunt gebruiken.
+Lees de volgende secties voor informatie over hoe u privé eindpunten samen met [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) kunt gebruiken.
 
 ### Verbinding maken met een privé-eindpunt {#create-base-connection}
 
@@ -583,7 +583,7 @@ curl -X POST \
 | `name` | De naam van uw basisverbinding. |
 | `description` | (Optioneel) Een beschrijving met aanvullende informatie over de verbinding. |
 | `auth.specName` | De verificatie die wordt gebruikt om uw bron te verbinden met Experience Platform. |
-| `auth.params.connectionString` | De [!DNL Azure Blob Storage] verbindingstekenreeks. Voor meer informatie, lees de [[!DNL Azure Blob Storage]  API authentificatiegids ](../api/create/cloud-storage/blob.md). |
+| `auth.params.connectionString` | De [!DNL Azure Blob Storage] verbindingstekenreeks. Voor meer informatie, lees de [[!DNL Azure Blob Storage]  API authentificatiegids &#x200B;](../api/create/cloud-storage/blob.md). |
 | `auth.params.usePrivateLink` | Een booleaanse waarde die bepaalt of u een privé eindpunt gebruikt of niet. Stel deze waarde in op `true` als u een privé-eindpunt gebruikt. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van [!DNL Azure Blob Storage] . |
 | `connectionSpec.version` | De versie van uw [!DNL Azure Blob Storage] connection spec ID. |
@@ -840,7 +840,7 @@ Lees deze sectie voor meer informatie met [!DNL Azure] persoonlijke koppelingen 
 
 Als u een aanvraag voor een privéeindpunt voor de bronnen [!DNL Azure Blob] en [!DNL Azure Data Lake Gen2] wilt goedkeuren, meldt u zich aan bij de map [!DNL Azure Portal] . Selecteer in de linkernavigatie **[!DNL Data storage]** , ga naar de tab **[!DNL Security + networking]** en kies **[!DNL Networking]** . Selecteer vervolgens **[!DNL Private endpoints]** om een lijst weer te geven met persoonlijke eindpunten die zijn gekoppeld aan uw account en de huidige verbindingsstatussen. Als u een aanvraag in behandeling wilt goedkeuren, selecteert u het gewenste eindpunt en klikt u op **[!DNL Approve]** .
 
-![ het Azure portaal met een lijst van hangende privé eindpunten.](../../images/tutorials/private-links/azure.png)
+![&#x200B; het Azure portaal met een lijst van hangende privé eindpunten.](../../images/tutorials/private-links/azure.png)
 
 <!--
 

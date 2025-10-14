@@ -30,7 +30,7 @@ Controleer voordat u `sendPushSubscription` gebruikt of:
 
 Het verzenden van Push-abonnementsgegevens wordt uitgevoerd als een handeling binnen een regel in de interface Tags voor gegevensverzameling van Adobe Experience Platform.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -124,5 +124,5 @@ De opdracht verzendt pushberichtgegevens in de volgende indeling:
 ## Gerelateerde documentatie
 
 - [Pushmeldingen configureren](configure/pushnotifications.md)
-- [ Push API specificatie van het Web ](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
-- [ de Arbeider API van de Dienst ](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+- [&#x200B; Push API specificatie van het Web &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
+- [&#x200B; de Arbeider API van de Dienst &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)

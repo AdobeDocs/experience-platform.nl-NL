@@ -18,13 +18,13 @@ ht-degree: 0%
 >
 >De naam van mengsels is gewijzigd in schemaveldgroepen en daarom is het eindpunt `/mixins` vervangen door het eindpunt `/fieldgroups` .
 >
->Hoewel `/mixins` als verouderd eindpunt blijft behouden, wordt u ten zeerste aangeraden `/fieldgroups` te gebruiken voor nieuwe implementaties van de API voor het schemaregister in uw ervaringstoepassingen. Zie de [ gids van het eindpunt van gebiedsgroepen ](./field-groups.md) voor meer informatie.
+>Hoewel `/mixins` als verouderd eindpunt blijft behouden, wordt u ten zeerste aangeraden `/fieldgroups` te gebruiken voor nieuwe implementaties van de API voor het schemaregister in uw ervaringstoepassingen. Zie de [&#x200B; gids van het eindpunt van gebiedsgroepen &#x200B;](./field-groups.md) voor meer informatie.
 
 Mixins zijn herbruikbare componenten die een of meer velden definiëren die een bepaald concept vertegenwoordigen, zoals een individuele persoon, een mailingadres of een webbrowseromgeving. Mixins zijn bedoeld om te worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert, afhankelijk van het gedrag van de gegevens die ze vertegenwoordigen (record- of tijdreeks). Met het eindpunt `/mixins` in de [!DNL Schema Registry] API kunt u via programmacode mixen beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 ## Een lijst met mengsels ophalen {#list}
 
@@ -32,7 +32,7 @@ U kunt alle mixen onder de `global` - of `tenant` -container weergeven door een 
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [&#x200B; vraagparameters &#x200B;](./appendix.md#query) in het bijlage document voor meer informatie.
 
 **API formaat**
 
@@ -43,7 +43,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CONTAINER_ID}` | De container waarvan u mixins wilt ophalen: `global` voor door Adobe gemaakte mixins of `tenant` voor mixins die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [&#x200B; bijlage document &#x200B;](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
@@ -238,7 +238,7 @@ Wanneer u een nieuwe mix definieert, moet deze een `meta:intendedToExtend` -kenm
 
 >[!NOTE]
 >
->Voor details op hoe te om verschillende gebiedstypes te bepalen om in uw mengeling te omvatten, zie de [ gids van de gebiedsbeperkingen ](../schema/field-constraints.md#define-fields).
+>Voor details op hoe te om verschillende gebiedstypes te bepalen om in uw mengeling te omvatten, zie de [&#x200B; gids van de gebiedsbeperkingen &#x200B;](../schema/field-constraints.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -391,15 +391,15 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en een payload die d
 }
 ```
 
-Het uitvoeren van een verzoek van de GET aan [ lijst alle mixins ](#list) in de huurderscontainer zou nu de mengsel van de Details van het Bezit omvatten, of u kunt [ een raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om de nieuwe mix direct te bekijken.
+Het uitvoeren van een verzoek van de GET aan [&#x200B; lijst alle mixins &#x200B;](#list) in de huurderscontainer zou nu de mengsel van de Details van het Bezit omvatten, of u kunt [&#x200B; een raadpleging (GET) verzoek &#x200B;](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om de nieuwe mix direct te bekijken.
 
 ## Een mix bijwerken {#put}
 
-U kunt een volledige mix door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een mixin door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuwe mixin ](#create) in een verzoek van de POST.
+U kunt een volledige mix door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een mixin door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [&#x200B; creërend een nieuwe mixin &#x200B;](#create) in een verzoek van de POST.
 
 >[!NOTE]
 >
->Als u slechts een deel van een mixin in plaats van het volledig wilt bijwerken, zie de sectie op [ het bijwerken van een gedeelte van een mixin ](#patch).
+>Als u slechts een deel van een mixin in plaats van het volledig wilt bijwerken, zie de sectie op [&#x200B; het bijwerken van een gedeelte van een mixin &#x200B;](#patch).
 
 **API formaat**
 
@@ -580,11 +580,11 @@ Een succesvolle reactie retourneert de details van de bijgewerkte mix.
 
 ## Een gedeelte van een mix bijwerken {#patch}
 
-U kunt een gedeelte van een mix bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
+U kunt een gedeelte van een mix bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [&#x200B; API fundamentals gids &#x200B;](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een mixin gebruikend een verrichting van de PUT ](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [&#x200B; het vervangen van een mixin gebruikend een verrichting van de PUT &#x200B;](#put).
 
 **API formaat**
 
@@ -752,4 +752,4 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de schrapping bevestigen door het verzoek van de a [ raadpleging (GET) ](#lookup) aan de mixin te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat de mixin uit de schemaregistratie is verwijderd.
+U kunt de schrapping bevestigen door het verzoek van de a [&#x200B; raadpleging (GET) &#x200B;](#lookup) aan de mixin te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat de mixin uit de schemaregistratie is verwijderd.

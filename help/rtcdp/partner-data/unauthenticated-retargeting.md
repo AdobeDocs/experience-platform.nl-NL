@@ -76,7 +76,7 @@ Opstelling een gebeurtenis door:sturen binnen Platform om verzamelde gegevens va
 
 Zorg ervoor dat de extensie voor herbestemming buiten de site is gekoppeld aan een geldige gebeurtenisregel in de gegevensverzameling van Adobe Experience Platform. Doorgaans moet een algemene regel worden gemaakt die op toetshandelingen, zoals `page load` of specifieke gebruikersinteracties, wordt geactiveerd.
 
-Meer leren over het vormen van de uitbreiding, lees de [ Gebeurtenis door:sturen ](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/event-forwarding/getting-started) documentatie.
+Meer leren over het vormen van de uitbreiding, lees de [&#x200B; Gebeurtenis door:sturen &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/event-forwarding/getting-started) documentatie.
 
 ## Andere gebruiksgevallen {#other-use-cases}
 
@@ -84,6 +84,6 @@ Dit document biedt een overzicht van de belangrijkste gebruiksgevallen en techni
 
 U kunt verdere gebruiksgevallen onderzoeken die door de steun van partnergegevens in Real-Time CDP worden toegelaten:
 
-- [ verbind en verkrijg nieuwe klanten ](./prospecting.md) door partnergegevens te gebruiken.
-- [ personaliseer onsite ervaringen ](./offsite-retargeting.md) met partner-gesteunde bezoekerserkenning.
-- [ de profielen van de Supplement van de Eerste partij ](./supplement-first-party-profiles.md) met partner-Geleverde attributen.
+- [&#x200B; verbind en verkrijg nieuwe klanten &#x200B;](./prospecting.md) door partnergegevens te gebruiken.
+- [&#x200B; personaliseer onsite ervaringen &#x200B;](./offsite-retargeting.md) met partner-gesteunde bezoekerserkenning.
+- [&#x200B; de profielen van de Supplement van de Eerste partij &#x200B;](./supplement-first-party-profiles.md) met partner-Geleverde attributen.

@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Bij de eerste configuratie retourneert de Adobe Audience Manager-bron een foutbericht waarin wordt uitgelegd dat er geen naamruimte met een bepaalde naam `namespaceCode={VALUE}` bestaat. **Nota**: In het achterste eind, `namespaceCode` wordt gebruikt om naar identiteitssymbool te verwijzen. Om uw integratie te voltooien, moet u:
 >
->- [ creeer een douane namespace in de Dienst van de Identiteit ](../../../identity-service/features/namespaces.md#create-custom-namespaces) met het gespecificeerde identiteitssymbool (`VALUE`).
+>- [&#x200B; creeer een douane namespace in de Dienst van de Identiteit &#x200B;](../../../identity-service/features/namespaces.md#create-custom-namespaces) met het gespecificeerde identiteitssymbool (`VALUE`).
 >- Voer uw gegevens opnieuw in.
 
 De Adobe Audience Manager-bronstroom streamt gegevens van de eerste partij die in Adobe Audience Manager zijn verzameld voor activering in Adobe Experience Platform. De Audience Manager-bron voert twee typen gegevens in op Experience Platform:
@@ -27,7 +27,7 @@ De Adobe Audience Manager-bronstroom streamt gegevens van de eerste partij die i
 
 De Audience Manager-bron wijst deze gegevenstypen toe aan een XDM-schema (Experience Data Model) en verzendt deze vervolgens naar Experience Platform. In real time gegevens worden verzonden als gegevens XDM ExperienceEvent, terwijl de gegevens van het Profiel als gegevens van het Individuele Profiel XDM worden verzonden.
 
-Voor meer informatie, lees de gids bij [ het creëren van een Audience Manager bronverbinding in UI ](../../tutorials/ui/create/adobe-applications/audience-manager.md).
+Voor meer informatie, lees de gids bij [&#x200B; het creëren van een Audience Manager bronverbinding in UI &#x200B;](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
 ## Wat is het Model van de Gegevens van de Ervaring (XDM)?
 
@@ -35,7 +35,7 @@ XDM is een openbaar gedocumenteerde specificatie die een gestandaardiseerd kader
 
 Door zich aan XDM-standaarden te houden, kunnen gegevens voor klantervaring op uniforme wijze worden opgenomen, waardoor het eenvoudiger wordt om gegevens te leveren en informatie te verzamelen.
 
-Voor meer informatie over hoe XDM in Experience Platform wordt gebruikt, lees het [ overzicht van het Systeem XDM ](../../../xdm/home.md). Meer over leren hoe de schema&#39;s XDM tussen profielen en gebeurtenissen gestructureerd zijn, lees de [ grondbeginselen van schemacompositie ](../../../xdm/schema/composition.md).
+Voor meer informatie over hoe XDM in Experience Platform wordt gebruikt, lees het [&#x200B; overzicht van het Systeem XDM &#x200B;](../../../xdm/home.md). Meer over leren hoe de schema&#39;s XDM tussen profielen en gebeurtenissen gestructureerd zijn, lees de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../../../xdm/schema/composition.md).
 
 ## Voorbeelden van XDM-schema&#39;s
 
@@ -49,7 +49,7 @@ Hieronder volgen voorbeelden van de Audience Manager-structuur die is toegewezen
 
 ![](images/aam-profile-xdm-for-profile-data.png)
 
-Voor informatie over hoe de gebieden van Audience Manager aan XDM in kaart worden gebracht, lees de documentatie over [ de kaartgebieden van Audience Manager ](./mapping/audience-manager.md).
+Voor informatie over hoe de gebieden van Audience Manager aan XDM in kaart worden gebracht, lees de documentatie over [&#x200B; de kaartgebieden van Audience Manager &#x200B;](./mapping/audience-manager.md).
 
 ## Gegevensbeheer op Experience Platform
 
@@ -76,13 +76,13 @@ De datasets van Audience Manager worden onbruikbaar gemaakt voor Profiel door ge
 
 ### Verbindingen
 
-Adobe Audience Manager maakt één verbinding in Catalog: Audience Manager Connection. Catalog is het systeem van de verslagen voor gegevensplaats en lijn binnen Adobe Experience Platform. Een verbinding is een voorwerp van de Catalogus dat een klant-specifiek geval van schakelaars is. Gelieve te lezen het [ overzicht van de Dienst van de Catalogus ](../../../catalog/home.md) voor meer informatie over Catalogus, verbindingen, en schakelaars.
+Adobe Audience Manager maakt één verbinding in Catalog: Audience Manager Connection. Catalog is het systeem van de verslagen voor gegevensplaats en lijn binnen Adobe Experience Platform. Een verbinding is een voorwerp van de Catalogus dat een klant-specifiek geval van schakelaars is. Gelieve te lezen het [&#x200B; overzicht van de Dienst van de Catalogus &#x200B;](../../../catalog/home.md) voor meer informatie over Catalogus, verbindingen, en schakelaars.
 
 ### Segmentpopulatie voor profieleffect
 
 Grootte van segmentpopulatie heeft een directe invloed op profielnummers wanneer u voor het eerst een Audience Manager-segment naar Experience Platform verzendt. Dit betekent dat het selecteren van alle segmenten mogelijk Profieloverschrijdingen kan veroorzaken die uw gebruiksrechten voor licenties overschrijden. Experience Platform maakt ook onderscheid tussen nieuwe gegevens en historische gegevens voor het opnemen van profielen. Een segment met 100 op de eerste plaats gebaseerde identiteiten zal tot 100 profielen leiden. Als de populatie van hetzelfde segment echter tot 150 werd verhoogd en aan Experience Platform werd geconsumeerd, zal het aantal profielen slechts met 50 stijgen, aangezien er slechts 50 nieuwe profielen zijn.
 
-U kunt het profielgebruik ook controleren uw rekening beschikbaar door het [ dashboard van het Gebruik van de Vergunning ](../../../dashboards/guides/license-usage.md) heeft.
+U kunt het profielgebruik ook controleren uw rekening beschikbaar door het [&#x200B; dashboard van het Gebruik van de Vergunning &#x200B;](../../../dashboards/guides/license-usage.md) heeft.
 
 ## Wat is de verwachte vertraging voor Audience Manager Data op Experience Platform?
 

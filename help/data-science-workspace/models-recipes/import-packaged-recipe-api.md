@@ -20,16 +20,16 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Dit leerprogramma gebruikt [[!DNL Sensei Machine Learning API] ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) om een [ Motor ](../api/engines.md) tot stand te brengen, die ook als Ontvanger in het gebruikersinterface wordt bekend.
+Dit leerprogramma gebruikt [[!DNL Sensei Machine Learning API] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) om een [&#x200B; Motor &#x200B;](../api/engines.md) tot stand te brengen, die ook als Ontvanger in het gebruikersinterface wordt bekend.
 
 Voordat u aan de slag gaat, moet u weten dat Adobe Experience Platform [!DNL Data Science Workspace] verschillende termen gebruikt om te verwijzen naar vergelijkbare elementen in de API en de gebruikersinterface. De API-termen worden in deze zelfstudie gebruikt en in de volgende tabel worden de corresponderende termen beschreven:
 
 | UI-term | API-term |
 | ---- | ---- |
-| Recipe | [ Motor ](../api/engines.md) |
-| Model | [ MLInstance ](../api/mlinstances.md) |
-| Opleiding en evaluatie | [ Experiment ](../api/experiments.md) |
-| Service | [ MLService ](../api/mlservices.md) |
+| Recipe | [&#x200B; Motor &#x200B;](../api/engines.md) |
+| Model | [&#x200B; MLInstance &#x200B;](../api/mlinstances.md) |
+| Opleiding en evaluatie | [&#x200B; Experiment &#x200B;](../api/experiments.md) |
+| Service | [&#x200B; MLService &#x200B;](../api/mlservices.md) |
 
 Een motor bevat machine het leren algoritmen en logica om specifieke problemen op te lossen. In het onderstaande diagram ziet u een visualisatie van de API-workflow in [!DNL Data Science Workspace] . Deze zelfstudie richt zich op het maken van een engine, het brein van een model voor machinaal leren.
 
@@ -37,11 +37,11 @@ Een motor bevat machine het leren algoritmen en logica om specifieke problemen o
 
 ## Aan de slag
 
-Voor deze zelfstudie is een Recipe-bestand in het pakket vereist in de vorm van een docker-URL. Volg de [ brondossiers van het Pakket in een Ontvanger ](./package-source-files-recipe.md) leerprogramma om een verpakt Ontvanger dossier tot stand te brengen of uw te verstrekken.
+Voor deze zelfstudie is een Recipe-bestand in het pakket vereist in de vorm van een docker-URL. Volg de [&#x200B; brondossiers van het Pakket in een Ontvanger &#x200B;](./package-source-files-recipe.md) leerprogramma om een verpakt Ontvanger dossier tot stand te brengen of uw te verstrekken.
 
 - `{DOCKER_URL}`: Een URL-adres naar een Docker-afbeelding van een intelligente service.
 
-Dit leerprogramma vereist u om de [ Authentificatie aan zelfstudie van Adobe Experience Platform ](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan [!DNL Experience Platform] APIs met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Dit leerprogramma vereist u om de [&#x200B; Authentificatie aan zelfstudie van Adobe Experience Platform &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan [!DNL Experience Platform] APIs met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.
 - `{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
@@ -207,4 +207,4 @@ Een succesvolle reactie toont een nuttige lading JSON met informatie betreffende
 
 ## Volgende stappen {#next-steps}
 
-U hebt een engine gemaakt met de API en er is een unieke engine-id verkregen als onderdeel van de responsstructuur. U kunt dit herkenningsteken van de Motor in het volgende leerprogramma gebruiken aangezien u leert hoe te [ creëren, een Model te trainen en te evalueren gebruikend API ](./train-evaluate-model-api.md).
+U hebt een engine gemaakt met de API en er is een unieke engine-id verkregen als onderdeel van de responsstructuur. U kunt dit herkenningsteken van de Motor in het volgende leerprogramma gebruiken aangezien u leert hoe te [&#x200B; creëren, een Model te trainen en te evalueren gebruikend API &#x200B;](./train-evaluate-model-api.md).

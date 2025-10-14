@@ -223,7 +223,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` gebruiken om [ uw gecreeerde vraag ](#cancel-a-query) te annuleren.
+>U kunt de waarde van `_links.cancel` gebruiken om [&#x200B; uw gecreeerde vraag &#x200B;](#cancel-a-query) te annuleren.
 
 ### Een query ophalen op ID
 
@@ -294,7 +294,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` gebruiken om [ uw gecreeerde vraag ](#cancel-a-query) te annuleren.
+>U kunt de waarde van `_links.cancel` gebruiken om [&#x200B; uw gecreeerde vraag &#x200B;](#cancel-a-query) te annuleren.
 
 ### Een query annuleren of verwijderen op een andere manier
 

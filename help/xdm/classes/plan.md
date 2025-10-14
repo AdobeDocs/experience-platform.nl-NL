@@ -13,7 +13,7 @@ ht-degree: 0%
 
 In het Model van de Gegevens van de Ervaring (XDM), vangt de [!UICONTROL Plan] klasse de minimumreeks eigenschappen die een plan, zoals een ziekteplan of een verzekeringsplan bepalen.
 
-![ structuur van de Klasse ](../images/classes/plan.png)
+![&#x200B; structuur van de Klasse &#x200B;](../images/classes/plan.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -23,4 +23,4 @@ In het Model van de Gegevens van de Ervaring (XDM), vangt de [!UICONTROL Plan] k
 
 {style="table-layout:auto"}
 
-De klasse kan met de [[!UICONTROL Healthcare Plan Details] gebiedsgroep ](../field-groups/plan/healthcare-plan-details.md) worden uitgebreid om verdere details over een plan van de ziekteverzekering te beschrijven.
+De klasse kan met de [[!UICONTROL Healthcare Plan Details] gebiedsgroep &#x200B;](../field-groups/plan/healthcare-plan-details.md) worden uitgebreid om verdere details over een plan van de ziekteverzekering te beschrijven.

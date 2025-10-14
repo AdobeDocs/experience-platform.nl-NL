@@ -19,17 +19,17 @@ Het tabblad [!UICONTROL Scheduled Queries] biedt een overzicht van al uw gepland
 
 Als u naar het tabblad [!UICONTROL Scheduled Queries] wilt navigeren, selecteert u **[!UICONTROL Queries]** in de linkernavigatiebalk, gevolgd door **[!UICONTROL Scheduled Queries]**
 
-![ het Geplande lusje van Vragen in de werkruimte van Vragen met Gepland benadrukte Vragen en Vragen.](../images/ui/monitor-queries/scheduled-queries.png)
+![&#x200B; het Geplande lusje van Vragen in de werkruimte van Vragen met Gepland benadrukte Vragen en Vragen.](../images/ui/monitor-queries/scheduled-queries.png)
 
 In de onderstaande tabel wordt elke beschikbare kolom beschreven.
 
 >[!NOTE]
 >
->Het waakzame abonnementspictogram (![ een waakzaam abonnementspictogram.](/help/images/icons/alert-add.png)) bevindt zich in elke rij in een kolom zonder titel. Zie de [ waakzame abonnementen ](#alert-subscription) sectie voor meer informatie.
+>Het waakzame abonnementspictogram (![&#x200B; een waakzaam abonnementspictogram.](/help/images/icons/alert-add.png)) bevindt zich in elke rij in een kolom zonder titel. Zie de [&#x200B; waakzame abonnementen &#x200B;](#alert-subscription) sectie voor meer informatie.
 
 | Kolom | Beschrijving |
 |---|---|
-| **[!UICONTROL Name]** | Het naamveld is de sjabloonnaam of de eerste paar tekens van uw SQL-query. Om het even welke vraag die door UI met de Redacteur van de Vraag wordt gecreeerd wordt genoemd bij aanvang. Als de query via de API is gemaakt, wordt de naam ervan een fragment van de eerste SQL die wordt gebruikt om de query te maken. Selecteer een item in de kolom [!UICONTROL Name] om een lijst weer te geven met alle aan de query gekoppelde uitvoering. Voor meer informatie, zie de [ vraag looppas planningsdetails ](#query-runs) sectie. |
+| **[!UICONTROL Name]** | Het naamveld is de sjabloonnaam of de eerste paar tekens van uw SQL-query. Om het even welke vraag die door UI met de Redacteur van de Vraag wordt gecreeerd wordt genoemd bij aanvang. Als de query via de API is gemaakt, wordt de naam ervan een fragment van de eerste SQL die wordt gebruikt om de query te maken. Selecteer een item in de kolom [!UICONTROL Name] om een lijst weer te geven met alle aan de query gekoppelde uitvoering. Voor meer informatie, zie de [&#x200B; vraag looppas planningsdetails &#x200B;](#query-runs) sectie. |
 | **[!UICONTROL Template]** | De sjabloonnaam van de query. Selecteer een sjabloonnaam om naar de Query-editor te navigeren. Het vraagmalplaatje wordt getoond in de Redacteur van de Vraag voor gemak. Als er geen malplaatjenaam is, wordt de rij duidelijk met een koppelteken en er is geen capaciteit om aan de Redacteur van de Vraag om de vraag te bekijken opnieuw te richten. |
 | **[!UICONTROL SQL]** | Een fragment van de SQL-query. |
 | **[!UICONTROL Run frequency]** | De frequentie waarmee de query is ingesteld op uitvoeren. De beschikbare waarden zijn `Run once` en `Scheduled` . |
@@ -45,13 +45,13 @@ In de onderstaande tabel wordt elke beschikbare kolom beschreven.
 
 ## Tabelinstellingen aanpassen voor geplande query&#39;s {#customize-table}
 
-U kunt de kolommen op het tabblad [!UICONTROL Scheduled Queries] naar wens aanpassen. Om het [!UICONTROL Customize table] montagedialoog te openen en beschikbare kolommen uit te geven, selecteer het montagespictogram (![ A montagespictogram.](/help/images/icons/column-settings.png) ) vanaf de rechterbovenhoek van het scherm.
+U kunt de kolommen op het tabblad [!UICONTROL Scheduled Queries] naar wens aanpassen. Om het [!UICONTROL Customize table] montagedialoog te openen en beschikbare kolommen uit te geven, selecteer het montagespictogram (![&#x200B; A montagespictogram.](/help/images/icons/column-settings.png) ) vanaf de rechterbovenhoek van het scherm.
 
 >[!NOTE]
 >
 >De kolom [!UICONTROL Created] die verwijst naar de datum waarop het schema is gemaakt, is standaard verborgen.
 
-![ het Geplande lusje van Vragen met het Aanpassen benadrukte pictogram van lijstmontages.](../images/ui/monitor-queries/customze-table-settings-icon.png)
+![&#x200B; het Geplande lusje van Vragen met het Aanpassen benadrukte pictogram van lijstmontages.](../images/ui/monitor-queries/customze-table-settings-icon.png)
 
 Schakel de desbetreffende selectievakjes in of uit om een tabelkolom te verwijderen of toe te voegen. Selecteer vervolgens **[!UICONTROL Apply]** om uw keuzes te bevestigen.
 
@@ -59,13 +59,13 @@ Schakel de desbetreffende selectievakjes in of uit om een tabelkolom te verwijde
 >
 >Om het even welke vraag die door UI werd gecreeerd wordt een genoemd malplaatje als deel van het creatieproces. De sjabloonnaam wordt weergegeven in de sjabloonkolom. Als de query via de API is gemaakt, is de sjabloonkolom leeg.
 
-![ het Customize de dialoog van lijstmontages.](../images/ui/monitor-queries/customize-table-dialog.png)
+![&#x200B; het Customize de dialoog van lijstmontages.](../images/ui/monitor-queries/customize-table-dialog.png)
 
 ## Geplande query&#39;s beheren met inlinehandelingen {#inline-actions}
 
-De weergave [!UICONTROL Scheduled Queries] biedt verschillende inline-handelingen om al uw geplande query&#39;s vanaf één locatie te beheren. Inline-handelingen worden aangegeven in elke rij met ovaal. Selecteer de ellips van een geplande vraag die u wilt leiden om de beschikbare opties in een pop-up menu te zien. Tot de beschikbare opties behoren [[!UICONTROL Disable schedule]](#disable) of [!UICONTROL Enable schedule] , [[!UICONTROL Delete schedule]](#delete) , [[!UICONTROL Subscribe]](#alert-subscription) om waarschuwingen te vragen en [ Inschakelen of [!UICONTROL Disable quarantine]](#quarantined-queries) .
+De weergave [!UICONTROL Scheduled Queries] biedt verschillende inline-handelingen om al uw geplande query&#39;s vanaf één locatie te beheren. Inline-handelingen worden aangegeven in elke rij met ovaal. Selecteer de ellips van een geplande vraag die u wilt leiden om de beschikbare opties in een pop-up menu te zien. Tot de beschikbare opties behoren [[!UICONTROL Disable schedule]](#disable) of [!UICONTROL Enable schedule] , [[!UICONTROL Delete schedule]](#delete) , [[!UICONTROL Subscribe]](#alert-subscription) om waarschuwingen te vragen en [&#x200B; Inschakelen of [!UICONTROL Disable quarantine]](#quarantined-queries) .
 
-![ het Geplande lusje van Vragen met de gealigneerde actie ellipsen en popup menu benadrukte.](../images/ui/monitor-queries/inline-actions.png)
+![&#x200B; het Geplande lusje van Vragen met de gealigneerde actie ellipsen en popup menu benadrukte.](../images/ui/monitor-queries/inline-actions.png)
 
 ### Een geplande query in- of uitschakelen {#disable}
 
@@ -83,19 +83,19 @@ Als u een geplande query wilt verwijderen, selecteert u de ellips voor de geplan
 
 Zodra een geplande vraag wordt geschrapt, wordt het **niet** verwijderd uit de lijst van geplande vragen. De inline-acties van de ovalen worden verwijderd en vervangen door het pictogram voor het toevoegen van een waarschuwing met grijs weergegeven. U kunt zich niet abonneren op waarschuwingen voor het verwijderde schema. De rij blijft in UI om informatie over looppas te verstrekken die als deel van de geplande vraag wordt geleid.
 
-![ het Geplande lusje van Vragen met een geschrapte geplande vraag en grayed uit het waarschuwingspictogram van het abonnement benadrukte.](../images/ui/monitor-queries/post-delete.png)
+![&#x200B; het Geplande lusje van Vragen met een geschrapte geplande vraag en grayed uit het waarschuwingspictogram van het abonnement benadrukte.](../images/ui/monitor-queries/post-delete.png)
 
-Als u looppas voor dat vraagmalplaatje wilt plannen, selecteer de malplaatjenaam van de aangewezen rij om aan de Redacteur van de Vraag te navigeren, dan volg de [ instructies om een programma aan een vraag ](./query-schedules.md#create-schedule) toe te voegen zoals die in de documentatie wordt beschreven.
+Als u looppas voor dat vraagmalplaatje wilt plannen, selecteer de malplaatjenaam van de aangewezen rij om aan de Redacteur van de Vraag te navigeren, dan volg de [&#x200B; instructies om een programma aan een vraag &#x200B;](./query-schedules.md#create-schedule) toe te voegen zoals die in de documentatie wordt beschreven.
 
 ### Abonneren op waarschuwingen {#alert-subscription}
 
-Om aan alarm voor geplande vraaglooppas in te tekenen, selecteer of `...` (ellipse) of waakzaam pictogram van het abonnement (![ een waakzaam abonnementspictogram.](/help/images/icons/alert-add.png) ) voor de geplande query die u wilt beheren. Het vervolgkeuzemenu Handelingen inline wordt weergegeven. Selecteer vervolgens **[!UICONTROL Subscribe]** uit de beschikbare opties.
+Om aan alarm voor geplande vraaglooppas in te tekenen, selecteer of `...` (ellipse) of waakzaam pictogram van het abonnement (![&#x200B; een waakzaam abonnementspictogram.](/help/images/icons/alert-add.png) ) voor de geplande query die u wilt beheren. Het vervolgkeuzemenu Handelingen inline wordt weergegeven. Selecteer vervolgens **[!UICONTROL Subscribe]** uit de beschikbare opties.
 
-![ de geplande vraagwerkruimte met een ellips, waakzaam het abonnementspictogram, en het gealigneerde benadrukte menu van actities.](../images/ui/monitor-queries/subscribe.png)
+![&#x200B; de geplande vraagwerkruimte met een ellips, waakzaam het abonnementspictogram, en het gealigneerde benadrukte menu van actities.](../images/ui/monitor-queries/subscribe.png)
 
 Het dialoogvenster [!UICONTROL Alerts] wordt geopend. In het dialoogvenster [!UICONTROL Alerts] wordt u geabonneerd op zowel UI-berichten als e-mailwaarschuwingen. Er zijn verschillende abonnementsopties beschikbaar voor waarschuwingen: `start`, `success`, `failure`, `quarantine` en `delay` . Controleer de desbetreffende doos of vakjes en selecteer **[!UICONTROL Save]** om u te abonneren.
 
-![ de waakzame dialoog van abonnementen.](../images/ui/monitor-queries/alert-subscription-dialog.png)
+![&#x200B; de waakzame dialoog van abonnementen.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
 In de onderstaande tabel worden de ondersteunde typen querywaarschuwingen beschreven:
 
@@ -104,20 +104,20 @@ In de onderstaande tabel worden de ondersteunde typen querywaarschuwingen beschr
 | `start` | Deze waarschuwing brengt u op de hoogte wanneer een geplande vraaglooppas in werking wordt gesteld of begint te verwerken. |
 | `success` | Deze waarschuwing geeft aan wanneer een geplande query correct is uitgevoerd en geeft aan dat de query zonder fouten is uitgevoerd. |
 | `failed` | Deze waarschuwing treedt op wanneer een geplande query een fout aantreft of niet met succes wordt uitgevoerd. Hiermee kunt u problemen snel identificeren en verhelpen. |
-| `quarantine` | Dit alarm wordt geactiveerd wanneer een geplande vraaglooppas in quarantined staat wordt gezet. Wanneer de vragen in de [ quarantaineeigenschap ](#quarantined-queries) worden ingeschreven, wordt om het even welke geplande vraag die tien opeenvolgende looppas ontbreekt automatisch gezet in a [!UICONTROL Quarantined] staat. Vervolgens hebben zij uw tussenkomst nodig voordat verdere executies kunnen plaatsvinden. |
-| `delay` | Dit alarm brengt u op de hoogte als er a [ vertraging in het resultaat van een vraaguitvoering ](#query-run-delay) voorbij een gespecificeerde drempel is. U kunt een douanetijd plaatsen die de waakzaamheid teweegbrengen wanneer de vraaglooppas voor die duur zonder of het voltooien of het ontbreken. |
+| `quarantine` | Dit alarm wordt geactiveerd wanneer een geplande vraaglooppas in quarantined staat wordt gezet. Wanneer de vragen in de [&#x200B; quarantaineeigenschap &#x200B;](#quarantined-queries) worden ingeschreven, wordt om het even welke geplande vraag die tien opeenvolgende looppas ontbreekt automatisch gezet in a [!UICONTROL Quarantined] staat. Vervolgens hebben zij uw tussenkomst nodig voordat verdere executies kunnen plaatsvinden. |
+| `delay` | Dit alarm brengt u op de hoogte als er a [&#x200B; vertraging in het resultaat van een vraaguitvoering &#x200B;](#query-run-delay) voorbij een gespecificeerde drempel is. U kunt een douanetijd plaatsen die de waakzaamheid teweegbrengen wanneer de vraaglooppas voor die duur zonder of het voltooien of het ontbreken. |
 
 >[!NOTE]
 >
->Om op de hoogte te worden gebracht van vraaglooppas die quarantined worden, moet u de geplande vraaglooppas in de [ quarantaineeigenschap ](#quarantined-queries) eerst inschrijven.
+>Om op de hoogte te worden gebracht van vraaglooppas die quarantined worden, moet u de geplande vraaglooppas in de [&#x200B; quarantaineeigenschap &#x200B;](#quarantined-queries) eerst inschrijven.
 
-Zie de [ waakzame API documentatie van abonnementen ](../api/alert-subscriptions.md) voor meer informatie.
+Zie de [&#x200B; waakzame API documentatie van abonnementen &#x200B;](../api/alert-subscriptions.md) voor meer informatie.
 
 ### De query-details weergeven {#query-details}
 
-Selecteer het informatiepictogram (![ een informatiepictogram.](/help/images/icons/info.png)) om het deelvenster Details voor de query te bekijken. Het detailspaneel bevat alle relevante informatie over de vraag voorbij de feiten inbegrepen in de geplande vraaglijst. De extra informatie omvat vraagidentiteitskaart, de laatste gewijzigde datum, SQL van de vraag, planningsidentiteitskaart, en het huidige vastgestelde programma.
+Selecteer het informatiepictogram (![&#x200B; een informatiepictogram.](/help/images/icons/info.png)) om het deelvenster Details voor de query te bekijken. Het detailspaneel bevat alle relevante informatie over de vraag voorbij de feiten inbegrepen in de geplande vraaglijst. De extra informatie omvat vraagidentiteitskaart, de laatste gewijzigde datum, SQL van de vraag, planningsidentiteitskaart, en het huidige vastgestelde programma.
 
-![ het Geplande lusje van Vragen met het informatiepictogram en het benadrukte detailspaneel.](../images/ui/monitor-queries/details-panel.png)
+![&#x200B; het Geplande lusje van Vragen met het informatiepictogram en het benadrukte detailspaneel.](../images/ui/monitor-queries/details-panel.png)
 
 ## Quarantated query&#39;s {#quarantined-queries}
 
@@ -129,15 +129,15 @@ Wanneer u bent ingeschreven voor de quarantainefunctie, wordt elke geplande quer
 
 Als u een geplande query voor de quarantainefunctie wilt inschakelen, selecteert u de ellipsen (`...`) gevolgd door [!UICONTROL Enable quarantine] in het vervolgkeuzemenu dat wordt weergegeven.
 
-![ het geplande vraaglusje met de ellipsen en laat quarantaine toe die van het gealigneerde actiemenu wordt benadrukt.](../images/ui/monitor-queries/inline-enable.png)
+![&#x200B; het geplande vraaglusje met de ellipsen en laat quarantaine toe die van het gealigneerde actiemenu wordt benadrukt.](../images/ui/monitor-queries/inline-enable.png)
 
-De vragen kunnen ook in de quarantaineeigenschap tijdens het proces van de programmaverwezenlijking worden ingeschreven. Zie de [ documentatie van vraagprogramma&#39;s ](./query-schedules.md#quarantine) voor meer informatie.
+De vragen kunnen ook in de quarantaineeigenschap tijdens het proces van de programmaverwezenlijking worden ingeschreven. Zie de [&#x200B; documentatie van vraagprogramma&#39;s &#x200B;](./query-schedules.md#quarantine) voor meer informatie.
 
 ## Uitstel van query-uitvoering {#query-run-delay}
 
 Houd de controle over uw computeruren door alarm voor vraagvertragingen te plaatsen. U kunt vraagprestaties controleren en berichten ontvangen als de status van een vraag onveranderd na een specifieke periode blijft. Gebruik het alarm &quot;[!UICONTROL Query Run Delay]&quot;om op de hoogte te worden gebracht als een vraag na een specifieke periode blijft verwerken zonder de voltooiing.
 
-Wanneer u [ aan alarm ](#alert-subscription) voor geplande vraaglooppas intekent, is één van het beschikbare alarm [!UICONTROL Query Run Delay]. Voor deze waarschuwing moet u een drempelwaarde instellen voor de tijd die nodig is om de bewerking uit te voeren, waarna u op de hoogte wordt gesteld van de vertraging bij de verwerking.
+Wanneer u [&#x200B; aan alarm &#x200B;](#alert-subscription) voor geplande vraaglooppas intekent, is één van het beschikbare alarm [!UICONTROL Query Run Delay]. Voor deze waarschuwing moet u een drempelwaarde instellen voor de tijd die nodig is om de bewerking uit te voeren, waarna u op de hoogte wordt gesteld van de vertraging bij de verwerking.
 
 Als u een drempelduur wilt kiezen die de melding activeert, voert u een getal in het tekstinvoerveld in of gebruikt u de pijl-omhoog en -omlaag om de stappen met één minuut te verhogen. Aangezien de drempel in notulen wordt geplaatst, is de maximumduur om een vertraging van de vraaglooppas te waarnemen 1440 minuten (24 uren). De standaardtijdsperiode voor een runtime-vertraging is 150 minuten.
 
@@ -145,15 +145,15 @@ Als u een drempelduur wilt kiezen die de melding activeert, voert u een getal in
 >
 >Een queryuitvoering kan slechts één runtime hebben. Als u de vertragingsdrempel verandert, wordt het veranderd voor gebruiker die aan het alarm en voor uw volledige organisatie wordt geabonneerd.
 
-![ de dialoog van het Alarm op het geplande vraaglusje met het benadrukte gebied van de de vertragingsinput van de vraaglooppas.](../images/ui/monitor-queries/query-run-delay-input.png)
+![&#x200B; de dialoog van het Alarm op het geplande vraaglusje met het benadrukte gebied van de de vertragingsinput van de vraaglooppas.](../images/ui/monitor-queries/query-run-delay-input.png)
 
-Zie intekenen aan alarm sectie leren hoe te [ intekenen aan [!UICONTROL Query Run Delay] alarm ](#alert-subscription).
+Zie intekenen aan alarm sectie leren hoe te [&#x200B; intekenen aan [!UICONTROL Query Run Delay] alarm &#x200B;](#alert-subscription).
 
 ## Filterquery&#39;s {#filter}
 
-U kunt vragen filteren op runtime frequentie. Van het [!UICONTROL Scheduled Queries] lusje, selecteer het filterpictogram (![ A filterpictogram ](/help/images/icons/filter.png)) om de filterzijbalk te openen.
+U kunt vragen filteren op runtime frequentie. Van het [!UICONTROL Scheduled Queries] lusje, selecteer het filterpictogram (![&#x200B; A filterpictogram &#x200B;](/help/images/icons/filter.png)) om de filterzijbalk te openen.
 
-![ het geplande vraaglusje met het benadrukte filterpictogram.](../images/ui/monitor-queries/filter-queries.png)
+![&#x200B; het geplande vraaglusje met het benadrukte filterpictogram.](../images/ui/monitor-queries/filter-queries.png)
 
 Als u de lijst met query&#39;s wilt filteren op basis van de uitvoerfrequentie, schakelt u het selectievakje **[!UICONTROL Scheduled]** of **[!UICONTROL Run once]** in.
 
@@ -161,7 +161,7 @@ Als u de lijst met query&#39;s wilt filteren op basis van de uitvoerfrequentie, 
 >
 >Elke query die is uitgevoerd maar niet is gepland, wordt gekwalificeerd als [!UICONTROL Run once] .
 
-![ het geplande vraaglusje met de benadrukte filterzijbalk.](../images/ui/monitor-queries/filter-sidebar.png)
+![&#x200B; het geplande vraaglusje met de benadrukte filterzijbalk.](../images/ui/monitor-queries/filter-sidebar.png)
 
 Wanneer u de filtercriteria hebt ingeschakeld, selecteert u **[!UICONTROL Hide Filters]** om het filterdeelvenster te sluiten.
 
@@ -169,7 +169,7 @@ Wanneer u de filtercriteria hebt ingeschakeld, selecteert u **[!UICONTROL Hide F
 
 Als u de pagina met planningsdetails wilt openen, selecteert u een querynaam op het tabblad [!UICONTROL Scheduled Queries] . Deze mening verstrekt een lijst van alle looppas die als deel van die geplande vraag wordt uitgevoerd. De verstrekte informatie omvat de begin en eindtijd, status, en gebruikte dataset.
 
-![ de pagina van planningsdetails.](../images/ui/monitor-queries/schedule-details.png)
+![&#x200B; de pagina van planningsdetails.](../images/ui/monitor-queries/schedule-details.png)
 
 Deze informatie wordt verstrekt in een vijf-kolomlijst. Elke rij geeft een query-uitvoering aan.
 
@@ -183,25 +183,25 @@ Deze informatie wordt verstrekt in een vijf-kolomlijst. Elke rij geeft een query
 
 Details van de query die wordt gepland, zijn beschikbaar in het deelvenster [!UICONTROL Properties] . Dit deelvenster bevat de initiële query-id, het type client, de sjabloonnaam, de query-SQL en het corresponderende schema.
 
-![ de pagina van planningsdetails met het benadrukte eigenschappen paneel.](../images/ui/monitor-queries/properties-panel.png)
+![&#x200B; de pagina van planningsdetails met het benadrukte eigenschappen paneel.](../images/ui/monitor-queries/properties-panel.png)
 
 Selecteer een id voor een query om naar de pagina met uitvoerdetails te navigeren en query-informatie weer te geven.
 
-![ het scherm van planningsdetails met een in werking gestelde benadrukte identiteitskaart.](../images/ui/monitor-queries/navigate-to-run-details.png)
+![&#x200B; het scherm van planningsdetails met een in werking gestelde benadrukte identiteitskaart.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
 ## Overzicht van query-uitvoering {#query-run-overview}
 
 [!UICONTROL Query run overview] verstrekt informatie over individuele looppas voor deze geplande vraag en een meer gedetailleerde specificatie van de looppasstatus. Deze pagina omvat ook de cliëntinformatie en details van om het even welke fouten die de vraag kunnen hebben veroorzaakt om te ontbreken.
 
-![ het scherm van looppasdetails met de benadrukte overzichtssectie.](../images/ui/monitor-queries/query-run-details.png)
+![&#x200B; het scherm van looppasdetails met de benadrukte overzichtssectie.](../images/ui/monitor-queries/query-run-details.png)
 
 De sectie met de querystatus bevat de foutcode en het foutbericht als de query is mislukt.
 
-![ het scherm van looppasdetails met de benadrukte foutensectie.](../images/ui/monitor-queries/failed-query.png)
+![&#x200B; het scherm van looppasdetails met de benadrukte foutensectie.](../images/ui/monitor-queries/failed-query.png)
 
 U kunt de SQL-query van deze weergave naar het klembord kopiëren. Als u de query wilt kopiëren, selecteert u het kopieerpictogram rechtsboven in het SQL-fragment. Een pop-upbericht bevestigt dat de code is gekopieerd.
 
-![ het scherm van looppasdetails met het SQL benadrukte exemplaarpictogram.](../images/ui/monitor-queries/copy-sql.png)
+![&#x200B; het scherm van looppasdetails met het SQL benadrukte exemplaarpictogram.](../images/ui/monitor-queries/copy-sql.png)
 
 ### Details uitvoeren voor query&#39;s met anoniem blok {#anonymous-block-queries}
 
@@ -211,16 +211,16 @@ Vragen die anonieme blokken gebruiken om uit hun SQL-instructies te bestaan, wor
 >
 >De looppasdetails van een anoniem blok dat het bevel DROP gebruikt zullen **niet** als afzonderlijke subquery worden gemeld. De afzonderlijke looppasdetails zijn beschikbaar voor vragen CTAS, vragen ITAS, en verklaringen van de KOPIE die als anonieme die bloksubquery&#39;s worden gebruikt. Details uitvoeren voor de opdracht DROP wordt momenteel niet ondersteund.
 
-Anonieme blokken worden aangegeven door het gebruik van een voorvoegsel `$$` vóór de query. Om meer over anonieme blokken in de vraagdienst te weten te komen, zie het [ anonieme blokdocument ](../key-concepts/anonymous-block.md).
+Anonieme blokken worden aangegeven door het gebruik van een voorvoegsel `$$` vóór de query. Om meer over anonieme blokken in de vraagdienst te weten te komen, zie het [&#x200B; anonieme blokdocument &#x200B;](../key-concepts/anonymous-block.md).
 
 Anonieme subquery&#39;s voor blokken hebben tabs links van de status van de run. Selecteer een tabblad om de uitvoergegevens weer te geven.
 
-![ het overzicht van de looppas van de Vraag die een anonieme blokvraag toont. De veelvoudige vraaglusjes worden benadrukt.](../images/ui/monitor-queries/anonymous-block-overview.png)
+![&#x200B; het overzicht van de looppas van de Vraag die een anonieme blokvraag toont. De veelvoudige vraaglusjes worden benadrukt.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
 Als een anonieme blokquery mislukt, kunt u de foutcode voor dat specifieke blok vinden via deze UI.
 
-![ het overzicht van de looppas van de Vraag die een anonieme blokvraag met de foutencode voor één enkel benadrukt blok toont.](../images/ui/monitor-queries/anonymous-block-failed-query.png)
+![&#x200B; het overzicht van de looppas van de Vraag die een anonieme blokvraag met de foutencode voor één enkel benadrukt blok toont.](../images/ui/monitor-queries/anonymous-block-failed-query.png)
 
 Selecteer **[!UICONTROL Query]** om terug te keren naar het scherm met de details van de planning of **[!UICONTROL Scheduled Queries]** om terug te keren naar het tabblad [!UICONTROL Scheduled Queries] .
 
-![ het scherm van looppasdetails met benadrukte Vraag.](../images/ui/monitor-queries/return-navigation.png)
+![&#x200B; het scherm van looppasdetails met benadrukte Vraag.](../images/ui/monitor-queries/return-navigation.png)

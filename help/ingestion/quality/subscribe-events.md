@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Meldingen voor gegevensinvoer
 
-Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit meerdere stappen. Zodra u gegevensbestanden hebt geïdentificeerd die in [!DNL Experience Platform] moeten worden opgenomen, begint het innameproces en elke stap komt opeenvolgend voor tot de gegevens met succes worden opgenomen of ontbreken. Het insluitingsproces kan worden in werking gesteld gebruikend [ de Ingestie API van de Partij van Adobe Experience Platform ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) of het gebruiken van het [!DNL Experience Platform] gebruikersinterface.
+Het proces om gegevens in Adobe Experience Platform in te voeren bestaat uit meerdere stappen. Zodra u gegevensbestanden hebt geïdentificeerd die in [!DNL Experience Platform] moeten worden opgenomen, begint het innameproces en elke stap komt opeenvolgend voor tot de gegevens met succes worden opgenomen of ontbreken. Het insluitingsproces kan worden in werking gesteld gebruikend [&#x200B; de Ingestie API van de Partij van Adobe Experience Platform &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) of het gebruiken van het [!DNL Experience Platform] gebruikersinterface.
 
 Gegevens die in [!DNL Experience Platform] worden geladen, moeten meerdere stappen doorlopen om het doel, de [!DNL Data Lake] of de [!DNL Real-Time Customer Profile] gegevensopslag, te bereiken. Elke stap omvat het verwerken van de gegevens, het valideren van de gegevens en het opslaan van de gegevens voordat u deze doorgeeft aan de volgende stap. Afhankelijk van de hoeveelheid gegevens die wordt opgenomen, kan dit een tijdrovend proces worden en er is altijd een kans dat het proces mislukt door validatie-, semantiek- of verwerkingsfouten. In geval van een fout moeten de gegevensproblemen worden opgelost en moet het volledige innameproces opnieuw worden gestart met de gecorrigeerde gegevensbestanden.
 
@@ -21,9 +21,9 @@ Als hulp bij het controleren van het innameproces, maakt [!DNL Experience Platfo
 
 ## Webhaak registreren voor meldingen over gegevensinvoer
 
-Om gegevensopname berichten te ontvangen, moet u [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) gebruiken om een webhaak aan uw integratie van Experience Platform te registreren.
+Om gegevensopname berichten te ontvangen, moet u [&#x200B; Adobe Developer Console &#x200B;](https://www.adobe.com/go/devs_console_ui) gebruiken om een webhaak aan uw integratie van Experience Platform te registreren.
 
-Volg het leerprogramma op [ intekenend aan  [!DNL Adobe I/O Event]  berichten ](../../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.
+Volg het leerprogramma op [&#x200B; intekenend aan  [!DNL Adobe I/O Event]  berichten &#x200B;](../../observability/alerts/subscribe.md) voor gedetailleerde stappen op hoe te om dit te verwezenlijken.
 
 >[!IMPORTANT]
 >
@@ -65,13 +65,13 @@ De volgende JSON is een voorbeeld van een berichtlading die naar uw webhaak in h
 | `event_id` | Een unieke, door het systeem gegenereerde id voor het bericht. |
 | `event` | Een object dat de details bevat van de gebeurtenis die de melding heeft geactiveerd. |
 | `event.xdm:datasetId` | De id van de gegevensset waarop de insluitingsgebeurtenis van toepassing is. |
-| `event.xdm:eventCode` | Een statuscode die het type gebeurtenis aangeeft dat voor de gegevensset is geactiveerd. Zie [ bijlage ](#event-codes) voor specifieke waarden en hun definities. |
+| `event.xdm:eventCode` | Een statuscode die het type gebeurtenis aangeeft dat voor de gegevensset is geactiveerd. Zie [&#x200B; bijlage &#x200B;](#event-codes) voor specifieke waarden en hun definities. |
 
-Om het volledige schema voor gebeurtenisberichten te bekijken, verwijs naar de [ openbare bewaarplaats GitHub ](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
+Om het volledige schema voor gebeurtenisberichten te bekijken, verwijs naar de [&#x200B; openbare bewaarplaats GitHub &#x200B;](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
 
 ## Volgende stappen
 
-Nadat u [!DNL Experience Platform] -berichten hebt geregistreerd voor uw project, kunt u ontvangen gebeurtenissen van [!UICONTROL Project overview] weergeven. Verwijs naar de gids op [ het vinden Adobe I/O Events ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies op hoe te om uw gebeurtenissen te vinden.
+Nadat u [!DNL Experience Platform] -berichten hebt geregistreerd voor uw project, kunt u ontvangen gebeurtenissen van [!UICONTROL Project overview] weergeven. Verwijs naar de gids op [&#x200B; het vinden Adobe I/O Events &#x200B;](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) voor gedetailleerde instructies op hoe te om uw gebeurtenissen te vinden.
 
 ## Bijlage
 

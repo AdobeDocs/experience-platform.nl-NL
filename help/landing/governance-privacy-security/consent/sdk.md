@@ -92,7 +92,7 @@ Zodra het gegevenselement wordt gecreeerd, navigeer terug naar de de uitbreiding
 
 ### De extensie op uw website implementeren
 
-Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Verwijs naar de [ het publiceren gids ](../../../tags/ui/publishing/overview.md) in de markeringen documentatie voor gedetailleerde informatie over hoe te om uw bijgewerkte bibliotheek op te stellen bouwt.
+Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Verwijs naar de [&#x200B; het publiceren gids &#x200B;](../../../tags/ui/publishing/overview.md) in de markeringen documentatie voor gedetailleerde informatie over hoe te om uw bijgewerkte bibliotheek op te stellen bouwt.
 
 ## Opdrachten voor wijzigen van toestemming maken {#commands}
 
@@ -101,7 +101,7 @@ Als u de SDK-extensie eenmaal in uw website hebt geïntegreerd, kunt u de Experi
 De opdracht `setConsent` voert twee handelingen uit:
 
 1. Hiermee werkt u de profielkenmerken van de gebruiker rechtstreeks bij in het archief Profiel. Hiermee worden geen gegevens naar het datumpigment verzonden.
-1. Creeert een [ Gebeurtenis van de Ervaring ](../../../xdm/classes/experienceevent.md) die een timestamped rekening van de gebeurtenis van de toestemmingsverandering registreert. Deze gegevens worden rechtstreeks naar het datumpigment verzonden en kunnen worden gebruikt om wijzigingen in de voorkeur voor toestemming in de loop van de tijd bij te houden.
+1. Creeert een [&#x200B; Gebeurtenis van de Ervaring &#x200B;](../../../xdm/classes/experienceevent.md) die een timestamped rekening van de gebeurtenis van de toestemmingsverandering registreert. Deze gegevens worden rechtstreeks naar het datumpigment verzonden en kunnen worden gebruikt om wijzigingen in de voorkeur voor toestemming in de loop van de tijd bij te houden.
 
 ### Wanneer wordt `setConsent` aangeroepen
 
@@ -195,9 +195,9 @@ var setConsent = function () {
 
 ## SDK-reacties verwerken
 
-Alle [!DNL Experience Platform SDK] opdrachten retourneren beloftes die aangeven of de aanroep is geslaagd of mislukt. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie [ reacties van het Bevel ](/help/web-sdk/commands/command-responses.md) voor meer informatie.
+Alle [!DNL Experience Platform SDK] opdrachten retourneren beloftes die aangeven of de aanroep is geslaagd of mislukt. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie [&#x200B; reacties van het Bevel &#x200B;](/help/web-sdk/commands/command-responses.md) voor meer informatie.
 
-Nadat u `setConsent` -aanroepen met de SDK hebt uitgevoerd, kunt u met de profielviewer in de Experience Platform-gebruikersinterface controleren of gegevens in het Profile Store worden gedownload. Zie de sectie over [ doorbladerend profielen door identiteit ](../../../profile/ui/user-guide.md#browse-identity) voor meer informatie.
+Nadat u `setConsent` -aanroepen met de SDK hebt uitgevoerd, kunt u met de profielviewer in de Experience Platform-gebruikersinterface controleren of gegevens in het Profile Store worden gedownload. Zie de sectie over [&#x200B; doorbladerend profielen door identiteit &#x200B;](../../../profile/ui/user-guide.md#browse-identity) voor meer informatie.
 
 ## Volgende stappen
 

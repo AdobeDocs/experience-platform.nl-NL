@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Vergelijkingsfuncties
 
-Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken en `true` of `false` dienovereenkomstig te retourneren. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
+Vergelijkingsfuncties worden gebruikt om verschillende expressies en waarden met elkaar te vergelijken en `true` of `false` dienovereenkomstig te retourneren. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht &#x200B;](./overview.md) worden gevonden.
 
 ## Gelijk
 
@@ -124,4 +124,4 @@ person.birthMonth <= 2
 
 ## Volgende stappen
 
-Nu u over vergelijkingsfuncties hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).
+Nu u over vergelijkingsfuncties hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [&#x200B; overzicht van Profile Query Language &#x200B;](./overview.md).

@@ -14,7 +14,7 @@ ht-degree: 0%
 [!UICONTROL QoE Data Details] Rapportage is een standaard XDM-gegevenstype (Experience Data Model) dat gedetailleerde metriek biedt met betrekking tot de kwaliteit van de ervaring (QoE) tijdens het afspelen van media. Gebruik het gegevenstype [!UICONTROL QoE Data Details] Rapportage voor het vastleggen van details zoals bitsnelheidgegevens, framesnelheden, buffergebeurtenissen, gedropte frames enzovoort. Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden Media Collection die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd. Met dit gegevenstype kunt u de afspeelkwaliteit analyseren, zodat u inzicht hebt in de streamingprestaties, gebruikerservaring en potentiële problemen die tijdens afspeelsessies zijn opgetreden.
 
 +++Select om het gegevenstype van de Gegevens te tonen QoE die van Gegevens het gegevenstype melden.
-![ een diagram van QoE (Kwaliteit van Ervaring) Gegevens die gegevenstype melden.](../images/data-types/qoe-data-details-reporting.png)
+![&#x200B; een diagram van QoE (Kwaliteit van Ervaring) Gegevens die gegevenstype melden.](../images/data-types/qoe-data-details-reporting.png)
 +++
 
 >[!NOTE]

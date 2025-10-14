@@ -32,10 +32,10 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor het bewerken van toewijzingen voor bestaande gegevensstromen | U kunt nu de sets met toewijzingen van een bestaande gegevensstroom bijwerken. U kunt geen toewijzingssets bijwerken voor gegevensstromen die voor eenmalig gebruik waren gepland. Deze functie wordt niet ondersteund voor HTTP API, Adobe Analytics, Adobe Audience Manager en [!DNL Marketo Engage] . Voor meer informatie, zie het leerprogramma bij [ het bijwerken van bronnen dataflows in UI ](../../sources/tutorials/ui/update-dataflows.md). |
-| Ondersteuning voor streaming-opname | U kunt nu functies van het gegevensvoorvoegsel gebruiken wanneer u een streamingbronverbinding maakt. Voor meer informatie, zie het leerprogramma bij [ het creëren van een het stromen bronverbinding in UI ](../../sources/tutorials/ui/create/streaming/http.md). |
+| Ondersteuning voor het bewerken van toewijzingen voor bestaande gegevensstromen | U kunt nu de sets met toewijzingen van een bestaande gegevensstroom bijwerken. U kunt geen toewijzingssets bijwerken voor gegevensstromen die voor eenmalig gebruik waren gepland. Deze functie wordt niet ondersteund voor HTTP API, Adobe Analytics, Adobe Audience Manager en [!DNL Marketo Engage] . Voor meer informatie, zie het leerprogramma bij [&#x200B; het bijwerken van bronnen dataflows in UI &#x200B;](../../sources/tutorials/ui/update-dataflows.md). |
+| Ondersteuning voor streaming-opname | U kunt nu functies van het gegevensvoorvoegsel gebruiken wanneer u een streamingbronverbinding maakt. Voor meer informatie, zie het leerprogramma bij [&#x200B; het creëren van een het stromen bronverbinding in UI &#x200B;](../../sources/tutorials/ui/create/streaming/http.md). |
 
-Voor meer informatie, gelieve te zien het [[!DNL Data Prep]  overzicht ](../../data-prep/home.md).
+Voor meer informatie, gelieve te zien het [[!DNL Data Prep]  overzicht &#x200B;](../../data-prep/home.md).
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
@@ -43,7 +43,7 @@ Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wo
 
 | Functie | Beschrijving |
 | --- | --- |
-| Aanbevelingen van het bedrijfsleven inzake schema | Wanneer het selecteren van klassen en groepen van het schemagebied in de Redacteur UI van het Schema, kunt u een nieuw filter gebruiken om geadviseerde standaardcomponenten te bekijken die op uw specifieke industrie worden gebaseerd. Zie de documentatie over [ de modellen van de industriegegevens ](https://www.adobe.com/go/xdm-industry-erds-en) voor meer informatie over hoe deze componenten met elkaar voor verschillende de gebruiksgevallen van de industrie betrekking hebben. |
+| Aanbevelingen van het bedrijfsleven inzake schema | Wanneer het selecteren van klassen en groepen van het schemagebied in de Redacteur UI van het Schema, kunt u een nieuw filter gebruiken om geadviseerde standaardcomponenten te bekijken die op uw specifieke industrie worden gebaseerd. Zie de documentatie over [&#x200B; de modellen van de industriegegevens &#x200B;](https://www.adobe.com/go/xdm-industry-erds-en) voor meer informatie over hoe deze componenten met elkaar voor verschillende de gebruiksgevallen van de industrie betrekking hebben. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
@@ -57,9 +57,9 @@ De in Real-Time Customer Data Platform beschikbare AI van de klant wordt gebruik
 | ------- | ----------- |
 | Ondersteuning voor Adobe Analytics-gegevens | Bijgewerkte functionaliteit om Adobe Analytics datasets via de bron van Analytics schakelaar zonder de behoefte te steunen om uw gegevens te ETL om aan het schema van de Gebeurtenis van de Consumentenervaring (CEE) in overeenstemming te zijn. |
 | Ondersteuning voor Adobe Audience Manager-gegevens | Bijgewerkte functionaliteit om Adobe Audience Manager datasets via de Audience Manager bronschakelaar te steunen zonder de behoefte om uw gegevens te ETL om aan het schema van de Gebeurtenis van de Consumentenervaring (CEE) in overeenstemming te zijn. |
-| Overzicht van modelprestaties | De Klant AI heeft nu het overzicht tabel van de a [ modelprestaties ](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) binnen de pagina van de Inzichten van de de dienstinstantie. Op het tabblad Modelprestaties worden alle werkelijke conversie- en koelingssnelheden weergegeven. Hierdoor kun je ontcijferen en begrijpen wat er gebeurt in elk van je nevenemmers. |
+| Overzicht van modelprestaties | De Klant AI heeft nu het overzicht tabel van de a [&#x200B; modelprestaties &#x200B;](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) binnen de pagina van de Inzichten van de de dienstinstantie. Op het tabblad Modelprestaties worden alle werkelijke conversie- en koelingssnelheden weergegeven. Hierdoor kun je ontcijferen en begrijpen wat er gebeurt in elk van je nevenemmers. |
 
-Voor meer informatie over gesteunde datasets, zie gelieve de [[!DNL Intelligent Services]  documentatie van de gegevensvoorbereiding ](../../intelligent-services/data-preparation.md).
+Voor meer informatie over gesteunde datasets, zie gelieve de [[!DNL Intelligent Services]  documentatie van de gegevensvoorbereiding &#x200B;](../../intelligent-services/data-preparation.md).
 
 ### Attributie-AI
 
@@ -69,7 +69,7 @@ Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leide
 | ------- | ----------- |
 | Ondersteuning voor Adobe Analytics-gegevens | Bijgewerkte functionaliteit om Adobe Analytics datasets via de bron van Analytics schakelaar zonder de behoefte te steunen om uw gegevens te ETL om aan het schema van de Gebeurtenis van de Consumentenervaring (CEE) in overeenstemming te zijn. |
 
-Voor meer informatie over gesteunde datasets, zie gelieve de [[!DNL Intelligent Services]  documentatie van de gegevensvoorbereiding ](../../intelligent-services/data-preparation.md).
+Voor meer informatie over gesteunde datasets, zie gelieve de [[!DNL Intelligent Services]  documentatie van de gegevensvoorbereiding &#x200B;](../../intelligent-services/data-preparation.md).
 
 ## Segmentatieservice {#segmentation}
 
@@ -81,7 +81,7 @@ Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Aanvullende aggregatiefuncties | De functies van de telling zijn toegevoegd in de Bouwer van het Segment. Met telfuncties kunt u tellen hoe vaak de opgegeven gebeurtenis is uitgevoerd. Meer informatie over de tellingsfuncties kan in de sectie van tellingsfuncties van de [ gids van de Bouwer van het Segment ](../../segmentation/ui/segment-builder.md#count-functions) worden gevonden |
+| Aanvullende aggregatiefuncties | De functies van de telling zijn toegevoegd in de Bouwer van het Segment. Met telfuncties kunt u tellen hoe vaak de opgegeven gebeurtenis is uitgevoerd. Meer informatie over de tellingsfuncties kan in de sectie van tellingsfuncties van de [&#x200B; gids van de Bouwer van het Segment &#x200B;](../../segmentation/ui/segment-builder.md#count-functions) worden gevonden |
 
 Voor meer informatie over [!DNL Segmentation Service], raadpleegt u het [overzicht van segmentatie](../../segmentation/home.md).
 
@@ -93,7 +93,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | U kunt nu een [!DNL Marketo Engage] -bronverbinding maken met behulp van de gebruikersinterface om B2B-gegevens naar Experience Platform te verzenden en deze gegevens up-to-date te houden met Experience Platform-toepassingen. Voor meer informatie, zie de [[!DNL Marketo Engage]  documentatie van de bronschakelaar ](../../sources/connectors/adobe-applications/marketo/marketo.md). |
+| [!DNL Marketo Engage] (Beta) | U kunt nu een [!DNL Marketo Engage] -bronverbinding maken met behulp van de gebruikersinterface om B2B-gegevens naar Experience Platform te verzenden en deze gegevens up-to-date te houden met Experience Platform-toepassingen. Voor meer informatie, zie de [[!DNL Marketo Engage]  documentatie van de bronschakelaar &#x200B;](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 | Beta-bronnen die naar GA gaan | De volgende bronnen zijn gepromoveerd van bèta naar GA: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

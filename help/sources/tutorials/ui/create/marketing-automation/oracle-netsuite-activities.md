@@ -17,16 +17,16 @@ Lees de volgende zelfstudie om te leren hoe u gebeurtenisgegevens van uw [!DNL O
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL Oracle NetSuite] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/marketing-automation.md).
+Als u reeds een geldige [!DNL Oracle NetSuite] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/marketing-automation.md).
 
 >[!TIP]
 >
->Lees het [[!DNL Oracle NetSuite]  overzicht ](../../../../connectors/marketing-automation/oracle-netsuite.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
+>Lees het [[!DNL Oracle NetSuite]  overzicht &#x200B;](../../../../connectors/marketing-automation/oracle-netsuite.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
 
 ## Sluit uw [!DNL Oracle NetSuite] -account aan {#connect-account}
 
@@ -34,7 +34,7 @@ Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTR
 
 Onder de *categorie van de Automatisering van de Marketing*, selecteer **[!DNL Oracle NetSuite Activities]**, en selecteer dan **[!UICONTROL Add data]**.
 
-![ het schermschot UI van Experience Platform voor catalogus met de kaart van de Activiteiten van Oracle NetSuite ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
+![&#x200B; het schermschot UI van Experience Platform voor catalogus met de kaart van de Activiteiten van Oracle NetSuite &#x200B;](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
 
 De pagina **[!UICONTROL Connect Oracle NetSuite Activities account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -46,17 +46,17 @@ De pagina **[!UICONTROL Connect Oracle NetSuite Activities account]** wordt weer
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Oracle NetSuite Activities] -account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![ het schermschot van Experience Platform UI om de rekening van de Activiteiten van Oracle NetSuite met een bestaande rekening te verbinden ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
+![&#x200B; het schermschot van Experience Platform UI om de rekening van de Activiteiten van Oracle NetSuite met een bestaande rekening te verbinden &#x200B;](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
 
 ### Nieuwe account {#new-account}
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ het schermschot van Experience Platform UI om de rekening van de Activiteiten van Oracle NetSuite met een nieuwe rekening te verbinden ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
+![&#x200B; het schermschot van Experience Platform UI om de rekening van de Activiteiten van Oracle NetSuite met een nieuwe rekening te verbinden &#x200B;](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Oracle NetSuite Activities] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/marketing-automation.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Oracle NetSuite Activities] -account. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](../../dataflow/marketing-automation.md) te brengen.
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -64,7 +64,7 @@ De onderstaande secties bevatten aanvullende bronnen waarnaar u kunt verwijzen w
 
 ### Toewijzing {#mapping}
 
-Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
@@ -82,4 +82,4 @@ Tijdens het ophalen van gegevens reageert [!DNL Oracle NetSuite] met de laatst g
 
 Als u de waarden voor uw schema hebt opgegeven, selecteert u **[!UICONTROL Next]** .
 
-![ de het plannen stap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/scheduling.png)
+![&#x200B; de het plannen stap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/scheduling.png)

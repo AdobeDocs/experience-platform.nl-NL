@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 ## dinsdag 5 april 2021
 
@@ -29,4 +29,4 @@ ht-degree: 1%
 * Gebruikt de Media Collection API voor het volgen van media
 * Ondersteunt het bijhouden van spelerstatussen
 
-De [ Analytics van Adobe Media (3.x SDK) voor Audio en Video Uitbreiding ](./overview.md) voegt de de bibliotheek van de Analyse van de KernMedia 3.x JavaScript toe. Deze bibliotheek biedt de functionaliteit voor het bijhouden van media naar een site of project waarvoor tags zijn ingeschakeld.
+De [&#x200B; Analytics van Adobe Media (3.x SDK) voor Audio en Video Uitbreiding &#x200B;](./overview.md) voegt de de bibliotheek van de Analyse van de KernMedia 3.x JavaScript toe. Deze bibliotheek biedt de functionaliteit voor het bijhouden van media naar een site of project waarvoor tags zijn ingeschakeld.

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # De Reactor-API verifiëren en openen
 
-Om [ Reactor API ](https://developer.adobe.com/experience-platform-apis/references/reactor/) te gebruiken om de uitbreidingen van Codes tot stand te brengen en te beheren, moet elk verzoek de volgende authentificatiekopballen omvatten:
+Om [&#x200B; Reactor API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/reactor/) te gebruiken om de uitbreidingen van Codes tot stand te brengen en te beheren, moet elk verzoek de volgende authentificatiekopballen omvatten:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -23,7 +23,7 @@ In deze handleiding wordt uitgelegd hoe u de Adobe Developer Console kunt gebrui
 
 ## Toegang voor ontwikkelaars tot Adobe Experience Platform {#gain-developer-access}
 
-Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u toegang voor ontwikkelaars tot Experience Platform hebben. Om ontwikkelaartoegang te verkrijgen, volg de eerste stappen in het [ de authentificatieleerprogramma van Experience Platform ](/help/landing/api-authentication.md). Zodra u de [ stap van de Toegang van de Gebruiker van de Versterking ](/help/landing/api-authentication.md#gain-user-access) hebt voltooid, terugkeer naar dit leerprogramma om de geloofsbrieven te produceren specifiek voor Reactor API.
+Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u toegang voor ontwikkelaars tot Experience Platform hebben. Om ontwikkelaartoegang te verkrijgen, volg de eerste stappen in het [&#x200B; de authentificatieleerprogramma van Experience Platform &#x200B;](/help/landing/api-authentication.md). Zodra u de [&#x200B; stap van de Toegang van de Gebruiker van de Versterking &#x200B;](/help/landing/api-authentication.md#gain-user-access) hebt voltooid, terugkeer naar dit leerprogramma om de geloofsbrieven te produceren specifiek voor Reactor API.
 
 ## Toegangsreferenties genereren {#generate-access-credentials}
 
@@ -39,7 +39,7 @@ De stappen voor het genereren van deze waarden worden hieronder in detail bespro
 
 ### Eenmalige installatie {#one-time-setup}
 
-Ga naar [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) en teken binnen met uw Adobe ID. Daarna, volg de stappen die in het leerprogramma worden geschetst op [ creërend een leeg project ](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in de documentatie van Developer Console.
+Ga naar [&#x200B; Adobe Developer Console &#x200B;](https://www.adobe.com/go/devs_console_ui) en teken binnen met uw Adobe ID. Daarna, volg de stappen die in het leerprogramma worden geschetst op [&#x200B; creërend een leeg project &#x200B;](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in de documentatie van Developer Console.
 
 Zodra u een project hebt gecreeerd, uitgezocht **voeg API** op het **Overzicht van het Project** scherm toe.
 
@@ -53,11 +53,11 @@ Selecteer vervolgens het verificatietype dat u wilt genereren voor toegangstoken
 
 >[!IMPORTANT]
 >
->Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE &#x200B; Vervangen &#x200B;]{type=negative} [ een Symbolisch van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt) in het de authentificatieleerprogramma van Experience Platform API.
+>Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE &#x200B; Vervangen &#x200B;]{type=negative} [&#x200B; een Symbolisch van het Web JSON (JWT) &#x200B;](/help/landing/api-authentication.md#jwt) in het de authentificatieleerprogramma van Experience Platform API.
 
 Selecteer **daarna** om verder te gaan.
 
-![ Uitgezochte Server-aan-Server authentificatiemethode.](/help/tags/images/api/getting-started/oauth-authentication-method.png)
+![&#x200B; Uitgezochte Server-aan-Server authentificatiemethode.](/help/tags/images/api/getting-started/oauth-authentication-method.png)
 
 In het volgende scherm wordt u gevraagd een of meer productprofielen te selecteren die u aan de API-integratie wilt koppelen.
 
@@ -76,7 +76,7 @@ Zodra API aan het project is toegevoegd, **[!UICONTROL Experience Platform API]*
 * `{API_KEY}` ([!UICONTROL Client ID])
 * `{ORG_ID}` ([!UICONTROL Organization ID])
 
-![ de informatie van de Integratie na het toevoegen van API in Developer Console.](/help/tags/images/api/getting-started/api-integration-information.png)
+![&#x200B; de informatie van de Integratie na het toevoegen van API in Developer Console.](/help/tags/images/api/getting-started/api-integration-information.png)
 
 ### Een toegangstoken genereren {#generate-access-token}
 
@@ -95,19 +95,19 @@ U hebt twee opties om uw toegangstokens te produceren, afhankelijk van uw gebrui
 
 Als u handmatig een nieuwe `{ACCESS_TOKEN}` wilt genereren, navigeert u naar **[!UICONTROL Credentials]** > **[!UICONTROL OAuth Server-to-Server]** en selecteert u **[!UICONTROL Generate access token]** (zie hieronder).
 
-![ opname van het Scherm van hoe en toegangstoken in Developer Console UI wordt geproduceerd.](/help/tags/images/api/getting-started/generate-access-token.gif)
+![&#x200B; opname van het Scherm van hoe en toegangstoken in Developer Console UI wordt geproduceerd.](/help/tags/images/api/getting-started/generate-access-token.gif)
 
 Er wordt een nieuw toegangstoken gegenereerd en er wordt een knop opgegeven waarmee het token naar het klembord kan worden gekopieerd. Deze waarde wordt gebruikt voor de vereiste machtigingsheader en moet worden opgegeven in de indeling `Bearer {ACCESS_TOKEN}` .
 
 #### Automatisch token genereren {#auto-token}
 
-U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [ gebruikend Postman om API vraag ](/help/landing/api-authentication.md#use-postman) in de de authentificatiegids van Experience Platform voor authentiek te verklaren en te testen API.
+U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [&#x200B; gebruikend Postman om API vraag &#x200B;](/help/landing/api-authentication.md#use-postman) in de de authentificatiegids van Experience Platform voor authentiek te verklaren en te testen API.
 
 ## API-referenties testen {#test-api-credentials}
 
 Door de stappen in deze zelfstudie uit te voeren, hebt u geldige waarden voor `{ORG_ID}`, `{API_KEY}` en `{ACCESS_TOKEN}` . U kunt deze waarden nu testen door ze te gebruiken in een eenvoudig cURL-verzoek aan de Reactor-API.
 
-Begin door te proberen om een API vraag te maken aan [ lijst alle bedrijven ](./endpoints/companies.md#list).
+Begin door te proberen om een API vraag te maken aan [&#x200B; lijst alle bedrijven &#x200B;](./endpoints/companies.md#list).
 
 >[!NOTE]
 >
@@ -117,11 +117,11 @@ Nadat u hebt bevestigd dat uw toegangsreferenties werken, gaat u verder met de d
 
 ## API-voorbeeldaanroepen lezen {#read-sample-api-calls}
 
-Elke eindpuntgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/api-guide.md#sample-api) in de begonnen gids voor Experience Platform APIs te lezen.
+Elke eindpuntgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/api-guide.md#sample-api) in de begonnen gids voor Experience Platform APIs te lezen.
 
 ## Volgende stappen {#next-steps}
 
 Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het richten aan Reactor API. Selecteer een van de eindpunthulplijnen om aan de slag te gaan:
 
-* [ Reactor API verwijzingsdocumentatie ](https://developer.adobe.com/experience-platform-apis/references/reactor/)
+* [&#x200B; Reactor API verwijzingsdocumentatie &#x200B;](https://developer.adobe.com/experience-platform-apis/references/reactor/)
 * [Overzicht van de Reactor-API](/help/tags/api/overview.md)

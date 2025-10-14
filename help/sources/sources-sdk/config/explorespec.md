@@ -84,4 +84,4 @@ De specificaties van het onderzoek bepalen de parameters die voor het onderzoeke
 
 ## Volgende stappen
 
-Als uw verkenningsspecificaties zijn gevuld, kunt u doorgaan met het maken van een volledige verbindingsspecificatie met de API [!DNL Flow Service] . Zie de [ Zelfbediening gids van de Bron (van de Partij SDK) API ](../api/api-overview.md) voor meer informatie.
+Als uw verkenningsspecificaties zijn gevuld, kunt u doorgaan met het maken van een volledige verbindingsspecificatie met de API [!DNL Flow Service] . Zie de [&#x200B; Zelfbediening gids van de Bron (van de Partij SDK) API &#x200B;](../api/api-overview.md) voor meer informatie.

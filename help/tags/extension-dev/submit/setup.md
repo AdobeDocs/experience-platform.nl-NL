@@ -13,15 +13,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Voor het ontwikkelen van extensies voor tags in Adobe Experience Platform is het nodig een Adobe Experience Cloud-organisatie te registreren.
 
-De klanten van het Experience Cloud worden toegewezen een organisatie wanneer de contracten worden ondertekend. Als u een bestaande klant bent en reeds een organisatie hebt die dan wordt geregistreerd kunt u dit document overslaan en aan de gids te werk gaan bij [ het verlenen van gebruikerstoegang voor uitbreidingsontwikkeling ](./access.md). Als u geen klant van het Experience Cloud bent, kunt u een organisatie hebben die door zich bij één van de hieronder vermelde programma&#39;s van de partner van de Adobe aan te sluiten wordt gecreeerd.
+De klanten van het Experience Cloud worden toegewezen een organisatie wanneer de contracten worden ondertekend. Als u een bestaande klant bent en reeds een organisatie hebt die dan wordt geregistreerd kunt u dit document overslaan en aan de gids te werk gaan bij [&#x200B; het verlenen van gebruikerstoegang voor uitbreidingsontwikkeling &#x200B;](./access.md). Als u geen klant van het Experience Cloud bent, kunt u een organisatie hebben die door zich bij één van de hieronder vermelde programma&#39;s van de partner van de Adobe aan te sluiten wordt gecreeerd.
 
 ## Exchange-partnerprogramma
 
-Dit programma is voor partners die technologie hebben die aan Adobe wordt gecomprimeerd en met de technologieën van de Adobe kan worden geïntegreerd om waarde aan onze wederzijdse klanten toe te voegen. Dit programma handhaaft a [ markt ](https://www.adobeexchange.com/experiencecloud.html) waar de partners lijsten kunnen tot stand brengen die hun integratie bevorderen. U kunt de registratiegids [ hier ](https://partners.adobe.com/exchangeprogram/experiencecloud/reg-guide.html) zien en u kunt met uw registratie [ hier ](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) beginnen.
+Dit programma is voor partners die technologie hebben die aan Adobe wordt gecomprimeerd en met de technologieën van de Adobe kan worden geïntegreerd om waarde aan onze wederzijdse klanten toe te voegen. Dit programma handhaaft a [&#x200B; markt &#x200B;](https://www.adobeexchange.com/experiencecloud.html) waar de partners lijsten kunnen tot stand brengen die hun integratie bevorderen. U kunt de registratiegids [&#x200B; hier &#x200B;](https://partners.adobe.com/exchangeprogram/experiencecloud/reg-guide.html) zien en u kunt met uw registratie [&#x200B; hier &#x200B;](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) beginnen.
 
 U moet lid zijn van dit programma om openbaar vermelde tagextensies voor Adobe Experience Platform te maken die worden weergegeven op de markt.
 
@@ -31,7 +31,7 @@ U moet lid zijn van dit programma om openbaar vermelde tagextensies voor Adobe E
 
 ## Het Programma van de Partner van de oplossing (SPP)
 
-Dit programma is voor het raadplegen van bedrijven die klanten van de Adobe helpen hun investeringen en partners optimaal te maken die de oplossingen van de Adobe doorverkopen. Voor een geleidelijke gids op hoe te om zich bij het Programma van de Partner van de Oplossing aan [ de website van Adobe Spark ](https://spark.adobe.com/page/7PKZzIJJjkcDd/) aan te sluiten, of voor meer informatiebezoek [ de plaats van het Programma van de Partner van de Oplossing ](https://solutionpartners.adobe.com/home.html).
+Dit programma is voor het raadplegen van bedrijven die klanten van de Adobe helpen hun investeringen en partners optimaal te maken die de oplossingen van de Adobe doorverkopen. Voor een geleidelijke gids op hoe te om zich bij het Programma van de Partner van de Oplossing aan [&#x200B; de website van Adobe Spark &#x200B;](https://spark.adobe.com/page/7PKZzIJJjkcDd/) aan te sluiten, of voor meer informatiebezoek [&#x200B; de plaats van het Programma van de Partner van de Oplossing &#x200B;](https://solutionpartners.adobe.com/home.html).
 
 >[!NOTE]
 >
@@ -41,9 +41,9 @@ Dit programma is voor het raadplegen van bedrijven die klanten van de Adobe help
 >
 >Uw bedrijfs-e-mail kan momenteel slechts in één partnerprogramma tegelijkertijd worden gebruikt, zodat zult u een verschillende collectieve e-mail als geregistreerde contact voor elk van de programma&#39;s moeten gebruiken.
 
-Zodra uw bedrijf in het programma van de Partner van de Uitwisseling is, kunt u toegang tot de Oplossingen van de Adobe verzoeken door binnen aan de [ Plaats van de Partner van de Uitwisseling te ondertekenen ](https://partners.adobe.com/exchangeprogram/experiencecloud) en de hieronder stappen te volgen.
+Zodra uw bedrijf in het programma van de Partner van de Uitwisseling is, kunt u toegang tot de Oplossingen van de Adobe verzoeken door binnen aan de [&#x200B; Plaats van de Partner van de Uitwisseling te ondertekenen &#x200B;](https://partners.adobe.com/exchangeprogram/experiencecloud) en de hieronder stappen te volgen.
 
-Als u een Rekening van het Experience Cloud hebt vereist toegang tot UI en Experience Platform UI van de Inzameling van Gegevens, gelieve de [ gids van de toestemmingen van de gegevensinzameling ](../../../collection/permissions.md) te zien.
+Als u een Rekening van het Experience Cloud hebt vereist toegang tot UI en Experience Platform UI van de Inzameling van Gegevens, gelieve de [&#x200B; gids van de toestemmingen van de gegevensinzameling &#x200B;](../../../collection/permissions.md) te zien.
 
 ## Voor onafhankelijke ontwikkelaars
 

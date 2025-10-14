@@ -19,13 +19,13 @@ In dit document worden de stappen doorlopen waarmee u [!DNL RStudio] kunt verbin
 >
 > [!DNL RStudio] is nu herbrandd als [!DNL Posit] . De naam van [!DNL RStudio] -producten is gewijzigd in [!DNL Posit Connect] , [!DNL Posit Workbench] , [!DNL Posit Package] Manager [!DNL Posit Cloud] en [!DNL Posit Academy] .
 >
-> In deze handleiding wordt ervan uitgegaan dat u al toegang hebt tot [!DNL RStudio] en vertrouwd bent met het gebruik ervan. Meer informatie over [!DNL RStudio] kan in de [ officiële  [!DNL RStudio]  documentatie ](https://rstudio.com/products/rstudio/) worden gevonden.
+> In deze handleiding wordt ervan uitgegaan dat u al toegang hebt tot [!DNL RStudio] en vertrouwd bent met het gebruik ervan. Meer informatie over [!DNL RStudio] kan in de [&#x200B; officiële  [!DNL RStudio]  documentatie &#x200B;](https://rstudio.com/products/rstudio/) worden gevonden.
 > 
-> Als u [!DNL RStudio] wilt gebruiken met Query Service, moet u bovendien het [!DNL PostgreSQL] JDBC 4.2-stuurprogramma installeren. U kunt de bestuurder JDBC van de [[!DNL PostgreSQL]  officiële plaats ](https://jdbc.postgresql.org/download/) downloaden.
+> Als u [!DNL RStudio] wilt gebruiken met Query Service, moet u bovendien het [!DNL PostgreSQL] JDBC 4.2-stuurprogramma installeren. U kunt de bestuurder JDBC van de [[!DNL PostgreSQL]  officiële plaats &#x200B;](https://jdbc.postgresql.org/download/) downloaden.
 
 ## Een [!DNL Query Service] -verbinding maken in de [!DNL RStudio] -interface
 
-Nadat u [!DNL RStudio] hebt geïnstalleerd, moet u het RJDBC-pakket installeren. De instructies op hoe te om [ een gegevensbestand door de bevellijn ](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) te verbinden kunnen in de officiële documentatie van de Positie worden gevonden.
+Nadat u [!DNL RStudio] hebt geïnstalleerd, moet u het RJDBC-pakket installeren. De instructies op hoe te om [&#x200B; een gegevensbestand door de bevellijn &#x200B;](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) te verbinden kunnen in de officiële documentatie van de Positie worden gevonden.
 
 Als u een Mac OS gebruikt, kunt u **[!UICONTROL Tools]** selecteren in de menubalk gevolgd door **[!UICONTROL Install Packages]** in het vervolgkeuzemenu. U kunt ook het tabblad **[!DNL Packages]** in de UI voor het bewerken van RStudio selecteren en **[!DNL Install]** selecteren.
 
@@ -47,9 +47,9 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!IMPORTANT]
 >
->Zie de [[!DNL Query Service]  SSL documentatie ](./ssl-modes.md) om over SSL steun voor derdeverbindingen aan de Dienst van de Vraag van Adobe Experience Platform te leren, en hoe te om het gebruiken van `verify-full` SSL wijze te verbinden.
+>Zie de [[!DNL Query Service]  SSL documentatie &#x200B;](./ssl-modes.md) om over SSL steun voor derdeverbindingen aan de Dienst van de Vraag van Adobe Experience Platform te leren, en hoe te om het gebruiken van `verify-full` SSL wijze te verbinden.
 
-Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, te lezen gelieve de [ gids van geloofsbrieven ](../ui/credentials.md). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Experience Platform] en selecteert u **[!UICONTROL Queries]** , gevolgd door **[!UICONTROL Credentials]** .
+Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, te lezen gelieve de [&#x200B; gids van geloofsbrieven &#x200B;](../ui/credentials.md). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Experience Platform] en selecteert u **[!UICONTROL Queries]** , gevolgd door **[!UICONTROL Credentials]** .
 
 Een bericht in de consoleoutput bevestigt de verbinding aan de Dienst van de Vraag.
 
@@ -57,7 +57,7 @@ Een bericht in de consoleoutput bevestigt de verbinding aan de Dienst van de Vra
 
 Nu u verbinding hebt gemaakt met [!DNL Query Service] , kunt u query&#39;s schrijven om SQL-instructies uit te voeren en te bewerken. U kunt `dbGetQuery(con, sql)` bijvoorbeeld gebruiken om query&#39;s uit te voeren, waarbij `sql` de SQL-query is die u wilt uitvoeren.
 
-De volgende vraag gebruikt een dataset die [ Gebeurtenissen van de Ervaring ](../../xdm/classes/experienceevent.md) bevat en leidt tot een histogram van paginameningen van een website, gezien de het schermhoogte van het apparaat.
+De volgende vraag gebruikt een dataset die [&#x200B; Gebeurtenissen van de Ervaring &#x200B;](../../xdm/classes/experienceevent.md) bevat en leidt tot een histogram van paginameningen van een website, gezien de het schermhoogte van het apparaat.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -94,4 +94,4 @@ df_pageviews
 
 ## Volgende stappen
 
-Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen gelieve de gids op [ lopende vragen ](../best-practices/writing-queries.md).
+Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen gelieve de gids op [&#x200B; lopende vragen &#x200B;](../best-practices/writing-queries.md).

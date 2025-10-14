@@ -11,11 +11,11 @@ ht-degree: 1%
 
 # Het eindpunt van componenten van de regel
 
-In de markeringen van de gegevensinzameling, [ regels ](./rules.md) controleren het gedrag van de middelen in een opgestelde [ bibliotheek ](./libraries.md). **de componenten van de Regel** zijn de individuele delen die omhoog een regel maken. Als een regel een recept is, dan is een regelcomponent een van de ingrediënten. Het `/rule_components` eindpunt in Reactor API staat u toe om regelcomponenten programmatically te beheren.
+In de markeringen van de gegevensinzameling, [&#x200B; regels &#x200B;](./rules.md) controleren het gedrag van de middelen in een opgestelde [&#x200B; bibliotheek &#x200B;](./libraries.md). **de componenten van de Regel** zijn de individuele delen die omhoog een regel maken. Als een regel een recept is, dan is een regelcomponent een van de ingrediënten. Het `/rule_components` eindpunt in Reactor API staat u toe om regelcomponenten programmatically te beheren.
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u regelcomponenten in de Reactor-API beheert. Voor details op hoe te met regels en regelcomponenten in UI in wisselwerking te staan, gelieve te verwijzen naar de [ gids UI ](../../ui/managing-resources/rules.md).
+>In dit document wordt beschreven hoe u regelcomponenten in de Reactor-API beheert. Voor details op hoe te met regels en regelcomponenten in UI in wisselwerking te staan, gelieve te verwijzen naar de [&#x200B; gids UI &#x200B;](../../ui/managing-resources/rules.md).
 
 Regelcomponenten hebben drie basistypen:
 
@@ -29,11 +29,11 @@ Regelcomponenten hebben drie basistypen:
 
 Een regelcomponent behoort tot exact één regel. Een regel kan (en zou) vele regelcomponenten moeten hebben.
 
-Een regelcomponent wordt verstrekt door precies één [ uitbreiding ](./extensions.md). Extensies kunnen vele typen regelcomponenten bevatten.
+Een regelcomponent wordt verstrekt door precies één [&#x200B; uitbreiding &#x200B;](./extensions.md). Extensies kunnen vele typen regelcomponenten bevatten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met regelcomponenten ophalen {#list}
 
@@ -53,7 +53,7 @@ GET /rules/{RULE_ID}/rule_components
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde regelcomponenten worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde regelcomponenten worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -316,7 +316,7 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuwe regelcomponent gemaakt. In de payload koppelt de eigenschap `relationships` de component aan een of meer specifieke regels en een bestaande extensie. Zie de gids op [ verhoudingen ](../guides/relationships.md) voor meer informatie.
+Met de volgende aanvraag wordt een nieuwe regelcomponent gemaakt. In de payload koppelt de eigenschap `relationships` de component aan een of meer specifieke regels en een bestaande extensie. Zie de gids op [&#x200B; verhoudingen &#x200B;](../guides/relationships.md) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -359,14 +359,14 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Vereist)** de types van regelcomponenten die u kunt bepalen worden verstrekt door [ uitbreidingspakketten ](./extension-packages.md). Wanneer u een nieuwe regelcomponent creeert, moet u een identiteitskaart van de afgevaardigde van de beschrijver verstrekken om op te wijzen op welk uitbreidingspakket deze regelcomponent gebaseerd is, het type van de component (gebeurtenis, voorwaarde, of actie), en de naam van de specifieke component zoals die door de uitbreiding (zoals de gebeurtenis &quot;Klik&quot;in de uitbreiding van de Kern wordt bepaald).<br><br> zie de gids op [ de beschrijver IDs van de afgevaardigde ](../guides/delegate-descriptor-ids.md) voor meer informatie. |
+| `attributes.delegate_descriptor_id` | **(Vereist)** de types van regelcomponenten die u kunt bepalen worden verstrekt door [&#x200B; uitbreidingspakketten &#x200B;](./extension-packages.md). Wanneer u een nieuwe regelcomponent creeert, moet u een identiteitskaart van de afgevaardigde van de beschrijver verstrekken om op te wijzen op welk uitbreidingspakket deze regelcomponent gebaseerd is, het type van de component (gebeurtenis, voorwaarde, of actie), en de naam van de specifieke component zoals die door de uitbreiding (zoals de gebeurtenis &quot;Klik&quot;in de uitbreiding van de Kern wordt bepaald).<br><br> zie de gids op [&#x200B; de beschrijver IDs van de afgevaardigde &#x200B;](../guides/delegate-descriptor-ids.md) voor meer informatie. |
 | `attributes.name` | **(Vereist)** Een voor de mens leesbare naam voor de regelcomponent. |
 | `attributes.delay_next` | Een Booleaanse waarde die aangeeft of latere handelingen moeten worden vertraagd. |
 | `attributes.order` | Een geheel getal dat de volgorde aangeeft waarin de component op type moet worden geladen. |
 | `attributes.rule_order` | Een geheel dat op de prioriteit voor de bijbehorende regel wijst in brand te steken. |
 | `attributes.settings` | A settings JSON object represented as a string. |
 | `attributes.timeout` | Een geheel getal dat de time-out aangeeft van de actie die achtereenvolgens wordt uitgevoerd. |
-| `relationships` | Een voorwerp dat de noodzakelijke verhoudingen voor de regelcomponent vestigt. Er moeten twee relaties worden aangegaan: <ol><li>`extension`: De extensie die deze regelcomponent definieert. Dit moet dezelfde extensie zijn waarvan het extensiepakket wordt aangegeven door de extensie `delegate_descriptor_id` .</li><li>`rules`: de regel waaronder deze component wordt gedefinieerd.</li></ol>Voor meer algemene informatie over verhoudingen, verwijs naar de [ verhoudingsgids ](../guides/relationships.md). |
+| `relationships` | Een voorwerp dat de noodzakelijke verhoudingen voor de regelcomponent vestigt. Er moeten twee relaties worden aangegaan: <ol><li>`extension`: De extensie die deze regelcomponent definieert. Dit moet dezelfde extensie zijn waarvan het extensiepakket wordt aangegeven door de extensie `delegate_descriptor_id` .</li><li>`rules`: de regel waaronder deze component wordt gedefinieerd.</li></ol>Voor meer algemene informatie over verhoudingen, verwijs naar de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md). |
 | `type` | Het type resource dat wordt gemaakt. Voor dit eindpunt moet de waarde `rule_components` zijn. |
 
 {style="table-layout:auto"}
@@ -646,13 +646,13 @@ Een succesvolle reactie keert HTTP status 204 (Geen Inhoud) zonder reactiekarakt
 
 ## Notities beheren voor een regelcomponent {#notes}
 
-De componenten van de regel zijn &quot;notable&quot;middelen, betekenend kunt u op tekst-gebaseerde nota&#39;s op elk individueel middel tot stand brengen en terugwinnen. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor regelcomponenten en andere compatibele middelen beheren.
+De componenten van de regel zijn &quot;notable&quot;middelen, betekenend kunt u op tekst-gebaseerde nota&#39;s op elk individueel middel tot stand brengen en terugwinnen. Zie de [&#x200B; gids van het Notitieeindpunt &#x200B;](./notes.md) voor meer informatie over hoe te nota&#39;s voor regelcomponenten en andere compatibele middelen beheren.
 
 ## Verwante middelen voor een regelcomponent ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een regelcomponent terug te winnen. Wanneer [ omhoog een regelcomponent ](#lookup) kijkt, zijn deze verhoudingen vermeld onder de `relationships` regelcomponent.
+De volgende vraag toont aan hoe te om de verwante middelen voor een regelcomponent terug te winnen. Wanneer [&#x200B; omhoog een regelcomponent &#x200B;](#lookup) kijkt, zijn deze verhoudingen vermeld onder de `relationships` regelcomponent.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante regels weergeven voor een regelcomponent {#rules}
 

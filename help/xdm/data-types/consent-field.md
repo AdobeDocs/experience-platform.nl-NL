@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Dit gegevenstype is bedoeld om te worden gebruikt om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend de [[!UICONTROL Consents and Preferences] gebiedsgroep ](../field-groups/profile/consents.md) als basislijn.
+>Dit gegevenstype is bedoeld om te worden gebruikt om de structuur van de toestemmingsregelingen van uw organisatie aan te passen gebruikend de [[!UICONTROL Consents and Preferences] gebiedsgroep &#x200B;](../field-groups/profile/consents.md) als basislijn.
 
 ![](../images/data-types/consent-field.png)
 
@@ -46,5 +46,5 @@ In de volgende tabel worden de toegestane waarden voor `val` weergegeven:
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-field.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-field.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-field.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-field.schema.json)

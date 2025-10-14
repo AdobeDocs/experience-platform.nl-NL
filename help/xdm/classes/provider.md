@@ -13,7 +13,7 @@ ht-degree: 0%
 
 In het Model van de Gegevens van de Ervaring (XDM), vangt de [!UICONTROL Provider] klasse de minimumreeks eigenschappen die een dienstverlener bedrijfsentiteit (zoals een gezondheidszorgleverancier of een verzekeringsleverancier) bepalen.
 
-![ structuur van de Klasse ](../images/classes/provider.png)
+![&#x200B; structuur van de Klasse &#x200B;](../images/classes/provider.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -23,4 +23,4 @@ In het Model van de Gegevens van de Ervaring (XDM), vangt de [!UICONTROL Provide
 
 {style="table-layout:auto"}
 
-De klasse kan met de [[!UICONTROL Healthcare Provider] gebiedsgroep ](../field-groups/provider/healthcare-provider.md) worden uitgebreid om verdere details over een gezondheidszorgleverancier te beschrijven.
+De klasse kan met de [[!UICONTROL Healthcare Provider] gebiedsgroep &#x200B;](../field-groups/provider/healthcare-provider.md) worden uitgebreid om verdere details over een gezondheidszorgleverancier te beschrijven.

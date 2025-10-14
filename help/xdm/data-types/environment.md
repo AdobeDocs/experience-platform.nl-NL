@@ -17,14 +17,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Alle waarden zouden met het [ DeviceAtlas ](https://deviceatlas.com) gegevensbestand moeten worden gericht, dat door Adobe wordt vergunning gegeven.
+>Alle waarden zouden met het [&#x200B; DeviceAtlas &#x200B;](https://deviceatlas.com) gegevensbestand moeten worden gericht, dat door Adobe wordt vergunning gegeven.
 
 ![](../images/data-types/environment.png){width=400}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `_dc` | Object | Een object dat één veld bevat, `language` , dat de taal van de omgeving aangeeft die de taalkundige, geografische of culturele voorkeuren van de gebruiker voor de gegevenspresentatie vertegenwoordigt. De talen worden gespecificeerd in taalcode zoals die in [ wordt bepaald IETF RFC 3066 ](https://www.ietf.org/rfc/rfc3066.txt). |
-| `browserDetails` | [ Browser details ](./browser-details.md) | Beschrijft browser-specifieke details van het milieu, zoals browser naam, versie, versie van JavaScript, gebruikersagent koord, en keurt taal goed. |
+| `_dc` | Object | Een object dat één veld bevat, `language` , dat de taal van de omgeving aangeeft die de taalkundige, geografische of culturele voorkeuren van de gebruiker voor de gegevenspresentatie vertegenwoordigt. De talen worden gespecificeerd in taalcode zoals die in [&#x200B; wordt bepaald IETF RFC 3066 &#x200B;](https://www.ietf.org/rfc/rfc3066.txt). |
+| `browserDetails` | [&#x200B; Browser details &#x200B;](./browser-details.md) | Beschrijft browser-specifieke details van het milieu, zoals browser naam, versie, versie van JavaScript, gebruikersagent koord, en keurt taal goed. |
 | `ISP` | String | De naam van de internetprovider van de gebruiker. |
 | `carrier` | String | De naam van de mobiele netwerkprovider of MNO (ook bekend als een draadloze serviceprovider, draadloze provider, mobiel bedrijf of mobiele netwerkprovider) die communicatiediensten aan de gebruiker verkoopt en levert. |
 | `colorDepth` | Geheel | Het aantal bits dat wordt gebruikt voor elke kleurcomponent van één pixel. |
@@ -35,7 +35,7 @@ ht-degree: 0%
 | `operatingSystem` | String | De naam van het besturingssysteem dat bij de waarneming werd gebruikt. Het kenmerk mag geen versiegegevens zoals `10.5.3` bevatten, maar wel &#39;editie&#39;-aanduidingen zoals `Ultimate` of `Professional` . |
 | `operatingSystemVendor` | String | De naam van de leverancier van het besturingssysteem die is gebruikt bij de waarneming. |
 | `operatingSystemVersion` | String | De volledige versie-id voor het besturingssysteem dat bij de waarneming werd gebruikt. Versies worden meestal numeriek samengesteld, maar kunnen in een door de leverancier gedefinieerde indeling worden gebruikt. |
-| `type` | String | Het type van de toepassingsomgeving. Zie [ bijlage ](#type) voor toegelaten waarden. |
+| `type` | String | Het type van de toepassingsomgeving. Zie [&#x200B; bijlage &#x200B;](#type) voor toegelaten waarden. |
 | `viewportHeight` | Geheel | De verticale grootte in pixels van het venster waarin de ervaring is weergegeven. Voor een webweergavegebeurtenis is dit de hoogte van de viewport van de browser. |
 | `viewPortWidth` | Geheel | De horizontale grootte in pixels van het venster waarin de ervaring is weergegeven. Voor een webweergavegebeurtenis is dit de breedte van de viewport van de browser. |
 
@@ -43,8 +43,8 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
 
 ## Bijlage
 

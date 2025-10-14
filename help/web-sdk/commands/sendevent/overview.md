@@ -17,7 +17,7 @@ De opdracht `sendEvent` is de primaire manier om gegevens naar Adobe te verzende
 
 Het verzenden van gebeurtenisgegevens wordt uitgevoerd als een handeling binnen een regel in de interface met Adobe Experience Platform-tags voor gegevensverzameling.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -42,7 +42,7 @@ alloy("sendEvent", {
 
 ## Object Response
 
-Als u besluit om [ reacties ](../command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
+Als u besluit om [&#x200B; reacties &#x200B;](../command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
 
 * **`propositions`**: Een array met voorstellingen die door de Edge Network worden geretourneerd. Voorwaarden die automatisch worden gerenderd, zijn onder andere de markering `renderAttempted` ingesteld op `true` .
 * **`inferences`**: Een array van gebeurtenisobjecten die informatie over deze gebruiker bevatten.

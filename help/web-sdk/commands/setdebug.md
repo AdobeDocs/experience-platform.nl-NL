@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `setDebug`
 
-Met de opdracht `setDebug` kunt u de foutopsporingsmodus in de SDK van het web activeren of afsluiten. Het is één van verscheidene opties beschikbaar voor [ het zuiveren ](../use-cases/debugging.md). Adobe adviseert het toelaten van zuivert wijze binnen ontwikkelomgevingen of enkel op uw lokale machine binnen productiemilieu&#39;s.
+Met de opdracht `setDebug` kunt u de foutopsporingsmodus in de SDK van het web activeren of afsluiten. Het is één van verscheidene opties beschikbaar voor [&#x200B; het zuiveren &#x200B;](../use-cases/debugging.md). Adobe adviseert het toelaten van zuivert wijze binnen ontwikkelomgevingen of enkel op uw lokale machine binnen productiemilieu&#39;s.
 
 ## Foutopsporing instellen met de extensie van de Web SDK-tag
 

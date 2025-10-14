@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Refund Item] is een standaard XDM-gegevenstype (Experience Data Model) waarmee wordt beschreven welke gegevens betrekking hebben op een restitutie voor een bestelling.
 
-![ een diagram van het gegevenstype van het Punt van de Terugbetaling.](../images/data-types/refund-item.png)
+![&#x200B; een diagram van het gegevenstype van het Punt van de Terugbetaling.](../images/data-types/refund-item.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |--------------------|-----------------------|-----------|---------------------------------------------------------------------------------------------------|
@@ -27,5 +27,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/refunditem.schema.json)

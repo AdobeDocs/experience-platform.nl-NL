@@ -53,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Optie 3: Geef de identiteit op als XID (`xid`). Voor meer op hoe te om XID van een identiteit te verkrijgen, zie de sectie van dit document die [ behandelt die XID voor een identiteit ](./list-native-id.md) krijgen.
+Optie 3: Geef de identiteit op als XID (`xid`). Voor meer op hoe te om XID van een identiteit te verkrijgen, zie de sectie van dit document die [&#x200B; behandelt die XID voor een identiteit &#x200B;](./list-native-id.md) krijgen.
 
 ```shell
 curl -X GET \
@@ -218,4 +218,4 @@ curl -X POST \
 
 ## Volgende stappen
 
-Ga aan het volgende leerprogramma te werk aan [ identiteitstoewijzingen van de lijstidentiteit ](./list-identity-mappings.md)
+Ga aan het volgende leerprogramma te werk aan [&#x200B; identiteitstoewijzingen van de lijstidentiteit &#x200B;](./list-identity-mappings.md)

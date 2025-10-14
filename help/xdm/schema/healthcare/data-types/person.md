@@ -16,14 +16,14 @@ ht-degree: 0%
 
 [!UICONTROL Person] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat informatie over een generisch persoonverslag verstrekt. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ het gegevenstype van de Persoon structuur ](../../../images/healthcare/data-types/person/person.png)
+![&#x200B; het gegevenstype van de Persoon structuur &#x200B;](../../../images/healthcare/data-types/person/person.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
 | [!UICONTROL Address] | `address` | Array van [[!UICONTROL Address]](../data-types/address.md) | Een of meer adressen voor de persoon. |
-| [!UICONTROL Communication] | `communication` | Array van objecten | Een taal die kan worden gebruikt om met de persoon te communiceren over zijn of haar gezondheid. Zie de [ sectie hieronder ](#communication) voor meer informatie. |
+| [!UICONTROL Communication] | `communication` | Array van objecten | Een taal die kan worden gebruikt om met de persoon te communiceren over zijn of haar gezondheid. Zie de [&#x200B; sectie hieronder &#x200B;](#communication) voor meer informatie. |
 | [!UICONTROL Identifier] | `identifier` | Array van [[!UICONTROL Identifier]](../data-types/identifier.md) | Een menselijke identificator voor deze persoon. |
-| [!UICONTROL Person Link Details] | `link` | Array van objecten | Een koppeling naar een bron die dezelfde persoon aangaat. Zie de [ sectie hieronder ](#link) voor meer informatie. |
+| [!UICONTROL Person Link Details] | `link` | Array van objecten | Een koppeling naar een bron die dezelfde persoon aangaat. Zie de [&#x200B; sectie hieronder &#x200B;](#link) voor meer informatie. |
 | [!UICONTROL Managing Organization] | `managingOrganization` | [[!UICONTROL Reference]](../data-types/reference.md) | De organisatie die de bewaarder van het patiëntendossier is. |
 | [!UICONTROL Marital Status] | `maritalStatus` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De burgerlijke (of burgerlijke) staat van een persoon |
 | [!UICONTROL Name] | `name` | Array van [[!UICONTROL Human Name]](../data-types/human-name.md) | De namen die aan een persoon zijn gekoppeld. |
@@ -36,14 +36,14 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/identifier.schema.json)
 
 ## `communication` {#communication}
 
 `communication` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ communicatie structuur ](../../../images/healthcare/data-types/person/communication.png)
+![&#x200B; communicatie structuur &#x200B;](../../../images/healthcare/data-types/person/communication.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstyp
 
 `link` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ verbindingsstructuur ](../../../images/healthcare/data-types/person/link.png)
+![&#x200B; verbindingsstructuur &#x200B;](../../../images/healthcare/data-types/person/link.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

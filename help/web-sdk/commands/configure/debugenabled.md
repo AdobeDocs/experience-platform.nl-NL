@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # `debugEnabled`
 
-Met de eigenschap `debugEnabled` kunt u foutopsporing in- of uitschakelen met behulp van Web SDK-code. Het is één van de beschikbare manieren om [ het zuiveren ](../../use-cases/debugging.md) toe te laten. Het inschakelen van foutopsporing binnen uw implementatie kan handiger zijn dan andere methoden tijdens de ontwikkeling van websites wanneer u foutopsporing altijd wilt inschakelen. Deze methode van het zuiveren laat het voor alle bezoekers toe, zodat wordt het niet geadviseerd voor productiepagina&#39;s.
+Met de eigenschap `debugEnabled` kunt u foutopsporing in- of uitschakelen met behulp van Web SDK-code. Het is één van de beschikbare manieren om [&#x200B; het zuiveren &#x200B;](../../use-cases/debugging.md) toe te laten. Het inschakelen van foutopsporing binnen uw implementatie kan handiger zijn dan andere methoden tijdens de ontwikkeling van websites wanneer u foutopsporing altijd wilt inschakelen. Deze methode van het zuiveren laat het voor alle bezoekers toe, zodat wordt het niet geadviseerd voor productiepagina&#39;s.
 
-Zie [ het Zuiveren ](../../use-cases/debugging.md) gebruiken gevalpagina voor meer manieren om het zuiveren toe te laten.
+Zie [&#x200B; het Zuiveren &#x200B;](../../use-cases/debugging.md) gebruiken gevalpagina voor meer manieren om het zuiveren toe te laten.
 
 ## Foutopsporing inschakelen met de Web SDK-tagextensie
 
-Er zijn geen opties voor foutopsporing beschikbaar die native de SDK-tagextensie van Web gebruiken. Gebruik een [ afwisselende het zuiveren methode ](../../use-cases/debugging.md).
+Er zijn geen opties voor foutopsporing beschikbaar die native de SDK-tagextensie van Web gebruiken. Gebruik een [&#x200B; afwisselende het zuiveren methode &#x200B;](../../use-cases/debugging.md).
 
 ## Foutopsporing inschakelen met de Web SDK JavaScript-bibliotheek
 

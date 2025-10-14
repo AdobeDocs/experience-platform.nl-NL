@@ -16,23 +16,23 @@ ht-degree: 1%
 
 [!UICONTROL Availability] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat beschikbaarheidsgegevens voor een punt beschrijft. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ het gegevenstype van de Beschikbaarheid structuur ](../../../images/healthcare/data-types/availability/availability.png)
+![&#x200B; het gegevenstype van de Beschikbaarheid structuur &#x200B;](../../../images/healthcare/data-types/availability/availability.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
-| [!UICONTROL Available Time] | `availableTime` | Array van objecten | De tijd waarop het item beschikbaar is. Zie de [ sectie hieronder ](#available-time) voor meer informatie. |
-| [!UICONTROL Not Available Time] | `notAvailableTime` | String | De tijd waarop het object niet beschikbaar is, met een opgegeven reden. Zie de [ sectie hieronder ](#not-available-time) voor meer informatie. |
+| [!UICONTROL Available Time] | `availableTime` | Array van objecten | De tijd waarop het item beschikbaar is. Zie de [&#x200B; sectie hieronder &#x200B;](#available-time) voor meer informatie. |
+| [!UICONTROL Not Available Time] | `notAvailableTime` | String | De tijd waarop het object niet beschikbaar is, met een opgegeven reden. Zie de [&#x200B; sectie hieronder &#x200B;](#not-available-time) voor meer informatie. |
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/availability.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/availability.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/availability.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/availability.schema.json)
 
 ## `availableTime` {#available-time}
 
 `availableTime` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ Beschikbare tijdstructuur ](../../../images/healthcare/data-types/availability/available-time.png)
+![&#x200B; Beschikbare tijdstructuur &#x200B;](../../../images/healthcare/data-types/availability/available-time.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstyp
 
 `notAvailableTime` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ niet beschikbare tijdstructuur ](../../../images/healthcare/data-types/availability/not-available-time.png)
+![&#x200B; niet beschikbare tijdstructuur &#x200B;](../../../images/healthcare/data-types/availability/not-available-time.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

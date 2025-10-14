@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # [!UICONTROL Flight Reservation] schemaveldgroep
 
-[!UICONTROL Flight Reservation] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een vluchtreserve te vangen die.
+[!UICONTROL Flight Reservation] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md) wordt gebruikt om informatie betreffende een vluchtreserve te vangen die.
 
 De veldgroep is een extensie van de veldgroep [!UICONTROL Reservation Details] en bevat dezelfde velden onder één objecttype, `reservations` . Naast deze algemene velden bevat [!UICONTROL Flight Reservation] ook `flightReservations` array. Deze array met objecten wordt gebruikt om een of meer reserveringen te beschrijven met eigenschappen die uniek zijn voor luchtvervoer.
 
 >[!NOTE]
 >
->In dit document worden de details van de array `flightReservations` besproken. Voor informatie over de andere gebieden die onder het `reservations` voorwerp worden verstrekt, gelieve te verwijzen naar [[!UICONTROL Reservation Details] de verwijzing van de gebiedsgroep ](./reservation-details.md).
+>In dit document worden de details van de array `flightReservations` besproken. Voor informatie over de andere gebieden die onder het `reservations` voorwerp worden verstrekt, gelieve te verwijzen naar [[!UICONTROL Reservation Details] de verwijzing van de gebiedsgroep &#x200B;](./reservation-details.md).
 
-![ structuur van de Reservering van de Vlucht ](../../images/field-groups/flight-reservation/structure.png)
+![&#x200B; structuur van de Reservering van de Vlucht &#x200B;](../../images/field-groups/flight-reservation/structure.png)
 
 ## `flightReservations`
 
@@ -28,7 +28,7 @@ De veldgroep is een extensie van de veldgroep [!UICONTROL Reservation Details] e
 
 Hieronder vindt u de structuur van elk object dat onder `flightReservations` wordt geleverd.
 
-![ flightReservations structuur ](../../images/field-groups/flight-reservation/flightReservations.png)
+![&#x200B; flightReservations structuur &#x200B;](../../images/field-groups/flight-reservation/flightReservations.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -65,5 +65,5 @@ Hieronder vindt u de structuur van elk object dat onder `flightReservations` wor
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-flight-reservation.schema.json)

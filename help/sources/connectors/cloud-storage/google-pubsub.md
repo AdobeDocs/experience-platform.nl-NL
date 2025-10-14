@@ -31,23 +31,23 @@ A **de dienstrekening** is een type van rekening die vaak door een toepassing wo
 * Aan de ene kant zijn de de dienstrekeningen **principes** - u kunt de dienstrekeningen toegang tot [!DNL Google Cloud] middelen verlenen. Bijvoorbeeld, kon u een de dienstrekening de Compute rol van Admin `(roles/compute.admin)` op een bepaald project verlenen. Dit staat dan de de dienstrekening toe om de middelen van de Motor in dat bepaalde project te kunnen beheren.
 * Anderzijds, zijn de dienstrekeningen ook middelen - u kunt andere hoofden toestemming geven om tot de de dienstrekening toegang te hebben. U kunt een gebruiker bijvoorbeeld de rol Gebruikers van serviceaccount `(roles/iam.serviceAccountUser)` op een serviceaccount geven, zodat de gebruiker die serviceaccount aan bronnen kan koppelen. U kunt een gebruiker ook de rol Serviceaccount Admin `(roles/iam.serviceAccountAdmin)` geven om de gebruiker in staat te stellen taken uit te voeren, zoals het weergeven, bewerken, uitschakelen en verwijderen van de serviceaccount.
 
-Voor meer informatie bij het bepalen van het juiste authentificatietype voor uw gebruiksgeval, lees de [[!DNL Google]  gids op authentificatiemethodes ](https://cloud.google.com/docs/authentication).
+Voor meer informatie bij het bepalen van het juiste authentificatietype voor uw gebruiksgeval, lees de [[!DNL Google]  gids op authentificatiemethodes &#x200B;](https://cloud.google.com/docs/authentication).
 
 Voer de onderstaande stappen uit om een serviceaccount te maken:
 
 Navigeer eerst naar de [!DNL IAM] -pagina van de [!DNL Google Developer Console] -pagina en selecteer vervolgens **[!DNL Create Service Account]** .
 
-![ creeer het venster van de de dienstrekening in Google Developer Console ](../../images/tutorials/create/google-pubsub/create-service-account.png)
+![&#x200B; creeer het venster van de de dienstrekening in Google Developer Console &#x200B;](../../images/tutorials/create/google-pubsub/create-service-account.png)
 
 Voer vervolgens een weergavenaam en een id voor uw serviceaccount in en selecteer **[!DNL Create and Continue]** .
 
-![ de details van de de dienstrekening in Google Developer Console ](../../images/tutorials/create/google-pubsub/service-account-details.png)
+![&#x200B; de details van de de dienstrekening in Google Developer Console &#x200B;](../../images/tutorials/create/google-pubsub/service-account-details.png)
 
 ### Servicetoetsen genereren {#generate-service-account-keys}
 
 Om sleutels voor uw de dienstrekening te produceren, selecteer de sleutelkopbal in de pagina van de de dienstrekeningen. Selecteer vervolgens **[!DNL Add key]** en selecteer vervolgens **[!DNL Create new key]** in het vervolgkeuzemenu. U kunt dit deelvenster ook gebruiken om een bestaande sleutel te uploaden.
 
-![ voegt zeer belangrijk venster in Google toe Developer Console ](../../images/tutorials/create/google-pubsub/add-key.png)
+![&#x200B; voegt zeer belangrijk venster in Google toe Developer Console &#x200B;](../../images/tutorials/create/google-pubsub/add-key.png)
 
 Als dit lukt, ontvangt u een bericht dat de persoonlijke sleutel op uw computer is opgeslagen en dat een bestand wordt gedownload. Vervolgens kunt u de inhoud van dit bestand als referenties gebruiken wanneer u uw [!DNL Google PubSub] -account op Experience Platform maakt.
 
@@ -55,7 +55,7 @@ Als dit lukt, ontvangt u een bericht dat de persoonlijke sleutel op uw computer 
 
 Om toestemmingen op het onderwerp en abonnementsniveau te verlenen, navigeer aan de pagina van de onderwerpconsole en selecteer dan **[!DNL Show info panel]**. Selecteer vervolgens onder het tabblad [!DNL Permissions] de optie [!DNL Add Principal] en voeg samen met de machtigingen de principal van de serviceaccount toe.
 
-![ het pop-up venster in Google Developer Console waar u toestemmingen op het onderwerp en abonnementsniveau ](../../images/tutorials/create/google-pubsub/add-principal.png) kunt verlenen
+![&#x200B; het pop-up venster in Google Developer Console waar u toestemmingen op het onderwerp en abonnementsniveau &#x200B;](../../images/tutorials/create/google-pubsub/add-principal.png) kunt verlenen
 
 ## Configuraties voor optimale prestaties [!DNL Google PubSub usage] {#optimal-configurations}
 
@@ -65,15 +65,15 @@ In deze sectie worden configuraties beschreven die u kunt aanraden om het gebrui
 
 Gebruik [!DNL Google Developer Console] om **uw erkenningsdeadline** te verhogen. Hierdoor kan de [!DNL Google Publisher] op basis van de tijd die u configureert wachten voordat het bericht opnieuw wordt verzonden. Deze vertraging helpt onnodige belasting op abonneeniveau te verminderen.
 
-![ de interface van de erkenningsdeadline in Google Developer Console.](../../images/tutorials/create/google-pubsub/acknowledgement-deadline.png)
+![&#x200B; de interface van de erkenningsdeadline in Google Developer Console.](../../images/tutorials/create/google-pubsub/acknowledgement-deadline.png)
 
 Schakel **[!DNL exactly one delivery]** in. Deze configuratie informeert de [!DNL Google Publisher] om te garanderen dat berichten die naar het abonnement worden verzonden niet opnieuw worden verzonden voordat de deadline van de ontvangstbevestiging verloopt. U kunt deze instelling gebruiken om ervoor te zorgen dat bevestigingsberichten niet opnieuw naar het abonnement worden verzonden.
 
-![ precies één pagina van de leveringsconfiguratie in Google Developer Console.](../../images/tutorials/create/google-pubsub/exactly-one-delivery.png)
+![&#x200B; precies één pagina van de leveringsconfiguratie in Google Developer Console.](../../images/tutorials/create/google-pubsub/exactly-one-delivery.png)
 
 U kunt **[!DNL Retry after exponential backoff delay]** inschakelen om het risico te verminderen dat de server verder wordt overweldigd. U kunt deze configuratie in [!DNL Google Developer Console] toelaten om voorbijgaande mislukkingen (tijdelijke fouten die typisch zelf oplossen) beter te verlichten, door het systeem van meer tijd te voorzien om terug te krijgen alvorens een andere verbinding te proberen.
 
-![ het Opnieuw beleidsvenster in Google Developer Console.](../../images/tutorials/create/google-pubsub/retry-policy.png)
+![&#x200B; het Opnieuw beleidsvenster in Google Developer Console.](../../images/tutorials/create/google-pubsub/retry-policy.png)
 
 U moet **plaatsen uw het bewaarduur van het abonnementsbericht om 24 uur of meer** zijn om ervoor te zorgen dat de niet erkende gegevens niet tijdens piekladingen worden verloren. Bovendien, **laat een dood brievenonderwerp** toe om ervoor te zorgen dat het gegevensverlies niet zelfs tijdens zeldzame randgevallen gebeurt.
 

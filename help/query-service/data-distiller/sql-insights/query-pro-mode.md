@@ -11,6 +11,6 @@ ht-degree: 0%
 
 # Query Pro-modus
 
-Gebruik query pro-modus om complexe analyses uit te voeren met aangepaste SQL-query&#39;s en uw gegevens om te zetten in gemakkelijk te interpreteren grafieken. Met deze functie kunt u uw inzichten en filters beter aanpassen aan uw wensen voor nichemoepassingen. U kunt [ op maat gemaakte inzichten en visulaties op uw dashboards ](../../../dashboards/sql-insights-query-pro-mode/overview.md) tot stand brengen en aan zowel technisch als niet-technisch publiek behandelen door uw inzichten als Csv- dossiers te downloaden.
+Gebruik query pro-modus om complexe analyses uit te voeren met aangepaste SQL-query&#39;s en uw gegevens om te zetten in gemakkelijk te interpreteren grafieken. Met deze functie kunt u uw inzichten en filters beter aanpassen aan uw wensen voor nichemoepassingen. U kunt [&#x200B; op maat gemaakte inzichten en visulaties op uw dashboards &#x200B;](../../../dashboards/sql-insights-query-pro-mode/overview.md) tot stand brengen en aan zowel technisch als niet-technisch publiek behandelen door uw inzichten als Csv- dossiers te downloaden.
 
-Zie de vraag pro wijzedocumentatie leren hoe te [ SQL vragen gebruiken om inzichten ](../../../dashboards/sql-insights-query-pro-mode/overview.md) voor uw douanedashboards te produceren, of [ uw inzichten als Csv- dossier ](../../../dashboards/sql-insights-query-pro-mode/view-more.md#download-csv) te downloaden.
+Zie de vraag pro wijzedocumentatie leren hoe te [&#x200B; SQL vragen gebruiken om inzichten &#x200B;](../../../dashboards/sql-insights-query-pro-mode/overview.md) voor uw douanedashboards te produceren, of [&#x200B; uw inzichten als Csv- dossier &#x200B;](../../../dashboards/sql-insights-query-pro-mode/view-more.md#download-csv) te downloaden.

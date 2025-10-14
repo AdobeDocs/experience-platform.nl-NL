@@ -14,9 +14,9 @@ Het dashboard van [!UICONTROL Audience comparison] vergelijkt en contrasteert de
 
 ## Vergelijking van doelgroepen instellen {#set-audience-comparisons}
 
-Om betekenisvollere inzichten en vergelijkingen mogelijk te maken, gebruik de systeemfilters om de doelgroepsegmenten en het tijdkader dat u in het analyseren interesseert nauwkeurig te richten. Selecteer het filterpictogram (![ het filterpictogram.](../../../images/icons/filter-icon-white.png) ) om twee verschillende doelgroepen te kiezen ([!UICONTROL Audience A] en [!UICONTROL Audience B] ) en specifieke parameters voor vergelijking in te stellen.
+Om betekenisvollere inzichten en vergelijkingen mogelijk te maken, gebruik de systeemfilters om de doelgroepsegmenten en het tijdkader dat u in het analyseren interesseert nauwkeurig te richten. Selecteer het filterpictogram (![&#x200B; het filterpictogram.](../../../images/icons/filter-icon-white.png) ) om twee verschillende doelgroepen te kiezen ([!UICONTROL Audience A] en [!UICONTROL Audience B] ) en specifieke parameters voor vergelijking in te stellen.
 
-![ de dialoog van Filters op het de vergelijkingsdashboard van het Publiek.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters.png)
+![&#x200B; de dialoog van Filters op het de vergelijkingsdashboard van het Publiek.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters.png)
 
 Het dialoogvenster [!UICONTROL Filter] wordt weergegeven. Selecteer het vervolgkeuzemenu **[!UICONTROL Select Audience A]** om het eerste publiek te kiezen dat u wilt analyseren. In dit voorbeeld is `California Patients` geselecteerd als Publiek A. Dit publiek wordt aan de linkerkant van de vergelijking weergegeven wanneer het filter wordt toegepast.
 
@@ -30,11 +30,11 @@ Het dialoogvenster geeft ook aan hoeveel filters worden toegepast (in de onderst
 
 Nadat u het publiek en het datumbereik hebt ingesteld, selecteert u **[!UICONTROL Apply]** om het dashboard van [!UICONTROL Audience comparison] te vernieuwen.
 
-![ de dialoog van Filters op het de vergelijkingsdashboard van het Publiek met benadrukt van toepassing.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters-apply.png)
+![&#x200B; de dialoog van Filters op het de vergelijkingsdashboard van het Publiek met benadrukt van toepassing.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters-apply.png)
 
 Het dashboard toont nu de vergelijkende grafieken naast elkaar voor elk publiek.
 
-![ het de vergelijkingsdashboard van het Publiek met verscheidene grafieken die metriek voor elk publiek vergelijken.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-dashboard.png)
+![&#x200B; het de vergelijkingsdashboard van het Publiek met verscheidene grafieken die metriek voor elk publiek vergelijken.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-dashboard.png)
 
 ## Beschikbare vergelijkingsdiagrammen voor doelgroepen {#available-charts}
 
@@ -57,9 +57,9 @@ Nadat u filters hebt toegepast en het publiek hebt geanalyseerd, kunt u de gegev
 
 Selecteer **[!UICONTROL Templates]** om terug te keren naar het overzicht van [!UICONTROL Template] .
 
-![ de Geavanceerde benadrukte mening van de Overlappingen van de Publiek met Malplaatjes.](../../images/sql-insights-query-pro-mode/templates/navigation.png)
+![&#x200B; de Geavanceerde benadrukte mening van de Overlappingen van de Publiek met Malplaatjes.](../../images/sql-insights-query-pro-mode/templates/navigation.png)
 
 ## Volgende stappen
 
-Na het lezen van dit document, hebt u geleerd hoe te om zeer belangrijke metriek tussen verschillende publieksgroepen te vergelijken gebruikend het **dashboard van de Vergelijking van het publiek 0&rbrace;.** Om uw publiekssegmentatie en het richten van strategieën verder te verbeteren, verkend andere Malplaatjes van Gegevens Distiller die extra inzichten verstrekken. Verwijs naar de [ Trends van het publiek ](./trends.md), [ de Overlappingen van de Identiteit van het publiek ](./identity-overlaps.md), en [ Geavanceerde gidsen van de Overlapping van het Publiek ](./overlaps.md) UI om uw besluit-makend verder te verbeteren en betrokkenheidsinspanningen te optimaliseren.
+Na het lezen van dit document, hebt u geleerd hoe te om zeer belangrijke metriek tussen verschillende publieksgroepen te vergelijken gebruikend het **dashboard van de Vergelijking van het publiek 0&rbrace;.** Om uw publiekssegmentatie en het richten van strategieën verder te verbeteren, verkend andere Malplaatjes van Gegevens Distiller die extra inzichten verstrekken. Verwijs naar de [&#x200B; Trends van het publiek &#x200B;](./trends.md), [&#x200B; de Overlappingen van de Identiteit van het publiek &#x200B;](./identity-overlaps.md), en [&#x200B; Geavanceerde gidsen van de Overlapping van het Publiek &#x200B;](./overlaps.md) UI om uw besluit-makend verder te verbeteren en betrokkenheidsinspanningen te optimaliseren.
 

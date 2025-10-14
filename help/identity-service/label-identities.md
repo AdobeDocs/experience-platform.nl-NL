@@ -22,8 +22,8 @@ Een veld met het opschrift identity mag alleen aan de volgende criteria voldoen:
 * Identificaties worden alleen opgenomen in gegevens uit records- en tijdreeksen
 * Alleen PII-velden moeten als identiteit worden gemarkeerd. Als u een veld met meer generieke gegevens kiest, worden relaties minder nauwkeurig en kunnen er fouten optreden bij de toegang tot verwante identiteiten in de identiteitsgrafiek
 
-Voor instructies op hoe te om identiteitsgebieden in UI te etiketteren, zie de gids op [ bepalende identiteitsgebieden in UI ](../xdm/ui/fields/identity.md).
+Voor instructies op hoe te om identiteitsgebieden in UI te etiketteren, zie de gids op [&#x200B; bepalende identiteitsgebieden in UI &#x200B;](../xdm/ui/fields/identity.md).
 
 ## Volgende stappen
 
-Voor meer informatie over [!DNL Identity Service], zie het [[!DNL Identity Service]  overzicht ](./home.md).
+Voor meer informatie over [!DNL Identity Service], zie het [[!DNL Identity Service]  overzicht &#x200B;](./home.md).

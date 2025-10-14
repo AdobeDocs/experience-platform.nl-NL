@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!UICONTROL Card Actions] schemaveldgroep
 
-[!UICONTROL Card Actions] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). De veldgroep verschaft één `personalFinances.cardActions` -veld voor een schema waarin details worden vastgelegd over een kaartactie, zoals het type kaart, de activeringsstatus en de vergrendelingsstatus.
+[!UICONTROL Card Actions] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md). De veldgroep verschaft één `personalFinances.cardActions` -veld voor een schema waarin details worden vastgelegd over een kaartactie, zoals het type kaart, de activeringsstatus en de vergrendelingsstatus.
 
 ![](../../images/field-groups/card-actions.png)
 
@@ -31,4 +31,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).

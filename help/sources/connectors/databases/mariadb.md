@@ -22,7 +22,7 @@ Lees de volgende secties om de vereiste instellingen te voltooien voordat u uw [
 
 ### IP adres lijst van gewenste personen
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ### Verifiëren voor Experience Platform
 
@@ -39,7 +39,7 @@ Geef de juiste waarden voor de volgende referenties op om verificatie met de acc
 | `connectionString` | De verbindingstekenreeks die aan uw [!DNL MariaDB] -verificatie is gekoppeld. Het patroon van de [!DNL MariaDB] verbindingstekenreeks is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` . |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015` . **Nota**: Deze referentie wordt slechts vereist wanneer het verbinden door [!DNL Flow Service] API. |
 
-Voor meer informatie over het verkrijgen van een verbindingskoord, verwijs naar dit [[!DNL MariaDB]  document ](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+Voor meer informatie over het verkrijgen van een verbindingskoord, verwijs naar dit [[!DNL MariaDB]  document &#x200B;](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
 >[!TAB  Basisauthentificatie ]
 
@@ -55,7 +55,7 @@ Om basisauthentificatie te gebruiken, verstrek de aangewezen waarden voor de vol
 | `sslMode` | De methode waarmee gegevens tijdens gegevensoverdracht worden gecodeerd. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015` . **Nota**: Deze referentie wordt slechts vereist wanneer het verbinden door [!DNL Flow Service] API. |
 
-Voor meer informatie over het verkrijgen van een verbindingskoord, verwijs naar dit [[!DNL MariaDB]  document ](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+Voor meer informatie over het verkrijgen van een verbindingskoord, verwijs naar dit [[!DNL MariaDB]  document &#x200B;](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
 >[!ENDTABS]
 

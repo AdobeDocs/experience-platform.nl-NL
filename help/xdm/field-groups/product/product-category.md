@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!UICONTROL Product Category] schemaveldgroep
 
-[!UICONTROL Product Category] is een standaardgroep van het schemagebied voor de [[!UICONTROL Product] klasse ](../../classes/product.md) die eigenschappen met betrekking tot de categorie van een product vangt.
+[!UICONTROL Product Category] is een standaardgroep van het schemagebied voor de [[!UICONTROL Product] klasse &#x200B;](../../classes/product.md) die eigenschappen met betrekking tot de categorie van een product vangt.
 
 ![](../../images/field-groups/product/product-category.png)
 
@@ -24,4 +24,4 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).

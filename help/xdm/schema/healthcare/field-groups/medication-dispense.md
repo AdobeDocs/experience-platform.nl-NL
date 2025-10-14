@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!UICONTROL Medication Dispense] schemaveldgroep
 
-[!UICONTROL Medication Dispense] is een standaardgroep van het schemagebied voor de [[!DNL Medication]  klasse ](../../../classes/medication.md), de [[!DNL XDM Individual Profile]  Klasse ](../../../classes/individual-profile.md), en [[!DNL Provider class]](../../../classes/provider.md). Het verstrekt één enkel voorwerp-type gebied `healthcareMedicationDispense` dat informatie over een medicatie vangt die voor een genoemde persoon/patiënt moet worden of is verstrekt.
+[!UICONTROL Medication Dispense] is een standaardgroep van het schemagebied voor de [[!DNL Medication]  klasse &#x200B;](../../../classes/medication.md), de [[!DNL XDM Individual Profile]  Klasse &#x200B;](../../../classes/individual-profile.md), en [[!DNL Provider class]](../../../classes/provider.md). Het verstrekt één enkel voorwerp-type gebied `healthcareMedicationDispense` dat informatie over een medicatie vangt die voor een genoemde persoon/patiënt moet worden of is verstrekt.
 
-![ de groepsstructuur van het Gebied ](../../../images/healthcare/field-groups/medication-dispense/medication-dispense.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../../images/healthcare/field-groups/medication-dispense/medication-dispense.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ ht-degree: 0%
 | [!UICONTROL Not Performed Reason] | `notPerformedReason` | [[!UICONTROL Codeable Reference]](../data-types/codeable-reference.md) | De reden waarom het geneesmiddel niet werd toegediend. |
 | [!UICONTROL Note] | `note` | Array van [[!UICONTROL Annotation]](../data-types/annotation.md) | Aanvullende informatie over de verstrekking. |
 | [!UICONTROL Part Of] | `partOf` | Array van [[!UICONTROL Reference]](../data-types/reference.md) | De procedure of het verzoek om medicatie die de toevoer heeft veroorzaakt. |
-| [!UICONTROL Performer] | `performer` | Array van objecten | Hiermee wordt aangegeven wie of wat de verzendgebeurtenis heeft uitgevoerd. Zie de [ sectie hieronder ](#performer) voor meer informatie. |
+| [!UICONTROL Performer] | `performer` | Array van objecten | Hiermee wordt aangegeven wie of wat de verzendgebeurtenis heeft uitgevoerd. Zie de [&#x200B; sectie hieronder &#x200B;](#performer) voor meer informatie. |
 | [!UICONTROL Quantity] | `quantity` | [[!UICONTROL Simple Quantity]](../data-types/simple-quantity.md) | De hoeveelheid geneesmiddel die wordt toegediend, inclusief de maateenheid. |
 | [!UICONTROL Receiver] | `receiver` | Array van [[!UICONTROL Reference]](../data-types/reference.md) | Identificeert de persoon die de medicatie heeft opgepakt of de plaats waar de medicatie is afgeleverd. |
 | [!UICONTROL Subject] | `subject` | [[!UICONTROL Reference]](../data-types/reference.md) | Een link naar een bron die de persoon of groep vertegenwoordigt aan wie de medicatie zal worden gegeven. |
@@ -50,14 +50,14 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/medicationdispense.schema.json)
 
 ## `performer` {#performer}
 
 `performer` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ uitvoerderstructuur ](../../../images/healthcare/field-groups/medication-dispense/performer.png)
+![&#x200B; uitvoerderstructuur &#x200B;](../../../images/healthcare/field-groups/medication-dispense/performer.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

@@ -54,7 +54,7 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 ## Handmatige functietransformaties {#manual-transformations}
 
-Als u aangepaste gegevensvoorbewerking wilt definiëren in de instructie `CREATE MODEL` , gebruikt u de component `TRANSFORM` in combinatie met een willekeurig aantal van de beschikbare transformatiefuncties. Deze handmatige voorbewerkingsfuncties kunnen ook buiten de component `TRANSFORM` worden gebruikt. Alle transformaties die in de [ transformatorsectie hieronder ](#available-transformations) worden besproken, kunnen worden gebruikt om de gegevens manueel vooraf te verwerken.
+Als u aangepaste gegevensvoorbewerking wilt definiëren in de instructie `CREATE MODEL` , gebruikt u de component `TRANSFORM` in combinatie met een willekeurig aantal van de beschikbare transformatiefuncties. Deze handmatige voorbewerkingsfuncties kunnen ook buiten de component `TRANSFORM` worden gebruikt. Alle transformaties die in de [&#x200B; transformatorsectie hieronder &#x200B;](#available-transformations) worden besproken, kunnen worden gebruikt om de gegevens manueel vooraf te verwerken.
 
 ### Belangrijkste kenmerken {#key-characteristics}
 
@@ -85,7 +85,7 @@ AS SELECT * FROM df;
 
 ## Beschikbare transformaties {#available-transformations}
 
-Er zijn 19 beschikbare transformaties. Deze transformaties zijn verdeeld in [ Algemene transformaties ](#general-transformations), [ Numerieke transformaties ](#numeric-transformations), [ Categorische transformaties ](#categorical-transformations), en [ Textual transformaties ](#textual-transformations).
+Er zijn 19 beschikbare transformaties. Deze transformaties zijn verdeeld in [&#x200B; Algemene transformaties &#x200B;](#general-transformations), [&#x200B; Numerieke transformaties &#x200B;](#numeric-transformations), [&#x200B; Categorische transformaties &#x200B;](#categorical-transformations), en [&#x200B; Textual transformaties &#x200B;](#textual-transformations).
 
 ### Algemene transformaties {#general-transformations}
 
@@ -97,7 +97,7 @@ Lees deze sectie voor details op de transformatoren die voor een brede waaier va
 
 #### Numerieke invoer {#numeric-imputer}
 
-De **Numerieke invoertransformator** voltooit ontbrekende waarden in een dataset. Dit gebruikt of het gemiddelde, mediaan, of wijze van de kolommen waarin de ontbrekende waarden worden gevestigd. De invoerkolommen moeten `DoubleType` of `FloatType` zijn. Meer informatie en voorbeelden kunnen in de [ documentatie van het het algoritme van de Vonk ](https://spark.apache.org/docs/2.2.0/ml-features.html#imputer) worden gevonden.
+De **Numerieke invoertransformator** voltooit ontbrekende waarden in een dataset. Dit gebruikt of het gemiddelde, mediaan, of wijze van de kolommen waarin de ontbrekende waarden worden gevestigd. De invoerkolommen moeten `DoubleType` of `FloatType` zijn. Meer informatie en voorbeelden kunnen in de [&#x200B; documentatie van het het algoritme van de Vonk &#x200B;](https://spark.apache.org/docs/2.2.0/ml-features.html#imputer) worden gevonden.
 
 >[!NOTE]
 >

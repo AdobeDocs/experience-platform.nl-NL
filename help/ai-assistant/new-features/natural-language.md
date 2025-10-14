@@ -68,7 +68,7 @@ Gebruik deze functie om het schatten van de omvang van het publiek te vereenvoud
 
 >[!TIP]
 >
->Uw rekening van het Experience Platform moet met [ AI van de Klant ](../../intelligent-services/customer-ai/overview.md) worden voorzien om de mogelijkheden van de de bezitsraming van AI Medewerker te gebruiken.
+>Uw rekening van het Experience Platform moet met [&#x200B; AI van de Klant &#x200B;](../../intelligent-services/customer-ai/overview.md) worden voorzien om de mogelijkheden van de de bezitsraming van AI Medewerker te gebruiken.
 
 U kunt de schatting van de doeldichtheid gebruiken om de waarschijnlijkheid van specifieke gedragingen of acties binnen een publiek te bepalen. U kunt bijvoorbeeld vragen stellen zoals:
 
@@ -108,7 +108,7 @@ Momenteel ondersteunt AI Assistant vooraf gedefinieerde datumbereiken, zoals &qu
 
 ### Hoe berekent AI Assistant eigenschapscores?
 
-De scores van de volheid worden berekend gebruikend [ AI van de Klant ](../../intelligent-services/customer-ai/overview.md). AI Assistant maakt gebruik van modellen voor machinaal leren om de waarschijnlijkheid te voorspellen van specifiek gedrag van het publiek, zoals aankopen en verven, binnen de gevraagde tijd. Tijdens het Alpha-stadium gebruikt de berekening van de densiteitsscore in AI Assistant geen ervaringsgebeurtenissen of gedragsgegevens.
+De scores van de volheid worden berekend gebruikend [&#x200B; AI van de Klant &#x200B;](../../intelligent-services/customer-ai/overview.md). AI Assistant maakt gebruik van modellen voor machinaal leren om de waarschijnlijkheid te voorspellen van specifiek gedrag van het publiek, zoals aankopen en verven, binnen de gevraagde tijd. Tijdens het Alpha-stadium gebruikt de berekening van de densiteitsscore in AI Assistant geen ervaringsgebeurtenissen of gedragsgegevens.
 
 ### Zal AI Assistant de publieksgrootten of -eigenschappen schatten op basis van real-time gegevens?
 
@@ -124,7 +124,7 @@ De volgende mogelijkheden worden momenteel niet ondersteund:
 
 ### Schattingen van de omvang van de doelgroep gebaseerd op gedragsgegevens
 
-De Medewerker van AI kan momenteel geen vragen beantwoorden die op gedragsgegevens zoals **worden gebaseerd &quot;hoeveel gebruikers een product aan karretje in de afgelopen 30 dagen hebben toegevoegd&quot;**. U kunt echter in Real-Time CDP een kenmerk voor gegevensverwerking maken dat dergelijke waarden vooraf kan berekenen. Deze berekende kenmerken zijn vervolgens beschikbaar in AI Assistant. Voor meer informatie, lees de documentatie over [ gegevens verwerkte attributen ](../../profile/computed-attributes/overview.md).
+De Medewerker van AI kan momenteel geen vragen beantwoorden die op gedragsgegevens zoals **worden gebaseerd &quot;hoeveel gebruikers een product aan karretje in de afgelopen 30 dagen hebben toegevoegd&quot;**. U kunt echter in Real-Time CDP een kenmerk voor gegevensverwerking maken dat dergelijke waarden vooraf kan berekenen. Deze berekende kenmerken zijn vervolgens beschikbaar in AI Assistant. Voor meer informatie, lees de documentatie over [&#x200B; gegevens verwerkte attributen &#x200B;](../../profile/computed-attributes/overview.md).
 
 ### Updates van realtime gegevens
 

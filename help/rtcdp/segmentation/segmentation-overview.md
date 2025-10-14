@@ -23,7 +23,7 @@ De segmentatie is het proces om specifieke attributen of gedrag te bepalen die d
 
 ## [!DNL Audience Builder]
 
-Met [!DNL Platform] kunt u eenvoudig segmentdefinities maken en openen en verschillende bouwstenen gebruiken om uw publiek verder te karakteriseren. Voor meer informatie over hoe te om de Bouwer van het Publiek te gebruiken, te lezen gelieve de [ gids van de Bouwer van het Publiek ](./audience-builder.md).
+Met [!DNL Platform] kunt u eenvoudig segmentdefinities maken en openen en verschillende bouwstenen gebruiken om uw publiek verder te karakteriseren. Voor meer informatie over hoe te om de Bouwer van het Publiek te gebruiken, te lezen gelieve de [&#x200B; gids van de Bouwer van het Publiek &#x200B;](./audience-builder.md).
 
 ## Customer AI
 
@@ -44,13 +44,13 @@ AI van de klant bevindt zich op het tabblad **[!UICONTROL Services]** onder **[!
 
 ### Aan de slag met Customer AI
 
-Om met Klant AI begonnen te worden moet u het [ leerprogramma van de gegevensprestatie volgen ](../../intelligent-services/data-preparation.md) en het inputschema vormen dat op uw gebruiksgeval wordt gebaseerd. Daarna, zult u een instantie van de Klant moeten [ vormen AI ](../../intelligent-services/customer-ai/user-guide/configure.md). Na het vormen van een instantie, wordt een model geproduceerd waar u uw inzichten en scores [ kunt bekijken ](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Met behulp van de gegevens die op basis van uw model worden gegenereerd, kunt u een publiek maken dat gegevens activeert.
+Om met Klant AI begonnen te worden moet u het [&#x200B; leerprogramma van de gegevensprestatie volgen &#x200B;](../../intelligent-services/data-preparation.md) en het inputschema vormen dat op uw gebruiksgeval wordt gebaseerd. Daarna, zult u een instantie van de Klant moeten [&#x200B; vormen AI &#x200B;](../../intelligent-services/customer-ai/user-guide/configure.md). Na het vormen van een instantie, wordt een model geproduceerd waar u uw inzichten en scores [&#x200B; kunt bekijken &#x200B;](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Met behulp van de gegevens die op basis van uw model worden gegenereerd, kunt u een publiek maken dat gegevens activeert.
 
-Om meer over Klant AI te leren, begin door het [ overzicht van AI van de Klant ](../../intelligent-services/customer-ai/overview.md) te bezoeken. Bovendien toont de volgende video hoe de AI van de Klant klantenprofielen met op AI-Gebaseerde eigenschappen verrijkt en klantensegmentatie en gerichte inspanningen toelaat.
+Om meer over Klant AI te leren, begin door het [&#x200B; overzicht van AI van de Klant &#x200B;](../../intelligent-services/customer-ai/overview.md) te bezoeken. Bovendien toont de volgende video hoe de AI van de Klant klantenprofielen met op AI-Gebaseerde eigenschappen verrijkt en klantensegmentatie en gerichte inspanningen toelaat.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
 
 
 ## Volgende stappen
 
-Nadat u dit overzicht hebt gelezen, moet u nu begrijpen hoe Real-Time CDP [!DNL Segmentation Service] gebruikt om marketingcampagnes beter aan te passen en aan te passen. Voor meer informatie over [!DNL Segmentation Service], te lezen gelieve de [ documentatie van de Segmentatie ](../../segmentation/home.md).
+Nadat u dit overzicht hebt gelezen, moet u nu begrijpen hoe Real-Time CDP [!DNL Segmentation Service] gebruikt om marketingcampagnes beter aan te passen en aan te passen. Voor meer informatie over [!DNL Segmentation Service], te lezen gelieve de [&#x200B; documentatie van de Segmentatie &#x200B;](../../segmentation/home.md).

@@ -15,12 +15,12 @@ ht-degree: 2%
 
 # Adobe Experience Platform Debugger-overzicht
 
-De uitbreiding van Adobe Experience Platform Debugger voor [ Chrome ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) onderzoekt uw Web-pagina&#39;s en helpt u problemen met vinden hoe uw oplossingen van Adobe Experience Cloud worden uitgevoerd.
+De uitbreiding van Adobe Experience Platform Debugger voor [&#x200B; Chrome &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) onderzoekt uw Web-pagina&#39;s en helpt u problemen met vinden hoe uw oplossingen van Adobe Experience Cloud worden uitgevoerd.
 
 U kunt Experience Platform Debugger gebruiken met de andere Adobe activeringsoplossingen om het volgende uit te voeren:
 
-1. Gebruik [ markeringen ](../tags/home.md) om code op te nemen die [ Adobe Experience Cloud ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=nl-NL) producten op uw pagina&#39;s activeert.
-1. Gebruik het [**[!UICONTROL Auditor]**&#x200B;lusje ](./auditor/overview.md) in Foutopsporing van Experience Platform om uw implementaties te testen.
+1. Gebruik [&#x200B; markeringen &#x200B;](../tags/home.md) om code op te nemen die [&#x200B; Adobe Experience Cloud &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=nl-NL) producten op uw pagina&#39;s activeert.
+1. Gebruik het [**[!UICONTROL Auditor]**&#x200B;lusje &#x200B;](./auditor/overview.md) in Foutopsporing van Experience Platform om uw implementaties te testen.
 1. Gebruik op gebeurtenissen gebaseerde en oplossingsspecifieke hulpmiddelen in Foutopsporing van Experience Platform om kwesties te zuiveren die door de Controleur worden gevonden of andere informatie over uw implementaties te onderzoeken.
 
 >[!NOTE]

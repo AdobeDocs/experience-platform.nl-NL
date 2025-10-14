@@ -16,22 +16,22 @@ Het volgende entiteitsrelatiediagram (ERD) vertegenwoordigt een gestandaardiseer
 
 >[!NOTE]
 >
->De ERD zoals beschreven is een aanbeveling voor hoe u uw gegevens moet modelleren voor deze branche-gebruikscase. Om van dit gegevensmodel in Experience Platform gebruik te maken, moet u de geadviseerde schema&#39;s en hun verhoudingen zelf construeren. Zie de gidsen bij het beheren van [ schema&#39;s ](../../ui/resources/schemas.md) en [ verhoudingen ](../../tutorials/relationship-ui.md) in UI voor meer informatie.
+>De ERD zoals beschreven is een aanbeveling voor hoe u uw gegevens moet modelleren voor deze branche-gebruikscase. Om van dit gegevensmodel in Experience Platform gebruik te maken, moet u de geadviseerde schema&#39;s en hun verhoudingen zelf construeren. Zie de gidsen bij het beheren van [&#x200B; schema&#39;s &#x200B;](../../ui/resources/schemas.md) en [&#x200B; verhoudingen &#x200B;](../../tutorials/relationship-ui.md) in UI voor meer informatie.
 
 Gebruik de volgende legenda om dit ERD te interpreteren:
 
-* Elke entiteit die binnen wordt getoond is gebaseerd op een onderliggende [ Model van de Gegevens van de Ervaring (XDM) klasse ](../composition.md#class).
+* Elke entiteit die binnen wordt getoond is gebaseerd op een onderliggende [&#x200B; Model van de Gegevens van de Ervaring (XDM) klasse &#x200B;](../composition.md#class).
 * Velden die onder een bovenliggend veld zijn ingesprongen, vertegenwoordigen een onderliggend veld, of subveld, dat tot de veldgroep van het bovenliggende veld behoort.
 * De belangrijkste velden voor een bepaalde entiteit worden rood gemarkeerd.
 * Alle eigenschappen die zouden kunnen worden gebruikt om individuele klanten te identificeren zijn duidelijk als &quot;identiteit&quot;, met één van deze eigenschappen duidelijk als &quot;primaire identiteit&quot;.
 * Entiteitsrelaties zijn gemarkeerd als niet-afhankelijk, omdat op cookies gebaseerde gebeurtenissen vaak niet kunnen bepalen wie de transactie heeft uitgevoerd.
 
 
-![ Een voorbeeld ERD voor een model van de telecomindustrie gegevens ](../../images/industries/telecom.png)
+![&#x200B; Een voorbeeld ERD voor een model van de telecomindustrie gegevens &#x200B;](../../images/industries/telecom.png)
 
 >[!NOTE]
 >
->De Experience Event-entiteit bevat het veld &quot;_ID&quot;, dat het unieke id-kenmerk (`_id`) vertegenwoordigt dat door de XDM ExperienceEvent-klasse wordt verschaft. Zie het verwijzingsdocument op [ XDM ExperienceEvent ](../../classes/experienceevent.md) voor meer details over wat voor deze waarde wordt verwacht.
+>De Experience Event-entiteit bevat het veld &quot;_ID&quot;, dat het unieke id-kenmerk (`_id`) vertegenwoordigt dat door de XDM ExperienceEvent-klasse wordt verschaft. Zie het verwijzingsdocument op [&#x200B; XDM ExperienceEvent &#x200B;](../../classes/experienceevent.md) voor meer details over wat voor deze waarde wordt verwacht.
 
 ## [!UICONTROL Telecommunications] gebruik gevallen
 

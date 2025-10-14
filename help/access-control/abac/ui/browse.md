@@ -23,13 +23,13 @@ Met [!UICONTROL Permissions] kunt u het volgende configureren:
 * [Sandboxes](./sandboxes.md)
 * [Gebruikers](./users.md)
 
-Als u toegang wilt tot op kenmerken gebaseerde toegangsbeheermachtigingen voor [!DNL Adobe Experience Platform] , moet u een beheerder zijn voor uw organisatie die een abonnement heeft op [!DNL Adobe Experience Platform] . Hoewel Adobe flexibele beheerderhiërarchieën voor uw organisaties ondersteunt, moet u een productbeheerder voor [!DNL Adobe Experience Platform] zijn om machtigingen te configureren. Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
+Als u toegang wilt tot op kenmerken gebaseerde toegangsbeheermachtigingen voor [!DNL Adobe Experience Platform] , moet u een beheerder zijn voor uw organisatie die een abonnement heeft op [!DNL Adobe Experience Platform] . Hoewel Adobe flexibele beheerderhiërarchieën voor uw organisaties ondersteunt, moet u een productbeheerder voor [!DNL Adobe Experience Platform] zijn om machtigingen te configureren. Zie het artikel van het Centrum van de Hulp van Adobe op [&#x200B; administratieve rollen &#x200B;](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
 
 Als u geen beheerdersrechten hebt, neemt u contact op met de systeembeheerder om toegang te krijgen.
 
-Zodra u admin voorrechten hebt, ga naar [ Adobe Experience Platform ](https://experience.adobe.com/) en teken binnen gebruikend uw [!DNL Adobe] geloofsbrieven. Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overview]** weergegeven voor uw organisatie waarvoor u beheerdersrechten hebt. Op deze pagina worden de producten weergegeven waarop uw organisatie is geabonneerd, samen met andere besturingselementen voor het toevoegen van gebruikers en beheerders aan de organisatie als geheel. Selecteer **[!UICONTROL Permissions]** om de op attributen-gebaseerde werkruimte van de toegangscontrole voor uw integratie van Experience Platform te openen.
+Zodra u admin voorrechten hebt, ga naar [&#x200B; Adobe Experience Platform &#x200B;](https://experience.adobe.com/) en teken binnen gebruikend uw [!DNL Adobe] geloofsbrieven. Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overview]** weergegeven voor uw organisatie waarvoor u beheerdersrechten hebt. Op deze pagina worden de producten weergegeven waarop uw organisatie is geabonneerd, samen met andere besturingselementen voor het toevoegen van gebruikers en beheerders aan de organisatie als geheel. Selecteer **[!UICONTROL Permissions]** om de op attributen-gebaseerde werkruimte van de toegangscontrole voor uw integratie van Experience Platform te openen.
 
-![ fc-select-product ](../../images/flac-ui/flac-select-product.png)
+![&#x200B; fc-select-product &#x200B;](../../images/flac-ui/flac-select-product.png)
 
 De op attributen-gebaseerde werkruimte van het toegangsbeheer voor Experience Platform verschijnt, die op de **[!UICONTROL Roles]** pagina opent. Op deze pagina kunt u alle rollen weergeven en verschillende instellingen beheren zoals in dit document wordt beschreven.
 
@@ -39,10 +39,10 @@ De op attributen-gebaseerde werkruimte van het toegangsbeheer voor Experience Pl
 
 Gebruik nu Machtigingen op [!DNL Adobe Experience Platform] in plaats van Rollen in de Adobe Admin Console om machtigingen voor gebruikers, functionaliteit, labels en andere bronnen in uw organisatie te beheren.
 
-![ fc-select-rollen ](../../images/flac-ui/flac-select-roles.png)
+![&#x200B; fc-select-rollen &#x200B;](../../images/flac-ui/flac-select-roles.png)
 
-In deze gebruikershandleiding wordt uitgelegd hoe u de [!DNL Adobe Experience Platform] kunt gebruiken om toegangsmachtigingen voor Experience Platform toe te wijzen. Voor meer algemene informatie over hoe te om [!DNL Admin Console] te navigeren, zie de [ gebruikersgids van Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
+In deze gebruikershandleiding wordt uitgelegd hoe u de [!DNL Adobe Experience Platform] kunt gebruiken om toegangsmachtigingen voor Experience Platform toe te wijzen. Voor meer algemene informatie over hoe te om [!DNL Admin Console] te navigeren, zie de [&#x200B; gebruikersgids van Admin Console &#x200B;](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
 ## Volgende stappen
 
-Zodra u de toestemmingenwerkruimte hebt genavigeerd, ga aan de volgende stap te werk [ creeer een nieuwe rol ](roles.md).
+Zodra u de toestemmingenwerkruimte hebt genavigeerd, ga aan de volgende stap te werk [&#x200B; creeer een nieuwe rol &#x200B;](roles.md).

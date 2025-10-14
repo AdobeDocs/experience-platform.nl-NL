@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!UICONTROL Virtual Service Detail] is een standaard gegevenstype van het Model van de Gegevens van de Ervaring (XDM) dat de details van het virtuele de dienstcontact beschrijft. Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ Virtuele het gegevenstype van de Dienst van het Detail structuur ](../../../images/healthcare/data-types/virtual-service-detail.png)
+![&#x200B; Virtuele het gegevenstype van de Dienst van het Detail structuur &#x200B;](../../../images/healthcare/data-types/virtual-service-detail.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -31,5 +31,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/simplequantity.schema.json)

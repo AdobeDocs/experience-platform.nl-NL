@@ -24,9 +24,9 @@ Dit document en de bijbehorende videopresentatie bieden een end-to-end workflow 
 
 Deze workflowdemonstratie is gebaseerd op verschillende Adobe Experience Platform-services. Als u de stappen wilt volgen, is het raadzaam de volgende functies en services goed te begrijpen:
 
-* De [ grondbeginselen van het Model van de Gegevens van de Ervaring (XDM) schemacompositie ](../../xdm/schema/composition.md)
-* Hoe te [ datasets tot stand brengen en gegevens opnemen ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL)
-* Hoe te om [ gegevens in te voeren gebruikend de Adobe Analytics bronschakelaar ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=nl-NL)
+* De [&#x200B; grondbeginselen van het Model van de Gegevens van de Ervaring (XDM) schemacompositie &#x200B;](../../xdm/schema/composition.md)
+* Hoe te [&#x200B; datasets tot stand brengen en gegevens opnemen &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL)
+* Hoe te om [&#x200B; gegevens in te voeren gebruikend de Adobe Analytics bronschakelaar &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=nl-NL)
 * [Segmentatie](../../segmentation/home.md)
 * [Bestemmingen](../../destinations/home.md)
 
@@ -73,13 +73,13 @@ Adobe Experience Platform biedt een gegevensopslagplaats en de benodigde hulpmid
 
 ## Volgende stappen
 
-Door dit document te lezen, moet u nu begrijpen hoe [!DNL Query Service] niet alleen de kwaliteit van uw gegevens en het gemak van segmentatie beïnvloedt, maar ook het belang ervan binnen uw gegevensarchitectuur voor de volledige end-to-end workflow. Voor meer toepasselijke SQL voorbeelden die Adobe Analytics met [!DNL Query Service] gebruiken, zie het [ Adobe Analytics het handelende gebruik van variabelen case ](./merchandising-variables.md).
+Door dit document te lezen, moet u nu begrijpen hoe [!DNL Query Service] niet alleen de kwaliteit van uw gegevens en het gemak van segmentatie beïnvloedt, maar ook het belang ervan binnen uw gegevensarchitectuur voor de volledige end-to-end workflow. Voor meer toepasselijke SQL voorbeelden die Adobe Analytics met [!DNL Query Service] gebruiken, zie het [&#x200B; Adobe Analytics het handelende gebruik van variabelen case &#x200B;](./merchandising-variables.md).
 
-Andere documenten die de voordelen van [!DNL Query Service] aan de strategische bedrijfsinzichten van uw organisatie aantonen zijn [ allebei het gebruiken van geval ](./bot-filtering.md) voorbeeld filtreren.
+Andere documenten die de voordelen van [!DNL Query Service] aan de strategische bedrijfsinzichten van uw organisatie aantonen zijn [&#x200B; allebei het gebruiken van geval &#x200B;](./bot-filtering.md) voorbeeld filtreren.
 
 U kunt deze documenten ook gebruiken voor een beter begrip van de functies van [!DNL Query Service] :
 
 * [Richtlijnen voor het uitvoeren van query&#39;s](../best-practices/writing-queries.md)
-* [ Begeleiding voor de organisatie van gegevensactiva ](../best-practices/organize-data-assets.md).
+* [&#x200B; Begeleiding voor de organisatie van gegevensactiva &#x200B;](../best-practices/organize-data-assets.md).
 
 

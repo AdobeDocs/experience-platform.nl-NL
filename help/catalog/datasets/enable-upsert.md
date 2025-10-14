@@ -17,7 +17,7 @@ Deze zelfstudie behandelt het proces waarbij een dataset met &quot;upsert&quot;m
 
 >[!NOTE]
 >
->De workflow die in deze zelfstudie wordt beschreven, werkt alleen voor batchopname. Voor het stromen opnemen upserts, gelieve te verwijzen naar de gids bij [ verzendend gedeeltelijke rijupdates naar het Profiel van de Klant in real time gebruikend Prep van Gegevens ](../../data-prep/upserts.md).
+>De workflow die in deze zelfstudie wordt beschreven, werkt alleen voor batchopname. Voor het stromen opnemen upserts, gelieve te verwijzen naar de gids bij [&#x200B; verzendend gedeeltelijke rijupdates naar het Profiel van de Klant in real time gebruikend Prep van Gegevens &#x200B;](../../data-prep/upserts.md).
 
 ## Aan de slag
 
@@ -26,17 +26,17 @@ Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platf
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 - [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful-API waarmee u gegevenssets kunt maken en configureren voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service] .
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
-- [ Inname van de Partij ](../../ingestion/batch-ingestion/overview.md): De Ingestie API van de Partij staat u toe om gegevens in Experience Platform als partijdossiers in te voeren.
+- [&#x200B; Inname van de Partij &#x200B;](../../ingestion/batch-ingestion/overview.md): De Ingestie API van de Partij staat u toe om gegevens in Experience Platform als partijdossiers in te voeren.
 
 De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Experience Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -44,7 +44,7 @@ Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentifica
 
 Voor alle aanvragen die een payload (POST, PUT, PATCH) bevatten, is een extra `Content-Type` -header vereist. De correcte waarde voor deze kopbal wordt getoond in de steekproefverzoeken waar nodig.
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een `x-sandbox-name` -header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een `x-sandbox-name` -header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 ## Een gegevensset maken die is ingeschakeld voor profielupdates
 
@@ -52,7 +52,7 @@ Wanneer het creëren van een nieuwe dataset, kunt u die dataset voor Profiel toe
 
 >[!NOTE]
 >
->Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Voor informatie over hoe te omhoog kijken of een profiel-Toegelaten schema tot stand brengen, zie het leerprogramma op [ creërend een schema gebruikend de Registratie API van het Schema ](../../xdm/tutorials/create-schema-api.md).
+>Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Voor informatie over hoe te omhoog kijken of een profiel-Toegelaten schema tot stand brengen, zie het leerprogramma op [&#x200B; creërend een schema gebruikend de Registratie API van het Schema &#x200B;](../../xdm/tutorials/create-schema-api.md).
 
 Om een dataset tot stand te brengen die voor Profiel en updates wordt toegelaten, gebruik een POST- verzoek aan het `/dataSets` eindpunt.
 
@@ -96,7 +96,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `schemaRef.id` | De id van het schema waarvoor [!DNL Profile] is ingeschakeld en waarop de gegevensset wordt gebaseerd. |
-| `{TENANT_ID}` | De naamruimte in de [!DNL Schema Registry] die bronnen bevat die tot uw organisatie behoren. Zie [ TENANT_ID ](../../xdm/api/getting-started.md#know-your-tenant-id) sectie van de [!DNL Schema Registry] ontwikkelaarsgids voor meer informatie. |
+| `{TENANT_ID}` | De naamruimte in de [!DNL Schema Registry] die bronnen bevat die tot uw organisatie behoren. Zie [&#x200B; TENANT_ID &#x200B;](../../xdm/api/getting-started.md#know-your-tenant-id) sectie van de [!DNL Schema Registry] ontwikkelaarsgids voor meer informatie. |
 
 **Reactie**
 
@@ -114,7 +114,7 @@ De volgende stappen behandelen hoe te om een bestaande profiel-Toegelaten datase
 
 >[!NOTE]
 >
->Om een bestaande profiel-Toegelaten dataset voor upsert te vormen, moet u eerst de dataset voor Profiel onbruikbaar maken en dan het naast de `isUpsert` markering re-toelaten. Als de bestaande dataset niet voor Profiel wordt toegelaten, kunt u rechtstreeks aan de stappen voor [ te werk gaan toelatend de dataset voor Profiel en ](#enable-the-dataset) te steunen. Als u onzeker bent, tonen de volgende stappen u hoe te om te controleren als de dataset reeds wordt toegelaten.
+>Om een bestaande profiel-Toegelaten dataset voor upsert te vormen, moet u eerst de dataset voor Profiel onbruikbaar maken en dan het naast de `isUpsert` markering re-toelaten. Als de bestaande dataset niet voor Profiel wordt toegelaten, kunt u rechtstreeks aan de stappen voor [&#x200B; te werk gaan toelatend de dataset voor Profiel en &#x200B;](#enable-the-dataset) te steunen. Als u onzeker bent, tonen de volgende stappen u hoe te om te controleren als de dataset reeds wordt toegelaten.
 
 ### Controleren of de gegevensset is ingeschakeld voor profiel
 
@@ -290,4 +290,4 @@ Een geslaagde PATCH-aanvraag retourneert HTTP Status 200 (OK) en een array met d
 
 ## Volgende stappen
 
-De gegevensset Profiel en Upsert-ingeschakeld kunnen nu worden gebruikt door workflows voor het invoeren van batches om updates van profielgegevens te maken. Om meer over het opnemen van gegevens in Adobe Experience Platform te leren, gelieve te beginnen door het [ overzicht van de gegevensinvoer te lezen ](../../ingestion/home.md).
+De gegevensset Profiel en Upsert-ingeschakeld kunnen nu worden gebruikt door workflows voor het invoeren van batches om updates van profielgegevens te maken. Om meer over het opnemen van gegevens in Adobe Experience Platform te leren, gelieve te beginnen door het [&#x200B; overzicht van de gegevensinvoer te lezen &#x200B;](../../ingestion/home.md).

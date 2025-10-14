@@ -23,4 +23,4 @@ De belangrijkste onderwerpen die in het document aan de orde komen, zijn:
 
 ## Volgende stappen
 
-Leren hoe te om het model van de kanaalvoorspelling tot stand te brengen en toe te passen, zie de [ volledige gids ](../advanced-statistics/examples/predict-customer-churn.md).
+Leren hoe te om het model van de kanaalvoorspelling tot stand te brengen en toe te passen, zie de [&#x200B; volledige gids &#x200B;](../advanced-statistics/examples/predict-customer-churn.md).

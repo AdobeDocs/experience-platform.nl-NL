@@ -42,7 +42,7 @@ Updates voor bestaande functies:
 
 * Momenteel geen bekende problemen.
 
-Voor meer informatie over [!DNL Intelligent Services] en wat het moet aanbieden, zie het [ Intelligente overzicht van de Diensten ](../../intelligent-services/home.md).
+Voor meer informatie over [!DNL Intelligent Services] en wat het moet aanbieden, zie het [&#x200B; Intelligente overzicht van de Diensten &#x200B;](../../intelligent-services/home.md).
 
 ## [!DNL Experience Data Model] (XDM)-systeem {#xdm}
 
@@ -78,18 +78,18 @@ Het gegevensbeheerframework vereenvoudigt en stroomlijnt het proces voor het cat
 
 | Functie | Beschrijving |
 | -----------| ---------- |
-| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid van het gegevensgebruik kan nu binnen de **1&rbrace; werkruimte van Beleid &lbrace;in [!DNL Experience Platform] UI worden geleid.** Zie de [ gids van de beleidsgebruiker ](../../data-governance/policies/user-guide.md) voor meer informatie. |
+| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid van het gegevensgebruik kan nu binnen de **1&rbrace; werkruimte van Beleid &lbrace;in [!DNL Experience Platform] UI worden geleid.** Zie de [&#x200B; gids van de beleidsgebruiker &#x200B;](../../data-governance/policies/user-guide.md) voor meer informatie. |
 
 **Bekende kwesties**
 
 * Geen.
 
-Voor meer informatie, gelieve te zien het [ overzicht van het Beleid van Gegevens ](../../data-governance/home.md).
+Voor meer informatie, gelieve te zien het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](../../data-governance/home.md).
 
 
 ## Bestemmingen {#destinations}
 
-In [ Real-Time Customer Data Platform ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [&#x200B; Real-Time Customer Data Platform &#x200B;](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
@@ -97,10 +97,10 @@ Real-Time CDP ondersteunt nu gegevensactivering voor meer dan vijftig [!DNL Expe
 
 | Documentatie | Beschrijving |
 |--- | ---|
-| [ de types en de categorieën van de Bestemming ](../../destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de interface van Real-Time CDP en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
-| [ de uitbreidingen van de Lancering van het Platform van de Ervaring ](../../destinations/catalog/launch-extensions/overview.md) | Op deze pagina wordt uitgelegd wat [!DNL Launch] extensies zijn, worden gebruiksscenario&#39;s voor het gebruik van extensies vermeld en worden koppelingen naar documentatie voor elke [!DNL Launch] -extensie in Real-Time CDP weergegeven. |
+| [&#x200B; de types en de categorieën van de Bestemming &#x200B;](../../destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de interface van Real-Time CDP en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
+| [&#x200B; de uitbreidingen van de Lancering van het Platform van de Ervaring &#x200B;](../../destinations/catalog/launch-extensions/overview.md) | Op deze pagina wordt uitgelegd wat [!DNL Launch] extensies zijn, worden gebruiksscenario&#39;s voor het gebruik van extensies vermeld en worden koppelingen naar documentatie voor elke [!DNL Launch] -extensie in Real-Time CDP weergegeven. |
 
-Voor meer informatie, gelieve te zien het [ overzicht van Doelen ](../../destinations/home.md).
+Voor meer informatie, gelieve te zien het [&#x200B; overzicht van Doelen &#x200B;](../../destinations/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -118,7 +118,7 @@ Bekende problemen
 
 * Geen
 
-Voor meer informatie over [!DNL Privacy Service], gelieve te beginnen door het [ overzicht van Privacy Service ](../../privacy-service/home.md) te lezen.
+Voor meer informatie over [!DNL Privacy Service], gelieve te beginnen door het [&#x200B; overzicht van Privacy Service &#x200B;](../../privacy-service/home.md) te lezen.
 
 ## Bronnen {#sources}
 
@@ -137,4 +137,4 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 * Geen
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

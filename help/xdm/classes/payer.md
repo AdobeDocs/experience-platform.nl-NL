@@ -13,7 +13,7 @@ ht-degree: 0%
 
 In Experience Data Model (XDM) legt de [!UICONTROL Payer] -klasse de minimale reeks eigenschappen vast die een zakelijke entiteit definiëren die gegevens verzamelt die betrekking hebben op verzekeringsmaatschappijen (zoals ziektekostenverzekeringen).
 
-![ structuur van de Klasse ](../images/classes/payer.png)
+![&#x200B; structuur van de Klasse &#x200B;](../images/classes/payer.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

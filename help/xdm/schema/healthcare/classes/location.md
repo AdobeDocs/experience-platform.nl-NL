@@ -16,7 +16,7 @@ ht-degree: 0%
 
 In Experience Data Model (XDM) legt de klasse [!UICONTROL Location] locatie-informatie voor livegebeurtenissen vast, zoals een reishal of sportarena.
 
-![ de klassenstructuur van de Plaats ](../../../images/healthcare/classes/location.png)
+![&#x200B; de klassenstructuur van de Plaats &#x200B;](../../../images/healthcare/classes/location.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -24,4 +24,4 @@ In Experience Data Model (XDM) legt de klasse [!UICONTROL Location] locatie-info
 | [!UICONTROL Location Identifier] | `locationID` | [!UICONTROL String] | Een unieke id voor de locatie. |
 | [!UICONTROL Location Name] | `locationName` | [!UICONTROL String] | De naam van de locatie. |
 
-De klasse kan met de [[!UICONTROL Location] gebiedsgroep ](../field-groups/location.md) worden uitgebreid om verdere details over een plaats te beschrijven.
+De klasse kan met de [[!UICONTROL Location] gebiedsgroep &#x200B;](../field-groups/location.md) worden uitgebreid om verdere details over een plaats te beschrijven.

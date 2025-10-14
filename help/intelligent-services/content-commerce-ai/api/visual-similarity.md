@@ -21,7 +21,7 @@ Wanneer u een afbeelding krijgt met de visuele gelijkenis, worden in de catalogu
 
 De volgende afbeelding is gebruikt in de voorbeeldaanvraag die in dit document wordt weergegeven:
 
-![ testbeeld ](../images/Query_Image.jpeg)
+![&#x200B; testbeeld &#x200B;](../images/Query_Image.jpeg)
 
 **API formaat**
 
@@ -92,7 +92,7 @@ Een succesvol antwoord retourneert een `response` -array die een `feature_value`
 
 De volgende visueel vergelijkbare afbeeldingen zijn geretourneerd in de onderstaande voorbeeldreactie:
 
-![ gelijkaardige beelden ](../images/results.jpg)
+![&#x200B; gelijkaardige beelden &#x200B;](../images/results.jpg)
 
 ```json
 {

@@ -13,9 +13,9 @@ ht-degree: 1%
 
 # Overzicht Adobe Privacy JavaScript Library
 
-Als gegevensverwerker verwerkt de Adobe persoonsgegevens volgens de toestemming en instructies van uw bedrijf. Als gegevenscontrolemechanisme, bepaalt u de persoonlijke gegevens die de Adobe verwerkt en namens u opslaat. Afhankelijk van de informatie die u kiest om via Adobe Experience Cloud-oplossingen te verzenden, kan Adobe persoonlijke informatie opslaan die van toepassing is op privacyregels zoals [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA). Zie het document over [ privacy in Adobe Experience Cloud ](https://www.adobe.com/nl/privacy/marketing-cloud.html) voor meer informatie over hoe de oplossingen van het Experience Cloud privé gegevens verzamelen.
+Als gegevensverwerker verwerkt de Adobe persoonsgegevens volgens de toestemming en instructies van uw bedrijf. Als gegevenscontrolemechanisme, bepaalt u de persoonlijke gegevens die de Adobe verwerkt en namens u opslaat. Afhankelijk van de informatie die u kiest om via Adobe Experience Cloud-oplossingen te verzenden, kan Adobe persoonlijke informatie opslaan die van toepassing is op privacyregels zoals [!DNL General Data Protection Regulation] (GDPR) en [!DNL California Consumer Privacy Act] (CCPA). Zie het document over [&#x200B; privacy in Adobe Experience Cloud &#x200B;](https://www.adobe.com/nl/privacy/marketing-cloud.html) voor meer informatie over hoe de oplossingen van het Experience Cloud privé gegevens verzamelen.
 
-De **Bibliotheek van JavaScript van de Privacy van de Adobe** staat gegevenscontrolemechanismen toe om de terugwinning van alle die gegevensonderwerpidentiteiten te automatiseren door [!DNL Experience Cloud] oplossingen voor een specifiek domein worden geproduceerd. Gebruikend API die door [ Adobe Experience Platform Privacy Service ](home.md) wordt verstrekt, kunnen deze identiteiten dan worden gebruikt om toegang tot en schrappingsverzoeken voor privé gegevens tot stand te brengen die tot die gegevenssubjecten behoren.
+De **Bibliotheek van JavaScript van de Privacy van de Adobe** staat gegevenscontrolemechanismen toe om de terugwinning van alle die gegevensonderwerpidentiteiten te automatiseren door [!DNL Experience Cloud] oplossingen voor een specifiek domein worden geproduceerd. Gebruikend API die door [&#x200B; Adobe Experience Platform Privacy Service &#x200B;](home.md) wordt verstrekt, kunnen deze identiteiten dan worden gebruikt om toegang tot en schrappingsverzoeken voor privé gegevens tot stand te brengen die tot die gegevenssubjecten behoren.
 
 >[!NOTE]
 >
@@ -45,9 +45,9 @@ Aangezien alle drie functies asynchrone processen vertegenwoordigen, moeten om h
 Als u [!DNL Privacy JS Library] wilt gaan gebruiken, moet u de toepassing op de computer installeren met een van de volgende methoden:
 
 * Installeer met npm door de volgende opdracht uit te voeren: `npm install @adobe/adobe-privacy`
-* Download van de [ bewaarplaats van GitHub van het Experience Cloud ](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* Download van de [&#x200B; bewaarplaats van GitHub van het Experience Cloud &#x200B;](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-U kunt de bibliotheek ook installeren met een tagextensie. Zie het overzicht op de [ de markeringsuitbreiding van de Privacy van de Adobe ](../tags/extensions/client/privacy/overview.md) voor meer informatie.
+U kunt de bibliotheek ook installeren met een tagextensie. Zie het overzicht op de [&#x200B; de markeringsuitbreiding van de Privacy van de Adobe &#x200B;](../tags/extensions/client/privacy/overview.md) voor meer informatie.
 
 ## Instantiëren van de [!DNL Privacy JS Library]
 
@@ -62,7 +62,7 @@ var adobePrivacy = new AdobePrivacy({
 });
 ```
 
-Voor een volledige lijst van gesteunde parameters voor verschillende oplossingen van de Adobe, zie de bijlage sectie over gesteunde [ de configuratieparameters van de oplossing van de Adobe ](#adobe-solution-configuration-parameters).
+Voor een volledige lijst van gesteunde parameters voor verschillende oplossingen van de Adobe, zie de bijlage sectie over gesteunde [&#x200B; de configuratieparameters van de oplossing van de Adobe &#x200B;](#adobe-solution-configuration-parameters).
 
 ## Codevoorbeelden {#samples}
 
@@ -170,7 +170,7 @@ Als de code met succes wordt uitgevoerd, wordt `validIDs` gevuld met een lijst v
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u de kernfuncties van de [!DNL Privacy JS Library] geïntroduceerd. Nadat u de bibliotheek hebt gebruikt om een lijst met identiteiten op te halen, kunt u deze identiteiten gebruiken om toegang tot gegevens te maken en aanvragen naar de API van [!DNL Privacy Service] te verwijderen. Zie de [ Privacy Service API gids ](api/overview.md) voor meer informatie.
+Door dit document te lezen, hebt u de kernfuncties van de [!DNL Privacy JS Library] geïntroduceerd. Nadat u de bibliotheek hebt gebruikt om een lijst met identiteiten op te halen, kunt u deze identiteiten gebruiken om toegang tot gegevens te maken en aanvragen naar de API van [!DNL Privacy Service] te verwijderen. Zie de [&#x200B; Privacy Service API gids &#x200B;](api/overview.md) voor meer informatie.
 
 ## Bijlage
 
@@ -178,7 +178,7 @@ Deze sectie bevat aanvullende informatie voor het gebruik van [!DNL Privacy JS L
 
 ### Configuratieparameters van de oplossing Adobe {#config-params}
 
-Het volgende is een lijst van de toegelaten configuratieparameters voor gesteunde Adobe oplossingen, die worden gebruikt wanneer [ het concretiseren van een voorwerp AdobePrivacy ](#instantiate-the-privacy-js-library).
+Het volgende is een lijst van de toegelaten configuratieparameters voor gesteunde Adobe oplossingen, die worden gebruikt wanneer [&#x200B; het concretiseren van een voorwerp AdobePrivacy &#x200B;](#instantiate-the-privacy-js-library).
 
 **Alle oplossingen**
 

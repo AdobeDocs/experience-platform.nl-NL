@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!UICONTROL Location] schemaveldgroep
 
-[!UICONTROL Location] is een standaardgroep van het schemagebied voor de [[!DNL Location]  klasse ](../classes/location.md). Het biedt één veld van het objecttype `healthcareLocation` waarin details en positiegegevens voor een plaats worden vastgelegd.
+[!UICONTROL Location] is een standaardgroep van het schemagebied voor de [[!DNL Location]  klasse &#x200B;](../classes/location.md). Het biedt één veld van het objecttype `healthcareLocation` waarin details en positiegegevens voor een plaats worden vastgelegd.
 
-![ de groepsstructuur van het Gebied ](../../../images/healthcare/field-groups/location.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../../images/healthcare/field-groups/location.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -41,5 +41,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/location.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/location.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/location.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/location.schema.json)

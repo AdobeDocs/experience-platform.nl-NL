@@ -22,7 +22,7 @@ Deze handleiding bevat informatie die u helpt meer inzicht te krijgen in tags en
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de Adobe Experience Platform API&#39;s. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de Adobe Experience Platform API&#39;s. Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen
 
 ### Woordenlijst
 
@@ -773,7 +773,7 @@ Een geslaagde reactie retourneert HTTP status 200 met details van de zojuist bij
 >
 >Alleen de systeembeheerder en de productbeheerder kunnen deze API-aanroep gebruiken.
 >
->Bovendien, kan de markering **niet** met om het even welke bedrijfsvoorwerpen worden geassocieerd en **moet** worden gearchiveerd alvorens u de markering kunt schrappen. U kunt de markering archiveren door het [ eindpunt van de updatemarkering ](#update-tag) te gebruiken.
+>Bovendien, kan de markering **niet** met om het even welke bedrijfsvoorwerpen worden geassocieerd en **moet** worden gearchiveerd alvorens u de markering kunt schrappen. U kunt de markering archiveren door het [&#x200B; eindpunt van de updatemarkering &#x200B;](#update-tag) te gebruiken.
 
 U kunt een specifieke tag verwijderen door een DELETE-tag op te geven aan het eindpunt van `/tags` en de id op te geven van het label dat u wilt verwijderen.
 
@@ -807,4 +807,4 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege reactie.
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u meer inzicht in het maken, beheren en verwijderen van tags en tagcategorieën met behulp van de Adobe Experience Platform API&#39;s. Voor meer informatie bij het beheren van markeringen die UI gebruiken, te lezen gelieve [ het leiden de gids van markeringen ](../ui/managing-tags.md). Voor meer informatie bij het beheren van markeringscategorieën die UI gebruiken, te lezen gelieve de [ gids van de markeringscategorieën ](../ui/tags-categories.md).
+Nadat u deze handleiding hebt gelezen, hebt u meer inzicht in het maken, beheren en verwijderen van tags en tagcategorieën met behulp van de Adobe Experience Platform API&#39;s. Voor meer informatie bij het beheren van markeringen die UI gebruiken, te lezen gelieve [&#x200B; het leiden de gids van markeringen &#x200B;](../ui/managing-tags.md). Voor meer informatie bij het beheren van markeringscategorieën die UI gebruiken, te lezen gelieve de [&#x200B; gids van de markeringscategorieën &#x200B;](../ui/tags-categories.md).

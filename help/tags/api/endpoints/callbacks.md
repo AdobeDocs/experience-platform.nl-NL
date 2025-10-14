@@ -13,7 +13,7 @@ ht-degree: 3%
 
 Een callback is een bericht dat de Reactor API naar een specifieke URL verzendt (gewoonlijk één die door uw organisatie wordt ontvangen).
 
-Callbacks zijn bedoeld om samen met [ controlegebeurtenissen ](./audit-events.md) aan spooractiviteiten in Reactor API worden gebruikt. Telkens wanneer een controlegebeurtenis van een bepaald type wordt geproduceerd, kan een callback een passend bericht naar gespecificeerde URL verzenden.
+Callbacks zijn bedoeld om samen met [&#x200B; controlegebeurtenissen &#x200B;](./audit-events.md) aan spooractiviteiten in Reactor API worden gebruikt. Telkens wanneer een controlegebeurtenis van een bepaald type wordt geproduceerd, kan een callback een passend bericht naar gespecificeerde URL verzenden.
 
 De service achter de URL die in de callback is opgegeven, moet reageren met HTTP-statuscode 200 (OK) of 201 (Gemaakt). Als de dienst niet met één van beiden van deze statuscodes antwoordt, wordt de berichtlevering opnieuw geprobeerd met de volgende intervallen:
 
@@ -31,11 +31,11 @@ De service achter de URL die in de callback is opgegeven, moet reageren met HTTP
 
 Als alle leveringspogingen zijn mislukt, wordt het bericht genegeerd.
 
-Een callback behoort tot precies één [ bezit ](./properties.md). Een eigenschap kan vele callbacks hebben.
+Een callback behoort tot precies één [&#x200B; bezit &#x200B;](./properties.md). Een eigenschap kan vele callbacks hebben.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Callbacks weergeven {#list}
 
@@ -55,7 +55,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde callbacks op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde callbacks op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -192,7 +192,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | `id` van het [ bezit ](./properties.md) dat u callback bepaalt onder. |
+| `PROPERTY_ID` | `id` van het [&#x200B; bezit &#x200B;](./properties.md) dat u callback bepaalt onder. |
 
 {style="table-layout:auto"}
 
@@ -221,7 +221,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `url` | De bestemming URL voor het callback bericht. De URL moet de HTTPS-protocolextensie gebruiken. |
-| `subscriptions` | Een array van tekenreeksen die de gebeurtenistypen van de audit aangeven die de callback activeren. Zie de [ gids van het de controlegebeurtenissen eindpunt ](./audit-events.md) voor een lijst van mogelijke gebeurtenistypen. |
+| `subscriptions` | Een array van tekenreeksen die de gebeurtenistypen van de audit aangeven die de callback activeren. Zie de [&#x200B; gids van het de controlegebeurtenissen eindpunt &#x200B;](./audit-events.md) voor een lijst van mogelijke gebeurtenistypen. |
 
 {style="table-layout:auto"}
 

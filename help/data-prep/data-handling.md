@@ -40,7 +40,7 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{DATE}` | Vereist. De tekenreeks die de datum vertegenwoordigt. |
-| `{FORMAT}` | Optioneel. De tekenreeks die staat voor de indeling van de brondatum. Meer informatie over koord het formatteren kan in de [ de sectie van het datum/tijdformaat koord ](#format) worden gevonden. |
+| `{FORMAT}` | Optioneel. De tekenreeks die staat voor de indeling van de brondatum. Meer informatie over koord het formatteren kan in de [&#x200B; de sectie van het datum/tijdformaat koord &#x200B;](#format) worden gevonden. |
 | `{DEFAULT_DATE}` | Optioneel. De standaarddatum die moet worden geretourneerd als de opgegeven datum null is. |
 
 Met de expressie `date(orderDate, "yyyy-MM-dd")` wordt bijvoorbeeld de `orderDate` waarde &quot;31 december 2020&quot; omgezet in de datetime-waarde &quot;2020-12-31&quot;.

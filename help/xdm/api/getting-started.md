@@ -20,19 +20,19 @@ Met de API van [!DNL Schema Registry] kunt u verschillende XDM-bronnen (Experien
 Voor het gebruik van de handleiding voor ontwikkelaars is een goed begrip van de volgende onderdelen van Adobe Experience Platform vereist:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
-   * [ Grondbeginselen van schemacompositie ](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-XDM gebruikt het formatteren van het Schema JSON om de structuur van ingebedde gegevens van de klantenervaring te beschrijven en te bevestigen. Daarom wordt sterk geadviseerd dat u de [ officiële documentatie van het Schema JSON ](https://json-schema.org/) voor een beter inzicht in deze onderliggende technologie herziet.
+XDM gebruikt het formatteren van het Schema JSON om de structuur van ingebedde gegevens van de klantenervaring te beschrijven en te bevestigen. Daarom wordt sterk geadviseerd dat u de [&#x200B; officiële documentatie van het Schema JSON &#x200B;](https://json-schema.org/) voor een beter inzicht in deze onderliggende technologie herziet.
 
 ## API-voorbeeldaanroepen lezen
 
-De API-documentatie van [!DNL Schema Registry] biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
+De API-documentatie van [!DNL Schema Registry] biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
 
 ## Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -44,9 +44,9 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ zandbakdocumentatie ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; zandbakdocumentatie &#x200B;](../../sandboxes/home.md).
 
-Voor alle opzoekverzoeken (GET) naar de [!DNL Schema Registry] is een extra `Accept` -header vereist, waarvan de waarde de indeling van de informatie bepaalt die door de API wordt geretourneerd. Zie [ kopbal ](#accept) hieronder sectie goedkeuren voor meer details.
+Voor alle opzoekverzoeken (GET) naar de [!DNL Schema Registry] is een extra `Accept` -header vereist, waarvan de waarde de indeling van de informatie bepaalt die door de API wordt geretourneerd. Zie [&#x200B; kopbal &#x200B;](#accept) hieronder sectie goedkeuren voor meer details.
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -222,7 +222,7 @@ De volgende tabel bevat een lijst met compatibele `Accept` headerwaarden, inclus
 
 In schemaversies wordt verwezen door `Accept` headers in de Schema Registry API en in `schemaRef.contentType` -eigenschappen in downstream Experience Platform service API payloads.
 
-Momenteel, steunt Experience Platform slechts één enkele belangrijkste versie (`1`) voor elk schema. Volgens de [ regels van schemaevolutie ](../schema/composition.md#evolution), moet elke update aan een schema niet-destructief zijn, betekenend dat de nieuwe minder belangrijke versies van een schema (`1.2`, `1.3`, enz.) altijd achterwaarts compatibel met vorige minder belangrijke versies zijn. Daarom wanneer het specificeren van `version=1`, keert de Registratie van het Schema altijd de **recentste** belangrijkste versie `1` van een schema terug, betekenend dat de vorige minder belangrijke versies niet zijn teruggekeerd.
+Momenteel, steunt Experience Platform slechts één enkele belangrijkste versie (`1`) voor elk schema. Volgens de [&#x200B; regels van schemaevolutie &#x200B;](../schema/composition.md#evolution), moet elke update aan een schema niet-destructief zijn, betekenend dat de nieuwe minder belangrijke versies van een schema (`1.2`, `1.3`, enz.) altijd achterwaarts compatibel met vorige minder belangrijke versies zijn. Daarom wanneer het specificeren van `version=1`, keert de Registratie van het Schema altijd de **recentste** belangrijkste versie `1` van een schema terug, betekenend dat de vorige minder belangrijke versies niet zijn teruggekeerd.
 
 >[!NOTE]
 >
@@ -235,7 +235,7 @@ Momenteel, steunt Experience Platform slechts één enkele belangrijkste versie 
 
 ## Beperkingen en aanbevolen procedures voor XDM-velden
 
-De velden van een schema worden vermeld in het bijbehorende `properties` -object. Elk veld is zelf een object dat kenmerken bevat voor het beschrijven en beperken van de gegevens die het veld kan bevatten. Verwijs naar de gids op [ bepalend douanegebieden in API ](../tutorials/custom-fields-api.md) voor codesteekproeven en facultatieve beperkingen voor de het meest algemeen gebruikte gegevenstypes.
+De velden van een schema worden vermeld in het bijbehorende `properties` -object. Elk veld is zelf een object dat kenmerken bevat voor het beschrijven en beperken van de gegevens die het veld kan bevatten. Verwijs naar de gids op [&#x200B; bepalend douanegebieden in API &#x200B;](../tutorials/custom-fields-api.md) voor codesteekproeven en facultatieve beperkingen voor de het meest algemeen gebruikte gegevenstypes.
 
 In het volgende voorbeeldveld wordt een correct opgemaakt XDM-veld weergegeven met nadere informatie over de naamgevingsbeperkingen en de onderstaande aanbevolen procedures. Deze praktijken kunnen ook worden toegepast wanneer het bepalen van andere middelen die gelijkaardige attributen bevatten.
 
@@ -260,7 +260,7 @@ In het volgende voorbeeldveld wordt een correct opgemaakt XDM-veld weergegeven m
 * Voor dit veld is een `type` vereist.
    * Voor het definiëren van bepaalde typen is mogelijk een optionele `format` vereist.
    * Wanneer een specifieke opmaak van gegevens vereist is, kan `examples` als een array worden toegevoegd.
-   * Het veldtype kan ook worden gedefinieerd aan de hand van elk gegevenstype in het register. Zie de sectie over [ het creëren van een gegevenstype ](./data-types.md#create) in de gids van het gegevenstypepunteindpunt voor meer informatie.
+   * Het veldtype kan ook worden gedefinieerd aan de hand van elk gegevenstype in het register. Zie de sectie over [&#x200B; het creëren van een gegevenstype &#x200B;](./data-types.md#create) in de gids van het gegevenstypepunteindpunt voor meer informatie.
 * In `description` worden het veld en de relevante informatie met betrekking tot veldgegevens uitgelegd. Het zou in volledige zinnen met duidelijke taal moeten worden geschreven zodat iedereen die tot het schema toegang heeft de intentie van het gebied kan begrijpen.
 
 ## Volgende stappen

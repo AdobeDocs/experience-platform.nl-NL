@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Gebruikersmachtigingen voor tags in Adobe Experience Platform worden aan gebruikers toegewezen via Adobe Admin Console. In plaats van te worden toegewezen aan individuele gebruikers, worden verschillende reeksen toestemmingen gevormd afzonderlijk als productprofielen. De gebruikers worden dan toegewezen aan deze productprofielen om de toestemmingen te worden verleend zij voor zijn gevormd.
 
@@ -21,7 +21,7 @@ Deze gids verstrekt een overzicht van de verschillende soorten toestemmingen bes
 
 >[!NOTE]
 >
->Voor stappen op hoe te om toestemmingen voor gebruikers te vormen die Admin Console gebruiken, gelieve te verwijzen naar het leerprogramma over [ het beheren van toestemmingen voor gegevensinzameling ](../../../collection/permissions.md).
+>Voor stappen op hoe te om toestemmingen voor gebruikers te vormen die Admin Console gebruiken, gelieve te verwijzen naar het leerprogramma over [&#x200B; het beheren van toestemmingen voor gegevensinzameling &#x200B;](../../../collection/permissions.md).
 
 ## Machtigingstypen
 
@@ -55,8 +55,8 @@ De volgende tabel geeft een overzicht van de beschikbare eigendomsrechten en de 
 | **ontwikkelen** | Op deze manier kunt u de volgende handelingen uitvoeren:<ul><li>Regels en gegevenselementen maken</li><li>Bibliotheken maken en deze bouwen in bestaande ontwikkelomgevingen</li><li>Bibliotheek ter goedkeuring verzenden</li></ul>De meeste dagelijkse taken in UI vereisen dit recht. |
 | **goedkeuren** | Hierdoor kunt u een verzonden bibliotheek gebruiken en bouwen naar de testomgeving. U kunt ook een bibliotheek goedkeuren voor publicatie nadat het testen is voltooid. |
 | **Publish** | Hierdoor kunt u goedgekeurde bibliotheken publiceren naar de productieomgeving. |
-| **beheert Uitbreidingen** | Op deze manier kunt u de volgende handelingen uitvoeren: <ul><li>Nieuwe extensies installeren op een eigenschap</li><li>De configuratie voor een reeds geïnstalleerde extensie wijzigen</li><li>Een extensie verwijderen</li></ul>Zie de documentatie van het uitbreidingsoverzicht voor [ meer informatie over uitbreidingen ](../managing-resources/extensions/overview.md). Deze rol behoort gewoonlijk tot IT of Marketing, afhankelijk van uw organisatie. |
-| **beheert Milieu&#39;s** | Hierdoor kunt u omgevingen maken en wijzigen. Zie de [ milieu&#39;s documentatie ](../publishing/environments.md) voor meer informatie. Deze rol behoort gewoonlijk tot de IT-groep. |
+| **beheert Uitbreidingen** | Op deze manier kunt u de volgende handelingen uitvoeren: <ul><li>Nieuwe extensies installeren op een eigenschap</li><li>De configuratie voor een reeds geïnstalleerde extensie wijzigen</li><li>Een extensie verwijderen</li></ul>Zie de documentatie van het uitbreidingsoverzicht voor [&#x200B; meer informatie over uitbreidingen &#x200B;](../managing-resources/extensions/overview.md). Deze rol behoort gewoonlijk tot IT of Marketing, afhankelijk van uw organisatie. |
+| **beheert Milieu&#39;s** | Hierdoor kunt u omgevingen maken en wijzigen. Zie de [&#x200B; milieu&#39;s documentatie &#x200B;](../publishing/environments.md) voor meer informatie. Deze rol behoort gewoonlijk tot de IT-groep. |
 
 {style="table-layout:auto"}
 
@@ -66,7 +66,7 @@ De rechten van het bedrijf zijn op toestemmingen van toepassing die veelvoudige 
 
 | Bedrijfsrecht | Beschrijving |
 | --- | --- |
-| **beheert Eigenschappen** | Op deze manier kunt u de volgende handelingen uitvoeren:<ul><li>Nieuwe eigenschappen maken</li><li>Metagegevens en instellingen op eigenschapsniveau wijzigen</li><li>Eigenschappen verwijderen</li></ul>Beheerders voeren deze rol gewoonlijk uit. Zie de [ eigenschappen documentatie ](companies-and-properties.md) voor meer informatie. |
+| **beheert Eigenschappen** | Op deze manier kunt u de volgende handelingen uitvoeren:<ul><li>Nieuwe eigenschappen maken</li><li>Metagegevens en instellingen op eigenschapsniveau wijzigen</li><li>Eigenschappen verwijderen</li></ul>Beheerders voeren deze rol gewoonlijk uit. Zie de [&#x200B; eigenschappen documentatie &#x200B;](companies-and-properties.md) voor meer informatie. |
 | **ontwikkelt Uitbreidingen** | Biedt de mogelijkheid extensiepakketten te maken en aan te passen die eigendom zijn van het bedrijf, inclusief privéreleases en verzoeken om openbare publicatie. |
 | **beheer App Configurations** | Dit is alleen beschikbaar als u een licentie voor Adobe Journey Optimizer hebt of een andere oplossing die toegang biedt tot mobiele berichten in de app en push-berichten.  Op deze manier kunt u de apps beheren die het Experience Cloud kent, samen met de vereiste pushgegevens die nodig zijn om te communiceren met de Firebase Cloud Messaging-service en de Apple Push Notification Service. |
 
@@ -121,4 +121,4 @@ De volgende lijst verstrekt sommige voorbeelden van de soorten rollen u in uw or
 
 ## Volgende stappen
 
-Dit document bevat een overzicht van de beschikbare machtigingen voor tags in Experience Platform. Voor stappen op hoe te om productprofielen voor markeringen in Adobe Admin Console te vormen, zie de gids bij [ het beheren van gebruikerstoestemmingen voor gegevensinzameling ](../../../collection/permissions.md).
+Dit document bevat een overzicht van de beschikbare machtigingen voor tags in Experience Platform. Voor stappen op hoe te om productprofielen voor markeringen in Adobe Admin Console te vormen, zie de gids bij [&#x200B; het beheren van gebruikerstoestemmingen voor gegevensinzameling &#x200B;](../../../collection/permissions.md).

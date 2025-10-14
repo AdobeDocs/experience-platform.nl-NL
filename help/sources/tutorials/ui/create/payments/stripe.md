@@ -18,14 +18,14 @@ Lees de volgende zelfstudie om te leren hoe u via de gebruikersinterface betalin
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Verificatie
 
-Lees het [[!DNL Stripe]  overzicht ](../../../../connectors/payments/stripe.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
+Lees het [[!DNL Stripe]  overzicht &#x200B;](../../../../connectors/payments/stripe.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
 
 ## Sluit uw [!DNL Stripe] -account aan {#connect}
 
@@ -37,7 +37,7 @@ Onder de *categorie van Betalingen*, selecteer **[!DNL Stripe]**, en selecteer d
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus in Experience Platform UI, met de geselecteerde bron van Stripe kaart.](../../../../images/tutorials/create/stripe/catalog.png)
+![&#x200B; de broncatalogus in Experience Platform UI, met de geselecteerde bron van Stripe kaart.](../../../../images/tutorials/create/stripe/catalog.png)
 
 De pagina **[!UICONTROL Connect Stripe account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -49,11 +49,11 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 
 Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ de nieuwe interface van de rekeningsverwezenlijking van het bronwerkschema.](../../../../images/tutorials/create/stripe/new.png)
+![&#x200B; de nieuwe interface van de rekeningsverwezenlijking van het bronwerkschema.](../../../../images/tutorials/create/stripe/new.png)
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Toegangstoken | Uw toegangstoken van [!DNL Stripe]. Voor informatie over hoe te om uw toegangstoken terug te winnen, lees de [[!DNL Stripe]  authentificatiegids ](../../../../connectors/payments/stripe.md). |
+| Toegangstoken | Uw toegangstoken van [!DNL Stripe]. Voor informatie over hoe te om uw toegangstoken terug te winnen, lees de [[!DNL Stripe]  authentificatiegids &#x200B;](../../../../connectors/payments/stripe.md). |
 
 >[!TAB  Gebruik een bestaande rekening ]
 
@@ -61,7 +61,7 @@ Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing 
 
 Selecteer **[!UICONTROL Next]** om door te gaan.
 
-![ de bestaande pagina van de rekeningsselectie van de broncatalogus.](../../../../images/tutorials/create/stripe/existing.png)
+![&#x200B; de bestaande pagina van de rekeningsselectie van de broncatalogus.](../../../../images/tutorials/create/stripe/existing.png)
 
 >[!ENDTABS]
 
@@ -76,11 +76,11 @@ Nu u toegang hebt tot uw account, moet u het juiste pad aangeven naar de [!DNL S
 * Klanten
 * Prijzen
 
-![ het dropdown venster van de middelweg.](../../../../images/tutorials/create/stripe/select-resource-path.png)
+![&#x200B; het dropdown venster van de middelweg.](../../../../images/tutorials/create/stripe/select-resource-path.png)
 
 Zodra uw eindpunt wordt geselecteerd, werkt de interface in een voorproefscherm bij, die de gegevensstructuur van het [!DNL Stripe] eindpunt toont dat u selecteerde. Selecteer **[!UICONTROL Next]** om door te gaan.
 
-![ het voorproefvenster van uw gegevens van Stripe.](../../../../images/tutorials/create/stripe/preview.png)
+![&#x200B; het voorproefvenster van uw gegevens van Stripe.](../../../../images/tutorials/create/stripe/preview.png)
 
 ## Gegevensset en gegevens over gegevensstroom opgeven {#provide-dataset-and-dataflow-details}
 
@@ -96,19 +96,19 @@ Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens
 
 Als u een nieuwe gegevensset wilt gebruiken, selecteert u **[!UICONTROL New dataset]** en geeft u een naam en een optionele beschrijving voor de gegevensset op. U moet ook een schema van het Model van de Gegevens van de Ervaring (XDM) selecteren dat uw dataset volgt aan.
 
-![ de nieuwe interface van de datasetselectie.](../../../../images/tutorials/create/stripe/new-dataset.png)
+![&#x200B; de nieuwe interface van de datasetselectie.](../../../../images/tutorials/create/stripe/new-dataset.png)
 
 | Nieuwe gegevens gegevensset | Beschrijving |
 | --- | --- |
 | Naam uitvoergegevensset | De naam van uw nieuwe dataset. |
 | Beschrijving | (Optioneel) Een korte toelichting op de nieuwe gegevensset. |
-| Schema | Een vervolgkeuzelijst met schema&#39;s die in uw organisatie bestaan. U kunt ook uw eigen schema vóór het proces van de bronconfiguratie maken. Voor meer informatie, lees de gids op [ creërend een schema XDM in UI ](../../../../../xdm/tutorials/create-schema-ui.md). |
+| Schema | Een vervolgkeuzelijst met schema&#39;s die in uw organisatie bestaan. U kunt ook uw eigen schema vóór het proces van de bronconfiguratie maken. Voor meer informatie, lees de gids op [&#x200B; creërend een schema XDM in UI &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md). |
 
 >[!TAB  Gebruik een bestaande dataset ]
 
 Als u al een bestaande dataset hebt, selecteert u **[!UICONTROL Existing dataset]** en gebruikt u vervolgens de optie **[!UICONTROL Advanced search]** om een venster weer te geven met alle datasets in uw organisatie, inclusief de respectievelijke details, zoals of deze zijn ingeschakeld voor opname in het realtime-klantprofiel.
 
-![ de bestaande interface van de datasetselectie.](../../../../images/tutorials/create/stripe/existing-dataset.png)
+![&#x200B; de bestaande interface van de datasetselectie.](../../../../images/tutorials/create/stripe/existing-dataset.png)
 
 >[!ENDTABS]
 
@@ -125,21 +125,21 @@ Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan 
 
 Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegrip van een naam, een facultatieve beschrijving, en waakzame configuraties dan verstrekken.
 
-![ de stap van de de detailconfiguratie van de gegevensstroom.](../../../../images/tutorials/create/stripe/dataflow-detail.png)
+![&#x200B; de stap van de de detailconfiguratie van de gegevensstroom.](../../../../images/tutorials/create/stripe/dataflow-detail.png)
 
 | Dataflow-configuraties | Beschrijving |
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom.  Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties vereisen allen een lopende gegevensstroom om hen teweeg te brengen.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties vereisen allen een lopende gegevensstroom om hen teweeg te brengen.  Voor meer informatie, lees het [&#x200B; alarm overzicht &#x200B;](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ## Velden toewijzen aan een XDM-schema {#mapping}
 
-De stap **[!UICONTROL Mapping]** wordt weergegeven. Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens die gegevens in Experience Platform op te nemen. Voor een uitgebreide gids op hoe te om de kaartinterface te gebruiken, lees de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md) voor meer informatie.
+De stap **[!UICONTROL Mapping]** wordt weergegeven. Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens die gegevens in Experience Platform op te nemen. Voor een uitgebreide gids op hoe te om de kaartinterface te gebruiken, lees de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md) voor meer informatie.
 
-![ de afbeeldingsinterface van het bronwerkschema.](../../../../images/tutorials/create/stripe/mapping.png)
+![&#x200B; de afbeeldingsinterface van het bronwerkschema.](../../../../images/tutorials/create/stripe/mapping.png)
 
 ## Inlogschema configureren {#scheduling}
 
@@ -147,11 +147,11 @@ Daarna, gebruik de het plannen interface om een innameprogramma voor uw dataflow
 
 Selecteer de frequentie dropdown om de de innamefrequentie van uw gegevensstroom te vormen.
 
-![ het frequentiemalpdown menu.](../../../../images/tutorials/create/stripe/frequency.png)
+![&#x200B; het frequentiemalpdown menu.](../../../../images/tutorials/create/stripe/frequency.png)
 
 U kunt ook het kalenderpictogram selecteren en een pop-upkalender gebruiken om de begintijd van de opname te configureren.
 
-![ De configureerbare kalender voor het plannen.](../../../../images/tutorials/create/stripe/calendar.png)
+![&#x200B; De configureerbare kalender voor het plannen.](../../../../images/tutorials/create/stripe/calendar.png)
 
 | Configuratie plannen | Beschrijving |
 | --- | --- |
@@ -162,7 +162,7 @@ U kunt ook het kalenderpictogram selecteren en een pop-upkalender gebruiken om d
 
 Selecteer **[!UICONTROL Next]** als u het schema voor inname van de gegevensstroom hebt geconfigureerd.
 
-![ De het plannen interface van het bronwerkschema.](../../../../images/tutorials/create/stripe/scheduling.png)
+![&#x200B; De het plannen interface van het bronwerkschema.](../../../../images/tutorials/create/stripe/scheduling.png)
 
 ## Controleer uw gegevensstroom
 
@@ -174,7 +174,7 @@ De laatste stap in het proces voor het maken van een gegevensstroom is het contr
 
 Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.
 
-![ de stap van het Overzicht van het bronwerkschema.](../../../../images/tutorials/create/stripe/review.png)
+![&#x200B; de stap van het Overzicht van het bronwerkschema.](../../../../images/tutorials/create/stripe/review.png)
 
 ## Volgende stappen
 
@@ -182,12 +182,12 @@ Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om betalingsge
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [ controlerekeningen en dataflows in UI ](../../../../../dataflows/ui/monitor-sources.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [&#x200B; controlerekeningen en dataflows in UI &#x200B;](../../../../../dataflows/ui/monitor-sources.md).
 
 ### Uw gegevensstroom bijwerken
 
-Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [ bijwerken brondataflows in UI ](../../update-dataflows.md).
+Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [&#x200B; bijwerken brondataflows in UI &#x200B;](../../update-dataflows.md).
 
 ### Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [ het schrappen van dataflows in UI ](../../delete.md).
+U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [&#x200B; het schrappen van dataflows in UI &#x200B;](../../delete.md).

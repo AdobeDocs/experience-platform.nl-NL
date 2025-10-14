@@ -21,11 +21,11 @@ ht-degree: 0%
 
 Het volgende document schetst de toestemmingen van Workspace van de Wetenschap van Gegevens en toegang tot eigenschappen.
 
-![ de lusjes van DSW ](./images/access/platform-tabs.png)
+![&#x200B; de lusjes van DSW &#x200B;](./images/access/platform-tabs.png)
 
-- **Notitieboekjes:** verstrekt een interactieve ontwikkelomgeving ([ JupyterLab ](./jupyterlab/overview.md)) om, uw gegevens op Experience Platform te onderzoeken te analyseren en te modelleren.
-- **Modellen:** verstrekt hulpmiddelen die worden gebruikt om, geavanceerde machine het leren recepten en modellen tot stand te brengen te publiceren en op te slaan. Voor meer informatie, bezoek [ creeer en publiceer een machine het leren model ](./models-recipes/create-publish-model.md) leerprogramma.
-- **de Diensten:** bevat zowel de Adobe-Verstrekte diensten zoals [ AI/ML diensten ](../intelligent-services/home.md) en om het even welke douanediensten u met de Wetenschap Workspace van Gegevens creeerde.
+- **Notitieboekjes:** verstrekt een interactieve ontwikkelomgeving ([&#x200B; JupyterLab &#x200B;](./jupyterlab/overview.md)) om, uw gegevens op Experience Platform te onderzoeken te analyseren en te modelleren.
+- **Modellen:** verstrekt hulpmiddelen die worden gebruikt om, geavanceerde machine het leren recepten en modellen tot stand te brengen te publiceren en op te slaan. Voor meer informatie, bezoek [&#x200B; creeer en publiceer een machine het leren model &#x200B;](./models-recipes/create-publish-model.md) leerprogramma.
+- **de Diensten:** bevat zowel de Adobe-Verstrekte diensten zoals [&#x200B; AI/ML diensten &#x200B;](../intelligent-services/home.md) en om het even welke douanediensten u met de Wetenschap Workspace van Gegevens creeerde.
 
 Waarom zie ik slechts het lusje van de Diensten?
 
@@ -58,7 +58,7 @@ In de volgende tabel worden enkele belangrijke verschillen beschreven voor Data 
 
 ## Toegangsbeheer
 
-De controle van de toegang voor Experience Platform wordt beheerd door [ Adobe Admin Console ](https://adminconsole.adobe.com). Deze functionaliteit maakt gebruik van productprofielen in Admin Console, die gebruikers koppelen aan machtigingen en sandboxen. Zie het [ overzicht van de toegangscontrole ](../access-control/home.md) voor meer informatie.
+De controle van de toegang voor Experience Platform wordt beheerd door [&#x200B; Adobe Admin Console &#x200B;](https://adminconsole.adobe.com). Deze functionaliteit maakt gebruik van productprofielen in Admin Console, die gebruikers koppelen aan machtigingen en sandboxen. Zie het [&#x200B; overzicht van de toegangscontrole &#x200B;](../access-control/home.md) voor meer informatie.
 
 Als u Data Science Workspace wilt gebruiken, moet de machtiging &quot;Manage Data Science Workspace&quot; zijn ingeschakeld. In de volgende tabel worden de effecten weergegeven van het inschakelen of uitschakelen van deze machtiging:
 
@@ -68,7 +68,7 @@ Als u Data Science Workspace wilt gebruiken, moet de machtiging &quot;Manage Dat
 
 ## Sandbox-ondersteuning
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke Experience Platform-instantie ondersteunt meerdere productie- en niet-productie sandboxen, elk met een eigen bibliotheek met Experience Platform-bronnen. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van zandbakken ](../sandboxes/home.md).
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke Experience Platform-instantie ondersteunt meerdere productie- en niet-productie sandboxen, elk met een eigen bibliotheek met Experience Platform-bronnen. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Voor meer informatie over zandbakken, zie het [&#x200B; overzicht van zandbakken &#x200B;](../sandboxes/home.md).
 
 Data Science Workspace heeft momenteel de volgende sandboxbeperking:
 
@@ -78,4 +78,4 @@ Data Science Workspace heeft momenteel de volgende sandboxbeperking:
 
 In dit document worden de verschillende soorten toegang en functies beschreven die beschikbaar zijn in Data Science Workspace.
 
-Om meer over de Wetenschap van Gegevens Workspace, zoals een volledig dagelijks werkschema te leren, gelieve te beginnen door de [&#128279;](./walkthrough.md) documentatie van Workspace van de Wetenschap van 0&rbrace; Gegevens te lezen.  Voor meer algemene informatie, bezoek het [ overzicht van Workspace van de Wetenschap van Gegevens ](./home.md).
+Om meer over de Wetenschap van Gegevens Workspace, zoals een volledig dagelijks werkschema te leren, gelieve te beginnen door de [&#128279;](./walkthrough.md) documentatie van Workspace van de Wetenschap van 0&rbrace; Gegevens te lezen.  Voor meer algemene informatie, bezoek het [&#x200B; overzicht van Workspace van de Wetenschap van Gegevens &#x200B;](./home.md).

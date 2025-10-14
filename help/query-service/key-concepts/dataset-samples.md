@@ -33,7 +33,7 @@ Als u de benaderende verwerkingsmogelijkheden voor query&#39;s die in dit docume
 >
 >U moet de sessiemarkering inschakelen telkens wanneer u zich aanmeldt bij Experience Platform.
 
-![ de Redacteur van de Vraag met &quot;SET qp=true;&quot;benadrukt bevel.](../images/key-concepts/set-session-flag.png)
+![&#x200B; de Redacteur van de Vraag met &quot;SET qp=true;&quot;benadrukt bevel.](../images/key-concepts/set-session-flag.png)
 
 ## Een uniforme steekproef voor een willekeurige gegevensset maken {#create-a-sample}
 

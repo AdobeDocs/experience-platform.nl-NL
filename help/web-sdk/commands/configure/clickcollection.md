@@ -30,7 +30,7 @@ De volgende variabelen zijn beschikbaar in het object `clickCollection` :
 
 ## Klik inzamelingsmontages gebruikend de de markeringsuitbreiding van SDK van het Web
 
-Selecteer om het even welke volgende opties wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md):
+Selecteer om het even welke volgende opties wanneer [&#x200B; het vormen van de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md):
 
 * [!UICONTROL Collect internal links]
    * [!UICONTROL Event grouping options]:
@@ -41,7 +41,7 @@ Selecteer om het even welke volgende opties wanneer [ het vormen van de markerin
 * [!UICONTROL Collect download links]
 * [!UICONTROL Filter click properties]
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.

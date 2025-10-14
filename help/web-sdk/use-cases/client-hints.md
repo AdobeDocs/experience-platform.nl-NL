@@ -56,7 +56,7 @@ In de afgelopen jaren hebben eigenaars van sites en leveranciers van marketingse
 
 Ondanks het belangrijke doel dat gebruikersagentenkoorden voor plaatseigenaars dienen, hebben de browser ontwikkelaars besloten om te veranderen hoe de koorden van de gebruikersagent werken, om potentiële privacykwesties voor eind te beperken - gebruikers.
 
-De oplossing zij ontwikkelden wordt genoemd [ de wenken van de gebruikersagent ](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met behulp van clienttips kunnen websites nog steeds de benodigde informatie over de browser, het besturingssysteem en het apparaat verzamelen, terwijl ze tegelijkertijd een betere bescherming bieden tegen methoden voor geheime tracering, zoals vingerafdrukken.
+De oplossing zij ontwikkelden wordt genoemd [&#x200B; de wenken van de gebruikersagent &#x200B;](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Met behulp van clienttips kunnen websites nog steeds de benodigde informatie over de browser, het besturingssysteem en het apparaat verzamelen, terwijl ze tegelijkertijd een betere bescherming bieden tegen methoden voor geheime tracering, zoals vingerafdrukken.
 
 Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de userAgent-tekenreeks, maar op een meer privacyvriendelijke manier.
 
@@ -64,7 +64,7 @@ Wanneer moderne browsers een gebruiker naar een webserver sturen, wordt de volle
 
 ## Browserondersteuning {#browser-support}
 
-{de wenken van de de agentencliënt van de Gebruiker 1} werden geïntroduceerd met [ versie 89.](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) [!DNL Google Chrome]
+{de wenken van de de agentencliënt van de Gebruiker 1} werden geïntroduceerd met [&#x200B; versie 89.](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) [!DNL Google Chrome]
 
 Aanvullende op chroom gebaseerde browsers ondersteunen de client Hints-API, zoals:
 
@@ -119,13 +119,13 @@ Als u geen hoge entropieclientiptips inschakelt in uw omgeving, werken de Adobe 
 
 ### Adobe Analytics rapporteert op basis van hoge entropclient-hints {#analytics}
 
-De [ dimensie van het Werkende systeem ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=nl-NL) omvat werkend systeemversie die als hoge entropie cliëntwenk wordt opgeslagen. Als de hoge wenken van entropiecliënten niet wordt toegelaten, kan de versie van het werkende systeem voor klappen die van browsers Chromium worden verzameld onnauwkeurig zijn.
+De [&#x200B; dimensie van het Werkende systeem &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=nl-NL) omvat werkend systeemversie die als hoge entropie cliëntwenk wordt opgeslagen. Als de hoge wenken van entropiecliënten niet wordt toegelaten, kan de versie van het werkende systeem voor klappen die van browsers Chromium worden verzameld onnauwkeurig zijn.
 
 ### Audience Manager-kenmerken die afhankelijk zijn van hoge entropclientijdenten {#aam}
 
-[!DNL Google] heeft de browserfunctionaliteit van [!DNL Chrome] bijgewerkt om de informatie die via de header van `User-Agent` wordt verzameld, tot een minimum te beperken. Dientengevolge, zullen de klanten van Audience Manager die [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL) gebruiken geen betrouwbare informatie voor eigenschappen meer ontvangen die op [ worden gebaseerd platform-vlakke sleutels ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=nl-NL).
+[!DNL Google] heeft de browserfunctionaliteit van [!DNL Chrome] bijgewerkt om de informatie die via de header van `User-Agent` wordt verzameld, tot een minimum te beperken. Dientengevolge, zullen de klanten van Audience Manager die [&#x200B; DIL &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL) gebruiken geen betrouwbare informatie voor eigenschappen meer ontvangen die op [&#x200B; worden gebaseerd platform-vlakke sleutels &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=nl-NL).
 
-De klanten van Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten aan [ SDK van het Web van Experience Platform ](/help/web-sdk/home.md) in plaats van [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL) schakelen, en [ Hoge Hints van de Cliënt Entropy ](#enabling-high-entropy-client-hints) toelaten om betrouwbare gegevens van het dienblad te blijven ontvangen.
+De klanten van Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten aan [&#x200B; SDK van het Web van Experience Platform &#x200B;](/help/web-sdk/home.md) in plaats van [&#x200B; DIL &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL) schakelen, en [&#x200B; Hoge Hints van de Cliënt Entropy &#x200B;](#enabling-high-entropy-client-hints) toelaten om betrouwbare gegevens van het dienblad te blijven ontvangen.
 
 ## Hoog entropclient-hints inschakelen {#enabling-high-entropy-client-hints}
 

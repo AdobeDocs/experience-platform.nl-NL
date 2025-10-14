@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Pinterest] is een visuele zoekfunctie waarmee u ideeën kunt vinden zoals recepten, thuisdecor, stijlinspiratie en nog veel meer. Er zijn miljarden punten op [!DNL Pinterest] die ook met anderen kunnen worden gedeeld op [!DNL Pinterest] . U kunt de gebruikersinteractiegebeurtenissen en hefboomwerking [!DNL Pinterest Analytics] sorteren om gebruikersgedrag te begrijpen en gerichte reclame in werking te stellen.
 
-De [[!DNL Pinterest]  gebeurtenis van Conversies ](https://developers.pinterest.com/docs/conversions/conversion-management/) API [ die ](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen staat u toe aan hefboomwerkingsgegevens in de Edge Network van Adobe Experience Platform worden gevangen en het verzenden naar [!DNL Pinterest]. Dit document behandelt de gebruiksgevallen van de uitbreiding, hoe te om het te installeren, en hoe te om zijn mogelijkheden in uw gebeurtenis te integreren die [ regels ](../../../ui/managing-resources/rules.md) door:sturen.
+De [[!DNL Pinterest]  gebeurtenis van Conversies &#x200B;](https://developers.pinterest.com/docs/conversions/conversion-management/) API [&#x200B; die &#x200B;](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen staat u toe aan hefboomwerkingsgegevens in de Edge Network van Adobe Experience Platform worden gevangen en het verzenden naar [!DNL Pinterest]. Dit document behandelt de gebruiksgevallen van de uitbreiding, hoe te om het te installeren, en hoe te om zijn mogelijkheden in uw gebeurtenis te integreren die [&#x200B; regels &#x200B;](../../../ui/managing-resources/rules.md) door:sturen.
 
 Conversies van toegangstokens zijn de verificatiemethode die [!DNL Pinterest] gebruikt bij interactie met de [!DNL Pinterest] API.
 
@@ -27,13 +27,13 @@ Neem bijvoorbeeld een marketingteam in een organisatie. Het team legt gebruikers
 
 De marketing- en analyseteams kunnen vervolgens gebruikmaken van [!DNL Pinterest] Analysemogelijkheden om belangrijke gebruikersinteracties en -gedrag te begrijpen, zodat u gebruikers beter kunt begrijpen en beter kunt richten op doelgerichte advertentiecampagnes.
 
-Voor meer informatie over gebruiksgevallen specifiek voor [!DNL Pinterest], verwijs naar de [[!DNL Pinterest]  gebruiksgevallen ](https://business.pinterest.com/en/success-stories) documentatie.
+Voor meer informatie over gebruiksgevallen specifiek voor [!DNL Pinterest], verwijs naar de [[!DNL Pinterest]  gebruiksgevallen &#x200B;](https://business.pinterest.com/en/success-stories) documentatie.
 
 ## [!DNL Pinterest] voorwaarden {#prerequisites}
 
-U moet een geldige [!DNL Pinterest] [ bedrijfsrekening ](https://help.pinterest.com/en/business/article/get-a-business-account) hebben om deze uitbreiding te gebruiken. Ga naar de [[!DNL Pinterest]  registratiepagina ](https://www.pinterest.com/business/create/) om een rekening te registreren en tot stand te brengen als u niet reeds hebt.
+U moet een geldige [!DNL Pinterest] [&#x200B; bedrijfsrekening &#x200B;](https://help.pinterest.com/en/business/article/get-a-business-account) hebben om deze uitbreiding te gebruiken. Ga naar de [[!DNL Pinterest]  registratiepagina &#x200B;](https://www.pinterest.com/business/create/) om een rekening te registreren en tot stand te brengen als u niet reeds hebt.
 
-U hebt ook een [!DNL Pinterest] -ontwikkelaarsaccount nodig, die aan uw [!DNL Pinterest] -zakelijke account moet worden gekoppeld. Om uw ontwikkelaarrekening met uw bedrijfsrekening te associëren, verwijs naar de [[!DNL Pinterest &#x200B;]  ontwikkelaarrekening ](https://developers.pinterest.com/account-setup/).
+U hebt ook een [!DNL Pinterest] -ontwikkelaarsaccount nodig, die aan uw [!DNL Pinterest] -zakelijke account moet worden gekoppeld. Om uw ontwikkelaarrekening met uw bedrijfsrekening te associëren, verwijs naar de [[!DNL Pinterest &#x200B;]  ontwikkelaarrekening &#x200B;](https://developers.pinterest.com/account-setup/).
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 
@@ -41,16 +41,16 @@ Als u het Experience Platform wilt verbinden met [!DNL Pinterest] , hebt u de vo
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Adds-account-id | Je account-id voor [!DNL Pinterest] Adds. Verwijs naar de [[!DNL Pinterest]  documentatie ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) voor begeleiding. | 123456789012 |
-| Token voor toegang tot conversie | Uw token voor conversietoegang van [!DNL Pinterest] . Verwijs naar [[!DNL Pinterest]  Conversies API ](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token) document voor begeleiding. <br> **u zal slechts worden vereist dit één keer te doen aangezien dit teken niet verloopt.** | {YOUR_PINTEREST_BEARER_TOKEN} |
+| Adds-account-id | Je account-id voor [!DNL Pinterest] Adds. Verwijs naar de [[!DNL Pinterest]  documentatie &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) voor begeleiding. | 123456789012 |
+| Token voor toegang tot conversie | Uw token voor conversietoegang van [!DNL Pinterest] . Verwijs naar [[!DNL Pinterest]  Conversies API &#x200B;](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token) document voor begeleiding. <br> **u zal slechts worden vereist dit één keer te doen aangezien dit teken niet verloopt.** | {YOUR_PINTEREST_BEARER_TOKEN} |
 
 ## De extensie [!DNL Pinterest] installeren en configureren {#install}
 
-Om de uitbreiding te installeren, [ creeer een gebeurtenis door:sturen bezit ](../../../ui/event-forwarding/overview.md#properties) of kies een bestaand bezit in plaats daarvan uit te geven.
+Om de uitbreiding te installeren, [&#x200B; creeer een gebeurtenis door:sturen bezit &#x200B;](../../../ui/event-forwarding/overview.md#properties) of kies een bestaand bezit in plaats daarvan uit te geven.
 
 Selecteer **[!UICONTROL Extensions]** in de linkernavigatie. Selecteer **[!UICONTROL Install]** op de kaart voor de extensie [!DNL Pinterest] op het tabblad **[!UICONTROL Catalog]** .
 
-![ Catalogus die de [!DNL Pinterest] uitbreiding met [!UICONTROL Install] benadrukte tonen.](../../../images/extensions/server/pinterest/install.png)
+![&#x200B; Catalogus die de [!DNL Pinterest] uitbreiding met [!UICONTROL Install] benadrukte tonen.](../../../images/extensions/server/pinterest/install.png)
 
 ### De extensie [!DNL Pinterest] configureren
 
@@ -60,19 +60,19 @@ Selecteer **[!UICONTROL Extensions]** in de linkernavigatie. Selecteer **[!UICON
 
 Selecteer **[!UICONTROL Extensions]** in de linkernavigatie. Selecteer **[!UICONTROL Configure]** op de kaart voor de [!DNL Pinterest] -extensie op het tabblad [!UICONTROL Installed] **.
 
-![[!DNL Pinterest] die wordt weergegeven op de [!UICONTROL Install] tab met [!UICONTROL Configure] gemarkeerde extensie. ](../../../images/extensions/server/pinterest/configure.png)
+![[!DNL Pinterest] die wordt weergegeven op de [!UICONTROL Install] tab met [!UICONTROL Configure] gemarkeerde extensie. &#x200B;](../../../images/extensions/server/pinterest/configure.png)
 
-Op het volgende scherm, input [!UICONTROL Ads Account Id] en [!UICONTROL Conversion Access Token] die u eerder in de [ sectie van configuratiedetails ](#configuration-details) verzamelde. Selecteer **[!UICONTROL Save]** als u klaar bent.
+Op het volgende scherm, input [!UICONTROL Ads Account Id] en [!UICONTROL Conversion Access Token] die u eerder in de [&#x200B; sectie van configuratiedetails &#x200B;](#configuration-details) verzamelde. Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![ het [!DNL Pinterest] [!UICONTROL Configure] scherm dat de [!UICONTROL Ads Account Id] en [!UICONTROL Conversion Access Token] inputgebieden benadrukt.](../../../images/extensions/server/pinterest/input.png)
+![&#x200B; het [!DNL Pinterest] [!UICONTROL Configure] scherm dat de [!UICONTROL Ads Account Id] en [!UICONTROL Conversion Access Token] inputgebieden benadrukt.](../../../images/extensions/server/pinterest/input.png)
 
 ## Vorm een gebeurtenis door:sturen regel {#config-rule}
 
 Zodra al uw gegevenselementen opstelling zijn, kunt u gebeurtenis beginnen tot stand te brengen die regels bepaalt wanneer en hoe uw gebeurtenissen naar [!DNL Pinterest] zullen worden verzonden.
 
-Creeer een nieuwe [ regel ](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Pinterest]** . Als u Edge Network-gebeurtenissen naar [!DNL Pinterest] wilt verzenden, stelt u de waarde **[!UICONTROL Action Type]** in op **[!UICONTROL Send Event].**
+Creeer een nieuwe [&#x200B; regel &#x200B;](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Pinterest]** . Als u Edge Network-gebeurtenissen naar [!DNL Pinterest] wilt verzenden, stelt u de waarde **[!UICONTROL Action Type]** in op **[!UICONTROL Send Event].**
 
-![ de [!DNL Pinterest] [!UICONTROL Send Event] regelverwezenlijking.](../../../images/extensions/server/pinterest/rule.png)
+![&#x200B; de [!DNL Pinterest] [!UICONTROL Send Event] regelverwezenlijking.](../../../images/extensions/server/pinterest/rule.png)
 
 Na selectie, schijnen de extra controles om de gebeurtenis verder te vormen. U moet de eigenschappen van de gebeurtenis [!DNL Pinterest] toewijzen aan de gegevenselementen die u eerder hebt gemaakt.
 
@@ -82,13 +82,13 @@ De volgende gebeurtenisgegevens worden vereist om de nieuwe regel te maken:
 
 | Veldnaam | Beschrijving | Voorbeeld |
 | --- | --- | --- | 
-| [!UICONTROL Event Name] | Het type van de gebruikersgebeurtenis. Dit kan om het even welk gebeurtenistype echter zijn, aan hefboomwerking [!DNL Pinterest Analytics] wordt het geadviseerd om [[!DNL Pinterest]  gebeurteniscodes ](https://help.pinterest.com/en/business/article/add-event-codes) te gebruiken | * checkout <br> * add_to_cart <br> * page_visit <br> * signup <br> * [ user-defined gebeurtenis ] |
+| [!UICONTROL Event Name] | Het type van de gebruikersgebeurtenis. Dit kan om het even welk gebeurtenistype echter zijn, aan hefboomwerking [!DNL Pinterest Analytics] wordt het geadviseerd om [[!DNL Pinterest]  gebeurteniscodes &#x200B;](https://help.pinterest.com/en/business/article/add-event-codes) te gebruiken | * checkout <br> * add_to_cart <br> * page_visit <br> * signup <br> * [ user-defined gebeurtenis ] |
 | [!UICONTROL Action Source] | De bron die aangeeft waar de conversiegebeurtenis heeft plaatsgevonden. | * app_android <br> * app_ios <br> * web <br> * offline |
-| [!UICONTROL Event Time] | Dit verwijst naar de tijd van de gebeurtenis. De standaardtijdnotatie die wordt gebruikt, is UNIX, in de notatie `<seconds>.<miliseconds>` , afhankelijk van uw lokale tijdzone. Voor meer informatie, verwijs naar [[!DNL Pinterest]  API ](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 wijst op 1433188255 seconden en 500 milliseconden na epoch, of maandag, 1 Juni, 2015, bij 7 :50: 55 PM GMT. |
+| [!UICONTROL Event Time] | Dit verwijst naar de tijd van de gebeurtenis. De standaardtijdnotatie die wordt gebruikt, is UNIX, in de notatie `<seconds>.<miliseconds>` , afhankelijk van uw lokale tijdzone. Voor meer informatie, verwijs naar [[!DNL Pinterest]  API &#x200B;](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 wijst op 1433188255 seconden en 500 milliseconden na epoch, of maandag, 1 Juni, 2015, bij 7 :50: 55 PM GMT. |
 | [!UICONTROL Event ID] | Een unieke id-tekenreeks die deze gebeurtenis identificeert en kan worden gebruikt voor het verwijderen tussen gebeurtenissen die via de API voor conversie en Pinterest-tracking worden opgenomen. Zonder dit zullen de gegevens van de gebeurtenis waarschijnlijk dubbel worden geteld en zal de inflatie in metrische termen worden gerapporteerd. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
 | [!UICONTROL Event Properties] | Een JSON-object dat aangepaste eigenschappen van de gebeurtenis bevat. Maak een keuze uit het opgeven van onbewerkte JSON of uit het gebruik van een vereenvoudigde set toetsinvoer. | { &quot;event_source_url&quot;: &quot;http://site.com&quot; } |
 
-![ [!DNL Pinterest] [!UICONTROL Event Data] benadrukt in de regelactie.](../../../images/extensions/server/pinterest/event-data.png)
+![&#x200B; [!DNL Pinterest] [!UICONTROL Event Data] benadrukt in de regelactie.](../../../images/extensions/server/pinterest/event-data.png)
 
 De volgende gebeurteniseigenschappen kunnen worden geconfigureerd:
 
@@ -117,7 +117,7 @@ De volgende gebruikersgegevens kunnen worden ingevoerd door zijn geen vereiste v
 | [!UICONTROL Client User Agent] | De userAgent-tekenreeks van de webbrowser van de gebruiker. | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |
 | [!UICONTROL Customer information data] | Een JSON-object dat andere klantgegevens bevat. Maak een keuze uit het opgeven van onbewerkte JSON of uit het gebruik van een vereenvoudigde set toetsinvoer. | { &quot;ph&quot;: &quot;122333445&quot; } |
 
-![ [!DNL Pinterest] [!UICONTROL User Data] benadrukt in de regelactie.](../../../images/extensions/server/pinterest/user-data.png)
+![&#x200B; [!DNL Pinterest] [!UICONTROL User Data] benadrukt in de regelactie.](../../../images/extensions/server/pinterest/user-data.png)
 
 De eigenschappen van de klanteninformatie die kunnen worden gevormd zijn:
 
@@ -153,7 +153,7 @@ De volgende aangepaste gegevens kunnen voor de regel worden ingevoerd:
 | Inhoud-id&#39;s | Lijst (array) met product-id&#39;s. |
 | Inhoud | Een lijst (array) met objecten die informatie over producten bevatten, zoals prijs en hoeveelheid. |
 
-![ [!DNL Pinterest] [!UICONTROL Custom Data] benadrukt in de regelactie.](../../../images/extensions/server/pinterest/custom-data.png)
+![&#x200B; [!DNL Pinterest] [!UICONTROL Custom Data] benadrukt in de regelactie.](../../../images/extensions/server/pinterest/custom-data.png)
 
 ## Gegevens valideren binnen [!DNL Pinterest]
 
@@ -161,15 +161,15 @@ Nadat de regel voor het doorsturen van gebeurtenissen is gemaakt en uitgevoerd, 
 
 Als de gebeurtenisverzameling en [!DNL Experience Platform] -integratie zijn gelukt, ziet u gebeurtenissen in de gebruikersinterface van [!DNL Pinterest] .
 
-![ de [!DNL Pinterest] gebeurtenismanager ](../../../images/extensions/server/pinterest/event-history.png)
+![&#x200B; de [!DNL Pinterest] gebeurtenismanager &#x200B;](../../../images/extensions/server/pinterest/event-history.png)
 
 U kunt de [!DNL Pinterest] -gebeurtenisgegevensdistributie verder doorlopen en bekijken.
 
-![ de [!DNL Pinterest] gegevensdistributie ](../../../images/extensions/server/pinterest/event-history-distribution.png)
+![&#x200B; de [!DNL Pinterest] gegevensdistributie &#x200B;](../../../images/extensions/server/pinterest/event-history-distribution.png)
 
 ## Volgende stappen
 
 Deze handleiding besprak het installeren en configureren van de [!DNL Pinterest] -gebeurtenis voor het doorsturen van extensies in de gebruikersinterface. Raadpleeg de officiële documentatie voor meer informatie:
 
-* [[!DNL Pinterest]  API ](https://developers.pinterest.com/docs/api/v5/)
-* [[!DNL Pinterest]  Conversies API Overzicht ](https://help.pinterest.com/en/business/article/the-pinterest-api-for-conversions)
+* [[!DNL Pinterest]  API &#x200B;](https://developers.pinterest.com/docs/api/v5/)
+* [[!DNL Pinterest]  Conversies API Overzicht &#x200B;](https://help.pinterest.com/en/business/article/the-pinterest-api-for-conversions)

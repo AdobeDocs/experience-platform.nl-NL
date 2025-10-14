@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # Reacties sorteren en filteren in de Flow Service API
 
-Wanneer het uitvoeren van lijst (GET) verzoeken in de [ Dienst API van de Stroom ](https://www.adobe.io/experience-platform-apis/references/flow-service/), kunt u vraagparameters gebruiken om reacties te sorteren en te filtreren. Deze handleiding bevat een referentie voor het gebruik van deze parameters voor verschillende gebruiksgevallen.
+Wanneer het uitvoeren van lijst (GET) verzoeken in de [&#x200B; Dienst API van de Stroom &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/), kunt u vraagparameters gebruiken om reacties te sorteren en te filtreren. Deze handleiding bevat een referentie voor het gebruik van deze parameters voor verschillende gebruiksgevallen.
 
 ## Sorteren
 
 U kunt antwoorden sorteren met behulp van een `orderby` query-parameter. De volgende bronnen kunnen worden gesorteerd in de API:
 
-* [ Verbindingen ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
-* [ de verbindingen van Source ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
-* [ de verbindingen van het Doel ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
-* [ Stromen ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
-* [ Lopen ](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
+* [&#x200B; Verbindingen &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
+* [&#x200B; de verbindingen van Source &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
+* [&#x200B; de verbindingen van het Doel &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
+* [&#x200B; Stromen &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
+* [&#x200B; Lopen &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
 Als u de parameter wilt gebruiken, moet u de waarde ervan instellen op de specifieke eigenschap waarop u wilt sorteren (bijvoorbeeld `?orderby=name` ). U kunt de waarde met een plusteken (`+`) voor het stijgen orde of minteken (`-`) voor het dalende orde toevoegen. Als er geen voorvoegsel voor de volgorde is opgegeven, wordt de lijst standaard in oplopende volgorde gesorteerd.
 
@@ -44,7 +44,7 @@ Filteren kan algemeen worden toegepast op elke eigenschap in een entiteit, zolan
 
 >[!NOTE]
 >
->Als een bezit binnen een seriepunt wordt genesteld, moet u vierkante haakjes (`[]`) aan de serie in de weg toevoegen. Zie de sectie op [ het filtreren op serieeigenschappen ](#arrays) voor voorbeelden.
+>Als een bezit binnen een seriepunt wordt genesteld, moet u vierkante haakjes (`[]`) aan de serie in de weg toevoegen. Zie de sectie op [&#x200B; het filtreren op serieeigenschappen &#x200B;](#arrays) voor voorbeelden.
 
 **keer alle bronverbindingen terug waar de naam van de bronlijst `lead` is:**
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u de query-parameters `orderby` en `property` kunt gebruiken om reacties in de Flow Service API te sorteren en te filteren. Voor geleidelijke gidsen op hoe te om API voor gemeenschappelijke werkschema&#39;s in Experience Platform te gebruiken, zie de API leerprogramma&#39;s in de [ bronnen ](../../sources/home.md) en [ documentatie van bestemmingen ](../../destinations/home.md).
+In deze handleiding wordt beschreven hoe u de query-parameters `orderby` en `property` kunt gebruiken om reacties in de Flow Service API te sorteren en te filteren. Voor geleidelijke gidsen op hoe te om API voor gemeenschappelijke werkschema&#39;s in Experience Platform te gebruiken, zie de API leerprogramma&#39;s in de [&#x200B; bronnen &#x200B;](../../sources/home.md) en [&#x200B; documentatie van bestemmingen &#x200B;](../../destinations/home.md).

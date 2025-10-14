@@ -11,12 +11,12 @@ ht-degree: 1%
 
 # Het eindpunt van omgevingen
 
-Wanneer de a [ bibliotheek ](./libraries.md) in a [ wordt gecompileerd bouwt ](./builds.md) in Reactor API, hangt de nauwkeurige inhoud van de bouwstijl van de milieumontages en de middelen inbegrepen in de bibliotheek af. De omgeving bepaalt met name het volgende:
+Wanneer de a [&#x200B; bibliotheek &#x200B;](./libraries.md) in a [&#x200B; wordt gecompileerd bouwt &#x200B;](./builds.md) in Reactor API, hangt de nauwkeurige inhoud van de bouwstijl van de milieumontages en de middelen inbegrepen in de bibliotheek af. De omgeving bepaalt met name het volgende:
 
-1. **Bestemming**: De plaats waar u de bouwstijl wilt worden opgesteld. Dit wordt gecontroleerd door a [ gastheer ](./hosts.md) voor het milieu te selecteren om te gebruiken.
+1. **Bestemming**: De plaats waar u de bouwstijl wilt worden opgesteld. Dit wordt gecontroleerd door a [&#x200B; gastheer &#x200B;](./hosts.md) voor het milieu te selecteren om te gebruiken.
 1. **Archief**: U kunt verkiezen om de bouwstijl als plaatsbare reeks dossiers terug te winnen of het te hebben omhoog in een archiefformaat gecompileerd. Dit wordt bepaald door de instelling `archive` voor de omgeving.
 
-Het doel en archiefformaat dat door het milieu wordt gevormd verandert hoe u in uw toepassing (die verwijzing die een [ inbedt code ](../../ui/publishing/environments.md#embed-code) is) van verwijzingen voorziet. Als u wijzigingen aanbrengt in de doel- of bestandsindeling, moet u een overeenkomende update uitvoeren naar uw toepassing om de nieuwe referentie te kunnen gebruiken.
+Het doel en archiefformaat dat door het milieu wordt gevormd verandert hoe u in uw toepassing (die verwijzing die een [&#x200B; inbedt code &#x200B;](../../ui/publishing/environments.md#embed-code) is) van verwijzingen voorziet. Als u wijzigingen aanbrengt in de doel- of bestandsindeling, moet u een overeenkomende update uitvoeren naar uw toepassing om de nieuwe referentie te kunnen gebruiken.
 
 De milieu&#39;s komen in drie types (of stadia), met elk type dat een verschillende grens van het totale aantal heeft u kunt hebben:
 
@@ -28,15 +28,15 @@ De milieu&#39;s komen in drie types (of stadia), met elk type dat een verschille
 
 {style="table-layout:auto"}
 
-Deze omgevingstypes hebben gelijkaardig gedrag, maar worden gebruikt in verschillende stadia van het [ markering het publiceren werkschema ](../../ui/publishing/publishing-flow.md).
+Deze omgevingstypes hebben gelijkaardig gedrag, maar worden gebruikt in verschillende stadia van het [&#x200B; markering het publiceren werkschema &#x200B;](../../ui/publishing/publishing-flow.md).
 
-Een milieu behoort tot precies één [ bezit ](./properties.md).
+Een milieu behoort tot precies één [&#x200B; bezit &#x200B;](./properties.md).
 
-Voor meer algemene informatie over milieu&#39;s, zie de sectie over [ milieu&#39;s ](../../ui/publishing/environments.md) in het publiceren documenten.
+Voor meer algemene informatie over milieu&#39;s, zie de sectie over [&#x200B; milieu&#39;s &#x200B;](../../ui/publishing/environments.md) in het publiceren documenten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met omgevingen ophalen {#list}
 
@@ -56,7 +56,7 @@ GET /properties/{PROPERTY_ID}/environments
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde milieu&#39;s op de volgende attributen worden gefiltreerd:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde milieu&#39;s op de volgende attributen worden gefiltreerd:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -283,13 +283,13 @@ POST /properties/{PROPERTY_ID}/environments
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | `id` van het [ bezit ](./properties.md) dat u het milieu onder bepaalt. |
+| `PROPERTY_ID` | `id` van het [&#x200B; bezit &#x200B;](./properties.md) dat u het milieu onder bepaalt. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe omgeving voor de opgegeven eigenschap gemaakt. De aanroep koppelt de omgeving ook aan een bestaande host via de eigenschap `relationships` . Zie de gids op [ verhoudingen ](../guides/relationships.md) voor meer informatie.
+Met het volgende verzoek wordt een nieuwe omgeving voor de opgegeven eigenschap gemaakt. De aanroep koppelt de omgeving ook aan een bestaande host via de eigenschap `relationships` . Zie de gids op [&#x200B; verhoudingen &#x200B;](../guides/relationships.md) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -453,7 +453,7 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de omgeving moeten worden bijgewerkt. De volgende omgevingskenmerken kunnen worden bijgewerkt: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Zie de voorbeeldvraag voor [ creërend een milieu ](#create) voor een lijst van attributen en hun gebruiksgeval. |
+| `attributes` | Een object waarvan de eigenschappen de kenmerken vertegenwoordigen die voor de omgeving moeten worden bijgewerkt. De volgende omgevingskenmerken kunnen worden bijgewerkt: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Zie de voorbeeldvraag voor [&#x200B; creërend een milieu &#x200B;](#create) voor een lijst van attributen en hun gebruiksgeval. |
 | `id` | De `id` -omgeving die u wilt bijwerken. Dit moet overeenkomen met de `{ENVIRONMENT_ID}` -waarde in het aanvraagpad. |
 | `type` | Het type resource dat wordt bijgewerkt. Voor dit eindpunt moet de waarde `environments` zijn. |
 
@@ -572,9 +572,9 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responsst
 
 ## Gerelateerde bronnen ophalen voor een omgeving {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een milieu terug te winnen. Wanneer [ omhoog een milieu ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een milieu terug te winnen. Wanneer [&#x200B; omhoog een milieu &#x200B;](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante builds voor een omgeving weergeven {#builds}
 
@@ -695,7 +695,7 @@ U kunt de host die een omgeving gebruikt, opzoeken door `/host` toe te voegen aa
 
 >[!NOTE]
 >
->U kunt omhoog het voorwerp van de gastheerverhouding zelf door a [ afzonderlijke vraag ](#host-relationship) kijken.
+>U kunt omhoog het voorwerp van de gastheerverhouding zelf door a [&#x200B; afzonderlijke vraag &#x200B;](#host-relationship) kijken.
 
 **API formaat**
 

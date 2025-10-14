@@ -19,7 +19,7 @@ We weten dat het gebruik van locatiecontext in uw app-ervaringen hen boeiender k
 
 Voer de volgende stappen uit om aan de slag te gaan:
 
-1. [ de Verzekering van de opstelling ](../tutorials/implement-assurance.md).
+1. [&#x200B; de Verzekering van de opstelling &#x200B;](../tutorials/implement-assurance.md).
 2. Om uw gebeurtenissen te bekijken, van het linkerzijmenu selecteer de **mening van Gebeurtenissen** onder de **sectie van de Dienst van Plaatsen**.
 
 ![](./images/places-service/places-view.png)

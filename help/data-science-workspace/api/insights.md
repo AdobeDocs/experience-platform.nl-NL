@@ -24,7 +24,7 @@ Inzichten bevatten meetgegevens die worden gebruikt om een gegevenswetenschapper
 
 ## Een lijst met inzichten ophalen
 
-U kunt een lijst van Inzichten terugwinnen door één enkel verzoek van GET tot het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst van Inzichten terugwinnen door één enkel verzoek van GET tot het inzichten eindpunt uit te voeren.  Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [&#x200B; vraagparameters voor activaherwinning &#x200B;](./appendix.md#query).
 
 **API Formaat**
 
@@ -114,7 +114,7 @@ Een geslaagde reactie retourneert een payload die een lijst met inzichten bevat 
 
 ## Een specifiek inzicht ophalen
 
-Als u een bepaald inzicht wilt opzoeken, vraagt u een GET aan en geeft u een geldige `{INSIGHT_ID}` op in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
+Als u een bepaald inzicht wilt opzoeken, vraagt u een GET aan en geeft u een geldige `{INSIGHT_ID}` op in het aanvraagpad. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [&#x200B; vraagparameters voor activaherwinning &#x200B;](./appendix.md#query).
 
 **API Formaat**
 

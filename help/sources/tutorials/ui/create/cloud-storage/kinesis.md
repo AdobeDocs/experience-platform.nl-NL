@@ -22,12 +22,12 @@ Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   - [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+- [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   - [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   - [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL Kinesis] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/streaming/cloud-storage-streaming.md).
+Als u reeds een geldige [!DNL Kinesis] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/streaming/cloud-storage-streaming.md).
 
 ### Vereiste referenties verzamelen
 
@@ -39,13 +39,13 @@ Als u de [!DNL Kinesis] bronconnector wilt verifiëren, moet u waarden opgeven v
 | `Secret access key` | De geheime toegangssleutel voor uw [!DNL Kinesis] account. |
 | `region` | Het gebied van uw AWS-server. |
 
-Voor meer informatie over deze waarden, verwijs naar [ dit  [!DNL Kinesis]  document ](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
+Voor meer informatie over deze waarden, verwijs naar [&#x200B; dit  [!DNL Kinesis]  document &#x200B;](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ## Sluit uw [!DNL Kinesis] -account aan
 
 Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Kinesis] -account te koppelen aan [!DNL Experience Platform] .
 
-Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Login aan [&#x200B; Adobe Experience Platform &#x200B;](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -69,4 +69,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL Kinesis] -acco
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u verbinding gemaakt met uw [!DNL Kinesis] -account met [!DNL Experience Platform] . U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in  [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md) te brengen.
+Aan de hand van deze zelfstudie hebt u verbinding gemaakt met uw [!DNL Kinesis] -account met [!DNL Experience Platform] . U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens van uw wolkenopslag in  [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md) te brengen.

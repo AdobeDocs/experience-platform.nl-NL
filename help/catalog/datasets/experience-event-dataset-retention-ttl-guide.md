@@ -32,7 +32,7 @@ TTL is nuttig wanneer het beheren van tijd-gevoelige gegevens die relevantie in 
 
 >[!NOTE]
 >
->De Behoud van de Dataset van de Gebeurtenis van de ervaring is op gebeurtenisgegevens van toepassing die in het gegevensmeer worden opgeslagen. Als u behoud in Real-Time Customer Data Platform beheert, overweeg het gebruiken van [ Verlopen van de Gebeurtenis van de Ervaring ](../../profile/event-expirations.md) en [ de Zijdeloze Verlopen van het Profiel ](../../profile/pseudonymous-profiles.md) naast de montages van het het behoud van het gegevensmeer.
+>De Behoud van de Dataset van de Gebeurtenis van de ervaring is op gebeurtenisgegevens van toepassing die in het gegevensmeer worden opgeslagen. Als u behoud in Real-Time Customer Data Platform beheert, overweeg het gebruiken van [&#x200B; Verlopen van de Gebeurtenis van de Ervaring &#x200B;](../../profile/event-expirations.md) en [&#x200B; de Zijdeloze Verlopen van het Profiel &#x200B;](../../profile/pseudonymous-profiles.md) naast de montages van het het behoud van het gegevensmeer.
 
 Gebruik TTL-configuraties om opslag te optimaliseren op basis van rechten. Hoewel gegevens uit de profielopslag (gebruikt in Real-Time CDP) na 30 dagen als &#39;stale&#39; en &#39;verwijder&#39; kunnen worden beschouwd, kunnen dezelfde gebeurtenisgegevens in het datumpomeer gedurende 12-13 maanden (of langer op basis van &#39;machtiging&#39;) beschikbaar blijven voor gebruik door Analytics en Data Distiller.
 
@@ -80,7 +80,7 @@ Volg deze beste praktijken om ervoor te zorgen dat de montages van TTL zich aan 
 
 Houd rekening met de volgende beperkingen bij het gebruik van TTL:
 
-- **het Behouden van de Dataset van de Gebeurtenis van de Ervaring gebruikend TTL is op rij-vlakke afloop**, niet datasetschrapping van toepassing. TTL verwijdert verslagen die op een bepaalde bewaartermijn worden gebaseerd maar schrapt geen volledige datasets. Om een dataset te verwijderen, gebruik het [ eindpunt van de gegevenssetvervalsing ](../../hygiene/api/dataset-expiration.md) of handschrapping.
+- **het Behouden van de Dataset van de Gebeurtenis van de Ervaring gebruikend TTL is op rij-vlakke afloop**, niet datasetschrapping van toepassing. TTL verwijdert verslagen die op een bepaalde bewaartermijn worden gebaseerd maar schrapt geen volledige datasets. Om een dataset te verwijderen, gebruik het [&#x200B; eindpunt van de gegevenssetvervalsing &#x200B;](../../hygiene/api/dataset-expiration.md) of handschrapping.
 - **de configuratie van TTL blijft actief tot uitdrukkelijk gehandicapt**. De configuratie blijft van kracht tot u het onbruikbaar maakt. Als u TTL uitschakelt, wordt de vervaldatum beëindigd en blijven alle records in de gegevensset behouden.
 - **TTL is geen nalevingshulpmiddel**. Terwijl TTL opslag en levenscyclusbeheer optimaliseert, moet u bredere beheersstrategieën uitvoeren om regelgevende naleving te verzekeren.
 
@@ -88,7 +88,7 @@ Houd rekening met de volgende beperkingen bij het gebruik van TTL:
 
 Alvorens TTL toe te passen, gebruik vragen om datasetgrootte en relevantie te analyseren. Voer gerichte query&#39;s uit (zoals het tellen van records binnen specifieke datumbereiken) om een voorvertoning te bekijken van de impact van verschillende TTL-waarden. Gebruik deze informatie vervolgens om een optimale retentieperiode te kiezen waarin het nut en de kosteneffectiviteit van de gegevens op elkaar worden afgestemd.
 
-![ een visuele werkschema voor het uitvoeren van TTL op de Datasets van de Gebeurtenis van de Ervaring. De stappen omvatten: beoordelen gegevenslevensduur en effect van verwijdering, bevestigen de montages van TTL met vragen, vormen TTL door de Dienst API van de Catalogus, en controleren onophoudelijk de gevolgen van TTL en maken aanpassingen.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
+![&#x200B; een visuele werkschema voor het uitvoeren van TTL op de Datasets van de Gebeurtenis van de Ervaring. De stappen omvatten: beoordelen gegevenslevensduur en effect van verwijdering, bevestigen de montages van TTL met vragen, vormen TTL door de Dienst API van de Catalogus, en controleren onophoudelijk de gevolgen van TTL en maken aanpassingen.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
 
 Het runnen van gerichte vragen helpt bepalen hoeveel gegevens onder verschillende configuraties van TTL worden behouden of worden verwijderd. De volgende SQL-query telt bijvoorbeeld het aantal records dat in de laatste 30 dagen is gemaakt:
 
@@ -100,19 +100,19 @@ Het runnen van gelijkaardige vragen voor verschillende tijdintervallen helpt de 
 
 ## Aan de slag met TTL-beheer
 
-Voordat u de bewaring van de Dataset van de Gebeurtenis van de Ervaring kunt evalueren, instellen en beheren met de API van de Catalogusservice, moet u begrijpen hoe u uw verzoeken correct opmaakt. Dit omvat het kennen van de API wegen, het verstrekken van vereiste kopballen, en het formatteren verzoeklading. Verwijs naar de [ Begonnen gids van de Dienst API van de Catalogus ](../api/getting-started.md) voor deze essentiële informatie.
+Voordat u de bewaring van de Dataset van de Gebeurtenis van de Ervaring kunt evalueren, instellen en beheren met de API van de Catalogusservice, moet u begrijpen hoe u uw verzoeken correct opmaakt. Dit omvat het kennen van de API wegen, het verstrekken van vereiste kopballen, en het formatteren verzoeklading. Verwijs naar de [&#x200B; Begonnen gids van de Dienst API van de Catalogus &#x200B;](../api/getting-started.md) voor deze essentiële informatie.
 
 >[!NOTE]
 >
->Dit document behandelt rij-vlakke afloop, die individuele verlopen rijen binnen een dataset schrapt terwijl het houden van de dataset zelf intact. Het is niet op datasetvervaldatum van toepassing, die volledige datasets verwijdert en door een afzonderlijke eigenschap wordt beheerd. Voor dataset-vlakke afloop, verwijs naar de [ API documentatie van de datasetvervaldatum ](../../hygiene/api/dataset-expiration.md).
+>Dit document behandelt rij-vlakke afloop, die individuele verlopen rijen binnen een dataset schrapt terwijl het houden van de dataset zelf intact. Het is niet op datasetvervaldatum van toepassing, die volledige datasets verwijdert en door een afzonderlijke eigenschap wordt beheerd. Voor dataset-vlakke afloop, verwijs naar de [&#x200B; API documentatie van de datasetvervaldatum &#x200B;](../../hygiene/api/dataset-expiration.md).
 
 ### Controleer uw beperkingen van TTL {#check-ttl-constraints}
 
 Gebruik het eindpunt van de API van de Hygiëne van Gegevens `/ttl/{DATASET_ID}` helpen configuraties plannen TTL. Dit eindpunt keert de minimum en maximumwaarden van TTL terug die voor uw organisatie, samen met een geadviseerde waarde (`defaultValue`) voor het datasettype worden gesteund.
 
-Zie de Adobe Developer [ documentatie van de Hygiëne API van Gegevens ](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) voor meer informatie.
+Zie de Adobe Developer [&#x200B; documentatie van de Hygiëne API van Gegevens &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) voor meer informatie.
 
-Om [ te controleren TTL momenteel toegepast op een dataset ](#check-applied-ttl-values), doe een verzoek van GET aan het [ de dienstAPI van de Catalogus ](https://developer.adobe.com/experience-platform-apis/references/catalog/) `/dataSets/{DATASET_ID}` eindpunt in plaats daarvan.
+Om [&#x200B; te controleren TTL momenteel toegepast op een dataset &#x200B;](#check-applied-ttl-values), doe een verzoek van GET aan het [&#x200B; de dienstAPI van de Catalogus &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/) `/dataSets/{DATASET_ID}` eindpunt in plaats daarvan.
 
 >[!TIP]
 >
@@ -126,7 +126,7 @@ GET /ttl/{DATASET_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{DATASET_ID}` | Een door het systeem gegenereerde tekenreeks die een gegevensset uniek identificeert. Als u een gegevensset-id wilt zoeken, gebruikt u het eindpunt `/datasets` . Zie de [ gids van de lijstcatalogusvoorwerpen API ](../api/list-objects.md) voor instructies bij het filtreren van reacties voor relevante datasets. |
+| `{DATASET_ID}` | Een door het systeem gegenereerde tekenreeks die een gegevensset uniek identificeert. Als u een gegevensset-id wilt zoeken, gebruikt u het eindpunt `/datasets` . Zie de [&#x200B; gids van de lijstcatalogusvoorwerpen API &#x200B;](../api/list-objects.md) voor instructies bij het filtreren van reacties voor relevante datasets. |
 
 **Verzoek**
 
@@ -222,7 +222,7 @@ Een succesvolle reactie omvat het `extensions` voorwerp, dat de huidige configur
 >
 >Op TTL-Gebaseerde rij-vlakke afloop kan slechts op gebeurtenisdatasets worden toegepast die een tijdreeksschema gebruiken. Dit omvat datasets die op de standaard klasse XDM ExperienceEvent evenals douaneschema&#39;s worden gebaseerd die het schema van de Reeks van de Tijd uitbreiden (`https://ns.adobe.com/xdm/data/time-series`).
 >
->Alvorens u TTL toepast, gebruik de Registratie API van het Schema om te verifiëren dat het schema van de dataset de correcte uitbreiding door het `meta:extends` bezit te controleren omvat. Zie de [ documentatie van het eindpunt van het Schema ](../../xdm/api/schemas.md#lookup) voor begeleiding op hoe te om dit te doen.
+>Alvorens u TTL toepast, gebruik de Registratie API van het Schema om te verifiëren dat het schema van de dataset de correcte uitbreiding door het `meta:extends` bezit te controleren omvat. Zie de [&#x200B; documentatie van het eindpunt van het Schema &#x200B;](../../xdm/api/schemas.md#lookup) voor begeleiding op hoe te om dit te doen.
 
 U kunt het Behouden van de Dataset van de Gebeurtenis van de Ervaring vormen door een nieuwe TTL te plaatsen of een bestaande TTL bij te werken gebruikend de zelfde API methode. Gebruik een PATCH-aanvraag voor het `/v2/datasets/{DATASET_ID}` -eindpunt om TTL toe te passen of aan te passen.
 
@@ -347,13 +347,13 @@ Ja, u kunt verschillende behoudsbeleid voor de diensten van het gegevensmeer en 
 +++Antwoord
 U kunt de nieuwste opslaggrootte van gegevenssets controleren voor gegevens in de bestanden Meer en Profiel als aparte maateenheden in de inventariswerkruimte van [!UICONTROL Dataset] . Sorteer de kolommen om de grootste datasets te identificeren en te verifiëren dat het behoudbeleid wordt toegepast.
 
-Raadpleeg het dashboard Licentiegebruik voor informatie over gebruik op sandboxniveau. Zie de [ documentatie van het Gebruik van de Vergunning ](../../dashboards/guides/license-usage.md) voor details.
+Raadpleeg het dashboard Licentiegebruik voor informatie over gebruik op sandboxniveau. Zie de [&#x200B; documentatie van het Gebruik van de Vergunning &#x200B;](../../dashboards/guides/license-usage.md) voor details.
 +++
 
 ### Hoe kan ik controleren of de functie voor het bewaren van gegevens is gelukt?
 
 +++Antwoord
-U kunt de laatste baan van het gegevensbehoud verifiëren door zijn timestamp in de [ Configuratie UI van het Behoud van de Dataset ](./user-guide.md#data-retention-policy) of op de pagina van de Inventaris van Gegevens te controleren.
+U kunt de laatste baan van het gegevensbehoud verifiëren door zijn timestamp in de [&#x200B; Configuratie UI van het Behoud van de Dataset &#x200B;](./user-guide.md#data-retention-policy) of op de pagina van de Inventaris van Gegevens te controleren.
 
 U kunt ook een GET-aanvraag indienen bij het volgende eindpunt:
 
@@ -381,13 +381,13 @@ De minimale TTL voor een gegevensmeerervaringsgegevensset is 30 dagen. Het datum
 +++Antwoord 
 Gebruik Data Distiller om specifieke velden buiten de TTL van uw dataset te behouden terwijl u binnen uw gebruiksgrenzen blijft. Creeer een baan die regelmatig slechts de noodzakelijke gebieden aan een afgeleide dataset schrijft. Deze workflow zorgt voor compatibiliteit met een kortere TTL en bewaart kritieke gegevens voor uitgebreid gebruik.
 
-Voor meer details, zie [ afgeleide datasets met SQL gids ](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) creëren.
+Voor meer details, zie [&#x200B; afgeleide datasets met SQL gids &#x200B;](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) creëren.
 +++
 
 ## Volgende stappen {#next-steps}
 
 Nu u hebt geleerd hoe te om de montages van TTL voor rij-vlakke afloop te beheren, herzie de volgende documentatie om uw inzicht in het beheer van TTL te bevorderen:
 
-- De banen van het behoud: Leer om datasettermijnen in Experience Platform UI met de [ gids UI van de gegevenslevenscyclus te plannen en te automatiseren ](../../hygiene/ui/dataset-expiration.md), of configuraties van het Behoud van de Dataset te controleren en te verifiëren dat de verlopen verslagen worden geschrapt.
-- [ het eindpuntgids van de Vervalsing API van de Dataset ](../../hygiene/api/dataset-expiration.md): Ontdek hoe te om volledige datasets eerder dan enkel rijen te schrappen. Leer hoe u het verlopen van gegevenssets kunt plannen, beheren en automatiseren met behulp van de API voor een efficiënte gegevensopslag.
-- [ overzicht van het het gebruiksbeleid van gegevens ](../../data-governance/policies/overview.md): Leer hoe te om uw strategie van het gegevensbehoud met bredere nalevingsvereisten en marketing gebruiksbeperkingen te richten.
+- De banen van het behoud: Leer om datasettermijnen in Experience Platform UI met de [&#x200B; gids UI van de gegevenslevenscyclus te plannen en te automatiseren &#x200B;](../../hygiene/ui/dataset-expiration.md), of configuraties van het Behoud van de Dataset te controleren en te verifiëren dat de verlopen verslagen worden geschrapt.
+- [&#x200B; het eindpuntgids van de Vervalsing API van de Dataset &#x200B;](../../hygiene/api/dataset-expiration.md): Ontdek hoe te om volledige datasets eerder dan enkel rijen te schrappen. Leer hoe u het verlopen van gegevenssets kunt plannen, beheren en automatiseren met behulp van de API voor een efficiënte gegevensopslag.
+- [&#x200B; overzicht van het het gebruiksbeleid van gegevens &#x200B;](../../data-governance/policies/overview.md): Leer hoe te om uw strategie van het gegevensbehoud met bredere nalevingsvereisten en marketing gebruiksbeperkingen te richten.

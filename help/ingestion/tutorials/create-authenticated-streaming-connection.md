@@ -16,4 +16,4 @@ ht-degree: 0%
 
 Met geverifieerde gegevensverzameling kunnen Adobe Experience Platform-services, zoals [!DNL Real-Time Customer Profile] en [!DNL Identity] , onderscheid maken tussen records die afkomstig zijn van vertrouwde bronnen en niet-vertrouwde bronnen. De cliënten die Persoonlijk Identificeerbare Informatie (PII) willen verzenden kunnen dit doen door toegangstokens als deel van het verzoek van de POST te verzenden.
 
-Leren hoe te om een voor authentiek verklaarde het stromen verbinding tot stand te brengen, te lezen gelieve de [ bron API van HTTP gids ](../../sources/tutorials/api/create/streaming/http.md).
+Leren hoe te om een voor authentiek verklaarde het stromen verbinding tot stand te brengen, te lezen gelieve de [&#x200B; bron API van HTTP gids &#x200B;](../../sources/tutorials/api/create/streaming/http.md).

@@ -15,37 +15,37 @@ ht-degree: 0%
 >
 >De veldgroep [!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension] bevindt zich momenteel in bèta. De documentatie en de functionaliteit kunnen worden gewijzigd.
 
-[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md), die gemeenschappelijke metriek vangt die door Adobe Advertising (vroeger genoemd &quot;[!DNL Advertising Cloud]&quot;) wordt verzameld.
+[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md), die gemeenschappelijke metriek vangt die door Adobe Advertising (vroeger genoemd &quot;[!DNL Advertising Cloud]&quot;) wordt verzameld.
 
 In dit document worden de structuur en het gebruik van hoofdletters en kleine letters beschreven voor de veldgroep met [!DNL Advertising Cloud] extensies.
 
 >[!NOTE]
 >
->U kunt ook omhoog deze gebiedsgroep [ in Experience Platform UI ](../../ui/explore.md) kijken of het volledige schema in de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) bekijken.
+>U kunt ook omhoog deze gebiedsgroep [&#x200B; in Experience Platform UI &#x200B;](../../ui/explore.md) kijken of het volledige schema in de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) bekijken.
 
 ## Groepsstructuur van veld
 
 De veldgroep biedt één `_experience` -object aan een schema, dat zelf één `adcloud` -object bevat.
 
-![ Top-level gebieden voor de [!DNL Advertising Cloud] gebiedsgroep ](../../images/field-groups/advertising-full-extension/full-schema.png " Top-level gebieden voor de  [!DNL Advertising Cloud]  gebiedsgroep ")
+![&#x200B; Top-level gebieden voor de [!DNL Advertising Cloud] gebiedsgroep &#x200B;](../../images/field-groups/advertising-full-extension/full-schema.png " Top-level gebieden voor de  [!DNL Advertising Cloud]  gebiedsgroep ")
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `adDeliveryDetails` | Object | Details van advertentie. Zie de [ onderafdeling hieronder op het `adDeliveryDetails` voorwerp ](#adDeliveryDetails) voor meer informatie over de inhoud van dit voorwerp. |
-| `advertisement` | Object | Details van digitale advertentie. Zie de [ onderafdeling hieronder op het advertentievoorwerp ](#advertisement) voor meer informatie over de inhoud van dit voorwerp. |
-| `campaign` | Object | Informatie over de campagnehiërarchie. Zie de [ onderafdeling hieronder op het campagnevoorwerp ](#campaign-campaign) voor meer informatie over de inhoud van dit voorwerp. |
-| `conversionDetails` | Object | Conversiedetails voor een advertentie. Zie de [ onderafdeling hieronder ](#conversionDetails) voor meer informatie over de inhoud van dit voorwerp. |
+| `adDeliveryDetails` | Object | Details van advertentie. Zie de [&#x200B; onderafdeling hieronder op het `adDeliveryDetails` voorwerp &#x200B;](#adDeliveryDetails) voor meer informatie over de inhoud van dit voorwerp. |
+| `advertisement` | Object | Details van digitale advertentie. Zie de [&#x200B; onderafdeling hieronder op het advertentievoorwerp &#x200B;](#advertisement) voor meer informatie over de inhoud van dit voorwerp. |
+| `campaign` | Object | Informatie over de campagnehiërarchie. Zie de [&#x200B; onderafdeling hieronder op het campagnevoorwerp &#x200B;](#campaign-campaign) voor meer informatie over de inhoud van dit voorwerp. |
+| `conversionDetails` | Object | Conversiedetails voor een advertentie. Zie de [&#x200B; onderafdeling hieronder &#x200B;](#conversionDetails) voor meer informatie over de inhoud van dit voorwerp. |
 | `eventType` | String | Het Adobe Advertising-gebeurtenistype. |
-| `fees` | Object | Details Advertising-kosten. Zie de [ onderafdeling hieronder op het takenvoorwerp ](#fees) voor meer informatie over de inhoud van dit voorwerp. |
-| `inventory` | Object | Voorraadgegevens. Zie de [ onderafdeling hieronder ](#inventory) voor meer informatie over de inhoud van dit voorwerp. |
-| `productDetails` | Object | Product en details. Zie de [ onderafdeling hieronder op het productDetails voorwerp ](#productDetails) voor meer informatie over de inhoud van dit voorwerp. |
+| `fees` | Object | Details Advertising-kosten. Zie de [&#x200B; onderafdeling hieronder op het takenvoorwerp &#x200B;](#fees) voor meer informatie over de inhoud van dit voorwerp. |
+| `inventory` | Object | Voorraadgegevens. Zie de [&#x200B; onderafdeling hieronder &#x200B;](#inventory) voor meer informatie over de inhoud van dit voorwerp. |
+| `productDetails` | Object | Product en details. Zie de [&#x200B; onderafdeling hieronder op het productDetails voorwerp &#x200B;](#productDetails) voor meer informatie over de inhoud van dit voorwerp. |
 | `stitchId` | String | ID van de Adobe Advertising en servers om doorklikomzettingen bij te houden op browsers die derdekoekjes blokkeren. |
 
 ## `adDeliveryDetails` {#adDeliveryDetails}
 
 Het adDeliveryDetails-object biedt informatie over waar en hoe de advertentie is geleverd, waaronder plaatsingswebsites en locatie-id&#39;s.
 
-![ diagram dat van het Schema het `adDeliveryDetails` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/adDeliveryDetails.png)
+![&#x200B; diagram dat van het Schema het `adDeliveryDetails` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/adDeliveryDetails.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -58,7 +58,7 @@ Het adDeliveryDetails-object biedt informatie over waar en hoe de advertentie is
 
 In het advertentieobject worden details over de digitale advertentie beschreven, zoals id&#39;s, type, creatief, doelbewust en bijbehorende trefwoorden.
 
-![ diagram dat van het Schema het `advertisement` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/advertisement.png)
+![&#x200B; diagram dat van het Schema het `advertisement` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/advertisement.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ In het advertentieobject worden details over de digitale advertentie beschreven,
 
 Het campagneobject definieert de hiërarchie van de advertentiecampagne, inclusief account-, adverteerder-, plaatsing- en pakketid&#39;s, samen met valutadetails.
 
-![ diagram dat van het Schema het `campaign` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/campaign.png)
+![&#x200B; diagram dat van het Schema het `campaign` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/campaign.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -99,19 +99,19 @@ Het campagneobject definieert de hiërarchie van de advertentiecampagne, inclusi
 
 Het object conversionDetails legt trackinggegevens vast voor conversies van advertenties, waaronder trackingcodes, identiteiten en conversie-eigenschappen.
 
-![ diagram dat van het schema het `conversionDetails` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/conversionDetails.png " conversionDetails gebied ")
+![&#x200B; diagram dat van het schema het `conversionDetails` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/conversionDetails.png " conversionDetails gebied ")
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `trackingCode` | String | De conversietrackingcode voor de gebeurtenis. Voor een lijst van mogelijke formaten, zie {de Formaten van identiteitskaart 0} AMO [.](https://experienceleague.adobe.com/nl/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats) |
-| `trackingIdentities` | String | De EF-id of identiteitsgegevens voor het bijhouden van een gebeurtenis. Voor een lijst van mogelijke formaten, zie [ EF identiteitskaart Formaten ](https://experienceleague.adobe.com/nl/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
+| `trackingIdentities` | String | De EF-id of identiteitsgegevens voor het bijhouden van een gebeurtenis. Voor een lijst van mogelijke formaten, zie [&#x200B; EF identiteitskaart Formaten &#x200B;](https://experienceleague.adobe.com/nl/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
 | `conversionProperties` | Object | Een kaart met omzettingseigenschappen, die als serie van zeer belangrijk-waardepaarkoorden (zoals `subscriptions=253` wordt vertegenwoordigd). |
 
 ## `fees` {#fees}
 
 Het object fee legt media, gegevens en andere advertentiekosten vast, uitgesplitst naar Advertising DSP, account en adverteerder.
 
-![ diagram dat van het Schema het `fees` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/fees.png)
+![&#x200B; diagram dat van het Schema het `fees` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/fees.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -136,7 +136,7 @@ Het object fee legt media, gegevens en andere advertentiekosten vast, uitgesplit
 
 Het inventarisvoorwerp registreert details over de kans van de advertentie, met inbegrip van zittingsgegevens, partnercodes, plaats IDs, kostenvaluta, en segmenteringsregels.
 
-![ diagram dat van het Schema het `inventory` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/inventory.png)
+![&#x200B; diagram dat van het Schema het `inventory` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/inventory.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -154,7 +154,7 @@ Het inventarisvoorwerp registreert details over de kans van de advertentie, met 
 
 Het `productDetails` -object bevat informatie over producten die in winkeladvertenties voor [!DNL Adobe Advertising Search, Social, & Commerce] worden weergegeven, zoals product-id&#39;s, land, taal, partitie, titel en type advertentie.
 
-![ diagram dat van het Schema het `productDetails` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/productDetails.png)
+![&#x200B; diagram dat van het Schema het `productDetails` voorwerp en zijn gebieden toont.](../../images/field-groups/advertising-full-extension/productDetails.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -167,6 +167,6 @@ Het `productDetails` -object bevat informatie over producten die in winkeladvert
 
 ## Volgende stappen
 
-In dit document wordt de structuur en het gebruik van hoofdletters en kleine letters beschreven voor de veldgroep met extensies van [!DNL Advertising Cloud] . Voor meer details op de gebiedsgroep zelf, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
+In dit document wordt de structuur en het gebruik van hoofdletters en kleine letters beschreven voor de veldgroep met extensies van [!DNL Advertising Cloud] . Voor meer details op de gebiedsgroep zelf, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
 
-Als u deze gebiedsgroep gebruikt om [!DNL Advertising] gegevens te verzamelen gebruikend het Web SDK van Adobe Experience Platform, zie de gids op [ vormend een datastream ](../../../datastreams/overview.md) om te leren hoe te om gegevens aan XDM op de server in kaart te brengen.
+Als u deze gebiedsgroep gebruikt om [!DNL Advertising] gegevens te verzamelen gebruikend het Web SDK van Adobe Experience Platform, zie de gids op [&#x200B; vormend een datastream &#x200B;](../../../datastreams/overview.md) om te leren hoe te om gegevens aan XDM op de server in kaart te brengen.

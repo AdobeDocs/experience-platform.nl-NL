@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL Customer.io] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Customer.io] is in bèta. Gelieve te lezen het [&#x200B; overzicht van bronnen &#x200B;](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Customer.io] bronverbinding en gegevensstroom via de Adobe Experience Platform-gebruikersinterface.
 
@@ -22,9 +22,9 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Customer.io] bronverb
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## Vereisten {#prerequisites}
@@ -55,7 +55,7 @@ Voordat u een [!DNL Customer.io] -bronverbinding maakt, moet u een bronschema op
 
 ### Experience Platform-schema maken voor [!DNL Customer.io] {#create-platform-schema}
 
-U moet er ook voor zorgen dat u een Experience Platform-schema maakt dat u voor uw bron kunt gebruiken. Zie het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+U moet er ook voor zorgen dat u een Experience Platform-schema maakt dat u voor uw bron kunt gebruiken. Zie het leerprogramma op [&#x200B; creërend een schema van Experience Platform &#x200B;](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 {het schermschot van 0} Experience Platform UI die een voorbeeldschema voor Customer.io toont ![&#128279;](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
@@ -78,13 +78,13 @@ De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface wa
 
 Selecteer **[!UICONTROL Upload files]** om een JSON-bestand van uw lokale systeem te uploaden. U kunt ook het JSON-bestand dat u wilt uploaden naar het deelvenster [!UICONTROL Drag and drop files] slepen.
 
-![ voegt gegevensstap van het bronwerkschema toe.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//add-data.png)
+![&#x200B; voegt gegevensstap van het bronwerkschema toe.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//add-data.png)
 
 Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt het hulpprogramma [!UICONTROL Search field] ook gebruiken om toegang te krijgen tot specifieke items binnen uw schema.
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ de voorproefstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//preview.png)
+![&#x200B; de voorproefstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//preview.png)
 
 ## Gegevens {#dataflow-detail}
 
@@ -92,24 +92,24 @@ De **Dataflow detailstap** verschijnt, die u van opties voorzien om een bestaand
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ dataflow-detail stap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//dataflow-detail.png)
+![&#x200B; dataflow-detail stap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//dataflow-detail.png)
 
 ## Toewijzing {#mapping}
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Alle onderstaande toewijzingen zijn verplicht en moeten worden ingesteld voordat u naar het [!UICONTROL Review] -werkgebied gaat.
 
 | Doelveld | Beschrijving |
 | --- | --- |
-| `object_type` | Het objecten type, verwijs naar de [!DNL Customer.io] [ gebeurtenissen ](https://customer.io/docs/webhooks/#events) documentatie voor de gesteunde types. |
+| `object_type` | Het objecten type, verwijs naar de [!DNL Customer.io] [&#x200B; gebeurtenissen &#x200B;](https://customer.io/docs/webhooks/#events) documentatie voor de gesteunde types. |
 | `id` | De id van het object. |
 | `email` | Het e-mailadres dat aan het object is gekoppeld. |
 | `event_id` | De unieke id van de gebeurtenis. |
 | `cio_id` | De [!DNL Customer.io] -id voor de gebeurtenis. |
-| `metric` | Het gebeurtenistype. Voor meer informatie, verwijs naar de [!DNL Customer.io] [ gebeurtenissen ](https://customer.io/docs/webhooks/#events) documentatie voor gesteunde types. |
+| `metric` | Het gebeurtenistype. Voor meer informatie, verwijs naar de [!DNL Customer.io] [&#x200B; gebeurtenissen &#x200B;](https://customer.io/docs/webhooks/#events) documentatie voor gesteunde types. |
 | `timestamp` | De tijdstempel wanneer de gebeurtenis heeft plaatsgevonden. |
 
 >[!IMPORTANT]
@@ -118,7 +118,7 @@ Alle onderstaande toewijzingen zijn verplicht en moeten worden ingesteld voordat
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
-![ de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/mapping.png)
+![&#x200B; de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/mapping.png)
 
 ## Controleren {#review}
 
@@ -129,7 +129,7 @@ De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstr
 
 Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.
 
-![ de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
+![&#x200B; de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
 
 ## Uw URL voor het streamingeindpunt ophalen {#get-streaming-endpoint}
 
@@ -142,25 +142,25 @@ Als u de URL wilt maken die wordt gebruikt om de webhaak op [!DNL Customer.io] t
 
 Als u de gegevens **[!UICONTROL Dataflow ID]** en **[!UICONTROL Streaming endpoint]** wilt ophalen, gaat u naar de [!UICONTROL Dataflow activity] pagina van de gegevensstroom die u net hebt gemaakt en kopieert u de gegevens onder aan het deelvenster [!UICONTROL Properties] .
 
-![ het stromen eindpunt in dataflow activiteit.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
+![&#x200B; het stromen eindpunt in dataflow activiteit.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
 
 Wanneer u het streamingeindpunt en de dataflow-id hebt opgehaald, maakt u een URL op basis van het volgende patroon: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}``` . Een geconstrueerde URL voor een webhaak ziet er bijvoorbeeld als volgt uit: ``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
 
 ## Rapportwebhaak instellen in [!DNL Customer.io] {#set-up-webhook}
 
-Als de URL van uw webhaak is gemaakt, kunt u nu de rapportwebhaak instellen via de gebruikersinterface van [!DNL Customer.io] . Voor stappen bij vestiging die webhooks melden, te lezen gelieve de [[!DNL Customer.io]  gids ](https://customer.io/docs/webhooks/#setup) bij vestiging webhooks.
+Als de URL van uw webhaak is gemaakt, kunt u nu de rapportwebhaak instellen via de gebruikersinterface van [!DNL Customer.io] . Voor stappen bij vestiging die webhooks melden, te lezen gelieve de [[!DNL Customer.io]  gids &#x200B;](https://customer.io/docs/webhooks/#setup) bij vestiging webhooks.
 
-In het [!DNL Customer.io] gebruikersinterface, input uw [ webhaak URL ](#get-streaming-endpoint-url) op het [!DNL WEBHOOK ENDPOINT] gebied.
+In het [!DNL Customer.io] gebruikersinterface, input uw [&#x200B; webhaak URL &#x200B;](#get-streaming-endpoint-url) op het [!DNL WEBHOOK ENDPOINT] gebied.
 
-![ Het gebruikersinterface Customer.io die het WebHaak eindpuntgebied ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png) toont
+![&#x200B; Het gebruikersinterface Customer.io die het WebHaak eindpuntgebied &#x200B;](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png) toont
 
 >[!TIP]
 >
->U kunt zich abonneren op verschillende gebeurtenissen voor uw rapporterende webhaak. Het bericht van elke gebeurtenis wordt naar Experience Platform verzonden wanneer aan de triggercriteria voor een gebeurtenis met [!DNL Customer.io] -actie wordt voldaan. Voor meer informatie over de verschillende gebeurtenissen, gelieve te verwijzen naar de [[!DNL Customer.io]  gebeurtenisdocumentatie ](https://customer.io/docs/webhooks/#events).
+>U kunt zich abonneren op verschillende gebeurtenissen voor uw rapporterende webhaak. Het bericht van elke gebeurtenis wordt naar Experience Platform verzonden wanneer aan de triggercriteria voor een gebeurtenis met [!DNL Customer.io] -actie wordt voldaan. Voor meer informatie over de verschillende gebeurtenissen, gelieve te verwijzen naar de [[!DNL Customer.io]  gebeurtenisdocumentatie &#x200B;](https://customer.io/docs/webhooks/#events).
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Customer.io] -gegevens over te brengen naar Experience Platform. Om de gegevens te controleren die worden opgenomen, verwijs naar de gids bij [ controle die dataflows gebruikend Experience Platform UI ](../../monitor-streaming.md) stromen.
+Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Customer.io] -gegevens over te brengen naar Experience Platform. Om de gegevens te controleren die worden opgenomen, verwijs naar de gids bij [&#x200B; controle die dataflows gebruikend Experience Platform UI &#x200B;](../../monitor-streaming.md) stromen.
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -168,7 +168,7 @@ De onderstaande secties bevatten aanvullende bronnen waarnaar u kunt verwijzen w
 
 ### Guardrails {#guardrails}
 
-Voor informatie over gidsen, gelieve te verwijzen naar de [[!DNL Customer.io]  onderbrekingen en mislukkingspagina ](https://customer.io/docs/webhooks/#timeouts-and-failures).
+Voor informatie over gidsen, gelieve te verwijzen naar de [[!DNL Customer.io]  onderbrekingen en mislukkingspagina &#x200B;](https://customer.io/docs/webhooks/#timeouts-and-failures).
 
 ### Validatie {#validation}
 

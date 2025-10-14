@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Als u Real-Time Machine Learning wilt gebruiken, hebt u toegang nodig tot een organisatie die is ingericht voor Adobe Experience Platform en [!DNL Data Science Workspace] . Bovendien, moet u een volledige dataset voor gebruik in opleiding en het scoren hebben.
 
-De gidsen voor het Leren van de machine in real time vereisen een werkend begrip van Python 3, [ Jupyter Blocbooks ](../jupyterlab/overview.md), gegevenswetenschap, en machine het leren.
+De gidsen voor het Leren van de machine in real time vereisen een werkend begrip van Python 3, [&#x200B; Jupyter Blocbooks &#x200B;](../jupyterlab/overview.md), gegevenswetenschap, en machine het leren.
 
 **Zeer belangrijke Termen:**
 
@@ -40,11 +40,11 @@ Om te beginnen het Leren van de Machine in real time te gebruiken, moet u toegan
 
 >[!NOTE]
 >
->Als u reeds een dataset hebt u wenst om te gebruiken, kunt u aan [ Volgende stappen ](#next-steps) overslaan.
+>Als u reeds een dataset hebt u wenst om te gebruiken, kunt u aan [&#x200B; Volgende stappen &#x200B;](#next-steps) overslaan.
 
 ### Een externe gegevensset gebruiken
 
-Meer leren over het gebruiken van een externe dataset zoals het uploaden van gegevens aan uw [!DNL JupyterLab] milieu, bezoek het leerprogramma op [ het analyseren van uw gegevens gebruikend laptops ](../jupyterlab/analyze-your-data.md#external-data).
+Meer leren over het gebruiken van een externe dataset zoals het uploaden van gegevens aan uw [!DNL JupyterLab] milieu, bezoek het leerprogramma op [&#x200B; het analyseren van uw gegevens gebruikend laptops &#x200B;](../jupyterlab/analyze-your-data.md#external-data).
 
 ### Een nieuwe gegevensset maken
 
@@ -55,4 +55,4 @@ Om een nieuwe dataset voor gebruik in het Leren van de machine in real time tot 
 
 ## Volgende stappen {#next-steps}
 
-Zodra u uw gegevens voor het Leren van de Machine in real time hebt voorbereid, begin door de [ Echt - tijd machine te volgen die notitieboekjectgebruikershandleiding ](./rtml-authoring-notebook.md) leren hoe te om een model ONNX tot stand te brengen en te uploaden aan de het leren modelopslag in real time van de Machine.
+Zodra u uw gegevens voor het Leren van de Machine in real time hebt voorbereid, begin door de [&#x200B; Echt - tijd machine te volgen die notitieboekjectgebruikershandleiding &#x200B;](./rtml-authoring-notebook.md) leren hoe te om een model ONNX tot stand te brengen en te uploaden aan de het leren modelopslag in real time van de Machine.

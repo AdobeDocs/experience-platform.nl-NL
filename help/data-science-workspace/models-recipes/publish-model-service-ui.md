@@ -31,9 +31,9 @@ Met Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geë
 
 U moet toegang hebben tot [!DNL Experience Platform] om deze zelfstudie te kunnen voltooien. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform] , neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
-Voor deze zelfstudie is een bestaand model met een geslaagde trainingsuitvoering vereist. Als u geen publiceerbaar Model hebt, volg de [ Lijn en evalueer een Model in de UI ](./train-evaluate-model-ui.md) leerprogramma alvorens verder te gaan.
+Voor deze zelfstudie is een bestaand model met een geslaagde trainingsuitvoering vereist. Als u geen publiceerbaar Model hebt, volg de [&#x200B; Lijn en evalueer een Model in de UI &#x200B;](./train-evaluate-model-ui.md) leerprogramma alvorens verder te gaan.
 
-Als u verkiest om een Model te publiceren door het Leren APIs van de Machine van Sensei te gebruiken, verwijs naar het [ API leerprogramma ](./publish-model-service-api.md).
+Als u verkiest om een Model te publiceren door het Leren APIs van de Machine van Sensei te gebruiken, verwijs naar het [&#x200B; API leerprogramma &#x200B;](./publish-model-service-api.md).
 
 ## Een model publiceren {#publish-a-model}
 
@@ -81,4 +81,4 @@ Op de pagina van het Overzicht van de Dienst **&#x200B;**, worden de details van
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u met succes een Model als toegankelijke Dienst gepubliceerd, en gegevens gescoord gebruikend de nieuwe Dienst door [!UICONTROL Service Gallery]. Ga aan het volgende leerprogramma verder om te leren hoe u [ geautomatiseerde opleiding en het scoren looppas op de Dienst ](./schedule-models-ui.md) kunt plannen.
+Door deze zelfstudie te volgen, hebt u met succes een Model als toegankelijke Dienst gepubliceerd, en gegevens gescoord gebruikend de nieuwe Dienst door [!UICONTROL Service Gallery]. Ga aan het volgende leerprogramma verder om te leren hoe u [&#x200B; geautomatiseerde opleiding en het scoren looppas op de Dienst &#x200B;](./schedule-models-ui.md) kunt plannen.

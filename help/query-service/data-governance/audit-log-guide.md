@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # [!DNL Query Service] integratie van controlelogboeken
 
-De integratie van het Adobe Experience Platform [!DNL Query Service] -controlelogbestand biedt records met gebruikersacties die betrekking hebben op query. Auditlogboeken zijn een essentieel hulpmiddel voor het oplossen van problemen en het naleven van het beleid en de regelgevende vereisten van het bedrijfsgegevensbeheer. Het vermogen staat u toe om een actielogboek voor vele gebeurtenistypen en filter terug te keren en de verslagen uit te voeren. De logboeken kunnen of door Experience Platform UI of [ de Vraag API van de Controle van de Controle ](https://www.adobe.io/experience-platform-apis/references/audit-query/) worden betreden en in of CSV of JSON dossierformaten worden gedownload.
+De integratie van het Adobe Experience Platform [!DNL Query Service] -controlelogbestand biedt records met gebruikersacties die betrekking hebben op query. Auditlogboeken zijn een essentieel hulpmiddel voor het oplossen van problemen en het naleven van het beleid en de regelgevende vereisten van het bedrijfsgegevensbeheer. Het vermogen staat u toe om een actielogboek voor vele gebeurtenistypen en filter terug te keren en de verslagen uit te voeren. De logboeken kunnen of door Experience Platform UI of [&#x200B; de Vraag API van de Controle van de Controle &#x200B;](https://www.adobe.io/experience-platform-apis/references/audit-query/) worden betreden en in of CSV of JSON dossierformaten worden gedownload.
 
-Meer over het gebruikersinterface van de controlelogboeken leren, verwijs naar het [ document van het controlelogboeken ](../../landing/governance-privacy-security/audit-logs/overview.md). Meer leren over het maken van vraag aan Experience Platform APIs, verwijs naar de [ handleiding van de controlelogboeken API ](../../landing/api-guide.md).
+Meer over het gebruikersinterface van de controlelogboeken leren, verwijs naar het [&#x200B; document van het controlelogboeken &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md). Meer leren over het maken van vraag aan Experience Platform APIs, verwijs naar de [&#x200B; handleiding van de controlelogboeken API &#x200B;](../../landing/api-guide.md).
 
 ## Vereisten
 
-U moet de machtiging [!DNL Data Governance] [!UICONTROL View User Activity Log] hebben ingeschakeld om het dashboard voor het auditlogboek weer te geven in de gebruikersinterface van Experience Platform. De toestemming wordt toegelaten door Adobe [ Admin Console ](https://adminconsole.adobe.com/). Neem contact op met de beheerder van uw organisatie als u geen beheerdersrechten hebt om deze machtiging in te schakelen. Zie de documentatie van de toegangscontrole voor [ volledige instructies bij het toevoegen van toestemmingen door Admin Console ](../../access-control/home.md).
+U moet de machtiging [!DNL Data Governance] [!UICONTROL View User Activity Log] hebben ingeschakeld om het dashboard voor het auditlogboek weer te geven in de gebruikersinterface van Experience Platform. De toestemming wordt toegelaten door Adobe [&#x200B; Admin Console &#x200B;](https://adminconsole.adobe.com/). Neem contact op met de beheerder van uw organisatie als u geen beheerdersrechten hebt om deze machtiging in te schakelen. Zie de documentatie van de toegangscontrole voor [&#x200B; volledige instructies bij het toevoegen van toestemmingen door Admin Console &#x200B;](../../access-control/home.md).
 
 ## [!DNL Query Service] controlelogcategorieën {#audit-log-categories}
 
@@ -31,11 +31,11 @@ De categorieën van het controlelogboek die door [!DNL Query Service] worden ver
 
 ## Een [!DNL Query Service] controlelogboek uitvoeren {#perform-an-audit-log}
 
-Om een controle voor [!DNL Query Service] activiteiten uit te voeren, selecteer **[!UICONTROL Audits]** van de linkernavigatie, die door het kanaalpictogram wordt gevolgd (![ het filterpictogram van A.](/help/images/icons/filter.png)) om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken.
+Om een controle voor [!DNL Query Service] activiteiten uit te voeren, selecteer **[!UICONTROL Audits]** van de linkernavigatie, die door het kanaalpictogram wordt gevolgd (![&#x200B; het filterpictogram van A.](/help/images/icons/filter.png)) om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken.
 
-![ het dashboard van het de controlelogboek van Experience Platform UI met &quot;Audits&quot;in de linkernavigatie en filtercontroles benadrukte.](../images/audit-log/filter-controls.png)
+![&#x200B; het dashboard van het de controlelogboek van Experience Platform UI met &quot;Audits&quot;in de linkernavigatie en filtercontroles benadrukte.](../images/audit-log/filter-controls.png)
 
-Vanuit het tabblad [!UICONTROL Audits] dashboard [!UICONTROL Activity log] kunt u alle opgenomen Experience Platform-handelingen filteren op een van de categorieën [!DNL Query Service] . De logboekresultaten kunnen verder worden gefiltreerd gebaseerd op de tijdsperiode zij werden uitgevoerd, de actie/de functie die, of de gebruiker werd genomen die de vraag uitvoerde. Zie de documentatie van het controlelogboek voor [ volledige instructies op hoe te om de logboeken te filtreren die op categorie, actie, gebruiker, en status ](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui) worden gebaseerd.
+Vanuit het tabblad [!UICONTROL Audits] dashboard [!UICONTROL Activity log] kunt u alle opgenomen Experience Platform-handelingen filteren op een van de categorieën [!DNL Query Service] . De logboekresultaten kunnen verder worden gefiltreerd gebaseerd op de tijdsperiode zij werden uitgevoerd, de actie/de functie die, of de gebruiker werd genomen die de vraag uitvoerde. Zie de documentatie van het controlelogboek voor [&#x200B; volledige instructies op hoe te om de logboeken te filtreren die op categorie, actie, gebruiker, en status &#x200B;](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui) worden gebaseerd.
 
 De teruggekeerde gegevens van het controlelogboek bevatten de volgende informatie over alle vragen die aan uw gekozen filtercriteria voldoen.
 
@@ -47,7 +47,7 @@ De teruggekeerde gegevens van het controlelogboek bevatten de volgende informati
 | [!UICONTROL Action] | Dit kan worden gemaakt, verwijderd, bijgewerkt of uitgevoerd. Welke acties beschikbaar zijn, is afhankelijk van de categorie die u als filter hebt gekozen. |
 | [!UICONTROL User] | Dit veld bevat de gebruikersnaam die de query heeft uitgevoerd. |
 
-![ het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../images/audit-log/filtered-activity.png)
+![&#x200B; het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../images/audit-log/filtered-activity.png)
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ De teruggekeerde gegevens van het controlelogboek bevatten de volgende informati
 
 Selecteer een rij controlelogbestandresultaten om een deelvenster met details rechts van het scherm te openen.
 
-![ het logboeklusje van de Activiteit van het dashboard van Audits met het benadrukte detailspaneel.](../images/audit-log/details-panel.png)
+![&#x200B; het logboeklusje van de Activiteit van het dashboard van Audits met het benadrukte detailspaneel.](../images/audit-log/details-panel.png)
 
 U kunt het deelvenster Details gebruiken om de [!UICONTROL Asset ID] en de [!UICONTROL Event status] te zoeken.
 
@@ -75,11 +75,11 @@ De waarde van de [!UICONTROL Event status] verandert afhankelijk van de categori
 
 ## Beschikbare filters voor [!DNL Query Service] controlelogcategorieën {#available-filters}
 
-Welke filters beschikbaar zijn, is afhankelijk van de categorie die u in de vervolgkeuzelijst hebt geselecteerd. De volgende lijst specificeert de filters beschikbaar voor [[!DNL Query Service]  categorieën van het controlelogboek ](#audit-log-categories).
+Welke filters beschikbaar zijn, is afhankelijk van de categorie die u in de vervolgkeuzelijst hebt geselecteerd. De volgende lijst specificeert de filters beschikbaar voor [[!DNL Query Service]  categorieën van het controlelogboek &#x200B;](#audit-log-categories).
 
 | Filter | Beschrijving |
 |---|---|
-| Categorie | Zie de [[!DNL Query Service]  sectie van het controlelogboek ](#audit-log-categories) voor een volledige lijst van beschikbare categorieën. |
+| Categorie | Zie de [[!DNL Query Service]  sectie van het controlelogboek &#x200B;](#audit-log-categories) voor een volledige lijst van beschikbare categorieën. |
 | Actie | Wanneer het verwijzen naar [!DNL Query Service] controlecategorieën, is de update a **wijziging aan de bestaande vorm**, schrapt is de **verwijdering van het programma of het malplaatje**, creeer **creeert een nieuw programma of malplaatje**, en voert is **in werking stellend een vraag** uit. |
 | Gebruiker | Voer de volledige gebruikersnaam in (bijvoorbeeld johndoe@acme.com) om te filteren op gebruiker. |
 | Status | De [!UICONTROL Allow], [!UICONTROL Success], en [!UICONTROL Failure] opties filtreren de logboeken die op de &quot;Status&quot;of &quot;Status van de Gebeurtenis&quot;worden gebaseerd terwijl de [!UICONTROL Deny] optie **&#x200B;**&#x200B;logboeken zal filtreren. |
@@ -89,4 +89,4 @@ Welke filters beschikbaar zijn, is afhankelijk van de categorie die u in de verv
 
 Door dit document te lezen, hebt u een beter inzicht in de mogelijkheden van het [!DNL Query Service] controlelogboek en hoe het kan worden gebruikt om uw [!DNL Query Service] -gebruikersacties te filteren.
 
-Als u het [!DNL Query Service] vermogen van het controlelogboek voor het oplossen van problemendoeleinden gebruikt, wordt u geadviseerd om de [ het oplossen van problemengids ](../troubleshooting-guide.md) te lezen.
+Als u het [!DNL Query Service] vermogen van het controlelogboek voor het oplossen van problemendoeleinden gebruikt, wordt u geadviseerd om de [&#x200B; het oplossen van problemengids &#x200B;](../troubleshooting-guide.md) te lezen.

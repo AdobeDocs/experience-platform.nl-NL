@@ -17,29 +17,29 @@ Dit object is handig wanneer u verschillende websites of subdomeinen voor versch
 
 >[!IMPORTANT]
 >
->Voor gedetailleerde, van begin tot eind configuratieinstructies voor gegevensstroom treedt met voeten, zie de [ configuratie datastream met voeten ](../../datastreams/overrides.md#configure-overrides) documentatie.
+>Voor gedetailleerde, van begin tot eind configuratieinstructies voor gegevensstroom treedt met voeten, zie de [&#x200B; configuratie datastream met voeten &#x200B;](../../datastreams/overrides.md#configure-overrides) documentatie.
 
 De configuratieopheffing van gegevensstroom is een proces in twee stappen:
 
-1. Eerst, moet u uw de configuratieopheffing van de gegevensstroom in de [ gegevenstream configuratiepagina ](../../datastreams/configure.md), binnen de Gebruikersstromen UI bepalen. Zie de [ configuratie datastream met voeten treedt ](../../datastreams/overrides.md#configure-overrides) documentatie voor instructies op hoe te om met voeten te treden.
+1. Eerst, moet u uw de configuratieopheffing van de gegevensstroom in de [&#x200B; gegevenstream configuratiepagina &#x200B;](../../datastreams/configure.md), binnen de Gebruikersstromen UI bepalen. Zie de [&#x200B; configuratie datastream met voeten treedt &#x200B;](../../datastreams/overrides.md#configure-overrides) documentatie voor instructies op hoe te om met voeten te treden.
 2. Nadat u de gegevensstroomopheffing in UI hebt gevormd, moet u de overschrijvingen naar de Edge Network op één van de volgende manieren verzenden:
-   * Door het Web SDK [ markeringsuitbreiding ](#tag-extension).
+   * Door het Web SDK [&#x200B; markeringsuitbreiding &#x200B;](#tag-extension).
    * Via de [`sendEvent`](../commands/sendevent/overview.md) - of [`configure`](../commands/configure/overview.md) Web SDK-opdrachten.
-   * Via de SDK van Mobile [`sendEvent` ](https://developer.adobe.com/client-sdks/home/getting-started/track-events/#send-events-to-edge-network) bevel.
+   * Via de SDK van Mobile [`sendEvent` &#x200B;](https://developer.adobe.com/client-sdks/home/getting-started/track-events/#send-events-to-edge-network) bevel.
 
 Als u met voeten treedt zowel in de configuratie van SDK van het Web als in een specifiek bevel (zoals [`sendEvent`](sendevent/overview.md)), treedt de met voeten in het specifieke bevel belangrijkheid.
 
 >[!NOTE]
 >
->Als u een configuratieopheffing wilt **&#x200B; onbruikbaar maken de dienst van het Experience Cloud, moet u ervoor zorgen dat de dienst eerst &#x200B;** in de configuratie van de gegevensstroom wordt toegelaten. Zie de documentatie op hoe te [ gegevensstromen ](../../datastreams/configure.md#add-services) voor details vormen over hoe te om de diensten aan een gegevensstroom toe te voegen.
+>Als u een configuratieopheffing wilt **&#x200B; onbruikbaar maken de dienst van het Experience Cloud, moet u ervoor zorgen dat de dienst eerst &#x200B;** in de configuratie van de gegevensstroom wordt toegelaten. Zie de documentatie op hoe te [&#x200B; gegevensstromen &#x200B;](../../datastreams/configure.md#add-services) voor details vormen over hoe te om de diensten aan een gegevensstroom toe te voegen.
 
 ## Verstuur gegevensstroom met voeten treedt aan de Edge Network door de de markeringsuitbreiding van SDK van het Web {#tag-extension}
 
-Zie de documentatie op [ vormend datastream treedt ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#datastrea-overrides) van de de markeringsuitbreiding van SDK van het Web voor gedetailleerde configuratieinstructies met voeten.
+Zie de documentatie op [&#x200B; vormend datastream treedt &#x200B;](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#datastrea-overrides) van de de markeringsuitbreiding van SDK van het Web voor gedetailleerde configuratieinstructies met voeten.
 
-Als u datastream met voeten treedt van de de markeringsuitbreiding van SDK van het Web wilt vormen, plaats elk gewenst gebied onder **[!UICONTROL Datastream configuration overrides]** wanneer [ vormend de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Als u datastream met voeten treedt van de de markeringsuitbreiding van SDK van het Web wilt vormen, plaats elk gewenst gebied onder **[!UICONTROL Datastream configuration overrides]** wanneer [&#x200B; vormend de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
@@ -48,7 +48,7 @@ Als u datastream met voeten treedt van de de markeringsuitbreiding van SDK van h
 
 Als u alleen voor een bepaalde opdracht overschrijvingen wilt instellen, stelt u elk gewenst veld in binnen de handelingen van een labelregel.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -62,7 +62,7 @@ Afzonderlijke velden zijn beschikbaar voor [!UICONTROL Development] -, [!UICONTR
 
 ## De overschrijvingen naar de Edge Network verzenden via de Web SDK JavaScript-bibliotheek {#library}
 
-Na [ het vormen van de gegevensstroom treedt ](../../datastreams/overrides.md) in de Inzameling UI van Gegevens met voeten, kunt u de met voeten treedt naar de Edge Network, via de bibliotheek van JavaScript van SDK van het Web nu verzenden.
+Na [&#x200B; het vormen van de gegevensstroom treedt &#x200B;](../../datastreams/overrides.md) in de Inzameling UI van Gegevens met voeten, kunt u de met voeten treedt naar de Edge Network, via de bibliotheek van JavaScript van SDK van het Web nu verzenden.
 
 Als u Web SDK gebruikt, is het verzenden van de overschrijvingen naar de Edge Network via het `edgeConfigOverrides` bevel de tweede en laatste stap van het activeren van gegevensstroomconfiguratieoverschrijvingen.
 

@@ -13,18 +13,18 @@ ht-degree: 1%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Lees dit document om te leren hoe te om een basisverbinding voor [!DNL PathFactory] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Lees dit document om te leren hoe te om een basisverbinding voor [!DNL PathFactory] tot stand te brengen gebruikend [[!DNL Flow Service]  API &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 In de volgende sectie vindt u aanvullende informatie die u moet weten als u verbinding wilt maken met [!DNL PathFactory] via de [!DNL Flow Service] API.
 
@@ -40,7 +40,7 @@ U moet de volgende waarden opgeven om toegang te krijgen tot uw PathFactory-acco
 | Toegangstoken | Een uniek token dat wordt gebruikt voor API-verificatie om te zorgen voor veilige communicatie tussen uw systemen en [!DNL PathFactory] . |
 | API-eindpunten | Specifieke API-eindpunten voor toegang tot gegevens: Bezoekers, Sessies en Paginaweergaven. Elk eindpunt komt overeen met verschillende gegevenssets die u kunt ophalen. **Nota:** deze zijn vooraf bepaald door [!DNL PathFactory] en zijn specifiek voor de gegevens u van plan bent toegang te hebben: <ul><li>**Eindpunt van Bezoekers**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Eindpunt van zittingen**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Eindpunt van de Mening van de Pagina**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-Voor meer informatie over hoe te om uw geloofsbrieven te beveiligen en te gebruiken, en hoe te om uw toegangstoken te verkrijgen en te verfrissen, bezoek het [[!DNL PathFactory]  Centrum van de Steun ](https://support.pathfactory.com/categories/adobe/). Deze bron bevat uitgebreide handleidingen voor het beheer van uw referenties en voor een effectieve en veilige API-integratie.
+Voor meer informatie over hoe te om uw geloofsbrieven te beveiligen en te gebruiken, en hoe te om uw toegangstoken te verkrijgen en te verfrissen, bezoek het [[!DNL PathFactory]  Centrum van de Steun &#x200B;](https://support.pathfactory.com/categories/adobe/). Deze bron bevat uitgebreide handleidingen voor het beheer van uw referenties en voor een effectieve en veilige API-integratie.
 
 ## Een basisverbinding maken
 

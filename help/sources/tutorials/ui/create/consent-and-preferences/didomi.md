@@ -15,27 +15,27 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De bron [!DNL Didomi] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Didomi] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees deze handleiding voor informatie over hoe u uw [!DNL Didomi] -account kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de gebruikersinterface.
 
 >[!IMPORTANT]
 >
 >* Deze documentatiepagina werd gecreeerd door het *Didomi* team. Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct in *support@didomi.io* te contacteren.
->* Voor geleidelijke instructies bij het produceren van de verbinding, verwijs naar de [ Didomi Adobe bronschakelaardocumentatie ](https://developers.didomi.io/integrations/third-party-apps/preference-management-platform-integrations/Adobe-source-connector).
+>* Voor geleidelijke instructies bij het produceren van de verbinding, verwijs naar de [&#x200B; Didomi Adobe bronschakelaardocumentatie &#x200B;](https://developers.didomi.io/integrations/third-party-apps/preference-management-platform-integrations/Adobe-source-connector).
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Uw [!DNL Didomi] -account instellen
 
-Alvorens u kunt te werk gaan, zorg ervoor dat u de in de eerste plaats vereiste stappen leest en voltooit die in het [[!DNL Didomi]  overzicht ](../../../../connectors/consent-and-preferences/didomi.md#prerequisites) worden geschetst om uw rekening met Experience Platform met succes te verbinden.
+Alvorens u kunt te werk gaan, zorg ervoor dat u de in de eerste plaats vereiste stappen leest en voltooit die in het [[!DNL Didomi]  overzicht &#x200B;](../../../../connectors/consent-and-preferences/didomi.md#prerequisites) worden geschetst om uw rekening met Experience Platform met succes te verbinden.
 
 ## Navigeren door de catalogus met bronnen
 
@@ -47,15 +47,15 @@ Als u verbinding wilt maken met [!DNL Didomi] , gaat u naar de categorie *[!UICO
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ bron-schakelaar-lijst ](../../../../images/tutorials/create/didomi/source-connector-list.png)
+![&#x200B; bron-schakelaar-lijst &#x200B;](../../../../images/tutorials/create/didomi/source-connector-list.png)
 
 ## Het schema voor brongegevens toevoegen
 
-Daarna, gebruik de *[!UICONTROL Select data]* interface om het JSON- dossier te uploaden dat [ in de eerste vereiste stappen ](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) werd gedownload.
+Daarna, gebruik de *[!UICONTROL Select data]* interface om het JSON- dossier te uploaden dat [&#x200B; in de eerste vereiste stappen &#x200B;](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) werd gedownload.
 
 U kunt de voorvertoningsinterface gebruiken om de bestandsstructuur van de laadbewerking weer te geven. Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ toe:voegen-gegeven-schema ](../../../../images/tutorials/create/didomi/add-data-schema.png)
+![&#x200B; toe:voegen-gegeven-schema &#x200B;](../../../../images/tutorials/create/didomi/add-data-schema.png)
 
 ## Gegevens over gegevensstroom opgeven
 
@@ -84,27 +84,27 @@ Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan 
 
 Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegrip van een naam, een facultatieve beschrijving, en waakzame configuraties dan verstrekken.
 
-![ dataflow-details ](../../../../images/tutorials/create/didomi/dataflow-details.png)
+![&#x200B; dataflow-details &#x200B;](../../../../images/tutorials/create/didomi/dataflow-details.png)
 
 | Dataflow-configuraties | Beschrijving |
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom.  Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties zijn allemaal een doorlopende gegevensstroom om deze waarschuwingen te activeren.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties zijn allemaal een doorlopende gegevensstroom om deze waarschuwingen te activeren.  Voor meer informatie, lees het [&#x200B; alarm overzicht &#x200B;](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Toewijzing
 
-Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren.  Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md)
+Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren.  Voor meer informatie, lees de [&#x200B; kaartgids in UI &#x200B;](../../../../../data-prep/ui/mapping.md)
 
 De afbeelding wordt specifiek gebruikt om **doelgegevens** van [!DNL Didomi] in de dataset van Experience Platform over te brengen. Deze doelen vertegenwoordigen de keuze van de gebruiker voor toestemming (zoals voor analyses, personalisatie, reclame, enz.) en zijn de enige aanvaarde kaartvelden in deze integratie.
 
-Gebruik de [ gedownloade steekproef WebHaaklading ](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) van de [!DNL Didomi] WebHaak montages om elk [!DNL Didomi] doel aan de aangewezen gebieden in uw dataset van Adobe in kaart te brengen.
+Gebruik de [&#x200B; gedownloade steekproef WebHaaklading &#x200B;](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file) van de [!DNL Didomi] WebHaak montages om elk [!DNL Didomi] doel aan de aangewezen gebieden in uw dataset van Adobe in kaart te brengen.
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ afbeelding-details ](../../../../images/tutorials/create/didomi/mapping-details.png)
+![&#x200B; afbeelding-details &#x200B;](../../../../images/tutorials/create/didomi/mapping-details.png)
 
 ## Controleren
 
@@ -131,7 +131,7 @@ In de gebruikersinterface van Experience Platform:
 1. Na de voltooiing van de configuratie, herzie de configuratieparameters die van de aanvankelijke WebHaak opstelling ontbraken.
 2. Als deze waarden beschikbaar zijn, gaat u terug naar Didomi en werkt u de webshconfiguratie bij.
 
-![ configuratie-geklaard ](../../../../images/tutorials/create/didomi/configuration-done.png)
+![&#x200B; configuratie-geklaard &#x200B;](../../../../images/tutorials/create/didomi/configuration-done.png)
 
 ## Werk de Configuratie Webhaak bij
 
@@ -145,12 +145,12 @@ Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om batchgegeve
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [ controlerekeningen en dataflows in UI ](../../../../../dataflows/ui/monitor-sources.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [&#x200B; controlerekeningen en dataflows in UI &#x200B;](../../../../../dataflows/ui/monitor-sources.md).
 
 ### Uw gegevensstroom bijwerken
 
-Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [ bijwerken brondataflows in UI ](../../update-dataflows.md).
+Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [&#x200B; bijwerken brondataflows in UI &#x200B;](../../update-dataflows.md).
 
 ### Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [ het schrappen van dataflows in UI ](../../delete.md).
+U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [&#x200B; het schrappen van dataflows in UI &#x200B;](../../delete.md).

@@ -17,9 +17,9 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Merkury Enterprise Id
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Vereiste referenties verzamelen
@@ -32,7 +32,7 @@ Als u toegang wilt tot uw emmertje op Experience Platform, moet u geldige waarde
 | Geheime sleutel | De geheime sleutel-id voor uw emmer. U kunt deze waarde ophalen van uw [!DNL Merkury] -team. |
 | Naam van emmertje | Dit is uw Merkury bucket waar de dossiers zullen worden gedeeld. U kunt deze waarde ophalen van uw [!DNL Merkury] -team. |
 
-Voor meer informatie over opstelling voor [!DNL Merkury] en andere eerste vereisten, lees het [[!DNL Merkury]  bronoverzicht ](../../../../connectors/data-partners/merkury.md).
+Voor meer informatie over opstelling voor [!DNL Merkury] en andere eerste vereisten, lees het [[!DNL Merkury]  bronoverzicht &#x200B;](../../../../connectors/data-partners/merkury.md).
 
 ## Maak verbinding met uw Merkury-account
 
@@ -42,7 +42,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie **[!UICONTROL Data partners]** de optie **[!UICONTROL Merkury]** en selecteer vervolgens **[!UICONTROL Set up]** .
 
-![ de broncatalogus met de geselecteerde bron van de Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/catalog.png)
+![&#x200B; de broncatalogus met de geselecteerde bron van de Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/catalog.png)
 
 De pagina **[!UICONTROL Connect to Merkury]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -50,13 +50,13 @@ De pagina **[!UICONTROL Connect to Merkury]** wordt weergegeven. Op deze pagina 
 
 Selecteer **[!UICONTROL New account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Merkury] -gegevens op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ de nieuwe rekeningsinterface voor Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-account.png)
+![&#x200B; de nieuwe rekeningsinterface voor Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-account.png)
 
 ### Een bestaande account gebruiken
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL Merkury] -account die u wilt gebruiken. Selecteer **[!UICONTROL Next]** om door te gaan.
 
-![ de bestaande rekeningsinterface voor Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-account.png)
+![&#x200B; de bestaande rekeningsinterface voor Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-account.png)
 
 >[!BEGINSHADEBOX]
 
@@ -78,13 +78,13 @@ Nadat u uw [!DNL Merkury] -account hebt gemaakt, wordt de stap **[!UICONTROL Add
 * Het linkergedeelte van de interface is een directorybrowser waarin de bestandshiërarchie van [!DNL Merkury] wordt weergegeven.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een compatibele map of bestand voorvertonen.
 
-![ het dossier en de omslagfolder van het bronwerkschema waar u de gegevens kunt selecteren die u wilt opnemen.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/add-data.png)
+![&#x200B; het dossier en de omslagfolder van het bronwerkschema waar u de gegevens kunt selecteren die u wilt opnemen.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/add-data.png)
 
 Selecteer de hoofdmap voor toegang tot de mappenhiërarchie. Van hieruit kunt u één map selecteren om alle bestanden in de map recursief in te voeren. Wanneer u een volledige map opgeeft, moet u ervoor zorgen dat alle bestanden in die map dezelfde gegevensindeling en hetzelfde schema hebben.
 
 Nadat u een map hebt geselecteerd, wordt de juiste interface bijgewerkt met een voorvertoning van de inhoud en structuur van het eerste bestand in de geselecteerde map.
 
-![ de gegevens die voor opname en de interface van de dossiervoorproef worden geselecteerd.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/selected-data.png)
+![&#x200B; de gegevens die voor opname en de interface van de dossiervoorproef worden geselecteerd.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/selected-data.png)
 
 
 Tijdens deze stap kunt u verschillende configuraties aan uw gegevens toevoegen voordat u verdergaat. Selecteer eerst **[!UICONTROL Data format]** en selecteer vervolgens de juiste gegevensindeling voor het bestand in het vervolgkeuzemenu dat wordt weergegeven.
@@ -129,13 +129,13 @@ Met de pagina [!UICONTROL Dataflow detail] kunt u selecteren of u een bestaande 
 
 Selecteer **[!UICONTROL Existing dataset]** als u gegevens in een bestaande gegevensset wilt opnemen. U kunt of een bestaande dataset terugwinnen gebruikend de [!UICONTROL Advanced search] optie of door door de lijst van bestaande datasets in het dropdown menu te scrollen. Zodra u een dataset hebt geselecteerd, verstrek een naam en een beschrijving voor uw gegevensstroom.
 
-![ de bestaande datasetinterface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-dataset.png)
+![&#x200B; de bestaande datasetinterface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-dataset.png)
 
 ### Een nieuwe gegevensset gebruiken
 
 Om in een nieuwe dataset in te gaan, selecteer **[!UICONTROL New dataset]** en verstrek dan een naam van de outputdataset en een facultatieve beschrijving. Selecteer vervolgens het schema dat u wilt toewijzen met de optie [!UICONTROL Advanced search] of door door de lijst met bestaande schema&#39;s in het vervolgkeuzemenu te bladeren. Nadat u een schema hebt geselecteerd, geeft u een naam en een beschrijving voor de gegevensstroom op.
 
-![ de nieuwe datasetinterface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-dataset.png)
+![&#x200B; de nieuwe datasetinterface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-dataset.png)
 
 ### Profiel- en foutdiagnostiek inschakelen
 
@@ -143,7 +143,7 @@ Om in een nieuwe dataset in te gaan, selecteer **[!UICONTROL New dataset]** en v
 
 Selecteer vervolgens de schakeloptie **[!UICONTROL Profile dataset]** om uw gegevensset in te schakelen voor realtime klantprofiel. Hierdoor kunt u een holistische weergave maken van de kenmerken en het gedrag van een entiteit. De gegevens van alle profiel-toegelaten datasets zullen in Profiel worden omvat en de veranderingen worden toegepast wanneer u sparen uw gegevensstroom.
 
-In [!UICONTROL Error diagnostics] kunnen gedetailleerde foutberichten worden gegenereerd voor onjuiste records in de gegevensstroom, terwijl u in [!UICONTROL Partial ingestion] gegevens met fouten kunt invoeren tot een bepaalde drempel die u handmatig definieert. Zie het [ gedeeltelijke overzicht van partijingestie ](../../../../../ingestion/batch-ingestion/partial.md) voor meer informatie.
+In [!UICONTROL Error diagnostics] kunnen gedetailleerde foutberichten worden gegenereerd voor onjuiste records in de gegevensstroom, terwijl u in [!UICONTROL Partial ingestion] gegevens met fouten kunt invoeren tot een bepaalde drempel die u handmatig definieert. Zie het [&#x200B; gedeeltelijke overzicht van partijingestie &#x200B;](../../../../../ingestion/batch-ingestion/partial.md) voor meer informatie.
 
 +++
 
@@ -151,7 +151,7 @@ In [!UICONTROL Error diagnostics] kunnen gedetailleerde foutberichten worden geg
 
 +++Selecteren om stappen weer te geven voor het inschakelen van waarschuwingen
 
-U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bronalarm gebruikend UI ](../../alerts.md).
+U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bronalarm gebruikend UI &#x200B;](../../alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor de gegevensstroom, selecteert u **[!UICONTROL Next]** .
 
@@ -161,11 +161,11 @@ Wanneer u klaar bent met het opgeven van details voor de gegevensstroom, selecte
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
-![ de afbeeldingsinterface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/mapping.png)
+![&#x200B; de afbeeldingsinterface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/mapping.png)
 
 ## Planninguitvoering
 
@@ -175,7 +175,7 @@ De stap [!UICONTROL Scheduling] verschijnt, die u toestaat om een innameprogramm
 >
 >Interval en backfill zijn niet zichtbaar tijdens een eenmalige opname.
 
-![ de het plannen interface ](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/schedule.png)
+![&#x200B; de het plannen interface &#x200B;](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/schedule.png)
 
 Als u de innamefrequentie instelt op `Minute` , `Hour` , `Day` of `Week` , moet u een interval instellen om een bepaald tijdkader tussen elke inname te maken. Als de innamefrequentie bijvoorbeeld is ingesteld op `Day` en als het interval is ingesteld op `15` , worden gegevens elke 15 dagen opgenomen.
 
@@ -206,7 +206,7 @@ De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstr
 
 Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Finish]** en laat u enige tijd over tot de gegevensstroom.
 
-![ De overzichtspagina.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
+![&#x200B; De overzichtspagina.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
 
 ## Volgende stappen
 
@@ -214,12 +214,12 @@ Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om batchgegeve
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [ controlerekeningen en dataflows in UI ](../../monitor.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [&#x200B; controlerekeningen en dataflows in UI &#x200B;](../../monitor.md).
 
 ### Uw gegevensstroom bijwerken
 
-Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [ bijwerken brondataflows in UI ](../../update-dataflows.md).
+Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [&#x200B; bijwerken brondataflows in UI &#x200B;](../../update-dataflows.md).
 
 ### Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [ het schrappen van dataflows in UI ](../../delete.md).
+U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [&#x200B; het schrappen van dataflows in UI &#x200B;](../../delete.md).

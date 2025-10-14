@@ -32,9 +32,9 @@ Voor het respecteren van de waarden voor toestemming van klanten is een goed beg
 
 Om de instemming en voorkeuren van klanten te respecteren, moet een van de schema&#39;s die deel uitmaken van uw [!UICONTROL XDM Individual Profile] -samenvoegingsschema de standaardveldgroep **[!UICONTROL Consents and Preferences]** bevatten.
 
-Voor details op de structuur en het voorgenomen gebruiksgeval van elk van de attributen die door de gebiedsgroep worden verstrekt, zie de [ handleiding van de toestemmingen en van de voorkeursverwijzing ](../../xdm/field-groups/profile/consents.md). Voor geleidelijke instructies op hoe te om een gebiedsgroep aan een schema toe te voegen, verwijs naar de [ gids XDM UI ](../../xdm/ui/resources/schemas.md#add-field-groups).
+Voor details op de structuur en het voorgenomen gebruiksgeval van elk van de attributen die door de gebiedsgroep worden verstrekt, zie de [&#x200B; handleiding van de toestemmingen en van de voorkeursverwijzing &#x200B;](../../xdm/field-groups/profile/consents.md). Voor geleidelijke instructies op hoe te om een gebiedsgroep aan een schema toe te voegen, verwijs naar de [&#x200B; gids XDM UI &#x200B;](../../xdm/ui/resources/schemas.md#add-field-groups).
 
-Zodra de gebiedsgroep aan a [ profiel-Toegelaten schema ](../../xdm/ui/resources/schemas.md#profile) is toegevoegd en zijn gebieden zijn gebruikt om toestemmingsgegevens van uw ervaringstoepassing in te voeren, kunt u de verzamelde toestemmingsattributen in uw segmentregels gebruiken.
+Zodra de gebiedsgroep aan a [&#x200B; profiel-Toegelaten schema &#x200B;](../../xdm/ui/resources/schemas.md#profile) is toegevoegd en zijn gebieden zijn gebruikt om toestemmingsgegevens van uw ervaringstoepassing in te voeren, kunt u de verzamelde toestemmingsattributen in uw segmentregels gebruiken.
 
 ## Verwerking van toestemming in segmentatie
 
@@ -47,13 +47,13 @@ In de onderstaande stappen wordt getoond hoe u de juiste velden kunt toevoegen v
 
 >[!NOTE]
 >
->Terwijl deze gids zich op de twee hierboven opt-out vlaggen concentreert, kunt u uw segmentdefinities vormen om extra toestemmingssignalen eveneens op te nemen. De [ toestemmingen en voorkeurenverwijzingsgids ](../../xdm/field-groups/profile/consents.md) verstrekt meer informatie over elk van deze opties en hun voorgenomen gebruiksgevallen.
+>Terwijl deze gids zich op de twee hierboven opt-out vlaggen concentreert, kunt u uw segmentdefinities vormen om extra toestemmingssignalen eveneens op te nemen. De [&#x200B; toestemmingen en voorkeurenverwijzingsgids &#x200B;](../../xdm/field-groups/profile/consents.md) verstrekt meer informatie over elk van deze opties en hun voorgenomen gebruiksgevallen.
 
 Navigeer bij het maken van een segmentdefinitie in de gebruikersinterface onder **[!UICONTROL Attributes]** naar **[!UICONTROL XDM Individual Profile]** en selecteer vervolgens **[!UICONTROL Consents and Preferences]** , gevolgd door **[!UICONTROL Id Specific]** . Hier ziet u de opties voor **[!UICONTROL Data Collection]** en **[!UICONTROL Share Data]** .
 
 ![](../images/tutorials/opt-outs/consents.png)
 
-Selecteer eerst de categorie **[!UICONTROL Data Collection]** en sleep vervolgens **[!UICONTROL Choice Value]** naar de gesegmenteerde ontwikkelaar. Wanneer het toevoegen van de attributen aan de segmentdefinitie, kunt u de [ toestemmingswaarden ](../../xdm/field-groups/profile/consents.md#choice-values) specificeren die moeten worden omvat of worden uitgesloten.
+Selecteer eerst de categorie **[!UICONTROL Data Collection]** en sleep vervolgens **[!UICONTROL Choice Value]** naar de gesegmenteerde ontwikkelaar. Wanneer het toevoegen van de attributen aan de segmentdefinitie, kunt u de [&#x200B; toestemmingswaarden &#x200B;](../../xdm/field-groups/profile/consents.md#choice-values) specificeren die moeten worden omvat of worden uitgesloten.
 
 ![](../images/tutorials/opt-outs/consent-values.png)
 

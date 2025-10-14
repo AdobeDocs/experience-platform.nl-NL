@@ -13,14 +13,14 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-Voordat u aan de slag gaat met uw `extension_package` , moet u uw teamleden instellen met gebruikersaccounts en machtigingen.  Dit wordt verwezenlijkt in [ Adobe Admin Console ](https://adminconsole.adobe.com/).
+Voordat u aan de slag gaat met uw `extension_package` , moet u uw teamleden instellen met gebruikersaccounts en machtigingen.  Dit wordt verwezenlijkt in [&#x200B; Adobe Admin Console &#x200B;](https://adminconsole.adobe.com/).
 
 ## Gebruikersmachtigingen configureren voor Experience Platform en gegevensverzameling
 
-Een beheerder moet zijn accounts toevoegen aan een productprofiel in Adobe Admin Console zodat een gebruiker toegang kan krijgen tot tagfuncties. De gebruiker krijgt dan toegang tot specifieke eigenschappen en mogelijkheden voor gegevensverzameling. Voor meer informatie over hoe te om toestemmingen voor de Inzameling van Gegevens te verlenen, zie de [ de toestemmingengids van de Inzameling van Gegevens ](../../../collection/permissions.md).
+Een beheerder moet zijn accounts toevoegen aan een productprofiel in Adobe Admin Console zodat een gebruiker toegang kan krijgen tot tagfuncties. De gebruiker krijgt dan toegang tot specifieke eigenschappen en mogelijkheden voor gegevensverzameling. Voor meer informatie over hoe te om toestemmingen voor de Inzameling van Gegevens te verlenen, zie de [&#x200B; de toestemmingengids van de Inzameling van Gegevens &#x200B;](../../../collection/permissions.md).
 
 ## Levering bevestigen
 
-Nadat uw bedrijf van toegang tot markeringen wordt voorzien en uw gebruikers opstelling zoals hierboven beschreven zijn, zou u tot de Inzameling UI van Gegevens en Experience Platform UI van het [ Adobe Experience Cloud dashboard ](https://experience.adobe.com/) moeten kunnen toegang hebben. Neem contact op met het accountteam van de Adobe of met de klantenservice als u na het uitvoeren van de bovenstaande stappen nog steeds geen toegang hebt tot een van de UI.
+Nadat uw bedrijf van toegang tot markeringen wordt voorzien en uw gebruikers opstelling zoals hierboven beschreven zijn, zou u tot de Inzameling UI van Gegevens en Experience Platform UI van het [&#x200B; Adobe Experience Cloud dashboard &#x200B;](https://experience.adobe.com/) moeten kunnen toegang hebben. Neem contact op met het accountteam van de Adobe of met de klantenservice als u na het uitvoeren van de bovenstaande stappen nog steeds geen toegang hebt tot een van de UI.

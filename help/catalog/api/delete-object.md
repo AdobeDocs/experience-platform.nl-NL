@@ -27,7 +27,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Het eindpunt `DELETE /batches/{ID}` is vervangen. Om een partij te schrappen, zou u de [ Ingestie API van de Partij moeten gebruiken ](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>Het eindpunt `DELETE /batches/{ID}` is vervangen. Om een partij te schrappen, zou u de [&#x200B; Ingestie API van de Partij moeten gebruiken &#x200B;](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parameter | Beschrijving |
 | --- | --- |

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Gebruik de [!DNL Acxiom Data Ingestion] -bron om [!DNL Acxiom] -gegevens in te voeren in Real-Time Customer Data Platform en om eerstelijns-profielen te verrijken. Vervolgens kunt u met uw [!DNL Acxiom] verrijkte first-party-profielen het publiek verbeteren en activeren via verschillende marketingkanalen.
 
-![ acxiom-gegeven-inname-werkschema ](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
+![&#x200B; acxiom-gegeven-inname-werkschema &#x200B;](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
 Lees het onderstaande document voor informatie over hoe u uw [!DNL Acxiom Data Ingestion] bronaccount kunt instellen.
 
@@ -30,11 +30,11 @@ Als u uw [!DNL Acxiom Data Ingestion] -account wilt verbinden met Experience Pla
 
 ## IP adres lijst van gewenste personen
 
-Alvorens u bronschakelaars kunt gebruiken, moet u de vereiste IP adressen voor uw gebied aan uw lijst van gewenste personen toevoegen. Als u deze IP adressen niet toevoegt, kunnen de bronschakelaars niet correct werken of fouten veroorzaken. Voor gedetailleerde instructies en de lijst van IP adressen om toe te staan, lees de [ IP pagina van de adreslijst van gewenste personen ](../../ip-address-allow-list.md).
+Alvorens u bronschakelaars kunt gebruiken, moet u de vereiste IP adressen voor uw gebied aan uw lijst van gewenste personen toevoegen. Als u deze IP adressen niet toevoegt, kunnen de bronschakelaars niet correct werken of fouten veroorzaken. Voor gedetailleerde instructies en de lijst van IP adressen om toe te staan, lees de [&#x200B; IP pagina van de adreslijst van gewenste personen &#x200B;](../../ip-address-allow-list.md).
 
 ### Machtigingen configureren voor Experience Platform
 
-U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Acxiom Data Ingestion] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
+U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Acxiom Data Ingestion] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [&#x200B; gids UI van de toegangscontrole &#x200B;](../../../access-control/ui/overview.md).
 
 ### Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -44,9 +44,9 @@ Met de onderstaande beperkingen moet rekening worden gehouden bij de naamgeving 
 - De folder en de dossiernamen kunnen niet met een voorwaartse schuine streep (`/`) beëindigen. Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 - De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?` .
-- Ongeldige URL-padtekens zijn niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
+- Ongeldige URL-padtekens zijn niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [&#x200B; RFC 2616, Sectie 2.2: BasisRegels &#x200B;](https://www.ietf.org/rfc/rfc2616.txt) en [&#x200B; RFC 3987 &#x200B;](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u de vereiste instellingen voltooid die nodig zijn om gegevens van uw [!DNL Acxiom] -account naar Experience Platform te kunnen verzenden. U kunt aan de gids nu te werk gaan op [ verbindend  [!DNL Acxiom Data Ingestion]  met Experience Platform gebruikend het gebruikersinterface ](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+Door dit document te lezen, hebt u de vereiste instellingen voltooid die nodig zijn om gegevens van uw [!DNL Acxiom] -account naar Experience Platform te kunnen verzenden. U kunt aan de gids nu te werk gaan op [&#x200B; verbindend  [!DNL Acxiom Data Ingestion]  met Experience Platform gebruikend het gebruikersinterface &#x200B;](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).

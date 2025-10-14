@@ -41,13 +41,13 @@ Vervolgens moet u ervoor zorgen dat voor uw account de volgende machtigingen gel
 * **[!UICONTROL View Identity Settings]**: Pas deze machtiging toe om unieke naamruimten en naamruimteprioriteit weer te geven in de pagina Bladeren naar naamruimte voor identiteit.
 * **[!UICONTROL Edit Identity Settings]**: Pas deze machtiging toe om uw identiteitsinstellingen te kunnen bewerken en opslaan.
 
-Neem contact op met de beheerder als u deze machtigingen niet hebt. Voor meer informatie, lees de [ toestemmingengids ](../../access-control/abac/ui/permissions.md).
+Neem contact op met de beheerder als u deze machtigingen niet hebt. Voor meer informatie, lees de [&#x200B; toestemmingengids &#x200B;](../../access-control/abac/ui/permissions.md).
 
 ## Uw identiteitsinstellingen configureren
 
 Als u identiteitsinstellingen wilt openen, navigeert u naar de werkruimte Identiteitsservice in de gebruikersinterface van Adobe Experience Platform en selecteert u **[!UICONTROL Settings]** .
 
-![ de interface van het identiteitsdashboard met de &quot;Geselecteerde knoop van Montages&quot;.](../images/rules/dashboard.png)
+![&#x200B; de interface van het identiteitsdashboard met de &quot;Geselecteerde knoop van Montages&quot;.](../images/rules/dashboard.png)
 
 De pagina met identiteitsinstellingen bestaat uit twee gedeelten: [!UICONTROL Person namespaces] en [!UICONTROL Device or cookie namespaces] . Personnaamruimten zijn id&#39;s voor afzonderlijke personen. Dit kunnen apparaat-id&#39;s, e-mailadressen en telefoonnummers zijn. Apparaat- of cookie-naamruimten zijn id&#39;s voor apparaten en webbrowsers en kunnen geen hogere prioriteit krijgen dan naamruimten van personen. U kunt een apparaat- of cookie-naamruimte ook niet toewijzen als een unieke naamruimte.
 
@@ -55,17 +55,17 @@ De pagina met identiteitsinstellingen bestaat uit twee gedeelten: [!UICONTROL Pe
 
 Om namespace prioriteit te vormen, selecteer een namespace in het menu van identiteitsinstellingen en sleep dan en laat vallen die namespace aan de orde van uw houden. Plaats een naamruimte hoger in de lijst om deze een hogere prioriteit te geven en plaats een naamruimte lager in de lijst om deze een lagere prioriteit te geven. De naamruimte met de hoogste prioriteit moet ook als een unieke naamruimte worden opgegeven.
 
-![ de werkruimte van identiteitsmontages met een benadrukte persoon namespace.](../images/rules/namespace-priority.png)
+![&#x200B; de werkruimte van identiteitsmontages met een benadrukte persoon namespace.](../images/rules/namespace-priority.png)
 
 ### Geef uw unieke naamruimte op
 
 Als u een unieke naamruimte wilt toewijzen, schakelt u het selectievakje [!UICONTROL Unique per graph] in dat overeenkomt met die naamruimte. U kunt **tot een maximum van drie unieke namespaces** voor uw configuratie van identiteitsmontages selecteren.
 
-Wanneer uw unieke naamruimten zijn ingesteld, kunnen grafieken niet langer meerdere identiteiten hebben die een unieke naamruimte bevatten. Als u bijvoorbeeld CRMID hebt aangewezen als een unieke naamruimte, kan een grafiek slechts één identiteit hebben met de naamruimte CRMID. Voor meer informatie, lees het [ overzicht van het Algoritme van de Optimalisering van de Identiteit ](./identity-optimization-algorithm.md#unique-namespace).
+Wanneer uw unieke naamruimten zijn ingesteld, kunnen grafieken niet langer meerdere identiteiten hebben die een unieke naamruimte bevatten. Als u bijvoorbeeld CRMID hebt aangewezen als een unieke naamruimte, kan een grafiek slechts één identiteit hebben met de naamruimte CRMID. Voor meer informatie, lees het [&#x200B; overzicht van het Algoritme van de Optimalisering van de Identiteit &#x200B;](./identity-optimization-algorithm.md#unique-namespace).
 
 Wanneer u klaar bent met uw configuraties, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ twee die namespaces worden geselecteerd en als uniek worden bepaald.](../images/rules/unique-namespace.png)
+![&#x200B; twee die namespaces worden geselecteerd en als uniek worden bepaald.](../images/rules/unique-namespace.png)
 
 Van hier, moet u het volgende bevestigen alvorens tot de definitieve stap te werk te gaan:
 
@@ -73,7 +73,7 @@ Van hier, moet u het volgende bevestigen alvorens tot de definitieve stap te wer
 2. Het bestaan van een identiteit met de hoogst geprioriteerde unieke naamruimte in elk bekend profiel.
 3. De volgorde van de naamruimtenprioriteit.
 
-![ A bevestigingsvenster met de &quot;bevestig&quot;geselecteerde knoop.](../images/rules/confirmation.png)
+![&#x200B; A bevestigingsvenster met de &quot;bevestig&quot;geselecteerde knoop.](../images/rules/confirmation.png)
 
 ### Bevestig uw instellingen {#confirm-your-settings}
 
@@ -85,7 +85,7 @@ Van hier, moet u het volgende bevestigen alvorens tot de definitieve stap te wer
 >
 >* Uw gegevens worden pas gewijzigd wanneer u uw identiteitsinstellingen opslaat.
 
-![ het bevestigingsvenster dat een waarschuwing over een vertraging van 24 uur toont alvorens de configuraties worden verwerkt.](../images/rules/complete.png)
+![&#x200B; het bevestigingsvenster dat een waarschuwing over een vertraging van 24 uur toont alvorens de configuraties worden verwerkt.](../images/rules/complete.png)
 
 ## Volgende stappen
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 In sommige omstandigheden is het mogelijk dat de details van een bestaande basisverbinding moeten worden bijgewerkt. [!DNL Flow Service] biedt u de mogelijkheid om details van een bestaande batch- of streamingverbinding toe te voegen, te bewerken en te verwijderen, inclusief de naam, beschrijving en gegevens.
 
-Dit leerprogramma behandelt de stappen voor het bijwerken van de details en de geloofsbrieven van een verbinding gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma behandelt de stappen voor het bijwerken van de details en de geloofsbrieven van een verbinding gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!TIP]
 >
@@ -21,16 +21,16 @@ Dit leerprogramma behandelt de stappen voor het bijwerken van de details en de g
 
 ## Aan de slag
 
-Voor deze zelfstudie moet u beschikken over een bestaande verbinding en een geldige verbinding-id. Als u geen bestaande verbinding hebt, selecteer uw bron van keus van het [ overzicht van bronnen ](../../home.md) en volg de stappen die alvorens dit leerprogramma te proberen worden geschetst.
+Voor deze zelfstudie moet u beschikken over een bestaande verbinding en een geldige verbinding-id. Als u geen bestaande verbinding hebt, selecteer uw bron van keus van het [&#x200B; overzicht van bronnen &#x200B;](../../home.md) en volg de stappen die alvorens dit leerprogramma te proberen worden geschetst.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
 
 ## Verbindingsdetails opzoeken
 
@@ -169,4 +169,4 @@ Een succesvolle reactie retourneert uw verbindings-id en een bijgewerkt label. U
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u de referenties en informatie bijgewerkt die aan uw verbinding zijn gekoppeld met de API van [!DNL Flow Service] . Voor meer informatie bij het gebruiken van bronschakelaars, zie het [ overzicht van bronnen ](../../home.md).
+Aan de hand van deze zelfstudie hebt u de referenties en informatie bijgewerkt die aan uw verbinding zijn gekoppeld met de API van [!DNL Flow Service] . Voor meer informatie bij het gebruiken van bronschakelaars, zie het [&#x200B; overzicht van bronnen &#x200B;](../../home.md).

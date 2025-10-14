@@ -25,13 +25,13 @@ In de middelhiërarchie, is een bezit de eigenaar van het volgende:
 * [Regelcomponenten](./rule-components.md)
 * [Regels](./rules.md)
 
-Een bezit behoort tot precies één [ bedrijf ](./companies.md). Een bedrijf kan vele eigenschappen hebben.
+Een bezit behoort tot precies één [&#x200B; bedrijf &#x200B;](./companies.md). Een bedrijf kan vele eigenschappen hebben.
 
-Voor meer algemene informatie over eigenschappen en hun rol in markeringsbeheer, zie het overzicht op [ bedrijven en eigenschappen ](../../ui/administration/companies-and-properties.md).
+Voor meer algemene informatie over eigenschappen en hun rol in markeringsbeheer, zie het overzicht op [&#x200B; bedrijven en eigenschappen &#x200B;](../../ui/administration/companies-and-properties.md).
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met eigenschappen ophalen {#list}
 
@@ -51,7 +51,7 @@ GET /companies/{COMPANY_ID}/properties
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde eigenschappen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde eigenschappen worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -398,7 +398,7 @@ POST /company/{COMPANY_ID}/properties
 
 **Verzoek**
 
-Met het volgende verzoek wordt een nieuwe eigenschap voor de opgegeven eigenschap gemaakt. De aanroep koppelt de eigenschap ook aan een bestaande extensie via de eigenschap `relationships` . Zie de gids op [ verhoudingen ](../guides/relationships.md) voor meer informatie.
+Met het volgende verzoek wordt een nieuwe eigenschap voor de opgegeven eigenschap gemaakt. De aanroep koppelt de eigenschap ook aan een bestaande extensie via de eigenschap `relationships` . Zie de gids op [&#x200B; verhoudingen &#x200B;](../guides/relationships.md) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -710,17 +710,17 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) zonder responste
 
 ## Notities voor een eigenschap beheren {#notes}
 
-Eigenschappen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor eigenschappen en andere compatibele middelen beheren.
+Eigenschappen zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [&#x200B; gids van het Notitieeindpunt &#x200B;](./notes.md) voor meer informatie over hoe te nota&#39;s voor eigenschappen en andere compatibele middelen beheren.
 
 ## Gerelateerde bronnen voor een eigenschap ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een bezit terug te winnen. Wanneer [ omhoog een bezit ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een bezit terug te winnen. Wanneer [&#x200B; omhoog een bezit &#x200B;](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante callbacks voor een eigenschap weergeven {#callbacks}
 
-U kunt van [ callbacks ](./callbacks.md) een lijst maken die op een bezit door `/callbacks` aan de weg van een raadplegingsverzoek toe te voegen worden geregistreerd.
+U kunt van [&#x200B; callbacks &#x200B;](./callbacks.md) een lijst maken die op een bezit door `/callbacks` aan de weg van een raadplegingsverzoek toe te voegen worden geregistreerd.
 
 **API formaat**
 
@@ -795,7 +795,7 @@ Een succesvolle reactie keert een lijst van callbacks terug die door het gespeci
 
 ### Verwante gegevenselementen weergeven voor een eigenschap {#data-elements}
 
-U kunt van de [ gegevenselementen ](./data-elements.md) een lijst maken die door een bezit door `/data_elements` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
+U kunt van de [&#x200B; gegevenselementen &#x200B;](./data-elements.md) een lijst maken die door een bezit door `/data_elements` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
 
 **API formaat**
 
@@ -936,7 +936,7 @@ Een geslaagde reactie retourneert een lijst met gegevenselementen die het eigend
 
 ### Verwante omgevingen weergeven voor een eigenschap {#environments}
 
-U kunt van de [ milieu&#39;s ](./environments.md) een lijst maken die door een bezit door `/environments` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
+U kunt van de [&#x200B; milieu&#39;s &#x200B;](./environments.md) een lijst maken die door een bezit door `/environments` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
 
 **API formaat**
 
@@ -1056,7 +1056,7 @@ Een geslaagde reactie retourneert een lijst met omgevingen die eigendom zijn van
 
 ### Verwante extensies weergeven voor een eigenschap {#extensions}
 
-U kunt van de [ uitbreidingen ](./extensions.md) een lijst maken die door een bezit door `/extensions` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
+U kunt van de [&#x200B; uitbreidingen &#x200B;](./extensions.md) een lijst maken die door een bezit door `/extensions` aan de weg van een raadplegingsverzoek toe te voegen worden bezeten.
 
 **API formaat**
 
@@ -1187,7 +1187,7 @@ Een succesvol antwoord retourneert een lijst met extensies die eigendom zijn van
 
 ### Verwante hosts voor een eigenschap weergeven {#hosts}
 
-U kunt van de [ gastheren ](./hosts.md) een lijst maken die door een bezit door `/hosts` aan de weg van een raadplegingsverzoek toe te voegen worden gebruikt.
+U kunt van de [&#x200B; gastheren &#x200B;](./hosts.md) een lijst maken die door een bezit door `/hosts` aan de weg van een raadplegingsverzoek toe te voegen worden gebruikt.
 
 **API formaat**
 
@@ -1265,7 +1265,7 @@ Een succesvolle reactie keert een lijst van gastheren terug die door het gespeci
 
 ### Verwante regels voor een eigenschap weergeven {#rules}
 
-U kunt van de [ regels ](./rules.md) een lijst maken die door een bezit door `/rules` aan de weg van een raadplegingsverzoek toe te voegen worden gebruikt.
+U kunt van de [&#x200B; regels &#x200B;](./rules.md) een lijst maken die door een bezit door `/rules` aan de weg van een raadplegingsverzoek toe te voegen worden gebruikt.
 
 **API formaat**
 

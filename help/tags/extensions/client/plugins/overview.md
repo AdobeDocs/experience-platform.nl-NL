@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Gebruik deze naslaggids voor informatie over het configureren van de extensie Algemene analytische plug-ins en de opties die beschikbaar zijn wanneer u deze extensie gebruikt om de extensie [!DNL Adobe Analytics] te verhogen.
 
@@ -71,4 +71,4 @@ De volgende gegevenselementen zijn beschikbaar in de Common Analytics Plugins-ex
 
 >[!NOTE]
 >
->Voor meer informatie over de bovengenoemde stoppen, gelieve de [ documentatie van Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=nl-NL) te raadplegen.
+>Voor meer informatie over de bovengenoemde stoppen, gelieve de [&#x200B; documentatie van Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=nl-NL) te raadplegen.

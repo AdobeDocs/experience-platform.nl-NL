@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 ## zaterdag 25 oktober 2019
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 #### **Eigenschappen**
 
-[ Adobe Analytics for VideoUitbreiding ](../media-analytics/overview.md) voegt de bibliotheek van JavaScript van de Analyse van de kernVideo toe. Deze bibliotheek biedt de functionaliteit voor het toevoegen van de MediaHeartmaatinstantie aan een tag-compatibele site of project. Voor de extensie Adobe Analytics for Video (VA) zijn twee extra extensies nodig:
+[&#x200B; Adobe Analytics for VideoUitbreiding &#x200B;](../media-analytics/overview.md) voegt de bibliotheek van JavaScript van de Analyse van de kernVideo toe. Deze bibliotheek biedt de functionaliteit voor het toevoegen van de MediaHeartmaatinstantie aan een tag-compatibele site of project. Voor de extensie Adobe Analytics for Video (VA) zijn twee extra extensies nodig:
 
 * Extensie Analytics
 * Extensie Experience Cloud-id

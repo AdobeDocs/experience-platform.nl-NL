@@ -13,7 +13,7 @@ ht-degree: 1%
 
 [!UICONTROL Return] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat de essentiële informatie met betrekking tot een Vergunning van de Handel van de Terugkeer (RMA) vangt.
 
-![ A diagram van het gegevenstype van de Terugkeer.](../images/data-types/return.png)
+![&#x200B; A diagram van het gegevenstype van de Terugkeer.](../images/data-types/return.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |----------------------------------|----------------------|-----------|--------------------------------------------------|
@@ -25,5 +25,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/return.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/return.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/return.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/return.schema.json)

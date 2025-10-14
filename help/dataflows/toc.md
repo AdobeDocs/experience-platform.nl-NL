@@ -28,4 +28,4 @@ ht-degree: 21%
    - [Dataflows controleren voor het streamen van profielopname](./ui/monitor-streaming-profile.md)
    - B2B-bewaking {#b2b}
       - [Verbeteringstaken voor profielen controleren](./ui/b2b/monitor-profile-enrichment.md)
-- [ de Dienst API van de Stroom ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [&#x200B; de Dienst API van de Stroom &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)

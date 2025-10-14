@@ -16,11 +16,11 @@ ht-degree: 0%
 
 Deze extensie installeert de [!DNL JW Player] adapter om [!DNL JW Player] -gebeurtenissen te verbinden met Adobe Video Analytics. Maak gebruik van de kracht van Adobe Video Analytics om meer inzicht te krijgen in de videoweergavepatronen van uw klanten.
 
-[!DNL JW Player Analytics] (Beta) is een uitbreiding voor analysemogelijkheden in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [ Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
+[!DNL JW Player Analytics] (Beta) is een uitbreiding voor analysemogelijkheden in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [&#x200B; Adobe Exchange &#x200B;](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Experience Platform werken, zie het [&#x200B; overzicht van markeringsuitbreidingen &#x200B;](../launch-extensions/overview.md).
 
-![ JW analytische uitbreiding ](../../assets/catalog/analytics/jw-analytics/catalog.png)
+![&#x200B; JW analytische uitbreiding &#x200B;](../../assets/catalog/analytics/jw-analytics/catalog.png)
 
 ## Vereisten {#prerequisites}
 
@@ -32,25 +32,25 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 U installeert als volgt de extensie [!DNL JW Player Analytics] (Beta):
 
-In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [&#x200B; interface van Experience Platform &#x200B;](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
-Klik op de bestemming om deze te markeren en selecteer vervolgens **[!UICONTROL Configure]** in de rechtertrack. Als het besturingselement **[!UICONTROL Configure]** grijs wordt weergegeven, ontbreekt de machtiging **[!UICONTROL manage_properties]** . Zie [ Eerste vereisten ](#prerequisites).
+Klik op de bestemming om deze te markeren en selecteer vervolgens **[!UICONTROL Configure]** in de rechtertrack. Als het besturingselement **[!UICONTROL Configure]** grijs wordt weergegeven, ontbreekt de machtiging **[!UICONTROL manage_properties]** . Zie [&#x200B; Eerste vereisten &#x200B;](#prerequisites).
 
-Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Leer over eigenschappen in de [ sectie van de pagina van Eigenschappen ](../../../tags/ui/administration/companies-and-properties.md#properties-page) van in de markeringsdocumentatie.
+Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Leer over eigenschappen in de [&#x200B; sectie van de pagina van Eigenschappen &#x200B;](../../../tags/ui/administration/companies-and-properties.md#properties-page) van in de markeringsdocumentatie.
 
 Het werkschema begeleidt u door de stappen om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [ JW pagina van de de uitbreidingsuitbreiding van de Analyse van de Speler (Beta) ](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) in Adobe Exchange.
+Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [&#x200B; JW pagina van de de uitbreidingsuitbreiding van de Analyse van de Speler (Beta) &#x200B;](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) in Adobe Exchange.
 
-U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Voor meer informatie, zie de sectie op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de markeringsdocumentatie.
+U kunt de uitbreiding direct in [&#x200B; de Inzameling UI van Gegevens &#x200B;](https://experience.adobe.com/#/data-collection/) ook installeren. Voor meer informatie, zie de sectie op [&#x200B; toevoegend een nieuwe uitbreiding &#x200B;](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de markeringsdocumentatie.
 
 ## De extensie gebruiken {#how-to-use}
 
 Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen.
 
-U kunt regels instellen voor geïnstalleerde extensies, zodat gebeurtenisgegevens alleen in bepaalde situaties naar de extensiebestemming worden verzonden. Voor meer informatie over vestiging regels voor uw uitbreidingen, zie de [ tagdocumentatie ](../../../tags/ui/managing-resources/rules.md).
+U kunt regels instellen voor geïnstalleerde extensies, zodat gebeurtenisgegevens alleen in bepaalde situaties naar de extensiebestemming worden verzonden. Voor meer informatie over vestiging regels voor uw uitbreidingen, zie de [&#x200B; tagdocumentatie &#x200B;](../../../tags/ui/managing-resources/rules.md).
 
 ## Uitbreiding configureren, bijwerken en verwijderen {#configure-upgrade-delete}
 
@@ -58,6 +58,6 @@ U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface
 
 >[!TIP]
 >
->Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de gebruikersinterface van Experience Platform nog steeds **[!UICONTROL Install]** voor de extensie weergegeven. Kik van het installatiewerkschema zoals die in [ wordt beschreven installeer uitbreiding ](#install-extension) om uw uitbreiding te vormen of te schrappen.
+>Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de gebruikersinterface van Experience Platform nog steeds **[!UICONTROL Install]** voor de extensie weergegeven. Kik van het installatiewerkschema zoals die in [&#x200B; wordt beschreven installeer uitbreiding &#x200B;](#install-extension) om uw uitbreiding te vormen of te schrappen.
 
-Om uw uitbreiding te bevorderen, zie de gids op het [ proces van de uitbreidingsverbetering ](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.
+Om uw uitbreiding te bevorderen, zie de gids op het [&#x200B; proces van de uitbreidingsverbetering &#x200B;](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.

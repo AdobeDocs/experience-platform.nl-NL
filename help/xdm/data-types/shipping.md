@@ -14,7 +14,7 @@ ht-degree: 0%
 [!UICONTROL Shipping] is een standaard XDM-gegevenstype (Experience Data Model) dat details biedt met betrekking tot de verzending van een of meer producten. Het bevat details over de logistiek en bijzonderheden met betrekking tot de levering van bestelde voorwerpen.
 
 
-![ een diagram van het [!UICONTROL Shipping] gegevenstype.](../images/data-types/shipping.png)
+![&#x200B; een diagram van het [!UICONTROL Shipping] gegevenstype.](../images/data-types/shipping.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |----------------------|-----------------------|-----------|------------------------------------------------------|
@@ -31,5 +31,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json)

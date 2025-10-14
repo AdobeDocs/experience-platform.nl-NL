@@ -27,7 +27,7 @@ Ja, het is veilig om de API-aanroep opnieuw te proberen. Ondanks de mislukking, 
 
 ### Wanneer moet de API voor grote bestanden uploaden worden gebruikt?
 
-De aanbevolen bestandsgrootte voor het gebruik van de API voor het uploaden van grote bestanden is 256 MB of groter. Meer informatie over hoe te om het Grote Dossier te gebruiken uploadt API kan [ hier ](./api-overview.md#ingest-large-parquet-files) worden gevonden.
+De aanbevolen bestandsgrootte voor het gebruik van de API voor het uploaden van grote bestanden is 256 MB of groter. Meer informatie over hoe te om het Grote Dossier te gebruiken uploadt API kan [&#x200B; hier &#x200B;](./api-overview.md#ingest-large-parquet-files) worden gevonden.
 
 ### Waarom mislukt de aanroep van de API voor groot bestand?
 
@@ -138,7 +138,7 @@ Er worden drie validatieniveaus toegepast op de gegevens:
 
 ### Hoe kan een reeds opgenomen partij worden vervangen?
 
-Een reeds opgenomen partij kan worden vervangen door de eigenschap van de Replay van de Partij te gebruiken. Meer informatie over Replay van de Partij kan [ hier ](./api-overview.md#replay-a-batch) worden gevonden.
+Een reeds opgenomen partij kan worden vervangen door de eigenschap van de Replay van de Partij te gebruiken. Meer informatie over Replay van de Partij kan [&#x200B; hier &#x200B;](./api-overview.md#replay-a-batch) worden gevonden.
 
 ### Hoe wordt de inname van batch gecontroleerd?
 
@@ -212,7 +212,7 @@ Wanneer een batch wordt geladen, betekent dit dat de API van CompleteBatch niet 
 
 ### Is er een manier om te weten of een partij met succes is opgenomen?
 
-Ja, zodra de batchstatus &quot;Actief&quot; is, is de batch ingeslikt. Om het statuut van de partij te weten te komen, volg de stappen die [ vroeger ](#how-is-batch-ingestion-monitored) worden gedetailleerd.
+Ja, zodra de batchstatus &quot;Actief&quot; is, is de batch ingeslikt. Om het statuut van de partij te weten te komen, volg de stappen die [&#x200B; vroeger &#x200B;](#how-is-batch-ingestion-monitored) worden gedetailleerd.
 
 ### Wat gebeurt er als een batch mislukt? {#what-if-a-batch-fails}
 

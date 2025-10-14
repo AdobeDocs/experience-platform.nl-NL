@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Postal Address] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat adresdetails verstrekt.
 
-![ een diagram van het [!UICONTROL Postal Address] gegevenstype.](../images/data-types/postal-address.png)
+![&#x200B; een diagram van het [!UICONTROL Postal Address] gegevenstype.](../images/data-types/postal-address.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |------------------------------------|------------------|-----------|-----------------------------------------------------------------------------------------------|
@@ -33,4 +33,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op het gegevenstype, verwijs naar het [ volledige schema ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/address.schema.json) op de openbare bewaarplaats XDM:
+Voor meer details op het gegevenstype, verwijs naar het [&#x200B; volledige schema &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/address.schema.json) op de openbare bewaarplaats XDM:

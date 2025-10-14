@@ -25,7 +25,7 @@ Interne koppelingen, downloadkoppelingen en afsluitkoppelingen worden standaard 
 
 SDK van het Web steunt automatische klik het volgen voor verbindingen binnen **open DOM van de Schaduw** elementen.
 
-Vele moderne websites gebruiken {de Componenten van 0} Web [&#128279;](https://developer.mozilla.org/en-US/docs/Web/Web_Components) om herbruikbare en ingekapselde gebruikersinterfaceelementen te bouwen.  Deze componenten gebruiken vaak een technologie genoemd [**DOM van de Schaduw** ](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) om hun interne structuur en stijlen gescheiden van de rest van de pagina te houden.
+Vele moderne websites gebruiken {de Componenten van 0} Web [&#128279;](https://developer.mozilla.org/en-US/docs/Web/Web_Components) om herbruikbare en ingekapselde gebruikersinterfaceelementen te bouwen.  Deze componenten gebruiken vaak een technologie genoemd [**DOM van de Schaduw** &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) om hun interne structuur en stijlen gescheiden van de rest van de pagina te houden.
 
 Er zijn twee soorten schaduw-DOM:
 
@@ -36,7 +36,7 @@ Het Web SDK houdt automatisch kliks op `<a>` en `<area>` elementen binnen **open
 
 ## Logica voor automatisch bijhouden van koppelingen
 
-De Web SDK houdt bij alle klikken op `<a>` en `<area>` HTML-elementen als het geen `onClick` -kenmerk heeft. De klikken worden gevangen met a [ vangt ](https://www.w3.org/TR/uievents/#capture-phase) klik gebeurtenisluisteraar die aan het document in bijlage is. Wanneer op een geldige koppeling wordt geklikt, wordt de volgende logica in de juiste volgorde uitgevoerd:
+De Web SDK houdt bij alle klikken op `<a>` en `<area>` HTML-elementen als het geen `onClick` -kenmerk heeft. De klikken worden gevangen met a [&#x200B; vangt &#x200B;](https://www.w3.org/TR/uievents/#capture-phase) klik gebeurtenisluisteraar die aan het document in bijlage is. Wanneer op een geldige koppeling wordt geklikt, wordt de volgende logica in de juiste volgorde uitgevoerd:
 
 1. Als de koppeling overeenkomt met criteria op basis van waarden in [`downloadLinkQualifier`](downloadlinkqualifier.md) of als de koppeling een `download` HTML-kenmerk bevat, wordt `xdm.web.webInteraction.type` ingesteld op `"download"` (als `clickCollection.downloadLinkEnabled` is ingeschakeld).
 1. Als het koppelingsdoeldomein verschilt van het huidige `window.location.hostname` , wordt `xdm.web.webInteraction.type` ingesteld op `"exit"` (als `clickCollection.exitLinkEnabled` is ingeschakeld).
@@ -46,7 +46,7 @@ In alle gevallen wordt `xdm.web.webInteraction.name` ingesteld op het label van 
 
 ## Automatisch koppelingen bijhouden inschakelen met de webtagextensie SDK {#tag-extension}
 
-Deze variabele wordt automatisch beheerd door de tagextensie. U hoeft deze niet expliciet in te stellen. Als om het even welk van het volgende wordt geselecteerd wanneer [ het vormen van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), wordt de toepasselijke verbinding volgende gegevens verzameld:
+Deze variabele wordt automatisch beheerd door de tagextensie. U hoeft deze niet expliciet in te stellen. Als om het even welk van het volgende wordt geselecteerd wanneer [&#x200B; het vormen van de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), wordt de toepasselijke verbinding volgende gegevens verzameld:
 
 * [!UICONTROL Collect internal link clicks]
 * [!UICONTROL Collect external link clicks]

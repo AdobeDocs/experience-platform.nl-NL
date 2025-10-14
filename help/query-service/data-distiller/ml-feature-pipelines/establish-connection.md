@@ -15,13 +15,13 @@ Als u uw computer wilt verrijken met instructiepijpleidingen met hoogwaardige ge
 
 ## Aan de slag
 
-In deze handleiding wordt ervan uitgegaan dat u bekend bent met interactieve [!DNL Python] -laptops en toegang hebt tot een laptopomgeving. De laptop kan worden gehost in een leeromgeving voor computers in de cloud, of lokaal met [[!DNL Jupyter Notebook] ](https://jupyter.org/) .
+In deze handleiding wordt ervan uitgegaan dat u bekend bent met interactieve [!DNL Python] -laptops en toegang hebt tot een laptopomgeving. De laptop kan worden gehost in een leeromgeving voor computers in de cloud, of lokaal met [[!DNL Jupyter Notebook] &#x200B;](https://jupyter.org/) .
 
 ### Verbindingsgegevens opvragen {#obtain-credentials}
 
-Als u verbinding wilt maken met Data Distiller en andere Adobe Experience Platform-services, hebt u een Experience Platform API-referentie nodig. API geloofsbrieven kunnen in [ Adobe Developer Console ](https://developer.adobe.com/console/home) door iemand met de toegang van de Ontwikkelaar tot Experience Platform worden gecreeerd. U wordt geadviseerd om een referentie van Oauth2 API specifiek voor de werkschema&#39;s van de gegevenswetenschap tot stand te brengen en een het systeemadmin van Adobe van uw organisatie te hebben de geloofsbrieven aan een rol met aangewezen toestemmingen toewijzen.
+Als u verbinding wilt maken met Data Distiller en andere Adobe Experience Platform-services, hebt u een Experience Platform API-referentie nodig. API geloofsbrieven kunnen in [&#x200B; Adobe Developer Console &#x200B;](https://developer.adobe.com/console/home) door iemand met de toegang van de Ontwikkelaar tot Experience Platform worden gecreeerd. U wordt geadviseerd om een referentie van Oauth2 API specifiek voor de werkschema&#39;s van de gegevenswetenschap tot stand te brengen en een het systeemadmin van Adobe van uw organisatie te hebben de geloofsbrieven aan een rol met aangewezen toestemmingen toewijzen.
 
-Zie [ voor authentiek verklaren en toegang Experience Platform APIs ](../../../landing/api-authentication.md) voor gedetailleerde instructies bij het creëren van een API referentie en het verkrijgen van de vereiste toestemmingen.
+Zie [&#x200B; voor authentiek verklaren en toegang Experience Platform APIs &#x200B;](../../../landing/api-authentication.md) voor gedetailleerde instructies bij het creëren van een API referentie en het verkrijgen van de vereiste toestemmingen.
 
 De geadviseerde toestemmingen voor gegevenswetenschap omvatten:
 
@@ -69,7 +69,7 @@ org_id = config.get('Credential', 'ims_org_id')
 
 ## PP Python-bibliotheek installeren {#install-python-library}
 
-[ aepp ](https://github.com/adobe/aepp/tree/main) is een Adobe-Beheerde open-source [!DNL Python] bibliotheek die functies verstrekt om met Gegevens Distiller te verbinden en vragen voor te leggen, zoals het doen van verzoeken aan andere diensten van Experience Platform. De `aepp` -bibliotheek is op zijn beurt afhankelijk van het PostgreSQL-databaseadapterpakket `psycopg2` voor interactieve Distiller-query&#39;s voor gegevens. Het is mogelijk verbinding te maken met Data Distiller en Experience Platform-gegevenssets te controleren met `psycopg2` alleen, maar `aepp` biedt meer gebruiksgemak en extra functionaliteit om aanvragen in te dienen bij alle Experience Platform API-services.
+[&#x200B; aepp &#x200B;](https://github.com/adobe/aepp/tree/main) is een Adobe-Beheerde open-source [!DNL Python] bibliotheek die functies verstrekt om met Gegevens Distiller te verbinden en vragen voor te leggen, zoals het doen van verzoeken aan andere diensten van Experience Platform. De `aepp` -bibliotheek is op zijn beurt afhankelijk van het PostgreSQL-databaseadapterpakket `psycopg2` voor interactieve Distiller-query&#39;s voor gegevens. Het is mogelijk verbinding te maken met Data Distiller en Experience Platform-gegevenssets te controleren met `psycopg2` alleen, maar `aepp` biedt meer gebruiksgemak en extra functionaliteit om aanvragen in te dienen bij alle Experience Platform API-services.
 
 Als u `aepp` en `psycopg2` wilt installeren of upgraden in uw omgeving, kunt u de opdracht `%pip` Magisch in uw notitieboekje gebruiken:
 
@@ -137,4 +137,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe u verbinding kunt maken met Data Distiller vanaf een [!DNL Python] -laptop in de leeromgeving van uw computer. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren moet [ uw datasets ](./exploratory-analysis.md) onderzoeken en analyseren.
+Door dit document te lezen, hebt u geleerd hoe u verbinding kunt maken met Data Distiller vanaf een [!DNL Python] -laptop in de leeromgeving van uw computer. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren moet [&#x200B; uw datasets &#x200B;](./exploratory-analysis.md) onderzoeken en analyseren.

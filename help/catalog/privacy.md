@@ -19,9 +19,9 @@ Dit document behandelt essentiële concepten met betrekking tot het verwerken va
 
 >[!NOTE]
 >
->In deze handleiding wordt alleen uitgelegd hoe u een verzoek om privacy kunt indienen voor het datumpigment in Experience Platform. Als u ook van plan bent om privacyverzoeken voor de de gegevensopslag van het Profiel van de Klant in real time te maken, verwijs naar de gids op [ verwerking van het privacyverzoek voor Profiel ](../profile/privacy.md) naast dit leerprogramma.
+>In deze handleiding wordt alleen uitgelegd hoe u een verzoek om privacy kunt indienen voor het datumpigment in Experience Platform. Als u ook van plan bent om privacyverzoeken voor de de gegevensopslag van het Profiel van de Klant in real time te maken, verwijs naar de gids op [&#x200B; verwerking van het privacyverzoek voor Profiel &#x200B;](../profile/privacy.md) naast dit leerprogramma.
 >
->Voor stappen op hoe te om privacyverzoeken voor andere toepassingen van Adobe Experience Cloud te maken, verwijs naar de [ documentatie van Privacy Service ](../privacy-service/experience-cloud-apps.md).
+>Voor stappen op hoe te om privacyverzoeken voor andere toepassingen van Adobe Experience Cloud te maken, verwijs naar de [&#x200B; documentatie van Privacy Service &#x200B;](../privacy-service/experience-cloud-apps.md).
 
 ## Aan de slag
 
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identite
 
 [!DNL Identity Service] onderhoudt een opslag van algemeen gedefinieerde (standaard) en door de gebruiker gedefinieerde (aangepaste) naamruimten. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
-Voor meer informatie over identiteit namespaces in [!DNL Experience Platform], zie het [ overzicht van identiteitskaart namespace ](../identity-service/features/namespaces.md).
+Voor meer informatie over identiteit namespaces in [!DNL Experience Platform], zie het [&#x200B; overzicht van identiteitskaart namespace &#x200B;](../identity-service/features/namespaces.md).
 
 ## Identiteitsgegevens toevoegen aan gegevenssets
 
@@ -48,11 +48,11 @@ Wanneer het creëren van privacyverzoeken voor het gegevens meer, moeten de geld
 >
 >Om het even welke datasets die op schema&#39;s worden gebaseerd die geen meta-gegevens van de identiteitsbeschrijver (zoals ad hoc datasets) steunen kunnen momenteel niet in privacyverzoeken worden verwerkt.
 
-Deze sectie doorloopt de stappen om een identiteitsbeschrijver aan het XDM schema van een bestaande dataset toe te voegen. Als u reeds een dataset met een identiteitsbeschrijver hebt, kunt u vooruit aan de [ volgende sectie ](#nested-maps) overslaan.
+Deze sectie doorloopt de stappen om een identiteitsbeschrijver aan het XDM schema van een bestaande dataset toe te voegen. Als u reeds een dataset met een identiteitsbeschrijver hebt, kunt u vooruit aan de [&#x200B; volgende sectie &#x200B;](#nested-maps) overslaan.
 
 >[!IMPORTANT]
 >
->Wanneer het beslissen van welke schemagebieden om als identiteiten te plaatsen, houd in mening de [ beperkingen om genestelde kaart-type gebieden ](#nested-maps) te gebruiken.
+>Wanneer het beslissen van welke schemagebieden om als identiteiten te plaatsen, houd in mening de [&#x200B; beperkingen om genestelde kaart-type gebieden &#x200B;](#nested-maps) te gebruiken.
 
 Er zijn twee methodes om een identiteitsbeschrijver aan een datasetschema toe te voegen:
 
@@ -61,17 +61,17 @@ Er zijn twee methodes om een identiteitsbeschrijver aan een datasetschema toe te
 
 ### UI gebruiken {#identity-ui}
 
-In het [!DNL Experience Platform] gebruikersinterface, staat de **[!UICONTROL Schemas]** werkruimte u toe om uw bestaande schema&#39;s uit te geven XDM. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor [ plaatsend een schemagebied als identiteitsgebied ](../xdm/tutorials/create-schema-ui.md#identity-field) in het [!DNL Schema Editor] leerprogramma.
+In het [!DNL Experience Platform] gebruikersinterface, staat de **[!UICONTROL Schemas]** werkruimte u toe om uw bestaande schema&#39;s uit te geven XDM. Om een identiteitsbeschrijver aan een schema toe te voegen, selecteer het schema van de lijst en volg de stappen voor [&#x200B; plaatsend een schemagebied als identiteitsgebied &#x200B;](../xdm/tutorials/create-schema-ui.md#identity-field) in het [!DNL Schema Editor] leerprogramma.
 
-Zodra u de aangewezen gebieden binnen het schema als identiteitsgebieden hebt geplaatst, kunt u aan de volgende sectie te werk gaan over [ het voorleggen van privacyverzoeken ](#submit).
+Zodra u de aangewezen gebieden binnen het schema als identiteitsgebieden hebt geplaatst, kunt u aan de volgende sectie te werk gaan over [&#x200B; het voorleggen van privacyverzoeken &#x200B;](#submit).
 
 ### De API gebruiken {#identity-api}
 
 >[!NOTE]
 >
->Deze sectie veronderstelt u de unieke waarde van identiteitskaart van URI van het schema XDM van uw dataset kent. Als u deze waarde niet kent, kunt u deze ophalen met de API [!DNL Catalog Service] . Na het lezen van de [ begonnen ](./api/getting-started.md) sectie van de ontwikkelaarsgids, volg de stappen die in voor [ worden geschetst lijst ](./api/list-objects.md) of [ het opzoeken ](./api/look-up-object.md) [!DNL Catalog] voorwerpen om uw dataset te vinden. De schema-id staat onder `schemaRef.id`
+>Deze sectie veronderstelt u de unieke waarde van identiteitskaart van URI van het schema XDM van uw dataset kent. Als u deze waarde niet kent, kunt u deze ophalen met de API [!DNL Catalog Service] . Na het lezen van de [&#x200B; begonnen &#x200B;](./api/getting-started.md) sectie van de ontwikkelaarsgids, volg de stappen die in voor [&#x200B; worden geschetst lijst &#x200B;](./api/list-objects.md) of [&#x200B; het opzoeken &#x200B;](./api/look-up-object.md) [!DNL Catalog] voorwerpen om uw dataset te vinden. De schema-id staat onder `schemaRef.id`
 >
->Deze sectie veronderstelt ook dat u weet hoe te om vraag aan de Registratie API van het Schema te maken. Voor belangrijke informatie met betrekking tot het gebruiken van API, met inbegrip van het kennen van uw `{TENANT_ID}` en het concept containers, zie [ begonnen worden ](../xdm/api/getting-started.md) sectie van de API gids.
+>Deze sectie veronderstelt ook dat u weet hoe te om vraag aan de Registratie API van het Schema te maken. Voor belangrijke informatie met betrekking tot het gebruiken van API, met inbegrip van het kennen van uw `{TENANT_ID}` en het concept containers, zie [&#x200B; begonnen worden &#x200B;](../xdm/api/getting-started.md) sectie van de API gids.
 
 U kunt een identiteitsbeschrijver aan het schema van XDM van een dataset toevoegen door een POST- verzoek aan het `/descriptors` eindpunt in [!DNL Schema Registry] API te doen.
 
@@ -111,7 +111,7 @@ curl -X POST \
 | `xdm:sourceSchema` | De unieke URI-id van het XDM-schema van uw gegevensset. |
 | `xdm:sourceVersion` | De versie van het XDM-schema die is opgegeven in `xdm:sourceSchema` . |
 | `xdm:sourceProperty` | Het pad naar het schemaveld waarop de descriptor wordt toegepast. |
-| `xdm:namespace` | Één van [ standaardidentiteitsnamespaces ](../privacy-service/api/appendix.md#standard-namespaces) erkend door [!DNL Privacy Service], of een douane namespace die door uw organisatie wordt bepaald. |
+| `xdm:namespace` | Één van [&#x200B; standaardidentiteitsnamespaces &#x200B;](../privacy-service/api/appendix.md#standard-namespaces) erkend door [!DNL Privacy Service], of een douane namespace die door uw organisatie wordt bepaald. |
 | `xdm:property` | Ofwel &quot;xdm:id&quot; of &quot;xdm:code&quot;, afhankelijk van de naamruimte die onder `xdm:namespace` wordt gebruikt. |
 | `xdm:isPrimary` | Een optionele booleaanse waarde. Indien waar (true), geeft dit aan dat het veld een primaire identiteit is. Schema&#39;s mogen slechts één primaire identiteit bevatten. De standaardwaarde is false als dit item niet wordt opgenomen. |
 
@@ -137,7 +137,7 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de details van de
 
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u privacyverzoeken voor het datumpigment kunt opmaken. Het wordt sterk geadviseerd dat u de [[!DNL Privacy Service]  UI ](../privacy-service/ui/overview.md) of [[!DNL Privacy Service]  API ](../privacy-service/api/getting-started.md) documentatie voor volledige stappen op bekijkt hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om voorgelegde gegevens van de gebruikersidentiteit in verzoeklading behoorlijk te formatteren.
+>In deze sectie wordt beschreven hoe u privacyverzoeken voor het datumpigment kunt opmaken. Het wordt sterk geadviseerd dat u de [[!DNL Privacy Service]  UI &#x200B;](../privacy-service/ui/overview.md) of [[!DNL Privacy Service]  API &#x200B;](../privacy-service/api/getting-started.md) documentatie voor volledige stappen op bekijkt hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om voorgelegde gegevens van de gebruikersidentiteit in verzoeklading behoorlijk te formatteren.
 
 In de volgende sectie wordt beschreven hoe u privacyverzoeken voor het gegevenspomeer kunt maken met de [!DNL Privacy Service] UI of API.
 
@@ -149,11 +149,11 @@ In de volgende sectie wordt beschreven hoe u privacyverzoeken voor het gegevensp
 
 Wanneer u taakaanvragen maakt in de gebruikersinterface, moet u **[!UICONTROL AEP Data Lake]** onder **[!UICONTROL Products]** selecteren om taken te verwerken voor gegevens die in het datumpigment zijn opgeslagen.
 
-![ Beeld dat het product toont van het gegevensmeer dat in de de aanmaakdialoog van het privacyverzoek wordt geselecteerd ](./images/privacy/product-value.png)
+![&#x200B; Beeld dat het product toont van het gegevensmeer dat in de de aanmaakdialoog van het privacyverzoek wordt geselecteerd &#x200B;](./images/privacy/product-value.png)
 
 ### De API gebruiken
 
-Bij het maken van taakaanvragen in de API moeten alle `userIDs` die worden geleverd, een specifieke `namespace` en `type` gebruiken, afhankelijk van de gegevensopslag waarop ze van toepassing zijn. IDs voor het gegevensmeer moet `unregistered` voor hun `type` waarde, en a `namespace` waarde gebruiken die één [ privacyetiketten ](#privacy-labels) aanpast die aan toepasselijke datasets zijn toegevoegd.
+Bij het maken van taakaanvragen in de API moeten alle `userIDs` die worden geleverd, een specifieke `namespace` en `type` gebruiken, afhankelijk van de gegevensopslag waarop ze van toepassing zijn. IDs voor het gegevensmeer moet `unregistered` voor hun `type` waarde, en a `namespace` waarde gebruiken die één [&#x200B; privacyetiketten &#x200B;](#privacy-labels) aanpast die aan toepasselijke datasets zijn toegevoegd.
 
 Bovendien moet de `include` -array van de payload van de aanvraag de productwaarden voor de verschillende gegevensopslagruimten bevatten waarnaar de aanvraag wordt verzonden. Wanneer u een aanvraag indient voor het datumpeer, moet de array de waarde `aepDataLake` bevatten.
 
@@ -200,19 +200,19 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Experience Platform verwerkt privacyverzoeken over alle [ zandbakken ](../sandboxes/home.md) die tot uw organisatie behoren. Als gevolg hiervan wordt elke `x-sandbox-name` -header die in de aanvraag is opgenomen, genegeerd door het systeem.
+>Experience Platform verwerkt privacyverzoeken over alle [&#x200B; zandbakken &#x200B;](../sandboxes/home.md) die tot uw organisatie behoren. Als gevolg hiervan wordt elke `x-sandbox-name` -header die in de aanvraag is opgenomen, genegeerd door het systeem.
 
 ## Verzoek om verwerking verwijderen
 
 Wanneer [!DNL Experience Platform] een verwijderaanvraag ontvangt van [!DNL Privacy Service] , stuurt [!DNL Experience Platform] een bevestiging naar [!DNL Privacy Service] dat de aanvraag is ontvangen en de desbetreffende gegevens zijn gemarkeerd voor verwijdering. De gegevens worden vervolgens binnen zeven dagen uit het datumpeer verwijderd. Tijdens dat venster van zeven dagen worden de gegevens via de elektronische weg verwijderd en zijn deze daarom niet toegankelijk voor een [!DNL Experience Platform] -service.
 
-Als u ook `ProfileService` of `identity` in de privacyaanvraag hebt opgenomen, worden de bijbehorende gegevens afzonderlijk verwerkt. Zie de sectie over [ schrapping verzoekverwerking voor Profiel ](../profile/privacy.md#delete) voor meer informatie.
+Als u ook `ProfileService` of `identity` in de privacyaanvraag hebt opgenomen, worden de bijbehorende gegevens afzonderlijk verwerkt. Zie de sectie over [&#x200B; schrapping verzoekverwerking voor Profiel &#x200B;](../profile/privacy.md#delete) voor meer informatie.
 
 ## Volgende stappen
 
 Door dit document te lezen, bent u geïntroduceerd aan de belangrijke concepten betrokken bij de verwerking van privacyverzoeken voor het gegevenspeer. U wordt aangeraden de documentatie in deze handleiding te blijven lezen om meer inzicht te krijgen in de manier waarop u identiteitsgegevens kunt beheren en privacytaken kunt maken.
 
-Zie het document op [ verwerking van het privacyverzoek voor het Profiel van de Klant in real time ](../profile/privacy.md) voor stappen op de verzoeken van de verwerkingsprivacy voor de [!DNL Profile] opslag.
+Zie het document op [&#x200B; verwerking van het privacyverzoek voor het Profiel van de Klant in real time &#x200B;](../profile/privacy.md) voor stappen op de verzoeken van de verwerkingsprivacy voor de [!DNL Profile] opslag.
 
 ## Bijlage
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -22,7 +22,7 @@ ht-degree: 0%
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan de serverzijde. Voor een lijst van beschikbare cliënt-zijuitbreidingen, zie in plaats daarvan de [ verwijzing van markeringsuitbreidingen ](../client/overview.md).
+Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan de serverzijde. Voor een lijst van beschikbare cliënt-zijuitbreidingen, zie in plaats daarvan de [&#x200B; verwijzing van markeringsuitbreidingen &#x200B;](../client/overview.md).
 
 >[!NOTE]
 >
@@ -31,10 +31,10 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [Adobe Experience Platform Cloud Connector](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
-* [ Verbinding van de Wolk voor Googles Analytics ](https://exchange.adobe.com/apps/ec/106542)*
+* [&#x200B; Verbinding van de Wolk voor Googles Analytics &#x200B;](https://exchange.adobe.com/apps/ec/106542)*
 <!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [Kern](./core/overview.md)
-* [ Epsilon Event API ](https://exchange.adobe.com/apps/ec/109127)*
+* [&#x200B; Epsilon Event API &#x200B;](https://exchange.adobe.com/apps/ec/109127)*
 * [Verbeterde Google-conversies voor advertenties](./google-ads-enhanced-conversions/overview.md)
 * [Google Cloud Platform](./google-cloud-platform/overview.md)
 * [[!DNL LinkedIn] Conversie-API](./linkedin/overview.md)
@@ -42,9 +42,9 @@ Hieronder volgt een lijst met documentatie voor het doorsturen van extensies aan
 * [[!DNL Meta] Conversies-API](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
-* [ de Hub van het Besluit van de Klant van Pega ](https://exchange.adobe.com/apps/ec/107597)*
+* [&#x200B; de Hub van het Besluit van de Klant van Pega &#x200B;](https://exchange.adobe.com/apps/ec/107597)*
 * [[!DNL Pinterest]](./pinterest/overview.md)
-* [ Magnetische Conversies API ](https://exchange.adobe.com/apps/ec/108550)*
+* [&#x200B; Magnetische Conversies API &#x200B;](https://exchange.adobe.com/apps/ec/108550)*
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)

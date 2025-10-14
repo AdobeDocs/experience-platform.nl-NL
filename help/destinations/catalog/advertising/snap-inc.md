@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[ Snapchat Ads ](https://forbusiness.snapchat.com/) worden gemaakt voor elke zaken, ongeacht de grootte of de industrie. Word onderdeel van de dagelijkse gesprekken van Snapchatters met digitale advertenties op volledig scherm die inspireren tot actie van de mensen die het belangrijkst zijn voor uw bedrijf.
+[&#x200B; Snapchat Ads &#x200B;](https://forbusiness.snapchat.com/) worden gemaakt voor elke zaken, ongeacht de grootte of de industrie. Word onderdeel van de dagelijkse gesprekken van Snapchatters met digitale advertenties op volledig scherm die inspireren tot actie van de mensen die het belangrijkst zijn voor uw bedrijf.
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ Op deze bestemming kunnen marketers gebruikersgroepen die in Experience Platform
 
 Als u deze bestemming wilt gebruiken, moet u een account voor Snapchat Ads hebben. Raadpleeg deze documentatie voor informatie over het maken van een dergelijke documentatie:
 
-[ krijgen Begonnen met Snapchat Advertising ](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
+[&#x200B; krijgen Begonnen met Snapchat Advertising &#x200B;](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
 ## Beperkingen {#limitations}
 
@@ -37,7 +37,7 @@ Als u deze bestemming wilt gebruiken, moet u een account voor Snapchat Ads hebbe
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De *Magnetische* bestemming van Inc. steunt de activering van identiteiten die in de lijst hieronder worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+De *Magnetische* bestemming van Inc. steunt de activering van identiteiten die in de lijst hieronder worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 Alle herkenningstekens die naar de *Magnetische bestemming Inc* worden verzonden moeten in formaat worden gehashed SHA-256. Als u gewone-tekstid&#39;s wilt hashen voordat u ze naar de bestemming verzendt, controleert u de optie **[!UICONTROL Apply transformation]** wanneer u doelid&#39;s voor de bestemming toewijst.
 
@@ -66,8 +66,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
-| [!DNL Federated Audience Composition] | ✓ | Het publiek werd ingevoerd in Experience Platform door [ Federated Samenstelling van het Publiek ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/start/audiences). |
+| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| [!DNL Federated Audience Composition] | ✓ | Het publiek werd ingevoerd in Experience Platform door [&#x200B; Federated Samenstelling van het Publiek &#x200B;](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de Inc-bestemming magnetisch worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -94,23 +94,23 @@ Ga als volgt te werk om te verifiëren bij de bestemming:
 
 1. Vind de *Magnetische Inc.* bestemming van de Catalogus van de Bestemming van Adobe Experience Platform en selecteer **Opstelling**.
 2. Selecteer **[!UICONTROL Connect to destination]**. U wordt omgeleid naar het volgende scherm:
-   ![ Scherm van de Auth 1 ](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
+   ![&#x200B; Scherm van de Auth 1 &#x200B;](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Ga uw geloofsbrieven van de Snapchat in en selecteer **Login**.
 4. De gegevens voor Snapchat waartoe Adobe Experience Platform toegang heeft, worden weergegeven. Selecteer **verdergaan** met het verbindingsproces te werk te gaan.
 
-![ Scherm 2 van de Auth ](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
+![&#x200B; Scherm 2 van de Auth &#x200B;](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
 Nadat u hebt geselecteerd, wacht u tot u weer naar Adobe Experience Platform bent omgeleid.
 
 ### Doelgegevens invullen {#destination-details}
 
-![ Details van de Bestemming ](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
+![&#x200B; Details van de Bestemming &#x200B;](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
 Als u details voor het doel wilt configureren, vult u de vereiste velden in en selecteert u **[!UICONTROL Next]** .
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: De id van het Advertentieaccount die is gekoppeld aan het Advertentieaccount waarnaar u uw publiek wilt importeren. Voor meer informatie over hoe te om dit te vinden, gelieve te verwijzen naar [ deze documentatie over het Centrum van de Hulp van de Bedrijfs Snapchat ](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Account ID]**: De id van het Advertentieaccount die is gekoppeld aan het Advertentieaccount waarnaar u uw publiek wilt importeren. Voor meer informatie over hoe te om dit te vinden, gelieve te verwijzen naar [&#x200B; deze documentatie over het Centrum van de Hulp van de Bedrijfs Snapchat &#x200B;](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
@@ -118,7 +118,7 @@ Als u details voor het doel wilt configureren, vult u de vereiste velden in en s
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -126,22 +126,22 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Na het activeren van publiek aan de *Magnetische bestemming Inc.*, zult u het publiek in de Magnetische 2&rbrace; sectie **van de Manager van Advertenties [&#128279;](https://businesshelp.snapchat.com/s/article/audience-sharing) kunnen zien.** Ga als volgt te werk om naar deze sectie te navigeren:
 
-1. Logboek in de [ Magnetische Manager van Advertenties ](https://ads.snapchat.com/)
+1. Logboek in de [&#x200B; Magnetische Manager van Advertenties &#x200B;](https://ads.snapchat.com/)
 2. Selecteer **Soorten publiek** van het pulldown menu in de hogere linkerhoek van het scherm. In de Audience Library ziet u het publiek dat u in Adobe Experience Platform hebt geactiveerd:
 
 ![Doelgroepen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Houd er rekening mee dat wanneer een Adobe-publiek voor het eerst wordt geactiveerd op Snap Inc, dit eerst als een leeg publiek wordt weergegeven. Adobe Experience Platform exporteert ledengegevens namelijk pas naar Snap Inc als het publiek wordt geëvalueerd. Voor meer informatie over hoe het publiek in Experience Platform wordt geëvalueerd, gelieve te verwijzen naar het [ overzicht van de Dienst van de Segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=nl-NL#evaluate-segments).
+Houd er rekening mee dat wanneer een Adobe-publiek voor het eerst wordt geactiveerd op Snap Inc, dit eerst als een leeg publiek wordt weergegeven. Adobe Experience Platform exporteert ledengegevens namelijk pas naar Snap Inc als het publiek wordt geëvalueerd. Voor meer informatie over hoe het publiek in Experience Platform wordt geëvalueerd, gelieve te verwijzen naar het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=nl-NL#evaluate-segments).
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).

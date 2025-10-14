@@ -32,5 +32,5 @@ Daarnaast biedt het gegevenstype een aantal optionele eigenschappen die kunnen w
 
 Voor meer details over het gegevenstype van de persoonnaam, verwijs naar de openbare bewaarplaats XDM:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)

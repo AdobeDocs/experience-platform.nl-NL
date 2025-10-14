@@ -11,15 +11,15 @@ ht-degree: 1%
 
 # Einde bibliotheken
 
-Een bibliotheek is een inzameling van markeringsmiddelen ([ uitbreidingen ](./extensions.md), [ regels ](./rules.md), en [ gegevenselementen ](./data-elements.md)) die het gewenste gedrag van a [ bezit ](./properties.md) vertegenwoordigen. Met het eindpunt `/libraries` in de Reactor-API kunt u bibliotheken programmatisch beheren binnen de eigenschappen van de tag.
+Een bibliotheek is een inzameling van markeringsmiddelen ([&#x200B; uitbreidingen &#x200B;](./extensions.md), [&#x200B; regels &#x200B;](./rules.md), en [&#x200B; gegevenselementen &#x200B;](./data-elements.md)) die het gewenste gedrag van a [&#x200B; bezit &#x200B;](./properties.md) vertegenwoordigen. Met het eindpunt `/libraries` in de Reactor-API kunt u bibliotheken programmatisch beheren binnen de eigenschappen van de tag.
 
 Een bibliotheek behoort tot precies één eigenschap. Een eigenschap kan veel bibliotheken bevatten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
-Voordat u met bibliotheken gaat werken in de Reactor-API, is het belangrijk dat u de rollen begrijpt die de bibliotheekstatus en -omgevingen spelen bij het bepalen welke handelingen u op een bepaalde bibliotheek kunt uitvoeren. Zie de gids op de [ bibliotheek het publiceren stroom ](../../ui/publishing/publishing-flow.md) voor meer informatie.
+Voordat u met bibliotheken gaat werken in de Reactor-API, is het belangrijk dat u de rollen begrijpt die de bibliotheekstatus en -omgevingen spelen bij het bepalen welke handelingen u op een bepaalde bibliotheek kunt uitvoeren. Zie de gids op de [&#x200B; bibliotheek het publiceren stroom &#x200B;](../../ui/publishing/publishing-flow.md) voor meer informatie.
 
 ## Een lijst met bibliotheken ophalen {#list}
 
@@ -39,7 +39,7 @@ GET /properties/{PROPERTY_ID}/libraries
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde bibliotheken op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde bibliotheken op de volgende attributen worden gefiltreerd:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -270,13 +270,13 @@ POST /properties/{PROPERTY_ID}/libraries
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `PROPERTY_ID` | `id` van het [ bezit ](./properties.md) dat u de bibliotheek onder bepaalt. |
+| `PROPERTY_ID` | `id` van het [&#x200B; bezit &#x200B;](./properties.md) dat u de bibliotheek onder bepaalt. |
 
 {style="table-layout:auto"}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een nieuwe bibliotheek voor de opgegeven eigenschap gemaakt. Wanneer u een bibliotheek maakt, kan alleen het kenmerk `name` ervan worden geconfigureerd. Als u gegevenselementen, extensies en regels wilt toevoegen aan de bibliotheek, moet u relaties maken. Zie de sectie over [ het beheren van bibliotheekmiddelen ](#resources) voor meer informatie.
+Met de volgende aanvraag wordt een nieuwe bibliotheek voor de opgegeven eigenschap gemaakt. Wanneer u een bibliotheek maakt, kan alleen het kenmerk `name` ervan worden geconfigureerd. Als u gegevenselementen, extensies en regels wilt toevoegen aan de bibliotheek, moet u relaties maken. Zie de sectie over [&#x200B; het beheren van bibliotheekmiddelen &#x200B;](#resources) voor meer informatie.
 
 ```shell
 curl -X POST \
@@ -460,7 +460,7 @@ curl -X POST \
 
 **Reactie**
 
-Een succesvolle reactie retourneert de details van de toegevoegde relaties. Het uitvoeren van a [ raadplegingsverzoek ](#lookup) voor de bibliotheek toont de toegevoegde verhoudingen onder het `relationships` bezit.
+Een succesvolle reactie retourneert de details van de toegevoegde relaties. Het uitvoeren van a [&#x200B; raadplegingsverzoek &#x200B;](#lookup) voor de bibliotheek toont de toegevoegde verhoudingen onder het `relationships` bezit.
 
 ```json
 {
@@ -529,7 +529,7 @@ curl -X PATCH \
 
 **Reactie**
 
-Een succesvolle reactie retourneert de details van de bijgewerkte relaties. Het uitvoeren van a [ raadplegingsverzoek ](#lookup) voor de bibliotheek toont de verhoudingen onder het `relationships` bezit.
+Een succesvolle reactie retourneert de details van de bijgewerkte relaties. Het uitvoeren van a [&#x200B; raadplegingsverzoek &#x200B;](#lookup) voor de bibliotheek toont de verhoudingen onder het `relationships` bezit.
 
 ```json
 {
@@ -594,7 +594,7 @@ curl -X DELETE \
 
 **Reactie**
 
-Een succesvolle reactie keert de details van de bijgewerkte verhoudingen voor het middeltype terug. Als er geen relaties bestaan voor dit type resource, wordt de eigenschap `data` geretourneerd als een lege array. Het uitvoeren van a [ raadplegingsverzoek ](#lookup) voor de bibliotheek toont de verhoudingen onder het `relationships` bezit.
+Een succesvolle reactie keert de details van de bijgewerkte verhoudingen voor het middeltype terug. Als er geen relaties bestaan voor dit type resource, wordt de eigenschap `data` geretourneerd als een lege array. Het uitvoeren van a [&#x200B; raadplegingsverzoek &#x200B;](#lookup) voor de bibliotheek toont de verhoudingen onder het `relationships` bezit.
 
 ```json
 {
@@ -651,7 +651,7 @@ curl -X POST \
 
 **Reactie**
 
-Een succesvolle reactie retourneert de details van de relatie. Het uitvoeren van a [ raadplegingsverzoek ](#lookup) voor de bibliotheek toont de toegevoegde verhouding onder het `relationships` bezit.
+Een succesvolle reactie retourneert de details van de relatie. Het uitvoeren van a [&#x200B; raadplegingsverzoek &#x200B;](#lookup) voor de bibliotheek toont de toegevoegde verhouding onder het `relationships` bezit.
 
 ```json
 {
@@ -684,7 +684,7 @@ PATCH /libraries/{LIBRARY_ID}
 
 **Verzoek**
 
-Met de volgende aanvraag wordt de status van een bestaande bibliotheek gewijzigd op basis van de waarde `meta.action` die in de payload wordt opgegeven. De beschikbare acties voor een bibliotheek hangen van zijn huidige het publiceren staat af, zoals die in de [ wordt geschetst het publiceren stroom ](../../ui/publishing/publishing-flow.md#state).
+Met de volgende aanvraag wordt de status van een bestaande bibliotheek gewijzigd op basis van de waarde `meta.action` die in de payload wordt opgegeven. De beschikbare acties voor een bibliotheek hangen van zijn huidige het publiceren staat af, zoals die in de [&#x200B; wordt geschetst het publiceren stroom &#x200B;](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
 curl -X PATCH \
@@ -905,13 +905,13 @@ curl -X POST \
 
 ## Notities voor een bibliotheek beheren {#notes}
 
-Bibliotheken zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor bibliotheken en andere compatibele middelen beheren.
+Bibliotheken zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [&#x200B; gids van het Notitieeindpunt &#x200B;](./notes.md) voor meer informatie over hoe te nota&#39;s voor bibliotheken en andere compatibele middelen beheren.
 
 ## Gerelateerde bronnen voor een bibliotheek ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een bibliotheek terug te winnen. Wanneer [ omhoog een bibliotheek ](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
+De volgende vraag toont aan hoe te om de verwante middelen voor een bibliotheek terug te winnen. Wanneer [&#x200B; omhoog een bibliotheek &#x200B;](#lookup) kijkt, zijn deze verhoudingen vermeld onder het `relationships` bezit.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante gegevenselementen weergeven voor een bibliotheek {#data-elements}
 

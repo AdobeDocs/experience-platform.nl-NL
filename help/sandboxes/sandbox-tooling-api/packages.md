@@ -511,7 +511,7 @@ GET /packages/?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [ vraagparameters ](./appendix.md) voor meer informatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [&#x200B; vraagparameters &#x200B;](./appendix.md) voor meer informatie. |
 
 **Verzoek**
 
@@ -1058,7 +1058,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [ vraagparameters ](./appendix.md) voor meer informatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [&#x200B; vraagparameters &#x200B;](./appendix.md) voor meer informatie. |
 
 **Verzoek**
 

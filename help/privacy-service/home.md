@@ -32,13 +32,13 @@ Om optimaal gebruik van Privacy Service te maken, moeten verscheidene zeer belan
 Deze besluiten kunnen als volgt worden samengevat:
 
 1. **welke informatie ik van mijn klanten verzamel?**
-   * Om optimaal gebruik te maken van Privacy Service, moet u een gedetailleerd inzicht hebben in de soorten gegevens u van uw klanten verzamelt, en welke van het onderworpen is aan privacyverordeningen. Zie de sectie over [ bepalend privacyvereisten ](#requirements) voor meer informatie.
+   * Om optimaal gebruik te maken van Privacy Service, moet u een gedetailleerd inzicht hebben in de soorten gegevens u van uw klanten verzamelt, en welke van het onderworpen is aan privacyverordeningen. Zie de sectie over [&#x200B; bepalend privacyvereisten &#x200B;](#requirements) voor meer informatie.
 1. **Heb ik correct mijn gegevens geëtiketteerd?**
-   * De gegevens moeten correct geëtiketteerd zijn opdat de dienst bepaalt welke gebieden om tijdens privacybanen toegang te hebben of te schrappen. Zie de sectie over [ etiketterend gegevens ](#label) voor meer informatie.
+   * De gegevens moeten correct geëtiketteerd zijn opdat de dienst bepaalt welke gebieden om tijdens privacybanen toegang te hebben of te schrappen. Zie de sectie over [&#x200B; etiketterend gegevens &#x200B;](#label) voor meer informatie.
 1. **weet ik welke IDs aan Privacy Service te verzenden?**
-   * Wanneer het verzenden van privacyverzoeken, individuele klant IDs specifiek voor specifieke Adobe toepassingen moet worden verstrekt. Zie de secties over [ het verstrekken van identiteitsgegevens ](#identity) en [ het maken van privacyverzoeken ](#requests) voor meer informatie.
+   * Wanneer het verzenden van privacyverzoeken, individuele klant IDs specifiek voor specifieke Adobe toepassingen moet worden verstrekt. Zie de secties over [&#x200B; het verstrekken van identiteitsgegevens &#x200B;](#identity) en [&#x200B; het maken van privacyverzoeken &#x200B;](#requests) voor meer informatie.
 1. **Hoe volg ik mijn privacybanen?**
-   * Nadat u een privacyverzoek hebt ingediend, kunt u de status en de resultaten van dat verzoek op verschillende manieren volgen. Zie de sectie over [ de banen van de controleprivacy ](#monitor) voor meer informatie.
+   * Nadat u een privacyverzoek hebt ingediend, kunt u de status en de resultaten van dat verzoek op verschillende manieren volgen. Zie de sectie over [&#x200B; de banen van de controleprivacy &#x200B;](#monitor) voor meer informatie.
 
 In de volgende secties worden algemene richtsnoeren gegeven voor deze belangrijke, noodzakelijke stappen en wordt verwezen naar verdere documentatie over de Privacy Service voor meer informatie.
 
@@ -46,7 +46,7 @@ In de volgende secties worden algemene richtsnoeren gegeven voor deze belangrijk
 
 Afhankelijk van de aard van uw bedrijf en de rechtsgebieden waaronder het werkt, zijn uw gegevensbewerkingen mogelijk onderworpen aan wettelijke privacyregels. Deze verordeningen geven uw klanten vaak het recht om toegang tot de gegevens te verzoeken u van hen verzamelt, en het recht om de schrapping van die opgeslagen gegevens te verzoeken. Deze verzoeken van klanten om hun persoonsgegevens worden bedoeld als &quot;privacyverzoeken&quot;door de documentatie.
 
-Voor details op de verschillende wettelijke privacyverordeningen die de Privacy Service verzoeken voor, met inbegrip van zeer belangrijke termijnen en antwoorden op vaak gestelde vragen beheert, verwijs naar de [ documentatie van de privacyverordeningen ](./regulations/overview.md).
+Voor details op de verschillende wettelijke privacyverordeningen die de Privacy Service verzoeken voor, met inbegrip van zeer belangrijke termijnen en antwoorden op vaak gestelde vragen beheert, verwijs naar de [&#x200B; documentatie van de privacyverordeningen &#x200B;](./regulations/overview.md).
 
 Als uw gegevensbewerkingen onder de ondersteunde regelgeving vallen, raadpleegt u de documentatie bij deze bewerkingen voor belangrijke informatie, zoals de specifieke privacyrechten die ze aan uw klanten verlenen en compatibiliteitsvensters voor het uitvoeren van privacyverzoeken. Met deze informatie moet rekening worden gehouden wanneer wordt bepaald hoe Privacy Service in uw CRM-systeem moet worden geïntegreerd en hoe klanten met uw website moeten communiceren om privacyverzoeken te kunnen indienen.
 
@@ -54,7 +54,7 @@ Naast wettelijke voorschriften, zouden om het even welke organisatie of industri
 
 ### Gegevens labelen voor privacyverzoeken {#label}
 
-Afhankelijk van de [!DNL Experience Cloud] toepassingen die u gebruikt, moet u de specifieke gegevensgebieden etiketteren die in antwoord op privacyverzoeken zouden moeten worden betreden of worden geschrapt. Het proces voor het etiketteren van gegevens varieert tussen toepassingen. Leren hoe te om gegevens voor elke gesteunde toepassing van de Adobe te etiketteren, zie het document op [ toepassingen van het Experience Cloud ](./experience-cloud-apps.md).
+Afhankelijk van de [!DNL Experience Cloud] toepassingen die u gebruikt, moet u de specifieke gegevensgebieden etiketteren die in antwoord op privacyverzoeken zouden moeten worden betreden of worden geschrapt. Het proces voor het etiketteren van gegevens varieert tussen toepassingen. Leren hoe te om gegevens voor elke gesteunde toepassing van de Adobe te etiketteren, zie het document op [&#x200B; toepassingen van het Experience Cloud &#x200B;](./experience-cloud-apps.md).
 
 ### De typen identiteitsgegevens bepalen die naar de Privacy Service moeten worden verzonden {#identity}
 
@@ -62,7 +62,7 @@ Om een privacyverzoek van een klant te kunnen verwerken, moet ten minste één u
 
 Afhankelijk van de [!DNL Experience Cloud] toepassingen die uw CRM-systeem gebruikt, variëren het type en het aantal identiteitswaarden dat u voor elke klant moet opgeven. Sommige toepassingen gebruiken hun eigen interne waarden voor de klant-id (zoals Adobe Target-id&#39;s), terwijl andere oplossingen vertrouwen op algemene id&#39;s van Adobe [!DNL Experience Cloud Identity Service] (ECID) die de activiteiten van de klant in alle [!DNL Experience Cloud] -toepassingen bijhouden. Daarnaast kunnen algemene persoonlijke gegevens, zoals een e-mailadres of telefoonnummer, ook als geldige identiteitsgegevens worden gebruikt.
 
-Lees het document over [ identiteitsgegevens voor privacyverzoeken ](./identity-data.md) voor meer gedetailleerde informatie over de types van identiteitsinformatie die voor Privacy Service worden goedgekeurd. Het document biedt ook richtlijnen voor het toepassen van Adobe-technologieën om de juiste identiteitsgegevens van uw klanten op te halen bij de interactie met uw website en om die gegevens naar de Privacy Service te verzenden in API-verzoeken.
+Lees het document over [&#x200B; identiteitsgegevens voor privacyverzoeken &#x200B;](./identity-data.md) voor meer gedetailleerde informatie over de types van identiteitsinformatie die voor Privacy Service worden goedgekeurd. Het document biedt ook richtlijnen voor het toepassen van Adobe-technologieën om de juiste identiteitsgegevens van uw klanten op te halen bij de interactie met uw website en om die gegevens naar de Privacy Service te verzenden in API-verzoeken.
 
 ### Start met het indienen van privacyaanvragen {#requests}
 
@@ -80,13 +80,13 @@ Er is **geen download URL** in de reactie voor a **schrapt verzoek**, aangezien 
 >
 >In de volgende secties vindt u koppelingen naar documentatie over het maken van algemene privacyverzoeken in de API of UI. Afhankelijk van de [!DNL Experience Cloud] -toepassingen die u gebruikt, kunnen de velden die u in de aanvraag moet verzenden, echter afwijken van de voorbeelden in deze handleidingen.
 >
->Aangezien u samen met de API of gidsen UI volgt, verwijs naar het document op [ Privacy Service en de toepassingen van het Experience Cloud ](./experience-cloud-apps.md) voor verdere documentatie over hoe te om privacyverzoeken voor uw bepaalde [!DNL Experience Cloud] toepassingen te formatteren.
+>Aangezien u samen met de API of gidsen UI volgt, verwijs naar het document op [&#x200B; Privacy Service en de toepassingen van het Experience Cloud &#x200B;](./experience-cloud-apps.md) voor verdere documentatie over hoe te om privacyverzoeken voor uw bepaalde [!DNL Experience Cloud] toepassingen te formatteren.
 >
 >Het is ook belangrijk om op te merken dat de privacyverzoeken asynchroon over de toepassingen van het Experience Cloud worden verwerkt. Zodra een verzoek door Privacy Service wordt ontvangen, kan elke toepassing overal van minuten tot weken duren om het verzoek te voltooien. De hoeveelheid tijd die nodig is om elk verzoek te voltooien, is specifiek voor de toepassing waarmee u werkt en de hoeveelheid gegevens die moet worden verwerkt.
 
 #### De API gebruiken {#api}
 
-Om privacy regelnaleving voor uw [!DNL Experience Cloud] toepassingen programmatically te benaderen, kunt u RESTful API vraag aan [[!DNL Privacy Service API] gebruiken ](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) eindpunten om privacybanen tot stand te brengen en te beheren. Voor gedetailleerde stappen op hoe te om API te gebruiken, zie de [ Privacy Service API gids ](api/overview.md).
+Om privacy regelnaleving voor uw [!DNL Experience Cloud] toepassingen programmatically te benaderen, kunt u RESTful API vraag aan [[!DNL Privacy Service API] gebruiken &#x200B;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) eindpunten om privacybanen tot stand te brengen en te beheren. Voor gedetailleerde stappen op hoe te om API te gebruiken, zie de [&#x200B; Privacy Service API gids &#x200B;](api/overview.md).
 
 #### UI gebruiken {#ui}
 
@@ -94,7 +94,7 @@ Om privacy regelnaleving voor uw [!DNL Experience Cloud] toepassingen programmat
 >
 >De Privacy Service-UI ondersteunt momenteel alleen toegangs- en verwijderingsverzoeken. Alle verzoeken om te weigeren moeten in plaats daarvan via de API worden gedaan.
 
-U kunt privacybanen tot stand brengen en controleren gebruikend een grafische interface met Privacy Service UI. De gebruikersinterface bevat een **[!UICONTROL Status Report]** -widget die een visuele weergave biedt van de status van alle actieve aanvragen en u kunt aanvragen maken met de ingebouwde **[!UICONTROL Request Builder]** of door JSON-bestanden te uploaden. Voor meer informatie bij het gebruiken van UI, zie de [ gebruikersgids van de Privacy Service ](ui/overview.md).
+U kunt privacybanen tot stand brengen en controleren gebruikend een grafische interface met Privacy Service UI. De gebruikersinterface bevat een **[!UICONTROL Status Report]** -widget die een visuele weergave biedt van de status van alle actieve aanvragen en u kunt aanvragen maken met de ingebouwde **[!UICONTROL Request Builder]** of door JSON-bestanden te uploaden. Voor meer informatie bij het gebruiken van UI, zie de [&#x200B; gebruikersgids van de Privacy Service &#x200B;](ui/overview.md).
 
 ### Privacy-taken controleren {#monitor}
 
@@ -102,9 +102,9 @@ Nadat u een privacytaak hebt uitgevoerd, kunt u de status en de resultaten van d
 
 | Controlemethode | Beschrijving |
 | --- | --- |
-| UI PRIVACY SERVICE | U kunt een visuele vertegenwoordiging van de status van alle actieve verzoeken met het Privacy Service UI controledashboard bekijken. Zie de [ gebruikersgids van de Privacy Service ](ui/overview.md) voor meer informatie. |
-| Privacy Service-API | U kunt de status van de banen van de Privacy programmatically controleren door de raadplegingseindpunten te gebruiken die door Privacy Service API worden verstrekt. Zie de [ Privacy Service API gids ](./api/overview.md) voor gedetailleerde stappen op hoe te om API te gebruiken. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] gebruik Adobe I/O-gebeurtenissen die naar een geconfigureerde webhaak worden verzonden om een efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de Privacy Service-API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een workflow is bereikt. Zie het leerprogramma op [ intekenend aan de Gebeurtenissen van de Privacy ](./privacy-events.md) voor meer informatie. |
+| UI PRIVACY SERVICE | U kunt een visuele vertegenwoordiging van de status van alle actieve verzoeken met het Privacy Service UI controledashboard bekijken. Zie de [&#x200B; gebruikersgids van de Privacy Service &#x200B;](ui/overview.md) voor meer informatie. |
+| Privacy Service-API | U kunt de status van de banen van de Privacy programmatically controleren door de raadplegingseindpunten te gebruiken die door Privacy Service API worden verstrekt. Zie de [&#x200B; Privacy Service API gids &#x200B;](./api/overview.md) voor gedetailleerde stappen op hoe te om API te gebruiken. |
+| [!DNL Privacy Events] | [!DNL Privacy Events] gebruik Adobe I/O-gebeurtenissen die naar een geconfigureerde webhaak worden verzonden om een efficiënte automatisering van taakaanvragen te vergemakkelijken. Ze verminderen of elimineren de noodzaak om de Privacy Service-API te raadplegen om te controleren of een taak voltooid is of dat een bepaalde mijlpaal in een workflow is bereikt. Zie het leerprogramma op [&#x200B; intekenend aan de Gebeurtenissen van de Privacy &#x200B;](./privacy-events.md) voor meer informatie. |
 
 #### Reacties voor niet-bestaande gebruikers {#non-existing-users}
 

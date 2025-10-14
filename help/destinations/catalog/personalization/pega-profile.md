@@ -20,7 +20,7 @@ Deze aansluiting helpt bij het instellen van de eerste export van profielgegeven
 
 >[!IMPORTANT]
 >
->Deze bestemmings schakelaar en documentatiepagina worden gecreeerd en door Pegasystems gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve te contacteren direct [ hier ](mailto:support@pega.com).
+>Deze bestemmings schakelaar en documentatiepagina worden gecreeerd en door Pegasystems gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve te contacteren direct [&#x200B; hier &#x200B;](mailto:support@pega.com).
 
 ## Gebruiksscenario’s
 
@@ -45,7 +45,7 @@ Voordat u deze bestemming kunt gebruiken voor het exporteren van gegevens uit Ad
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] ondersteunt de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Voor meer details, zie [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL Pega Customer Decision Hub] ondersteunt de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Voor meer details, zie [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving |
 |---|---|
@@ -59,8 +59,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 |---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [ werkschema van de bestemmingsactivering ](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [&#x200B; werkschema van de bestemmingsactivering &#x200B;](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [&#x200B; partij op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -68,21 +68,21 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-* **[!DNL Amazon S3]access key** en **[!DNL Amazon S3]geheime sleutel**: in [!DNL Amazon S3] genereert u een `access key - secret access key` paar om Adobe Experience Platform toegang te verlenen tot uw [!DNL Amazon S3] account. Leer meer in de [ documentatie van Amazon Web Services ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]access key** en **[!DNL Amazon S3]geheime sleutel**: in [!DNL Amazon S3] genereert u een `access key - secret access key` paar om Adobe Experience Platform toegang te verlenen tot uw [!DNL Amazon S3] account. Leer meer in de [&#x200B; documentatie van Amazon Web Services &#x200B;](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Doelgegevens invullen {#destination-details}
 
 Nadat u de verificatieverbinding met [!DNL Amazon S3] tot stand hebt gebracht, geeft u de volgende informatie op voor het doel:
 
-![ Beeld van het scherm UI die voltooide gebieden voor de de bestemmingsdetails van de Schakelaar van het Profiel van Pega tonen ](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
+![&#x200B; Beeld van het scherm UI die voltooide gebieden voor de de bestemmingsdetails van de Schakelaar van het Profiel van Pega tonen &#x200B;](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
 Als u details voor het doel wilt configureren, vult u de vereiste velden in en selecteert u **[!UICONTROL Next]** . Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
@@ -94,11 +94,11 @@ Als u details voor het doel wilt configureren, vult u de vereiste velden in en s
 
 >[!TIP]
 >
->In de Connect-doelworkflow kunt u per geëxporteerd publieksbestand een aangepaste map in uw Amazon S3-opslag maken. Lees [ de macro&#39;s van het Gebruik om een omslag in uw opslagplaats ](/help/destinations/catalog/cloud-storage/overview.md#use-macros) voor instructies tot stand te brengen.
+>In de Connect-doelworkflow kunt u per geëxporteerd publieksbestand een aangepaste map in uw Amazon S3-opslag maken. Lees [&#x200B; de macro&#39;s van het Gebruik om een omslag in uw opslagplaats &#x200B;](/help/destinations/catalog/cloud-storage/overview.md#use-macros) voor instructies tot stand te brengen.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -106,29 +106,29 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [&#x200B; publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](../../ui/activate-batch-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
-In de stap **[!UICONTROL Mapping]** kunt u selecteren welke kenmerk- en identiteitsvelden u wilt exporteren voor uw profielen. U kunt ook selecteren om de kopteksten in het geëxporteerde bestand te wijzigen in een gewenste vriendelijke naam. Voor meer informatie, bekijk de [ toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in de activerende partijbestemmingen UI leerprogramma.
+In de stap **[!UICONTROL Mapping]** kunt u selecteren welke kenmerk- en identiteitsvelden u wilt exporteren voor uw profielen. U kunt ook selecteren om de kopteksten in het geëxporteerde bestand te wijzigen in een gewenste vriendelijke naam. Voor meer informatie, bekijk de [&#x200B; toewijzingsstap &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in de activerende partijbestemmingen UI leerprogramma.
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Voor [!DNL Pega Profile Connector] -doelen maakt [!DNL Experience Platform] een `.csv` -bestand in de opslaglocatie van Amazon S3 die u hebt opgegeven. Voor meer informatie over de dossiers, zie [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md) in het leerprogramma van de publiekactivering activeren.
+Voor [!DNL Pega Profile Connector] -doelen maakt [!DNL Experience Platform] een `.csv` -bestand in de opslaglocatie van Amazon S3 die u hebt opgegeven. Voor meer informatie over de dossiers, zie [&#x200B; publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](../../ui/activate-batch-profile-destinations.md) in het leerprogramma van de publiekactivering activeren.
 
 Wanneer het importeren van profielgegevens uit S3 is gelukt, worden gegevens in de [!DNL Pega Customer] -profieldatastore ingevoegd. De geïmporteerde klantprofielgegevens kunnen worden gevalideerd in [!DNL Pega Customer Profile Designer] , zoals in de volgende afbeelding wordt getoond.
-![ Beeld van het scherm UI waar u het profielgegevens van Adobe in Designer van het Profiel van de Klant kunt bevestigen ](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+![&#x200B; Beeld van het scherm UI waar u het profielgegevens van Adobe in Designer van het Profiel van de Klant kunt bevestigen &#x200B;](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-In [!DNL Pega Customer Decision Hub] kunnen gegevensbeheerders gegevenstaken configureren in [!DNL Customer Profile Designer] om profielgegevens periodiek te importeren vanuit S3, zoals in de volgende afbeelding wordt getoond. Zie de [ extra middelen ](#additional-resources) voor meer informatie over hoe te om gegevenstaken te vormen om profielgegevens van [!DNL Amazon S3] in te voeren.
-![ Beeld van het scherm UI om gegevenstaken in Designer van het Profiel van de Klant te vormen ](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
+In [!DNL Pega Customer Decision Hub] kunnen gegevensbeheerders gegevenstaken configureren in [!DNL Customer Profile Designer] om profielgegevens periodiek te importeren vanuit S3, zoals in de volgende afbeelding wordt getoond. Zie de [&#x200B; extra middelen &#x200B;](#additional-resources) voor meer informatie over hoe te om gegevenstaken te vormen om profielgegevens van [!DNL Amazon S3] in te voeren.
+![&#x200B; Beeld van het scherm UI om gegevenstaken in Designer van het Profiel van de Klant te vormen &#x200B;](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## Aanvullende bronnen {#additional-resources}
 
-Zie [ de banen van de Gegevens van de Invoer ](https://academy.pega.com/topic/import-data-jobs/v1) in [!DNL Pega Customer Decision Hub].
+Zie [&#x200B; de banen van de Gegevens van de Invoer &#x200B;](https://academy.pega.com/topic/import-data-jobs/v1) in [!DNL Pega Customer Decision Hub].
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).

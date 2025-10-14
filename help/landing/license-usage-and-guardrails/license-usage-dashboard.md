@@ -15,8 +15,8 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen.
 
-Voor gedetailleerde instructies op om tot en met het dashboard van het vergunningsgebruik in UI toegang te hebben en in wisselwerking te staan, evenals meer over de beschikbare metriek te leren die in het dashboard wordt getoond, gelieve de [ gids van het vergunningsgebruik ](../../dashboards/guides/license-usage.md) te bezoeken.
+Voor gedetailleerde instructies op om tot en met het dashboard van het vergunningsgebruik in UI toegang te hebben en in wisselwerking te staan, evenals meer over de beschikbare metriek te leren die in het dashboard wordt getoond, gelieve de [&#x200B; gids van het vergunningsgebruik &#x200B;](../../dashboards/guides/license-usage.md) te bezoeken.
 
-Voor een overzicht van alle dashboardeigenschappen binnen Experience Platform, gelieve te beginnen door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
+Voor een overzicht van alle dashboardeigenschappen binnen Experience Platform, gelieve te beginnen door het [&#x200B; overzicht van dashboards &#x200B;](../../dashboards/home.md) te lezen.
 
 ![](../../dashboards/images/license-usage/dashboard-overview.png)

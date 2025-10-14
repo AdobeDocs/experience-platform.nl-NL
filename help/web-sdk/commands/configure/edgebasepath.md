@@ -15,9 +15,9 @@ De eigenschap `edgeBasePath` wijzigt het doelpad wanneer u werkt met Adobe-servi
 
 ## Edge-basispad met de Web SDK-tagextensie
 
-Ga de gewenste tekst op het **[!UICONTROL Edge base path]** tekstgebied in wanneer [ vormend de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Ga de gewenste tekst op het **[!UICONTROL Edge base path]** tekstgebied in wanneer [&#x200B; vormend de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.

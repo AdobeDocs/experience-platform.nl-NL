@@ -31,7 +31,7 @@ Deze zelfstudie doorloopt de stappen om trainings- en studieprogramma&#39;s op e
 
 U moet toegang hebben tot [!DNL Experience Platform] om deze zelfstudie te kunnen voltooien. Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform] , neemt u contact op met uw systeembeheerder voordat u verdergaat.
 
-Voor deze zelfstudie is een bestaande service vereist. Als u geen toegankelijke dienst hebt om met te werken, kunt u tot stand brengen door het leerprogramma voor [ te volgen het publiceren van een model als dienst ](./publish-model-service-ui.md).
+Voor deze zelfstudie is een bestaande service vereist. Als u geen toegankelijke dienst hebt om met te werken, kunt u tot stand brengen door het leerprogramma voor [&#x200B; te volgen het publiceren van een model als dienst &#x200B;](./publish-model-service-ui.md).
 
 ## Geplande scoring configureren {#configure-scheduled-scoring}
 
@@ -77,4 +77,4 @@ Het bijgewerkte trainingsschema wordt weergegeven op de pagina **[!UICONTROL Ove
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u met succes automatische training en scoring gepland voor een service en hebt u de workflow voor de gebruikersinterface van de zelfstudie van [!DNL Data Science Workspace] voltooid. Als u dit niet reeds hebt gedaan, overweeg [ herstartend het leerprogramma ](./create-retails-sales-dataset.md) en volg het API werkschema om tot stand te brengen, te trainen, te scoren, en een model te publiceren.
+Aan de hand van deze zelfstudie hebt u met succes automatische training en scoring gepland voor een service en hebt u de workflow voor de gebruikersinterface van de zelfstudie van [!DNL Data Science Workspace] voltooid. Als u dit niet reeds hebt gedaan, overweeg [&#x200B; herstartend het leerprogramma &#x200B;](./create-retails-sales-dataset.md) en volg het API werkschema om tot stand te brengen, te trainen, te scoren, en een model te publiceren.

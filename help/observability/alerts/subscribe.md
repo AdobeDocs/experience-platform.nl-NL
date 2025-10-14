@@ -19,13 +19,13 @@ Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen 
 
 ## Aan de slag
 
-Dit document vereist een goed begrip van webhaken en hoe te om een webhaak van één toepassing aan een andere aan te sluiten. Verwijs naar de [[!DNL I/O Events]  documentatie ](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) voor een inleiding aan webhooks.
+Dit document vereist een goed begrip van webhaken en hoe te om een webhaak van één toepassing aan een andere aan te sluiten. Verwijs naar de [[!DNL I/O Events]  documentatie &#x200B;](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) voor een inleiding aan webhooks.
 
 ## Webhaak maken
 
 Als u [!DNL I/O Event] -meldingen wilt ontvangen, moet u een webhaak registreren door een unieke webhaak-URL op te geven als onderdeel van de gegevens voor gebeurtenisregistratie.
 
-U kunt uw webhaak configureren met behulp van de client van uw keuze. Voor een tijdelijk webhaakadres om als deel van dit leerprogramma te gebruiken, bezoek [ WebHaak.site ](https://webhook.site/) en kopieer unieke verstrekte URL.
+U kunt uw webhaak configureren met behulp van de client van uw keuze. Voor een tijdelijk webhaakadres om als deel van dit leerprogramma te gebruiken, bezoek [&#x200B; WebHaak.site &#x200B;](https://webhook.site/) en kopieer unieke verstrekte URL.
 
 ![](../images/notifications/webhook-url.png)
 
@@ -35,7 +35,7 @@ Tijdens het eerste validatieproces verzendt [!DNL I/O Events] een query-paramete
 
 ## Een nieuw project maken in Adobe Developer Console
 
-Ga naar [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) en teken binnen met uw Adobe ID. Daarna, volg de stappen die in het leerprogramma worden geschetst op [ creërend een leeg project ](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in de documentatie van Adobe Developer Console.
+Ga naar [&#x200B; Adobe Developer Console &#x200B;](https://www.adobe.com/go/devs_console_ui) en teken binnen met uw Adobe ID. Daarna, volg de stappen die in het leerprogramma worden geschetst op [&#x200B; creërend een leeg project &#x200B;](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in de documentatie van Adobe Developer Console.
 
 ## Abonneren op gebeurtenissen
 
@@ -62,8 +62,8 @@ In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u
 >
 >Raadpleeg de volgende documentatie als u niet zeker weet op welke gebeurtenissen u zich moet abonneren voor de service waarmee u werkt:
 >
->* [ de berichten van het Platform ](./rules.md)
->* [ de berichten van Privacy Service ](../../privacy-service/privacy-events.md)
+>* [&#x200B; de berichten van het Platform &#x200B;](./rules.md)
+>* [&#x200B; de berichten van Privacy Service &#x200B;](../../privacy-service/privacy-events.md)
 
 >[!IMPORTANT]
 >
@@ -87,7 +87,7 @@ Geef in het volgende scherm een naam en een beschrijving voor de gebeurtenisregi
 
 ![](../images/notifications/registration-details.png)
 
-Verderop op hetzelfde scherm onder de sectie [!UICONTROL How to receive events] kunt u desgewenst configureren hoe gebeurtenissen moeten worden ontvangen. **[!UICONTROL Webhook]** staat u toe om een adres van de douanewebsite te verstrekken om gebeurtenissen te ontvangen, terwijl **[!UICONTROL Runtime action]** u toestaat om het zelfde te doen gebruikend [ Adobe I/O Runtime ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Verderop op hetzelfde scherm onder de sectie [!UICONTROL How to receive events] kunt u desgewenst configureren hoe gebeurtenissen moeten worden ontvangen. **[!UICONTROL Webhook]** staat u toe om een adres van de douanewebsite te verstrekken om gebeurtenissen te ontvangen, terwijl **[!UICONTROL Runtime action]** u toestaat om het zelfde te doen gebruikend [&#x200B; Adobe I/O Runtime &#x200B;](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
 
 Selecteer **[!UICONTROL Webhook]** voor deze zelfstudie en geef de URL op van de webhaak die u eerder hebt gemaakt. Als u klaar bent, selecteert u **[!UICONTROL Save configured events]** om de gebeurtenisregistratie te voltooien.
 
@@ -104,4 +104,4 @@ Aan de hand van deze zelfstudie hebt u een webhaak geregistreerd om [!DNL I/O Ev
 * [[!DNL Privacy Service] meldingen](../../privacy-service/privacy-events.md)
 * [[!DNL Flow Service] (bronnen) meldingen](../../sources/notifications.md)
 
-Zie het [[!DNL Observability Insights]  overzicht ](../home.md) voor meer informatie over hoe u uw activiteiten op [!DNL Experience Platform] en [!DNL Privacy Service] kunt controleren.
+Zie het [[!DNL Observability Insights]  overzicht &#x200B;](../home.md) voor meer informatie over hoe u uw activiteiten op [!DNL Experience Platform] en [!DNL Privacy Service] kunt controleren.

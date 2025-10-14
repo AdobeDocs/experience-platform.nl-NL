@@ -20,20 +20,20 @@ De verzamelde gegevens kunnen informatie over media playbacks, pauzes, voltooiin
 Als u de component `streamingMedia` van Web SDK wilt gebruiken, moet u aan de volgende voorwaarden voldoen:
 
 * Zorg ervoor dat u toegang hebt tot Adobe Experience Platform en/of Adobe Analytics.
-* U moet Web SDK versie 2.20.0 of later gebruiken. Zie het [ de installatieoverzicht van SDK van het Web ](../../install/overview.md) leren hoe te om de recentste versie te installeren.
+* U moet Web SDK versie 2.20.0 of later gebruiken. Zie het [&#x200B; de installatieoverzicht van SDK van het Web &#x200B;](../../install/overview.md) leren hoe te om de recentste versie te installeren.
 * Schakel de optie **[[!UICONTROL Media Analytics]](../../../datastreams/configure.md#advanced-options)** in voor de gegevensstroom die u gebruikt.
 * Zorg ervoor dat het schema dat door uw gegevensstroom wordt gebruikt de het schemagebieden van de Inzameling van Media omvat.
-* Vorm de Streaming eigenschap van Media in de configuratie van SDK van het Web, zoals aangetoond in deze pagina, of door de [ markeringsuitbreiding ](#tag-extension) of door de [ bibliotheek van JavaScript ](#library).
+* Vorm de Streaming eigenschap van Media in de configuratie van SDK van het Web, zoals aangetoond in deze pagina, of door de [&#x200B; markeringsuitbreiding &#x200B;](#tag-extension) of door de [&#x200B; bibliotheek van JavaScript &#x200B;](#library).
 
 ## Streaming media configureren met de webSDK-tagextensie {#tag-extension}
 
 Voer de onderstaande stappen uit om streamingmedia te configureren in de SDK-tagextensie van Web.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
-1. Vorm de **[!UICONTROL Streaming Media]** montages zoals die in de [ pagina van de de de taguitbreiding van SDK van het Web ](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection) worden beschreven.
+1. Vorm de **[!UICONTROL Streaming Media]** montages zoals die in de [&#x200B; pagina van de de de taguitbreiding van SDK van het Web &#x200B;](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection) worden beschreven.
 
 ## Streaming media configureren met de Web SDK JavaScript-bibliotheek {#library}
 
@@ -58,5 +58,5 @@ alloy("configure", {
 | `channel` | String | Ja | De naam van het kanaal waar de het stromen media inzameling voorkomt. Voorbeeld: `Video channel` . |
 | `playerName` | String | Ja | De naam van de mediaspeler. |
 | `appVersion` | String | Nee | De versie van de mediaspeler. |
-| `mainPingInterval` | Geheel | Nee | Frequentie van pings voor belangrijkste inhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `10` tot `50` seconden.  Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [ automatisch-gevolgde zittingen ](../createmediasession.md#automatic). |
-| `adPingInterval` | Geheel | Nee | Frequentie van pingelt voor advertentie-inhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `1` tot `10` seconden. Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [ automatisch-gevolgde zittingen ](../createmediasession.md#automatic). |
+| `mainPingInterval` | Geheel | Nee | Frequentie van pings voor belangrijkste inhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `10` tot `50` seconden.  Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [&#x200B; automatisch-gevolgde zittingen &#x200B;](../createmediasession.md#automatic). |
+| `adPingInterval` | Geheel | Nee | Frequentie van pingelt voor advertentie-inhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `1` tot `10` seconden. Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [&#x200B; automatisch-gevolgde zittingen &#x200B;](../createmediasession.md#automatic). |

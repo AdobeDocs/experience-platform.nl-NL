@@ -18,8 +18,8 @@ ht-degree: 0%
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| Januari 2024 | Bijwerken van functionaliteit en documentatie | De Amazon S3 bestemmingsschakelaar steunt nu een nieuw verondersteld rolauthentificatietype. Lees meer over het in de [ authentificatiesectie ](#assumed-role-authentication). |
-| Juli 2023 | Bijwerken van functionaliteit en documentatie | Met de Experience Platform-release van juli 2023 biedt de [!DNL Amazon S3] -bestemming nieuwe functionaliteit, zoals hieronder wordt weergegeven: <br><ul><li>[ de uitvoersteun van de Dataset ](/help/destinations/ui/export-datasets.md)</li><li>Aanvullende [ dossier noemende opties ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Mogelijkheid om de kopballen van het douanedossier in uw uitgevoerde dossiers via de [ verbeterde toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) te plaatsen.</li><li>[ Mogelijkheid om het formatteren van uitgevoerde CSV gegevensdossiers ](/help/destinations/ui/batch-destinations-file-formatting-options.md) aan te passen.</li></ul> |
+| Januari 2024 | Bijwerken van functionaliteit en documentatie | De Amazon S3 bestemmingsschakelaar steunt nu een nieuw verondersteld rolauthentificatietype. Lees meer over het in de [&#x200B; authentificatiesectie &#x200B;](#assumed-role-authentication). |
+| Juli 2023 | Bijwerken van functionaliteit en documentatie | Met de Experience Platform-release van juli 2023 biedt de [!DNL Amazon S3] -bestemming nieuwe functionaliteit, zoals hieronder wordt weergegeven: <br><ul><li>[&#x200B; de uitvoersteun van de Dataset &#x200B;](/help/destinations/ui/export-datasets.md)</li><li>Aanvullende [&#x200B; dossier noemende opties &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Mogelijkheid om de kopballen van het douanedossier in uw uitgevoerde dossiers via de [&#x200B; verbeterde toewijzingsstap &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) te plaatsen.</li><li>[&#x200B; Mogelijkheid om het formatteren van uitgevoerde CSV gegevensdossiers &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md) aan te passen.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -27,8 +27,8 @@ ht-degree: 0%
 
 ## Verbinding maken met uw [!DNL Amazon S3] -opslag via API of UI {#connect-api-or-ui}
 
-* Om met uw [!DNL Amazon S3] opslagplaats te verbinden gebruikend het gebruikersinterface van Experience Platform, lees de secties [ verbinden met de bestemming ](#connect) en [ actief publiek aan deze bestemming ](#activate) hieronder.
-* Om met uw [!DNL Amazon S3] opslagplaats programmatically te verbinden, lees de gids op hoe te [ publiek aan op dossier-gebaseerde bestemmingen activeren door de Dienst API van de Stroom te gebruiken leerprogramma ](../../api/activate-segments-file-based-destinations.md).
+* Om met uw [!DNL Amazon S3] opslagplaats te verbinden gebruikend het gebruikersinterface van Experience Platform, lees de secties [&#x200B; verbinden met de bestemming &#x200B;](#connect) en [&#x200B; actief publiek aan deze bestemming &#x200B;](#activate) hieronder.
+* Om met uw [!DNL Amazon S3] opslagplaats programmatically te verbinden, lees de gids op hoe te [&#x200B; publiek aan op dossier-gebaseerde bestemmingen activeren door de Dienst API van de Stroom te gebruiken leerprogramma &#x200B;](../../api/activate-segments-file-based-destinations.md).
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -37,7 +37,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -47,33 +47,33 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [ werkschema van de bestemmingsactivering ](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [&#x200B; werkschema van de bestemmingsactivering &#x200B;](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [&#x200B; partij op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
-![ Amazon S3 op profiel-gebaseerd die uitvoertype in UU wordt benadrukt.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![&#x200B; Amazon S3 op profiel-gebaseerd die uitvoertype in UU wordt benadrukt.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## Gegevensbestanden exporteren {#export-datasets}
 
 Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
 
-* Hoe te [ datasets uitvoeren gebruikend het gebruikersinterface van Experience Platform ](/help/destinations/ui/export-datasets.md).
-* Hoe te [ datasets programmatically uitvoeren gebruikend de Dienst API van de Stroom ](/help/destinations/api/export-datasets.md).
+* Hoe te [&#x200B; datasets uitvoeren gebruikend het gebruikersinterface van Experience Platform &#x200B;](/help/destinations/ui/export-datasets.md).
+* Hoe te [&#x200B; datasets programmatically uitvoeren gebruikend de Dienst API van de Stroom &#x200B;](/help/destinations/api/export-datasets.md).
 
 ## Bestandsindeling van de geëxporteerde gegevens {#file-format}
 
-Wanneer het uitvoeren van *publieksgegevens*, leidt Experience Platform tot een `.csv`, `parquet`, of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ gesteunde dossierformaten voor de uitvoer ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) sectie in het leerprogramma van de publiekactivering.
+Wanneer het uitvoeren van *publieksgegevens*, leidt Experience Platform tot een `.csv`, `parquet`, of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [&#x200B; gesteunde dossierformaten voor de uitvoer &#x200B;](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) sectie in het leerprogramma van de publiekactivering.
 
-Wanneer het uitvoeren van *datasets*, leidt Experience Platform tot een `.parquet` of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ succesvolle datasetuitvoer ](../../ui/export-datasets.md#verify) sectie in het de uitvoerdatasetleerprogramma verifiëren.
+Wanneer het uitvoeren van *datasets*, leidt Experience Platform tot een `.parquet` of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [&#x200B; succesvolle datasetuitvoer &#x200B;](../../ui/export-datasets.md#verify) sectie in het de uitvoerdatasetleerprogramma verifiëren.
 
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -91,12 +91,12 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 
 Gebruik deze verificatiemethode als u de Amazon S3-toegangstoets en de geheime sleutel wilt invoeren, zodat Experience Platform gegevens kan exporteren naar uw Amazon S3-eigenschappen.
 
-![ Beeld van de vereiste gebieden wanneer het selecteren van toegangstoets en geheime zeer belangrijke authentificatie.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
+![&#x200B; Beeld van de vereiste gebieden wanneer het selecteren van toegangstoets en geheime zeer belangrijke authentificatie.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
-* **[!DNL Amazon S3]access key** en **[!DNL Amazon S3]geheime sleutel**: in [!DNL Amazon S3] genereert u een `access key - secret access key` paar om Experience Platform toegang te verlenen tot uw [!DNL Amazon S3] account. Leer meer in de [ documentatie van Amazon Web Services ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]access key** en **[!DNL Amazon S3]geheime sleutel**: in [!DNL Amazon S3] genereert u een `access key - secret access key` paar om Experience Platform toegang te verlenen tot uw [!DNL Amazon S3] account. Leer meer in de [&#x200B; documentatie van Amazon Web Services &#x200B;](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
-  ![ Beeld dat een voorbeeld van een correct geformatteerde sleutel PGP in UI toont.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![&#x200B; Beeld dat een voorbeeld van een correct geformatteerde sleutel PGP in UI toont.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### Authentificatie met S3 veronderstelde rol {#assumed-role-authentication}
 
@@ -107,12 +107,12 @@ Gebruik deze verificatiemethode als u de Amazon S3-toegangstoets en de geheime s
 
 Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet wilt delen met Adobe. Experience Platform maakt in plaats daarvan verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang.
 
-![ Beeld van de vereiste gebieden wanneer het selecteren van veronderstelde rolauthentificatie.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+![&#x200B; Beeld van de vereiste gebieden wanneer het selecteren van veronderstelde rolauthentificatie.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
 * **[!DNL Role]**: plak de ARN van de rol die u in AWS voor de Adobe-gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` . Zie de stappen hieronder voor gedetailleerde begeleiding op hoe te om S3 toegang correct te vormen.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
-Om dit te doen, moet u in de console van AWS een veronderstelde rol voor Adobe met het [ recht vereiste toestemmingen ](#minimum-permissions-iam-user) tot stand brengen om aan uw emmers van Amazon S3 te schrijven.
+Om dit te doen, moet u in de console van AWS een veronderstelde rol voor Adobe met het [&#x200B; recht vereiste toestemmingen &#x200B;](#minimum-permissions-iam-user) tot stand brengen om aan uw emmers van Amazon S3 te schrijven.
 
 **creeer een beleid met de vereiste toestemmingen**
 
@@ -192,7 +192,7 @@ Als u liever niet het volledige Adobe-account toestaat, kunt u de toegang beperk
 }
 ```
 
-Voor meer informatie, verwijs naar de [ documentatie van AWS bij het creëren van rollen ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Voor meer informatie, verwijs naar de [&#x200B; documentatie van AWS bij het creëren van rollen &#x200B;](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 
 
@@ -215,10 +215,10 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Description]**: voer een beschrijving van dit doel in.
 * **[!UICONTROL Bucket name]**: voer de naam in van het [!DNL Amazon S3] emmertje dat door dit doel moet worden gebruikt.
 * **[!UICONTROL Folder path]**: voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
-* **[!UICONTROL File type]**: selecteer de indeling die Experience Platform moet gebruiken voor de geëxporteerde bestanden. Wanneer het selecteren van de [!UICONTROL CSV] optie, kunt u ook [ de dossier het formatteren opties ](../../ui/batch-destinations-file-formatting-options.md) vormen.
+* **[!UICONTROL File type]**: selecteer de indeling die Experience Platform moet gebruiken voor de geëxporteerde bestanden. Wanneer het selecteren van de [!UICONTROL CSV] optie, kunt u ook [&#x200B; de dossier het formatteren opties &#x200B;](../../ui/batch-destinations-file-formatting-options.md) vormen.
 * **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
-* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Bekijk a [ steekproef manifestdossier ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
-   * `flowRunId`: De [ dataflow looppas ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.
+* **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Bekijk a [&#x200B; steekproef manifestdossier &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
+   * `flowRunId`: De [&#x200B; dataflow looppas &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.
    * `scheduledTime`: De tijd in UTC toen het bestand werd geëxporteerd.
    * `exportResults.sinkPath`: Het pad in uw opslaglocatie waar het geëxporteerde bestand is opgeslagen.
    * `exportResults.name`: De naam van het geëxporteerde bestand.
@@ -226,11 +226,11 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 >[!TIP]
 >
->In de Connect-doelworkflow kunt u per geëxporteerd publieksbestand een aangepaste map in uw Amazon S3-opslag maken. Lees [ de macro&#39;s van het Gebruik om een omslag in uw opslagplaats ](overview.md#use-macros) voor instructies tot stand te brengen.
+>In de Connect-doelworkflow kunt u per geëxporteerd publieksbestand een aangepaste map in uw Amazon S3-opslag maken. Lees [&#x200B; de macro&#39;s van het Gebruik om een omslag in uw opslagplaats &#x200B;](overview.md#use-macros) voor instructies tot stand te brengen.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -291,10 +291,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [&#x200B; publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](../../ui/activate-batch-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ## Geëxporteerde gegevens valideren {#exported-data}
 

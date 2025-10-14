@@ -17,23 +17,23 @@ ht-degree: 2%
 >
 >* [[!DNL Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
->* [[!DNL Marketo Engage]  standaardactiviteiten ](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Marketo Engage]  standaardactiviteiten &#x200B;](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Lees deze gids voor stappen op hoe te om rij-vlakke gegevens voor een bron te filtreren gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze gids voor stappen op hoe te om rij-vlakke gegevens voor een bron te filtreren gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
 
 ## Brongegevens filteren {#filter-source-data}
 
@@ -407,7 +407,7 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 ## Activiteitenentiteiten filteren voor [!DNL Marketo Engage] {#filter-for-marketo}
 
-U kunt rij-niveau het filtreren gebruiken om voor activiteitenentiteiten te filtreren wanneer het gebruiken van de [[!DNL Marketo Engage]  bronschakelaar ](../../connectors/adobe-applications/marketo/marketo.md). Momenteel kunt u alleen filteren op activiteitentiteiten en standaardtypen. De activiteiten van de douane blijven onder [[!DNL Marketo]  gebiedsafbeeldingen ](../../connectors/adobe-applications/mapping/marketo.md) worden geregeerd.
+U kunt rij-niveau het filtreren gebruiken om voor activiteitenentiteiten te filtreren wanneer het gebruiken van de [[!DNL Marketo Engage]  bronschakelaar &#x200B;](../../connectors/adobe-applications/marketo/marketo.md). Momenteel kunt u alleen filteren op activiteitentiteiten en standaardtypen. De activiteiten van de douane blijven onder [[!DNL Marketo]  gebiedsafbeeldingen &#x200B;](../../connectors/adobe-applications/mapping/marketo.md) worden geregeerd.
 
 ### [!DNL Marketo] standaardactiviteitstypen {#marketo-standard-activity-types}
 
@@ -448,7 +448,7 @@ Voer de onderstaande stappen uit om de entiteiten met de standaardactiviteit te 
 
 ### Concepten van gegevensstroom maken
 
-Eerst, creeer a [[!DNL Marketo]  dataflow ](../ui/create/adobe-applications/marketo.md) en bewaar het als ontwerp. Raadpleeg de volgende documentatie voor gedetailleerde stappen voor het maken van een concept-gegevensstroom:
+Eerst, creeer a [[!DNL Marketo]  dataflow &#x200B;](../ui/create/adobe-applications/marketo.md) en bewaar het als ontwerp. Raadpleeg de volgende documentatie voor gedetailleerde stappen voor het maken van een concept-gegevensstroom:
 
 * [Een gegevensstroom opslaan als concept met de gebruikersinterface](../ui/draft.md)
 * [Een gegevensstroom opslaan als concept met de API](../api/draft.md)

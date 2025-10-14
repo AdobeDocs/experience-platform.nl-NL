@@ -118,7 +118,7 @@ Voor op een bestand gebaseerde doelen wordt het doelveld automatisch gevuld met 
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-![ het schermschot van Experience Platform UI die afbeelding van XDM aan douanekenmerken voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![&#x200B; het schermschot van Experience Platform UI die afbeelding van XDM aan douanekenmerken voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 Gebruikers kunnen de standaardnaam op hun plaats laten of een aangepaste kenmerknaam invoeren in het selectiescherm van het doelveld.
 
@@ -144,7 +144,7 @@ Wanneer u een naamruimte van een identiteit als een bronveld selecteert, wordt h
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-![ het schermschot van Experience Platform UI die identiteitstoewijzing aan identiteit voor op dossier-gebaseerde bestemmingen tonen.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![&#x200B; het schermschot van Experience Platform UI die identiteitstoewijzing aan identiteit voor op dossier-gebaseerde bestemmingen tonen.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## Volgende stappen {#next-steps}

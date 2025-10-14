@@ -15,15 +15,15 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->De Toegang API van Gegevens is nu verouderd **&#x200B;**. U wordt aangeraden Doelen te gebruiken voor het exporteren van gegevens uit Adobe Experience Platform. Voor meer informatie, gelieve te verwijzen naar de [ documentatie van de de uitvoerbestemmingen van de dataset ](../destinations/destination-types.md#dataset-export-destinations).
+>De Toegang API van Gegevens is nu verouderd **&#x200B;**. U wordt aangeraden Doelen te gebruiken voor het exporteren van gegevens uit Adobe Experience Platform. Voor meer informatie, gelieve te verwijzen naar de [&#x200B; documentatie van de de uitvoerbestemmingen van de dataset &#x200B;](../destinations/destination-types.md#dataset-export-destinations).
 
 De API voor gegevenstoegang ondersteunt Adobe Experience Platform door gebruikers een RESTful-interface te bieden die is gericht op de detecteerbaarheid en toegankelijkheid van opgenomen datasets binnen [!DNL Experience Platform] .
 
-![ een diagram van hoe de Toegang van Gegevens de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform vergemakkelijkt.](images/Data_Access_Experience_Platform.png)
+![&#x200B; een diagram van hoe de Toegang van Gegevens de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform vergemakkelijkt.](images/Data_Access_Experience_Platform.png)
 
 ## API-specificatieverwijzing
 
-Verwijs naar de [ de verwijzingsdocumentatie van OpenAPI van de Toegang van Gegevens ](https://developer.adobe.com/experience-platform-apis/references/data-access/) om een gestandaardiseerd, machine-leesbaar formaat voor gemakkelijkere integratie, het testen, en de exploratie te bekijken.
+Verwijs naar de [&#x200B; de verwijzingsdocumentatie van OpenAPI van de Toegang van Gegevens &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-access/) om een gestandaardiseerd, machine-leesbaar formaat voor gemakkelijkere integratie, het testen, en de exploratie te bekijken.
 
 ## Terminologie {#terminology}
 
@@ -239,8 +239,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Aanvullende codevoorbeelden
 
-Voor extra steekproeven, verwijs naar het [ leerprogramma van de gegevenstoegang ](tutorials/dataset-data.md).
+Voor extra steekproeven, verwijs naar het [&#x200B; leerprogramma van de gegevenstoegang &#x200B;](tutorials/dataset-data.md).
 
 ## Abonneren op gebeurtenissen voor gegevensinvoer {#subscribe-to-data-ingestion-events}
 
-U kunt aan specifieke high-value gebeurtenissen door [ Adobe Developer Console ](https://developer.adobe.com/console/) intekenen. U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie het leerprogramma op [ intekenend aan de gebeurtenisberichten van Adobe ](../observability/alerts/subscribe.md) voor meer informatie.
+U kunt aan specifieke high-value gebeurtenissen door [&#x200B; Adobe Developer Console &#x200B;](https://developer.adobe.com/console/) intekenen. U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie het leerprogramma op [&#x200B; intekenend aan de gebeurtenisberichten van Adobe &#x200B;](../observability/alerts/subscribe.md) voor meer informatie.

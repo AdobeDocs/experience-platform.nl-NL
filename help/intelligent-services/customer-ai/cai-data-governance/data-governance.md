@@ -22,14 +22,14 @@ Dankzij de integratie tussen Customer AI en Adobe Experience Platform Data Gover
 
 Labels en beleidsregels voor gegevensgebruik die zijn gemaakt op gegevenssets die door Experience Platform worden gebruikt, kunnen worden weergegeven in de configuratieworkflow van de AI van de Klant. Deze labels stoppen of waarschuwen gebruikers die gelabelde velden gebruiken.
 
-Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevensstewards in uw organisatie kunnen beleid plaatsen om gebruik te beperken. Dientengevolge, kunt u gegevens gebruiken die met beleid in plaats van gegevens worden bepaald in overeenstemming zijn. Lees de documentatie over [ Etiketten en Beleid ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=nl-NL) om meer te leren.
+Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevensstewards in uw organisatie kunnen beleid plaatsen om gebruik te beperken. Dientengevolge, kunt u gegevens gebruiken die met beleid in plaats van gegevens worden bepaald in overeenstemming zijn. Lees de documentatie over [&#x200B; Etiketten en Beleid &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=nl-NL) om meer te leren.
 
 ## Toestemmingsbeleid {#consent-policy}
 
-Klant-AI houdt zich aan uw voorkeuren voor toestemming. Zodra u [ opstelling hebt en uw toestemmingsbeleid ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=nl-NL#consent-policy) toegelaten, zal AI van de Klant de toestemmingsgegevens respecteren die van u worden verzameld. Alleen gegevens met toestemming worden gebruikt om het model te scoren in volgende uitvoeringen van het model. De nieuwe scores vervangen de oude scores en kunnen in segmentatie worden gebruikt. Deze functie is momenteel alleen beschikbaar voor klanten van het HealthCare Shield- en het Privacy- en beveiligingsschild.
+Klant-AI houdt zich aan uw voorkeuren voor toestemming. Zodra u [&#x200B; opstelling hebt en uw toestemmingsbeleid &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=nl-NL#consent-policy) toegelaten, zal AI van de Klant de toestemmingsgegevens respecteren die van u worden verzameld. Alleen gegevens met toestemming worden gebruikt om het model te scoren in volgende uitvoeringen van het model. De nieuwe scores vervangen de oude scores en kunnen in segmentatie worden gebruikt. Deze functie is momenteel alleen beschikbaar voor klanten van het HealthCare Shield- en het Privacy- en beveiligingsschild.
 
 Meer informatie over deze functie vindt u hier:
 
-[ Begonnen het worden in Klant AI ](../../customer-ai/getting-started.md)
-[ Adobe Experience Platform &amp; Toepassingen ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=nl-NL)
-[ Adobe Experience Cloud architectuurdiagrammen ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=nl-NL)
+[&#x200B; Begonnen het worden in Klant AI &#x200B;](../../customer-ai/getting-started.md)
+[&#x200B; Adobe Experience Platform &amp; Toepassingen &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=nl-NL)
+[&#x200B; Adobe Experience Cloud architectuurdiagrammen &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=nl-NL)

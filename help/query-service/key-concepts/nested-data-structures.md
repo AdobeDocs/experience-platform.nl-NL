@@ -18,15 +18,15 @@ De Dienst van de vraag verstrekt een [!DNL PostgreSQL] interface om SQL vragen o
 
 ## Aan de slag
 
-Deze zelfstudie vereist het gebruik van een PSQL-client van derden of het gereedschap Query-editor om query&#39;s te schrijven, te valideren en uit te voeren in de gebruikersinterface van Experience Platform (UI). De volledige details op hoe te om vragen door UI in werking te stellen kunnen in de [ gids UI van de Redacteur van de Vraag ](../ui/user-guide.md) worden gevonden. Voor een gedetailleerde lijst waarop de derdeDesktopcliënten met de Dienst van de Vraag kunnen verbinden, zie het [ overzicht van cliëntverbindingen ](../clients/overview.md).
+Deze zelfstudie vereist het gebruik van een PSQL-client van derden of het gereedschap Query-editor om query&#39;s te schrijven, te valideren en uit te voeren in de gebruikersinterface van Experience Platform (UI). De volledige details op hoe te om vragen door UI in werking te stellen kunnen in de [&#x200B; gids UI van de Redacteur van de Vraag &#x200B;](../ui/user-guide.md) worden gevonden. Voor een gedetailleerde lijst waarop de derdeDesktopcliënten met de Dienst van de Vraag kunnen verbinden, zie het [&#x200B; overzicht van cliëntverbindingen &#x200B;](../clients/overview.md).
 
-U moet ook een goed inzicht hebben in de syntaxis `INSERT INTO` en `CTAS` . De specifieke informatie over hun gebruik kan in de [`INSERT INTO`](../sql/syntax.md#insert-into) en [`CTAS`](../sql/syntax.md#create-table-as-select) secties van de [ SQL documentatie van de syntaxisverwijzing ](../sql/syntax.md) worden gevonden.
+U moet ook een goed inzicht hebben in de syntaxis `INSERT INTO` en `CTAS` . De specifieke informatie over hun gebruik kan in de [`INSERT INTO`](../sql/syntax.md#insert-into) en [`CTAS`](../sql/syntax.md#create-table-as-select) secties van de [&#x200B; SQL documentatie van de syntaxisverwijzing &#x200B;](../sql/syntax.md) worden gevonden.
 
 ## Een gegevensset maken
 
 De dienst van de vraag verstrekt de Create Lijst als Uitgezochte (`CTAS`) functionaliteit om een lijst tot stand te brengen die op de output van een `SELECT` verklaring wordt gebaseerd, of zoals in dit geval, door een verwijzing naar een bestaand schema XDM in Adobe Experience Platform te gebruiken. Hieronder wordt het XDM-schema voor `Final_subscription` weergegeven dat voor dit voorbeeld is gemaakt.
 
-![ A diagram van het final_subscription schema.](../images/best-practices/final-subscription-schema.png)
+![&#x200B; A diagram van het final_subscription schema.](../images/best-practices/final-subscription-schema.png)
 
 In het volgende voorbeeld ziet u hoe SQL wordt gebruikt om de gegevensset `final_subscription_test2` te maken. `final_subscription_test2` wordt gemaakt met het schema `Final_subscription` . Gegevens worden uit de bron geëxtraheerd met een `SELECT` -component om bepaalde rijen te vullen.
 
@@ -152,4 +152,4 @@ Ondanks de toenemende complexiteit van dit SQL-voorbeeld, garandeert `collect_li
 
 ## Volgende stappen
 
-Door dit document te lezen, begrijpt u nu hoe te om datasets te verwerken of om te zetten die complexe gegevenstypes in de Dienst van de Vraag van Adobe Experience Platform gebruiken. Gelieve te zien de [ leidraad van de vraaguitvoering ](../best-practices/writing-queries.md) voor meer informatie over het runnen van SQL vragen over datasets binnen het meer van Gegevens.
+Door dit document te lezen, begrijpt u nu hoe te om datasets te verwerken of om te zetten die complexe gegevenstypes in de Dienst van de Vraag van Adobe Experience Platform gebruiken. Gelieve te zien de [&#x200B; leidraad van de vraaguitvoering &#x200B;](../best-practices/writing-queries.md) voor meer informatie over het runnen van SQL vragen over datasets binnen het meer van Gegevens.

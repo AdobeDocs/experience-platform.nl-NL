@@ -12,7 +12,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 ## 13 februari 2023
 
@@ -24,5 +24,5 @@ v1.3.1
 
 v1.3.0
 
-* Voeg acties voor alle hier vermelde standaardgebeurtenissen toe: [ https://developers.facebook.com/docs/meta-pixel/reference#standard-events ](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+* Voeg acties voor alle hier vermelde standaardgebeurtenissen toe: [&#x200B; https://developers.facebook.com/docs/meta-pixel/reference#standard-events &#x200B;](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
 * Verplaats de gebeurtenis-id uit de configuratieweergave van de extensie en voeg de velden voor de gebeurtenis-id toe aan alle acties.

@@ -24,7 +24,7 @@ Vóór de versie van Januari 2024, verwijzen alle regel-niveau, groep-niveau, en
 
 Eerder kon aan een afzonderlijke gebeurtenis meerdere regels voor tijdbeperking zijn gekoppeld. Met deze recente update, zal het proberen om een tijdbeperking aan een regel toe te voegen nu in een **fout** resulteren.
 
-![ de regel-vlakke tijdbeperking wordt benadrukt. De fout die vervolgens optreedt, wordt ook gemarkeerd. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![&#x200B; de regel-vlakke tijdbeperking wordt benadrukt. De fout die vervolgens optreedt, wordt ook gemarkeerd. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 Tijdbeperkingen kunnen nu alleen op canvasniveau of op kaartniveau worden toegepast.
 
@@ -36,8 +36,8 @@ Wanneer u een tijdbeperking op canvasniveau toepast, kunt u nog steeds alle besc
 >
 >Als er **veelvoudige** kaarten op het canvas zijn, zal het toepassen van de tijdbeperking op canvas-niveau die tijdbeperking op **alle** kaarten op het canvas toepassen.
 
-![ de canvas-vlakke tijdbeperking wordt benadrukt.](../images/ui/segment-refactoring/canvas-time-constraint.png)
+![&#x200B; de canvas-vlakke tijdbeperking wordt benadrukt.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
 Als u een tijdbeperking op kaartniveau wilt toepassen, selecteert u de specifieke kaart waarop u de tijdbeperking wilt toepassen. De container **[!UICONTROL Event Rules]** wordt weergegeven. U kunt nu de tijdbeperking selecteren die u op de kaart wilt toepassen.
 
-![ de kaart-vlakke tijdbeperking wordt benadrukt.](../images/ui/segment-refactoring/card-time-constraint.png)
+![&#x200B; de kaart-vlakke tijdbeperking wordt benadrukt.](../images/ui/segment-refactoring/card-time-constraint.png)

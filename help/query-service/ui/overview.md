@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Handleiding voor Query Service
 
-De Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query&#39;s, het weergeven van eerder uitgevoerde query&#39;s en het openen van query&#39;s die zijn opgeslagen door gebruikers binnen uw organisatie. Om tot UI binnen [ Adobe Experience Platform ](https://platform.adobe.com) toegang te hebben, selecteer **[!UICONTROL Queries]** in de linkernavigatie. De lus [!UICONTROL Queries] [!UICONTROL Overview] wordt weergegeven.
+De Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt voor het schrijven en uitvoeren van query&#39;s, het weergeven van eerder uitgevoerde query&#39;s en het openen van query&#39;s die zijn opgeslagen door gebruikers binnen uw organisatie. Om tot UI binnen [&#x200B; Adobe Experience Platform &#x200B;](https://platform.adobe.com) toegang te hebben, selecteer **[!UICONTROL Queries]** in de linkernavigatie. De lus [!UICONTROL Queries] [!UICONTROL Overview] wordt weergegeven.
 
-![ de werkruimte van de Dienst van de Vraag met Vragen en het benadrukte lusje van het Overzicht.](../images/ui/overview/queries-overview.png)
+![&#x200B; de werkruimte van de Dienst van de Vraag met Vragen en het benadrukte lusje van het Overzicht.](../images/ui/overview/queries-overview.png)
 
 ## Overzicht {#overview}
 
@@ -29,7 +29,7 @@ De pagina [!UICONTROL Overview] bevat verschillende hoofdsecties die u helpen aa
 2. Selecteer **[!UICONTROL Learn more]** om gedetailleerde documentatie over **[!UICONTROL Write queries]** weer te geven.
 3. Selecteer **[!UICONTROL Get started]** in de **[!UICONTROL Discover Data Distiller]** -sectie om het Distiller-overzicht voor gegevens te openen en meer te weten te komen over de beschikbare functies.
 
-![ de werkruimte van de Dienst van de Vraag met Create vraag, leer meer, en krijg begonnen benadrukt.](../images/ui/overview/main-panels.png)
+![&#x200B; de werkruimte van de Dienst van de Vraag met Create vraag, leer meer, en krijg begonnen benadrukt.](../images/ui/overview/main-panels.png)
 
 ### Data Distiller-mogelijkheden {#data-distiller-capabilities}
 
@@ -40,7 +40,7 @@ De sectie [!UICONTROL Data Distiller capabilities] bevat documentatiekoppelingen
 - **[[!UICONTROL AI/ML pipelines]](../data-distiller/ml-feature-pipelines/overview.md)**: Leer belangrijke concepten achter de leergereedschappen van uw voorkeurssysteem en hoe u aangepaste modellen maakt die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen. In deze reeks handleidingen worden de stappen beschreven die nodig zijn om functiepijplijnen te maken die gegevens van Experience Platform voorbereiden om aangepaste modellen te voeden in de leeromgeving van uw computer.
 - **[[!UICONTROL SQL insights]](../data-distiller/sql-insights/overview.md)**: Leer over de belangrijkste mogelijkheden en vereiste stappen om een dashboard met inzichten van SQL met Gegevens Distiller te ontwikkelen.
 
-![ de werkruimte van de Dienst van de Vraag met de benadrukte de motensectie van Distiller van Gegevens.](../images/ui/overview/data-distiller-capabilities.png)
+![&#x200B; de werkruimte van de Dienst van de Vraag met de benadrukte de motensectie van Distiller van Gegevens.](../images/ui/overview/data-distiller-capabilities.png)
 
 ### Aanbevolen Distiller-versnellers voor gegevens {#recommended-accelerators}
 
@@ -52,7 +52,7 @@ Selecteer een snelle koppeling om naar de desbetreffende Distiller-gegevensdashb
 Houd de meetgegevens van het publiek in de loop der tijd bij om wijzigingen in de publieksgrootte, identiteitsgroei en algemene betrokkenheid te controleren.
 - **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: gebruik het dashboard Identiteitsoverlappingen publiek om identiteitsoverlappingen binnen geselecteerde doelgroepen te analyseren. Visualisaties en getabelleerde gegevens bieden inzicht in het optimaliseren van identiteitsstitching, het reduceren van redundantie en het verbeteren van segmentatie. Deze inzichten laten effectiever gericht, verbeterde verpersoonlijking, en gestroomlijnde klanteninteractie toe.
 
-![ de werkruimte van de Dienst van de Vraag met de benadrukte de versnellerssectie van Gegevens Distiller.](../images/ui/overview/data-distiller-accelerators.png)
+![&#x200B; de werkruimte van de Dienst van de Vraag met de benadrukte de versnellerssectie van Gegevens Distiller.](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Distiller-voorbeelden voor gegevens {#data-distiller-examples}
 
@@ -64,53 +64,53 @@ Selecteer een kaart om documentatiegidsen en voorbeelden te openen om u te helpe
 - **[[!UICONTROL Consent analysis]](../../dashboards/insights-use-cases/consent-analysis.md)**: Leer hoe u de toestemming van klanten kunt analyseren en volgen met Real-Time CDP, Query Service en Data Distiller. Deze gids behandelt bouwtoestemmingsdashboards, het verfijnen van segmentatie, het volgen van tendensen, en het verzekeren van naleving, die u helpen vertrouwen opbouwen en persoonlijke ervaringen leveren.
 - **[[!UICONTROL Fuzzy match]](../use-cases/fuzzy-match.md)**: Leer hoe u een &#39;vage&#39; overeenkomst uitvoert op uw Experience Platform-gegevens om overeenkomsten bij benadering te zoeken en tekenreeksgelijkenis te analyseren in verschillende gegevenssets. Volg deze handleiding om tijd te besparen en uw gegevens toegankelijker te maken. Het voorbeeld toont aan hoe te om de attributen van de hotelruimte tussen twee gegevensreeksen van reisbureaus aan te passen, die tonen hoe te, grote, complexe datasets voor consistentie en nauwkeurigheid efficiënt aanpassen, vergelijken en met elkaar in overeenstemming brengen.
 
-![ de werkruimte van de Dienst van de Vraag met de benadrukte de voorbeelden van Gegevens Distiller sectie.](../images/ui/overview/data-distiller-examples.png)
+![&#x200B; de werkruimte van de Dienst van de Vraag met de benadrukte de voorbeelden van Gegevens Distiller sectie.](../images/ui/overview/data-distiller-examples.png)
 
 ### Belangrijkste cijfers {#key-metrics}
 
-De belangrijkste metrieksectie toont visualisaties van belangrijke gegevens die u helpen het gebruik van de Dienst van de Vraag controleren. Voor elke grafiek, kunt u de ellips (`...`) in het hoogste recht selecteren dat door [!UICONTROL View more] wordt gevolgd om of een van tabellarische vorm van de resultaten te bekijken, of de gegevens als Csv- dossier te downloaden om in een spreadsheet te bekijken. Voor meer details, verwijs naar de [ Meer gids van de Mening ](../../dashboards/sql-insights-query-pro-mode/view-more.md).
+De belangrijkste metrieksectie toont visualisaties van belangrijke gegevens die u helpen het gebruik van de Dienst van de Vraag controleren. Voor elke grafiek, kunt u de ellips (`...`) in het hoogste recht selecteren dat door [!UICONTROL View more] wordt gevolgd om of een van tabellarische vorm van de resultaten te bekijken, of de gegevens als Csv- dossier te downloaden om in een spreadsheet te bekijken. Voor meer details, verwijs naar de [&#x200B; Meer gids van de Mening &#x200B;](../../dashboards/sql-insights-query-pro-mode/view-more.md).
 
 #### Datumfilter instellen {#set-date-filter}
 
-Om een globale datumfilter voor deze visualisaties toe te passen, selecteer het filterpictogram (![ het filterpictogram van A.](../../images/icons/filter-icon-white.png) ) en pas het datumbereik aan in het dialoogvenster **[!UICONTROL Filters]** . Pas dit filter toe om de weergegeven metriek voor een bepaald tijdkader aan te passen en de relevantie van uw analyse te verbeteren.
+Om een globale datumfilter voor deze visualisaties toe te passen, selecteer het filterpictogram (![&#x200B; het filterpictogram van A.](../../images/icons/filter-icon-white.png) ) en pas het datumbereik aan in het dialoogvenster **[!UICONTROL Filters]** . Pas dit filter toe om de weergegeven metriek voor een bepaald tijdkader aan te passen en de relevantie van uw analyse te verbeteren.
 
-![ de dialoog van Filters voor de belangrijkste metriekaarten in de Dienst Workspace van de Vraag.](../images/ui/overview/filters-dialog.png)
+![&#x200B; de dialoog van Filters voor de belangrijkste metriekaarten in de Dienst Workspace van de Vraag.](../images/ui/overview/filters-dialog.png)
 
 #### [!UICONTROL Distiller batch queries] {#distiller-batch-queries}
 
 Het [!UICONTROL Distiller batch queries] diagram verstrekt een uitsplitsing van vraagactiviteit door dag, die het aantal verwerkte (interactieve en geplande) vragen CTAS en ITAS benadrukt. De grafiek markeert patronen, zoals pieken in interactieve vragen op bepaalde dagen en het zelden gebruik van geplande vragen. Gebruik deze inzichten om prestaties te optimaliseren door piekactiviteitsperiodes, het raffineren van planningsstrategieën, en het in evenwicht brengen vraaguitvoering te identificeren om werkschemageefficiency en middelgebruik te verbeteren.
 
-![ het de partijvraagdiagram van Distiller.](../images/ui/overview/distiller-batch-queries.png)
+![&#x200B; het de partijvraagdiagram van Distiller.](../images/ui/overview/distiller-batch-queries.png)
 
 #### [!UICONTROL Compute hours consumed] {#compute-hours-consumed}
 
 De grafiek [!UICONTROL Compute hours consumed] verstrekt een dagelijkse visualisatie van compute uren die aan de verrichtingen van de Dienst van de Vraag worden gebruikt te verwerken. Gebruik deze compute uurtendensen om middelverbruik te controleren, high-demand periodes te identificeren, en vraaguitvoering te optimaliseren om efficiënte middeltoewijzing en prestaties te verzekeren.
 
-![ Compute uren verbruikte grafiek.](../images/ui/overview/compute-hours-consumed.png)
+![&#x200B; Compute uren verbruikte grafiek.](../images/ui/overview/compute-hours-consumed.png)
 
 #### [!UICONTROL Data exploratory queries]
 
 In het [!UICONTROL Data exploratory queries] -diagram wordt het aantal SELECT-query&#39;s weergegeven dat elke dag op aanvraag wordt verwerkt. Deze visualisatie benadrukt de tendensen van de vraagactiviteit, zoals pieken in gebruik op specifieke dagen, om u te helpen begrijpen wanneer uw inspanningen van de gegevensexploratie het meest actief zijn. Gebruik deze inzichten om de patronen van het vraaggebruik te controleren, werklasten in evenwicht te brengen, en middeltoewijzing voor verkennende gegevensanalyse te optimaliseren. Deze analyse verzekert efficiënter gebruik van de Dienst van de Vraag en betere planning voor de periodes van de hoge vraag.
 
-![ de Verkennende grafiek van Gegevens.](../images/ui/overview/data-exploratory-queries.png)
+![&#x200B; de Verkennende grafiek van Gegevens.](../images/ui/overview/data-exploratory-queries.png)
 
 ## Query-editor
 
 Gebruik de Redacteur van de Vraag om vragen te schrijven en uit te voeren zonder een externe cliënt te gebruiken. Selecteer **[!UICONTROL Create Query]** om de Redacteur van de Vraag te openen en een nieuwe vraag tot stand te brengen. U kunt de Query-editor ook openen door een query te selecteren op de tabbladen **[!UICONTROL Log]** of **[!UICONTROL Templates]** . Als u een eerder uitgevoerde of bewaarde vraag selecteert, opent de Redacteur van de Vraag en toont SQL voor uw geselecteerde vraag.
 
-![ het dashboard van Vragen met Create benadrukte Vraag.](../images/ui/overview/overview-create-query.png)
+![&#x200B; het dashboard van Vragen met Create benadrukte Vraag.](../images/ui/overview/overview-create-query.png)
 
-Terwijl u in de Query-editor typt, voltooit de editor automatisch voor SQL gereserveerde woorden, tabellen en veldnamen in tabellen. Wanneer u klaar bent met het schrijven van uw vraag, selecteer het speel pictogram (![ het speel pictogram.](../../images/icons/play.png) ) om de query uit te voeren. Op het tabblad **[!UICONTROL Console]** onder de editor ziet u wat de Query-service momenteel doet en geeft u aan wanneer een query is geretourneerd. Het tabblad **[!UICONTROL Result]** naast [!UICONTROL Console] geeft de queryresultaten weer. Zie de [ gids van de Redacteur van de Vraag ](./user-guide.md) voor meer informatie bij het gebruiken van de Redacteur van de Vraag.
+Terwijl u in de Query-editor typt, voltooit de editor automatisch voor SQL gereserveerde woorden, tabellen en veldnamen in tabellen. Wanneer u klaar bent met het schrijven van uw vraag, selecteer het speel pictogram (![&#x200B; het speel pictogram.](../../images/icons/play.png) ) om de query uit te voeren. Op het tabblad **[!UICONTROL Console]** onder de editor ziet u wat de Query-service momenteel doet en geeft u aan wanneer een query is geretourneerd. Het tabblad **[!UICONTROL Result]** naast [!UICONTROL Console] geeft de queryresultaten weer. Zie de [&#x200B; gids van de Redacteur van de Vraag &#x200B;](./user-guide.md) voor meer informatie bij het gebruiken van de Redacteur van de Vraag.
 
-![ de werkruimte van de Redacteur van de Vraag.](../images/ui/overview/query-editor.png)
+![&#x200B; de werkruimte van de Redacteur van de Vraag.](../images/ui/overview/query-editor.png)
 
 ### Het tabblad Resultaten {#results-tab}
 
 Op het tabblad [!UICONTROL Result] wordt de tabeluitvoer van de query na de uitvoering weergegeven. Op dit tabblad kunt u de resultaten controleren, de uitvoer valideren en de follow-upacties rechtstreeks in de interface uitvoeren. In deze weergave kunt u:
 
-- Download resultaten in de CSV-, XLSX- of JSON-indeling voor offline analyse. Zie [ de vraagresultaten van de Download ](./user-guide.md#download-query-results).
-- De resultaten van de mening in volledig scherm om grote lijsten of brede datasets in een resizable netlay-out te onderzoeken. Zie [ resultaten van de Mening in volledig scherm ](./user-guide.md#view-results).
-- Kopieer de resultaten naar het klembord in CSV-indeling, zodat u ze snel in spreadsheettoepassingen kunt plakken. Zie [ resultaten van het Exemplaar ](./user-guide.md#copy-results).
+- Download resultaten in de CSV-, XLSX- of JSON-indeling voor offline analyse. Zie [&#x200B; de vraagresultaten van de Download &#x200B;](./user-guide.md#download-query-results).
+- De resultaten van de mening in volledig scherm om grote lijsten of brede datasets in een resizable netlay-out te onderzoeken. Zie [&#x200B; resultaten van de Mening in volledig scherm &#x200B;](./user-guide.md#view-results).
+- Kopieer de resultaten naar het klembord in CSV-indeling, zodat u ze snel in spreadsheettoepassingen kunt plakken. Zie [&#x200B; resultaten van het Exemplaar &#x200B;](./user-guide.md#copy-results).
 
 Deze functies zijn ontworpen om naadloze gegevensvalidatie, rapportage en het delen van workflows te ondersteunen, allemaal zonder de Query Editor te verlaten.
 
@@ -120,17 +120,17 @@ De redacteur van de vraag steunt parameters bepaalde vragen, die u toestaan om v
 
 U kunt parameters definiëren wanneer u query&#39;s schrijft en vervolgens waarden toewijzen via het tabblad [!UICONTROL Query parameters] voordat u deze uitvoert. De parameters bepaalde vragen zijn vooral nuttig voor geplande vragen of vraagmalplaatjes die over uw organisatie worden gedeeld.
 
-Leren hoe te om parameters te bepalen en te gebruiken, zie [ Geparametereerde vragen in de Redacteur van de Vraag ](./parameterized-queries.md).
+Leren hoe te om parameters te bepalen en te gebruiken, zie [&#x200B; Geparametereerde vragen in de Redacteur van de Vraag &#x200B;](./parameterized-queries.md).
 
 ## Geplande query&#39;s {#scheduled-queries}
 
 Vragen die al als een sjabloon zijn opgeslagen, kunnen worden gepland voor uitvoering op een normale cadence. Wanneer het plannen van een vraag, kunt u de frequentie van looppas, de begin en einddatum, de dag van de week kiezen de geplande vraaglooppas, evenals de dataset om de vraag naar uit te voeren. De programma&#39;s van de vraag worden geplaatst gebruikend de Redacteur van de Vraag.
 
-Leren hoe te om een vraag door UI te plannen, zie de [ geplande gids van vragen ](./user-guide.md#scheduled-queries). Leren hoe te om programma&#39;s toe te voegen gebruikend API, te lezen gelieve de [ geplande gids van het vraageindpunt ](../api/scheduled-queries.md).
+Leren hoe te om een vraag door UI te plannen, zie de [&#x200B; geplande gids van vragen &#x200B;](./user-guide.md#scheduled-queries). Leren hoe te om programma&#39;s toe te voegen gebruikend API, te lezen gelieve de [&#x200B; geplande gids van het vraageindpunt &#x200B;](../api/scheduled-queries.md).
 
 Nadat een query is gepland, wordt deze weergegeven in de lijst met geplande query&#39;s op het tabblad [!UICONTROL Scheduled Queries] . De volledige details betreffende de vraag, de looppas, de schepper, en de tijdopnemers kunnen worden gevonden door een geplande vraag van de lijst te selecteren.
 
-![ de werkruimte van Vragen met het Geplande lusje van Vragen benadrukte en tonend rijen van vraagprogramma&#39;s.](../images/ui/overview/scheduled-queries.png)
+![&#x200B; de werkruimte van Vragen met het Geplande lusje van Vragen benadrukte en tonend rijen van vraagprogramma&#39;s.](../images/ui/overview/scheduled-queries.png)
 
 | Kolom | Beschrijving |
 | --- | --- |
@@ -143,13 +143,13 @@ Nadat een query is gepland, wordt deze weergegeven in de lijst met geplande quer
 | **[!UICONTROL Last run timestamp]** | De meest recente tijdstempel toen de query werd uitgevoerd. Deze kolom benadrukt of een vraag volgens zijn huidig programma is uitgevoerd. |
 | **[!UICONTROL Last run status]** | De status van de meest recente queryuitvoering. De drie statuswaarden zijn: `successful` `failed` of `in progress` . |
 
-Zie de documentatie voor meer informatie over hoe te [ controleren vragen door de Dienst UI van de Vraag ](./monitor-queries.md).
+Zie de documentatie voor meer informatie over hoe te [&#x200B; controleren vragen door de Dienst UI van de Vraag &#x200B;](./monitor-queries.md).
 
 ## Sjablonen {#browse}
 
 Op het tabblad **[!UICONTROL Templates]** worden query&#39;s weergegeven die door gebruikers in uw organisatie zijn opgeslagen. Het is nuttig om van deze als vraagprojecten te denken, aangezien de vragen hier worden bewaard nog onder bouw kunnen zijn. Vragen die worden weergegeven op het tabblad **[!UICONTROL Templates]** worden ook weergegeven als query&#39;s die worden uitgevoerd op het tabblad **[!UICONTROL Log]** als ze eerder zijn uitgevoerd door Query Service.
 
-![ A zoomde in mening van het lusje van Malplaatjes van het Dashboard van Vragen tonend verscheidene bewaarde vragen.](../images/ui/overview/templates.png)
+![&#x200B; A zoomde in mening van het lusje van Malplaatjes van het Dashboard van Vragen tonend verscheidene bewaarde vragen.](../images/ui/overview/templates.png)
 
 | Kolom | Beschrijving |
 | --- | --- |
@@ -158,13 +158,13 @@ Op het tabblad **[!UICONTROL Templates]** worden query&#39;s weergegeven die doo
 | **[!UICONTROL Modified by]** | De laatste gebruiker die de query heeft gewijzigd. Om het even welke gebruiker in uw organisatie met toegang tot de Dienst van de Vraag kan vragen wijzigen. |
 | **[!UICONTROL Last modified]** | De datum en de tijd van de laatste wijziging in de query, in de tijdzone van de browser. |
 
-Zie de [ documentatie van vraagmalplaatjes ](./query-templates.md) voor meer informatie over malplaatjes in Experience Platform UI.
+Zie de [&#x200B; documentatie van vraagmalplaatjes &#x200B;](./query-templates.md) voor meer informatie over malplaatjes in Experience Platform UI.
 
 ## Logboek {#log}
 
 Het tabblad **[!UICONTROL Log]** bevat een lijst met query&#39;s die eerder zijn uitgevoerd. Door gebrek, maakt een lijst van het logboek van de vragen in omgekeerde chronologie.
 
-![ A zoomde in mening van het lusje van het Logboek van het Dashboard van Vragen tonend een lijst van vragen in omgekeerde chronologische orde.](../images/ui/overview/log.png)
+![&#x200B; A zoomde in mening van het lusje van het Logboek van het Dashboard van Vragen tonend een lijst van vragen in omgekeerde chronologische orde.](../images/ui/overview/log.png)
 
 | Kolom | Beschrijving |
 | --- | --- |
@@ -178,16 +178,16 @@ Het tabblad **[!UICONTROL Log]** bevat een lijst met query&#39;s die eerder zijn
 
 >[!NOTE]
 >
->Selecteer het potloodpictogram (![ het potloodpictogram van A.](/help/images/icons/edit.png)) van om het even welke rij van het vraaglogboek om aan de Redacteur van de Vraag te navigeren. De query is vooraf ingevuld voor handige bewerking.
+>Selecteer het potloodpictogram (![&#x200B; het potloodpictogram van A.](/help/images/icons/edit.png)) van om het even welke rij van het vraaglogboek om aan de Redacteur van de Vraag te navigeren. De query is vooraf ingevuld voor handige bewerking.
 
-Zie de [ documentatie van vraaglogboeken ](./query-logs.md) voor meer informatie over de logboekdossiers automatisch door een vraaggebeurtenis worden geproduceerd.
+Zie de [&#x200B; documentatie van vraaglogboeken &#x200B;](./query-logs.md) voor meer informatie over de logboekdossiers automatisch door een vraaggebeurtenis worden geproduceerd.
 
 ## Credentials
 
-Op het tabblad **[!UICONTROL Credentials]** worden uw verlopen en niet-verlopen referenties weergegeven. Voor meer informatie over hoe te om deze geloofsbrieven te gebruiken om met externe cliënten te verbinden, te lezen gelieve de [ gids van geloofsbrieven ](../clients/overview.md).
+Op het tabblad **[!UICONTROL Credentials]** worden uw verlopen en niet-verlopen referenties weergegeven. Voor meer informatie over hoe te om deze geloofsbrieven te gebruiken om met externe cliënten te verbinden, te lezen gelieve de [&#x200B; gids van geloofsbrieven &#x200B;](../clients/overview.md).
 
-![ het dashboard van Vragen met het benadrukte lusje van Geloofsbrieven.](../images/ui/overview/credentials.png)
+![&#x200B; het dashboard van Vragen met het benadrukte lusje van Geloofsbrieven.](../images/ui/overview/credentials.png)
 
 ## Volgende stappen
 
-Nu u met het gebruikersinterface van de Dienst van de Vraag op [!DNL Experience Platform] vertrouwd bent, kunt u tot de Redacteur van de Vraag toegang hebben beginnen uw eigen vraagprojecten te creëren om met andere gebruikers in uw organisatie te delen. Voor meer informatie over het schrijven van en het runnen van vragen in de Redacteur van de Vraag, zie de [ gebruikersgids van de Redacteur van de Vraag ](./user-guide.md).
+Nu u met het gebruikersinterface van de Dienst van de Vraag op [!DNL Experience Platform] vertrouwd bent, kunt u tot de Redacteur van de Vraag toegang hebben beginnen uw eigen vraagprojecten te creëren om met andere gebruikers in uw organisatie te delen. Voor meer informatie over het schrijven van en het runnen van vragen in de Redacteur van de Vraag, zie de [&#x200B; gebruikersgids van de Redacteur van de Vraag &#x200B;](./user-guide.md).

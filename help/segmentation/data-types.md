@@ -52,11 +52,11 @@ Zoals in de onderstaande tabel wordt getoond, worden gebeurtenisgegevens weergeg
 
 Het externe publiek kan ook als componenten van een nieuwe segmentdefinitie worden gebruikt, toevoegend hun attributenregels aan de nieuwe segmentdefinities.
 
-Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruiken van het publiek van Adobe Audience Manager met Experience Platform kan in de [ publiek worden gevonden delend gids binnen de documentatie van Adobe Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL).
+Momenteel wordt alleen Adobe Audience Manager ondersteund als een extern publiek, waarbij in de toekomst extra bronnen worden ingeschakeld. Meer informatie over het gebruiken van het publiek van Adobe Audience Manager met Experience Platform kan in de [&#x200B; publiek worden gevonden delend gids binnen de documentatie van Adobe Audience Manager &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL).
 
 ### Delen van segmentdefinitie
 
-De definities van het segment die in Experience Platform worden gecreeerd kunnen binnen andere [ de Diensten van de Kern van Adobe Experience Cloud worden gebruikt ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=nl-NL). Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
+De definities van het segment die in Experience Platform worden gecreeerd kunnen binnen andere [&#x200B; de Diensten van de Kern van Adobe Experience Cloud worden gebruikt &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=nl-NL). Om deze functie in te schakelen, dient u contact op te nemen met uw oplossingsarchitect of uw consultant.
 
 ## Andere gegevenstypen
 

@@ -15,34 +15,34 @@ ht-degree: 1%
 
 Op deze pagina wordt uitgelegd hoe u het API-eindpunt van `/testing/destinationInstance` gebruikt om de volledige details van de testresultaten voor bestandsgebaseerde doelen weer te geven.
 
-Als u reeds [ uw bestemming ](file-based-destination-testing-api.md) hebt getest en een geldige API reactie hebt ontvangen, werkt uw bestemming correct.
+Als u reeds [&#x200B; uw bestemming &#x200B;](file-based-destination-testing-api.md) hebt getest en een geldige API reactie hebt ontvangen, werkt uw bestemming correct.
 
-Als u meer gedetailleerde informatie over uw activeringsstroom wilt zien, kunt u het `results` bezit van de [ bestemming gebruiken testende ](file-based-destination-testing-api.md) eindpuntreactie, zoals hieronder verder beschreven.
+Als u meer gedetailleerde informatie over uw activeringsstroom wilt zien, kunt u het `results` bezit van de [&#x200B; bestemming gebruiken testende &#x200B;](file-based-destination-testing-api.md) eindpuntreactie, zoals hieronder verder beschreven.
 
 >[!NOTE]
 >
->Dit API eindpunt keert het zelfde resultaat terug zoals u wanneer het gebruiken van de [ Dienst API van de Stroom ](../../../api/update-destination-dataflows.md) zou verkrijgen om dataflows te controleren.
+>Dit API eindpunt keert het zelfde resultaat terug zoals u wanneer het gebruiken van de [&#x200B; Dienst API van de Stroom &#x200B;](../../../api/update-destination-dataflows.md) zou verkrijgen om dataflows te controleren.
 
 ## Aan de slag {#getting-started}
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Vereisten {#prerequisites}
 
 Voordat u het eindpunt `/testing/destinationInstance` kunt gebruiken, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* U hebt een bestaande op dossier-gebaseerde bestemming die door Destination SDK wordt gecreeerd en u kunt het in uw [ doelcatalogus ](../../../ui/destinations-workspace.md) zien.
+* U hebt een bestaande op dossier-gebaseerde bestemming die door Destination SDK wordt gecreeerd en u kunt het in uw [&#x200B; doelcatalogus &#x200B;](../../../ui/destinations-workspace.md) zien.
 * U hebt ten minste één activeringsstroom voor uw doel gemaakt in de gebruikersinterface van Experience Platform.
 * Als u de API-aanvraag met succes wilt uitvoeren, hebt u de id van de doelinstantie nodig die overeenkomt met de doelinstantie die u wilt testen. Krijg bestemmingsidentiteitskaart die u in de API vraag, van URL zou moeten gebruiken, wanneer het doorbladeren van een verbinding met uw bestemming in Experience Platform UI.
 
-  ![ beeld UI die hoe te om bestemmingsidentiteitskaart van URL te krijgen toont.](../../assets/testing-api/get-destination-instance-id.png)
-* U hebt eerder [ uw bestemmingsconfiguratie ](file-based-destination-testing-api.md) getest, en een geldige API reactie ontvangen, die a `results` bezit omvat. U gebruikt deze `results` -waarde om de bestemming verder te testen.
+  ![&#x200B; beeld UI die hoe te om bestemmingsidentiteitskaart van URL te krijgen toont.](../../assets/testing-api/get-destination-instance-id.png)
+* U hebt eerder [&#x200B; uw bestemmingsconfiguratie &#x200B;](file-based-destination-testing-api.md) getest, en een geldige API reactie ontvangen, die a `results` bezit omvat. U gebruikt deze `results` -waarde om de bestemming verder te testen.
 
 ## Gedetailleerde resultaten voor doeltests weergeven {#test-activation-results}
 
-Zodra u [ uw bestemmingsconfiguratie ](file-based-destination-testing-api.md) hebt bevestigd, kunt u gedetailleerde activeringsresultaten bekijken door een verzoek van GET aan het `authoring/testing/destinationInstance/` eindpunt te doen en bestemmingsidentiteitskaart van de bestemming te verstrekken die u, en de stroom in werking stelt IDs van het geactiveerde publiek test.
+Zodra u [&#x200B; uw bestemmingsconfiguratie &#x200B;](file-based-destination-testing-api.md) hebt bevestigd, kunt u gedetailleerde activeringsresultaten bekijken door een verzoek van GET aan het `authoring/testing/destinationInstance/` eindpunt te doen en bestemmingsidentiteitskaart van de bestemming te verstrekken die u, en de stroom in werking stelt IDs van het geactiveerde publiek test.
 
-U kunt volledige API URL vinden die u in het `results` bezit moet gebruiken dat in de [ reactie van de bestemmings testende vraag ](file-based-destination-testing-api.md) is teruggekeerd.
+U kunt volledige API URL vinden die u in het `results` bezit moet gebruiken dat in de [&#x200B; reactie van de bestemmings testende vraag &#x200B;](file-based-destination-testing-api.md) is teruggekeerd.
 
 **API formaat**
 
@@ -52,11 +52,11 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | Padparameters | Beschrijving |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | De id van de doelinstantie waarvoor u voorbeeldprofielen genereert. Zie de [ eerste vereisten ](#prerequisites) sectie voor details op hoe te om deze identiteitskaart te verkrijgen. |
+| `{DESTINATION_INSTANCE_ID}` | De id van de doelinstantie waarvoor u voorbeeldprofielen genereert. Zie de [&#x200B; eerste vereisten &#x200B;](#prerequisites) sectie voor details op hoe te om deze identiteitskaart te verkrijgen. |
 
 | Parameters van queryreeks | Beschrijving |
 | -------- | ----------- |
-| `flowRunIds` | De flow-id&#39;s die overeenkomen met het geactiveerde publiek. U kunt de stroom in werking stellen IDs in het `results` bezit vinden dat in de [ reactie van de bestemmings testende vraag ](file-based-destination-testing-api.md) is teruggekeerd. |
+| `flowRunIds` | De flow-id&#39;s die overeenkomen met het geactiveerde publiek. U kunt de stroom in werking stellen IDs in het `results` bezit vinden dat in de [&#x200B; reactie van de bestemmings testende vraag &#x200B;](file-based-destination-testing-api.md) is teruggekeerd. |
 
 **Verzoek**
 
@@ -71,7 +71,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 **Reactie**
 
-Het antwoord bevat de volledige details van de activeringsstroom. U kunt de zelfde reactie verkrijgen door de [ Dienst API van de Stroom ](../../../api/update-destination-dataflows.md) te roepen om dataflows te controleren.
+Het antwoord bevat de volledige details van de activeringsstroom. U kunt de zelfde reactie verkrijgen door de [&#x200B; Dienst API van de Stroom &#x200B;](../../../api/update-destination-dataflows.md) te roepen om dataflows te controleren.
 
 ```json
 {
@@ -213,10 +213,10 @@ Het antwoord bevat de volledige details van de activeringsstroom. U kunt de zelf
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen
 
 Nadat u dit document hebt gelezen, weet u nu hoe u de doelconfiguratie op basis van een bestand kunt testen en alle details van de activeringsresultaten kunt bekijken.
 
-Als u een openbare bestemming bouwt, kunt u [ uw bestemmingsconfiguratie ](../../guides/submit-destination.md) aan Adobe voor overzicht nu voorleggen.
+Als u een openbare bestemming bouwt, kunt u [&#x200B; uw bestemmingsconfiguratie &#x200B;](../../guides/submit-destination.md) aan Adobe voor overzicht nu voorleggen.

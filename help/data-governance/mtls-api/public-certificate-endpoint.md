@@ -20,7 +20,7 @@ Deze gids verklaart hoe te om het openbare certificaateindpunt te gebruiken om o
 
 ## Aan de slag
 
-Alvorens verder te gaan, herzie [ begonnen gids ](./getting-started.md) voor belangrijke details over vereiste kopballen en hoe te om voorbeeld API vraag te interpreteren.
+Alvorens verder te gaan, herzie [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke details over vereiste kopballen en hoe te om voorbeeld API vraag te interpreteren.
 
 ## API-paden {#paths}
 
@@ -118,10 +118,10 @@ Adobe automatiseert de levenscyclus van openbare mTLS certificaten om continuït
 
 >[!NOTE]
 >
->Deze chronologie zal in tijd korten in groepering met [ CA/B de richtlijnen van het Forum ](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days), die erop gericht zijn certificaatlevens tot een maximum van 47 dagen te verminderen.
+>Deze chronologie zal in tijd korten in groepering met [&#x200B; CA/B de richtlijnen van het Forum &#x200B;](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days), die erop gericht zijn certificaatlevens tot een maximum van 47 dagen te verminderen.
 
 U moet uw integratie bijwerken om geautomatiseerde herwinning via API te steunen. Vertrouw niet op handmatige certificaatdownloads of statische kopieën, aangezien deze kunnen resulteren in verlopen of ingetrokken certificaten.
 
 ## Volgende stappen
 
-Nadat u uw openbare certificaten hebt opgehaald met behulp van de API, werkt u uw integratie bij om dit eindpunt regelmatig aan te roepen voordat certificaten verlopen. Om deze vraag interactively te testen, bezoek de [ MTLS API verwijzingspagina ](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). Voor bredere begeleiding op op certificaat-gebaseerde integratie, zie de [ encryptie van Gegevens in het overzicht van Adobe Experience Platform ](../../landing/governance-privacy-security/encryption.md) of het [ overzicht van het Beheer van Gegevens ](../home.md).
+Nadat u uw openbare certificaten hebt opgehaald met behulp van de API, werkt u uw integratie bij om dit eindpunt regelmatig aan te roepen voordat certificaten verlopen. Om deze vraag interactively te testen, bezoek de [&#x200B; MTLS API verwijzingspagina &#x200B;](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). Voor bredere begeleiding op op certificaat-gebaseerde integratie, zie de [&#x200B; encryptie van Gegevens in het overzicht van Adobe Experience Platform &#x200B;](../../landing/governance-privacy-security/encryption.md) of het [&#x200B; overzicht van het Beheer van Gegevens &#x200B;](../home.md).

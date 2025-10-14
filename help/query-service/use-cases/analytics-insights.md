@@ -15,7 +15,7 @@ Met Adobe Experience Platform kunt u gegevens uit Adobe Analytics-rapportreeksen
 
 Dit document bevat een groot aantal voorbeeld-SQL-query&#39;s die veelvoorkomende gebruiksgevallen aantonen bij het maken van inzichten op basis van gegevens van Analytics via internet en mobiele apparatuur.
 
-Zie de [ documentatie van de het gebiedstoewijzingen van Analytics ](../../sources/connectors/adobe-applications/mapping/analytics.md) voor meer informatie bij het opnemen van en het in kaart brengen van analysegegevens.
+Zie de [&#x200B; documentatie van de het gebiedstoewijzingen van Analytics &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) voor meer informatie bij het opnemen van en het in kaart brengen van analysegegevens.
 
 ## Aan de slag
 

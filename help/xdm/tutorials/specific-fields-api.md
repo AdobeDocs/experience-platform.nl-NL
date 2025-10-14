@@ -17,11 +17,11 @@ Wanneer u een schema samenstelt, wilt u wellicht bepaalde velden uit een bepaald
 
 >[!NOTE]
 >
->Voor informatie over hoe te om individuele schemagebieden in Adobe Experience Platform toe te voegen en te verwijderen UI, zie de gids op [ op gebied-gebaseerde werkschema&#39;s ](../ui/field-based-workflows.md) (momenteel in bèta).
+>Voor informatie over hoe te om individuele schemagebieden in Adobe Experience Platform toe te voegen en te verwijderen UI, zie de gids op [&#x200B; op gebied-gebaseerde werkschema&#39;s &#x200B;](../ui/field-based-workflows.md) (momenteel in bèta).
 
 ## Vereisten
 
-Dit leerprogramma impliceert het maken van vraag aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om met succes vraag aan API, met inbegrip van uw `{TENANT_ID}`, het concept containers, en de vereiste kopballen te maken om verzoeken te doen.
+Dit leerprogramma impliceert het maken van vraag aan de [&#x200B; Registratie API van het Schema &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens te beginnen, te herzien gelieve de [&#x200B; ontwikkelaarsgids &#x200B;](../api/getting-started.md) voor belangrijke informatie die u moet kennen om met succes vraag aan API, met inbegrip van uw `{TENANT_ID}`, het concept containers, en de vereiste kopballen te maken om verzoeken te doen.
 
 ## Het veld `meta:refProperty`
 
@@ -190,11 +190,11 @@ Een succesvolle reactie keert de details van het bijgewerkte schema terug.
 
 >[!NOTE]
 >
->Voor meer gedetailleerde informatie over PUT verzoeken om schema&#39;s, verwijs naar de [ gids van het schemaeindpunt ](../api/schemas.md#put).
+>Voor meer gedetailleerde informatie over PUT verzoeken om schema&#39;s, verwijs naar de [&#x200B; gids van het schemaeindpunt &#x200B;](../api/schemas.md#put).
 
 ## Velden toevoegen met een PATCH-bewerking
 
-U kunt een PATCH-aanvraag gebruiken om afzonderlijke velden aan een schema toe te voegen zonder andere velden te overschrijven. Het schema-register ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
+U kunt een PATCH-aanvraag gebruiken om afzonderlijke velden aan een schema toe te voegen zonder andere velden te overschrijven. Het schema-register ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [&#x200B; API fundamentals gids &#x200B;](../../landing/api-fundamentals.md#json-patch).
 
 **API formaat**
 
@@ -281,10 +281,10 @@ Een succesvolle reactie keert de details van het bijgewerkte schema terug.
 
 >[!NOTE]
 >
->Voor meer gedetailleerde informatie over PATCH verzoeken om schema&#39;s, verwijs naar de [ gids van het schemaeindpunt ](../api/schemas.md#patch).
+>Voor meer gedetailleerde informatie over PATCH verzoeken om schema&#39;s, verwijs naar de [&#x200B; gids van het schemaeindpunt &#x200B;](../api/schemas.md#patch).
 
 ## Volgende stappen
 
-Deze gids besprak hoe te om API vraag te gebruiken om individuele gebieden van een bestaande gebiedsgroep aan een schema toe te voegen. Voor details op hoe te om gelijkaardige op gebied-gebaseerde taken in Experience Platform uit te voeren UI, zie de gids op [ op gebied-gebaseerde werkschema&#39;s ](../ui/field-based-workflows.md).
+Deze gids besprak hoe te om API vraag te gebruiken om individuele gebieden van een bestaande gebiedsgroep aan een schema toe te voegen. Voor details op hoe te om gelijkaardige op gebied-gebaseerde taken in Experience Platform uit te voeren UI, zie de gids op [&#x200B; op gebied-gebaseerde werkschema&#39;s &#x200B;](../ui/field-based-workflows.md).
 
-Voor meer informatie over de mogelijkheden van de Registratie API van het Schema, verwijs naar het [ API overzicht ](../api/overview.md) voor een volledige lijst van eindpunten en processen.
+Voor meer informatie over de mogelijkheden van de Registratie API van het Schema, verwijs naar het [&#x200B; API overzicht &#x200B;](../api/overview.md) voor een volledige lijst van eindpunten en processen.

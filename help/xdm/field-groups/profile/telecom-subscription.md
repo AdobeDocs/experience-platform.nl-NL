@@ -15,20 +15,20 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [ de naamupdates van de gebiedsgroep ](../name-updates.md) voor meer informatie.
+>De namen van verschillende groepen schemavelden zijn gewijzigd. Zie het document op [&#x200B; de naamupdates van de gebiedsgroep &#x200B;](../name-updates.md) voor meer informatie.
 
-[!UICONTROL Telecom Subscription] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md) die het de abonnementsplan van een klant van de telecommunicatie, met inbegrip van tarifering, pakketten, en individuele productabonnementen beschrijft.
+[!UICONTROL Telecom Subscription] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../classes/individual-profile.md) die het de abonnementsplan van een klant van de telecommunicatie, met inbegrip van tarifering, pakketten, en individuele productabonnementen beschrijft.
 
 De veldgroep biedt één objecttype veld, `telecomSubscription` , waarvan de eigenschappen hieronder worden beschreven.
 
-![ de structuur van het Abonnement van Telecom ](../../images/field-groups/telecom-subscription/structure.png)
+![&#x200B; de structuur van het Abonnement van Telecom &#x200B;](../../images/field-groups/telecom-subscription/structure.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `internetSubscription` | Array van objecten | Beschrijft de details van het Internet abonnementsplan zoals gegevensGLB, verbindingstype, en snelheidsdetails. Zie de [ sectie hieronder ](#internetSubscription) voor meer informatie. |
-| `landlineSubscription` | Array van objecten | Beschrijft de details van het landline abonnementsplan, met inbegrip van geselecteerde eigenschappen, notulen, en het draaien plannen. Zie de [ sectie hieronder ](#landlineSubscription) voor meer informatie. |
-| `mediaSubscription` | Array van objecten | Beschrijft de details van het media abonnementsplan, met inbegrip van het aantal kanalen en inbegrepen het stromen diensten. Zie de [ sectie hieronder ](#mediaSubscription) voor meer informatie. |
-| `mobileSubscription` | Array van objecten | Beschrijft mobiele details van het abonnementsabonnement, met inbegrip van het aantal lijnen, gegevenstarieven, kosten, en meer. Zie de [ sectie hieronder ](#mobileSubscription) voor meer informatie. |
+| `internetSubscription` | Array van objecten | Beschrijft de details van het Internet abonnementsplan zoals gegevensGLB, verbindingstype, en snelheidsdetails. Zie de [&#x200B; sectie hieronder &#x200B;](#internetSubscription) voor meer informatie. |
+| `landlineSubscription` | Array van objecten | Beschrijft de details van het landline abonnementsplan, met inbegrip van geselecteerde eigenschappen, notulen, en het draaien plannen. Zie de [&#x200B; sectie hieronder &#x200B;](#landlineSubscription) voor meer informatie. |
+| `mediaSubscription` | Array van objecten | Beschrijft de details van het media abonnementsplan, met inbegrip van het aantal kanalen en inbegrepen het stromen diensten. Zie de [&#x200B; sectie hieronder &#x200B;](#mediaSubscription) voor meer informatie. |
+| `mobileSubscription` | Array van objecten | Beschrijft mobiele details van het abonnementsabonnement, met inbegrip van het aantal lijnen, gegevenstarieven, kosten, en meer. Zie de [&#x200B; sectie hieronder &#x200B;](#mobileSubscription) voor meer informatie. |
 | `primarySubscriber` | [[!UICONTROL Person]](../../data-types/person.md) | Beschrijft de eigenaar van het abonnement. |
 | `bundleName` | String | Vangt de naam van om het even welk type van abonnementsbundel waarin de klant wordt ingeschreven, zoals `Internet + Media`. |
 | `primaryPartyID` | String | Een herkenningsteken voor de primaire persoon verantwoordelijk voor het abonnement, die typisch hun aantal van de apparatentelefoon zou kunnen zijn. |
@@ -37,14 +37,14 @@ De veldgroep biedt één objecttype veld, `telecomSubscription` , waarvan de eig
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
 
 ## `internetSubscription` {#internetSubscription}
 
 `internetSubscription` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ InternetSubscription ](../../images/field-groups/telecom-subscription/internetSubscription.png)
+![&#x200B; InternetSubscription &#x200B;](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -61,7 +61,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `landlineSubscription` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ landlineSubscription ](../../images/field-groups/telecom-subscription/landlineSubscription.png)
+![&#x200B; landlineSubscription &#x200B;](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -84,7 +84,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `mediaSubscription` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ mediaSubscription ](../../images/field-groups/telecom-subscription/mediaSubscription.png)
+![&#x200B; mediaSubscription &#x200B;](../../images/field-groups/telecom-subscription/mediaSubscription.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -98,7 +98,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `mobileSubscription` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ mobileSubscription ](../../images/field-groups/telecom-subscription/mobileSubscription.png)
+![&#x200B; mobileSubscription &#x200B;](../../images/field-groups/telecom-subscription/mobileSubscription.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

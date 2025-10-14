@@ -11,17 +11,17 @@ ht-degree: 1%
 
 # Het eindpunt van regels
 
-In de context van de markeringen van de gegevensinzameling, controleren de regels het gedrag van de middelen in een opgestelde bibliotheek. Een regel wordt samengesteld uit één of meerdere [ regelcomponenten ](./rule-components.md), bestaat om de regelcomponenten samen op een logische manier te binden. Met het `/rules` -eindpunt in de Reactor-API kunt u labelregels programmatisch beheren.
+In de context van de markeringen van de gegevensinzameling, controleren de regels het gedrag van de middelen in een opgestelde bibliotheek. Een regel wordt samengesteld uit één of meerdere [&#x200B; regelcomponenten &#x200B;](./rule-components.md), bestaat om de regelcomponenten samen op een logische manier te binden. Met het `/rules` -eindpunt in de Reactor-API kunt u labelregels programmatisch beheren.
 
 >[!NOTE]
 >
->In dit document wordt beschreven hoe u de regels in de Reactor-API beheert. Voor informatie over hoe te met regels in UI in wisselwerking te staan, verwijs naar de [ gids UI ](../../ui/managing-resources/rules.md).
+>In dit document wordt beschreven hoe u de regels in de Reactor-API beheert. Voor informatie over hoe te met regels in UI in wisselwerking te staan, verwijs naar de [&#x200B; gids UI &#x200B;](../../ui/managing-resources/rules.md).
 
-Een regel behoort tot precies één [ bezit ](./properties.md). Een eigenschap kan vele regels bevatten.
+Een regel behoort tot precies één [&#x200B; bezit &#x200B;](./properties.md). Een eigenschap kan vele regels bevatten.
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met regels ophalen {#list}
 
@@ -41,7 +41,7 @@ GET /properties/{PROPERTY_ID}/rules
 
 >[!NOTE]
 >
->Gebruikend vraagparameters, kunnen de vermelde regels worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids bij [ het filtreren reacties ](../guides/filtering.md) voor meer informatie.
+>Gebruikend vraagparameters, kunnen de vermelde regels worden gefiltreerd gebaseerd op de volgende attributen:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Zie de gids bij [&#x200B; het filtreren reacties &#x200B;](../guides/filtering.md) voor meer informatie.
 
 **Verzoek**
 
@@ -366,7 +366,7 @@ Een succesvolle reactie keert de details van de pas gecreëerde regel terug.
 
 ## Gebeurtenissen, voorwaarden en handelingen aan een regel toevoegen {#components}
 
-Zodra u [ een regel ](#create) hebt gecreeerd, kunt u beginnen zijn logica uit te bouwen door gebeurtenissen, voorwaarden, en acties toe te voegen (collectief verwezen naar als regelcomponenten). Verwijs naar de sectie op [ creërend een regelcomponent ](./rule-components.md#create) in de `/rule_components` eindpuntgids om te leren hoe te om dit in Reactor API te doen.
+Zodra u [&#x200B; een regel &#x200B;](#create) hebt gecreeerd, kunt u beginnen zijn logica uit te bouwen door gebeurtenissen, voorwaarden, en acties toe te voegen (collectief verwezen naar als regelcomponenten). Verwijs naar de sectie op [&#x200B; creërend een regelcomponent &#x200B;](./rule-components.md#create) in de `/rule_components` eindpuntgids om te leren hoe te om dit in Reactor API te doen.
 
 ## Een regel bijwerken {#update}
 
@@ -520,13 +520,13 @@ Een succesvolle reactie keert HTTP status 204 (Geen Inhoud) zonder reactiekarakt
 
 ## Notities voor een regel beheren {#notes}
 
-Regels zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [ gids van het Notitieeindpunt ](./notes.md) voor meer informatie over hoe te nota&#39;s voor regels en andere compatibele middelen beheren.
+Regels zijn &#39;opmerkelijke&#39; bronnen, wat betekent dat u op tekst gebaseerde notities kunt maken en ophalen voor elke afzonderlijke bron. Zie de [&#x200B; gids van het Notitieeindpunt &#x200B;](./notes.md) voor meer informatie over hoe te nota&#39;s voor regels en andere compatibele middelen beheren.
 
 ## Verwante middelen voor een regel ophalen {#related}
 
-De volgende vraag toont aan hoe te om de verwante middelen voor een regel terug te winnen. Wanneer [ omhoog een regel ](#lookup) kijkt, zijn deze verhoudingen vermeld onder de `relationships` regel.
+De volgende vraag toont aan hoe te om de verwante middelen voor een regel terug te winnen. Wanneer [&#x200B; omhoog een regel &#x200B;](#lookup) kijkt, zijn deze verhoudingen vermeld onder de `relationships` regel.
 
-Zie de [ verhoudingsgids ](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
+Zie de [&#x200B; verhoudingsgids &#x200B;](../guides/relationships.md) voor meer informatie over verhoudingen in Reactor API.
 
 ### Verwante bibliotheken weergeven voor een regel {#libraries}
 

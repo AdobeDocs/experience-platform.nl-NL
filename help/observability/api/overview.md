@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # [!DNL Observability Insights] API-handleiding
 
-De [!DNL Observability Insights] API verstrekt een eindpunt dat u toestaat om metrische gegevens voor diverse eigenschappen van Adobe Experience Platform programmatically terug te winnen en te controleren. Dit eindpunt wordt hieronder beschreven. Gelieve te bezoeken de eindpuntgids voor details en te verwijzen naar [ begonnen gids ](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
+De [!DNL Observability Insights] API verstrekt een eindpunt dat u toestaat om metrische gegevens voor diverse eigenschappen van Adobe Experience Platform programmatically terug te winnen en te controleren. Dit eindpunt wordt hieronder beschreven. Gelieve te bezoeken de eindpuntgids voor details en te verwijzen naar [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
-Om alle beschikbare eindpunten en verrichtingen te bekijken CRUD, bezoek de [[!DNL Observability Insights]  API schakelaar ](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
+Om alle beschikbare eindpunten en verrichtingen te bekijken CRUD, bezoek de [[!DNL Observability Insights]  API schakelaar &#x200B;](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
 
 ## Metrics
 
-De metriek van de waarneming verstrekt inzicht in gebruiksstatistieken, historische tendensen, en prestatiesindicatoren voor diverse eigenschappen in Adobe Experience Platform. Leren hoe te om metriek terug te winnen gebruikend API, zie de [ gids van het metrieke eindpunt ](./metrics.md).
+De metriek van de waarneming verstrekt inzicht in gebruiksstatistieken, historische tendensen, en prestatiesindicatoren voor diverse eigenschappen in Adobe Experience Platform. Leren hoe te om metriek terug te winnen gebruikend API, zie de [&#x200B; gids van het metrieke eindpunt &#x200B;](./metrics.md).

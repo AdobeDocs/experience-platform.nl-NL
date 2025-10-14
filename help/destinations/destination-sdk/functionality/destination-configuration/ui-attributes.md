@@ -13,14 +13,14 @@ ht-degree: 0%
 
 UI-kenmerken definiëren de visuele elementen die Adobe in de gebruikersinterface van Adobe Experience Platform voor uw doelkaart moet weergeven, zoals een logo, een koppeling naar de documentatiepagina, een doelbeschrijving en de categorie en het type van de doelkaart.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ documentatie van configuratieopties ](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [&#x200B; documentatie van configuratieopties &#x200B;](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
 * [Destination SDK gebruiken om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Wanneer [ creërend een bestemming ](../../authoring-api/destination-configuration/create-destination-configuration.md) door Destination SDK, bepaalt de `uiAttributes` sectie de volgende visuele eigenschappen van uw bestemmingskaart:
+Wanneer [&#x200B; creërend een bestemming &#x200B;](../../authoring-api/destination-configuration/create-destination-configuration.md) door Destination SDK, bepaalt de `uiAttributes` sectie de volgende visuele eigenschappen van uw bestemmingskaart:
 
-* URL van uw pagina van de bestemmingsdocumentatie in de [ bestemmingscatalogus ](../../../catalog/overview.md).
+* URL van uw pagina van de bestemmingsdocumentatie in de [&#x200B; bestemmingscatalogus &#x200B;](../../../catalog/overview.md).
 * De categorie waaronder je bestemming wordt weergegeven in de gebruikersinterface van Experience Platform.
 * De gegevensexportfrequentie voor uw bestemming.
 * Het verbindingstype van de bestemming, zoals Amazon S3, Azure Blob, enz.
@@ -62,13 +62,13 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` is een koordparameter die naar de documentatiepagina in de [ Catalogus van Doelen ](../../../catalog/overview.md) voor uw bestemming verwijst. Elke bestemming die in Adobe Experience Platform wordt geproduceerd, moet een bijbehorende documentatiepagina hebben. [ Leer hoe te om een pagina van de bestemmingsdocumentatie ](../../docs-framework/documentation-instructions.md) voor uw bestemming tot stand te brengen. Merk op dat dit niet voor privé/douanebestemmingen wordt vereist.
+`documentationLink` is een koordparameter die naar de documentatiepagina in de [&#x200B; Catalogus van Doelen &#x200B;](../../../catalog/overview.md) voor uw bestemming verwijst. Elke bestemming die in Adobe Experience Platform wordt geproduceerd, moet een bijbehorende documentatiepagina hebben. [&#x200B; Leer hoe te om een pagina van de bestemmingsdocumentatie &#x200B;](../../docs-framework/documentation-instructions.md) voor uw bestemming tot stand te brengen. Merk op dat dit niet voor privé/douanebestemmingen wordt vereist.
 
 Gebruik de volgende notatie: `http://www.adobe.com/go/destinations-YOURDESTINATION-en` , waarbij `YOURDESTINATION` de naam van het doel is. Voor een doel met de naam Moviestar gebruikt u `http://www.adobe.com/go/destinations-moviestar-en` .
 
 De gebruikers kunnen uw documentatieverbinding van de pagina van de bestemmingscatalogus in UI zien en bezoeken. Ze moeten naar de doelkaart bladeren, vervolgens **[!UICONTROL More actions]** en **[!UICONTROL View documentation]** selecteren, zoals in de onderstaande afbeelding wordt getoond.
 
-![ beeld UI die de plaats van de documentverbinding tonen.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
+![&#x200B; beeld UI die de plaats van de documentverbinding tonen.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
 >[!NOTE]
 >
@@ -76,19 +76,19 @@ De gebruikers kunnen uw documentatieverbinding van de pagina van de bestemmingsc
 
 ### `category` {#category}
 
-`category` is een tekenreeksparameter die verwijst naar de categorie die aan uw doel in Adobe Experience Platform is toegewezen. Voor meer informatie, lees [ Categorieën van de Bestemming ](../../../destination-types.md). Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` .
+`category` is een tekenreeksparameter die verwijst naar de categorie die aan uw doel in Adobe Experience Platform is toegewezen. Voor meer informatie, lees [&#x200B; Categorieën van de Bestemming &#x200B;](../../../destination-types.md). Gebruik een van de volgende waarden: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` .
 
 Gebruikers kunnen de lijst met doelcategorieën aan de linkerkant van het scherm weergeven in de doelcatalogus, zoals in de onderstaande afbeelding wordt getoond.
 
-![ beeld UI die de plaats van de bestemmingscategorie toont.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
+![&#x200B; beeld UI die de plaats van de bestemmingscategorie toont.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
 ### `connectionType` {#connection-type}
 
 `connectionType` is een tekenreeksparameter die naar het type verbinding verwijst, afhankelijk van het doel. Ondersteunde waarden: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
 
-De gebruikers kunnen het type van bestemmingsverbinding in [ zien doorbladert ](../../../ui/destinations-workspace.md#browse) lusje van de bestemmingswerkruimte.
+De gebruikers kunnen het type van bestemmingsverbinding in [&#x200B; zien doorbladert &#x200B;](../../../ui/destinations-workspace.md#browse) lusje van de bestemmingswerkruimte.
 
-![ beeld UI die de plaats van het verbindingstype in UI toont.](../../assets/functionality/destination-configuration/ui-attributes-connection.png)
+![&#x200B; beeld UI die de plaats van het verbindingstype in UI toont.](../../assets/functionality/destination-configuration/ui-attributes-connection.png)
 
 ### `frequency` {#frequency}
 
@@ -96,7 +96,7 @@ De gebruikers kunnen het type van bestemmingsverbinding in [ zien doorbladert ](
 
 Gebruikers kunnen het frequentietype op de **[!UICONTROL Dataflow runs]** -pagina van elke doelverbinding zien.
 
-![ beeld UI die de het frequentietype plaats in UI toont.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
+![&#x200B; beeld UI die de het frequentietype plaats in UI toont.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 
 ### `isBeta` {#isbeta}
 
@@ -104,15 +104,15 @@ Als de bestemming die u met Destination SDK creeert aan een beperkt aantal klant
 
 Hiervoor kunt u de parameter `isBeta: "true"` in de sectie UI-kenmerken van de doelconfiguratie gebruiken om de doelkaart correct te markeren.
 
-![ beeld UI die een bestemmingskaart duidelijk tonen als bèta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
+![&#x200B; beeld UI die een bestemmingskaart duidelijk tonen als bèta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
 ### `icon` {#icon}
 
 U kunt een logopictogram aan uw bestemming, zoals aangetoond in het hieronder beeld toevoegen.
 
-![ beeld UI die de pictogramplaats toont.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+![&#x200B; beeld UI die de pictogramplaats toont.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-Om een embleem aan uw bestemmingskaart toe te voegen, moet u het gewenste beeld met het team van Adobe delen wanneer u [ de bestemming voor overzicht ](../../guides/submit-destination.md#logo) voorlegt.
+Om een embleem aan uw bestemmingskaart toe te voegen, moet u het gewenste beeld met het team van Adobe delen wanneer u [&#x200B; de bestemming voor overzicht &#x200B;](../../guides/submit-destination.md#logo) voorlegt.
 
 ## Volgende stappen {#next-steps}
 

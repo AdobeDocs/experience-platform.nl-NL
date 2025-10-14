@@ -21,18 +21,18 @@ Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opnam
 
 Deze zelfstudie vereist een praktische kennis van de verschillende Adobe Experience Platform-services die betrokken zijn bij gedeeltelijke batchopname. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [ Inname van de Partij ](./overview.md): De methode die [!DNL Experience Platform] gegevens van gegevensdossiers, zoals CSV en Parquet opneemt en opslaat.
+- [&#x200B; Inname van de Partij &#x200B;](./overview.md): De methode die [!DNL Experience Platform] gegevens van gegevensdossiers, zoals CSV en Parquet opneemt en opslaat.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om aanroepen van [!DNL Experience Platform] API&#39;s te kunnen uitvoeren.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -44,17 +44,17 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 ## Een batch voor gedeeltelijke batch-opname inschakelen in de API {#enable-api}
 
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u een batch voor gedeeltelijke batch-opname via de API inschakelt. Voor instructies bij het gebruiken van UI, te lezen gelieve [ een partij voor gedeeltelijke partijingestitie in de UI ](#enable-ui) stap toelaten.
+>In deze sectie wordt beschreven hoe u een batch voor gedeeltelijke batch-opname via de API inschakelt. Voor instructies bij het gebruiken van UI, te lezen gelieve [&#x200B; een partij voor gedeeltelijke partijingestitie in de UI &#x200B;](#enable-ui) stap toelaten.
 
 U kunt een nieuwe partij tot stand brengen met gedeeltelijke toegelaten opname.
 
-Om een nieuwe partij tot stand te brengen, volg de stappen in de [ handleiding van de partijontwikkelaar ](./api-overview.md). Wanneer u de stap **[!UICONTROL Create batch]** hebt bereikt, voegt u het volgende veld toe binnen de aanvraaginstantie:
+Om een nieuwe partij tot stand te brengen, volg de stappen in de [&#x200B; handleiding van de partijontwikkelaar &#x200B;](./api-overview.md). Wanneer u de stap **[!UICONTROL Create batch]** hebt bereikt, voegt u het volgende veld toe binnen de aanvraaginstantie:
 
 ```json
 {
@@ -79,7 +79,7 @@ Om een partij voor gedeeltelijke opname door [!DNL Experience Platform] UI toe t
 
 ### Een nieuwe bronverbinding maken {#new-source}
 
-Om een nieuwe bronverbinding tot stand te brengen, volg de vermelde stappen in het [ Bronoverzicht ](../../sources/home.md). Wanneer u de stap **[!UICONTROL Dataflow detail]** hebt bereikt, neemt u de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** op.
+Om een nieuwe bronverbinding tot stand te brengen, volg de vermelde stappen in het [&#x200B; Bronoverzicht &#x200B;](../../sources/home.md). Wanneer u de stap **[!UICONTROL Dataflow detail]** hebt bereikt, neemt u de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** op.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
@@ -109,7 +109,7 @@ Nu, kunt u gegevens uploaden gebruikend **gegevens** knoop toevoegen, en het zal
 
 ### De &quot;[!UICONTROL Map CSV to XDM schema]&quot;-stroom gebruiken {#map-flow}
 
-Om de &quot;[!UICONTROL Map CSV to XDM schema]&quot;stroom te gebruiken, volg de vermelde stappen in [ Kaart een CSV- dossierleerprogramma ](../tutorials/map-csv/overview.md). Wanneer u de stap **[!UICONTROL Add data]** hebt bereikt, neemt u de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** op.
+Om de &quot;[!UICONTROL Map CSV to XDM schema]&quot;stroom te gebruiken, volg de vermelde stappen in [&#x200B; Kaart een CSV- dossierleerprogramma &#x200B;](../tutorials/map-csv/overview.md). Wanneer u de stap **[!UICONTROL Add data]** hebt bereikt, neemt u de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** op.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
@@ -123,6 +123,6 @@ In **[!UICONTROL Error threshold]** kunt u het percentage acceptabele fouten ins
 
 ## Volgende stappen {#next-steps}
 
-Dit leerprogramma behandelde hoe te om een dataset tot stand te brengen of te wijzigen om gedeeltelijke partijingestie toe te laten. Voor meer informatie over partijingestie, te lezen gelieve de [ gids van de partijontwikkelaar ](./api-overview.md).
+Dit leerprogramma behandelde hoe te om een dataset tot stand te brengen of te wijzigen om gedeeltelijke partijingestie toe te laten. Voor meer informatie over partijingestie, te lezen gelieve de [&#x200B; gids van de partijontwikkelaar &#x200B;](./api-overview.md).
 
-Voor informatie bij het controleren van gedeeltelijke innamefouten, te lezen gelieve de [ gids van de de foutendiagnostiek van de partijingestie ](../quality/error-diagnostics.md).
+Voor informatie bij het controleren van gedeeltelijke innamefouten, te lezen gelieve de [&#x200B; gids van de de foutendiagnostiek van de partijingestie &#x200B;](../quality/error-diagnostics.md).

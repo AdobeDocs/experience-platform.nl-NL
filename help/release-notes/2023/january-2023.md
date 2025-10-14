@@ -36,12 +36,12 @@ Kenmerken AI wordt gebruikt om credits toe te wijzen aan aanraakpunten die tot c
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Gereedheid van HIPAA | Klanten met een gezondheidszorgschild kunnen nu beschermde gezondheidsinformatie ontvangen, gebruiken, onderhouden of doorgeven in Attribution AI en bepaalde andere op Experience Platform gebaseerde toepassingen. Gezondheidsschild is voor klanten in de gezondheidszorg die ofwel een onder de HIPAA vallende entiteit zijn, ofwel een zakelijke vennoot. Voor meer informatie, lees de documentatie over [ HIPAA en de Producten en de Diensten van Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
-| Kolommen met aanvullende scoregegevens bewerken | U kunt extra kolommen van de scoredataset (het melden van kolommen) nu toevoegen of verwijderen wanneer u bestaande modellen uitgeeft. Hierdoor wordt de flexibiliteit van de toewijzingsscores uitgebreid om u inzichten aan extra dimensies te verstrekken nadat een model reeds is gecreeerd. Zie de [ gids UI van de Attributie ](../../intelligent-services/attribution-ai/user-guide.md) om meer te leren. |
+| Gereedheid van HIPAA | Klanten met een gezondheidszorgschild kunnen nu beschermde gezondheidsinformatie ontvangen, gebruiken, onderhouden of doorgeven in Attribution AI en bepaalde andere op Experience Platform gebaseerde toepassingen. Gezondheidsschild is voor klanten in de gezondheidszorg die ofwel een onder de HIPAA vallende entiteit zijn, ofwel een zakelijke vennoot. Voor meer informatie, lees de documentatie over [&#x200B; HIPAA en de Producten en de Diensten van Adobe &#x200B;](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+| Kolommen met aanvullende scoregegevens bewerken | U kunt extra kolommen van de scoredataset (het melden van kolommen) nu toevoegen of verwijderen wanneer u bestaande modellen uitgeeft. Hierdoor wordt de flexibiliteit van de toewijzingsscores uitgebreid om u inzichten aan extra dimensies te verstrekken nadat een model reeds is gecreeerd. Zie de [&#x200B; gids UI van de Attributie &#x200B;](../../intelligent-services/attribution-ai/user-guide.md) om meer te leren. |
 
 {style="table-layout:auto"}
 
-Gelieve te zien het [ AI/ML de diensten ](../../intelligent-services/attribution-ai/overview.md) overzicht voor meer informatie.
+Gelieve te zien het [&#x200B; AI/ML de diensten &#x200B;](../../intelligent-services/attribution-ai/overview.md) overzicht voor meer informatie.
 
 ### Customer AI
 
@@ -51,11 +51,11 @@ De AI van de Klant voor Real-Time Customer Data Platform, wordt gebruikt om doua
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Gereedheid van HIPAA | Klanten met een gezondheidszorgschild kunnen nu beschermde gezondheidsinformatie ontvangen, gebruiken, onderhouden of doorgeven in Customer AI voor Real-Time Customer Data Platform en bepaalde andere Experience Platform-toepassingen. Gezondheidsschild is voor klanten in de gezondheidszorg die ofwel een onder de HIPAA vallende entiteit zijn, ofwel een zakelijke vennoot. Voor meer informatie, zie de documentatie over [ HIPAA en de Producten en de Diensten van Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+| Gereedheid van HIPAA | Klanten met een gezondheidszorgschild kunnen nu beschermde gezondheidsinformatie ontvangen, gebruiken, onderhouden of doorgeven in Customer AI voor Real-Time Customer Data Platform en bepaalde andere Experience Platform-toepassingen. Gezondheidsschild is voor klanten in de gezondheidszorg die ofwel een onder de HIPAA vallende entiteit zijn, ofwel een zakelijke vennoot. Voor meer informatie, zie de documentatie over [&#x200B; HIPAA en de Producten en de Diensten van Adobe &#x200B;](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
 
 {style="table-layout:auto"}
 
-Gelieve te zien het [ AI/ML de diensten ](../../intelligent-services/customer-ai/overview.md) overzicht voor meer informatie.
+Gelieve te zien het [&#x200B; AI/ML de diensten &#x200B;](../../intelligent-services/customer-ai/overview.md) overzicht voor meer informatie.
 
 ## Assurance {#assurance}
 
@@ -69,7 +69,7 @@ Met Adobe Assurance kunt u controleren, testen, simuleren en valideren hoe u geg
 
 {style="table-layout:auto"}
 
-Voor meer informatie over Assurance, te lezen gelieve de [ documentatie van Assurance ](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
+Voor meer informatie over Assurance, te lezen gelieve de [&#x200B; documentatie van Assurance &#x200B;](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## Dataverzameling {#data-collection}
 
@@ -80,7 +80,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 | Functie | Beschrijving |
 | --- | --- |
 | Nieuw beginscherm | De homepage voor de UI van de Inzameling van Gegevens is bijgewerkt om nuttige onboarding informatie en verbindingen te omvatten om productiviteit te stroomlijnen. Dit omvat het volgende:<ol><li>Documentatie en aanbevolen workflows om aan de slag te gaan</li><li>Recente eigenschappen, regels en gegevenselementen</li><li>Populaire extensies</li><li>Nieuwe extensies zijn bijgewerkt met een functie voor snelle installatie</li></ol> |
-| Gegevens naar [!DNL Google Ads] verzenden met behulp van gebeurtenissen doorsturen | U kunt de [[!DNL Google Ads Enhanced Conversions]  API uitbreiding ](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) voor gebeurtenis nu gebruiken door:sturen, gecombineerd met [ Google Oauth 2 geheimen ](../../tags/ui/event-forwarding/secrets.md#google-oauth2), om server-zijgegevens aan [!DNL Google Ads] in real time veilig te verzenden. |
+| Gegevens naar [!DNL Google Ads] verzenden met behulp van gebeurtenissen doorsturen | U kunt de [[!DNL Google Ads Enhanced Conversions]  API uitbreiding &#x200B;](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) voor gebeurtenis nu gebruiken door:sturen, gecombineerd met [&#x200B; Google Oauth 2 geheimen &#x200B;](../../tags/ui/event-forwarding/secrets.md#google-oauth2), om server-zijgegevens aan [!DNL Google Ads] in real time veilig te verzenden. |
 
 {style="table-layout:auto"}
 
@@ -92,17 +92,17 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Bestemming | Beschrijving |
 | ----------- | ----------- |
-| [ (Beta) Adobe Experience Cloud Poortverbinding ](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Gebruik de [!UICONTROL (Beta) Adobe Experience Cloud Audiences] -verbinding om segmenten van Experience Platform naar verschillende Experience Platform-oplossingen te delen, zoals Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target of Marketo. |
-| [ verbinding van het Profiel van Pega ](../../destinations/catalog/personalization/pega-profile.md) | Gebruik [!DNL Pega Profile Connector] in Adobe Experience Platform om een live uitgaande verbinding met uw [!DNL Amazon] S3-opslag te maken en profielgegevens periodiek naar CSV-bestanden vanuit Adobe Experience Platform naar uw eigen S3-emmers te exporteren. In [!DNL Pega Customer Decision Hub] kunt u gegevenstaken plannen om deze profielgegevens te importeren uit S3-opslag om het [!DNL Pega Customer Decision Hub] -profiel bij te werken. |
-| [ (Beta) The Trade Desk CRM EU connection ](../../destinations/catalog/advertising/tradedesk-emails.md) | Met de versie van EUID (Europese Verenigde identiteitskaart), ziet u nu twee [!DNL The Trade Desk - CRM] bestemmingen in de [ bestemmingscatalogus ](/help/destinations/catalog/overview.md). <ul><li> Gebruik de **[!DNL The Trade Desk - CRM (EU)]** -bestemming als u gegevens in de EU levert.</li><li> Gebruik het doel **[!DNL The Trade Desk - CRM (NAMER & APAC)]** als u gegevens in de APAC- of NAMER-gebieden bront. </li></ul> |
+| [&#x200B; (Beta) Adobe Experience Cloud Poortverbinding &#x200B;](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Gebruik de [!UICONTROL (Beta) Adobe Experience Cloud Audiences] -verbinding om segmenten van Experience Platform naar verschillende Experience Platform-oplossingen te delen, zoals Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target of Marketo. |
+| [&#x200B; verbinding van het Profiel van Pega &#x200B;](../../destinations/catalog/personalization/pega-profile.md) | Gebruik [!DNL Pega Profile Connector] in Adobe Experience Platform om een live uitgaande verbinding met uw [!DNL Amazon] S3-opslag te maken en profielgegevens periodiek naar CSV-bestanden vanuit Adobe Experience Platform naar uw eigen S3-emmers te exporteren. In [!DNL Pega Customer Decision Hub] kunt u gegevenstaken plannen om deze profielgegevens te importeren uit S3-opslag om het [!DNL Pega Customer Decision Hub] -profiel bij te werken. |
+| [&#x200B; (Beta) The Trade Desk CRM EU connection &#x200B;](../../destinations/catalog/advertising/tradedesk-emails.md) | Met de versie van EUID (Europese Verenigde identiteitskaart), ziet u nu twee [!DNL The Trade Desk - CRM] bestemmingen in de [&#x200B; bestemmingscatalogus &#x200B;](/help/destinations/catalog/overview.md). <ul><li> Gebruik de **[!DNL The Trade Desk - CRM (EU)]** -bestemming als u gegevens in de EU levert.</li><li> Gebruik het doel **[!DNL The Trade Desk - CRM (NAMER & APAC)]** als u gegevens in de APAC- of NAMER-gebieden bront. </li></ul> |
 
 **Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Verbetering van het beleid voor betaalde mediaconcept voor integratie met streaming doelen | Een [ verhoging om beleidshandhaving ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) op [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations) voor betaalde media activering gebruik-gevallen goed te keuren. Als profielen niet meer in aanmerking komen voor een beleid voor toestemming, geeft Experience Platform nu proactief aan dat het beleid is afgesloten met streaming doelen. <br> <b> Nota </b>: Deze functionaliteit is beschikbaar slechts aan klanten van **[!UICONTROL Privacy and Security Shield]**, en die van **[!UICONTROL Healthcare Shield]**. |
-| Nieuwe scheidingstekenopties voor bètaboudopslagdoelconnectors | Drie nieuwe scheidingsopties (Colon `:`, Pipe, Semicolon `;`) zijn nu beschikbaar voor de nieuwe bètawolopslagbestemmingen - [ (Beta) Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ (Beta) Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ (Beta) Azure Data Lake Storage Gen2 ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ (Beta) Data Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [ (Beta Google) Cloudopslag ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [ (Beta) SFTP ](/help/destinations/catalog/cloud-storage/sftp.md). <br> las over de gesteunde [ dossier het formatteren opties ](/help/destinations/ui/batch-destinations-file-formatting-options.md) voor op dossier-gebaseerde bestemmingen. |
-| Nieuwe facultatieve parameter beschikbaar in [ gebieden van klantengegevens ](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md) configuraties in [ Destination SDK ](/help/destinations/destination-sdk/overview.md) | `unique`: Gebruik deze parameter wanneer u een gegevensveld voor klanten moet maken waarvan de waarde uniek moet zijn voor alle doelgegevensstromen die door de organisatie van een gebruiker zijn ingesteld. <br> Het **[!UICONTROL Integration alias]** -veld in het [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) -doel moet bijvoorbeeld uniek zijn, wat betekent dat twee afzonderlijke gegevensstromen naar dit doel niet dezelfde waarde voor dit veld kunnen hebben. |
+| Verbetering van het beleid voor betaalde mediaconcept voor integratie met streaming doelen | Een [&#x200B; verhoging om beleidshandhaving &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) op [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations) voor betaalde media activering gebruik-gevallen goed te keuren. Als profielen niet meer in aanmerking komen voor een beleid voor toestemming, geeft Experience Platform nu proactief aan dat het beleid is afgesloten met streaming doelen. <br> <b> Nota </b>: Deze functionaliteit is beschikbaar slechts aan klanten van **[!UICONTROL Privacy and Security Shield]**, en die van **[!UICONTROL Healthcare Shield]**. |
+| Nieuwe scheidingstekenopties voor bètaboudopslagdoelconnectors | Drie nieuwe scheidingsopties (Colon `:`, Pipe, Semicolon `;`) zijn nu beschikbaar voor de nieuwe bètawolopslagbestemmingen - [&#x200B; (Beta) Amazon S3 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md), [&#x200B; (Beta) Azure Blob &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md), [&#x200B; (Beta) Azure Data Lake Storage Gen2 &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md), [&#x200B; (Beta) Data Landing Zone &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [&#x200B; (Beta Google) Cloudopslag &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [&#x200B; (Beta) SFTP &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md). <br> las over de gesteunde [&#x200B; dossier het formatteren opties &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md) voor op dossier-gebaseerde bestemmingen. |
+| Nieuwe facultatieve parameter beschikbaar in [&#x200B; gebieden van klantengegevens &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md) configuraties in [&#x200B; Destination SDK &#x200B;](/help/destinations/destination-sdk/overview.md) | `unique`: Gebruik deze parameter wanneer u een gegevensveld voor klanten moet maken waarvan de waarde uniek moet zijn voor alle doelgegevensstromen die door de organisatie van een gebruiker zijn ingesteld. <br> Het **[!UICONTROL Integration alias]** -veld in het [[!UICONTROL Custom Personalization]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) -doel moet bijvoorbeeld uniek zijn, wat betekent dat twee afzonderlijke gegevensstromen naar dit doel niet dezelfde waarde voor dit veld kunnen hebben. |
 
 **Opgeloste problemen en verbeteringen** {#destinations-fixes-and-enhancements}
 
@@ -163,7 +163,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Voor meer informatie over XDM in Experience Platform, zie het [&#x200B; XDM overzicht van het Systeem &#x200B;](../../xdm/home.md).
 
 ## Realtime-klantenprofiel {#profile}
 
@@ -171,13 +171,13 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 **Komende veroudering** {#deprecation}
 
-Om overtolligheid in de levenscyclus van het segmentlidmaatschap te verwijderen, zal de `Existing` status van de [ kaart van het segmentlidmaatschap ](../../xdm/field-groups/profile/segmentation.md) aan het eind van Maart 2023 worden afgekeurd. Een vervolgaankondiging zal de exacte vervaldatum bevatten.
+Om overtolligheid in de levenscyclus van het segmentlidmaatschap te verwijderen, zal de `Existing` status van de [&#x200B; kaart van het segmentlidmaatschap &#x200B;](../../xdm/field-groups/profile/segmentation.md) aan het eind van Maart 2023 worden afgekeurd. Een vervolgaankondiging zal de exacte vervaldatum bevatten.
 
 Na de afgekeurde versie worden profielen die in een segment zijn gekwalificeerd, weergegeven als `Realized` en worden profielen die zijn uitgeschakeld, ook weergegeven als `Exited` . Dit zorgt voor pariteit met op bestanden gebaseerde doelen met `Active` - en `Expired` -segmentstatussen.
 
-Deze verandering zou u kunnen beïnvloeden als u [ ondernemingsbestemmingen ](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, HTTP API) gebruikt en stroomafwaartse processen op zijn plaats, gebaseerd op de `Existing` status geautomatiseerd hebt. Gelieve te herzien uw downstreamintegratie als dit voor u het geval is. Als u pas gekwalificeerde profielen wilt identificeren na een bepaalde tijd, kunt u overwegen een combinatie van de status `Realized` en de status `lastQualificationTime` in uw overzicht van segmentlidmaatschap te gebruiken. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
+Deze verandering zou u kunnen beïnvloeden als u [&#x200B; ondernemingsbestemmingen &#x200B;](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, HTTP API) gebruikt en stroomafwaartse processen op zijn plaats, gebaseerd op de `Existing` status geautomatiseerd hebt. Gelieve te herzien uw downstreamintegratie als dit voor u het geval is. Als u pas gekwalificeerde profielen wilt identificeren na een bepaalde tijd, kunt u overwegen een combinatie van de status `Realized` en de status `lastQualificationTime` in uw overzicht van segmentlidmaatschap te gebruiken. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
-Meer over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met profielgegevens leren, gelieve te beginnen door het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md) te lezen.
+Meer over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met profielgegevens leren, gelieve te beginnen door het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../../profile/home.md) te lezen.
 
 ## Segmentatieservice {#segmentation}
 
@@ -187,7 +187,7 @@ Meer over het Profiel van de Klant in real time, met inbegrip van leerprogramma&
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bulkwaarde importeren in Segment Builder | De Bouwer van het segment steunt nu het invoeren veelvoudige waarden, of door een CSV of TSV dossier te uploaden of door komma&#39;s gescheiden waarden manueel op te nemen. Meer informatie kan binnen de [ gids van de Bouwer van het Segment ](../../segmentation/ui/segment-builder.md#rule-builder-canvas) worden gevonden. |
+| Bulkwaarde importeren in Segment Builder | De Bouwer van het segment steunt nu het invoeren veelvoudige waarden, of door een CSV of TSV dossier te uploaden of door komma&#39;s gescheiden waarden manueel op te nemen. Meer informatie kan binnen de [&#x200B; gids van de Bouwer van het Segment &#x200B;](../../segmentation/ui/segment-builder.md#rule-builder-canvas) worden gevonden. |
 | Vervaldatum extern publiekslidmaatschap | Standaard blijven leden van externe doelgroepen 30 dagen behouden. Gebruik het veld `validUntil` tijdens het invoeren van publieksgegevens om deze gegevens langer te behouden. |
 | Door Experience Platform gegenereerde vervaldatum van segmentlidmaatschap | Elk segmentlidmaatschap dat langer dan 30 dagen in de status `Exited` staat, op basis van het veld `lastQualificationTime` , wordt verwijderd. |
 
@@ -203,5 +203,5 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Toegang van gebruikers tot submappen van bronnen voor cloudopslag toestaan | U kunt nu toegang definiëren tot een specifieke submap van de bron voor cloudopslag wanneer u een nieuw account maakt. Zodra gecreeerd, zullen de gebruikers tot gegevens van toegelaten subfolder kunnen slechts toegang hebben. Deze eigenschap is beschikbaar aan de volgende bronnen van de wolkenopslag: [ Azure BlobOpslag ](../../sources/connectors/cloud-storage/blob.md), [ de Opslag van de Wolk van Google ](../../sources/connectors/cloud-storage/google-cloud-storage.md), [ Google PubSub ](../../sources/connectors/cloud-storage/google-pubsub.md), en [ SFTP ](../../sources/connectors/cloud-storage/sftp.md). |
-| Beta-beschikbaarheid van [!DNL SugarCRM] | [!DNL SugarCRM] -bronnen zijn nu beschikbaar in bèta. Gebruik [!DNL SugarCRM Accounts & Contacts] en de [!DNL SugarCRM Events] -bronnen om gegevens van uw [!DNL SugarCRM] -account over te brengen naar Experience Platform. Voor meer informatie, lees het [[!DNL SugarCRM]  overzicht ](../../sources/connectors/crm/sugarcrm.md). |
+| Toegang van gebruikers tot submappen van bronnen voor cloudopslag toestaan | U kunt nu toegang definiëren tot een specifieke submap van de bron voor cloudopslag wanneer u een nieuw account maakt. Zodra gecreeerd, zullen de gebruikers tot gegevens van toegelaten subfolder kunnen slechts toegang hebben. Deze eigenschap is beschikbaar aan de volgende bronnen van de wolkenopslag: [&#x200B; Azure BlobOpslag &#x200B;](../../sources/connectors/cloud-storage/blob.md), [&#x200B; de Opslag van de Wolk van Google &#x200B;](../../sources/connectors/cloud-storage/google-cloud-storage.md), [&#x200B; Google PubSub &#x200B;](../../sources/connectors/cloud-storage/google-pubsub.md), en [&#x200B; SFTP &#x200B;](../../sources/connectors/cloud-storage/sftp.md). |
+| Beta-beschikbaarheid van [!DNL SugarCRM] | [!DNL SugarCRM] -bronnen zijn nu beschikbaar in bèta. Gebruik [!DNL SugarCRM Accounts & Contacts] en de [!DNL SugarCRM Events] -bronnen om gegevens van uw [!DNL SugarCRM] -account over te brengen naar Experience Platform. Voor meer informatie, lees het [[!DNL SugarCRM]  overzicht &#x200B;](../../sources/connectors/crm/sugarcrm.md). |

@@ -47,11 +47,11 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe snelstartworkflow voor Meta Conversions API (Beta) | Krijg toegang tot nieuwe snelstartworkflows onder Aan de slag vanuit het startscherm voor gegevensverzameling. Het [ snelle beginwerkschema voor de Conversies van Meta API ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=nl-NL#quick-start) laat klanten toe om gebeurtenisgegevens, server-kant aan Meta voor advertentieconversies in enkel een paar eenvoudige stappen snel te verzamelen en door:sturen. |
-| Nieuwe snelstartworkflow voor Mobile SDK (Beta) | Krijg toegang tot nieuwe snelstartworkflows onder Aan de slag vanuit het startscherm voor gegevensverzameling. Het [ snelle beginwerkschema voor Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) laat u toe om Mobiele SDK snel uit te voeren en fundamentele mobiele gebeurtenissen in enkel een paar eenvoudige stappen te bevestigen. |
-| [!DNL Braze] -gebeurtenis, extensie doorsturen | Met de [[!DNL Braze Track Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=nl-NL) -extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in de Adobe Experience Platform Edge Network, gebruiken en verzenden naar [!DNL Braze] in de vorm van gebeurtenissen aan de serverzijde met behulp van de [!DNL Braze] User Track API&#39;s. |
-| [!DNL Epsilon] -gebeurtenis, extensie doorsturen | Met de extensie [[!DNL Epsilon Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=nl-NL) kunt u gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in de Adobe Experience Platform Edge Network en deze naar [!DNL Epsilon] te verzenden met de [!DNL Epsilon] Event-API. |
-| [!DNL Mixpanel] -gebeurtenis, extensie doorsturen | Met de extensie [[!DNL Mixpanel Track Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=nl-NL) kunnen klanten gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in de Adobe Experience Platform Edge Network en deze naar Mixpanel te verzenden met de API voor gebeurtenissen bijhouden. |
+| Nieuwe snelstartworkflow voor Meta Conversions API (Beta) | Krijg toegang tot nieuwe snelstartworkflows onder Aan de slag vanuit het startscherm voor gegevensverzameling. Het [&#x200B; snelle beginwerkschema voor de Conversies van Meta API &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=nl-NL#quick-start) laat klanten toe om gebeurtenisgegevens, server-kant aan Meta voor advertentieconversies in enkel een paar eenvoudige stappen snel te verzamelen en door:sturen. |
+| Nieuwe snelstartworkflow voor Mobile SDK (Beta) | Krijg toegang tot nieuwe snelstartworkflows onder Aan de slag vanuit het startscherm voor gegevensverzameling. Het [&#x200B; snelle beginwerkschema voor Mobiele SDK &#x200B;](https://developer.adobe.com/client-sdks/documentation/) laat u toe om Mobiele SDK snel uit te voeren en fundamentele mobiele gebeurtenissen in enkel een paar eenvoudige stappen te bevestigen. |
+| [!DNL Braze] -gebeurtenis, extensie doorsturen | Met de [[!DNL Braze Track Events API] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=nl-NL) -extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in de Adobe Experience Platform Edge Network, gebruiken en verzenden naar [!DNL Braze] in de vorm van gebeurtenissen aan de serverzijde met behulp van de [!DNL Braze] User Track API&#39;s. |
+| [!DNL Epsilon] -gebeurtenis, extensie doorsturen | Met de extensie [[!DNL Epsilon Events API] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=nl-NL) kunt u gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in de Adobe Experience Platform Edge Network en deze naar [!DNL Epsilon] te verzenden met de [!DNL Epsilon] Event-API. |
+| [!DNL Mixpanel] -gebeurtenis, extensie doorsturen | Met de extensie [[!DNL Mixpanel Track Events API] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=nl-NL) kunnen klanten gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in de Adobe Experience Platform Edge Network en deze naar Mixpanel te verzenden met de API voor gebeurtenissen bijhouden. |
 
 {style="table-layout:auto"}
 
@@ -63,10 +63,10 @@ Met gegevensvoorbereiding kunnen gegevenstechnici gegevens toewijzen, transforme
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene beschikbaarheid van filters voor Adobe Analytics-gegevens | U kunt nu de functies van Data Prep gebruiken om regels en voorwaarden toe te passen om uw analysegegevens te filteren alvorens hen in het Profiel van de Klant in real time op te nemen. Voor meer informatie, lees de gids over [ het filtreren gegevens van Analytics voor het opnemen van het Profiel ](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
-| Nieuwe functies voor het coderen en decoderen van URL-tekenreeksen | <ul><li>De functie `get_url_encoded` neemt een URL als invoer en vervangt of codeert speciale karakters met karakters ASCII.</li><li>De functie `get_url_decoded` neemt een URL als invoer en decodeert ASCII-tekens tot speciale tekens.</li></ul> Voor meer informatie, lees de [ Prep functies van Gegevens gids ](../../data-prep/functions.md). Voor een uitvoerige lijst van gereserveerde karakters en hun overeenkomstige gecodeerde karakters, lees de gids op [ speciale karakters ](../../data-prep/functions.md#special-characters). |
+| Algemene beschikbaarheid van filters voor Adobe Analytics-gegevens | U kunt nu de functies van Data Prep gebruiken om regels en voorwaarden toe te passen om uw analysegegevens te filteren alvorens hen in het Profiel van de Klant in real time op te nemen. Voor meer informatie, lees de gids over [&#x200B; het filtreren gegevens van Analytics voor het opnemen van het Profiel &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
+| Nieuwe functies voor het coderen en decoderen van URL-tekenreeksen | <ul><li>De functie `get_url_encoded` neemt een URL als invoer en vervangt of codeert speciale karakters met karakters ASCII.</li><li>De functie `get_url_decoded` neemt een URL als invoer en decodeert ASCII-tekens tot speciale tekens.</li></ul> Voor meer informatie, lees de [&#x200B; Prep functies van Gegevens gids &#x200B;](../../data-prep/functions.md). Voor een uitvoerige lijst van gereserveerde karakters en hun overeenkomstige gecodeerde karakters, lees de gids op [&#x200B; speciale karakters &#x200B;](../../data-prep/functions.md#special-characters). |
 
-Voor meer informatie over Prep van Gegevens, gelieve het [ overzicht van de Prep van Gegevens ](../../data-prep/home.md) te lezen.
+Voor meer informatie over Prep van Gegevens, gelieve het [&#x200B; overzicht van de Prep van Gegevens &#x200B;](../../data-prep/home.md) te lezen.
 
 ## Bestemmingen {#destinations}
 
@@ -76,13 +76,13 @@ Voor meer informatie over Prep van Gegevens, gelieve het [ overzicht van de Prep
 
 | Bestemming | Beschrijving |
 | ----------- | ----------- |
-| [[!DNL Adobe Commerce]  verbinding GA ](../../destinations/catalog/personalization/adobe-commerce.md) | Met de [!DNL Adobe Commerce] doelconnector (nu algemeen beschikbaar) kunt u een of meer Real-Time CDP-soorten publiek selecteren om te activeren naar uw [!DNL Adobe Commerce] -account voor een dynamische, gepersonaliseerde ervaring voor uw klanten. |
-| [[!DNL Snap Inc]  verbinding GA ](../../destinations/catalog/advertising/snap-inc.md) | Met de [!DNL Snap Inc] doelconnector (nu algemeen beschikbaar) kunnen marketers gebruikerssegmenten die in Experience Platform zijn gemaakt, importeren in [!DNL Snapchat Ads] en deze gebruiken om hun advertenties te activeren. |
-| [ (API) Oracle Eloqua-verbinding ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Gebruik de op API gebaseerde verbinding met [!DNL Oracle Eloqua] om campagnes te plannen en uit te voeren terwijl een persoonlijke klantervaring wordt geboden voor hun vooruitzichten in [!DNL Oracle Eloqua] . |
-| [ (Beta)  [!DNL Amazon Ads]  verbinding ](../../destinations/catalog/advertising/amazon-ads.md) | De [!DNL Amazon Ads] -integratie met Adobe Experience Platform biedt kant-en-klare integratie voor [!DNL Amazon Ads] -producten, inclusief de [!DNL Amazon DSP (ADSP)] -producten. Met behulp van de [!DNL Amazon Ads] -bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor activering en doelversie op de [!DNL Amazon DSP] . |
+| [[!DNL Adobe Commerce]  verbinding GA &#x200B;](../../destinations/catalog/personalization/adobe-commerce.md) | Met de [!DNL Adobe Commerce] doelconnector (nu algemeen beschikbaar) kunt u een of meer Real-Time CDP-soorten publiek selecteren om te activeren naar uw [!DNL Adobe Commerce] -account voor een dynamische, gepersonaliseerde ervaring voor uw klanten. |
+| [[!DNL Snap Inc]  verbinding GA &#x200B;](../../destinations/catalog/advertising/snap-inc.md) | Met de [!DNL Snap Inc] doelconnector (nu algemeen beschikbaar) kunnen marketers gebruikerssegmenten die in Experience Platform zijn gemaakt, importeren in [!DNL Snapchat Ads] en deze gebruiken om hun advertenties te activeren. |
+| [&#x200B; (API) Oracle Eloqua-verbinding &#x200B;](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Gebruik de op API gebaseerde verbinding met [!DNL Oracle Eloqua] om campagnes te plannen en uit te voeren terwijl een persoonlijke klantervaring wordt geboden voor hun vooruitzichten in [!DNL Oracle Eloqua] . |
+| [&#x200B; (Beta)  [!DNL Amazon Ads]  verbinding &#x200B;](../../destinations/catalog/advertising/amazon-ads.md) | De [!DNL Amazon Ads] -integratie met Adobe Experience Platform biedt kant-en-klare integratie voor [!DNL Amazon Ads] -producten, inclusief de [!DNL Amazon DSP (ADSP)] -producten. Met behulp van de [!DNL Amazon Ads] -bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor activering en doelversie op de [!DNL Amazon DSP] . |
 | [[!DNL Marketo Measure Ultimate] verbinding](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (voorheen Bizible) biedt marketers insight de mogelijkheid om marketingactiviteiten te ontplooien die de meest efficiënte manier zijn om inkomsten te genereren en het rendement van investeringen voor hun bedrijf te maximaliseren. De bestemming laat de zaken-aan-zaken (B2B) gegevensstromen van Adobe Experience Platform aan [!DNL Marketo Measure] toe. De kaart is alleen beschikbaar voor [!DNL Marketo Measure Ultimate] klanten. |
-| [ verbinding van TikTok ](../../destinations/catalog/social/tiktok.md) | Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. |
-| [ verbinding van Zendesk ](../../destinations/catalog/crm/zendesk.md) | Gebruik deze bestemming om identiteiten binnen een segment als contacten binnen [!DNL Zendesk] tot stand te brengen en bij te werken. |
+| [&#x200B; verbinding van TikTok &#x200B;](../../destinations/catalog/social/tiktok.md) | Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. |
+| [&#x200B; verbinding van Zendesk &#x200B;](../../destinations/catalog/crm/zendesk.md) | Gebruik deze bestemming om identiteiten binnen een segment als contacten binnen [!DNL Zendesk] tot stand te brengen en bij te werken. |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ Voor meer informatie over Prep van Gegevens, gelieve het [ overzicht van de Prep
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Nieuwe toegangsbeheermachtigingen voor doelen: [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | De nieuwe toestemming geeft gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren, zonder de [ toewijzingsstap ](../../destinations/ui/activate-batch-profile-destinations.md#mapping) te tonen. Gebruikers kunnen segmenten toevoegen en verwijderen in activeringsworkflows, maar kunnen toegewezen kenmerken of identiteiten niet toevoegen of verwijderen. |
+| Nieuwe toegangsbeheermachtigingen voor doelen: [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | De nieuwe toestemming geeft gebruikers de capaciteit om segmenten aan bestaande bestemmingen te activeren, zonder de [&#x200B; toewijzingsstap &#x200B;](../../destinations/ui/activate-batch-profile-destinations.md#mapping) te tonen. Gebruikers kunnen segmenten toevoegen en verwijderen in activeringsworkflows, maar kunnen toegewezen kenmerken of identiteiten niet toevoegen of verwijderen. |
 
 {style="table-layout:auto"}
 
@@ -111,7 +111,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Functie | Beschrijving |
 | --- | --- |
-| CSV naar schemaaanbeveling | U kunt nu uw lokale bestanden uploaden om via een computer opgeleide schema&#39;s te maken die het niet nodig maken om handmatig een schema te maken. Upload vanuit de werkruimte van [!UICONTROL Sources] een voorbeeld-CSV-bestand en Adobe-algoritmen voor machinetaken stellen een schema voor u voor op basis van de doelvelden. Zie de [ documentatie ](../../ingestion/tutorials/map-csv/recommendations.md) voor meer informatie.&quot; |
+| CSV naar schemaaanbeveling | U kunt nu uw lokale bestanden uploaden om via een computer opgeleide schema&#39;s te maken die het niet nodig maken om handmatig een schema te maken. Upload vanuit de werkruimte van [!UICONTROL Sources] een voorbeeld-CSV-bestand en Adobe-algoritmen voor machinetaken stellen een schema voor u voor op basis van de doelvelden. Zie de [&#x200B; documentatie &#x200B;](../../ingestion/tutorials/map-csv/recommendations.md) voor meer informatie.&quot; |
 
 {style="table-layout:auto"}
 
@@ -135,19 +135,19 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 | --- | --- | --- |
 | Veldgroep | [[!UICONTROL Content Component Details]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` is verwijderd uit [!UICONTROL Content Component Details] |
 | Veldgroep | [[!UICONTROL AJO Entity tags]](https://github.com/adobe/xdm/pull/1672/files) | AJO Entiteitscodes toegevoegd aan [!UICONTROL AJO Entity Fields] die overeenkomen met een reis of campagne |
-| Veldgroep | (Meerdere) | Verschillende velden toegevoegd voor [[!UICONTROL Journey Orchestration Step Event Common Fields] ](https://github.com/adobe/xdm/pull/1671/files) |
-| Veldgroep | (Meerdere) | [ toegevoegde verscheidene XDM gebeurtenistypen voor [!UICONTROL Media Reporting] ](https://github.com/adobe/xdm/pull/1670/files). |
+| Veldgroep | (Meerdere) | Verschillende velden toegevoegd voor [[!UICONTROL Journey Orchestration Step Event Common Fields] &#x200B;](https://github.com/adobe/xdm/pull/1671/files) |
+| Veldgroep | (Meerdere) | [&#x200B; toegevoegde verscheidene XDM gebeurtenistypen voor [!UICONTROL Media Reporting] &#x200B;](https://github.com/adobe/xdm/pull/1670/files). |
 | Veldgroep | [!UICONTROL Workfront Change Event] | De veldgroepen `Full Record` en `Accessor Employee Ids` zijn toegevoegd. |
 | Gegevenstype | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refund Amount] is toegevoegd om het bedrag aan te geven dat voor het item is terugbetaald, indien van toepassing. |
 | Gegevenstype | [[!UICONTROL Order &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] is toegevoegd aan de lijst met terugbetalingen voor deze bestelling. |
 | Gegevenstype | [[!UICONTROL Product List Item &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | Productcategorieën zijn toegevoegd aan de lijst met categoriegegevens van dit product. |
-| Gegevenstype | [!UICONTROL Session details information] | Toegevoegd het `pev3` koordgebied dat [ op het type van de media stroom wijst die voor het melden van ](https://github.com/adobe/xdm/pull/1676/files) wordt gebruikt. De eigenschap `pccr` wordt ook toegevoegd om aan te geven of een omleiding heeft plaatsgevonden. |
-| Gegevenstype | [!UICONTROL Requisition List] | Verstrekt de [ eigenschappen van de verzoeklijst ](https://github.com/adobe/xdm/pull/1675/files). Deze bevatten naam, id en beschrijving. |
-| Gegevenstype | [!UICONTROL Commerce] | Het [ gegevenstype van Commerce werd bijgewerkt ](https://github.com/adobe/xdm/pull/1675/files) om `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, en `requisitionList` te omvatten. |
+| Gegevenstype | [!UICONTROL Session details information] | Toegevoegd het `pev3` koordgebied dat [&#x200B; op het type van de media stroom wijst die voor het melden van &#x200B;](https://github.com/adobe/xdm/pull/1676/files) wordt gebruikt. De eigenschap `pccr` wordt ook toegevoegd om aan te geven of een omleiding heeft plaatsgevonden. |
+| Gegevenstype | [!UICONTROL Requisition List] | Verstrekt de [&#x200B; eigenschappen van de verzoeklijst &#x200B;](https://github.com/adobe/xdm/pull/1675/files). Deze bevatten naam, id en beschrijving. |
+| Gegevenstype | [!UICONTROL Commerce] | Het [&#x200B; gegevenstype van Commerce werd bijgewerkt &#x200B;](https://github.com/adobe/xdm/pull/1675/files) om `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, en `requisitionList` te omvatten. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Experience Platform, lees het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Voor meer informatie over XDM in Experience Platform, lees het [&#x200B; XDM overzicht van het Systeem &#x200B;](../../xdm/home.md).
 
 ## Query-service {#query-service}
 
@@ -175,7 +175,7 @@ Real-Time CDP B2B edition is gebaseerd op Real-Time Customer Data Platform (Real
 
 {style="table-layout:auto"}
 
-Meer over Real-Time CDP B2B edition leren, lees het [ overzicht van B2B edition van Real-Time CDP ](../../rtcdp/overview.md).
+Meer over Real-Time CDP B2B edition leren, lees het [&#x200B; overzicht van B2B edition van Real-Time CDP &#x200B;](../../rtcdp/overview.md).
 
 ## Segmentatieservice {#segmentation}
 
@@ -185,7 +185,7 @@ Meer over Real-Time CDP B2B edition leren, lees het [ overzicht van B2B edition 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Profielafmetingen | Om u een nauwkeurigere vertegenwoordiging van profielmetriek te geven, worden de lidmaatschapsuitsplitsing en de cijfers van de kroon gecombineerd en nu berekend over een periode van 24 uur. Meer informatie is beschikbaar in de [ gids van de Segmentatie UI ](../../segmentation/ui/overview.md#browse) |
+| Profielafmetingen | Om u een nauwkeurigere vertegenwoordiging van profielmetriek te geven, worden de lidmaatschapsuitsplitsing en de cijfers van de kroon gecombineerd en nu berekend over een periode van 24 uur. Meer informatie is beschikbaar in de [&#x200B; gids van de Segmentatie UI &#x200B;](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
@@ -201,10 +201,10 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Beta-beschikbaarheid van [!DNL Chatlio] | De bron [!DNL Chatlio] is nu beschikbaar in bèta. Gebruik de [!DNL Chatlio] -bron om uw [!DNL Chatlio] -gebeurtenisgegevens te streamen naar Experience Platform. Voor meer informatie, lees het [[!DNL Chatlio]  overzicht ](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
-| Beta-beschikbaarheid van [!DNL Customer.io] | De bron [!DNL Customer.io] is nu beschikbaar in bèta. Gebruik de [!DNL Customer.io] -bron om de gegevens van klantgebeurtenissen te streamen naar Experience Platform. Voor meer informatie, lees het [[!DNL Customer.io]  overzicht ](../../sources/connectors/marketing-automation/customerio-webhook.md). |
-| Beta-beschikbaarheid van [!DNL Pendo] | De bron [!DNL Pendo] is nu beschikbaar in bèta. Gebruik de bron [!DNL Pendo] om de analysegegevens van uw product naar Experience Platform te streamen. Voor meer informatie, lees het [[!DNL Pendo]  overzicht ](../../sources/connectors/analytics/pendo-webhook.md). |
-| Ondersteuning voor conceptgegevensstromen | U kunt nu de Flow Service API gebruiken om uw gegevensstromen in te stellen op een conceptstatus. Tekenstromen kunnen later worden bijgewerkt en gepubliceerd met nieuwe informatie. Voor meer informatie, lees de gids bij [ plaatsend uw brongegevens als concepten ](../../sources/tutorials/api/draft.md). |
+| Beta-beschikbaarheid van [!DNL Chatlio] | De bron [!DNL Chatlio] is nu beschikbaar in bèta. Gebruik de [!DNL Chatlio] -bron om uw [!DNL Chatlio] -gebeurtenisgegevens te streamen naar Experience Platform. Voor meer informatie, lees het [[!DNL Chatlio]  overzicht &#x200B;](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
+| Beta-beschikbaarheid van [!DNL Customer.io] | De bron [!DNL Customer.io] is nu beschikbaar in bèta. Gebruik de [!DNL Customer.io] -bron om de gegevens van klantgebeurtenissen te streamen naar Experience Platform. Voor meer informatie, lees het [[!DNL Customer.io]  overzicht &#x200B;](../../sources/connectors/marketing-automation/customerio-webhook.md). |
+| Beta-beschikbaarheid van [!DNL Pendo] | De bron [!DNL Pendo] is nu beschikbaar in bèta. Gebruik de bron [!DNL Pendo] om de analysegegevens van uw product naar Experience Platform te streamen. Voor meer informatie, lees het [[!DNL Pendo]  overzicht &#x200B;](../../sources/connectors/analytics/pendo-webhook.md). |
+| Ondersteuning voor conceptgegevensstromen | U kunt nu de Flow Service API gebruiken om uw gegevensstromen in te stellen op een conceptstatus. Tekenstromen kunnen later worden bijgewerkt en gepubliceerd met nieuwe informatie. Voor meer informatie, lees de gids bij [&#x200B; plaatsend uw brongegevens als concepten &#x200B;](../../sources/tutorials/api/draft.md). |
 
 {style="table-layout:auto"}
 

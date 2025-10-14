@@ -18,7 +18,7 @@ Dit document bevat aanvullende informatie over het werken met de [!DNL Sandbox] 
 
 ## Query-parameters gebruiken {#query}
 
-[[!DNL Sandbox]  API ](https://www.adobe.io/experience-platform-apis/references/sandbox) steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het van een lijst maken van zandbakken.
+[[!DNL Sandbox]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/sandbox) steunt het gebruik van vraagparameters aan pagina en filterresultaten wanneer het van een lijst maken van zandbakken.
 
 >[!NOTE]
 >

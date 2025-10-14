@@ -13,15 +13,15 @@ ht-degree: 2%
 
 # Doelverbindingen bewerken met de Flow Service API
 
-Deze zelfstudie behandelt de stappen voor het bewerken van verschillende componenten van een doelverbinding. Leer hoe te om authentificatiegeloofsbrieven, de uitvoerplaats, en meer bij te werken door [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) te gebruiken.
+Deze zelfstudie behandelt de stappen voor het bewerken van verschillende componenten van een doelverbinding. Leer hoe te om authentificatiegeloofsbrieven, de uitvoerplaats, en meer bij te werken door [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) te gebruiken.
 
 >[!NOTE]
 >
-> De bewerkingen die in deze zelfstudie worden beschreven, worden ook ondersteund in de gebruikersinterface van Experience Platform. Lees het leerprogramma op hoe te [ bestemmingen in UI ](/help/destinations/ui/edit-destination.md) voor meer informatie uitgeven.
+> De bewerkingen die in deze zelfstudie worden beschreven, worden ook ondersteund in de gebruikersinterface van Experience Platform. Lees het leerprogramma op hoe te [&#x200B; bestemmingen in UI &#x200B;](/help/destinations/ui/edit-destination.md) voor meer informatie uitgeven.
 
 ## Aan de slag {#get-started}
 
-Voor deze zelfstudie moet u een geldige gegevensstroom-id hebben. Als u geen geldige dataflow identiteitskaart hebt, selecteer uw bestemming van keus van de [ bestemmingscatalogus ](../catalog/overview.md) en volg de stappen die aan [ worden geschetst verbinden met de bestemming ](../ui/connect-destination.md) en [ activeren gegevens ](../ui/activation-overview.md) alvorens dit leerprogramma te proberen.
+Voor deze zelfstudie moet u een geldige gegevensstroom-id hebben. Als u geen geldige dataflow identiteitskaart hebt, selecteer uw bestemming van keus van de [&#x200B; bestemmingscatalogus &#x200B;](../catalog/overview.md) en volg de stappen die aan [&#x200B; worden geschetst verbinden met de bestemming &#x200B;](../ui/connect-destination.md) en [&#x200B; activeren gegevens &#x200B;](../ui/activation-overview.md) alvorens dit leerprogramma te proberen.
 
 >[!NOTE]
 >
@@ -29,18 +29,18 @@ Voor deze zelfstudie moet u een geldige gegevensstroom-id hebben. Als u geen gel
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Doelen ](../home.md): [!DNL Destinations] zijn pre-gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
-* [ Sandboxes ](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Doelen &#x200B;](../home.md): [!DNL Destinations] zijn pre-gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
+* [&#x200B; Sandboxes &#x200B;](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om uw gegevensstroom met de [!DNL Flow Service] API te kunnen bijwerken.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Om vraag aan Experience Platform APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan Experience Platform APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -66,7 +66,7 @@ De eerste stap bij het bewerken van uw doelverbinding is het ophalen van gegeven
 >
 >U kunt de gebruikersinterface van Experience Platform gebruiken om de gewenste gegevensstroom-id van een doel op te halen. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** en selecteer de gewenste doelgegevensstroom en zoek de doel-id in de rechtertrack. De doel-id is de waarde die u in de volgende stap als stroom-id wilt gebruiken.
 >
-> ![ krijgt bestemmingsidentiteitskaart gebruikend Experience Platform UI ](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+> ![&#x200B; krijgt bestemmingsidentiteitskaart gebruikend Experience Platform UI &#x200B;](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
 >[!BEGINSHADEBOX]
 
@@ -248,7 +248,7 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkte Etag
 
 **Verzoek**
 
-Het volgende verzoek werkt de parameters van a [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) of [[!DNL Google Ad Manager 360]  bestemmings ](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) verbinding bij om het nieuwe [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations) gebied toe te voegen.
+Het volgende verzoek werkt de parameters van a [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) of [[!DNL Google Ad Manager 360]  bestemmings &#x200B;](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) verbinding bij om het nieuwe [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations) gebied toe te voegen.
 
 ```shell
 curl -X PATCH \
@@ -288,7 +288,7 @@ Een geslaagde reactie retourneert uw doel-verbindings-id en een bijgewerkt label
 
 **Verzoek**
 
-Het volgende verzoek werkt de `advertiserId` parameter van a [[!DNL Pinterest]  bestemmingsverbinding ](/help/destinations/catalog/advertising/pinterest.md#parameters) bij.
+Het volgende verzoek werkt de `advertiserId` parameter van a [[!DNL Pinterest]  bestemmingsverbinding &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters) bij.
 
 ```shell
 curl -X PATCH \
@@ -336,7 +336,7 @@ Bewerk de basisverbinding wanneer u de referenties van een doel wilt bijwerken. 
 
 Als u componenten van een basisverbinding wilt bijwerken, voert u een `PATCH` -aanvraag uit naar het `/connections` -eindpunt terwijl u de id, versie en de nieuwe waarden voor de basisverbinding opgeeft die u wilt gebruiken.
 
-Herinner me, u uw identiteitskaart van de basisverbinding in a [ vorige stap ](#look-up-dataflow-details) kreeg, toen u een bestaande dataflow aan uw gewenste bestemming voor de parameter `baseConnection` inspecteerde.
+Herinner me, u uw identiteitskaart van de basisverbinding in a [&#x200B; vorige stap &#x200B;](#look-up-dataflow-details) kreeg, toen u een bestaande dataflow aan uw gewenste bestemming voor de parameter `baseConnection` inspecteerde.
 
 >[!IMPORTANT]
 >
@@ -407,7 +407,7 @@ Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt labe
 
 **Verzoek**
 
-Het volgende verzoek werkt de parameters van een [[!DNL Azure Blob]  bestemmings ](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) verbinding bij om het verbindingskoord bij te werken dat wordt vereist om met een Azure instantie van Blob te verbinden.
+Het volgende verzoek werkt de parameters van een [[!DNL Azure Blob]  bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) verbinding bij om het verbindingskoord bij te werken dat wordt vereist om met een Azure instantie van Blob te verbinden.
 
 ```shell
 curl -X PATCH \
@@ -451,8 +451,8 @@ Een geslaagde reactie retourneert uw basis-verbindings-id en een bijgewerkt labe
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Experience Platform API-foutbericht. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform voor meer informatie bij het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Experience Platform API-foutbericht. Verwijs naar [&#x200B; API statuscodes &#x200B;](/help/landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform voor meer informatie bij het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u geleerd hoe u verschillende componenten van een doelverbinding kunt bijwerken met de [!DNL Flow Service] API. Voor meer informatie over bestemmingen, zie het [ overzicht van bestemmingen ](../home.md).
+Aan de hand van deze zelfstudie hebt u geleerd hoe u verschillende componenten van een doelverbinding kunt bijwerken met de [!DNL Flow Service] API. Voor meer informatie over bestemmingen, zie het [&#x200B; overzicht van bestemmingen &#x200B;](../home.md).

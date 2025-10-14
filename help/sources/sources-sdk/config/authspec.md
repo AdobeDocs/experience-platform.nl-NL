@@ -340,4 +340,4 @@ Hieronder ziet u een voorbeeld van een voltooide verificatiespecificatie met een
 
 ## Volgende stappen
 
-Met uw bevolkte authentificatiespecificaties, kunt u te werk gaan om de bronspecificaties voor de bron te vormen die u aan Experience Platform wilt integreren. Zie het document op [ vormend bronspecificaties ](./sourcespec.md) voor meer informatie.
+Met uw bevolkte authentificatiespecificaties, kunt u te werk gaan om de bronspecificaties voor de bron te vormen die u aan Experience Platform wilt integreren. Zie het document op [&#x200B; vormend bronspecificaties &#x200B;](./sourcespec.md) voor meer informatie.

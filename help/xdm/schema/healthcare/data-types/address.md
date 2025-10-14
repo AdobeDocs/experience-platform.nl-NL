@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!UICONTROL Address] is een standaard XDM-gegevenstype (Experience Data Model) dat een adres beschrijft dat wordt uitgedrukt met postconventies (in tegenstelling tot GPS of andere notaties voor locatiedefinitie). Dit gegevenstype wordt gecreeerd volgens de specificaties van Versie 5 van HL7 FHIR.
 
-![ het gegevenstype van het Adres structuur ](../../../images/healthcare/data-types/address.png)
+![&#x200B; het gegevenstype van het Adres structuur &#x200B;](../../../images/healthcare/data-types/address.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -33,5 +33,5 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/address.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/address.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/address.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/datatypes/address.schema.json)

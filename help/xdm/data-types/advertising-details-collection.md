@@ -14,7 +14,7 @@ ht-degree: 0%
 [!UICONTROL Advertising Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model) waarmee de belangrijkste kenmerken van advertenties worden vastgelegd. Het bevat informatie zoals de advertentie-id, adverteerder en campagne-id&#39;s, lengte, positie binnen een reeks, details over de speler die de advertentie rendert, enzovoort. U kunt dit gegevenstype gebruiken om verschillende aspecten van de prestaties en betrokkenheid van advertenties te volgen en te analyseren, en inzichten te verschaffen in de interactie van het publiek met en de reactie op verschillende advertenties. Deze gegevens worden gebruikt om uw streaminggegevens bij te houden.
 
 +++Select om een diagram van het gegevenstype van de Verzameling van Details van Advertising te tonen.
-![ A diagram van het gegevenstype van de Inzameling van de Details van Advertising.](../images/data-types/advertising-details-collection.png)
+![&#x200B; A diagram van het gegevenstype van de Inzameling van de Details van Advertising.](../images/data-types/advertising-details-collection.png)
 +++
 
 >[!NOTE]

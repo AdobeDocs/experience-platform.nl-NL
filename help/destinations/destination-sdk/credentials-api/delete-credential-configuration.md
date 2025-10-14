@@ -23,11 +23,11 @@ Deze pagina illustreert de API-aanvraag en -lading die u kunt gebruiken om een r
 >
 >In de meeste gevallen, te hoeven u ***niet*** om het `/credentials` API eindpunt te gebruiken. In plaats daarvan kunt u de verificatiegegevens voor uw doel configureren via de `customerAuthenticationConfigurations` -parameters van het `/destinations` -eindpunt.
 > 
->Lees [ de authentificatieconfiguratie van de Klant ](../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde informatie over de gesteunde authentificatietypen.
+>Lees [&#x200B; de authentificatieconfiguratie van de Klant &#x200B;](../functionality/destination-configuration/customer-authentication.md) voor gedetailleerde informatie over de gesteunde authentificatietypen.
 
 Gebruik dit API-eindpunt om alleen een referentie-configuratie te maken als er een algemeen verificatiesysteem is tussen Adobe en uw doelplatform. De [!DNL Experience Platform] -klant hoeft geen verificatiegegevens op te geven om verbinding te maken met uw bestemming. In dit geval moet u een referentieconfiguratie maken met het API-eindpunt van `/credentials` .
 
-Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [ 2&rbrace; configuratie van de bestemmingslevering plaatsen, wanneer ](../functionality/destination-configuration/destination-delivery.md) creërend een nieuwe bestemmingsconfiguratie [. ](../authoring-api/destination-configuration/create-destination-configuration.md) Dan, moet u de configuratie van de a [ geloofsbrieven ](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van de referentie objecten in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
+Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [&#x200B; 2&rbrace; configuratie van de bestemmingslevering plaatsen, wanneer &#x200B;](../functionality/destination-configuration/destination-delivery.md) creërend een nieuwe bestemmingsconfiguratie [. &#x200B;](../authoring-api/destination-configuration/create-destination-configuration.md) Dan, moet u de configuratie van de a [&#x200B; geloofsbrieven &#x200B;](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van de referentie objecten in de `authenticationId` parameter in de [&#x200B; configuratie van de bestemmingslevering &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
 
 >[!IMPORTANT]
 >
@@ -35,13 +35,13 @@ Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authentic
 
 ## Aan de slag met API-bewerkingen voor gebruikersgegevens {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een referentieconfiguratie verwijderen {#delete}
 
-U kunt een [ bestaande ](create-credential-configuration.md) credentiële configuratie schrappen door a `DELETE` verzoek aan het `/authoring/credentials` eindpunt met `{INSTANCE_ID}` van de referentie configuratie te maken die u wilt schrappen.
+U kunt een [&#x200B; bestaande &#x200B;](create-credential-configuration.md) credentiële configuratie schrappen door a `DELETE` verzoek aan het `/authoring/credentials` eindpunt met `{INSTANCE_ID}` van de referentie configuratie te maken die u wilt schrappen.
 
-Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een credentiële configuratie ](retrieve-credential-configuration.md).
+Om een bestaande bestemmingsconfiguratie en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [&#x200B; het terugwinnen van een credentiële configuratie &#x200B;](retrieve-credential-configuration.md).
 
 **API formaat**
 
@@ -75,8 +75,8 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respon
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een referentieconfiguratie kunt verwijderen met behulp van het API-eindpunt van `/authoring/credentials` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u een referentieconfiguratie kunt verwijderen met behulp van het API-eindpunt van `/authoring/credentials` . Lees [&#x200B; hoe te om Destination SDK te gebruiken om uw bestemming &#x200B;](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

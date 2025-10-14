@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Advertising Pod Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model). Hiermee definieert u een reeks of groep advertenties die normaal gesproken achtereenvolgens worden afgespeeld tijdens inhoudeinden. Gebruik het gegevenstype [!UICONTROL Advertising Pod Details] Verzameling om details vast te leggen, zoals de id van het advertentie-einde, een vriendelijke naam voor het advertentieeinde, de index van advertenties binnen het einde en de verschuiving van het advertentierak binnen de tijdlijn van de inhoud in seconden.
 
-![ een diagram van het de gegevenstype van de Inzameling van de Informatie van de Peul van Advertising.](../images/data-types/advertising-pod-details-collection.png)
+![&#x200B; een diagram van het de gegevenstype van de Inzameling van de Informatie van de Peul van Advertising.](../images/data-types/advertising-pod-details-collection.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Vereist | Beschrijving |
 |-----------------------------------------|-----------------|-----------|----------|---------------------------------------------------------|

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!UICONTROL Quote Request Details] schemaveldgroep
 
-[!UICONTROL Quote Request Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). De veldgroep biedt één `quotes` -object aan een schema dat de procesdetails van de aanvraag vastlegt voor verschillende typen aanhalingstekens, zoals verzekeringspolissen, gezondheidszorg, productieorders en hightech-bestellingen.
+[!UICONTROL Quote Request Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse &#x200B;](../../classes/experienceevent.md). De veldgroep biedt één `quotes` -object aan een schema dat de procesdetails van de aanvraag vastlegt voor verschillende typen aanhalingstekens, zoals verzekeringspolissen, gezondheidszorg, productieorders en hightech-bestellingen.
 
 ![](../../images/field-groups/quote-request-details.png)
 
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).
+Voor meer details op de gebiedsgroep, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).

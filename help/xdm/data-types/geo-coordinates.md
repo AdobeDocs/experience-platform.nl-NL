@@ -13,14 +13,14 @@ ht-degree: 0%
 
 # [!UICONTROL Geo Coordinates] gegevenstype
 
-[!UICONTROL Geo Coordinates] is een standaard XDM gegevenstype dat de geografische coördinaten van een plaats beschrijft. Dit gegevenstype is gebaseerd op de openbare die specificatie op [ wordt gedocumenteerd schema.org ](https://schema.org/GeoCoordinates).
+[!UICONTROL Geo Coordinates] is een standaard XDM gegevenstype dat de geografische coördinaten van een plaats beschrijft. Dit gegevenstype is gebaseerd op de openbare die specificatie op [&#x200B; wordt gedocumenteerd schema.org &#x200B;](https://schema.org/GeoCoordinates).
 
 ![](../images/data-types/geo-coordinates.png){width=400}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
 | `_schema.description` | String | Een beschrijving van wat de coördinaten identificeren. |
-| `_schema.elevation` | Dubbel | De specifieke hoogte van de gedefinieerde coördinaat. De waarde moet met het [ WGS84 ](https://gisgeography.com/wgs84-world-geodetic-system/) gegeven in overeenstemming zijn en in meters gemeten. |
+| `_schema.elevation` | Dubbel | De specifieke hoogte van de gedefinieerde coördinaat. De waarde moet met het [&#x200B; WGS84 &#x200B;](https://gisgeography.com/wgs84-world-geodetic-system/) gegeven in overeenstemming zijn en in meters gemeten. |
 | `_schema.latitude` | Dubbel | De ondertekende verticale coördinaat van het geografische punt. |
 | `_schema.longitude` | Dubbel | De ondertekende horizontale coördinaat van het geografische punt. |
 | `_id` | String | Een unieke, door het systeem gegenereerde id voor de coördinaten. |

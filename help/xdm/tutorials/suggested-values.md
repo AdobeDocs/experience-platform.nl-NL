@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Voor om het even welk koordgebied in het Model van de Gegevens van de Ervaring (XDM), kunt u een **opsomming** bepalen die de waarden beperkt die het gebied aan een vooraf bepaalde reeks kan opnemen. Als u probeert gegevens in te voeren in een opsommingsveld en de waarde niet overeenkomt met een van de gedefinieerde waarden in de configuratie, wordt invoer geweigerd.
 
-In tegenstelling tot opsommingen, beperkt het toevoegen van **gesuggereerde waarden** aan een koordgebied niet de waarden die het kan opnemen. In plaats daarvan, beïnvloeden de voorgestelde waarden welke vooraf bepaalde waarden in [ Segmentatie UI ](../../segmentation/ui/overview.md) beschikbaar zijn wanneer het omvatten van het koordgebied als attribuut.
+In tegenstelling tot opsommingen, beperkt het toevoegen van **gesuggereerde waarden** aan een koordgebied niet de waarden die het kan opnemen. In plaats daarvan, beïnvloeden de voorgestelde waarden welke vooraf bepaalde waarden in [&#x200B; Segmentatie UI &#x200B;](../../segmentation/ui/overview.md) beschikbaar zijn wanneer het omvatten van het koordgebied als attribuut.
 
 >[!NOTE]
 >
 >Er is een ongeveer vijf-minieme vertraging voor de bijgewerkte voorgestelde waarden van een gebied om in de Segmentatie UI worden weerspiegeld.
 
-Deze gids behandelt hoe te om voorgestelde waarden te beheren gebruikend de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Voor stappen op hoe te om dit in het gebruikersinterface van Adobe Experience Platform te doen, zie de [ gids UI op aantallen en voorgestelde waarden ](../ui/fields/enum.md).
+Deze gids behandelt hoe te om voorgestelde waarden te beheren gebruikend de [&#x200B; Registratie API van het Schema &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Voor stappen op hoe te om dit in het gebruikersinterface van Adobe Experience Platform te doen, zie de [&#x200B; gids UI op aantallen en voorgestelde waarden &#x200B;](../ui/fields/enum.md).
 
 ## Vereisten
 
@@ -28,7 +28,7 @@ Deze gids veronderstelt u met de elementen van schemacompositie in XDM vertrouwd
 * [Basisbeginselen van de schemacompositie](../schema/composition.md)
 * [Handleiding Schema Registry API](../api/overview.md)
 
-Het wordt ook sterk geadviseerd dat u de [ evolutieregels voor aantallen en gesuggereerde waarden ](../ui/fields/enum.md#evolution) herziet als u bestaande gebieden bijwerkt. Als u voorgestelde waarden voor schema&#39;s beheert die aan een unie deelnemen, zie de [ regels voor het samenvoegen van lijsten en voorgestelde waarden ](../ui/fields/enum.md#merging).
+Het wordt ook sterk geadviseerd dat u de [&#x200B; evolutieregels voor aantallen en gesuggereerde waarden &#x200B;](../ui/fields/enum.md#evolution) herziet als u bestaande gebieden bijwerkt. Als u voorgestelde waarden voor schema&#39;s beheert die aan een unie deelnemen, zie de [&#x200B; regels voor het samenvoegen van lijsten en voorgestelde waarden &#x200B;](../ui/fields/enum.md#merging).
 
 ## Samenstelling
 
@@ -75,13 +75,13 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 
 ## Voorgestelde waarden toevoegen aan een standaardveld {#add-suggested-standard}
 
-Om `meta:enum` van een standaardkoordgebied uit te breiden, kunt u a [ vriendschappelijke naambeschrijver ](../api/descriptors.md#friendly-name) voor het gebied in kwestie in een bepaald schema tot stand brengen.
+Om `meta:enum` van een standaardkoordgebied uit te breiden, kunt u a [&#x200B; vriendschappelijke naambeschrijver &#x200B;](../api/descriptors.md#friendly-name) voor het gebied in kwestie in een bepaald schema tot stand brengen.
 
 >[!NOTE]
 >
 >Voorgestelde waarden voor tekenreeksvelden kunnen alleen op schemaniveau worden toegevoegd. Met andere woorden, het uitbreiden van `meta:enum` van een standaardveld in één schema heeft geen invloed op andere schema&#39;s die hetzelfde standaardveld gebruiken.
 
-Het volgende verzoek voegt gesuggereerde waarden aan het standaard `eventType` gebied (door de [ klasse XDM ExperienceEvent ](../classes/experienceevent.md) wordt verstrekt) voor het schema toe dat onder `sourceSchema` wordt geïdentificeerd:
+Het volgende verzoek voegt gesuggereerde waarden aan het standaard `eventType` gebied (door de [&#x200B; klasse XDM ExperienceEvent &#x200B;](../classes/experienceevent.md) wordt verstrekt) voor het schema toe dat onder `sourceSchema` wordt geïdentificeerd:
 
 ```curl
 curl -X POST \
@@ -220,9 +220,9 @@ Als u de `meta:enum` van een aangepast veld wilt beheren, kunt u de bovenliggend
 >
 >In tegenstelling tot standaardvelden heeft het bijwerken van de `meta:enum` van een aangepast veld invloed op alle andere schema&#39;s waarin dat veld wordt gebruikt. Als u geen veranderingen over schema&#39;s wilt verspreiden, denk in plaats daarvan na creërend een nieuwe douanemiddel:
 >
->* [ creeer een douaneklasse ](../api/classes.md#create)
->* [ creeer een groep van het douanegebied ](../api/field-groups.md#create)
->* [ creeer een type van douanegegevens ](../api/data-types.md#create)
+>* [&#x200B; creeer een douaneklasse &#x200B;](../api/classes.md#create)
+>* [&#x200B; creeer een groep van het douanegebied &#x200B;](../api/field-groups.md#create)
+>* [&#x200B; creeer een type van douanegegevens &#x200B;](../api/data-types.md#create)
 
 Met de volgende aanvraag wordt de `meta:enum` van een veld voor een &quot;loyaliteitsniveau&quot; bijgewerkt dat door een aangepast gegevenstype wordt verschaft:
 
@@ -274,4 +274,4 @@ Na het toepassen van de verandering, antwoordt de Registratie van het Schema met
 
 ## Volgende stappen
 
-Deze gids behandelde hoe te om voorgestelde waarden voor koordgebieden in de Registratie API van het Schema te beheren. Zie de gids op [ bepalend douanegebieden in API ](./custom-fields-api.md) voor meer informatie over hoe te om verschillende gebiedstypes tot stand te brengen.
+Deze gids behandelde hoe te om voorgestelde waarden voor koordgebieden in de Registratie API van het Schema te beheren. Zie de gids op [&#x200B; bepalend douanegebieden in API &#x200B;](./custom-fields-api.md) voor meer informatie over hoe te om verschillende gebiedstypes tot stand te brengen.

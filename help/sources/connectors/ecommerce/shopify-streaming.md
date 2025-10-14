@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL Shopify Streaming] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Shopify Streaming] is in bèta. Gelieve te lezen het [&#x200B; overzicht van bronnen &#x200B;](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Adobe Experience Platform biedt ondersteuning voor het opnemen van gegevens uit streaming toepassingen. Tot de ondersteuning voor streamingproviders behoren [!DNL Shopify] .
 
@@ -23,11 +23,11 @@ Adobe Experience Platform biedt ondersteuning voor het opnemen van gegevens uit 
 
 In de volgende sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd voordat de [!DNL Shopify Streaming] -bron wordt gebruikt.
 
-U moet een geldige [!DNL Shopify] partneraccount hebben om verbinding te kunnen maken met de [!DNL Shopify] API&#39;s. Als u nog geen partnerrekening hebt, gelieve te registreren gebruikend het [[!DNL Shopify]  partners dashboard ](https://www.shopify.com/partners).
+U moet een geldige [!DNL Shopify] partneraccount hebben om verbinding te kunnen maken met de [!DNL Shopify] API&#39;s. Als u nog geen partnerrekening hebt, gelieve te registreren gebruikend het [[!DNL Shopify]  partners dashboard &#x200B;](https://www.shopify.com/partners).
 
 ### Uw toepassing maken
 
-Met een geldig [!DNL Shopify] partneraccount kunt u nu doorgaan en uw app maken via het partnerdashboard. Voor uitvoerige stappen op hoe te om uw app in [!DNL Shopify] tot stand te brengen, lees de [[!DNL Shopify]  gids op begonnen worden ](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
+Met een geldig [!DNL Shopify] partneraccount kunt u nu doorgaan en uw app maken via het partnerdashboard. Voor uitvoerige stappen op hoe te om uw app in [!DNL Shopify] tot stand te brengen, lees de [[!DNL Shopify]  gids op begonnen worden &#x200B;](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
 
 Zodra uw app wordt gecreeerd, wint uw **cliëntidentiteitskaart** en **cliëntgeheim** van het **cliëntgeloofsbrieven** lusje van het [!DNL Shopify] partnerdashboard terug. De cliënt ID en het cliëntgeheim zullen in de volgende stappen worden gebruikt om uw vergunningscode en toegangstoken terug te winnen.
 
@@ -127,7 +127,7 @@ curl -X POST \
 | Parameter | Beschrijving |
 | --- | --- | 
 | `webhook.address` | Het eindpunt van http waar het stromen berichten worden verzonden. |
-| `webhook.topic` | Het onderwerp van uw webshabonnement. Voor meer informatie, leest de [[!DNL Shopify]  gids van de webshgebeurtenis onderwerpen ](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
+| `webhook.topic` | Het onderwerp van uw webshabonnement. Voor meer informatie, leest de [[!DNL Shopify]  gids van de webshgebeurtenis onderwerpen &#x200B;](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | De indeling van de gegevens. |
 
 **Reactie**

@@ -20,12 +20,12 @@ Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL Veeva CRM] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/crm.md).
+Als u reeds een geldige [!DNL Veeva CRM] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/crm.md).
 
 ### Vereiste referenties verzamelen
 
@@ -36,7 +36,7 @@ Als u reeds een geldige [!DNL Veeva CRM] rekening hebt, kunt u de rest van dit d
 | `password` | Het wachtwoord voor de [!DNL Veeva CRM] -gebruikersaccount. |
 | `securityToken` | Het beveiligingstoken voor de gebruikersaccount van [!DNL Veeva CRM] . |
 
-Voor meer informatie bij het worden begonnen, verwijs naar dit [[!DNL Veeva CRM]  document ](https://developer.veevacrm.com/doc/Content/rest-api.htm).
+Voor meer informatie bij het worden begonnen, verwijs naar dit [[!DNL Veeva CRM]  document &#x200B;](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ## Sluit uw [!DNL Veeva CRM] -account aan
 
@@ -48,7 +48,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie [!UICONTROL CRM] de optie **[!UICONTROL Veeva CRM]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ catalogus ](../../../../images/tutorials/create/veeva/catalog.png)
+![&#x200B; catalogus &#x200B;](../../../../images/tutorials/create/veeva/catalog.png)
 
 De pagina **[!UICONTROL Connect Veeva CRM account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -56,14 +56,14 @@ De pagina **[!UICONTROL Connect Veeva CRM account]** wordt weergegeven. Op deze 
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Veeva CRM] -account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![ bestaand ](../../../../images/tutorials/create/veeva/existing.png)
+![&#x200B; bestaand &#x200B;](../../../../images/tutorials/create/veeva/existing.png)
 
 ### Nieuwe account
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u vervolgens een naam, een optionele beschrijving en uw [!DNL Veeva CRM] -referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ nieuw ](../../../../images/tutorials/create/veeva/new.png)
+![&#x200B; nieuw &#x200B;](../../../../images/tutorials/create/veeva/new.png)
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Veeva CRM] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/crm.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Veeva CRM] -account. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](../../dataflow/crm.md) te brengen.

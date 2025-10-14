@@ -18,7 +18,7 @@ Schema&#39;s kunnen met Mapper worden gebruikt om ervoor te zorgen dat de gegeve
 
 >[!NOTE]
 >
->Schema&#39;s die met dit eindpunt worden gemaakt, worden uitsluitend gebruikt met Mapper- en toewijzingssets. Om schema&#39;s tot stand te brengen die door andere diensten van Experience Platform toegankelijk zijn, te lezen gelieve de [ de ontwikkelaarsgids van de Registratie van het Schema ](../../xdm/api/schemas.md).
+>Schema&#39;s die met dit eindpunt worden gemaakt, worden uitsluitend gebruikt met Mapper- en toewijzingssets. Om schema&#39;s tot stand te brengen die door andere diensten van Experience Platform toegankelijk zijn, te lezen gelieve de [&#x200B; de ontwikkelaarsgids van de Registratie van het Schema &#x200B;](../../xdm/api/schemas.md).
 
 ## Alle schema&#39;s ophalen
 
@@ -132,7 +132,7 @@ De volgende reactie keert status 200 van HTTP met een lijst van de gevraagde sch
 
 ## Een schema maken
 
-U kunt een schema tot stand brengen om tegen te bevestigen door een POST- verzoek aan het `/schemas` eindpunt te doen. Er zijn drie manieren om een schema tot stand te brengen: het verzenden van het Schema van a [ JSON ](https://json-schema.org/), gebruikend steekproefgegevens, of het van verwijzingen voorzien van een bestaand schema XDM.
+U kunt een schema tot stand brengen om tegen te bevestigen door een POST- verzoek aan het `/schemas` eindpunt te doen. Er zijn drie manieren om een schema tot stand te brengen: het verzenden van het Schema van a [&#x200B; JSON &#x200B;](https://json-schema.org/), gebruikend steekproefgegevens, of het van verwijzingen voorzien van een bestaand schema XDM.
 
 ```http
 POST /schemas
@@ -142,7 +142,7 @@ POST /schemas
 
 **Verzoek**
 
-Het volgende verzoek laat u een schema tot stand brengen door a [ Schema JSON ](https://json-schema.org/) te verzenden.
+Het volgende verzoek laat u een schema tot stand brengen door a [&#x200B; Schema JSON &#x200B;](https://json-schema.org/) te verzenden.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -269,7 +269,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `name` | De naam van het schema dat u wilt maken. |
 | `schemaRef.id` | De id van het schema waarnaar u verwijst. |
-| `schemaRef.contentType` | Bepaalt het reactieformaat van het referenced schema. Meer informatie dit gebied kan in de [ gids van de schemaontwikkelaar van de schemacontrole ](../../xdm/api/schemas.md#lookup) worden gevonden |
+| `schemaRef.contentType` | Bepaalt het reactieformaat van het referenced schema. Meer informatie dit gebied kan in de [&#x200B; gids van de schemaontwikkelaar van de schemacontrole &#x200B;](../../xdm/api/schemas.md#lookup) worden gevonden |
 
 **Reactie**
 

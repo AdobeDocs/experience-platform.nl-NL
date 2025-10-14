@@ -32,13 +32,13 @@ De Prep van gegevens past verscheidene intrinsieke gegevensbevestigingen ook toe
 
 Een afbeelding is een koppeling van een invoerkenmerk of berekend veld naar één XDM-kenmerk. Eén kenmerk kan aan meerdere XDM-kenmerken worden toegewezen door afzonderlijke toewijzingen te maken.
 
-Om meer over de verschillende kaartfuncties te leren, te lezen gelieve de [ gids van de kaartfuncties ](./functions.md).
+Om meer over de verschillende kaartfuncties te leren, te lezen gelieve de [&#x200B; gids van de kaartfuncties &#x200B;](./functions.md).
 
 ### Berekende velden
 
 Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in het invoerschema. Deze waarden kunnen vervolgens aan kenmerken in het doelschema worden toegewezen en een naam en beschrijving worden gegeven om de referentie eenvoudiger te maken. Berekende velden mogen maximaal 4096 tekens lang zijn.
 
-Om meer over berekende gebieden te leren, te lezen gelieve de [ berekende gebiedsgids ](./functions.md#calculated-fields).
+Om meer over berekende gebieden te leren, te lezen gelieve de [&#x200B; berekende gebiedsgids &#x200B;](./functions.md#calculated-fields).
 
 ### Speciale tekens voor Escape {#escape-special-characters}
 
@@ -48,15 +48,15 @@ Met `${...}` kunt u speciale tekens in een veld verwijderen. JSON-bestanden die 
 
 Een reeks afbeeldingen die een schema in een ander schema omzetten, wordt samen een toewijzingsset genoemd. Er wordt één toewijzingenset gemaakt als onderdeel van elke gegevensstroom. Een toewijzingenset is een integraal onderdeel van de gegevensstromen en wordt gemaakt, bewerkt en bewaakt als onderdeel van de gegevensstromen.
 
-Om meer over afbeeldingsreeksen, met inbegrip van te leren hoe te om de gebieden binnen een kaartreeks te gebruiken, te lezen gelieve de [ handleiding van de kaartplaatste ](./mapping-set.md). Leren hoe te om een mappingsreeks tot stand te brengen en andere API vraag te gebruiken met betrekking tot mappingsreeksen, gelieve de sectie van de mappingsreeks in de [ ontwikkelaarsgids ](./api/mapping-set.md) te lezen.
+Om meer over afbeeldingsreeksen, met inbegrip van te leren hoe te om de gebieden binnen een kaartreeks te gebruiken, te lezen gelieve de [&#x200B; handleiding van de kaartplaatste &#x200B;](./mapping-set.md). Leren hoe te om een mappingsreeks tot stand te brengen en andere API vraag te gebruiken met betrekking tot mappingsreeksen, gelieve de sectie van de mappingsreeks in de [&#x200B; ontwikkelaarsgids &#x200B;](./api/mapping-set.md) te lezen.
 
 ## Gegevensverwerking
 
-Data Prep kan op krachtige wijze verschillende gegevensindelingen verwerken die in Experience Platform worden ingevoerd. Om meer over te leren hoe de Prep van Gegevens verschillende gegevenstypes behandelt, te lezen gelieve het [ overzicht van de gegevensformaat behandeling ](./data-handling.md).
+Data Prep kan op krachtige wijze verschillende gegevensindelingen verwerken die in Experience Platform worden ingevoerd. Om meer over te leren hoe de Prep van Gegevens verschillende gegevenstypes behandelt, te lezen gelieve het [&#x200B; overzicht van de gegevensformaat behandeling &#x200B;](./data-handling.md).
 
 ## Updates van gedeeltelijke rijen verzenden met [!DNL Data Prep]
 
-Met streaming updates in [!DNL Data Prep] kunt u gedeeltelijke rijupdates naar [!DNL Profile Service] -gegevens verzenden en tegelijkertijd nieuwe identiteitskoppelingen maken en tot stand brengen met één API-aanvraag. Meer over leren hoe te om upserts in [!DNL Data Prep] te stromen, zie het document op [ verzendend gedeeltelijke rijupdates ](./upserts.md).
+Met streaming updates in [!DNL Data Prep] kunt u gedeeltelijke rijupdates naar [!DNL Profile Service] -gegevens verzenden en tegelijkertijd nieuwe identiteitskoppelingen maken en tot stand brengen met één API-aanvraag. Meer over leren hoe te om upserts in [!DNL Data Prep] te stromen, zie het document op [&#x200B; verzendend gedeeltelijke rijupdates &#x200B;](./upserts.md).
 
 ## Toegangsbeheer op basis van kenmerken in [!DNL Data Prep]
 
@@ -64,8 +64,8 @@ Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen be
 
 Op attribuut-gebaseerde toegangscontrole zorgt ervoor dat u slechts de attributen kunt in kaart brengen die u toegang tot hebt. Kenmerken waartoe u geen toegang hebt, kunnen niet worden gebruikt in doorvoertoewijzingen en berekende velden. Als u dus geen toegang hebt tot een vereist veld, kunt u geen toewijzing opslaan. Bovendien kunt u geen objecten of objectarrays toewijzen als u geen toegang hebt tot een van de onderliggende kenmerken. U kunt echter andere elementen binnen de object- of objectarray afzonderlijk toewijzen.
 
-Zie het [ op attributen-gebaseerde overzicht van de toegangscontrole ](../access-control/abac/overview.md) voor meer informatie.
+Zie het [&#x200B; op attributen-gebaseerde overzicht van de toegangscontrole &#x200B;](../access-control/abac/overview.md) voor meer informatie.
 
 ## Volgende stappen
 
-In dit document worden de basisbeginselen van Data Prep in Adobe Experience Platform besproken. Om meer over verschillende kaartfuncties te leren, te lezen gelieve de [ handleiding van toewijzingsfuncties ](./functions.md). Om meer over te leren hoe de Prep van Gegevens verschillende gegevenstypes behandelt, te lezen gelieve de [ gids van de het formaatbehandeling van gegevens ](./data-handling.md#dates). Leren hoe te om de Prep API van Gegevens te gebruiken, te lezen gelieve de [ ontwikkelaarsgids van de Prep van Gegevens ](api/overview.md).
+In dit document worden de basisbeginselen van Data Prep in Adobe Experience Platform besproken. Om meer over verschillende kaartfuncties te leren, te lezen gelieve de [&#x200B; handleiding van toewijzingsfuncties &#x200B;](./functions.md). Om meer over te leren hoe de Prep van Gegevens verschillende gegevenstypes behandelt, te lezen gelieve de [&#x200B; gids van de het formaatbehandeling van gegevens &#x200B;](./data-handling.md#dates). Leren hoe te om de Prep API van Gegevens te gebruiken, te lezen gelieve de [&#x200B; ontwikkelaarsgids van de Prep van Gegevens &#x200B;](api/overview.md).

@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!DNL Access Control] API-handleiding
 
-[!DNL Access control] voor [!DNL Experience Platform] wordt beheerd door [ Adobe Admin Console ](https://adminconsole.adobe.com). Deze functionaliteit maakt gebruik van productprofielen in Admin Console, die gebruikers koppelen aan machtigingen en sandboxen. Zie het [ overzicht van de toegangscontrole ](../home.md) voor meer informatie.
+[!DNL Access control] voor [!DNL Experience Platform] wordt beheerd door [&#x200B; Adobe Admin Console &#x200B;](https://adminconsole.adobe.com). Deze functionaliteit maakt gebruik van productprofielen in Admin Console, die gebruikers koppelen aan machtigingen en sandboxen. Zie het [&#x200B; overzicht van de toegangscontrole &#x200B;](../home.md) voor meer informatie.
 
-Deze ontwikkelaarsgids verstrekt informatie over hoe te om uw verzoeken aan [[!DNL Access Control API] te formatteren ](https://www.adobe.io/experience-platform-apis/references/access-control/), en behandelt de volgende verrichtingen:
+Deze ontwikkelaarsgids verstrekt informatie over hoe te om uw verzoeken aan [[!DNL Access Control API] te formatteren &#x200B;](https://www.adobe.io/experience-platform-apis/references/access-control/), en behandelt de volgende verrichtingen:
 
 - [De namen van de lijst van toestemmingen en middeltypes](./permissions-and-resource-types.md)
 - [Effectief toegangsbeleid voor de huidige gebruiker weergeven](./effective-policies.md)
@@ -27,11 +27,11 @@ De volgende secties bevatten aanvullende informatie die u moet weten om aanroepe
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -43,7 +43,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 

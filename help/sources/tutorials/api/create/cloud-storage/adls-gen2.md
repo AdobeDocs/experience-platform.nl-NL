@@ -16,14 +16,14 @@ ht-degree: 0%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Azure Data Lake Storage Gen2] tot stand te brengen (verder die als &quot;ADLS Gen2&quot;worden bedoeld) gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Azure Data Lake Storage Gen2] tot stand te brengen (verder die als &quot;ADLS Gen2&quot;worden bedoeld) gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om een ADLS Gen2-bronverbinding met de [!DNL Flow Service] API te kunnen maken.
 
@@ -39,11 +39,11 @@ De volgende secties bevatten aanvullende informatie die u moet weten om een ADLS
 | `tenant` | De huurdersinformatie die uw toepassing bevat. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor ADLS Gen2 is: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` . |
 
-Voor meer informatie over deze waarden, verwijs naar [ dit document van ADLS Gen2 ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
+Voor meer informatie over deze waarden, verwijs naar [&#x200B; dit document van ADLS Gen2 &#x200B;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -109,4 +109,4 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een ADLS Gen2-verbinding gemaakt met behulp van API&#39;s en is een unieke id opgehaald als onderdeel van de responsstructuur. U kunt deze verbindingsidentiteitskaart gebruiken om [ wolkenopslag te onderzoeken gebruikend de Dienst API van de Stroom ](../../explore/cloud-storage.md).
+Door deze zelfstudie te volgen, hebt u een ADLS Gen2-verbinding gemaakt met behulp van API&#39;s en is een unieke id opgehaald als onderdeel van de responsstructuur. U kunt deze verbindingsidentiteitskaart gebruiken om [&#x200B; wolkenopslag te onderzoeken gebruikend de Dienst API van de Stroom &#x200B;](../../explore/cloud-storage.md).

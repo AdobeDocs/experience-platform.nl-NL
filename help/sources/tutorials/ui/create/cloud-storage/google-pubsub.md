@@ -22,14 +22,14 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Google PubSub] (hiern
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-Als u reeds een geldige [!DNL PubSub] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/batch/cloud-storage.md).
+Als u reeds een geldige [!DNL PubSub] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/batch/cloud-storage.md).
 
 ### Vereiste referenties verzamelen
 
-U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden beschreven om uw [!DNL PubSub] -account aan te sluiten op Experience Platform. Voor meer informatie over authentificatie en eerste vereiste opstelling, lees het [[!DNL PubSub source]  overzicht ](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden beschreven om uw [!DNL PubSub] -account aan te sluiten op Experience Platform. Voor meer informatie over authentificatie en eerste vereiste opstelling, lees het [[!DNL PubSub source]  overzicht &#x200B;](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 
 >[!BEGINTABS]
@@ -51,7 +51,7 @@ U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden bes
 
 >[!ENDTABS]
 
-Voor meer informatie over deze waarden, zie het volgende [&#128279;](https://cloud.google.com/pubsub/docs/authentication) document PubSub authentificatie . Als u de dienst op rekening-gebaseerde authentificatie gebruikt, zie de volgende [ gids PubSub ](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
+Voor meer informatie over deze waarden, zie het volgende [&#128279;](https://cloud.google.com/pubsub/docs/authentication) document PubSub authentificatie . Als u de dienst op rekening-gebaseerde authentificatie gebruikt, zie de volgende [&#x200B; gids PubSub &#x200B;](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
 
 >[!TIP]
 >
@@ -67,7 +67,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie [!UICONTROL Cloud storage] de optie **[!UICONTROL Google PubSub]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ de broncatalogus op Experience Platform UI.](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![&#x200B; de broncatalogus op Experience Platform UI.](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 De pagina **[!UICONTROL Connect to Google PubSub]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -75,7 +75,7 @@ De pagina **[!UICONTROL Connect to Google PubSub]** wordt weergegeven. Op deze p
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL PubSub] -account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![ de bestaande rekeningsselectie in het bronwerkschema.](../../../../images/tutorials/create/google-pubsub/existing.png)
+![&#x200B; de bestaande rekeningsselectie in het bronwerkschema.](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### Nieuwe account
 
@@ -86,7 +86,7 @@ Als u een bestaande account wilt gebruiken, selecteert u de [!DNL PubSub] -accou
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam en een optionele beschrijving voor uw nieuwe [!DNL PubSub] -account.
 
-![ de nieuwe rekeningsinterface voor Google PubSub bron in het bronwerkschema ](../../../../images/tutorials/create/google-pubsub/new.png)
+![&#x200B; de nieuwe rekeningsinterface voor Google PubSub bron in het bronwerkschema &#x200B;](../../../../images/tutorials/create/google-pubsub/new.png)
 
 Met de bron [!DNL PubSub] kunt u het type toegang opgeven dat u wilt toestaan tijdens verificatie. U kunt opstelling uw rekening om of op project-gebaseerde authentificatie of onderwerp en op abonnement-gebaseerde authentificatie te hebben. De op project-gebaseerde authentificatie staat u toe om toegang tot het wortel-vlakke project in uw rekening te verlenen, terwijl het onderwerp en op abonnement-gebaseerde authentificatie u toestaat om toegang tot een bepaald [!DNL PubSub] onderwerp en een abonnement te beperken.
 
@@ -96,19 +96,19 @@ Met de bron [!DNL PubSub] kunt u het type toegang opgeven dat u wilt toestaan ti
 
 Een account maken met toegang tot de hoofdprojectmap van [!DNL PubSub] . Selecteer **[!UICONTROL Google PubSub authentication credentials]** als verificatietype en geef uw project-id en referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ de nieuwe rekeningsinterface voor Google PubSub met geselecteerde worteltoegang.](../../../../images/tutorials/create/google-pubsub/root.png)
+![&#x200B; de nieuwe rekeningsinterface voor Google PubSub met geselecteerde worteltoegang.](../../../../images/tutorials/create/google-pubsub/root.png)
 
 >[!TAB  Onderwerp en op abonnement-Gebaseerde authentificatie ]
 
 Als u een account wilt maken met beperkte toegang tot alleen een bepaald [!DNL PubSub] -onderwerp en -abonnement, selecteert u **[!UICONTROL Google PubSub Scoped authentication credentials]** en geeft u vervolgens uw referenties, onderwerpnaam en/of abonnementsnaam op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ de nieuwe rekeningsinterface voor Google PubSub bron met scoped geselecteerde toegang.](../../../../images/tutorials/create/google-pubsub/scoped.png)
+![&#x200B; de nieuwe rekeningsinterface voor Google PubSub bron met scoped geselecteerde toegang.](../../../../images/tutorials/create/google-pubsub/scoped.png)
 
 >[!ENDTABS]
 
 >[!NOTE]
 >
->Hoofd (rollen) die aan een [!DNL PubSub] project worden toegewezen worden geërft in alle onderwerpen en abonnementen die binnen een [!DNL PubSub] project worden gecreeerd. Als u een hoofd (rol) toegang tot een specifiek onderwerp wilt hebben, dan moet dat hoofd (rol) ook aan het overeenkomstige abonnement van het onderwerp worden toegevoegd. Voor meer informatie, lees de [[!DNL PubSub]  documentatie over toegangsbeheer ](<https://cloud.google.com/pubsub/docs/access-control>).
+>Hoofd (rollen) die aan een [!DNL PubSub] project worden toegewezen worden geërft in alle onderwerpen en abonnementen die binnen een [!DNL PubSub] project worden gecreeerd. Als u een hoofd (rol) toegang tot een specifiek onderwerp wilt hebben, dan moet dat hoofd (rol) ook aan het overeenkomstige abonnement van het onderwerp worden toegevoegd. Voor meer informatie, lees de [[!DNL PubSub]  documentatie over toegangsbeheer &#x200B;](<https://cloud.google.com/pubsub/docs/access-control>).
 
 ## Gegevens selecteren
 
@@ -120,7 +120,7 @@ Een geslaagde verificatie brengt u naar de stap [!UICONTROL Select data] , waar 
 
 Als u met op project-gebaseerde toegang voor authentiek hebt verklaard, zal de [!UICONTROL Select data] interface alle abonnementen binnen uw project tonen dat een onderwerp in bijlage aan hen heeft.
 
-![ de uitgezochte gegevensstap van het bronwerkschema met op project-gebaseerde authentificatie.](../../../../images/tutorials/create/google-pubsub/root-folders.png)
+![&#x200B; de uitgezochte gegevensstap van het bronwerkschema met op project-gebaseerde authentificatie.](../../../../images/tutorials/create/google-pubsub/root-folders.png)
 
 >[!TAB  Onderwerp en op abonnement-Gebaseerde authentificatie ]
 
@@ -130,10 +130,10 @@ Als u met een onderwerp en op abonnement-gebaseerde toegang voor authentiek hebt
 * Als u slechts de abonnementsnaam verstrekt, dan toont de interface alle onderwerp-abonnement paren die aan de verstrekte abonnementsnaam beantwoorden.
 * Als zowel het onderwerp als de abonnementsnamen worden verstrekt, dan toont de interface het onderwerp-abonnement paar dat met beide verstrekte waarden beantwoordt.
 
-![ de uitgezochte gegevensstap van het bronwerkschema met onderwerp en op abonnement-gebaseerde authentificatie.](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
+![&#x200B; de uitgezochte gegevensstap van het bronwerkschema met onderwerp en op abonnement-gebaseerde authentificatie.](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
 
 >[!ENDTABS]
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding gemaakt tussen uw [!DNL PubSub] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om het stromen gegevens van uw wolkenopslag in Experience Platform ](../../dataflow/streaming/cloud-storage-streaming.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding gemaakt tussen uw [!DNL PubSub] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om het stromen gegevens van uw wolkenopslag in Experience Platform &#x200B;](../../dataflow/streaming/cloud-storage-streaming.md) te brengen.

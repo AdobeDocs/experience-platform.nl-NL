@@ -23,7 +23,7 @@ In kunnen UI-elementen die kunnen worden aangeklikt of geactiveerd met een aanwi
 
 Experience Platform streeft ernaar te voldoen aan internationale toegankelijkheidsnormen, waaronder de Web Content Accessibility Guidelines 2.1 Level A en Level AA en de Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA).
 
-![ De homepage van Adobe Experience Platform UI.](images/homepage.png)
+![&#x200B; De homepage van Adobe Experience Platform UI.](images/homepage.png)
 
 ## Linkernavigatie
 
@@ -31,25 +31,25 @@ De linkernavigatie in de gebruikersinterface van Experience Platform is toeganke
 
 Gebruikers kunnen met de Tab-toets naar links in het scherm Home gaan. Het selecteren van **verschuiving + Lusje** keert de gebruiker aan het scherm van het Huis terug.
 
-![ de linkernavigatie van Experience Platform.](images/left-navigation-select.png)
+![&#x200B; de linkernavigatie van Experience Platform.](images/left-navigation-select.png)
 
 Met de linkernavigatie in nadruk, **Lusje** neemt gebruikers aan uit en doen ineenstorten interactie. De capaciteit om de linkernavigatie uit te breiden of samen te vouwen wordt geactiveerd met **binnengaan (Terugkeer)**.
 
-![ de verlaten navigatie van Experience Platform doen ineenstorten.](images/left-navigation-collapse.png)
+![&#x200B; de verlaten navigatie van Experience Platform doen ineenstorten.](images/left-navigation-collapse.png)
 
 Met de linkernavigatie in focus, navigeren de pijltoetsen omhoog en omlaag naar elk item in de navigatie en doorlopend (met andere woorden, verschuift de focus niet weg totdat de gebruiker met de Tab-toets van de linkernavigatie af gaat). Wanneer deze optie is geselecteerd, wordt de focus voor navigatie-items weergegeven. De huidige selectie wordt weergegeven met een gemarkeerde en bolle tekst. Wanneer het selecteren van een linkernavigatiepunt, **gaat binnen (Terugkeer)** het geselecteerde punt UI in het juiste paneel opent, nochtans blijft de nadruk in linkernavigatie tot de gebruikerslusjes weg.
 
-![ de linkernavigatie van Experience Platform met Geselecteerde bronnen.](images/left-navigation-sources.png)
+![&#x200B; de linkernavigatie van Experience Platform met Geselecteerde bronnen.](images/left-navigation-sources.png)
 
 Sommige functies in Experience Platform zijn niet voor alle gebruikers ingeschakeld. Deze items worden in de navigatie weergegeven, maar kunnen niet worden geselecteerd. Wanneer het navigeren met een toetsenbord, worden deze punten overgeslagen tijdens pijlnavigatie en kunnen niet worden geselecteerd gebruikend **binnengaan (Terugkeer)**.
 
-![ secties van de verlaten navigatie van Experience Platform die niet voor de gebruiker worden toegelaten kunnen niet worden geselecteerd.](images/left-navigation-sections-disabled.png)
+![&#x200B; secties van de verlaten navigatie van Experience Platform die niet voor de gebruiker worden toegelaten kunnen niet worden geselecteerd.](images/left-navigation-sections-disabled.png)
 
 ## Dialoogvenster Ingesloten video
 
 Video&#39;s kunnen in Experience Platform worden weergegeven door toetsenbordnavigatie te gebruiken om een beschikbare videokoppeling te markeren en te selecteren. Hiermee wordt een ingesloten videodialoogvenster geopend in de gebruikersinterface van Experience Platform.
 
-![ een blauwe grens die rond een geselecteerd element verschijnt om erop te wijzen dat de nadruk wordt toegepast.](images/profile-overview-tab.png)
+![&#x200B; een blauwe grens die rond een geselecteerd element verschijnt om erop te wijzen dat de nadruk wordt toegepast.](images/profile-overview-tab.png)
 
 ## Toegankelijkheid van het dialoogvenster Video
 
@@ -70,7 +70,7 @@ U kunt ook via het toetsenbord navigeren in het dialoogvenster Ingesloten video.
 >
 >Op elk gewenst moment tijdens het afspelen kan de escape-toets (&quot;esc&quot;) worden gebruikt om het ingesloten videodialoogvenster te sluiten.
 
-![ de ingebedde videodialoog met aantallen die toetsenbordnavigatie elementen identificeren.](images/video-dialog.png)
+![&#x200B; de ingebedde videodialoog met aantallen die toetsenbordnavigatie elementen identificeren.](images/video-dialog.png)
 
 ## Bestanden slepen en neerzetten
 
@@ -80,11 +80,11 @@ Nadat een bestand is geüpload, kunt u met het toetsenbord navigeren door een ve
 
 Als het geüploade bestand niet de juiste indeling heeft, wordt een foutpictogram weergegeven met een foutbericht en is de knop **[!UICONTROL Choose files]** actief en selecteerbaar.
 
-![ het dossier van A belemmering-en-dalingsstreek met een foutenmelding en verkies dossiers knoop in nadruk.](images/drag-and-drop.png)
+![&#x200B; het dossier van A belemmering-en-dalingsstreek met een foutenmelding en verkies dossiers knoop in nadruk.](images/drag-and-drop.png)
 
 Als u een muis gebruikt om de zone voor slepen en neerzetten te selecteren, wordt ook de gebruikersinterface voor de bestandsselectie aangeroepen, of een muisgebruiker kan een bestand selecteren en naar de zone slepen om te beginnen met uploaden.
 
-![ A dossier belemmering-en-dalingsstreek in nadruk aangezien een muisgebruiker een dossier in de streek sleept.](images/drag-and-drop-mouse-over.png)
+![&#x200B; A dossier belemmering-en-dalingsstreek in nadruk aangezien een muisgebruiker een dossier in de streek sleept.](images/drag-and-drop-mouse-over.png)
 
 ## Tabelbladeren
 
@@ -97,7 +97,7 @@ Alle tabellen in de Experience Platform-gebruikersinterface zijn toegankelijk vi
 * Het gebruik **gaat** binnen om een punt in de rij te selecteren. Gebruikers met een schermlezer worden gewaarschuwd als een nieuw venster moet worden geopend.
 * Wanneer u aan 200% of meer zoomt, kunt u het **pictogram van de spoorinspecteur** zien aangezien de juiste spoorstaaf samenvouwt om meer het bekijken ruimte voor de lijst te verstrekken.
 
-![ het pictogram van de spoorinspecteur in nadruk wanneer een gebruiker aan 200% zoomt.](images/rail-inspector.png)
+![&#x200B; het pictogram van de spoorinspecteur in nadruk wanneer een gebruiker aan 200% zoomt.](images/rail-inspector.png)
 
 ### Toegankelijkheid van tabeltoetsenbord doorbladeren
 
@@ -134,7 +134,7 @@ Wanneer u de gebruikersinterface van Segment Builder gebruikt voor het maken, be
 
 U kunt nu de linker- en rechterrails van het gesegmenteerde canvas samenvouwen of uitvouwen om meer schermruimte te verkrijgen. Deze functie is vooral handig omdat deze bij 200% zoomen volledige functionaliteit biedt.
 
-![ het segment bouwercanvas met de linker en juiste benadrukte spooronthullingswidgets.](images/left-right-rail-expandables.png)
+![&#x200B; het segment bouwercanvas met de linker en juiste benadrukte spooronthullingswidgets.](images/left-right-rail-expandables.png)
 
 ## Query Service-editor
 

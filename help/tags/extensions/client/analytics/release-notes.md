@@ -15,7 +15,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 >[!NOTE]
 >
->De de markeringsuitbreiding van de Analyse als vaak bijgewerkt in antwoord op updates aan de [ bibliotheek van JavaScript van het AppMeasurement ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL). Verwijs naar de [ nota&#39;s van de de versieversie van het AppMeasurement ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL) voor details op de specifieke hieronder vermelde versies.
+>De de markeringsuitbreiding van de Analyse als vaak bijgewerkt in antwoord op updates aan de [&#x200B; bibliotheek van JavaScript van het AppMeasurement &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL). Verwijs naar de [&#x200B; nota&#39;s van de de versieversie van het AppMeasurement &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL) voor details op de specifieke hieronder vermelde versies.
 
 ## dinsdag 28 oktober 2024
 
@@ -23,7 +23,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Eigenschappen**:
 
-* Toegevoegd een nieuwe eigenschap om gebruikers toe te staan om een versie JSON van de [ Vastgestelde Actie van Variabelen ](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) te bekijken en uit te geven. De uitbreiding van SDK van het Web van de Adobe omvat ook een actie om [ een analytische variabele ](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) te bevolken door JSON te verstrekken. Door JSON-gegevens te kopiëren van de extensie AA naar de extensie Web SDK, kunnen migrerende klanten eenvoudig meerdere instellingen tegelijk overdragen in plaats van elke variabele handmatig toe te voegen.
+* Toegevoegd een nieuwe eigenschap om gebruikers toe te staan om een versie JSON van de [&#x200B; Vastgestelde Actie van Variabelen &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) te bekijken en uit te geven. De uitbreiding van SDK van het Web van de Adobe omvat ook een actie om [&#x200B; een analytische variabele &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) te bevolken door JSON te verstrekken. Door JSON-gegevens te kopiëren van de extensie AA naar de extensie Web SDK, kunnen migrerende klanten eenvoudig meerdere instellingen tegelijk overdragen in plaats van elke variabele handmatig toe te voegen.
 
 ## dinsdag 12 augustus 2024
 
@@ -31,7 +31,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Eigenschappen**:
 
-* Geüpgraded aan [ AppMeasurement aan v2.27.0 ](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
+* Geüpgraded aan [&#x200B; AppMeasurement aan v2.27.0 &#x200B;](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
 
 ## dinsdag 4 maart 2024
 
@@ -39,7 +39,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Eigenschappen**:
 
-* Geüpgraded aan [ AppMeasurement aan v2.26.0 ](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+* Geüpgraded aan [&#x200B; AppMeasurement aan v2.26.0 &#x200B;](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
 ## zaterdag 15 september 2023
 
@@ -47,7 +47,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Eigenschappen**:
 
-* Geüpgraded aan [ AppMeasurement aan v2.25.0 ](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+* Geüpgraded aan [&#x200B; AppMeasurement aan v2.25.0 &#x200B;](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
 
 
 ## donderdag 19 juli 2023
@@ -56,13 +56,13 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Eigenschappen**:
 
-* Geüpgraded aan [ AppMeasurement v2.24.0 ](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
+* Geüpgraded aan [&#x200B; AppMeasurement v2.24.0 &#x200B;](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * Er is een optionele configuratie toegevoegd (`decodeLinkParameters` default `false` ) die URL&#39;s met dubbele byte gecodeerde tekens decodeert.
 
 **Bugfixes**:
 
-* Toegevoegde extra fout behandeling voor browsers met gebrek high-entropy [ gebruiker-Agent cliëntwenken ](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=nl-NL) API&#39;s.
-* Veranderde [ POST ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) inhoud-Type kopbal aan gebruik `x-www-form-urlencoded` door gebrek.
+* Toegevoegde extra fout behandeling voor browsers met gebrek high-entropy [&#x200B; gebruiker-Agent cliëntwenken &#x200B;](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=nl-NL) API&#39;s.
+* Veranderde [&#x200B; POST &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) inhoud-Type kopbal aan gebruik `x-www-form-urlencoded` door gebrek.
 
 ## zaterdag 23 september 2022
 
@@ -71,7 +71,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 **Eigenschappen**:
 
 * Bijgewerkt naar AppMeasurement v2.23.0.
-* De uitbreiding kan high-entropy [ gebruiker-agent cliëntwenken ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) nu verzamelen zoals gesteund door de recentste versie van AppMeasurement.
+* De uitbreiding kan high-entropy [&#x200B; gebruiker-agent cliëntwenken &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) nu verzamelen zoals gesteund door de recentste versie van AppMeasurement.
 
 ## dinsdag 28 februari 2022
 
@@ -104,7 +104,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Bugfixes**:
 
-* Bevorderde [ AppMeasurement aan v2.22.1 ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL).
+* Bevorderde [&#x200B; AppMeasurement aan v2.22.1 &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL).
 * Bijgewerkte fallback linkName om logica van de Activity Map te weerspiegelen in plaats van innerHTML te gebruiken.
 
 ## vrijdag 6 augustus 2020
@@ -117,7 +117,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Eigenschappen**:
 
-* Bijgewerkt [ AppMeasurement aan 2.22.0 ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL).
+* Bijgewerkt [&#x200B; AppMeasurement aan 2.22.0 &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL).
 * De kleine verandering UI zodat het extra plaatsen nu samengevouwen in een accordeon in plaats van checkbox verschijnt.
 
 ## woensdag 2 juni 2020
@@ -145,7 +145,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Eigenschappen**:
 
-* Bijgewerkt [ AppMeasurement aan 2.20.0 ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL)
+* Bijgewerkt [&#x200B; AppMeasurement aan 2.20.0 &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL)
 
 ## dinsdag 2 maart 2020
 
@@ -157,7 +157,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Eigenschappen**:
 
-* Bijgewerkt [ AppMeasurement aan 2.18.0 ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL)
+* Bijgewerkt [&#x200B; AppMeasurement aan 2.18.0 &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL)
 * De DIL-bibliotheek in de module Audience Manager is bijgewerkt naar 9.4
 * De lengte van invoervelden in de extensie vergroten
 * Vars en props in de extensie- en actieconfiguraties geven nu de vriendelijke naam van Analytics weer
@@ -218,7 +218,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 * De Adobe Analytics-extensie is bijgewerkt om DIL 9.2 voor Audience Manager te ondersteunen
 
-* Bijgewerkte uitbreiding om [ AppMeasurement 2.15.0 te steunen ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL#version-2.15.0)
+* Bijgewerkte uitbreiding om [&#x200B; AppMeasurement 2.15.0 te steunen &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL#version-2.15.0)
 * Het volgende selectievakje is verwijderd, omdat het niet meer wordt ondersteund: &quot;Koppel het doel-publicatie-IFRAME niet aan de DOM- of branddoelen&quot;
 
 ## woensdag 4 juni 2019
@@ -227,7 +227,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 **Eigenschappen**:
 
-* Bijgewerkt de Uitbreiding van Adobe Analytics aan [ AppMeasurement 2.14.0 ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL#version-2.14.0) die een moeilijke situatie aan een bekende clearVars kwestie omvat
+* Bijgewerkt de Uitbreiding van Adobe Analytics aan [&#x200B; AppMeasurement 2.14.0 &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=nl-NL#version-2.14.0) die een moeilijke situatie aan een bekende clearVars kwestie omvat
 * Een Exchange-koppeling toegevoegd aan de extensie. De Exchange-lijst kan worden bereikt door het vervolgkeuzemenu te selecteren en &quot;extensie info&quot; te kiezen
 
 **Bugfixes**:

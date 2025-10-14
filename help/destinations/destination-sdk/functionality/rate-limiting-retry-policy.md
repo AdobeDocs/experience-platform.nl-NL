@@ -13,7 +13,7 @@ ht-degree: 0%
 
 De partner-gebouwde bestemmingen kunnen diverse fouten terugkeren en verschillend tarief beperkend beleid hebben. Deze pagina verklaart hoe het Experience Platform verschillende soorten fouten behandelt die door het stromen bestemmingen zijn teruggekeerd.
 
-Wanneer het vormen van een bestemming die Destination SDK gebruikt, kunt u tussen twee samenvoegingstypes selecteren - [ beste inspanningssamenvoeging ](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) en [ configureerbare samenvoeging ](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). Afhankelijk van het aggregatietype dat u selecteert, leest u hieronder hoe Experience Platform fouten en tariefbeperkingen behandelt.
+Wanneer het vormen van een bestemming die Destination SDK gebruikt, kunt u tussen twee samenvoegingstypes selecteren - [&#x200B; beste inspanningssamenvoeging &#x200B;](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) en [&#x200B; configureerbare samenvoeging &#x200B;](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). Afhankelijk van het aggregatietype dat u selecteert, leest u hieronder hoe Experience Platform fouten en tariefbeperkingen behandelt.
 
 ## Beste inspanningsaggregatie {#best-effort-aggregation}
 

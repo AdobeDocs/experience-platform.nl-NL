@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Aangepaste inhoud renderen
 
-Adobe Experience Platform Web SDK steunt het terugwinnen van gepersonaliseerde inhoud van de verpersoonlijkingsoplossingen van Adobe, met inbegrip van [ Adobe Target ](https://business.adobe.com/products/target/adobe-target.html), [ Offer Decisioning ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl) en [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=nl).
+Adobe Experience Platform Web SDK steunt het terugwinnen van gepersonaliseerde inhoud van de verpersoonlijkingsoplossingen van Adobe, met inbegrip van [&#x200B; Adobe Target &#x200B;](https://business.adobe.com/products/target/adobe-target.html), [&#x200B; Offer Decisioning &#x200B;](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl) en [&#x200B; Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=nl).
 
-Bovendien, de bevoegdheden van SDK van het Web op dezelfde pagina en volgende-pagina verpersoonlijkingsmogelijkheden door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [ Adobe Target ](../../destinations/catalog/personalization/adobe-target-connection.md) en de [ verbinding van de douaneverpersoonlijking ](../../destinations/catalog/personalization/custom-personalization.md). Leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie de [ specifieke gids ](../../destinations/ui/activate-edge-personalization-destinations.md).
+Bovendien, de bevoegdheden van SDK van het Web op dezelfde pagina en volgende-pagina verpersoonlijkingsmogelijkheden door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [&#x200B; Adobe Target &#x200B;](../../destinations/catalog/personalization/adobe-target-connection.md) en de [&#x200B; verbinding van de douaneverpersoonlijking &#x200B;](../../destinations/catalog/personalization/custom-personalization.md). Leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie de [&#x200B; specifieke gids &#x200B;](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-De inhoud die binnen Adobe Target [ wordt gecreeerd Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) en de Campagne UI van het Web van Adobe Journey Optimizer [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=nl-NL) kan automatisch worden teruggewonnen en door SDK worden teruggegeven. De inhoud die binnen Adobe Target [ op vorm-gebaseerde Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=nl-NL) wordt gecreeerd, Adobe Journey Optimizer [ op code-gebaseerd Kanaal van de Ervaring ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/code-based-experience/get-started-code-based) of Offer Decisioning kan niet automatisch door SDK worden teruggegeven. In plaats daarvan moet u deze inhoud aanvragen via de SDK en de inhoud vervolgens zelf handmatig renderen.
+De inhoud die binnen Adobe Target [&#x200B; wordt gecreeerd Visuele Composer van de Ervaring &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) en de Campagne UI van het Web van Adobe Journey Optimizer [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=nl-NL) kan automatisch worden teruggewonnen en door SDK worden teruggegeven. De inhoud die binnen Adobe Target [&#x200B; op vorm-gebaseerde Composer van de Ervaring &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=nl-NL) wordt gecreeerd, Adobe Journey Optimizer [&#x200B; op code-gebaseerd Kanaal van de Ervaring &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/code-based-experience/get-started-code-based) of Offer Decisioning kan niet automatisch door SDK worden teruggegeven. In plaats daarvan moet u deze inhoud aanvragen via de SDK en de inhoud vervolgens zelf handmatig renderen.
 
 ## Inhoud automatisch renderen {#automatic}
 
@@ -298,7 +298,7 @@ alloy("sendEvent", {
 
 ### flikkering beheren
 
-SDK verstrekt faciliteiten om [ flikkering ](../personalization/manage-flicker.md) tijdens het verpersoonlijkingsproces te beheren.
+SDK verstrekt faciliteiten om [&#x200B; flikkering &#x200B;](../personalization/manage-flicker.md) tijdens het verpersoonlijkingsproces te beheren.
 
 ## Profielen renderen in toepassingen van één pagina zonder metrische gegevens te verhogen {#applypropositions}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### Hoofdlettergebruik 2: voorvertoningen renderen die geen kiezer hebben
 
-Dit gebruiksgeval is op ervaringen van toepassing die gebruikend [!DNL Target Form-based Experience Composer] of Adobe Journey Optimizer [ op code-Gebaseerd Kanaal van de Ervaring ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/code-based-experience/get-started-code-based) worden geschreven.
+Dit gebruiksgeval is op ervaringen van toepassing die gebruikend [!DNL Target Form-based Experience Composer] of Adobe Journey Optimizer [&#x200B; op code-Gebaseerd Kanaal van de Ervaring &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/code-based-experience/get-started-code-based) worden geschreven.
 
 U moet de kiezer, de handeling en het bereik opgeven in de aanroep van `applyPropositions` .
 

@@ -47,7 +47,7 @@ U kunt gegevenskenmerken op elementen gebruiken om specificiteit aan een interac
 | Naam | Gegevenskenmerk | Beschrijving |
 | --- | --- | --- |
 | [!DNL Label] | `data-aep-click-label` | Wanneer het kenmerk labelgegevens aanwezig is op een aangeklikt element, wordt dit opgenomen met de interactiedetails die naar de [!DNL Edge Network] worden verzonden. [!DNL Web SDK] zoekt naar een kenmerk van labelgegevens dat begint met het element waarop is geklikt en dat de DOM-structuur doorloopt. De [!DNL Web SDK] gebruikt het eerste label dat wordt gevonden. |
-| [!DNL Token] | `data-aep-click-token` | Gebruik dit teken wanneer het leveraging van besluitvormingsbeleid in [ op code-gebaseerde campagnes van Adobe Journey Optimizer ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/code-based-experience/get-started-code-based). U kunt het teken gebruiken om te onderscheiden welk punt van het besluitvormingsbeleid werd geklikt. Wanneer het attribuut van symbolische gegevens op een geklikt element aanwezig is, is het inbegrepen met de interactiedetails die naar de Edge Network worden verzonden. De [!DNL Web SDK] zoekt naar een kenmerk voor tokengegevens dat begint met het element waarop is geklikt en dat de DOM-structuur doorloopt. De [!DNL Web SDK] gebruikt de eerste token die wordt gevonden. |
+| [!DNL Token] | `data-aep-click-token` | Gebruik dit teken wanneer het leveraging van besluitvormingsbeleid in [&#x200B; op code-gebaseerde campagnes van Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/code-based-experience/get-started-code-based). U kunt het teken gebruiken om te onderscheiden welk punt van het besluitvormingsbeleid werd geklikt. Wanneer het attribuut van symbolische gegevens op een geklikt element aanwezig is, is het inbegrepen met de interactiedetails die naar de Edge Network worden verzonden. De [!DNL Web SDK] zoekt naar een kenmerk voor tokengegevens dat begint met het element waarop is geklikt en dat de DOM-structuur doorloopt. De [!DNL Web SDK] gebruikt de eerste token die wordt gevonden. |
 | [!DNL Interact ID] | `data-aep-interact-id` | De [!DNL Web SDK] voegt deze unieke id automatisch toe aan containerelementen bij het renderen van voorstellingen. Web SDK gebruikt deze id om [!DNL DOM] -elementen te correleren met voorstellingen. Aangezien dit een id is die vereist is door de [!DNL Web SDK] , mag u deze op geen enkele manier wijzigen. U kunt het veilig negeren. |
 
 **Voorbeeld**
@@ -122,7 +122,7 @@ alloy("sendEvent", {
 
 ## Automatische voorstellingen en interacties inschakelen en klikken op bijhouden via de Web SDK-tagextensie {#tag-extension}
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw referentie van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw referentie van Adobe ID.
 1. Navigeer aan **de Inzameling van Gegevens** > **Markeringen**.
 1. Selecteer de gewenste eigenschap voor tags.
 1. Navigeer aan **Uitbreidingen**, dan selecteren **&#x200B;**&#x200B;op de kaart van SDK van het Web van Adobe Experience Platform vormt.

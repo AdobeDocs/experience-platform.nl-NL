@@ -34,13 +34,13 @@ Een technologieverkoper wil zijn bezoekersactiviteit rapporteren met informatie 
 
 Gebruik [!DNL Web SDK] versie 2.11.0 of hoger als u id&#39;s van mobiele naar webapparaten en andere domeinen wilt delen.
 
-Voor mobiele implementaties van de Edge Network, wordt deze eigenschap gesteund in de [ Identiteit voor Edge Network ](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) uitbreiding die met versie 1.1.0 (iOS en Android) begint.
+Voor mobiele implementaties van de Edge Network, wordt deze eigenschap gesteund in de [&#x200B; Identiteit voor Edge Network &#x200B;](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) uitbreiding die met versie 1.1.0 (iOS en Android) begint.
 
 Deze functie is ook compatibel met [!DNL VisitorAPI.js] versie 1.7.0 of hoger.
 
 ## Id&#39;s delen via mobiele apparaten {#mobile-to-web}
 
-Gebruik `getUrlVariables` API van de [ Identiteit voor Edge Network ](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) uitbreiding om de herkenningstekens als vraagparameters terug te winnen en hen aan uw URL vast te maken wanneer het openen [!DNL webViews].
+Gebruik `getUrlVariables` API van de [&#x200B; Identiteit voor Edge Network &#x200B;](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) uitbreiding om de herkenningstekens als vraagparameters terug te winnen en hen aan uw URL vast te maken wanneer het openen [!DNL webViews].
 
 Er is geen aanvullende configuratie vereist voor de Web SDK om `ECID` -waarden in de queryreeks te accepteren.
 
@@ -53,7 +53,7 @@ De parameter van het vraagkoord omvat:
 
 Bij het delen van een id van mobiel naar web wordt de parameter `adobe_mc` gebruikt. Wanneer de parameter `adobe_mc` aanwezig en geldig is, wordt `ECID` van het vraagkoord automatisch toegevoegd aan de identiteitskaart in het eerste verzoek aan de Edge Network wordt gemaakt die. Alle volgende Edge Network-interacties gebruiken die `ECID` .
 
-Voor meer informatie over hoe te om bezoekers IDs van een mobiele app tot een WebView over te gaan, zie de documentatie over [ behandelend WebViews ](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=nl-NL#implementation).
+Voor meer informatie over hoe te om bezoekers IDs van een mobiele app tot een WebView over te gaan, zie de documentatie over [&#x200B; behandelend WebViews &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=nl-NL#implementation).
 
 ## Id&#39;s delen naar andere domeinen implementeren {#cross-domain-sharing}
 

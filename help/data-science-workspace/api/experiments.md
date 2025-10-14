@@ -139,7 +139,7 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met experimenten ophalen
 
-U kunt een lijst van Experimenten terugwinnen die tot een bepaalde instantie behoren door één enkel verzoek van de GET uit te voeren en geldige identiteitskaart MLInstance als vraagparameter te verstrekken. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst van Experimenten terugwinnen die tot een bepaalde instantie behoren door één enkel verzoek van de GET uit te voeren en geldige identiteitskaart MLInstance als vraagparameter te verstrekken. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie over [&#x200B; vraagparameters voor activaherwinning &#x200B;](./appendix.md#query).
 
 
 **API Formaat**
@@ -248,7 +248,7 @@ Een geslaagde reactie retourneert een payload die de details van het gewenste ex
 
 ## Een lijst met experimentele tests ophalen
 
-U kunt een lijst ophalen met trainings- of scores die bij een bepaalde expert horen, door één aanvraag voor een GET uit te voeren en een geldige experimentele id op te geven. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een volledige lijst van beschikbare vraagparameters, zie de bijlage sectie op [ vraagparameters voor activa terugwinning ](./appendix.md#query).
+U kunt een lijst ophalen met trainings- of scores die bij een bepaalde expert horen, door één aanvraag voor een GET uit te voeren en een geldige experimentele id op te geven. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een volledige lijst van beschikbare vraagparameters, zie de bijlage sectie op [&#x200B; vraagparameters voor activa terugwinning &#x200B;](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -265,7 +265,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parameter | Beschrijving |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Een geldige experimentele id. |
-| `{QUERY_PARAMETER}` | Één van de [ beschikbare vraagparameters ](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
+| `{QUERY_PARAMETER}` | Één van de [&#x200B; beschikbare vraagparameters &#x200B;](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
 | `{VALUE}` | De waarde voor de voorafgaande vraagparameter. |
 
 **Verzoek**
@@ -313,7 +313,7 @@ U kunt een bestaande Experiment bijwerken door zijn eigenschappen door een verzo
 
 >[!TIP]
 >
->Om het succes van dit verzoek van PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET uitvoert om [ het Experiment door identiteitskaart ](#retrieve-specific) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>Om het succes van dit verzoek van PUT te verzekeren, wordt gesuggereerd dat eerst u een verzoek van de GET uitvoert om [&#x200B; het Experiment door identiteitskaart &#x200B;](#retrieve-specific) terug te winnen. Pas vervolgens het geretourneerde JSON-object aan en werk dit bij en pas het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 De volgende voorbeeld-API-aanroep werkt de naam van een expert bij terwijl deze in eerste instantie deze eigenschappen heeft:
 

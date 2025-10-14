@@ -16,12 +16,12 @@ De begeleiding is drempels die begeleiding voor gegevens en systeemgebruik, pres
 
 >[!IMPORTANT]
 >
->Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/nl/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [&#x200B; Beschrijving van het Product &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 
 Begin hier en volg de onderstaande links om alle instructies in de verschillende services en gebieden van Real-Time CDP te begrijpen:
 
 * [Guardrails voor gegevensinvoer](/help/ingestion/guardrails.md)
-* [ Guardrails voor  [!DNL Edge Network API] ](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)
+* [&#x200B; Guardrails voor  [!DNL Edge Network API] &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)
 * [Guardrails voor  [!DNL Real-Time Customer Profile]  gegevens en segmentatie](/help/profile/guardrails.md)
 * [Guardrails voor  [!DNL Identity Service]  gegevens](/help/identity-service/guardrails.md)
 * [Guardrails voor  [!DNL Query Service]](/help/query-service/guardrails.md)
@@ -30,7 +30,7 @@ Begin hier en volg de onderstaande links om alle instructies in de verschillende
 
 >[!TIP]
 >
->Bovendien, bezoek [ de digitale ervaringsblauwdrukken ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=nl-NL) voor verdere informatie zoals [ de diagrammen van de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=nl-NL#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
+>Bovendien, bezoek [&#x200B; de digitale ervaringsblauwdrukken &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=nl-NL) voor verdere informatie zoals [&#x200B; de diagrammen van de latentie van begin tot eind &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=nl-NL#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
 
 ## Typen guardrail {#guardrail-types}
 
@@ -47,18 +47,18 @@ De twee soorten guardrail voor alle Real-Time CDP-gebieden en -services zijn:
 
 Raadpleeg ook de onderstaande koppelingen naar productbeschrijving voor licentiegegevens en informatie over machtigingen op basis van de Real-Time CDP-editie en -laag die u hebt aangeschaft:
 
-* [ Alle het productbeschrijvingen van Adobe ](https://helpx.adobe.com/nl/legal/product-descriptions.html)
-* [ Real-Time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [ Real-Time Customer Data Platform (B2P Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [ Real-Time Customer Data Platform (B2B edition - Prime en de Pakketten van Ultimate) ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Alle het productbeschrijvingen van Adobe &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions.html)
+* [&#x200B; Real-Time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Real-Time Customer Data Platform (B2P Uitgave - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Real-Time Customer Data Platform (B2B edition - Prime en de Pakketten van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## Guardrails voor andere Experience Platform-toepassingen  {#guardrails-other-aep-apps}
 
 Voor andere Experience Platform-toepassingen bestaan soortgelijke instructies. Ga naar de onderstaande koppelingen voor meer informatie:
 
-* [ de guardrails van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=nl-NL)
-* [ de guardrails van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=nl-NL)
+* [&#x200B; de guardrails van Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=nl-NL)
+* [&#x200B; de guardrails van Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=nl-NL)
 
 ## Volgende stappen
 
-Na het begrijpen van de gidsen die op diverse gebieden en de diensten van Real-Time CDP van toepassing zijn, kunt u samen met het geval van het a [ steekproefgebruik van een implementatie van Real-Time CDP ](/help/rtcdp/get-started.md) volgen.
+Na het begrijpen van de gidsen die op diverse gebieden en de diensten van Real-Time CDP van toepassing zijn, kunt u samen met het geval van het a [&#x200B; steekproefgebruik van een implementatie van Real-Time CDP &#x200B;](/help/rtcdp/get-started.md) volgen.

@@ -19,7 +19,7 @@ Dit document bevat aanvullende informatie die u helpt bij het werken met de [!DN
 
 Sommige [!DNL Catalog] -objecten kunnen met andere [!DNL Catalog] -objecten verweven zijn. Alle velden die vooraf worden ingesteld door `@` in antwoordladingen verwijzen naar gerelateerde objecten. De waarden voor deze velden hebben de vorm van een URI, die kan worden gebruikt in een afzonderlijke aanvraag voor een GET om de gerelateerde objecten op te halen die ze vertegenwoordigen.
 
-De voorbeelddataset die in het document op [ is teruggekeerd die omhoog een specifieke dataset ](look-up-object.md) kijkt bevat a `files` gebied met de volgende waarde van URI: `"@/datasetFiles?datasetId={DATASET_ID}"`. De inhoud van het veld `files` kan worden weergegeven door deze URI te gebruiken als het pad voor een nieuwe GET-aanvraag.
+De voorbeelddataset die in het document op [&#x200B; is teruggekeerd die omhoog een specifieke dataset &#x200B;](look-up-object.md) kijkt bevat a `files` gebied met de volgende waarde van URI: `"@/datasetFiles?datasetId={DATASET_ID}"`. De inhoud van het veld `files` kan worden weergegeven door deze URI te gebruiken als het pad voor een nieuwe GET-aanvraag.
 
 **API formaat**
 

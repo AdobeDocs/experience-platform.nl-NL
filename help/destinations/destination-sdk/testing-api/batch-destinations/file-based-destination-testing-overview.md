@@ -18,7 +18,7 @@ Wij adviseren gebruikend deze hulpmiddelen om uw configuratie te bevestigen alvo
 
 Voor de beste testresultaten raden we u aan deze API te gebruiken op basis van het onderstaande stroomdiagram.
 
-![ Diagram die de geadviseerde stroom van het bestemmingstesten tonen ](../../assets/testing-api/batch-destinations/file-based-testing-flow.png)
+![&#x200B; Diagram die de geadviseerde stroom van het bestemmingstesten tonen &#x200B;](../../assets/testing-api/batch-destinations/file-based-testing-flow.png)
 
 Zie de secties hieronder voor een kort overzicht van wat elk eindpunt kan doen.
 
@@ -28,28 +28,28 @@ Gebruik het API-eindpunt van `/sample-profiles` om voorbeeldprofielen te generer
 
 Voorbeeldprofielen kunnen u helpen de JSON-structuur van een profiel te begrijpen. Bovendien geven ze u een standaardinstelling die u kunt aanpassen met uw eigen profielgegevens voor verdere doeltests.
 
-Zie de [ specifieke documentatie ](file-based-sample-profile-generation-api.md) leren hoe te om steekproefprofielen te produceren.
+Zie de [&#x200B; specifieke documentatie &#x200B;](file-based-sample-profile-generation-api.md) leren hoe te om steekproefprofielen te produceren.
 
 ## Doelconfiguratie testen {#test-destination-configuration}
 
 Gebruik het `/testing/destinationInstance` API eindpunt om te testen als uw op dossier-gebaseerde bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren.
 
-U kunt verzoeken aan het het testen eindpunt met of zonder [ steekproefprofielen ](file-based-sample-profile-generation-api.md) aan de vraag toe te voegen. Als u geen profielen verzendt op de aanvraag, genereert de API automatisch een voorbeeldprofiel en voegt deze toe aan de aanvraag.
+U kunt verzoeken aan het het testen eindpunt met of zonder [&#x200B; steekproefprofielen &#x200B;](file-based-sample-profile-generation-api.md) aan de vraag toe te voegen. Als u geen profielen verzendt op de aanvraag, genereert de API automatisch een voorbeeldprofiel en voegt deze toe aan de aanvraag.
 
-Zie de [ specifieke documentatie ](file-based-destination-testing-api.md) leren hoe te om uw bestemmingsconfiguratie met steekproefprofielen te testen.
+Zie de [&#x200B; specifieke documentatie &#x200B;](file-based-destination-testing-api.md) leren hoe te om uw bestemmingsconfiguratie met steekproefprofielen te testen.
 
 ## Gedetailleerde activeringsresultaten weergeven {#view-detailed-activation-results}
 
 U kunt het API-eindpunt van `/testing/destinationInstance` gebruiken om de volledige details van de testresultaten voor bestandsgebaseerde doelen weer te geven.
 
-Dit API eindpunt keert het zelfde resultaat terug zoals u wanneer het gebruiken van de [ Dienst API van de Stroom ](../../../api/update-destination-dataflows.md) zou verkrijgen om dataflows te controleren.
+Dit API eindpunt keert het zelfde resultaat terug zoals u wanneer het gebruiken van de [&#x200B; Dienst API van de Stroom &#x200B;](../../../api/update-destination-dataflows.md) zou verkrijgen om dataflows te controleren.
 
-Zie de [ specifieke documentatie ](file-based-destination-results-api.md) leren hoe te om gedetailleerde activeringsresultaten te bekijken.
+Zie de [&#x200B; specifieke documentatie &#x200B;](file-based-destination-results-api.md) leren hoe te om gedetailleerde activeringsresultaten te bekijken.
 
 ## Gegevensvelden van klanten renderen {#render-customer-data-fields}
 
-Gebruik het `/authoring/testing/template/render` API eindpunt om te visualiseren hoe de templatized [ gebieden van klantengegevens ](../../functionality/destination-configuration/customer-data-fields.md) die in uw bestemmingsconfiguratie worden bepaald als zou kijken.
+Gebruik het `/authoring/testing/template/render` API eindpunt om te visualiseren hoe de templatized [&#x200B; gebieden van klantengegevens &#x200B;](../../functionality/destination-configuration/customer-data-fields.md) die in uw bestemmingsconfiguratie worden bepaald als zou kijken.
 
 Het API eindpunt produceert willekeurige waarden voor uw gebieden van klantengegevens, en keert hen in de reactie terug. Hierdoor kunt u de semantische structuur van gegevensvelden van klanten, zoals emmernamen of mappaden, valideren.
 
-Zie de [ specifieke documentatie ](file-based-render-template-api.md) leren hoe te om waarden voor uw gebieden van klantengegevens te produceren en te visualiseren.
+Zie de [&#x200B; specifieke documentatie &#x200B;](file-based-render-template-api.md) leren hoe te om waarden voor uw gebieden van klantengegevens te produceren en te visualiseren.

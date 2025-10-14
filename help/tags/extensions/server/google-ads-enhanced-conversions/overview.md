@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # [!DNL Google Ads] Verbeterde extensie Conversies
 
-Gebruikend [!DNL Google Ads] API, kunt u hefboomwerking [ verbeterde omzettingen ](https://support.google.com/google-ads/answer/9888656) door de gegevens van de eerste partijklant in de vorm van omzettingsaanpassingen te verzenden. Google gebruikt deze aanvullende gegevens om de rapportage van uw online conversies via ad-interacties te verbeteren.
+Gebruikend [!DNL Google Ads] API, kunt u hefboomwerking [&#x200B; verbeterde omzettingen &#x200B;](https://support.google.com/google-ads/answer/9888656) door de gegevens van de eerste partijklant in de vorm van omzettingsaanpassingen te verzenden. Google gebruikt deze aanvullende gegevens om de rapportage van uw online conversies via ad-interacties te verbeteren.
 
-De [[!DNL Google Ads]  Verbeterde gebeurtenis die van Conversies uitbreiding ](https://exchange.adobe.com/apps/ec/108630/google-ads-enhanced-conversions) door:sturen (die nu als [!DNL Enhanced Conversions] uitbreiding wordt bedoeld) verstrekt een gebruikersvriendelijk malplaatje om verbeterde omzettingen voor [!DNL Google Ads] API gemakkelijk uit te voeren.
+De [[!DNL Google Ads]  Verbeterde gebeurtenis die van Conversies uitbreiding &#x200B;](https://exchange.adobe.com/apps/ec/108630/google-ads-enhanced-conversions) door:sturen (die nu als [!DNL Enhanced Conversions] uitbreiding wordt bedoeld) verstrekt een gebruikersvriendelijk malplaatje om verbeterde omzettingen voor [!DNL Google Ads] API gemakkelijk uit te voeren.
 
 >[!IMPORTANT]
 >
->Verbeterde conversies werken alleen voor conversietypen waarbij klantgegevens aanwezig zijn, zoals abonnementen, aanmeldingsgegevens en aankopen. Één of meerdere van de volgende stukken van klantengegevens moeten beschikbaar zijn, aangezien zij wanneer [ worden vereist vormend een omzettingsactie ](#conversion-action-event-forwarding) voor een gebeurtenis die regel door:sturen:
+>Verbeterde conversies werken alleen voor conversietypen waarbij klantgegevens aanwezig zijn, zoals abonnementen, aanmeldingsgegevens en aankopen. Één of meerdere van de volgende stukken van klantengegevens moeten beschikbaar zijn, aangezien zij wanneer [&#x200B; worden vereist vormend een omzettingsactie &#x200B;](#conversion-action-event-forwarding) voor een gebeurtenis die regel door:sturen:
 >
 >* E-mailadres (voorkeur)
 >* Naam en huisadres (straatadres, woonplaats, land/regio en postcode)
@@ -33,9 +33,9 @@ Verbeterde conversies maken gebruik van de API van [!DNL Google Ads] om gegevens
 
 >[!TIP]
 >
->Om de cliënt-zijomzettingsgebeurtenis met de eerste partijgegevens te associëren die van gebeurtenis door:sturen worden verzonden, moet `transaction_ID` het zelfde in beide vraag zijn. Voor meer informatie over waar deze waarde voor elke dienst moet worden verstrekt, zie de secties bij het vormen omzettingsacties voor [ markeringen ](#conversion-action-tags) en [ gebeurtenis door:sturen ](#conversion-action-event-forwarding), respectievelijk.
+>Om de cliënt-zijomzettingsgebeurtenis met de eerste partijgegevens te associëren die van gebeurtenis door:sturen worden verzonden, moet `transaction_ID` het zelfde in beide vraag zijn. Voor meer informatie over waar deze waarde voor elke dienst moet worden verstrekt, zie de secties bij het vormen omzettingsacties voor [&#x200B; markeringen &#x200B;](#conversion-action-tags) en [&#x200B; gebeurtenis door:sturen &#x200B;](#conversion-action-event-forwarding), respectievelijk.
 
-Aangezien het verzenden van omzettingsgebeurtenissen zowel een cliënt-kant als server-zijimplementatie impliceert, behandelt dit document de eerste vereiste stappen voor vestiging de cliënt-kant [[!DNL Google Global Site Tag]  (gtag) uitbreiding ](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) naast de [!DNL Enhanced Conversions] uitbreiding voor gebeurtenis door:sturen.
+Aangezien het verzenden van omzettingsgebeurtenissen zowel een cliënt-kant als server-zijimplementatie impliceert, behandelt dit document de eerste vereiste stappen voor vestiging de cliënt-kant [[!DNL Google Global Site Tag]  (gtag) uitbreiding &#x200B;](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) naast de [!DNL Enhanced Conversions] uitbreiding voor gebeurtenis door:sturen.
 
 In de volgende video wordt een inleiding gegeven op de extensie [!DNL Enhanced Conversions] en worden de implementatiestappen op hoog niveau doorlopen:
 
@@ -49,7 +49,7 @@ In de volgende video wordt een inleiding gegeven op de extensie [!DNL Enhanced C
 
 Navigeer naar de gebruikersinterface van [!UICONTROL Data Collection] of Experience Platform en selecteer **[!UICONTROL Tags]** in de linkernavigatie. Selecteer de eigenschap tag waarop u de extensie wilt installeren en selecteer vervolgens **[!UICONTROL Extensions]** in de linkernavigatie. Zoek onder het tabblad **[!UICONTROL Catalog]** de extensie [!UICONTROL Google Global Site Tag (gtag)] en selecteer **[!UICONTROL Install]** .
 
-![ de [!UICONTROL Google Global Site Tag (gtag)] uitbreiding die onder de [!UICONTROL Extensions] mening in [!UICONTROL Data Collection] UI wordt geselecteerd.](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
+![&#x200B; de [!UICONTROL Google Global Site Tag (gtag)] uitbreiding die onder de [!UICONTROL Extensions] mening in [!UICONTROL Data Collection] UI wordt geselecteerd.](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
 Het installatiedialoogvenster wordt weergegeven. Selecteer **[!UICONTROL Add Account]** hier en geef de volgende waarden op wanneer u hierom wordt gevraagd:
 
@@ -67,12 +67,12 @@ Als u klaar bent, selecteert u **[!UICONTROL Add Account]** en vervolgens **[!UI
 
 Nadat u de extensie hebt geïnstalleerd, kunt u beginnen met het opnemen van conversieacties in de tagregels. Selecteer **[!UICONTROL Add]** onder [!UICONTROL Actions] wanneer u een regel maakt of bewerkt die luistert naar de conversie die u wilt verbeteren. Selecteer in het volgende dialoogvenster **[!UICONTROL Google Global Site Tag (gtag)]** in de vervolgkeuzelijst [!UICONTROL Extension] en selecteer vervolgens **[!UICONTROL Send an event]** onder [!UICONTROL Action Type] .
 
-![ het [!UICONTROL Send an event] actietype dat binnen de mening van de actieconfiguratie van de regel het uitgeven werkschema wordt geselecteerd.](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
+![&#x200B; het [!UICONTROL Send an event] actietype dat binnen de mening van de actieconfiguratie van de regel het uitgeven werkschema wordt geselecteerd.](../../../images/extensions/server/google-ads-enhanced-conversions/select-client-action.png)
 
 Er verschijnen extra besturingselementen waarmee u de gebeurtenis [!DNL gtag] kunt configureren. De volgende velden moeten ten minste worden ingevuld:
 
 1. **[!UICONTROL Event Name (Action)]**: voer `conversion` in als de waarde.
-1. Voeg een nieuw gebied toe waar de sleutel `transaction_id` is en de waarde a [ gegevenselement ](../../../ui/managing-resources/data-elements.md) is dat de [ waarde van identiteitskaart van de transactie ](https://support.google.com/google-ads/answer/6386790) bevat.
+1. Voeg een nieuw gebied toe waar de sleutel `transaction_id` is en de waarde a [&#x200B; gegevenselement &#x200B;](../../../ui/managing-resources/data-elements.md) is dat de [&#x200B; waarde van identiteitskaart van de transactie &#x200B;](https://support.google.com/google-ads/answer/6386790) bevat.
 1. **[!UICONTROL Conversion Label]**: voer het juiste conversielabel vanuit uw [!DNL Google Ads] -account in. Als u deze waarde wilt zoeken, meldt u zich aan bij Google Ads en navigeert u naar **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]** . Het conversielabel vindt u onder [!DNL Instructions] .
 
    >[!IMPORTANT]
@@ -81,7 +81,7 @@ Er verschijnen extra besturingselementen waarmee u de gebeurtenis [!DNL gtag] ku
 
 Nadat u de actie hebt gevormd, uitgezocht **[!UICONTROL Keep Changes]** om de actie aan de regelconfiguratie toe te voegen. Selecteer **[!UICONTROL Save to Library]** als u tevreden bent met de regel.
 
-Tot slot publiceer een nieuwe [ bouwstijl ](../../../ui/publishing/builds.md) om de veranderingen in de bibliotheek toe te laten.
+Tot slot publiceer een nieuwe [&#x200B; bouwstijl &#x200B;](../../../ui/publishing/builds.md) om de veranderingen in de bibliotheek toe te laten.
 
 ## Gegevens van de eerste partij verzenden met behulp van gebeurtenis doorsturen
 
@@ -91,20 +91,20 @@ Wanneer u conversiegebeurtenissen vanaf de client kunt verzenden, kunt u deze co
 
 Voordat u de extensie configureert, moet u een toegangstoken maken bij het doorsturen van gebeurtenissen om te verifiëren met de API van [!DNL Google Ads] .
 
-Zie de gids bij [ het creëren van gebeurtenis die geheimen ](../../../ui/event-forwarding/secrets.md) voor gedetailleerde stappen door:sturen. Zorg ervoor dat u **[!UICONTROL Google OAuth 2]** selecteert als geheim type. Ga door met het volgen van de aanwijzingen en selecteer wanneer u wordt gevraagd een Google-accountprofiel te selecteren, de account die toegang heeft tot de conversieactie die u configureert.
+Zie de gids bij [&#x200B; het creëren van gebeurtenis die geheimen &#x200B;](../../../ui/event-forwarding/secrets.md) voor gedetailleerde stappen door:sturen. Zorg ervoor dat u **[!UICONTROL Google OAuth 2]** selecteert als geheim type. Ga door met het volgen van de aanwijzingen en selecteer wanneer u wordt gevraagd een Google-accountprofiel te selecteren, de account die toegang heeft tot de conversieactie die u configureert.
 
-Zodra het geheim wordt gecreeerd, [ creeer een nieuw gegevenselement ](../../../ui/managing-resources/data-elements.md#create-a-data-element) en selecteer **[!UICONTROL Secret]** voor het type van gegevenselement. Selecteer het juiste Google OAuth 2-geheim voor elke omgeving en selecteer **[!UICONTROL Save to Library]** .
+Zodra het geheim wordt gecreeerd, [&#x200B; creeer een nieuw gegevenselement &#x200B;](../../../ui/managing-resources/data-elements.md#create-a-data-element) en selecteer **[!UICONTROL Secret]** voor het type van gegevenselement. Selecteer het juiste Google OAuth 2-geheim voor elke omgeving en selecteer **[!UICONTROL Save to Library]** .
 
 ### De extensie [!DNL Enhanced Conversions] configureren en installeren {#install-enhanced-conversions}
 
 Zoek de extensie [!UICONTROL Google Ads Enhanced Conversions] in de door:sturen catalogus van de gebeurtenis en selecteer **[!UICONTROL Install]** .
 
-![ de [!UICONTROL Google Ads Enhanced Conversions] uitbreiding die onder de [!UICONTROL Extensions] mening in [!UICONTROL Data Collection] UI wordt geselecteerd.](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
+![&#x200B; de [!UICONTROL Google Ads Enhanced Conversions] uitbreiding die onder de [!UICONTROL Extensions] mening in [!UICONTROL Data Collection] UI wordt geselecteerd.](../../../images/extensions/server/google-ads-enhanced-conversions/install-enhanced-conversions.png)
 
 Als u de extensie wilt configureren, moet u de twee vereiste velden invullen:
 
 1. **[!UICONTROL Customer ID]**: De id die uw [!DNL Google Ads] -account uniek identificeert. U kunt deze waarde zoeken door u aan te melden bij [!DNL Google Ads] en naar **[!DNL Help]** > **[!DNL Customer ID]** te navigeren.
-2. **[!UICONTROL Access Token Data Element]**: Selecteer het pictogram van het gegevenselement (![ het elementenpictogram van Gegevens ](/help/images/icons/database.png)) en kies Google OAuth 2 geheim gegevenselement dat u [ in de vorige stap ](#create-secret-data-element) van het menu vormde.
+2. **[!UICONTROL Access Token Data Element]**: Selecteer het pictogram van het gegevenselement (![&#x200B; het elementenpictogram van Gegevens &#x200B;](/help/images/icons/database.png)) en kies Google OAuth 2 geheim gegevenselement dat u [&#x200B; in de vorige stap &#x200B;](#create-secret-data-element) van het menu vormde.
 
 Als u klaar bent, selecteert u **[!UICONTROL Save]** om de extensie te installeren.
 
@@ -112,7 +112,7 @@ Als u klaar bent, selecteert u **[!UICONTROL Save]** om de extensie te installer
 
 Nadat de extensie is geïnstalleerd, kunt u beginnen met het opnemen van [!UICONTROL Send Conversion] -acties in uw gebeurtenisverzendregels. Selecteer **[!UICONTROL Add]** onder [!UICONTROL Actions] wanneer u een regel maakt of bewerkt die luistert naar de conversie die u wilt verbeteren. Selecteer in het volgende dialoogvenster **[!UICONTROL Google Ads Enhanced Conversions]** in de vervolgkeuzelijst [!UICONTROL Extension] en selecteer vervolgens **[!UICONTROL Send Conversion]** onder [!UICONTROL Action Type] .
 
-![ het [!UICONTROL Send Conversion] actietype dat binnen de mening van de actieconfiguratie van de regel het uitgeven werkschema wordt geselecteerd.](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
+![&#x200B; het [!UICONTROL Send Conversion] actietype dat binnen de mening van de actieconfiguratie van de regel het uitgeven werkschema wordt geselecteerd.](../../../images/extensions/server/google-ads-enhanced-conversions/select-server-action.png)
 
 De nieuwe controles verschijnen in het juiste paneel dat u toestaat om uw omzetting te vormen. Ten minste de volgende velden moeten worden ingevuld:
 
@@ -120,9 +120,9 @@ De nieuwe controles verschijnen in het juiste paneel dat u toestaat om uw omzett
 
 | Invoer | Beschrijving |
 | --- | --- |
-| Klant-id | Uw [!DNL Google Ads] klant-id. De gebreken aan klantenidentiteitskaart u inging toen [ het installeren van de uitbreiding ](#install-enhanced-conversions). |
-| Conversie-id of conversielabel | Waarden bijhouden die zijn opgehaald uit [!DNL Google Ads] bij het instellen van bijhouden van conversie. Waarden beginnen met `AW-` .<br><br> voor details op hoe te om deze waarden te vinden, verwijs naar de [[!DNL Google Ads]  documentatie ](https://support.google.com/tagmanager/answer/6105160?hl=en). |
-| Transactie-id | Selecteer een gegevenselement dat de zelfde waarde van transactieidentiteitskaart heeft die [ van de cliëntkant ](#conversion-action-tags) wordt verzonden gebruikend de [!DNL Google Global Site Tag] uitbreiding. |
+| Klant-id | Uw [!DNL Google Ads] klant-id. De gebreken aan klantenidentiteitskaart u inging toen [&#x200B; het installeren van de uitbreiding &#x200B;](#install-enhanced-conversions). |
+| Conversie-id of conversielabel | Waarden bijhouden die zijn opgehaald uit [!DNL Google Ads] bij het instellen van bijhouden van conversie. Waarden beginnen met `AW-` .<br><br> voor details op hoe te om deze waarden te vinden, verwijs naar de [[!DNL Google Ads]  documentatie &#x200B;](https://support.google.com/tagmanager/answer/6105160?hl=en). |
+| Transactie-id | Selecteer een gegevenselement dat de zelfde waarde van transactieidentiteitskaart heeft die [&#x200B; van de cliëntkant &#x200B;](#conversion-action-tags) wordt verzonden gebruikend de [!DNL Google Global Site Tag] uitbreiding. |
 
 **Identificatie van de Gebruiker**
 
@@ -135,12 +135,12 @@ De nieuwe controles verschijnen in het juiste paneel dat u toestaat om uw omzett
 >
 >De identificatiegegevens van de gebruiker moeten worden gehasht alvorens het naar Google wordt verzonden. Als de gegevens niet worden gehasht wanneer het door:sturen van de gebeurtenis het ontvangt, selecteer **[!UICONTROL Normalize & Hash]** knevel op een bepaald gebied om de uitbreiding op te dragen om de waarde te hakken.
 >
->![ de [!UICONTROL Normalize & Hash] knevel voor de [!UICONTROL Email] input binnen de [!UICONTROL Send Conversion] vorm van de actieconfiguratie wordt toegelaten die.](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
+>![&#x200B; de [!UICONTROL Normalize & Hash] knevel voor de [!UICONTROL Email] input binnen de [!UICONTROL Send Conversion] vorm van de actieconfiguratie wordt toegelaten die.](../../../images/extensions/server/google-ads-enhanced-conversions/hash-user-id-values.png)
 
 Als u klaar bent, selecteert u **[!UICONTROL Keep Changes]** om de handeling aan de regelconfiguratie toe te voegen. Selecteer **[!UICONTROL Save to Library]** als u tevreden bent met de regel.
 
-Tot slot publiceer een nieuwe gebeurtenis door:sturen [ bouwt ](../../../ui/publishing/builds.md) om de veranderingen in de bibliotheek toe te laten.
+Tot slot publiceer een nieuwe gebeurtenis door:sturen [&#x200B; bouwt &#x200B;](../../../ui/publishing/builds.md) om de veranderingen in de bibliotheek toe te laten.
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe conversiegebeurtenissen naar [!DNL Google Ads] worden verzonden met behulp van de [!DNL Enhanced Conversions] -extensie voor het doorsturen van gebeurtenissen. Voor meer informatie over gebeurtenis die mogelijkheden in Experience Platform door:sturen, verwijs naar de [ gebeurtenis die overzicht ](../../../ui/event-forwarding/overview.md) door:sturen.
+In deze handleiding wordt beschreven hoe conversiegebeurtenissen naar [!DNL Google Ads] worden verzonden met behulp van de [!DNL Enhanced Conversions] -extensie voor het doorsturen van gebeurtenissen. Voor meer informatie over gebeurtenis die mogelijkheden in Experience Platform door:sturen, verwijs naar de [&#x200B; gebeurtenis die overzicht &#x200B;](../../../ui/event-forwarding/overview.md) door:sturen.

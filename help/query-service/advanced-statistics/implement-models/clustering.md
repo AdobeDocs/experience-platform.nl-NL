@@ -142,4 +142,4 @@ Create MODEL modelname OPTIONS(
 
 ## Volgende stappen
 
-Na het lezen van dit document, weet u nu hoe te om diverse het groeperen algoritmen te vormen en te gebruiken. Daarna, verwijs naar de documenten op [ classificatie ](./classification.md) en [ regressie ](./regression.md) om over andere soorten geavanceerde statistische modellen te leren.
+Na het lezen van dit document, weet u nu hoe te om diverse het groeperen algoritmen te vormen en te gebruiken. Daarna, verwijs naar de documenten op [&#x200B; classificatie &#x200B;](./classification.md) en [&#x200B; regressie &#x200B;](./regression.md) om over andere soorten geavanceerde statistische modellen te leren.

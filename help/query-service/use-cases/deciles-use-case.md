@@ -25,12 +25,12 @@ De volgende belangrijke concepten worden geïllustreerd:
 
 ## Aan de slag
 
-Deze gids vereist een werkend begrip van [ vraaguitvoering in de Dienst van de Vraag ](../best-practices/writing-queries.md) en de volgende componenten van Adobe Experience Platform:
+Deze gids vereist een werkend begrip van [&#x200B; vraaguitvoering in de Dienst van de Vraag &#x200B;](../best-practices/writing-queries.md) en de volgende componenten van Adobe Experience Platform:
 
-* [ Real-Time overzicht van het Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [ Grondbeginselen van schemacompositie ](../../xdm/schema/composition.md): Een inleiding aan de schema&#39;s van het Model van Gegevens van de Ervaring (XDM) en de bouwstenen, beginselen, en beste praktijken voor het samenstellen van schema&#39;s.
-* [ hoe te om een schema voor het Profiel van de Klant in real time ](../../profile/tutorials/add-profile-data.md) toe te laten: Dit leerprogramma schetst de stappen noodzakelijk om gegevens aan het Profiel van de Klant toe te voegen In real time.
-* [ hoe te om een type van douanegegevens te bepalen ](../../xdm/api/data-types.md): De types van gegevens worden gebruikt als verwijzing-type gebieden in klassen of de groepen van het schemagebied en staan voor het verenigbare gebruik van een multi-gebiedstructuur toe die overal in het schema kan worden omvat.
+* [&#x200B; Real-Time overzicht van het Profiel van de Klant &#x200B;](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../xdm/schema/composition.md): Een inleiding aan de schema&#39;s van het Model van Gegevens van de Ervaring (XDM) en de bouwstenen, beginselen, en beste praktijken voor het samenstellen van schema&#39;s.
+* [&#x200B; hoe te om een schema voor het Profiel van de Klant in real time &#x200B;](../../profile/tutorials/add-profile-data.md) toe te laten: Dit leerprogramma schetst de stappen noodzakelijk om gegevens aan het Profiel van de Klant toe te voegen In real time.
+* [&#x200B; hoe te om een type van douanegegevens te bepalen &#x200B;](../../xdm/api/data-types.md): De types van gegevens worden gebruikt als verwijzing-type gebieden in klassen of de groepen van het schemagebied en staan voor het verenigbare gebruik van een multi-gebiedstructuur toe die overal in het schema kan worden omvat.
 
 ## Doelstellingen
 
@@ -46,13 +46,13 @@ Deze gids gebruikt een dataset van de luchtvaartloyaliteit om aan te tonen hoe t
 
 Gebruikend de Dienst van de Vraag, kunt u een dataset tot stand brengen die categorische deciles bevat, die dan kan worden gesegmenteerd om publiek tot stand te brengen dat op attributenrangschikking wordt gebaseerd. De concepten die in de volgende voorbeelden worden getoond kunnen worden toegepast om andere decile emmerdatasets tot stand te brengen, zolang een categorie wordt bepaald en metrisch beschikbaar is.
 
-De gegevens van de voorbeeldluchtvaartloyaliteit gebruiken een [ XDM klasse ExperienceEvents ](../../xdm/classes/experienceevent.md). Elke gebeurtenis is een overzicht van een zakelijke transactie voor afgelegde kilometers, gecrediteerd of gedebiteerd, en de status van lidmaatschapsloyaliteit van &quot;Flyer&quot;, &quot;Frequent&quot;, &quot;Silver&quot; of &quot;Gold&quot;. Het primaire identiteitsveld is `membershipNumber` .
+De gegevens van de voorbeeldluchtvaartloyaliteit gebruiken een [&#x200B; XDM klasse ExperienceEvents &#x200B;](../../xdm/classes/experienceevent.md). Elke gebeurtenis is een overzicht van een zakelijke transactie voor afgelegde kilometers, gecrediteerd of gedebiteerd, en de status van lidmaatschapsloyaliteit van &quot;Flyer&quot;, &quot;Frequent&quot;, &quot;Silver&quot; of &quot;Gold&quot;. Het primaire identiteitsveld is `membershipNumber` .
 
 ### Voorbeeldgegevenssets
 
 De aanvankelijke dataset van de luchtvaartloyaliteit voor dit voorbeeld is &quot;Gegevens van de Loyalty van de Luchtlijn&quot;, en heeft het volgende schema. De primaire identiteit voor het schema is `_profilefoundationreportingstg.membershipNumber` .
 
-![ een diagram van het schema van de Gegevens van de Loyalty van het Luchtnet.](../images/use-cases/airline-loyalty-data.png)
+![&#x200B; een diagram van het schema van de Gegevens van de Loyalty van het Luchtnet.](../images/use-cases/airline-loyalty-data.png)
 
 **gegevens van de Steekproef**
 
@@ -78,27 +78,27 @@ In de bovenstaande loyaliteitsgegevens van de luchtvaartmaatschappij bevat de `.
 
 Maak een &quot;Airline Loyalty Decile Schema&quot; om een decile dataset te maken met gebruik van Query Service.
 
-![ A diagram van het &quot;Airline Loyalty Decile Schema&quot;.](../images/use-cases/airline-loyalty-decile-schema.png)
+![&#x200B; A diagram van het &quot;Airline Loyalty Decile Schema&quot;.](../images/use-cases/airline-loyalty-decile-schema.png)
 
 ### Het schema inschakelen voor realtime-klantprofiel
 
-Gegevens die in Experience Platform voor gebruik door het Profiel van de Klant in real time worden opgenomen moeten [ een Model van de Gegevens van de Ervaring (XDM) schema in overeenstemming zijn dat voor Profiel ](../../xdm/ui/resources/schemas.md) wordt toegelaten. Een schema kan alleen worden ingeschakeld voor Profiel als het de klasse XDM Individual Profile of XDM ExperienceEvent implementeert.
+Gegevens die in Experience Platform voor gebruik door het Profiel van de Klant in real time worden opgenomen moeten [&#x200B; een Model van de Gegevens van de Ervaring (XDM) schema in overeenstemming zijn dat voor Profiel &#x200B;](../../xdm/ui/resources/schemas.md) wordt toegelaten. Een schema kan alleen worden ingeschakeld voor Profiel als het de klasse XDM Individual Profile of XDM ExperienceEvent implementeert.
 
-[ laat uw schema voor gebruik in het Profiel van de Klant in real time toe gebruikend de Registratie API van het Schema ](../../xdm/tutorials/create-schema-api.md) of het [ gebruikersinterface van de Redacteur van het Schema ](../../xdm/tutorials/create-schema-ui.md).  Gedetailleerde instructies over hoe te om een schema voor Profiel toe te laten zijn beschikbaar in hun respectieve documentatie.
+[&#x200B; laat uw schema voor gebruik in het Profiel van de Klant in real time toe gebruikend de Registratie API van het Schema &#x200B;](../../xdm/tutorials/create-schema-api.md) of het [&#x200B; gebruikersinterface van de Redacteur van het Schema &#x200B;](../../xdm/tutorials/create-schema-ui.md).  Gedetailleerde instructies over hoe te om een schema voor Profiel toe te laten zijn beschikbaar in hun respectieve documentatie.
 
 Maak vervolgens een gegevenstype dat opnieuw moet worden gebruikt voor alle op decile betrekking hebbende veldgroepen. Het maken van de decile-veldgroep is een eenmalige stap per sandbox. Het kan ook voor alle op decile betrekking hebbende regelingen opnieuw worden gebruikt.
 
 ### Een naamruimte voor identiteit maken en markeren als primaire id {#identity-namespace}
 
-Om het even welk schema dat voor gebruik met deciles wordt gecreeerd moet een primaire toegewezen identiteit hebben. U kunt [ een identiteitsgebied in de Schema&#39;s UI van Adobe Experience Platform ](../../xdm/ui/fields/identity.md#define-an-identity-field) bepalen, of door de [ Registratie API van het Schema ](../../xdm/api/descriptors.md#create).
+Om het even welk schema dat voor gebruik met deciles wordt gecreeerd moet een primaire toegewezen identiteit hebben. U kunt [&#x200B; een identiteitsgebied in de Schema&#39;s UI van Adobe Experience Platform &#x200B;](../../xdm/ui/fields/identity.md#define-an-identity-field) bepalen, of door de [&#x200B; Registratie API van het Schema &#x200B;](../../xdm/api/descriptors.md#create).
 
-De Dienst van de vraag staat u ook toe om een identiteit of een primaire identiteit voor de gebieden van de ad hoc schemadataset direct door SQL te plaatsen. Zie de documentatie bij [ plaatsend een secundaire identiteit en een primaire identiteit in ad hoc schemaidentiteiten ](../data-governance/ad-hoc-schema-identities.md) voor meer informatie.
+De Dienst van de vraag staat u ook toe om een identiteit of een primaire identiteit voor de gebieden van de ad hoc schemadataset direct door SQL te plaatsen. Zie de documentatie bij [&#x200B; plaatsend een secundaire identiteit en een primaire identiteit in ad hoc schemaidentiteiten &#x200B;](../data-governance/ad-hoc-schema-identities.md) voor meer informatie.
 
 ### Creeer een vraag voor het berekenen van deciles over een raadplegingsperiode {#create-a-query}
 
 In het volgende voorbeeld wordt de SQL-query getoond voor het berekenen van een decile-bewerking over een terugzoekperiode.
 
-Een malplaatje kan of worden gemaakt gebruikend de Redacteur van de Vraag in UI, of door de [ Dienst API van de Vraag ](../api/query-templates.md#create-a-query-template).
+Een malplaatje kan of worden gemaakt gebruikend de Redacteur van de Vraag in UI, of door de [&#x200B; Dienst API van de Vraag &#x200B;](../api/query-templates.md#create-a-query-template).
 
 ```sql
 CREATE TABLE AS airline_loyality_decile 
@@ -295,8 +295,8 @@ Een correlatie tussen het rangschikkende aantal en percentiel wordt gewaarborgd 
 
 ### De querysjabloon uitvoeren
 
-Stel de vraag in werking om de decile dataset te bevolken. U kunt de vraag als malplaatje ook bewaren en het plannen om bij een kadentie te lopen. Als de query als een sjabloon wordt opgeslagen, kan deze ook worden bijgewerkt met het patroon voor maken en invoegen dat verwijst naar de opdracht `table_exists` . Meer informatie over hoe te om het `table_exists` bevel te gebruiken kan in de [ SQL syntaxisgids ](../sql/syntax.md#table-exists) worden gevonden.
+Stel de vraag in werking om de decile dataset te bevolken. U kunt de vraag als malplaatje ook bewaren en het plannen om bij een kadentie te lopen. Als de query als een sjabloon wordt opgeslagen, kan deze ook worden bijgewerkt met het patroon voor maken en invoegen dat verwijst naar de opdracht `table_exists` . Meer informatie over hoe te om het `table_exists` bevel te gebruiken kan in de [&#x200B; SQL syntaxisgids &#x200B;](../sql/syntax.md#table-exists) worden gevonden.
 
 ## Volgende stappen
 
-Het bovenstaande voorbeeld gebruikt benadrukt stappen om op decile-gebaseerde afgeleide datasets beschikbaar te maken in het Profiel van de Klant in real time. Dit staat voor de Dienst van de Segmentatie, of via een gebruikersinterface of RESTful API, toe om publiek te kunnen produceren dat op deze decile emmers wordt gebaseerd. Zie het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md) voor informatie over hoe te tot stand brengen, evalueren, en tot segmenten toegang hebben.
+Het bovenstaande voorbeeld gebruikt benadrukt stappen om op decile-gebaseerde afgeleide datasets beschikbaar te maken in het Profiel van de Klant in real time. Dit staat voor de Dienst van de Segmentatie, of via een gebruikersinterface of RESTful API, toe om publiek te kunnen produceren dat op deze decile emmers wordt gebaseerd. Zie het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](../../segmentation/home.md) voor informatie over hoe te tot stand brengen, evalueren, en tot segmenten toegang hebben.

@@ -18,7 +18,7 @@ Wanneer een probleem optreedt tijdens het aanroepen van de Reactor-API, kan een 
 
 ## Foutindeling
 
-De reacties van de fout zijn bedoeld om met [ JSON in overeenstemming te zijn:API foutenspecificatie ](http://jsonapi.org/format/#errors), en over het algemeen aan de volgende structuur te houden:
+De reacties van de fout zijn bedoeld om met [&#x200B; JSON in overeenstemming te zijn:API foutenspecificatie &#x200B;](http://jsonapi.org/format/#errors), en over het algemeen aan de volgende structuur te houden:
 
 ```json
 {
@@ -46,7 +46,7 @@ De reacties van de fout zijn bedoeld om met [ JSON in overeenstemming te zijn:AP
 | `code` | Een toepassingsspecifieke foutcode, uitgedrukt als tekenreekswaarde. |
 | `title` | Een korte, mens-leesbare samenvatting van het probleem dat **&#x200B;**&#x200B;van voorkomen aan voorkomen, behalve voor localisatie niet zou moeten veranderen. |
 | `detail` | Een door de mens leesbare verklaring specifiek voor dit voorkomen van het probleem. Net als `title` kan de waarde van dit veld worden gelokaliseerd. |
-| `source` | Een object met verwijzingen naar de bron van de fout, eventueel inclusief een van de volgende leden:<ul><li>`pointer`: a [ JSON Aanwijzer (RFC6901) ](https://datatracker.ietf.org/doc/html/rfc6901) koord dat verwijzingen de bijbehorende entiteit in het verzoekdocument (zoals `/data` voor een primair gegevensvoorwerp, of `/data/attributes/title` voor een specifiek attribuut).</li></ul> |
+| `source` | Een object met verwijzingen naar de bron van de fout, eventueel inclusief een van de volgende leden:<ul><li>`pointer`: a [&#x200B; JSON Aanwijzer (RFC6901) &#x200B;](https://datatracker.ietf.org/doc/html/rfc6901) koord dat verwijzingen de bijbehorende entiteit in het verzoekdocument (zoals `/data` voor een primair gegevensvoorwerp, of `/data/attributes/title` voor een specifiek attribuut).</li></ul> |
 | `meta` | Een object dat niet-standaard metagegevens over de fout bevat. |
 
 {style="table-layout:auto"}
@@ -92,7 +92,7 @@ In de volgende tabel worden de verschillende fouten weergegeven die de API kan r
 | `not-authorized` | Deze gebruikersaccount beschikt niet over de benodigde rechten om deze handeling uit te voeren. |
 | `not-found` | De record kan niet worden gevonden. Controleer de id van het object dat u wilt ophalen. |
 | `not-unique` | De naam die u wilt gebruiken, is al in gebruik. Voor deze resource moet de eigenschap &#39;name&#39; uniek zijn. |
-| `public-release-not-authorized` | De openbare release van extensies wordt gecoördineerd door `launch-ext-dev@adobe.com` . Zie het document op [ het vrijgeven van uitbreidingen ](../../extension-dev/submit/release.md) voor meer informatie. |
+| `public-release-not-authorized` | De openbare release van extensies wordt gecoördineerd door `launch-ext-dev@adobe.com` . Zie het document op [&#x200B; het vrijgeven van uitbreidingen &#x200B;](../../extension-dev/submit/release.md) voor meer informatie. |
 | `read-only` | Deze bron is alleen-lezen en kan niet worden gewijzigd. |
 | `session-timeout` | De gebruikerssessie is verlopen. Log uit en meld u opnieuw aan. |
 | `sftp-authentication-failed` | Verificatie is mislukt voor de SFTP-verbinding. |

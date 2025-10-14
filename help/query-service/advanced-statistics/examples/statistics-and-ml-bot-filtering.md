@@ -166,7 +166,7 @@ Dit tweede voorbeeld bouwt op basis SQL het filtreren voort door machine het ler
 
 ### Een trainingsgegevensset maken {#build-a-training-dataset}
 
-Bereid eerst een dataset met vlakke en genestelde structuren voor die het machine het leren model (zoals hierboven beschreven) kan gebruiken. De verdere begeleiding op hoe te om dit te doen kan in [ worden gevonden Werkend met genestelde documentatie van gegevensstructuren ](../../key-concepts/nested-data-structures.md). Groepeer de gegevens op tijdstempel, gebruikers-id en webpaginanaam om patronen in beide activiteiten te identificeren.
+Bereid eerst een dataset met vlakke en genestelde structuren voor die het machine het leren model (zoals hierboven beschreven) kan gebruiken. De verdere begeleiding op hoe te om dit te doen kan in [&#x200B; worden gevonden Werkend met genestelde documentatie van gegevensstructuren &#x200B;](../../key-concepts/nested-data-structures.md). Groepeer de gegevens op tijdstempel, gebruikers-id en webpaginanaam om patronen in beide activiteiten te identificeren.
 
 ### De clausules van TRANSFORM en van OPTIONS van het gebruik voor modelverwezenlijking {#transform-and-preprocess}
 
@@ -174,7 +174,7 @@ Om uw dataset om te zetten en uw machine het leren model effectief te vormen, vo
 
 >[!TIP]
 >
->Meer leren over het gebruiken van transformaties en het preprocessing van uw gegevens, verwijs naar de [ documentatie van de transformatietechnieken van de Eigenschap transformatie ](../feature-transformation.md).
+>Meer leren over het gebruiken van transformaties en het preprocessing van uw gegevens, verwijs naar de [&#x200B; documentatie van de transformatietechnieken van de Eigenschap transformatie &#x200B;](../feature-transformation.md).
 
 1. Als u null-waarden in numerieke, tekenreeks- en booleaanse kolommen wilt vullen, gebruikt u respectievelijk de functies `numeric_imputer` , `string_imputer` en `boolean_imputer` . Met deze stap zorgt u ervoor dat het leeralgoritme van de computer de gegevens zonder fouten kan verwerken.
 2. Pas eigenschaptransformaties toe om de gegevens voor modellering voor te bereiden. Pas `binarized`, `quantile_discretizer` of `string_indexer` toe om de kolommen te categoriseren of te standaardiseren. Geef vervolgens de uitvoer van de imputers ( `numeric_imputer` en `string_imputer` ) door naar volgende transformatoren zoals `string_indexer` of `quantile_discretizer` om betekenisvolle functies te maken.

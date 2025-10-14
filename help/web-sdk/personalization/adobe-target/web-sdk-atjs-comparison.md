@@ -26,7 +26,7 @@ Wij staan onze klanten toe om de bibliotheek van Adobe Experience Cloud, het lus
 
 De vooraf gebouwde versie is beschikbaar op een CDN. U kunt de bibliotheek op CDN rechtstreeks op uw pagina van verwijzingen voorzien, of het downloaden en ontvangen op uw eigen infrastructuur. Het is beschikbaar in geminiatuurde en ongeminificeerde formaten. De ongeminificeerde versie is handig voor foutopsporingsdoeleinden.
 
-Zie [ SDK van het Web installeren gebruikend de bibliotheek van JavaScript ](/help/web-sdk/install/library.md) voor meer informatie.
+Zie [&#x200B; SDK van het Web installeren gebruikend de bibliotheek van JavaScript &#x200B;](/help/web-sdk/install/library.md) voor meer informatie.
 
 ## De bibliotheken configureren
 
@@ -83,7 +83,7 @@ Als u at.js 2.x gebruikt en de instelling `pageLoadEnabled` inschakelt, wordt in
 
 ### Web SDK gebruiken
 
-De inhoud die binnen Adobe Target [ wordt gecreeerd Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) kan automatisch door SDK worden teruggewonnen en worden teruggegeven.
+De inhoud die binnen Adobe Target [&#x200B; wordt gecreeerd Visuele Composer van de Ervaring &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) kan automatisch door SDK worden teruggewonnen en worden teruggegeven.
 
 Als u Target-aanbiedingen wilt aanvragen en automatisch wilt renderen, gebruikt u de opdracht `sendEvent` en stelt u de optie `renderDecisions` in op `true` . Hierdoor wordt de SDK gedwongen om automatisch gepersonaliseerde inhoud te renderen die in aanmerking komt voor automatische rendering.
 
@@ -438,7 +438,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-Leer meer over het `applyOffers` bevel van de [ specifieke documentatie ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=nl-NL).
+Leer meer over het `applyOffers` bevel van de [&#x200B; specifieke documentatie &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=nl-NL).
 
 
 ### Web SDK gebruiken
@@ -453,7 +453,7 @@ alloy("applyPropositions", {
 });
 ```
 
-Leer meer over het `applyPropositions` bevel van de [ specifieke documentatie ](../../personalization/rendering-personalization-content.md#applypropositions).
+Leer meer over het `applyPropositions` bevel van de [&#x200B; specifieke documentatie &#x200B;](../../personalization/rendering-personalization-content.md#applypropositions).
 
 ## Hoe kan ik gebeurtenissen volgen?
 
@@ -691,7 +691,7 @@ alloy("sendEvent", {
 
 ## Respontokens gebruiken
 
-De inhoud van Personalization die van Adobe Target is teruggekeerd omvat [ reactietokens ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
+De inhoud van Personalization die van Adobe Target is teruggekeerd omvat [&#x200B; reactietokens &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
 
 ### At.js gebruiken
 
@@ -871,16 +871,16 @@ Zo ziet de antwoordlading eruit:
 }
 ```
 
-De nuttige lading van de Analyse (`tnta` teken) zou in de treffer moeten worden omvat Analytics gebruikend [ Invoeging API van Gegevens ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+De nuttige lading van de Analyse (`tnta` teken) zou in de treffer moeten worden omvat Analytics gebruikend [&#x200B; Invoeging API van Gegevens &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 #### Logboekregistratie op de server voor Analytics
 
 Logboekregistratie aan de serverzijde voor analyse kan worden ingeschakeld door `analyticsLogging: server_side` in te stellen bij de instellingen at.js of door het `window.targetglobalSettings` -object te overschrijven.
 Vervolgens worden de gegevens als volgt gestroomd:
 
-![ Diagram die het Zijhet Registreren werkschema van de Server van de Analyse tonen ](assets/a4t-server-side-atjs.png)
+![&#x200B; Diagram die het Zijhet Registreren werkschema van de Server van de Analyse tonen &#x200B;](assets/a4t-server-side-atjs.png)
 
-[ leer meer ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=nl-NL)
+[&#x200B; leer meer &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=nl-NL)
 
 ### Web SDK gebruiken
 
@@ -893,9 +893,9 @@ Web SDK ondersteunt ook:
 
 Logboekregistratie aan de clientzijde van Analytics wordt ingeschakeld wanneer Adobe Analytics is uitgeschakeld voor die DataStream-configuratie.
 
-![ Diagram die het Analytics Kant Logging werkschema van de Cliënt tonen ](assets/analytics-disabled-datastream-config.png)
+![&#x200B; Diagram die het Analytics Kant Logging werkschema van de Cliënt tonen &#x200B;](assets/analytics-disabled-datastream-config.png)
 
-De klant heeft toegang tot het teken van Analytics (`tnta`) dat met Analytics moet worden gedeeld gebruikend [ de Invoeging API van Gegevens ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
+De klant heeft toegang tot het teken van Analytics (`tnta`) dat met Analytics moet worden gedeeld gebruikend [&#x200B; de Invoeging API van Gegevens &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 door de opdracht `sendEvent` in een keten te plaatsen en de resulterende array met voorstellingen te doorlopen.
 
 **Voorbeeld**
@@ -931,20 +931,20 @@ alloy("sendEvent", {
 
 Hier is een diagram om te tonen hoe de gegevensstromen wanneer de Kant van de Cliënt van Analytics wordt toegelaten:
 
-![ de stroomdiagram van Gegevens in het Zijkbestand van de Cliënt van Analytics ](assets/analytics-client-side-logging.png)
+![&#x200B; de stroomdiagram van Gegevens in het Zijkbestand van de Cliënt van Analytics &#x200B;](assets/analytics-client-side-logging.png)
 
 #### Logboekregistratie op de server voor Analytics
 
 Logboekregistratie aan de serverkant van Analytics wordt ingeschakeld wanneer Analytics is ingeschakeld voor die DataStream-configuratie.
 
-![ Datastreams UI die de montages van Analytics toont.](assets/analytics-enabled-datastream-config.png)
+![&#x200B; Datastreams UI die de montages van Analytics toont.](assets/analytics-enabled-datastream-config.png)
 
 Wanneer de Logboekregistratie van de Analyse van de Zijde van de Server wordt toegelaten de nuttige lading A4T die met Analytics moet worden gedeeld zodat de Analytics rapportering toont
 de correcte beelden en de omzettingen worden gedeeld op het niveau van Edge Network, zodat de klant geen extra verwerking hoeft te doen.
 
 Hieronder wordt beschreven hoe gegevens in onze systemen stromen wanneer de Logboekregistratie van de Analytics van de Server wordt toegelaten:
 
-![ Diagram die de gegevensstroom in het Loggen van de Analyse van de Server Zijde tonen ](assets/analytics-server-side-logging.png)
+![&#x200B; Diagram die de gegevensstroom in het Loggen van de Analyse van de Server Zijde tonen &#x200B;](assets/analytics-server-side-logging.png)
 
 ## Globale instellingen doel instellen
 
@@ -1154,7 +1154,7 @@ Met deze kennis in mening kunnen wij zien wat de noodzakelijke stappen aan opste
 
 1. Opstelling namespace die identiteitskaart van de Derde van het Doel in de de configuratiepagina van de gegevensstroom zal bevatten:
 
-![ Datastreams UI die het gebied van de derde van het Doel tonen namespace ](assets/mbox-3-party-id-setup.png)
+![&#x200B; Datastreams UI die het gebied van de derde van het Doel tonen namespace &#x200B;](assets/mbox-3-party-id-setup.png)
 
 1. Verzend die identiteitsnaamruimte in elke sendEvent-opdracht als volgt:
 
@@ -1203,7 +1203,7 @@ window.targetPageParams = function() {
 ### Web SDK gebruiken
 
 Gebruikend Web SDK kunnen de klanten opstelling het bezit op een hoger niveau, wanneer vestiging de configuratie van de gegevensstroom, onder Adobe Target namespace:
-![ Datastreams UI die de montages van Adobe Target toont.](assets/at-property-setup.png)
+![&#x200B; Datastreams UI die de montages van Adobe Target toont.](assets/at-property-setup.png)
 Dit betekent elke vraag van het Doel voor die specifieke configuratie van de Stream van Gegevens die bezitstoken zal bevatten.
 
 ## Hoe kan ik een voorvoegsel toevoegen aan een box
@@ -1249,14 +1249,14 @@ At.js stelt deze het zuiveren eigenschappen bloot:
 * Mbox Debug - at.js registreert elke actie
 * Doelovertrek - met een mbox trace-token dat in Bullseye is gegenereerd, is een trace-object met details die aan het beslissingsproces hebben deelgenomen, beschikbaar onder `window.___target_trace` -object
 
-Nota: Al deze het zuiveren eigenschappen zijn beschikbaar met verbeterde mogelijkheden in [ Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+Nota: Al deze het zuiveren eigenschappen zijn beschikbaar met verbeterde mogelijkheden in [&#x200B; Adobe Experience Platform Debugger &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ### Web SDK gebruiken
 
 U hebt meerdere mogelijkheden voor foutopsporing wanneer u Web SDK gebruikt:
 
-* Gebruikend [ Assurance ](/help/assurance/home.md)
+* Gebruikend [&#x200B; Assurance &#x200B;](/help/assurance/home.md)
 * [Web SDK debug ingeschakeld](/help/web-sdk/use-cases/debugging.md)
-* Het gebruik van [ SDK controlemaakjes van het Web ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Gebruik [ Adobe Experience Platform Debugger ](/help/debugger/home.md)
+* Het gebruik van [&#x200B; SDK controlemaakjes van het Web &#x200B;](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* Gebruik [&#x200B; Adobe Experience Platform Debugger &#x200B;](/help/debugger/home.md)
 * Doelovertrek

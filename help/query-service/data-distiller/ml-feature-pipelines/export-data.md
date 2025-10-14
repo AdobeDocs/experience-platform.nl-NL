@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Gegevens exporteren naar externe XML-omgevingen
 
-In dit document wordt uitgelegd hoe u een voorbereide trainingsgegevensset die is gemaakt met Data Distiller, kunt delen met een locatie voor cloudopslag die uw XML-omgeving kan lezen voor training en het scoren van uw model. Het voorbeeld voert hier de trainingsdataset naar de [ Gebieden van Gegevens - Landing Zone (DLZ) ](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) uit. U kunt de opslagbestemming naar wens wijzigen om te werken met de leeromgeving van uw computer.
+In dit document wordt uitgelegd hoe u een voorbereide trainingsgegevensset die is gemaakt met Data Distiller, kunt delen met een locatie voor cloudopslag die uw XML-omgeving kan lezen voor training en het scoren van uw model. Het voorbeeld voert hier de trainingsdataset naar de [&#x200B; Gebieden van Gegevens - Landing Zone (DLZ) &#x200B;](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) uit. U kunt de opslagbestemming naar wens wijzigen om te werken met de leeromgeving van uw computer.
 
-De [ Dienst van de Stroom voor Doelen ](https://developer.adobe.com/experience-platform-apis/references/destinations/) wordt gebruikt om de eigenschappijpleiding te voltooien door een dataset van gegevens verwerkte eigenschappen in een aangewezen plaats van de wolkenopslag te landen.
+De [&#x200B; Dienst van de Stroom voor Doelen &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/) wordt gebruikt om de eigenschappijpleiding te voltooien door een dataset van gegevens verwerkte eigenschappen in een aangewezen plaats van de wolkenopslag te landen.
 
 ## De bronverbinding maken {#create-source-connection}
 

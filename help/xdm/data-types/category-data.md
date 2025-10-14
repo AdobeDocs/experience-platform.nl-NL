@@ -13,7 +13,7 @@ ht-degree: 1%
 
 [!UICONTROL Category data] is een standaard XDM-gegevenstype (Experience Data Model) waarmee informatie wordt beschreven die betrekking heeft op de categorie van een product.
 
-![ een diagram van het gegevenstype van de Categorie.](../images/data-types/category-data.png)
+![&#x200B; een diagram van het gegevenstype van de Categorie.](../images/data-types/category-data.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-----------------|--------------------|-----------|------------------------------------------|
@@ -25,5 +25,5 @@ ht-degree: 1%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.schema.json)

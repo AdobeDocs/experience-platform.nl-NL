@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Id&#39;s van beschrijvingsbestanden delegeren
 
-Wanneer u tags gebruikt in Adobe Experience Platform, worden alle functies die u op uw site kunt implementeren, geleverd door extensies. De mogelijkheden die door elke extensie worden geboden, worden gedefinieerd door de ontwikkelaar van de extensie. Wanneer een uitbreiding wordt opgesteld, wordt het gebundeld met zijn diverse mogelijkheden in de vorm van een [ uitbreidingspakket ](../endpoints/extension-packages.md). De functies die ontwikkelaars aan een extensiepakket toevoegen, worden beschouwd als &#39;gedelegeerde&#39; van dat pakket.
+Wanneer u tags gebruikt in Adobe Experience Platform, worden alle functies die u op uw site kunt implementeren, geleverd door extensies. De mogelijkheden die door elke extensie worden geboden, worden gedefinieerd door de ontwikkelaar van de extensie. Wanneer een uitbreiding wordt opgesteld, wordt het gebundeld met zijn diverse mogelijkheden in de vorm van een [&#x200B; uitbreidingspakket &#x200B;](../endpoints/extension-packages.md). De functies die ontwikkelaars aan een extensiepakket toevoegen, worden beschouwd als &#39;gedelegeerde&#39; van dat pakket.
 
 Elke afgevaardigde binnen een uitbreidingspakket wordt gegeven een unieke identiteitskaart van de afgevaardigde van de beschrijver. De afgevaardigde beschrijver identiteitskaart voor een bepaald middel vertelt het systeem welk soort middel het is en tot welk uitbreidingspakket het behoort.
 
@@ -27,23 +27,23 @@ De beschrijvings IDs van de delegatie is belangrijk om te begrijpen wanneer het 
 
 ### Regelcomponenten
 
-A [ regelcomponent ](../endpoints/rule-components.md) moet met een gebeurtenis, een voorwaarde, of een actie worden geassocieerd die tot een uitbreidingspakket behoort. Dit vertegenwoordigt het &quot;type&quot;van de regelcomponent aangezien het tot de logica van de algemene regel (een gebeurtenis, een voorwaarde, of een actie) behoort. Daarom wanneer het creëren van een regelcomponent, moet een identiteitskaart van de afgevaardigde van de beschrijver worden verstrekt om erop te wijzen welke gebeurtenis, voorwaarde, of actie de regelcomponent zou moeten worden geassocieerd met.
+A [&#x200B; regelcomponent &#x200B;](../endpoints/rule-components.md) moet met een gebeurtenis, een voorwaarde, of een actie worden geassocieerd die tot een uitbreidingspakket behoort. Dit vertegenwoordigt het &quot;type&quot;van de regelcomponent aangezien het tot de logica van de algemene regel (een gebeurtenis, een voorwaarde, of een actie) behoort. Daarom wanneer het creëren van een regelcomponent, moet een identiteitskaart van de afgevaardigde van de beschrijver worden verstrekt om erop te wijzen welke gebeurtenis, voorwaarde, of actie de regelcomponent zou moeten worden geassocieerd met.
 
 Als u bijvoorbeeld een gebeurtenisregelcomponent wilt maken die is gebaseerd op een gebeurtenis `click` in een extensiepakket `example-package` , gebruikt de component rule de volgende `delegate_descriptor_id` waarde: `example-package::events::click` .
 
-Zie de sectie op [ creërend een regelcomponent ](../endpoints/rule-components.md#create) voor meer informatie.
+Zie de sectie op [&#x200B; creërend een regelcomponent &#x200B;](../endpoints/rule-components.md#create) voor meer informatie.
 
 ### Gegevenselementen
 
-A [ gegevenselement ](../endpoints/data-elements.md) moet met een uitbreidingspakket worden geassocieerd wanneer het eerst wordt gecreeerd, aangezien elk uitbreidingspakket de compatibele types voor zijn elementen van gedelegeerde gegevens, evenals hun voorgenomen gedrag bepaalt.
+A [&#x200B; gegevenselement &#x200B;](../endpoints/data-elements.md) moet met een uitbreidingspakket worden geassocieerd wanneer het eerst wordt gecreeerd, aangezien elk uitbreidingspakket de compatibele types voor zijn elementen van gedelegeerde gegevens, evenals hun voorgenomen gedrag bepaalt.
 
 Als u bijvoorbeeld een gegevenselement wilt maken dat het `cookie` -type gebruikt zoals gedefinieerd door het extensiepakket `example-package` , gebruikt het gegevenselement de volgende `delegate_descriptor_id` -waarde: `example-package::dataElements::cookie` .
 
-Zie de sectie over [ het creëren van een gegevenselement ](../endpoints/data-elements.md#create) voor meer informatie.
+Zie de sectie over [&#x200B; het creëren van een gegevenselement &#x200B;](../endpoints/data-elements.md#create) voor meer informatie.
 
 ### Extensies
 
-Een [ uitbreiding ](../endpoints/extensions.md) wordt automatisch geassocieerd met een uitbreidingspakket wanneer het eerst wordt gecreeerd, en wordt vertegenwoordigd binnen het voorwerp van de uitbreiding `relationships`. Als uw extensie aangepaste instellingen nodig heeft, is ook een id voor de gedelegeerde descriptor vereist.
+Een [&#x200B; uitbreiding &#x200B;](../endpoints/extensions.md) wordt automatisch geassocieerd met een uitbreidingspakket wanneer het eerst wordt gecreeerd, en wordt vertegenwoordigd binnen het voorwerp van de uitbreiding `relationships`. Als uw extensie aangepaste instellingen nodig heeft, is ook een id voor de gedelegeerde descriptor vereist.
 
 >[!NOTE]
 >
@@ -51,4 +51,4 @@ Een [ uitbreiding ](../endpoints/extensions.md) wordt automatisch geassocieerd m
 
 Als u bijvoorbeeld een id van een gedelegeerde descriptor wilt toevoegen aan een extensie die tot het extensiepakket `example-package` behoort, wordt voor de extensie de volgende `delegate_descriptor_id` value: `example-package::extensionConfiguration::config` gebruikt.
 
-Zie de gids bij [ het creëren van een uitbreiding ](../endpoints/extensions.md#create) voor meer informatie.
+Zie de gids bij [&#x200B; het creëren van een uitbreiding &#x200B;](../endpoints/extensions.md#create) voor meer informatie.

@@ -20,15 +20,15 @@ Deze handleiding voor ontwikkelaars bevat stappen waarmee u sandbox-API kunt geb
 
 ## Vereisten
 
-Voor het beheren van sandboxen voor uw organisatie hebt u beheerdersrechten nodig voor sandboxen. De gebruikers zonder toegangstoestemmingen kunnen het [ beschikbare zandbakeneindpunt ](./available.md) slechts gebruiken om van actieve zandbakken voor de huidige gebruiker een lijst te maken. Zie het [ overzicht van de toegangscontrole ](../../access-control/home.md) voor meer informatie over hoe te om zandbaktoestemmingen voor Experience Platform toe te wijzen.
+Voor het beheren van sandboxen voor uw organisatie hebt u beheerdersrechten nodig voor sandboxen. De gebruikers zonder toegangstoestemmingen kunnen het [&#x200B; beschikbare zandbakeneindpunt &#x200B;](./available.md) slechts gebruiken om van actieve zandbakken voor de huidige gebruiker een lijst te maken. Zie het [&#x200B; overzicht van de toegangscontrole &#x200B;](../../access-control/home.md) voor meer informatie over hoe te om zandbaktoestemmingen voor Experience Platform toe te wijzen.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in de documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in de documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Deze gids vereist u om het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan Experience Platform APIs met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Deze gids vereist u om het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan Experience Platform APIs met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

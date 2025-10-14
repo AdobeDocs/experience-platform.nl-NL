@@ -18,27 +18,27 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Adobe Experience Platform. De dienst verstrekt een gebruikersinterface en RESTful API waarvan alle gesteunde bronnen en bestemmingen verbindbaar zijn.
 
-Deze zelfstudie behandelt de stappen voor het controleren van de gegevens van de stroomlooppas voor volledigheid, fouten, en metriek gebruikend [[!DNL Flow Service API] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Deze zelfstudie behandelt de stappen voor het controleren van de gegevens van de stroomlooppas voor volledigheid, fouten, en metriek gebruikend [[!DNL Flow Service API] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow identiteitskaart hebt, selecteer uw schakelaar van keus van het [ overzicht van bronnen ](../../sources/home.md) of [ overzicht van bestemmingen ](../../destinations/catalog/overview.md) en volg de stappen alvorens dit leerprogramma te proberen.
+Voor deze zelfstudie moet u beschikken over de id-waarde van een geldige gegevensstroom. Als u geen geldige dataflow identiteitskaart hebt, selecteer uw schakelaar van keus van het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md) of [&#x200B; overzicht van bestemmingen &#x200B;](../../destinations/catalog/overview.md) en volg de stappen alvorens dit leerprogramma te proberen.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-- [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Experience Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
-- [ Bronnen ](../../sources/home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [&#x200B; Doelen &#x200B;](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Experience Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
+- [&#x200B; Bronnen &#x200B;](../../sources/home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+- [&#x200B; Sandboxen &#x200B;](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om stromen met succes te kunnen controleren met behulp van de [!DNL Flow Service] API.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -200,4 +200,4 @@ Een succesvolle reactie keert details betreffende uw stroomlooppas, met inbegrip
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u metrische gegevens en foutgegevens over uw gegevensstroom opgehaald met de API [!DNL Flow Service] . U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om dataflows voor bronnen te controleren, te lezen gelieve [ controledataflows voor bronnen gebruikend het gebruikersinterface ](../ui/monitor-sources.md) leerprogramma. Voor meer informatie over hoe te om dataflows voor bestemmingen te controleren, te lezen gelieve [ controledataflows voor bestemmingen gebruikend het gebruikersinterface ](../ui/monitor-destinations.md) leerprogramma.
+Aan de hand van deze zelfstudie hebt u metrische gegevens en foutgegevens over uw gegevensstroom opgehaald met de API [!DNL Flow Service] . U kunt nu uw gegevensstroom blijven controleren, afhankelijk van uw innameschema, om zijn status en innamesnelheden te volgen. Voor informatie over hoe te om dataflows voor bronnen te controleren, te lezen gelieve [&#x200B; controledataflows voor bronnen gebruikend het gebruikersinterface &#x200B;](../ui/monitor-sources.md) leerprogramma. Voor meer informatie over hoe te om dataflows voor bestemmingen te controleren, te lezen gelieve [&#x200B; controledataflows voor bestemmingen gebruikend het gebruikersinterface &#x200B;](../ui/monitor-destinations.md) leerprogramma.

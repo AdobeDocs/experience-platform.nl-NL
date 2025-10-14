@@ -22,7 +22,7 @@ Wanneer u op dossier-gebaseerde bestemmingen door Destination SDK creeert, kunt 
 
 De de configuratiemontages van de partij maken deel uit van de bestemmingsconfiguratie voor op dossier-gebaseerde bestemmingen.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [&#x200B; configuratieopties &#x200B;](../configuration-options.md) documentatie of zie de gids op hoe te [&#x200B; Destination SDK gebruiken om een op dossier-gebaseerde bestemming &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
 
 U kunt de instellingen voor de bestandsnaam en het exportschema configureren via het eindpunt van `/authoring/destinations` . Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -46,7 +46,7 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ## Ondersteunde parameters {#supported-parameters}
 
-De waarden die u opstelling hier wordt aangehaald in de [ stap van de de publieksuitvoer van het Programma ](../../../ui/activate-batch-profile-destinations.md#scheduling) van het op dossier-gebaseerde werkschema van de bestemmingsactivering.
+De waarden die u opstelling hier wordt aangehaald in de [&#x200B; stap van de de publieksuitvoer van het Programma &#x200B;](../../../ui/activate-batch-profile-destinations.md#scheduling) van het op dossier-gebaseerde werkschema van de bestemmingsactivering.
 
 ```json
 "batchConfig":{
@@ -90,9 +90,9 @@ De waarden die u opstelling hier wordt aangehaald in de [ stap van de de publiek
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `allowMandatoryFieldSelection` | Boolean | Ingesteld op `true` zodat klanten kunnen opgeven welke profielkenmerken verplicht zijn. De standaardwaarde is `false` . Zie [ Verplicht attributen ](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes) voor meer informatie. |
-| `allowDedupeKeyFieldSelection` | Boolean | Ingesteld op `true` zodat klanten deduplicatietoetsen kunnen opgeven. De standaardwaarde is `false` .  Zie [ de sleutels van de Deduplicatie ](../../../ui/activate-batch-profile-destinations.md#deduplication-keys) voor meer informatie. |
-| `defaultExportMode` | Enum | Definieert de standaardmodus voor het exporteren van bestanden. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> De standaardwaarde is `DAILY_FULL_EXPORT` . Zie de [ documentatie van de partijactivering ](../../../ui/activate-batch-profile-destinations.md#scheduling) voor details over dossieruitvoer die plannen. |
+| `allowMandatoryFieldSelection` | Boolean | Ingesteld op `true` zodat klanten kunnen opgeven welke profielkenmerken verplicht zijn. De standaardwaarde is `false` . Zie [&#x200B; Verplicht attributen &#x200B;](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes) voor meer informatie. |
+| `allowDedupeKeyFieldSelection` | Boolean | Ingesteld op `true` zodat klanten deduplicatietoetsen kunnen opgeven. De standaardwaarde is `false` .  Zie [&#x200B; de sleutels van de Deduplicatie &#x200B;](../../../ui/activate-batch-profile-destinations.md#deduplication-keys) voor meer informatie. |
+| `defaultExportMode` | Enum | Definieert de standaardmodus voor het exporteren van bestanden. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> De standaardwaarde is `DAILY_FULL_EXPORT` . Zie de [&#x200B; documentatie van de partijactivering &#x200B;](../../../ui/activate-batch-profile-destinations.md#scheduling) voor details over dossieruitvoer die plannen. |
 | `allowedExportModes` | Lijst | Hiermee definieert u de exportmodi voor bestanden die beschikbaar zijn voor klanten. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Lijst | Hiermee definieert u de exportfrequentie voor bestanden die beschikbaar is voor klanten. Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> |
 | `defaultFrequency` | Enum | Definieert de standaard exportfrequentie voor bestanden.Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> De standaardwaarde is `DAILY` . |
@@ -100,13 +100,13 @@ De waarden die u opstelling hier wordt aangehaald in de [ stap van de de publiek
 | `filenameConfig.allowedFilenameAppendOptions` | String | *Vereiste*. Lijst met beschikbare bestandsnaammacro&#39;s waaruit gebruikers kunnen kiezen. Op deze manier bepaalt u welke items aan geëxporteerde bestandsnamen worden toegevoegd (gebruikers-id, naam van de organisatie, datum en tijd van export, enzovoort). Zorg er bij het instellen van `defaultFilename` voor dat dubbele macro&#39;s worden vermeden. <br><br> Gesteunde waarden: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Ongeacht de volgorde waarin u de macro&#39;s definieert, geeft de Experience Platform-interface deze altijd weer in de volgorde die hier wordt weergegeven. <br><br> Als `defaultFilename` leeg is, moet de lijst `allowedFilenameAppendOptions` minstens één macro bevatten. |
 | `filenameConfig.defaultFilenameAppendOptions` | String | *Vereiste*. Vooraf geselecteerde standaardbestandsnaammacro&#39;s die gebruikers kunnen uitschakelen.<br><br> De macro&#39;s in deze lijst zijn een subset van de gedefinieerde macro&#39;s in `allowedFilenameAppendOptions` . |
 | `filenameConfig.defaultFilename` | String | *Facultatief*. Hiermee definieert u de standaardbestandsnamen van macro&#39;s voor de geëxporteerde bestanden. Deze kunnen niet worden overschreven door gebruikers. <br><br> Om het even welke macro die door `allowedFilenameAppendOptions` wordt bepaald zal na de `defaultFilename` macro&#39;s worden toegevoegd. <br><br> Als `defaultFilename` leeg is, moet u minstens één macro in `allowedFilenameAppendOptions` bepalen. |
-| `segmentGroupingEnabled` | Boolean | Bepaalt of het geactiveerde publiek in één enkel dossier of veelvoudige dossiers zou moeten worden uitgevoerd, die op publiek [ wordt gebaseerd fusiebeleid ](../../../../profile/merge-policies/overview.md). Ondersteunde waarden: <ul><li>`true` : exporteert één bestand per samenvoegbeleid.</li><li>`false` : exporteert één bestand per publiek, ongeacht het samenvoegbeleid. Dit is het standaardgedrag. U kunt hetzelfde resultaat bereiken door deze parameter volledig in te zetten.</li></ul> |
+| `segmentGroupingEnabled` | Boolean | Bepaalt of het geactiveerde publiek in één enkel dossier of veelvoudige dossiers zou moeten worden uitgevoerd, die op publiek [&#x200B; wordt gebaseerd fusiebeleid &#x200B;](../../../../profile/merge-policies/overview.md). Ondersteunde waarden: <ul><li>`true` : exporteert één bestand per samenvoegbeleid.</li><li>`false` : exporteert één bestand per publiek, ongeacht het samenvoegbeleid. Dit is het standaardgedrag. U kunt hetzelfde resultaat bereiken door deze parameter volledig in te zetten.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Configuratie bestandsnaam {#file-name-configuration}
 
-Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geëxporteerde bestandsnamen moeten bevatten. De macro&#39;s in de lijst hieronder beschrijven elementen die in UI in het [ worden gevonden dossier - noem configuratie ](../../../ui/activate-batch-profile-destinations.md#file-names) scherm.
+Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geëxporteerde bestandsnamen moeten bevatten. De macro&#39;s in de lijst hieronder beschrijven elementen die in UI in het [&#x200B; worden gevonden dossier - noem configuratie &#x200B;](../../../ui/activate-batch-profile-destinations.md#file-names) scherm.
 
 >[!TIP]
 > 
@@ -124,8 +124,8 @@ Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geë
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` en `TIMESTAMP` beide definiëren wanneer het bestand is gegenereerd, maar in verschillende indelingen. <br><br><ul><li>`DATETIME` gebruikt de volgende indeling: YYYMMDD_HMMSS.</li><li>`TIMESTAMP` gebruikt de Unix-indeling van 10 cijfers. </li></ul> `DATETIME` en `TIMESTAMP` sluiten elkaar uit en kunnen niet gelijktijdig worden gebruikt. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Custom text] | Door de gebruiker gedefinieerde aangepaste tekst die in de bestandsnaam moet worden opgenomen. Kan niet worden gebruikt in `defaultFilename` . | Mijn_Aangepaste_tekst |
 | `TIMESTAMP` | [!UICONTROL Date and time] | Tijdstempel van 10 cijfers van het tijdstip waarop het bestand is gegenereerd, in Unix-indeling. | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | Identiteitskaart van het [ samenvoegbeleid ](../../../../profile/merge-policies/overview.md) wordt gebruikt om het uitgevoerde publiek te produceren dat. Gebruik deze macro wanneer u geëxporteerde soorten publiek in bestanden groepeert op basis van het samenvoegbeleid. Gebruik deze macro samen met `segmentGroupingEnabled:true` . | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | De naam van het [ samenvoegbeleid ](../../../../profile/merge-policies/overview.md) wordt gebruikt om het uitgevoerde publiek te produceren dat. Gebruik deze macro wanneer u geëxporteerde soorten publiek in bestanden groepeert op basis van het samenvoegbeleid. Gebruik deze macro samen met `segmentGroupingEnabled:true` . | Mijn aangepaste samenvoegingsbeleid |
+| `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | Identiteitskaart van het [&#x200B; samenvoegbeleid &#x200B;](../../../../profile/merge-policies/overview.md) wordt gebruikt om het uitgevoerde publiek te produceren dat. Gebruik deze macro wanneer u geëxporteerde soorten publiek in bestanden groepeert op basis van het samenvoegbeleid. Gebruik deze macro samen met `segmentGroupingEnabled:true` . | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | De naam van het [&#x200B; samenvoegbeleid &#x200B;](../../../../profile/merge-policies/overview.md) wordt gebruikt om het uitgevoerde publiek te produceren dat. Gebruik deze macro wanneer u geëxporteerde soorten publiek in bestanden groepeert op basis van het samenvoegbeleid. Gebruik deze macro samen met `segmentGroupingEnabled:true` . | Mijn aangepaste samenvoegingsbeleid |
 
 {style="table-layout:auto"}
 
@@ -148,7 +148,7 @@ In het onderstaande configuratievoorbeeld ziet u de overeenkomst tussen de confi
 }
 ```
 
-![ beeld UI die het scherm van de het configuratieconfiguratie van de dossiernaam met vooraf geselecteerde macro&#39;s toont ](../../assets/functionality/destination-configuration/file-name-configuration.png)
+![&#x200B; beeld UI die het scherm van de het configuratieconfiguratie van de dossiernaam met vooraf geselecteerde macro&#39;s toont &#x200B;](../../assets/functionality/destination-configuration/file-name-configuration.png)
 
 ## Volgende stappen {#next-steps}
 

@@ -15,7 +15,7 @@ Gebruik de SQL publieksuitbreiding om publiek met gegevens van het gegevensmeer,
 
 Het gebruik van deze SQL-extensie verbetert de mogelijkheid om een publiek te maken omdat u geen onbewerkte gegevens in uw profielen nodig hebt wanneer u publiekssegmenten definieert. Het publiek dat met deze methode wordt gecreeerd wordt automatisch geregistreerd in de werkruimte van het Publiek, waar u hen aan op dossier-gebaseerde bestemmingen kunt verder richten.
 
-![ Infographic die het SQL werkschema van de publieksuitbreiding tonen. De stadia omvatten; het bouwen van publiek met de Dienst van de Vraag gebruikend SQL bevelen, die hen in Experience Platform UI beheren, om hen in op dossier-gebaseerde bestemmingen te activeren.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![&#x200B; Infographic die het SQL werkschema van de publieksuitbreiding tonen. De stadia omvatten; het bouwen van publiek met de Dienst van de Vraag gebruikend SQL bevelen, die hen in Experience Platform UI beheren, om hen in op dossier-gebaseerde bestemmingen te activeren.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 In dit document wordt beschreven hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten.
 
@@ -23,7 +23,7 @@ In dit document wordt beschreven hoe u de SQL-publieksextensie in Adobe Experien
 
 Voer de volgende stappen uit om uw publiek te maken, te beheren en te activeren. Gemaakt publiek integreert naadloos in de &#39;publieksstroom&#39;, zodat u segmenten kunt maken van het basispubliek en doelbestandsgebaseerde doelen (bijvoorbeeld CSV-uploads of cloudopslaglocaties) voor klantenservice. De &quot;stroom van het publiek&quot;verwijst naar het volledige proces om, publiek tot stand te brengen te leiden en te activeren, die naadloze integratie over bestemmingen verzekeren.
 
-Als deel van uw &quot;publieksstroom,&quot;gebruik de volgende SQL bevelen om [&#128279;](#create-audience) tot stand te brengen, [ wijzigen ](#add-profiles-to-audience), en [ schrapt ](#delete-audience) publiek binnen Adobe Experience Platform.
+Als deel van uw &quot;publieksstroom,&quot;gebruik de volgende SQL bevelen om [&#128279;](#create-audience) tot stand te brengen, [&#x200B; wijzigen &#x200B;](#add-profiles-to-audience), en [&#x200B; schrapt &#x200B;](#delete-audience) publiek binnen Adobe Experience Platform.
 
 ### Een publiek maken {#create-audience}
 
@@ -45,7 +45,7 @@ Gebruik deze parameters om uw SQL vraag van de publieksverwezenlijking te bepale
 | `table_name` | Naam van de tabel en het publiek. |
 | `primary_identity` | Hiermee geeft u de primaire identiteitskolom voor het publiek op. |
 | `identity_namespace` | Naamruimte van de identiteit. U kunt een bestaande naamruimte gebruiken of een nieuwe naamruimte maken. Gebruik de opdracht `SHOW NAMESPACES` om beschikbare naamruimten weer te geven. Gebruik `CREATE NAMESPACE` om een nieuwe naamruimte te maken. Bijvoorbeeld: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')` . |
-| `select_query` | Een SELECT-instructie die het publiek definieert. De syntaxis van de UITGEZOCHTE vraag kan in de [ UITGEZOCHTE vragen ](../sql/syntax.md#select-queries) sectie worden gevonden. |
+| `select_query` | Een SELECT-instructie die het publiek definieert. De syntaxis van de UITGEZOCHTE vraag kan in de [&#x200B; UITGEZOCHTE vragen &#x200B;](../sql/syntax.md#select-queries) sectie worden gevonden. |
 
 {style="table-layout:auto"}
 
@@ -294,17 +294,17 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Automatische publieksregistratie en beschikbaarheid {#registration-and-availability}
 
-Soorten publiek dat is gemaakt met de SQL-extensie, worden automatisch geregistreerd onder de Data Distiller [!UICONTROL Origin] in de werkruimte Publiek. Zodra geregistreerd, zijn deze publiek beschikbaar voor het richten in op dossier-gebaseerde bestemmingen, die segmentatie en het richten strategieën verbeteren. Dit proces vereist geen extra configuratie, die publieksbeheer stroomlijnt. Voor meer details op hoe te om, publiek binnen Experience Platform UI te bekijken te beheren en te creëren, zie het [ Poortoverzicht van het Poortpubliek van het Publiek ](../../segmentation/ui/audience-portal.md).
+Soorten publiek dat is gemaakt met de SQL-extensie, worden automatisch geregistreerd onder de Data Distiller [!UICONTROL Origin] in de werkruimte Publiek. Zodra geregistreerd, zijn deze publiek beschikbaar voor het richten in op dossier-gebaseerde bestemmingen, die segmentatie en het richten strategieën verbeteren. Dit proces vereist geen extra configuratie, die publieksbeheer stroomlijnt. Voor meer details op hoe te om, publiek binnen Experience Platform UI te bekijken te beheren en te creëren, zie het [&#x200B; Poortoverzicht van het Poortpubliek van het Publiek &#x200B;](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
-![ de werkruimte van het Publiek in Adobe Experience Platform, die het publiek van Distiller van Gegevens toont automatisch gepubliceerd en klaar voor gebruik.](../images/data-distiller/sql-audiences/audiences.png)
+![&#x200B; de werkruimte van het Publiek in Adobe Experience Platform, die het publiek van Distiller van Gegevens toont automatisch gepubliceerd en klaar voor gebruik.](../images/data-distiller/sql-audiences/audiences.png)
 
 ## Soorten publiek naar doelen activeren {#activate-audiences}
 
 Activeer uw doelgroepen door deze naar een bestandsdoel te sturen, zoals [!DNL Amazon S3] , [!DNL SFTP] of [!DNL Azure Blob] . De verrijkte publieksattributen zijn beschikbaar voor verdere verfijning en het filtreren zoals nodig.
 
-![ Stroomschema van de bestemmingstypes van Adobe Experience Platform, die openbare en privé/douanebestemmingen, met inbegrip van partij en het stromen opties tonen.](../images/data-distiller/sql-audiences/destination-types.png)
+![&#x200B; Stroomschema van de bestemmingstypes van Adobe Experience Platform, die openbare en privé/douanebestemmingen, met inbegrip van partij en het stromen opties tonen.](../images/data-distiller/sql-audiences/destination-types.png)
 
 ## Specificaties {#faqs}
 
@@ -382,7 +382,7 @@ Nadat u dit document hebt gelezen, hebt u geleerd hoe u de SQL-publieksextensie 
 
 Vervolgens kunt u de volgende documentatie lezen om uw Experience Platform-beheerstrategieën voor het publiek verder te ontwikkelen en te optimaliseren:
 
-- **Onderzoek de Evaluatie van het publiek**: Leer over de [ methodes van de publieksevaluatie in Adobe Experience Platform ](../../segmentation/home.md#evaluate-segments): het stromen segmentatie voor updates in real time, partijsegmentatie voor geplande of verwerking op bestelling, en randsegmentatie voor onmiddellijke evaluatie op Edge Network.
-- **integreer met Doelen**: Lees de gids op hoe te [ dossiers op bestelling uitvoeren aan partijbestemmingen ](../../destinations/ui/export-file-now.md) gebruikend de Doelen UI van Experience Platform.
-- **Prestaties van het publiek van het Overzicht**: Analyseer hoe uw SQL-bepaald publiek over verschillende kanalen presteert. Gebruik gegevensinzichten om uw publieksdefinities en doelstrategieën aan te passen en te verbeteren. Lees het document op [ de inzichten van het Publiek ](../../dashboards/insights/audiences.md) om te leren hoe te om tot de SQL vragen voor publieksinzichten in Adobe Real-Time CDP toegang te hebben en aan te passen. Vervolgens kunt u uw eigen inzichten maken en onbewerkte gegevens transformeren in activeerbare informatie door het dashboard Soorten publiek aan te passen en deze inzichten effectief te visualiseren en te gebruiken voor een betere besluitvorming.
+- **Onderzoek de Evaluatie van het publiek**: Leer over de [&#x200B; methodes van de publieksevaluatie in Adobe Experience Platform &#x200B;](../../segmentation/home.md#evaluate-segments): het stromen segmentatie voor updates in real time, partijsegmentatie voor geplande of verwerking op bestelling, en randsegmentatie voor onmiddellijke evaluatie op Edge Network.
+- **integreer met Doelen**: Lees de gids op hoe te [&#x200B; dossiers op bestelling uitvoeren aan partijbestemmingen &#x200B;](../../destinations/ui/export-file-now.md) gebruikend de Doelen UI van Experience Platform.
+- **Prestaties van het publiek van het Overzicht**: Analyseer hoe uw SQL-bepaald publiek over verschillende kanalen presteert. Gebruik gegevensinzichten om uw publieksdefinities en doelstrategieën aan te passen en te verbeteren. Lees het document op [&#x200B; de inzichten van het Publiek &#x200B;](../../dashboards/insights/audiences.md) om te leren hoe te om tot de SQL vragen voor publieksinzichten in Adobe Real-Time CDP toegang te hebben en aan te passen. Vervolgens kunt u uw eigen inzichten maken en onbewerkte gegevens transformeren in activeerbare informatie door het dashboard Soorten publiek aan te passen en deze inzichten effectief te visualiseren en te gebruiken voor een betere besluitvorming.
 

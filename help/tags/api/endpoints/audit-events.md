@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >De implementatie van het `/audit_events` eindpunt is in flits aangezien de eigenschappen worden toegevoegd, verwijderd, en herwerkt.
 
-Een auditgebeurtenis is een record van een specifieke wijziging van een andere bron in de Reactor-API, die wordt gegenereerd op het moment dat de wijziging wordt aangebracht. Dit zijn systeemgebeurtenissen die aan door het gebruik van a [ callback ](./callbacks.md) kunnen worden ingetekend. Met het `/audit_events` -eindpunt in de Reactor-API kunt u auditgebeurtenissen programmatisch beheren binnen uw ervaringstoepassing.
+Een auditgebeurtenis is een record van een specifieke wijziging van een andere bron in de Reactor-API, die wordt gegenereerd op het moment dat de wijziging wordt aangebracht. Dit zijn systeemgebeurtenissen die aan door het gebruik van a [&#x200B; callback &#x200B;](./callbacks.md) kunnen worden ingetekend. Met het `/audit_events` -eindpunt in de Reactor-API kunt u auditgebeurtenissen programmatisch beheren binnen uw ervaringstoepassing.
 
 Audit-gebeurtenissen hebben de notatie `{RESOURCE_TYPE}.{EVENT}`, zoals `build.created` of `rule.updated` .
 
@@ -39,7 +39,7 @@ De volgende gebeurtenissen worden ondersteund voor elk brontype:
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een lijst met auditgebeurtenissen ophalen {#list}
 

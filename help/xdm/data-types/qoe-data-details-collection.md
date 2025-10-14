@@ -14,7 +14,7 @@ ht-degree: 0%
 [!UICONTROL QoE Data Details] Verzameling is een standaard XDM-gegevenstype (Experience Data Model) dat gedetailleerde metriek biedt met betrekking tot de kwaliteit van de ervaring (QoE) tijdens het afspelen van media. Gebruik het gegevenstype [!UICONTROL QoE Data Details] Verzameling om details vast te leggen, zoals informatie over bitsnelheid, framesnelheden, buffergebeurtenissen, gedropte frames, enzovoort. In velden voor het verzamelen van media worden gegevens vastgelegd en naar andere Adobe-services verzonden voor verdere verwerking. Met dit gegevenstype kunt u de afspeelkwaliteit analyseren, zodat u inzicht hebt in de streamingprestaties, gebruikerservaring en potentiële problemen die tijdens afspeelsessies zijn opgetreden.
 
 +++Selecteren om het gegevenstype QoE-gegevensdetails weer te geven.
-![ een diagram van het QoE (Kwaliteit van Ervaring) gegevenstype van de Gegevens van de Inzameling.](../images/data-types/qoe-data-details-collection.png)
+![&#x200B; een diagram van het QoE (Kwaliteit van Ervaring) gegevenstype van de Gegevens van de Inzameling.](../images/data-types/qoe-data-details-collection.png)
 +++
 
 >[!NOTE]

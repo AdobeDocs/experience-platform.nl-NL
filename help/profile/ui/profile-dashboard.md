@@ -15,8 +15,8 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) biedt een dashboard waarmee u belangrijke informatie over uw [!DNL Real-Time Customer Profile] gegevens kunt bekijken, zoals vastgelegd tijdens een dagelijkse momentopname.
 
-Voor gedetailleerde instructies op om tot het [!UICONTROL Profiles] dashboard in UI toegang te hebben en in wisselwerking te staan, evenals meer over de beschikbare metriek te leren die in het dashboard wordt getoond, gelieve de [[!UICONTROL Profiles] dashboardgids ](../../dashboards/guides/profiles.md) te bezoeken.
+Voor gedetailleerde instructies op om tot het [!UICONTROL Profiles] dashboard in UI toegang te hebben en in wisselwerking te staan, evenals meer over de beschikbare metriek te leren die in het dashboard wordt getoond, gelieve de [[!UICONTROL Profiles] dashboardgids &#x200B;](../../dashboards/guides/profiles.md) te bezoeken.
 
-Voor een overzicht van alle dashboardeigenschappen binnen het gebruikersinterface van het Experience Platform, gelieve te beginnen door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
+Voor een overzicht van alle dashboardeigenschappen binnen het gebruikersinterface van het Experience Platform, gelieve te beginnen door het [&#x200B; overzicht van dashboards &#x200B;](../../dashboards/home.md) te lezen.
 
-![ het dashboard van het Profiel wordt getoond.](../images/profile-dashboard/dashboard-overview.png)
+![&#x200B; het dashboard van het Profiel wordt getoond.](../images/profile-dashboard/dashboard-overview.png)

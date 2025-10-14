@@ -20,9 +20,9 @@ Voordat u de API-extensie [!DNL Amazon] Conversies installeert en configureert, 
 
 ### Een geheim en gegevenselement maken {#secret}
 
-Creeer een nieuwe [!DNL Amazon] [ gebeurtenis door:sturen geheim ](../../../ui/event-forwarding/secrets.md) en verstrek het van een unieke naam die het voor authentiek verklaren lid aanduidt. Dit wordt gebruikt om de verbinding met uw account te verifiëren en de waarde veilig te houden.
+Creeer een nieuwe [!DNL Amazon] [&#x200B; gebeurtenis door:sturen geheim &#x200B;](../../../ui/event-forwarding/secrets.md) en verstrek het van een unieke naam die het voor authentiek verklaren lid aanduidt. Dit wordt gebruikt om de verbinding met uw account te verifiëren en de waarde veilig te houden.
 
-Daarna, [ creeer een gegevenselement ](../../../ui/managing-resources/data-elements.md#create-a-data-element) gebruikend de [!UICONTROL Core] uitbreiding en een [!UICONTROL Secret] type van gegevenselement om naar het `Amazon` geheim te verwijzen u enkel creeerde.
+Daarna, [&#x200B; creeer een gegevenselement &#x200B;](../../../ui/managing-resources/data-elements.md#create-a-data-element) gebruikend de [!UICONTROL Core] uitbreiding en een [!UICONTROL Secret] type van gegevenselement om naar het `Amazon` geheim te verwijzen u enkel creeerde.
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 
@@ -32,7 +32,7 @@ Voer de volgende gegevens in als u Experience Platform wilt verbinden met [!DNL 
 | --- | --- |
 | Account-id | De unieke account-id voor uw [!DNL Amazon] -account. |
 | Entiteit-id | De id van een profiel dat aan het adverteerderaccount is gekoppeld. U vindt deze informatie in de URL van de portal Campagne Manager, vooraf ingesteld door `entity` . |
-| Toegangstoken | Het niet-verouderde toegangstoken van uw app, die wordt gebruikt voor verificatie met de [!DNL Amazon] -API via OAuth. Verwijs naar de [ Amazon API documentatie op authentificatie ](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html) voor begeleiding. |
+| Toegangstoken | Het niet-verouderde toegangstoken van uw app, die wordt gebruikt voor verificatie met de [!DNL Amazon] -API via OAuth. Verwijs naar de [&#x200B; Amazon API documentatie op authentificatie &#x200B;](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html) voor begeleiding. |
 
 ## De extensie [!DNL Amazon] installeren en configureren {#install-configure}
 
@@ -42,16 +42,16 @@ Voer de volgende stappen uit om de API-extensie [!DNL Amazon] Conversies te inst
 2. Navigeer aan **Uitbreidingen** in het linkernavigatievenster, dan selecteer de [!DNL Amazon] uitbreiding in de Catalogus tabel.
 3. Selecteer **installeer**.
 
-   ![ de de uitbreidingskaart van Amazon die in de catalogus van de Uitbreidingen van Adobe Experience Platform wordt benadrukt.](../../../images/extensions/server/amazon/amazon-extension.png)
+   ![&#x200B; de de uitbreidingskaart van Amazon die in de catalogus van de Uitbreidingen van Adobe Experience Platform wordt benadrukt.](../../../images/extensions/server/amazon/amazon-extension.png)
 
 4. Configureer de extensie met de volgende details:
    - **Token van de Toegang**: Uw geheim van het gegevenselement dat het teken OAuth 2 bevat.
 
-     ![ de configuratieinterface die het gebied benadrukt om het geheim van het gegevenselement voor het teken OAuth 2 in te gaan.](../../../images/extensions/server/amazon/amazon-oauth2-token-field.png)
+     ![&#x200B; de configuratieinterface die het gebied benadrukt om het geheim van het gegevenselement voor het teken OAuth 2 in te gaan.](../../../images/extensions/server/amazon/amazon-oauth2-token-field.png)
 
    - **identiteitskaart van de Entiteit**: Uw Identiteitskaart (die in het portaal URL van de Manager van de Campagne met de &quot;entiteit&quot;prefix wordt gevonden).
 
-     ![ de het poortinterface van de Manager van de Campagne met het benadrukte gebied van identiteitskaart van de Entiteit.](../../../images/extensions/server/amazon/campaign-manager-entity-id.png)
+     ![&#x200B; de het poortinterface van de Manager van de Campagne met het benadrukte gebied van identiteitskaart van de Entiteit.](../../../images/extensions/server/amazon/campaign-manager-entity-id.png)
 
 5. Selecteer **sparen** om de configuratie te voltooien.
 
@@ -63,7 +63,7 @@ Zodra al uw gegevenselementen opstelling zijn, creeer gebeurtenis door:sturen re
 2. Onder **Acties**, uitgezochte **Conversies API van Amazon Uitbreiding**.
 3. Plaats het **Type van Actie** aan **de Gebeurtenissen van de Omzetting van de Invoer**.
 
-   ![ de gebeurtenis die regelconfiguratieinterface met het Type van Actie door:sturen dat aan de Gebeurtenissen van de Omzetting van de Invoer wordt geplaatst.](../../../images/extensions/server/amazon/amazon-import-conversion-events.png)
+   ![&#x200B; de gebeurtenis die regelconfiguratieinterface met het Type van Actie door:sturen dat aan de Gebeurtenissen van de Omzetting van de Invoer wordt geplaatst.](../../../images/extensions/server/amazon/amazon-import-conversion-events.png)
 
 ### Conversie-gebeurtenisgegevens configureren {#conversion-event-data}
 
@@ -89,9 +89,9 @@ In de onderstaande tabel worden de belangrijkste eigenschappen beschreven die ve
 
 - Selecteer **[!UICONTROL Keep Changes]** om de regel op te slaan.
 
-![ de de configuratieinterface van gebeurtenisparameters met de benadrukte knoop van Veranderingen van het Levensonderhoud.](../../../images/extensions/server/amazon/event-parameters.png)
+![&#x200B; de de configuratieinterface van gebeurtenisparameters met de benadrukte knoop van Veranderingen van het Levensonderhoud.](../../../images/extensions/server/amazon/event-parameters.png)
 
-![ Extra de configuratieinterface van gebeurtenisparameters met de benadrukte knoop van Veranderingen van het Levensonderhoud.](../../../images/extensions/server/amazon/additional-event-parameters.png)
+![&#x200B; Extra de configuratieinterface van gebeurtenisparameters met de benadrukte knoop van Veranderingen van het Levensonderhoud.](../../../images/extensions/server/amazon/additional-event-parameters.png)
 
 ## Gebeurtenisdeduplicatie {#deduplication}
 
@@ -108,10 +108,10 @@ Als u deduplicatie wilt inschakelen, neemt u het veld `clientDedupeId` op in elk
 
 Door deduplicatie correct te configureren, kunt u ervoor zorgen dat de optimalisatiegegevens correct blijven en dat de rapportage geen negatieve gevolgen heeft.
 
-Voor meer details, verwijs naar de [ Gids van de Deduplicatie van de Gebeurtenis van Amazon ](https://advertising.amazon.com/).
+Voor meer details, verwijs naar de [&#x200B; Gids van de Deduplicatie van de Gebeurtenis van Amazon &#x200B;](https://advertising.amazon.com/).
 
 ## Volgende stappen {#next-steps}
 
-In deze handleiding wordt beschreven hoe conversiegebeurtenissen met de API-extensie [!DNL Amazon] Conversies kunnen worden geconfigureerd en verzonden naar [!DNL Amazon] . Voor meer informatie over gebeurtenis die mogelijkheden in [!DNL Adobe Experience Platform] door:sturen, verwijs naar de [ gebeurtenis die overzicht ](../../../ui/event-forwarding/overview.md) door:sturen.
+In deze handleiding wordt beschreven hoe conversiegebeurtenissen met de API-extensie [!DNL Amazon] Conversies kunnen worden geconfigureerd en verzonden naar [!DNL Amazon] . Voor meer informatie over gebeurtenis die mogelijkheden in [!DNL Adobe Experience Platform] door:sturen, verwijs naar de [&#x200B; gebeurtenis die overzicht &#x200B;](../../../ui/event-forwarding/overview.md) door:sturen.
 
-Voor meer details op hoe te om uw implementatie te zuiveren gebruikend het Debugger van Experience Platform en het Door:sturen van de Gebeurtenis hulpmiddel van de Controle, lees het [ overzicht van Adobe Experience Platform Debugger ](/help/debugger/home.md) en [ activiteiten van de Monitor ](../../../ui/event-forwarding/monitoring.md) in gebeurtenis door:sturen.
+Voor meer details op hoe te om uw implementatie te zuiveren gebruikend het Debugger van Experience Platform en het Door:sturen van de Gebeurtenis hulpmiddel van de Controle, lees het [&#x200B; overzicht van Adobe Experience Platform Debugger &#x200B;](/help/debugger/home.md) en [&#x200B; activiteiten van de Monitor &#x200B;](../../../ui/event-forwarding/monitoring.md) in gebeurtenis door:sturen.

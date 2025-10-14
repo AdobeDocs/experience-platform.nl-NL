@@ -13,17 +13,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Extensies, regels en gegevenselementen zijn bouwstenen. Wanneer u wilt dat uw toepassing iets doet, worden deze bouwstenen toegevoegd aan bibliotheken en wordt een bibliotheek &quot;ingebouwd&quot; in een build. Deze builds worden geleverd op een gehoste locatie.
 
 De gastheren bepalen beschikbare bestemmingen waar de bouwstijlen kunnen worden geleverd. Ze bestaan uit twee soorten:
 
-* [ Beheerd door Adobe ](./managed-by-adobe-host.md)
+* [&#x200B; Beheerd door Adobe &#x200B;](./managed-by-adobe-host.md)
 * [SFTP](./sftp-host.md)
 
 Gebruik de bovenstaande koppelingen voor gedetailleerde informatie over elk type host.
 
 Dezelfde host kan worden gebruikt voor meerdere omgevingen binnen een eigenschap.
 
-Voor meer informatie om u te helpen tussen zelf-ontvangen beslissen en het hebben van Adobe beheren het ontvangen voor u, te lezen gelieve de [ zelf-ontvangende gids ](./self-hosting-libraries.md).
+Voor meer informatie om u te helpen tussen zelf-ontvangen beslissen en het hebben van Adobe beheren het ontvangen voor u, te lezen gelieve de [&#x200B; zelf-ontvangende gids &#x200B;](./self-hosting-libraries.md).

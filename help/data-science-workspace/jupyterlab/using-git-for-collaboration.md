@@ -28,19 +28,19 @@ ht-degree: 0%
 >
 > De Git-server die u wilt gebruiken, moet via internet toegankelijk zijn.
 
-De [!DNL Data Science Workspace JupyterLab] -omgeving is een gehoste omgeving en wordt niet geïmplementeerd binnen uw bedrijfsfirewall. Daarom moet de Git-server waarmee u verbinding maakt, toegankelijk zijn via het openbare internet. Dit zou een openbare of privé bewaarplaats op [ GitHub ](https://github.com/) of een ander geval van een [!DNL Git] server kunnen zijn die u hebt beslist om te ontvangen.
+De [!DNL Data Science Workspace JupyterLab] -omgeving is een gehoste omgeving en wordt niet geïmplementeerd binnen uw bedrijfsfirewall. Daarom moet de Git-server waarmee u verbinding maakt, toegankelijk zijn via het openbare internet. Dit zou een openbare of privé bewaarplaats op [&#x200B; GitHub &#x200B;](https://github.com/) of een ander geval van een [!DNL Git] server kunnen zijn die u hebt beslist om te ontvangen.
 
 ## Verbind [!DNL Git] met het [!DNL Data Science Workspace JupyterLab Notebooks] milieu
 
-Begin door [!DNL Adobe Experience Platform] te lanceren en aan het [[!DNL JupyterLabs Notebooks] ](https://platform.adobe.com/notebooks/jupyterLab) milieu te navigeren.
+Begin door [!DNL Adobe Experience Platform] te lanceren en aan het [[!DNL JupyterLabs Notebooks] &#x200B;](https://platform.adobe.com/notebooks/jupyterLab) milieu te navigeren.
 
 Selecteer in [!DNL JupyterLab] de optie **[!UICONTROL File]** en houd de muisaanwijzer boven **[!UICONTROL New]** . Selecteer **[!UICONTROL Terminal]** in het vervolgkeuzemenu dat wordt weergegeven.
 
-![ JupyterLab Nav ](../images/jupyterlab/tutorials/open-terminal.png)
+![&#x200B; JupyterLab Nav &#x200B;](../images/jupyterlab/tutorials/open-terminal.png)
 
 Daarna, binnen *Eind* navigeert aan uw werkruimte door het volgende bevel te gebruiken: `cd my-workspace`.
 
-![ cd werkruimte ](../images/jupyterlab/tutorials/find-workspace.png)
+![&#x200B; cd werkruimte &#x200B;](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
 >
@@ -52,7 +52,7 @@ Vervolgens kloont u de opslagplaats die u wilt gebruiken met de opdracht `git cl
 
 `git clone https://github.com/adobe/experience-platform-dsw-reference.git`
 
-![ kloon ](../images/jupyterlab/tutorials/git-collaboration.png)
+![&#x200B; kloon &#x200B;](../images/jupyterlab/tutorials/git-collaboration.png)
 
 >[!NOTE]
 >

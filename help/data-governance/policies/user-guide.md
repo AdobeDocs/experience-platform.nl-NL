@@ -22,11 +22,11 @@ In dit document wordt beschreven hoe u de **[!UICONTROL Policies]** -werkruimte 
 
 >[!NOTE]
 >
->Voor informatie over hoe te om toegangsbeheerbeleid in UI te beheren, verwijs naar de [ op attributen-gebaseerde gids van de toegangscontrole UI ](../../access-control/abac/ui/policies.md) in plaats daarvan.
+>Voor informatie over hoe te om toegangsbeheerbeleid in UI te beheren, verwijs naar de [&#x200B; op attributen-gebaseerde gids van de toegangscontrole UI &#x200B;](../../access-control/abac/ui/policies.md) in plaats daarvan.
 
 >[!IMPORTANT]
 >
->Alle beleidsregels voor gegevensgebruik (inclusief basisbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten. Zie de sectie op [ toelatend beleid ](#enable) voor stappen op hoe te om dit in UI te doen.
+>Alle beleidsregels voor gegevensgebruik (inclusief basisbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten. Zie de sectie op [&#x200B; toelatend beleid &#x200B;](#enable) voor stappen op hoe te om dit in UI te doen.
 
 ## Vereisten
 
@@ -45,7 +45,7 @@ Als u beschikt over toestemmingsbeleid, selecteert u de schakeloptie **[!UICONTR
 
 ![](../images/policies/consent-policy-toggle.png)
 
-Selecteer een vermeld beleid om zijn beschrijving en type te bekijken. Als een douanebeleid wordt geselecteerd, worden de extra controles getoond om uit te geven, te schrappen, of [ toelaten/onbruikbaar maken het beleid ](#enable).
+Selecteer een vermeld beleid om zijn beschrijving en type te bekijken. Als een douanebeleid wordt geselecteerd, worden de extra controles getoond om uit te geven, te schrappen, of [&#x200B; toelaten/onbruikbaar maken het beleid &#x200B;](#enable).
 
 ![](../images/policies/policy-details.png)
 
@@ -57,8 +57,8 @@ Als u een nieuw beleid voor aangepast gegevensgebruik wilt maken, selecteert u *
 
 Afhankelijk van of u deel uitmaakt van de bètaversie voor het toestemmingsbeleid, komt een van de volgende situaties voor:
 
-* Als u geen deel van bèta bent, wordt u onmiddellijk gebracht aan het werkschema voor [ creërend een gegeven governancebeleid ](#create-governance-policy).
-* Als u deel van bèta uitmaakt, verstrekt een dialoog een extra optie om [ een toestemmingsbeleid ](#consent-policy) tot stand te brengen.
+* Als u geen deel van bèta bent, wordt u onmiddellijk gebracht aan het werkschema voor [&#x200B; creërend een gegeven governancebeleid &#x200B;](#create-governance-policy).
+* Als u deel van bèta uitmaakt, verstrekt een dialoog een extra optie om [&#x200B; een toestemmingsbeleid &#x200B;](#consent-policy) tot stand te brengen.
   ![](../images/policies/choose-policy-type.png)
 
 ### Beleid voor gegevensbeheer en instemming samen gebruiken {#combine-policies}
@@ -71,7 +71,7 @@ Het beleid van bestuur en toestemming kan samen worden gebruikt om robuuste rege
 
 Door dit gedrag te gebruiken, kunt u opstelling een combinatie beleid en toestemmingsregels die de correcte profielen omvatten, maar u verhindert om gegevens te omvatten die tegen uw vastgestelde organisatorische regels gaan. Een voorbeeldscenario zou zijn, waarbij u gevoelige gegevens wilt uitsluiten van opname, maar nog wel geconverteerde gebruikers voor marketing via sociale media kunt aanwijzen. De noodzakelijke stappen voor dit scenario worden geschetst in hieronder informatie.
 
-![ een infographic die de stappen schetst om governance en toestemmingsbeleid samen te gebruiken om robuuste regels voor het besturen van publiek tot stand te brengen.](../images/policies/governance-and-consent-policies-infographic.png)
+![&#x200B; een infographic die de stappen schetst om governance en toestemmingsbeleid samen te gebruiken om robuuste regels voor het besturen van publiek tot stand te brengen.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Een beleid voor gegevensbeheer maken {#create-governance-policy}
 
@@ -114,7 +114,7 @@ Als u verkoos om een toestemmingsbeleid tot stand te brengen, verschijnt een nie
 
 ![](../images/policies/consent-policy-dialog.png)
 
-Als u het beleid voor toestemming wilt gebruiken, moet u toestemmingskenmerken in uw profielgegevens hebben. Zie de gids op [ toestemmingsverwerking in Experience Platform ](../../landing/governance-privacy-security/consent/adobe/overview.md) voor gedetailleerde stappen op hoe te om de vereiste attributen in uw unieschema te omvatten.
+Als u het beleid voor toestemming wilt gebruiken, moet u toestemmingskenmerken in uw profielgegevens hebben. Zie de gids op [&#x200B; toestemmingsverwerking in Experience Platform &#x200B;](../../landing/governance-privacy-security/consent/adobe/overview.md) voor gedetailleerde stappen op hoe te om de vereiste attributen in uw unieschema te omvatten.
 
 Het beleid van de goedkeuring bestaat uit twee logische componenten:
 
@@ -169,7 +169,7 @@ Het toestemmingsbeleid wordt nu gecreeerd, en zijn status wordt geplaatst aan [!
 
 #### Beleidshandhaving verifiëren
 
-Nadat u een toestemmingsbeleid hebt gecreeerd en toegelaten, kunt u voorproef hoe het uw toegelaten publiek wanneer het activeren van segmenten aan bestemmingen beïnvloedt. Zie de sectie over [ evaluatie van het toestemmingsbeleid ](../enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie.
+Nadat u een toestemmingsbeleid hebt gecreeerd en toegelaten, kunt u voorproef hoe het uw toegelaten publiek wanneer het activeren van segmenten aan bestemmingen beïnvloedt. Zie de sectie over [&#x200B; evaluatie van het toestemmingsbeleid &#x200B;](../enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie.
 
 ## Een beleid in- of uitschakelen {#enable}
 
@@ -195,7 +195,7 @@ Het dialoogvenster **[!UICONTROL Create marketing action]** wordt weergegeven. V
 
 ![](../images/policies/create-marketing-action-details.png)
 
-De nieuwe handeling wordt weergegeven op het tabblad **[!UICONTROL Marketing actions]** . U kunt de marketing actie nu gebruiken wanneer [ het creëren van nieuw beleid van het gegevensgebruik ](#create-policy).
+De nieuwe handeling wordt weergegeven op het tabblad **[!UICONTROL Marketing actions]** . U kunt de marketing actie nu gebruiken wanneer [&#x200B; het creëren van nieuw beleid van het gegevensgebruik &#x200B;](#create-policy).
 
 ![](../images/policies/created-marketing-action.png)
 
@@ -219,7 +219,7 @@ Als de marketingactie niet wordt gebruikt door een bestaand gebruiksbeleid, kunt
 
 ## Volgende stappen
 
-Dit document biedt een overzicht van het beheer van beleidsregels voor gegevensgebruik in de gebruikersinterface van [!DNL Experience Platform] . Voor stappen op hoe te om beleid te beheren gebruikend [!DNL Policy Service API], zie de [ ontwikkelaarsgids ](../api/getting-started.md). Voor informatie over hoe te om het beleid van het gegevensgebruik af te dwingen, zie het [ overzicht van de beleidshandhaving ](../enforcement/overview.md).
+Dit document biedt een overzicht van het beheer van beleidsregels voor gegevensgebruik in de gebruikersinterface van [!DNL Experience Platform] . Voor stappen op hoe te om beleid te beheren gebruikend [!DNL Policy Service API], zie de [&#x200B; ontwikkelaarsgids &#x200B;](../api/getting-started.md). Voor informatie over hoe te om het beleid van het gegevensgebruik af te dwingen, zie het [&#x200B; overzicht van de beleidshandhaving &#x200B;](../enforcement/overview.md).
 
 In de volgende video wordt een demonstratie gegeven van het werken met gebruiksbeleid in de gebruikersinterface van [!DNL Experience Platform] :
 

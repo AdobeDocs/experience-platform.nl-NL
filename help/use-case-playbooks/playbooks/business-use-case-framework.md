@@ -22,4 +22,4 @@ Ontdek een praktisch kader om uw bedrijfsdoelstellingen met echte klantenervarin
 - Pas een looptijdenkader toe om gebruiksgevallen voor grotere bedrijfsgevolgen te evolueren.
 - Gebruik Adobe Experience Platform om de realisatie van waarden te versnellen.
 
-Download dit [ middel van PDF ](../assets/summit/20250110-summit-session-s651-leave-behind.pdf) om een gestructureerde benadering te onderzoeken voor het bepalen van, het beoordelen van, en het evolueren van het gebruiksgevallen van de klantenervaring. Leer hoe u bedrijfsdoelstellingen kunt afstemmen op meetbare effecten, gegevens kunt gebruiken voor personalisatie en gebruiksgevallen effectief kunt activeren in Adobe Experience Platform.
+Download dit [&#x200B; middel van PDF &#x200B;](../assets/summit/20250110-summit-session-s651-leave-behind.pdf) om een gestructureerde benadering te onderzoeken voor het bepalen van, het beoordelen van, en het evolueren van het gebruiksgevallen van de klantenervaring. Leer hoe u bedrijfsdoelstellingen kunt afstemmen op meetbare effecten, gegevens kunt gebruiken voor personalisatie en gebruiksgevallen effectief kunt activeren in Adobe Experience Platform.

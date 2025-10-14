@@ -22,7 +22,7 @@ Lees de volgende secties om de vereiste instellingen te voltooien voordat u uw [
 
 ### IP adres lijst van gewenste personen
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op of Azure of Amazon Web Services (AWS) aan te sluiten. Lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform op Azure en AWS ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op of Azure of Amazon Web Services (AWS) aan te sluiten. Lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform op Azure en AWS &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ### Verifiëren voor Experience Platform in Azure {#azure}
 
@@ -39,7 +39,7 @@ Geef waarden op voor de volgende gebruikersgegevens om uw [!DNL MySQL] -database
 | `connectionString` | De [!DNL MySQL] verbindingstekenreeks die aan uw account is gekoppeld. Het patroon van de [!DNL MySQL] verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` . |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecs met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a` . |
 
-Voor meer informatie, lees de [[!DNL MySQL]  documentatie over verbindingskoorden ](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
+Voor meer informatie, lees de [[!DNL MySQL]  documentatie over verbindingskoorden &#x200B;](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 
 >[!TAB  Basisauthentificatie ]
 
@@ -59,7 +59,7 @@ Geef waarden op voor de volgende referenties om uw [!DNL MySQL] -database te ver
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../landing/multi-cloud.md).
 
 U moet waarden opgeven voor de volgende referenties om [!DNL MySQL] te verbinden met Experience Platform op AWS.
 

@@ -435,19 +435,19 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
 
 Lees het volgende voor voorbeelden van AI Assistant-gebruiksscenario&#39;s:
 
-* [ Verminder onboarding tijd voor nieuwe leden van uw team ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [ ontmoedig uw publiek en optimaliseer uw marketing verrichtingen ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [ Controle gebiedsdelen en minimaliseer risico tijdens gegevensupdates ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
-* [ ontdekt en stelt sneller nieuwe eigenschappen ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125) op
-* [ Revolutioneer klantensteun met Medewerker AI ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
+* [&#x200B; Verminder onboarding tijd voor nieuwe leden van uw team &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
+* [&#x200B; ontmoedig uw publiek en optimaliseer uw marketing verrichtingen &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
+* [&#x200B; Controle gebiedsdelen en minimaliseer risico tijdens gegevensupdates &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [&#x200B; ontdekt en stelt sneller nieuwe eigenschappen &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125) op
+* [&#x200B; Revolutioneer klantensteun met Medewerker AI &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
 >[!TAB  Extra videoinhoud ]
 
 Bekijk de volgende video&#39;s voor extra voorbeelden van AI Assistant-gebruiksscenario&#39;s:
 
-* [ ontgrendel de macht van AI Medewerker ](https://www.youtube.com/watch?v=J48CNmcV7wc)
-* [ krijg om AI Medewerker voor Soorten van publiek te kennen ](https://www.youtube.com/live/DYsyii7ldck)
-* [ ontgrendel operationele inzichten met Medewerker AI ](https://www.youtube.com/watch?v=fGgFwAOZle8)
+* [&#x200B; ontgrendel de macht van AI Medewerker &#x200B;](https://www.youtube.com/watch?v=J48CNmcV7wc)
+* [&#x200B; krijg om AI Medewerker voor Soorten van publiek te kennen &#x200B;](https://www.youtube.com/live/DYsyii7ldck)
+* [&#x200B; ontgrendel operationele inzichten met Medewerker AI &#x200B;](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
 

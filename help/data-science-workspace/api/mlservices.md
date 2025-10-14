@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Een dienst MLService is een gepubliceerd opgeleid model dat uw organisatie van de capaciteit voorziet om tot eerder ontwikkelde modellen toegang te hebben en te hergebruiken. Een belangrijk kenmerk van MLServices is de mogelijkheid om training en scoring op een geplande basis te automatiseren. De geplande trainingslooppas kan helpen de efficiency en nauwkeurigheid van een model handhaven, terwijl de geplande scoring looppas kan ervoor zorgen dat de nieuwe inzichten constant worden geproduceerd.
 
-De geautomatiseerde opleiding en het schrapen programma&#39;s worden bepaald met beginnende timestamp, het beëindigen timestamp, en een frequentie die als a [ wordt vertegenwoordigd cron uitdrukking ](https://en.wikipedia.org/wiki/Cron). De programma&#39;s kunnen worden bepaald wanneer [ creërend een MLService ](#create-an-mlservice) of toegepast door [ het bijwerken van een bestaande MLService ](#update-an-mlservice).
+De geautomatiseerde opleiding en het schrapen programma&#39;s worden bepaald met beginnende timestamp, het beëindigen timestamp, en een frequentie die als a [&#x200B; wordt vertegenwoordigd cron uitdrukking &#x200B;](https://en.wikipedia.org/wiki/Cron). De programma&#39;s kunnen worden bepaald wanneer [&#x200B; creërend een MLService &#x200B;](#create-an-mlservice) of toegepast door [&#x200B; het bijwerken van een bestaande MLService &#x200B;](#update-an-mlservice).
 
 ## Een MLService maken {#create-an-mlservice}
 
@@ -114,7 +114,7 @@ Een succesvolle reactie keert een lading terug die de details van de pas gecreë
 
 ## Een lijst met MLServices ophalen {#retrieve-a-list-of-mlservices}
 
-U kunt een lijst van diensten terugwinnen MLServices door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie op [ vraagparameters voor activaherwinning ](./appendix.md#query).
+U kunt een lijst van diensten terugwinnen MLServices door één enkel verzoek van de GET uit te voeren. Om filterresultaten te helpen, kunt u vraagparameters in de verzoekweg specificeren. Voor een lijst van beschikbare vragen, verwijs naar de appendix sectie op [&#x200B; vraagparameters voor activaherwinning &#x200B;](./appendix.md#query).
 
 **API Formaat**
 
@@ -126,7 +126,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Één van de [ beschikbare vraagparameters ](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
+| `{QUERY_PARAMETER}` | Één van de [&#x200B; beschikbare vraagparameters &#x200B;](./appendix.md#query) die aan filterresultaten wordt gebruikt. |
 | `{VALUE}` | De waarde voor de voorafgaande queryparameter. |
 
 **Verzoek**
@@ -221,7 +221,7 @@ U kunt een bestaande MLService bijwerken door zijn eigenschappen door een verzoe
 
 >[!TIP]
 >
->om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een GET verzoek uitvoert om [ MLService door identiteitskaart ](#retrieve-a-specific-mlservice) terug te winnen. Vervolgens past u het geretourneerde JSON-object aan en werkt u het bij en past u het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
+>om het succes van dit verzoek van de PUT te verzekeren, wordt gesuggereerd dat eerst u een GET verzoek uitvoert om [&#x200B; MLService door identiteitskaart &#x200B;](#retrieve-a-specific-mlservice) terug te winnen. Vervolgens past u het geretourneerde JSON-object aan en werkt u het bij en past u het gehele gewijzigde JSON-object toe als de payload voor het verzoek om PUT.
 
 **API Formaat**
 

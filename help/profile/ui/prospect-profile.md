@@ -22,13 +22,13 @@ Selecteer **[!UICONTROL Profiles]** in de sectie **[!UICONTROL Prospects]** voor
 
 De pagina **[!UICONTROL Browse]** wordt weergegeven. Er wordt een lijst met alle perspectiefprofielen voor uw organisatie weergegeven.
 
-![ de [!UICONTROL Profiles] knoop wordt benadrukt, tonend de [!UICONTROL Browse] pagina voor perspectiefprofielen.](../images/prospect-profile/browse-profiles.png)
+![&#x200B; de [!UICONTROL Profiles] knoop wordt benadrukt, tonend de [!UICONTROL Browse] pagina voor perspectiefprofielen.](../images/prospect-profile/browse-profiles.png)
 
 >[!IMPORTANT]
 >
->Terwijl het grootste deel van het doorbladeren functionaliteit tussen klantenprofielen en perspectiefprofielen het zelfde is, kunt u **niet** doorbladeren perspectiefprofielen door samenvoegingsbeleid. Dit is omdat de perspectiefprofielen automatisch door een systeem-ontworpen op tijd-gebaseerd fusiebeleid worden geregeerd. Meer informatie over fusiebeleid kan in het [ overzicht van het fusiebeleid ](../merge-policies/overview.md) worden gevonden.
+>Terwijl het grootste deel van het doorbladeren functionaliteit tussen klantenprofielen en perspectiefprofielen het zelfde is, kunt u **niet** doorbladeren perspectiefprofielen door samenvoegingsbeleid. Dit is omdat de perspectiefprofielen automatisch door een systeem-ontworpen op tijd-gebaseerd fusiebeleid worden geregeerd. Meer informatie over fusiebeleid kan in het [&#x200B; overzicht van het fusiebeleid &#x200B;](../merge-policies/overview.md) worden gevonden.
 
-Voor meer informatie over het doorbladeren van profielen, gelieve te lezen [ doorbladert sectie van de de gebruikersgids van het Profiel ](./user-guide.md#browse-identity).
+Voor meer informatie over het doorbladeren van profielen, gelieve te lezen [&#x200B; doorbladert sectie van de de gebruikersgids van het Profiel &#x200B;](./user-guide.md#browse-identity).
 
 ## Details van profiel voor vooruitzichten {#profile-details}
 
@@ -38,21 +38,21 @@ Voor meer informatie over het doorbladeren van profielen, gelieve te lezen [ doo
 
 Als u meer informatie over een bepaald perspectiefprofiel wilt weergeven, selecteert u een profiel op de pagina [!UICONTROL Browse] .
 
-![ het perspectiefprofiel van A wordt benadrukt op doorbladert pagina.](../images/prospect-profile/select-specific-profile.png)
+![&#x200B; het perspectiefprofiel van A wordt benadrukt op doorbladert pagina.](../images/prospect-profile/select-specific-profile.png)
 
 Informatie over het perspectiefprofiel wordt weergegeven, inclusief de kenmerken die zijn gekoppeld aan het profiel en het publiekslidmaatschap.
 
-![ de detailpagina van het vooruitgangsprofiel wordt getoond.](../images/prospect-profile/profile-details.png)
+![&#x200B; de detailpagina van het vooruitgangsprofiel wordt getoond.](../images/prospect-profile/profile-details.png)
 
-Voor meer informatie over deze lusjes, te lezen gelieve de [ sectie van de details van het meningsprofiel van de de gebruikersgids van het Profiel ](./user-guide.md#profile-detail).
+Voor meer informatie over deze lusjes, te lezen gelieve de [&#x200B; sectie van de details van het meningsprofiel van de de gebruikersgids van het Profiel &#x200B;](./user-guide.md#profile-detail).
 
 U kunt ook alle kenmerken in JSON-indeling zien door **[!UICONTROL View JSON]** te selecteren.
 
-![ de [!UICONTROL View JSON] knoop wordt benadrukt op de pagina van de detailgegevens van het vooruitgangsprofiel.](../images/prospect-profile/profile-select-view-json.png)
+![&#x200B; de [!UICONTROL View JSON] knoop wordt benadrukt op de pagina van de detailgegevens van het vooruitgangsprofiel.](../images/prospect-profile/profile-select-view-json.png)
 
 Het dialoogvenster [!UICONTROL View JSON] wordt weergegeven. De kenmerken van het perspectiefprofiel worden nu in JSON-vorm weergegeven.
 
-![ de attributen van het perspectiefprofiel worden getoond in vorm JSON.](../images/prospect-profile/profile-view-json.png)
+![&#x200B; de attributen van het perspectiefprofiel worden getoond in vorm JSON.](../images/prospect-profile/profile-view-json.png)
 
 ## Aanbevolen gebruiksgevallen {#use-cases}
 
@@ -62,4 +62,4 @@ Lees de volgende gebruiksdocumentatie voor meer informatie over het gebruik van 
 
 ## Volgende stappen
 
-Na het lezen van deze handleiding begrijpt u nu hoe perspectiefprofielen kunnen worden gebruikt in Adobe Experience Platform. Leren hoe deze perspectiefprofielen in publiek kunnen worden gebruikt, gelieve de [ gids van het vooruitgangspubliek ](../../segmentation/types/prospect-audiences.md) te lezen.
+Na het lezen van deze handleiding begrijpt u nu hoe perspectiefprofielen kunnen worden gebruikt in Adobe Experience Platform. Leren hoe deze perspectiefprofielen in publiek kunnen worden gebruikt, gelieve de [&#x200B; gids van het vooruitgangspubliek &#x200B;](../../segmentation/types/prospect-audiences.md) te lezen.

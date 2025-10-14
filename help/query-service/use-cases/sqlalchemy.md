@@ -21,15 +21,15 @@ U hebt toegang tot de werkruimte Query&#39;s in de gebruikersinterface van Exper
 
 ## [!DNL Query Service] referenties {#credentials}
 
-Meld u aan bij de gebruikersinterface van Experience Platform en selecteer **[!UICONTROL Queries]** in de linkernavigatie, gevolgd door **[!UICONTROL Credentials]** om uw referenties te zoeken. Voor volledige richtingen op hoe te om uw login geloofsbrieven te vinden, te lezen gelieve de [ gids van geloofsbrieven ](../ui/credentials.md).
+Meld u aan bij de gebruikersinterface van Experience Platform en selecteer **[!UICONTROL Queries]** in de linkernavigatie, gevolgd door **[!UICONTROL Credentials]** om uw referenties te zoeken. Voor volledige richtingen op hoe te om uw login geloofsbrieven te vinden, te lezen gelieve de [&#x200B; gids van geloofsbrieven &#x200B;](../ui/credentials.md).
 
-![ het Credentiële lusje met het verlopen van geloofsbrieven voor de benadrukte Dienst van de Vraag.](../images/use-cases/credentials.png)
+![&#x200B; het Credentiële lusje met het verlopen van geloofsbrieven voor de benadrukte Dienst van de Vraag.](../images/use-cases/credentials.png)
 
 Hoewel haven 80 de geadviseerde haven voor een verbinding aan de Dienst van de Vraag is, kunt u haven 5432 ook gebruiken.
 
 >[!IMPORTANT]
 >
->Als u het verlopen geloofsbrieven (zoals die in het beeld hierboven worden gezien) gebruikt om met de Dienst van de Vraag te verbinden, zal het zittingsleven voor uw verbinding na de vastgestelde periode verlopen die in de montages van uw organisatie wordt bepaald. Deze periode is standaard 24 uur. Zie de documentatie leren hoe te om [ een cliënt met niet-het verlopen geloofsbrieven ](../ui/credentials.md#non-expiring-credentials) te verbinden, of hoe te [ het zittingsleven voor uw het verlopen geloofsbrieven ](../ui/credentials.md#expiring-credentials) veranderen.
+>Als u het verlopen geloofsbrieven (zoals die in het beeld hierboven worden gezien) gebruikt om met de Dienst van de Vraag te verbinden, zal het zittingsleven voor uw verbinding na de vastgestelde periode verlopen die in de montages van uw organisatie wordt bepaald. Deze periode is standaard 24 uur. Zie de documentatie leren hoe te om [&#x200B; een cliënt met niet-het verlopen geloofsbrieven &#x200B;](../ui/credentials.md#non-expiring-credentials) te verbinden, of hoe te [&#x200B; het zittingsleven voor uw het verlopen geloofsbrieven &#x200B;](../ui/credentials.md#expiring-credentials) veranderen.
 
 Wanneer u toegang hebt tot uw QS-referenties, opent u de [!DNL Python] -editor.
 
@@ -59,7 +59,7 @@ password = quote('''
 
 >[!NOTE]
 >
->Het wachtwoord dat u opgeeft om [!DNL SQLAlchemy] verbinding te maken met Experience Platform, verloopt als u uw aanmeldingsgegevens gebruikt. Zie de [ geloofsbrieven sectie ](#credentials) voor meer informatie.
+>Het wachtwoord dat u opgeeft om [!DNL SQLAlchemy] verbinding te maken met Experience Platform, verloopt als u uw aanmeldingsgegevens gebruikt. Zie de [&#x200B; geloofsbrieven sectie &#x200B;](#credentials) voor meer informatie.
 
 ### Een motorinstantie maken [#create-engine ]
 
@@ -69,7 +69,7 @@ Nadat de variabelen zijn gecreeerd, voer de `create_engine` functie in en creeer
 >
 >`create_engine` keert een geval van een motor terug. Nochtans, opent het niet de verbinding aan de Dienst van de Vraag tot een vraag wordt geroepen die een verbinding vereist.
 
-SSL moet zijn ingeschakeld wanneer u Experience Platform opent met behulp van externe clients. Als onderdeel van de engine voert u aanvullende trefwoordargumenten in via `connect_args` . U wordt aangeraden de SSL-modus in te stellen op `require` . Zie de [ SSL wijzedocumentatie ](../clients/ssl-modes.md) voor meer informatie over toegelaten waarden.
+SSL moet zijn ingeschakeld wanneer u Experience Platform opent met behulp van externe clients. Als onderdeel van de engine voert u aanvullende trefwoordargumenten in via `connect_args` . U wordt aangeraden de SSL-modus in te stellen op `require` . Zie de [&#x200B; SSL wijzedocumentatie &#x200B;](../clients/ssl-modes.md) voor meer informatie over toegelaten waarden.
 
 In het onderstaande voorbeeld wordt de [!DNL Python] -code weergegeven die nodig is om een engine- en verbindingstekenreeks te initialiseren.
 
@@ -89,7 +89,7 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 
 >[!NOTE]
 >
->Het wachtwoord dat u opgeeft om [!DNL SQLAlchemy] verbinding te maken met Experience Platform, verloopt als u uw aanmeldingsgegevens gebruikt. Zie de [ geloofsbrieven sectie ](#credentials) voor meer informatie.
+>Het wachtwoord dat u opgeeft om [!DNL SQLAlchemy] verbinding te maken met Experience Platform, verloopt als u uw aanmeldingsgegevens gebruikt. Zie de [&#x200B; geloofsbrieven sectie &#x200B;](#credentials) voor meer informatie.
 
 U kunt nu Experience Platform-gegevens opvragen met [!DNL Python] . In het onderstaande voorbeeld wordt een array met tabelnamen van Query Service geretourneerd.
 

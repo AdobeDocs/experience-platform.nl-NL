@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Profile Partner Enrichment (Sample)] schemaveldgroep
 
-[!UICONTROL Profile Partner Enrichment (Sample)] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md). Gebruik deze gebiedsgroep om extra gegevens te verstrekken met betrekking tot partner-gedreven verbeteringen voor klantenprofielen.
+[!UICONTROL Profile Partner Enrichment (Sample)] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../classes/individual-profile.md). Gebruik deze gebiedsgroep om extra gegevens te verstrekken met betrekking tot partner-gedreven verbeteringen voor klantenprofielen.
 
-![ A diagram van de [!UICONTROL Profile Partner Enrichment (Sample)] gebiedsgroep.](../../images/field-groups/profile-partner-enrichment-sample.png)
+![&#x200B; A diagram van de [!UICONTROL Profile Partner Enrichment (Sample)] gebiedsgroep.](../../images/field-groups/profile-partner-enrichment-sample.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 |-----------------------------|------------------------|-----------|----------------------------------|
@@ -48,4 +48,4 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-Voor meer details op de gebiedsgroep, verwijs naar het [ volledige schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) op de openbare bewaarplaats XDM.
+Voor meer details op de gebiedsgroep, verwijs naar het [&#x200B; volledige schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) op de openbare bewaarplaats XDM.

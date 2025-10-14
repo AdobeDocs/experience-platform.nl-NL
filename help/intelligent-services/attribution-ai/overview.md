@@ -47,4 +47,4 @@ Attribution AI biedt ook integratie met andere Adobe oplossingen zoals [!DNL Cus
 
 ## Volgende stappen
 
-U kunt beginnen door [ te volgen begonnen wordt ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste pre-verzoeken om Attribution AI. Als u reeds uw geloofsbrieven en gegevens klaar hebt, bezoek de [ gebruikersgids van de Attribution AI ](./user-guide.md). Deze gids begeleidt u door het creëren van een geval en het voorleggen van het voor opleiding en het scoren.
+U kunt beginnen door [&#x200B; te volgen begonnen wordt &#x200B;](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste pre-verzoeken om Attribution AI. Als u reeds uw geloofsbrieven en gegevens klaar hebt, bezoek de [&#x200B; gebruikersgids van de Attribution AI &#x200B;](./user-guide.md). Deze gids begeleidt u door het creëren van een geval en het voorleggen van het voor opleiding en het scoren.

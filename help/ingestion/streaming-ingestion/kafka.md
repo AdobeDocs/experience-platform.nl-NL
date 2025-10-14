@@ -20,4 +20,4 @@ De streamconnector is een &#39;sink&#39;-connector (one-way) die gegevens van [!
 - Geverifieerde verzameling van gegevens
 - Berichten in batches om netwerkaanroepen te verminderen en de doorvoer te verhogen
 
-Voor meer informatie over de [!DNL Kafka] schakelaar, met inbegrip van instructies op hoe te opstelling de schakelaar, gelieve te lezen [ begonnen gids ](https://github.com/adobe/experience-platform-streaming-connect) wordt begonnen. Voor een meer gedetailleerd werkschema, te lezen gelieve de [ ontwikkelaarsgids ](https://www.adobe.com/go/kafka-connector-developer-guide).
+Voor meer informatie over de [!DNL Kafka] schakelaar, met inbegrip van instructies op hoe te opstelling de schakelaar, gelieve te lezen [&#x200B; begonnen gids &#x200B;](https://github.com/adobe/experience-platform-streaming-connect) wordt begonnen. Voor een meer gedetailleerd werkschema, te lezen gelieve de [&#x200B; ontwikkelaarsgids &#x200B;](https://www.adobe.com/go/kafka-connector-developer-guide).

@@ -13,15 +13,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 >[!IMPORTANT]
 >
->In dit document wordt de indeling van de module Bibliotheek voor randextensies besproken. Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ het formatteren van de modules van de Webuitbreiding ](../web/format.md).
+>In dit document wordt de indeling van de module Bibliotheek voor randextensies besproken. Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids op [&#x200B; het formatteren van de modules van de Webuitbreiding &#x200B;](../web/format.md).
 
 Een bibliotheekmodule is een stuk herbruikbare code die door een extensie wordt geleverd en die wordt uitgegeven in de runtimebibliotheek van de tag in Adobe Experience Platform (de bibliotheek die op het randknooppunt wordt uitgevoerd). Een actietype `sendBeacon` heeft bijvoorbeeld een bibliotheekmodule die op het randknooppunt wordt uitgevoerd en een baken verzendt.
 
-De bibliotheekmodule is gestructureerd als module a [ CommonJS ](https://nodejs.org/api/modules.html#modules-commonjs-modules). Binnen een module CommonJS, zijn de volgende variabelen beschikbaar voor gebruik:
+De bibliotheekmodule is gestructureerd als module a [&#x200B; CommonJS &#x200B;](https://nodejs.org/api/modules.html#modules-commonjs-modules). Binnen een module CommonJS, zijn de volgende variabelen beschikbaar voor gebruik:
 
 ## [!DNL require]
 
@@ -54,11 +54,11 @@ Voorbeeld:
 exports.sayHello = (…) => { … }
 ```
 
-Dit is een alternatief voor `module.exports` maar het gebruik ervan is beperkter. Gelieve te lezen [ Begrijpend module.exporting en de uitvoer in node.js ](https://www.sitepoint.com/understanding-module-exports-exports-node-js/) voor een beter inzicht in de verschillen tussen `module.exports` en `exports` en de verwante bedenkingen met het gebruiken `exports`. Als u twijfelt, maakt u uw leven makkelijker en gebruikt u `module.exports` in plaats van `exports` .
+Dit is een alternatief voor `module.exports` maar het gebruik ervan is beperkter. Gelieve te lezen [&#x200B; Begrijpend module.exporting en de uitvoer in node.js &#x200B;](https://www.sitepoint.com/understanding-module-exports-exports-node-js/) voor een beter inzicht in de verschillen tussen `module.exports` en `exports` en de verwante bedenkingen met het gebruiken `exports`. Als u twijfelt, maakt u uw leven makkelijker en gebruikt u `module.exports` in plaats van `exports` .
 
 ## Handtekening van de module Server-side
 
-Alle moduletypes (gegevenselementen, voorwaarden, of acties) die door uw uitbreiding worden verstrekt zullen met de zelfde parameters worden geroepen: [ context ](./context.md).
+Alle moduletypes (gegevenselementen, voorwaarden, of acties) die door uw uitbreiding worden verstrekt zullen met de zelfde parameters worden geroepen: [&#x200B; context &#x200B;](./context.md).
 
 ```js
 exports.sayHello = (context) => { … }

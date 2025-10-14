@@ -11,14 +11,14 @@ ht-degree: 0%
 
 # Web SDK installeren met de JavaScript-bibliotheek
 
-Een alternatief aan het installeren van het Web SDK zonder [ het gebruiken van de markeringsuitbreiding ](extension.md) moet de bibliotheek van JavaScript van verwijzingen voorzien die op een CDN wordt ontvangen. U kunt rechtstreeks naar de bibliotheek verwijzen of deze downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in geminiatuurde en volledige formaten.
+Een alternatief aan het installeren van het Web SDK zonder [&#x200B; het gebruiken van de markeringsuitbreiding &#x200B;](extension.md) moet de bibliotheek van JavaScript van verwijzingen voorzien die op een CDN wordt ontvangen. U kunt rechtstreeks naar de bibliotheek verwijzen of deze downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in geminiatuurde en volledige formaten.
 
 De Web SDK-bibliotheek is beschikbaar via de volgende URL-structuur:
 
 * **Minified**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js`
 * **Volledig**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.js`
 
-Zie de [ versienota&#39;s ](../release-notes.md) voor de recentste versie om in URL te omvatten. De URL voor de volledige versie van versie 2.19.1 is bijvoorbeeld `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` .
+Zie de [&#x200B; versienota&#39;s &#x200B;](../release-notes.md) voor de recentste versie om in URL te omvatten. De URL voor de volledige versie van versie 2.19.1 is bijvoorbeeld `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` .
 
 ## De code toevoegen
 

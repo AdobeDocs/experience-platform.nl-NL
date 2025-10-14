@@ -19,14 +19,14 @@ In Adobe Experience Platform worden gegevens uit een groot aantal verschillende 
 
 Dataflows zijn een voorstelling van gegevenstaken die gegevens over Experience Platform verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door de Dienst van de Identiteit en het Profiel van de Klant in real time alvorens uiteindelijk aan bestemmingen wordt geactiveerd wordt gebruikt.
 
-Meer leren over het gebruiken van dataflows in bronschakelaars, te lezen gelieve het [ overzicht van bronnen ](../sources/home.md).
+Meer leren over het gebruiken van dataflows in bronschakelaars, te lezen gelieve het [&#x200B; overzicht van bronnen &#x200B;](../sources/home.md).
 
 ## Gegevens voorbereiden
 
 Met gegevensvoorbereiding kunnen gegevenstechnici gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience-datamodel).
 
-Meer leren over het voorbereiden van gegevens nadat het is opgenomen, te lezen gelieve het [ overzicht van de Prep van Gegevens ](../data-prep/home.md).
+Meer leren over het voorbereiden van gegevens nadat het is opgenomen, te lezen gelieve het [&#x200B; overzicht van de Prep van Gegevens &#x200B;](../data-prep/home.md).
 
 ## Gegevensstromen controleren
 
-De gegevensstromen van de controle kunnen door of Experience Platform APIs of Experience Platform UI worden gedaan. Leren hoe te om dataflows te controleren gebruikend API, te lezen gelieve de [ controle dataflows API leerprogramma ](./api/monitor.md). Leren hoe te om dataflows binnen Experience Platform UI te controleren, te lezen gelieve de leerprogramma&#39;s op [ controledataflows voor bronnen ](./ui/monitor-sources.md) en [ controledataflows voor bestemmingen ](./ui/monitor-destinations.md).
+De gegevensstromen van de controle kunnen door of Experience Platform APIs of Experience Platform UI worden gedaan. Leren hoe te om dataflows te controleren gebruikend API, te lezen gelieve de [&#x200B; controle dataflows API leerprogramma &#x200B;](./api/monitor.md). Leren hoe te om dataflows binnen Experience Platform UI te controleren, te lezen gelieve de leerprogramma&#39;s op [&#x200B; controledataflows voor bronnen &#x200B;](./ui/monitor-sources.md) en [&#x200B; controledataflows voor bestemmingen &#x200B;](./ui/monitor-destinations.md).

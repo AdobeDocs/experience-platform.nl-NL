@@ -23,7 +23,7 @@ Dit document biedt een overzicht en gedetailleerde voorbeelden van de SQL bot fi
 
 Als onderdeel van dit proces moet u een model voor machinaal leren trainen, wordt in dit document uitgegaan van een praktische kennis van een of meer computerleeromgevingen.
 
-In dit voorbeeld wordt [!DNL Jupyter Notebook] gebruikt als een ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, wordt [!DNL Jupyter Notebook] aanbevolen omdat het een opensource webtoepassing is die lage computervereisten heeft. Het kan [ van de officiële plaats ](https://jupyter.org/) worden gedownload.
+In dit voorbeeld wordt [!DNL Jupyter Notebook] gebruikt als een ontwikkelomgeving. Hoewel er veel opties beschikbaar zijn, wordt [!DNL Jupyter Notebook] aanbevolen omdat het een opensource webtoepassing is die lage computervereisten heeft. Het kan [&#x200B; van de officiële plaats &#x200B;](https://jupyter.org/) worden gedownload.
 
 ## Gebruik [!DNL Query Service] om een drempel voor beide activiteit te definiëren
 
@@ -116,7 +116,7 @@ Het resultaat van deze expressie kan er ongeveer zo uitzien als in de onderstaan
 
 ## Nieuwe spookdrempels identificeren aan de hand van computerleren
 
-Exporteer vervolgens de resulterende querygegevensset naar de CSV-indeling en importeer deze vervolgens naar [!DNL Jupyter Notebook] . Vanuit die omgeving kun je een model voor machinetraining trainen met behulp van de huidige bibliotheken voor machinaal leren. Zie de het oplossen van problemengids voor meer details op [ hoe te om gegevens van  [!DNL Query Service]  in formaat uit te voeren CSV ](../troubleshooting-guide.md#export-csv)
+Exporteer vervolgens de resulterende querygegevensset naar de CSV-indeling en importeer deze vervolgens naar [!DNL Jupyter Notebook] . Vanuit die omgeving kun je een model voor machinetraining trainen met behulp van de huidige bibliotheken voor machinaal leren. Zie de het oplossen van problemengids voor meer details op [&#x200B; hoe te om gegevens van  [!DNL Query Service]  in formaat uit te voeren CSV &#x200B;](../troubleshooting-guide.md#export-csv)
 
 De aanvankelijk vastgestelde ad-hocdrempels voor spinnen zijn niet gebaseerd op gegevens en zijn daarom niet nauwkeurig. De modellen van het leren van de machine kunnen worden gebruikt om parameters als drempels op te leiden. Hierdoor kunt u de query-efficiëntie verhogen door het aantal trefwoorden van `GROUP BY` te verminderen door overbodige functies te verwijderen.
 
@@ -159,7 +159,7 @@ De waarden die door [!DNL Jupyter Notebook] voor dit voorbeeld worden geretourne
 Model Accuracy: 0.99935
 ```
 
-![ Statistische output van [!DNL Jupyter Notebook] machine het leren model.](../images/use-cases/jupiter-notebook-output.png)
+![&#x200B; Statistische output van [!DNL Jupyter Notebook] machine het leren model.](../images/use-cases/jupiter-notebook-output.png)
 
 De resultaten voor het model in het bovenstaande voorbeeld zijn meer dan 99% nauwkeurig.
 
@@ -171,4 +171,4 @@ Het voorbeeldmodel bepaalde met een hoge mate van nauwkeurigheid dat om het even
 
 Door dit document te lezen, hebt u een beter inzicht in hoe u [!DNL Query Service] kunt gebruiken en machine leren om beide activiteiten te bepalen en te filteren.
 
-Andere documenten die de voordelen van [!DNL Query Service] aan de strategische bedrijfsinzichten van uw organisatie aantonen zijn [ verlaten doorblazen gebruiksgeval ](./abandoned-browse.md) voorbeeld.
+Andere documenten die de voordelen van [!DNL Query Service] aan de strategische bedrijfsinzichten van uw organisatie aantonen zijn [&#x200B; verlaten doorblazen gebruiksgeval &#x200B;](./abandoned-browse.md) voorbeeld.

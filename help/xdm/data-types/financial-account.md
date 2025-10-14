@@ -24,4 +24,4 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Voor meer details op het gegevenstype, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).
+Voor meer details op het gegevenstype, verwijs naar de [&#x200B; openbare bewaarplaats XDM &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).

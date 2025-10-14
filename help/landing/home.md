@@ -28,9 +28,9 @@ Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op
 
 ## [!DNL Experience Platform] documentatie
 
-[!DNL Experience Platform] -documentatie wordt in meerdere indelingen geleverd voor een groot aantal functies en toepassingen. Meer over de types van documentatie leren die beschikbaar zijn, gelieve het [ de documentatieoverzicht van Experience Platform ](documentation/overview.md) te bezoeken.
+[!DNL Experience Platform] -documentatie wordt in meerdere indelingen geleverd voor een groot aantal functies en toepassingen. Meer over de types van documentatie leren die beschikbaar zijn, gelieve het [&#x200B; de documentatieoverzicht van Experience Platform &#x200B;](documentation/overview.md) te bezoeken.
 
-Beginnen meer over de specifieke [!DNL Experience Platform] dienst te leren, terugkeer aan de [ documentatie landend pagina ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=nl-NL) en selecteer de aangewezen gids.
+Beginnen meer over de specifieke [!DNL Experience Platform] dienst te leren, terugkeer aan de [&#x200B; documentatie landend pagina &#x200B;](https://experienceleague.adobe.com/docs/experience-platform.html?lang=nl-NL) en selecteer de aangewezen gids.
 
 ### Documentatie voor op [!DNL Experience Platform] gebaseerde toepassingen
 
@@ -51,20 +51,20 @@ In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassi
 
 U kunt snel en eenvoudig aan de slag met [!DNL Experience Platform] door stapsgewijze zelfstudies te volgen waarin alles wordt behandeld, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de documentatie van [!DNL Experience Platform] , zodat u de documentatie voor de beste resultaten bij de voltooiing van de zelfstudies kunt bewaren.
 
-Bezoek de [ zelfstudies van Experience Platform ](https://www.adobe.com/go/platform-tutorials-home-en) landende pagina om begonnen te worden.
+Bezoek de [&#x200B; zelfstudies van Experience Platform &#x200B;](https://www.adobe.com/go/platform-tutorials-home-en) landende pagina om begonnen te worden.
 
 ## Referentiedocumenten en bronnen
 
 * [**API fundamentals**](api-fundamentals.md)\
   Leer de basisbeginselen van het werken met [!DNL Experience Platform] API&#39;s.
 
-* [**API verwijzingsdocumenten** ](https://www.adobe.com/go/platform-api-reference-en)\
+* [**API verwijzingsdocumenten** &#x200B;](https://www.adobe.com/go/platform-api-reference-en)\
   Ontdek API&#39;s van [!DNL Experience Platform] , waaronder headers, parameters, voorbeeldaanvragen en reacties.<br/>*Deze documenten worden ontvangen op Adobe I/O.*
 
 * [**Verklarende woordenlijst**](glossary.md)\
   Adobe Experience Platform-terminologie controleren.
 
-* [**de nota&#39;s van de Versie** ](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)\
+* [**de nota&#39;s van de Versie** &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)\
   Meer informatie over de meest recente release van [!DNL Experience Platform] en revisie in het verleden.
 
 * [**gids van het Oplossen van problemen**](troubleshooting.md)\

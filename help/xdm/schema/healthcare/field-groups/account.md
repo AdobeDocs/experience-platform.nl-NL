@@ -14,22 +14,22 @@ ht-degree: 0%
 
 # [!UICONTROL Account] schemaveldgroep
 
-[!UICONTROL Account] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../../classes/individual-profile.md) en [[!DNL Provider class]](../../../classes/provider.md). Het verstrekt één enkel voorwerp-type gebied `healthcareAccount` dat wordt gebruikt om transacties, de diensten, en andere financiële informatie te registreren met betrekking tot gezondheidsdiensten die aan een patiënt of een groep individuen worden verleend (zoals voor een verzekeringspolis of factureringsdoeleinden).
+[!UICONTROL Account] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../../classes/individual-profile.md) en [[!DNL Provider class]](../../../classes/provider.md). Het verstrekt één enkel voorwerp-type gebied `healthcareAccount` dat wordt gebruikt om transacties, de diensten, en andere financiële informatie te registreren met betrekking tot gezondheidsdiensten die aan een patiënt of een groep individuen worden verleend (zoals voor een verzekeringspolis of factureringsdoeleinden).
 
-![ de groepsstructuur van het Gebied ](../../../images/healthcare/field-groups/account/account.png)
+![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../../images/healthcare/field-groups/account/account.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
-| [!UICONTROL Balance] | `balance` | Array van objecten | De door het financiële stelsel berekende en verwerkte rekeningsaldi. Zie [ sectie-hieronder ](#balances) voor meer informatie. |
+| [!UICONTROL Balance] | `balance` | Array van objecten | De door het financiële stelsel berekende en verwerkte rekeningsaldi. Zie [&#x200B; sectie-hieronder &#x200B;](#balances) voor meer informatie. |
 | [!UICONTROL Billing Status] | `billingStatus` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Dit volgt de levenscyclus van de rekening door het factureringsproces. Het geeft aan hoe transacties worden verwerkt wanneer ze aan de rekening worden toegerekend. |
-| [!UICONTROL Coverage] | `coverage` | Array van objecten | De partij(en) die verantwoordelijk is (zijn) voor de dekking van de kosten van deze rekening en in welke volgorde moeten deze worden toegepast. Zie de [ sectie hieronder ](#coverage) voor meer informatie. |
+| [!UICONTROL Coverage] | `coverage` | Array van objecten | De partij(en) die verantwoordelijk is (zijn) voor de dekking van de kosten van deze rekening en in welke volgorde moeten deze worden toegepast. Zie de [&#x200B; sectie hieronder &#x200B;](#coverage) voor meer informatie. |
 | [!UICONTROL Currency] | `currency` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | De standaardvaluta voor de account. |
-| [!UICONTROL Diagnosis] | `diagnosis` | Array van objecten | De reeks diagnoses die relevant zijn voor de facturering worden hier opgeslagen op de rekening waar zij voorafgaand aan de verwerking naar behoren kunnen worden gerangschikt om claim(en) te produceren. Zie de [ sectie hieronder ](#diagnosis) voor meer informatie. |
-| [!UICONTROL Guarantor] | `guarantor` | Array van objecten | De partijen die verantwoordelijk zijn voor het in evenwicht brengen van de rekening indien andere betalingsopties tekortschieten. Zie de [ sectie hieronder ](#guarantor) voor meer informatie. |
+| [!UICONTROL Diagnosis] | `diagnosis` | Array van objecten | De reeks diagnoses die relevant zijn voor de facturering worden hier opgeslagen op de rekening waar zij voorafgaand aan de verwerking naar behoren kunnen worden gerangschikt om claim(en) te produceren. Zie de [&#x200B; sectie hieronder &#x200B;](#diagnosis) voor meer informatie. |
+| [!UICONTROL Guarantor] | `guarantor` | Array van objecten | De partijen die verantwoordelijk zijn voor het in evenwicht brengen van de rekening indien andere betalingsopties tekortschieten. Zie de [&#x200B; sectie hieronder &#x200B;](#guarantor) voor meer informatie. |
 | [!UICONTROL Identifier] | `identifier` | Array van [[!UICONTROL Identifier]](../data-types/identifier.md) | Een unieke id die wordt gebruikt om naar de account te verwijzen. Het kan al dan niet voor menselijk gebruik zijn bestemd (bv. creditcardnummer). |
 | [!UICONTROL Owner] | `owner` | [[!UICONTROL Reference]](../data-types/reference.md) | Geeft het servicegebied, het ziekenhuis, de afdeling enz. aan. verantwoordelijk is voor het beheer van de account. |
-| [!UICONTROL Procedure] | `procedure` | Array van objecten | De voor facturering relevante reeks procedures wordt hier opgeslagen op de rekening waar zij voorafgaand aan de verwerking naar behoren kunnen worden gesequenceerd om de vordering(en) te produceren. Zie de [ sectie hieronder ](#procedure) voor meer informatie. |
-| [!UICONTROL Related Account] | `relatedAccount` | Array van objecten | Overige met deze rekening verband houdende rekeningen. Zie de [ sectie hieronder ](#related-account) voor meer informatie. |
+| [!UICONTROL Procedure] | `procedure` | Array van objecten | De voor facturering relevante reeks procedures wordt hier opgeslagen op de rekening waar zij voorafgaand aan de verwerking naar behoren kunnen worden gesequenceerd om de vordering(en) te produceren. Zie de [&#x200B; sectie hieronder &#x200B;](#procedure) voor meer informatie. |
+| [!UICONTROL Related Account] | `relatedAccount` | Array van objecten | Overige met deze rekening verband houdende rekeningen. Zie de [&#x200B; sectie hieronder &#x200B;](#related-account) voor meer informatie. |
 | [!UICONTROL Service Period] | `servicePeriod` | [[!UICONTROL Period]](../data-types/period.md) | Het datumbereik van services die aan dit account zijn gekoppeld. |
 | [!UICONTROL Subject] | `subject` | Array van [[!UICONTROL Reference]](../data-types/reference.md) | Identificeert de entiteit die de kosten maakt. Hoewel de directe afnemers van diensten of goederen entiteiten zouden kunnen zijn die met het onderwerp van de rekening verband houden, werden de kosten uiteindelijk gedragen door het onderwerp van de rekening. |
 | [!UICONTROL Type] | `type` | [[!UICONTROL Codeable Concept]](../data-types/codeable-concept.md) | Hiermee categoriseert u de account voor rapportage- en zoekdoeleinden. |
@@ -40,14 +40,14 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/account.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/account.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/account.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/industry/healthcare/fhir/fieldgroups/account.schema.json)
 
 ## `balances` {#balances}
 
 `balances` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ evenwichtsstructuur ](../../../images/healthcare/field-groups/account/balance.png)
+![&#x200B; evenwichtsstructuur &#x200B;](../../../images/healthcare/field-groups/account/balance.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -60,7 +60,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `coverage` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ dekkingsstructuur ](../../../images/healthcare/field-groups/account/coverage.png)
+![&#x200B; dekkingsstructuur &#x200B;](../../../images/healthcare/field-groups/account/coverage.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -71,7 +71,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `diagnosis` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ diagnosefunctie ](../../../images/healthcare/field-groups/account/diagnosis.png)
+![&#x200B; diagnosefunctie &#x200B;](../../../images/healthcare/field-groups/account/diagnosis.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `guarantor` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ garantieersstructuur ](../../../images/healthcare/field-groups/account/guarantor.png)
+![&#x200B; garantieersstructuur &#x200B;](../../../images/healthcare/field-groups/account/guarantor.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -98,7 +98,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `procedure` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ procedurestructuur ](../../../images/healthcare/field-groups/account/procedure.png)
+![&#x200B; procedurestructuur &#x200B;](../../../images/healthcare/field-groups/account/procedure.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
 `relatedAccount` wordt opgegeven als een array van objecten. De structuur van elk object wordt hieronder beschreven.
 
-![ relatedAccount structure ](../../../images/healthcare/field-groups/account/related-account.png)
+![&#x200B; relatedAccount structure &#x200B;](../../../images/healthcare/field-groups/account/related-account.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- | --- |

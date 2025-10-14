@@ -30,7 +30,7 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 
 | Functie | Beschrijving |
 | --- | --- |
-| Doelen voor doelgebruik | Er zijn nieuwe metergegevens toegevoegd aan het dashboard voor licentiegebruik. De **[!UICONTROL Audience Activation Size]** - en **[!UICONTROL Data Export Size]** -gegevens bieden een handige manier om te controleren hoeveel gegevens u uit Experience Platform hebt geëxporteerd ten opzichte van uw gebruiksrechten voor licenties. Zie de [ beschikbare metriek ](../../dashboards/guides/license-usage.md#available-metrics) documentatie voor beschrijvingen van deze en andere metriek van het vergunningsgebruik. |
+| Doelen voor doelgebruik | Er zijn nieuwe metergegevens toegevoegd aan het dashboard voor licentiegebruik. De **[!UICONTROL Audience Activation Size]** - en **[!UICONTROL Data Export Size]** -gegevens bieden een handige manier om te controleren hoeveel gegevens u uit Experience Platform hebt geëxporteerd ten opzichte van uw gebruiksrechten voor licenties. Zie de [&#x200B; beschikbare metriek &#x200B;](../../dashboards/guides/license-usage.md#available-metrics) documentatie voor beschrijvingen van deze en andere metriek van het vergunningsgebruik. |
 
 {style="table-layout:auto"}
 
@@ -44,13 +44,13 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Extensies | [!DNL Meta] Verbetering van conversie-API | Er zijn drie verhogingen aan de [ Conversies API van Meta ](/help/tags/extensions/server/meta/overview.md) uitbreiding: <ul><li>Integratie met [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): maakt een naadloze aanmeldervaring doordat u uw pixelID en toegangstoken kunt delen voor de integratie van Conversies-API met Adobe.</li><li>Integratie met [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): hiermee kunt u reclame maken voor mensen die een gewenste actie waarschijnlijk uitvoeren en de actie weer koppelen aan de geleverde advertenties.</li><li>Integratie met [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): hiermee kunt u de RampID van LiveRamp in het CIP-veld doorgeven, zodat u geen PII rechtstreeks met partners of Meta hoeft te delen. </li></ul> |
-| Extensies | [!DNL LinkedIn] Conversies-API | De [[!DNL LinkedIn]  Conversies API ](../../tags/extensions/server/linkedin/overview.md) uitbreiding staat u toe om de doeltreffendheid van uw LinkedIn marketing campagnes te evalueren door de gebeurtenisgegevens van Experience Platform aan LinkedIn door:sturen. |
-| Geheim | [!DNL LinkedIn] OAuth 2 Secret | [[!DNL LinkedIn]  OAuth 2 Geheim ](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) staat u toe om server-server interactie naar [!DNL LinkedIn] in gebeurtenis te verzenden die door:sturen. |
-| Gebeurtenis doorsturen | Bijwerken naar tags en doorsturen van gebeurtenissen | Om [ Markeringen ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=nl) en [ Gebeurtenis te bewaren die ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=nl-NL) prestaties in Experience Platform door:sturen, slechts zullen de meest recente Ontwikkeling en het Stadium bouwt, zowel succesvol als niet succesvol, worden behouden. Alle builds die niet meer in gebruik zijn, worden verwijderd. Bovendien is het vertragen en het tarief beperken uitgevoerd om ervoor te zorgen dat een paar zwaar gebruik van API de prestaties van API voor anderen niet degraderen. |
-| Extensies | Elementen, regels en extensies | [ Elementen, regels, en uitbreidingen ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=nl-NL) worden nu gesorteerd in de bibliotheekoutput om meer consistentie tussen veelvoudige bouwt en plaatsingen van de zelfde bibliotheek te verzekeren. |
+| Extensies | [!DNL Meta] Verbetering van conversie-API | Er zijn drie verhogingen aan de [&#x200B; Conversies API van Meta &#x200B;](/help/tags/extensions/server/meta/overview.md) uitbreiding: <ul><li>Integratie met [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): maakt een naadloze aanmeldervaring doordat u uw pixelID en toegangstoken kunt delen voor de integratie van Conversies-API met Adobe.</li><li>Integratie met [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): hiermee kunt u reclame maken voor mensen die een gewenste actie waarschijnlijk uitvoeren en de actie weer koppelen aan de geleverde advertenties.</li><li>Integratie met [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): hiermee kunt u de RampID van LiveRamp in het CIP-veld doorgeven, zodat u geen PII rechtstreeks met partners of Meta hoeft te delen. </li></ul> |
+| Extensies | [!DNL LinkedIn] Conversies-API | De [[!DNL LinkedIn]  Conversies API &#x200B;](../../tags/extensions/server/linkedin/overview.md) uitbreiding staat u toe om de doeltreffendheid van uw LinkedIn marketing campagnes te evalueren door de gebeurtenisgegevens van Experience Platform aan LinkedIn door:sturen. |
+| Geheim | [!DNL LinkedIn] OAuth 2 Secret | [[!DNL LinkedIn]  OAuth 2 Geheim &#x200B;](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) staat u toe om server-server interactie naar [!DNL LinkedIn] in gebeurtenis te verzenden die door:sturen. |
+| Gebeurtenis doorsturen | Bijwerken naar tags en doorsturen van gebeurtenissen | Om [&#x200B; Markeringen &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=nl) en [&#x200B; Gebeurtenis te bewaren die &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=nl-NL) prestaties in Experience Platform door:sturen, slechts zullen de meest recente Ontwikkeling en het Stadium bouwt, zowel succesvol als niet succesvol, worden behouden. Alle builds die niet meer in gebruik zijn, worden verwijderd. Bovendien is het vertragen en het tarief beperken uitgevoerd om ervoor te zorgen dat een paar zwaar gebruik van API de prestaties van API voor anderen niet degraderen. |
+| Extensies | Elementen, regels en extensies | [&#x200B; Elementen, regels, en uitbreidingen &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=nl-NL) worden nu gesorteerd in de bibliotheekoutput om meer consistentie tussen veelvoudige bouwt en plaatsingen van de zelfde bibliotheek te verzekeren. |
 
-Voor meer informatie over gegevensinzameling, te lezen gelieve het [ overzicht van gegevensinzamelingen ](../../tags/home.md).
+Voor meer informatie over gegevensinzameling, te lezen gelieve het [&#x200B; overzicht van gegevensinzamelingen &#x200B;](../../tags/home.md).
 
 ## Bestemmingen {#destinations}
 
@@ -69,8 +69,8 @@ Voor meer informatie over gegevensinzameling, te lezen gelieve het [ overzicht v
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| (Beta) Ondersteuning voor hashfuncties in berekende velden | Naast de functies specifiek voor [ het uitvoeren van series ](../../destinations/ui/export-arrays-maps-objects.md) of elementen van een serie, kunt u extra [ het hakken functies ](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) aan knoeiboelattributen in de uitgevoerde dossiers nu gebruiken. De ondersteunde hashingfuncties zijn: `sha`, `sha256`, `sha512`, `hash`, `md5` en `crc32` . |
-| (Beperkte GA) Accountpubliek naar bepaalde bestemmingen activeren | De klanten van Real-Time CDP B2B kunnen [ rekeningspubliek ](../../segmentation/types/account-audiences.md) aan bepaalde bestemmingen nu activeren. Voor meer informatie over deze eigenschap, gelieve te lezen [ de leerprogramma van het rekeningspubliek activeert ](/help/destinations/ui/activate-account-audiences.md). |
+| (Beta) Ondersteuning voor hashfuncties in berekende velden | Naast de functies specifiek voor [&#x200B; het uitvoeren van series &#x200B;](../../destinations/ui/export-arrays-maps-objects.md) of elementen van een serie, kunt u extra [&#x200B; het hakken functies &#x200B;](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) aan knoeiboelattributen in de uitgevoerde dossiers nu gebruiken. De ondersteunde hashingfuncties zijn: `sha`, `sha256`, `sha512`, `hash`, `md5` en `crc32` . |
+| (Beperkte GA) Accountpubliek naar bepaalde bestemmingen activeren | De klanten van Real-Time CDP B2B kunnen [&#x200B; rekeningspubliek &#x200B;](../../segmentation/types/account-audiences.md) aan bepaalde bestemmingen nu activeren. Voor meer informatie over deze eigenschap, gelieve te lezen [&#x200B; de leerprogramma van het rekeningspubliek activeert &#x200B;](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -86,9 +86,9 @@ Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldw
 
 | Functie | Beschrijving |
 | --- | --- |
-| Sandbox-tools | Met de functie voor sandboxgereedschappen kunt u de configuratienauwkeurigheid in verschillende sandboxen verbeteren en kunt u naadloos sandboxconfiguraties exporteren en importeren tussen sandboxen. U kunt de functie voor gereedschappen in de sandbox gebruiken om verschillende objecten te selecteren en deze te exporteren naar een pakket. Voor meer informatie, zie de [ zandbak tooling UI gids ](../../sandboxes/ui/sandbox-tooling.md). |
+| Sandbox-tools | Met de functie voor sandboxgereedschappen kunt u de configuratienauwkeurigheid in verschillende sandboxen verbeteren en kunt u naadloos sandboxconfiguraties exporteren en importeren tussen sandboxen. U kunt de functie voor gereedschappen in de sandbox gebruiken om verschillende objecten te selecteren en deze te exporteren naar een pakket. Voor meer informatie, zie de [&#x200B; zandbak tooling UI gids &#x200B;](../../sandboxes/ui/sandbox-tooling.md). |
 
-Voor meer informatie over zandbakken, te zien gelieve het [ overzicht van zandbakken ](../../sandboxes/home.md).
+Voor meer informatie over zandbakken, te zien gelieve het [&#x200B; overzicht van zandbakken &#x200B;](../../sandboxes/home.md).
 
 ## Segmentatieservice {#segmentation}
 
@@ -100,7 +100,7 @@ Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Exp
 | ------- | ----------- |
 | Accountpubliek (beperkt GA) | In Real-Time Customer Data Platform B2B edition kunt u nu de segmentatie van uw account gebruiken om het hele gemak en de verfijning van de segmentatieervaring van marketingmedewerkers te vergroten van een publiek dat op mensen is gebaseerd naar een publiek in een account. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/types/account-audiences.md). |
 
-Om meer over de Dienst van de Segmentatie te leren, te lezen gelieve het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
+Om meer over de Dienst van de Segmentatie te leren, te lezen gelieve het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
@@ -110,8 +110,8 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Bijgewerkte verificatie voor Data Landing Zone | U kunt nu de aangewezen vervaldatum van uw Gebied van Gegevens zien Landing wanneer het bekijken van uw geloofsbrieven. U moet uw token vernieuwen vóór de vervaldatum om deze in uw toepassing te kunnen blijven gebruiken. Als u uw token niet handmatig vernieuwt vóór de opgegeven vervaldatum, wordt deze automatisch vernieuwd en krijgt u een nieuwe token wanneer u uw gegevens de volgende keer ophaalt. Voor meer informatie, lees de documentatie op [ gebruikend de Gegevens die Zone ](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) aanvoeren. |
+| Bijgewerkte verificatie voor Data Landing Zone | U kunt nu de aangewezen vervaldatum van uw Gebied van Gegevens zien Landing wanneer het bekijken van uw geloofsbrieven. U moet uw token vernieuwen vóór de vervaldatum om deze in uw toepassing te kunnen blijven gebruiken. Als u uw token niet handmatig vernieuwt vóór de opgegeven vervaldatum, wordt deze automatisch vernieuwd en krijgt u een nieuwe token wanneer u uw gegevens de volgende keer ophaalt. Voor meer informatie, lees de documentatie op [&#x200B; gebruikend de Gegevens die Zone &#x200B;](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) aanvoeren. |
 
 {style="table-layout:auto"}
 
-Om meer over bronnen te leren, te lezen gelieve het [ overzicht van bronnen ](../../sources/home.md).
+Om meer over bronnen te leren, te lezen gelieve het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

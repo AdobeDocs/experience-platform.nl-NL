@@ -15,18 +15,18 @@ In dit document worden de stappen beschreven die zijn vereist om [!DNL Jupyter N
 
 ## Aan de slag
 
-Deze handleiding vereist dat u al toegang hebt tot [!DNL Jupyter Notebook] en vertrouwd bent met de interface. Om [!DNL Jupyter Notebook] of voor meer informatie te downloaden, zie de [ officiële  [!DNL Jupyter Notebook]  documentatie ](https://jupyter.org/).
+Deze handleiding vereist dat u al toegang hebt tot [!DNL Jupyter Notebook] en vertrouwd bent met de interface. Om [!DNL Jupyter Notebook] of voor meer informatie te downloaden, zie de [&#x200B; officiële  [!DNL Jupyter Notebook]  documentatie &#x200B;](https://jupyter.org/).
 
 U hebt toegang tot de [!UICONTROL Queries] -werkruimte in de gebruikersinterface van Experience Platform nodig om de vereiste gegevens voor het verbinden van [!DNL Jupyter Notebook] met Experience Platform te verkrijgen. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte van [!UICONTROL Queries] .
 
 >[!TIP]
 >
 >[!DNL Anaconda Navigator] is een grafische gebruikersinterface voor desktops (GUI) waarmee algemene [!DNL Python] -programma&#39;s zoals [!DNL Jupyter Notebook] gemakkelijker kunnen worden geïnstalleerd en gestart. Het helpt ook om pakketten, milieu&#39;s, en kanalen te beheren zonder bevel-lijn bevelen te gebruiken.
->Volg het geleide installatieproces op hun website om [ uw aangewezen versie van de toepassing ](https://docs.anaconda.com/anaconda/install/) te installeren.
+>Volg het geleide installatieproces op hun website om [&#x200B; uw aangewezen versie van de toepassing &#x200B;](https://docs.anaconda.com/anaconda/install/) te installeren.
 >Selecteer in het beginscherm van de Anaconda Navigator de optie **[!DNL Jupyter Notebook]** in de lijst met ondersteunde toepassingen om het programma te starten.
->Meer informatie kan in de [ officiële documentatie Anaconda ](https://docs.anaconda.com/anaconda/navigator/) worden gevonden.
+>Meer informatie kan in de [&#x200B; officiële documentatie Anaconda &#x200B;](https://docs.anaconda.com/anaconda/navigator/) worden gevonden.
 
-De officiële documentatie van de Jupyter verstrekt instructies [ in werking stellen de notitie van de interface van de bevellijn ](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
+De officiële documentatie van de Jupyter verstrekt instructies [&#x200B; in werking stellen de notitie van de interface van de bevellijn &#x200B;](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
 
 ## Starten [!DNL Jupyter Notebook]
 
@@ -40,9 +40,9 @@ Voer op de eerste regel van de [!DNL Notebook] -editor de volgende waarde in: `p
 
 Importeer vervolgens een [!DNL PostgreSQL] databaseadapter voor [!DNL Python] . Voer de waarde in: `import psycopg2` en selecteer **[!DNL Run]** . Er is geen succesbericht voor dit proces. Ga door met de volgende stap als er geen foutbericht wordt weergegeven.
 
-U moet nu uw Adobe Experience Platform-gebruikersgegevens opgeven door de waarde `conn = psycopg2.connect("{YOUR_CREDENTIALS}")` in te voeren. De verbindingsgegevens vindt u in de sectie [!UICONTROL Queries] onder het tabblad [!UICONTROL Credentials] van de gebruikersinterface van Experience Platform. Zie de documentatie op hoe te [ uw organisatiereferenties ](../ui/credentials.md) voor gedetailleerde instructies vinden.
+U moet nu uw Adobe Experience Platform-gebruikersgegevens opgeven door de waarde `conn = psycopg2.connect("{YOUR_CREDENTIALS}")` in te voeren. De verbindingsgegevens vindt u in de sectie [!UICONTROL Queries] onder het tabblad [!UICONTROL Credentials] van de gebruikersinterface van Experience Platform. Zie de documentatie op hoe te [&#x200B; uw organisatiereferenties &#x200B;](../ui/credentials.md) voor gedetailleerde instructies vinden.
 
-Het gebruik van niet-vervallende gegevens wordt aanbevolen wanneer u clients van derden gebruikt om de moeite te besparen dat u herhaaldelijk uw gegevens invoert. Zie de documentatie voor instructies op [ hoe te om niet-het verlopen geloofsbrieven ](../ui/credentials.md#non-expiring-credentials) te produceren en te gebruiken.
+Het gebruik van niet-vervallende gegevens wordt aanbevolen wanneer u clients van derden gebruikt om de moeite te besparen dat u herhaaldelijk uw gegevens invoert. Zie de documentatie voor instructies op [&#x200B; hoe te om niet-het verlopen geloofsbrieven &#x200B;](../ui/credentials.md#non-expiring-credentials) te produceren en te gebruiken.
 
 >[!IMPORTANT]
 >
@@ -82,4 +82,4 @@ Voer de functie `df.head()` in en voer deze uit om de resultaten van de query me
 
 ## Volgende stappen
 
-Nu u met de Dienst van de Vraag hebt verbonden, kunt u [!DNL Jupyter Notebook] gebruiken om vragen te schrijven. Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen gelieve de [ lopende vraaggids ](../best-practices/writing-queries.md).
+Nu u met de Dienst van de Vraag hebt verbonden, kunt u [!DNL Jupyter Notebook] gebruiken om vragen te schrijven. Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, te lezen gelieve de [&#x200B; lopende vraaggids &#x200B;](../best-practices/writing-queries.md).

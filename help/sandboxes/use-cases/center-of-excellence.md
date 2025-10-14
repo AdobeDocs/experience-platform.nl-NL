@@ -13,11 +13,11 @@ ht-degree: 2%
 
 Schakel een expertisecentrum in met behulp van sandboxgereedschappen door een &#39;gouden sandbox&#39;-pakket te maken waarmee u de aanbevolen procedures voor meerdere sandboxen kunt standaardiseren.
 
-![ Overzicht van het uitvoeren van pakketten over verschillende organisaties ](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
+![&#x200B; Overzicht van het uitvoeren van pakketten over verschillende organisaties &#x200B;](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## Waarom dit gebruiksgeval overwegen {#why-this-use-case}
 
-Veel grote bedrijven of bedrijven gebruiken meerdere sandboxen voor verschillende organisaties, teams, regio&#39;s of ontwikkelomgevingen. Met de macht van [ zandbak tooling ](../ui/sandbox-tooling.md), kunt u een gouden zandbakpakket tot stand brengen om consistentie, naleving, en groepering van de normen van uw organisatie over veelvoudige zandbakken te verzekeren.
+Veel grote bedrijven of bedrijven gebruiken meerdere sandboxen voor verschillende organisaties, teams, regio&#39;s of ontwikkelomgevingen. Met de macht van [&#x200B; zandbak tooling &#x200B;](../ui/sandbox-tooling.md), kunt u een gouden zandbakpakket tot stand brengen om consistentie, naleving, en groepering van de normen van uw organisatie over veelvoudige zandbakken te verzekeren.
 
 Dit gouden zandbakpakket leidt tot een centrum van excellentie om zeer belangrijke configuraties efficiënt te delen. Met behulp van sandboxgereedschappen kunt u het pakket gemakkelijk importeren over meerdere sandboxen. U kunt uw pakket ook delen met andere organisaties voor algemene consistentie.
 
@@ -39,14 +39,14 @@ Wanneer u van plan bent om uw eigen centrum van excellentie binnen uw organisati
 
 ### UI-functionaliteit, Experience Platform-componenten en Experience Cloud-producten die u wilt gebruiken {#ui-functionality-and-elements}
 
-Als u dit geval wilt gebruiken, moet u meerdere gebieden van Adobe Experience Platform gebruiken. Verzeker u de noodzakelijke [ op attributen-gebaseerde toegangsbeheertoestemmingen ](../../access-control/abac/overview.md) voor al deze gebieden hebt, of uw systeembeheerder vragen om u de noodzakelijke toestemmingen te verlenen.
+Als u dit geval wilt gebruiken, moet u meerdere gebieden van Adobe Experience Platform gebruiken. Verzeker u de noodzakelijke [&#x200B; op attributen-gebaseerde toegangsbeheertoestemmingen &#x200B;](../../access-control/abac/overview.md) voor al deze gebieden hebt, of uw systeembeheerder vragen om u de noodzakelijke toestemmingen te verlenen.
 
 - [Sandbox-tools](../ui/sandbox-tooling.md)
 - [Sandboxbeheer](../ui/user-guide.md)
 - [Gegevenssets](../../catalog/datasets/overview.md)
 - [Schema&#39;s](../../xdm//home.md)
 - [Doelgroepen](../../segmentation/home.md)
-- [ reizen van Adobe Journey Optimizer ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [&#x200B; reizen van Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 
@@ -63,25 +63,25 @@ Lees de onderstaande secties door, die koppelingen naar verdere documentatie bev
 
 ### Uw gouden sandbox maken
 
-De eerste stap bij het inschakelen van uw expertisecentrum is het maken van uw gouden sandbox. Deze zandbak zou de basislijnconfiguraties moeten bevatten die uw beste praktijken vertegenwoordigen. Om deze gouden zandbak tot stand te brengen, volg de gids op [ creërend een nieuwe zandbak ](../ui/user-guide.md#create-a-new-sandbox) in Experience Platform.
+De eerste stap bij het inschakelen van uw expertisecentrum is het maken van uw gouden sandbox. Deze zandbak zou de basislijnconfiguraties moeten bevatten die uw beste praktijken vertegenwoordigen. Om deze gouden zandbak tot stand te brengen, volg de gids op [&#x200B; creërend een nieuwe zandbak &#x200B;](../ui/user-guide.md#create-a-new-sandbox) in Experience Platform.
 
-Zodra uw zandbak is gecreeerd, begin creërend uw configuraties van basislijnobjecten, zoals [ schema&#39;s ](../../xdm/ui/resources/schemas.md#create-a-new-schema), [ datasets ](../../catalog/datasets/user-guide.md#create-a-dataset), of [ publiek ](../../segmentation/ui/segment-builder.md). Controleer uw configuraties voordat u verdergaat.
+Zodra uw zandbak is gecreeerd, begin creërend uw configuraties van basislijnobjecten, zoals [&#x200B; schema&#39;s &#x200B;](../../xdm/ui/resources/schemas.md#create-a-new-schema), [&#x200B; datasets &#x200B;](../../catalog/datasets/user-guide.md#create-a-dataset), of [&#x200B; publiek &#x200B;](../../segmentation/ui/segment-builder.md). Controleer uw configuraties voordat u verdergaat.
 
 ### Uw sandbox exporteren naar een pakket
 
-Nu de sandbox de objectconfiguraties van de basislijn bevat, is deze klaar om te worden geëxporteerd naar een pakket met behulp van sandboxgereedschappen. Volg de gids op [ die een volledige zandbak ](../ui/sandbox-tooling.md#export-an-entire-sandbox) uitvoert om uw gouden zandbakpakket tot stand te brengen.
+Nu de sandbox de objectconfiguraties van de basislijn bevat, is deze klaar om te worden geëxporteerd naar een pakket met behulp van sandboxgereedschappen. Volg de gids op [&#x200B; die een volledige zandbak &#x200B;](../ui/sandbox-tooling.md#export-an-entire-sandbox) uitvoert om uw gouden zandbakpakket tot stand te brengen.
 
 ### Het pakket importeren in relevante sandboxen
 
-Nu het pakket is gemaakt, kunt u dit pakket importeren in uw relevante sandboxen. U kunt het beste een pakket met een volledige sandbox importeren in een lege sandbox. Gebruikend zandbak tooling, kunt u gemakkelijk [ een volledig zandbakpakket ](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) in een zandbak direct binnen Experience Platform invoeren.
+Nu het pakket is gemaakt, kunt u dit pakket importeren in uw relevante sandboxen. U kunt het beste een pakket met een volledige sandbox importeren in een lege sandbox. Gebruikend zandbak tooling, kunt u gemakkelijk [&#x200B; een volledig zandbakpakket &#x200B;](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) in een zandbak direct binnen Experience Platform invoeren.
 
 ### Pakket delen over organisaties
 
-Met gereedschappen voor sandboxen kunt u pakketten delen die u in verschillende organisaties hebt gemaakt. Volg het [ pakket delend gids ](../../sandboxes/ui/sharing-packages-across-orgs.md) om uw gouden zandbakpakket te delen.
+Met gereedschappen voor sandboxen kunt u pakketten delen die u in verschillende organisaties hebt gemaakt. Volg het [&#x200B; pakket delend gids &#x200B;](../../sandboxes/ui/sharing-packages-across-orgs.md) om uw gouden zandbakpakket te delen.
 
 ### Invoer en uitvoer controleren aan de hand van auditlogs
 
-Wanneer u het pakket importeert of exporteert, kunt u de status van de taken controleren met het dashboard van **[!UICONTROL Jobs]** in Experience Platform. Om meer over controletaken te leren, lees de gids over [ controlerende de invoerdetails ](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
+Wanneer u het pakket importeert of exporteert, kunt u de status van de taken controleren met het dashboard van **[!UICONTROL Jobs]** in Experience Platform. Om meer over controletaken te leren, lees de gids over [&#x200B; controlerende de invoerdetails &#x200B;](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
 
 ### De gouden sandbox regelmatig bijwerken
 
@@ -89,7 +89,7 @@ Nu uw gouden sandboxpakket klaar is, hebt u een gestandaardiseerd expertisecentr
 
 >[!NOTE]
 >
-> De bovenstaande stappen volgen het proces in de gebruikersinterface van Experience Platform. Het is mogelijk om dezelfde stappen te volgen gebruikend API door diverse eindpunten. Verwijs naar de `sandboxes` [ eindpuntgids ](https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/api/sandboxes#create) en de `packages` [ eindpuntgids ](https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/sandbox-tooling-api/packages) voor informatie bij het maken van elk verzoek door API.
+> De bovenstaande stappen volgen het proces in de gebruikersinterface van Experience Platform. Het is mogelijk om dezelfde stappen te volgen gebruikend API door diverse eindpunten. Verwijs naar de `sandboxes` [&#x200B; eindpuntgids &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/api/sandboxes#create) en de `packages` [&#x200B; eindpuntgids &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/sandbox-tooling-api/packages) voor informatie bij het maken van elk verzoek door API.
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 

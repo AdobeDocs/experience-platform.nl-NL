@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens met Python voor gebruik in Data Science Workspace. Voor informatie bij de toegang tot van gegevens die laptops gebruiken JupyterLab, bezoek de [ JupyterLab toegang van notitieboekjes tot ](../jupyterlab/access-notebook-data.md) documentatie.
+Het volgende document bevat voorbeelden over hoe u toegang kunt krijgen tot gegevens met Python voor gebruik in Data Science Workspace. Voor informatie bij de toegang tot van gegevens die laptops gebruiken JupyterLab, bezoek de [&#x200B; JupyterLab toegang van notitieboekjes tot &#x200B;](../jupyterlab/access-notebook-data.md) documentatie.
 
 ## Een gegevensset lezen
 
@@ -164,4 +164,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Volgende stappen
 
-Adobe Experience Platform Data Science Workspace levert een recept-voorbeeld waarin de bovenstaande codevoorbeelden worden gebruikt voor het lezen en schrijven van gegevens. Als u meer over wilt leren hoe te om Python voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve de [ Gegevens Wetenschap Workspace Python GitHub Bewaarplaats ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+Adobe Experience Platform Data Science Workspace levert een recept-voorbeeld waarin de bovenstaande codevoorbeelden worden gebruikt voor het lezen en schrijven van gegevens. Als u meer over wilt leren hoe te om Python voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve de [&#x200B; Gegevens Wetenschap Workspace Python GitHub Bewaarplaats &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).

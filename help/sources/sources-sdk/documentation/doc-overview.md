@@ -19,15 +19,15 @@ Deze handleiding bevat:
 
 * Een zelfstudie die u kunt volgen om een documentatiepagina voor uw nieuwe bron te maken;
 * Een documentatiesjabloon dat u kunt invullen voor uw nieuwe bron.
-* [ Instructies op hoe te om Markering voor het schrijven van technische documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL) te gebruiken;
-* [ Instructies bij het begrip van de aroma van de Prijsverhoging van Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL#custom-markdown-extensions).
+* [&#x200B; Instructies op hoe te om Markering voor het schrijven van technische documentatie &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL) te gebruiken;
+* [&#x200B; Instructies bij het begrip van de aroma van de Prijsverhoging van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL#custom-markdown-extensions).
 
 ## Vereisten
 
 De volgende items zijn vereist voordat u de nieuwe bron kunt documenteren:
 
-* **Een geldige GitHub gebruikersrekening**: Als u geen bestaande rekening GitHub hebt, dan moet u één door de [ GitHub ondertekenen pagina ](https://github.com/) tot stand brengen;
-* **Toegang tot Desktop GitHub**: U moet de [ Desktop gebruiken GitHub app ](https://desktop.github.com/) om uw brondocumentatie in uw lokaal milieu tot stand te brengen;
+* **Een geldige GitHub gebruikersrekening**: Als u geen bestaande rekening GitHub hebt, dan moet u één door de [&#x200B; GitHub ondertekenen pagina &#x200B;](https://github.com/) tot stand brengen;
+* **Toegang tot Desktop GitHub**: U moet de [&#x200B; Desktop gebruiken GitHub app &#x200B;](https://desktop.github.com/) om uw brondocumentatie in uw lokaal milieu tot stand te brengen;
 * Uw integratie met Adobe moet zich in een testfase bevinden en uw bron moet worden geïmplementeerd in een testomgeving in Experience Platform.
 
 ## Instructies op hoog niveau voor het maken van documentatie voor uw bron in Experience Platform
@@ -36,7 +36,7 @@ Op hoog niveau moet u voor het maken van documentatie voor uw bron een vork make
 
 ## Documentatiesjabloon
 
-U kunt een vooraf ingevuld [ documentatiemalplaatje ](./template.md) gebruiken om in het creëren van documentatie voor uw bron bij te wonen. Hieronder vindt u instructies voor het bewerken van de sjabloon en het openen van een pull-verzoek. Verzonden documentatie voor uw nieuwe bron wordt gecontroleerd en gepubliceerd door het Adobe-documentatieteam.
+U kunt een vooraf ingevuld [&#x200B; documentatiemalplaatje &#x200B;](./template.md) gebruiken om in het creëren van documentatie voor uw bron bij te wonen. Hieronder vindt u instructies voor het bewerken van de sjabloon en het openen van een pull-verzoek. Verzonden documentatie voor uw nieuwe bron wordt gecontroleerd en gepubliceerd door het Adobe-documentatieteam.
 
 U kunt ook de onderstaande documentatiesjablonen downloaden:
 

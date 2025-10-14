@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >* De [!DNL Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* De bron [!DNL Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>* De bron [!DNL Databricks] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [!DNL Databricks] is een op de cloud gebaseerd platform dat is ontworpen voor gegevensanalyse, leren van machines en AI. U kunt [!DNL Databricks] gebruiken om een holistische omgeving te integreren en te verstrekken voor het bouwen, implementeren en beheren van gegevensoplossingen op schaal.
 
@@ -159,7 +159,7 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Opslagaccount | De naam van uw opslagaccount. U kunt deze waarde verkrijgen door uw [!DNL Azure Blob Storage] -gegevens op te halen. |
 | SAS-token | Het token voor gedeelde toegangshandtekeningen voor uw [!DNL Azure Blob Storage] . U kunt deze waarde verkrijgen door uw [!DNL Azure Blob Storage] -gegevens op te halen. |
 
-![ de Databases UI op Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+![&#x200B; de Databases UI op Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
 Als deze niet is opgegeven, mislukt de kopieeractiviteit in de flowuitvoering en wordt de volgende fout geretourneerd:
 

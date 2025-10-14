@@ -16,17 +16,17 @@ ht-degree: 0%
 
 Met [!DNL Real-Time Customer Profile] kunt u één weergave van individuele klanten maken door gegevens uit meerdere bronnen samen te voegen, waaronder zowel kenmerkgegevens als gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd. [!DNL Profile] -gegevens kunnen bijvoorbeeld worden geëxporteerd voor activering door een publiek te maken en profielkenmerken kunnen worden geëxporteerd voor rapportage.
 
-Dit document verstrekt geleidelijke instructies voor het creëren van en het leiden van uitvoerbanen gebruikend [ Profiel API ](https://www.adobe.com/go/profile-apis-en).
+Dit document verstrekt geleidelijke instructies voor het creëren van en het leiden van uitvoerbanen gebruikend [&#x200B; Profiel API &#x200B;](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >
->Deze handleiding behandelt het gebruik van exporttaken in de [!DNL Profile API] . Voor informatie over hoe te om uitvoerbanen voor de Dienst van de Segmentatie van Adobe Experience Platform te beheren, zie de gids op [ de uitvoerbanen in de Segmentatie API ](../../profile/api/export-jobs.md).
+>Deze handleiding behandelt het gebruik van exporttaken in de [!DNL Profile API] . Voor informatie over hoe te om uitvoerbanen voor de Dienst van de Segmentatie van Adobe Experience Platform te beheren, zie de gids op [&#x200B; de uitvoerbanen in de Segmentatie API &#x200B;](../../profile/api/export-jobs.md).
 
-Naast het creëren van een uitvoerbaan, kunt u tot [!DNL Profile] gegevens ook toegang hebben gebruikend het `/entities` eindpunt, ook genoemd geworden &quot;[!DNL Profile Access]&quot;. Zie de [ gids van het entiteitseindpunt ](./entities.md) voor meer informatie. Voor stappen op hoe te om tot [!DNL Profile] gegevens toegang te hebben gebruikend UI, verwijs naar de [ gebruikersgids ](../ui/user-guide.md).
+Naast het creëren van een uitvoerbaan, kunt u tot [!DNL Profile] gegevens ook toegang hebben gebruikend het `/entities` eindpunt, ook genoemd geworden &quot;[!DNL Profile Access]&quot;. Zie de [&#x200B; gids van het entiteitseindpunt &#x200B;](./entities.md) voor meer informatie. Voor stappen op hoe te om tot [!DNL Profile] gegevens toegang te hebben gebruikend UI, verwijs naar de [&#x200B; gebruikersgids &#x200B;](../ui/user-guide.md).
 
 ## Aan de slag
 
-De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Real-Time Customer Profile] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
+De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Real-Time Customer Profile] . Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Een exporttaak maken
 
@@ -36,11 +36,11 @@ Voor het exporteren van [!DNL Profile] -gegevens moet u eerst een gegevensset ma
 
 Bij het exporteren van [!DNL Profile] -gegevens moet eerst een doelgegevensset worden gemaakt. Het is belangrijk dat de dataset correct wordt gevormd om de uitvoer succesvol te verzekeren.
 
-Één van de belangrijkste overwegingen is het schema waarop de dataset (`schemaRef.id` in het API steekproefverzoek hieronder) wordt gebaseerd. Als u profielgegevens wilt exporteren, moet de gegevensset zijn gebaseerd op het [!DNL XDM Individual Profile] Unieschema (`https://ns.adobe.com/xdm/context/profile__union` ). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen. In dit geval is dat de [!DNL XDM Individual Profile] -klasse. Voor meer informatie over de schema&#39;s van de verenigingsmening, zie gelieve de [ uniesectie in de grondbeginselen van de gids van de schemacompositie ](../../xdm/schema/composition.md#union).
+Één van de belangrijkste overwegingen is het schema waarop de dataset (`schemaRef.id` in het API steekproefverzoek hieronder) wordt gebaseerd. Als u profielgegevens wilt exporteren, moet de gegevensset zijn gebaseerd op het [!DNL XDM Individual Profile] Unieschema (`https://ns.adobe.com/xdm/context/profile__union` ). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen. In dit geval is dat de [!DNL XDM Individual Profile] -klasse. Voor meer informatie over de schema&#39;s van de verenigingsmening, zie gelieve de [&#x200B; uniesectie in de grondbeginselen van de gids van de schemacompositie &#x200B;](../../xdm/schema/composition.md#union).
 
-In de stappen die in deze zelfstudie worden gezet, wordt beschreven hoe u een gegevensset maakt die verwijst naar het [!DNL XDM Individual Profile] Union-schema met de [!DNL Catalog] API. U kunt de [!DNL Experience Platform] gebruikersinterface ook gebruiken om een dataset tot stand te brengen die verwijzingen het unieschema. De stappen voor het gebruiken van UI worden geschetst in [ dit leerprogramma UI voor het uitvoeren van publiek ](../../segmentation/tutorials/create-dataset-export-segment.md) maar zijn hier eveneens van toepassing. Zodra voltooid, kunt u aan dit leerprogramma terugkeren om met de stappen voor [ te werk te gaan in werking stellend een nieuwe uitvoerbaan ](#initiate).
+In de stappen die in deze zelfstudie worden gezet, wordt beschreven hoe u een gegevensset maakt die verwijst naar het [!DNL XDM Individual Profile] Union-schema met de [!DNL Catalog] API. U kunt de [!DNL Experience Platform] gebruikersinterface ook gebruiken om een dataset tot stand te brengen die verwijzingen het unieschema. De stappen voor het gebruiken van UI worden geschetst in [&#x200B; dit leerprogramma UI voor het uitvoeren van publiek &#x200B;](../../segmentation/tutorials/create-dataset-export-segment.md) maar zijn hier eveneens van toepassing. Zodra voltooid, kunt u aan dit leerprogramma terugkeren om met de stappen voor [&#x200B; te werk te gaan in werking stellend een nieuwe uitvoerbaan &#x200B;](#initiate).
 
-Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u rechtstreeks aan de stap voor [ in werking stellen een nieuwe de uitvoerbaan ](#initiate) te werk gaan.
+Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u rechtstreeks aan de stap voor [&#x200B; in werking stellen een nieuwe de uitvoerbaan &#x200B;](#initiate) te werk gaan.
 
 **API formaat**
 
@@ -428,13 +428,13 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 204 (Geen inhoud) en 
 
 ## Volgende stappen
 
-Zodra het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. U kunt de [ Toegang API van Gegevens ](https://www.adobe.io/experience-platform-apis/references/data-access/) dan gebruiken om tot de gegevens toegang te hebben gebruikend `batchId` verbonden aan de uitvoer. Afhankelijk van de grootte van de exportbewerking kunnen de gegevens in blokken staan en kan de batch uit meerdere bestanden bestaan.
+Zodra het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. U kunt de [&#x200B; Toegang API van Gegevens &#x200B;](https://www.adobe.io/experience-platform-apis/references/data-access/) dan gebruiken om tot de gegevens toegang te hebben gebruikend `batchId` verbonden aan de uitvoer. Afhankelijk van de grootte van de exportbewerking kunnen de gegevens in blokken staan en kan de batch uit meerdere bestanden bestaan.
 
-Voor geleidelijke instructies op hoe te om de Toegang API van Gegevens te gebruiken om tot partijdossiers toegang te hebben en te downloaden, volg het [ leerprogramma van de Toegang van Gegevens ](../../data-access/tutorials/dataset-data.md).
+Voor geleidelijke instructies op hoe te om de Toegang API van Gegevens te gebruiken om tot partijdossiers toegang te hebben en te downloaden, volg het [&#x200B; leerprogramma van de Toegang van Gegevens &#x200B;](../../data-access/tutorials/dataset-data.md).
 
 U kunt ook toegang krijgen tot geëxporteerde realtime klantprofielgegevens met Adobe Experience Platform Query Service. Gebruikend UI of RESTful API, staat de Dienst van de Vraag u toe om, vragen op gegevens binnen het meer van Gegevens te schrijven te bevestigen en in werking te stellen.
 
-Voor meer informatie over hoe te om publieksgegevens te vragen, te herzien gelieve de [ documentatie van de Dienst van de Vraag ](../../query-service/home.md).
+Voor meer informatie over hoe te om publieksgegevens te vragen, te herzien gelieve de [&#x200B; documentatie van de Dienst van de Vraag &#x200B;](../../query-service/home.md).
 
 ## Bijlage
 
@@ -442,7 +442,7 @@ De volgende sectie bevat aanvullende informatie over exporttaken in de profiel-A
 
 ### Aanvullende voorbeelden voor het laden van exporten
 
-De voorbeeldAPI vraag die in de sectie wordt getoond bij [ het in werking stellen van een de uitvoerbaan ](#initiate) leidt tot een baan die zowel profiel (verslag) en gebeurtenis (tijdreeks) gegevens bevat. Deze sectie verstrekt extra voorbeelden van de verzoeklading om uw uitvoer te beperken tot één gegevenstype of andere.
+De voorbeeldAPI vraag die in de sectie wordt getoond bij [&#x200B; het in werking stellen van een de uitvoerbaan &#x200B;](#initiate) leidt tot een baan die zowel profiel (verslag) en gebeurtenis (tijdreeks) gegevens bevat. Deze sectie verstrekt extra voorbeelden van de verzoeklading om uw uitvoer te beperken tot één gegevenstype of andere.
 
 Met de volgende payload wordt een exporttaak gemaakt die alleen profielgegevens bevat (geen gebeurtenissen):
 
@@ -492,4 +492,4 @@ Als u een exporttaak wilt maken die alleen gebeurtenisgegevens bevat (geen profi
 
 ### Soorten publiek exporteren
 
-U kunt het eindpunt van exporttaken ook gebruiken om doelgroepen te exporteren in plaats van [!DNL Profile] -gegevens. Zie de gids op [ de uitvoerbanen in de Segmentatie API ](../../segmentation/api/export-jobs.md) voor meer informatie.
+U kunt het eindpunt van exporttaken ook gebruiken om doelgroepen te exporteren in plaats van [!DNL Profile] -gegevens. Zie de gids op [&#x200B; de uitvoerbanen in de Segmentatie API &#x200B;](../../segmentation/api/export-jobs.md) voor meer informatie.

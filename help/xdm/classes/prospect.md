@@ -15,9 +15,9 @@ In het Model van Gegevens van de Ervaring (XDM), vangt de [!UICONTROL XDM Indivi
 
 >[!NOTE]
 >
->Om een gebied in het Individuele Profiel van het Vooruitzicht XDM als entiteit te plaatsen, moet u minstens één identiteitskaart van de Partner eerst creëren namespace. Lees meer over identiteitskaart van de Partner namespaces in de [ sectie van identiteitstypes ](../../identity-service/features/namespaces.md).
+>Om een gebied in het Individuele Profiel van het Vooruitzicht XDM als entiteit te plaatsen, moet u minstens één identiteitskaart van de Partner eerst creëren namespace. Lees meer over identiteitskaart van de Partner namespaces in de [&#x200B; sectie van identiteitstypes &#x200B;](../../identity-service/features/namespaces.md).
 
-![ het schemadiagram van de klasse van het Vooruitzicht XDM.](../images/classes/individual-prospect-profile.png)
+![&#x200B; het schemadiagram van de klasse van het Vooruitzicht XDM.](../images/classes/individual-prospect-profile.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ In het Model van Gegevens van de Ervaring (XDM), vangt de [!UICONTROL XDM Indivi
 | `_id` | [!UICONTROL String] | Een unieke, door het systeem gegenereerde tekenreeks-id voor de record. Dit veld wordt gebruikt om het unieke karakter van een individueel record te volgen, om te voorkomen dat gegevens dubbel worden opgeslagen en om dat record op te zoeken in downstreamdiensten.<br><br> Aangezien dit gebied systeem-geproduceerd is, levert het geen expliciete waarde tijdens gegevensopname. U kunt echter desgewenst ook uw eigen unieke id-waarden opgeven. |
 | `createdByBatchID` | [!UICONTROL String] | De id van de opgenomen batch die ervoor heeft gezorgd dat de record is gemaakt. |
 | `modifiedByBatchID` | [!UICONTROL String] | De id van de laatst opgenomen batch die ervoor zorgde dat de record werd bijgewerkt. |
-| `partnerID` | [!UICONTROL String] | Typisch, een uniek pseudoniem herkenningsteken dat een individueel vooruitzicht identificeert. Zie de documentatie op [ identiteitstypes ](../../identity-service/features/namespaces.md#identity-type) om meer over identiteitskaart van de Partner en de andere identiteitstypes te leren die binnen Adobe Experience Platform beschikbaar zijn. |
+| `partnerID` | [!UICONTROL String] | Typisch, een uniek pseudoniem herkenningsteken dat een individueel vooruitzicht identificeert. Zie de documentatie op [&#x200B; identiteitstypes &#x200B;](../../identity-service/features/namespaces.md#identity-type) om meer over identiteitskaart van de Partner en de andere identiteitstypes te leren die binnen Adobe Experience Platform beschikbaar zijn. |
 | `repositoryCreatedBy` | [!UICONTROL String] | De id van de gebruiker die de record heeft gemaakt. |
 | `repositoryLastModifiedBy` | [!UICONTROL String] | De id van de gebruiker die de record als laatste heeft gewijzigd. Wanneer de record wordt gemaakt, wordt de `modifiedByUser` -waarde ingesteld als de `createdByUser` -waarde. |
 

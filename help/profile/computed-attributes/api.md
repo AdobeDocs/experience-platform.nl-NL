@@ -17,13 +17,13 @@ ht-degree: 0%
 
 Berekende kenmerken zijn functies die worden gebruikt om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt. Deze handleiding bevat voorbeeld-API-aanroepen voor het uitvoeren van standaard-CRUD-bewerkingen met behulp van het `/attributes` -eindpunt.
 
-Meer over gegevens verwerkte attributen leren, gelieve te beginnen door [ gegevens verwerkt attributenoverzicht ](overview.md) te lezen.
+Meer over gegevens verwerkte attributen leren, gelieve te beginnen door [&#x200B; gegevens verwerkt attributenoverzicht &#x200B;](overview.md) te lezen.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Real-Time API van het Profiel van de Klant ](https://www.adobe.com/go/profile-apis-en).
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Real-Time API van het Profiel van de Klant &#x200B;](https://www.adobe.com/go/profile-apis-en).
 
-Alvorens verder te gaan, te herzien gelieve [ Profiel API die begonnen gids ](../api/getting-started.md) voor verbindingen aan geadviseerde documentatie wordt begonnen, een gids aan het lezen van de steekproefAPI vraag die in dit document verschijnen, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; Profiel API die begonnen gids &#x200B;](../api/getting-started.md) voor verbindingen aan geadviseerde documentatie wordt begonnen, een gids aan het lezen van de steekproefAPI vraag die in dit document verschijnen, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om met succes vraag aan om het even welk Experience Platform API te maken.
 
 Raadpleeg ook de documentatie bij de volgende service:
 
@@ -211,7 +211,7 @@ Een succesvolle reactie retourneert HTTP-status 200 met een lijst van de laatste
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `_links` | Een object dat de pagineringsinformatie bevat die nodig is voor toegang tot de laatste pagina met resultaten, de volgende pagina met resultaten, de vorige pagina met resultaten of de huidige pagina met resultaten. |
-| `computedAttributes` | Een array die de berekende kenmerken bevat op basis van de queryparameters. Meer informatie over de gegevens verwerkte attributenserie kan in [ worden gevonden wint een specifieke gegevens verwerkte attributensectie ](#get) terug. |
+| `computedAttributes` | Een array die de berekende kenmerken bevat op basis van de queryparameters. Meer informatie over de gegevens verwerkte attributenserie kan in [&#x200B; worden gevonden wint een specifieke gegevens verwerkte attributensectie &#x200B;](#get) terug. |
 | `_page` | Een object dat metagegevens bevat over de geretourneerde resultaten. Dit omvat informatie over de huidige verschuiving, het aantal geretourneerde berekende kenmerken, het totale aantal berekende kenmerken en de limiet van geretourneerde berekende kenmerken. |
 
 +++
@@ -396,7 +396,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 | `displayName` | De weergavenaam voor het berekende kenmerk. Dit is de naam die wordt weergegeven wanneer u uw berekende kenmerken weergeeft in de gebruikersinterface van Adobe Experience Platform. |
 | `description` | Een beschrijving van het berekende kenmerk. Dit is vooral handig als er meerdere berekende kenmerken zijn gedefinieerd, omdat dit anderen binnen uw organisatie helpt te bepalen welk kenmerk correct moet worden berekend. |
 | `imsOrgId` | De id van de organisatie waartoe het berekende kenmerk behoort. |
-| `sandbox` | Het sandboxobject bevat details van de sandbox waarin het berekende kenmerk is geconfigureerd. Deze informatie wordt getekend vanuit de sandboxheader die in de aanvraag wordt verzonden. Voor meer informatie, te zien gelieve het [ overzicht van zandbakken ](../../sandboxes/home.md). |
+| `sandbox` | Het sandboxobject bevat details van de sandbox waarin het berekende kenmerk is geconfigureerd. Deze informatie wordt getekend vanuit de sandboxheader die in de aanvraag wordt verzonden. Voor meer informatie, te zien gelieve het [&#x200B; overzicht van zandbakken &#x200B;](../../sandboxes/home.md). |
 | `path` | The `path` to the computed attribute. |
 | `keepCurrent` | Een Booleaanse waarde die bepaalt of de waarde van het berekende kenmerk up-to-date wordt gehouden met de functie voor snel vernieuwen. |
 | `expression` | Een object dat de expressie van het berekende kenmerk bevat. |
@@ -579,4 +579,4 @@ Een geslaagde reactie retourneert HTTP status 200 met informatie over het zojuis
 
 ## Volgende stappen
 
-Nu u de grondbeginselen van berekende attributen hebt geleerd, bent u klaar om te beginnen bepalend hen voor uw organisatie. Leren hoe te om gegevens verwerkte attributen in het Experience Platform UI te gebruiken, te lezen gelieve de [ gegevens verwerkte gids UI van attributen ](./ui.md).
+Nu u de grondbeginselen van berekende attributen hebt geleerd, bent u klaar om te beginnen bepalend hen voor uw organisatie. Leren hoe te om gegevens verwerkte attributen in het Experience Platform UI te gebruiken, te lezen gelieve de [&#x200B; gegevens verwerkte gids UI van attributen &#x200B;](./ui.md).

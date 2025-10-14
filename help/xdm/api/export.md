@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # Exporteindpunt
 
-Alle bronnen in de [!DNL Schema Library] bevinden zich in een specifieke sandbox in Adobe Experience Platform. In sommige gevallen wilt u wellicht XDM-bronnen (Experience Data Model) delen tussen sandboxen en organisaties. Het `/rpc/export` eindpunt in [!DNL Schema Registry] API staat u toe een de uitvoerlading voor om het even welk schema, de groep van het schemagebied, of gegevenstype in [!DNL Schema Library] produceren, en dan die nuttige lading gebruiken om dat middel (en alle afhankelijke middelen) in een doelzandbak en organisatie door het [`/rpc/import` eindpunt ](./import.md) in te voeren.
+Alle bronnen in de [!DNL Schema Library] bevinden zich in een specifieke sandbox in Adobe Experience Platform. In sommige gevallen wilt u wellicht XDM-bronnen (Experience Data Model) delen tussen sandboxen en organisaties. Het `/rpc/export` eindpunt in [!DNL Schema Registry] API staat u toe een de uitvoerlading voor om het even welk schema, de groep van het schemagebied, of gegevenstype in [!DNL Schema Library] produceren, en dan die nuttige lading gebruiken om dat middel (en alle afhankelijke middelen) in een doelzandbak en organisatie door het [`/rpc/import` eindpunt &#x200B;](./import.md) in te voeren.
 
 ## Aan de slag
 
-Het `/rpc/export` eindpunt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het `/rpc/export` eindpunt maakt deel uit van [[!DNL Schema Registry]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
 
 Het `/rpc/export` eindpunt maakt deel uit van de verre procedurevraag (RPCs) die door [!DNL Schema Registry] wordt gesteund. In tegenstelling tot andere eindpunten in de [!DNL Schema Registry] API, vereisen RPC-eindpunten geen extra kopteksten zoals `Accept` of `Content-Type` en gebruiken ze geen `CONTAINER_ID` . In plaats daarvan moeten ze de naamruimte `/rpc` gebruiken, zoals wordt getoond in de API-aanroepen hieronder.
 
@@ -197,4 +197,4 @@ Merk op dat alle instanties van de huurder ID van het middel door `<XDM_TENANTID
 
 Na het produceren van de de uitvoerlading van het Csv- dossier, kunt u die lading naar het `/rpc/import` eindpunt verzenden om het schema te produceren.
 
-Zie de [ de gids van het de invoereindpunt ](./import.md) voor details op hoe te schema&#39;s van de uitvoerladingen produceren.
+Zie de [&#x200B; de gids van het de invoereindpunt &#x200B;](./import.md) voor details op hoe te schema&#39;s van de uitvoerladingen produceren.

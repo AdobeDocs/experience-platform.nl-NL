@@ -17,7 +17,7 @@ Als u een gegevensset wilt maken met de [!DNL Catalog] API, moet u de `$id` -waa
 
 >[!NOTE]
 >
->In dit document wordt alleen beschreven hoe u een gegevenssetobject maakt in [!DNL Catalog] . Voor volledige stappen op om, een dataset tot stand te brengen te bevolken en te controleren, gelieve te verwijzen naar het volgende [ leerprogramma ](../datasets/create.md).
+>In dit document wordt alleen beschreven hoe u een gegevenssetobject maakt in [!DNL Catalog] . Voor volledige stappen op om, een dataset tot stand te brengen te bevolken en te controleren, gelieve te verwijzen naar het volgende [&#x200B; leerprogramma &#x200B;](../datasets/create.md).
 
 **API formaat**
 
@@ -50,11 +50,11 @@ curl -X POST \
 | --- | --- |
 | `name` | De naam van de gegevensset die moet worden gemaakt. |
 | `schemaRef.id` | De URI `$id`-waarde voor het XDM-schema waarop de gegevensset wordt gebaseerd. |
-| `schemaRef.contentType` | Geeft de indeling en versie van het schema aan. Zie de sectie over [ schema versioning ](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie. |
+| `schemaRef.contentType` | Geeft de indeling en versie van het schema aan. Zie de sectie over [&#x200B; schema versioning &#x200B;](../../xdm/api/getting-started.md#versioning) in de gids XDM API voor meer informatie. |
 
 >[!NOTE]
 >
->Dit voorbeeld gebruikt het [&#128279;](https://parquet.apache.org/docs/) dossierformaat van de Parket van 0&rbrace; Apache &lbrace;voor zijn `containerFormat` bezit.  Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ handleiding van de partijontwikkelaar ](../../ingestion/batch-ingestion/api-overview.md) worden gevonden.
+>Dit voorbeeld gebruikt het [&#128279;](https://parquet.apache.org/docs/) dossierformaat van de Parket van 0&rbrace; Apache &lbrace;voor zijn `containerFormat` bezit.  Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [&#x200B; handleiding van de partijontwikkelaar &#x200B;](../../ingestion/batch-ingestion/api-overview.md) worden gevonden.
 
 **Reactie**
 

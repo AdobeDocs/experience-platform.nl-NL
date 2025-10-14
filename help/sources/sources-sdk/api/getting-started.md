@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Aan de slag met Self-Serve Bronnen (Batch SDK)
 
-Met Self-Serve Sources (Batch SDK) kunt u uw eigen REST-gebaseerde bron integreren om batchgegevens naar Adobe Experience Platform over te brengen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) te maken.
+Met Self-Serve Sources (Batch SDK) kunt u uw eigen REST-gebaseerde bron integreren om batchgegevens naar Adobe Experience Platform over te brengen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/) te maken.
 
 ## Vereisten
 
@@ -21,16 +21,16 @@ Als u Self-Serve Sources (Batch SDK) wilt gebruiken, moet u ervoor zorgen dat u 
 
 Deze handleiding vereist ook een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## API-voorbeeldaanroepen lezen
 
-De Self-Serve Bronnen (Batch SDK) en de [!DNL Flow Service] API-documentatie bieden voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
+De Self-Serve Bronnen (Batch SDK) en de [!DNL Flow Service] API-documentatie bieden voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
 
 ## Waarden verzamelen voor vereiste koppen
 
-Om vraag aan Experience Platform APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan Experience Platform APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -42,7 +42,7 @@ Alle bronnen in Experience Platform, inclusief die van [!DNL Flow Service] , zij
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in Experience Platform, zie de [ zandbakdocumentatie ](../../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in Experience Platform, zie de [&#x200B; zandbakdocumentatie &#x200B;](../../../sandboxes/home.md).
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -50,4 +50,4 @@ Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kop
 
 ## Volgende stappen
 
-Beginnen creërend een nieuwe bron met Zelfbediening Bronnen (Partij SDK), zie het leerprogramma op [ creërend een nieuwe bron ](./create.md).
+Beginnen creërend een nieuwe bron met Zelfbediening Bronnen (Partij SDK), zie het leerprogramma op [&#x200B; creërend een nieuwe bron &#x200B;](./create.md).

@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Het Web SDK van Adobe Experience Platform staat u toe om [ Adobe Analytics voor Doel (A4T) ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=nl-NL) gegevens over de cliëntkant van uw Webtoepassing te verzamelen.
+Het Web SDK van Adobe Experience Platform staat u toe om [&#x200B; Adobe Analytics voor Doel (A4T) &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=nl-NL) gegevens over de cliëntkant van uw Webtoepassing te verzamelen.
 
-Logboekregistratie aan de clientzijde betekent dat relevante [!DNL Target] gegevens worden geretourneerd aan de clientzijde, zodat u deze kunt verzamelen en delen met Analytics. Deze optie zou moeten worden toegelaten als u van plan bent gegevens aan Analytics manueel te verzenden gebruikend de [ Invoeging API van Gegevens ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=nl-NL).
+Logboekregistratie aan de clientzijde betekent dat relevante [!DNL Target] gegevens worden geretourneerd aan de clientzijde, zodat u deze kunt verzamelen en delen met Analytics. Deze optie zou moeten worden toegelaten als u van plan bent gegevens aan Analytics manueel te verzenden gebruikend de [&#x200B; Invoeging API van Gegevens &#x200B;](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=nl-NL).
 
 >[!NOTE]
 >
->Een methode om dit uit te voeren gebruikend [ AppMeasurement.js ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL) is momenteel in ontwikkeling en zal in de nabije toekomst beschikbaar zijn.
+>Een methode om dit uit te voeren gebruikend [&#x200B; AppMeasurement.js &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL) is momenteel in ontwikkeling en zal in de nabije toekomst beschikbaar zijn.
 
 Dit document behandelt de stappen voor vestiging cliënt-kant het registreren A4T voor het Web SDK en verstrekt sommige implementatievoorbeelden voor gemeenschappelijke gebruiksgevallen.
 
@@ -40,9 +40,9 @@ De volgende subsecties schetsen hoe te om cliënt-zijregistreren van Analytics v
 
 ### Logboekregistratie op de client voor Analytics inschakelen {#enable-analytics-client-side-logging}
 
-Om Analytics cliënt-zijregistreren te overwegen die voor uw implementatie wordt toegelaten, moet u de configuratie van Adobe Analytics in uw [ datastream ](../../../../datastreams/overview.md) onbruikbaar maken.
+Om Analytics cliënt-zijregistreren te overwegen die voor uw implementatie wordt toegelaten, moet u de configuratie van Adobe Analytics in uw [&#x200B; datastream &#x200B;](../../../../datastreams/overview.md) onbruikbaar maken.
 
-![ de configuratie van de Analyse gegevensstroom gehandicapte ](../assets/disable-analytics-datastream.png)
+![&#x200B; de configuratie van de Analyse gegevensstroom gehandicapte &#x200B;](../assets/disable-analytics-datastream.png)
 
 ### [!DNL A4T] -gegevens ophalen van de SDK en verzenden deze naar Analytics {#a4t-to-analytics}
 
@@ -52,7 +52,7 @@ Wanneer Target Edge een reactie op proposities berekent, wordt gecontroleerd of 
 
 De stroom ziet er ongeveer als volgt uit:
 
-![ cliënt-kant registrerenstroom ](../assets/analytics-client-side-logging.png)
+![&#x200B; cliënt-kant registrerenstroom &#x200B;](../assets/analytics-client-side-logging.png)
 
 Hieronder ziet u een voorbeeld van een `interact` -reactie als Logboekregistratie op de client van Analytics is ingeschakeld. Als het voorstel voor een activiteit is waarvoor Analytics-rapportage wordt gebruikt, heeft het de eigenschap `scopeDetails.characteristics.analyticsToken` .
 
@@ -204,7 +204,7 @@ Voorstellen voor Form-based Experience Composer-activiteiten kunnen zowel inhoud
 }
 ```
 
-Alle waarden van `scopeDetails.characteristics.analyticsToken`, evenals `scopeDetails.characteristics.analyticsDisplayToken` (voor getoonde inhoud) en `scopeDetails.characteristics.analyticsClickToken` (voor klikmetriek) zijn de nuttige ladingen A4T die moeten worden verzameld en als `tnta` markering in de [ API van de Invoeging van Gegevens ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) vraag worden omvat.
+Alle waarden van `scopeDetails.characteristics.analyticsToken`, evenals `scopeDetails.characteristics.analyticsDisplayToken` (voor getoonde inhoud) en `scopeDetails.characteristics.analyticsClickToken` (voor klikmetriek) zijn de nuttige ladingen A4T die moeten worden verzameld en als `tnta` markering in de [&#x200B; API van de Invoeging van Gegevens &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) vraag worden omvat.
 
 >[!IMPORTANT]
 >
@@ -227,7 +227,7 @@ De volgende subsecties tonen aan hoe te om cliënt-zijregistreren van Analytics 
 
 ### Formuliergebaseerde composeractiviteiten {#form-based-composer}
 
-U kunt het Web SDK gebruiken om de uitvoering van voorstellen van [ Adobe Target vorm-Gebaseerde Composer van de Ervaring te controleren ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=nl-NL) activiteiten.
+U kunt het Web SDK gebruiken om de uitvoering van voorstellen van [&#x200B; Adobe Target vorm-Gebaseerde Composer van de Ervaring te controleren &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=nl-NL) activiteiten.
 
 Wanneer u om voorstellen voor een specifiek besluitwerkingsgebied verzoekt, bevat het teruggekeerde voorstel zijn aangewezen token Analytics. De beste manier is om de Experience Platform Web SDK `sendEvent` -opdracht te koppelen en de geretourneerde voorstellen te doorlopen om deze uit te voeren terwijl de Analytische tokens tegelijkertijd worden verzameld.
 
@@ -427,10 +427,10 @@ Samengevat moeten de volgende stappen worden uitgevoerd bij het toepassen van Fo
 1. Pas de inhoudswijzigingen toe op de pagina;
 1. Verzend de `decisioning.propositionDisplay` notification-gebeurtenis;
 1. Verzamel de analytische vertoningstekenen van de reactie van SDK en construeer een lading voor de treffer Analytics;
-1. Verzend de nuttige lading naar Analytics gebruikend de [ Invoeging API van Gegevens ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
+1. Verzend de nuttige lading naar Analytics gebruikend de [&#x200B; Invoeging API van Gegevens &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 1. Als er klikmetriek in geleverde voorstellen zijn, zouden de klikluisteraars opstelling moeten zijn zodat wanneer een klik wordt uitgevoerd, het de `decisioning.propositionInteract` berichtgebeurtenis verzendt. De `onBeforeEventSend` -handler moet zo worden geconfigureerd dat bij het onderscheppen van `decisioning.propositionInteract` -gebeurtenissen de volgende handelingen plaatsvinden:
    1. De click Analytics-tokens verzamelen uit `xdm._experience.decisioning.propositions`
-   1. Verzenden van de klikAnalytics met de verzamelde nuttige lading van Analytics via [ Invoeging API van Gegevens ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
+   1. Verzenden van de klikAnalytics met de verzamelde nuttige lading van Analytics via [&#x200B; Invoeging API van Gegevens &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 
 ```javascript
 alloy("sendEvent", {
@@ -467,11 +467,11 @@ alloy("sendEvent", {
 
 ### Visual Experience Composer-activiteiten {#visual-experience-composer-acitivties}
 
-SDK van het Web staat u toe om aanbiedingen te behandelen die gebruikend [ Visuele Composer van de Ervaring (VEC) ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) werden authored.
+SDK van het Web staat u toe om aanbiedingen te behandelen die gebruikend [&#x200B; Visuele Composer van de Ervaring (VEC) &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) werden authored.
 
 >[!NOTE]
 >
->De stappen voor het uitvoeren van dit gebruiksgeval zijn zeer gelijkaardig aan de stappen voor [ op vorm-Gebaseerde activiteiten van de Composer van de Ervaring ](#form-based-composer). Lees de vorige sectie voor meer informatie.
+>De stappen voor het uitvoeren van dit gebruiksgeval zijn zeer gelijkaardig aan de stappen voor [&#x200B; op vorm-Gebaseerde activiteiten van de Composer van de Ervaring &#x200B;](#form-based-composer). Lees de vorige sectie voor meer informatie.
 
 Wanneer automatische rendering is ingeschakeld, kunt u de tokens Analytics verzamelen van de voorstellingen die op de pagina zijn uitgevoerd. De beste manier is om de Experience Platform Web SDK `sendEvent` opdracht te koppelen en de geretourneerde voorstellen te doorlopen om de voorstellen te filteren die de Web SDK heeft geprobeerd te renderen.
 
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## Volgende stappen {#next-steps}
 
-Deze gids behandelde cliënt-zijregistreren voor A4T gegevens in het Web SDK. Zie de gids op [ server-zijregistreren ](server-side.md) voor meer informatie over hoe te om A4T gegevens over Edge Network te behandelen.
+Deze gids behandelde cliënt-zijregistreren voor A4T gegevens in het Web SDK. Zie de gids op [&#x200B; server-zijregistreren &#x200B;](server-side.md) voor meer informatie over hoe te om A4T gegevens over Edge Network te behandelen.

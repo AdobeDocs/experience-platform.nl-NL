@@ -17,12 +17,12 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL SugarCRM Accounts & C
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL SugarCRM] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/crm.md).
+Als u reeds een geldige [!DNL SugarCRM] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [&#x200B; vormend een dataflow &#x200B;](../../dataflow/crm.md).
 
 ### Vereiste referenties verzamelen
 
@@ -36,7 +36,7 @@ Als u [!DNL SugarCRM Accounts & Contacts] wilt verbinden met Experience Platform
 
 ### Een Experience Platform-schema maken
 
-Voordat u een [!DNL SugarCRM] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema voor uw bron maakt. Zie het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+Voordat u een [!DNL SugarCRM] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema voor uw bron maakt. Zie het leerprogramma op [&#x200B; creërend een schema van Experience Platform &#x200B;](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 De [!DNL SugarCRM Accounts & Contacts] ondersteunt meerdere API&#39;s. Dit betekent dat u een afzonderlijk schema moet maken, afhankelijk van het objecttype dat u gebruikt. Zie de voorbeelden hieronder voor zowel rekeningen als contactschema&#39;s:
 
@@ -60,7 +60,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Onder de *CRM* categorie, selecteer **[!UICONTROL SugarCRM Accounts & Contacts]**, en selecteer dan **[!UICONTROL Add data]**.
 
-![ het schermschot van Experience Platform UI voor catalogus met de Rekeningen &amp; de kaart van Contacten SugarCRM ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![&#x200B; het schermschot van Experience Platform UI voor catalogus met de Rekeningen &amp; de kaart van Contacten SugarCRM &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
 De pagina **[!UICONTROL Connect SugarCRM Accounts & Contacts account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -68,13 +68,13 @@ De pagina **[!UICONTROL Connect SugarCRM Accounts & Contacts account]** wordt we
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL SugarCRM Accounts & Contacts] -account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![ het schermschot van Experience Platform voor Connect SugarCRM- Rekeningen &amp; van Contacten rekening met een bestaande rekening ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
+![&#x200B; het schermschot van Experience Platform voor Connect SugarCRM- Rekeningen &amp; van Contacten rekening met een bestaande rekening &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### Nieuwe account
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ het schermschot van Experience Platform voor Connect SugarCRM- Rekeningen &amp; rekening van Contacten met een nieuwe rekening ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
+![&#x200B; het schermschot van Experience Platform voor Connect SugarCRM- Rekeningen &amp; rekening van Contacten met een nieuwe rekening &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
 ### Gegevens selecteren
 
@@ -99,7 +99,7 @@ Tot slot moet u het objecttype selecteren dat u aan Experience Platform wilt toe
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SugarCRM Accounts & Contacts] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/crm.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SugarCRM Accounts & Contacts] -account. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](../../dataflow/crm.md) te brengen.
 
 ## Aanvullende bronnen
 
@@ -121,11 +121,11 @@ Volg onderstaande stappen om te controleren of u de bron juist hebt ingesteld en
 
 >[!TAB  Rekeningen ]
 
-![ Scherenshot van de pagina van de Rekeningen SugarMarket tonend lijst van rekeningen ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
+![&#x200B; Scherenshot van de pagina van de Rekeningen SugarMarket tonend lijst van rekeningen &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
 
 >[!TAB  Contacten ]
 
-![ Schermafbeelding van de pagina Contacten SugarMarket die lijst van contacten toont ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-contacts.png)
+![&#x200B; Schermafbeelding van de pagina Contacten SugarMarket die lijst van contacten toont &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-contacts.png)
 
 >[!ENDTABS]
 

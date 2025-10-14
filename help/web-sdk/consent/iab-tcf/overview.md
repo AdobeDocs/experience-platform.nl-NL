@@ -23,7 +23,7 @@ Bovendien zijn de volgende gidsen beschikbaar om in het leren te helpen hoe te o
 
 Om het Web SDK met IAB TCF 2.0 uit te voeren, moet u een werkend inzicht in het Model van de Gegevens van de Ervaring (XDM) en de Gebeurtenissen van de Ervaring hebben. Lees het volgende document voordat u begint:
 
-- [ het overzicht van het Systeem van Gegevens van de Ervaring Model (XDM) ](../../../xdm/home.md): De normalisering en de interoperabiliteit zijn zeer belangrijke concepten achter Adobe Experience Platform. [!DNL Experience Data Model (XDM)] wordt aangestuurd door Adobe en is een poging om gegevens over de klantervaring te standaardiseren en schema&#39;s voor het beheer van de klantervaring te definiëren.
+- [&#x200B; het overzicht van het Systeem van Gegevens van de Ervaring Model (XDM) &#x200B;](../../../xdm/home.md): De normalisering en de interoperabiliteit zijn zeer belangrijke concepten achter Adobe Experience Platform. [!DNL Experience Data Model (XDM)] wordt aangestuurd door Adobe en is een poging om gegevens over de klantervaring te standaardiseren en schema&#39;s voor het beheer van de klantervaring te definiëren.
 
 ## Experience Platform-integratie
 
@@ -32,7 +32,7 @@ Als u toestemmingsgegevens naar Adobe Experience Platform wilt verzenden via de 
 - Een dataset waarvan het schema is gebaseerd op de [!DNL XDM Individual Profile] -klasse en TCF 2.0-toestemmingsvelden bevat, die zijn ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] .
 - Een gegevensstroom die opstelling met Experience Platform en de profiel-Toegelaten dataset hierboven wordt vermeld.
 
-Gelieve te verwijzen naar de gids op [ TCF 2.0 naleving ](../../../landing/governance-privacy-security/consent/iab/overview.md) voor instructies bij het creëren van de vereiste datasets en datastream.
+Gelieve te verwijzen naar de gids op [&#x200B; TCF 2.0 naleving &#x200B;](../../../landing/governance-privacy-security/consent/iab/overview.md) voor instructies bij het creëren van de vereiste datasets en datastream.
 
 ## Audience Manager-integratie
 
@@ -51,7 +51,7 @@ Om toestemmingsinformatie over gebeurtenissen te verzamelen, wordt het volgende 
 - Een gegevensset die is gebaseerd op de klasse [!DNL XDM Experience Event] , met de veldgroep met het [!DNL Experience Event] privacyschema.
 - Een gegevensstroom die is ingesteld met de [!DNL XDM Experience Event] dataset hierboven.
 
-Voor meer informatie over hoe te om een Gebeurtenis van de Ervaring XDM in een hit van Analytics om te zetten, zie [ Verzendende gegevens naar Adobe Analytics gebruikend het Web SDK ](/help/web-sdk/use-cases/adobe-analytics.md).
+Voor meer informatie over hoe te om een Gebeurtenis van de Ervaring XDM in een hit van Analytics om te zetten, zie [&#x200B; Verzendende gegevens naar Adobe Analytics gebruikend het Web SDK &#x200B;](/help/web-sdk/use-cases/adobe-analytics.md).
 
 ## Integratie van Adobe Experience Platform Web SDK
 
@@ -78,7 +78,7 @@ Net als bij de Audience Manager IAB TCF 2.0-integratie geeft de Edge Network toe
 - **Speciaal Doel 1:** verzekert veiligheid, verhindert fraude, en zuivert. (Per IAB TCF verordeningen, wordt dit altijd goedgekeurd aan)
 - **Vergunning van de Leverancier van Adobe:** Toestemming voor Adobe (Leverancier 565)
 
-Voor meer informatie over het `setConsent` bevel, lees de specifieke documentatie van SDK van het Web over [ setConsent ](../../../web-sdk/commands/setconsent.md).
+Voor meer informatie over het `setConsent` bevel, lees de specifieke documentatie van SDK van het Web over [&#x200B; setConsent &#x200B;](../../../web-sdk/commands/setconsent.md).
 
 ### Toestemming toevoegen aan Experience Events
 
@@ -86,4 +86,4 @@ Adobe Experience Platform Web SDK heeft een [`sendEvent`](/help/web-sdk/commands
 
 ## Volgende stappen
 
-Nu u een basisbegrip van de Transparantie IAB &amp; het Toegelaten Kader 2.0 hebt, gelieve te verwijzen naar één van beide gidsen bij het gebruiken van IAB TCF 2.0 [ met markeringen ](./with-tags.md) of [ zonder markeringen ](./without-tags.md).
+Nu u een basisbegrip van de Transparantie IAB &amp; het Toegelaten Kader 2.0 hebt, gelieve te verwijzen naar één van beide gidsen bij het gebruiken van IAB TCF 2.0 [&#x200B; met markeringen &#x200B;](./with-tags.md) of [&#x200B; zonder markeringen &#x200B;](./without-tags.md).

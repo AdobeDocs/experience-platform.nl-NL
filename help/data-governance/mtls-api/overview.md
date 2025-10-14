@@ -15,8 +15,8 @@ Gebruik de MTLS-service-API om openbare certificaten die zijn uitgegeven door Ad
 
 ## Openbaar certificaat
 
-Een openbaar certificaat is een digitaal document dat wordt gebruikt om de identiteit van een server of cliënt in veilige mededelingen voor authentiek te verklaren. In de context van de mTLS Service API zorgen deze certificaten ervoor dat gegevensuitwisselingen met Adobe Experience Platform worden geverifieerd en gecodeerd. Het ophalen en verifiëren van deze certificaten via de API bevestigt hun echtheid, waardoor de beveiliging en betrouwbaarheid van uw gegevenstransacties worden verbeterd en gevoelige informatie wordt beschermd. Leren hoe te om uw openbaar certificaat terug te winnen, zie de [ eindpuntgids ](./public-certificate-endpoint.md) leren hoe te om vraag te maken.
+Een openbaar certificaat is een digitaal document dat wordt gebruikt om de identiteit van een server of cliënt in veilige mededelingen voor authentiek te verklaren. In de context van de mTLS Service API zorgen deze certificaten ervoor dat gegevensuitwisselingen met Adobe Experience Platform worden geverifieerd en gecodeerd. Het ophalen en verifiëren van deze certificaten via de API bevestigt hun echtheid, waardoor de beveiliging en betrouwbaarheid van uw gegevenstransacties worden verbeterd en gevoelige informatie wordt beschermd. Leren hoe te om uw openbaar certificaat terug te winnen, zie de [&#x200B; eindpuntgids &#x200B;](./public-certificate-endpoint.md) leren hoe te om vraag te maken.
 
 ## Volgende stappen
 
-Begin makend vraag gebruikend de Dienst MTLS API, lees [ begonnen gids ](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproef API vraag, en meer.
+Begin makend vraag gebruikend de Dienst MTLS API, lees [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproef API vraag, en meer.

@@ -61,9 +61,9 @@ Onder de **Streaming** categorie, selecteer *JUURSOURCE*, en selecteer dan **[!U
 
 >[!TIP]
 >
->De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het volledige Experience Platform UI-scherm vastlegt. Voor informatie over hoe te om uw screenshots te uploaden, zie de gids bij [ het voorleggen van uw documentatie voor overzicht ](../documentation/github.md).
+>De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het volledige Experience Platform UI-scherm vastlegt. Voor informatie over hoe te om uw screenshots te uploaden, zie de gids bij [&#x200B; het voorleggen van uw documentatie voor overzicht &#x200B;](../documentation/github.md).
 
-![ de Experience Platform broncatalogus ](../assets/streaming/catalog.png)
+![&#x200B; de Experience Platform broncatalogus &#x200B;](../assets/streaming/catalog.png)
 
 ## Gegevens selecteren
 
@@ -74,13 +74,13 @@ De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface wa
 
 Selecteer **[!UICONTROL Upload files]** om een JSON-bestand van uw lokale systeem te uploaden. U kunt ook het JSON-bestand dat u wilt uploaden naar het deelvenster [!UICONTROL Drag and drop files] slepen.
 
-![ voegt gegevensstap van het bronwerkschema toe.](../assets/streaming/add-data.png)
+![&#x200B; voegt gegevensstap van het bronwerkschema toe.](../assets/streaming/add-data.png)
 
 Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en wordt een voorvertoning weergegeven van het schema dat u hebt geüpload. Met de voorvertoningsinterface kunt u de inhoud en structuur van een bestand controleren. U kunt het hulpprogramma [!UICONTROL Search field] ook gebruiken om toegang te krijgen tot specifieke items binnen uw schema.
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ de voorproefstap van het bronwerkschema.](../assets/streaming/preview.png)
+![&#x200B; de voorproefstap van het bronwerkschema.](../assets/streaming/preview.png)
 
 ## Gegevens
 
@@ -88,17 +88,17 @@ De **Dataflow detailstap** verschijnt, die u van opties voorzien om een bestaand
 
 Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ dataflow-detail stap van het bronwerkschema.](../assets/streaming/dataflow-detail.png)
+![&#x200B; dataflow-detail stap van het bronwerkschema.](../assets/streaming/dataflow-detail.png)
 
 ## Toewijzing
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=nl-NL).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=nl-NL).
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
-![ de afbeeldingsstap van het bronwerkschema.](../assets/streaming/mapping.png)
+![&#x200B; de afbeeldingsstap van het bronwerkschema.](../assets/streaming/mapping.png)
 
 ## Controleren
 
@@ -109,7 +109,7 @@ De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstr
 
 Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Finish]** en laat u enige tijd over tot de gegevensstroom.
 
-![ de overzichtsstap van het bronwerkschema.](../assets/streaming/review.png)
+![&#x200B; de overzichtsstap van het bronwerkschema.](../assets/streaming/review.png)
 
 ## Uw URL voor het streamingeindpunt ophalen
 
@@ -117,13 +117,13 @@ Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingein
 
 Als u het streamingeindpunt wilt ophalen, gaat u naar de [!UICONTROL Dataflow activity] -pagina van de gegevensstroom die u net hebt gemaakt en kopieert u het eindpunt van de onderkant van het deelvenster [!UICONTROL Properties] .
 
-![ het stromen eindpunt in dataflow activiteit.](../assets/testing/endpoint-test.png)
+![&#x200B; het stromen eindpunt in dataflow activiteit.](../assets/testing/endpoint-test.png)
 
 ## Volgende stappen
 
 *de Werkschema&#39;s voor de resterende stappen van het creëren van een dataflow worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
 
-Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR &lbrace;gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=nl-NL) te brengen.
+Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR &lbrace;gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=nl-NL) te brengen.
 
 ## Aanvullende bronnen
 

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Reacties filteren in de Reactor-API
 
-Wanneer u eindpunten van lijsten (GET) gebruikt in de Reactor-API, is het mogelijk dat u de geretourneerde resultaten moet beperken tot een subset van records. Hiervoor ondersteunen veel van de eindpunten van de lijst van de API de mogelijkheid om te filteren op specifieke kenmerken. Als u wenst om gestructureerde vragen aan API in plaats daarvan te maken, zie de gids op [ zoekend ](./search.md).
+Wanneer u eindpunten van lijsten (GET) gebruikt in de Reactor-API, is het mogelijk dat u de geretourneerde resultaten moet beperken tot een subset van records. Hiervoor ondersteunen veel van de eindpunten van de lijst van de API de mogelijkheid om te filteren op specifieke kenmerken. Als u wenst om gestructureerde vragen aan API in plaats daarvan te maken, zie de gids op [&#x200B; zoekend &#x200B;](./search.md).
 
 ## Filtersyntaxis
 
@@ -23,7 +23,7 @@ Om de reactie voor een bepaald lijsteindpunt te filtreren, moet u een `filter` v
 
 >[!NOTE]
 >
->In de onderstaande sjabloon worden vierkante haken (`[]`) en spatietekens gebruikt voor leesbaarheid. In praktijk, moeten deze karakters URI-gecodeerd zijn, zoals geschetst in [ RFC 3986 ](https://tools.ietf.org/html/rfc3986). Deze handleiding bevat een voorbeeld van een correct gecodeerd aanvraagpad.
+>In de onderstaande sjabloon worden vierkante haken (`[]`) en spatietekens gebruikt voor leesbaarheid. In praktijk, moeten deze karakters URI-gecodeerd zijn, zoals geschetst in [&#x200B; RFC 3986 &#x200B;](https://tools.ietf.org/html/rfc3986). Deze handleiding bevat een voorbeeld van een correct gecodeerd aanvraagpad.
 >
 >Als de structuur van de filters onjuist is, worden geen filters toegepast en wordt de volledige resultaatset geretourneerd.
 
@@ -35,7 +35,7 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME}]={OPERATOR} {VALUE}
 | --- | --- |
 | `{ENDPOINT}` | Een eindpunt in de Reactor-API dat filterparameters ondersteunt. |
 | `{ATTRIBUTE_NAME}` | De naam van een specifiek kenmerk waarop filterresultaten moeten worden uitgevoerd. Houd er rekening mee dat verschillende eindpunten verschillende kenmerken voor filteren ondersteunen. Verwijs naar de verwijzingsgids voor het eindpunt u met voor een lijst van beschikbare het filtreren attributen werkt. |
-| `{OPERATOR}` | De operator die bepaalt hoe de resultaten worden geëvalueerd op basis van de opgegeven `{VALUE}` . De gesteunde exploitanten zijn vermeld in de [ bijlage sectie ](#supported-operators). |
+| `{OPERATOR}` | De operator die bepaalt hoe de resultaten worden geëvalueerd op basis van de opgegeven `{VALUE}` . De gesteunde exploitanten zijn vermeld in de [&#x200B; bijlage sectie &#x200B;](#supported-operators). |
 | `{VALUE}` | De waarde waarmee de geretourneerde resultaten moeten worden vergeleken. Wanneer u vergelijkt voor gelijkheid met de operator `EQ` , moet de waarde een exacte, hoofdlettergevoelige overeenkomst zijn om te worden opgenomen in de reactie. |
 
 {style="table-layout:auto"}
@@ -92,5 +92,5 @@ In de volgende tabel worden de ondersteunde operatorwaarden voor filterparameter
 | `NOT` | Het kenmerk mag niet gelijk zijn aan de opgegeven waarde. |
 | `LT` | Het kenmerk moet kleiner zijn dan de opgegeven waarde. |
 | `GT` | Het kenmerk moet groter zijn dan de opgegeven waarde. |
-| `BETWEEN` | Het kenmerk moet binnen een opgegeven waardenbereik vallen. Wanneer het gebruiken van deze exploitant, [ twee waarden ](#multiple-values) moeten worden verstrekt om op de minimum en maximumwaarden voor de gewenste waaier te wijzen. |
+| `BETWEEN` | Het kenmerk moet binnen een opgegeven waardenbereik vallen. Wanneer het gebruiken van deze exploitant, [&#x200B; twee waarden &#x200B;](#multiple-values) moeten worden verstrekt om op de minimum en maximumwaarden voor de gewenste waaier te wijzen. |
 | `CONTAINS` | Het kenmerk moet de opgegeven waarde bevatten, zoals een set tekens binnen een tekenreekskenmerk. |

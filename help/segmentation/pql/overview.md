@@ -72,19 +72,19 @@ In de volgende tabel worden de verschillende categorieën ondersteunde PQL-funct
 
 | Categorie | Definitie |
 | -------- | ---------- |
-| Boolean | Wordt gebruikt om Booleaanse algebra te implementeren in PQL. Meer informatie over deze functies kan in het [ worden gevonden booleaanse functiedocument ](./boolean-functions.md). |
-| Vergelijking | Wordt gebruikt om verschillende PQL-elementen te vergelijken. Meer informatie over deze functies kan in het [ document van vergelijkingsfuncties worden gevonden ](./comparison-functions.md). |
-| Array, list en set | Wordt gebruikt voor interactie met arrays, lijsten en sets. Meer informatie over deze functies kan in de [ serie worden gevonden, lijst, en reeks functies document ](./array-functions.md). |
-| Kaart | Wordt gebruikt voor interactie met kaarten. Meer informatie over deze functies kan in het [ document van kaartfuncties worden gevonden ](./map-functions.md). |
-| String | Wordt gebruikt voor interactie met tekenreeksen. Meer informatie over deze functies kan in het [ document van de koordfuncties worden gevonden ](./string-functions.md). |
-| Object | Wordt gebruikt voor interactie met objecten. Meer informatie over deze functies kan in het [ document van objecten functies ](./object-functions.md) worden gevonden. |
-| Rekenkundig | Wordt gebruikt voor het uitvoeren van rekenkundige basisbewerkingen op PQL-elementen. Meer informatie over deze functies kan in het [ rekenkundige functiedocument ](./arithmetic-functions.md) worden gevonden |
-| Samenvoeging | Wordt gebruikt om resultaten van een array te combineren in een enkel resultaat. Meer informatie over samenvoegingsfuncties kan in het [ document van de samenvoegingsfuncties worden gevonden ](./aggregation-functions.md). |
-| Datum en tijd | Wordt gebruikt in combinatie met datum-, tijd- en datetime-objecten. Meer informatie over deze functies kan in het [ datum/tijdfunctiedocument ](./datetime-functions.md) worden gevonden. |
-| Filter | Wordt gebruikt om gegevens binnen arrays te filteren. Meer informatie over deze functies kan in het [ document van de filterfuncties worden gevonden ](./filter-functions.md). |
-| Logische kwantoren | Wordt gebruikt om voorwaarden binnen een array te bevestigen. Meer informatie kan in het [ logische kwantoren document ](./logical-quantifiers.md) worden gevonden. |
-| Overige | De functies die niet in om het even welke bovengenoemde categorieën passen kunnen in het [ diverse functiedocument ](./misc-functions.md) worden gevonden. |
+| Boolean | Wordt gebruikt om Booleaanse algebra te implementeren in PQL. Meer informatie over deze functies kan in het [&#x200B; worden gevonden booleaanse functiedocument &#x200B;](./boolean-functions.md). |
+| Vergelijking | Wordt gebruikt om verschillende PQL-elementen te vergelijken. Meer informatie over deze functies kan in het [&#x200B; document van vergelijkingsfuncties worden gevonden &#x200B;](./comparison-functions.md). |
+| Array, list en set | Wordt gebruikt voor interactie met arrays, lijsten en sets. Meer informatie over deze functies kan in de [&#x200B; serie worden gevonden, lijst, en reeks functies document &#x200B;](./array-functions.md). |
+| Kaart | Wordt gebruikt voor interactie met kaarten. Meer informatie over deze functies kan in het [&#x200B; document van kaartfuncties worden gevonden &#x200B;](./map-functions.md). |
+| String | Wordt gebruikt voor interactie met tekenreeksen. Meer informatie over deze functies kan in het [&#x200B; document van de koordfuncties worden gevonden &#x200B;](./string-functions.md). |
+| Object | Wordt gebruikt voor interactie met objecten. Meer informatie over deze functies kan in het [&#x200B; document van objecten functies &#x200B;](./object-functions.md) worden gevonden. |
+| Rekenkundig | Wordt gebruikt voor het uitvoeren van rekenkundige basisbewerkingen op PQL-elementen. Meer informatie over deze functies kan in het [&#x200B; rekenkundige functiedocument &#x200B;](./arithmetic-functions.md) worden gevonden |
+| Samenvoeging | Wordt gebruikt om resultaten van een array te combineren in een enkel resultaat. Meer informatie over samenvoegingsfuncties kan in het [&#x200B; document van de samenvoegingsfuncties worden gevonden &#x200B;](./aggregation-functions.md). |
+| Datum en tijd | Wordt gebruikt in combinatie met datum-, tijd- en datetime-objecten. Meer informatie over deze functies kan in het [&#x200B; datum/tijdfunctiedocument &#x200B;](./datetime-functions.md) worden gevonden. |
+| Filter | Wordt gebruikt om gegevens binnen arrays te filteren. Meer informatie over deze functies kan in het [&#x200B; document van de filterfuncties worden gevonden &#x200B;](./filter-functions.md). |
+| Logische kwantoren | Wordt gebruikt om voorwaarden binnen een array te bevestigen. Meer informatie kan in het [&#x200B; logische kwantoren document &#x200B;](./logical-quantifiers.md) worden gevonden. |
+| Overige | De functies die niet in om het even welke bovengenoemde categorieën passen kunnen in het [&#x200B; diverse functiedocument &#x200B;](./misc-functions.md) worden gevonden. |
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe u [!DNL Profile Query Language] kunt gebruiken, kunt u PQL gebruiken bij het maken en wijzigen van segmentdefinities. Voor meer informatie over segmentatie, gelieve het [ segmentatieoverzicht ](../home.md) te lezen.
+Nu u hebt geleerd hoe u [!DNL Profile Query Language] kunt gebruiken, kunt u PQL gebruiken bij het maken en wijzigen van segmentdefinities. Voor meer informatie over segmentatie, gelieve het [&#x200B; segmentatieoverzicht &#x200B;](../home.md) te lezen.

@@ -18,7 +18,7 @@ Controleer uw huidige quotagebruik om naleving van organisatorische grenzen voor
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data Hygiene API. Alvorens verder te gaan, te herzien gelieve het [ overzicht ](./overview.md) voor de volgende informatie:
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data Hygiene API. Alvorens verder te gaan, te herzien gelieve het [&#x200B; overzicht &#x200B;](./overview.md) voor de volgende informatie:
 
 * Gerelateerde documentatiekoppelingen
 * Hoe te om steekproefAPI vraag te lezen
@@ -30,7 +30,7 @@ Aanvragen voor het verwijderen van records zijn onderhevig aan quota&#39;s en ve
 
 >[!TIP]
 >
->In dit document wordt weergegeven hoe u uw gebruik kunt afstemmen op op op machtigingen gebaseerde limieten. Voor een volledige beschrijving van quotalagen, registreert schrappingsaanspraken, en het gedrag van SLA, zie [ op UI-Gebaseerd verslag schrapping ](../ui/record-delete.md#quotas) of [ op API-Gebaseerd verslag schrapt ](./workorder.md#quotas) documenten.
+>In dit document wordt weergegeven hoe u uw gebruik kunt afstemmen op op op machtigingen gebaseerde limieten. Voor een volledige beschrijving van quotalagen, registreert schrappingsaanspraken, en het gedrag van SLA, zie [&#x200B; op UI-Gebaseerd verslag schrapping &#x200B;](../ui/record-delete.md#quotas) of [&#x200B; op API-Gebaseerd verslag schrapt &#x200B;](./workorder.md#quotas) documenten.
 
 ## Quota weergeven {#list}
 

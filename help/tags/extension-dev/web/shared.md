@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-Een gedeelde module is een mechanisme waardoor u met andere uitbreidingen kunt communiceren. Bijvoorbeeld, kan de Uitbreiding A een stuk van gegevens asynchroon laden en het ter beschikking stellen van Uitbreiding B via a [ belofte ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Een gedeelde module is een mechanisme waardoor u met andere uitbreidingen kunt communiceren. Bijvoorbeeld, kan de Uitbreiding A een stuk van gegevens asynchroon laden en het ter beschikking stellen van Uitbreiding B via a [&#x200B; belofte &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 In JavaScript-implementaties worden alle gedeelde modules geïnstantieerd met behulp van de methode [`getSharedModule`](../turbine.md#shared) die wordt geleverd door de variabele `turbine` free.
 
@@ -30,7 +30,7 @@ var userIdPromise = new Promise(/* load user ID, then resolve promise */);
 module.exports = userIdPromise;
 ```
 
-In [ uitbreidingsmanifest ](../manifest.md), moet u een naam voor deze gedeelde module verstrekken. Als u de naam `user-id-promise` geeft, heeft een andere extensie als volgt toegang tot deze gedeelde module:
+In [&#x200B; uitbreidingsmanifest &#x200B;](../manifest.md), moet u een naam voor deze gedeelde module verstrekken. Als u de naam `user-id-promise` geeft, heeft een andere extensie als volgt toegang tot deze gedeelde module:
 
 ```javascript
 var userIdPromise = turbine.getSharedModule('user-extension', 'user-id-promise');

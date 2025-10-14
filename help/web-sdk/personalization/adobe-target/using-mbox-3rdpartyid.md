@@ -21,15 +21,15 @@ Wanneer een bezoeker zich aanmeldt bij de site van een bedrijf, maakt het bedrij
 
 ### Stap 1: Configureer de `Target Third Party ID Namespace`
 
-Vorm `Target Third Party ID Namespace` in uw [ DataStream ](../../../datastreams/overview.md), gebruikend identiteitskaart Namespace u als 3de partijidentiteitskaart wilt gebruiken.
-[ Leer meer over identiteitskaart namespaces ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl)
+Vorm `Target Third Party ID Namespace` in uw [&#x200B; DataStream &#x200B;](../../../datastreams/overview.md), gebruikend identiteitskaart Namespace u als 3de partijidentiteitskaart wilt gebruiken.
+[&#x200B; Leer meer over identiteitskaart namespaces &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl)
 
-![ Experience Platform UI die het van de Derde van het Doel namespace gebied toont.](assets/mbox3rdpartyid.png)
+![&#x200B; Experience Platform UI die het van de Derde van het Doel namespace gebied toont.](assets/mbox3rdpartyid.png)
 
 ### Stap 2: De `mbox3rdpartyId` naar doel verzenden
 
 Verzend `mbox3rdpartyId` naar Doel in het `sendEvent` bevel, gebruikend identiteitskaart namespace die u in Stap 1 vormde.
-[ leer meer over het verzenden van IDs ](../../identity/overview.md#syncing-identities)
+[&#x200B; leer meer over het verzenden van IDs &#x200B;](../../identity/overview.md#syncing-identities)
 
 ```javascript
 alloy("sendEvent", {

@@ -34,7 +34,7 @@ De gegevens in de momentopname geven de gegevens precies zo weer als op het spec
 
 ## Dashboardvoorraad
 
-Voor gedetailleerde stappen op hoe te om de **[!UICONTROL Dashboards]** werkruimte te gebruiken om alle beschikbare dashboards te bekijken, gelieve te verwijzen naar de [ gids van de dashboardinventaris ](./inventory.md).
+Voor gedetailleerde stappen op hoe te om de **[!UICONTROL Dashboards]** werkruimte te gebruiken om alle beschikbare dashboards te bekijken, gelieve te verwijzen naar de [&#x200B; gids van de dashboardinventaris &#x200B;](./inventory.md).
 
 ## Beschikbare dashboards
 

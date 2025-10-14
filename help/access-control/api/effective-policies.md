@@ -46,7 +46,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Voor een volledige lijst van toestemmingen en middeltypes die in de nuttige ladingsserie kunnen worden verstrekt, zie de bijlage sectie op [ toegelaten toestemmingen en middeltypes ](#accepted-permissions-and-resource-types).
+>Voor een volledige lijst van toestemmingen en middeltypes die in de nuttige ladingsserie kunnen worden verstrekt, zie de bijlage sectie op [&#x200B; toegelaten toestemmingen en middeltypes &#x200B;](#accepted-permissions-and-resource-types).
 
 **Reactie**
 
@@ -69,7 +69,7 @@ Een succesvolle reactie keert informatie over de toestemmingen en middeltypes te
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u aanroepen van de [!DNL Access Control] API kunt uitvoeren om informatie te retourneren over actieve machtigingen en het gerelateerde toegangsbeleid voor typen bronnen. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie het [ overzicht van de toegangscontrole ](../home.md).
+In dit document wordt beschreven hoe u aanroepen van de [!DNL Access Control] API kunt uitvoeren om informatie te retourneren over actieve machtigingen en het gerelateerde toegangsbeleid voor typen bronnen. Voor meer informatie over toegangsbeheer voor [!DNL Experience Platform], zie het [&#x200B; overzicht van de toegangscontrole &#x200B;](../home.md).
 
 ## Bijlage
 

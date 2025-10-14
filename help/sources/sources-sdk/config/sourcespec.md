@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Source-specificaties bevatten specifieke informatie over een bron, waaronder kenmerken die betrekking hebben op de categorie van een bron, de bètastatus en het cataloguspictogram. Zij bevatten ook nuttige informatie zoals parameters URL, inhoud, kopbal, en programma. Source-specificaties beschrijven ook het schema met de parameters die nodig zijn om een bronverbinding te maken via een basisverbinding. Het schema is nodig om een bronverbinding te maken.
 
-Zie [ bijlage ](#source-spec) voor een voorbeeld van een volledig-bevolkte bronspecificatie.
+Zie [&#x200B; bijlage &#x200B;](#source-spec) voor een voorbeeld van een volledig-bevolkte bronspecificatie.
 
 
 ```json
@@ -242,7 +242,7 @@ Zie [ bijlage ](#source-spec) voor een voorbeeld van een volledig-bevolkte brons
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definieert de ondersteunde queryparameters die kunnen worden gebruikt om de bron-URL toe te voegen bij het indienen van een aanvraag om gegevens op te halen. **Nota**: Om het even welke user-provided parameterwaarde moet als placeholder worden geformatteerd. Bijvoorbeeld: `${USER_PARAMETER}` . | `"queryParams" : {"key" : "value", "key1" : "value1"}` wordt als volgt aan de bron-URL toegevoegd: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Bepaalt kopballen die in het HTTP- verzoek aan bron URL moeten worden verstrekt terwijl het halen van gegevens. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | Dit attribuut kan worden gevormd om het lichaam van HTTP door een POST- verzoek te verzenden. |
-| `sourceSpec.attributes.spec.properties.contentPath` | Definieert het knooppunt dat de lijst bevat met items die moeten worden opgenomen in Experience Platform. Dit kenmerk moet een geldige JSON-padsyntaxis volgen en verwijzen naar een bepaalde array. | Bekijk de [ extra middelensectie ](#content-path) voor een voorbeeld van het middel bevat binnen een inhoudsweg. |
+| `sourceSpec.attributes.spec.properties.contentPath` | Definieert het knooppunt dat de lijst bevat met items die moeten worden opgenomen in Experience Platform. Dit kenmerk moet een geldige JSON-padsyntaxis volgen en verwijzen naar een bepaalde array. | Bekijk de [&#x200B; extra middelensectie &#x200B;](#content-path) voor een voorbeeld van het middel bevat binnen een inhoudsweg. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | Het pad dat wijst naar de verzamelingsrecords die moeten worden ingevoegd in Experience Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Met deze eigenschap kunt u specifieke items identificeren uit de bron die is geïdentificeerd in het inhoudspad en die moeten worden uitgesloten van het opnemen van inhoud. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt behouden. | `[total_items]` |
@@ -263,7 +263,7 @@ Zie [ bijlage ](#source-spec) voor een voorbeeld van een volledig-bevolkte brons
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Definieert de naam van de eindtijdparameter | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Definieert de ondersteunde indeling voor de `scheduleStartParamName` . | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Definieert de ondersteunde indeling voor de `scheduleEndParamName` . | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | Bepaalt de user-provided parameters om middelwaarden te halen. | Zie de [ extra middelen ](#user-input) voor een voorbeeld user-inputted parameters voor `spec.properties`. |
+| `sourceSpec.spec.properties` | Bepaalt de user-provided parameters om middelwaarden te halen. | Zie de [&#x200B; extra middelen &#x200B;](#user-input) voor een voorbeeld user-inputted parameters voor `spec.properties`. |
 
 {style="table-layout:auto"}
 
@@ -659,4 +659,4 @@ Hieronder ziet u een voorbeeld van een aangepast schema dat u kunt toevoegen aan
 
 ## Volgende stappen
 
-Met uw bevolkte bronspecificaties, kunt u te werk gaan om de verkennende specificaties voor de bron te vormen die u aan Experience Platform wilt integreren. Zie het document bij [ het vormen onderzoeken specificaties ](./explorespec.md) voor meer informatie.
+Met uw bevolkte bronspecificaties, kunt u te werk gaan om de verkennende specificaties voor de bron te vormen die u aan Experience Platform wilt integreren. Zie het document bij [&#x200B; het vormen onderzoeken specificaties &#x200B;](./explorespec.md) voor meer informatie.

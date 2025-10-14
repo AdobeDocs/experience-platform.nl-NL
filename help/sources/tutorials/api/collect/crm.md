@@ -11,36 +11,36 @@ ht-degree: 0%
 
 # Een gegevensstroom maken om gegevens van een CRM in Experience Platform in te voeren
 
-Lees deze gids om te leren hoe te om een dataflow tot stand te brengen en gegevens in Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om een dataflow tot stand te brengen en gegevens in Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Inname van de Partij ](../../../../ingestion/batch-ingestion/overview.md): Ontdek hoe u grote volumes van gegevens in partijen snel en efficiënt kunt uploaden.
-* [ de Dienst van de Catalogus ](../../../../catalog/datasets/overview.md): Organiseer en houd spoor van uw datasets in Experience Platform.
-* [ Prep van Gegevens ](../../../../data-prep/home.md): Transformeer en breng uw inkomende gegevens in kaart om uw schemavereisten aan te passen.
-* [ Dataflows ](../../../../dataflows/home.md): Opstelling en beheer de pijpleidingen die uw gegevens van bronnen aan bestemmingen bewegen.
-* [ Schema&#39;s van de Gegevens van de Ervaring Model (XDM) ](../../../../xdm/home.md): Structuur uw gegevens gebruikend schema&#39;s XDM zodat is het klaar voor gebruik in Experience Platform.
-* [ Sandboxen ](../../../../sandboxes/home.md): Test en ontwikkel veilig in geïsoleerde milieu&#39;s zonder productiegegevens te beïnvloeden.
-* [ Bronnen ](../../../home.md): Leer hoe te om uw externe gegevensbronnen met Experience Platform te verbinden.
+* [&#x200B; Inname van de Partij &#x200B;](../../../../ingestion/batch-ingestion/overview.md): Ontdek hoe u grote volumes van gegevens in partijen snel en efficiënt kunt uploaden.
+* [&#x200B; de Dienst van de Catalogus &#x200B;](../../../../catalog/datasets/overview.md): Organiseer en houd spoor van uw datasets in Experience Platform.
+* [&#x200B; Prep van Gegevens &#x200B;](../../../../data-prep/home.md): Transformeer en breng uw inkomende gegevens in kaart om uw schemavereisten aan te passen.
+* [&#x200B; Dataflows &#x200B;](../../../../dataflows/home.md): Opstelling en beheer de pijpleidingen die uw gegevens van bronnen aan bestemmingen bewegen.
+* [&#x200B; Schema&#39;s van de Gegevens van de Ervaring Model (XDM) &#x200B;](../../../../xdm/home.md): Structuur uw gegevens gebruikend schema&#39;s XDM zodat is het klaar voor gebruik in Experience Platform.
+* [&#x200B; Sandboxen &#x200B;](../../../../sandboxes/home.md): Test en ontwikkel veilig in geïsoleerde milieu&#39;s zonder productiegegevens te beïnvloeden.
+* [&#x200B; Bronnen &#x200B;](../../../home.md): Leer hoe te om uw externe gegevensbronnen met Experience Platform te verbinden.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, lees de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, lees de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../landing/api-guide.md).
 
 ### Basisverbinding maken {#base}
 
-Als u een gegevensstroom voor uw bron wilt maken, hebt u een volledig geverifieerde bronaccount en de bijbehorende basis-verbindings-id nodig. Als u dit identiteitskaart niet hebt, bezoek de [ broncatalogus ](../../../home.md) om een lijst van bronnen te vinden waarvoor u een basisverbinding kunt tot stand brengen.
+Als u een gegevensstroom voor uw bron wilt maken, hebt u een volledig geverifieerde bronaccount en de bijbehorende basis-verbindings-id nodig. Als u dit identiteitskaart niet hebt, bezoek de [&#x200B; broncatalogus &#x200B;](../../../home.md) om een lijst van bronnen te vinden waarvoor u een basisverbinding kunt tot stand brengen.
 
 ### Een doel-XDM-schema maken {#target-schema}
 
 Een schema van de Gegevens van de Ervaring van het Model (XDM) verstrekt een gestandaardiseerde manier om gegevens van de klantenervaring binnen Experience Platform te organiseren en te beschrijven. Om uw brongegevens in Experience Platform in te voeren, moet u eerst een doelXDM schema tot stand brengen dat de structuur en de soorten gegevens bepaalt u wilt opnemen. Dit schema dient als blauwdruk voor de dataset van Experience Platform waar uw opgenomen gegevens zullen verblijven.
 
-Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren. Lees de volgende hulplijnen voor gedetailleerde stappen over het maken van een doel-XDM-schema:
+Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Registratie API van het Schema &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren. Lees de volgende hulplijnen voor gedetailleerde stappen over het maken van een doel-XDM-schema:
 
-* [ creeer een schema gebruikend API ](../../../../xdm/api/schemas.md).
-* [ creeer een schema gebruikend UI ](../../../../xdm/tutorials/create-schema-ui.md).
+* [&#x200B; creeer een schema gebruikend API &#x200B;](../../../../xdm/api/schemas.md).
+* [&#x200B; creeer een schema gebruikend UI &#x200B;](../../../../xdm/tutorials/create-schema-ui.md).
 
 Zodra gecreeerd, zal het doelXDM schema `$id` later voor uw doeldataset en afbeelding worden vereist.
 
@@ -48,7 +48,7 @@ Zodra gecreeerd, zal het doelXDM schema `$id` later voor uw doeldataset en afbee
 
 Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch gestructureerd zoals een lijst met kolommen (schema) en rijen (gebieden). De gegevens die met succes in Experience Platform worden opgenomen worden opgeslagen binnen het gegevensmeer als datasets. Tijdens deze stap, kunt u of een nieuwe dataset tot stand brengen of bestaande gebruiken.
 
-U kunt een doeldataset tot stand brengen door een POST- verzoek aan de [ Dienst API van de Catalogus ](https://developer.adobe.com/experience-platform-apis/references/catalog/) te doen, terwijl het verstrekken van identiteitskaart van het doelschema binnen de nuttige lading. Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, lees de gids bij [ het creëren van een dataset gebruikend API ](../../../../catalog/api/create-dataset.md).
+U kunt een doeldataset tot stand brengen door een POST- verzoek aan de [&#x200B; Dienst API van de Catalogus &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/) te doen, terwijl het verstrekken van identiteitskaart van het doelschema binnen de nuttige lading. Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, lees de gids bij [&#x200B; het creëren van een dataset gebruikend API &#x200B;](../../../../catalog/api/create-dataset.md).
 
 >[!TIP]
 >
@@ -243,7 +243,7 @@ curl -X POST \
 
 ## Toewijzing {#mapping}
 
-Daarna, kaart uw brongegevens aan het doelschema dat uw doeldataset volgt aan. Om een afbeelding tot stand te brengen, doe een POST verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Neem de doel-XDM-schema-id op en de details van de toewijzingssets die u wilt maken.
+Daarna, kaart uw brongegevens aan het doelschema dat uw doeldataset volgt aan. Om een afbeelding tot stand te brengen, doe een POST verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Neem de doel-XDM-schema-id op en de details van de toewijzingssets die u wilt maken.
 
 **API formaat**
 
@@ -743,11 +743,11 @@ Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd datafl
 
 U kunt de gebruikersinterface van Experience Platform gebruiken om het maken van uw gegevensstroom te bevestigen. Navigeer naar de catalogus *[!UICONTROL Sources]* in de gebruikersinterface van Experience Platform en selecteer vervolgens **[!UICONTROL Dataflows]** op de tabbladen voor kopteksten. Vervolgens gebruikt u de kolom [!UICONTROL Dataflow Name] en zoekt u de gegevensstroom die u met de API [!DNL Flow Service] hebt gemaakt.
 
-![ de dataflows interface van de bronwerkruimte in Experience Platform UI ](../../../images/tutorials/validations/dataflows-interface.png)
+![&#x200B; de dataflows interface van de bronwerkruimte in Experience Platform UI &#x200B;](../../../images/tutorials/validations/dataflows-interface.png)
 
 U kunt de gegevensstroom verder valideren via de interface van [!UICONTROL Dataflow activity] . Gebruik de rechterrail om de [!UICONTROL API usage] informatie van uw gegevensstroom te bekijken. Deze sectie toont zelfde gegevensstroom identiteitskaart, dataset identiteitskaart, en afbeelding identiteitskaart die tijdens het proces van de gegevensstroom in [!DNL Flow Service] werd geproduceerd.
 
-![ de dataflow meningspagina van de bronwerkruimte.](../../../images/tutorials/validations/api-usage.png)
+![&#x200B; de dataflow meningspagina van de bronwerkruimte.](../../../images/tutorials/validations/api-usage.png)
 
 ## Volgende stappen
 
@@ -755,12 +755,12 @@ Deze zelfstudie begeleidde u door het proces voor het maken van een gegevensstro
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom wordt gecreeerd, kunt u zijn prestaties direct in de UI van Experience Platform controleren. Dit omvat het volgen van ingangssnelheden, succesmetriek, en om het even welke fouten die voorkomen. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [ controlerekeningen en dataflows ](../../../../dataflows/ui/monitor-sources.md).
+Zodra uw gegevensstroom wordt gecreeerd, kunt u zijn prestaties direct in de UI van Experience Platform controleren. Dit omvat het volgen van ingangssnelheden, succesmetriek, en om het even welke fouten die voorkomen. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [&#x200B; controlerekeningen en dataflows &#x200B;](../../../../dataflows/ui/monitor-sources.md).
 
 ### Uw gegevensstroom bijwerken
 
-Om configuraties voor uw dataflows bij te werken die plannen, in kaart brengen, of algemene informatie, bezoek het leerprogramma op [ het bijwerken van bronnen dataflows ](../../api/update-dataflows.md).
+Om configuraties voor uw dataflows bij te werken die plannen, in kaart brengen, of algemene informatie, bezoek het leerprogramma op [&#x200B; het bijwerken van bronnen dataflows &#x200B;](../../api/update-dataflows.md).
 
 ## Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [ het schrappen van dataflows ](../../api/delete.md).
+U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [&#x200B; het schrappen van dataflows &#x200B;](../../api/delete.md).

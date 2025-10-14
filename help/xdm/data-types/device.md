@@ -28,14 +28,14 @@ ht-degree: 0%
 | `screenWidth` | String | Het aantal horizontale pixels van de actieve weergave van het apparaat in de standaardoriëntatie. |
 | `type` | String | Het type apparaat dat wordt bijgehouden. Tot de geaccepteerde waarden behoren: <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | String | Een id voor het apparaat. Dit kan een herkenningsteken van DeviceAtlas of een andere dienst zijn die de hardware identificeert die wordt gebruikt. |
-| `typeIDService` | String | De naamruimte van de service die wordt gebruikt om het apparaattype te identificeren. Zie [ bijlage ](#typeIDService) voor details op toegelaten waarden. |
+| `typeIDService` | String | De naamruimte van de service die wordt gebruikt om het apparaattype te identificeren. Zie [&#x200B; bijlage &#x200B;](#typeIDService) voor details op toegelaten waarden. |
 
 {style="table-layout:auto"}
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
-* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
+* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
+* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
 
 ## Bijlage
 

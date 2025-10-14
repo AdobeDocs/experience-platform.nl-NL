@@ -19,20 +19,20 @@ Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het samenvoegi
 
 >[!NOTE]
 >
->De API van de Registratie van het Schema verwijst naar verwijzingsschema&#39;s als &quot;bestemmingsschema&#39;s&quot;. Deze moeten niet met bestemmingsschema&#39;s in [ de kaartreeksen van Prep van Gegevens ](../../data-prep/mapping-set.md) of schema&#39;s voor [ bestemmingsverbindingen ](../../destinations/home.md) worden verward.
+>De API van de Registratie van het Schema verwijst naar verwijzingsschema&#39;s als &quot;bestemmingsschema&#39;s&quot;. Deze moeten niet met bestemmingsschema&#39;s in [&#x200B; de kaartreeksen van Prep van Gegevens &#x200B;](../../data-prep/mapping-set.md) of schema&#39;s voor [&#x200B; bestemmingsverbindingen &#x200B;](../../destinations/home.md) worden verward.
 
-Dit document verstrekt een zelfstudie voor het bepalen van een één-aan-één verhouding tussen twee schema&#39;s die door uw organisatie worden bepaald gebruikend [[!DNL Schema Registry API] ](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Dit document verstrekt een zelfstudie voor het bepalen van een één-aan-één verhouding tussen twee schema&#39;s die door uw organisatie worden bepaald gebruikend [[!DNL Schema Registry API] &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van [!DNL Experience Data Model] (XDM) en [!DNL XDM System] . Lees de volgende documentatie voordat u met deze zelfstudie begint:
 
-* [ XDM Systeem in Experience Platform ](../home.md): Een overzicht van XDM en zijn implementatie in [!DNL Experience Platform].
-   * [ Grondbeginselen van schemacompositie ](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
+* [&#x200B; XDM Systeem in Experience Platform &#x200B;](../home.md): Een overzicht van XDM en zijn implementatie in [!DNL Experience Platform].
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Sandboxen &#x200B;](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-Alvorens dit leerprogramma te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Schema Registry] API met succes te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header [!DNL Accept] en de mogelijke waarden ervan).
+Alvorens dit leerprogramma te beginnen, te herzien gelieve de [&#x200B; ontwikkelaarsgids &#x200B;](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Schema Registry] API met succes te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header [!DNL Accept] en de mogelijke waarden ervan).
 
 ## Een bron- en referentieschema definiëren {#define-schemas}
 
@@ -42,7 +42,7 @@ De verhoudingen van het schema worden vertegenwoordigd door a **bronschema** heb
 
 >[!IMPORTANT]
 >
->Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en voor [!DNL Real-Time Customer Profile] worden toegelaten. Zie de sectie op [ toelatend een schema voor gebruik in Profiel ](./create-schema-api.md#profile) in het leerprogramma van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
+>Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en voor [!DNL Real-Time Customer Profile] worden toegelaten. Zie de sectie op [&#x200B; toelatend een schema voor gebruik in Profiel &#x200B;](./create-schema-api.md#profile) in het leerprogramma van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
 
 Als u een relatie tussen twee schema&#39;s wilt definiëren, moet u eerst de `$id` -waarden voor beide schema&#39;s ophalen. Als u de weergavenamen (`title`) van de schema&#39;s kent, kunt u hun `$id` -waarden vinden door een GET-aanvraag in te dienen bij het `/tenant/schemas` -eindpunt in de [!DNL Schema Registry] API.
 
@@ -122,7 +122,7 @@ In deze zelfstudie, bevat het verwijzingsschema &quot;[!DNL Hotels]&quot;een `ho
 
 >[!NOTE]
 >
->Als uw bronschema reeds een specifiek gebied heeft dat u van plan bent als verwijzingsgebied te gebruiken, kunt u vooruit aan de stap overslaan op [ creërend een verwijzingsbeschrijver ](#reference-identity).
+>Als uw bronschema reeds een specifiek gebied heeft dat u van plan bent als verwijzingsgebied te gebruiken, kunt u vooruit aan de stap overslaan op [&#x200B; creërend een verwijzingsbeschrijver &#x200B;](#reference-identity).
 
 ### Een nieuwe veldgroep maken
 
@@ -383,7 +383,7 @@ curl -X POST \
 | `xdm:sourceSchema` | De `$id` URL van het bronschema. |
 | `xdm:sourceVersion` | Het versienummer van het bronschema. |
 | `sourceProperty` | Het pad naar het veld in het bronschema dat wordt gebruikt om naar de primaire identiteit van het referentieschema te verwijzen. |
-| `xdm:identityNamespace` | De naamruimte van de identiteit van het verwijzingsveld. Dit moet dezelfde naamruimte zijn als de primaire identiteit van het referentieschema. Zie het [ overzicht van identiteitskaart namespace ](../../identity-service/home.md) voor meer informatie. |
+| `xdm:identityNamespace` | De naamruimte van de identiteit van het verwijzingsveld. Dit moet dezelfde naamruimte zijn als de primaire identiteit van het referentieschema. Zie het [&#x200B; overzicht van identiteitskaart namespace &#x200B;](../../identity-service/home.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -468,4 +468,4 @@ Een succesvolle reactie retourneert de details van de zojuist gemaakte relatiebe
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een één-op-één verhouding tussen twee schema&#39;s gecreeerd. Voor meer informatie bij het werken met beschrijvers die [!DNL Schema Registry] API gebruiken, zie de [ de ontwikkelaarsgids van de Registratie van het Schema ](../api/descriptors.md). Voor stappen op hoe te om schemaverhoudingen in UI te bepalen, zie het leerprogramma op [ bepalend schemaverhoudingen gebruikend de Redacteur van het Schema ](relationship-ui.md).
+Door deze zelfstudie te volgen, hebt u met succes een één-op-één verhouding tussen twee schema&#39;s gecreeerd. Voor meer informatie bij het werken met beschrijvers die [!DNL Schema Registry] API gebruiken, zie de [&#x200B; de ontwikkelaarsgids van de Registratie van het Schema &#x200B;](../api/descriptors.md). Voor stappen op hoe te om schemaverhoudingen in UI te bepalen, zie het leerprogramma op [&#x200B; bepalend schemaverhoudingen gebruikend de Redacteur van het Schema &#x200B;](relationship-ui.md).
