@@ -17,17 +17,17 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Deze bestemming is beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze bestemming is beschikbaar slechts aan [&#x200B; Adobe Real-Time Customer Data Platform Ultimate &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 Met de [!DNL Kinesis Data Streams] -service van [!DNL Amazon Web Services] kunt u grote stromen gegevensrecords in real-time verzamelen en verwerken.
 
 U kunt een real-time uitgaande verbinding maken met uw [!DNL Amazon Kinesis] -opslag om gegevens vanuit Adobe Experience Platform te streamen.
 
-* Voor meer informatie over [!DNL Amazon Kinesis], zie de [ documentatie van Amazon ](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* Om met [!DNL Amazon Kinesis] programmatically te verbinden, zie de [ Streaming bestemmingen API leerprogramma ](../../api/streaming-destinations.md).
+* Voor meer informatie over [!DNL Amazon Kinesis], zie de [&#x200B; documentatie van Amazon &#x200B;](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
+* Om met [!DNL Amazon Kinesis] programmatically te verbinden, zie de [&#x200B; Streaming bestemmingen API leerprogramma &#x200B;](../../api/streaming-destinations.md).
 * Zie de volgende secties als u verbinding wilt maken met [!DNL Amazon Kinesis] via de Experience Platform-gebruikersinterface.
 
-![ Kinesis van Amazon in UI ](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![&#x200B; Kinesis van Amazon in UI &#x200B;](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -41,8 +41,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -52,14 +52,14 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [ werkschema van de bestemmingsactivering ](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [&#x200B; werkschema van de bestemmingsactivering &#x200B;](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## IP adres lijst van gewenste personen {#ip-address-allowlist}
 
-Experience Platform biedt een lijst met statische IP&#39;s die u kunt lijsten van gewenste personen voor de [!DNL Amazon Kinesis] -bestemming om aan de beveiligings- en compatibiliteitsvereisten van klanten te voldoen. Verwijs naar [ IP adreslijst van gewenste personen voor het stromen bestemmingen ](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor de volledige lijst van IPs aan lijst van gewenste personen.
+Experience Platform biedt een lijst met statische IP&#39;s die u kunt lijsten van gewenste personen voor de [!DNL Amazon Kinesis] -bestemming om aan de beveiligings- en compatibiliteitsvereisten van klanten te voldoen. Verwijs naar [&#x200B; IP adreslijst van gewenste personen voor het stromen bestemmingen &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor de volledige lijst van IPs aan lijst van gewenste personen.
 
 ## Vereiste [!DNL Amazon Kinesis] machtigingen {#required-kinesis-permission}
 
@@ -100,23 +100,23 @@ In het onderstaande voorbeeld worden de minimale toegangsrechten weergegeven die
 
 {style="table-layout:auto"}
 
-Voor meer informatie bij het controleren van toegang voor [!DNL Kinesis] gegevensstromen, lees het volgende [[!DNL Kinesis]  document ](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+Voor meer informatie bij het controleren van toegang voor [!DNL Kinesis] gegevensstromen, lees het volgende [[!DNL Kinesis]  document &#x200B;](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. Wanneer u verbinding maakt met dit doel, moet u de volgende informatie opgeven:
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. Wanneer u verbinding maakt met dit doel, moet u de volgende informatie opgeven:
 
 ### Verificatiegegevens {#authentication-information}
 
 Voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]** :
 
-![ Beeld van het scherm UI die voltooide gebieden voor de de authentificatiedetails van Kinesis van Amazon tonen ](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+![&#x200B; Beeld van het scherm UI die voltooide gebieden voor de de authentificatiedetails van Kinesis van Amazon tonen &#x200B;](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* **[!DNL Amazon Web Services]toegangstoets en geheime sleutel** : genereer in [!DNL Amazon Web Services] een `access key - secret access key` paar om Experience Platform toegang te verlenen tot uw [!DNL Amazon Kinesis] -account. Leer meer in de [ documentatie van Amazon Web Services ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]toegangstoets en geheime sleutel** : genereer in [!DNL Amazon Web Services] een `access key - secret access key` paar om Experience Platform toegang te verlenen tot uw [!DNL Amazon Kinesis] -account. Leer meer in de [&#x200B; documentatie van Amazon Web Services &#x200B;](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Region]**: geef aan naar welk [!DNL Amazon Web Services] -gebied gegevens moeten worden gestreamd.
 
 ### Doelgegevens invullen {#destination-details}
@@ -133,13 +133,13 @@ Voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![ Beeld van het scherm UI die voltooide gebieden voor de bestemmingsdetails van Amazon Kinesis tonen ](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+![&#x200B; Beeld van het scherm UI die voltooide gebieden voor de bestemmingsdetails van Amazon Kinesis tonen &#x200B;](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
 * **[!UICONTROL Name]**: Geef een naam op voor uw verbinding met [!DNL Amazon Kinesis]
 * **[!UICONTROL Description]**: geef een beschrijving op voor de verbinding met [!DNL Amazon Kinesis] .
 * **[!UICONTROL Stream]**: geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] -account. Experience Platform exporteert gegevens naar deze stream.
-* **[!UICONTROL Include Segment Names]**: in-/uitschakelen als u wilt dat bij het exporteren van de gegevens de namen worden opgenomen van het publiek dat u exporteert. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [ Uitgevoerde gegevens ](#exported-data) sectie verder hieronder.
-* **[!UICONTROL Include Segment Timestamps]**: Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de UNIX-tijdstempel wordt gebruikt wanneer het publiek is gemaakt en bijgewerkt, en ook de UNIX-tijdstempel wanneer het publiek voor activering is toegewezen aan het doel. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [ Uitgevoerde gegevens ](#exported-data) sectie verder hieronder.
+* **[!UICONTROL Include Segment Names]**: in-/uitschakelen als u wilt dat bij het exporteren van de gegevens de namen worden opgenomen van het publiek dat u exporteert. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [&#x200B; Uitgevoerde gegevens &#x200B;](#exported-data) sectie verder hieronder.
+* **[!UICONTROL Include Segment Timestamps]**: Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de UNIX-tijdstempel wordt gebruikt wanneer het publiek is gemaakt en bijgewerkt, en ook de UNIX-tijdstempel wanneer het publiek voor activering is toegewezen aan het doel. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [&#x200B; Uitgevoerde gegevens &#x200B;](#exported-data) sectie verder hieronder.
 
 <!--
 
@@ -151,7 +151,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -159,17 +159,17 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* [ de beleidsevaluatie van de toestemming ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wordt momenteel niet gesteund in de uitvoer naar de bestemming van Amazon Kinesis. [Meer informatie](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* [&#x200B; de beleidsevaluatie van de toestemming &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wordt momenteel niet gesteund in de uitvoer naar de bestemming van Amazon Kinesis. [Meer informatie](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Zie [ publieksgegevens aan het stromen van profieluitvoer bestemmingen ](../../ui/activate-streaming-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [&#x200B; publieksgegevens aan het stromen van profieluitvoer bestemmingen &#x200B;](../../ui/activate-streaming-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ## Exportgedrag profiel {#profile-export-behavior}
 
 Experience Platform optimaliseert het gedrag voor het exporteren van profielen naar uw [!DNL Amazon Kinesis] -doel, zodat alleen gegevens naar uw doel worden geëxporteerd wanneer relevante updates naar een profiel zijn opgetreden na een kwalificatie van het publiek of andere belangrijke gebeurtenissen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
 
 * De profielupdate werd bepaald door een wijziging in het publiekslidmaatschap voor ten minste een van de doelgroepen. Het profiel is bijvoorbeeld gekwalificeerd voor een van de soorten publiek die aan de bestemming zijn toegewezen of heeft een van de soorten publiek afgesloten die aan de bestemming zijn toegewezen.
-* De profielupdate werd bepaald door een verandering in de [ identiteitskaart ](/help/xdm/field-groups/profile/identitymap.md). Een profiel dat bijvoorbeeld al was gekwalificeerd voor een van de soorten publiek dat aan de bestemming is toegewezen, is toegevoegd aan een nieuwe identiteit in het kenmerk Naamplaatje.
+* De profielupdate werd bepaald door een verandering in de [&#x200B; identiteitskaart &#x200B;](/help/xdm/field-groups/profile/identitymap.md). Een profiel dat bijvoorbeeld al was gekwalificeerd voor een van de soorten publiek dat aan de bestemming is toegewezen, is toegevoegd aan een nieuwe identiteit in het kenmerk Naamplaatje.
 * De profielupdate is bepaald door een wijziging in kenmerken voor ten minste een van de kenmerken die aan de bestemming zijn toegewezen. Een van de kenmerken die in de toewijzingsstap aan het doel is toegewezen, wordt bijvoorbeeld aan een profiel toegevoegd.
 
 In alle hierboven beschreven gevallen worden alleen de profielen waarin relevante updates zijn opgetreden, naar uw bestemming geëxporteerd. Bijvoorbeeld, als een publiek dat aan de bestemmingsstroom in kaart wordt gebracht honderd leden heeft, en vijf nieuwe profielen voor het segment kwalificeren, is de uitvoer naar uw bestemming incrementeel en omvat slechts de vijf nieuwe profielen.
@@ -182,7 +182,7 @@ Met betrekking tot het gegeven dat voor een bepaald profiel wordt uitgevoerd, is
 
 | Wat bepaalt de doelexport | Wat is inbegrepen in de doelexport |
 |---------|----------|
-| <ul><li>Toegewezen kenmerken en segmenten fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als de `segmentMembership` -status van een profiel verandert in `realized` of `exiting` of als toegewezen kenmerken worden bijgewerkt, een doelexport wordt uitgeschakeld.</li><li>Omdat identiteiten momenteel niet aan [!DNL Amazon Kinesis] bestemmingen kunnen worden in kaart gebracht, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>Het `segmentMembership` -object bevat het segment dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een kwalificatie- of segmentafsluitgebeurtenis. Merk op dat andere unmapped segmenten waarvoor het profiel dat voor wordt gekwalificeerd deel van de bestemmingsuitvoer kan uitmaken, als deze segmenten tot het zelfde [ fusiebeleid ](/help/profile/merge-policies/overview.md) behoren zoals het segment in kaart gebracht in activeringsdataflow. </li><li>Alle identiteiten in het `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in het [!DNL Amazon Kinesis] -doel).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
+| <ul><li>Toegewezen kenmerken en segmenten fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als de `segmentMembership` -status van een profiel verandert in `realized` of `exiting` of als toegewezen kenmerken worden bijgewerkt, een doelexport wordt uitgeschakeld.</li><li>Omdat identiteiten momenteel niet aan [!DNL Amazon Kinesis] bestemmingen kunnen worden in kaart gebracht, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>Het `segmentMembership` -object bevat het segment dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een kwalificatie- of segmentafsluitgebeurtenis. Merk op dat andere unmapped segmenten waarvoor het profiel dat voor wordt gekwalificeerd deel van de bestemmingsuitvoer kan uitmaken, als deze segmenten tot het zelfde [&#x200B; fusiebeleid &#x200B;](/help/profile/merge-policies/overview.md) behoren zoals het segment in kaart gebracht in activeringsdataflow. </li><li>Alle identiteiten in het `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in het [!DNL Amazon Kinesis] -doel).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -190,9 +190,9 @@ Met betrekking tot het gegeven dat voor een bepaald profiel wordt uitgevoerd, is
 
 Neem bijvoorbeeld deze gegevensstroom naar een [!DNL Amazon Kinesis] -bestemming waar drie soorten publiek in de gegevensstroom zijn geselecteerd en vier kenmerken aan de bestemming worden toegewezen.
 
-![ de bestemmingsdataflow van Amazon Kinesis ](../../assets/catalog/http/profile-export-example-dataflow.png)
+![&#x200B; de bestemmingsdataflow van Amazon Kinesis &#x200B;](../../assets/catalog/http/profile-export-example-dataflow.png)
 
-Een profieluitvoer naar de bestemming kan door een profiel worden bepaald dat voor of het weggaan van één van *drie in kaart gebrachte segmenten* in aanmerking komt. In de gegevensuitvoer, in het `segmentMembership` voorwerp (zie [ Uitgevoerde Gegevens ](#exported-data) sectie hieronder), zouden andere in kaart gebrachte toehoorders kunnen verschijnen, als dat bepaalde profiel een lid van hen is en als deze het zelfde fusiebeleid zoals het publiek delen dat de uitvoer teweegbracht. Als een profiel voor de **Klant met DeLorean Cars** segment kwalificeert en ook een lid van de **Basis Actieve Plaats en Stad - Dallas** segmenten is, dan zullen deze andere twee publiek ook aanwezig zijn in het `segmentMembership` voorwerp van de gegevensuitvoer, omdat deze in dataflow in kaart worden gebracht, als deze het zelfde fusiebeleid met de **Klant met DeLorean Codes delen ars** segment.
+Een profieluitvoer naar de bestemming kan door een profiel worden bepaald dat voor of het weggaan van één van *drie in kaart gebrachte segmenten* in aanmerking komt. In de gegevensuitvoer, in het `segmentMembership` voorwerp (zie [&#x200B; Uitgevoerde Gegevens &#x200B;](#exported-data) sectie hieronder), zouden andere in kaart gebrachte toehoorders kunnen verschijnen, als dat bepaalde profiel een lid van hen is en als deze het zelfde fusiebeleid zoals het publiek delen dat de uitvoer teweegbracht. Als een profiel voor de **Klant met DeLorean Cars** segment kwalificeert en ook een lid van de **Basis Actieve Plaats en Stad - Dallas** segmenten is, dan zullen deze andere twee publiek ook aanwezig zijn in het `segmentMembership` voorwerp van de gegevensuitvoer, omdat deze in dataflow in kaart worden gebracht, als deze het zelfde fusiebeleid met de **Klant met DeLorean Codes delen ars** segment.
 
 Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaande kenmerken de doelexport en zijn alle vier toegewezen kenmerken in het profiel aanwezig in de gegevensexport.
 
@@ -308,6 +308,6 @@ In het geval van mislukte verzoeken aan uw bestemming van HTTP API, slaat Experi
 
 >[!MORELIKETHIS]
 >
->* [ verbind met Amazon Kinesis en activeer gegevens gebruikend de Dienst API van de Stroom ](../../api/streaming-destinations.md)
->* [ Azure de bestemming van de Hubs van de Gebeurtenis ](./azure-event-hubs.md)
->* [ de types en de categorieën van de Bestemming ](../../destination-types.md)
+>* [&#x200B; verbind met Amazon Kinesis en activeer gegevens gebruikend de Dienst API van de Stroom &#x200B;](../../api/streaming-destinations.md)
+>* [&#x200B; Azure de bestemming van de Hubs van de Gebeurtenis &#x200B;](./azure-event-hubs.md)
+>* [&#x200B; de types en de categorieën van de Bestemming &#x200B;](../../destination-types.md)
