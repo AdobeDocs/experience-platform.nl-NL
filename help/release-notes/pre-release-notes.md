@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
+source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 33%
+source-wordcount: '1007'
+ht-degree: 30%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 33%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -57,15 +57,17 @@ Raadpleeg het [[!DNL Observability Insights] overzicht](../observability/home.md
 | Bestemming | Beschrijving |
 | --- | --- |
 | [!DNL AdForm] | Gebruik deze bestemming om Adobe Real-Time CDP-gebruikers naar [!DNL AdForm] te sturen voor activering op basis van de Experience Cloud-id (ECID) en de ID-versie van [!DNL AdForm] . De ID Fusion van [!DNL AdForm] is een service voor het oplossen van id&#39;s waarmee u uw eerste publiek kunt activeren op basis van de Experience Cloud-id (ECID). |
-| `Amazon Ads` | Er zijn aanvullende ondersteuning voor persoonlijke id&#39;s toegevoegd, zoals `firstName` , `lastName` , `street` , `city` , `state` , `zip` en `country` . Door deze velden toe te wijzen als doelidentiteiten, kunt u de overeenkomende populatiegraad verbeteren. |
+| [!DNL Amazon Ads] | Er zijn aanvullende ondersteuning voor persoonlijke id&#39;s toegevoegd, zoals `firstName` , `lastName` , `street` , `city` , `state` , `zip` en `country` . Door deze velden toe te wijzen als doelidentiteiten, kunt u de overeenkomende populatiegraad verbeteren. |
+| [!DNL Snowflake Batch] (beperkte beschikbaarheid) | Maak een live [!DNL Snowflake] gegevensuitwisseling om dagelijkse publieksupdates rechtstreeks als gedeelde tabellen in uw account te ontvangen. Deze integratie is momenteel beschikbaar voor klantenorganisaties die in de VA7-regio zijn gevestigd. |
+| [!DNL Snowflake Streaming] (beperkte beschikbaarheid) | Maak een live [!DNL Snowflake] gegevensuitwisseling om streaming publiek-updates rechtstreeks als gedeelde tabellen in uw account te ontvangen. Deze integratie is momenteel beschikbaar voor klantenorganisaties die in de VA7-regio zijn gevestigd. |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
 | --- | --- |
 | Ondersteuning voor [!DNL AES256] servercodering in [!DNL Amazon S3] -doelen | [!DNL Amazon S3] -doelen bieden nu ondersteuning voor [!DNL AES256] server-side codering, waardoor uw geëxporteerde gegevens beter worden beveiligd. U kunt deze coderingsmethode configureren wanneer u de [!DNL Amazon S3] -doelverbindingen instelt of bijwerkt, zodat uw gegevens in rust worden gecodeerd met de gangbare [!DNL AES256] -coderingsalgoritmen. Raadpleeg de [[!DNL Amazon] documentatie](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html) voor meer informatie. |
-| [&#x200B; Verscheidene nieuwe bestemmingen die publiek-vlakke controle &#x200B;](../dataflows/ui/monitor-destinations.md#audience-level-view) steunen | De volgende bestemmingen steunen nu publiek-vlakke controle: <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] Betrokkenheid account</li><li>[!DNL The Trade Desk]</li></ul> |
-| Oplossing voor instructies voor het exporteren van gegevens | Er is een correctie toegepast op de exportinstructies voor de gegevensset. Eerder, werden sommige datasets die een timestamp kolom omvatten maar __ gebaseerd op het schema van de Gebeurtenissen van de Ervaring XDM niet verkeerd behandeld als datasets van de Gebeurtenissen van de Ervaring, die de uitvoer beperken tot een terugkijkvenster van 365 dagen. De gedocumenteerde naslaggids voor 365 dagen is nu uitsluitend van toepassing op datasets van Experience Events. Datasets die een ander schema gebruiken dan het schema voor XDM Experience Events worden nu beheerst door de handleiding voor 10 miljard records. Sommige klanten kunnen verhoogde uitvoeraantallen voor datasets zien die verkeerd onder het terugkijkvenster van 365 dagen vielen. Dit laat u toe om datasets voor vooruitlopende werkschema&#39;s uit te voeren die een lang raadplegingsvenster hebben. Voor meer informatie, lees de [&#x200B; de uitvoergidsen van de dataset &#x200B;](../destinations/guardrails.md#dataset-exports). |
+| [ Verscheidene nieuwe bestemmingen die publiek-vlakke controle ](../dataflows/ui/monitor-destinations.md#audience-level-view) steunen | De volgende bestemmingen steunen nu publiek-vlakke controle: <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>[!DNL Salesforce Marketing Cloud] Betrokkenheid account</li><li>[!DNL The Trade Desk]</li></ul> |
+| Oplossing voor instructies voor het exporteren van gegevens | Er is een correctie toegepast op de exportinstructies voor de gegevensset. Eerder, werden sommige datasets die een timestamp kolom omvatten maar __ gebaseerd op het schema van de Gebeurtenissen van de Ervaring XDM niet verkeerd behandeld als datasets van de Gebeurtenissen van de Ervaring, die de uitvoer beperken tot een terugkijkvenster van 365 dagen. De gedocumenteerde naslaggids voor 365 dagen is nu uitsluitend van toepassing op datasets van Experience Events. Datasets die een ander schema gebruiken dan het schema voor XDM Experience Events worden nu beheerst door de handleiding voor 10 miljard records. Sommige klanten kunnen verhoogde uitvoeraantallen voor datasets zien die verkeerd onder het terugkijkvenster van 365 dagen vielen. Dit laat u toe om datasets voor vooruitlopende werkschema&#39;s uit te voeren die een lang raadplegingsvenster hebben. Voor meer informatie, lees de [ de uitvoergidsen van de dataset ](../destinations/guardrails.md#dataset-exports). |
 | Verbeterde publieksrapportage voor zakelijke doelen | Verbeterde publiek-vlakke rapporteringslogica voor ondernemingsbestemmingen. Na deze release zullen klanten nauwkeurigere publieksrapportagenummers zien met alleen publiek dat relevant is voor de geselecteerde bestemming. Deze aanpassing van de bewaking zorgt ervoor dat de rapportage alleen betrekking heeft op publiek dat is toegewezen aan de dataflow, zodat duidelijker inzicht wordt verkregen in de feitelijke activering van gegevens. Dit heeft geen invloed op de hoeveelheid gegevens die wordt geactiveerd, maar is louter een verbetering van de controle om de nauwkeurigheid van de rapportage te verbeteren. |
 
 Voor meer informatie leest u het [overzicht van bestemmingen](../destinations/home.md).
@@ -90,7 +92,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Bron | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} [!DNL Talon.one] bronnen voor loyaliteitsgegevens | Met de [!DNL Talon.One] -bronnen kunt u batchgegevens en streaming loyaliteitsgegevens invoeren in Experience Platform. De schakelaar steunt het stromen van profielgegevens, transactiegegevens, en loyaliteitsgegevens met inbegrip van verdiende punten, afgeloste punten, verlopen punten, en rijgegevens. |
+| [!BADGE  Beta ]{type=Informative} [!DNL Talon.one] bronnen voor loyaliteitsgegevens | Met de [!DNL Talon.One] -bronnen kunt u batchgegevens en streaming loyaliteitsgegevens invoeren in Experience Platform. De schakelaar steunt het stromen van profielgegevens, transactiegegevens, en loyaliteitsgegevens met inbegrip van verdiende punten, afgeloste punten, verlopen punten, en rijgegevens. |
 
 **Bijgewerkte bronnen**
 
