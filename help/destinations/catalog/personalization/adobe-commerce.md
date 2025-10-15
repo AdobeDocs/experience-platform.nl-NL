@@ -23,7 +23,7 @@ Om deze bestemmingsverbinding te gebruiken, zorg ervoor dat u toegang hebt tot:
 
 - [&#x200B; Adobe Experience Platform &#x200B;](https://experience.adobe.com/)
 - [&#x200B; Adobe Developer Console &#x200B;](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Met toegang tot de ontwikkelaarsconsole, kunt u de dienstrekening en credentieinformatie bekijken die nodig is om [&#x200B; de configuratie &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=nl-NL#configure-the-extension) van de uitbreiding in Adobe Commerce te voltooien.
-- [&#x200B; versie van de Wolk van de Handel van Adobe 2.4.4 of hoger &#x200B;](https://business.adobe.com/products/magento/magento-commerce.html)
+- [&#x200B; versie van de Wolk van de Handel van Adobe 2.4.4 of hoger &#x200B;](https://business.adobe.com/nl/products/magento/magento-commerce.html)
 
 In Experience Platform maakt u het volgende:
 

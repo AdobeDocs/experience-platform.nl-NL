@@ -265,7 +265,7 @@ Ja. Het [&#x200B; Beheers en Toestemmingsbeleid van Gegevens &#x200B;](../data-g
 ### Zijn de [!DNL Adobe Target] en [!DNL Custom Personalization] bestemmingen [!DNL HIPAA] compatibel?
 
 +++Antwoord
-[!DNL Adobe Target] is niet [!DNL HIPPA] - volgzaam met [[!DNL Adobe Healthcare Shield] &#x200B;](https://business.adobe.com/solutions/industries/healthcare.html). Klanten dienen met hun eigen juridische teams na te gaan of [!DNL HIPPA] gereed is voor aangepaste optimalisatiekanalen voordat ze de randaanpassing via [!DNL Adobe Target] of de [!DNL Custom Personalization] -doelen gebruiken.
+[!DNL Adobe Target] is niet [!DNL HIPPA] - volgzaam met [[!DNL Adobe Healthcare Shield] &#x200B;](https://business.adobe.com/nl/solutions/industries/healthcare.html). Klanten dienen met hun eigen juridische teams na te gaan of [!DNL HIPPA] gereed is voor aangepaste optimalisatiekanalen voordat ze de randaanpassing via [!DNL Adobe Target] of de [!DNL Custom Personalization] -doelen gebruiken.
 
 Wanneer het beheer van het toestemmingsbeleid op schaal moet worden toegepast, moeten klanten [!DNL Adobe Privacy & Security Shield] kopen. [!DNL Adobe Privacy & Security Shield] -functies worden verkocht als een geavanceerde suite van mogelijkheden en worden mogelijk niet afzonderlijk aangeschaft.
 
