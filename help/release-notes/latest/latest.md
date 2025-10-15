@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
 workflow-type: tm+mt
-source-wordcount: '1499'
-ht-degree: 92%
+source-wordcount: '1605'
+ht-degree: 86%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 92%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -90,7 +90,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Op modellen gebaseerde schema&#39;s | Vereenvoudig uw gegevensmodellering met op modellen gebaseerde schema&#39;s. U kunt nu eenvoudiger schema&#39;s maken met uitgebreide voorbeelden en richtlijnen. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en zal worden uitgebreid naar Data Distiller-klanten bij GA, waardoor gegevensmodellering toegankelijker en efficiënter wordt. De functie biedt ondersteuning voor gegevens uit tijdreeksen en mogelijkheden voor het vastleggen van gewijzigde gegevens. |
-| Data Mirror | Breng veranderingen op rijniveau van de pakhuizen van wolkengegevens (b.v., Snowflake, Databricks, BigQuery) in Adobe Experience Platform met model-gebaseerde schema&#39;s voor. Data Mirror elimineert stroomopwaartse ETL en bewaart verhoudingen, versioning, en schrappingen door bestaande gegevensbestandstructuren direct in het gegevensmeer te weerspiegelen. De tijdreeks en het gedrag van het registratieschema van de verslaggebeurtenis met de mogelijkheden van de verandering van gegevens vangen allen worden gesteund. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en wordt uitgebreid via deze beperkte release, ook voor Customer Journey Analytics-klanten. Zie de [&#x200B; documentatie van Data Mirror &#x200B;](../../xdm/data-mirror/overview.md) voor meer details. Neem contact op met uw Adobe-vertegenwoordiger voor toegang. |
+| Data Mirror | Breng veranderingen op rijniveau van de pakhuizen van wolkengegevens (b.v., Snowflake, Databricks, BigQuery) in Adobe Experience Platform met model-gebaseerde schema&#39;s voor. Data Mirror elimineert stroomopwaartse ETL en bewaart verhoudingen, versioning, en schrappingen door bestaande gegevensbestandstructuren direct in het gegevensmeer te weerspiegelen. De tijdreeks en het gedrag van het registratieschema van de verslaggebeurtenis met de mogelijkheden van de verandering van gegevens vangen allen worden gesteund. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en wordt uitgebreid via deze beperkte release, ook voor Customer Journey Analytics-klanten. Zie de [ documentatie van Data Mirror ](../../xdm/data-mirror/overview.md) voor meer details. Neem contact op met uw Adobe-vertegenwoordiger voor toegang. |
 
 Voor meer informatie raadpleegt u het [overzicht van XDM](../../xdm/home.md).
 
@@ -102,7 +102,13 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!BADGE &#x200B; de kijkersverhogingen van het Profiel van Alpha &#x200B;]{type=Informative} | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde weergave**: kenmerken, gebeurtenissen, en inzichten zijn gecombineerd in één enkele weergave.</li><li>**Door AI gegenereerde inzichten**: op de pagina met profielgegevens worden nu door AI gegenereerde inzichten weergegeven, zodat u weet welke gegevens uit uw profiel zijn gegenereerd. Deze inzichten kunnen informatie omvatten zoals propensity-scores en trendanalyse.</li><li>**Stijlupdate**: de pagina met profielgegevens is visueel vernieuwd.</li><li>**Bladeren**: u kunt nu uw profielen verkennen via een interactieve, op kaarten gebaseerde carrousel met zoek- en aanpassingsmogelijkheden.</li></ul> |
+| [!BADGE  de kijkersverhogingen van het Profiel van Alpha ]{type=Informative} | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde weergave**: kenmerken, gebeurtenissen, en inzichten zijn gecombineerd in één enkele weergave.</li><li>**Door AI gegenereerde inzichten**: op de pagina met profielgegevens worden nu door AI gegenereerde inzichten weergegeven, zodat u weet welke gegevens uit uw profiel zijn gegenereerd. Deze inzichten kunnen informatie omvatten zoals propensity-scores en trendanalyse.</li><li>**Stijlupdate**: de pagina met profielgegevens is visueel vernieuwd.</li><li>**Bladeren**: u kunt nu uw profielen verkennen via een interactieve, op kaarten gebaseerde carrousel met zoek- en aanpassingsmogelijkheden.</li></ul> |
+
+**Belangrijke updates**
+
+| Bijwerken | Beschrijving |
+| ------ | ----------- |
+| API-afleiding profiel verwijderen | Het [ Profiel schrapt API ](/help/profile/api/entities.md#delete-entity) zal tegen eind oktober 2025 worden afgekeurd. Als u verslag schrapt verrichtingen wilt uitvoeren, kunt u het [ verslag van de Levenscyclus van Gegevens gebruiken schrapt API werkschema ](/help/hygiene/api/workorder.md) of het [ het verslag van de Levenscyclus van Gegevens schrapt UI ](/help/hygiene/ui/record-delete.md) in plaats daarvan. De workflows van de gegevenslevenscyclus bieden end-to-end levenscyclustracering en maandelijkse quota&#39;s die u kunt bekijken en beheren. <br/><br/> nadat het eindpunt is afgekeurd, zal om het even welke gebruiker die momenteel dit eindpunt gebruikt toegang tot dit eindpunt blijven hebben. Het einde van de levensduur van dit product wordt apart bekendgemaakt. Neem contact op met de klantenservice van Adobe als u vragen hebt. |
 
 Voor meer informatie raadpleegt u het [overzicht van het realtime-klantenprofiel](../../profile/home.md).
 

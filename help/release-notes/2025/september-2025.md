@@ -2,10 +2,10 @@
 title: Aanvullende informatie van september 2025 voor Adobe Experience Platform
 description: Aanvullende informatie voor de versie van september 2025 voor Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
 workflow-type: tm+mt
-source-wordcount: '1413'
-ht-degree: 98%
+source-wordcount: '1519'
+ht-degree: 92%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 98%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -106,7 +106,13 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!BADGE &#x200B; Alpha &#x200B;]{type=Informative} Deze eigenschap is momenteel in Alpha. Verbeteringen voor profielviewer | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde weergave**: kenmerken, gebeurtenissen, en inzichten zijn gecombineerd in één enkele weergave.</li><li>**Door AI gegenereerde inzichten**: op de pagina met profielgegevens worden nu door AI gegenereerde inzichten weergegeven, zodat u weet welke gegevens uit uw profiel zijn gegenereerd. Deze inzichten kunnen informatie omvatten zoals propensity-scores en trendanalyse.</li><li>**Stijlupdate**: de pagina met profielgegevens is visueel vernieuwd.</li><li>**Bladeren**: u kunt nu uw profielen verkennen via een interactieve, op kaarten gebaseerde carrousel met zoek- en aanpassingsmogelijkheden.</li></ul> |
+| [!BADGE  Alpha ]{type=Informative} Deze eigenschap is momenteel in Alpha. Verbeteringen voor profielviewer | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde weergave**: kenmerken, gebeurtenissen, en inzichten zijn gecombineerd in één enkele weergave.</li><li>**Door AI gegenereerde inzichten**: op de pagina met profielgegevens worden nu door AI gegenereerde inzichten weergegeven, zodat u weet welke gegevens uit uw profiel zijn gegenereerd. Deze inzichten kunnen informatie omvatten zoals propensity-scores en trendanalyse.</li><li>**Stijlupdate**: de pagina met profielgegevens is visueel vernieuwd.</li><li>**Bladeren**: u kunt nu uw profielen verkennen via een interactieve, op kaarten gebaseerde carrousel met zoek- en aanpassingsmogelijkheden.</li></ul> |
+
+**Belangrijke updates**
+
+| Bijwerken | Beschrijving |
+| ------ | ----------- |
+| API-afleiding profiel verwijderen | Het [ Profiel schrapt API ](/help/profile/api/entities.md#delete-entity) zal tegen eind oktober 2025 worden afgekeurd. Als u verslag schrapt verrichtingen wilt uitvoeren, kunt u het [ verslag van de Levenscyclus van Gegevens gebruiken schrapt API werkschema ](/help/hygiene/api/workorder.md) of het [ het verslag van de Levenscyclus van Gegevens schrapt UI ](/help/hygiene/ui/record-delete.md) in plaats daarvan. De workflows van de gegevenslevenscyclus bieden end-to-end levenscyclustracering en maandelijkse quota&#39;s die u kunt bekijken en beheren. <br/><br/> nadat het eindpunt is afgekeurd, zal om het even welke gebruiker die momenteel dit eindpunt gebruikt toegang tot dit eindpunt blijven hebben. Het einde van de levensduur van dit product wordt apart bekendgemaakt. Neem contact op met de klantenservice van Adobe als u vragen hebt. |
 
 Voor meer informatie raadpleegt u het [overzicht van het realtime-klantenprofiel](../../profile/home.md).
 
