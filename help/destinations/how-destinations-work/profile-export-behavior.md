@@ -47,7 +47,7 @@ Het samenvoegingsbeleid is configureerbaar, en de bestemmingsontwikkelaars kunne
 
 >[!IMPORTANT]
 >
-> De bestemmingen van de onderneming zijn beschikbaar slechts aan [&#x200B; Adobe Real-Time Customer Data Platform Ultimate &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> De bestemmingen van de onderneming zijn beschikbaar slechts aan [&#x200B; Adobe Real-Time Customer Data Platform Ultimate &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 De [&#x200B; ondernemingsbestemmingen &#x200B;](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform zijn Amazon Kinesis, Azure Event Hubs, en HTTP API.
 
