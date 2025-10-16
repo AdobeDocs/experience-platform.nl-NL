@@ -19,9 +19,9 @@ intro blurb
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Dataflows ](../home.md): Dataflows vertegenwoordigen gegevensbanen die informatie over Experience Platform overbrengen. Zij worden gevormd over diverse diensten om de beweging van gegevens van bronschakelaars aan doeldatasets, evenals aan de Dienst van de Identiteit, het Profiel van de Klant in real time, en Doelen te vergemakkelijken.
-* [ de Dienst van de Segmentatie ](../../segmentation/home.md):
-* [ Capaciteiten ](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform, laten de capaciteiten u weten als uw organisatie om het even welk van uw gidsen heeft overschreden en geeft u informatie over hoe te om deze kwesties te bevestigen.
+* [&#x200B; Dataflows &#x200B;](../home.md): Dataflows vertegenwoordigen gegevensbanen die informatie over Experience Platform overbrengen. Zij worden gevormd over diverse diensten om de beweging van gegevens van bronschakelaars aan doeldatasets, evenals aan de Dienst van de Identiteit, het Profiel van de Klant in real time, en Doelen te vergemakkelijken.
+* [&#x200B; de Dienst van de Segmentatie &#x200B;](../../segmentation/home.md):
+* [&#x200B; Capaciteiten &#x200B;](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform, laten de capaciteiten u weten als uw organisatie om het even welk van uw gidsen heeft overschreden en geeft u informatie over hoe te om deze kwesties te bevestigen.
 
 ## Metrische gegevens voor streaming publiek controleren {#streaming-audience-metrics}
 
@@ -44,9 +44,9 @@ De volgende lijst verstrekt meer gedetailleerde informatie over de metriek die v
 | Evaluatiepercentage | Het aantal verwerkte publieksevaluaties per seconde. | Sandbox, gegevensset |
 | P95-inlaatlatentie | De 95e percentiele latentie van de succesvolle gebeurtenis die in het publiek aankomt. | Sandbox, gegevensset |
 | Ontvangen records | Het totale aantal records dat tijdens het geselecteerde tijdvenster van streamingopname voor streamingsegmentatie is ontvangen. | Gegevensset |
-| Gedownloade records | Het totale aantal verslagen dat **** met succes het stromen segmentatie tijdens het geselecteerde tijdvenster evalueerde. | Gegevensset |
-| Records mislukt | Het totale aantal verslagen dat **** evaluatie in het stromen segmentatie wegens fouten tijdens het geselecteerde tijdvenster ontbrak. | Dataset, Flow-uitvoering |
-| Records overgeslagen | Het totale aantalverslagen die **** evaluatie in het stromen segmentatie wegens fouten tijdens het geselecteerde tijdvenster overgeslagen. | Dataset, Flow-uitvoering |
+| Gedownloade records | Het totale aantal verslagen dat **&#x200B;**&#x200B;met succes het stromen segmentatie tijdens het geselecteerde tijdvenster evalueerde. | Gegevensset |
+| Records mislukt | Het totale aantal verslagen dat **&#x200B;**&#x200B;evaluatie in het stromen segmentatie wegens fouten tijdens het geselecteerde tijdvenster ontbrak. | Dataset, Flow-uitvoering |
+| Records overgeslagen | Het totale aantalverslagen die **&#x200B;**&#x200B;evaluatie in het stromen segmentatie wegens fouten tijdens het geselecteerde tijdvenster overgeslagen. | Dataset, Flow-uitvoering |
 | Profielen gekwalificeerd | Het aantal profielen dat tijdens het geselecteerde tijdvenster voor het publiek is gekwalificeerd. | Sandbox, publiek |
 | Profielen gediskwalificeerd | Het aantal profielen dat tijdens het geselecteerde tijdvenster van het publiek is uitgesloten. | Sandbox, publiek |
 
