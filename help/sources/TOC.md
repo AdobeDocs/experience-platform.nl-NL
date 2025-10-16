@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1065'
 ht-degree: 7%
 
 ---
@@ -102,7 +102,7 @@ ht-degree: 7%
       - [Schopify](connectors/ecommerce/shopify.md)
       - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
-      - [&#x200B; Lokale dossier uploadt schakelaar &#x200B;](connectors/local-system/local-file-upload.md)
+      - [ Lokale dossier uploadt schakelaar ](connectors/local-system/local-file-upload.md)
    - Loyalty {#loyalty}
       - [Capillary Streaming-gebeurtenissen](connectors/loyalty/capillary.md)
    - Marketing automatiseren {#marketing-automation}
@@ -181,8 +181,6 @@ ht-degree: 7%
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Schopify](tutorials/api/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/api/create/ecommerce/shopify-streaming.md)
-      - Loyalty {#loyalty}
-         - [Capillary Streaming-gebeurtenissen](tutorials/api/create/loyalty/capillary.md)
       - Marketing automatiseren {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -314,7 +312,7 @@ ht-degree: 7%
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
-         - [&#x200B; Lokale dossier uploadt &#x200B;](tutorials/ui/create/local-system/local-file-upload.md)
+         - [ Lokale dossier uploadt ](tutorials/ui/create/local-system/local-file-upload.md)
       - Loyalty {#loyalty}
          - [Capillary Streaming-gebeurtenissen](tutorials/ui/create/loyalty/capillary.md)
       - Marketing automatiseren {#marketing-automation}
@@ -399,5 +397,5 @@ ht-degree: 7%
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
-- [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

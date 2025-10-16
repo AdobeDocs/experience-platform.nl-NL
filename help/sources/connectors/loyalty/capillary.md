@@ -3,9 +3,9 @@ title: Overzicht van Capillary Streaming-gebeurtenissen
 description: Leer hoe u gegevens kunt streamen van Capillary naar Experience Platform.
 badge: Beta
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: 428aed259343f56a2bf493b40ff2388340fffb7b
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [!DNL Capillary Technologies] is een toonaangevend platform voor loyaliteit en betrokkenheid dat door meer dan 300 merken over de hele wereld wordt vertrouwd. Gebruik de [!DNL Capillary Streaming Events] -bron om uw bedrijf in staat te stellen probleemloos klantenprofielen, loyaliteitsgegevens en transactionele gebeurtenissen van [!DNL Capillary] naar Adobe Experience Platform te streamen. Sluit de [!DNL Capillary] -bron aan om realtime personalisatie, geavanceerde publiekssegmentatie en omnichannel campagneorchestratie mogelijk te maken.
 
@@ -26,51 +26,41 @@ Door [!DNL Capillary] te integreren met Experience Platform kunt u:
 
 ## Vereisten
 
-Voordat u verbinding maakt met Adobe Experience Platform, moet u controleren of u:[!DNL Capillary]
+Voordat u [!DNL Capillary] verbindt met Adobe Experience Platform, moet u het volgende controleren:
 
 * Een geldige **identiteitskaart van de Organisatie van Adobe** en toegang tot een toegelaten zandbak van Experience Platform.
-* **[!DNL Capillary]brongeloofsbrieven** (identiteitskaart van de Cliënt en Geheime cliënt).
-* De benodigde machtigingen in de Adobe Admin Console om bronnen en gegevensstromen te maken.
+* U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Capillary] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
 
-### Vereiste referenties verzamelen
+### Een schema maken
 
-U moet waarden opgeven voor de volgende referenties om uw [!DNL Capillary] -account aan Experience Platform te koppelen:
+U moet een schema van het Model van Gegevens van de Ervaring (XDM) creëren om een dataset te beschrijven die de mogelijke gebieden en gegevenstypes kan opslaan die van [!DNL Capillary] zullen worden verzonden.
 
-| Credentials | Beschrijving | Voorbeeld |
-| --- | --- | --- |
-| Client-id | De client-id voor de [!DNL Capillary] -bron. | `321c8a8fee0d4a06838d46f9d3109e8a` |
-| Clientgeheim | Het clientgeheim dat is uitgegeven met de client-id | `xxxxxxxxxxxxxxxxxx` |
-| Org-id | Je Adobe-organisatie-id | `0A7D42FC5DB9D3360A495FD3@AdobeOrg` |
+1. Meld u aan bij Adobe Experience Platform en open de Experience Platform via de aanmeldingsgegevens van uw organisatie.
+2. Selecteer in het navigatievenster aan de linkerkant **[!UICONTROL Schemas]** om de werkruimte van [!UICONTROL Schemas] te openen.
+3. Selecteer **[!UICONTROL Create schema]** in de rechterbovenhoek.
+4. Kies in het dialoogvenster Schema maken de optie tussen **[!UICONTROL Manual creation]** (Velden en veldgroepen zelf toevoegen) of **[!UICONTROL ML-assisted creation]** (Upload een CSV-bestand en gebruik computerlessen om een aanbevolen schema te genereren).
+5. Kies een basisklasse voor het schema (bijvoorbeeld XDM Individual Profile, XDM ExperienceEvent of Other). Als u **[!UICONTROL Other]** selecteert, kunt u een keuze maken uit beschikbare aangepaste of standaardklassen.
+6. Voer een mensvriendelijke naam en beschrijving in voor uw schema.
+7. Gebruik de Schema-editor om: veldgroepen (herbruikbare blokken velden) toe te voegen, afzonderlijke velden te definiëren (namen, gegevenstypen en opties aan te passen) en desgewenst aangepaste gegevenstypen of veldgroepen te maken als de bestaande niet op uw behoeften zijn afgestemd.
+8. Controleer de schemastructuur in het canvas. Selecteer **[!UICONTROL Finish]** om het schema te maken.
+9. (Optioneel) Bewerk velden, voeg beschrijvingen toe en pas zo nodig veldgroepen aan in de Schema-editor.
 
-Voor meer informatie bij het produceren van toegangstokens, lees de [&#x200B; de authentificatiegids van Adobe &#x200B;](https://developer.adobe.com/developer-console/docs/guides/authentication/).
+Voor gedetailleerde instructies op hoe te om een schema te creëren XDM, lees de gids bij [ het creëren van een schema gebruikend de schemageditor ](../../../xdm/tutorials/create-schema-ui.md).
 
-### Een toegangstoken genereren
+### Een gegevensset maken
 
-Gebruik vervolgens uw client-id en clientgeheim om een toegangstoken te genereren vanuit Adobe.
+Daarna, moet u een dataset tot stand brengen die verwijzingen het schema u enkel creeerde.
 
-**Verzoek**
+1. Selecteer in de gebruikersinterface van Experience Platform de optie [!UICONTROL Datasets] in de linkernavigatie om de werkruimte van [!UICONTROL Datasets] te openen.
+2. Selecteer **[!UICONTROL Create dataset]** rechtsboven.
+3. Selecteer **[!UICONTROL Create dataset from schema]** in de opties voor het maken.
+4. Zoek in de lijst naar het XDM-schema dat u eerder hebt gemaakt en selecteer dit schema. Selecteer **[!UICONTROL Next]** wanneer u het schema hebt gevonden.
+5. Ga een unieke, beschrijvende naam voor uw dataset in.
+6. Voeg desgewenst een beschrijving toe waarmee toekomstige gebruikers de gegevensset kunnen identificeren.
+7. Selecteer **[!UICONTROL Finish]** om de gegevensset te maken.
 
-```shell
-curl -X POST 'https://ims-na1.adobelogin.com/ims/token' \
-  -d 'client_id={CLIENT_ID}' \
-  -d 'client_secret={CLIENT_SECRET}' \
-  -d 'grant_type=client_credentials' \
-  -d 'scope=openid AdobeID read_organizations additional_info.projectedProductContext session'
-```
+Voor gedetailleerde instructies op hoe te om een dataset tot stand te brengen, lees de [ gids UI van datasets ](../../../catalog/datasets/user-guide.md).
 
-**Reactie**
+## Verbinden [!DNL Capillary Streaming Events] met Experience Platform
 
-```json
-{
-  "access_token": "eyJhbGciOi...",
-  "token_type": "bearer",
-  "expires_in": 86399994
-}
-```
-
-## Volgende stappen
-
-Als u de vereiste instellingen voor [!DNL Capillary] hebt voltooid, leest u de volgende documentatie voor informatie over hoe u verbinding kunt maken met uw account en hoe u kunt beginnen met het streamen van gegevens van [!DNL Capillary] naar Experience Platform.
-
-* [Verbind  [!DNL Capillary Streaming Events]  met Experience Platform gebruikend API](../../tutorials/api/create/loyalty/capillary.md)
-* [Verbind  [!DNL Capillary Streaming Events]  met Experience Platform gebruikend UI](../../tutorials/ui/create/loyalty/capillary.md)
+Zodra u de eerste vereiste opstelling voor [!DNL Capillary] hebt voltooid, lees het [[!DNL Capillary Streaming Events]  leerprogramma UI ](../../tutorials/ui/create/loyalty/capillary.md) om te leren hoe u uw rekening en stroomgegevens van [!DNL Capillary] met Experience Platform kunt verbinden.
