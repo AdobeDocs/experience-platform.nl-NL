@@ -4,10 +4,10 @@ user-guide-title: Handleiding voor gegevensstromen
 user-guide-description: Leer meer over gegevensstromen en hoe u deze kunt configureren voor verschillende services.
 feature: Dataflows
 role: Developer
-source-git-commit: 2f78b70761ef676fe4ab61b89b6cbb261c99e9ca
+source-git-commit: 13fc8603cb490ff59e76c18cbb03b68488ebd005
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 21%
+source-wordcount: '71'
+ht-degree: 19%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 21%
    - [Dataflows in publiek controleren](./ui/monitor-audiences.md)
    - [Dataflows in doelen bewaken](./ui/monitor-destinations.md)
    - [Dataflows controleren voor het streamen van profielopname](./ui/monitor-streaming-profile.md)
+   - [Gegevens controleren voor streamingsegmentatie](./ui/monitor-streaming-audiences.md)
    - B2B-bewaking {#b2b}
       - [Verbeteringstaken voor profielen controleren](./ui/b2b/monitor-profile-enrichment.md)
-- [&#x200B; de Dienst API van de Stroom &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [ de Dienst API van de Stroom ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
