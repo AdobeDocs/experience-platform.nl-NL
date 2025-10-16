@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [!DNL Capillary Technologies] is een toonaangevend platform voor loyaliteit en betrokkenheid dat door meer dan 300 merken over de hele wereld wordt vertrouwd. Gebruik de [!DNL Capillary Streaming Events] -bron om uw bedrijf in staat te stellen probleemloos klantenprofielen, loyaliteitsgegevens en transactionele gebeurtenissen van [!DNL Capillary] naar Adobe Experience Platform te streamen. Sluit de [!DNL Capillary] -bron aan om realtime personalisatie, geavanceerde publiekssegmentatie en omnichannel campagneorchestratie mogelijk te maken.
 
@@ -29,7 +29,7 @@ Door [!DNL Capillary] te integreren met Experience Platform kunt u:
 Voordat u [!DNL Capillary] verbindt met Adobe Experience Platform, moet u het volgende controleren:
 
 * Een geldige **identiteitskaart van de Organisatie van Adobe** en toegang tot een toegelaten zandbak van Experience Platform.
-* U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Capillary] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
+* U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Capillary] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [&#x200B; gids UI van de toegangscontrole &#x200B;](../../../access-control/ui/overview.md).
 
 ### Een schema maken
 
@@ -45,7 +45,7 @@ U moet een schema van het Model van Gegevens van de Ervaring (XDM) creëren om e
 8. Controleer de schemastructuur in het canvas. Selecteer **[!UICONTROL Finish]** om het schema te maken.
 9. (Optioneel) Bewerk velden, voeg beschrijvingen toe en pas zo nodig veldgroepen aan in de Schema-editor.
 
-Voor gedetailleerde instructies op hoe te om een schema te creëren XDM, lees de gids bij [ het creëren van een schema gebruikend de schemageditor ](../../../xdm/tutorials/create-schema-ui.md).
+Voor gedetailleerde instructies op hoe te om een schema te creëren XDM, lees de gids bij [&#x200B; het creëren van een schema gebruikend de schemageditor &#x200B;](../../../xdm/tutorials/create-schema-ui.md).
 
 ### Een gegevensset maken
 
@@ -59,8 +59,8 @@ Daarna, moet u een dataset tot stand brengen die verwijzingen het schema u enkel
 6. Voeg desgewenst een beschrijving toe waarmee toekomstige gebruikers de gegevensset kunnen identificeren.
 7. Selecteer **[!UICONTROL Finish]** om de gegevensset te maken.
 
-Voor gedetailleerde instructies op hoe te om een dataset tot stand te brengen, lees de [ gids UI van datasets ](../../../catalog/datasets/user-guide.md).
+Voor gedetailleerde instructies op hoe te om een dataset tot stand te brengen, lees de [&#x200B; gids UI van datasets &#x200B;](../../../catalog/datasets/user-guide.md).
 
 ## Verbinden [!DNL Capillary Streaming Events] met Experience Platform
 
-Zodra u de eerste vereiste opstelling voor [!DNL Capillary] hebt voltooid, lees het [[!DNL Capillary Streaming Events]  leerprogramma UI ](../../tutorials/ui/create/loyalty/capillary.md) om te leren hoe u uw rekening en stroomgegevens van [!DNL Capillary] met Experience Platform kunt verbinden.
+Zodra u de eerste vereiste opstelling voor [!DNL Capillary] hebt voltooid, lees het [[!DNL Capillary Streaming Events]  leerprogramma UI &#x200B;](../../tutorials/ui/create/loyalty/capillary.md) om te leren hoe u uw rekening en stroomgegevens van [!DNL Capillary] met Experience Platform kunt verbinden.
