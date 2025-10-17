@@ -31,19 +31,19 @@ De looppas van de stroom vertegenwoordigt een geval van dataflow uitvoering. Bij
 
 Voor dit document is een goed begrip van de volgende Experience Platform-componenten vereist:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Dataflows ](../../../dataflows/home.md): Een dataflow is een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets, aan de Dienst van de Identiteit en het Profiel van de Klant in real time, en aan Doelen helpen verplaatsen.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Dataflows &#x200B;](../../../dataflows/home.md): Een dataflow is een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets, aan de Dienst van de Identiteit en het Profiel van de Klant in real time, en aan Doelen helpen verplaatsen.
+* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Een gegevensstroom op aanvraag maken {#create-a-dataflow-on-demand}
 
 Navigeer naar het tabblad *[!UICONTROL Dataflows]* van de werkruimte Bronnen. Van hier, vind dataflow die u op bestelling wilt in werking stellen, en selecteer dan de ellipsen (**`...`**) naast uw dataflow naam.
 
-![ een lijst van gegevens in de bronwerkruimte.](../../images/tutorials/on-demand/select-dataflow.png)
+![&#x200B; een lijst van gegevens in de bronwerkruimte.](../../images/tutorials/on-demand/select-dataflow.png)
 
 Selecteer vervolgens **[!UICONTROL Run on-demand]** in het vervolgkeuzemenu dat wordt weergegeven.
 
-![ dropdown menu van A met de Looppas op bestelling geselecteerde optie.](../../images/tutorials/on-demand/run-on-demand.png)
+![&#x200B; dropdown menu van A met de Looppas op bestelling geselecteerde optie.](../../images/tutorials/on-demand/run-on-demand.png)
 
 Vorm het programma van uw opname op bestelling. Selecteer **[!UICONTROL Ingestion start time]**, **[!UICONTROL Date range start time]**, en **[!UICONTROL Date range end time]**.
 
@@ -55,7 +55,7 @@ Vorm het programma van uw opname op bestelling. Selecteer **[!UICONTROL Ingestio
 
 Selecteer **[!UICONTROL Schedule]** en wacht even tot uw gegevensstroom op aanvraag wordt geactiveerd.
 
-![ het plannen configuratievenster voor op bestelling opnemen.](../../images/tutorials/on-demand/configure-schedule.png)
+![&#x200B; het plannen configuratievenster voor op bestelling opnemen.](../../images/tutorials/on-demand/configure-schedule.png)
 
 Selecteer de naam van uw gegevensstroom om uw gegevensstroomactiviteit te bekijken. Hier ziet u een lijst van uw dataflow looppas die zijn verwerkt. U kunt individuele herhalingen van uw dataflow looppas opnieuw in werking stellen ongeacht of zij of succesvol zijn ontbroken. Voor mislukte herhalingen kunt u met **[!UICONTROL Retry]** de uitvoering opnieuw starten nadat u eventuele fouten tijdens het maken hebt gediagnosticeerd en verholpen.
 
@@ -63,12 +63,12 @@ Selecteer de naam van uw gegevensstroom om uw gegevensstroomactiviteit te bekijk
 >
 >Als u een flowuitvoering opnieuw uitvoert, worden alleen bestanden met tijdstempels verwerkt die binnen het bereik van de oorspronkelijke uitvoering vallen.
 
-![ een lijst van verwerkte stroomlooppas voor een geselecteerde dataflow.](../../images/tutorials/on-demand/processed.png)
+![&#x200B; een lijst van verwerkte stroomlooppas voor een geselecteerde dataflow.](../../images/tutorials/on-demand/processed.png)
 
 Selecteer **[!UICONTROL Scheduled]** om een lijst van dataflow looppas te zien die voor toekomstige opname gepland is.
 
-![ een lijst van geplande stroomlooppas voor geselecteerde dataflow.](../../images/tutorials/on-demand/scheduled.png)
+![&#x200B; een lijst van geplande stroomlooppas voor geselecteerde dataflow.](../../images/tutorials/on-demand/scheduled.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe te om stroomlooppas op bestelling voor bestaande brondataflows tot stand te brengen. Voor meer informatie over bronnen, lees het [ overzicht van bronnen ](../../home.md)
+Door dit document te lezen, hebt u geleerd hoe te om stroomlooppas op bestelling voor bestaande brondataflows tot stand te brengen. Voor meer informatie over bronnen, lees het [&#x200B; overzicht van bronnen &#x200B;](../../home.md)
