@@ -19,7 +19,7 @@ Identiteitsinstellingen zijn een functie in de gebruikersinterface van de Adobe 
 
 Bekijk de volgende video voor aanvullende informatie over het gebruik van de interface [!DNL Graph Simulation] in de gebruikersinterface van de identiteitsservice:
 
->[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475968/?captions=dut&learn=on&enablevpops)
 
 Lees deze gids om te leren hoe te om uw identiteitsmontages in UI te vormen.
 

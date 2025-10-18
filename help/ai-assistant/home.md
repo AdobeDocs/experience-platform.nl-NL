@@ -61,7 +61,7 @@ Productkennis verwijst naar concepten en onderwerpen die zijn gebaseerd op Exper
 
 Bekijk de volgende video voor aanvullende informatie over productkennis van AI Assistant:
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475936/?captions=dut&learn=on)
 
 ### Operationele inzichten {#operational-insights}
 

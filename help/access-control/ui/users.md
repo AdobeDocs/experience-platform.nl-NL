@@ -29,7 +29,7 @@ Nadat u een gebruiker hebt geselecteerd, selecteert u **[!UICONTROL Save]** om d
 
 De volgende video is bedoeld als ondersteuning voor uw begrip van het beheren van beheerders voor een productprofiel.
 
->[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475947/?captions=dut&learn=on)
 
 ## Volgende stappen
 
