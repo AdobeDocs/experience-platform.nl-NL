@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->De bronnen van [!DNL Talon.One] zijn in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bronnen van [!DNL Talon.One] zijn in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Met [!DNL Talon.One] kunt u eenvoudig op maat gemaakte marketingcampagnes maken, beheren en optimaliseren die zijn afgestemd op uw klanten. Gebruik dit krachtige platform om kortingen uit te voeren, coupons te verdelen, verwijzingsprogramma&#39;s te lanceren, loyaliteitsprogramma&#39;s op te zetten, en gamified stimuli aan te bieden - allen van één scalable systeem dat wordt ontworpen om u te helpen uw publiek in dienst nemen en belonen.
 
