@@ -3,20 +3,24 @@ keywords: Experience Platform;home;populaire onderwerpen;flowservice;
 title: Creeer een Looppas van de Stroom voor On-Demand Ingestie die de Dienst API van de Stroom gebruikt
 description: Leer hoe te om een stroom tot stand te brengen die voor opname op bestelling gebruikend de Dienst API van de Stroom wordt uitgevoerd
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: b2b835faf9cf52ea0461d43b29076eaf7b0688f1
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
 
 # Een stroom maken die wordt uitgevoerd voor opname op aanvraag met de API [!DNL Flow Service]
 
-De looppas van de stroom vertegenwoordigt een geval van stroomuitvoering. Bijvoorbeeld, als een stroom om uur bij 9:00 AM, 10:00 AM, en 11:00 AM gepland is te lopen, dan zou u drie instanties van een stroomlooppas hebben. De looppas van de stroom is specifiek voor uw bepaalde organisatie.
+De looppas van de stroom vertegenwoordigt een geval van stroomuitvoering. Bijvoorbeeld, als een stroom wordt gepland om te lopen bij 9 :00 AM, 10 :00 AM, en 11 :00 AM, dan zou u drie instanties van een stroomlooppas hebben. De looppas van de stroom is specifiek voor uw bepaalde organisatie.
 
 Op bestelling kunt u een stroom maken die tegen een gegeven gegevensstroom wordt uitgevoerd. Dit staat uw gebruikers toe om een stroomlooppas tot stand te brengen, die op bepaalde parameters wordt gebaseerd en een opnamecyclus, zonder de diensttekenen tot stand te brengen. Ondersteuning voor inname op aanvraag is alleen beschikbaar voor batchbronnen.
 
-Dit leerprogramma behandelt de stappen op hoe te om op bestelling ingestie te gebruiken en een stroom tot stand te brengen die [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) gebruikt.
+Dit leerprogramma behandelt de stappen op hoe te om op bestelling ingestie te gebruiken en een stroom tot stand te brengen die [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) gebruikt.
+
+>[!TIP]
+>
+>Als u een flowuitvoering opnieuw uitvoert, worden alleen bestanden met tijdstempels verwerkt die binnen het bereik van de oorspronkelijke uitvoering vallen.
 
 ## Aan de slag
 
@@ -26,12 +30,12 @@ Dit leerprogramma behandelt de stappen op hoe te om op bestelling ingestie te ge
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [&#x200B; Bronnen &#x200B;](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [&#x200B; Sandboxen &#x200B;](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
 
 ## Een doorloop maken die wordt uitgevoerd voor een op tabellen gebaseerde bron
 
@@ -102,7 +106,7 @@ Een geslaagde reactie retourneert de details van de nieuw gemaakte flow, inclusi
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De id van de nieuwe flow-run. Zie de gids bij [&#x200B; het terugwinnen van stroomspecificaties &#x200B;](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
+| `id` | De id van de nieuwe flow-run. Zie de gids bij [ het terugwinnen van stroomspecificaties ](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
 | `etag` | De middelversie van de stroomlooppas. |
 
 <!-- 
@@ -184,9 +188,9 @@ Een geslaagde reactie retourneert de details van de nieuw gemaakte flow, inclusi
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `id` | De id van de nieuwe flow-run. Zie de gids bij [&#x200B; het terugwinnen van stroomspecificaties &#x200B;](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
+| `id` | De id van de nieuwe flow-run. Zie de gids bij [ het terugwinnen van stroomspecificaties ](../api/collect/database-nosql.md#specs) voor meer informatie over op lijst-gebaseerde looppas specificaties. |
 | `etag` | De middelversie van de stroomlooppas. |
 
 ## De stroomuitvoering controleren
 
-Zodra uw stroomlooppas is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Om uw stroomlooppas te controleren die API gebruiken, zie het leerprogramma op [&#x200B; controledataflows in API &#x200B;](./monitor.md). Om uw stroomlooppas te controleren die Experience Platform UI gebruiken, zie de gids op [&#x200B; gegevensstroom controlemogelijkheden gebruikend het controledashboard &#x200B;](../../../dataflows/ui/monitor-sources.md).
+Zodra uw stroomlooppas is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Om uw stroomlooppas te controleren die API gebruiken, zie het leerprogramma op [ controledataflows in API ](./monitor.md). Om uw stroomlooppas te controleren die Experience Platform UI gebruiken, zie de gids op [ gegevensstroom controlemogelijkheden gebruikend het controledashboard ](../../../dataflows/ui/monitor-sources.md).
