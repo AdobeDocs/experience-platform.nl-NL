@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie van de privacyregels
 description: Dit document bevat definities voor belangrijke termen met betrekking tot privacyregels die worden ondersteund door Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: ccde37961bd98275030db98440800925d3a6703e
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '2630'
+source-wordcount: '2790'
 ht-degree: 0%
 
 ---
@@ -107,9 +107,11 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 
 **Belangrijkste vestiging**: De plaats binnen de Unie dat de belangrijkste besluiten met betrekking tot gegevensverwerking worden genomen; met betrekking tot de bewerker.
 
-**MHMDAa**: [[!DNL Washington My Health My Data Act] &#x200B;](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) verbetert privacyrechten voor consumenten betreffende hun gezondheidsgegevens. Het verplicht de informatieverschaffing, de instemming van de consument en het recht om gezondheidsgegevens te verwijderen, en verbiedt de verkoop van gezondheidsgegevens zonder toestemming. Bovendien maakt de wet het onwettig om gebruik te maken van geofencing rond gezondheidszorgfaciliteiten.
+**MHMDAa**: [[!DNL Washington My Health My Data Act] ](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) verbetert privacyrechten voor consumenten betreffende hun gezondheidsgegevens. Het verplicht de informatieverschaffing, de instemming van de consument en het recht om gezondheidsgegevens te verwijderen, en verbiedt de verkoop van gezondheidsgegevens zonder toestemming. Bovendien maakt de wet het onwettig om gebruik te maken van geofencing rond gezondheidszorgfaciliteiten.
 
 **[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): Met ingang van 31 juli 2025 geeft het MCDPA de inwoners van Minnesota het recht om hun persoonsgegevens te raadplegen, te corrigeren, te verwijderen en te verkrijgen, alsook om zich te onthouden van de verkoop van gegevens, gerichte reclame en bepaalde profilering. Het is van toepassing op bedrijven die actief zijn in of zich richten op Minnesota en die gegevens verwerken van meer dan 100.000 consumenten per jaar (met uitzondering van gegevens die alleen voor betalingen bestemd zijn), of 25.000 consumenten als meer dan 25% van de inkomsten afkomstig is van de verkoop van gegevens. De betrokken entiteiten moeten redelijke maatregelen op het gebied van gegevensbeveiliging treffen en risicobeoordelingen uitvoeren.De procureur-generaal van Minnesota handhaaft de wet en kan boetes tot $7.500 per overtreding opleggen. Ondernemingen moeten echter tot 31 januari 2026 eventuele overtredingen corrigeren voordat ze worden bestraft.
+
+**MODPA**: [!DNL Maryland Online Data Privacy Act] verleent omwonenden rechten met inbegrip van toegang, correctie, schrapping, en gegevensportabiliteit. Inwoners kunnen zich afmelden voor gerichte reclame, verkoop van persoonsgegevens en het opstellen van profielen. De wet verbiedt afscherming rond voorzieningen voor geestelijke gezondheid of reproductieve gezondheid. De wet is van toepassing op entiteiten die gegevens verwerken van meer dan 35.000 consumenten, of op entiteiten die gegevens verwerken van meer dan 10.000 consumenten en meer dan 20% van hun inkomsten halen uit de verkoop van die gegevens. De tenuitvoerlegging wordt afgehandeld door de procureur-generaal van Maryland, met geldboeten en sancties voor overtredingen.
 
 **[!DNL Montana Consumer Data Privacy Act]**: Deze wet geeft inwoners van Montana het recht op toegang tot, correctie, verwijdering en het aanvragen van kopieën van hun persoonlijke gegevens. Het MCDPA is van toepassing op bedrijven die gegevens verwerken voor meer dan 50.000 consumenten in Montana en benadrukt de bescherming van gevoelige persoonsgegevens, zoals biometrische en genetische informatie. Het handhaaft transparantie rond gegevensinzameling, het delen, en het verkopen praktijken.
 
@@ -133,6 +135,8 @@ Dit document bevat definities voor belangrijke termen met betrekking tot privacy
 **Persoonlijke gegevens**: Om het even welke informatie met betrekking tot een natuurlijke persoon of &quot;Onderwerp van Gegevens&quot;, die kunnen worden gebruikt om de persoon direct of indirect te identificeren.
 
 **de schending van Persoonlijke gegevens**: Een schending van veiligheid die tot de toevallige of onwettige toegang tot, vernietiging, misbruik, etc., van persoonsgegevens leidt.
+
+**PIPA** (Zuid-Korea): [!DNL Personal Information Protection Act] reguleert de verwerking en bescherming van persoonsgegevens voor Zuid-Koreaanse ingezetenen. PIPA verleent ingezetenen rechten, waaronder om geïnformeerd te worden, toegang te krijgen, kopieën te verkrijgen en om correctie, verwijdering of opschorting van verwerking te verzoeken. De verantwoordelijken voor de verwerking moeten de inzamelingsdoeleinden specificeren, de gegevens zo min mogelijk rechtmatig verwerken en de nauwkeurigheid van de gegevens waarborgen. In de wet is ook de commissie voor de bescherming van persoonsgegevens opgericht, die boetes en administratieve sancties kan opleggen voor niet-naleving.
 
 **Privacy door ontwerp**: Een beginsel dat de opneming van gegevensbescherming van het begin van het ontwerpen van systemen, eerder dan een toevoeging roept.
 
