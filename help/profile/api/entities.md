@@ -5,22 +5,20 @@ type: Documentation
 description: Met Adobe Experience Platform hebt u toegang tot realtime gegevens van het klantprofiel met RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
+source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2211'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van entiteiten (de toegang van het Profiel)
 
-Met Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie bij de toegang tot van profielen die [!DNL Experience Platform] UI gebruiken, gelieve te verwijzen naar de [&#x200B; de gebruikersgids van het Profiel &#x200B;](../ui/user-guide.md).
+Met Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie bij de toegang tot van profielen die [!DNL Experience Platform] UI gebruiken, gelieve te verwijzen naar de [ de gebruikersgids van het Profiel ](../ui/user-guide.md).
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] &#x200B;](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
-
->[!BEGINSHADEBOX]
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] ](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Entiteitsafwikkeling
 
@@ -28,7 +26,16 @@ Als onderdeel van de architectuurupgrade introduceert Adobe entiteitresolutie vo
 
 Dankzij deze verbetering kan Experience Platform meerdere records die dezelfde entiteit vertegenwoordigen, identificeren en verenigen, waardoor de gegevensconsistentie wordt verbeterd en het publiek nauwkeuriger wordt gesegmenteerd.
 
-Eerder, baseerden de Rekeningen en de Kansen zich op op identiteitsgrafiek-gebaseerde resolutie die identiteiten, met inbegrip van alle historische ingesties verbond. Bij de nieuwe aanpak van de afwikkeling van entiteiten worden identiteiten alleen gekoppeld op basis van de meest recente gegevens
+Eerder, baseerden de Rekeningen en de Kansen zich op op identiteitsgrafiek-gebaseerde resolutie die identiteiten, met inbegrip van alle historische ingesties verbond. Bij de nieuwe aanpak van de afwikkeling van entiteiten zijn identiteiten alleen gekoppeld op basis van de meest recente gegevens.
+
+- Account en Opportunity zijn een entiteit die wordt opgelost met een op tijd gebaseerde samenvoeging die gebaseerd is op samenvoegen:
+   - Account: identiteiten die de naamruimte `b2b_account` gebruiken.
+   - Opportunity: identiteiten gebruiken de naamruimte `b2b_opportunity` .
+- Alle andere entiteiten zijn verenigd en alleen primaire identiteitsoverlap wordt samengevoegd met op tijd gebaseerde samenvoeging.
+
+>[!NOTE]
+>
+>Het oplossen van entiteiten ondersteunt alleen `b2b_account` en `b2b_opportunity` . Identiteiten uit andere naamruimten worden niet gebruikt bij de afwikkeling van entiteiten. Als u aangepaste naamruimten gebruikt, kunt u geen accounts en mogelijkheden vinden.
 
 ### Hoe werkt het oplossen van entiteiten?
 
@@ -36,8 +43,6 @@ Eerder, baseerden de Rekeningen en de Kansen zich op op identiteitsgrafiek-gebas
 - **na**: Als het aantal DUNS als extra identiteit werd gebruikt en het aantal DUNS van de rekening in een bronsysteem als CRM werd bijgewerkt, wordt rekeningidentiteitskaart slechts verbonden met het nieuwe aantal DUNS, daardoor die nauwkeuriger op de huidige staat van rekening wijst.
 
 Als gevolg van deze update weerspiegelt de API van [!DNL Profile Access] nu de meest recente weergave van het samenvoegprofiel nadat een taakcyclus voor het oplossen van entiteiten is voltooid. Bovendien bieden de consistente gegevens gebruiksgevallen, zoals segmentatie, activering en analyse, met een verbeterde gegevensnauwkeurigheid en consistentie.
-
->[!ENDSHADEBOX]
 
 ## Entiteiten ophalen {#retrieve-entity}
 
@@ -65,13 +70,13 @@ Om tot een entiteit van het Profiel toegang te hebben, moet u **de volgende vraa
 
 - `schema.name`: De naam van het XDM-schema van de entiteit. In dit geval wordt de instructie `schema.name=_xdm.context.profile` gebruikt.
 - `entityId`: De id van de entiteit die u probeert op te halen.
-- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
+- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **** geen XID is.
 
 Bovendien, wordt het gebruik van de volgende vraagparameter *hoogst* geadviseerd:
 
 - `mergePolicyId`: De id van het samenvoegbeleid waarmee u de gegevens wilt filteren. Als er geen samenvoegbeleid is opgegeven, wordt het standaardsamenvoegbeleid van uw organisatie gebruikt.
 
-Een volledige lijst van geldige parameters wordt verstrekt in de [&#x200B; sectie van vraagparameters &#x200B;](#query-parameters) van appendix.
+Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
 
 **Verzoek**
 
@@ -178,17 +183,17 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;).
 
-Om tot de B2B gegevens van de Rekening toegang te hebben, moet u **&#x200B;**&#x200B;de volgende vraagparameters verstrekken:
+Om tot de B2B gegevens van de Rekening toegang te hebben, moet u **** de volgende vraagparameters verstrekken:
 
 - `schema.name`: De naam van het XDM-schema van de entiteit. In dit geval is deze waarde `schema.name=_xdm.context.account` .
 - `entityId`: De id van de entiteit die u probeert op te halen.
-- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
+- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **** geen XID is.
 
 Bovendien, wordt het gebruik van de volgende vraagparameter *hoogst* geadviseerd:
 
 - `mergePolicyId`: De id van het samenvoegbeleid waarmee u de gegevens wilt filteren. Als er geen samenvoegbeleid is opgegeven, wordt het standaardsamenvoegbeleid van uw organisatie gebruikt.
 
-Een volledige lijst van geldige parameters wordt verstrekt in de [&#x200B; sectie van vraagparameters &#x200B;](#query-parameters) van appendix.
+Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
 
 **Verzoek**
 
@@ -274,17 +279,17 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;).
 
-Om tot een entiteit van de Kans B2B toegang te hebben, moet u **&#x200B;**&#x200B;de volgende vraagparameters verstrekken:
+Om tot een entiteit van de Kans B2B toegang te hebben, moet u **** de volgende vraagparameters verstrekken:
 
 - `schema.name`: De naam van het XDM-schema van de entiteit. In dit geval wordt de instructie `schema.name=_xdm.context.opportunity` gebruikt.
 - `entityId`: De id van de entiteit die u probeert op te halen.
-- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
+- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **** geen XID is.
 
 Bovendien, wordt het gebruik van de volgende vraagparameter *hoogst* geadviseerd:
 
 - `mergePolicyId`: De id van het samenvoegbeleid waarmee u de gegevens wilt filteren. Als er geen samenvoegbeleid is opgegeven, wordt het standaardsamenvoegbeleid van uw organisatie gebruikt.
 
-Een volledige lijst van geldige parameters wordt verstrekt in de [&#x200B; sectie van vraagparameters &#x200B;](#query-parameters) van appendix.
+Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
 
 **Verzoek**
 
@@ -1219,7 +1224,7 @@ Als de reactie is gelukt, wordt de volgende pagina met resultaten geretourneerd.
 
 >[!IMPORTANT]
 >
->Het eindpunt van de verwijderingsentiteit wordt eind oktober 2025 vervangen. Als u verslag schrapt verrichtingen wilt uitvoeren, kunt u het [&#x200B; verslag van de Levenscyclus van Gegevens gebruiken schrapt API werkschema &#x200B;](/help/hygiene/api/workorder.md) of het [&#x200B; het verslag van de Levenscyclus van Gegevens schrapt UI &#x200B;](/help/hygiene/ui/record-delete.md) in plaats daarvan.
+>Het eindpunt van de verwijderingsentiteit wordt eind oktober 2025 vervangen. Als u verslag schrapt verrichtingen wilt uitvoeren, kunt u het [ verslag van de Levenscyclus van Gegevens gebruiken schrapt API werkschema ](/help/hygiene/api/workorder.md) of het [ het verslag van de Levenscyclus van Gegevens schrapt UI ](/help/hygiene/ui/record-delete.md) in plaats daarvan.
 >
 >Bovendien zijn verwijderingsaanvragen voor de volgende B2B-entiteiten al afgekeurd:
 >
@@ -1242,11 +1247,11 @@ DELETE /access/entities?{QUERY_PARAMETERS}
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;).
 
-Om een entiteit te schrappen, moet u **&#x200B;**&#x200B;de volgende vraagparameters verstrekken:
+Om een entiteit te schrappen, moet u **** de volgende vraagparameters verstrekken:
 
 - `schema.name`: De naam van het XDM-schema van de entiteit. In dit gebruiksgeval, kunt u **slechts** gebruiken `schema.name=_xdm.context.profile`.
 - `entityId`: De id van de entiteit die u probeert op te halen.
-- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
+- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **** geen XID is.
 - `mergePolicyId`: De id van het samenvoegbeleid van de entiteit. Het samenvoegingsbeleid bevat informatie over identiteitsstitching en key-value XDM voorwerp het samenvoegen. Als deze waarde niet wordt opgegeven, wordt het standaardsamenvoegbeleid gebruikt.
 
 **Verzoek**
@@ -1271,7 +1276,7 @@ Een geslaagde reactie retourneert HTTP status 202 met een lege antwoordinstantie
 
 ## Volgende stappen
 
-In deze handleiding hebt u toegang tot gegevensvelden, profielen en gegevens uit de tijdreeks van [!DNL Real-Time Customer Profile] . Leren hoe te om tot andere gegevensmiddelen toegang te hebben die in [!DNL Experience Platform] worden opgeslagen, zie het [&#x200B; overzicht van de Toegang van Gegevens &#x200B;](../../data-access/home.md).
+In deze handleiding hebt u toegang tot gegevensvelden, profielen en gegevens uit de tijdreeks van [!DNL Real-Time Customer Profile] . Leren hoe te om tot andere gegevensmiddelen toegang te hebben die in [!DNL Experience Platform] worden opgeslagen, zie het [ overzicht van de Toegang van Gegevens ](../../data-access/home.md).
 
 ## Bijlage {#appendix}
 
@@ -1284,10 +1289,10 @@ De volgende parameters worden gebruikt in de weg voor GET- verzoeken aan het `/a
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
 | `schema.name` | **(Vereist)** De naam van het schema XDM van de entiteit. | `schema.name=_xdm.context.profile` |
-| `relatedSchema.name` | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde **&#x200B;**&#x200B;het schema voor de profielentiteit specificeren dat de gebeurtenissen van de tijdreeks met betrekking tot zijn. | `relatedSchema.name=_xdm.context.profile` |
+| `relatedSchema.name` | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde **** het schema voor de profielentiteit specificeren dat de gebeurtenissen van de tijdreeks met betrekking tot zijn. | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **(Vereist)** identiteitskaart van de entiteit. Als de waarde van deze parameter geen XID is, moet een parameter van identiteitsnamespace (`entityIdNS`) ook worden verstrekt. | `entityId=janedoe@example.com` |
-| `entityIdNS` | Als `entityId` niet als XID wordt verstrekt, moet dit gebied **&#x200B;**&#x200B;de identiteit specificeren namespace. | `entityIdNS=email` |
-| `relatedEntityId` | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde **&#x200B;**&#x200B;identiteitskaart van de verwante profielentiteit specificeren. Deze waarde volgt dezelfde regels als `entityId` . | `relatedEntityId=69935279872410346619186588147492736556` |
+| `entityIdNS` | Als `entityId` niet als XID wordt verstrekt, moet dit gebied **** de identiteit specificeren namespace. | `entityIdNS=email` |
+| `relatedEntityId` | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde **** identiteitskaart van de verwante profielentiteit specificeren. Deze waarde volgt dezelfde regels als `entityId` . | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | Als `schema.name` &quot;_xdm.context.experienceEvent&quot; is, moet deze waarde de naamruimte van de identiteit opgeven voor de entiteit die is opgegeven in `relatedEntityId` . | `relatedEntityIdNS=CRMID` |
 | `fields` | Hiermee filtert u de gegevens die in de reactie worden geretourneerd. Gebruik dit om te specificeren welke waarden van het schemagebied in opgehaalde gegevens moeten omvatten. Voor meerdere velden scheidt u waarden met een komma zonder tussenruimten. | `fields=personalEmail,person.name,person.gender` |
 | `mergePolicyId` | *geadviseerde* identificeert het fusiebeleid waardoor om de teruggekeerde gegevens te regeren. Als niet in de vraag wordt gespecificeerd, zal het gebrek van uw organisatie voor dat schema worden gebruikt. Als er geen standaardsamenvoegingsbeleid is gedefinieerd voor het schema dat u aanvraagt, retourneert de API een HTTP 422-foutstatuscode. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
