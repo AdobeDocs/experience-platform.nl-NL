@@ -5,7 +5,7 @@ title: Een gegevensstroom maken voor Cloud Storage-bronnen met behulp van de Flo
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van externe cloudopslag en het naar Experience Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -14,26 +14,26 @@ ht-degree: 0%
 
 # Een gegevensstroom maken voor bronnen voor cloudopslag met de API [!DNL Flow Service]
 
-Dit leerprogramma behandelt de stappen om gegevens van een bron van de wolkenopslag terug te winnen en hen te brengen aan Experience Platform gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma behandelt de stappen om gegevens van een bron van de wolkenopslag terug te winnen en hen te brengen aan Experience Platform gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een bron voor cloudopslag hebben. Als u dit identiteitskaart niet hebt, dan zie het [&#x200B; overzicht van bronnen &#x200B;](../../../home.md#cloud-storage) voor een lijst van de bronnen van de wolkenopslag die u een basisverbinding kunt tot stand brengen met.
+>Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een bron voor cloudopslag hebben. Als u dit identiteitskaart niet hebt, dan zie het [ overzicht van bronnen ](../../../home.md#cloud-storage) voor een lijst van de bronnen van de wolkenopslag die u een basisverbinding kunt tot stand brengen met.
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde raamwerk waarmee Experience Platform gegevens over de ervaring van klanten organiseert.
-   - [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   - [&#x200B; de ontwikkelaarsgids van de Registratie van het Schema &#x200B;](../../../../xdm/api/getting-started.md): Omvat belangrijke informatie die u moet kennen om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
+   - [ Grondbeginselen van schemacompositie ](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   - [ de ontwikkelaarsgids van de Registratie van het Schema ](../../../../xdm/api/getting-started.md): Omvat belangrijke informatie die u moet kennen om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor gegevenslocatie en -lijn in Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): met de API voor batchverwerking kunt u gegevens als batchbestanden in Experience Platform invoeren.
-- [&#x200B; Sandboxes &#x200B;](../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [ Sandboxes ](../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
 
 ## Een bronverbinding maken {#source}
 
@@ -101,8 +101,8 @@ curl -X POST \
 | `data.properties.compressionType` | (Optioneel) Een eigenschap die het gecomprimeerde bestandstype voor inname definieert. De ondersteunde gecomprimeerde bestandstypen zijn: `bzip2` , `gzip` , `deflate` , `zipDeflate` , `tarGzip` en `tar` . **Nota**: Het `compressionType` bezit kan slechts worden gebruikt wanneer het opnemen van afgebakende of JSON- dossiers. |
 | `params.path` | Het pad van het bronbestand dat u opent. Deze parameter verwijst naar een afzonderlijk bestand of naar een volledige map.  **Nota**: U kunt een asterisk in plaats van het dossier gebruiken - naam om de opname van een volledige omslag te specificeren. `/acme/summerCampaign/*.csv` voert bijvoorbeeld de gehele `/acme/summerCampaign/` -map in. |
 | `params.type` | Het bestandstype van het brongegevensbestand dat u opgeeft. Gebruik het type `file` om een afzonderlijk bestand in te voeren en gebruik het type `folder` om een volledige map in te voeren. |
-| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Bij gebruik met op modellen gebaseerde schema&#39;s, baseert de vangst van veranderingsgegevens zich op de `_change_request_type` controlekolom (`u` — upsert, `d` — schrapping), die tijdens opneming maar niet opgeslagen in het doelschema wordt geëvalueerd. Deze eigenschap wordt ondersteund door de volgende bronnen voor cloudopslag: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Voor een overzicht van dit vermogen, zie het [&#x200B; overzicht van Data Mirror &#x200B;](../../../../xdm/data-mirror/overview.md). Voor implementatiedetails, lees de gids bij het gebruiken van [&#x200B; veranderingsgegevens vangen in bronnen &#x200B;](../change-data-capture.md) en [&#x200B; op model-gebaseerde schema&#39;s technische verwijzing &#x200B;](../../../../xdm/schema/model-based.md). |
-| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke bron voor cloudopslag. Zie [&#x200B; bijlage &#x200B;](#appendix) voor een lijst van verbindingsspecificiteit IDs. |
+| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Bij gebruik met relationele schema&#39;s, baseert de vangst van veranderingsgegevens zich op de `_change_request_type` controlekolom (`u` — upsert, `d` — schrapping), die tijdens opneming maar niet opgeslagen in het doelschema wordt geëvalueerd. Deze eigenschap wordt ondersteund door de volgende bronnen voor cloudopslag: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Voor een overzicht van dit vermogen, zie het [ overzicht van Data Mirror ](../../../../xdm/data-mirror/overview.md). Voor implementatiedetails, lees de gids bij het gebruiken van [ veranderingsgegevens vangen in bronnen ](../change-data-capture.md) en [ relationele schema&#39;s technische verwijzing ](../../../../xdm/schema/relational.md). |
+| `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke bron voor cloudopslag. Zie [ bijlage ](#appendix) voor een lijst van verbindingsspecificiteit IDs. |
 
 **Reactie**
 
@@ -200,15 +200,15 @@ curl -X POST \
 
 Als u de brongegevens in Experience Platform wilt gebruiken, moet u een doelschema maken om de brongegevens naar wens te structureren. Het doelschema wordt dan gebruikt om een dataset van Experience Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Registratie API van het Schema &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/) uit te voeren.
+Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://www.adobe.io/experience-platform-apis/references/schema-registry/) uit te voeren.
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [&#x200B; creërend een schema gebruikend API &#x200B;](../../../../xdm/api/schemas.md).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](../../../../xdm/api/schemas.md).
 
 ## Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Dienst API van de Catalogus uit te voeren &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
+Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [&#x200B; het creëren van een dataset gebruikend API &#x200B;](../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](../../../../catalog/api/create-dataset.md).
 
 ## Een doelverbinding maken {#target-connection}
 
@@ -273,7 +273,7 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Om een mappingsreeks tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
+Om een mappingsreeks tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
 
 >[!TIP]
 >
@@ -608,7 +608,7 @@ Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd
 
 >[!IMPORTANT]
 >
->Het wordt sterk geadviseerd om uw dataflow voor eenmalige opname te plannen wanneer het gebruiken van de [&#x200B; schakelaar van FTP &#x200B;](../../../connectors/cloud-storage/ftp.md).
+>Het wordt sterk geadviseerd om uw dataflow voor eenmalige opname te plannen wanneer het gebruiken van de [ schakelaar van FTP ](../../../connectors/cloud-storage/ftp.md).
 
 **API formaat**
 
@@ -657,10 +657,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `flowSpec.id` | De [&#x200B; identiteitskaart van de stroomspecificatie &#x200B;](#specs) die in de vorige stap wordt teruggewonnen. |
-| `sourceConnectionIds` | [&#x200B; bron verbindingsidentiteitskaart &#x200B;](#source) die in een vroegere stap wordt teruggewonnen. |
-| `targetConnectionIds` | De [&#x200B; identiteitskaart van de doelverbinding &#x200B;](#target-connection) die in een vroegere stap wordt teruggewonnen. |
-| `transformations.params.mappingId` | [&#x200B; afbeelding identiteitskaart &#x200B;](#mapping) die in een vroegere stap wordt teruggewonnen. |
+| `flowSpec.id` | De [ identiteitskaart van de stroomspecificatie ](#specs) die in de vorige stap wordt teruggewonnen. |
+| `sourceConnectionIds` | [ bron verbindingsidentiteitskaart ](#source) die in een vroegere stap wordt teruggewonnen. |
+| `targetConnectionIds` | De [ identiteitskaart van de doelverbinding ](#target-connection) die in een vroegere stap wordt teruggewonnen. |
+| `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt teruggewonnen. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week` . |
 | `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. De waarde van het interval moet een geheel getal zijn dat niet gelijk is aan nul. De minimaal toegestane intervalwaarde voor elke frequentie is als volgt:<ul><li>**Eenmaal**: n/a</li><li>**Minuut**: 15</li><li>**Uur**: 1</li><li>**Dag**: 1</li><li>**Week**: 1</li></ul> |
@@ -678,7 +678,7 @@ Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd datafl
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [&#x200B; controledataflows in API &#x200B;](../monitor.md)
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [ controledataflows in API ](../monitor.md)
 
 ## Volgende stappen
 

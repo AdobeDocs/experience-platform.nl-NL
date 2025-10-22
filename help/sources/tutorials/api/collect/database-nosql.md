@@ -3,7 +3,7 @@ title: Creeer een Dataflow voor de Bronnen van het Gegevensbestand Gebruikend de
 type: Tutorial
 description: Leer hoe u de Flow Service API kunt gebruiken om een gegevensstroom te maken en gegevens van uw database in Experience Platform in te voeren.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 0%
@@ -12,27 +12,27 @@ ht-degree: 0%
 
 # Een gegevensstroom maken voor databasebronnen met de API [!DNL Flow Service]
 
-Lees dit leerprogramma leren hoe te om een dataflow tot stand te brengen en gegevens van uw gegevensbestand in Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees dit leerprogramma leren hoe te om een dataflow tot stand te brengen en gegevens van uw gegevensbestand in Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een databasebron hebben. Als u dit identiteitskaart niet hebt, dan bezoek de [&#x200B; broncatalogus &#x200B;](../../../home.md#database) om een lijst van gegevensbestandbronnen te bekijken die u een basisverbinding kunt tot stand brengen met.
->* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC. De enige tijdstempel die voor de [[!DNL Snowflake]  bron &#x200B;](../../../connectors/databases/snowflake.md) wordt gesteund is TIMESTAMP_NTZ met tijd UTC.
+>* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een databasebron hebben. Als u dit identiteitskaart niet hebt, dan bezoek de [ broncatalogus ](../../../home.md#database) om een lijst van gegevensbestandbronnen te bekijken die u een basisverbinding kunt tot stand brengen met.
+>* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC. De enige tijdstempel die voor de [[!DNL Snowflake]  bron ](../../../connectors/databases/snowflake.md) wordt gesteund is TIMESTAMP_NTZ met tijd UTC.
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde raamwerk waarmee Experience Platform gegevens over de ervaring van klanten organiseert.
-   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [&#x200B; de ontwikkelaarsgids van de Registratie van het Schema &#x200B;](../../../../xdm/api/getting-started.md): Omvat belangrijke informatie die u moet kennen om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
+   * [ Grondbeginselen van schemacompositie ](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [ de ontwikkelaarsgids van de Registratie van het Schema ](../../../../xdm/api/getting-started.md): Omvat belangrijke informatie die u moet kennen om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor gegevenslocatie en -lijn in Experience Platform.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): met de API voor batchverwerking kunt u gegevens als batchbestanden in Experience Platform invoeren.
-* [&#x200B; Sandboxes &#x200B;](../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Sandboxes ](../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
 
 ## Een bronverbinding maken {#source}
 
@@ -113,8 +113,8 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | De verbinding-id van uw databasebron. |
 | `params.tableName` | Het pad van het bronbestand. |
-| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Wanneer gebruikt met op model-gebaseerde schema&#39;s, verandert gegevens vangt sporen tussenvoegsels, updates, en schrapt om de doeldataset te houden die met de bron wordt gesynchroniseerd. Deze eigenschap wordt ondersteund door de volgende databasebronnen: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Voor een overzicht van dit vermogen, zie het [&#x200B; overzicht van Data Mirror &#x200B;](../../../../xdm/data-mirror/overview.md). Voor implementatiedetails, zie [&#x200B; veranderingsgegevens vangen in bronnen gids &#x200B;](../change-data-capture.md) en [&#x200B; op model-gebaseerde schema&#39;s technische verwijzing &#x200B;](../../../../xdm/schema/model-based.md). |
-| `connectionSpec.id` | De id van de verbindingsspecificatie van uw databasebron. Zie [&#x200B; Bijlage &#x200B;](#appendix) voor een lijst van gegevensbestand specifieke IDs. |
+| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Wanneer gebruikt met relationele schema&#39;s, verandert gegevens vangt sporen op, werkt bij, en schrapt om de doeldataset te houden die met de bron wordt gesynchroniseerd. Deze eigenschap wordt ondersteund door de volgende databasebronnen: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Voor een overzicht van dit vermogen, zie het [ overzicht van Data Mirror ](../../../../xdm/data-mirror/overview.md). Voor implementatiedetails, zie [ veranderingsgegevens vangen in bronnen gids ](../change-data-capture.md) en [ relationele schema&#39;s technische verwijzing ](../../../../xdm/schema/relational.md). |
+| `connectionSpec.id` | De id van de verbindingsspecificatie van uw databasebron. Zie [ Bijlage ](#appendix) voor een lijst van gegevensbestand specifieke IDs. |
 
 **Reactie**
 
@@ -131,15 +131,15 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 Als u de brongegevens in Experience Platform wilt gebruiken, moet u een doelschema maken om de brongegevens naar wens te structureren. Het doelschema wordt dan gebruikt om een dataset van Experience Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Registratie API van het Schema &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/) uit te voeren.
+Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://www.adobe.io/experience-platform-apis/references/schema-registry/) uit te voeren.
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [&#x200B; creërend een schema gebruikend API &#x200B;](../../../../xdm/api/schemas.md).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](../../../../xdm/api/schemas.md).
 
 ## Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Dienst API van de Catalogus uit te voeren &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
+Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [&#x200B; het creëren van een dataset gebruikend API &#x200B;](../../../../catalog/api/create-dataset.md).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](../../../../catalog/api/create-dataset.md).
 
 ## Een doelverbinding maken {#target-connection}
 
@@ -204,7 +204,7 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Om een mappingsreeks tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
+Om een mappingsreeks tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
 
 **API formaat**
 
@@ -661,10 +661,10 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `flowSpec.id` | De [&#x200B; identiteitskaart van de stroomspecificatie &#x200B;](#specs) die in de vorige stap wordt teruggewonnen. |
-| `sourceConnectionIds` | [&#x200B; bron verbindingsidentiteitskaart &#x200B;](#source) die in een vroegere stap wordt teruggewonnen. |
-| `targetConnectionIds` | De [&#x200B; identiteitskaart van de doelverbinding &#x200B;](#target-connection) die in een vroegere stap wordt teruggewonnen. |
-| `transformations.params.mappingId` | [&#x200B; afbeelding identiteitskaart &#x200B;](#mapping) die in een vroegere stap wordt teruggewonnen. |
+| `flowSpec.id` | De [ identiteitskaart van de stroomspecificatie ](#specs) die in de vorige stap wordt teruggewonnen. |
+| `sourceConnectionIds` | [ bron verbindingsidentiteitskaart ](#source) die in een vroegere stap wordt teruggewonnen. |
+| `targetConnectionIds` | De [ identiteitskaart van de doelverbinding ](#target-connection) die in een vroegere stap wordt teruggewonnen. |
+| `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt teruggewonnen. |
 | `transformations.params.deltaColum` | De opgegeven kolom die wordt gebruikt om onderscheid te maken tussen nieuwe en bestaande gegevens. Incrementele gegevens worden opgenomen op basis van het tijdstempel van de geselecteerde kolom. De ondersteunde datumnotatie voor `deltaColumn` is `yyyy-MM-dd HH:mm:ss` . Als u Azure Table Storage gebruikt, is de ondersteunde indeling voor `deltaColumn` `yyyy-MM-ddTHH:mm:ssZ` . |
 | `transformations.params.mappingId` | De toewijzing-id die aan uw database is gekoppeld. |
 | `scheduleParams.startTime` | De begintijd voor de gegevensstroom in tijdperk. |
@@ -684,7 +684,7 @@ Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd datafl
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [&#x200B; controledataflows in API &#x200B;](../monitor.md)
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor meer informatie over hoe te om dataflows te controleren, zie het leerprogramma op [ controledataflows in API ](../monitor.md)
 
 ## Volgende stappen
 
