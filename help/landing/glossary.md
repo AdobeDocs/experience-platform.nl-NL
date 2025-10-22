@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Verklarende woordenlijst
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
 workflow-type: tm+mt
-source-wordcount: '8170'
+source-wordcount: '8169'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 **de schakelaar van Amazon S3**: De [!DNL Amazon] S3 schakelaar staat klanten van Experience Platform toe om veilig tot hun [!DNL Amazon] S3 gegevens te verbinden en toegang te hebben.
 
-**APA**: [[!DNL Australia Privacy Act (Privacy Act)] &#x200B;](https://www.oaic.gov.au/privacy/the-privacy-act) bevordert en beschermt de privacy van individuen en regelt hoe de Australische overheidsagentschappen en organisatie persoonlijke informatie behandelen. [!DNL Privacy Act] bevat beginselen die van toepassing zijn op organisaties uit de particuliere sector. Individuen hebben bijvoorbeeld het recht te begrijpen waarom de persoonlijke gegevens worden verzameld en hoe deze worden gebruikt, of ze toegang hebben tot hun gegevens, deze kunnen wissen en persoonlijke gegevens kunnen corrigeren.
+**APA**: [[!DNL Australia Privacy Act (Privacy Act)] ](https://www.oaic.gov.au/privacy/the-privacy-act) bevordert en beschermt de privacy van individuen en regelt hoe de Australische overheidsagentschappen en organisatie persoonlijke informatie behandelen. [!DNL Privacy Act] bevat beginselen die van toepassing zijn op organisaties uit de particuliere sector. Individuen hebben bijvoorbeeld het recht te begrijpen waarom de persoonlijke gegevens worden verzameld en hoe deze worden gebruikt, of ze toegang hebben tot hun gegevens, deze kunnen wissen en persoonlijke gegevens kunnen corrigeren.
 
 **voeg sparen strategie** toe: &quot;voeg&quot;opslagstrategie toe is een optie die wordt gebruikt wanneer het specificeren van derdegegevens om via een verbinding in te gaan en het toevoegen van om het even welke nieuwe gegevens of rijen aan het eind van de dataset. De eerder opgenomen rijen blijven ongewijzigd en alleen de rijen die zijn gemaakt sinds de laatste geplande run, worden opgenomen in Experience Platform. Alle rijen die in het bronsysteem zijn gewijzigd, blijven ongewijzigd op Experience Platform.
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] (ook wel [!DNL Catalog] genoemd) is het recordsysteem voor de gegevenslocatie en -lijn in Adobe Experience Platform. Hoewel alle gegevens die in Experience Platform worden opgenomen, in het datumpomeer worden opgeslagen als bestanden en mappen, bevat [!DNL Catalog] de metagegevens en een beschrijving van deze bestanden en mappen voor opzoekings-, controle- en gegevensbeheerdoeleinden.
 
-**CCPA**: [[!DNL California Consumer Privacy Act (CCPA)] &#x200B;](https://oag.ca.gov/privacy/ccpa) verbetert privacyrechten en consumentenbescherming voor ingezetenen van Californië, Verenigde Staten. De CCPA biedt de inwoners van Californië nieuwe privacyrechten op het gebied van gegevens, waaronder het recht op toegang tot en verwijdering van hun persoonsgegevens, om te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.
+**CCPA**: [[!DNL California Consumer Privacy Act (CCPA)] ](https://oag.ca.gov/privacy/ccpa) verbetert privacyrechten en consumentenbescherming voor ingezetenen van Californië, Verenigde Staten. De CCPA biedt de inwoners van Californië nieuwe privacyrechten op het gebied van gegevens, waaronder het recht op toegang tot en verwijdering van hun persoonsgegevens, om te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.
 
 **Klasse**: In het Model van de Gegevens van de Ervaring (XDM), bepaalt een klasse de kleinste reeks gebieden worden gebruikt om een schema te bouwen en bepaalt het basisgedrag van het bedrijfsvoorwerp dat het schema vertegenwoordigt.
 
@@ -111,7 +111,7 @@ ht-degree: 0%
 
 **de etiketten van het Contract (&quot;C&quot;)**: De etiketten van het de gegevensgebruik van het contract (&quot;C&quot;) worden gebruikt om gegevens te categoriseren die contractuele verplichtingen hebben of met het beleid van het gegevensbeheer van uw organisatie verwant zijn.
 
-**CPRA**: [[!DNL California Consumer Privacy Rights Act (CPRA)] &#x200B;](https://cppa.ca.gov/regulations/consumer_privacy_act.html) breidt en wijzigt gedeelten van [!DNL California Consumer Privacy Act (CCPA)] uit. In [!DNL CPRA] wordt een nieuwe basislijn voor de privacy van consumentengegevens in Californië vastgesteld door de rechten van de consument te verhogen en het type gegevens uit te breiden dat wordt bestreken door een bredere definitie van gevoelige persoonlijke informatie. Daarnaast heeft [!DNL CPRA] het California Privacy Protection Agency opgericht, een nieuwe instantie die zich bezighoudt met het implementeren en afdwingen van privacyregels voor gegevens.
+**CPRA**: [[!DNL California Consumer Privacy Rights Act (CPRA)] ](https://cppa.ca.gov/regulations/consumer_privacy_act.html) breidt en wijzigt gedeelten van [!DNL California Consumer Privacy Act (CCPA)] uit. In [!DNL CPRA] wordt een nieuwe basislijn voor de privacy van consumentengegevens in Californië vastgesteld door de rechten van de consument te verhogen en het type gegevens uit te breiden dat wordt bestreken door een bredere definitie van gevoelige persoonlijke informatie. Daarnaast heeft [!DNL CPRA] het California Privacy Protection Agency opgericht, een nieuwe instantie die zich bezighoudt met het implementeren en afdwingen van privacyregels voor gegevens.
 
 **C1 contractetiket**: Het gebruiksetiket van A `C1` contractgegevens specificeert gegevens kan slechts uit Adobe Experience Cloud in een samengevoegde vorm zonder individuele of apparatenherkenningstekens worden uitgevoerd. Bijvoorbeeld, gegevens die uit sociale netwerken voortkwamen.
 
@@ -267,7 +267,7 @@ ht-degree: 0%
 
 ## H
 
-**HIPAA**: [[!DNL Health Insurance Portability and Accountability Act (HIPAA)] &#x200B;](https://www.hhs.gov/hipaa/index.html) is een federale wet van de Verenigde Staten die wordt gecreeerd om gezondheidszorgefficiency te verbeteren, de portabiliteit van de ziekteverzekering te verbeteren, en de privacy van patiënten en leden van het gezondheidsplan te beschermen. Op grond van de HIPAA hebben individuen recht op toegang tot hun informatie en op wijziging daarvan en op het verkrijgen van kopieën van hun medische dossiers of gezondheidsinformatie. De onder de HIPAA-regeling vallende entiteiten en zakelijke vennoten van onder de HIPAA-regeling vallende entiteiten moeten zich daaraan houden.
+**HIPAA**: [[!DNL Health Insurance Portability and Accountability Act (HIPAA)] ](https://www.hhs.gov/hipaa/index.html) is een federale wet van de Verenigde Staten die wordt gecreeerd om gezondheidszorgefficiency te verbeteren, de portabiliteit van de ziekteverzekering te verbeteren, en de privacy van patiënten en leden van het gezondheidsplan te beschermen. Op grond van de HIPAA hebben individuen recht op toegang tot hun informatie en op wijziging daarvan en op het verkrijgen van kopieën van hun medische dossiers of gezondheidsinformatie. De onder de HIPAA-regeling vallende entiteiten en zakelijke vennoten van onder de HIPAA-regeling vallende entiteiten moeten zich daaraan houden.
 
 **Gastheer**: In de context van markeringen, specificeert een gastheer de plaats, het domein, en gebruikersgeloofsbrieven noodzakelijk voor het systeem om een bouwstijl te leveren.
 
@@ -323,11 +323,11 @@ ht-degree: 0%
 
 ## L
 
-**LGPD**: [[!DNL Lei Geral de Proteção de Dados (LGPD)] &#x200B;](https://gdpr.eu/gdpr-vs-lgpd/) is gericht om de behandeling van persoonlijke gegevens van alle individuen of natuurlijke personen in Brazilië te regelen. De LGPD geeft de burgers van Brazilië het recht om hun persoonsgegevens te raadplegen en te wissen, te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.
+**LGPD**: [[!DNL Lei Geral de Proteção de Dados (LGPD)] ](https://gdpr.eu/gdpr-vs-lgpd/) is gericht om de behandeling van persoonlijke gegevens van alle individuen of natuurlijke personen in Brazilië te regelen. De LGPD geeft de burgers van Brazilië het recht om hun persoonsgegevens te raadplegen en te wissen, te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.
 
 **Bibliotheek**: In de context van markeringen, is een bibliotheek een reeks bedrijfslogica die instructies voor bevat hoe de markeringsbibliotheek zich op het cliëntapparaat zou moeten gedragen.
 
-**de entiteiten van de Raadpleging**: In de context van gegevensmodellering, vertegenwoordigen de raadplegingsentiteiten concepten die op een individuele persoon kunnen betrekking hebben, maar niet direct kunnen worden gebruikt om het individu te identificeren. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op het Model van de Gegevens van de douaneervaring (XDM) klassen worden gebaseerd, en met een profielentiteit door a [&#x200B; schemaverhouding &#x200B;](../xdm/tutorials/relationship-ui.md) verbonden.
+**de entiteiten van de Raadpleging**: In de context van gegevensmodellering, vertegenwoordigen de raadplegingsentiteiten concepten die op een individuele persoon kunnen betrekking hebben, maar niet direct kunnen worden gebruikt om het individu te identificeren. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op het Model van de Gegevens van de douaneervaring (XDM) klassen worden gebaseerd, en met een profielentiteit door a [ schemaverhouding ](../xdm/tutorials/relationship-ui.md) verbonden.
 
 ## M
 
@@ -345,17 +345,17 @@ ht-degree: 0%
 
 **beleid van de Fusie**: Het beleid van de fusie is regels die Experience Platform gebruikt om te bepalen hoe de fragmenten van klantengegevens van veelvoudige bronnen zullen worden gecombineerd om een individueel profiel tot stand te brengen. Wanneer een gegevensconflict voorkomt, bepaalt het fusiebeleid welke gegevens voor opneming in het profiel zouden moeten worden voorrang gegeven.
 
-**MHMDAa**: [[!DNL Washington My Health My Data Act] &#x200B;](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) verbetert privacyrechten voor consumenten betreffende hun gezondheidsgegevens. Het verplicht de informatieverschaffing, de instemming van de consument en het recht om gezondheidsgegevens te verwijderen, en verbiedt de verkoop van gezondheidsgegevens zonder toestemming. Bovendien maakt de wet het onwettig om gebruik te maken van geofencing rond gezondheidszorgfaciliteiten.
+**MHMDAa**: [[!DNL Washington My Health My Data Act] ](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) verbetert privacyrechten voor consumenten betreffende hun gezondheidsgegevens. Het verplicht de informatieverschaffing, de instemming van de consument en het recht om gezondheidsgegevens te verwijderen, en verbiedt de verkoop van gezondheidsgegevens zonder toestemming. Bovendien maakt de wet het onwettig om gebruik te maken van geofencing rond gezondheidszorgfaciliteiten.
 
 **Mixin**: Zie &quot;de gebiedsgroep van het Schema&quot;.
 
 **Module**: In de context van markeringen, is een module een fragment van uitvoerbare JavaScript die door een uitbreiding wordt verstrekt, die acties in een cliëntmilieu uitvoert zonder het moeten een regel tot stand brengen.
 
-**MODPA**: [!DNL Maryland Online Data Privacy Act] (MODPA) van 2024 verleent Maryland- omwonenden rechten met inbegrip van toegang, correctie, schrapping, en gegevensportabiliteit. Inwoners kunnen zich afmelden voor gerichte reclame, verkoop van persoonsgegevens en profilering. De verantwoordelijken voor de verwerking moeten de privacyverklaringen verstrekken en gegevensbeschermingsbeoordelingen uitvoeren voor verwerking met een hoog risico. MODPA is opgewassen tegen het verbieden van het afschermen van geofencing rond voorzieningen voor geestelijke of reproductieve gezondheid. De wet is van toepassing op entiteiten die gegevens verwerken van meer dan 35.000 consumenten, of op entiteiten die gegevens verwerken van meer dan 10.000 consumenten en meer dan 20% van hun inkomsten halen uit de verkoop van die gegevens. Het wordt afgedwongen door de procureur-generaal van Maryland.
+**MODPA**: [!DNL Maryland Online Data Privacy Act] (MODPA) van 2024 verleent Maryland- omwonenden rechten met inbegrip van toegang, correctie, schrapping, en gegevensportabiliteit. Inwoners kunnen zich afmelden voor gerichte reclame, verkoop van persoonsgegevens en profilering. De verantwoordelijken voor de verwerking moeten privacymededelingen verstrekken en gegevensbeschermingsbeoordelingen uitvoeren voor verwerking met een hoog risico. MODPA is opgewassen tegen het verbieden van het afschermen van geofencing rond voorzieningen voor geestelijke of reproductieve gezondheid. De wet is van toepassing op entiteiten die gegevens verwerken van meer dan 35.000 consumenten, of op entiteiten die gegevens verwerken van meer dan 10.000 consumenten en meer dan 20% van hun inkomsten halen uit de verkoop van die gegevens. Het wordt afgedwongen door de procureur-generaal van Maryland.
 
 ## N
 
-**[!DNL New Zealand Privacy Act]**: [[!DNL New Zealand Privacy Act] &#x200B;](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controleert hoe de agentschappen kunnen verzamelen, gebruiken, bekendmaken, opslaan, en toegang tot de persoonlijke informatie van burgers en organisaties van Nieuw Zeeland verlenen. In 2020 werd in de meest recente versie van de wet een aanzienlijke aanpassing van deze privacywetten geïntroduceerd, waaronder nieuwe delicten, hogere boetes, verplichte meldingen van inbreuken op gegevens en uitbreiding van de bevoegdheden van de privacycommissaris.
+**[!DNL New Zealand Privacy Act]**: [[!DNL New Zealand Privacy Act] ](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controleert hoe de agentschappen kunnen verzamelen, gebruiken, bekendmaken, opslaan, en toegang tot de persoonlijke informatie van burgers en organisaties van Nieuw Zeeland verlenen. In 2020 werd in de meest recente versie van de wet een aanzienlijke aanpassing van deze privacywetten geïntroduceerd, waaronder nieuwe delicten, hogere boetes, verplichte meldingen van inbreuken op gegevens en uitbreiding van de bevoegdheden van de privacycommissaris.
 
 **de zandbak van de niet productie**: De zandbakken van de niet-productie zijn zandbakken die typisch voor ontwikkelingsexperimenten, het testen, of proeven worden gebruikt. In tegenstelling tot productiesandboxen kunnen niet-productiesandboxen worden hersteld en verwijderd.
 
@@ -383,11 +383,11 @@ ht-degree: 0%
 
 **de dossiers van het Pakket**: Een dossier van het Pakket is een formaat van het kolomopslagdossier met complexe genestelde gegevensstructuren. De dossiers van de parket worden vereist voor het toevoegen van gegevens om een schemadataset te bevolken.
 
-**PDPA**: [[!DNL Personal Data Protection Act (PDPA)] &#x200B;](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) werd geïntroduceerd om Thaise gegevenseigenaars van de illegale inzameling, het gebruik, of de bekendmaking van hun persoonlijke gegevens te beschermen. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens.
+**PDPA**: [[!DNL Personal Data Protection Act (PDPA)] ](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) werd geïntroduceerd om Thaise gegevenseigenaars van de illegale inzameling, het gebruik, of de bekendmaking van hun persoonlijke gegevens te beschermen. De verordening is geïnspireerd door de GDPR van de Europese Unie en verleent Thaise burgers het recht om toegang te vragen tot of te verwijderen van hun opgeslagen persoonsgegevens.
 
 **Gepersonaliseerde aanbiedingen**: Een gepersonaliseerde aanbieding is een klantgericht marketing bericht dat op geschiktheidsregels en beperkingen wordt gebaseerd.
 
-**PIPA** (Zuid-Korea): [[!DNL Personal Information Protection Act]  (PIPA) &#x200B;](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) regelt de verwerking en de bescherming van persoonsgegevens voor Zuid-Koreaanse ingezetenen. PIPA verleent rechten om te worden geïnformeerd, toegang te krijgen, kopieën te verkrijgen, en om correctie, schrapping, of opschorting van verwerking te verzoeken. De verantwoordelijken voor de verwerking van persoonsgegevens moeten de doeleinden van de verzameling specificeren, de gegevens zo veel mogelijk rechtmatig verwerken en de nauwkeurigheid van de gegevens waarborgen. PIPA heeft ook de commissie voor de bescherming van persoonsgegevens opgericht om de voorschriften inzake de bescherming van persoonsgegevens te onderzoeken en te handhaven.
+**PIPA** (Zuid-Korea): [[!DNL Personal Information Protection Act]  (PIPA) ](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) regelt de verwerking en de bescherming van persoonsgegevens voor Zuid-Koreaanse ingezetenen. PIPA verleent rechten om te worden geïnformeerd, toegang te krijgen, kopieën te verkrijgen, en om correctie, schrapping, of opschorting van verwerking te verzoeken. De verantwoordelijken voor de verwerking van persoonsgegevens moeten de doeleinden van de verzameling specificeren, de gegevens zo veel mogelijk rechtmatig verwerken en de nauwkeurigheid van de gegevens waarborgen. PIPA heeft ook de commissie voor de bescherming van persoonsgegevens opgericht om de voorschriften inzake de bescherming van persoonsgegevens te onderzoeken en te handhaven.
 
 **Plaatsingen**: een plaatsing is de locatie en/of de context waarin een aanbieding voor een eindgebruiker wordt weergegeven.
 
@@ -545,13 +545,13 @@ ht-degree: 0%
 
 ## U
 
-**UCPA**: [[!DNL Utah Consumer Privacy Act] &#x200B;](https://le.utah.gov/~2022/bills/static/SB0227.html) leidt tot het recht voor een consument om te weten welke persoonlijke gegevens een zaken verzamelt, hoe de zaken hun persoonlijke gegevens gebruiken, en of de zaken hun persoonlijke gegevens verkopen. Consumenten kunnen van het bedrijf verlangen dat het hun persoonsgegevens verwijdert of niet langer verkoopt.
+**UCPA**: [[!DNL Utah Consumer Privacy Act] ](https://le.utah.gov/~2022/bills/static/SB0227.html) leidt tot het recht voor een consument om te weten welke persoonlijke gegevens een zaken verzamelt, hoe de zaken hun persoonlijke gegevens gebruiken, en of de zaken hun persoonlijke gegevens verkopen. Consumenten kunnen van het bedrijf verlangen dat het hun persoonsgegevens verwijdert of niet langer verkoopt.
 
 **schema van de Unie**: Een verenigingsschema is een consolidatie van schema&#39;s die de zelfde klasse delen en voor [!DNL Real-Time Customer Profile] toegelaten zijn. De veelvoudige verenigingsschema&#39;s kunnen voor een organisatie bestaan, maar er kan slechts één verenigingsschema per klasse zijn.
 
 ## V
 
-**VCDPA**: [[!DNL Virginia Consumer Data Protection Act (VCDPA)] &#x200B;](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) verstrekt nieuwe rechten van de gegevensprivacy aan de inwoners van Virginia (&quot;Consumenten&quot;) met inbegrip van het recht om, persoonlijke gegevens toegang te hebben te schrappen en te verbeteren. Consumenten hebben ook het recht om zich uit te sluiten van de verkoop van persoonsgegevens, om af te zien van profilering op basis van persoonsgegevens en om persoonlijke reclame te verwerken.
+**VCDPA**: [[!DNL Virginia Consumer Data Protection Act (VCDPA)] ](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) verstrekt nieuwe rechten van de gegevensprivacy aan de inwoners van Virginia (&quot;Consumenten&quot;) met inbegrip van het recht om, persoonlijke gegevens toegang te hebben te schrappen en te verbeteren. Consumenten hebben ook het recht om zich uit te sluiten van de verkoop van persoonsgegevens, om af te zien van profilering op basis van persoonsgegevens en om persoonlijke reclame te verwerken.
 
 ## W
 
