@@ -1,9 +1,9 @@
 ---
 keywords: Catalogus;catalogus
 title: Overzicht van de doelcatalogus
-description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten oplossingen van de Adobe, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
+description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten de oplossingen van Adobe, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Overzicht van de doelcatalogus
 
-De bestemmingscatalogus verstrekt een lijst van beschikbare bestemmingsplatforms die klaar zijn om gegevens te ontvangen. Deze doelplatforms omvatten oplossingen voor Adobe, advertentieplatforms, onderzoeksplatforms, e-mailmarketing platforms, Experience Platform uitbreidingen, en meer.
+De bestemmingscatalogus verstrekt een lijst van beschikbare bestemmingsplatforms die klaar zijn om gegevens te ontvangen. Deze doelplatforms omvatten Adobe-oplossingen, advertentieplatforms, enquêteplatforms, e-mailmarketingplatforms, Experience Platform-extensies en meer.
 
 Blader in de catalogus om te bepalen welke doelplatforms het beste zijn voor uw Gebruiksscenario&#39;s voor advertenties en personalisatie en stel vervolgens stromen in om uw publiek naar bestemmingen te activeren.
 
@@ -31,7 +31,7 @@ Je kunt je gegevens activeren naar verschillende doelcategorieën in Adobe Exper
 - [[!UICONTROL Advertising] [!UICONTROL destinations] overzicht](advertising/overview.md)
 - [[!UICONTROL Analytics] [!UICONTROL destinations] overzicht](analytics/overview.md)
 - [[!UICONTROL Cloud storage] [!UICONTROL destinations] overzicht](cloud-storage/overview.md)
-- [Overzicht [!UICONTROL Data Management Platform] (DMP) [!UICONTROL destinations]](data-management/overview.md)
+- [[!UICONTROL Data Management Platform] (DMP) [!UICONTROL destinations] overzicht](data-management/overview.md)
 - [[!UICONTROL Email marketing] [!UICONTROL destinations] overzicht](email-marketing/overview.md)
 - [[!UICONTROL Mobile engagement] [!UICONTROL destinations] overzicht](mobile-engagement/overview.md)
 - [[!UICONTROL Personalization] [!UICONTROL destinations] overzicht](personalization/overview.md)

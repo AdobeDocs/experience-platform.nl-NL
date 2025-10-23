@@ -2,7 +2,7 @@
 title: Aanvullende informatie van september 2025 voor Adobe Experience Platform
 description: Aanvullende informatie voor de versie van september 2025 voor Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: 96b9fcd8bfb4ff62eb9d4adce2e486782d918344
+source-git-commit: 1e1e91a4006a55a94c64bbc8e89ff3e2e58c4918
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 91%
@@ -15,8 +15,8 @@ ht-degree: 91%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -68,7 +68,7 @@ Raadpleeg het [[!DNL Observability Insights] overzicht](../../observability/home
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) connector | Er is nu een nieuwe [!DNL Snowflake Batch]-connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksscenario&#39;s. |
+| [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/warehouses/snowflake-batch.md) connector | Er is nu een nieuwe [!DNL Snowflake Batch]-connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksscenario&#39;s. |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) ondersteuning voor versleuteling | U kunt nu openbare sleutels in RSA-formaat toevoegen om uw geëxporteerde bestanden te versleutelen. Zo heeft uhetzelfde beveiligingsniveau als andere cloudopslaglocaties voor gevoelige informatie. |
 | Informatie over de vervaldatum van de authenticatie voor [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md)-bestemmingen | Informatie over de verloopdatum van de verificatie voor [!DNL Pinterest]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
 
@@ -106,13 +106,13 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| [!BADGE &#x200B; Alpha &#x200B;]{type=Informative} Deze eigenschap is momenteel in Alpha. Verbeteringen voor profielviewer | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde weergave**: kenmerken, gebeurtenissen, en inzichten zijn gecombineerd in één enkele weergave.</li><li>**Door AI gegenereerde inzichten**: op de pagina met profielgegevens worden nu door AI gegenereerde inzichten weergegeven, zodat u weet welke gegevens uit uw profiel zijn gegenereerd. Deze inzichten kunnen informatie omvatten zoals propensity-scores en trendanalyse.</li><li>**Stijlupdate**: de pagina met profielgegevens is visueel vernieuwd.</li><li>**Bladeren**: u kunt nu uw profielen verkennen via een interactieve, op kaarten gebaseerde carrousel met zoek- en aanpassingsmogelijkheden.</li></ul> |
+| [!BADGE  Alpha ]{type=Informative} Deze eigenschap is momenteel in Alpha. Verbeteringen voor profielviewer | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde weergave**: kenmerken, gebeurtenissen, en inzichten zijn gecombineerd in één enkele weergave.</li><li>**Door AI gegenereerde inzichten**: op de pagina met profielgegevens worden nu door AI gegenereerde inzichten weergegeven, zodat u weet welke gegevens uit uw profiel zijn gegenereerd. Deze inzichten kunnen informatie omvatten zoals propensity-scores en trendanalyse.</li><li>**Stijlupdate**: de pagina met profielgegevens is visueel vernieuwd.</li><li>**Bladeren**: u kunt nu uw profielen verkennen via een interactieve, op kaarten gebaseerde carrousel met zoek- en aanpassingsmogelijkheden.</li></ul> |
 
 **Belangrijke updates**
 
 | Bijwerken | Beschrijving |
 | ------ | ----------- |
-| API-afleiding profiel verwijderen | Het [&#x200B; Profiel schrapt API &#x200B;](/help/profile/api/entities.md#delete-entity) zal tegen eind oktober 2025 worden afgekeurd. Als u verslag schrapt verrichtingen wilt uitvoeren, kunt u het [&#x200B; verslag van de Levenscyclus van Gegevens gebruiken schrapt API werkschema &#x200B;](/help/hygiene/api/workorder.md) of het [&#x200B; het verslag van de Levenscyclus van Gegevens schrapt UI &#x200B;](/help/hygiene/ui/record-delete.md) in plaats daarvan. De workflows van de gegevenslevenscyclus bieden end-to-end levenscyclustracering en maandelijkse quota&#39;s die u kunt bekijken en beheren. <br/><br/> nadat het eindpunt is afgekeurd, zal om het even welke gebruiker die momenteel dit eindpunt gebruikt toegang tot dit eindpunt blijven hebben. Het einde van de levensduur van dit product wordt apart bekendgemaakt. Neem contact op met de klantenservice van Adobe als u vragen hebt. |
+| API-afleiding profiel verwijderen | Het [ Profiel schrapt API ](/help/profile/api/entities.md#delete-entity) zal tegen eind oktober 2025 worden afgekeurd. Als u verslag schrapt verrichtingen wilt uitvoeren, kunt u het [ verslag van de Levenscyclus van Gegevens gebruiken schrapt API werkschema ](/help/hygiene/api/workorder.md) of het [ het verslag van de Levenscyclus van Gegevens schrapt UI ](/help/hygiene/ui/record-delete.md) in plaats daarvan. De workflows van de gegevenslevenscyclus bieden end-to-end levenscyclustracering en maandelijkse quota&#39;s die u kunt bekijken en beheren. <br/><br/> nadat het eindpunt is afgekeurd, zal om het even welke gebruiker die momenteel dit eindpunt gebruikt toegang tot dit eindpunt blijven hebben. Het einde van de levensduur van dit product wordt apart bekendgemaakt. Neem contact op met de klantenservice van Adobe als u vragen hebt. |
 
 Voor meer informatie raadpleegt u het [overzicht van het realtime-klantenprofiel](../../profile/home.md).
 
