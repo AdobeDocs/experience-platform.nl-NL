@@ -2,7 +2,7 @@
 title: Identity Service Linking Logic
 description: Leer hoe de Dienst van de Identiteit verschillende identiteiten verbindt om een uitvoerige mening van een klant tot stand te brengen.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
+source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 0%
@@ -23,10 +23,6 @@ Er zijn twee soorten identiteiten die aan elkaar worden gekoppeld:
 * **verslagen van het Profiel**: Deze identiteiten komen gewoonlijk van de systemen van CRM.
 * **Gebeurtenissen van de Ervaring**: Deze identiteiten komen gewoonlijk uit implementatie WebSDK of de bron van Adobe Analytics.
 
->[!IMPORTANT]
->
->Identiteitsservice is hoofdlettergevoelig. Bijvoorbeeld, **abc <span>@gmail.com** en **ABC <span>@GMAIL.COM** zou als twee afzonderlijke E-mailidentiteiten worden behandeld.
-
 ## Semantische betekenis van het tot stand brengen van verbindingen
 
 Een identiteit vertegenwoordigt een echte entiteit. Als er een verband tussen twee identiteiten is vastgesteld, betekent dit dat de twee identiteiten aan elkaar zijn gekoppeld. Hieronder volgen enkele voorbeelden die dit concept illustreren:
@@ -44,6 +40,7 @@ Een identiteit bestaat uit een naamruimte van een identiteit en een identiteitsw
 
 * Een naamruimte voor identiteit is de context van een bepaalde identiteitswaarde die moet worden gebruikt. Veelvoorkomende voorbeelden van naamruimten zijn CRMID, Email en Phone.
 * Een identiteitswaarde is de tekenreeks die een echte entiteit vertegenwoordigt. Bijvoorbeeld: &quot;julien <span>@acme.com&quot;kan een identiteitswaarde voor een E-mailnamespace en 555-555-1234 kunnen een overeenkomstige identiteitswaarde voor een Telefoon namespace zijn.
+* Identiteitsservice is hoofdlettergevoelig. Bijvoorbeeld, **julien <span>@gmail.com** en **JULIEN <span>@GMAIL.COM** zouden als twee afzonderlijke e-mailidentiteiten worden behandeld.
 
 >[!TIP]
 >
@@ -61,7 +58,7 @@ Stel dat u een bestaande identiteitsgrafiek hebt met drie gekoppelde identiteite
 * E-MAIL:julien<span>@acme.com
 * CRMID :60013ABC
 
-![&#x200B; bestaande grafiek &#x200B;](../images/identity-settings/existing-graph.png)
+![ bestaande grafiek ](../images/identity-settings/existing-graph.png)
 
 >[!TAB  Binnenkomende gegevens ]
 
@@ -70,13 +67,13 @@ Een paar identiteiten worden opgenomen in uw grafiek en dit paar bevat:
 * CRMID :60013ABC
 * ECID:100066526
 
-![&#x200B; inkomende gegevens &#x200B;](../images/identity-settings/incoming-data.png)
+![ inkomende gegevens ](../images/identity-settings/incoming-data.png)
 
 >[!TAB  Bijgewerkte grafiek ]
 
 De Dienst van de identiteit erkent dat CRMID :60013ABC reeds binnen uw grafiek bestaat, en zo slechts verbindt nieuwe ECID
 
-![&#x200B; bijgewerkte grafiek &#x200B;](../images/identity-settings/updated-graph.png)
+![ bijgewerkte grafiek ](../images/identity-settings/updated-graph.png)
 
 >[!ENDTABS]
 
@@ -105,7 +102,7 @@ U hebt WebSDK ook uitgevoerd en een dataset WebSDK (de Gebeurtenis van de Ervari
 | `t=3` | ECID:44675 | Homepage weergeven |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | Aankoopgeschiedenis weergeven |
 
-De primaire identiteit voor elke gebeurtenis zal worden bepaald gebaseerd op [&#x200B; hoe u de types van gegevenselement &#x200B;](../../tags/extensions/client/web-sdk/data-element-types.md) vormt.
+De primaire identiteit voor elke gebeurtenis zal worden bepaald gebaseerd op [ hoe u de types van gegevenselement ](../../tags/extensions/client/web-sdk/data-element-types.md) vormt.
 
 >[!NOTE]
 >
@@ -133,30 +130,30 @@ Bij `timestamp=0` hebt u twee identiteitsgrafieken voor twee verschillende klant
 | Klant één | 60013ABC | julien<span>@acme.com | 555-555-1234 |
 | Klant twee | 31260XYZ | evan<span>@acme.com | 777-777-6890 |
 
-![&#x200B; timestamp-nul &#x200B;](../images/identity-settings/timestamp-zero.png)
+![ timestamp-nul ](../images/identity-settings/timestamp-zero.png)
 
 >[!TAB  timestamp=1 ]
 
 Bij `timestamp=1` gebruikt een klant een laptop om uw e-commercewebsite te bezoeken, uw homepage te bekijken en anoniem te bladeren. Deze anonieme het doorbladeren gebeurtenis wordt geïdentificeerd als ECID :38652. Omdat de Dienst van de Identiteit slechts gebeurtenissen met minstens twee identiteiten opslaat, wordt deze informatie niet opgeslagen.
 
-![&#x200B; timestamp-one &#x200B;](../images/identity-settings/timestamp-one.png)
+![ timestamp-one ](../images/identity-settings/timestamp-one.png)
 
 >[!TAB  timestamp=2 ]
 
 Bij `timestamp=2` gebruikt een klant dezelfde laptop om uw e-commercewebsite te bezoeken. Ze melden zich aan met hun gebruikersnaam en wachtwoord en zoeken naar schoenen. Identiteitsdienst identificeert de rekening van de klant wanneer zij login omdat het aan hun CRMID beantwoordt: 31260XYZ. Bovendien, heeft de Dienst van de Identiteit ECID :38562 op CRMID :31260XYZ betrekking aangezien zij allebei zelfde browser op het zelfde apparaat gebruiken.
 
-![&#x200B; timestamp-two &#x200B;](../images/identity-settings/timestamp-two.png)
+![ timestamp-two ](../images/identity-settings/timestamp-two.png)
 
 >[!TAB  timestamp=3 ]
 
 Bij `timestamp=3` gebruikt een klant een tablet om uw e-commercewebsite te bezoeken en anoniem te bladeren. Deze anonieme het doorbladeren gebeurtenis wordt geïdentificeerd als ECID :44675. Omdat de Dienst van de Identiteit slechts gebeurtenissen met minstens twee identiteiten opslaat, wordt deze informatie niet opgeslagen.
 
-![&#x200B; timestamp-three &#x200B;](../images/identity-settings/timestamp-three.png)
+![ timestamp-three ](../images/identity-settings/timestamp-three.png)
 
 >[!TAB  timestamp=4 ]
 
 Bij `timestamp=4`, gebruikt een klant het zelfde tablet, login aan hun rekening (CRMID :31260XYZ) en bekijkt hun aankoopgeschiedenis. Deze gebeurtenis verbindt hun CRMID :31260XYZ aan het koekjesherkenningsteken dat aan anonieme het doorbladeren activiteit, ECID :44675 wordt toegewezen, en verbindt ECID :44675 aan de identiteitsgrafiek van klant twee.
 
-![&#x200B; timestamp-four &#x200B;](../images/identity-settings/timestamp-four.png)
+![ timestamp-four ](../images/identity-settings/timestamp-four.png)
 
 >[!ENDTABS]
