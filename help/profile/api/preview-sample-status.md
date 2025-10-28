@@ -4,7 +4,7 @@ title: Voorbeeld van voorbeeldstatus (profiel voorvertoning) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-Time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d1eb9191c74add1ab21cd268327bab9a3255d182
 workflow-type: tm+mt
 source-wordcount: '2904'
 ht-degree: 0%
@@ -19,11 +19,11 @@ De resultaten van deze voorbeeldbaan kunnen worden bekeken gebruikend het `/prev
 
 >[!NOTE]
 >
->Er zijn schatting en voorproef eindpunten beschikbaar als deel van de Dienst API van de Segmentatie van Adobe Experience Platform die u toestaan om samenvatting-vlakke informatie betreffende segmentdefinities te bekijken helpen ervoor zorgen u het verwachte publiek isoleert. Om gedetailleerde stappen voor het werken met voorproef te vinden en eindpunten te schatten, gelieve te bezoeken de [&#x200B; voorproeven en de gids van geschatte eindpunten &#x200B;](../../segmentation/api/previews-and-estimates.md), een deel van de [!DNL Segmentation] API ontwikkelaarsgids.
+>Er zijn schatting en voorproef eindpunten beschikbaar als deel van de Dienst API van de Segmentatie van Adobe Experience Platform die u toestaan om samenvatting-vlakke informatie betreffende segmentdefinities te bekijken helpen ervoor zorgen u het verwachte publiek isoleert. Om gedetailleerde stappen voor het werken met voorproef te vinden en eindpunten te schatten, gelieve te bezoeken de [ voorproeven en de gids van geschatte eindpunten ](../../segmentation/api/previews-and-estimates.md), een deel van de [!DNL Segmentation] API ontwikkelaarsgids.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Real-Time Customer Profile]  API &#x200B;](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Real-Time Customer Profile]  API ](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Profielfragmenten versus samengevoegde profielen
 
@@ -33,16 +33,16 @@ Elk individueel klantprofiel bestaat uit meerdere profielfragmenten die zijn sam
 
 Wanneer profielfragmenten in Experience Platform worden opgenomen, worden ze samengevoegd (op basis van een samenvoegbeleid) om één profiel voor die klant te maken. Daarom is het totale aantal profielfragmenten waarschijnlijk altijd hoger dan het totale aantal samengevoegde profielen, aangezien elk profiel uit veelvoudige fragmenten bestaat.
 
-Meer over profielen en hun rol binnen Experience Platform leren, gelieve te beginnen door het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../home.md) te lezen.
+Meer over profielen en hun rol binnen Experience Platform leren, gelieve te beginnen door het [ overzicht van het Profiel van de Klant in real time ](../home.md) te lezen.
 
 ## Hoe de voorbeeldtaak wordt geactiveerd
 
-Aangezien gegevens die voor het Profiel van de Klant in real time worden toegelaten in [!DNL Experience Platform] worden opgenomen, wordt het opgeslagen binnen de gegevensopslag van het Profiel. Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De wijze waarop het monster wordt geactiveerd, hangt af van het type inname dat wordt gebruikt:
+Aangezien gegevens die voor het Profiel van de Klant in real time worden toegelaten in [!DNL Experience Platform] worden opgenomen, wordt het opgeslagen binnen de gegevensopslag van het Profiel. Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 3% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De wijze waarop het monster wordt geactiveerd, hangt af van het type inname dat wordt gebruikt:
 
-* Voor **het stromen gegevenswerkschema&#39;s**, wordt een controle gedaan op een uurbasis om te bepalen als de 5% toename of dalingsdrempel is voldaan aan. Als dit het geval is, wordt er automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
-* Voor **partijingestie**, binnen 15 minuten van met succes het opnemen van een partij in de opslag van het Profiel, als de 5% verhoging of dalingsdrempel wordt voldaan, wordt een baan in werking gesteld om de telling bij te werken. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
+* Voor **het stromen gegevenswerkschema&#39;s**, wordt een controle gedaan op een uurbasis om te bepalen als de 3% toename of dalingsdrempel is voldaan aan. Als dit het geval is, wordt er automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
+* Voor **partijingestie**, binnen 15 minuten van met succes het opnemen van een partij in de opslag van het Profiel, als de 3% verhoging of dalingsdrempel wordt ontmoet, wordt een baan in werking gesteld om de telling bij te werken. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
 
-Het aantal profielen en de profielen op basis van naamruimtewaarden zijn ook beschikbaar in de sectie [!UICONTROL Profiles] van de gebruikersinterface van Experience Platform. Voor informatie over hoe te om tot de gegevens van het Profiel toegang te hebben gebruikend UI, gelieve de [[!DNL Profile]  gids UI &#x200B;](../ui/user-guide.md) te bezoeken.
+Het aantal profielen en de profielen op basis van naamruimtewaarden zijn ook beschikbaar in de sectie [!UICONTROL Profiles] van de gebruikersinterface van Experience Platform. Voor informatie over hoe te om tot de gegevens van het Profiel toegang te hebben gebruikend UI, gelieve de [[!DNL Profile]  gids UI ](../ui/user-guide.md) te bezoeken.
 
 ## Laatste voorbeeldstatus weergeven {#view-last-sample-status}
 
@@ -195,9 +195,9 @@ De reactie bevat een array `data` die een lijst met gegevenssetobjecten bevat. D
 | Eigenschap | Beschrijving |
 |---|---|
 | `sampleCount` | Het totale aantal gesamplede profielen met deze gegevensset-id. |
-| `samplePercentage` | `sampleCount` als percentage van het totale aantal gesamplede profielen (de `numRowsToRead` waarde zoals teruggekeerd in de [&#x200B; laatste steekproefstatus &#x200B;](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
+| `samplePercentage` | `sampleCount` als percentage van het totale aantal gesamplede profielen (de `numRowsToRead` waarde zoals teruggekeerd in de [ laatste steekproefstatus ](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
 | `fullIDsCount` | Het totale aantal samengevoegde profielen met deze dataset-id. |
-| `fullIDsPercentage` | `fullIDsCount` als percentage van het totale aantal samengevoegde profielen (de `totalRows` waarde zoals teruggekeerd in de [&#x200B; laatste steekproefstatus &#x200B;](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
+| `fullIDsPercentage` | `fullIDsCount` als percentage van het totale aantal samengevoegde profielen (de `totalRows` waarde zoals teruggekeerd in de [ laatste steekproefstatus ](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
 | `name` | De naam van de dataset, zoals die tijdens de verwezenlijking van dataset wordt verstrekt. |
 | `description` | De beschrijving van de dataset, zoals die tijdens de verwezenlijking van dataset wordt verstrekt. |
 | `value` | De id van de gegevensset. |
@@ -209,7 +209,7 @@ De reactie bevat een array `data` die een lijst met gegevenssetobjecten bevat. D
 
 U kunt een GET-aanvraag naar het eindpunt van `/previewsamplestatus/report/namespace` uitvoeren om de uitsplitsing naar naamruimte van de identiteit weer te geven voor alle samengevoegde profielen in het archief Profiel. Dit geldt zowel voor de standaardidentiteiten die door Adobe worden geleverd als voor de aangepaste identiteiten die door uw organisatie zijn gedefinieerd.
 
-Identiteitsnaamruimten zijn een belangrijk onderdeel van de Adobe Experience Platform Identity Service dat als indicatoren dient voor de context waarop de klantgegevens betrekking hebben. Om meer te leren, begin door het [&#x200B; overzicht van identiteitskaart te lezen namespace &#x200B;](../../identity-service/features/namespaces.md).
+Identiteitsnaamruimten zijn een belangrijk onderdeel van de Adobe Experience Platform Identity Service dat als indicatoren dient voor de context waarop de klantgegevens betrekking hebben. Om meer te leren, begin door het [ overzicht van identiteitskaart te lezen namespace ](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -294,13 +294,13 @@ De reactie bevat een array `data` met afzonderlijke objecten die de details voor
 | Eigenschap | Beschrijving |
 |---|---|
 | `sampleCount` | Het totale aantal gesamplede profielen in de naamruimte. |
-| `samplePercentage` | `sampleCount` als percentage gesamplede profielen (de `numRowsToRead` waarde zoals teruggekeerd in de [&#x200B; laatste steekproefstatus &#x200B;](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
+| `samplePercentage` | `sampleCount` als percentage gesamplede profielen (de `numRowsToRead` waarde zoals teruggekeerd in de [ laatste steekproefstatus ](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
 | `reportTimestamp` | De tijdstempel van het rapport. Als een parameter `date` tijdens het verzoek werd verstrekt, is het teruggekeerde rapport voor de verstrekte datum. Als er geen parameter `date` is opgegeven, wordt het meest recente rapport geretourneerd. |
 | `fullIDsFragmentCount` | Het totale aantal profielfragmenten in de naamruimte. |
 | `fullIDsCount` | Het totale aantal samengevoegde profielen in de naamruimte. |
-| `fullIDsPercentage` | `fullIDsCount` als percentage van totaal samengevoegde profielen (de `totalRows` waarde zoals teruggekeerd in de [&#x200B; laatste steekproefstatus &#x200B;](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
-| `code` | De `code` voor de naamruimte. Dit kan worden gevonden wanneer het werken met namespaces gebruikend [&#x200B; de Dienst API van de Identiteit van Adobe Experience Platform &#x200B;](../../identity-service/api/list-namespaces.md) en ook bedoeld als [!UICONTROL Identity symbol] in Experience Platform UI. Om meer te leren, bezoek het [&#x200B; overzicht van identiteitskaart namespace &#x200B;](../../identity-service/features/namespaces.md). |
-| `value` | De `id` -waarde voor de naamruimte. Dit kan worden gevonden wanneer het werken met namespaces gebruikend de [&#x200B; Dienst API van de Identiteit &#x200B;](../../identity-service/api/list-namespaces.md). |
+| `fullIDsPercentage` | `fullIDsCount` als percentage van totaal samengevoegde profielen (de `totalRows` waarde zoals teruggekeerd in de [ laatste steekproefstatus ](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
+| `code` | De `code` voor de naamruimte. Dit kan worden gevonden wanneer het werken met namespaces gebruikend [ de Dienst API van de Identiteit van Adobe Experience Platform ](../../identity-service/api/list-namespaces.md) en ook bedoeld als [!UICONTROL Identity symbol] in Experience Platform UI. Om meer te leren, bezoek het [ overzicht van identiteitskaart namespace ](../../identity-service/features/namespaces.md). |
+| `value` | De `id` -waarde voor de naamruimte. Dit kan worden gevonden wanneer het werken met namespaces gebruikend de [ Dienst API van de Identiteit ](../../identity-service/api/list-namespaces.md). |
 
 ## Genereer het overlappingsrapport voor de gegevensset
 
@@ -308,7 +308,7 @@ Het rapport van de datasetoverlapping verstrekt zicht in de samenstelling van de
 
 U kunt het rapport van de datasetoverlapping produceren door een verzoek van GET aan het `/previewsamplestatus/report/dataset/overlap` eindpunt uit te voeren.
 
-Voor geleidelijke instructies die hoe te om het rapport van de datasetoverlapping te produceren gebruikend de bevellijn of Postman UI schetsen, gelieve te verwijzen naar [&#x200B; producerend de datasetoverlapping rapporttutorial &#x200B;](../tutorials/dataset-overlap-report.md).
+Voor geleidelijke instructies die hoe te om het rapport van de datasetoverlapping te produceren gebruikend de bevellijn of Postman UI schetsen, gelieve te verwijzen naar [ producerend de datasetoverlapping rapporttutorial ](../tutorials/dataset-overlap-report.md).
 
 **API formaat**
 
@@ -445,7 +445,7 @@ Een succesvol verzoek retourneert HTTP Status 200 (OK) en de naamruimte overlapt
 | Eigenschap | Beschrijving |
 |---|---|
 | `data` | Het `data` -object bevat door komma&#39;s gescheiden lijsten met unieke combinaties van naamruimtecodes en hun respectievelijke profielaantallen. |
-| Namespace-codes | `code` is een kort formulier voor elke naamruimtenaam van een identiteit. Een afbeelding van elk `code` aan zijn `name` kan worden gevonden gebruikend [&#x200B; de Dienst API van de Identiteit van Adobe Experience Platform &#x200B;](../../identity-service/api/list-namespaces.md). `code` wordt ook wel de [!UICONTROL Identity symbol] genoemd in de gebruikersinterface van Experience Platform. Om meer te leren, bezoek het [&#x200B; overzicht van identiteitskaart namespace &#x200B;](../../identity-service/features/namespaces.md). |
+| Namespace-codes | `code` is een kort formulier voor elke naamruimtenaam van een identiteit. Een afbeelding van elk `code` aan zijn `name` kan worden gevonden gebruikend [ de Dienst API van de Identiteit van Adobe Experience Platform ](../../identity-service/api/list-namespaces.md). `code` wordt ook wel de [!UICONTROL Identity symbol] genoemd in de gebruikersinterface van Experience Platform. Om meer te leren, bezoek het [ overzicht van identiteitskaart namespace ](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | De tijdstempel van het rapport. Als een parameter `date` tijdens het verzoek werd verstrekt, is het teruggekeerde rapport voor de verstrekte datum. Als er geen parameter `date` is opgegeven, wordt het meest recente rapport geretourneerd. |
 
 ### Rapport voor overlappende naamruimte interpreteren
@@ -593,5 +593,5 @@ Dit rapport bevat de volgende informatie:
 
 ## Volgende stappen
 
-Nu u weet hoe te om steekproefgegevens in de opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproefpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt u ervoor te zorgen dat u uw verwachte publiek isoleert. Om meer over het werken met voorproeven en ramingen te leren die de Segmentatie API gebruiken, gelieve de [&#x200B; voorproef en de gids van de schattingseindpunten &#x200B;](../../segmentation/api/previews-and-estimates.md) te bezoeken.
+Nu u weet hoe te om steekproefgegevens in de opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproefpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt u ervoor te zorgen dat u uw verwachte publiek isoleert. Om meer over het werken met voorproeven en ramingen te leren die de Segmentatie API gebruiken, gelieve de [ voorproef en de gids van de schattingseindpunten ](../../segmentation/api/previews-and-estimates.md) te bezoeken.
 
