@@ -12,7 +12,7 @@ ht-degree: 0%
 
 Gebruik deze verwijzing op geavanceerde regellogica om nauwkeurige, wettelijk geldige regels in te stellen in de **[!UICONTROL Then]** clausule van de Bouwer van het Beleid van de Toestemming in Adobe Experience Platform.
 
-![ de bouwerinterface van het toestemmingsbeleid die de [!UICONTROL Then] componentensectie benadrukt, waar de gebruikers regelvoorwaarden bepalen.](../images/policies/multiple-rules.png)
+![&#x200B; de bouwerinterface van het toestemmingsbeleid die de [!UICONTROL Then] componentensectie benadrukt, waar de gebruikers regelvoorwaarden bepalen.](../images/policies/multiple-rules.png)
 
 Leer hoe de beleidsregels op de structuur en de types van uw toestemmingsgegevens van toepassing zijn om klantentoestemmingsvoorkeur nauwkeurig af te dwingen.
 
@@ -24,12 +24,12 @@ Alvorens deze verwijzing te gebruiken, zorg ervoor dat uw opstelling van het toe
 
 Zorg ervoor dat u aan de volgende voorwaarden voldoet:
 
-* **Volledige Opstelling van het Beleid**: U hebt tot stand gebracht of begonnen een toestemmingsbeleid in Adobe Experience Platform UI te creëren. Voor gedetailleerde stappen, zie de [ gebruikersgids van het het gebruiksbeleid van het gegevensgebruik ](user-guide.md#consent-policy).
+* **Volledige Opstelling van het Beleid**: U hebt tot stand gebracht of begonnen een toestemmingsbeleid in Adobe Experience Platform UI te creëren. Voor gedetailleerde stappen, zie de [&#x200B; gebruikersgids van het het gebruiksbeleid van het gegevensgebruik &#x200B;](user-guide.md#consent-policy).
 
 * **Familiariteit met de Structuren van Gegevens**: Deze verwijzing vereist werkende kennis van de volgende kernconcepten:
-   * **XDM en het Schema van de Unie**: Begrijp hoe de modelstructuren van de Gegevens van de Ervaring gegevensverhoudingen bepalen en hoe het unieschema verenigde klantenprofielen vertegenwoordigt. Zie het [ XDM overzicht van het Systeem ](../../xdm/home.md) om meer te leren.
-   * **Kader van het Beheer van Gegevens**: Weet hoe Adobe Experience Platform beleid en governanceregels van het gegevensgebruik afdwingt. Zie het [ overzicht van het Beleid van Gegevens ](../home.md) voor details.
-   * **de Verwerking van de Toestemming van de Klant**: Begrijp hoe de toestemmingsgegevens worden verzameld, opgeslagen, en binnen de werkschema&#39;s van de klantenervaring toegepast. Zie het [ overzicht van de toestemmingsverwerking ](../../landing/governance-privacy-security/consent/adobe/overview.md).
+   * **XDM en het Schema van de Unie**: Begrijp hoe de modelstructuren van de Gegevens van de Ervaring gegevensverhoudingen bepalen en hoe het unieschema verenigde klantenprofielen vertegenwoordigt. Zie het [&#x200B; XDM overzicht van het Systeem &#x200B;](../../xdm/home.md) om meer te leren.
+   * **Kader van het Beheer van Gegevens**: Weet hoe Adobe Experience Platform beleid en governanceregels van het gegevensgebruik afdwingt. Zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](../home.md) voor details.
+   * **de Verwerking van de Toestemming van de Klant**: Begrijp hoe de toestemmingsgegevens worden verzameld, opgeslagen, en binnen de werkschema&#39;s van de klantenervaring toegepast. Zie het [&#x200B; overzicht van de toestemmingsverwerking &#x200B;](../../landing/governance-privacy-security/consent/adobe/overview.md).
 
 ## Kernconcepten: primitieve en containervelden
 
@@ -116,7 +116,7 @@ Ga als volgt te werk om een regel samen te stellen:
 
 1. **selecteer een gebied** - navigeer door containergebieden om een primitief gebied te bereiken.
 2. **kies een exploitant** - selecteer de exploitant die door het gebiedstype wordt gesteund.
-   ![ het hiërarchische schemanavigatiepaneel, dat een gebruiker toont die een container uitbreidt om een primitief gebied te bereiken.](../images/policies/consent-policy-map-field.png)
+   ![&#x200B; het hiërarchische schemanavigatiepaneel, dat een gebruiker toont die een container uitbreidt om een primitief gebied te bereiken.](../images/policies/consent-policy-map-field.png)
 3. **plaats een waarde** - bepaal de waarde of de voorwaarde om aan te passen.
 4. **de kaartsleutels van de Gelijke** - verkies of om een specifieke sleutel te richten of over alle sleutels in een kaart aan te passen.
 5. **voegt voorwaarden** toe - combineer veelvoudige regels gebruikend EN OF logica zoals nodig.
@@ -162,7 +162,7 @@ Result: Includes profiles who set the email frequency to weekly (for the "email_
 
 Gebruik de optie &quot;**[!UICONTROL find any matching item]**&quot; van het selectievakje om alle dynamische sleutels in een kaart aan te passen.
 
-![ de regelbouwer die van het Beleid &quot;vinden om het even welk passend punt&quot;checkbox voor de gebieden van de Kaart toont, wordt gebruikt om waarden over alle dynamische sleutels aan te passen die.](../images/policies/find-any-matching-item.png)
+![&#x200B; de regelbouwer die van het Beleid &quot;vinden om het even welk passend punt&quot;checkbox voor de gebieden van de Kaart toont, wordt gebruikt om waarden over alle dynamische sleutels aan te passen die.](../images/policies/find-any-matching-item.png)
 
 ```
 Field: consent.preferences.*.frequency (string)
@@ -302,6 +302,6 @@ Note: OR logic allows matching across different array entries. One entry can mee
 
 Na het bouwen van en het verfijnen van uw regels van het toestemmingsbeleid, gebruik de volgende middelen om configuratie te voltooien, beleidshandhaving te bevestigen, en onderliggende gegevensmodellen te herzien.
 
-* **Werkschema van de Aanmaak van het Beleid**: Voer de regels uit u in de beleidsaannemer UI met de [ Verkende Gids van het Beleid UI van de Toestemming ](user-guide.md#consent-policy.md) bepaalde
-* **de Evaluatie en de Handhaving van het Beleid van de Toestemming**: Verifieer hoe het toegelaten beleid publieksactivering en profielgegevensgebruik beïnvloedt. Zie de [ Automatische gids van de beleidshandhaving ](../enforcement/auto-enforcement.md) voor details
-* **XDM de Types van Gegevens van de Toestemming**: Verwijs de specifieke schemastructuren en gebiedsdefinities voor toestemmingsattributen die in uw beleidsregels worden gebruikt. Zie de [ XDM toestemmingen en van de Voorkeur gegevenstype ](../../xdm/data-types/consents.md) gids.
+* **Werkschema van de Aanmaak van het Beleid**: Voer de regels uit u in de beleidsaannemer UI met de [&#x200B; Verkende Gids van het Beleid UI van de Toestemming &#x200B;](user-guide.md#consent-policy.md) bepaalde
+* **de Evaluatie en de Handhaving van het Beleid van de Toestemming**: Verifieer hoe het toegelaten beleid publieksactivering en profielgegevensgebruik beïnvloedt. Zie de [&#x200B; Automatische gids van de beleidshandhaving &#x200B;](../enforcement/auto-enforcement.md) voor details
+* **XDM de Types van Gegevens van de Toestemming**: Verwijs de specifieke schemastructuren en gebiedsdefinities voor toestemmingsattributen die in uw beleidsregels worden gebruikt. Zie de [&#x200B; XDM toestemmingen en van de Voorkeur gegevenstype &#x200B;](../../xdm/data-types/consents.md) gids.
