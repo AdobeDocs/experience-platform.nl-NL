@@ -5,7 +5,7 @@ title: Algemene begeleiding voor de Uitvoering van de Vraag in de Dienst van de 
 type: Tutorial
 description: In dit document worden belangrijke gegevens beschreven die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Dit document bevat belangrijke informatie die u moet weten wanneer u query&#39;s schrijft in Adobe Experience Platform [!DNL Query Service] .
 
-Voor gedetailleerde informatie over de SQL syntaxis die in [!DNL Query Service] wordt gebruikt, te lezen gelieve de [&#x200B; SQL syntaxisdocumentatie &#x200B;](../sql/syntax.md).
+Voor gedetailleerde informatie over de SQL syntaxis die in [!DNL Query Service] wordt gebruikt, te lezen gelieve de [ SQL syntaxisdocumentatie ](../sql/syntax.md).
 
 ## Uitvoeringsmodellen voor query
 
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Query Service] heeft twee modellen voor het uitv
 
 ### Interactieve queryuitvoering
 
-De vragen kunnen interactief worden uitgevoerd door hen door [!DNL Query Service] UI of [&#x200B; door een verbonden cliënt &#x200B;](../clients/overview.md) voor te leggen. Wanneer [!DNL Query Service] via een verbonden client wordt uitgevoerd, wordt een actieve sessie uitgevoerd tussen de client en [!DNL Query Service] totdat de verzonden query terugkeert of de time-out.
+De vragen kunnen interactief worden uitgevoerd door hen door [!DNL Query Service] UI of [ door een verbonden cliënt ](../clients/overview.md) voor te leggen. Wanneer [!DNL Query Service] via een verbonden client wordt uitgevoerd, wordt een actieve sessie uitgevoerd tussen de client en [!DNL Query Service] totdat de verzonden query terugkeert of de time-out.
 
 De interactieve vraaguitvoering heeft de volgende beperkingen:
 
@@ -86,7 +86,7 @@ Beide voorbeeldquery&#39;s hierboven retourneren een samengevoegd object in plaa
 
 ```console
               endUserIds._experience.mcid   
---------------------------------------------------------
+|--------------------------------------------------------
  (48168239533518554367684086979667672499,"(ECID)",true)
 (1 row)
 ```
@@ -109,7 +109,7 @@ LIMIT 1
 
 ```console
      endUserIds._experience.mcid.id 
-----------------------------------------
+|----------------------------------------
  48168239533518554367684086979667672499
 (1 row)
 ```
@@ -210,7 +210,7 @@ De opdracht `\d` toont de standaardweergave van [!DNL PostgreSQL] voor het weerg
 ```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
---------+-----------------+-------+----------
+|--------+-----------------+-------+----------
  public | luma_midvalues  | table | postgres
  public | luma_postvalues | table | postgres
 (2 rows)
@@ -222,7 +222,7 @@ De opdracht `\d` toont de standaardweergave van [!DNL PostgreSQL] voor het weerg
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
------------------+--------------------------+----------------+-------------+----------
+|-----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues | 5c86b896b3c162151785b43c | Luma midValues |             | false
 (2 rows)
@@ -237,7 +237,7 @@ In het volgende voorbeeld worden de schemagegevens voor de tabel `luma_midvalues
 ```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
--------------------+-----------------------------+-----------+----------+---------
+|-------------------+-----------------------------+-----------+----------+---------
  timestamp         | timestamp                   |           |          | 
  _id               | text                        |           |          | 
  productlistitems  | anyarray                    |           |          | 
@@ -262,7 +262,7 @@ In het volgende voorbeeld wordt aanvullende informatie voor de kolom `web` getoo
 ```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
-----------------+-----------------------------------+-----------+----------+---------
+|----------------+-----------------------------------+-----------+----------+---------
  webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
  webreferrer    | web_webreferrer                   |           |          | 
 ```
@@ -311,15 +311,15 @@ LIMIT 50;
 
 ## Deduplicatie
 
-De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Voor meer informatie over deduplicatie, te lezen gelieve de [&#x200B; gids van de Deduplicatie van de Dienst van de Vraag &#x200B;](../key-concepts/deduplication.md).
+De Dienst van de vraag steunt gegevensdeduplicatie, of de verwijdering van dubbele rijen uit gegevens. Voor meer informatie over deduplicatie, te lezen gelieve de [ gids van de Deduplicatie van de Dienst van de Vraag ](../key-concepts/deduplication.md).
 
 ## De berekeningen van de tijdzone in de Dienst van de Vraag
 
-De Service van de vraag normaliseert persisted gegevens in Adobe Experience Platform gebruikend het timestamp formaat UTC. Voor meer informatie over hoe te om uw tijdzonevereiste aan en van een timestamp te vertalen UTC, gelieve de [&#x200B; sectie van Veelgestelde vragen te zien over hoe te om de tijdzone aan en van een Tijdstempel van UTC &#x200B;](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?) te veranderen.
+De Service van de vraag normaliseert persisted gegevens in Adobe Experience Platform gebruikend het timestamp formaat UTC. Voor meer informatie over hoe te om uw tijdzonevereiste aan en van een timestamp te vertalen UTC, gelieve de [ sectie van Veelgestelde vragen te zien over hoe te om de tijdzone aan en van een Tijdstempel van UTC ](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?) te veranderen.
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u op een aantal belangrijke overwegingen geïntroduceerd wanneer het schrijven van vragen gebruikend [!DNL Query Service]. Voor meer informatie over hoe te om de SQL syntaxis te gebruiken om uw eigen vragen te schrijven, te lezen gelieve de [&#x200B; SQL syntaxisdocumentatie &#x200B;](../sql/syntax.md).
+Door dit document te lezen, bent u op een aantal belangrijke overwegingen geïntroduceerd wanneer het schrijven van vragen gebruikend [!DNL Query Service]. Voor meer informatie over hoe te om de SQL syntaxis te gebruiken om uw eigen vragen te schrijven, te lezen gelieve de [ SQL syntaxisdocumentatie ](../sql/syntax.md).
 
 Voor meer steekproeven van vragen die binnen de Dienst van de Vraag kunnen worden gebruikt, gelieve de volgende documentatie van het gebruiksgeval te lezen:
 

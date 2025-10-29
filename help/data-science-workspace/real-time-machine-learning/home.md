@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;ontwikkelaarshandleiding;Data Science Workspace;populaire onderwerpen;In real time machinaal leren;
+keywords: Experience Platform;developer guide;Data Science Workspace;populaire onderwerpen;Real-time machine learning;
 solution: Experience Platform
 title: Real-time Machine Learning-overzicht
-description: Het leren van machines in real time kan de relevantie van uw digitale ervaringsinhoud voor uw eindgebruikers drastisch verbeteren. Dit wordt mogelijk gemaakt door real-time conferenties en voortdurend leren op de Edge Network van het Experience Platform te benutten.
+description: Het leren van machines in real time kan de relevantie van uw digitale ervaringsinhoud voor uw eindgebruikers drastisch verbeteren. Dit wordt mogelijk gemaakt door gebruik te maken van real-time conferenties en permanente educatie op de Experience Platform Edge Network.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 0%
@@ -25,23 +25,23 @@ ht-degree: 0%
 
 Het leren van machines in real time kan de relevantie van uw digitale ervaringsinhoud voor uw eindgebruikers drastisch verbeteren. Dit wordt mogelijk gemaakt door real-time conferenties en voortdurend leren over de [!DNL Experience Platform Edge Network] te benutten.
 
-Een combinatie van naadloze berekeningen op zowel de Hub als de [!DNL Edge] vermindert dramatisch de latentie die traditioneel betrokken is bij het aansturen van hypergepersonaliseerde ervaringen die zowel relevant als responsief zijn. Daarom biedt Real-time Machine Learning ongekend lage latentie voor synchrone besluitvorming. Voorbeelden zijn het renderen van gepersonaliseerde webpagina-inhoud of het onthullen van een aanbieding of korting om het aantal fouten te verminderen en het aantal conversies in een webwinkel te verhogen.
+Een combinatie naadloze berekening op zowel de Hub als [!DNL Edge] vermindert dramatisch de latentie die traditioneel betrokken bij het aandrijven van hyper-gepersonaliseerde ervaringen is die zowel relevant als ontvankelijk zijn. Vandaar, het Leren van de machine in real time verstrekt conclusies met ongelooflijk lage latentie voor synchrone besluitvorming. Voorbeelden zijn het renderen van gepersonaliseerde webpagina-inhoud of het surfen op een aanbieding of korting om de kans op fouten te verkleinen en conversies in een webwinkel te verhogen.
 
 ## Real-time Machine Learning-architectuur {#architecture}
 
 De volgende diagrammen verstrekken een overzicht voor de het Leren architectuur van de machine in real time. Alfa heeft momenteel een vereenvoudigde versie.
 
-![&#x200B; alpha- boog &#x200B;](../images/rtml/alpha-arch.png)
+![ alpha- boog ](../images/rtml/alpha-arch.png)
 
-![&#x200B; Vereenvoudigd overzicht &#x200B;](../images/rtml/end-to-end-arch.png)
+![ Vereenvoudigd overzicht ](../images/rtml/end-to-end-arch.png)
 
-## Workflow in real-time leren
+## Workflow voor het leren van machines in realtime
 
-In de volgende workflow worden de typische stappen en resultaten beschreven die zijn vereist voor het maken en gebruiken van een Real-Time Machine Learning-model.
+In de volgende workflow worden de typische stappen en resultaten beschreven die zijn betrokken bij het maken en gebruiken van een Real-Time Machine Learning-model.
 
 ### Inname van gegevens en preparaten
 
-Gegevens worden opgenomen en getransformeerd met de [!DNL Experience Data Model] (XDM) op Adobe Experience Platform. Deze gegevens worden gebruikt voor modeltraining. Meer over XDM leren, bezoek het [&#x200B; overzicht XDM &#x200B;](../../xdm/home.md).
+Gegevens worden opgenomen en getransformeerd met de [!DNL Experience Data Model] (XDM) op Adobe Experience Platform. Deze gegevens worden gebruikt voor modeltraining. Meer over XDM leren, bezoek het [ XDM overzicht ](../../xdm/home.md).
 
 ### Authoring
 
@@ -49,9 +49,9 @@ Maak een real-time model voor het leren van machines door deze volledig te ontwe
 
 ### Implementatie
 
-Implementeer uw model naar de [!DNL Edge Network] om een real-time machine learning-service in het [!UICONTROL Service Gallery] te maken met behulp van het voorspellings-API-eindpunt.
+Stel uw model aan [!DNL Edge Network] op om een Echte - tijd machine Lerende dienst in [!UICONTROL Service Gallery] tot stand te brengen gebruikend het Voorspelling API eindpunt.
 
-### gevolgtrekking
+### Opkomst
 
 Met het voorspellingsREST API-eindpunt kunt u in real-time inzichten van machines genereren.
 
@@ -65,22 +65,23 @@ Het leren van machines in real time is momenteel in alpha. De hieronder beschrev
 
 >[!NOTE]
 >
-> Beperkingen van de Alpha:
+> Alpha-beperkingen:
+>
 > - Momenteel worden alleen ONNX-modellen ondersteund.
 > - De functies die in knopen worden gebruikt kunnen niet in series worden vervaardigd. Bijvoorbeeld, een lambdafunctie die in een knoop van Pandas wordt gebruikt.
 > - Er is 20 seconden slaap nadat [!DNL Edge] de plaatsing manueel wordt gedaan.
-> - Voor diep leren moeten uw gegevens zodanig worden verzonden dat wanneer `df.values` wordt genoemd, een array wordt geretourneerd die door uw DL-model wordt geaccepteerd. De reden hiervoor is dat het ONNX model scoring knooppunt `df.values` gebruikt en de uitvoer naar de score stuurt voor het model.
+> - Voor diep leren moeten uw gegevens zodanig worden verzonden dat wanneer `df.values` wordt genoemd, een array wordt geretourneerd die door uw DL-model wordt geaccepteerd. Dit komt doordat het ONNX model scoring knooppunt `df.values` gebruikt en de uitvoer naar de score verzendt tegen het model.
 
 
 ### Functies:
 
-| | Alpha (mei) |
+| | Alpha (mei |
 | --- | --- |
-| **Eigenschappen** | - Gebruik de RTML-laptopsjabloon, ontwerp, test en implementeer een aangepast machine-learningmodel. <br> - Ondersteuning voor het importeren van vooraf getrainde modellen voor machine learning. <br> - Real-time Machine Learning SDK. <br> - Startset van ontwerpknooppunten. <br> - Gedistribueerd naar Adobe Experience Platform Hub. |
-| **Beschikbaarheid** | North America |
-| **Authoring Nodes** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Splitsen <br> - ModelUpload <br> - OneHotEncoder |
+| **Functies** | - Het gebruiken van het de notitieboekjecalplaatje van RTML, auteur, test, en stelt een model van het douanemachine leren op. <br> - Ondersteuning voor het importeren van vooraf opgeleide modellen voor machinaal leren. <br> - Real-time Machine Learning SDK. <br> - Startset van ontwerpknooppunten. <br> - Gedistribueerd naar Adobe Experience Platform Hub. |
+| **Beschikbaarheid** | Noord-Amerika |
+| **Authoring Nodes** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **het Scoren runtime** | ONNX |
 
 ## Volgende stappen
 
-U kunt beginnen door [&#x200B; te volgen begonnen wordt &#x200B;](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor het creëren van een In real time het Leren van de Machine model.
+U kunt beginnen door [ te volgen begonnen wordt ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor het creëren van een In real time het Leren van de Machine model.

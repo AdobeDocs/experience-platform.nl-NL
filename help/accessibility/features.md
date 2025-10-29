@@ -4,7 +4,7 @@ title: Algemene toegankelijkheidsfuncties in Experience Platform
 type: Documentation
 description: Meer informatie over de algemene toegankelijkheidsfuncties die door Adobe Experience Platform worden ondersteund, zoals toetsenbordnavigatie, kleurenpaletten en contrast, en ondersteuning voor ondersteunende hulpmiddelen.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 0%
@@ -24,6 +24,7 @@ Gebruikers met een handicap vertrouwen vaak op hardware en software, ook wel hul
 Experience Platform streeft ernaar volledige toetsenbordtoegankelijkheid te ondersteunen.
 
 De volgende navigatie-elementen vergemakkelijken de toegankelijkheid:
+
 * De sleutel van het Lusje beweegt zich tussen elementen UI, secties, en menugroepen.
 * Pijltoetsen worden verplaatst binnen menugroepen om focus in te stellen op afzonderlijke actieve elementen.
 * Shift + Tab wordt achterwaarts door de tabvolgorde verplaatst.
@@ -31,16 +32,16 @@ De volgende navigatie-elementen vergemakkelijken de toegankelijkheid:
 * De escape-toets (ESC) fungeert als een cancel-knop om een dialoogvenster te sluiten als deze aanwezig is.
 * Experience Platform geeft een blauwe rand weer rondom een geselecteerd element om een duidelijke indicatie te geven van welk interface-element momenteel focus heeft.
 
-![&#x200B; een blauwe grens die rond een geselecteerd element verschijnt om erop te wijzen dat de nadruk wordt toegepast.](images/profile-overview-tab.png)
+![ een blauwe grens die rond een geselecteerd element verschijnt om erop te wijzen dat de nadruk wordt toegepast.](images/profile-overview-tab.png)
 
 ## Kleurenpaletten en contrast
 
-Experience Platform streeft naar [&#x200B; WCAG 2.1 a &#x200B;](https://www.w3.org/TR/WCAG/) conformiteit, met inbegrip van vereisten voor kleurencontrast. De gebruikersinterface van Experience Platform biedt voldoende contrast in de toepassing voor een toegankelijke weergave voor gebruikers met een laag gezichtsvermogen of een laag kleurfalen.
+Experience Platform streeft naar [ WCAG 2.1 a ](https://www.w3.org/TR/WCAG/) conformiteit, met inbegrip van vereisten voor kleurencontrast. De gebruikersinterface van Experience Platform biedt voldoende contrast in de toepassing voor een toegankelijke weergave voor gebruikers met een laag gezichtsvermogen of een laag kleurfalen.
 
-![&#x200B; het kleurenpalet en het contrast aanwezig op de homepage van Experience Platform UI.](images/homepage.png)
+![ het kleurenpalet en het contrast aanwezig op de homepage van Experience Platform UI.](images/homepage.png)
 
 ## Veldvalidatie vereist
 
 Wanneer u gegevens toevoegt, schema&#39;s maakt of segmenten definieert, worden vereiste velden zowel visueel, met een sterretje naast het tekstlabel van een veld als programmatisch aangegeven. Deze velden activeren validatie wanneer u ongeldige gegevens in velden invoert en bij het opslaan. Als een vereist veld de validatie niet doorgeeft, wordt dit veld rood weergegeven met een foutpictogram en verschijnt ook een schriftelijke beschrijving van het probleem dat moet worden gecorrigeerd.
 
-![&#x200B; een close-up van een vereist gebied dat bevestiging niet heeft overgegaan. Het veld wordt rood weergegeven en er is een foutpictogram aanwezig.](images/field-validation.png)
+![ een close-up van een vereist gebied dat bevestiging niet heeft overgegaan. Het veld wordt rood weergegeven en er is een foutpictogram aanwezig.](images/field-validation.png)

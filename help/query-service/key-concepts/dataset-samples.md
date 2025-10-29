@@ -2,7 +2,7 @@
 title: Gegevenssetvoorbeelden
 description: De de steekproefdatasets van de Dienst van de vraag laten u toe om verkennende vragen over grote gegevens met zeer gereduceerde verwerkingstijd ten koste van vraagnauwkeurigheid te leiden. Deze gids verstrekt informatie over hoe te om uw steekproeven voor benaderende vraagverwerking te beheren
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
@@ -18,12 +18,12 @@ Aangezien vele gebruikers geen nauwkeurig antwoord voor een gezamenlijke verrich
 Om u te helpen uw steekproeven voor benaderende vraagverwerking beheren, steunt de Dienst van de Vraag de volgende verrichtingen voor datasetsteekproeven:
 
 - [Gegevenssetvoorbeelden](#dataset-samples)
-   - [Aan de slag {#get-started}](#getting-started-get-started)
-   - [Een uniforme steekproef voor willekeurige gegevenssets maken {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [Optioneel filtercriteria opgeven {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [De lijst met voorbeelden weergeven {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
-   - [De voorbeeldgegevensset opvragen {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
-   - [Gegevenssetvoorbeelden verwijderen {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
+   - [Aan de slag](#getting-started-get-started)
+   - [Een uniforme steekproef voor een willekeurige gegevensset maken](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Optioneel filtercriteria opgeven](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [De lijst met voorbeelden weergeven](#view-the-list-of-samples-view-list-of-samples)
+   - [Vraag de steekproefdataset](#query-the-sample-dataset-query-sample-datasets)
+   - [Gegevenssetvoorbeelden verwijderen](#delete-dataset-samples-delete-a-sample)
 
 ## Aan de slag {#get-started}
 
@@ -33,7 +33,7 @@ Als u de benaderende verwerkingsmogelijkheden voor query&#39;s die in dit docume
 >
 >U moet de sessiemarkering inschakelen telkens wanneer u zich aanmeldt bij Experience Platform.
 
-![&#x200B; de Redacteur van de Vraag met &quot;SET qp=true;&quot;benadrukt bevel.](../images/key-concepts/set-session-flag.png)
+![ de Redacteur van de Vraag met &quot;SET qp=true;&quot;benadrukt bevel.](../images/key-concepts/set-session-flag.png)
 
 ## Een uniforme steekproef voor een willekeurige gegevensset maken {#create-a-sample}
 
@@ -83,7 +83,7 @@ De lijst van datasetsteekproeven wordt getoond in het formaat van het hieronder 
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```

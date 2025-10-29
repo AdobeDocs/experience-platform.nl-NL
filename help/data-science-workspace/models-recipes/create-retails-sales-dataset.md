@@ -5,7 +5,7 @@ title: Het detailhandelsschema en de gegevensset maken
 type: Tutorial
 description: Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle andere zelfstudies van Adobe Experience Platform Data Science Workspace. Na voltooiing, zullen het Retailschema en de datasets van de Verkoop voor u en leden van uw organisatie op Experience Platform beschikbaar zijn.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
@@ -26,19 +26,20 @@ Deze zelfstudie biedt u de voorwaarden en elementen die vereist zijn voor alle a
 ## Aan de slag
 
 Voordat u deze zelfstudie kunt starten, moet u aan de volgende voorwaarden voldoen:
+
 - Toegang tot [!DNL Adobe Experience Platform] . Als u geen toegang hebt tot een organisatie in [!DNL Experience Platform] , neemt u contact op met uw systeembeheerder voordat u verdergaat.
-- Autorisatie om [!DNL Experience Platform] API-aanroepen uit te voeren. Voltooi [&#x200B; verifieer en toegang Adobe Experience Platform APIs &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) leerprogramma om de volgende waarden te verkrijgen om dit leerprogramma te voltooien:
+- Autorisatie om [!DNL Experience Platform] API-aanroepen uit te voeren. Voltooi [ verifieer en toegang Adobe Experience Platform APIs ](https://www.adobe.com/go/platform-api-authentication-en) leerprogramma om de volgende waarden te verkrijgen om dit leerprogramma te voltooien:
    - Autorisatie: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{ORG_ID}`
    - Clientgeheim: `{CLIENT_SECRET}`
    - Clientcertificaat: `{PRIVATE_KEY}`
-- De gegevens van de steekproef en brondossiers voor [&#x200B; Recipe van de Verkoop van de Kleinhandel &#x200B;](../pre-built-recipes/retail-sales.md). Download de activa die voor dit en andere [!DNL Data Science Workspace] leerprogramma&#39;s van de [&#x200B; Adobe openbare bewaarplaats van het Git &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/) worden vereist.
-- [&#x200B; Python >= 2.7 &#x200B;](https://www.python.org/downloads/) en de volgende [!DNL Python] pakketten:
-   - [&#x200B; pip &#x200B;](https://pypi.org/project/pip/)
-   - [&#x200B; PyYAML &#x200B;](https://pyyaml.org/)
-   - [&#x200B; dictor &#x200B;](https://pypi.org/project/dictor/)
-   - [&#x200B; JWT &#x200B;](https://pypi.org/project/jwt/)
+- De gegevens van de steekproef en brondossiers voor [ Recipe van de Verkoop van de Kleinhandel ](../pre-built-recipes/retail-sales.md). Download de activa die voor dit en andere [!DNL Data Science Workspace] leerprogramma&#39;s van de [ openbare bewaarplaats van het Git van Adobe ](https://github.com/adobe/experience-platform-dsw-reference/) worden vereist.
+- [ Python >= 2.7 ](https://www.python.org/downloads/) en de volgende [!DNL Python] pakketten:
+   - [ pip ](https://pypi.org/project/pip/)
+   - [ PyYAML ](https://pyyaml.org/)
+   - [ dictor ](https://pypi.org/project/dictor/)
+   - [ JWT ](https://pypi.org/project/jwt/)
 - Een goed begrip van de volgende concepten die in deze zelfstudie worden gebruikt:
    - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
    - [Basisbeginselen van de schemacompositie](../../xdm/schema/field-dictionary.md)
@@ -111,12 +112,13 @@ Het schema en de datasets van de Verkoop van de detailhandel worden gecreeerd au
 
 ## Volgende stappen
 
-Na succesvolle voltooiing van het laarzentrekkerscript kunnen de invoer- en uitvoerschema&#39;s en datasets van de detailhandel op [!DNL Experience Platform] worden weergegeven. Zie het [&#x200B; leerprogramma van de voorproefschemagegevens &#x200B;](./preview-schema-data.md)
+Na succesvolle voltooiing van het laarzentrekkerscript kunnen de invoer- en uitvoerschema&#39;s en datasets van de detailhandel op [!DNL Experience Platform] worden weergegeven. Zie het [ leerprogramma van de voorproefschemagegevens ](./preview-schema-data.md)
 voor meer informatie .
 
 U hebt ook met succes de gegevens van de steekproef van de Verkoop van de Handel in [!DNL Experience Platform] opgenomen gebruikend het verstrekte laarsmanuscript.
 
 U kunt als volgt met de opgenomen gegevens blijven werken:
+
 - [Uw gegevens analyseren met Jupyter-laptops](../jupyterlab/analyze-your-data.md)
    - Gebruik Jupyter-laptops in Data Science Workspace om toegang te krijgen tot uw gegevens, deze te verkennen, te visualiseren en te begrijpen.
 - [Bronbestanden in een pakket plaatsen in een ontvanger](./package-source-files-recipe.md)

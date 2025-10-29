@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Recipe voor productaankoopprognose
 description: Met het product Purchase Prediction recipe kunt u de waarschijnlijkheid voorspellen van een bepaald type aankoopgebeurtenis van de klant, bijvoorbeeld een aankoop van een product.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -24,6 +24,7 @@ Met het product Purchase Prediction recipe kunt u de waarschijnlijkheid voorspel
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
 Het volgende document zal vragen zoals beantwoorden:
+
 * Voor wie is dit recept gebouwd?
 * Wat doet dit recept?
 
@@ -37,7 +38,7 @@ Het product Purchase Prediction recipe maakt gebruik van machinaal leren om het 
 
 ## Gegevensschema
 
-Dit recept gebruikt [&#x200B; schema&#39;s XDM &#x200B;](../../xdm/home.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
+Dit recept gebruikt [ schema&#39;s XDM ](../../xdm/home.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
 
 | Veldnaam | Type |
 | --- | --- |
@@ -62,6 +63,6 @@ Dit recept gebruikt [&#x200B; schema&#39;s XDM &#x200B;](../../xdm/home.md) om d
 
 ## Algorithm
 
-Eerst, wordt de opleidingsdataset in het *ProductPrediction* schema geladen. Van hier, wordt het model getraind gebruikend a [&#x200B; random forest classifier &#x200B;](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is een type gecodeerd algoritme dat verwijst naar een algoritme dat meerdere algoritmen combineert om betere voorspellende prestaties te verkrijgen. Het idee achter het algoritme is dat de willekeurige bosclassificator veelvoudige besluitvormingsbomen bouwt en hen samenvoegt om een nauwkeurigere en stabielere voorspelling tot stand te brengen.
+Eerst, wordt de opleidingsdataset in het *ProductPrediction* schema geladen. Van hier, wordt het model getraind gebruikend a [ random forest classifier ](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is een type gecodeerd algoritme dat verwijst naar een algoritme dat meerdere algoritmen combineert om betere voorspellende prestaties te verkrijgen. Het idee achter het algoritme is dat de willekeurige bosclassificator veelvoudige besluitvormingsbomen bouwt en hen samenvoegt om een nauwkeurigere en stabielere voorspelling tot stand te brengen.
 
 Dit proces begint met het maken van een reeks beslissingsstructuren die willekeurig subsets van trainingsgegevens selecteren. Daarna wordt het gemiddelde van de resultaten van elke beslissingsboom genomen.

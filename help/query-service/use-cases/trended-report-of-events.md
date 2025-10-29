@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;query-service;Query-ser
 title: Een trendrapport van gebeurtenissen maken
 description: Leer hoe te om vragen te schrijven die de Gebeurtenissen van de Ervaring gebruiken om een trended rapport van gebeurtenissen over een gespecificeerde datumwaaier, gegroepeerd door datum tot stand te brengen.
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Een trended-rapport van gebeurtenissen maken
 
-Dit document bevat een voorbeeld van de SQL-code die nodig is om een trended-rapport van gebeurtenissen overdag over een bepaald datumbereik te maken. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die [!DNL Experience Events] gebruiken om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie [&#x200B; volgende stappen sectie &#x200B;](#next-steps) voor meer gebruiksgevallen die [!DNL Experience Events] impliceren om bezoekersrapporten te produceren.
+Dit document bevat een voorbeeld van de SQL-code die nodig is om een trended-rapport van gebeurtenissen overdag over een bepaald datumbereik te maken. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die [!DNL Experience Events] gebruiken om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie [ volgende stappen sectie ](#next-steps) voor meer gebruiksgevallen die [!DNL Experience Events] impliceren om bezoekersrapporten te produceren.
 
 Rapporten geven u toegang tot uw Experience Platform-gegevens ten behoeve van de strategische zakelijke inzichten van uw organisatie. Met deze rapporten kunt u uw Experience Platform-gegevens op verschillende manieren bekijken, belangrijke metriek weergeven in een begrijpelijke indeling en de daaruit voortvloeiende inzichten delen.
 
-Meer informatie over XDM en [!DNL Experience Events] kan in het [[!DNL XDM System]  overzicht &#x200B;](../../xdm/home.md) worden gevonden. Door de Dienst van de Vraag met [!DNL Experience Events] te combineren, kunt u gedragstendensen onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die [!DNL Experience Events] betreffen.
+Meer informatie over XDM en [!DNL Experience Events] kan in het [[!DNL XDM System]  overzicht ](../../xdm/home.md) worden gevonden. Door de Dienst van de Vraag met [!DNL Experience Events] te combineren, kunt u gedragstendensen onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die [!DNL Experience Events] betreffen.
 
 ## Doelstellingen
 
@@ -47,7 +47,7 @@ De resultaten van deze query zijn hieronder te zien.
 
 ```console
      Day     | pageViews |   A    |   B   |    C    | viewedParkas
--------------+-----------+--------+-------+---------+--------------
+|-------------+-----------+--------+-------+---------+--------------
  2019-03-01  |   55317.0 | 8503.0 | 804.0 | 1578.0  |           73
  2019-03-02  |   55302.0 | 8600.0 | 854.0 | 1528.0  |           86
  2019-03-03  |   54613.0 | 8162.0 | 795.0 | 1568.0  |          100

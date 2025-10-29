@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;product aanbeveling recept;Data Science Workspace;populaire onderwerpen;recepten;pre-build recipe
+keywords: Experience Platform;product aanbeveling recept;Data Science Workspace;populaire onderwerpen;recepten;pre-build recept
 solution: Experience Platform
 title: Recipe productaanbeveling
-description: Met het product Recommendations-recept kun je gepersonaliseerde productaanbevelingen bieden die zijn afgestemd op de behoeften en interesses van je klant. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u inzicht verschaffen in welke producten zij geïnteresseerd kunnen zijn.
+description: Het recept van de Aanbevelingen van het Product laat u toe om gepersonaliseerde productaanbevelingen te verstrekken die aan de behoeften en de belangen van uw klant worden aangepast. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u insight voorzien van welke producten ze willen.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -19,47 +19,48 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Met het product Recommendations-recept kunt u op maat gemaakte productaanbevelingen doen die zijn afgestemd op de behoeften en belangen van uw klant. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u inzicht verschaffen in welke producten zij geïnteresseerd kunnen zijn.
+Het recept van de Aanbevelingen van het Product laat u toe om gepersonaliseerde productaanbevelingen te verstrekken die aan de behoeften en de belangen van uw klant worden aangepast. Met een accuraat voorspellingsmodel kan de aankoopgeschiedenis van een klant u insight voorzien van welke producten ze willen.
 
 ## Voor wie is dit recept gebouwd?
 
-In de moderne tijd kan een detailhandelaar een groot aantal producten aanbieden, waardoor zijn klanten een heleboel keuzemogelijkheden hebben die ook het zoeken van klanten kunnen belemmeren. Vanwege tijd- en inspanningsbeperkingen kunnen klanten het product dat ze willen niet vinden, wat leidt tot aankopen met een hoog cognitieve dissonantie of helemaal geen aankoop.
+In de moderne tijd kan een retailer een groot aantal producten aanbieden, waardoor hun klanten een hoop keuzes kunnen maken die ook het zoeken van hun klanten kunnen belemmeren. Vanwege tijd- en inspanningsbeperkingen kunnen klanten het gewenste product wellicht niet vinden, wat leidt tot aankopen met een hoog niveau van cognitieve dissonantie of helemaal geen aankoop.
 
 ## Wat doet dit recept?
 
-Het Product Recommendations-recept maakt gebruik van machine learning om de interacties van klanten met producten in het verleden te analyseren en snel en moeiteloos een gepersonaliseerde lijst met productaanbevelingen te genereren. Zo optimaliseert u het proces voor productontdekking en voorkomt u lange, onproductieve, irrelevante zoekopdrachten voor uw klanten. Als gevolg hiervan kan het Product Recommendations-recept de algehele aanschafervaring van een klant verbeteren, wat leidt tot meer betrokkenheid en een sterkere merkloyaliteit.
+Het recept van de Aanbevelingen van het Product gebruikt machine het leren om de interactie van een klant met producten in het verleden te analyseren, en een gepersonaliseerde lijst van productaanbevelingen snel en moeiteloos te produceren. Dit optimaliseert het productontdekkingsproces en elimineert lange, onproductieve, irrelevante onderzoeken naar uw klanten. Dientengevolge, kan het recept van de Aanbevelingen van het Product de algemene aankoopervaring van een klant verbeteren, die tot hogere betrokkenheid en grotere merkloyaliteit leidt.
 
 ## Hoe begin ik?
 
-U kunt aan de slag door de zelfstudie van Adobe Experience Platform Lab te volgen (zie de verbinding van het Laboratorium hieronder). Dit leerprogramma zal u tonen hoe te om het recept van Recommendations van het Product in een Notitieboekje van de Jupyter tot stand te brengen door [&#x200B; notitieboekje aan recept &#x200B;](../jupyterlab/create-a-model.md) werkschema te volgen, en het recept in [!DNL Experience Platform] uit te voeren [!DNL Data Science Workspace].
+U kunt aan de slag door de zelfstudie van Adobe Experience Platform Lab te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie zal u tonen hoe te om het recept van de Aanbevelingen van het Product in een Notitieboekje van Jupyter tot stand te brengen door [ notitieboekje te volgen aan recept ](../jupyterlab/create-a-model.md) werkschema, en het recept in [!DNL Experience Platform] uit te voeren [!DNL Data Science Workspace].
 
-* [&#x200B; Laboratorium: Verwacht de Toekomst met de Wetenschap van Gegevens Workspace &#x200B;](https://expleague.azureedge.net/labs/L777/index.html)
-* [&#x200B; middelen van het Laboratorium &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
+* [ Laboratorium: Verwacht de Toekomst met de Wetenschap van Gegevens Workspace ](https://expleague.azureedge.net/labs/L777/index.html)
+* [ middelen van het Laboratorium ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Gegevensschema
 
-Dit recept gebruikt douane [&#x200B; XDM schema&#39;s &#x200B;](../../xdm/schema/field-dictionary.md) om de input en outputgegevens te modelleren:
+Dit recept gebruikt douane [ XDM schema&#39;s ](../../xdm/schema/field-dictionary.md) om de input en outputgegevens te modelleren:
 
 ### Invoergegevensschema
 
 | Veldnaam | Type |
 | --- | --- |
-| itemId | Tekenreeks |
+| itemId | String |
 | interactionType | String |
 | tijdstempel | String |
-| userId | Tekenreeks |
+| userId | String |
 
 ### Uitvoergegevensschema
 
 | Veldnaam | Type |
 | --- | --- |
-| aanbevelingen | Tekenreeks |
+| aanbevelingen | String |
 | userId | Geheel |
 
 ## Algorithm
 
-Het product Recommendations-recept maakt gebruik van collectieve filtering om een gepersonaliseerde lijst met productaanbevelingen voor uw klanten te genereren. Bij collectieve filtering is, in tegenstelling tot een op inhoud gebaseerde benadering, geen informatie over een specifiek product vereist, maar worden de historische voorkeuren van een klant voor een set producten gebruikt. Deze krachtige aanbeveling gebruikt twee eenvoudige veronderstellingen:
-* Er zijn klanten met vergelijkbare interesses, en deze kunnen worden gegroepeerd door hun aankoop- en browsergedrag te vergelijken.
-* Een klant is eerder geïnteresseerd in een aanbeveling op basis van soortgelijke klanten in termen van aankoop- en browsergedrag.
+Het recept van de Aanbevelingen van het Product gebruikt samenwerkings het filtreren om een gepersonaliseerde lijst van productaanbevelingen voor uw klanten te produceren. Bij collectieve filtering is, in tegenstelling tot een op inhoud gebaseerde benadering, geen informatie over een specifiek product vereist, maar worden de historische voorkeuren van een klant voor een set producten gebruikt. Deze krachtige aanbeveling gebruikt twee eenvoudige veronderstellingen:
 
-Dit proces is onderverdeeld in twee hoofdstappen. Definieer eerst een subset van vergelijkbare klanten. Vervolgens identificeert u binnen die set vergelijkbare functies onder die klanten om een aanbeveling voor de doelklant te retourneren.
+* Er zijn klanten met vergelijkbare belangen, en deze kunnen worden gegroepeerd door hun aankoop en het bladeren te vergelijken.
+* Een klant is meer geïnteresseerd in een aanbeveling die is gebaseerd op soortgelijke klanten wat betreft hun aankoop- en browsergedrag.
+
+Dit proces wordt opgesplitst in twee hoofdstappen. Eerst definieert u een subset van vergelijkbare klanten. Dan, binnen die reeks, identificeer gelijkaardige eigenschappen onder die klanten om een aanbeveling voor de doelklant terug te keren.

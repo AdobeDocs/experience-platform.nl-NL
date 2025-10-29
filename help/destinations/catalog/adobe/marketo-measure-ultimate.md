@@ -3,18 +3,18 @@ title: Marketo Measure Ultimate-bestemming
 description: Leer hoe u verbinding maakt met en gegevens activeert voor de Marketo Measure Ultimate-bestemming.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 0%
 
 ---
 
-# Marketo Measure Ultimate-doel {#mmu-destination}
+# Marketo Measure Ultimate-bestemming {#mmu-destination}
 
 ## Overzicht {#overview}
 
-Marketo Measure (voorheen Bizible) geeft de marketeers inzicht in welke marketinginspanningen het meest effectief zijn in het aansturen van inkomsten en het maximaliseren van het rendement van investeringen voor hun bedrijf. Marketo Measure is een marketingtoewijzingsoplossing die de kanaalprestaties automatisch bijhoudt en rapporteert, zodat u kunt zien in welke kanalen de meeste betrokkenheid van klanten wordt bevorderd en uw marketinguitgaven dienovereenkomstig kunt optimaliseren.
+Marketo Measure (voorheen Bizible) biedt marketeers insight aan welke marketingactiviteiten het meest effectief zijn in het aansturen van inkomsten en het maximaliseren van het rendement van investeringen voor hun bedrijf. Marketo Measure is een marketingtoewijzingsoplossing die de kanaalprestaties automatisch bijhoudt en rapporteert, zodat u kunt zien in welke kanalen de meeste betrokkenheid van klanten wordt bevorderd en uw marketinguitgaven dienovereenkomstig kunt optimaliseren.
 
 De bestemming laat de zaken-aan-zaken (B2B) gegevensstromen van Adobe Experience Platform aan Marketo Measure toe. De kaart is alleen beschikbaar voor Marketo Measure Ultimate-klanten.
 
@@ -30,7 +30,7 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van Marketo Measur
 
 Houd rekening met de volgende voorwaarden voor de Marketo Measure-bestemming:
 
-* Sandbox-toewijzing van Experience Platform moet door de beheerder worden ingevuld op de pagina Marketo Measure-instellingen. Zonder de functie Sandbox-toewijzing kunt u de workflow niet voltooien om verbinding te maken met het doel om gegevens op te slaan en te activeren.
+* Experience Platform Sandbox-toewijzing moet door de beheerder worden ingevuld op de pagina Marketo Measure-instellingen. Zonder de functie Sandbox-toewijzing kunt u de workflow niet voltooien om verbinding te maken met het doel om gegevens op te slaan en te activeren.
 * Alleen gegevenssets van B2B XDM-klassen kunnen worden geëxporteerd (zie bijvoorbeeld de klassen XDM Business Account en XDM Business Opportunity). U kunt niet in veelvoudige datasets van de zelfde B2B klasse XDM voor een bepaalde gegevensbron brengen.
 * Elke dataset kan slechts in één dataflow aan de bestemming van Marketo Measure worden omvat.
 
@@ -39,9 +39,9 @@ Houd rekening met de volgende voorwaarden voor de Marketo Measure-bestemming:
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
----------|----------|---------|
-| Exporttype | **[!UICONTROL Dataset export]** | U exporteert onbewerkte gegevenssets, die niet zijn gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. Lees meer over [&#x200B; de uitvoer van de dataset &#x200B;](/help/destinations/destination-types.md#dataset-export-destinations). |
-| Exportfrequentie | **[!UICONTROL Batch]** | Deze batchbestemming exporteert bestanden om de twee uur naar het Marketo Measure-platform. Lees meer over [&#x200B; plannend dataset de uitvoer &#x200B;](/help/destinations/ui/export-datasets.md#scheduling). |
+|---------|----------|---------|
+| Exporttype | **[!UICONTROL Dataset export]** | U exporteert onbewerkte gegevenssets, die niet zijn gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. Lees meer over [ de uitvoer van de dataset ](/help/destinations/destination-types.md#dataset-export-destinations). |
+| Exportfrequentie | **[!UICONTROL Batch]** | Deze batchbestemming exporteert bestanden om de twee uur naar het Marketo Measure-platform. Lees meer over [ plannend dataset de uitvoer ](/help/destinations/ui/export-datasets.md#scheduling). |
 
 {style="table-layout:auto"}
 
@@ -49,9 +49,9 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. Vul de velden in de onderstaande sectie in de workflow voor het configureren van de bestemming in.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. Vul de velden in de onderstaande sectie in de workflow voor het configureren van de bestemming in.
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -60,11 +60,11 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 
-![&#x200B; verbindt met bestemmingswerkschema voor de bestemming van Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+![ verbindt met bestemmingswerkschema voor de bestemming van Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -72,14 +72,14 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->Om gegevens te activeren, hebt u de **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om gegevens te activeren, hebt u de **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Lees de [&#x200B; datasets van de Uitvoer &#x200B;](/help/destinations/ui/export-datasets.md) leerprogramma voor uitgebreide instructies bij het uitvoeren van datasets aan deze bestemming.
+Lees de [ datasets van de Uitvoer ](/help/destinations/ui/export-datasets.md) leerprogramma voor uitgebreide instructies bij het uitvoeren van datasets aan deze bestemming.
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Om een succesvolle datasetuitvoer te bevestigen, kunt u controleren dat uw dataset met succes het aan uw [&#x200B; het gegevenspakhuis van de Snowflake &#x200B;](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=nl-NL) heeft gemaakt.
+Om een succesvolle datasetuitvoer te bevestigen, kunt u controleren dat uw dataset het aan uw [ het gegevenspakhuis van Snowflake ](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html) met succes heeft gemaakt.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).

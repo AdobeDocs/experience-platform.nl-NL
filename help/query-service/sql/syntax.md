@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door de Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '4686'
 ht-degree: 1%
@@ -198,7 +198,7 @@ SELECT statement 2
 
 Gebruik de opdracht `CREATE TABLE AS SELECT` (CTAS) om de resultaten van een `SELECT` -query in een nieuwe tabel te plaatsen. Dit is nuttig voor het creëren van getransformeerde datasets, het uitvoeren van samenvoegingen, of het voorvertonen van eigenschap-gebouwde gegevens alvorens het in een model te gebruiken.
 
-Als u bereid bent om een model te trainen gebruikend getransformeerde eigenschappen, zie de [&#x200B; documentatie van Modellen &#x200B;](../advanced-statistics/models.md) voor begeleiding bij het gebruiken van `CREATE MODEL` met de `TRANSFORM` clausule.
+Als u bereid bent om een model te trainen gebruikend getransformeerde eigenschappen, zie de [ documentatie van Modellen ](../advanced-statistics/models.md) voor begeleiding bij het gebruiken van `CREATE MODEL` met de `TRANSFORM` clausule.
 
 U kunt desgewenst een `TRANSFORM` -component opnemen om een of meer functies voor functietechniek rechtstreeks in de CTAS-instructie toe te passen. Gebruik `TRANSFORM` om de resultaten van uw transformatielogica te inspecteren voordat u een modeltraining volgt.
 
@@ -223,8 +223,8 @@ AS (select_query)
 | `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om de nieuwe lijst met een bestaand schema te associëren XDM. |
 | `rowvalidation` | (Optioneel) Hiermee schakelt u validatie op rijniveau in voor elke batch die in de gegevensset wordt opgenomen. De standaardwaarde is true. |
 | `label` | (Optioneel) Gebruik de waarde `PROFILE` om de gegevensset een label te geven dat geschikt is voor het opnemen van profielen. |
-| `transform` | (Optioneel) Past functietechnologietransformaties toe (zoals tekenreeksindexering, one-hot codering of TF-IDF) voordat de gegevensset wordt geconcretiseerd. Deze component wordt gebruikt voor het voorvertonen van getransformeerde functies. Zie [`TRANSFORM` componentendocumentatie &#x200B;](#transform) voor meer details. |
-| `select_query` | Een standaardinstructie `SELECT` die de gegevensset definieert. Zie [`SELECT` vragen sectie &#x200B;](#select-queries) voor meer details. |
+| `transform` | (Optioneel) Past functietechnologietransformaties toe (zoals tekenreeksindexering, one-hot codering of TF-IDF) voordat de gegevensset wordt geconcretiseerd. Deze component wordt gebruikt voor het voorvertonen van getransformeerde functies. Zie [`TRANSFORM` componentendocumentatie ](#transform) voor meer details. |
+| `select_query` | Een standaardinstructie `SELECT` die de gegevensset definieert. Zie [`SELECT` vragen sectie ](#select-queries) voor meer details. |
 
 >[!NOTE]
 >
@@ -289,7 +289,7 @@ Houd rekening met de volgende beperkingen wanneer u de component `TRANSFORM` geb
 
 >[!NOTE]
 >
->Voor meer details over beschikbare transformatiefuncties en hun outputtypes, zie {de gegevenstypen van de transformatieoutput van 0} Eigenschap [&#128279;](../advanced-statistics/feature-transformation.md#available-transformations).
+>Voor meer details over beschikbare transformatiefuncties en hun outputtypes, zie {de gegevenstypen van de transformatieoutput van 0} Eigenschap [.](../advanced-statistics/feature-transformation.md#available-transformations)
 
 
 ### TRANSFORM, component {#transform}
@@ -302,9 +302,9 @@ De component `TRANSFORM` kan in de volgende instructies worden gebruikt:
 - `CREATE TABLE`
 - `CREATE TEMP TABLE`
 
-Zie de [&#x200B; documentatie van Modellen &#x200B;](../advanced-statistics/models.md) voor gedetailleerde instructies bij het gebruiken CREATE MODEL, met inbegrip van hoe te om transformaties te bepalen, modelopties te plaatsen, en opleidingsgegevens te vormen.
+Zie de [ documentatie van Modellen ](../advanced-statistics/models.md) voor gedetailleerde instructies bij het gebruiken CREATE MODEL, met inbegrip van hoe te om transformaties te bepalen, modelopties te plaatsen, en opleidingsgegevens te vormen.
 
-Voor gebruik met `CREATE TABLE`, zie [&#x200B; LIJST ALS UITGEZOCHTE sectie &#x200B;](#create-table-as-select) CREËREN.
+Voor gebruik met `CREATE TABLE`, zie [ LIJST ALS UITGEZOCHTE sectie ](#create-table-as-select) CREËREN.
 
 #### CREATE MODEL, voorbeeld
 
@@ -347,7 +347,7 @@ INSERT INTO table_name select_query
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `table_name` | De naam van de tabel waarin u de query wilt invoegen. |
-| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [&#x200B; UITGEZOCHTE vraagsectie &#x200B;](#select-queries) worden gevonden. |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -426,7 +426,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `IF EXISTS` | Als deze parameter wordt gespecificeerd en het schema **niet** bestaat, wordt geen uitzondering geworpen. |
-| `RESTRICT` | De standaardwaarde voor de modus. Indien gespecificeerd, daalt het schema slechts als het **&#x200B;**&#x200B;geen lijsten bevat. |
+| `RESTRICT` | De standaardwaarde voor de modus. Indien gespecificeerd, daalt het schema slechts als het **** geen lijsten bevat. |
 | `CASCADE` | Indien opgegeven, wordt het schema neergezet samen met alle tabellen in het schema. |
 
 ## WEERGAVE MAKEN {#create-view}
@@ -442,7 +442,7 @@ CREATE VIEW view_name AS select_query
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `view_name` | De naam van de weergave die moet worden gemaakt. |
-| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [&#x200B; UITGEZOCHTE vraagsectie &#x200B;](#select-queries) worden gevonden. |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -466,7 +466,7 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 | `db_name` | De naam van de database. |
 | `schema_name` | De naam van het schema. |
 | `view_name` | De naam van de weergave die moet worden gemaakt. |
-| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [&#x200B; UITGEZOCHTE vraagsectie &#x200B;](#select-queries) worden gevonden. |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -486,7 +486,7 @@ SHOW VIEWS;
 
 ```console
  Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
-----------------------------------------------------------------------------------------------
+|----------------------------------------------------------------------------------------------
  qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
           |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
 (2 rows)
@@ -674,7 +674,7 @@ De resultaten zijn als volgt:
 
 ```console
                 _id                |                                _experience                                 | application  |                   commerce                   | dataSource |                               device                               |                       endUserIDs                       |                                                                                                environment                                                                                                |                     identityMap                     |                              placeContext                               |   receivedTimestamp   |       timestamp       | userActivityRegion |                                         web                                          | _adcstageforpqs
------------------------------------+----------------------------------------------------------------------------+--------------+----------------------------------------------+------------+--------------------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------+-----------------------+-----------------------+--------------------+--------------------------------------------------------------------------------------+-----------------
+|-----------------------------------+----------------------------------------------------------------------------+--------------+----------------------------------------------+------------+--------------------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------+-----------------------+-----------------------+--------------------+--------------------------------------------------------------------------------------+-----------------
  31892EE15DE00000-401D52664FF48A52 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE080007B35-E6CE00000000000,"(AAID)",t)")")  | ("(en-US,f,f,t,1.6,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",490,1125)",xo.net,64.3.235.13)     | [AAID -> "{(31892EE080007B35-E6CE00000000000,t)}"]  | ("("(34.01,-84.0)",lawrenceville,US,524,30043,ga)",600)                 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Search Results,"(1.0)")","(http://www.google.com/search?ie=UTF-8&q=,internal)") |
  31892EE15DE00000-401B92664FF48AE8 | ("("("(1,1)","(1,1)")","(-209479095,4085488201,-2105158467,2189808829)")") | (background) | (NULL,"(USD,NULL)",NULL,NULL,NULL,NULL,NULL) | (475341)   | (32,768,1024,205202,https://ns.adobe.com/xdm/external/deviceatlas) | ("("(31892EE100007BF3-215FE00000000001,"(AAID)",t)")") | ("(en-US,f,f,t,1.5,"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",768,556)",ntt.net,219.165.108.145) | [AAID -> "{(31892EE100007BF3-215FE00000000001,t)}"] | ("("(34.989999999999995,138.42)",shizuoka,JP,392005,420-0812,22)",-240) | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | (UT1)              | ("(f,Home - JJEsquire,"(1.0)")","(NULL,typed_bookmarked)")                           |
 (2 rows)  
@@ -686,7 +686,7 @@ In de volgende tabel ziet u het verschil in resultaten dat de instelling `auto_t
 
 ```console
                 _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
------------------------------------+-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------
+|-----------------------------------+-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------------------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------
  31892EE15DE00000-401D52664FF48A52 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE080007B35-E6CE00000000000","namespace":{"code":"AAID"},"primary":true}}}  | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.6","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":490,"viewportWidth":1125},"domain":"xo.net","ipV4":"64.3.235.13"}     | {"AAID":[{"id":"31892EE080007B35-E6CE00000000000","primary":true}]}  | {"geo":{"_schema":{"latitude":34.01,"longitude":-84.0},"city":"lawrenceville","countryCode":"US","dmaID":524,"postalCode":"30043","stateProvince":"ga"},"localTimezoneOffset":600}                 | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Search Results","pageViews":{"value":1.0}},"webReferrer":{"URL":"http://www.google.com/search?ie=UTF-8&q=","type":"internal"}} |
  31892EE15DE00000-401B92664FF48AE8 | 2022-09-02 19:47:14.0 | 2022-09-02 19:47:14.0 | {"analytics":{"customDimensions":{"eVars":{"eVar1":"1","eVar2":"1"},"props":{"prop1":"1","prop2":"1"}},"environment":{"browserID":-209479095,"browserIDStr":"4085488201","operatingSystemID":-2105158467,"operatingSystemIDStr":"2189808829"}}} | {"userPerspective":"background"} | {"order":{"currencyCode":"USD"}} | {"_id":"475341"} | {"colorDepth":32,"screenHeight":768,"screenWidth":1024,"typeID":"205202","typeIDService":"https://ns.adobe.com/xdm/external/deviceatlas"} | {"_experience":{"aaid":{"id":"31892EE100007BF3-215FE00000000001","namespace":{"code":"AAID"},"primary":true}}} | {"browserDetails":{"acceptLanguage":"en-US","cookiesEnabled":false,"javaEnabled":false,"javaScriptEnabled":true,"javaScriptVersion":"1.5","userAgent":"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; ja-jp) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7","viewportHeight":768,"viewportWidth":556},"domain":"ntt.net","ipV4":"219.165.108.145"} | {"AAID":[{"id":"31892EE100007BF3-215FE00000000001","primary":true}]} | {"geo":{"_schema":{"latitude":34.989999999999995,"longitude":138.42},"city":"shizuoka","countryCode":"JP","dmaID":392005,"postalCode":"420-0812","stateProvince":"22"},"localTimezoneOffset":-240} | {"dataCenterLocation":"UT1"} | {"webPageDetails":{"isHomePage":false,"name":"Home - JJEsquire","pageViews":{"value":1.0}},"webReferrer":{"type":"typed_bookmarked"}}                                        |
 (2 rows)
@@ -746,11 +746,11 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Zie de [&#x200B; logische organisatie van gegevensactiva &#x200B;](../best-practices/organize-data-assets.md) gids voor een meer gedetailleerde verklaring over de beste praktijken van de Dienst van de Vraag.
+Zie de [ logische organisatie van gegevensactiva ](../best-practices/organize-data-assets.md) gids voor een meer gedetailleerde verklaring over de beste praktijken van de Dienst van de Vraag.
 
 ## Tabel bestaat
 
-De SQL-opdracht `table_exists` wordt gebruikt om te bevestigen of een tabel momenteel in het systeem bestaat. Het bevel keert een booleaanse waarde terug: `true` als de lijst **&#x200B;**&#x200B;bestaat, en `false` als de lijst **niet** bestaat.
+De SQL-opdracht `table_exists` wordt gebruikt om te bevestigen of een tabel momenteel in het systeem bestaat. Het bevel keert een booleaanse waarde terug: `true` als de lijst **** bestaat, en `false` als de lijst **niet** bestaat.
 
 Door te controleren of een tabel bestaat voordat de instructies worden uitgevoerd, vereenvoudigt de functie `table_exists` het schrijven van een anoniem blok, zodat zowel de gebruiksgevallen `CREATE` als `INSERT INTO` worden behandeld.
 
@@ -807,7 +807,7 @@ In het voorbeeld wordt het volgende geretourneerd:
 
 In dit tweede voorbeeld wordt verder het concept en de toepassing van de functie `inline` getoond. Het gegevensmodel voor het voorbeeld wordt in de onderstaande afbeelding weergegeven.
 
-![&#x200B; het schemadiagram van A voor productListItems.](../images/sql/productListItems.png)
+![ het schemadiagram van A voor productListItems.](../images/sql/productListItems.png)
 
 **Voorbeeld**
 
@@ -845,7 +845,7 @@ De subsecties hieronder behandelen de [!DNL PostgreSQL] bevelen die door de Dien
 
 ### TABEL ANALYSEREN {#analyze-table}
 
-De opdracht `ANALYZE TABLE` voert een distributieanalyse en statistische berekeningen uit voor de benoemde tabel of tabellen. Het gebruik van `ANALYZE TABLE` varieert afhankelijk van of de datasets op de [&#x200B; versnelde opslag &#x200B;](#compute-statistics-accelerated-store) of het [&#x200B; gegevens meer &#x200B;](#compute-statistics-data-lake) worden opgeslagen. Zie de desbetreffende secties voor meer informatie over het gebruik ervan.
+De opdracht `ANALYZE TABLE` voert een distributieanalyse en statistische berekeningen uit voor de benoemde tabel of tabellen. Het gebruik van `ANALYZE TABLE` varieert afhankelijk van of de datasets op de [ versnelde opslag ](#compute-statistics-accelerated-store) of het [ gegevens meer ](#compute-statistics-data-lake) worden opgeslagen. Zie de desbetreffende secties voor meer informatie over het gebruik ervan.
 
 #### COMPUTE STATISTIEKEN OP DE versnelde opslag {#compute-statistics-accelerated-store}
 
@@ -857,7 +857,7 @@ Met de opdracht `ANALYZE TABLE` worden statistieken voor een tabel in de versnel
 ANALYZE TABLE <original_table_name>
 ```
 
-Hieronder volgt een lijst met statistische berekeningen die beschikbaar zijn na gebruik van de opdracht `ANALYZE TABLE` :-
+Hier volgt een lijst met statistische berekeningen die beschikbaar zijn na gebruik van de opdracht `ANALYZE TABLE` :-
 
 | Berekende waarden | Beschrijving |
 |---|---|
@@ -898,7 +898,7 @@ De uitvoer van de console wordt weergegeven zoals hieronder wordt weergegeven.
 (1 row)
 ```
 
-Vervolgens kunt u de berekende statistieken rechtstreeks opvragen door naar de `Statistics ID` te verwijzen. Gebruik de naam `Statistics ID` of de naam van de alias, zoals hieronder in de voorbeeldinstructie wordt getoond, om de uitvoer volledig weer te geven. Meer over deze eigenschap leren, zie de [&#x200B; documentatie van de aliasnaam &#x200B;](../key-concepts/dataset-statistics.md#alias-name).
+Vervolgens kunt u de berekende statistieken rechtstreeks opvragen door naar de `Statistics ID` te verwijzen. Gebruik de naam `Statistics ID` of de naam van de alias, zoals hieronder in de voorbeeldinstructie wordt getoond, om de uitvoer volledig weer te geven. Meer over deze eigenschap leren, zie de [ documentatie van de aliasnaam ](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -915,13 +915,13 @@ Hieronder ziet u een voorbeelduitvoer van SHOW STATISTICS.
 
 ```console
       statsId         |   tableName   | columnSet |         filterContext       |      timestamp
-----------------------+---------------+-----------+-----------------------------+--------------------
+|----------------------+---------------+-----------+-----------------------------+--------------------
 adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
 demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Zie de [&#x200B; documentatie van de datasetstatistieken &#x200B;](../key-concepts/dataset-statistics.md) voor meer informatie.
+Zie de [ documentatie van de datasetstatistieken ](../key-concepts/dataset-statistics.md) voor meer informatie.
 
 #### TABLESAMPLE {#tablesample}
 
@@ -940,7 +940,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Zie de [&#x200B; documentatie van de datasetsteekproeven &#x200B;](../key-concepts/dataset-samples.md) voor meer informatie.
+Zie de [ documentatie van de datasetsteekproeven ](../key-concepts/dataset-samples.md) voor meer informatie.
 
 ### BEGINNEN
 
@@ -965,7 +965,7 @@ Als `CLOSE name` wordt gebruikt, vertegenwoordigt `name` de naam van een open cu
 
 ### VERWIJDEREN
 
-Als u een eerder voorbereide SQL-instructie wilt zoeken, gebruikt u de opdracht `DEALLOCATE` . Als u niet expliciet een voorbereide instructie hebt gedistribueerd, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd. Meer informatie over voorbereide verklaringen kan in de [&#x200B; bevelPREPARE &#x200B;](#prepare) sectie worden gevonden.
+Als u een eerder voorbereide SQL-instructie wilt zoeken, gebruikt u de opdracht `DEALLOCATE` . Als u niet expliciet een voorbereide instructie hebt gedistribueerd, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd. Meer informatie over voorbereide verklaringen kan in de [ bevelPREPARE ](#prepare) sectie worden gevonden.
 
 ```sql
 DEALLOCATE name
@@ -989,7 +989,7 @@ DECLARE name CURSOR FOR query
 
 ### UITVOEREN
 
-De opdracht `EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Aangezien voorbereide instructies alleen tijdens een sessie bestaan, moet de voorbereide instructie zijn gemaakt met een instructie `PREPARE` die eerder in de huidige sessie is uitgevoerd. Meer informatie over het gebruik van voorbereide instructies vindt u in de sectie [`PREPARE` command &#x200B;](#prepare) .
+De opdracht `EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Aangezien voorbereide instructies alleen tijdens een sessie bestaan, moet de voorbereide instructie zijn gemaakt met een instructie `PREPARE` die eerder in de huidige sessie is uitgevoerd. Meer informatie over het gebruik van voorbereide instructies vindt u in de sectie [`PREPARE` command ](#prepare) .
 
 Als de instructie `PREPARE` die de instructie heeft gemaakt enkele parameters heeft opgegeven, moet een compatibele set parameters worden doorgegeven aan de instructie `EXECUTE` . Als deze parameters niet worden doorgegeven, treedt een fout op.
 
@@ -1035,7 +1035,7 @@ EXPLAIN SELECT * FROM foo;
 
 ```console
                        QUERY PLAN
----------------------------------------------------------
+|---------------------------------------------------------
  Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
@@ -1101,12 +1101,12 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-Meer informatie over de standaard UITGEZOCHTE vraagparameters kan in de [&#x200B; UITGEZOCHTE vraagsectie &#x200B;](#select-queries) worden gevonden. Deze sectie bevat alleen parameters die exclusief zijn voor de opdracht `SELECT INTO` .
+Meer informatie over de standaard UITGEZOCHTE vraagparameters kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. Deze sectie bevat alleen parameters die exclusief zijn voor de opdracht `SELECT INTO` .
 
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `TEMPORARY` of `TEMP` | Een optionele parameter. Als de parameter wordt gespecificeerd, is de gecreeerde lijst een tijdelijke lijst. |
-| `UNLOGGED` | Een optionele parameter. Als de parameter wordt gespecificeerd, is de gecreeerde lijst een niet geregistreerde lijst. Meer informatie over niet-geregistreerde lijsten kan in de [[!DNL PostgreSQL]  documentatie &#x200B;](https://www.postgresql.org/docs/current/sql-createtable.html) worden gevonden. |
+| `UNLOGGED` | Een optionele parameter. Als de parameter wordt gespecificeerd, is de gecreeerde lijst een niet geregistreerde lijst. Meer informatie over niet-geregistreerde lijsten kan in de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/current/sql-createtable.html) worden gevonden. |
 | `new_table` | De naam van de tabel die moet worden gemaakt. |
 
 **Voorbeeld**
@@ -1141,7 +1141,7 @@ SHOW DateStyle;
 
 ```console
  DateStyle
------------
+|-----------
  ISO, MDY
 (1 row)
 ```
@@ -1242,7 +1242,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Voor meer gedetailleerde informatie, zie het document over [&#x200B; plaatsende identiteiten in een ad hoc datasets &#x200B;](../data-governance/ad-hoc-schema-identities.md).
+Voor meer gedetailleerde informatie, zie het document over [ plaatsende identiteiten in een ad hoc datasets ](../data-governance/ad-hoc-schema-identities.md).
 
 #### KOLOM TOEVOEGEN
 
@@ -1315,7 +1315,7 @@ SHOW PRIMARY KEYS
 
 ```console
     tableName | columnName    | datatype | namespace
-------------------+----------------------+----------+-----------
+|------------------+----------------------+----------+-----------
  table_name_1 | column_name1  | text     | "ECID"
  table_name_2 | column_name2  | text     | "AAID"
 ```
@@ -1330,7 +1330,7 @@ SHOW FOREIGN KEYS
 
 ```console
     tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
-------------------+---------------------+----------+---------------------+----------------------+-----------
+|------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
 ```

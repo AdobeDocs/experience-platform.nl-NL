@@ -4,7 +4,7 @@ title: Kwalitatieve automatisering
 description: Synchroniseer ervaring en operationele klantgegevens om personalisatie op schaal te ontgrendelen. Gebruik de samenvoeging van meerdere bronnen van operationele gegevens in Adobe Experience Platform als input in de iD van de Ervaring van Qualtrics om uw klanten beter te begrijpen en gerichte outreach toe te laten om de hiaat te sluiten wanneer het aankomt op inzicht in bedoeling, emotie en ervaringsbestuurders.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1120'
 ht-degree: 0%
@@ -21,11 +21,11 @@ Gebruik de samenvoeging van meerdere bronnen van operationele gegevens in Adobe 
 
 >[!IMPORTANT]
 >
->De bestemmingsschakelaar en documentatiepagina worden gecreeerd en door het team van Qualtrics gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct te contacteren door in de [&#x200B; Hub van het Succes van de Klant &#x200B;](https://support-portal.qualtrics.com/) te registreren.
+>De bestemmingsschakelaar en documentatiepagina worden gecreeerd en door het team van Qualtrics gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct te contacteren door in de [ Hub van het Succes van de Klant ](https://support-portal.qualtrics.com/) te registreren.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u de *bestemming van de Automatiseringen van 0&rbrace; Qualtrics &lbrace;zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.*
+Om u beter te helpen begrijpen hoe en wanneer u de *bestemming van de Automatiseringen van 0} Qualtrics {zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.*
 
 ### Hoofdletters gebruiken #1 {#use-case-1}
 
@@ -57,7 +57,7 @@ Hieronder vindt u de noodzakelijke stappen voor het verkrijgen van een API-token
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-*de Automatiseringen van Qualtrics* steunen de activering van identiteiten die in de hieronder lijst worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
+*de Automatiseringen van Qualtrics* steunen de activering van identiteiten die in de hieronder lijst worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -71,9 +71,9 @@ Hieronder vindt u de noodzakelijke stappen voor het verkrijgen van een API-token
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
----------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U voert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, of anderen) uit die in de *bestemming van de Automatiseringen 0&rbrace; worden gebruikt Qualtrics.* |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Exporttype | **[!UICONTROL Segment export]** | U voert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, of anderen) uit die in de *bestemming van de Automatiseringen 0} worden gebruikt Qualtrics.* |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -81,9 +81,9 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -97,13 +97,13 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL URL]**: URL die in de [&#x200B; Gebeurtenis JSON &#x200B;](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) wordt gevonden die uw [&#x200B; werkschema in Qualtrics &#x200B;](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About) teweegbrengt. Zie onderstaande schermafbeelding voor een voorbeeld.
+* **[!UICONTROL URL]**: URL die in de [ Gebeurtenis JSON ](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) wordt gevonden die uw [ werkschema in Qualtrics ](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About) teweegbrengt. Zie onderstaande schermafbeelding voor een voorbeeld.
 
-![&#x200B; URL &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
+![ URL ](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -111,9 +111,9 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Lees [&#x200B; activeer profielen en segmenten aan het stromen segment de uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lees [ activeer profielen en segmenten aan het stromen segment de uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -123,11 +123,11 @@ Deze bestemming heeft een open schema zodat kunt u om het even welke eigenschapp
 
 Om een attribuut aan uw afbeelding toe te voegen, selecteer eenvoudig **douaneattributen** wanneer het toevoegen van een nieuwe afbeelding. U kunt elke naam voor het kenmerk invoeren. Qualtrics moedigt *camelCase* noemende overeenkomst voor attributennamen (zie onder screenshot voor een voorbeeld) aan.
 
-![&#x200B; attributen van de Douane &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![ attributen van de Douane ](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
 Zie hieronder screenshot voor een voorbeeld van mogelijke kenmerktoewijzingen.
 
-![&#x200B; de afbeeldingen van het Voorbeeld &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
+![ de afbeeldingen van het Voorbeeld ](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
 #### Identiteiten toewijzen
 
@@ -140,7 +140,7 @@ Het is verplicht om een naamruimte voor identiteit te selecteren voor deze beste
 
 Zie onderstaande schermafbeelding voor een voorbeeld.
 
-![&#x200B; Identiteitsnaamruimte &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
+![ Identiteitsnaamruimte ](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
@@ -184,4 +184,4 @@ Als er geen uitvoeringen zichtbaar in **zijn de geschiedenis van de Looppas**, b
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).

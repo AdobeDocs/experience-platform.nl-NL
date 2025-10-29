@@ -3,7 +3,7 @@ keywords: cloudopslag;cloudopslag
 title: Overzicht van Cloud Storage-bestemmingen
 description: Adobe Experience Platform kan uw publiek als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Adobe Experience Platform kan uw publiek als gegevensbestanden leveren aan uw opslaglocaties in de cloud. Hierdoor kunt u soorten publiek en hun profielkenmerken naar uw interne systemen verzenden via CSV-bestanden voor [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] en SFTP. Voor [!DNL Amazon Kinesis] - en [!DNL Azure Event Hubs] -doelen worden gegevens in [!DNL JSON] -indeling uit Experience Platform gestreamd.
 
-![&#x200B; de bestemmingen van de wolkenopslag van Adobe &#x200B;](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+![ de bestemmingen van de wolkenopslag van Adobe ](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Ondersteunde cloudopslagbestemmingen {#supported-destinations}
 
@@ -33,18 +33,18 @@ Adobe Experience Platform ondersteunt gegevensexport naar de volgende cloudopsla
 
 ## Verbinding maken met een nieuwe bestemming voor cloudopslag {#connect-destination}
 
-Experience Platform moet eerst verbinding maken met het doel om het publiek voor uw campagnes naar cloudopslagbestemmingen te sturen. Zie het [&#x200B; leerprogramma van de bestemmingsverwezenlijking &#x200B;](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
+Experience Platform moet eerst verbinding maken met het doel om het publiek voor uw campagnes naar cloudopslagbestemmingen te sturen. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
 
 
 ## Macro&#39;s gebruiken om een map te maken op uw opslaglocatie {#use-macros}
 
 >[!NOTE]
 >
-> De functionaliteit die in dit gedeelte wordt beschreven, is beschikbaar voor alle cloudopslagdoelen. Nochtans, steunt de [&#x200B; bestemming van Amazon S3 &#x200B;](amazon-s3.md) momenteel slechts de `%SEGMENT_ID%` en `%SEGMENT_NAME%` macro&#39;s.
+> De functionaliteit die in dit gedeelte wordt beschreven, is beschikbaar voor alle cloudopslagdoelen. Nochtans, steunt de [ bestemming van Amazon S3 ](amazon-s3.md) momenteel slechts de `%SEGMENT_ID%` en `%SEGMENT_NAME%` macro&#39;s.
 
 Als u een aangepaste map per doelbestand op uw opslaglocatie wilt maken, kunt u macro&#39;s gebruiken in het invoerveld voor het mappad. Voeg de macro&#39;s in aan het einde van het invoerveld, zoals hieronder wordt weergegeven.
 
-![&#x200B; hoe te om macro&#39;s te gebruiken om een omslag in uw opslag tot stand te brengen &#x200B;](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+![ hoe te om macro&#39;s te gebruiken om een omslag in uw opslag tot stand te brengen ](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
 In de onderstaande voorbeelden wordt verwezen naar een voorbeeldpubliek `Luxury Audience` met ID `25768be6-ebd5-45cc-8913-12fb3f348615` .
 
@@ -73,9 +73,10 @@ Net als in de bovenstaande voorbeelden kunt u aanvullende macro&#39;s gebruiken 
 ## Gegevensuitvoertype {#export-type}
 
 De opslagbestemmingen van de wolk steunen de volgende uitvoertypes:
+
 * **op profiel-gebaseerde uitvoer**. Dit betekent dat u details exporteert over de personen in het publiek. Deze details zijn nodig voor verpersoonlijking en kunnen attributen, gebeurtenissen, publiekslidmaatschappen, en meer omvatten.
 * **de uitvoer van de Dataset**. Deze functionaliteit staat u toe om volledige datasets naar de bestemmingen van de wolkenopslag uit te voeren. [Lees meer](/help/destinations/ui/export-datasets.md) over de nieuwe functionaliteit.
 
 ## Volgende stappen {#next-steps}
 
-Na het selecteren van welke één van [&#x200B; gesteunde wolkenbestemmingen &#x200B;](#supported-destinations) u zou willen gebruiken, [&#x200B; verbind met bestemmingsleerprogramma &#x200B;](/help/destinations/ui/connect-destination.md) leren hoe te om een verbinding aan de bestemming te vestigen. Dan, lees het activeringsleerprogramma aan op dossier-gebaseerde bestemmingen om te leren hoe te [&#x200B; het uitvoeren &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) gegevens aan uw bestemming van de wolkenopslag beginnen.
+Na het selecteren van welke één van [ gesteunde wolkenbestemmingen ](#supported-destinations) u zou willen gebruiken, [ verbind met bestemmingsleerprogramma ](/help/destinations/ui/connect-destination.md) leren hoe te om een verbinding aan de bestemming te vestigen. Dan, lees het activeringsleerprogramma aan op dossier-gebaseerde bestemmingen om te leren hoe te [ het uitvoeren ](/help/destinations/ui/activate-batch-profile-destinations.md) gegevens aan uw bestemming van de wolkenopslag beginnen.

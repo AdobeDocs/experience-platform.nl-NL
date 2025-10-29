@@ -1,7 +1,8 @@
 ---
 title: Klantencontrole voorspellen met op SQL gebaseerde logistieke regressie
 description: Leer hoe te om klantenkroon te voorspellen gebruikend op SQL-Gebaseerde logistieke regressie. Deze gids behandelt het volledige proces van modelverwezenlijking tot evaluatie en voorspelling. Verkrijg actionable inzicht van het gedrag van de klantenaankoop om pro-actieve bewaarstrategieën uit te voeren en bedrijfsbesluiten te optimaliseren.
-source-git-commit: 95c7ad3f8eb86cacd42077008824eea9e25b4db0
+exl-id: 3b18870d-104c-4dce-8549-a6818dc40d24
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 0%
@@ -128,7 +129,7 @@ De outputdataset bevat klant-gerelateerde metriek en hun kernostatus. Elke rij v
 
 ```console
  customer_id  | total_purchases | total_revenue | avg_order_value  | customer_lifetime | days_since_last_purchase | purchase_frequency | churned |
---------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
+|--------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
   100001      | 25              | 1250.00       | 50.00            | 540               | 20                       | 10                 | 0       
   100002      | 3               | 90.00         | 30.00            | 120               | 95                       | 1                  | 1       
   100003      | 60              | 7200.00       | 120.00           | 800               | 5                        | 24                 | 0       
@@ -144,7 +145,7 @@ De outputdataset bevat klant-gerelateerde metriek en hun kernostatus. Elke rij v
 
 Daarna, evalueer het model van de kinnevoorspelling om zijn doeltreffendheid te bepalen in het identificeren van op risico-klanten. Evalueer modelprestaties met zeer belangrijke metriek die nauwkeurigheid en betrouwbaarheid meten.
 
-Gebruik de functie `model_evaluate` om de nauwkeurigheid van het `retention_model_logistic_reg` -model te meten in het voorspellen van de klantketen. In het volgende SQL-voorbeeld wordt het model geëvalueerd aan de hand van een gegevensset die is gestructureerd zoals de trainingsgegevens:
+Gebruik de functie `retention_model_logistic_reg` om de nauwkeurigheid van het `model_evaluate` -model te meten in het voorspellen van de klantketen. In het volgende SQL-voorbeeld wordt het model geëvalueerd aan de hand van een gegevensset die is gestructureerd zoals de trainingsgegevens:
 
 ```sql
 SELECT * 
@@ -203,7 +204,7 @@ De evaluatieoutput omvat zeer belangrijke prestatiesmetriek, zoals AUC-ROC, nauw
 
 ```console
  auc_roc | accuracy | precision | recall 
----------+----------+-----------+--------
+|---------+----------+-----------+--------
 1        | 0.99998  |  1        |  1      
 ```
 
@@ -279,7 +280,7 @@ De outputdataset omvat zeer belangrijke klanteneigenschappen en hun voorspelde k
 
 ```console
  total_purchases | total_revenue | avg_order_value | customer_lifetime | days_since_last_purchase | purchase_frequency | churned | prediction
------------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
+|-----------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
  2               | 299           | 149.5           | 0                 | 13                        | 1                  | 0       | 0
  1               | 710           | 710.00          | 0                 | 149                       | 1                  | 1       | 1
  1               | 19.99         | 19.99           | 0                 | 30                        | 1                  | 0       | 0
@@ -296,5 +297,5 @@ De outputdataset omvat zeer belangrijke klanteneigenschappen en hun voorspelde k
 
 U hebt nu geleerd om een op SQL gebaseerd model te maken, te evalueren en te gebruiken om de klant te voorspellen. Met deze stichting, kunt u klantengedrag analyseren, klanten op risico identificeren, en pro-actieve behoudstrategieën uitvoeren om klantenbehoud te verbeteren. Neem de volgende stappen om uw model voor de voorspelling van fouten verder te verbeteren en toe te passen:
 
-- Automatiseer het proces: integreer het model in een gegevenspijplijn voor ononderbroken controle en inzicht in real time. [&#x200B; onderzoek hoe te om datasets met SQL &#x200B;](../../../dashboards/query.md) te verifiëren en te verwerken.
-- Prestaties van het model bewaken: het model voortdurend beoordelen met nieuwe gegevens om nauwkeurigheid en relevantie te behouden.  De Medewerker van AI van het gebruik [&#128279;](../../../ai-assistant/landing.md) in Adobe Experience Platform UI om zeer belangrijke prestatiesveranderingen te controleren en [&#x200B; het voorspellen van publiekstrends &#x200B;](../../../ai-assistant/new-features/audience-forecasting.md).
+- Automatiseer het proces: integreer het model in een gegevenspijplijn voor ononderbroken controle en inzicht in real time. [ onderzoek hoe te om datasets met SQL ](../../../dashboards/query.md) te verifiëren en te verwerken.
+- Prestaties van het model bewaken: het model voortdurend beoordelen met nieuwe gegevens om nauwkeurigheid en relevantie te behouden.  De Medewerker van AI van het gebruik [ in Adobe Experience Platform UI om zeer belangrijke prestatiesveranderingen te controleren en ](../../../ai-assistant/landing.md) het voorspellen van publiekstrends [.](../../../ai-assistant/new-features/audience-forecasting.md)

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;ExperienceEvent-query;ExperienceEvent-query;ExperienceEvent-query;
+keywords: Experience Platform;home;populaire onderwerpen;query-service;Query-service;ExperienceEvent-query;ExperienceEvent-query;Experience Event-query;
 title: De paginaweergaven van een gebruiker weergeven
 description: Leer hoe te vragen schrijven die de Gebeurtenissen van de Ervaring gebruiken om een lijst van de laatste 100 pagina's tot stand te brengen die een gespecificeerde gebruiker heeft gebruikt.
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # De paginaweergaven van een gebruiker weergeven
 
-Dit document bevat een voorbeeld van de SQL-code die vereist is om de paginaweergaven weer te geven van een opgegeven gebruiker. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die [!DNL Experience Events] gebruiken om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie [&#x200B; volgende stappen sectie &#x200B;](#next-steps) voor meer gebruiksgevallen die [!DNL Experience Events] impliceren om bezoekersrapporten te produceren.
+Dit document bevat een voorbeeld van de SQL-code die vereist is om de paginaweergaven weer te geven van een opgegeven gebruiker. Met Adobe Experience Platform Query Service kunt u query&#39;s schrijven die [!DNL Experience Events] gebruiken om verschillende gebruiksgevallen vast te leggen. De Gebeurtenissen van de ervaring worden vertegenwoordigd door de klasse ExperienceEvent van het Gegevensmodel van de Ervaring (XDM), die een onveranderlijke en niet-geaggregeerde momentopname van het systeem vangt wanneer een gebruiker met een website of de dienst interactie aangaat. De Gebeurtenissen van de ervaring kunnen zelfs voor tijd-domeinanalyse worden gebruikt. Zie [ volgende stappen sectie ](#next-steps) voor meer gebruiksgevallen die [!DNL Experience Events] impliceren om bezoekersrapporten te produceren.
 
-Meer informatie over XDM en [!DNL Experience Events] kan in het [[!DNL XDM System]  overzicht &#x200B;](../../xdm/home.md) worden gevonden. Door de Dienst van de Vraag met [!DNL Experience Events] te combineren, kunt u gedragstendensen onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die [!DNL Experience Events] betreffen.
+Meer informatie over XDM en [!DNL Experience Events] kan in het [[!DNL XDM System]  overzicht ](../../xdm/home.md) worden gevonden. Door de Dienst van de Vraag met [!DNL Experience Events] te combineren, kunt u gedragstendensen onder uw gebruikers effectief volgen. Het volgende document bevat voorbeelden van query&#39;s die [!DNL Experience Events] betreffen.
 
 ## Doelstelling
 
@@ -40,7 +40,7 @@ De resultaten van deze query zijn hieronder te zien.
 
 ```console
       timestamp       |  referrerType  |                            referrer                                |                 pageName            |  A  |  B  |  C  | pageViews
-----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
+|----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
 2019-11-08 17:15:28.0 | typed_bookmark |                                                                    |                                     |     |     |     |
 2019-11-08 17:53:05.0 | social         | http://www.reddit.com                                              | Home                                |     |     |     |          1.0
 2019-11-08 17:53:45.0 | typed_bookmark |                                                                    | Kids                                |     |     |     |          1.0

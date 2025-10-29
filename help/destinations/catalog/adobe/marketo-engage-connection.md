@@ -2,7 +2,7 @@
 title: Marketo Engage-verbinding
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: 1a87ad8259803886b9a1c60f1cdc50942ba49173
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1873'
 ht-degree: 0%
@@ -45,17 +45,17 @@ Ze kunnen hun publiek in Marketo Engage activeren en het **[!UICONTROL Audience 
 
 ## Vereisten {#prerequisites}
 
-* De gebruiker die opstelling de bestemming moet [&#x200B; hebben uitgeeft Persoon &#x200B;](https://experienceleague.adobe.com/nl/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) toestemming in hun instantie en verdeling van Marketo.
+* De gebruiker die opstelling de bestemming moet [ hebben uitgeeft Persoon ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) toestemming in hun instantie en verdeling van Marketo.
 * Alleen Marketo Engage-instanties in dezelfde Adobe Real-Time CDP-organisatie zijn beschikbaar bij het instellen van deze bestemming.
 * Alleen Marketo Engage-instanties waarvan de gebruikers in de Adobe Admin Console worden beheerd, kunnen deze bestemming gebruiken.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Marketo Engage] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
+[!DNL Marketo Engage] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| `DedupeField` | Het veld dat wordt gebruikt voor het identificeren en afstemmen van bestaande leads in Marketo. | Tijdens de [&#x200B; toewijzingsstap &#x200B;](#mapping), kaart om het even welk brongebied (zoals `Email` of andere douanedetectie) dat u als deduplicatiegebied aan deze doelidentiteit wilt gebruiken. Voor de beste resultaten kiest u een veld dat consistent beschikbaar en uniek is in al uw klantprofielen. `ECID` wordt niet ondersteund als een deduplicatieveld. |
+| `DedupeField` | Het veld dat wordt gebruikt voor het identificeren en afstemmen van bestaande leads in Marketo. | Tijdens de [ toewijzingsstap ](#mapping), kaart om het even welk brongebied (zoals `Email` of andere douanedetectie) dat u als deduplicatiegebied aan deze doelidentiteit wilt gebruiken. Voor de beste resultaten kiest u een veld dat consistent beschikbaar en uniek is in al uw klantprofielen. `ECID` wordt niet ondersteund als een deduplicatieveld. |
 
 {style="table-layout:auto"}
 
@@ -65,8 +65,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
-| Alle andere doelgroepen | ✓ | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> <br> |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | ✓ | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> <br> |
 
 {style="table-layout:auto"}
 
@@ -74,10 +74,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario’s |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -86,9 +86,9 @@ Ondersteund publiek per type publieksgegevens:
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
----------|----------|---------|
+|---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail, ECID) die in de [!DNL Marketo Engage] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -119,23 +119,23 @@ Marketo gebruikt de **[!UICONTROL Marketo deduplication field]** die u selecteer
 
 >[!IMPORTANT]
 > 
->* Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig.
+>* Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig.
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
 
-![&#x200B; Schermschot die tonen hoe te om aan de bestemming &#x200B;](../../assets/catalog/adobe/marketo-engage-connection/connect-destination.png) voor authentiek te verklaren
+![ Schermschot die tonen hoe te om aan de bestemming ](../../assets/catalog/adobe/marketo-engage-connection/connect-destination.png) voor authentiek te verklaren
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![&#x200B; het schermschot van de Steekproef die hoe te om details voor uw bestemming te vullen &#x200B;](../../assets/catalog/adobe/marketo-engage-connection/destination-details.png) tonen
+![ het schermschot van de Steekproef die hoe te om details voor uw bestemming te vullen ](../../assets/catalog/adobe/marketo-engage-connection/destination-details.png) tonen
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -145,8 +145,8 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
    * **[!UICONTROL Audience and profile]**: selecteer deze optie als u zowel publieksleden wilt toevoegen aan Marketo-lijsten als hun profielgegevens up-to-date wilt houden.
    * **[!UICONTROL Profile only]**: selecteer deze optie als u de Marketo-lead-profielen up-to-date wilt houden met de meest recente informatie van Experience Platform.
    * **[!UICONTROL Audience only]**: selecteer deze optie als u leden van het publiek wilt toevoegen aan Marketo-lijsten zonder hun profielgegevens bij te werken.
-* **[!UICONTROL Partition]**: *de selectie van de Verdeling is beschikbaar slechts wanneer het kiezen **[!UICONTROL Profile only]**&#x200B;of **[!UICONTROL Audience and profile]**&#x200B;synchronisatietypen*. Selecteer een Marketo-partitie-id die is gekoppeld aan uw gekozen werkruimte. Op deze manier kunt u opgeven welke hoofdpartitie in Marketo de geëxporteerde gegevens ontvangt. Als u geen specifieke partitie kiest, worden uw gegevens naar de **[!UICONTROL Default]** -partitie in Marketo verzonden.
-* **[!UICONTROL Marketo deduplication field]**: selecteer het Marketo-deduplicatieveld dat u wilt gebruiken bij het bijwerken van bestaande Marketo-leads. Deze kiezer toont de velden die u hebt gemarkeerd als deduplicatievelden in Marketo. Als u een specifiek gebied van Marketo als deduplicatieveld wilt tonen, moet u het gebied als a [&#x200B; doorzoekbaar gebied &#x200B;](https://experienceleague.adobe.com/nl/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo merken.
+* **[!UICONTROL Partition]**: *de selectie van de Verdeling is beschikbaar slechts wanneer het kiezen **[!UICONTROL Profile only]**of **[!UICONTROL Audience and profile]**synchronisatietypen*. Selecteer een Marketo-partitie-id die is gekoppeld aan uw gekozen werkruimte. Op deze manier kunt u opgeven welke hoofdpartitie in Marketo de geëxporteerde gegevens ontvangt. Als u geen specifieke partitie kiest, worden uw gegevens naar de **[!UICONTROL Default]** -partitie in Marketo verzonden.
+* **[!UICONTROL Marketo deduplication field]**: selecteer het Marketo-deduplicatieveld dat u wilt gebruiken bij het bijwerken van bestaande Marketo-leads. Deze kiezer toont de velden die u hebt gemarkeerd als deduplicatievelden in Marketo. Als u een specifiek gebied van Marketo als deduplicatieveld wilt tonen, moet u het gebied als a [ doorzoekbaar gebied ](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo merken.
 
   >[!NOTE]
   >
@@ -158,7 +158,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, lees de gids over [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, lees de gids over [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -166,10 +166,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Vereiste toewijzingen {#required-mappings}
 
@@ -183,11 +183,11 @@ Marketo kan alleen leads maken als u ook de volgende vereiste doelkenmerken toew
 
 Als u `email` als deduplicatieveld gebruikt, moet u ook de kenmerken `firstName` en `lastName` toewijzen, zoals in de onderstaande afbeelding wordt getoond.
 
-![&#x200B; Schermafbeelding die vereiste afbeelding tonen wanneer het gebruiken van E-mail als deduplicatieveld &#x200B;](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email-dedupe.png)
+![ Schermafbeelding die vereiste afbeelding tonen wanneer het gebruiken van E-mail als deduplicatieveld ](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email-dedupe.png)
 
 Als u een ander deduplicatieveld gebruikt, moet u de drie vereiste kenmerken (`firstName`, `lastName`, `email`) handmatig toewijzen, zoals in de onderstaande afbeelding wordt getoond.
 
-![&#x200B; Schermafbeelding die vereiste afbeelding tonen wanneer het gebruiken van E-mail niet als deduplicatieveld &#x200B;](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email.png)
+![ Schermafbeelding die vereiste afbeelding tonen wanneer het gebruiken van E-mail niet als deduplicatieveld ](../../assets/catalog/adobe/marketo-engage-connection/required-mapping-email.png)
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
@@ -197,4 +197,4 @@ Als u de verwachte gegevens niet ziet, controleert u de toewijzing- en exportins
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).

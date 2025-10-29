@@ -5,7 +5,7 @@ title: Een model trainen en evalueren met de API voor leren van Sensei Machine
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen voor leren van Sensei-machines.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 0%
@@ -20,13 +20,13 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen. Verwijs naar [&#x200B; dit document &#x200B;](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) voor een gedetailleerde lijst van API documentatie.
+In deze zelfstudie wordt uitgelegd hoe u een model kunt maken, trainen en evalueren met behulp van API-aanroepen. Verwijs naar [ dit document ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) voor een gedetailleerde lijst van API documentatie.
 
 ## Vereisten
 
-Volg de [&#x200B; Invoer een verpakte Ontvanger gebruikend API &#x200B;](./import-packaged-recipe-api.md) voor het creëren van een Motor, die wordt vereist om een Model te trainen en te evalueren gebruikend API.
+Volg de [ Invoer een verpakte Ontvanger gebruikend API ](./import-packaged-recipe-api.md) voor het creëren van een Motor, die wordt vereist om een Model te trainen en te evalueren gebruikend API.
 
-Volg het [&#x200B; Experience Platform API authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) beginnen API vraag te maken.
+Volg het [ Experience Platform API authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) beginnen API vraag te maken.
 
 In de zelfstudie hebt u nu de volgende waarden:
 
@@ -55,7 +55,7 @@ We gebruiken de API&#39;s om een Experiment Run voor training te maken. Voor dez
 
 ### Een MLInstance maken
 
-Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U zult `{ENGINE_ID}` gebruiken die toen het creëren van een Motor van [&#x200B; was teruggekeerd invoert een verpakte Ontvanger gebruikend de API &#x200B;](./import-packaged-recipe-ui.md) leerprogramma.
+Het creëren van een MLInstance kan worden gedaan gebruikend het volgende verzoek. U zult `{ENGINE_ID}` gebruiken die toen het creëren van een Motor van [ was teruggekeerd invoert een verpakte Ontvanger gebruikend de API ](./import-packaged-recipe-ui.md) leerprogramma.
 
 **Verzoek**
 
@@ -401,7 +401,7 @@ curl -X GET \
 
 **Reactie**
 
-De aanroep van de GET geeft de status in de parameter `state` op, zoals hieronder wordt weergegeven:
+De GET-aanroep geeft de status in de parameter `state` zoals hieronder wordt weergegeven:
 
 ```JSON
 {
@@ -438,6 +438,7 @@ De aanroep van de GET geeft de status in de parameter `state` op, zoals hieronde
 `{EXPERIMENT_ID}`: De id die staat voor het experiment dat onder de Experimentatieronde valt.
 
 Naast de status `DONE` zijn er andere statussen:
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`
@@ -493,7 +494,7 @@ De reactie vertegenwoordigt het opgeleide Model dat werd gecreeerd.
 
 ### Een geplande expert stoppen en verwijderen
 
-Als u de uitvoering van een gepland experiment vóór de `endTime` ervan wilt stoppen, kunt u dit doen door een verzoek van de DELETE naar de `{EXPERIMENT_ID}` te vragen
+Als u de uitvoering van een gepland experiment vóór de `endTime` ervan wilt stoppen, kunt u dit doen door een DELETE-aanvraag naar de `{EXPERIMENT_ID}` te vragen
 
 **Verzoek**
 
@@ -526,4 +527,4 @@ Hier volgt de reactie waarbij wordt gemeld dat het experiment is verwijderd.
 
 ## Volgende stappen
 
-In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentele runtime en getrainde modellen. In de [&#x200B; volgende oefening &#x200B;](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het hoogste uitvoerend getrainde model.
+In deze zelfstudie wordt uitgelegd hoe u de API&#39;s kunt gebruiken voor het maken van een engine, een Experiment, geplande experimentele runtime en getrainde modellen. In de [ volgende oefening ](./score-model-api.md), zult u voorspellingen maken door een nieuwe dataset te scoren gebruikend het hoogste uitvoerend getrainde model.

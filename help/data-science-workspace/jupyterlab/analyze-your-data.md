@@ -5,7 +5,7 @@ title: Uw gegevens analyseren met laptops
 type: Tutorial
 description: Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, gebouwd in Data Science Workspace, voor toegang tot, verkenning en visualisatie van uw gegevens.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, gebouwd in Data S
 
 De volgende concepten worden geïntroduceerd:
 
-- **[!DNL JupyterLab]:** [[!DNL JupyterLab] &#x200B;](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is de volgende-generatie web-based interface voor Project Jupyter, en is strak geïntegreerd in [!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab] ](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is de volgende-generatie web-based interface voor Project Jupyter, en is strak geïntegreerd in [!DNL Adobe Experience Platform].
 - **de Banden:** Datasets worden samengesteld uit partijen. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt. Nieuwe batches worden gemaakt wanneer gegevens aan een gegevensset worden toegevoegd.
 - **SDK van de Toegang van Gegevens (afgekeurd):** De Toegang SDK van Gegevens is nu afgekeurd. Gebruik de handleiding [[!DNL Experience Platform SDK]](../authoring/platform-sdk.md) .
 
@@ -38,7 +38,7 @@ Met Data Science Workspace kunnen gebruikers [!DNL Jupyter Notebooks] maken via 
 
 Bij het starten van [!DNL JupyterLab] krijgen we een webinterface voor Jupyter-laptops te zien. Afhankelijk van welk type laptop we kiezen, wordt een corresponderende kernel gestart.
 
-Bij het vergelijken van welke omgeving we moeten gebruiken, moeten we rekening houden met de beperkingen van elke service. Bijvoorbeeld, als wij de [&#x200B; pandas &#x200B;](https://pandas.pydata.org/) bibliotheek met [!DNL Python] gebruiken, als regelmatige gebruiker is de grens van RAM 2 GB. Zelfs als energiegebruiker zouden we beperkt zijn tot 20 GB RAM. Als u werkt met grotere berekeningen, is het handig om [!DNL Spark] te gebruiken, dat 1,5 TB biedt dat wordt gedeeld met alle laptopexemplaren.
+Bij het vergelijken van welke omgeving we moeten gebruiken, moeten we rekening houden met de beperkingen van elke service. Bijvoorbeeld, als wij de [ pandas ](https://pandas.pydata.org/) bibliotheek met [!DNL Python] gebruiken, als regelmatige gebruiker is de grens van RAM 2 GB. Zelfs als energiegebruiker zouden we beperkt zijn tot 20 GB RAM. Als u werkt met grotere berekeningen, is het handig om [!DNL Spark] te gebruiken, dat 1,5 TB biedt dat wordt gedeeld met alle laptopexemplaren.
 
 Standaard werkt Tensorflow-recept in een GPU-cluster en Python in een CPU-cluster.
 
@@ -52,19 +52,19 @@ In onze zelfstudie gebruiken we [!DNL Python] 3 in het Jupyter-notebook om te to
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
-Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de zelfde Detailhandel dataset van de Verkoop gebruikt om te tonen hoe de gegevens in de Notitie van Jupyter kunnen worden onderzocht en worden visualiseerd. Bovendien gaat de laptop dieper in met training en verificatie. Meer informatie over dit specifieke notitieboekje kan in deze [&#x200B; analyse &#x200B;](../walkthrough.md) worden gevonden.
+Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de zelfde Detailhandel dataset van de Verkoop gebruikt om te tonen hoe de gegevens in de Notitie van Jupyter kunnen worden onderzocht en worden visualiseerd. Bovendien gaat de laptop dieper in met training en verificatie. Meer informatie over dit specifieke notitieboekje kan in deze [ analyse ](../walkthrough.md) worden gevonden.
 
 ### Toegangsgegevens
 
 >[!NOTE]
 >
->`data_access_sdk_python` is afgekeurd en wordt niet meer aanbevolen. Gelieve te verwijzen naar het [&#x200B; omzetten van gegevenstoegang SDK in Experience Platform SDK &#x200B;](../authoring/platform-sdk.md) leerprogramma om uw code om te zetten. Voor deze zelfstudie gelden nog dezelfde stappen.
+>`data_access_sdk_python` is afgekeurd en wordt niet meer aanbevolen. Gelieve te verwijzen naar het [ omzetten van gegevenstoegang SDK in Experience Platform SDK ](../authoring/platform-sdk.md) leerprogramma om uw code om te zetten. Voor deze zelfstudie gelden nog dezelfde stappen.
 
 We gaan over tot interne toegang tot gegevens van [!DNL Adobe Experience Platform] en externe gegevens. We gebruiken de `data_access_sdk_python` -bibliotheek voor toegang tot interne gegevens, zoals gegevenssets en XDM-schema&#39;s. Voor externe gegevens gebruiken we de bibliotheek met panda&#39;s [!DNL Python] .
 
 #### Externe gegevens
 
-Open de Retail Sales-laptop en zoek de header &quot;Load Data&quot;. De volgende [!DNL Python] code gebruikt pandas&#39; `DataFrame` gegevensstructuur en [&#x200B; read_csv () &#x200B;](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) functie om CSV te lezen die op [!DNL Github] in DataFrame wordt ontvangen:
+Open de Retail Sales-laptop en zoek de header &quot;Load Data&quot;. De volgende [!DNL Python] code gebruikt pandas&#39; `DataFrame` gegevensstructuur en [ read_csv () ](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) functie om CSV te lezen die op [!DNL Github] in DataFrame wordt ontvangen:
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
@@ -84,7 +84,7 @@ Nu gaan we verder met het benaderen van [!DNL Experience Platform] -gegevens.
 
 Voor deze sectie, gebruiken wij de Detailhandel dataset van de Verkoop die de zelfde dataset is in de de steekproefnotitie van de Verkoop wordt gebruikt.
 
-In Jupyter Notitieboekje, kunt u tot uw gegevens van het **lusje van Gegevens ![&#x200B; toegang hebben &#x200B;](../images/jupyterlab/analyze-data/dataset-tab.png) op de linkerzijde.** Als u het tabblad selecteert, worden er twee mappen weergegeven. Selecteer de map **[!UICONTROL Datasets]** .
+In Jupyter Notitieboekje, kunt u tot uw gegevens van het **lusje van Gegevens** toegang hebben ![ op de linkerzijde. ](../images/jupyterlab/analyze-data/dataset-tab.png) Als u het tabblad selecteert, worden er twee mappen weergegeven. Selecteer de map **[!UICONTROL Datasets]** .
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
@@ -106,7 +106,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Als u aan andere kernels buiten [!DNL Python] werkt, gelieve te verwijzen naar [&#x200B; deze pagina &#x200B;](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) om tot gegevens op [!DNL Adobe Experience Platform] toegang te hebben.
+Als u aan andere kernels buiten [!DNL Python] werkt, gelieve te verwijzen naar [ deze pagina ](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) om tot gegevens op [!DNL Adobe Experience Platform] toegang te hebben.
 
 Als u de cel van het uitvoerbare bestand selecteert en vervolgens op de afspeelknop op de werkbalk drukt, wordt de uitvoerbare code uitgevoerd. De uitvoer voor `head()` zal een lijst met de sleutels van uw dataset als kolommen en eerste n rijen in de dataset zijn. `head()` accepteert een argument van het type integer om op te geven hoeveel regels moeten worden uitgevoerd. Standaard is dit 5.
 
@@ -120,6 +120,7 @@ Als u de kernel opnieuw opstart en alle cellen opnieuw uitvoert, krijgt u dezelf
 ### Uw gegevens verkennen
 
 Nu wij tot uw gegevens kunnen toegang hebben, laten wij nadruk op de gegevens zelf door statistieken en visualisatie te gebruiken. De dataset die wij gebruiken is een detailgegevensset die diverse informatie over 45 verschillende opslag op een bepaalde dag geeft. Enkele kenmerken voor een bepaalde `date` en `store` zijn:
+
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -161,20 +162,21 @@ Dit betekent dat er 22 winkels zijn van `storeType` `A` , 17 van `storeType` `B`
 #### Gegevensvisualisatie
 
 Nu we onze gegevenskaderwaarden kennen, willen we dit aanvullen met visualisaties om de dingen duidelijker en makkelijker te maken om patronen te identificeren. Grafieken zijn ook handig wanneer u resultaten naar een publiek verzendt. Enkele [!DNL Python] -bibliotheken die nuttig zijn voor visualisatie zijn onder andere:
-- [&#x200B; Matplotlib &#x200B;](https://matplotlib.org/)
-- [&#x200B; pandas &#x200B;](https://pandas.pydata.org/)
-- [&#x200B; seaborn &#x200B;](https://seaborn.pydata.org/)
-- [&#x200B; gplot &#x200B;](https://ggplot2.tidyverse.org/)
+
+- [ Matplotlib ](https://matplotlib.org/)
+- [ pandas ](https://pandas.pydata.org/)
+- [ seaborn ](https://seaborn.pydata.org/)
+- [ gplot ](https://ggplot2.tidyverse.org/)
 
 In deze sectie gaan we snel over enkele voordelen voor het gebruik van elke bibliotheek.
 
-[&#x200B; Matplotlib &#x200B;](https://matplotlib.org/) is het oudste [!DNL Python] visualisatiepakket. Hun doel is om &quot;gemakkelijke en moeilijke dingen mogelijk te maken&quot;. Dit is meestal het geval omdat het pakket uiterst krachtig is, maar ook ingewikkeld. Het is niet altijd gemakkelijk om een redelijke grafiek te krijgen zonder veel tijd en moeite te nemen.
+[ Matplotlib ](https://matplotlib.org/) is het oudste [!DNL Python] visualisatiepakket. Hun doel is om &quot;gemakkelijke en moeilijke dingen mogelijk te maken&quot;. Dit is meestal het geval omdat het pakket uiterst krachtig is, maar ook ingewikkeld. Het is niet altijd gemakkelijk om een redelijke grafiek te krijgen zonder veel tijd en moeite te nemen.
 
-[&#x200B; Pandas &#x200B;](https://pandas.pydata.org/) wordt hoofdzakelijk gebruikt voor zijn voorwerp DataFrame dat voor gegevensmanipulatie met geïntegreerde indexering toestaat. Panda&#39;s bevatten echter ook een ingebouwde functie voor het uitzetten van beelden die is gebaseerd op matplotlib.
+[ Pandas ](https://pandas.pydata.org/) wordt hoofdzakelijk gebruikt voor zijn voorwerp DataFrame dat voor gegevensmanipulatie met geïntegreerde indexering toestaat. Panda&#39;s bevatten echter ook een ingebouwde functie voor het uitzetten van beelden die is gebaseerd op matplotlib.
 
-[&#x200B; seaborn &#x200B;](https://seaborn.pydata.org/) is een pakket bouwt bovenop matplotlib. Het hoofddoel is standaardgrafieken visueel aantrekkelijker te maken en het maken van gecompliceerde grafieken te vereenvoudigen.
+[ seaborn ](https://seaborn.pydata.org/) is een pakket bouwt bovenop matplotlib. Het hoofddoel is standaardgrafieken visueel aantrekkelijker te maken en het maken van gecompliceerde grafieken te vereenvoudigen.
 
-[&#x200B; gplot &#x200B;](https://ggplot2.tidyverse.org/) is een pakket dat ook bovenop matplotlib wordt gebouwd. Het belangrijkste verschil is echter dat het gereedschap een haven is van ggplot2 voor R. Net als voor Seaborn, is het doel om matplotlib beter te maken. De gebruikers die met gplot2 voor R vertrouwd zijn zouden deze bibliotheek moeten overwegen.
+[ gplot ](https://ggplot2.tidyverse.org/) is een pakket dat ook bovenop matplotlib wordt gebouwd. Het belangrijkste verschil is echter dat het gereedschap een haven is van ggplot2 voor R. Net als voor Seaborn, is het doel om matplotlib beter te maken. De gebruikers die met gplot2 voor R vertrouwd zijn zouden deze bibliotheek moeten overwegen.
 
 
 ##### Grafieken gelijktrekken
@@ -201,8 +203,9 @@ Merk op dat 1 diagonaal naar beneden is. Dit toont aan dat wanneer het vergelijk
 ## Volgende stappen
 
 In deze zelfstudie wordt uitgelegd hoe u een nieuw Jupyter-notebook kunt maken in de Data Science Workspace en hoe u toegang kunt krijgen tot gegevens zowel extern als vanuit [!DNL Adobe Experience Platform] . We hebben met name de volgende stappen doorlopen:
+
 - Een nieuwe jupyter-laptop maken
 - Gegevensbestanden en schema&#39;s voor toegang
 - Gegevenssets verkennen
 
-Nu bent u bereid om naar de [&#x200B; volgende sectie &#x200B;](../models-recipes/package-source-files-recipe.md) te gaan om een recept te verpakken en in de Wetenschap van Gegevens Workspace in te voeren.
+Nu bent u bereid om naar de [ volgende sectie ](../models-recipes/package-source-files-recipe.md) te gaan om een recept te verpakken en in de Wetenschap van Gegevens Workspace in te voeren.

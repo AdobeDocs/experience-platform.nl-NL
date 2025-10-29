@@ -1,7 +1,8 @@
 ---
 title: Bot filteren met behulp van statistieken en leren van machines
 description: Leer hoe u Distiller-statistieken voor gegevens en computerleren gebruikt om beide activiteiten te identificeren en te filteren om nauwkeurige analyses en verbeterde gegevensintegriteit te garanderen.
-source-git-commit: a8abbf61bdc646c0834c296a64b27c71c98ea1d3
+exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -18,7 +19,7 @@ Dit document biedt een uitgebreide gids voor het identificeren en filteren van b
 
 Beide activiteiten kunnen worden geïdentificeerd door spikes in gebruikersacties binnen specifieke tijdintervallen te detecteren. Bijvoorbeeld, kunnen de bovenmatige kliks die door één enkele gebruiker in een korte tijd worden uitgevoerd op allebei gedrag wijzen. De twee belangrijkste kenmerken die bij beide filters worden gebruikt, zijn:
 
-- **ECID (identiteitskaart van de Bezoeker van het Experience Cloud):** Een universele, blijvende identiteitskaart die bezoekers identificeert.
+- **ECID (identiteitskaart van de Bezoeker van Experience Cloud):** Een universele, blijvende identiteitskaart die bezoekers identificeert.
 - **Tijdstempel:** de tijd en de datum wanneer een activiteit op de website voorkomt.
 
 In de onderstaande voorbeelden ziet u hoe u SQL- en computerleertechnieken kunt gebruiken om beide activiteiten te identificeren, te verfijnen en te voorspellen. Gebruik deze methoden om de gegevensintegriteit te verbeteren en te zorgen dat de analysemogelijkheden actief zijn.
@@ -166,7 +167,7 @@ Dit tweede voorbeeld bouwt op basis SQL het filtreren voort door machine het ler
 
 ### Een trainingsgegevensset maken {#build-a-training-dataset}
 
-Bereid eerst een dataset met vlakke en genestelde structuren voor die het machine het leren model (zoals hierboven beschreven) kan gebruiken. De verdere begeleiding op hoe te om dit te doen kan in [&#x200B; worden gevonden Werkend met genestelde documentatie van gegevensstructuren &#x200B;](../../key-concepts/nested-data-structures.md). Groepeer de gegevens op tijdstempel, gebruikers-id en webpaginanaam om patronen in beide activiteiten te identificeren.
+Bereid eerst een dataset met vlakke en genestelde structuren voor die het machine het leren model (zoals hierboven beschreven) kan gebruiken. De verdere begeleiding op hoe te om dit te doen kan in [ worden gevonden Werkend met genestelde documentatie van gegevensstructuren ](../../key-concepts/nested-data-structures.md). Groepeer de gegevens op tijdstempel, gebruikers-id en webpaginanaam om patronen in beide activiteiten te identificeren.
 
 ### De clausules van TRANSFORM en van OPTIONS van het gebruik voor modelverwezenlijking {#transform-and-preprocess}
 
@@ -174,7 +175,7 @@ Om uw dataset om te zetten en uw machine het leren model effectief te vormen, vo
 
 >[!TIP]
 >
->Meer leren over het gebruiken van transformaties en het preprocessing van uw gegevens, verwijs naar de [&#x200B; documentatie van de transformatietechnieken van de Eigenschap transformatie &#x200B;](../feature-transformation.md).
+>Meer leren over het gebruiken van transformaties en het preprocessing van uw gegevens, verwijs naar de [ documentatie van de transformatietechnieken van de Eigenschap transformatie ](../feature-transformation.md).
 
 1. Als u null-waarden in numerieke, tekenreeks- en booleaanse kolommen wilt vullen, gebruikt u respectievelijk de functies `numeric_imputer` , `string_imputer` en `boolean_imputer` . Met deze stap zorgt u ervoor dat het leeralgoritme van de computer de gegevens zonder fouten kan verwerken.
 2. Pas eigenschaptransformaties toe om de gegevens voor modellering voor te bereiden. Pas `binarized`, `quantile_discretizer` of `string_indexer` toe om de kolommen te categoriseren of te standaardiseren. Geef vervolgens de uitvoer van de imputers ( `numeric_imputer` en `string_imputer` ) door naar volgende transformatoren zoals `string_indexer` of `quantile_discretizer` om betekenisvolle functies te maken.
@@ -209,7 +210,7 @@ In de hieronder weergegeven resultaten wordt het model `bot_filtering_model` gem
 
 ```console
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -244,7 +245,7 @@ De reactie omvat metriek zoals nauwkeurigheid, precisie, herinnering, en AUC-ROC
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -282,7 +283,7 @@ De reactie omvat voorspellingen voor elke gebruiker (`id`) samen met details ove
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0

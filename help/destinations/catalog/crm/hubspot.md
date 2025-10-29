@@ -3,20 +3,20 @@ title: HubSpot-verbinding
 description: De bestemming HubSpot staat u toe om contactverslagen in uw rekening te beheren HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 0%
 
 ---
 
-# [!DNL HubSpot] verbinding
+# [!DNL HubSpot]-verbinding
 
-[[!DNL HubSpot] &#x200B;](https://www.hubspot.com) is een platform van CRM met alle software, integratie, en middelen u marketing, verkoop, inhoudsbeheer, en de klantendienst moet verbinden. Het staat u toe om uw gegevens, teams, en klanten op één platform van CRM te verbinden.
+[[!DNL HubSpot] ](https://www.hubspot.com) is een platform van CRM met alle software, integratie, en middelen u marketing, verkoop, inhoudsbeheer, en de klantendienst moet verbinden. Het staat u toe om uw gegevens, teams, en klanten op één platform van CRM te verbinden.
 
-Dit [!DNL Adobe Experience Platform] [&#x200B; bestemmings &#x200B;](/help/destinations/home.md) hefboomwerkingen [[!DNL HubSpot]  Contactpersonen API &#x200B;](https://developers.hubspot.com/docs/api/crm/contacts), om contacten binnen [!DNL HubSpot] van een bestaand publiek van Experience Platform na activering bij te werken.
+Dit [!DNL Adobe Experience Platform] [ bestemmings ](/help/destinations/home.md) hefboomwerkingen [[!DNL HubSpot]  Contactpersonen API ](https://developers.hubspot.com/docs/api/crm/contacts), om contacten binnen [!DNL HubSpot] van een bestaand publiek van Experience Platform na activering bij te werken.
 
-De instructies om aan uw [!DNL HubSpot] instantie voor authentiek te verklaren zijn verder hieronder, in [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](#authenticate) sectie.
+De instructies om aan uw [!DNL HubSpot] instantie voor authentiek te verklaren zijn verder hieronder, in [ voor authentiek verklaren aan bestemmings ](#authenticate) sectie.
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -30,9 +30,9 @@ Raadpleeg de onderstaande secties voor alle voorwaarden die u in Experience Plat
 
 ### Experience Platform-voorwaarden {#prerequisites-in-experience-platform}
 
-Alvorens gegevens aan de [!DNL HubSpot] bestemming te activeren, moet u a [&#x200B; schema &#x200B;](/help/xdm/schema/composition.md), a [&#x200B; dataset &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) hebben, en [&#x200B; publiek &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=nl-NL) dat in [!DNL Experience Platform] wordt gecreeerd.
+Alvorens gegevens aan de [!DNL HubSpot] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [ publiek ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dat in [!DNL Experience Platform] wordt gecreeerd.
 
-Verwijs naar de documentatie van Experience Platform voor [&#x200B; het schemagroep van de Details van het Lidmaatschap van de Publiek &#x200B;](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatus nodig hebt.
+Verwijs naar de documentatie van Experience Platform voor [ het schemagroep van de Details van het Lidmaatschap van de Publiek ](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatus nodig hebt.
 
 ### Vereisten voor het doel [!DNL HubSpot] {#prerequisites-destination}
 
@@ -40,31 +40,31 @@ Houd rekening met de volgende voorwaarden om gegevens van Experience Platform na
 
 #### U moet een [!DNL HubSpot] -account hebben {#prerequisites-account}
 
-Als u gegevens van Experience Platform naar uw [!DNL Hubspot] -account wilt exporteren, hebt u een [!DNL HubSpot] -account nodig. Als u niet reeds hebt, bezoek de [&#x200B; Opstelling uw HubSpot rekening &#x200B;](https://knowledge.hubspot.com/get-started/set-up-your-account) pagina en volg de begeleiding om uw rekening te registreren en te creëren.
+Als u gegevens van Experience Platform naar uw [!DNL Hubspot] -account wilt exporteren, hebt u een [!DNL HubSpot] -account nodig. Als u niet reeds hebt, bezoek de [ Opstelling uw HubSpot rekening ](https://knowledge.hubspot.com/get-started/set-up-your-account) pagina en volg de begeleiding om uw rekening te registreren en te creëren.
 
 #### Het toegangstoken voor de [!DNL HubSpot] persoonlijke app verzamelen {#gather-credentials}
 
-U hebt uw [!DNL HubSpot] `Access token` nodig om de [!DNL HubSpot] -bestemming toe te staan API-aanroepen uit te voeren via uw [!DNL HubSpot] persoonlijke app in uw [!DNL HubSpot] -account. `Access token` dient als `Bearer token` wanneer u [&#x200B; de bestemming &#x200B;](#authenticate) voor authentiek verklaart.
+U hebt uw [!DNL HubSpot] `Access token` nodig om de [!DNL HubSpot] -bestemming toe te staan API-aanroepen uit te voeren via uw [!DNL HubSpot] persoonlijke app in uw [!DNL HubSpot] -account. `Access token` dient als `Bearer token` wanneer u [ de bestemming ](#authenticate) voor authentiek verklaart.
 
-Als u geen privé app hebt, volg de documentatie aan [&#x200B; creeer privé app in  [!DNL HubSpot] &#x200B;](https://developers.hubspot.com/docs/api/private-apps).
+Als u geen privé app hebt, volg de documentatie aan [ creeer privé app in  [!DNL HubSpot] ](https://developers.hubspot.com/docs/api/private-apps).
 
 >[!IMPORTANT]
 >
 > Aan de persoonlijke app moeten de onderstaande bereiken worden toegewezen:
-> `crm.objects.contacts.write`, `crm.objects.contacts.read`
-> `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
+> > `crm.objects.contacts.write`, `crm.objects.contacts.read`
+> > `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| `Bearer token` | De `Access token` van uw [!DNL HubSpot] persoonlijke app. <br> om uw [!DNL HubSpot] te verkrijgen `Access token` volg de [!DNL HubSpot] documentatie om [&#x200B; API vraag met het toegangstoken van uw app &#x200B;](https://developers.hubspot.com/docs/api/private-apps#make-api-calls-with-your-app-s-access-token) te maken. | `pat-na1-11223344-abcde-12345-9876-1234a1b23456` |
+| `Bearer token` | De `Access token` van uw [!DNL HubSpot] persoonlijke app. <br> om uw [!DNL HubSpot] te verkrijgen `Access token` volg de [!DNL HubSpot] documentatie om [ API vraag met het toegangstoken van uw app ](https://developers.hubspot.com/docs/api/private-apps#make-api-calls-with-your-app-s-access-token) te maken. | `pat-na1-11223344-abcde-12345-9876-1234a1b23456` |
 
 ## Guardrails {#guardrails}
 
-[!DNL HubSpot] privé apps zijn onderworpen aan [&#x200B; Grenswaarden van het Tarief &#x200B;](https://developers.hubspot.com/docs/api/usage-details). Het aantal aanroepen dat uw persoonlijke app kan uitvoeren, is gebaseerd op uw accountabonnement van [!DNL HubSpot] en of u de API-invoegtoepassing hebt aangeschaft. Bovendien verwijs ook naar [&#x200B; Andere Beperkingen &#x200B;](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] privé apps zijn onderworpen aan [ Grenswaarden van het Tarief ](https://developers.hubspot.com/docs/api/usage-details). Het aantal aanroepen dat uw persoonlijke app kan uitvoeren, is gebaseerd op uw accountabonnement van [!DNL HubSpot] en of u de API-invoegtoepassing hebt aangeschaft. Bovendien verwijs ook naar [ Andere Beperkingen ](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL HubSpot] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
+[!DNL HubSpot] ondersteunt het bijwerken van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Voorbeeld | Beschrijving | Overwegingen |
 |---|---|---|---|
@@ -74,13 +74,13 @@ Als u geen privé app hebt, volg de documentatie aan [&#x200B; creeer privé app
 
 In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
 
-Deze bestemming steunt de activering van alle die publiek door de Dienst van de Segmentatie van Experience Platform [&#x200B; wordt geproduceerd &#x200B;](../../../segmentation/home.md).
+Deze bestemming steunt de activering van alle die publiek door de Dienst van de Segmentatie van Experience Platform [ wordt geproduceerd ](../../../segmentation/home.md).
 
 Deze bestemming ondersteunt ook de activering van het publiek dat in de onderstaande tabel wordt beschreven.
 
 | Type publiek | Beschrijving |
 |---------|----------|
-| Aangepaste uploads | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| Aangepaste uploads | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -89,9 +89,9 @@ Deze bestemming ondersteunt ook de activering van het publiek dat in de ondersta
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
----------|----------|---------|
+|---------|----------|---------|
 | Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een publiek samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Bovendien wordt in [!DNL HubSpot] een nieuwe eigenschap gemaakt met de naam van het publiek en heeft de waarde ervan de overeenkomende status van het publiek in Experience Platform voor elk geselecteerd publiek.</li></ul> |
-| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -99,33 +99,34 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 Kies in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** Zoeken naar [!DNL HubSpot] . U kunt de locatie ook in de categorie **[!UICONTROL CRM]** vinden.
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Vul de vereiste velden hieronder in. Verwijs naar [&#x200B; verzamelen de  [!DNL HubSpot]  privé app toegangstoken &#x200B;](#gather-credentials) sectie voor om het even welke begeleiding.
+Vul de vereiste velden hieronder in. Verwijs naar [ verzamelen de  [!DNL HubSpot]  privé app toegangstoken ](#gather-credentials) sectie voor om het even welke begeleiding.
+
 * **[!UICONTROL Bearer token]**: het toegangstoken voor uw [!DNL HubSpot] persoonlijke app.
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
-{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![&#128279;](../../assets/catalog/crm/hubspot/authenticate-destination.png)
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **[!UICONTROL Connected]** weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/crm/hubspot/destination-details.png)
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![](../../assets/catalog/crm/hubspot/destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -133,9 +134,9 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -146,29 +147,31 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
 #### De identiteit van `Email` toewijzen
 
 De identiteit van `Email` is een verplichte toewijzing voor dit doel. Voer de onderstaande stappen uit om deze toe te wijzen:
-1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
-   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.![&#128279;](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+
+1. Selecteer **[!UICONTROL Mapping]** in de stap **[!UICONTROL Add new mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
+   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.![](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. Kies in het **[!UICONTROL Select source field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
-   {het schermschot van 0} Experience Platform UI die e-mail als bronattribuut selecteert om als identiteit in kaart te brengen.![&#128279;](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
+   {het schermschot van 0} Experience Platform UI die e-mail als bronattribuut selecteert om als identiteit in kaart te brengen.![](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. Kies in het **[!UICONTROL Select target field]** -venster de **[!UICONTROL Select attributes]** en selecteer `email` .
-   {het schermschot van 0} Experience Platform UI die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.![&#128279;](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
+   {het schermschot van 0} Experience Platform UI die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.![](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
 | Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | Ja |
 
 Hieronder ziet u een voorbeeld met de identiteitstoewijzing:
-![&#x200B; het schermschot van Experience Platform UI met e-mailidentiteitstoewijzing.](../../assets/catalog/crm/hubspot/mapping-identities.png)
+![ het schermschot van Experience Platform UI met e-mailidentiteitstoewijzing.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
 #### Het in kaart brengen **facultatieve** attributen
 
 Als u andere kenmerken wilt toevoegen die u tussen het XDM-profielschema en uw [!DNL HubSpot] -account wilt bijwerken, herhaalt u de onderstaande stappen:
-1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
-   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.![&#128279;](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+
+1. Selecteer **[!UICONTROL Mapping]** in de stap **[!UICONTROL Add new mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
+   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.![](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk.
-   ![&#x200B; het schermschot van Experience Platform UI die Voornaam als bronattribuut selecteert.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
-1. Kies in het venster **[!UICONTROL Select target field]** de categorie **[!UICONTROL Select attributes]** en selecteer een van de kenmerken die automatisch worden ingevuld in uw [!DNL HubSpot] -account. De bestemming gebruikt [[!DNL HubSpot]  Eigenschappen &#x200B;](https://developers.hubspot.com/docs/api/crm/properties) API om deze informatie terug te winnen. Zowel [!DNL HubSpot] [&#x200B; standaardeigenschappen &#x200B;](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) als om het even welke douaneeigenschappen worden teruggewonnen voor selectie als doelgebieden.
-   {het schermschot van 0} Experience Platform UI die Voornaam als doelattribuut selecteert.![&#128279;](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
+   ![ het schermschot van Experience Platform UI die Voornaam als bronattribuut selecteert.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
+1. Kies in het venster **[!UICONTROL Select target field]** de categorie **[!UICONTROL Select attributes]** en selecteer een van de kenmerken die automatisch worden ingevuld in uw [!DNL HubSpot] -account. De bestemming gebruikt [[!DNL HubSpot]  Eigenschappen ](https://developers.hubspot.com/docs/api/crm/properties) API om deze informatie terug te winnen. Zowel [!DNL HubSpot] [ standaardeigenschappen ](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) als om het even welke douaneeigenschappen worden teruggewonnen voor selectie als doelgebieden.
+   {het schermschot van 0} Experience Platform UI die Voornaam als doelattribuut selecteert.![](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
 
 Hieronder worden enkele beschikbare toewijzingen weergegeven tussen uw XDM-profielschema en [!DNL Hubspot] :
 
@@ -181,7 +184,7 @@ Hieronder worden enkele beschikbare toewijzingen weergegeven tussen uw XDM-profi
 | `xdm: workAddress.country` | `Attribute: country` |
 
 Hieronder ziet u een voorbeeld waarin deze kenmerktoewijzingen worden gebruikt:
-![&#x200B; het schermschot van Experience Platform UI met attributenafbeeldingen.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
+![ het schermschot van Experience Platform UI met attributenafbeeldingen.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -190,20 +193,21 @@ Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding,
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Meld u aan bij de [!DNL HubSpot] -website en navigeer naar de **[!UICONTROL Contacts]** -pagina om de status van het publiek te controleren. Deze lijst kan worden gevormd om kolommen voor de douaneeigenschappen te tonen die met de publieksnaam met hun waarde worden gecreeerd de publieksstatus zijn.
-   ![&#x200B; het schermschot van HubSpot UI die de pagina van Contacten met kolomkopballen toont die de publieksnaam en de statistieken van het celpubliek tonen &#x200B;](../../assets/catalog/crm/hubspot/contacts.png)
+   ![ het schermschot van HubSpot UI die de pagina van Contacten met kolomkopballen toont die de publieksnaam en de statistieken van het celpubliek tonen ](../../assets/catalog/crm/hubspot/contacts.png)
 
 1. U kunt ook omlaag naar een afzonderlijke **[!UICONTROL Person]** -pagina gaan en naar de eigenschappen navigeren die de publieksnaam en de publieksstatus weergeven.
-   ![&#x200B; HubSpot UI het schermschot die de pagina van het Contact met douaneeigenschappen toont die de publieksnaam en de publieksstatussen tonen.](../../assets/catalog/crm/hubspot/contact.png)
+   ![ HubSpot UI het schermschot die de pagina van het Contact met douaneeigenschappen toont die de publieksnaam en de publieksstatussen tonen.](../../assets/catalog/crm/hubspot/contact.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
 Hieronder vindt u aanvullende nuttige informatie uit de documentatie van [!DNL HubSpot] :
-* [&#x200B; methodes van de Authentificatie op HubSpot &#x200B;](https://developers.hubspot.com/docs/api/intro-to-auth)
-* [!DNL HubSpot] API verwijzingen voor de [&#x200B; Contacten &#x200B;](https://developers.hubspot.com/docs/api/crm/contacts) en [&#x200B; Eigenschappen &#x200B;](https://developers.hubspot.com/docs/api/crm/properties) APIs.
+
+* [ methodes van de Authentificatie op HubSpot ](https://developers.hubspot.com/docs/api/intro-to-auth)
+* [!DNL HubSpot] API verwijzingen voor de [ Contacten ](https://developers.hubspot.com/docs/api/crm/contacts) en [ Eigenschappen ](https://developers.hubspot.com/docs/api/crm/properties) APIs.
 
 ### Changelog
 

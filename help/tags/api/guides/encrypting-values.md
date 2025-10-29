@@ -2,7 +2,7 @@
 title: Waarden versleutelen
 description: Leer hoe u gevoelige waarden versleutelt met de Reactor-API.
 exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -14,14 +14,14 @@ ht-degree: 0%
 Bij het gebruik van tags in Adobe Experience Platform moeten bepaalde workflows gevoelige waarden leveren (bijvoorbeeld een persoonlijke sleutel voor het leveren van bibliotheken aan omgevingen via hosts). De gevoelige aard van deze gegevens vereist
 veilige overdracht en opslag.
 
-Dit document beschrijft hoe te om gevoelige waarden te coderen gebruikend [&#x200B; encryptie GnuPG &#x200B;](https://www.gnupg.org/gph/en/manual/x110.html) (die ook als GPG wordt bekend) zodat slechts kan het markeringssysteem hen lezen.
+Dit document beschrijft hoe te om gevoelige waarden te coderen gebruikend [ encryptie GnuPG ](https://www.gnupg.org/gph/en/manual/x110.html) (die ook als GPG wordt bekend) zodat slechts kan het markeringssysteem hen lezen.
 
 ## De openbare GPG-sleutel en controlesom verkrijgen
 
-Na [&#x200B; het downloaden &#x200B;](https://gnupg.org/download/) en het installeren van de recentste versie van GPG moet u de openbare sleutel van GPG voor het milieu van de markeringsproductie verkrijgen:
+Na [ het downloaden ](https://gnupg.org/download/) en het installeren van de recentste versie van GPG moet u de openbare sleutel van GPG voor het milieu van de markeringsproductie verkrijgen:
 
-* [&#x200B; GPG sleutel &#x200B;](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
-* [&#x200B; Checksum &#x200B;](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
+* [ GPG sleutel ](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
+* [ Checksum ](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
 
 ## De sleutel importeren in de sleutelketen
 
@@ -65,7 +65,7 @@ De bovenstaande opdracht gebruikt de openbare sleutel voor `Tags Data Encryption
 De output van het bevel zou op het volgende lijken:
 
 ```shell
------BEGIN PGP MESSAGE-----
+|-----BEGIN PGP MESSAGE-----
 
 hQIMAxJHCI6fydT/ARAAwQ0Y0k7eSAbd0T9seoaWX75G70O2gxAF20KY5FWiZ9/m
 /RkgJwhJusZyEdazC/CmAdfXi9bsVxQT0i06ErUxXfQF0VtweRlcyRBsxzLz6Hr+
@@ -81,7 +81,7 @@ ekGD+p3PyyvxjfS5G/wf9HQZ085+mnjpKFa7fuFBQPbg4WpBadhWrhobthC+hN3S
 SAE9yWU11Y3xpoxqg4y7iYZ6rnX+qP2oUNYxC2/hdhsFbbZtUh4s51qaoLbe0iWB
 OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 =jrfE
------END PGP MESSAGE-----
+|-----END PGP MESSAGE-----
 ```
 
 Deze uitvoer kan alleen worden ontsleuteld door systemen met de persoonlijke sleutel die

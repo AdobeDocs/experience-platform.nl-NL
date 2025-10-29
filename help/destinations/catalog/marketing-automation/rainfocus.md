@@ -3,9 +3,9 @@ title: Deelnemerprofielen opnieuw instellen
 description: Leer hoe u de doelconnector voor RainFocus-profielen van deelnemers gebruikt om de publieksprofielen te synchroniseren met het RainFocus Global-deelnemerprofiel.
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '967'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ Gebruik de bestemming [!DNL RainFocus Attendee Profiles] om klantprofielen van A
 
 >[!IMPORTANT]
 >
->De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL RainFocus] . Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij `clientcare@rainfocus.com` te contacteren of het Centrum van de Hulp RainFocus [&#x200B; te bezoeken &#x200B;](https://help.rainfocus.com/hc/en-us).
+>De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL RainFocus] . Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij `clientcare@rainfocus.com` te contacteren of het Centrum van de Hulp RainFocus [ te bezoeken ](https://help.rainfocus.com/hc/en-us).
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -37,14 +37,14 @@ Een merk voor financiële diensten moet een reeks roadshows ontvangen die zich r
 Voordat u het doel van [!DNL RainFocus] kunt gebruiken, moet u aan de volgende voorwaarden voldoen:
 
 * Maak een [!DNL RainFocus] API-profiel met OAuth (Global).
-   * Het **eindpunt van de Opslag van 0&rbrace; Aanwezigen &lbrace;moet worden toegelaten.**
+   * Het **eindpunt van de Opslag van 0} Aanwezigen {moet worden toegelaten.**
    * A **identiteitskaart van de Cliënt** en **Geheime cliënt** zal moeten worden geproduceerd.
 
 U moet ook een herkenningsteken van de gebeurteniscode RainFocus **hebben**, waarin u profielen zou willen die naar worden verzonden.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL RainFocus] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
+[!DNL RainFocus] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -57,9 +57,9 @@ U moet ook een herkenningsteken van de gebeurteniscode RainFocus **hebben**, waa
 In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
----------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -68,9 +68,9 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
----------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [&#x200B; werkschema van de bestemmingsactivering &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [ werkschema van de bestemmingsactivering ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -78,15 +78,15 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-![&#x200B; verstrekken authentificatiedetails voor de Schakelaar van de Bestemming RainFocus &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
+![ verstrekken authentificatiedetails voor de Schakelaar van de Bestemming RainFocus ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-authentication.png)
 
 * **[!UICONTROL Client ID]**: vul de [!DNL Client ID] in die wordt geleverd door RainFocus API Profile.
 * **[!UICONTROL Client secret]**: vul de [!DNL Client Secret] in die wordt geleverd door RainFocus API Profile.
@@ -97,7 +97,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![&#x200B; verstrekt verbindingsdetails voor de Schakelaar van de Bestemming RainFocus &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png)
+![ verstrekt verbindingsdetails voor de Schakelaar van de Bestemming RainFocus ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -105,7 +105,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -113,9 +113,9 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Lees [&#x200B; activeer profielen en segmenten aan het stromen segment de uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lees [ activeer profielen en segmenten aan het stromen segment de uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -123,7 +123,7 @@ De volgende naamruimte(s) voor de doelidentiteit moeten worden toegewezen, afhan
 
 * **E-mail** moet als doelgebied worden in kaart gebracht gebruikend **gebied van het Doel > Uitgezochte identiteitskaart namespace > e-mail**
 
-![&#x200B; hoe te profiel en identiteitsgebieden in kaart brengen &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png)
+![ hoe te profiel en identiteitsgebieden in kaart brengen ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-mapping.png)
 
 U wordt aangeraden extra profielvelden toe te wijzen, zodat het deelnemersprofiel in [!DNL RainFocus] volledig wordt ingevuld. De volgende doelvelden zijn beschikbaar via [!DNL RainFocus] :
 
@@ -148,14 +148,14 @@ U wordt aangeraden extra profielvelden toe te wijzen, zodat het deelnemersprofie
 
 Nadat een set profielen naar [!DNL RainFocus] is verzonden, gebruikt u de aanmelding voor het API-profiel [!DNL RainFocus] om te controleren of de profielen zijn verwerkt.
 
-![&#x200B; Logboeken van de Mening in het API Profiel in RainFocus &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
+![ Logboeken van de Mening in het API Profiel in RainFocus ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-profile.png)
 
-![&#x200B; bevestigt dat de profielen met succes zijn opgenomen &#x200B;](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-logging.png)
+![ bevestigt dat de profielen met succes zijn opgenomen ](/help/destinations/assets/catalog/marketing-automation/rainfocus/rainfocus-destination-api-logging.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-* [&#x200B; RainFocus Streaming Source Connector &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [ RainFocus Streaming Source Connector ](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

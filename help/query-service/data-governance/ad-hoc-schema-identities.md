@@ -2,7 +2,7 @@
 title: Primaire id's instellen in een ad-hocgegevensset
 description: Met de Adobe Experience Platform Query Service kunt u een identiteit of een primaire identiteit voor de gegevenssetvelden van een ad-hocschema rechtstreeks instellen via de SQL-opdracht ALTER TABLE. Het document verklaart hoe te om het ALTER bevel van de LIJST te gebruiken om een primaire identiteit of een secundaire identiteit te plaatsen.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -17,8 +17,8 @@ Met Adobe Experience Platform Query Service kunt u gegevenssetkolommen markeren 
 
 Voor het labelen van gegevenssetkolommen als primaire of secundaire identiteit is een goed begrip van de SQL-opdracht van `ALTER TABLE` en van de privacyvereisten voor gegevens vereist. Lees de volgende documentatie voordat u doorgaat met dit document:
 
-* [&#x200B; de SQL syntaxisgids voor het `ALTER TABLE` bevel &#x200B;](../sql/syntax.md).
-* [&#x200B; het overzicht van het Beleid van Gegevens &#x200B;](../../data-governance/home.md) voor meer informatie.
+* [ de SQL syntaxisgids voor het `ALTER TABLE` bevel ](../sql/syntax.md).
+* [ het overzicht van het Beleid van Gegevens ](../../data-governance/home.md) voor meer informatie.
 
 ## Beperkingen toevoegen {#add-constraints}
 
@@ -68,7 +68,7 @@ Hieronder wordt een voorbeeld van een geretourneerde tabel weergegeven.
 
 ```console
  tableName | columnName | datatype | namespace | ifPrimary
------------+------------+----------+-----------+----------
+|-----------+------------+----------+-----------+----------
 (0 rows)
 ```
 
@@ -76,6 +76,6 @@ Hieronder wordt een voorbeeld van een geretourneerde tabel weergegeven.
 
 In de volgende lijst worden belangrijke overwegingen beschreven voor het bijwerken van identiteiten in bestaande gegevenssets bij het gebruik van XDM.
 
-* Om een kolom als identiteit te specificeren, moet u **&#x200B;**&#x200B;ook namespace bepalen die als meta-gegevens voor de kolom moet worden bewaard.
+* Om een kolom als identiteit te specificeren, moet u **** ook namespace bepalen die als meta-gegevens voor de kolom moet worden bewaard.
 * XDM ondersteunt het opgeven van een kolomnaam in het naamruimtekenmerk niet.
-* Als uw schema het `identityMap` XDM gebied gebruikt, moet het wortel of top-level `identityMap` voorwerp **&#x200B;**&#x200B;als identiteit of primaire identiteit worden geëtiketteerd.
+* Als uw schema het `identityMap` XDM gebied gebruikt, moet het wortel of top-level `identityMap` voorwerp **** als identiteit of primaire identiteit worden geëtiketteerd.

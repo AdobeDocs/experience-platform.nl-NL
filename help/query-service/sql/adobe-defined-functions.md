@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;query-service;Query-service;adobe defined functies;sql;
 solution: Experience Platform
-title: Adobe-bepaalde SQL Functies in de Dienst van de Vraag
-description: Dit document bevat informatie over door de Adobe gedefinieerde functies die beschikbaar zijn in Adobe Experience Platform Query Service.
+title: Adobe-Gedefinieerde SQL-functies in Query Service
+description: Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 1%
 
 ---
 
-# Adobe-bepaalde SQL functies in de Dienst van de Vraag
+# Adobe-gedefinieerde SQL-functies in Query Service
 
-Adobe-bepaalde functies, hier genoemd ADFs, zijn prebuilt functies in de Dienst van de Vraag van Adobe Experience Platform die helpen gemeenschappelijke zaken-gerelateerde taken op [!DNL Experience Event] gegevens uitvoeren. Deze omvatten functies voor [&#x200B; Sessionisatie &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=nl-NL) en [&#x200B; Attributie &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=nl-NL) als die gevonden in Adobe Analytics.
+Adobe-gedefinieerde functies, hierna ADF&#39;s genoemd, zijn vooraf gebouwde functies in de Adobe Experience Platform Query Service die u helpen bij het uitvoeren van veelvoorkomende zakelijke taken op [!DNL Experience Event] -gegevens. Deze omvatten functies voor [ Sessionisatie ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) en [ Attributie ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) als die gevonden in Adobe Analytics.
 
-Dit document bevat informatie over door de Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service] .
+Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service] .
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ Wanneer u werkt met [!DNL Experience Event] -gegevens die afkomstig zijn van een
 
 Deze groepering, of zitting van gegevens, helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
 
-Voor meer informatie over zittingssessie in Adobe Analytics, zie de documentatie over [&#x200B; context-bewuste zittingen &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=nl-NL).
+Voor meer informatie over zittingssessie in Adobe Analytics, zie de documentatie over [ context-bewuste zittingen ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **syntaxis van de Vraag**
 
@@ -60,7 +60,7 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
 | `{EXPIRATION_IN_SECONDS}` | Het aantal seconden dat nodig is tussen gebeurtenissen om het einde van de huidige sessie en het begin van een nieuwe sessie te kwalificeren. |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -82,7 +82,7 @@ LIMIT 10
 
 ```console
                 id                |       timestamp       |      session       
-----------------------------------+-----------------------+--------------------
+|----------------------------------+-----------------------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
@@ -124,7 +124,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
 | `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld `application.launches > 0` . |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -147,7 +147,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isLaunch |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
@@ -189,7 +189,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
 | `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld `application.launches > 0` . |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -212,7 +212,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isExit   |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
@@ -262,7 +262,7 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | (Optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
 | `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of `{KEY}` -waarden moeten worden genegeerd. De standaardwaarde is `false` . |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -281,7 +281,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
------------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -313,7 +313,7 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | (Optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
 | `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of `{KEY}` -waarden moeten worden genegeerd. De standaardwaarde is `false` . |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -333,7 +333,7 @@ LIMIT 10
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
------------------------------------+-----------------------+-------------------------------------+---------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+---------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -371,7 +371,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | De expressie die de vorige gebeurtenis moet kwalificeren. |
 | `{TIME_UNIT}` | De eenheid van output. Mogelijke waarden zijn dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -401,7 +401,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_since_registration 
------------------------------------+------------------------------------
+|-----------------------------------+------------------------------------
                                    |                                   
  Account Registration|Confirmation |                                0.0
  Seasonal                          |                   5.47029702970297
@@ -433,7 +433,7 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | `{EVENT_DEFINITION}` | De expressie waarmee de volgende gebeurtenis wordt gekwalificeerd. |
 | `{TIME_UNIT}` | (Optioneel) De uitvoereenheid. Mogelijke waarden zijn dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -463,7 +463,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
------------------------------------+------------------------------------------
+|-----------------------------------+------------------------------------------
  Shopping Cart|Order Confirmation  |                                      0.0
  Men                               |                       -9.465295629820051
  Equipment                         |                       -9.682098765432098
@@ -481,10 +481,10 @@ Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in de kol
 
 ## Volgende stappen
 
-Met de hier beschreven functies kunt u query&#39;s schrijven voor toegang tot uw eigen [!DNL Experience Event] datasets met [!DNL Query Service] . Voor meer informatie over auteursvragen in [!DNL Query Service], zie de documentatie bij [&#x200B; het creëren van vragen &#x200B;](../best-practices/writing-queries.md).
+Met de hier beschreven functies kunt u query&#39;s schrijven voor toegang tot uw eigen [!DNL Experience Event] datasets met [!DNL Query Service] . Voor meer informatie over auteursvragen in [!DNL Query Service], zie de documentatie bij [ het creëren van vragen ](../best-practices/writing-queries.md).
 
 ## Aanvullende bronnen
 
 In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. Bovendien gebruikt de video ook voorbeelden met afzonderlijke eigenschappen in een XDM-object, waarbij gebruik wordt gemaakt van door Adobe gedefinieerde functies en waarbij gebruik wordt gemaakt van CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/3470201?quality=12&learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
