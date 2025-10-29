@@ -41,7 +41,7 @@ Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als prim
 
 >[!IMPORTANT]
 >
->De geavanceerde ondernemingsbestemmingen, of het stromen de uitvoerbestemmingen van het profiel, zijn beschikbaar aan [&#x200B; Adobe Real-Time Customer Data Platform Ultimate &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) slechts klanten.
+>De geavanceerde ondernemingsbestemmingen, of het stromen de uitvoerbestemmingen van het profiel, zijn beschikbaar aan [&#x200B; Adobe Real-Time Customer Data Platform Ultimate &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) slechts klanten.
 
 Gebruik de geavanceerde gegevensconnectors voor bedrijfsdoelgegevens om Adobe Real-Time Customer Data Platform-profielen in bijna realtime te leveren aan interne systemen of aan andere systemen van derden voor gegevenssynchronisatie, analyse en verdere gebruiksscenario&#39;s voor profielverrijking.
 

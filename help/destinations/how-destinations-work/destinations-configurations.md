@@ -23,7 +23,7 @@ Deze pagina beschrijft of verbindt uit aan alle gemeenschappelijke en configuree
 
 ## Algemene exportinstellingen voor verschillende doeltypen {#common-settings-across-destination-types}
 
-Het de uitvoergedrag van de bestemming is verenigbaar over bestemmingen die tot een bestemmingstype met betrekking tot *behoren wat een bestemmingsuitvoer* teweegbrengt en *wat in de bestemmingsuitvoer* inbegrepen is. De uitvoer van de bestemming wordt teweeggebracht door berichten die de bestemmingsdienst van de [&#x200B; stroomopwaartse dienst van het Profiel van de Klant in real time &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram) ontvangt.
+Het de uitvoergedrag van de bestemming is verenigbaar over bestemmingen die tot een bestemmingstype met betrekking tot *behoren wat een bestemmingsuitvoer* teweegbrengt en *wat in de bestemmingsuitvoer* inbegrepen is. De uitvoer van de bestemming wordt teweeggebracht door berichten die de bestemmingsdienst van de [&#x200B; stroomopwaartse dienst van het Profiel van de Klant in real time &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=nl-NL#adobe-experience-platform-%26-applications-detailed-architecture-diagram) ontvangt.
 
 Wat in de bestemmingsuitvoer inbegrepen is varieert lichtjes tussen bestemmingstypes. Lees meer over de [&#x200B; gemeenschappelijke patronen van het uitvoergedrag per bestemmingstype &#x200B;](/help/destinations/how-destinations-work/profile-export-behavior.md). Deze instellingen kunnen niet worden bewerkt door bestemmingsontwikkelaars of Real-Time CDP-gebruikers.
 

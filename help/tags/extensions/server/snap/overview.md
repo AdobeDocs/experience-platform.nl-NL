@@ -53,7 +53,7 @@ Selecteer **[!UICONTROL Save]** als u klaar bent.
 
 ## Gegevenselementen maken {#create-data-elements}
 
-Om gegevens naar de [!DNL Snapchat] API uitbreiding van Conversies te verzenden, creeer [&#x200B; gegevenselementen &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) voor elke gegevensparameter. Voer de volgende stappen uit:
+Om gegevens naar de [!DNL Snapchat] API uitbreiding van Conversies te verzenden, creeer [&#x200B; gegevenselementen &#x200B;](https://experienceleague.adobe.com/nl/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) voor elke gegevensparameter. Voer de volgende stappen uit:
 
 1. Navigeer aan **[!UICONTROL Authoring]**> **[!UICONTROL Data Elements]** in het scherm van uw bezit **[!UICONTROL Property Info]**, en selecteer dan **[!UICONTROL Add Data Element]**.
 
@@ -79,7 +79,7 @@ Zie de [&#x200B; Gebeurtenis door:sturen eigenschappen documentatie &#x200B;](/h
 
 ## Regels maken om conversiegebeurtenissen naar Magnetisch te verzenden {#create-snap-rules}
 
-[&#x200B; Regels &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) worden gebruikt om uitbreidingen in Experience Platform teweeg te brengen. Deze sectie schetst hoe te om regels binnen uw gebeurtenis tot stand te brengen die bezit door:sturen om omzettingsgebeurtenissen naar Breuk te verzenden gebruikend de uitbreiding van Conversies API.
+[&#x200B; Regels &#x200B;](https://experienceleague.adobe.com/nl/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) worden gebruikt om uitbreidingen in Experience Platform teweeg te brengen. Deze sectie schetst hoe te om regels binnen uw gebeurtenis tot stand te brengen die bezit door:sturen om omzettingsgebeurtenissen naar Breuk te verzenden gebruikend de uitbreiding van Conversies API.
 
 ### Een nieuwe regel maken
 

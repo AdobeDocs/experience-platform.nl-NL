@@ -81,5 +81,5 @@ Gebruik deze waarden aan opstelling webhaak in de **console van het Relais**. Vo
 
 ## Aanvullende bronnen
 
-* [&#x200B; creeer een nieuwe verbindingsspecificatie gebruikend de Dienst API van de Stroom &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [&#x200B; verbind met uw bron gebruikend UI &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [&#x200B; creeer een nieuwe verbindingsspecificatie gebruikend de Dienst API van de Stroom &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [&#x200B; verbind met uw bron gebruikend UI &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

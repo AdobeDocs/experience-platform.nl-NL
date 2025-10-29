@@ -26,7 +26,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Experien
 
 >[!NOTE]
 >
->De stroomdoorvoercapaciteit ondersteunt maximaal 1500 inkomende gebeurtenissen per seconde. U kunt aanvullende streaming segmentatie aanschaffen ter ondersteuning van maximaal 13.500 extra binnenkomende gebeurtenissen per &#x200B;. Voor meer informatie, verwijs naar [&#x200B; Real-Time CDP B2C Edition - Prime en Ultimate de productbeschrijvingen van Pakketten &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>De stroomdoorvoercapaciteit ondersteunt maximaal 1500 inkomende gebeurtenissen per seconde. U kunt aanvullende streaming segmentatie aanschaffen ter ondersteuning van maximaal 13.500 extra binnenkomende gebeurtenissen per &#x200B;. Voor meer informatie, verwijs naar [&#x200B; Real-Time CDP B2C Edition - Prime en Ultimate de productbeschrijvingen van Pakketten &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Metrische gegevens voor het streamen van profielopname controleren {#streaming-profile-metrics}
 

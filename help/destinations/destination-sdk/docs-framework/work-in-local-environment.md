@@ -17,18 +17,18 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 >
 >Zie ook de ondersteunende documentatie in de handleiding voor contribuanten van Adobe:
 >
->* [&#x200B; installeer Git en de Authoring hulpmiddelen van de Prijsverhoging &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* &lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [&#x200B; GitHub bijdragewerkschema voor belangrijke veranderingen &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
+>* [&#x200B; installeer Git en de Authoring hulpmiddelen van de Prijsverhoging &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=nl-NL)
+>* &lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL)
+>* [&#x200B; GitHub bijdragewerkschema voor belangrijke veranderingen &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=nl-NL).
 
 ## Verbind met GitHub en opstelling uw lokale auteursmilieu {#set-up-environment}
 
 1. Blader in uw browser naar `https://github.com/AdobeDocs/experience-platform.en`
-2. Aan [&#x200B; vork &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) de bewaarplaats, klik **Fork** zoals hieronder getoond. Dit leidt tot een exemplaar van de bewaarplaats van Experience Platform in uw eigen rekening GitHub.
+2. Aan [&#x200B; vork &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL#fork-the-repository) de bewaarplaats, klik **Fork** zoals hieronder getoond. Dit leidt tot een exemplaar van de bewaarplaats van Experience Platform in uw eigen rekening GitHub.
 
    ![&#x200B; de documentatiebewaarplaats van Adobe van het Fork &#x200B;](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. Kloont de opslagplaats naar uw lokale computer. Selecteer **Code > HTTPS > Open met Desktop GitHub**, zoals hieronder getoond. Zorg ervoor u [&#x200B; geïnstalleerde Desktop GitHub &#x200B;](https://desktop.github.com/) hebt. Voor verdere verwijzing, lees [&#x200B; een lokale kloon van de bewaarplaats &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) in de de contributorgids van Adobe creëren.
+3. Kloont de opslagplaats naar uw lokale computer. Selecteer **Code > HTTPS > Open met Desktop GitHub**, zoals hieronder getoond. Zorg ervoor u [&#x200B; geïnstalleerde Desktop GitHub &#x200B;](https://desktop.github.com/) hebt. Voor verdere verwijzing, lees [&#x200B; een lokale kloon van de bewaarplaats &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL#create-a-local-clone-of-the-repository) in de de contributorgids van Adobe creëren.
 
    ![&#x200B; de documentatiebewaarplaats van Adobe van de Kloon aan lokaal milieu &#x200B;](../assets/docs-framework/clone-local.png)
 
@@ -37,10 +37,10 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 ## Auteur de documentatiepagina voor uw bestemming {#author-documentation}
 
 1. Uw documentatiepagina is gebaseerd op het [&#x200B; zelfbedienings bestemmingsmalplaatje &#x200B;](../docs-framework/self-service-template.md). Download het [&#x200B; bestemmingsmalplaatje &#x200B;](../assets/docs-framework/yourdestination-template.zip). Pak het uit en extraheer het bestand `yourdestination-template.md` naar de map die in stap 4 hierboven is vermeld.  Wijzig de naam van het bestand in `YOURDESTINATION.md` , waarbij UW BESTEMMING de naam van uw bestemming in Adobe Experience Platform is. Als uw bedrijf bijvoorbeeld Moviestar heet, geeft u het bestand de naam `moviestar.md` .
-2. Open uw nieuw dossier in uw [&#x200B; tekstredacteur van keus &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors). Adobe adviseert dat u [&#x200B; Code van Visual Studio &#x200B;](https://code.visualstudio.com/) gebruikt en de Verkennende uitbreiding van de Markeringen van Adobe installeert. Als u de extensie wilt installeren, opent u Visual Studio-code, selecteert u het tabblad **[!DNL Extensions]** links van het scherm en zoekt u naar `adobe markdown authoring` . Selecteer de extensie en klik op **[!DNL Install]** .
+2. Open uw nieuw dossier in uw [&#x200B; tekstredacteur van keus &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=nl-NL#understand-markdown-editors). Adobe adviseert dat u [&#x200B; Code van Visual Studio &#x200B;](https://code.visualstudio.com/) gebruikt en de Verkennende uitbreiding van de Markeringen van Adobe installeert. Als u de extensie wilt installeren, opent u Visual Studio-code, selecteert u het tabblad **[!DNL Extensions]** links van het scherm en zoekt u naar `adobe markdown authoring` . Selecteer de extensie en klik op **[!DNL Install]** .
    ![&#x200B; installeer Adobe Markdown Authoring uitbreiding &#x200B;](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. Bewerk de sjabloon met relevante informatie voor uw doel. Volg de instructies in de sjabloon.
-4. Ga voor alle schermafbeeldingen of afbeeldingen die u aan de documentatie wilt toevoegen naar `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]` , waar `[...]` de gewenste categorie voor uw doel is. Als u bijvoorbeeld een aanpassingsdoel toevoegt aan Experience Platform, selecteert u de map `personalization` . Maak een nieuwe map voor uw bestemming en sla uw afbeeldingen hier op. U moet er een koppeling naar maken vanaf de pagina die u ontwerpt. Zie [&#x200B; instructies hoe te om aan beelden &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images) te verbinden.
+4. Ga voor alle schermafbeeldingen of afbeeldingen die u aan de documentatie wilt toevoegen naar `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]` , waar `[...]` de gewenste categorie voor uw doel is. Als u bijvoorbeeld een aanpassingsdoel toevoegt aan Experience Platform, selecteert u de map `personalization` . Maak een nieuwe map voor uw bestemming en sla uw afbeeldingen hier op. U moet er een koppeling naar maken vanaf de pagina die u ontwerpt. Zie [&#x200B; instructies hoe te om aan beelden &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=nl-NL#link-to-images) te verbinden.
 5. Sla het bestand waaraan u werkt op als u klaar bent.
 
 ## De documentatie ter controle verzenden {#submit-review}
@@ -83,4 +83,4 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 
 >[!TIP]
 >
->Om beelden en verbindingen aan uw documentatie toe te voegen, en voor andere vragen rond Markering, lees [&#x200B; Gebruikend Markdown &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) in Adobe het samenwerken schrijvende gids.
+>Om beelden en verbindingen aan uw documentatie toe te voegen, en voor andere vragen rond Markering, lees [&#x200B; Gebruikend Markdown &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL) in Adobe het samenwerken schrijvende gids.
