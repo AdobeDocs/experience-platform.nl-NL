@@ -15,9 +15,9 @@ Met de validatie-editor kunt u snel en eenvoudig JavaScript-functies beheren om 
 
 ## Aan de slag met de validatie-editor
 
-Na [ vestiging Assurance ](../tutorials/implement-assurance.md), op de **[!UICONTROL Home]** mening, selecteer **[!UICONTROL Validation Editor]**.
+Na [&#x200B; vestiging Assurance &#x200B;](../tutorials/implement-assurance.md), op de **[!UICONTROL Home]** mening, selecteer **[!UICONTROL Validation Editor]**.
 
-![ bevestiging-redacteur-scherm-opname ](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
+![&#x200B; bevestiging-redacteur-scherm-opname &#x200B;](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
 ## Een validatiefunctie schrijven
 
@@ -57,7 +57,7 @@ Van de validatiefunctie wordt verwacht dat deze een object retourneert dat het v
 | :--- | :--- | :--- |
 | `message` | String | Het validatiebericht dat in de samenvattingsresultaten moet worden weergegeven. |
 | `events` | Array | Een array met gebeurtenishulplijnen die moeten worden gerapporteerd als gematchte of niet-overeenkomende gebeurtenissen. |
-| `links` | Array | Een array van `ValidationResultLink` -objecten naar verwijzingsdocumentatie en andere bronnen `{( type: 'doc'` &amp;vert;`'product', url: String )}` |
+| `links` | Array | Een array van `ValidationResultLink` -objecten naar verwijzingsdocumentatie en andere bronnen `{( type: 'doc'` &vert;`'product', url: String )}` |
 | `result` | String | Dit is het validatieresultaat en wordt verwacht dat het een van de opgesomde tekenreeksen is: &quot;gematcht&quot;, &quot;niet gematcht&quot;, &quot;onbekend&quot; |
 
 ## De validatieresultaten weergeven
@@ -68,7 +68,7 @@ De resultaten van de functie worden weergegeven in de resultatensectie onder de 
 * Oranje - onbekend
 * Rood - niet overeenkomend
 
-![ timing-Bevestiging-hoogtepunten-scherm-heet ](https://user-images.githubusercontent.com/6597105/198681412-93d10a5a-3212-4e85-850a-aeaf5caf0521.png)
+![&#x200B; timing-Bevestiging-hoogtepunten-scherm-heet &#x200B;](https://user-images.githubusercontent.com/6597105/198681412-93d10a5a-3212-4e85-850a-aeaf5caf0521.png)
 
 ## Problemen oplossen
 
@@ -76,4 +76,4 @@ U kunt `console.log()` in uw functie toevoegen om punten aan de ontwikkelaarscon
 
 Als er een fout optreedt in de JavaScript-code-editor, wordt naast de reden een foutstatus weergegeven.
 
-Om meer over bevestigingen te leren, gelieve te bezoeken de [ Bevestigingen van Adobe Experience Platform Assurance ](https://github.com/adobe/griffon-validation-plugins) GitHub. Hier zijn voorbeelden van validaties die eigendom zijn van Adobe. Zie [ wiki ](https://github.com/adobe/griffon-validation-plugins/wiki) voor meer gedetailleerde beschrijvingen van bevestigingen.
+Om meer over bevestigingen te leren, gelieve te bezoeken de [&#x200B; Bevestigingen van Adobe Experience Platform Assurance &#x200B;](https://github.com/adobe/griffon-validation-plugins) GitHub. Hier zijn voorbeelden van validaties die eigendom zijn van Adobe. Zie [&#x200B; wiki &#x200B;](https://github.com/adobe/griffon-validation-plugins/wiki) voor meer gedetailleerde beschrijvingen van bevestigingen.

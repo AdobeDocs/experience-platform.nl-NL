@@ -21,8 +21,8 @@ In dit artikel worden de volgende voorbeeldtransformaties getoond die een ETL-on
 
 Voorbeelden van CSV- en JSON-bestanden zijn beschikbaar in het openbare antwoord [!DNL GitHub] in de naslaggids voor ETL dat door Adobe wordt onderhouden:
 
-- [ CRM_profiles.csv ](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [ CRM_profiles.json ](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [&#x200B; CRM_profiles.csv &#x200B;](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [&#x200B; CRM_profiles.json &#x200B;](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### Voorbeeld-CSV
 
@@ -55,10 +55,10 @@ De toewijzingsvereisten voor de CRM-gegevens worden in de volgende tabel uiteeng
 | GENDER | person.gender | Het geslacht transformeren als overeenkomende persoon.genumwaarde geslacht |
 | DOB | person.bornDayAndMonth: &quot;MM-DD&quot;<br/> person.bornDate: &quot;JJJJ-MM-DD&quot;<br/> person.bornYear: JJJJJ | Transform geboorteDayAndMonth als koord <br/> TransformDate als koord <br/> TransformYear als korte int |
 | EMAIL | personalEmail.address | Kopiëren als tekenreeks |
-| CRMID | identityMap.CRMID [{&quot;id&quot;:x, primair :false ] | Kopiëren als tekenreeks naar CRMID-array in identityMap en instellen Primair als onwaar |
+| CRMID | identityMap.CRMID [&lbrace;&quot;id&quot;:x, primair :false ] | Kopiëren als tekenreeks naar CRMID-array in identityMap en instellen Primair als onwaar |
 | ECID | identityMap.ECID [{&quot;id&quot;:x, primair: false} ] | Kopiëren als tekenreeks naar eerste item in ECID-array in identityMap en instellen Primair als onwaar |
-| LOYALTYID | identityMap.LOYALTYID [{&quot;id&quot;:x, primair :true ] | Kopiëren als tekenreeks naar LOYALTYID-array in identityMap en Primair instellen als true |
-| ECID2 | identityMap.ECID [{&quot;id&quot;:x, primair :false ] | Kopiëren als tekenreeks naar tweede item in ECID-array in identityMap en instellen Primair op Onwaar |
+| LOYALTYID | identityMap.LOYALTYID [&lbrace;&quot;id&quot;:x, primair :true ] | Kopiëren als tekenreeks naar LOYALTYID-array in identityMap en Primair instellen als true |
+| ECID2 | identityMap.ECID [&lbrace;&quot;id&quot;:x, primair :false ] | Kopiëren als tekenreeks naar tweede item in ECID-array in identityMap en instellen Primair op Onwaar |
 | TELEFOON | homePhone.number | Kopiëren als tekenreeks |
 | STREET | homeAddress.street1 | Kopiëren als tekenreeks |
 | STAD | homeAddress.city | Kopiëren als tekenreeks |

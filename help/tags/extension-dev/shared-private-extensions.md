@@ -49,7 +49,7 @@ Hier ziet u een lijst met bestaande gedeelde machtigingen die in twee categorie√
 
 Selecteer **[!UICONTROL Add Authorization]**.
 
-![ Het tabblad [!UICONTROL Usage Authorizations] dat een lijst weergeeft met extensies die worden gedeeld met deze org, markeren [!UICONTROL Add Authorization]](../images/shared-extensions/add-authorization.png)
+![&#x200B; Het tabblad [!UICONTROL Usage Authorizations] dat een lijst weergeeft met extensies die worden gedeeld met deze org, markeren [!UICONTROL Add Authorization]](../images/shared-extensions/add-authorization.png)
 
 >[!IMPORTANT]
 >
@@ -59,11 +59,11 @@ Selecteer de extensies die u wilt delen in het vervolgkeuzemenu in **[!UICONTROL
 
 Voer vervolgens de id van de ontvangende organisatie in en selecteer **[!UICONTROL Save]** .
 
-![ De [!UICONTROL Create extension package usage authorization] -pagina waarop een geselecteerde extensie en een Adobe-organisatie-id worden weergegeven die is ingevoerd, wordt gemarkeerd [!UICONTROL Save]](../images/shared-extensions/save-authorization.png)
+![&#x200B; De [!UICONTROL Create extension package usage authorization] -pagina waarop een geselecteerde extensie en een Adobe-organisatie-id worden weergegeven die is ingevoerd, wordt gemarkeerd [!UICONTROL Save]](../images/shared-extensions/save-authorization.png)
 
 U keert terug naar het tabblad [!UICONTROL Usage Authorizations] waar u de extensie kunt zien in uw **[!UICONTROL Shared with other orgs]** -lijst. De status zal **wachten op Goedkeuring** tonen tot de ontvangende organisatie de vergunning goedkeurt, op welk punt het aan **Goedgekeurd** zal worden bijgewerkt.
 
-![ het [!UICONTROL Usage Authorizations] lusje dat een lijst van uitbreidingen toont die met andere organen worden gedeeld, die de nieuwe vergunning ](../images/shared-extensions/new-authorization.png) benadrukken
+![&#x200B; het [!UICONTROL Usage Authorizations] lusje dat een lijst van uitbreidingen toont die met andere organen worden gedeeld, die de nieuwe vergunning &#x200B;](../images/shared-extensions/new-authorization.png) benadrukken
 
 >[!TIP]
 >
@@ -71,7 +71,7 @@ U keert terug naar het tabblad [!UICONTROL Usage Authorizations] waar u de exten
 
 Wanneer een vergunning actief is, toont de gedeelde uitbreiding a ***delend*** badge in de catalogus erop wijst die het met andere organisaties wordt gedeeld.
 
-![ het [!UICONTROL Catalog] lusje dat de gedeelde uitbreiding met de badge ](../images/shared-extensions/sharing-badge.png) toont
+![&#x200B; het [!UICONTROL Catalog] lusje dat de gedeelde uitbreiding met de badge &#x200B;](../images/shared-extensions/sharing-badge.png) toont
 
 ## Gedeelde extensies autoriseren en beheren
 
@@ -83,7 +83,7 @@ Als u een gedeelde extensie wilt autoriseren voor uw organisatie, navigeert u na
 
 U kunt een lijst van gedeelde uitbreidingen met inbegrip van die **zien die op Goedkeuring** in de **[!UICONTROL Shared with this org]** sectie wachten. Selecteer de extensie die u wilt goedkeuren en selecteer vervolgens **[!UICONTROL Approve]** .
 
-![ Het [!UICONTROL Usage Authorizations] lusje dat een lijst toont van uitbreidingen die met dit org met de uitbreiding worden gedeeld die op Goedkeuring wacht geselecteerd, benadrukkend [!UICONTROL Approve]](../images/shared-extensions/approve-authorization.png)
+![&#x200B; Het [!UICONTROL Usage Authorizations] lusje dat een lijst toont van uitbreidingen die met dit org met de uitbreiding worden gedeeld die op Goedkeuring wacht geselecteerd, benadrukkend [!UICONTROL Approve]](../images/shared-extensions/approve-authorization.png)
 
 >[!NOTE]
 >
@@ -91,15 +91,15 @@ U kunt een lijst van gedeelde uitbreidingen met inbegrip van die **zien die op G
 
 Selecteer **[!UICONTROL OK]** in het dialoogvenster **[!UICONTROL Authorization Usages]** .
 
-![ Het dialoogvenster [!UICONTROL Authorization Usages] markeren [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
+![&#x200B; Het dialoogvenster [!UICONTROL Authorization Usages] markeren [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
 
 U bent teruggekeerd aan het [!UICONTROL Usage Authorizations] lusje waar u de uitbreiding kunt zien nu een **Goedgekeurde** status toont.
 
-![ het [!UICONTROL Usage Authorizations] lusje dat een lijst van uitbreidingen toont die met deze org worden gedeeld, die de uitbreiding met Goedgekeurde status benadrukken ](../images/shared-extensions/approved-authorization.png)
+![&#x200B; het [!UICONTROL Usage Authorizations] lusje dat een lijst van uitbreidingen toont die met deze org worden gedeeld, die de uitbreiding met Goedgekeurde status benadrukken &#x200B;](../images/shared-extensions/approved-authorization.png)
 
 Zodra de vergunning wordt goedgekeurd, is de uitbreiding beschikbaar in uw catalogus en kan worden ge√Ønstalleerd en worden gebruikt zoals om het even welke andere uitbreiding. De gedeelde uitbreiding toont a ***Ontvangend*** badge die op het wijst is een uitbreiding die aan u door een andere organisatie wordt gedeeld.
 
-![ het [!UICONTROL Catalog] lusje dat de gedeelde uitbreiding met &quot;Ontvangend&quot;badge ](../images/shared-extensions/receiving-badge.png) toont
+![&#x200B; het [!UICONTROL Catalog] lusje dat de gedeelde uitbreiding met &quot;Ontvangend&quot;badge &#x200B;](../images/shared-extensions/receiving-badge.png) toont
 
 ## Intrekking van vergunningen
 
@@ -128,6 +128,6 @@ Wanneer u een vergunning intrekt, behoudt de ontvangende organisatie bepaalde re
 
 ## Volgende stappen
 
-In dit document wordt getoond hoe u de functie voor gedeelde extensies in Experience Platform kunt gebruiken. Voor informatie over uitbreidingsontwikkeling, zie de [ gids van de gebruiker van de uitbreidingsontwikkeling ](./getting-started.md).
+In dit document wordt getoond hoe u de functie voor gedeelde extensies in Experience Platform kunt gebruiken. Voor informatie over uitbreidingsontwikkeling, zie de [&#x200B; gids van de gebruiker van de uitbreidingsontwikkeling &#x200B;](./getting-started.md).
 
-Voor een overzicht op hoog niveau van uitbreidingsontwikkeling in Experience Platform, verwijs naar de [ overzichtsdocumentatie ](./overview.md).
+Voor een overzicht op hoog niveau van uitbreidingsontwikkeling in Experience Platform, verwijs naar de [&#x200B; overzichtsdocumentatie &#x200B;](./overview.md).

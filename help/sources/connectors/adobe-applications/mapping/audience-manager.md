@@ -15,7 +15,7 @@ ht-degree: 0%
 
 De onderstaande tabellen bevatten de toewijzingen tussen de velden in Adobe Audience Manager-gegevens (Realtime, Onboard en Profielgegevens) en de bijbehorende XDM-velden.
 
-Gelieve te zien het [ XDM gebiedswoordenboek ](../../../../xdm/schema/field-dictionary.md) voor meer informatie over elk gebied XDM.
+Gelieve te zien het [&#x200B; XDM gebiedswoordenboek &#x200B;](../../../../xdm/schema/field-dictionary.md) voor meer informatie over elk gebied XDM.
 
 ## Realtime-gegevens
 

@@ -25,11 +25,11 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -41,7 +41,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DN
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
@@ -145,7 +145,7 @@ Als synchrone validatie is ingeschakeld, bevat een geslaagde reactie eventuele v
 }
 ```
 
-De bovenstaande reactie geeft aan hoeveel schemaovertredingen zijn gevonden en wat de overtredingen zijn. In dit antwoord staat bijvoorbeeld dat de toetsen `workEmail` en `person` niet in het schema zijn gedefinieerd en daarom niet zijn toegestaan. De waarde voor `_id` wordt ook als onjuist gemarkeerd, aangezien het schema een `string` verwachtte, maar een `long` werd ingevoegd. Merk op dat zodra vijf fouten worden ontmoet, de bevestigingsdienst **** zal ophouden verwerkend dat bericht. Andere berichten blijven echter geparseerd.
+De bovenstaande reactie geeft aan hoeveel schemaovertredingen zijn gevonden en wat de overtredingen zijn. In dit antwoord staat bijvoorbeeld dat de toetsen `workEmail` en `person` niet in het schema zijn gedefinieerd en daarom niet zijn toegestaan. De waarde voor `_id` wordt ook als onjuist gemarkeerd, aangezien het schema een `string` verwachtte, maar een `long` werd ingevoegd. Merk op dat zodra vijf fouten worden ontmoet, de bevestigingsdienst **&#x200B;**&#x200B;zal ophouden verwerkend dat bericht. Andere berichten blijven echter geparseerd.
 
 ## Asynchrone validatie
 
@@ -206,7 +206,7 @@ Deze sectie bevat informatie over wat de verschillende statuscodes voor reacties
 | ----------- | ------------- |
 | 200 | Geslaagd. Voor synchrone validatie betekent dit dat de validatiecontroles zijn geslaagd. Voor asynchrone validatie betekent dit dat alleen het bericht is ontvangen. De gebruikers kunnen de uiteindelijke berichtstatus door de dataset te observeren te weten komen. |
 | 400 | Fout. Er is iets mis met uw verzoek. Er wordt een foutbericht met meer details ontvangen van de streamingvalidatieservices. |
-| 401 | Fout. Uw verzoek is niet geautoriseerd. U moet een aanvraag indienen met een token voor toonder. Voor verdere informatie over hoe te om toegang te verzoeken, controleer dit [ leerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) of dit [ blogpost ](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Fout. Uw verzoek is niet geautoriseerd. U moet een aanvraag indienen met een token voor toonder. Voor verdere informatie over hoe te om toegang te verzoeken, controleer dit [&#x200B; leerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) of dit [&#x200B; blogpost &#x200B;](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Fout. Er is een interne systeemfout opgetreden. |
 | 501 | Fout. Dit betekent dat de synchrone bevestiging **niet** voor deze plaats wordt gesteund. |
 | 503 | Fout. De service is momenteel niet beschikbaar. Clients dienen ten minste drie keer een exponentiële back-offstrategie te gebruiken. |

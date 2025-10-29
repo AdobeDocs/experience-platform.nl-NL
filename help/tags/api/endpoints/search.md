@@ -38,11 +38,11 @@ Alle vragen zijn scoped aan uw huidige bedrijf en toegankelijke eigenschappen.
 >* De gebieden van het schema voor de afgevaardigden van het uitbreidingspakket (acties, voorwaarden, enz.) zijn doorzoekbaar als tekst, niet als genestelde gegevensstructuur.
 >* De vragen van de waaier steunen momenteel slechts gehelen.
 
-Voor meer diepgaande informatie over hoe te om deze functionaliteit te gebruiken, verwijs naar de [ zoekgids ](../guides/search.md).
+Voor meer diepgaande informatie over hoe te om deze functionaliteit te gebruiken, verwijs naar de [&#x200B; zoekgids &#x200B;](../guides/search.md).
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [ Reactor API ](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [&#x200B; Reactor API &#x200B;](https://www.adobe.io/experience-platform-apis/references/reactor/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie betreffende hoe te voor authentiek te verklaren aan API.
 
 ## Een zoekopdracht uitvoeren {#perform}
 
@@ -96,7 +96,7 @@ curl -X POST \
 | --- | --- |
 | `from` | Het aantal resultaten waarmee de reactie moet worden verschoven. |
 | `size` | De maximale hoeveelheid resultaten die moet worden geretourneerd. De resultaten mogen niet groter zijn dan 100 items. |
-| `query` | Een object dat de zoekquery vertegenwoordigt. Voor elke eigenschap in dit object moet de sleutel een veldpad vertegenwoordigen waarnaar moet worden gezocht. De waarde moet een object zijn waarvan de subeigenschappen bepalen waarvoor moet worden gezocht.<br><br> voor elk gebiedspad, kunt u de volgende sub-eigenschappen gebruiken:<ul><li>`exists`: retourneert true als het veld in de bron bestaat.</li><li>`value`: retourneert true als de waarde van het veld overeenkomt met de waarde van deze eigenschap.</li><li>`value_operator`: Booleaanse logica die wordt gebruikt om te bepalen hoe een `value` -query moet worden afgehandeld. Toegestane waarden zijn `AND` en `OR` . Wanneer deze optie is uitgesloten, wordt `AND` logic aangenomen. Zie de sectie over [ logica van de waardeexploitant ](#value-operator) voor meer informatie.</li><li>`range` Retourneert true als de waarde van het veld binnen een specifiek numeriek bereik valt. Het bereik zelf wordt bepaald door de volgende subeigenschappen:<ul><li>`gt`: groter dan de opgegeven waarde, niet-inclusief.</li><li>`gte`: groter dan of gelijk aan de opgegeven waarde.</li><li>`lt`: minder dan de opgegeven waarde, niet inclusief.</li><li>`lte`: kleiner dan of gelijk aan de opgegeven waarde.</li></ul></li></ul> |
+| `query` | Een object dat de zoekquery vertegenwoordigt. Voor elke eigenschap in dit object moet de sleutel een veldpad vertegenwoordigen waarnaar moet worden gezocht. De waarde moet een object zijn waarvan de subeigenschappen bepalen waarvoor moet worden gezocht.<br><br> voor elk gebiedspad, kunt u de volgende sub-eigenschappen gebruiken:<ul><li>`exists`: retourneert true als het veld in de bron bestaat.</li><li>`value`: retourneert true als de waarde van het veld overeenkomt met de waarde van deze eigenschap.</li><li>`value_operator`: Booleaanse logica die wordt gebruikt om te bepalen hoe een `value` -query moet worden afgehandeld. Toegestane waarden zijn `AND` en `OR` . Wanneer deze optie is uitgesloten, wordt `AND` logic aangenomen. Zie de sectie over [&#x200B; logica van de waardeexploitant &#x200B;](#value-operator) voor meer informatie.</li><li>`range` Retourneert true als de waarde van het veld binnen een specifiek numeriek bereik valt. Het bereik zelf wordt bepaald door de volgende subeigenschappen:<ul><li>`gt`: groter dan de opgegeven waarde, niet-inclusief.</li><li>`gte`: groter dan of gelijk aan de opgegeven waarde.</li><li>`lt`: minder dan de opgegeven waarde, niet inclusief.</li><li>`lte`: kleiner dan of gelijk aan de opgegeven waarde.</li></ul></li></ul> |
 | `sort` | Een array met objecten die de volgorde aangeeft waarin de resultaten moeten worden gesorteerd. Elk object moet één eigenschap bevatten: de sleutel staat voor het veldpad waarop moet worden gesorteerd, en de waarde vertegenwoordigt de sorteervolgorde (`asc` voor oplopend, `desc` voor aflopend). |
 | `resource_types` | Een array van tekenreeksen die de specifieke brontypen aangeven waarnaar moet worden gezocht. |
 
@@ -104,7 +104,7 @@ curl -X POST \
 
 **Reactie**
 
-Een succesvolle reactie keert een lijst van passende middelen voor de vraag terug. Voor details op hoe API gelijken voor specifieke waarden bepaalt, zie de bijlage sectie op [ passende overeenkomsten ](#conventions).
+Een succesvolle reactie keert een lijst van passende middelen voor de vraag terug. Voor details op hoe API gelijken voor specifieke waarden bepaalt, zie de bijlage sectie op [&#x200B; passende overeenkomsten &#x200B;](#conventions).
 
 ```json
 {

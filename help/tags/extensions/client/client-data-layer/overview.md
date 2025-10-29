@@ -20,7 +20,7 @@ If you would like to have more details on development consideration, [please rea
 
 Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface van Experience Platform of de gebruikersinterface voor gegevensverzameling en selecteert u Adobe Client Data Layer.
 
-![ ACDL de mening van de Uitbreiding in Catalogus ](./images/catalog.png)
+![&#x200B; ACDL de mening van de Uitbreiding in Catalogus &#x200B;](./images/catalog.png)
 
 <!-- (GitHub link?)
 There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.

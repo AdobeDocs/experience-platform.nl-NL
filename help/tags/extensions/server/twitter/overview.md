@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # [!DNL Twitter] -gebeurtenis, extensie doorsturen
 
-[[!DNL Twitter] ](https://twitter.com/i/flow/login) is een online sociale media en de sociale voorzien van een netwerkdienst, waarop de gebruikers posten en met 280 karakter-lange berichten in wisselwerking staan die als tweets worden bekend. De gebruikers kunnen met Twitter in wisselwerking staan gebruikend browser, mobiele frontend software, of programmatically door zijn [ APIs ](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter] &#x200B;](https://twitter.com/i/flow/login) is een online sociale media en de sociale voorzien van een netwerkdienst, waarop de gebruikers posten en met 280 karakter-lange berichten in wisselwerking staan die als tweets worden bekend. De gebruikers kunnen met Twitter in wisselwerking staan gebruikend browser, mobiele frontend software, of programmatically door zijn [&#x200B; APIs &#x200B;](https://developer.twitter.com/en/docs/twitter-api)
 
-De [!DNL Twitter] gebeurtenis die van de Conversies API van het Web [ ](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen staat u toe aan hefboomwerkingsgegevens in Adobe Experience Platform Edge Network worden gevangen en het verzenden naar [!DNL Twitter]. Dit document behandelt de gebruiksgevallen van de uitbreiding, hoe te om het te installeren, en hoe te om zijn mogelijkheden in uw gebeurtenis te integreren die [ regels ](../../../ui/managing-resources/rules.md) door:sturen.
+De [!DNL Twitter] gebeurtenis die van de Conversies API van het Web [&#x200B; &#x200B;](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen staat u toe aan hefboomwerkingsgegevens in Adobe Experience Platform Edge Network worden gevangen en het verzenden naar [!DNL Twitter]. Dit document behandelt de gebruiksgevallen van de uitbreiding, hoe te om het te installeren, en hoe te om zijn mogelijkheden in uw gebeurtenis te integreren die [&#x200B; regels &#x200B;](../../../ui/managing-resources/rules.md) door:sturen.
 
-[!DNL Twitter] vereist [ OAuth 1.0 ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) voor authentificatie met [!DNL Twitter] [!DNL Web Conversions] API.
+[!DNL Twitter] vereist [&#x200B; OAuth 1.0 &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) voor authentificatie met [!DNL Twitter] [!DNL Web Conversions] API.
 
 ## Gebruiksscenario’s
 
@@ -27,13 +27,13 @@ Neem bijvoorbeeld een marketingteam in een organisatie. Het team legt gebruikers
 
 De marketing- en analyseteams kunnen vervolgens gebruikmaken van [!DNL Twitter's] -mogelijkheden om aanvullende analyses uit te voeren en deze gebruikers te richten op gerichte advertentiecampagnes.
 
-Voor meer informatie over gebruiksgevallen specifiek voor [!DNL Twitter], verwijs naar de [[!DNL Twitter]  gebruiksgevallen ](https://developer.twitter.com/en/use-cases/build-for-businesses) documentatie.
+Voor meer informatie over gebruiksgevallen specifiek voor [!DNL Twitter], verwijs naar de [[!DNL Twitter]  gebruiksgevallen &#x200B;](https://developer.twitter.com/en/use-cases/build-for-businesses) documentatie.
 
 ## [!DNL Twitter] voorwaarden en instructies {#prerequisites}
 
-U moet een geldige [!DNL Twitter] -account hebben om deze extensie te kunnen gebruiken. Ga naar de [[!DNL Twitter]  registratiepagina ](https://help.twitter.com/en/using-twitter/create-twitter-account) om een rekening te registreren en tot stand te brengen als u niet reeds hebt.
+U moet een geldige [!DNL Twitter] -account hebben om deze extensie te kunnen gebruiken. Ga naar de [[!DNL Twitter]  registratiepagina &#x200B;](https://help.twitter.com/en/using-twitter/create-twitter-account) om een rekening te registreren en tot stand te brengen als u niet reeds hebt.
 
-U moet uw account instellen als een [!DNL Twitter] -ontwikkelaarsaccount. Om te weten te komen hoe te om omhoog als ontwikkelaar te ondertekenen, verwijs naar de [[!DNL Twitter]  ontwikkelaarsrekening ](https://developer.twitter.com/en/support/twitter-api/developer-account1).
+U moet uw account instellen als een [!DNL Twitter] -ontwikkelaarsaccount. Om te weten te komen hoe te om omhoog als ontwikkelaar te ondertekenen, verwijs naar de [[!DNL Twitter]  ontwikkelaarsrekening &#x200B;](https://developer.twitter.com/en/support/twitter-api/developer-account1).
 
 ### API-handleidingen {#guardrails}
 
@@ -45,25 +45,25 @@ Als u de Experience Platform wilt verbinden met [!DNL Twitter] , hebt u de volge
 
 | Type toets | Beschrijving |
 | --- | --- |
-| Consumentencode | &#x200B; de API-sleutel van de app voor toegang tot de [!DNL Twitter] -API. Verwijs naar de [!DNL Twitter] documentatie over [ api sleutels en geheimen ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) voor begeleiding. |
-| Consumentengeheim | Met het API-geheim heeft uw toepassing toegang tot de [!DNL Twitter] API. Verwijs naar de [!DNL Twitter] documentatie over [ api sleutels en geheimen ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) voor begeleiding. |
-| Token Secret | Het niet-vervalsende token-geheim van uw app, dat wordt gebruikt voor verificatie naar de [!DNL Twitter] -API via OAuth. Verwijs naar de [!DNL Twitter] documentatie op [ het verkrijgen van de tokens van de gebruikstoegang ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) voor begeleiding. |
-| Toegangstoken | Het niet-verouderde toegangstoken van uw app, die wordt gebruikt voor verificatie met de [!DNL Twitter] -API via OAuth. Verwijs naar de [!DNL Twitter] documentatie op [ het verkrijgen van de tokens van de gebruikstoegang ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) voor begeleiding. |
-| Pixel-id | De pixel van [!DNL Twitter] is een websitemarkering die op uw website wordt uitgevoerd om plaatsacties of omzettingen te volgen. Verwijs naar de [!DNL Twitter] documentatie over [ omzetting het volgen voor websites ](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) voor begeleiding. |
+| Consumentencode | &#x200B; de API-sleutel van de app voor toegang tot de [!DNL Twitter] -API. Verwijs naar de [!DNL Twitter] documentatie over [&#x200B; api sleutels en geheimen &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) voor begeleiding. |
+| Consumentengeheim | Met het API-geheim heeft uw toepassing toegang tot de [!DNL Twitter] API. Verwijs naar de [!DNL Twitter] documentatie over [&#x200B; api sleutels en geheimen &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) voor begeleiding. |
+| Token Secret | Het niet-vervalsende token-geheim van uw app, dat wordt gebruikt voor verificatie naar de [!DNL Twitter] -API via OAuth. Verwijs naar de [!DNL Twitter] documentatie op [&#x200B; het verkrijgen van de tokens van de gebruikstoegang &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) voor begeleiding. |
+| Toegangstoken | Het niet-verouderde toegangstoken van uw app, die wordt gebruikt voor verificatie met de [!DNL Twitter] -API via OAuth. Verwijs naar de [!DNL Twitter] documentatie op [&#x200B; het verkrijgen van de tokens van de gebruikstoegang &#x200B;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) voor begeleiding. |
+| Pixel-id | De pixel van [!DNL Twitter] is een websitemarkering die op uw website wordt uitgevoerd om plaatsacties of omzettingen te volgen. Verwijs naar de [!DNL Twitter] documentatie over [&#x200B; omzetting het volgen voor websites &#x200B;](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) voor begeleiding. |
 
 ## De extensie [!DNL Twitter] installeren en configureren {#install}
 
-Om de uitbreiding te installeren, [ creeer een gebeurtenis door:sturen bezit ](../../../ui/event-forwarding/overview.md#properties) of kies een bestaand bezit in plaats daarvan uit te geven.
+Om de uitbreiding te installeren, [&#x200B; creeer een gebeurtenis door:sturen bezit &#x200B;](../../../ui/event-forwarding/overview.md#properties) of kies een bestaand bezit in plaats daarvan uit te geven.
 
 Selecteer **[!UICONTROL Extensions]** in de linkernavigatie. Selecteer op het tabblad **[!UICONTROL Catalog]** **[!UICONTROL Install]** op de kaart voor de extensie [!DNL Twitter] .
 
-![ Catalogus die de [!DNL Twitter] uitbreiding toont die installeert benadrukt.](../../../images/extensions/server/twitter/install.png)
+![&#x200B; Catalogus die de [!DNL Twitter] uitbreiding toont die installeert benadrukt.](../../../images/extensions/server/twitter/install.png)
 
 >[!IMPORTANT]
 >
 >Afhankelijk van uw implementatiebehoeften, kunt u een schema, gegevenselementen, en een dataset moeten tot stand brengen alvorens de uitbreiding te vormen. Controleer alle configuratiestappen voordat u begint om te bepalen welke entiteiten u moet instellen voor uw geval van gebruik.
 
-Op het volgende scherm, input de volgende [ configuratiewaarden ](#configuration-details) die u eerder van [!DNL Twitter] verzamelde:
+Op het volgende scherm, input de volgende [&#x200B; configuratiewaarden &#x200B;](#configuration-details) die u eerder van [!DNL Twitter] verzamelde:
 
 * **[!UICONTROL Pixel Id]**
 * **[!UICONTROL Consumer Key]**
@@ -73,17 +73,17 @@ Op het volgende scherm, input de volgende [ configuratiewaarden ](#configuration
 
 Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![[!DNL Twitter] configuratiescherm voor de [!DNL Twitter] extensie. ](../../../images/extensions/server/twitter/configure.png)
+![[!DNL Twitter] configuratiescherm voor de [!DNL Twitter] extensie. &#x200B;](../../../images/extensions/server/twitter/configure.png)
 
 ## Vorm een gebeurtenis door:sturen regel {#config-rule}
 
 Zodra al uw gegevenselementen opstelling zijn, kunt u gebeurtenis beginnen tot stand te brengen die regels bepaalt wanneer en hoe uw gebeurtenissen naar [!DNL Twitter] zullen worden verzonden.
 
-Creeer een nieuwe [ regel ](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Twitter]** . Als u Edge Network-gebeurtenissen naar [!DNL Twitter] wilt verzenden, stelt u de eigenschap **[!UICONTROL Action Type]** to **[!UICONTROL Send Web Conversion]in.**
+Creeer een nieuwe [&#x200B; regel &#x200B;](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Twitter]** . Als u Edge Network-gebeurtenissen naar [!DNL Twitter] wilt verzenden, stelt u de eigenschap **[!UICONTROL Action Type]** to **[!UICONTROL Send Web Conversion]in.**
 
-Na selectie, schijnen de extra controles om de gebeurtenis verder te vormen. U moet de eigenschappen van de gebeurtenis [!DNL Twitter] toewijzen aan de gegevenselementen die u eerder hebt gemaakt. Voor meer informatie, verwijs naar de [[!DNL Twitter]  Conversies API van het Web ](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
+Na selectie, schijnen de extra controles om de gebeurtenis verder te vormen. U moet de eigenschappen van de gebeurtenis [!DNL Twitter] toewijzen aan de gegevenselementen die u eerder hebt gemaakt. Voor meer informatie, verwijs naar de [[!DNL Twitter]  Conversies API van het Web &#x200B;](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
-![ [!DNL Twitter] creërend een regel van de omzettingsgebeurtenis.](../../../images/extensions/server/twitter/action-configuration.png)
+![&#x200B; [!DNL Twitter] creërend een regel van de omzettingsgebeurtenis.](../../../images/extensions/server/twitter/action-configuration.png)
 
 **[!UICONTROL User Identification]**
 
@@ -111,13 +111,13 @@ Nadat de regel voor het doorsturen van gebeurtenissen is gemaakt en uitgevoerd, 
 
 Als de gebeurtenisverzameling en [!DNL Experience Platform] -integratie zijn gelukt, ziet u gebeurtenissen in de [!DNL Twitter] [!UICONTROL Events manager] .
 
-![ de [!DNL Twitter] gebeurtenismanager ](../../../images/extensions/server/twitter/event-manager.png)
+![&#x200B; de [!DNL Twitter] gebeurtenismanager &#x200B;](../../../images/extensions/server/twitter/event-manager.png)
 
 ## Volgende stappen
 
 In deze handleiding wordt beschreven hoe conversiegebeurtenissen naar [!DNL Twitter] kunnen worden verzonden via het doorsturen van gebeurtenissen. Raadpleeg de officiële documentatie voor meer informatie over deze onderliggende technologieën:
 
-* [[!DNL Twitter]  APIs ](https://developer.twitter.com/en/docs/twitter-api)
-* [[!DNL Twitter]  de omzetting API van het Web ](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
-* [[!DNL Twitter]  Token van de Toegang van 0} Gebruiker](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)
-* [ identiteitskaart van het Pixel en omzetting die ](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) volgen
+* [[!DNL Twitter]  APIs &#x200B;](https://developer.twitter.com/en/docs/twitter-api)
+* [[!DNL Twitter]  de omzetting API van het Web &#x200B;](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
+* [[!DNL Twitter]  Token van de Toegang van 0&rbrace; Gebruiker](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)
+* [&#x200B; identiteitskaart van het Pixel en omzetting die &#x200B;](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) volgen

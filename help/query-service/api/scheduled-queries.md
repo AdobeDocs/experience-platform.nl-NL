@@ -26,11 +26,11 @@ Vragen die met een persoonlijke gebruikersaccount zijn gemaakt, mislukken als de
 >
 >Belangrijke overwegingen wanneer het beheren van geplande vragen:<ul><li>Gepland vragen zullen ontbreken als de rekening (technisch of gebruiker) die wordt gebruikt om hen tot stand te brengen toegang of toestemmingen verliest.</li><li>Geplande query&#39;s moeten worden uitgeschakeld voordat ze kunnen worden verwijderd via de API of UI.</li><li>Het voor onbepaalde tijd plannen zonder een einddatum wordt niet gesteund; een einddatum moet altijd worden gespecificeerd.</li></ul>
 
-Voor gedetailleerde begeleiding op rekeningsvereisten, toestemmingsopstelling, en het beheren van geplande vragen, zie de [ documentatie van de programma&#39;s van de Vraag ](../ui/query-schedules.md#technical-account-user-requirements). Voor geleidelijke instructies bij het creëren van en het vormen van een technische rekening, verwijs naar [ de opstelling van Developer Console ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) en [ technische de rekeningsopstelling van begin tot eind ](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
+Voor gedetailleerde begeleiding op rekeningsvereisten, toestemmingsopstelling, en het beheren van geplande vragen, zie de [&#x200B; documentatie van de programma&#39;s van de Vraag &#x200B;](../ui/query-schedules.md#technical-account-user-requirements). Voor geleidelijke instructies bij het creëren van en het vormen van een technische rekening, verwijs naar [&#x200B; de opstelling van Developer Console &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) en [&#x200B; technische de rekeningsopstelling van begin tot eind &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Voorbeeld-API-aanroepen
 
-Zodra u de noodzakelijke authentificatiekopballen (zie de [ API authentificatiegids ](../../landing/api-authentication.md)) hebt gevormd, kunt u beginnen het maken vraag aan [!DNL Query Service] API. In de volgende secties worden verschillende API-aanroepen met algemene indelingen getoond, bijvoorbeeld aanvragen met vereiste koppen en voorbeeldantwoorden.
+Zodra u de noodzakelijke authentificatiekopballen (zie de [&#x200B; API authentificatiegids &#x200B;](../../landing/api-authentication.md)) hebt gevormd, kunt u beginnen het maken vraag aan [!DNL Query Service] API. In de volgende secties worden verschillende API-aanroepen met algemene indelingen getoond, bijvoorbeeld aanvragen met vereiste koppen en voorbeeldantwoorden.
 
 ### Hiermee wordt een lijst met geplande query&#39;s opgehaald
 
@@ -138,7 +138,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van geplande vra
 
 ### Nieuwe geplande query maken
 
-U kunt een nieuwe geplande query maken door een POST-aanvraag in te dienen bij het `/schedules` -eindpunt. Wanneer u een geplande query maakt in de API, kunt u deze ook zien in de Query-editor. Voor meer informatie over geplande vragen in UI, te lezen gelieve de [ documentatie van de Redacteur van de Vraag ](../ui/user-guide.md#scheduled-queries).
+U kunt een nieuwe geplande query maken door een POST-aanvraag in te dienen bij het `/schedules` -eindpunt. Wanneer u een geplande query maakt in de API, kunt u deze ook zien in de Query-editor. Voor meer informatie over geplande vragen in UI, te lezen gelieve de [&#x200B; documentatie van de Redacteur van de Vraag &#x200B;](../ui/user-guide.md#scheduled-queries).
 
 **API formaat**
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | De SQL-query die moet worden uitgevoerd volgens het gedefinieerde schema. |
 | `query.name` | De naam van de geplande query. |
 | `query.description` | Een optionele beschrijving voor de geplande query. |
-| `schedule.schedule` | Het uitsnijdschema voor de query. Verwijs naar [ Crontab.guru ](https://crontab.guru/) voor een interactieve manier om te creëren, te bevestigen, en gezamenlijke uitdrukkingen te begrijpen. In dit voorbeeld, &quot;`30 * * * *`&quot;betekent dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br> Alternatief, kunt u de volgende steno uitdrukkingen gebruiken:<ul><li>`@once`: de query wordt slechts één keer uitgevoerd.</li><li>`@hourly`: de query wordt elk uur uitgevoerd aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *` .</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *` .</li><li>`@weekly`: de query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0` .</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *` .</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 1 *` . |
+| `schedule.schedule` | Het uitsnijdschema voor de query. Verwijs naar [&#x200B; Crontab.guru &#x200B;](https://crontab.guru/) voor een interactieve manier om te creëren, te bevestigen, en gezamenlijke uitdrukkingen te begrijpen. In dit voorbeeld, &quot;`30 * * * *`&quot;betekent dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br> Alternatief, kunt u de volgende steno uitdrukkingen gebruiken:<ul><li>`@once`: de query wordt slechts één keer uitgevoerd.</li><li>`@hourly`: de query wordt elk uur uitgevoerd aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *` .</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *` .</li><li>`@weekly`: de query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0` .</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *` .</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 1 *` . |
 | `schedule.startDate` | De begindatum voor uw geplande query, geschreven als een UTC-tijdstempel. |
 
 **Reactie**
@@ -234,7 +234,7 @@ Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van u
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [ uw gecreeerde geplande vraag ](#delete-a-specified-scheduled-query) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw gecreeerde geplande vraag &#x200B;](#delete-a-specified-scheduled-query) te schrappen.
 
 ### Gegevens van een opgegeven geplande query aanvragen
 
@@ -317,7 +317,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van de gespecifice
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [ uw gecreeerde geplande vraag ](#delete-a-specified-scheduled-query) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw gecreeerde geplande vraag &#x200B;](#delete-a-specified-scheduled-query) te schrappen.
 
 ### Details van een opgegeven geplande query bijwerken
 
@@ -380,7 +380,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Geplande queryplanning bijwerken
 
-U kunt het bijsnijdschema van de geplande query bijwerken door de eigenschap `path` in te stellen op `/schedule/schedule` in de hoofdtekst van de aanvraag. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het [ formaat van de cron uitdrukking ](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie.
+U kunt het bijsnijdschema van de geplande query bijwerken door de eigenschap `path` in te stellen op `/schedule/schedule` in de hoofdtekst van de aanvraag. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het [&#x200B; formaat van de cron uitdrukking &#x200B;](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie.
 
 **API formaat**
 

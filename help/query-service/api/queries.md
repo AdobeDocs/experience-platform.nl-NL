@@ -41,8 +41,8 @@ Hieronder volgt een lijst met beschikbare queryparameters voor het weergeven van
 | `limit` | Hiermee geeft u de maximale paginagrootte op om het aantal resultaten op te geven dat in een pagina wordt opgenomen. (*Standaardwaarde: 20*) |
 | `start` | Geef een tijdstempel voor de ISO-indeling op om de resultaten te bestellen. Als geen begindatum wordt gespecificeerd, zal de API vraag eerst de oudste gecreeerde vraag terugkeren, dan zal blijven van recentere resultaten een lijst maken.<br> Met ISO-tijdstempels kunt u verschillende niveaus van granulariteit opgeven in de datum en tijd. De basis-ISO-tijdstempels hebben de notatie: `2020-09-07` voor het uitdrukken van de datum 7 september 2020. Een complexer voorbeeld zou als `2022-11-05T08:15:30-05:00` worden geschreven en beantwoordt aan 5 November, 2022, 8 :15: 30 am, de Tijd van de Norm van de V.S. Een timezone kan met een UTC compensatie worden voorzien en door het achtervoegsel &quot;Z&quot; (`2020-01-01T01:01:01Z`) wordt aangeduid. Als er geen tijdzone is opgegeven, wordt de standaardwaarde nul gebruikt. |
 | `property` | Filterresultaten op basis van velden. De filters **moeten** HTML zijn ontsnapt. Met komma&#39;s kunt u meerdere sets filters combineren. De ondersteunde velden zijn `created` , `updated` , `state` en `id` . De lijst met ondersteunde operatoren is `>` (groter dan), `<` (kleiner dan), `>=` (groter dan of gelijk aan), `<=` (kleiner dan of gelijk aan), `==` (gelijk aan), `!=` (niet gelijk aan) en `~` (bevat). `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retourneert bijvoorbeeld alle query&#39;s met de opgegeven id. |
-| `excludeSoftDeleted` | Geeft aan of een query die is verwijderd, moet worden opgenomen. Bijvoorbeeld, `excludeSoftDeleted=false` zal **** zachte geschrapte vragen omvatten. (*Van Boole, standaardwaarde: waar*) |
-| `excludeHidden` | Geeft aan of niet-door de gebruiker gestuurde query&#39;s moeten worden weergegeven. Het hebben van deze waarde die aan vals wordt geplaatst zal **** niet-gebruiker gedreven vragen, zoals CURSOR definities, FETCH, of meta-gegevensvragen omvatten. (*Van Boole, standaardwaarde: waar*) |
+| `excludeSoftDeleted` | Geeft aan of een query die is verwijderd, moet worden opgenomen. Bijvoorbeeld, `excludeSoftDeleted=false` zal **&#x200B;**&#x200B;zachte geschrapte vragen omvatten. (*Van Boole, standaardwaarde: waar*) |
+| `excludeHidden` | Geeft aan of niet-door de gebruiker gestuurde query&#39;s moeten worden weergegeven. Het hebben van deze waarde die aan vals wordt geplaatst zal **&#x200B;**&#x200B;niet-gebruiker gedreven vragen, zoals CURSOR definities, FETCH, of meta-gegevensvragen omvatten. (*Van Boole, standaardwaarde: waar*) |
 | `isPrevLink` | De query-parameter `isPrevLink` wordt gebruikt voor paginering. De resultaten van de API-aanroep worden gesorteerd op basis van hun `created` timestamp en de `orderby` -eigenschap. Wanneer u door de resultatenpagina&#39;s navigeert, wordt `isPrevLink` ingesteld op true wanneer achterwaarts wordt gepagineerd. Het keert de orde van de vraag om. Zie &quot;volgende&quot; en &quot;vorige&quot; koppelingen als voorbeelden. |
 
 **Verzoek**
@@ -223,7 +223,7 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` gebruiken om [ uw gecreeerde vraag ](#cancel-a-query) te annuleren.
+>U kunt de waarde van `_links.cancel` gebruiken om [&#x200B; uw gecreeerde vraag &#x200B;](#cancel-a-query) te annuleren.
 
 ### Een query ophalen op ID
 
@@ -294,7 +294,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.cancel` gebruiken om [ uw gecreeerde vraag ](#cancel-a-query) te annuleren.
+>U kunt de waarde van `_links.cancel` gebruiken om [&#x200B; uw gecreeerde vraag &#x200B;](#cancel-a-query) te annuleren.
 
 ### Een query annuleren of verwijderen op een andere manier
 

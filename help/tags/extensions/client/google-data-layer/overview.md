@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Google Data Layer-extensie
 
-Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van Tags. De uitbreiding kan onafhankelijk of gelijktijdig met de oplossingen van Google en met Google worden gebruikt open bron [ de Bibliotheek van de Helper van de Laag van Gegevens 0} ](https://github.com/google/data-layer-helper).
+Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van Tags. De uitbreiding kan onafhankelijk of gelijktijdig met de oplossingen van Google en met Google worden gebruikt open bron [&#x200B; de Bibliotheek van de Helper van de Laag van Gegevens 0&rbrace; &#x200B;](https://github.com/google/data-layer-helper).
 
-De Helper Library biedt functionaliteit die door gebeurtenissen wordt aangestuurd en die vergelijkbaar is met de Adobe Client Data Layer (ACDL). De gegevenselementen, de regels, en de acties van de uitbreiding van de Laag van de Gegevens van Google verstrekken gelijkaardige functionaliteit aan die in de [ uitbreiding ACDL ](../client-data-layer/overview.md).
+De Helper Library biedt functionaliteit die door gebeurtenissen wordt aangestuurd en die vergelijkbaar is met de Adobe Client Data Layer (ACDL). De gegevenselementen, de regels, en de acties van de uitbreiding van de Laag van de Gegevens van Google verstrekken gelijkaardige functionaliteit aan die in de [&#x200B; uitbreiding ACDL &#x200B;](../client-data-layer/overview.md).
 
 ## Installatie
 
@@ -56,7 +56,7 @@ Google Data Layer extension versions before 1.2.1 supported only events created 
 
 Versies 1.2.1 en hoger ondersteunen gebeurtenissen die met `gtag()` zijn gemaakt.  Dit is optioneel en kan worden ingeschakeld in het dialoogvenster voor extensieconfiguratie.
 
-Voor meer informatie over `push()` en `gtag()` gebeurtenissen, zie de [ documentatie van Google ](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  De informatie wordt ook verstrekt in de configuratie en regeldialogen van de uitbreiding.
+Voor meer informatie over `push()` en `gtag()` gebeurtenissen, zie de [&#x200B; documentatie van Google &#x200B;](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  De informatie wordt ook verstrekt in de configuratie en regeldialogen van de uitbreiding.
 
 ### Luisteren naar alle markeringen op de gegevenslaag
 
@@ -158,4 +158,4 @@ Het gegevenselement kan daarom worden geretourneerd:
 
 Het gegevenselement en de gebeurtenisdialoogvensters van de extensie bevatten gedetailleerde gebruiksinformatie en voorbeelden.
 
-De extra algemene informatie is in [ project README ](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+De extra algemene informatie is in [&#x200B; project README &#x200B;](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

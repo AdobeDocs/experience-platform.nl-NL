@@ -19,11 +19,11 @@ In het volgende document worden de verschillende invoer- en uitvoerbestanden bes
 
 Attributie AI werkt door de volgende datasets te analyseren om algoritmische scores te berekenen:
 
-- De datasets van Adobe Analytics die de [ bron van Analytics schakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
+- De datasets van Adobe Analytics die de [&#x200B; bron van Analytics schakelaar &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
 - Gegevenssets van Experience Event (EE) in het algemeen uit het Adobe Experience Platform-schema
 - Gegevenssets over de consumentenervaringsgebeurtenis (CEE)
 
-U kunt veelvoudige datasets van verschillende bronnen nu toevoegen die op de **identiteitstoewijzing** (gebied) worden gebaseerd als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Nadat u een identiteit en een naamruimte hebt geselecteerd, worden maatstaven voor de volledigheid van de kolom van de id weergegeven die het volume aangeven van de gegevens die worden vastgezet. Meer leren over het toevoegen van veelvoudige datasets, bezoek de [ AI gebruikersgids van de Attributie ](./user-guide.md#identity).
+U kunt veelvoudige datasets van verschillende bronnen nu toevoegen die op de **identiteitstoewijzing** (gebied) worden gebaseerd als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Nadat u een identiteit en een naamruimte hebt geselecteerd, worden maatstaven voor de volledigheid van de kolom van de id weergegeven die het volume aangeven van de gegevens die worden vastgezet. Meer leren over het toevoegen van veelvoudige datasets, bezoek de [&#x200B; AI gebruikersgids van de Attributie &#x200B;](./user-guide.md#identity).
 
 De kanaalgegevens worden niet altijd standaard toegewezen. In sommige gevallen, als mediaChannel (gebied) leeg is, zou u niet kunnen &quot;verdergaan&quot;tot u een gebied aan mediaChannel toewijst aangezien het een vereiste kolom is. Als het kanaal in de dataset wordt ontdekt, wordt het in kaart gebracht aan mediaChannel door gebrek. De andere kolommen zoals **media type** en **media actie** zijn nog facultatief.
 
@@ -31,9 +31,9 @@ Nadat u het kanaalveld hebt toegewezen, gaat u verder naar de stap &#39;Gebeurte
 
 >[!IMPORTANT]
 >
->De Adobe Analytics-bronaansluiting kan maximaal vier weken duren om back-ups van gegevens te maken. Als u onlangs opstelling een schakelaar, zou u moeten verifiëren dat de dataset de minimumlengte van gegevens heeft die voor Attributie AI wordt vereist. Gelieve te herzien de [ historische gegevens ](#data-requirements) sectie om te verifiëren u genoeg gegevens hebt om nauwkeurige algoritmische scores te berekenen.
+>De Adobe Analytics-bronaansluiting kan maximaal vier weken duren om back-ups van gegevens te maken. Als u onlangs opstelling een schakelaar, zou u moeten verifiëren dat de dataset de minimumlengte van gegevens heeft die voor Attributie AI wordt vereist. Gelieve te herzien de [&#x200B; historische gegevens &#x200B;](#data-requirements) sectie om te verifiëren u genoeg gegevens hebt om nauwkeurige algoritmische scores te berekenen.
 
-Voor meer details bij vestiging het [!DNL Consumer Experience Event] (CEE) schema, gelieve te verwijzen naar de [ Intelligente gids van de de gegevensvoorbereiding van de Diensten ](../data-preparation.md). Voor meer informatie bij het in kaart brengen van de gegevens van Adobe Analytics, bezoek de [ het gebiedsafbeeldingen van Analytics ](../../sources/connectors/adobe-applications/analytics.md) documentatie.
+Voor meer details bij vestiging het [!DNL Consumer Experience Event] (CEE) schema, gelieve te verwijzen naar de [&#x200B; Intelligente gids van de de gegevensvoorbereiding van de Diensten &#x200B;](../data-preparation.md). Voor meer informatie bij het in kaart brengen van de gegevens van Adobe Analytics, bezoek de [&#x200B; het gebiedsafbeeldingen van Analytics &#x200B;](../../sources/connectors/adobe-applications/analytics.md) documentatie.
 
 Niet alle kolommen in het schema [!DNL Consumer Experience Event] (CEE) zijn verplicht voor Attribution AI.
 
@@ -70,7 +70,7 @@ Datasets van de de gebeurtenisgebeurtenis van de ervaring (EE) te hoeven niet ui
 
 Attribution AI vereist historische gegevens als input voor modeltraining. De vereiste gegevensduur wordt hoofdzakelijk bepaald door twee sleutelfactoren: opleidingsvenster en terugkijkvenster. De input met kortere opleidingsvensters is gevoeliger voor recente tendensen, terwijl de langere trainingsvensters helpen stabielere en nauwkeurigere modellen produceren. Het is belangrijk om het doel met historische gegevens te modelleren die uw bedrijfsdoelstellingen het best vertegenwoordigen.
 
-De [ de filteromzettingsgebeurtenissen van de de vensterconfiguratie van de 0} training {worden geplaatst om voor modelopleiding te worden omvat die op voorvaltijd wordt gebaseerd. ](./user-guide.md#training-window) Momenteel is het minimale trainingsvenster 1 kwart (90 dagen). Het [ raadplegingsvenster ](./user-guide.md#lookback-window) verstrekt een tijdkader dat erop wijst hoeveel dagen voorafgaand aan de omzettingsgebeurtenis touchpoints met betrekking tot deze omzettingsgebeurtenis zou moeten worden omvat. Deze twee concepten bepalen samen de hoeveelheid inputgegevens (die door dagen wordt gemeten) die voor een toepassing wordt vereist.
+De [&#x200B; de filteromzettingsgebeurtenissen van de de vensterconfiguratie van de 0&rbrace; training &lbrace;worden geplaatst om voor modelopleiding te worden omvat die op voorvaltijd wordt gebaseerd. &#x200B;](./user-guide.md#training-window) Momenteel is het minimale trainingsvenster 1 kwart (90 dagen). Het [&#x200B; raadplegingsvenster &#x200B;](./user-guide.md#lookback-window) verstrekt een tijdkader dat erop wijst hoeveel dagen voorafgaand aan de omzettingsgebeurtenis touchpoints met betrekking tot deze omzettingsgebeurtenis zou moeten worden omvat. Deze twee concepten bepalen samen de hoeveelheid inputgegevens (die door dagen wordt gemeten) die voor een toepassing wordt vereist.
 
 Standaard definieert Attribution AI het trainingsvenster als de meest recente 2 kwartalen (6 maanden) en lookback window als 56 dagen. Met andere woorden, het model houdt rekening met alle gedefinieerde conversiegebeurtenissen die zich in de afgelopen twee kwartalen hebben voorgedaan en zoekt naar alle aanraakpunten die zich hebben voorgedaan binnen 56 dagen vóór de bijbehorende conversiegebeurtenis(sen).
 
@@ -99,7 +99,7 @@ Attributie AI geeft de volgende uitvoer:
 
 ### Ruw granulaat {#raw-granular-scores}
 
-Kenmerken AI-uitvoer geeft de toewijzingsscores in het meest granulaire niveau weer, zodat u de scores kunt segmenteren en dikken met elke gewenste score. Om deze scores in UI te bekijken, lees de sectie op [ het bekijken ruwe scorepaden ](#raw-score-path). Om de scores te downloaden gebruikend API bezoek de [ downloadende scores in AI van de Attributie ](./download-scores.md) document.
+Kenmerken AI-uitvoer geeft de toewijzingsscores in het meest granulaire niveau weer, zodat u de scores kunt segmenteren en dikken met elke gewenste score. Om deze scores in UI te bekijken, lees de sectie op [&#x200B; het bekijken ruwe scorepaden &#x200B;](#raw-score-path). Om de scores te downloaden gebruikend API bezoek de [&#x200B; downloadende scores in AI van de Attributie &#x200B;](./download-scores.md) document.
 
 >[!NOTE]
 >
@@ -141,18 +141,18 @@ In de volgende tabel worden de schemavelden in de voorbeelduitvoer van onbewerkt
 | namespace (String) | Waar | Naamruimte die wordt gebruikt om de paden en daardoor het model samen te stellen. <br> **Voorbeeld:** steun |
 | touchpointsDetail (Object Array) | Waar | De lijst met aanraakpuntdetails die leiden tot de conversie die wordt geordend door het aantal aanraakpunten of het tijdstempel. |
 | touchpointName (String) | Waar | Naam van touchpoint dat tijdens opstelling werd gevormd. <br> **Voorbeeld:** PAID_SEARCH_CLICK |
-| scores (Object) | Waar | Aanraakpuntbijdrage voor deze conversie als score. Voor meer informatie over de scores die binnen dit voorwerp worden geproduceerd, zie de [ samengevoegde attributiesscores ](#aggregated-attribution-scores) sectie. |
-| touchPoint (Object) | Waar | Metagegevens aanraakpunt. Voor meer informatie over de scores die binnen dit voorwerp worden geproduceerd, zie de [ samengevoegde scores ](#aggregated-scores) sectie. |
+| scores (Object) | Waar | Aanraakpuntbijdrage voor deze conversie als score. Voor meer informatie over de scores die binnen dit voorwerp worden geproduceerd, zie de [&#x200B; samengevoegde attributiesscores &#x200B;](#aggregated-attribution-scores) sectie. |
+| touchPoint (Object) | Waar | Metagegevens aanraakpunt. Voor meer informatie over de scores die binnen dit voorwerp worden geproduceerd, zie de [&#x200B; samengevoegde scores &#x200B;](#aggregated-scores) sectie. |
 
 ### Onbewerkte muziekpaden weergeven (UI) {#raw-score-path}
 
 U kunt het pad naar de onbewerkte scores weergeven in de gebruikersinterface. Selecteer eerst **[!UICONTROL Schemas]** in de gebruikersinterface van Experience Platform en zoek en selecteer vervolgens het schema voor de toewijzing van AI-scores in het tabblad **[!UICONTROL Browse]** .
 
-![ kies uw schema ](./images/input-output/schemas_browse.png)
+![&#x200B; kies uw schema &#x200B;](./images/input-output/schemas_browse.png)
 
 Selecteer vervolgens een veld in het **[!UICONTROL Structure]** -venster van de gebruikersinterface. Het tabblad **[!UICONTROL Field properties]** wordt geopend. Binnen **[!UICONTROL Field properties]** bevindt zich het padveld dat wordt toegewezen aan de onbewerkte scores.
 
-![ kies een Schema ](./images/input-output/field_properties.png)
+![&#x200B; kies een Schema &#x200B;](./images/input-output/field_properties.png)
 
 ### Geaggregeerde delingsscores {#aggregated-attribution-scores}
 
@@ -180,7 +180,7 @@ Zie de tabel hieronder voor meer informatie over elk van deze toewijzingsscores:
 
 **Ruwe verwijzing van de Score (attributiesscores)**
 
-In de onderstaande tabel worden de toewijzingsscores toegewezen aan de onbewerkte scores. Als u wenst om uw ruwe scores te downloaden, bezoek de [ downloadende scores in de documentatie van AI van de Attributie ](./download-scores.md).
+In de onderstaande tabel worden de toewijzingsscores toegewezen aan de onbewerkte scores. Als u wenst om uw ruwe scores te downloaden, bezoek de [&#x200B; downloadende scores in de documentatie van AI van de Attributie &#x200B;](./download-scores.md).
 
 | Attributiescores | Referentiekolom ruwe score |
 | --- | --- |
@@ -215,7 +215,7 @@ Geaggregeerde scores kunnen in CSV-indeling worden gedownload via de gebruikersi
 
 **Ruwe (bijeengevoegde) Referentie van de Score**
 
-In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewerkte scores. Als u wenst om uw ruwe scores te downloaden, bezoek de [ downloadende scores in de documentatie van AI van de Attributie ](./download-scores.md). Om de ruwe scorepaden van binnen UI te bekijken, bezoek de sectie op [ het bekijken ruwe scorepaden ](#raw-score-path) binnen dit document.
+In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewerkte scores. Als u wenst om uw ruwe scores te downloaden, bezoek de [&#x200B; downloadende scores in de documentatie van AI van de Attributie &#x200B;](./download-scores.md). Om de ruwe scorepaden van binnen UI te bekijken, bezoek de sectie op [&#x200B; het bekijken ruwe scorepaden &#x200B;](#raw-score-path) binnen dit document.
 
 | Kolomnaam | Referentiekolom Onbewerkte score |
 | --- | --- |
@@ -238,8 +238,8 @@ In de onderstaande tabel worden de geaggregeerde scores toegewezen aan de onbewe
 >
 > - Attribution AI gebruikt alleen bijgewerkte gegevens voor verdere training en scoring. Op dezelfde manier geldt dat als u gegevens wilt verwijderen, de AI van de Klant de verwijderde gegevens niet meer gebruikt.
 > - Attribution AI gebruikt Experience Platform datasets. Ter ondersteuning van consumentenrechtenaanvragen die een merk kan ontvangen, dienen merken Experience Platform Privacy Service te gebruiken om verzoeken van consumenten om toegang in te dienen en te verwijderen om hun gegevens over het datumpeer, de Identity Service en het Real-Time Klantprofiel te verwijderen.
-> - Alle datasets die we gebruiken voor invoer/uitvoer van modellen, volgen de Experience Platform-richtlijnen. Experience Platform Data Encryption is van toepassing op gegevens in rust en in doorvoer. Zie de documentatie meer over [ gegevensencryptie ](../../../help/landing/governance-privacy-security/encryption.md) leren
+> - Alle datasets die we gebruiken voor invoer/uitvoer van modellen, volgen de Experience Platform-richtlijnen. Experience Platform Data Encryption is van toepassing op gegevens in rust en in doorvoer. Zie de documentatie meer over [&#x200B; gegevensencryptie &#x200B;](../../../help/landing/governance-privacy-security/encryption.md) leren
 
 ## Volgende stappen {#next-steps}
 
-Zodra u uw gegevens hebt voorbereid en al uw geloofsbrieven en schema&#39;s op zijn plaats hebt, begin door de [ de gebruikersgids van AI van de Attributie te volgen ](./user-guide.md). Deze gids begeleidt u door het creëren van een geval voor Attributie AI.
+Zodra u uw gegevens hebt voorbereid en al uw geloofsbrieven en schema&#39;s op zijn plaats hebt, begin door de [&#x200B; de gebruikersgids van AI van de Attributie te volgen &#x200B;](./user-guide.md). Deze gids begeleidt u door het creëren van een geval voor Attributie AI.

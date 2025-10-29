@@ -40,7 +40,7 @@ XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht
 
 * Geen
 
-Om meer over het werken met XDM te leren gebruikend [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, te lezen gelieve de [ documentatie van het Systeem XDM ](../../xdm/home.md).
+Om meer over het werken met XDM te leren gebruikend [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, te lezen gelieve de [&#x200B; documentatie van het Systeem XDM &#x200B;](../../xdm/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -60,7 +60,7 @@ De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het rech
 
 * Geen
 
-Voor meer informatie over [!DNL Privacy Service], gelieve te beginnen door het [ overzicht van Privacy Service ](../../privacy-service/home.md) te lezen.
+Voor meer informatie over [!DNL Privacy Service], gelieve te beginnen door het [&#x200B; overzicht van Privacy Service &#x200B;](../../privacy-service/home.md) te lezen.
 
 ## Bronnen {#sources}
 
@@ -87,11 +87,11 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 * Geen
 
-Voor meer informatie over bronnen, zie het [ overzicht van bronnen ](../../sources/home.md)
+Voor meer informatie over bronnen, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md)
 
 ## Bestemmingen {#destinations}
 
-In [ Real-Time CDP ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [&#x200B; Real-Time CDP &#x200B;](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe functies**
 
@@ -111,4 +111,4 @@ In [ Real-Time CDP ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde
 
 * Geen
 
-Zie het [ overzicht van Doelen ](../../destinations/home.md) voor meer informatie.
+Zie het [&#x200B; overzicht van Doelen &#x200B;](../../destinations/home.md) voor meer informatie.

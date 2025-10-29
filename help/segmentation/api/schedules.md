@@ -17,7 +17,7 @@ Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met schema&#39;s ophalen {#retrieve-list}
 
@@ -110,7 +110,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van programma&#3
 | `children.type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn &quot;batch_segmentation&quot; en &quot;export&quot;. |
 | `children.properties` | Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `children.properties.segments` | Als u `["*"]` gebruikt, worden alle segmenten opgenomen. |
-| `children.schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld, &quot;`0 0 1 * *`&quot;betekent dat dit programma bij 1AM elke dag zal lopen. |
+| `children.schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [&#x200B; formaat van de cron uitdrukking &#x200B;](#appendix). In dit voorbeeld, &quot;`0 0 1 * *`&quot;betekent dat dit programma bij 1AM elke dag zal lopen. |
 | `children.state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
 +++
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Vereist.** Het type taak als tekenreeks. De twee ondersteunde typen zijn &quot;batch_segmentation&quot; en &quot;export&quot;. |
 | `properties` | **Vereist.** Een object dat aanvullende eigenschappen bevat die gerelateerd zijn aan het schema. |
 | `properties.segments` | **vereist wanneer `type` &quot;batch_segmentation&quot;evenaart.** Met `["*"]` zorgt u ervoor dat alle segmenten worden opgenomen. |
-| `schedule` | *Facultatief.* Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld, &quot;`0 0 1 * *`&quot;betekent dat dit programma bij 1AM elke dag zal lopen. <br><br> als dit koord niet wordt geleverd, zal een systeem-geproduceerd programma automatisch worden geproduceerd. |
+| `schedule` | *Facultatief.* Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [&#x200B; formaat van de cron uitdrukking &#x200B;](#appendix). In dit voorbeeld, &quot;`0 0 1 * *`&quot;betekent dat dit programma bij 1AM elke dag zal lopen. <br><br> als dit koord niet wordt geleverd, zal een systeem-geproduceerd programma automatisch worden geproduceerd. |
 | `state` | *Facultatief.* Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
 +++
@@ -257,7 +257,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn `batch_segmentation` en `export` . |
 | `properties` | Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `properties.segments` | Als u `["*"]` gebruikt, worden alle segmenten opgenomen. |
-| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld, &quot;`0 0 1 * *`&quot;betekent dat dit programma bij 1AM elke dag zal lopen. |
+| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [&#x200B; formaat van de cron uitdrukking &#x200B;](#appendix). In dit voorbeeld, &quot;`0 0 1 * *`&quot;betekent dat dit programma bij 1AM elke dag zal lopen. |
 | `state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn `active` en `inactive` . De status wordt standaard ingesteld op `inactive` . |
 
 +++
@@ -266,7 +266,7 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 U kunt een specifiek programma bijwerken door een PATCH-aanvraag in te dienen bij het `/config/schedules` -eindpunt en de id op te geven van het schema dat u probeert bij te werken in het aanvraagpad.
 
-Het verzoek van PATCH staat u toe om of de [ staat ](#update-state) of het [ bouwplan ](#update-schedule) voor een individueel programma bij te werken.
+Het verzoek van PATCH staat u toe om of de [&#x200B; staat &#x200B;](#update-state) of het [&#x200B; bouwplan &#x200B;](#update-schedule) voor een individueel programma bij te werken.
 
 **API formaat**
 
@@ -282,7 +282,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 >[!TAB  de planningsstaat van de Update ]
 
-U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de eigenschap `path` als `/state` en stelt u de eigenschap `value` in op `active` of `inactive` . Voor meer informatie over Reparatie JSON, te lezen gelieve de [ documentatie van het Reparatie 0} JSON {.](https://datatracker.ietf.org/doc/html/rfc6902)
+U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de eigenschap `path` als `/state` en stelt u de eigenschap `value` in op `active` of `inactive` . Voor meer informatie over Reparatie JSON, te lezen gelieve de [&#x200B; documentatie van het Reparatie 0&rbrace; JSON &lbrace;.](https://datatracker.ietf.org/doc/html/rfc6902)
 
 **Verzoek**
 
@@ -317,7 +317,7 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
 >[!TAB  Update bouwt programma ]
 
-U kunt een JSON-reparatiebewerking gebruiken om het uitsnijdschema bij te werken. Als u het schema wilt bijwerken, declareert u de eigenschap `path` als `/schedule` en stelt u de eigenschap `value` in op een geldig uitsnijdschema. Voor meer informatie over Reparatie JSON, te lezen gelieve de [ documentatie van het Reparatie 0} JSON {. ](https://datatracker.ietf.org/doc/html/rfc6902) Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix).
+U kunt een JSON-reparatiebewerking gebruiken om het uitsnijdschema bij te werken. Als u het schema wilt bijwerken, declareert u de eigenschap `path` als `/schedule` en stelt u de eigenschap `value` in op een geldig uitsnijdschema. Voor meer informatie over Reparatie JSON, te lezen gelieve de [&#x200B; documentatie van het Reparatie 0&rbrace; JSON &lbrace;. &#x200B;](https://datatracker.ietf.org/doc/html/rfc6902) Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [&#x200B; formaat van de cron uitdrukking &#x200B;](#appendix).
 
 >[!ENDTABS]
 

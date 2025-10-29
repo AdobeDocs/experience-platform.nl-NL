@@ -161,7 +161,7 @@ De nieuwe [!DNL Experience Platform] SDK ondersteunt de volgende bewerkingen:
 | Kleiner dan (`<`) | `lt()` |
 | Kleiner dan of gelijk aan (`<=`) | `le()` |
 | En (`&`) | `And()` |
-| Of ( &amp;vert; ) | `Or()` |
+| Of ( &vert; ) | `Or()` |
 
 ## Filteren op geselecteerde kolommen {#filter-by-selected-columns}
 
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Volgende stappen
 
-Nadat u de gegevenslader van `platform_sdk` hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de gegevenssets `train` en `val` . Om over gegevensvoorbereiding en eigenschaptechniek te leren gelieve de sectie over [ te bezoeken gegevens voorbereiding en eigenschapengineering ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in het leerprogramma voor het creëren van een recept gebruikend [!DNL JupyterLab] laptops.
+Nadat u de gegevenslader van `platform_sdk` hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de gegevenssets `train` en `val` . Om over gegevensvoorbereiding en eigenschaptechniek te leren gelieve de sectie over [&#x200B; te bezoeken gegevens voorbereiding en eigenschapengineering &#x200B;](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in het leerprogramma voor het creëren van een recept gebruikend [!DNL JupyterLab] laptops.

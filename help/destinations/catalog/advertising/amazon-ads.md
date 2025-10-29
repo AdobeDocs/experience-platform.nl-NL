@@ -46,12 +46,12 @@ Dankzij deze integratie met [!DNL Amazon Marketing Cloud] (AMC) kunnen adverteer
 
 Als u de [!DNL Amazon Ads] -verbinding met Adobe Experience Platform wilt gebruiken, moeten gebruikers eerst toegang hebben tot een Amazon DSP Advertiser-account of een [!DNL Amazon Marketing Cloud] -instantie. Ga naar de volgende pagina op de [!DNL Amazon Ads] -website om deze instanties op te geven:
 
-* [ worden begonnen met Amazon DSP ](https://advertising.amazon.com/solutions/products/amazon-dsp)
-* [ worden begonnen met Amazon Marketing Cloud ](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
+* [&#x200B; worden begonnen met Amazon DSP &#x200B;](https://advertising.amazon.com/solutions/products/amazon-dsp)
+* [&#x200B; worden begonnen met Amazon Marketing Cloud &#x200B;](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De *[!DNL Amazon Ads]* -verbinding ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service//features/namespaces.md). Voor meer details over de identiteiten die door [!DNL Amazon Ads] worden gesteund, bezoek het [ Centrum van de Steun van DSP van Amazon ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+De *[!DNL Amazon Ads]* -verbinding ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service//features/namespaces.md). Voor meer details over de identiteiten die door [!DNL Amazon Ads] worden gesteund, bezoek het [&#x200B; Centrum van de Steun van DSP van Amazon &#x200B;](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -59,7 +59,7 @@ De *[!DNL Amazon Ads]* -verbinding ondersteunt de activering van identiteiten di
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | `firstName` | Voornaam gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
 | `lastName` | Achternaam van de gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
-| `street` | Adres van de gebruiker op straatniveau | Alleen SHA256-invoer met hashing wordt ondersteund. Normaliseren voor hashing. Laat **** geen transformatie aan de kant van Adobe toe. |
+| `street` | Adres van de gebruiker op straatniveau | Alleen SHA256-invoer met hashing wordt ondersteund. Normaliseren voor hashing. Laat **&#x200B;**&#x200B;geen transformatie aan de kant van Adobe toe. |
 | `city` | Plaats van de gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
 | `state` | Staat of provincie van de gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
 | `zip` | Postcode van de gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
@@ -74,7 +74,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 | ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de *[!DNL Amazon Ads]* -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -82,9 +82,9 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -104,15 +104,15 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 >
 >Nadat u de doelconfiguratie hebt opgeslagen, kunt u de [!DNL Amazon Ads] Advertiser-id niet meer wijzigen, zelfs niet als u de verificatie opnieuw uitvoert via uw Amazon-account. Als u een andere [!DNL Amazon Ads] Advertiser-id wilt gebruiken, moet u een nieuwe doelverbinding maken. Adverteerders die al zijn ingesteld op een integratie met ADSP moeten een nieuwe doelstroom maken als zij willen dat hun publiek wordt geleverd aan AMC of aan een andere ADSP-account.
 
-* **[!UICONTROL Advertiser Region]**: selecteer het juiste gebied waarin uw adverteerder wordt gehost. Voor meer informatie over de markten die door elk gebied worden gesteund, bezoek de [ documentatie van Amazon Ads ](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
+* **[!UICONTROL Advertiser Region]**: selecteer het juiste gebied waarin uw adverteerder wordt gehost. Voor meer informatie over de markten die door elk gebied worden gesteund, bezoek de [&#x200B; documentatie van Amazon Ads &#x200B;](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 * **[!UICONTROL Amazon Ads Consent Signal]**: Bevestig dat alle gegevens die via deze verbinding worden verzonden, hebben ingestemd met het gebruik van persoonsgegevens voor reclamedoeleinden. &quot;GRANTED&quot; geeft aan dat Amazon ermee instemt de persoonsgegevens van de klant te gebruiken voor reclame. De toegestane waarden zijn &quot;GRANTED&quot; en &quot;DENIED&quot;. Alle records die via verbindingen met &quot;DENIED&quot; worden verzonden, worden geweigerd voor verder gebruik in Amazon Ads.
 
-![ vorm nieuwe bestemming ](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
+![&#x200B; vorm nieuwe bestemming &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -120,16 +120,16 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
 De verbinding van [!DNL Amazon Ads] steunt gehakt e-mailadres en gehashte telefoonaantallen voor overeenstemmende identiteit. In de onderstaande schermafbeelding ziet u een voorbeeld dat overeenkomt met de [!DNL Amazon Ads] -verbinding:
 
-![ Adobe aan de afbeelding van Advertenties van Amazon ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
+![&#x200B; Adobe aan de afbeelding van Advertenties van Amazon &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * Als u gehashte e-mailadressen wilt toewijzen, selecteert u de naamruimte `Email_LC_SHA256` identity als bronveld.
 * Als u gehashte telefoonnummers wilt toewijzen, selecteert u de naamruimte `Phone_SHA256` identity als bronveld.
@@ -140,13 +140,13 @@ De verbinding van [!DNL Amazon Ads] steunt gehakt e-mailadres en gehashte telefo
 >
 >Deze velden gebruiken:
 > 
->* Alle identiteitswaarden moeten vóór inname worden genormaliseerd. Verwijs naar de [ normalisatiegids ](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+>* Alle identiteitswaarden moeten vóór inname worden genormaliseerd. Verwijs naar de [&#x200B; normalisatiegids &#x200B;](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
 >* SHA256 hashing wordt vereist, of op de cliëntkant of door het toelaten van de transformatie van Adobe plaatsen.
 >* Adobe UI verstrekt checkbox om transformatie per identiteitsgebied tijdens schakelaaropstelling toe te passen.
 
 U selecteert slechts één keer een bepaald doelgebied in een bestemmingsconfiguratie van de [!DNL Amazon Ads] schakelaar.  Als u bijvoorbeeld bedrijfs-e-mail verzendt, kunt u persoonlijke e-mail niet ook toewijzen in dezelfde doelconfiguratie.
 
-U wordt ten zeerste aangeraden om zoveel velden in kaart te brengen als u hebt. Als er slechts één bronkenmerk beschikbaar is, kunt u één veld toewijzen. Het doel [!DNL Amazon Ads] gebruikt alle toegewezen velden voor toewijzingsdoeleinden, wat hogere overeenkomende snelheden oplevert als er meer velden zijn opgegeven. Voor meer informatie over de toegelaten herkenningstekens, bezoek de [ Amazon Ads hakte pagina van de publiekshulp ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+U wordt ten zeerste aangeraden om zoveel velden in kaart te brengen als u hebt. Als er slechts één bronkenmerk beschikbaar is, kunt u één veld toewijzen. Het doel [!DNL Amazon Ads] gebruikt alle toegewezen velden voor toewijzingsdoeleinden, wat hogere overeenkomende snelheden oplevert als er meer velden zijn opgegeven. Voor meer informatie over de toegelaten herkenningstekens, bezoek de [&#x200B; Amazon Ads hakte pagina van de publiekshulp &#x200B;](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
@@ -156,7 +156,7 @@ Nadat u het publiek hebt geüpload, kunt u controleren of het publiek correct is
 
 Navigeer naar uw **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]** . Als het publiek is gemaakt en het minimale aantal publieksleden bereikt, wordt de status `Active` weergegeven. Meer informatie over de grootte en het bereik van uw publiek vindt u in het deelvenster Voorspelde resultaten rechts van de Amazon DSP-gebruikersinterface.
 
-![ de bevestiging van de het publieksverwezenlijking van Amazon DSP ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
+![&#x200B; de bevestiging van de het publieksverwezenlijking van Amazon DSP &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **Voor[!DNL Amazon Marketing Cloud]**
 
@@ -164,17 +164,17 @@ Zoek in de linkerschemabrowser naar uw publiek onder **[!UICONTROL Advertiser Up
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![ de bevestiging van de het publieksverwezenlijking van Amazon Marketing Cloud ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
+![&#x200B; de bevestiging van de het publieksverwezenlijking van Amazon Marketing Cloud &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
 Raadpleeg de volgende [!DNL Amazon Ads] Help-bronnen voor aanvullende Help-documentatie:
 
-* [ Amazon DSP Help Center ](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_bt_desktop_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
+* [&#x200B; Amazon DSP Help Center &#x200B;](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_bt_desktop_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
 ## Changelog {#changelog}
 
@@ -188,7 +188,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 | Februari 2025 | De vereiste om **[!UICONTROL Amazon Ads Consent Signal]** toe te voegen aan het exporteren van gegevens is toegevoegd en de bestemming van bèta naar algemeen beschikbaar bevorderd. |  |
 | Mei 2024 | Bijwerken van functionaliteit en documentatie | De toewijzingsoptie voor het exporteren van de parameter `countryCode` naar Amazon Ads is toegevoegd. Gebruik `countryCode` in de [toewijzingsstap](#map) om uw afstemmingspercentages voor identiteiten met Amazon te verbeteren. |
 | Maart 2024 | Bijwerken van functionaliteit en documentatie | De optie voor het exporteren van soorten publiek die in [!DNL Amazon Marketing Cloud] (AMC) moeten worden gebruikt, is toegevoegd. |
-| Mei 2023 | Bijwerken van functionaliteit en documentatie | <ul><li>Toegevoegde steun voor de selectie van het Gebied Advertiser in het [ werkschema van de bestemmingsverbinding ](#destination-details).</li><li>Bijgewerkte documentatie waarin de toevoeging van de selectie van het advertentiegebied wordt weergegeven. Voor meer informatie bij het selecteren van het correcte Gebied Advertiser, zie de [ documentatie van Amazon ](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| Mei 2023 | Bijwerken van functionaliteit en documentatie | <ul><li>Toegevoegde steun voor de selectie van het Gebied Advertiser in het [&#x200B; werkschema van de bestemmingsverbinding &#x200B;](#destination-details).</li><li>Bijgewerkte documentatie waarin de toevoeging van de selectie van het advertentiegebied wordt weergegeven. Voor meer informatie bij het selecteren van het correcte Gebied Advertiser, zie de [&#x200B; documentatie van Amazon &#x200B;](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Maart 2023 | Eerste release | Eerste doelversie en documentatie gepubliceerd. |
 
 {style="table-layout:auto"}
