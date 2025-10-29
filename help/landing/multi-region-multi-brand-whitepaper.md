@@ -69,7 +69,7 @@ U kunt veelvoudige zandbakken van om het even welk type tot stand brengen, en vo
 
 ![&#x200B; CDP-creeer een zandbak &#x200B;](./images/whitepaper/Create-sandbox.png)
 
-In de productiesandbox, verwachten wij u om uw productieprofiel in te voeren en gebeurtenisgegevens te ervaren om een verenigd profiel voor uw marketing activiteiten te bouwen. Voor meer details op hoe te om bekende en anonieme gegevens van veelvoudige ondernemingsbronnen te combineren om klantenprofielen tot stand te brengen die kunnen worden gebruikt om gepersonaliseerde klantenervaringen over alle kanalen en apparaten in real time te verstrekken, zie de [&#x200B; documentatie van Adobe Real-Time Customer Data Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home).
+In de productiesandbox, verwachten wij u om uw productieprofiel in te voeren en gebeurtenisgegevens te ervaren om een verenigd profiel voor uw marketing activiteiten te bouwen. Voor meer details op hoe te om bekende en anonieme gegevens van veelvoudige ondernemingsbronnen te combineren om klantenprofielen tot stand te brengen die kunnen worden gebruikt om gepersonaliseerde klantenervaringen over alle kanalen en apparaten in real time te verstrekken, zie de [&#x200B; documentatie van Adobe Real-Time Customer Data Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/rtcdp/home).
 
 **controles van de Toegang**
 
@@ -77,13 +77,13 @@ U kunt toegangscontroles met rollen en toestemmingen bepalen om toegang tot toep
 
 Overweeg een gegevensengineer die mogelijk geen toegang nodig heeft tot alle Experience Platform en platformgebaseerde toepassingsfunctionaliteit. Zij zijn typisch verantwoordelijk voor het creëren van gegevensdefinities (schema&#39;s), het vormen gegevensbronnen aan ingeschrevene gegevens, en het creëren van datasets. Nochtans, kunnen zij niet de zelfde persoon zijn die tot publiek voor gepersonaliseerde klantenervaringen leidt en activeert. Voor deze persoon, creeer een rol, voeg de aangewezen toestemmingen toe, en verleent toegang slechts tot de vereiste functionaliteit. Een markeringspersoneel daarentegen zou geen schema&#39;s maken en gegevens invoeren, maar zich richten op het maken en activeren van publiek om persoonlijke klantenervaringen mogelijk te maken.
 
-Indien gewenst, denk na toevoegend korrelige toegangscontroles om toegang tot specifieke gebieden op het verenigde klantenprofiel met op attribuut-gebaseerde toegangsbeheer/gebied-vlakke toegangsbeheercapaciteit te beperken. Dit zijn governancemechanismen in Experience Platform waarmee u de toegang tot gegevenskenmerken kunt beperken op basis van vooraf gedefinieerde labels. Met toegangsbeheer op veldniveau kunnen persoonlijke identificeerbare gegevens worden beheerd en is de toegang beperkt tot alle Experience Platform- en toepassingsworkflows. Voor meer details op toegangsbeheermogelijkheden, zie de [&#x200B; documentatie van de toegangscontrole &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
+Indien gewenst, denk na toevoegend korrelige toegangscontroles om toegang tot specifieke gebieden op het verenigde klantenprofiel met op attribuut-gebaseerde toegangsbeheer/gebied-vlakke toegangsbeheercapaciteit te beperken. Dit zijn governancemechanismen in Experience Platform waarmee u de toegang tot gegevenskenmerken kunt beperken op basis van vooraf gedefinieerde labels. Met toegangsbeheer op veldniveau kunnen persoonlijke identificeerbare gegevens worden beheerd en is de toegang beperkt tot alle Experience Platform- en toepassingsworkflows. Voor meer details op toegangsbeheermogelijkheden, zie de [&#x200B; documentatie van de toegangscontrole &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/home).
 
 ![&#x200B; CDP-Toegang Controles, vorm de Toestemmingen van de Rol &#x200B;](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **Levenscyclus van de Ontwikkeling met ontwikkelingszandbakken**
 
-Een ontwikkelingssandbox gedraagt zich in alle functionele aspecten op dezelfde manier als een productiesandbox. Het is anders omdat het een aantal contractuele garanties bevat om u binnen uw licentielimieten te houden. Het is uitsluitend ontworpen voor ontwikkeling en het testen met niet-productieprofielen, die tot 10% van uw vergunning gegeven profielverplichting steunen (cumulatief die over alle erkende ontwikkelingszandbakken wordt gemeten). Voor extra details en begeleiding, zie de [&#x200B; documentatie van het zandbakenoverzicht &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) en de [&#x200B; pagina van de productbeschrijvingen &#x200B;](https://helpx.adobe.com/legal/product-descriptions.html) voor machtigingsdetails.
+Een ontwikkelingssandbox gedraagt zich in alle functionele aspecten op dezelfde manier als een productiesandbox. Het is anders omdat het een aantal contractuele garanties bevat om u binnen uw licentielimieten te houden. Het is uitsluitend ontworpen voor ontwikkeling en het testen met niet-productieprofielen, die tot 10% van uw vergunning gegeven profielverplichting steunen (cumulatief die over alle erkende ontwikkelingszandbakken wordt gemeten). Voor extra details en begeleiding, zie de [&#x200B; documentatie van het zandbakenoverzicht &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/home) en de [&#x200B; pagina van de productbeschrijvingen &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions.html) voor machtigingsdetails.
 
 U kunt meerdere ontwikkelingssandboxen gebruiken (tot 4 in dit bedrijfsvoorbeeld, aangezien we één productiesandbox gebruiken) voor de ontwikkelings- en testlevenscyclus.
 
@@ -99,7 +99,7 @@ Met de functie voor het gereedmaken van de sandbox kunt u verschillende objecten
 
 U kunt Experience Platform API&#39;s gebruiken om sandboximplementaties en configuratietaken te automatiseren. API&#39;s maken programmeerbare controle mogelijk voor herhaalde taken zoals het exporteren, importeren of wijzigen van sandboxconfiguraties, zodat u over flexibiliteit beschikt als u de voorkeur geeft aan geautomatiseerde workflows.
 
-Voor extra details op zandbak tooling, zie de [&#x200B; zandbak tooling documentatie &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Voor extra details op zandbak tooling, zie de [&#x200B; zandbak tooling documentatie &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![&#x200B; CDP-creeer een Pakket &#x200B;](./images/whitepaper/create-package.png) | ![&#x200B; CDP-Lijst Pakketten &#x200B;](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -226,7 +226,7 @@ Bovendien kunt u de Overeenkomst van het Segment van Experience Platform gebruik
 
 Deze segment-delende dienst staat twee of meer gebruikers toe om segmentgegevens op een veilige, beheerde, en privacy-vriendelijke manier uit te wisselen.
 
-Voor extra details op de eigenschap van de Gelijke van het Segment, zie de [&#x200B; documentatie van de Gelijke van het Segment &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
+Voor extra details op de eigenschap van de Gelijke van het Segment, zie de [&#x200B; documentatie van de Gelijke van het Segment &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Een overvloeiing van benaderingen voor wereldwijde, regionale en merkspecifieke bewerkingen
 
