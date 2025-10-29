@@ -79,7 +79,7 @@ Gegevens zijn de hoeksteen van het leren van AI en machines.
 
 ### Prebuilt machine het leren recepten
 
-[!DNL Data Science Workspace] bevat vooraf gebouwde recepten voor machinaal leren voor algemene bedrijfsbehoeften, zoals de voorspelling van de detailhandel en anomaliedetectie, zodat wetenschappers en ontwikkelaars van gegevens niet helemaal hoeven te beginnen. Momenteel worden drie recepten aangeboden, {de voorspelling van de 0} productaankoop [, ](./pre-built-recipes/product-purchase-prediction.md) productaanbevelingen [, en ](./pre-built-recipes/product-recommendations.md) kleinhandelsverkoop [.](./pre-built-recipes/retail-sales.md)
+[!DNL Data Science Workspace] bevat vooraf gebouwde recepten voor machinaal leren voor algemene bedrijfsbehoeften, zoals de voorspelling van de detailhandel en anomaliedetectie, zodat wetenschappers en ontwikkelaars van gegevens niet helemaal hoeven te beginnen. Momenteel worden drie recepten aangeboden, {de voorspelling van de 0} productaankoop [, &#x200B;](./pre-built-recipes/product-purchase-prediction.md) productaanbevelingen [, en &#x200B;](./pre-built-recipes/product-recommendations.md) kleinhandelsverkoop [.](./pre-built-recipes/retail-sales.md)
 
 [//]: # (The built-in recipe gallery offers recommendations for prebuilt recipes based on your business needs.)
 
@@ -178,7 +178,7 @@ Tijdens het trainen van uw modellen worden trainingsreeksen en evaluaties gegene
 
 ![](./images/home/evaluation_metrics.png)
 
-Bezoek of [ API ](./models-recipes/train-evaluate-model-api.md) of [ UI ](./models-recipes/train-evaluate-model-ui.md) leerprogramma op hoe te om modellen in [!DNL Data Science Workspace] te trainen en te evalueren.
+Bezoek of [&#x200B; API &#x200B;](./models-recipes/train-evaluate-model-api.md) of [&#x200B; UI &#x200B;](./models-recipes/train-evaluate-model-ui.md) leerprogramma op hoe te om modellen in [!DNL Data Science Workspace] te trainen en te evalueren.
 
 ### Het model opereren
 
@@ -194,10 +194,10 @@ Nog belangrijker is dat [!DNL Data Science Workspace] de mogelijkheden voor gege
 
 Met het huwelijk van merkexpertise en het leren van Adobe-machines en AI-processen hebben bedrijven de macht om meer bedrijfswaarde en merkloyaliteit te drijven door klanten te geven wat ze willen, voordat ze erom vragen.
 
-Voor extra informatie, zoals een volledig dagelijks werkschema, gelieve te beginnen door de [ looppas-door ](./walkthrough.md) documentatie van Workspace van de Wetenschap van Gegevens te lezen.
+Voor extra informatie, zoals een volledig dagelijks werkschema, gelieve te beginnen door de [&#x200B; looppas-door &#x200B;](./walkthrough.md) documentatie van Workspace van de Wetenschap van Gegevens te lezen.
 
 ## Aanvullende bronnen
 
 De volgende video is ontworpen om uw begrip van [!DNL Data Science Workspace] te steunen.
 
->[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&enable10seconds=on&speedcontrol=on)

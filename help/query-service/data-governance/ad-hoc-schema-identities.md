@@ -17,8 +17,8 @@ Met Adobe Experience Platform Query Service kunt u gegevenssetkolommen markeren 
 
 Voor het labelen van gegevenssetkolommen als primaire of secundaire identiteit is een goed begrip van de SQL-opdracht van `ALTER TABLE` en van de privacyvereisten voor gegevens vereist. Lees de volgende documentatie voordat u doorgaat met dit document:
 
-* [ de SQL syntaxisgids voor het `ALTER TABLE` bevel ](../sql/syntax.md).
-* [ het overzicht van het Beleid van Gegevens ](../../data-governance/home.md) voor meer informatie.
+* [&#x200B; de SQL syntaxisgids voor het `ALTER TABLE` bevel &#x200B;](../sql/syntax.md).
+* [&#x200B; het overzicht van het Beleid van Gegevens &#x200B;](../../data-governance/home.md) voor meer informatie.
 
 ## Beperkingen toevoegen {#add-constraints}
 
@@ -76,6 +76,6 @@ Hieronder wordt een voorbeeld van een geretourneerde tabel weergegeven.
 
 In de volgende lijst worden belangrijke overwegingen beschreven voor het bijwerken van identiteiten in bestaande gegevenssets bij het gebruik van XDM.
 
-* Om een kolom als identiteit te specificeren, moet u **** ook namespace bepalen die als meta-gegevens voor de kolom moet worden bewaard.
+* Om een kolom als identiteit te specificeren, moet u **&#x200B;**&#x200B;ook namespace bepalen die als meta-gegevens voor de kolom moet worden bewaard.
 * XDM ondersteunt het opgeven van een kolomnaam in het naamruimtekenmerk niet.
-* Als uw schema het `identityMap` XDM gebied gebruikt, moet het wortel of top-level `identityMap` voorwerp **** als identiteit of primaire identiteit worden geëtiketteerd.
+* Als uw schema het `identityMap` XDM gebied gebruikt, moet het wortel of top-level `identityMap` voorwerp **&#x200B;**&#x200B;als identiteit of primaire identiteit worden geëtiketteerd.

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**het punt van de Actie**: De [ versie van September 2024 van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceerde de optie om een `endTime` datum voor de gegevens van de uitvoerdataset te plaatsen. Adobe heeft ook een standaardeinddatum van 1 september 2025 voor alle gegevens van de datasetuitvoer gecreeerd *vóór de versie van september 2024* geïntroduceerd.
+>**het punt van de Actie**: De [&#x200B; versie van September 2024 van Experience Platform &#x200B;](/help/release-notes/latest/latest.md#destinations) introduceerde de optie om een `endTime` datum voor de gegevens van de uitvoerdataset te plaatsen. Adobe heeft ook een standaardeinddatum van 1 september 2025 voor alle gegevens van de datasetuitvoer gecreeerd *vóór de versie van september 2024* geïntroduceerd.
 >
 >Voor om het even welke dataflows, moet u de einddatum in dataflow manueel bijwerken vóór de einddatum, anders zal uw uitvoer op die datum ophouden. Gebruik de gebruikersinterface van Experience Platform om te bekijken welke dataflows op 1 september 2025 worden ingesteld.
 >
@@ -32,23 +32,23 @@ ht-degree: 0%
 
 -->
 
-Dit artikel verklaart het werkschema wordt vereist om [!DNL Flow Service API] te gebruiken om [ datasets ](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw aangewezen plaats van de wolkenopslag, zoals [!DNL Amazon S3], plaatsen SFTP, of [!DNL Google Cloud Storage] uit te voeren die.
+Dit artikel verklaart het werkschema wordt vereist om [!DNL Flow Service API] te gebruiken om [&#x200B; datasets &#x200B;](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw aangewezen plaats van de wolkenopslag, zoals [!DNL Amazon S3], plaatsen SFTP, of [!DNL Google Cloud Storage] uit te voeren die.
 
 >[!TIP]
 >
->U kunt de gebruikersinterface van Experience Platform ook gebruiken om datasets uit te voeren. Lees het [ leerprogramma van de de uitvoerdatasets UI ](/help/destinations/ui/export-datasets.md) voor meer informatie.
+>U kunt de gebruikersinterface van Experience Platform ook gebruiken om datasets uit te voeren. Lees het [&#x200B; leerprogramma van de de uitvoerdatasets UI &#x200B;](/help/destinations/ui/export-datasets.md) voor meer informatie.
 
 ## Beschikbare gegevensbestanden voor exporteren {#datasets-to-export}
 
 De gegevenssets die u kunt exporteren, zijn afhankelijk van de Experience Platform-toepassing (Real-Time CDP, Adobe Journey Optimizer), de laag (Prime of Ultimate) en alle invoegtoepassingen die u hebt aangeschaft (bijvoorbeeld Data Distiller).
 
-Verwijs naar de [ lijst op de pagina van het UI leerprogramma ](/help/destinations/ui/export-datasets.md#datasets-to-export) om te begrijpen welke datasets u kunt uitvoeren.
+Verwijs naar de [&#x200B; lijst op de pagina van het UI leerprogramma &#x200B;](/help/destinations/ui/export-datasets.md#datasets-to-export) om te begrijpen welke datasets u kunt uitvoeren.
 
 ## Ondersteunde doelen {#supported-destinations}
 
 Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren die in het schermafbeelding worden benadrukt en hieronder worden vermeld.
 
-![ Doelen die dataset uitvoeren ](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png) steunen
+![&#x200B; Doelen die dataset uitvoeren &#x200B;](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png) steunen
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -61,12 +61,12 @@ Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren di
 
 Neem nota van de volgende voorwaarden om datasets uit te voeren:
 
-* Om datasets naar de bestemmingen van de wolkenopslag uit te voeren, moet u met succes [ verbonden aan een bestemming ](/help/destinations/ui/connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](/help/destinations/catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
-* De datasets van het profiel moeten voor gebruik in het Profiel van de Klant in real time worden toegelaten. [ las meer ](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) over hoe te om deze optie toe te laten.
+* Om datasets naar de bestemmingen van de wolkenopslag uit te voeren, moet u met succes [&#x200B; verbonden aan een bestemming &#x200B;](/help/destinations/ui/connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [&#x200B; bestemmingscatalogus &#x200B;](/help/destinations/catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
+* De datasets van het profiel moeten voor gebruik in het Profiel van de Klant in real time worden toegelaten. [&#x200B; las meer &#x200B;](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) over hoe te om deze optie toe te laten.
 
 ## Aan de slag {#get-started}
 
-![ Overzicht - de stappen om een bestemming tot stand te brengen en datasets uit te voeren ](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![&#x200B; Overzicht - de stappen om een bestemming tot stand te brengen en datasets uit te voeren &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
@@ -77,17 +77,17 @@ De volgende secties verstrekken extra informatie die u moet weten om datasets na
 
 ### Vereiste machtigingen {#permissions}
 
-Om datasets uit te voeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]**, en **[!UICONTROL Manage and Activate Dataset Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+Om datasets uit te voeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]**, en **[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
 Om ervoor te zorgen dat u de noodzakelijke toestemmingen hebt om datasets uit te voeren en dat de bestemming het uitvoeren van datasets steunt, doorblader de bestemmingscatalogus. Als een doel een **[!UICONTROL Activate]** - of **[!UICONTROL Export datasets]** -besturingselement heeft, hebt u de juiste machtigingen.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste en optionele koppen {#gather-values-headers}
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ de authentificatieleerprogramma van Experience Platform ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; de authentificatieleerprogramma van Experience Platform &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -99,7 +99,7 @@ Bronnen in [!DNL Experience Platform] kunnen worden geïsoleerd naar specifieke 
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
 
@@ -107,11 +107,11 @@ Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra med
 
 ### API-naslagdocumentatie {#api-reference-documentation}
 
-In deze zelfstudie vindt u begeleidende referentiedocumentatie voor alle API-bewerkingen. Raadpleeg de documentatie bij de API voor [[!DNL Flow Service]  Doelen op de Adobe Developer-website ](https://developer.adobe.com/experience-platform-apis/references/destinations/) . We raden u aan deze zelfstudie en de API-naslagdocumentatie parallel te gebruiken.
+In deze zelfstudie vindt u begeleidende referentiedocumentatie voor alle API-bewerkingen. Raadpleeg de documentatie bij de API voor [[!DNL Flow Service]  Doelen op de Adobe Developer-website &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/) . We raden u aan deze zelfstudie en de API-naslagdocumentatie parallel te gebruiken.
 
 ### Woordenlijst {#glossary}
 
-Voor beschrijvingen van de termijnen die u in dit API leerprogramma zult ontmoeten, lees de [ verklarende woordenlijstsectie ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) van de API verwijzingsdocumentatie.
+Voor beschrijvingen van de termijnen die u in dit API leerprogramma zult ontmoeten, lees de [&#x200B; verklarende woordenlijstsectie &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) van de API verwijzingsdocumentatie.
 
 ### Verbindingsspecificaties en stroomspecificaties voor uw gewenste doel verzamelen {#gather-connection-spec-flow-spec}
 
@@ -343,7 +343,7 @@ Voer de onderstaande stappen uit om een gegevenssetgegevensstroom in te stellen 
 
 ## Een lijst met gegevenssets ophalen {#retrieve-list-of-available-datasets}
 
-![ Diagram die stap 1 in het werkschema van uitvoerdatasets tonen ](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
+![&#x200B; Diagram die stap 1 in het werkschema van uitvoerdatasets tonen &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
 
 Om een lijst van datasets terug te winnen geschikt voor activering, begin door een API vraag aan het hieronder eindpunt te maken.
 
@@ -362,7 +362,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-Merk op dat om in aanmerking komende datasets terug te winnen, [!DNL connection spec] identiteitskaart die in het verzoek URL wordt gebruikt specificeer identiteitskaart van de bron van de gegevensmeerverbinding, `23598e46-f560-407b-88d5-ea6207e49db0` moet zijn, en de twee vraagparameters `outputField=datasets` en `outputType=activationDatasets` moeten worden gespecificeerd. Alle andere vraagparameters zijn de standaarddegenen die door de [ Dienst API van de Catalogus ](https://developer.adobe.com/experience-platform-apis/references/catalog/) worden gesteund.
+Merk op dat om in aanmerking komende datasets terug te winnen, [!DNL connection spec] identiteitskaart die in het verzoek URL wordt gebruikt specificeer identiteitskaart van de bron van de gegevensmeerverbinding, `23598e46-f560-407b-88d5-ea6207e49db0` moet zijn, en de twee vraagparameters `outputField=datasets` en `outputType=activationDatasets` moeten worden gespecificeerd. Alle andere vraagparameters zijn de standaarddegenen die door de [&#x200B; Dienst API van de Catalogus &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/) worden gesteund.
 
 +++
 
@@ -449,11 +449,11 @@ Merk op dat om in aanmerking komende datasets terug te winnen, [!DNL connection 
 
 Een succesvol antwoord bevat een lijst met gegevenssets die in aanmerking komen voor activering. Deze datasets kunnen worden gebruikt wanneer het construeren van de bronverbinding in de volgende stap.
 
-Voor informatie over de diverse reactieparameters voor elke teruggekeerde dataset, verwijs naar de [ API ontwikkelaarsdocumentatie van Datasets ](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
+Voor informatie over de diverse reactieparameters voor elke teruggekeerde dataset, verwijs naar de [&#x200B; API ontwikkelaarsdocumentatie van Datasets &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
 
 ## Een bronverbinding maken {#create-source-connection}
 
-![ Diagram die stap 2 tonen in het werkschema van uitvoerdatasets ](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
+![&#x200B; Diagram die stap 2 tonen in het werkschema van uitvoerdatasets &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
 Na het terugwinnen van de lijst van datasets die u wilt uitvoeren, kunt u een bronverbinding tot stand brengen gebruikend die dataset IDs.
 
@@ -514,14 +514,14 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe bronverbinding en e
 
 Houd er rekening mee dat:
 
-* De bronverbinding die in deze stap wordt gecreeerd moet met een dataflow voor zijn datasets worden verbonden om aan een bestemming te worden geactiveerd. Zie [ een dataflow ](#create-dataflow) sectie voor informatie tot stand brengen over hoe te om een bronverbinding aan een dataflow te verbinden.
+* De bronverbinding die in deze stap wordt gecreeerd moet met een dataflow voor zijn datasets worden verbonden om aan een bestemming te worden geactiveerd. Zie [&#x200B; een dataflow &#x200B;](#create-dataflow) sectie voor informatie tot stand brengen over hoe te om een bronverbinding aan een dataflow te verbinden.
 * De dataset IDs van een bronverbinding kan niet na verwezenlijking worden gewijzigd. Als u datasets uit een bronverbinding moet toevoegen of verwijderen, moet u een nieuwe bronverbinding tot stand brengen en identiteitskaart van de nieuwe bronverbinding met dataflow verbinden.
 
 ## Een basisverbinding (doel) maken {#create-base-connection}
 
-![ Diagram die stap 3 tonen in het werkschema van uitvoerdatasets ](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
+![&#x200B; Diagram die stap 3 tonen in het werkschema van uitvoerdatasets &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-Een basisverbinding slaat veilig de geloofsbrieven aan uw bestemming op. Afhankelijk van het bestemmingstype, kunnen de geloofsbrieven nodig om tegen die bestemming voor authentiek te verklaren variëren. Om deze authentificatieparameters te vinden, wint eerst [!DNL connection spec] voor uw gewenste bestemming zoals die in de sectie [ wordt beschreven terug verzamelen verbindingsspecs en stroom specs ](#gather-connection-spec-flow-spec) en bekijk dan `authSpec` van de reactie. Verwijs in de onderstaande tabbladen naar de eigenschappen `authSpec` van alle ondersteunde doelen.
+Een basisverbinding slaat veilig de geloofsbrieven aan uw bestemming op. Afhankelijk van het bestemmingstype, kunnen de geloofsbrieven nodig om tegen die bestemming voor authentiek te verklaren variëren. Om deze authentificatieparameters te vinden, wint eerst [!DNL connection spec] voor uw gewenste bestemming zoals die in de sectie [&#x200B; wordt beschreven terug verzamelen verbindingsspecs en stroom specs &#x200B;](#gather-connection-spec-flow-spec) en bekijk dan `authSpec` van de reactie. Verwijs in de onderstaande tabbladen naar de eigenschappen `authSpec` van alle ondersteunde doelen.
 
 >[!BEGINTABS]
 
@@ -840,7 +840,7 @@ Met behulp van de eigenschappen die zijn opgegeven in de verificatietoets (d.w.z
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) sectie van de pagina van de de bestemmingsdocumentatie van Amazon S3.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) sectie van de pagina van de de bestemmingsdocumentatie van Amazon S3.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -891,7 +891,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de opslag van Azure Blob.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de opslag van Azure Blob.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -941,7 +941,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) sectie van de Azure pagina van de de bestemmingsdocumentatie van het Leer van Gegevens 2 (ADLS Gen2).
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) sectie van de Azure pagina van de de bestemmingsdocumentatie van het Leer van Gegevens 2 (ADLS Gen2).
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -994,7 +994,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Er zijn geen verificatiereferenties vereist voor de bestemming Landing Zone voor gegevens. Voor meer informatie, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) sectie van de Gegevens Landing de documentatiepagina van de Zone van de bestemmingsbestemming.
+>Er zijn geen verificatiereferenties vereist voor de bestemming Landing Zone voor gegevens. Voor meer informatie, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) sectie van de Gegevens Landing de documentatiepagina van de Zone van de bestemmingsbestemming.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1036,7 +1036,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de Opslag van de Wolk van Google.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de Opslag van de Wolk van Google.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1087,7 +1087,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1122,7 +1122,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1172,7 +1172,7 @@ Noteer de verbinding-id in het antwoord. Deze id is vereist in de volgende stap 
 
 ## Een doelverbinding maken {#create-target-connection}
 
-![ Diagram die stap 4 in het werkschema van uitvoerdatasets tonen ](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
+![&#x200B; Diagram die stap 4 in het werkschema van uitvoerdatasets tonen &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 Daarna, moet u een doelverbinding tot stand brengen die de uitvoerparameters voor uw datasets opslaat. Exportparameters zijn onder andere locatie, bestandsindeling, compressie en andere details. Raadpleeg de `targetSpec` -eigenschappen in de verbindingsspecificatie van het doel voor meer informatie over de ondersteunde eigenschappen voor elk doeltype. Verwijs in de onderstaande tabbladen naar de eigenschappen `targetSpec` van alle ondersteunde doelen.
 
@@ -1631,8 +1631,8 @@ Aan de hand van de bovenstaande specificatie kunt u een aanvraag voor een doelve
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invullen bestemmingsdetails ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) sectie van de [!DNL Amazon S3] pagina van de bestemmingsdocumentatie.
->>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invullen bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) sectie van de [!DNL Amazon S3] pagina van de bestemmingsdocumentatie.
+>&#x200B;>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1684,8 +1684,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invullen bestemmingsdetails ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) sectie van de [!DNL Azure Blob Storage] pagina van de bestemmingsdocumentatie.
->>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invullen bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) sectie van de [!DNL Azure Blob Storage] pagina van de bestemmingsdocumentatie.
+>&#x200B;>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
 
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
@@ -1738,8 +1738,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invul in bestemmingsdetails ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) sectie van de Azure [!DNL Data Lake Gen 2(ADLS Gen2)] pagina van de bestemmingsdocumentatie.
->>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invul in bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) sectie van de Azure [!DNL Data Lake Gen 2(ADLS Gen2)] pagina van de bestemmingsdocumentatie.
+>&#x200B;>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1790,8 +1790,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invullen bestemmingsdetails ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) sectie van de [!DNL Data Landing Zone] pagina van de bestemmingsdocumentatie.
->>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invullen bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) sectie van de [!DNL Data Landing Zone] pagina van de bestemmingsdocumentatie.
+>&#x200B;>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1842,8 +1842,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invullen bestemmingsdetails ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sectie van de [!DNL Google Cloud Storage] pagina van de bestemmingsdocumentatie.
->>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invullen bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sectie van de [!DNL Google Cloud Storage] pagina van de bestemmingsdocumentatie.
+>&#x200B;>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
 
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
@@ -1896,8 +1896,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invul in bestemmingsdetails ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
->>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invul in bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
+>&#x200B;>Zie de API-naslagdocumentatie voor andere ondersteunde waarden van `datasetFileType` .
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1946,7 +1946,7 @@ Noteer de doel-verbindings-id uit het antwoord. Deze id zal in de volgende stap 
 
 ## Een gegevensstroom maken {#create-dataflow}
 
-![ Diagram die stap 5 tonen in het werkschema van uitvoerdatasets ](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
+![&#x200B; Diagram die stap 5 tonen in het werkschema van uitvoerdatasets &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
 
 De definitieve stap in de bestemmingsconfiguratie is aan opstelling een dataflow. Een dataflow verbindt eerder gecreeerd entiteiten samen en verstrekt ook opties om het programma van de datasetuitvoer te vormen. Om de gegevensstroom tot stand te brengen, gebruik hieronder de ladingen, afhankelijk van uw gewenste bestemming van de wolkenopslag, en vervang entiteit IDs van vorige stappen.
 
@@ -1998,7 +1998,7 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 
 | Parameter | Beschrijving |
 |---------|----------|
-| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [&#x200B; uitvoer volledige dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [&#x200B; de uitvoer stijgende dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
 | `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
 | `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
 | `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
@@ -2067,7 +2067,7 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 
 | Parameter | Beschrijving |
 |---------|----------|
-| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [&#x200B; uitvoer volledige dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [&#x200B; de uitvoer stijgende dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
 | `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
 | `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
 | `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
@@ -2137,7 +2137,7 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 
 | Parameter | Beschrijving |
 |---------|----------|
-| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [&#x200B; uitvoer volledige dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [&#x200B; de uitvoer stijgende dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
 | `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
 | `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
 | `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
@@ -2207,7 +2207,7 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 
 | Parameter | Beschrijving |
 |---------|----------|
-| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [&#x200B; uitvoer volledige dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [&#x200B; de uitvoer stijgende dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
 | `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
 | `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
 | `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
@@ -2276,7 +2276,7 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 
 | Parameter | Beschrijving |
 |---------|----------|
-| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [&#x200B; uitvoer volledige dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [&#x200B; de uitvoer stijgende dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
 | `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
 | `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
 | `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
@@ -2346,7 +2346,7 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 
 | Parameter | Beschrijving |
 |---------|----------|
-| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [&#x200B; uitvoer volledige dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [&#x200B; de uitvoer stijgende dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
 | `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
 | `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
 | `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
@@ -2376,7 +2376,7 @@ Noteer de Dataflow-id uit het antwoord. Deze id wordt vereist in de volgende sta
 
 ## De gegevensstroomuitvoering ophalen {#get-dataflow-runs}
 
-![ Diagram die stap 6 tonen in het werkschema van uitvoerdatasets ](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
+![&#x200B; Diagram die stap 6 tonen in het werkschema van uitvoerdatasets &#x200B;](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
 
 Om de uitvoering van een gegevensstroom te controleren, gebruik Dataflow loops API:
 
@@ -2449,11 +2449,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-U kunt informatie over de [ diverse parameters vinden die door de looppasAPI van Dataflow ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in de API verwijzingsdocumentatie zijn teruggekeerd.
+U kunt informatie over de [&#x200B; diverse parameters vinden die door de looppasAPI van Dataflow &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in de API verwijzingsdocumentatie zijn teruggekeerd.
 
 ## Controleren of gegevensset is geëxporteerd {#verify}
 
-Bij het exporteren van gegevenssets maakt Experience Platform een `.json` - of `.parquet` -bestand op de opslaglocatie die u hebt opgegeven. Verwacht een nieuw dossier dat in uw opslagplaats volgens het de uitvoerprogramma moet worden gedeponeerd u verstrekte toen [ creërend een dataflow ](#create-dataflow).
+Bij het exporteren van gegevenssets maakt Experience Platform een `.json` - of `.parquet` -bestand op de opslaglocatie die u hebt opgegeven. Verwacht een nieuw dossier dat in uw opslagplaats volgens het de uitvoerprogramma moet worden gedeponeerd u verstrekte toen [&#x200B; creërend een dataflow &#x200B;](#create-dataflow).
 
 Experience Platform maakt een mappenstructuur op de opslaglocatie die u hebt opgegeven, waar de geëxporteerde gegevenssetbestanden worden opgeslagen. Voor elke exporttijd wordt een nieuwe map gemaakt volgens het onderstaande patroon:
 
@@ -2463,11 +2463,11 @@ De standaardbestandsnaam wordt willekeurig gegenereerd en zorgt ervoor dat geëx
 
 ### Voorbeeldgegevenssetbestanden {#sample-files}
 
-De aanwezigheid van deze bestanden op uw opslaglocatie is een bevestiging van een geslaagde export. Om te begrijpen hoe de uitgevoerde dossiers gestructureerd zijn, kunt u een steekproef [.parquet dossier ](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) of [ .json dossier ](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json) downloaden.
+De aanwezigheid van deze bestanden op uw opslaglocatie is een bevestiging van een geslaagde export. Om te begrijpen hoe de uitgevoerde dossiers gestructureerd zijn, kunt u een steekproef [.parquet dossier &#x200B;](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) of [&#x200B; .json dossier &#x200B;](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json) downloaden.
 
 #### Gecomprimeerde gegevensbestanden {#compressed-dataset-files}
 
-In de stap om [ tot een doelverbinding ](#create-target-connection) te leiden, kunt u de uitgevoerde datasetdossiers selecteren om worden samengeperst.
+In de stap om [&#x200B; tot een doelverbinding &#x200B;](#create-target-connection) te leiden, kunt u de uitgevoerde datasetdossiers selecteren om worden samengeperst.
 
 Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen bij het comprimeren:
 
@@ -2477,15 +2477,15 @@ Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen 
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Experience Platform API-foutbericht. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform voor meer informatie bij het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Experience Platform API-foutbericht. Verwijs naar [&#x200B; API statuscodes &#x200B;](/help/landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform voor meer informatie bij het interpreteren van foutenreacties.
 
 ## Bekende beperkingen {#known-limitations}
 
-Bekende beperkingen van de mening [ ](/help/destinations/ui/export-datasets.md#known-limitations) over datasetuitvoer.
+Bekende beperkingen van de mening [&#x200B; &#x200B;](/help/destinations/ui/export-datasets.md#known-limitations) over datasetuitvoer.
 
 ## Veelgestelde vragen {#faq}
 
-Bekijk a [ lijst van vaak gestelde vragen ](/help/destinations/ui/export-datasets.md#faq) over datasetuitvoer.
+Bekijk a [&#x200B; lijst van vaak gestelde vragen &#x200B;](/help/destinations/ui/export-datasets.md#faq) over datasetuitvoer.
 
 ## Volgende stappen {#next-steps}
 

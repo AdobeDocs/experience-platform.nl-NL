@@ -31,9 +31,9 @@ Een combinatie naadloze berekening op zowel de Hub als [!DNL Edge] vermindert dr
 
 De volgende diagrammen verstrekken een overzicht voor de het Leren architectuur van de machine in real time. Alfa heeft momenteel een vereenvoudigde versie.
 
-![ alpha- boog ](../images/rtml/alpha-arch.png)
+![&#x200B; alpha- boog &#x200B;](../images/rtml/alpha-arch.png)
 
-![ Vereenvoudigd overzicht ](../images/rtml/end-to-end-arch.png)
+![&#x200B; Vereenvoudigd overzicht &#x200B;](../images/rtml/end-to-end-arch.png)
 
 ## Workflow voor het leren van machines in realtime
 
@@ -41,7 +41,7 @@ In de volgende workflow worden de typische stappen en resultaten beschreven die 
 
 ### Inname van gegevens en preparaten
 
-Gegevens worden opgenomen en getransformeerd met de [!DNL Experience Data Model] (XDM) op Adobe Experience Platform. Deze gegevens worden gebruikt voor modeltraining. Meer over XDM leren, bezoek het [ XDM overzicht ](../../xdm/home.md).
+Gegevens worden opgenomen en getransformeerd met de [!DNL Experience Data Model] (XDM) op Adobe Experience Platform. Deze gegevens worden gebruikt voor modeltraining. Meer over XDM leren, bezoek het [&#x200B; XDM overzicht &#x200B;](../../xdm/home.md).
 
 ### Authoring
 
@@ -84,4 +84,4 @@ Het leren van machines in real time is momenteel in alpha. De hieronder beschrev
 
 ## Volgende stappen
 
-U kunt beginnen door [ te volgen begonnen wordt ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor het creëren van een In real time het Leren van de Machine model.
+U kunt beginnen door [&#x200B; te volgen begonnen wordt &#x200B;](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor het creëren van een In real time het Leren van de Machine model.

@@ -38,7 +38,7 @@ Het product Purchase Prediction recipe maakt gebruik van machinaal leren om het 
 
 ## Gegevensschema
 
-Dit recept gebruikt [ schema&#39;s XDM ](../../xdm/home.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
+Dit recept gebruikt [&#x200B; schema&#39;s XDM &#x200B;](../../xdm/home.md) om de gegevens te modelleren. Het schema dat voor dit recept wordt gebruikt wordt hieronder getoond:
 
 | Veldnaam | Type |
 | --- | --- |
@@ -63,6 +63,6 @@ Dit recept gebruikt [ schema&#39;s XDM ](../../xdm/home.md) om de gegevens te mo
 
 ## Algorithm
 
-Eerst, wordt de opleidingsdataset in het *ProductPrediction* schema geladen. Van hier, wordt het model getraind gebruikend a [ random forest classifier ](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is een type gecodeerd algoritme dat verwijst naar een algoritme dat meerdere algoritmen combineert om betere voorspellende prestaties te verkrijgen. Het idee achter het algoritme is dat de willekeurige bosclassificator veelvoudige besluitvormingsbomen bouwt en hen samenvoegt om een nauwkeurigere en stabielere voorspelling tot stand te brengen.
+Eerst, wordt de opleidingsdataset in het *ProductPrediction* schema geladen. Van hier, wordt het model getraind gebruikend a [&#x200B; random forest classifier &#x200B;](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is een type gecodeerd algoritme dat verwijst naar een algoritme dat meerdere algoritmen combineert om betere voorspellende prestaties te verkrijgen. Het idee achter het algoritme is dat de willekeurige bosclassificator veelvoudige besluitvormingsbomen bouwt en hen samenvoegt om een nauwkeurigere en stabielere voorspelling tot stand te brengen.
 
 Dit proces begint met het maken van een reeks beslissingsstructuren die willekeurig subsets van trainingsgegevens selecteren. Daarna wordt het gemiddelde van de resultaten van elke beslissingsboom genomen.

@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Activeer profielen voor uw [!DNL LinkedIn] -campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails en mobiele id&#39;s.
 
-![ LinkedIn bestemming in Adobe Experience Platform UI ](../../assets/catalog/social/linkedin/catalog.png)
+![&#x200B; LinkedIn bestemming in Adobe Experience Platform UI &#x200B;](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Gebruiksscenario’s
 
@@ -26,17 +26,17 @@ Een softwarebedrijf organiseert een conferentie en wil met deelnemers in contact
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL LinkedIn Matched Audiences] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL LinkedIn Matched Audiences] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 >[!IMPORTANT]
 >
->Vanaf september 2025 kunt u [!DNL IDFA] niet meer toewijzen als doelidentiteit, aangezien [!DNL IDFA] niet meer wordt ondersteund door het doel van [!DNL LinkedIn Matched Audiences] . Zie de [!DNL LinkedIn Matched Audiences] integratie [ documentatie ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) voor meer details. Deze wijziging is het gevolg van LinkedIn&#39;s vereisten en is niet gerelateerd aan Experience Platform-upgrades van de bestemmingsservice.
+>Vanaf september 2025 kunt u [!DNL IDFA] niet meer toewijzen als doelidentiteit, aangezien [!DNL IDFA] niet meer wordt ondersteund door het doel van [!DNL LinkedIn Matched Audiences] . Zie de [!DNL LinkedIn Matched Audiences] integratie [&#x200B; documentatie &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) voor meer details. Deze wijziging is het gevolg van LinkedIn&#39;s vereisten en is niet gerelateerd aan Experience Platform-upgrades van de bestemmingsservice.
 
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakte e-mails, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [&#x200B; passende vereisten van identiteitskaart &#x200B;](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakte e-mails, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 
 {style="table-layout:auto"}
 
@@ -46,8 +46,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer en andere) die in de [!DNL LinkedIn Matched Audiences] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -66,7 +66,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Voordat u het doel van [!UICONTROL LinkedIn Matched Audience] kunt gebruiken, moet u ervoor zorgen dat uw [!DNL LinkedIn Campaign Manager] -account het machtigingsniveau [!DNL Creative Manager] of hoger heeft.
 
-Leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [ toevoegen, uitgeven, en verwijderen de Toestemmingen van de Gebruiker op de Rekeningen van Advertising ](https://www.linkedin.com/help/lms/answer/5753) in de documentatie LinkedIn.
+Leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [&#x200B; toevoegen, uitgeven, en verwijderen de Toestemmingen van de Gebruiker op de Rekeningen van Advertising &#x200B;](https://www.linkedin.com/help/lms/answer/5753) in de documentatie LinkedIn.
 
 ## Vereisten voor id-afstemming {#id-matching-requirements}
 
@@ -78,7 +78,7 @@ Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, mo
 
 U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en [!DNL Experience Platform] hen hebben geknoeid op activering.
 
-Om over het opnemen van e-mailadressen in Experience Platform te leren, zie het [ overzicht van de partijopname ](/help/ingestion/batch-ingestion/overview.md) en [ het stromen ingestitieoverzicht ](/help/ingestion/streaming-ingestion/overview.md).
+Om over het opnemen van e-mailadressen in Experience Platform te leren, zie het [&#x200B; overzicht van de partijopname &#x200B;](/help/ingestion/batch-ingestion/overview.md) en [&#x200B; het stromen ingestitieoverzicht &#x200B;](/help/ingestion/streaming-ingestion/overview.md).
 
 Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende vereisten voldoen:
 
@@ -92,21 +92,21 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 >[!NOTE]
 >
 >Gegevens uit naamruimten zonder hashing worden automatisch gehasht door [!DNL Experience Platform] bij activering.
->> Kenmerkbrongegevens worden niet automatisch gehasht.
+>&#x200B;> Kenmerkbrongegevens worden niet automatisch gehasht.
 > 
-> Tijdens de [ stap van de Toewijzing van de Identiteit ](../../ui/activate-segment-streaming-destinations.md#mapping), wanneer uw brongebied unhashed attributen bevat, controleer de **[!UICONTROL Apply transformation]** optie, om [!DNL Experience Platform] automatisch de gegevens bij activering te hebben.
+> Tijdens de [&#x200B; stap van de Toewijzing van de Identiteit &#x200B;](../../ui/activate-segment-streaming-destinations.md#mapping), wanneer uw brongebied unhashed attributen bevat, controleer de **[!UICONTROL Apply transformation]** optie, om [!DNL Experience Platform] automatisch de gegevens bij activering te hebben.
 > 
 > De optie **[!UICONTROL Apply transformation]** wordt alleen weergegeven wanneer u kenmerken als bronvelden selecteert. Deze wordt niet weergegeven wanneer u naamruimten kiest.
 
-![ de afbeeldingstransformatie van de Identiteit ](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![&#x200B; de afbeeldingstransformatie van de Identiteit &#x200B;](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL LinkedIn Matched Audiences] -bestemming en het activeren van het publiek.
 
@@ -114,13 +114,13 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een [!D
 
 >[!NOTE]
 >
->De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, verwijs naar het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md).
+>De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, verwijs naar het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md).
 
 ### Verifiëren voor bestemming {#authenticate}
 
 1. Zoek het doel [!DNL LinkedIn Matched Audiences] in de doelcatalogus en selecteer **[!UICONTROL Set Up]** .
 2. Selecteer **[!UICONTROL Connect to destination]**.
-   ![ verifieer aan LinkedIn ](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
+   ![&#x200B; verifieer aan LinkedIn &#x200B;](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. Ga uw geloofsbrieven LinkedIn in en selecteer **Login**.
 
 ### Verificatiegegevens vernieuwen {#refresh-authentication-credentials}
@@ -131,11 +131,11 @@ Zodra het teken is verlopen, de gegevensuitvoer naar de bestemming houdt op werk
 
 1. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optioneel) Gebruik de beschikbare filters op de pagina om alleen LinkedIn-accounts weer te geven.
-   ![ Filter om slechts rekeningen te tonen LinkedIn ](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+   ![&#x200B; Filter om slechts rekeningen te tonen LinkedIn &#x200B;](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
 3. Selecteer de account die u wilt vernieuwen, selecteer de ellips en selecteer **[!UICONTROL Edit details]** .
-   ![ uitgezocht geef detailcontrole ](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png) uit
+   ![&#x200B; uitgezocht geef detailcontrole &#x200B;](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png) uit
 4. Selecteer **[!UICONTROL Reconnect OAuth]** in het modale venster en verifieer het opnieuw met uw LinkedIn-referenties.
-   ![ Modal venster met Opnieuw verbinden optie OAuth ](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+   ![&#x200B; Modal venster met Opnieuw verbinden optie OAuth &#x200B;](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 > 
@@ -156,7 +156,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -164,14 +164,14 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [&#x200B; publieksgegevens aan het stromen publiek de uitvoerbestemmingen &#x200B;](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Een succesvolle activering betekent dat een [!DNL LinkedIn] douanepubliek programmatically in [[!DNL LinkedIn Campaign Manager] ](https://www.linkedin.com/campaignmanager/login) wordt gecreeerd. Het lidmaatschap van het publiek wordt aangepast omdat gebruikers gekwalificeerd zijn voor of gediskwalificeerd zijn voor het actieve publiek.
+Een succesvolle activering betekent dat een [!DNL LinkedIn] douanepubliek programmatically in [[!DNL LinkedIn Campaign Manager] &#x200B;](https://www.linkedin.com/campaignmanager/login) wordt gecreeerd. Het lidmaatschap van het publiek wordt aangepast omdat gebruikers gekwalificeerd zijn voor of gediskwalificeerd zijn voor het actieve publiek.
 
 >[!TIP]
 >

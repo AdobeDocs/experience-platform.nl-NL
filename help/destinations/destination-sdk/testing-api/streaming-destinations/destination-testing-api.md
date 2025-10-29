@@ -16,23 +16,23 @@ ht-degree: 0%
 >
 >**API eindpunt**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u het gebruiken van het `/authoring/testing/destinationInstance/` API eindpunt kunt uitvoeren, om te testen of uw bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren. Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees [ test uw bestemmingsconfiguratie ](streaming-destination-testing-overview.md).
+Deze pagina maakt een lijst en beschrijft van alle API verrichtingen die u het gebruiken van het `/authoring/testing/destinationInstance/` API eindpunt kunt uitvoeren, om te testen of uw bestemming correct wordt gevormd en om de integriteit van gegevensstromen aan uw gevormde bestemming te verifiëren. Voor een beschrijving van de functionaliteit die door dit eindpunt wordt gesteund, lees [&#x200B; test uw bestemmingsconfiguratie &#x200B;](streaming-destination-testing-overview.md).
 
 U doet verzoeken aan het het testen eindpunt met of zonder profielen aan de vraag toe te voegen. Als u geen profielen verzendt op de aanvraag, genereert Adobe deze intern voor u en voegt ze toe aan de aanvraag.
 
-U kunt de [ generatie API van de profielgeneratie van de Steekproef gebruiken ](sample-profile-generation-api.md) om profielen tot stand te brengen in verzoeken aan de bestemmings het testen API te gebruiken.
+U kunt de [&#x200B; generatie API van de profielgeneratie van de Steekproef gebruiken &#x200B;](sample-profile-generation-api.md) om profielen tot stand te brengen in verzoeken aan de bestemmings het testen API te gebruiken.
 
 ## Hoe te om bestemmingsID te krijgen {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
->* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de gebruikersinterface van Experience Platform. Lees [ verbind met bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) en [ activeer profielen en publiek aan een bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) voor meer informatie.
->* Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [ doorbladert een verbinding met uw bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
->  >![UI beeld hoe te om identiteitskaart van de bestemmingsinstantie te krijgen ](../../assets/testing-api/get-destination-instance-id.png)
+>* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de gebruikersinterface van Experience Platform. Lees [&#x200B; verbind met bestemming &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) en [&#x200B; activeer profielen en publiek aan een bestemming &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) voor meer informatie.
+>* Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [&#x200B; doorbladert een verbinding met uw bestemming &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>  &#x200B;>![UI beeld hoe te om identiteitskaart van de bestemmingsinstantie te krijgen &#x200B;](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Aan de slag met API-bewerkingen voor doeltesten {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Test uw bestemmingsconfiguratie zonder profielen aan de vraag toe te voegen {#test-without-adding-profiles}
 
@@ -156,7 +156,7 @@ Een succesvolle reactie keert status 200 van HTTP samen met de API reactie van h
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `aggregationKey` | Omvat informatie over het samenvoegingsbeleid dat voor de bestemming wordt gevormd. Voor meer informatie, lees de [ documentatie van het beleid van de Samenvoeging 0} {.](../../functionality/destination-configuration/aggregation-policy.md) |
+| `aggregationKey` | Omvat informatie over het samenvoegingsbeleid dat voor de bestemming wordt gevormd. Voor meer informatie, lees de [&#x200B; documentatie van het beleid van de Samenvoeging 0&rbrace; &lbrace;.](../../functionality/destination-configuration/aggregation-policy.md) |
 | `traceId` | Een unieke id voor de bewerking. Als er fouten optreden, kunt u deze id delen met het Adobe-team voor probleemoplossing. |
 | `results.httpCalls.request` | Bevat de aanvraag die door Adobe naar uw bestemming is verzonden. |
 | `results.httpCalls.response` | Bevat het antwoord dat Adobe van je bestemming heeft ontvangen. |
@@ -322,8 +322,8 @@ Een succesvolle reactie keert status 200 van HTTP samen met de API reactie van h
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, weet u nu hoe u de bestemming kunt testen. U kunt Adobe [ zelfbediening documentatieproces ](../../docs-framework/documentation-instructions.md) nu gebruiken om een documentatiepagina voor uw bestemming tot stand te brengen.
+Nadat u dit document hebt gelezen, weet u nu hoe u de bestemming kunt testen. U kunt Adobe [&#x200B; zelfbediening documentatieproces &#x200B;](../../docs-framework/documentation-instructions.md) nu gebruiken om een documentatiepagina voor uw bestemming tot stand te brengen.

@@ -31,14 +31,14 @@ Het recept van de Aanbevelingen van het Product gebruikt machine het leren om de
 
 ## Hoe begin ik?
 
-U kunt aan de slag door de zelfstudie van Adobe Experience Platform Lab te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie zal u tonen hoe te om het recept van de Aanbevelingen van het Product in een Notitieboekje van Jupyter tot stand te brengen door [ notitieboekje te volgen aan recept ](../jupyterlab/create-a-model.md) werkschema, en het recept in [!DNL Experience Platform] uit te voeren [!DNL Data Science Workspace].
+U kunt aan de slag door de zelfstudie van Adobe Experience Platform Lab te volgen (zie de verbinding van het Laboratorium hieronder). Deze zelfstudie zal u tonen hoe te om het recept van de Aanbevelingen van het Product in een Notitieboekje van Jupyter tot stand te brengen door [&#x200B; notitieboekje te volgen aan recept &#x200B;](../jupyterlab/create-a-model.md) werkschema, en het recept in [!DNL Experience Platform] uit te voeren [!DNL Data Science Workspace].
 
-* [ Laboratorium: Verwacht de Toekomst met de Wetenschap van Gegevens Workspace ](https://expleague.azureedge.net/labs/L777/index.html)
-* [ middelen van het Laboratorium ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
+* [&#x200B; Laboratorium: Verwacht de Toekomst met de Wetenschap van Gegevens Workspace &#x200B;](https://expleague.azureedge.net/labs/L777/index.html)
+* [&#x200B; middelen van het Laboratorium &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Gegevensschema
 
-Dit recept gebruikt douane [ XDM schema&#39;s ](../../xdm/schema/field-dictionary.md) om de input en outputgegevens te modelleren:
+Dit recept gebruikt douane [&#x200B; XDM schema&#39;s &#x200B;](../../xdm/schema/field-dictionary.md) om de input en outputgegevens te modelleren:
 
 ### Invoergegevensschema
 

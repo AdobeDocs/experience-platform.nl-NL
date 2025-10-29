@@ -39,7 +39,7 @@ Momenteel ondersteunt het Model Insights Framework de volgende runtimes:
 - [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
-De code van de steekproef voor recepten kan in [ ervaring-platform-dsw-verwijzing ](https://github.com/adobe/experience-platform-dsw-reference) bewaarplaats onder `recipes` worden gevonden. In deze zelfstudie wordt verwezen naar specifieke bestanden in deze opslagplaats.
+De code van de steekproef voor recepten kan in [&#x200B; ervaring-platform-dsw-verwijzing &#x200B;](https://github.com/adobe/experience-platform-dsw-reference) bewaarplaats onder `recipes` worden gevonden. In deze zelfstudie wordt verwezen naar specifieke bestanden in deze opslagplaats.
 
 ### Scala {#scala}
 
@@ -55,7 +55,7 @@ Standaardevaluaties worden berekend als onderdeel van de classificatiealgoritmen
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
 
-De beoordelaar kan in het recept in het {[ dossier 0} application.properties in de ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) omslag worden bepaald. `recipe` De voorbeeldcode voor het inschakelen van `DefaultBinaryClassificationEvaluator` wordt hieronder weergegeven:
+De beoordelaar kan in het recept in het {[&#x200B; dossier 0} application.properties in de &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) omslag worden bepaald. `recipe` De voorbeeldcode voor het inschakelen van `DefaultBinaryClassificationEvaluator` wordt hieronder weergegeven:
 
 ```scala
 evaluation.class=com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator
@@ -91,7 +91,7 @@ In de volgende tabel worden de standaardmetriek voor elke klasse weergegeven. Ee
 
 #### Eigen evaluatiemetriek voor Scala
 
-De aangepaste beoordelaar kan worden opgegeven door de interface van `MLEvaluator.scala` in het `Evaluator.scala` -bestand uit te breiden. In het 1} dossier van voorbeeld [ Evaluator.scala, bepalen wij douane ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) en `split()` functies. `evaluate()` Onze functie `split()` splitst onze gegevens willekeurig met een verhouding van 8 :2 en onze functie `evaluate()` bepaalt en keert 3 metriek terug: MAPE, MAE, en RMSE.
+De aangepaste beoordelaar kan worden opgegeven door de interface van `MLEvaluator.scala` in het `Evaluator.scala` -bestand uit te breiden. In het 1&rbrace; dossier van voorbeeld [&#x200B; Evaluator.scala, bepalen wij douane &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) en `split()` functies. `evaluate()` Onze functie `split()` splitst onze gegevens willekeurig met een verhouding van 8 :2 en onze functie `evaluate()` bepaalt en keert 3 metriek terug: MAPE, MAE, en RMSE.
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ De aangepaste beoordelaar kan worden opgegeven door de interface van `MLEvaluato
 > Niet dit: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
-Wanneer het in het recept is gedefinieerd, is de volgende stap het in de recepten toelaten. Dit wordt gedaan in het {[ dossier 0} application.properties in de omslag van het project ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties). `resources` Hier wordt de `evaluation.class` ingesteld op de `Evaluator` -klasse die is gedefinieerd in `Evaluator.scala`
+Wanneer het in het recept is gedefinieerd, is de volgende stap het in de recepten toelaten. Dit wordt gedaan in het {[&#x200B; dossier 0} application.properties in de omslag van het project &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties). `resources` Hier wordt de `evaluation.class` ingesteld op de `Evaluator` -klasse die is gedefinieerd in `Evaluator.scala`
 
 ```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
@@ -117,7 +117,7 @@ Op dit moment zijn er geen standaardevaluatiemetriek voor [!DNL Python] of [!DNL
 
 Voor maatstaven voor aangepaste evaluatie zijn er twee hoofdmethoden die moeten worden geïmplementeerd voor de evaluator: `split()` en `evaluate()` .
 
-Voor [!DNL Python], zouden deze methodes in [ evaluator.py ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor de `Evaluator` klasse worden bepaald. Volg de {[ verbinding 0} evaluator.py voor een voorbeeld van ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py).`Evaluator`
+Voor [!DNL Python], zouden deze methodes in [&#x200B; evaluator.py &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor de `Evaluator` klasse worden bepaald. Volg de {[&#x200B; verbinding 0} evaluator.py voor een voorbeeld van &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py).`Evaluator`
 
 Voor het maken van evaluatiemetriek in [!DNL Python] moet de gebruiker de methoden `evaluate()` en `split()` implementeren.
 
@@ -155,13 +155,13 @@ Vanaf nu, zijn er geen standaardevaluatiemetriek voor R. Als u dus de evaluatiem
 
 Het belangrijkste doel van `applicationEvaluator` is een JSON-object te retourneren dat sleutelwaardeparen metriek bevat.
 
-Dit [ applicationEvaluator.R ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) kan als voorbeeld worden gebruikt. In dit voorbeeld wordt `applicationEvaluator` gesplitst in drie vertrouwde secties:
+Dit [&#x200B; applicationEvaluator.R &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) kan als voorbeeld worden gebruikt. In dit voorbeeld wordt `applicationEvaluator` gesplitst in drie vertrouwde secties:
 
 - Gegevens laden
 - Gegevensvoorbereiding/functietechniek
 - Opgeslagen model ophalen en evalueren
 
-Het gegeven wordt eerst geladen aan een dataset van een bron zoals die in [ wordt bepaald retail.config.json ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json). Vanaf dat moment worden de gegevens gereinigd en zo ontworpen dat ze passen in het model voor machinaal leren. Tot slot wordt het model gebruikt om een voorspelling te maken die onze dataset gebruikt en van de voorspelde waarden en daadwerkelijke waarden, worden de metriek berekend. In dit geval worden MAPE, MAE en RMSE gedefinieerd en geretourneerd in het `metrics` -object.
+Het gegeven wordt eerst geladen aan een dataset van een bron zoals die in [&#x200B; wordt bepaald retail.config.json &#x200B;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json). Vanaf dat moment worden de gegevens gereinigd en zo ontworpen dat ze passen in het model voor machinaal leren. Tot slot wordt het model gebruikt om een voorspelling te maken die onze dataset gebruikt en van de voorspelde waarden en daadwerkelijke waarden, worden de metriek berekend. In dit geval worden MAPE, MAE en RMSE gedefinieerd en geretourneerd in het `metrics` -object.
 
 ## Vooraf gebouwde metriek- en visualisatiekaarten gebruiken
 

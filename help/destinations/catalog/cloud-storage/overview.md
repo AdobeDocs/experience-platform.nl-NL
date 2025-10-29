@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Adobe Experience Platform kan uw publiek als gegevensbestanden leveren aan uw opslaglocaties in de cloud. Hierdoor kunt u soorten publiek en hun profielkenmerken naar uw interne systemen verzenden via CSV-bestanden voor [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] en SFTP. Voor [!DNL Amazon Kinesis] - en [!DNL Azure Event Hubs] -doelen worden gegevens in [!DNL JSON] -indeling uit Experience Platform gestreamd.
 
-![ de bestemmingen van de wolkenopslag van Adobe ](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+![&#x200B; de bestemmingen van de wolkenopslag van Adobe &#x200B;](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Ondersteunde cloudopslagbestemmingen {#supported-destinations}
 
@@ -33,18 +33,18 @@ Adobe Experience Platform ondersteunt gegevensexport naar de volgende cloudopsla
 
 ## Verbinding maken met een nieuwe bestemming voor cloudopslag {#connect-destination}
 
-Experience Platform moet eerst verbinding maken met het doel om het publiek voor uw campagnes naar cloudopslagbestemmingen te sturen. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
+Experience Platform moet eerst verbinding maken met het doel om het publiek voor uw campagnes naar cloudopslagbestemmingen te sturen. Zie het [&#x200B; leerprogramma van de bestemmingsverwezenlijking &#x200B;](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
 
 
 ## Macro&#39;s gebruiken om een map te maken op uw opslaglocatie {#use-macros}
 
 >[!NOTE]
 >
-> De functionaliteit die in dit gedeelte wordt beschreven, is beschikbaar voor alle cloudopslagdoelen. Nochtans, steunt de [ bestemming van Amazon S3 ](amazon-s3.md) momenteel slechts de `%SEGMENT_ID%` en `%SEGMENT_NAME%` macro&#39;s.
+> De functionaliteit die in dit gedeelte wordt beschreven, is beschikbaar voor alle cloudopslagdoelen. Nochtans, steunt de [&#x200B; bestemming van Amazon S3 &#x200B;](amazon-s3.md) momenteel slechts de `%SEGMENT_ID%` en `%SEGMENT_NAME%` macro&#39;s.
 
 Als u een aangepaste map per doelbestand op uw opslaglocatie wilt maken, kunt u macro&#39;s gebruiken in het invoerveld voor het mappad. Voeg de macro&#39;s in aan het einde van het invoerveld, zoals hieronder wordt weergegeven.
 
-![ hoe te om macro&#39;s te gebruiken om een omslag in uw opslag tot stand te brengen ](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+![&#x200B; hoe te om macro&#39;s te gebruiken om een omslag in uw opslag tot stand te brengen &#x200B;](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
 In de onderstaande voorbeelden wordt verwezen naar een voorbeeldpubliek `Luxury Audience` met ID `25768be6-ebd5-45cc-8913-12fb3f348615` .
 
@@ -79,4 +79,4 @@ De opslagbestemmingen van de wolk steunen de volgende uitvoertypes:
 
 ## Volgende stappen {#next-steps}
 
-Na het selecteren van welke één van [ gesteunde wolkenbestemmingen ](#supported-destinations) u zou willen gebruiken, [ verbind met bestemmingsleerprogramma ](/help/destinations/ui/connect-destination.md) leren hoe te om een verbinding aan de bestemming te vestigen. Dan, lees het activeringsleerprogramma aan op dossier-gebaseerde bestemmingen om te leren hoe te [ het uitvoeren ](/help/destinations/ui/activate-batch-profile-destinations.md) gegevens aan uw bestemming van de wolkenopslag beginnen.
+Na het selecteren van welke één van [&#x200B; gesteunde wolkenbestemmingen &#x200B;](#supported-destinations) u zou willen gebruiken, [&#x200B; verbind met bestemmingsleerprogramma &#x200B;](/help/destinations/ui/connect-destination.md) leren hoe te om een verbinding aan de bestemming te vestigen. Dan, lees het activeringsleerprogramma aan op dossier-gebaseerde bestemmingen om te leren hoe te [&#x200B; het uitvoeren &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) gegevens aan uw bestemming van de wolkenopslag beginnen.

@@ -14,14 +14,14 @@ ht-degree: 0%
 Bij het gebruik van tags in Adobe Experience Platform moeten bepaalde workflows gevoelige waarden leveren (bijvoorbeeld een persoonlijke sleutel voor het leveren van bibliotheken aan omgevingen via hosts). De gevoelige aard van deze gegevens vereist
 veilige overdracht en opslag.
 
-Dit document beschrijft hoe te om gevoelige waarden te coderen gebruikend [ encryptie GnuPG ](https://www.gnupg.org/gph/en/manual/x110.html) (die ook als GPG wordt bekend) zodat slechts kan het markeringssysteem hen lezen.
+Dit document beschrijft hoe te om gevoelige waarden te coderen gebruikend [&#x200B; encryptie GnuPG &#x200B;](https://www.gnupg.org/gph/en/manual/x110.html) (die ook als GPG wordt bekend) zodat slechts kan het markeringssysteem hen lezen.
 
 ## De openbare GPG-sleutel en controlesom verkrijgen
 
-Na [ het downloaden ](https://gnupg.org/download/) en het installeren van de recentste versie van GPG moet u de openbare sleutel van GPG voor het milieu van de markeringsproductie verkrijgen:
+Na [&#x200B; het downloaden &#x200B;](https://gnupg.org/download/) en het installeren van de recentste versie van GPG moet u de openbare sleutel van GPG voor het milieu van de markeringsproductie verkrijgen:
 
-* [ GPG sleutel ](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
-* [ Checksum ](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
+* [&#x200B; GPG sleutel &#x200B;](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
+* [&#x200B; Checksum &#x200B;](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
 
 ## De sleutel importeren in de sleutelketen
 

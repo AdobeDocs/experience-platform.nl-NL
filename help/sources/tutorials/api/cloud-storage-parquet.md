@@ -22,18 +22,18 @@ Deze zelfstudie gebruikt de [!DNL Flow Service] API om u door de stappen te late
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-- [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [&#x200B; Bronnen &#x200B;](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+- [&#x200B; Sandboxen &#x200B;](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om Parquet-gegevens van een externe cloudopslag met de API [!DNL Flow Service] correct te kunnen invoeren.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -63,7 +63,7 @@ Haal de unieke id (`$id`) van de verbinding op en sla deze op. Ga vervolgens ver
 
 Als u de brongegevens in [!DNL Experience Platform] wilt gebruiken, moet u ook een doelschema maken om de brongegevens naar wens te structureren. Het doelschema wordt vervolgens gebruikt om een [!DNL Experience Platform] dataset te maken waarin de brongegevens zich bevinden.
 
-Als u het gebruikersinterface in [!DNL Experience Platform] liever zou gebruiken, verstrekt het [ leerprogramma van de Redacteur van het Schema ](../../../xdm/tutorials/create-schema-ui.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de Redacteur van het Schema.
+Als u het gebruikersinterface in [!DNL Experience Platform] liever zou gebruiken, verstrekt het [&#x200B; leerprogramma van de Redacteur van het Schema &#x200B;](../../../xdm/tutorials/create-schema-ui.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de Redacteur van het Schema.
 
 **API formaat**
 
@@ -268,7 +268,7 @@ Ga na de stappen die in de ontwikkelaarsgids worden geschetst verder tot u een v
 
 ## Een doelgegevensset maken
 
-Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [ Dienst API van de Catalogus uit te voeren ](https://www.adobe.io/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
+Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [&#x200B; Dienst API van de Catalogus uit te voeren &#x200B;](https://www.adobe.io/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
 **API formaat**
 
