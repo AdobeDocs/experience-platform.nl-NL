@@ -1,7 +1,7 @@
 ---
 title: pushNotifications
 description: Vorm dupberichten voor het Web SDK om browser-gebaseerd dupoverseinen toe te laten.
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 1%
@@ -57,7 +57,7 @@ Hier is een voorbeeld van hoe te om de de dienstarbeider te installeren:
 
 Voer de volgende stappen uit om pushmeldingen in te schakelen en te configureren:
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## Volgende stappen {#next-steps}
 
-Nadat u pushberichten hebt geconfigureerd, gebruikt u de opdracht [`sendPushSubscription`](../sendPushSubscription.md) om pushabonnementen te registreren bij Adobe Experience Platform.
+Nadat u pushberichten hebt geconfigureerd, gebruikt u de opdracht [`sendPushSubscription`](../sendpushsubscription.md) om pushabonnementen te registreren bij Adobe Experience Platform.

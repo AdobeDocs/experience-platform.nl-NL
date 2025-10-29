@@ -6,7 +6,7 @@ breadcrumb-title: Handleiding voor Web SDK
 user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: c697d0e924545caf430382385797bde340b57d94
+source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 18%
@@ -64,7 +64,7 @@ ht-degree: 18%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
-   * [sendPushSubscription](commands/sendPushSubscription.md)
+   * [sendPushSubscription](commands/sendpushsubscription.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [Gegevensstroomoverschrijvingen configureren](commands/datastream-overrides.md)
    * [Opdrachtreacties](commands/command-responses.md)
