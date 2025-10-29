@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '722'
 ht-degree: 26%
 
 ---
@@ -33,7 +33,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 | ------- | ----------- |
 | Gewone expressiefuncties | [!DNL Data Prep] Mapper ondersteunt nu het zoeken naar overeenkomsten en het extraheren van een deel van het invoerveld op basis van reguliere expressies. |
 
-Voor meer informatie, gelieve te zien het [[!DNL Data Prep]  overzicht &#x200B;](../../data-prep/home.md).
+Voor meer informatie, gelieve te zien het [[!DNL Data Prep]  overzicht ](../../data-prep/home.md).
 
 ## Bestemmingen {#destinations}
 
@@ -49,9 +49,9 @@ Voor meer informatie, gelieve te zien het [[!DNL Data Prep]  overzicht &#x200B;]
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Geavanceerde id-overeenkomsten | Verbeteringen aan de mogelijkheden voor de overeenkomende doelgroep in [!DNL Facebook Custom Audiences] en [!DNL Google Customer Match] door ondersteuning toe te voegen voor extra overeenkomende identiteiten, zoals externe id&#39;s, telefoonnummers en id&#39;s van mobiele apparaten. Raadpleeg de volgende documentatie voor meer informatie: <ul><li>[&#x200B; bestemming Facebook &#x200B;](../../destinations/catalog/social/facebook.md)</li><li>[&#x200B; de Klant van Google Gelijke bestemming &#x200B;](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[&#x200B; activeer publieksgegevens aan het stromen segment de uitvoerbestemmingen &#x200B;](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
+| Geavanceerde id-overeenkomsten | Verbeteringen aan de mogelijkheden voor de overeenkomende doelgroep in [!DNL Facebook Custom Audiences] en [!DNL Google Customer Match] door ondersteuning toe te voegen voor extra overeenkomende identiteiten, zoals externe id&#39;s, telefoonnummers en id&#39;s van mobiele apparaten. Raadpleeg de volgende documentatie voor meer informatie: <ul><li>[ bestemming Facebook ](../../destinations/catalog/social/facebook.md)</li><li>[ de Klant van Google Gelijke bestemming ](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[ activeer publieksgegevens aan het stromen segment de uitvoerbestemmingen ](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
-Meer leren, bezoek het [&#x200B; overzicht van bestemmingen &#x200B;](../../destinations/home.md).
+Meer leren, bezoek het [ overzicht van bestemmingen ](../../destinations/home.md).
 
 ## Realtime-klantenprofiel {#profile}
 
@@ -61,10 +61,10 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Gegevensset verwijderen uit profielarchief | Wanneer u een dataset van het meer van Gegevens van Experience Platform schrapt, zal het automatisch van de opslag van het Profiel eveneens worden geschrapt. U hoeft niet langer het API-eindpunt van de taken van het profielsysteem te gebruiken om een verwijderingsverzoek te doen om de dataset expliciet uit de profielopslag te verwijderen. Voor meer informatie, zie de [&#x200B; API eindpuntgids van de banen van het profielsysteem &#x200B;](../../profile/api/profile-system-jobs.md). |
-| Geschatte aantal naamruimten van id voor een bepaald segment | De API voor voorvertoning rapporteert nu voor geschatte profielaantallen:<ul><li>Het totale aantal geschatte profielen in een segment voor een bepaalde naamruimte.</li><li>Het totale aantal geschatte profielen in het schema van de Unie van het Profiel voor een bepaalde namespace.</li></ul>Meer leren, verwijs naar de [&#x200B; API eindpuntgids van de profielvoorproef &#x200B;](../../profile/api/preview-sample-status.md). |
+| Gegevensset verwijderen uit profielarchief | Wanneer u een dataset van het meer van Gegevens van Experience Platform schrapt, zal het automatisch van de opslag van het Profiel eveneens worden geschrapt. U hoeft niet langer het API-eindpunt van de taken van het profielsysteem te gebruiken om een verwijderingsverzoek te doen om de dataset expliciet uit de profielopslag te verwijderen. Voor meer informatie, zie de [ API eindpuntgids van de banen van het profielsysteem ](../../profile/api/profile-system-jobs.md). |
+| Geschatte aantal naamruimten van id voor een bepaald segment | De API voor voorvertoning rapporteert nu voor geschatte profielaantallen:<ul><li>Het totale aantal geschatte profielen in een segment voor een bepaalde naamruimte.</li><li>Het totale aantal geschatte profielen in het schema van de Unie van het Profiel voor een bepaalde namespace.</li></ul>Meer leren, verwijs naar de [ API eindpuntgids van de profielvoorproef ](../../profile/api/preview-sample-status.md). |
 
-Voor meer informatie over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, gelieve te beginnen door het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../../profile/home.md) te lezen.
+Voor meer informatie over het Profiel van de Klant in real time, met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, gelieve te beginnen door het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md) te lezen.
 
 ## [!DNL Sources] {#sources}
 
@@ -76,10 +76,10 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Verbeteringen voor Adobe Audience Manager-bronaansluiting | U kunt nu afzonderlijke eerste-partijsegmenten van Audience Manager filteren en selecteren om in Experience Platform in te voeren, en de eerste-partijkenmerken filteren. Zie het leerprogramma op [&#x200B; creërend een bron van Audience Manager schakelaar &#x200B;](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie. |
-| [!DNL Google BigQuery] Verbeteringen aan bronaansluiting | U kunt nu bestanden die groter zijn dan 10 GB in één flowuitvoering opnemen via de [!DNL BigQuery] -bronconnector. Zie het [[!DNL BigQuery]  overzicht van de bronschakelaar &#x200B;](../../sources/connectors/databases/bigquery.md) voor meer informatie. |
-| Ondersteuning voor complexe gegevenstypen voor cloudopslag | U kunt nu complexe gegevenstypen, zoals arrays in JSON-bestanden, opnemen bij gebruik van een bronaansluiting voor cloudopslag. Zie de leerprogramma&#39;s bij het creëren van een dataflow van de wolkenopslag [&#x200B; in UI &#x200B;](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) of [&#x200B; gebruikend  [!DNL Flow Service]  API &#x200B;](../../sources/tutorials/api/collect/cloud-storage.md) voor meer informatie. |
-| Ondersteuning voor service principal key-based authentication for [!DNL Microsoft Dynamics] source | U kunt nu verifiëren aan uw [!DNL Dynamics] rekening gebruikend een de dienstbelangrijkste sleutel als alternatief aan op wachtwoord-gebaseerde authentificatie. Zie het [[!DNL Dynamics]  overzicht van de bronschakelaar &#x200B;](../../sources/connectors/crm/ms-dynamics.md) voor meer informatie. |
-| UI-ondersteuning voor aangepaste scheidingstekens in bronnen voor cloudopslag | U kunt een scheidingsteken van de douanekolom zoals een komma (`,`), lusje (`\t`), of een pijp (`|`) nu plaatsen, om afgebakende dossiers UI te verzamelen. Zie het leerprogramma op [&#x200B; creërend een dataflow met een de bronschakelaar van de wolkenopslag &#x200B;](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor meer informatie |
+| Verbeteringen voor Adobe Audience Manager-bronaansluiting | U kunt nu afzonderlijke eerste-partijsegmenten van Audience Manager filteren en selecteren om in Experience Platform in te voeren, en de eerste-partijkenmerken filteren. Zie het leerprogramma op [ creërend een bron van Audience Manager schakelaar ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie. |
+| [!DNL Google BigQuery] Verbeteringen aan bronaansluiting | U kunt nu bestanden die groter zijn dan 10 GB in één flowuitvoering opnemen via de [!DNL BigQuery] -bronconnector. Zie het [[!DNL BigQuery]  overzicht van de bronschakelaar ](../../sources/connectors/databases/bigquery.md) voor meer informatie. |
+| Ondersteuning voor complexe gegevenstypen voor cloudopslag | U kunt nu complexe gegevenstypen, zoals arrays in JSON-bestanden, opnemen bij gebruik van een bronaansluiting voor cloudopslag. Zie de leerprogramma&#39;s bij het creëren van een dataflow van de wolkenopslag [ in UI ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) of [ gebruikend  [!DNL Flow Service]  API ](../../sources/tutorials/api/collect/cloud-storage.md) voor meer informatie. |
+| Ondersteuning voor service principal key-based authentication for [!DNL Microsoft Dynamics] source | U kunt nu verifiëren aan uw [!DNL Dynamics] rekening gebruikend een de dienstbelangrijkste sleutel als alternatief aan op wachtwoord-gebaseerde authentificatie. Zie het [[!DNL Dynamics]  overzicht van de bronschakelaar ](../../sources/connectors/crm/ms-dynamics.md) voor meer informatie. |
+| UI-ondersteuning voor aangepaste scheidingstekens in bronnen voor cloudopslag | U kunt een scheidingsteken van de douanekolom zoals een komma (`,`), lusje (`\t`), of een pijp (&amp;vert;), nu plaatsen om afgebakende dossiers UI te verzamelen. Zie het leerprogramma op [ creërend een dataflow met een de bronschakelaar van de wolkenopslag ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) voor meer informatie |
 
-Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).
+Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).

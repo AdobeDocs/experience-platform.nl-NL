@@ -4,9 +4,9 @@ title: API-eindpunt voor planningen
 description: Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken één keer per dag automatisch uit te voeren.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2088'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ Planningen zijn een hulpmiddel dat kan worden gebruikt om batch-segmentatietaken
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met schema&#39;s ophalen {#retrieve-list}
 
-U kunt een lijst van alle programma&#39;s voor uw organisatie terugwinnen door een verzoek van de GET tot het `/config/schedules` eindpunt te richten.
+U kunt een lijst van alle programma&#39;s voor uw organisatie terugwinnen door een GET- verzoek aan het `/config/schedules` eindpunt te doen.
 
 **API formaat**
 
@@ -110,14 +110,14 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van programma&#3
 | `children.type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn &quot;batch_segmentation&quot; en &quot;export&quot;. |
 | `children.properties` | Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `children.properties.segments` | Als u `["*"]` gebruikt, worden alle segmenten opgenomen. |
-| `children.schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [&#x200B; formaat van de cron uitdrukking &#x200B;](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. |
+| `children.schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld, &quot;`0 0 1 * *`&quot;betekent dat dit programma bij 1AM elke dag zal lopen. |
 | `children.state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
 +++
 
 ## Een nieuw schema maken {#create}
 
-U kunt een nieuw programma tot stand brengen door een verzoek van de POST aan het `/config/schedules` eindpunt te doen.
+U kunt een nieuw schema tot stand brengen door een POST- verzoek aan het `/config/schedules` eindpunt te doen.
 
 **API formaat**
 
@@ -127,7 +127,7 @@ POST /config/schedules
 
 **Verzoek**
 
-+++ Een voorbeeldverzoek om een programma te maken.
++++ Een voorbeeldverzoek om een programma te maken. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Vereist.** Het type taak als tekenreeks. De twee ondersteunde typen zijn &quot;batch_segmentation&quot; en &quot;export&quot;. |
 | `properties` | **Vereist.** Een object dat aanvullende eigenschappen bevat die gerelateerd zijn aan het schema. |
 | `properties.segments` | **vereist wanneer `type` &quot;batch_segmentation&quot;evenaart.** Met `["*"]` zorgt u ervoor dat alle segmenten worden opgenomen. |
-| `schedule` | *Facultatief.* Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [&#x200B; formaat van de cron uitdrukking &#x200B;](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. <br><br> als dit koord niet wordt geleverd, zal een systeem-geproduceerd programma automatisch worden geproduceerd. |
+| `schedule` | *Facultatief.* Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld, &quot;`0 0 1 * *`&quot;betekent dat dit programma bij 1AM elke dag zal lopen. <br><br> als dit koord niet wordt geleverd, zal een systeem-geproduceerd programma automatisch worden geproduceerd. |
 | `state` | *Facultatief.* Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn &quot;actief&quot; en &quot;inactief&quot;. De status wordt standaard ingesteld op &quot;inactief&quot;. |
 
 +++
@@ -195,7 +195,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gec
 
 ## Een specifiek schema ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifiek programma terugwinnen door een verzoek van de GET tot het `/config/schedules` eindpunt te richten en identiteitskaart van het programma te verstrekken u in de verzoekweg wenst terug te winnen.
+U kunt gedetailleerde informatie over een specifiek programma terugwinnen door een GET- verzoek aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u in de verzoekweg wenst terug te winnen.
 
 **API formaat**
 
@@ -209,7 +209,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Verzoek**
 
-+++ Een steekproefverzoek om een programma terug te winnen.
++++ Een steekproefverzoek om een programma terug te winnen. 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
@@ -257,16 +257,16 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 | `type` | Het type taak als tekenreeks. De twee ondersteunde typen zijn `batch_segmentation` en `export` . |
 | `properties` | Een object dat aanvullende eigenschappen bevat die verwant zijn aan het schema. |
 | `properties.segments` | Als u `["*"]` gebruikt, worden alle segmenten opgenomen. |
-| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [&#x200B; formaat van de cron uitdrukking &#x200B;](#appendix). In dit voorbeeld betekent &quot;0 0 1 * *&quot;dat dit programma om 1AM elke dag zal lopen. |
+| `schedule` | Een tekenreeks met het taakschema. Taken kunnen slechts eenmaal per dag worden uitgevoerd, wat betekent dat u een taak niet meer dan één keer kunt plannen gedurende een periode van 24 uur. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix). In dit voorbeeld, &quot;`0 0 1 * *`&quot;betekent dat dit programma bij 1AM elke dag zal lopen. |
 | `state` | Een tekenreeks die de staat van het schema bevat. De twee ondersteunde statussen zijn `active` en `inactive` . De status wordt standaard ingesteld op `inactive` . |
 
 +++
 
 ## Details bijwerken voor een specifiek schema {#update}
 
-U kunt een specifiek programma bijwerken door een verzoek van PATCH tot het `/config/schedules` eindpunt te richten en identiteitskaart van het programma te verstrekken u probeert om in de verzoekweg bij te werken.
+U kunt een specifiek programma bijwerken door een PATCH-aanvraag in te dienen bij het `/config/schedules` -eindpunt en de id op te geven van het schema dat u probeert bij te werken in het aanvraagpad.
 
-Het verzoek van de PATCH staat u toe om of de [&#x200B; staat &#x200B;](#update-state) of het [&#x200B; bouwplan &#x200B;](#update-schedule) voor een individueel programma bij te werken.
+Het verzoek van PATCH staat u toe om of de [ staat ](#update-state) of het [ bouwplan ](#update-schedule) voor een individueel programma bij te werken.
 
 **API formaat**
 
@@ -282,7 +282,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 >[!TAB  de planningsstaat van de Update ]
 
-U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de eigenschap `path` als `/state` en stelt u de eigenschap `value` in op `active` of `inactive` . Voor meer informatie over Reparatie JSON, te lezen gelieve de [&#128279;](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0&rbrace; JSON &lbrace;.
+U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de eigenschap `path` als `/state` en stelt u de eigenschap `value` in op `active` of `inactive` . Voor meer informatie over Reparatie JSON, te lezen gelieve de [ documentatie van het Reparatie 0} JSON {.](https://datatracker.ietf.org/doc/html/rfc6902)
 
 **Verzoek**
 
@@ -317,7 +317,7 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
 >[!TAB  Update bouwt programma ]
 
-U kunt een JSON-reparatiebewerking gebruiken om het uitsnijdschema bij te werken. Als u het schema wilt bijwerken, declareert u de eigenschap `path` als `/schedule` en stelt u de eigenschap `value` in op een geldig uitsnijdschema. Voor meer informatie over Reparatie JSON, te lezen gelieve de [&#128279;](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0&rbrace; JSON &lbrace;.  Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [&#x200B; formaat van de cron uitdrukking &#x200B;](#appendix).
+U kunt een JSON-reparatiebewerking gebruiken om het uitsnijdschema bij te werken. Als u het schema wilt bijwerken, declareert u de eigenschap `path` als `/schedule` en stelt u de eigenschap `value` in op een geldig uitsnijdschema. Voor meer informatie over Reparatie JSON, te lezen gelieve de [ documentatie van het Reparatie 0} JSON {. ](https://datatracker.ietf.org/doc/html/rfc6902) Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix).
 
 >[!ENDTABS]
 
@@ -354,7 +354,7 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
 ## Een specifiek schema verwijderen
 
-U kunt verzoeken om een specifiek programma te schrappen door een verzoek van DELETE aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u wenst om in de verzoekweg te schrappen.
+U kunt verzoeken om een specifiek programma te schrappen door een DELETE- verzoek aan het `/config/schedules` eindpunt te doen en identiteitskaart van het programma te verstrekken u wenst om in de verzoekweg te schrappen.
 
 **API formaat**
 
@@ -434,10 +434,10 @@ In de volgende tabel ziet u voorbeelden van tekenreeksen voor snijexpressie en g
 | Uitdrukking | Toelichting |
 | ---------- | ----------- |
 | `0 0 13 * * ?` | Het evenement gaat elke dag om 13.00 uur branden. |
-| `0 30 9 * * ? 2022` | Het evenement zal elke dag om 9.30 uur in 2022 plaatsvinden. |
-| `0 * 18 * * ?` | Het evenement wordt elke minuut gestart, vanaf 18.00 uur tot 18.59 uur, elke dag. |
+| `0 30 9 * * ? 2022` | De gebeurtenis zal elke dag om 9 :30AM in het jaar 2022 branden. |
+| `0 * 18 * * ?` | De gebeurtenis zal elke minuut in brand steken, beginnend bij 6 PM en eindigend bij 6 :59PM, elke dag. |
 | `0 0/10 17 * * ?` | De gebeurtenis wordt elke 10 minuten gestart, van 17.00 tot 18.00 uur, elke dag. |
-| `0 13,38 5 ? 6 WED` | Het evenement gaat elke woensdag om 5.13 en om 5.38 uur van start. |
-| `0 30 12 ? * 4#3` | Het evenement gaat elke maand om 12:30 uur branden op de derde woensdag. |
-| `0 30 12 ? * 6L` | Het evenement wordt elke maand om 12:30 uur om de laatste vrijdag afgespeeld. |
-| `0 45 11 ? * MON-THU` | Het evenement gaat elke maandag, dinsdag, woensdag en donderdag om 11.45 uur branden. |
+| `0 13,38 5 ? 6 WED` | Het evenement gaat elke woensdag om 5 :13AM en 5 :38AM branden. |
+| `0 30 12 ? * 4#3` | De gebeurtenis zal om 12 :30PM op de derde Woensdag elke maand branden. |
+| `0 30 12 ? * 6L` | De gebeurtenis zal om 12 :30PM op de laatste Vrijdag van elke maand in brand steken. |
+| `0 45 11 ? * MON-THU` | De gebeurtenis zal om 11 :45AM elke maandag, Dinsdag, Woensdag, en Donderdag branden. |

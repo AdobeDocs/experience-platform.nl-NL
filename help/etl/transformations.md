@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;etl;ETL;etl transformaties;ETL-transformaties
+keywords: Experience Platform;home;populaire onderwerpen;etl;ETL;etl transformaties;ETL-transformaties
 solution: Experience Platform
 title: Voorbeeld-ETL-transformaties
 description: In dit artikel worden de volgende voorbeeldtransformaties getoond die een ETL-ontwikkelaar (extract, transform, load) kan tegenkomen.
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -19,10 +19,10 @@ In dit artikel worden de volgende voorbeeldtransformaties getoond die een ETL-on
 
 ### Voorbeeldbestanden
 
-Voorbeelden van CSV- en JSON-bestanden zijn beschikbaar in het openbare, door de Adobe bijgehouden rapport [!DNL GitHub] over de ETL-referentie:
+Voorbeelden van CSV- en JSON-bestanden zijn beschikbaar in het openbare antwoord [!DNL GitHub] in de naslaggids voor ETL dat door Adobe wordt onderhouden:
 
-- [&#x200B; CRM_profiles.csv &#x200B;](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [&#x200B; CRM_profiles.json &#x200B;](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [ CRM_profiles.csv ](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [ CRM_profiles.json ](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### Voorbeeld-CSV
 
@@ -42,6 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Toewijzing
 
 De toewijzingsvereisten voor de CRM-gegevens worden in de volgende tabel uiteengezet en omvatten de volgende transformaties:
+
 - Identiteitskolommen van `identityMap` -eigenschappen
 - Geboortedatum (Geboortedatum) tot jaar en maand
 - Tekenreeksen naar dubbele of korte gehele getallen.
@@ -54,10 +55,10 @@ De toewijzingsvereisten voor de CRM-gegevens worden in de volgende tabel uiteeng
 | GENDER | person.gender | Het geslacht transformeren als overeenkomende persoon.genumwaarde geslacht |
 | DOB | person.bornDayAndMonth: &quot;MM-DD&quot;<br/> person.bornDate: &quot;JJJJ-MM-DD&quot;<br/> person.bornYear: JJJJJ | Transform geboorteDayAndMonth als koord <br/> TransformDate als koord <br/> TransformYear als korte int |
 | EMAIL | personalEmail.address | Kopiëren als tekenreeks |
-| CRMID | identityMap.CRMID [{&quot;id&quot;:x, primair:false}] | Kopiëren als tekenreeks naar CRMID-array in identityMap en instellen Primair als onwaar |
-| ECID | identityMap.ECID [{&quot;id&quot;:x, primair: false}] | Kopiëren als tekenreeks naar eerste item in ECID-array in identityMap en instellen Primair als onwaar |
-| LOYALTYID | identityMap.LOYALTYID [{&quot;id&quot;:x, primary:true}] | Kopiëren als tekenreeks naar LOYALTYID-array in identityMap en Primair instellen als true |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Kopiëren als tekenreeks naar tweede item in ECID-array in identityMap en instellen Primair op Onwaar |
+| CRMID | identityMap.CRMID [{&quot;id&quot;:x, primair :false ] | Kopiëren als tekenreeks naar CRMID-array in identityMap en instellen Primair als onwaar |
+| ECID | identityMap.ECID [{&quot;id&quot;:x, primair: false} ] | Kopiëren als tekenreeks naar eerste item in ECID-array in identityMap en instellen Primair als onwaar |
+| LOYALTYID | identityMap.LOYALTYID [{&quot;id&quot;:x, primair :true ] | Kopiëren als tekenreeks naar LOYALTYID-array in identityMap en Primair instellen als true |
+| ECID2 | identityMap.ECID [{&quot;id&quot;:x, primair :false ] | Kopiëren als tekenreeks naar tweede item in ECID-array in identityMap en instellen Primair op Onwaar |
 | TELEFOON | homePhone.number | Kopiëren als tekenreeks |
 | STREET | homeAddress.street1 | Kopiëren als tekenreeks |
 | STAD | homeAddress.city | Kopiëren als tekenreeks |
@@ -284,9 +285,9 @@ De toewijzingsvereisten voor de array van identiteiten worden in de volgende tab
 
 | Identiteitsveld | identityMap-veld | Gegevenstype |
 | -------------- | ----------------- | --------- |
-| identiteiten [ 0 ].id | identityMap [ E-mail ][{"id"}] | kopiëren als tekenreeks |
-| identiteiten [ 1 ] .id | identityMap [ CRMID ][{"id"}] | kopiëren als tekenreeks |
-| identiteiten [ 2 ].id | identityMap [ LOYALTYID ][{"id"}] | kopiëren als tekenreeks |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | kopiëren als tekenreeks |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | kopiëren als tekenreeks |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | kopiëren als tekenreeks |
 
 ### Uitvoer XDM
 

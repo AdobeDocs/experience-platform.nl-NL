@@ -2,9 +2,9 @@
 title: Bronfoutberichten
 description: Leer over de foutenmeldingen die u wanneer het gebruiken van de Dienst van de Stroom voor bronnen kunt ontmoeten.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3188'
+source-wordcount: '3057'
 ht-degree: 0%
 
 ---
@@ -103,18 +103,18 @@ Dit document bevat een catalogus met foutberichten, beschrijvingen en voorgestel
 | `1339-400` | Ongeldig verzoek | Het formaat van organisatie= {imsOrg} die in het verzoek wordt verstrekt is ongeldig. Geef een geldige organisatie-id op en probeer het opnieuw. |
 | `1340-400` | Ongeldig verzoek | Er is een fout opgetreden tijdens het parseren van {time} . Controleer de tijdnotatie in de aanvraag en probeer het opnieuw. |
 | `1341-400` | Ongeldig verzoek | De geleverde ODI Json is leeg. Geef geldige ODI Json op en probeer het opnieuw. |
-| `1342-400` | Ongeldig verzoek | In het segment &#39;dls:folder&#39; in &#39;odi.json&#39; ontbreken definities. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
-| `1343-400` | Ongeldig verzoek | In de segmenten &#39;dls:entityReferences&#39; en &#39;dls:partitieSpec&#39; in &#39;odi.json&#39; ontbreken beide definities. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
-| `1344-400` | Ongeldig verzoek | De definitie voor &#39;dls:partitieSpec&#39; in &#39;odi.json&#39; is ongeldig omdat er meer dan één partitieSpecs zijn gevonden. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
-| `1345-400` | Ongeldig verzoek | Definities ontbreken in 1 of meer segmenten in paden: &#39;dls:partitieSpec/dls:fileFormat&#39;, &#39;dls:partitieSpec/dls:partitieTemplate&#39;,&#39;dls:partitieSpec/dls:fileFormat/@type&#39;, &#39;dls:partitieSpec/dls:fileFormat/dls:csvDelimiters&#39; in &#39;odi.js&#39; zoon&quot;. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
-| `1346-400` | Ongeldig verzoek | De definitie &#39;@type&#39; in &#39;dls:fileFormat&#39; in &#39;odi.json&#39; is ongeldig. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
-| `1347-400` | Ongeldig verzoek | De definitie dls:csvDelimiters&#39; in &#39;odi.json&#39; wordt niet ondersteund. De gesteunde csvDelimiters zijn: [&#39;, ]. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
-| `1348-400` | Ongeldig verzoek | Er is een fout opgetreden bij het deserialiseren van &#39;dls:entityReferences&#39;. Controleer of de gegevens een geldige indeling hebben en probeer het opnieuw. |
+| `1342-400` | Ongeldig verzoek | Het segment &#39;dls :folder&#39; in &#39;odi.json&#39; bevat geen definities. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
+| `1343-400` | Ongeldig verzoek | De segmenten &#39;dls :entityReferences&#39; en &#39;dls :partitionSpec&#39; in &#39;odi.json&#39; ontbreken beide in definities. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
+| `1344-400` | Ongeldig verzoek | De definitie voor &#39;dls :partitionSpec&#39; in &#39;odi.json&#39; is ongeldig omdat er meer dan één partitieSpecs zijn gevonden. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
+| `1345-400` | Ongeldig verzoek | De definities ontbreken in 1 of meer segmenten in wegen: &quot;dls :partitionSpec/dls :fileFormat&#39;, &quot;dls :partitionSpec/dls :partitionTemplate&#39;, &quot;dls :partitionSpec/dls :fileFormat/@type&#39;, &quot;dls :partitionSpec/dls :fileFormat/dls :csvDelimiters&quot;in &quot;odi.json&quot;. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
+| `1346-400` | Ongeldig verzoek | De definitie &#39;@type&#39; in &#39;dls :fileFormat&#39; in &#39;odi.json&#39; is ongeldig. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
+| `1347-400` | Ongeldig verzoek | De definitie dls :csvDelimiters&#39; in &#39;odi.json&#39; wordt niet ondersteund. De gesteunde csvDelimiters zijn: [&#39;, ]. Geef de juiste definities op in &#39;odi.json&#39; en probeer het opnieuw. |
+| `1348-400` | Ongeldig verzoek | Er is een fout opgetreden bij het deserialiseren van &#39;dls :entityReferences&#39;. Controleer of de gegevens een geldige indeling hebben en probeer het opnieuw. |
 | `1349-400` | Ongeldig verzoek | De opgegeven filterparams zijn ongeldig. Geef geldige filterparams op en probeer het opnieuw. |
 | `1350-400` | Ongeldig verzoek | Er is geen operator opgegeven voor filter aan de bron. Geef een geldige filteraanvraag op met de juiste operator en probeer het opnieuw. |
 | `1351-400` | Ongeldig verzoek | De opgegeven operator {operator} wordt niet ondersteund voor filter aan de bron voor deze connector. Geef een geldige operator op en probeer het opnieuw. |
 | `1352-400` | Ongeldig verzoek | De opgegeven operator {operator} kan niet worden toegewezen aan een ondersteunde native operator voor {ql} . Geef een geldige operator op en probeer het opnieuw. |
-| `1353-400` | Ongeldig verzoek | Het filter aan de bron wordt nog niet ondersteund voor {connectorType} -connector. Raadpleeg de ondersteunde connectors in de documentatie: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=nl-NL. |
+| `1353-400` | Ongeldig verzoek | Het filter aan de bron wordt nog niet ondersteund voor {connectorType} -connector. Raadpleeg de ondersteunde connectors in de documentatie: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
 | `1354-400` | Ongeldig verzoek | De querytaal {ql} wordt nog niet ondersteund voor filter aan de bron. Geef een geldige querytaal op en probeer het opnieuw. |
 | `1355-400` | Ongeldig verzoek | Het opgegeven filtertype is ongeldig. Het ondersteunde filtertype is: PQL. Geef een geldig filtertype op en probeer het opnieuw. |
 | `1356-400` | Ongeldig verzoek | De opgegeven filterindeling is ongeldig. De ondersteunde filterindeling is: pql/json. Geef een geldige filterindeling op en probeer het opnieuw. |

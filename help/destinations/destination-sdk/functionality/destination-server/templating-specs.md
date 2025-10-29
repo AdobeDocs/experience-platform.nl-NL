@@ -2,7 +2,7 @@
 description: Leer hoe te om de HTTP- verzoeken te formatteren die naar uw eindpunt worden verzonden. Gebruik het /authoring/bestemmings-servers eindpunt om bestemmings server te vormen die specs in Adobe Experience Platform Destination SDK templating.
 title: Sjabloonspecificaties voor bestemmingen die zijn gemaakt met Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -17,7 +17,7 @@ In een sjabloonspecificatie kunt u definiëren hoe u profielkenmerkvelden transf
 
 Sjabloonspecificaties maken deel uit van de configuratie van de doelserver voor realtime (streaming) doelen.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [&#x200B; configuratieopties &#x200B;](../configuration-options.md) documentatie of zie de gids op hoe te [&#x200B; Destination SDK gebruiken om een het stromen bestemming &#x200B;](../../guides/configure-destination-instructions.md#create-server-template-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een het stromen bestemming ](../../guides/configure-destination-instructions.md#create-server-template-configuration) te vormen.
 
 U kunt de malplaatjespecs voor uw bestemming via het `/authoring/destination-servers` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -39,9 +39,9 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ## Een sjabloonspecificatie configureren {#configure-template-spec}
 
-Adobe gebruikt een malplaatjetaal gelijkend op [&#x200B; Jinja &#x200B;](https://jinja.palletsprojects.com/en/2.11.x/) om de gebieden van het schema XDM in een formaat om te zetten dat door uw bestemming wordt gesteund.
+Adobe gebruikt een malplaatjetaal gelijkend op [ Jinja ](https://jinja.palletsprojects.com/en/2.11.x/) om de gebieden van het schema XDM in een formaat om te zetten dat door uw bestemming wordt gesteund.
 
-![&#x200B; benadrukte configuratie van het Malplaatje &#x200B;](../../assets/functionality/destination-server/template-configuration.png)
+![ benadrukte configuratie van het Malplaatje ](../../assets/functionality/destination-server/template-configuration.png)
 
 Ga voor meer informatie over de transformatie naar de onderstaande koppelingen:
 
@@ -50,7 +50,7 @@ Ga voor meer informatie over de transformatie naar de onderstaande koppelingen:
 
 >[!TIP]
 >
->Adobe biedt het hulpmiddel van de a [&#x200B; ontwikkelaar &#x200B;](../../testing-api/streaming-destinations/create-template.md) aan dat u helpt een malplaatje van de berichttransformatie creëren en testen.
+>Adobe biedt het hulpmiddel van de a [ ontwikkelaar ](../../testing-api/streaming-destinations/create-template.md) aan dat u helpt een malplaatje van de berichttransformatie creëren en testen.
 
 Zie onder een voorbeeld van een HTTP-aanvraagsjabloon, samen met beschrijvingen van elke individuele parameter.
 
@@ -71,8 +71,8 @@ Zie onder een voorbeeld van een HTTP-aanvraagsjabloon, samen met beschrijvingen 
 |---|---|---|
 | `httpMethod` | String | *Vereist.* De methode die Adobe gebruikt voor aanroepen van uw server. Ondersteunde methoden: `GET`, `PUT`, `POST`, `DELETE`, `PATCH` . |
 | `templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
-| `value` | String | *Vereist.* Deze tekenreeks is de tekenescapeversie van de sjabloon die de HTTP-aanvragen die door Experience Platform worden verzonden opmaakt in de indeling die door uw doel wordt verwacht. <br> voor informatie over hoe te om het malplaatje te schrijven, lees de sectie op [&#x200B; gebruikend het templating &#x200B;](message-format.md#using-templating). <br> voor meer informatie over karakter het ontsnappen, verwijs naar de [&#x200B; norm RFC JSON, sectie zeven &#x200B;](https://tools.ietf.org/html/rfc8259#section-7). <br> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [&#x200B; profielattributen &#x200B;](message-format.md#attributes) transformatie. |
-| `contentType` | String | *Vereist.* Het inhoudstype dat uw server accepteert. Afhankelijk van welk type van output uw transformatiemalplaatje produceert, kan dit om het even welke gesteunde [&#x200B; types van de toepassingsinhoud van HTTP &#x200B;](https://www.iana.org/assignments/media-types/media-types.xhtml#application) zijn. In de meeste gevallen moet deze waarde worden ingesteld op `application/json` . |
+| `value` | String | *Vereist.* Deze tekenreeks is de tekenescapeversie van de sjabloon die de HTTP-aanvragen die door Experience Platform worden verzonden opmaakt in de indeling die door uw doel wordt verwacht. <br> voor informatie over hoe te om het malplaatje te schrijven, lees de sectie op [ gebruikend het templating ](message-format.md#using-templating). <br> voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). <br> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ profielattributen ](message-format.md#attributes) transformatie. |
+| `contentType` | String | *Vereist.* Het inhoudstype dat uw server accepteert. Afhankelijk van welk type van output uw transformatiemalplaatje produceert, kan dit om het even welke gesteunde [ types van de toepassingsinhoud van HTTP ](https://www.iana.org/assignments/media-types/media-types.xhtml#application) zijn. In de meeste gevallen moet deze waarde worden ingesteld op `application/json` . |
 
 {style="table-layout:auto"}
 

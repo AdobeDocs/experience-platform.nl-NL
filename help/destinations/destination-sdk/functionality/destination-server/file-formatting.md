@@ -1,8 +1,8 @@
 ---
-description: Leer hoe te om dossier het formatteren opties voor op dossier-gebaseerde bestemmingen te vormen die met Adobe Experience Platform Destination SDK, via het &grave;/bestemming-servers' eindpunt worden gebouwd.
+description: Leer hoe te om dossier het formatteren opties voor op dossier-gebaseerde bestemmingen te vormen die met Adobe Experience Platform Destination SDK, via het `/bestemmings-servers' eindpunt worden gebouwd.
 title: Configuratie bestandsindeling
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 Destination SDK ondersteunt een flexibele reeks functies die u kunt configureren op basis van uw integratiebehoeften. Een van deze functies is de ondersteuning voor [!DNL CSV] bestandsindeling.
 
-Wanneer u op een bestand gebaseerde doelen maakt via Destination SDK, kunt u definiëren hoe de geëxporteerde CSV-bestanden moeten worden opgemaakt. U kunt vele opmaakopties aanpassen, zoals, maar niet beperkt tot:
+Wanneer u op bestanden gebaseerde doelen maakt via Destination SDK, kunt u definiëren hoe de geëxporteerde CSV-bestanden moeten worden opgemaakt. U kunt vele opmaakopties aanpassen, zoals, maar niet beperkt tot:
 
 * Of het CSV-bestand een header moet bevatten;
 * Welk karakter voor het citeren van waarden te gebruiken;
 * Hoe zouden lege waarden eruit moeten zien.
 
-Afhankelijk van uw bestemmingsconfiguratie, zullen de gebruikers bepaalde opties in UI zien wanneer het verbinden met een op dossier-gebaseerd doel. U kunt zien hoe deze opties in het [&#x200B; dossier het formatteren opties voor op dossier-gebaseerde bestemmingen &#x200B;](../../../ui/batch-destinations-file-formatting-options.md) documentatie kijken.
+Afhankelijk van uw bestemmingsconfiguratie, zullen de gebruikers bepaalde opties in UI zien wanneer het verbinden met een op dossier-gebaseerd doel. U kunt zien hoe deze opties in het [ dossier het formatteren opties voor op dossier-gebaseerde bestemmingen ](../../../ui/batch-destinations-file-formatting-options.md) documentatie kijken.
 
 
 De het formatteren van het dossier montages maken deel uit van de configuratie van de bestemmingsserver voor op dossier-gebaseerde bestemmingen.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [&#x200B; configuratieopties &#x200B;](../configuration-options.md) documentatie of zie de gids op hoe te [&#x200B; gebruiken Destination SDK om een op dossier-gebaseerde bestemming &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
 
 U kunt de opties voor bestandsindeling configureren via het eindpunt `/authoring/destination-servers` . Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -48,11 +48,11 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 ## Ondersteunde parameters {#supported-parameters}
 
-U kunt verschillende eigenschappen van de geëxporteerde bestanden aanpassen aan de vereisten van het bestandsontvangstsysteem van uw bestemming, zodat u de bestanden die u van het Experience Platform hebt ontvangen optimaal kunt lezen en interpreteren.
+U kunt verschillende eigenschappen van de geëxporteerde bestanden aanpassen aan de vereisten van het bestandsontvangstsysteem van uw bestemming, zodat u de bestanden die u van Experience Platform hebt ontvangen, optimaal kunt lezen en interpreteren.
 
 >[!NOTE]
 >
->CSV-opties worden alleen ondersteund bij het exporteren van CSV-bestanden. De sectie `fileConfigurations` is niet verplicht bij het instellen van een nieuwe doelserver. Als u om het even welke waarden in API vraag voor de opties CSV niet overgaat, zullen de standaarddegenen van de [&#x200B; verwijzingslijst verder onder &#x200B;](#file-formatting-reference-and-example) worden gebruikt.
+>CSV-opties worden alleen ondersteund bij het exporteren van CSV-bestanden. De sectie `fileConfigurations` is niet verplicht bij het instellen van een nieuwe doelserver. Als u om het even welke waarden in API vraag voor de opties CSV niet overgaat, zullen de standaarddegenen van de [ verwijzingslijst verder onder ](#file-formatting-reference-and-example) worden gebruikt.
 
 
 ## CSV-opties waarbij gebruikers geen configuratieopties kunnen selecteren {#file-configuration-templating-none}
@@ -129,7 +129,7 @@ In het onderstaande configuratievoorbeeld zijn alle CSV-opties vooraf gedefiniee
 
 ## CSV-opties waar gebruikers configuratieopties kunnen selecteren {#file-configuration-templating-pebble}
 
-In het onderstaande configuratievoorbeeld zijn geen van de CSV-opties vooraf gedefinieerd. De `value` in elk van de `csvOptions` -parameters wordt geconfigureerd in een overeenkomstig gegevensveld van de klant via het `/destinations` -eindpunt (bijvoorbeeld [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) voor de `quote` -optie voor bestandsindeling) en gebruikers kunnen de interface van het Experience Platform gebruiken om een keuze te maken tussen de verschillende opties die u configureert in het desbetreffende gegevensveld van de klant. U kunt zien hoe deze opties in het [&#x200B; dossier het formatteren opties voor op dossier-gebaseerde bestemmingen &#x200B;](../../../ui/batch-destinations-file-formatting-options.md) documentatie kijken.
+In het onderstaande configuratievoorbeeld zijn geen van de CSV-opties vooraf gedefinieerd. De `value` in elk van de `csvOptions` -parameters wordt geconfigureerd in een overeenkomstig gegevensveld van de klant via het `/destinations` -eindpunt (bijvoorbeeld [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) voor de `quote` -optie voor bestandsindeling) en gebruikers kunnen de Experience Platform-interface gebruiken om een keuze te maken tussen de verschillende opties die u configureert in het desbetreffende gegevensveld van de klant. U kunt zien hoe deze opties in het [ dossier het formatteren opties voor op dossier-gebaseerde bestemmingen ](../../../ui/batch-destinations-file-formatting-options.md) documentatie kijken.
 
 ```json
 {
@@ -177,13 +177,13 @@ In het onderstaande configuratievoorbeeld zijn geen van de CSV-opties vooraf ged
 
 >[!TIP]
 >
->De CSV dossier die opties formatteren hieronder worden beschreven zijn ook gedocumenteerd in de [&#x200B; gids van de Vonk van de Apache voor CSV- dossiers &#x200B;](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). De onderstaande beschrijvingen zijn ontleend aan de gids voor Apache Spark.
+>De CSV dossier die opties formatteren hieronder worden beschreven zijn ook gedocumenteerd in de [ gids van de Vonk van de Apache voor CSV- dossiers ](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). De onderstaande beschrijvingen zijn ontleend aan de gids voor Apache Spark.
 
-Hieronder ziet u een volledige verwijzing naar alle beschikbare opmaakopties voor bestanden in Destination SDK, naast uitvoervoorbeelden voor elke optie.
+Hieronder vindt u een volledige verwijzing naar alle beschikbare opmaakopties voor bestanden in Destination SDK, naast uitvoervoorbeelden voor elke optie.
 
 | Veld | Vereist/optioneel | Beschrijving | Standaardwaarde | Voorbeeld van uitvoer 1 | Voorbeeld van uitvoer 2 |
 |---|---|---|---|---|---|
-| `templatingStrategy` | Vereist | Voor elke optie voor bestandsindeling die u configureert, moet u de parameter `templatingStrategy` toevoegen. Deze parameter kan twee waarden hebben: <br><ul><li>`NONE`: gebruik deze waarde als u niet van plan bent om gebruikers toe te staan te selecteren tussen verschillende waarden voor een configuratie. Zie [&#x200B; deze configuratie &#x200B;](#file-configuration-templating-none) voor een voorbeeld waar dossier het formatteren opties vast zijn.</li><li>`PEBBLE_V1`: gebruik deze waarde als u wilt dat gebruikers een keuze kunnen maken tussen verschillende waarden voor een configuratie. In dit geval, moet u opstelling ook een overeenkomstig gebied van klantengegevens in de `/destination` eindpuntconfiguratie, om de diverse opties aan gebruikers in UI te oppervlakte. Zie [&#x200B; deze configuratie &#x200B;](#file-configuration-templating-pebble) voor een voorbeeld waar de gebruikers tussen verschillende waarden voor dossier het formatteren opties kunnen selecteren.</li></ul> | - | - | - |
+| `templatingStrategy` | Vereist | Voor elke optie voor bestandsindeling die u configureert, moet u de parameter `templatingStrategy` toevoegen. Deze parameter kan twee waarden hebben: <br><ul><li>`NONE`: gebruik deze waarde als u niet van plan bent om gebruikers toe te staan te selecteren tussen verschillende waarden voor een configuratie. Zie [ deze configuratie ](#file-configuration-templating-none) voor een voorbeeld waar dossier het formatteren opties vast zijn.</li><li>`PEBBLE_V1`: gebruik deze waarde als u wilt dat gebruikers een keuze kunnen maken tussen verschillende waarden voor een configuratie. In dit geval, moet u opstelling ook een overeenkomstig gebied van klantengegevens in de `/destination` eindpuntconfiguratie, om de diverse opties aan gebruikers in UI te oppervlakte. Zie [ deze configuratie ](#file-configuration-templating-pebble) voor een voorbeeld waar de gebruikers tussen verschillende waarden voor dossier het formatteren opties kunnen selecteren.</li></ul> | - | - | - |
 | `compression.value` | Optioneel | Compressiecodec die moet worden gebruikt bij het opslaan van gegevens naar een bestand. Ondersteunde waarden: `none`, `bzip2`, `gzip`, `lz4` en `snappy` . | `none` | - | - |
 | `fileType.value` | Optioneel | Hiermee geeft u de indeling voor het uitvoerbestand op. Ondersteunde waarden: `csv`, `parquet` en `json` . | `csv` | - | - |
 | `csvOptions.quote.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`* . Hiermee stelt u één teken in dat wordt gebruikt voor het escape-teken van geciteerde waarden, waarbij het scheidingsteken deel kan uitmaken van de waarde. | `null` | Voorbeeld van standaardwaarde: `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | Aangepast voorbeeld: `quote.value: "\""` —> `male,"John,LastName"` |
@@ -199,8 +199,8 @@ Hieronder ziet u een volledige verwijzing naar alle beschikbare opmaakopties voo
 | `csvOptions.timestampFormat.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`* . Stelt de tekenreeks in die een tijdstempelindeling aangeeft. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`* . Stelt één teken in dat wordt gebruikt voor escape voor het aanhalingsteken. | `\` als de escape- en aanhalingstekens verschillend zijn. `\0` wanneer het escape- en aanhalingsteken hetzelfde zijn. | - | - |
 | `csvOptions.emptyValue.value` | Optioneel | *Alleen voor`"fileType.value": "csv"`* . Stelt de tekenreeksrepresentatie in van een lege waarde. | `""` | `"emptyValue":""` —> `male,"",John` | `"emptyValue":"empty"` —> `male,empty,John` |
-| `maxFileRowCount` | Optioneel | Hiermee geeft u het maximale aantal rijen per geëxporteerd bestand op tussen 1.000.000 en 10.000.000 rijen. | 5.000.000 |
-| `includeFileManifest` | Optioneel | Hiermee schakelt u ondersteuning in voor het exporteren van een bestandmanifest samen met het exporteren van het bestand. Het manifest-JSON-bestand bevat informatie over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Bekijk a [&#x200B; steekproef manifestdossier &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden: <ul><li>`flowRunId`: De [&#x200B; dataflow looppas &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.</li><li>`scheduledTime`: De tijd in UTC toen het bestand werd geëxporteerd. </li><li>`exportResults.sinkPath`: Het pad in uw opslaglocatie waar het geëxporteerde bestand is opgeslagen. </li><li>`exportResults.name`: De naam van het geëxporteerde bestand.</li><li>`size`: De grootte van het geëxporteerde bestand, in bytes.</li></ul> |
+| `maxFileRowCount` | Optioneel | Hiermee geeft u het maximale aantal rijen per geëxporteerd bestand op tussen 1.000.000 en 10.000.000 rijen. | 5.000.000 | - | - |
+| `includeFileManifest` | Optioneel | Hiermee schakelt u ondersteuning in voor het exporteren van een bestandmanifest samen met het exporteren van het bestand. Het manifest-JSON-bestand bevat informatie over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Bekijk a [ steekproef manifestdossier ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden: <ul><li>`flowRunId`: De [ dataflow looppas ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.</li><li>`scheduledTime`: De tijd in UTC toen het bestand werd geëxporteerd. </li><li>`exportResults.sinkPath`: Het pad in uw opslaglocatie waar het geëxporteerde bestand is opgeslagen. </li><li>`exportResults.name`: De naam van het geëxporteerde bestand.</li><li>`size`: De grootte van het geëxporteerde bestand, in bytes.</li></ul> | - | - |
 
 {style="table-layout:auto"}
 
@@ -210,6 +210,6 @@ Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben hoe het d
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere componenten van de doelserver:
 
-* [Server specs voor bestemmingen die met Destination SDK worden gecreeerd](server-specs.md)
+* [Serverspecificaties voor doelen die met Destination SDK zijn gemaakt](server-specs.md)
 * [Sjabloonspecificaties](templating-specs.md)
 * [Berichtindeling](message-format.md)

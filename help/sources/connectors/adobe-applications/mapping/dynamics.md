@@ -1,8 +1,8 @@
 ---
-title: Toewijzingsvelden voor Microsoft-dynamiek
-description: De onderstaande tabellen bevatten de toewijzingen tussen de bronvelden van Microsoft Dynamics en de bijbehorende XDM-velden.
+title: Microsoft Dynamics-toewijzingsvelden
+description: De onderstaande tabellen bevatten de toewijzingen tussen Microsoft Dynamics-bronvelden en de bijbehorende XDM-velden.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -17,44 +17,44 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 
 | Source-veld | Doel XDM-veld | Notities |
 | --- | --- | --- |
-| `address1_addressid` | `workAddress._id` |
-| `address1_city` | `workAddress.city` |
-| `address1_country` | `workAddress.country` |
-| `address1_county` | `workAddress.stateProvince` |
-| `address1_latitude` | `workAddress._schema.latitude` |
-| `address1_line1` | `workAddress.street1` |
-| `address1_line2` | `workAddress.street2` |
-| `address1_line3` | `workAddress.street3` |
-| `address1_longitude` | `workAddress._schema.longitude` |
-| `address1_postalcode` | `workAddress.postalCode` |
-| `address1_postofficebox` | `workAddress.postOfficeBox` |
-| `address1_stateorprovince` | `workAddress.state` |
-| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |
-| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
-| `birthdate` | `person.birthDate` |
-| `"Dynamics"` | `b2b.personKey.sourceType` |
+| `address1_addressid` | `workAddress._id` |  |
+| `address1_city` | `workAddress.city` |  |
+| `address1_country` | `workAddress.country` |  |
+| `address1_county` | `workAddress.stateProvince` |  |
+| `address1_latitude` | `workAddress._schema.latitude` |  |
+| `address1_line1` | `workAddress.street1` |  |
+| `address1_line2` | `workAddress.street2` |  |
+| `address1_line3` | `workAddress.street3` |  |
+| `address1_longitude` | `workAddress._schema.longitude` |  |
+| `address1_postalcode` | `workAddress.postalCode` |  |
+| `address1_postofficebox` | `workAddress.postOfficeBox` |  |
+| `address1_stateorprovince` | `workAddress.state` |  |
+| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |  |
+| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |  |
+| `birthdate` | `person.birthDate` |  |
+| `"Dynamics"` | `b2b.personKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
-| `contactid` | `b2b.personKey.sourceID` |
+| `contactid` | `b2b.personKey.sourceID` |  |
 | `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
-| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
-| `department` | `extendedWorkDetails.departments` |
-| `fullname` | `person.name.fullName` |
-| `suffix` | `person.name.suffix` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |
-| `createdon` | `extSourceSystemAudit.createdDate` |
+| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |  |
+| `department` | `extendedWorkDetails.departments` |  |
+| `fullname` | `person.name.fullName` |  |
+| `suffix` | `person.name.suffix` |  |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |  |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |  |
+| `createdon` | `extSourceSystemAudit.createdDate` |  |
 | `emailaddress1` | `workEmail.address` | Secundaire id. |
-| `emailaddress2` | `personalEmail.address` |
-| `emailaddress1` | `personComponents.workEmail.address` |
-| `firstname` | `person.name.firstName` |
-| `fullname` | `person.name.fullName` |
-| `lastname` | `person.name.lastName` |
-| `jobtitle` | `extendedWorkDetails.jobTitle` |
-| `middlename` | `person.name.middleName` |
-| `mobilephone` | `mobilePhone.number` |
-| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
-| `salutation` | `person.name.courtesyTitle` |
-| `telephone1` | `workPhone.number` |
+| `emailaddress2` | `personalEmail.address` |  |
+| `emailaddress1` | `personComponents.workEmail.address` |  |
+| `firstname` | `person.name.firstName` |  |
+| `fullname` | `person.name.fullName` |  |
+| `lastname` | `person.name.lastName` |  |
+| `jobtitle` | `extendedWorkDetails.jobTitle` |  |
+| `middlename` | `person.name.middleName` |  |
+| `mobilephone` | `mobilePhone.number` |  |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |  |
+| `salutation` | `person.name.courtesyTitle` |  |
+| `telephone1` | `workPhone.number` |  |
 
 {style="table-layout:auto"}
 
@@ -171,8 +171,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [&#x200B; hoe te om een picklist type brongebied aan een doelXDM schema &#x200B;](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record1objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit &#x200B;](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [&#x200B; hoe te om een picklist type brongebied aan een doelXDM schema &#x200B;](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record2objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit &#x200B;](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [ hoe te om een picklist type brongebied aan een doelXDM schema ](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record1objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [ hoe te om een picklist type brongebied aan een doelXDM schema ](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record2objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
 {style="table-layout:auto"}
 
@@ -236,7 +236,7 @@ De onderstaande secties bevatten aanvullende informatie die u kunt gebruiken bij
 
 ### Tekstvelden voor keuzelijst {#picklist-type-fields}
 
-U kunt [&#x200B; berekende gebieden &#x200B;](../../../../data-prep/ui/mapping.md#calculated-fields) gebruiken om een picklist type brongebied van [!DNL Microsoft Dynamics] aan een doelXDM gebied in kaart te brengen.
+U kunt [ berekende gebieden ](../../../../data-prep/ui/mapping.md#calculated-fields) gebruiken om een picklist type brongebied van [!DNL Microsoft Dynamics] aan een doelXDM gebied in kaart te brengen.
 
 Het veld `genderCode` bevat bijvoorbeeld twee opties:
 
@@ -265,4 +265,4 @@ In dit scenario komt de waarde overeen met de sleutel, als de sleutel wordt gevo
 >
 >Een geneste herhaling van de bovenstaande bewerking lijkt op: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))` .
 
-Voor meer informatie is het [&#x200B; document over logische exploitanten in  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Voor meer informatie is het [ document over logische exploitanten in  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)

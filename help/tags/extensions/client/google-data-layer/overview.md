@@ -2,7 +2,7 @@
 title: Google Data Layer Extension
 description: Meer informatie over de tagextensie Google Client Data Layer in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Google Data Layer-extensie
 
-Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van Tags. De uitbreiding kan onafhankelijk of gelijktijdig met de oplossingen van Google en met Google worden gebruikt open bron [&#x200B; de Bibliotheek van de Helper van de Laag van Gegevens 0&rbrace; &#x200B;](https://github.com/google/data-layer-helper).
+Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van Tags. De uitbreiding kan onafhankelijk of gelijktijdig met de oplossingen van Google en met Google worden gebruikt open bron [ de Bibliotheek van de Helper van de Laag van Gegevens 0} ](https://github.com/google/data-layer-helper).
 
-De Helperbibliotheek verstrekt gelijkaardige gebeurtenis-gedreven functionaliteit aan de Laag van de Gegevens van de Cliënt van de Adobe (ACDL). De gegevenselementen, de regels, en de acties van de uitbreiding van de Laag van de Gegevens van Google verstrekken gelijkaardige functionaliteit aan die in de [&#x200B; uitbreiding ACDL &#x200B;](../client-data-layer/overview.md).
+De Helper Library biedt functionaliteit die door gebeurtenissen wordt aangestuurd en die vergelijkbaar is met de Adobe Client Data Layer (ACDL). De gegevenselementen, de regels, en de acties van de uitbreiding van de Laag van de Gegevens van Google verstrekken gelijkaardige functionaliteit aan die in de [ uitbreiding ACDL ](../client-data-layer/overview.md).
 
 ## Installatie
 
@@ -29,13 +29,14 @@ De standaardinstelling voor de naam van de gegevenslaag is de Google-standaardna
 
 >[!NOTE]
 >
->Het maakt niet uit of Google- of Adobe-code het eerst wordt geladen en of de gegevenslaag wordt gemaakt. Beide systemen gedragen zich het zelfde - creeer de gegevenslaag als het niet aanwezig is of gebruik de bestaande gegevenslaag.
+>Het maakt niet uit of Google- of Adobe-code het eerst wordt geladen en de gegevenslaag wordt gemaakt. Beide systemen gedragen zich het zelfde - creeer de gegevenslaag als het niet aanwezig is of gebruik de bestaande gegevenslaag.
 
 ## Gebeurtenissen
 
 >[!NOTE]
 >
 >Het woord _gebeurtenis_ wordt overbelast wanneer een gebeurtenis-gedreven gegevenslaag in de Markeringen van Adobe Experience Platform wordt gebruikt. _Gebeurtenissen_ kunnen zijn:
+>
 > - Gebeurtenissen van Adobe Experience Platform-tags (Bibliotheek geladen enzovoort).
 > - JavaScript-gebeurtenissen.
 > - Gegevens die aan de gegevenslaag met het _worden geduwd gebeurtenis_ sleutelwoord.
@@ -44,18 +45,18 @@ De extensie biedt u de mogelijkheid te luisteren naar wijzigingen in de gegevens
 
 >[!NOTE]
 >
->Het is belangrijk om het gebruik van het _gebeurtenis_ sleutelwoord te begrijpen wanneer het gegeven aan een de gegevenslaag van Google wordt geduwd, gelijkaardig aan de Laag van de Gegevens van de Cliënt van de Adobe. Het _gebeurtenis_ sleutelwoord verandert het gedrag van de de gegevenslaag van Google en daarom deze uitbreiding.\
+>Het is belangrijk om het gebruik van het _gebeurtenis_ sleutelwoord te begrijpen wanneer het gegeven aan een de gegevenslaag van Google wordt geduwd, gelijkaardig aan de Laag van de Gegevens van de Cliënt van Adobe. Het _gebeurtenis_ sleutelwoord verandert het gedrag van de de gegevenslaag van Google en daarom deze uitbreiding.\
 > Lees de documentatie van Google of doe onderzoek als u op dit punt onzeker bent.
 
 ### Google-gebeurtenistypen
 
-Google ondersteunt twee manieren om gebeurtenissen te verdringen: Google Tag Manager, met de methode `push()` en Googles Analytics 4, met de methode `gtag()` .
+Google ondersteunt twee manieren om gebeurtenissen te verdringen: Google Tag Manager, met de methode `push()` en Google Analytics 4, met de methode `gtag()` .
 
 Google Data Layer extension versions before 1.2.1 supported only events created by `push()`, as displayed in the code examples on this page.
 
 Versies 1.2.1 en hoger ondersteunen gebeurtenissen die met `gtag()` zijn gemaakt.  Dit is optioneel en kan worden ingeschakeld in het dialoogvenster voor extensieconfiguratie.
 
-Voor meer informatie over `push()` en `gtag()` gebeurtenissen, zie de [&#x200B; documentatie van Google &#x200B;](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  De informatie wordt ook verstrekt in de configuratie en regeldialogen van de uitbreiding.
+Voor meer informatie over `push()` en `gtag()` gebeurtenissen, zie de [ documentatie van Google ](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  De informatie wordt ook verstrekt in de configuratie en regeldialogen van de uitbreiding.
 
 ### Luisteren naar alle markeringen op de gegevenslaag
 
@@ -157,4 +158,4 @@ Het gegevenselement kan daarom worden geretourneerd:
 
 Het gegevenselement en de gebeurtenisdialoogvensters van de extensie bevatten gedetailleerde gebruiksinformatie en voorbeelden.
 
-De extra algemene informatie is in [&#x200B; project README &#x200B;](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+De extra algemene informatie is in [ project README ](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

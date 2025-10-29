@@ -1,10 +1,10 @@
 ---
-keywords: Experience Cloud;aan de slag;inhoud etiketteren;populaire onderwerpen;De Intelligente Diensten
+keywords: Experience Cloud;aan de slag;inhoud taggen;populaire onderwerpen;Intelligente services
 solution: Experience Platform
 title: Overzicht van inhoudstags
 description: Content Tagging is een reeks AI-services waarmee u intelligente functies van uw inhoud kunt extraheren, de inhoudsstroom kunt ordenen, stroomlijnen en uw klanten meer effectieve, persoonlijke ervaringen kunt bieden.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -31,16 +31,19 @@ Inhoud is een essentieel onderdeel van deze ervaringen. Om marketingvragen beter
 De algemene visie op het taggen van inhoud is onderverdeeld in drie stappen om een optimale betrokkenheid van de klant te realiseren en klantgerichte KPI&#39;s te maximaliseren.
 
 **Stap 1: Het begrip van de inhoud**
+
 - Haal intelligente eigenschappen en meta-gegevens uit.
 - Inhoud indelen (tags, categoriseren, groeperen, dedupliceren).
 - Wijs inhoudsgegevens aan elementen toe.
 
 **Stap 2: Begrijpend de klant**
+
 - De acties van de klant koppelen aan inhoudsfuncties.
 - De voorkeuren en affiniteiten van de klant ophalen uit inhoud en handelingen.
 - Voorkeuren toevoegen aan het profiel van de klant.
 
 **Stap 3: Het toelaten van ervaringsoptimalisering**
+
 - Gebruik het profiel van de klant om verbeterde, gepersonaliseerde ervaringen, in sessies en voor verdere ervaringen te bieden.
 - Gebruik inhoudseigenschappen om inzicht te krijgen in het gedrag van klanten dat KPI&#39;s drijft.
 - Inhoudsinzichten gebruiken voor verbeterde creatie, creatie en selectie van inhoud.

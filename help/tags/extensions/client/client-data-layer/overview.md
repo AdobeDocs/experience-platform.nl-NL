@@ -1,26 +1,26 @@
 ---
-title: Uitbreiding gegevenslaag client-Adobe
-description: Leer over de de markeringsuitbreiding van de Laag van de Gegevens van de Cliënt van de Adobe in Adobe Experience Platform.
+title: Adobe Client Data Layer Extension
+description: Meer informatie over de tagextensie Adobe Client Data Layer in Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
 
 ---
 
-# Adobe Clientgegevenslaagextensie
+# Adobe Client Data Layer-extensie
 
-Deze documentatie verstrekt voorbeelden en beste praktijken op hoe te om de uitbreiding van de Laag van de Gegevens van de Cliënt van de Adobe te gebruiken.
+Deze documentatie verstrekt voorbeelden en beste praktijken op hoe te om de uitbreiding van de Laag van Gegevens van de Cliënt van Adobe te gebruiken.
 
 <!-- (Missing document?)
 If you would like to have more details on development consideration, [please reach this page](./dev.md). -->
 
 ## Installatie
 
-Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface van het Experience Platform of de gebruikersinterface van de gegevensverzameling en selecteert u Clientgegevenslaag Adoben.
+Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface van Experience Platform of de gebruikersinterface voor gegevensverzameling en selecteert u Adobe Client Data Layer.
 
-![&#x200B; ACDL de mening van de Uitbreiding in Catalogus &#x200B;](./images/catalog.png)
+![ ACDL de mening van de Uitbreiding in Catalogus ](./images/catalog.png)
 
 <!-- (GitHub link?)
 There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.
@@ -51,12 +51,12 @@ Als u deze optie selecteert, luistert uw gebeurtenislistener naar elke wijziging
 
 De volgende voorbeeldpushgebeurtenissen worden door de listener bijgehouden:
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 De volgende voorbeeldpushgebeurtenis wordt niet door de listener bijgehouden:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### Alle gebeurtenissen beluisteren
 
@@ -64,8 +64,8 @@ Als u deze optie selecteert, luistert uw gebeurtenislistener naar elke gebeurten
 
 De volgende voorbeeldpushgebeurtenissen worden door de listener bijgehouden:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 De volgende voorbeeldpushgebeurtenis wordt niet door de listener bijgehouden:
 
@@ -91,7 +91,7 @@ In de volgende secties worden de acties beschreven die door de extensie worden o
 
 ### Gegevenslaag opnieuw instellen
 
-De extensie biedt u een manier om de lengte van de gegevenslaag opnieuw in te stellen. Hierdoor kunt u een beperkte grootte behouden voor een toepassing van één pagina (SPA).
+De uitbreiding voorziet u van een manier om de lengte van de gegevenslaag terug te stellen, die een beperkte grootte voor een enig-paginatoepassing (SPA) kan helpen houden.
 
 Er bestaat momenteel echter geen mogelijkheid om de informatie die eerder tijdens de pushmethoden was ingesteld, volledig te verwijderen.
 

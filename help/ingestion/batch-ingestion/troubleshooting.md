@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;ingebedde gegevens;het oplossen van problemen;faq;Ingestie;Het opnemen van de partij;partij ingestie;
+keywords: Experience Platform;home;populaire onderwerpen;ingesloten gegevens;problemen oplossen;faq;Ingestie;Batch-opname;batch-opname;
 solution: Experience Platform
 title: Handleiding voor het oplossen van problemen met inslikken
 description: Deze documentatie helpt veelgestelde vragen over Adobe Experience Platform Batch Data Ingestie-API's te beantwoorden.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Ja, het is veilig om de API-aanroep opnieuw te proberen. Ondanks de mislukking, 
 
 ### Wanneer moet de API voor grote bestanden uploaden worden gebruikt?
 
-De aanbevolen bestandsgrootte voor het gebruik van de API voor het uploaden van grote bestanden is 256 MB of groter. Meer informatie over hoe te om het Grote Dossier te gebruiken uploadt API kan [&#x200B; hier &#x200B;](./api-overview.md#ingest-large-parquet-files) worden gevonden.
+De aanbevolen bestandsgrootte voor het gebruik van de API voor het uploaden van grote bestanden is 256 MB of groter. Meer informatie over hoe te om het Grote Dossier te gebruiken uploadt API kan [ hier ](./api-overview.md#ingest-large-parquet-files) worden gevonden.
 
 ### Waarom mislukt de aanroep van de API voor groot bestand?
 
@@ -138,7 +138,7 @@ Er worden drie validatieniveaus toegepast op de gegevens:
 
 ### Hoe kan een reeds opgenomen partij worden vervangen?
 
-Een reeds opgenomen partij kan worden vervangen door de eigenschap van de Replay van de Partij te gebruiken. Meer informatie over Replay van de Partij kan [&#x200B; hier &#x200B;](./api-overview.md#replay-a-batch) worden gevonden.
+Een reeds opgenomen partij kan worden vervangen door de eigenschap van de Replay van de Partij te gebruiken. Meer informatie over Replay van de Partij kan [ hier ](./api-overview.md#replay-a-batch) worden gevonden.
 
 ### Hoe wordt de inname van batch gecontroleerd?
 
@@ -189,7 +189,7 @@ Een batch kan in de levenscyclus de volgende statussen doorlopen:
 | Inactief | x | De batch is gepromoveerd, maar deze is teruggedraaid of verlopen. De partij zal niet meer voor downstreamconsumptie beschikbaar zijn, maar de onderliggende gegevens blijven in Master totdat deze bewaard, gearchiveerd of anderszins verwijderd zijn. |
 | Laden | | De client schrijft momenteel gegevens voor de batch. De partij is **niet** klaar voor bevordering, op dit punt in tijd. |
 | Geladen | | De client heeft het schrijven van gegevens voor de batch voltooid. De partij is klaar voor promotie. |
-| Behouden | | De gegevens zijn uit Master gehaald en in een speciaal archief in het Adobe Data Lake. |
+| Behouden | | De gegevens zijn uit Master gehaald en in een speciaal archief in het Data Lake van Adobe. |
 | Staging | | De klant heeft de batch met succes voor promotie gesignaleerd en de gegevens worden gefaseerd voor consumptie stroomafwaarts. |
 | Opnieuw proberen | | De cliënt heeft de partij voor bevordering gesignaleerd, maar wegens een fout, wordt de partij opnieuw geprobeerd door de dienst van de Controle van de Partij. Deze staat kan worden gebruikt om cliënten te vertellen dat er een vertraging in het opnemen van de gegevens kan zijn. |
 | Gestopt | | De client heeft de batch voor speciale acties gesignaleerd, maar nadat `n` opnieuw is geprobeerd door een Batch Monitoring-service, is de batchbevordering geblokkeerd. |
@@ -212,7 +212,7 @@ Wanneer een batch wordt geladen, betekent dit dat de API van CompleteBatch niet 
 
 ### Is er een manier om te weten of een partij met succes is opgenomen?
 
-Ja, zodra de batchstatus &quot;Actief&quot; is, is de batch ingeslikt. Om het statuut van de partij te weten te komen, volg de stappen die [&#x200B; vroeger &#x200B;](#how-is-batch-ingestion-monitored) worden gedetailleerd.
+Ja, zodra de batchstatus &quot;Actief&quot; is, is de batch ingeslikt. Om het statuut van de partij te weten te komen, volg de stappen die [ vroeger ](#how-is-batch-ingestion-monitored) worden gedetailleerd.
 
 ### Wat gebeurt er als een batch mislukt? {#what-if-a-batch-fails}
 
@@ -272,4 +272,4 @@ Er zijn twee redenen waarom de metriek niet beschikbaar op uw partij kan zijn:
 | 200 | De partij is goedgekeurd voor verwerking, en zal overgang aan een definitieve staat, zoals Actief of Mislukt. Na verzending kan de batch worden gecontroleerd met behulp van het `GetBatch` eindpunt. |
 | 400 | Onjuist verzoek. Wordt geretourneerd als een batch ontbrekende of overlappende blokken bevat. |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

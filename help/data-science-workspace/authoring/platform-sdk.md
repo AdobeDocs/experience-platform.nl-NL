@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Modellen ontwerpen met de Adobe Experience Platform SDK
 description: Deze zelfstudie biedt u informatie over het omzetten van data_access_sdk_python in het nieuwe Python platform_sdk in zowel Python als R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ De nieuwe [!DNL Experience Platform] SDK ondersteunt de volgende bewerkingen:
 | Kleiner dan (`<`) | `lt()` |
 | Kleiner dan of gelijk aan (`<=`) | `le()` |
 | En (`&`) | `And()` |
-| Of (`|`) | `Or()` |
+| Of ( &amp;vert; ) | `Or()` |
 
 ## Filteren op geselecteerde kolommen {#filter-by-selected-columns}
 
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Volgende stappen
 
-Nadat u de gegevenslader van `platform_sdk` hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de gegevenssets `train` en `val` . Om over gegevensvoorbereiding en eigenschaptechniek te leren gelieve de sectie over [&#x200B; te bezoeken gegevens voorbereiding en eigenschapengineering &#x200B;](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in het leerprogramma voor het creëren van een recept gebruikend [!DNL JupyterLab] laptops.
+Nadat u de gegevenslader van `platform_sdk` hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de gegevenssets `train` en `val` . Om over gegevensvoorbereiding en eigenschaptechniek te leren gelieve de sectie over [ te bezoeken gegevens voorbereiding en eigenschapengineering ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in het leerprogramma voor het creëren van een recept gebruikend [!DNL JupyterLab] laptops.

@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '887'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -40,7 +40,7 @@ XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht
 
 * Geen
 
-Om meer over het werken met XDM te leren gebruikend [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, te lezen gelieve de [&#x200B; documentatie van het Systeem XDM &#x200B;](../../xdm/home.md).
+Om meer over het werken met XDM te leren gebruikend [!DNL Schema Registry] API en [!DNL Schema Editor] gebruikersinterface, te lezen gelieve de [ documentatie van het Systeem XDM ](../../xdm/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -54,13 +54,13 @@ De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het rech
 | Nieuwe API-eindpunten | Het basispad voor de [!DNL Privacy Service] API is bijgewerkt van `/data/privacy/gdpr` tot `/data/core/privacy/jobs` . |
 | Nieuwe vereiste `regulation`-eigenschap | Wanneer u nieuwe taken maakt in de [!DNL Privacy Service]-API, moet de eigenschap `regulation` in de payload van de aanvraag worden opgegeven om aan te geven onder welke regeling de taak moet worden bijgehouden. Accepteerde waarden zijn `gdpr` en `ccpa` . |
 | Ondersteuning voor [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] accepteert nu toegang-/verwijderaanvragen van Adobe [!DNL Primetime Authentication] en gebruikt `primetimeAuthentication` als de productwaarde. |
-| Verbeteringen voor de gebruikersinterface van Privacy Service | Afzonderlijke pagina&#39;s voor het volgen van taken voor GDPR en CCPA verordeningen. Nieuw **Type verordening &#x200B;** dropdown om tussen het volgen gegevens voor GDPR en CCPA te schakelen. |
+| Verbeteringen voor de gebruikersinterface van Privacy Service | Afzonderlijke pagina&#39;s voor het volgen van taken voor GDPR en CCPA verordeningen. Nieuwe vervolgkeuzelijst **Reguleringstype** om te schakelen tussen trackinggegevens voor AVG en CCPA. |
 
 **Bekende kwesties**
 
 * Geen
 
-Voor meer informatie over [!DNL Privacy Service], gelieve te beginnen door het [&#x200B; overzicht van Privacy Service &#x200B;](../../privacy-service/home.md) te lezen.
+Voor meer informatie over [!DNL Privacy Service], gelieve te beginnen door het [ overzicht van Privacy Service ](../../privacy-service/home.md) te lezen.
 
 ## Bronnen {#sources}
 
@@ -80,18 +80,18 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Categorie | Machtiging | Beschrijving |
 |--- | --- | ---|
-| Gegevensopname | Bronnen beheren | Toegang tot bronnen lezen, maken, bewerken en uitschakelen. |
-| Gegevensopname | Bronnen weergeven | Alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en geverifieerde bronnen op het tabblad **[!UICONTROL Browse]** . |
+| Data-opname | Bronnen beheren | Toegang tot bronnen lezen, maken, bewerken en uitschakelen. |
+| Data-opname | Bronnen weergeven | Alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en geverifieerde bronnen op het tabblad **[!UICONTROL Browse]** . |
 
 **Bekende kwesties**
 
 * Geen
 
-Voor meer informatie over bronnen, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md)
+Voor meer informatie over bronnen, zie het [ overzicht van bronnen ](../../sources/home.md)
 
 ## Bestemmingen {#destinations}
 
-In [&#x200B; Real-Time CDP &#x200B;](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [ Real-Time CDP ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe functies**
 
@@ -111,4 +111,4 @@ In [&#x200B; Real-Time CDP &#x200B;](../../rtcdp/overview.md), zijn de bestemmin
 
 * Geen
 
-Zie het [&#x200B; overzicht van Doelen &#x200B;](../../destinations/home.md) voor meer informatie.
+Zie het [ overzicht van Doelen ](../../destinations/home.md) voor meer informatie.

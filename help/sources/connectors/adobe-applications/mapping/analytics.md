@@ -2,9 +2,9 @@
 title: Toewijzingsvelden voor de Adobe Analytics Source Connector
 description: Wijs Adobe Analytics-velden toe aan XDM-velden met behulp van de Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 316879afe8c94657156c768cdc14d4710da9fd35
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3914'
+source-wordcount: '3854'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de bron Analytics. Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes worden in kaart gebracht.
 
-![&#x200B; een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
+![ een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
 
 ## Streaming media-parameters
 
@@ -25,8 +25,8 @@ Lees de volgende tabel voor informatie over streamingmedia-parameters.
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | string | De naam van de auteur van de media. |
 | `videoaudioartist` | `mediaReporting.sessionDetails.artist` | string | De naam van de albumartiest of groep die de muziekopname of video uitvoert. |
 | `videoaudioalbum` | `mediaReporting.sessionDetails.album` | string | De naam van het album waartoe de muziekopname of video behoort. |
-| `videolength` | `mediaReporting.sessionDetails.length ` | integer | De lengte of runtime van de video. |
-| `videoshowtype` | `mediaReporting.sessionDetails.showType` | string |
+| `videolength` | `mediaReporting.sessionDetails.length` | integer | De lengte of runtime van de video. |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | string |  |
 | `video` | `mediaReporting.sessionDetails.name` | string | De id van de video. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | string | De naam van het programma of de serie. De naam van het programma/de serie is slechts vereist als de show deel van een reeks uitmaakt. |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | string | Het type streamingmedia zoals &quot;video&quot; of &quot;audio&quot;. |
@@ -34,12 +34,12 @@ Lees de volgende tabel voor informatie over streamingmedia-parameters.
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | string | The number of the episode. |
 | `videogenre` | `mediaReporting.sessionDetails.genreList[]` | string[] | Het genre van de video. |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | string | Een id voor een instantie van een inhoudsstroom die uniek is voor een individuele playback. |
-| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | string | De naam van de videospeler. |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName` | string | De naam van de videospeler. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | string | Het distributiekanaal van waar de inhoud werd gespeeld. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | string | Het type van stroomlevering dat voor de inhoud wordt gebruikt. Deze wordt automatisch ingesteld op &quot;Video&quot; voor alle videoweergaven. Aanbevolen waarden zijn: VOD, Live, Lineair, UGC, DVOD, Radio, Podcast, Audiobook en Song. |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | string | De netwerk- of kanaalnaam. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | string | Het type diervoeder. Dit kan werkelijke gegevens met betrekking tot diervoeders vertegenwoordigen, zoals &quot;East HD&quot; of &quot;SD&quot;, of de bron van de feed, zoals een URL. |
-| `videosegment` | `mediaReporting.sessionDetails.segment` | string |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | string |  |
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | boolean | Een Booleaanse waarde die aangeeft of de video is gestart of niet. Dit gebeurt wanneer de gebruiker de afspeelknop selecteert en ook wordt geteld wanneer er pre-roladvertenties, buffering, fouten enzovoort zijn. |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | boolean | Een booleaanse waarde die aangeeft of het eerste frame van het medium is gestart. Als de gebruiker tijdens om het even welke advertenties of buffertijd daalt, dan zou &quot;inhoudstart&quot;niet kwalificeren. |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | integer | De duur (in seconden) voor alle gebeurtenissen van `type=PLAY` op de hoofdinhoud. |
@@ -57,7 +57,7 @@ Lees de volgende tabel voor informatie over streamingmedia-parameters.
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | integer | De totale duur (in seconden) waarin het afspelen door een gebruiker is gepauzeerd. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | string | Een MVPD-id die is opgegeven via Adobe-verificatie. |
 | `videoauthorized` | `mediaReporting.sessionDetails.authorized` | string | Definieert dat de gebruiker via Adobe-verificatie is geautoriseerd. |
-| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Hiermee bepaalt u de tijd van de dag waarop de inhoud werd uitgezonden of afgespeeld. |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Hiermee bepaalt u de tijd van de dag waarop de inhoud werd uitgezonden of afgespeeld. |  |
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | boolean | Een booleaanse waarde die elke playback markeert die na meer dan 30 minuten van buffer, pauze, of een stallperiode werd hervat. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | boolean | Een Booleaanse waarde die aangeeft dat ten minste één frame is weergegeven. Dit frame hoeft niet het eerste frame te zijn. |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | string | De naam van het recordlabel. |
@@ -133,7 +133,7 @@ Lees de volgende tabel voor informatie over kwaliteitsparameters.
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | getal | De gemiddelde bitsnelheid (in kbps, geheel getal). Deze metrische waarde wordt berekend als gewogen gemiddelde van alle bitsnelheidwaarden met betrekking tot de afspeelduur die tijdens een afspeelsessie plaatsvond. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | boolean | Een Booleaanse waarde die het aantal streams aangeeft waarin wijzigingen in de bitsnelheid zijn opgetreden. Deze metrische waarde wordt alleen op true ingesteld als tijdens een afspeelsessie ten minste één gebeurtenis voor het wijzigen van de bitsnelheid heeft plaatsgevonden. |
-| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer |
+| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | integer |  |
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | string | Het aantal wijzigingen in bitsnelheid. Deze waarde wordt berekend als de som van alle gebeurtenissen die zich tijdens een afspeelsessie hebben voorgedaan om de bitsnelheid te wijzigen. |
 | `videoqoetimetostartevar` | `mediaReporting.qoeDataDetails.timeToStart` | integer | De duur, gemeten in seconden, die tussen videolading en videobegin ging. |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | boolean | Een Booleaanse waarde die het aantal streams aangeeft waarin frames zijn neergezet. Deze metrische waarde wordt alleen op true ingesteld als tijdens een afspeelsessie ten minste één frame is verwijderd. |
@@ -155,7 +155,7 @@ Lees deze sectie voor informatie over verouderde analytische toewijzingsvelden.
 
 ### Directe toewijzingsvelden
 
-+++Selecteren om een afgekeurde direct-toewijzingsvelden weer te geven
++++Selecteren om een tabel met afgekeurde velden voor directe toewijzingen weer te geven
 
 | Gegevensfeed | XDM-veld | XDM-type | Beschrijving |
 | --- | --- | --- | --- |
@@ -182,7 +182,7 @@ Lees deze sectie voor informatie over verouderde analytische toewijzingsvelden.
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | string | Een variabele die wordt gebruikt om de dimensie van de Code van het PIT te bevolken. |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | string | Hiermee worden alle geaccepteerde talen weergegeven, zoals wordt aangegeven in de HTTP-header van Accept-Language. |
 | `homepage` | `web.webPageDetails.isHomePage` | boolean | Niet meer gebruikt. Geeft aan of de huidige URL de homepage van de browser is. |
-| `ipv6` | `environment.ipV6` | string |
+| `ipv6` | `environment.ipV6` | string |  |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | string | De versie van JavaScript die door de browser wordt ondersteund. |
 | `user_agent` | `environment.browserDetails.userAgent` | string | De userAgent-tekenreeks die in de HTTP-header wordt verzonden. |
 | `mobileappid` | `application.name` | string | De mobiele toepassings-id, opgeslagen in de volgende indeling: `[AppName][BundleVersion]`. |
@@ -196,21 +196,21 @@ Lees deze sectie voor informatie over verouderde analytische toewijzingsvelden.
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | getal | Belangrijkste baken voor mobiele services. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | getal | Beacon minor mobiele diensten. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | string | Mobile Services-baken UUID. |
-| `mobileinstalls` | `application.firstLaunches` | Object | Dit wordt geactiveerd bij de eerste uitvoering na installatie of herinstallatie | {id (string), value (number)} |
-| `mobileupgrades` | `application.upgrades` | Object | Meldt het aantal upgrades van de app. Triggers bij de eerste looppas na verbetering of om het even welk ogenblik verandert het versieaantal. | {id (string), value (number)} |
-| `mobilelaunches` | `application.launches` | Object | Het aantal keren dat de app is gestart. | {id (string), value (number)} |
-| `mobilecrashes` | `application.crashes` | Object |  | {id (string), value (number)} |
-| `mobilemessageclicks` | `directMarketing.clicks` | Object |  | {id (string), value (number)} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | | {id (string), value (number)} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | | {id (string), value (number)} |
-| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | De videokwaliteitstijd die moet worden gestart. | {id (string), value (number)} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | | {id (string), value (number)} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Object | Aantal buffer voor videokwaliteit | {id (string), value (number)} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Object | Buffertijd videokwaliteit | {id (string), value (number)} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Object | Aantal wijzigingen in videokwaliteit | {id (string), value (number)} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Object | Gemiddelde bitsnelheid videokwaliteit | {id (string), value (number)} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Object | Aantal fouten in videokwaliteit | {id (string), value (number)} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | | {id (string), value (number)} |
+| `mobileinstalls` | `application.firstLaunches` | Object | Dit wordt geactiveerd bij de eerste uitvoering na installatie of herinstallatie `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | Object | Meldt het aantal upgrades van de app. Triggers bij de eerste looppas na verbetering of om het even welk ogenblik verandert het versieaantal. | `{id (string), value (number)}` |
+| `mobilelaunches` | `application.launches` | Object | Het aantal keren dat de app is gestart.  `{id (string), value (number)}` |
+| `mobilecrashes` | `application.crashes` | Object | `{id (string), value (number)}` |
+| `mobilemessageclicks` | `directMarketing.clicks` | Object | `{id (string), value (number)}` |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Object | `{id (string), value (number)}` |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Object | `{id (string), value (number)}` |
+| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Object | De videokwaliteitstijd die moet worden gestart. `{id (string), value (number)}` |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Object | `{id (string), value (number)}` |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Object | Aantal buffer voor videokwaliteit `{id (string), value (number)}` |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Object | Buffertijd videokwaliteit `{id (string), value (number)}` |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Object | Aantal wijzigingen in videokwaliteit `{id (string), value (number)}` |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Object | Gemiddelde bitsnelheid voor videokwaliteit `{id (string), value (number)}` |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Object | Aantal fouten in videokwaliteit `{id (string), value (number)}` |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Object | `{id (string), value (number)}` |
 
 {style="table-layout:auto"}
 
@@ -291,11 +291,11 @@ Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen 
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) die gegevens bevatten nadat Adobe de waarden ervan heeft aangepast met de verwerkingsregels, de VISTA-regels en de opzoektabellen. De meeste postwaarden hebben een vooraf verwerkte tegenhanger.
 
-De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
-Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
-+++Selecteren om een afgekeurde geavanceerde toewijzingsvelden weer te geven
++++Selecteren om een lijst met afgekeurde geavanceerde toewijzingsvelden weer te geven
 
 | Gegevensfeed | XDM-veld | XDM-type | Beschrijving |
 | — | — | — | — ||

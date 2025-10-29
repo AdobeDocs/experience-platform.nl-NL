@@ -4,7 +4,7 @@ title: De Gids van de Beperkingen UI van de Tijd van de Vervorming van de Refact
 description: De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 De release van januari 2024 voor Adobe Experience Platform heeft wijzigingen aangebracht in Adobe Experience Platform Segmentation Service die nieuwe beperkingen toevoegen aan waar tijdbeperkingen kunnen worden gedefinieerd. Deze wijzigingen zijn van invloed op pas gemaakte of bewerkte segmenten die zijn gemaakt met de gebruikersinterface van Segment Builder. Deze gids verklaart hoe te om deze veranderingen te verlichten.
 
-Vóór de versie van Januari 2024, verwijzen alle regel-niveau, groep-niveau, en canvas-vlakke tijdbeperkingen overtollig naar zelfde timestamp. Om tijdbeperkingsgebruik te verduidelijken, zijn regel-niveau en groep-vlakke tijdbeperkingen verwijderd. Om deze verandering aan te passen, moeten alle tijdbeperkingen **&#x200B;**&#x200B;als **canvas-niveau** of **kaart-niveau** tijdbeperkingen worden herschreven.
+Vóór de versie van Januari 2024, verwijzen alle regel-niveau, groep-niveau, en canvas-vlakke tijdbeperkingen overtollig naar zelfde timestamp. Om tijdbeperkingsgebruik te verduidelijken, zijn regel-niveau en groep-vlakke tijdbeperkingen verwijderd. Om deze verandering aan te passen, moeten alle tijdbeperkingen **** als **canvas-niveau** of **kaart-niveau** tijdbeperkingen worden herschreven.
 
 Eerder kon aan een afzonderlijke gebeurtenis meerdere regels voor tijdbeperking zijn gekoppeld. Met deze recente update, zal het proberen om een tijdbeperking aan een regel toe te voegen nu in een **fout** resulteren.
 
-![&#x200B; de regel-vlakke tijdbeperking wordt benadrukt. De fout die vervolgens optreedt, wordt ook gemarkeerd. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
+![ de regel-vlakke tijdbeperking wordt benadrukt. De fout die daarna gebeurt wordt ook benadrukt.](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 Tijdbeperkingen kunnen nu alleen op canvasniveau of op kaartniveau worden toegepast.
 
@@ -36,8 +36,8 @@ Wanneer u een tijdbeperking op canvasniveau toepast, kunt u nog steeds alle besc
 >
 >Als er **veelvoudige** kaarten op het canvas zijn, zal het toepassen van de tijdbeperking op canvas-niveau die tijdbeperking op **alle** kaarten op het canvas toepassen.
 
-![&#x200B; de canvas-vlakke tijdbeperking wordt benadrukt.](../images/ui/segment-refactoring/canvas-time-constraint.png)
+![ de canvas-vlakke tijdbeperking wordt benadrukt.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
 Als u een tijdbeperking op kaartniveau wilt toepassen, selecteert u de specifieke kaart waarop u de tijdbeperking wilt toepassen. De container **[!UICONTROL Event Rules]** wordt weergegeven. U kunt nu de tijdbeperking selecteren die u op de kaart wilt toepassen.
 
-![&#x200B; de kaart-vlakke tijdbeperking wordt benadrukt.](../images/ui/segment-refactoring/card-time-constraint.png)
+![ de kaart-vlakke tijdbeperking wordt benadrukt.](../images/ui/segment-refactoring/card-time-constraint.png)

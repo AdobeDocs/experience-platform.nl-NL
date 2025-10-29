@@ -2,7 +2,7 @@
 title: Paginering van reacties in de Reactor-API
 description: Leer hoe u resultaten kunt pagineren bij het weergeven van bronnen in de Reactor-API.
 exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Paginering van reacties in de Reactor-API
 
-Reacties die door de Reactor-API worden geretourneerd, worden gepagineerd. De standaardpaginagrootte is 25 elementen. De details over de paginering worden gemeld in de `meta.pagination ` sectie van het API antwoordvoorwerp:
+Reacties die door de Reactor-API worden geretourneerd, worden gepagineerd. De standaardpaginagrootte is 25 elementen. Details over de paginering worden gerapporteerd in de sectie `meta.pagination` van het API-reactieobject:
 
 ```json
 "meta": {

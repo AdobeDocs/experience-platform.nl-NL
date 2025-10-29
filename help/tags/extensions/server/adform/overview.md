@@ -3,7 +3,8 @@ keywords: integratie van het adform; adform;
 title: Adform-integratie voor niet-geverifieerde herbestemming
 description: Dankzij deze Adobe Experience Platform-integratie kunt u gebruikers opnieuw als doel instellen op basis van ECID.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 23da6e12b1f5bdc37240d7aa11a44e040b29e3f7
+exl-id: 37eb9453-fc3c-481e-94ea-54d9b1545631
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 # [!DNL Adform] overzicht van extensies
 
-De [[!DNL Adform] &#x200B;](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud) uitbreiding laat server-side gebeurtenis toe door:sturen in Adobe Experience Platform, toestaand adverteerders, media agentschappen en uitgevers om gegevens direct met het systeem van de Fusie van identiteitskaart van Adform te synchroniseren. Deze integratie stelt bedrijven in staat om het publiek op meerdere kanalen te betrekken, de campagneprestaties te verbeteren en biedt op maat gesneden oplossingen om de strategieën voor digitale reclame te verfijnen en de efficiëntie te maximaliseren en uit te geven.
+De [[!DNL Adform] ](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud) uitbreiding laat server-side gebeurtenis toe door:sturen in Adobe Experience Platform, toestaand adverteerders, media agentschappen en uitgevers om gegevens direct met het systeem van de Fusie van identiteitskaart van Adform te synchroniseren. Deze integratie stelt bedrijven in staat om het publiek op meerdere kanalen te betrekken, de campagneprestaties te verbeteren en biedt op maat gesneden oplossingen om de strategieën voor digitale reclame te verfijnen en de efficiëntie te maximaliseren en uit te geven.
 
 In tegenstelling tot traditionele clienttracering elimineert deze extensie de noodzaak van cookies van derden door gebruik te maken van id&#39;s van eerste partijen, met name de ECID (Experience Cloud ID) die met Adform is gesynchroniseerd. Dit maakt het mogelijk om het publiek naadloos opnieuw te richten zonder dat JavaScript-implementatie op de client vereist is.
 
@@ -47,7 +48,7 @@ Voordat u Adform integreert met Adobe, moet u controleren of aan de volgende voo
 2. **CDP of SKU van de Verbinding**: U moet of het Platform van Gegevens van de Klant van Adobe (CDP) Prime of SKU van Ultimate, of het SKU van de Verbinding hebben, om naadloze cliënt-kant en server-zijmededeling toe te laten.
 
 3. **de configuratie van Edge Network van Adobe Experience Platform**:
-   * Zorg ervoor dat de Edge Network is geconfigureerd voor ondersteuning van realtime-gebeurtenisverzending voor offsite herbestemming. Zie Adobe [&#x200B; Gebeurtenis door:sturen Begonnen gids &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/event-forwarding/getting-started) voor meer informatie.
+   * Zorg ervoor dat de Edge Network is geconfigureerd voor ondersteuning van realtime-gebeurtenisverzending voor offsite herbestemming. Zie Adobe [ Gebeurtenis door:sturen Begonnen gids ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) voor meer informatie.
    * Deze stap is essentieel voor het efficiënt overbrengen van gegevens naar server-zijeindpunt van Adform.
 
 Wanneer deze voorwaarden zijn ingesteld, kunt u de extensie [!DNL Adform] blijven configureren en implementeren.
@@ -105,6 +106,7 @@ De extensie moet aan een regel zijn gekoppeld om correct te werken. Als er geen 
 ## Valideren en implementeren
 
 Controleer of de extensie correct is geïnstalleerd en geconfigureerd en of alle vereiste gegevenselementen zijn toegewezen, inclusief:
+
 * [ECID](/help/identity-service/features/ecid.md)
 * Paginanaam
 * URL verwijzing
@@ -115,4 +117,4 @@ Zodra u alle vereiste gebieden invoert en klaar bent met testen, uitgezochte **b
 
 ## Volgende stappen
 
-U moet nu begrijpen hoe Adform kan worden geïntegreerd met Adobe-serverfuncties en de haalbaarheid van de integratie in uw bestaande infrastructuur kunnen beoordelen. Voor meer informatie, verwijs naar [&#x200B; officiële documentatie van Adform &#x200B;](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud).
+U moet nu begrijpen hoe Adform kan worden geïntegreerd met Adobe-serverfuncties en de haalbaarheid van de integratie in uw bestaande infrastructuur kunnen beoordelen. Voor meer informatie, verwijs naar [ officiële documentatie van Adform ](https://www.adformhelp.com/hc/en-us/articles/29635608709137-Use-the-Adform-S2S-Site-Tracking-Extension-With-Adobe-Experience-Cloud).
