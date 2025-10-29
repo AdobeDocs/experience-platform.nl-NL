@@ -32,7 +32,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Display & Video 
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming met de Vertoning van Google &amp; Video 360 wilt tot stand brengen en niet de [&#x200B; functionaliteit van de Synchronisatie van identiteitskaart &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebben toegelaten, bereik uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder Google-integratie hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
+>Als u uw eerste bestemming met de Vertoning van Google &amp; Video 360 wilt tot stand brengen en niet de [&#x200B; functionaliteit van de Synchronisatie van identiteitskaart &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=nl-NL) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebben toegelaten, bereik uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder Google-integratie hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -42,7 +42,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Display & Video 
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] |  |
 | IDFA | [!DNL Apple ID for Advertisers] |  |
-| AAM UUID | [&#x200B; Adobe Audience Manager  [!DNL Unique User ID] &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), ook gekend als [!DNL Device ID]. Een numerieke, 38-cijferige apparaat-id die Audience Manager koppelt aan elk apparaat waarmee het werkt. | Google gebruikt [&#x200B; AAM UUID &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) aan doelgebruikers in Californië, en identiteitskaart van de Koekje van Google voor alle andere gebruikers. |
+| AAM UUID | [&#x200B; Adobe Audience Manager  [!DNL Unique User ID] &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=nl-NL), ook gekend als [!DNL Device ID]. Een numerieke, 38-cijferige apparaat-id die Audience Manager koppelt aan elk apparaat waarmee het werkt. | Google gebruikt [&#x200B; AAM UUID &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=nl-NL) aan doelgebruikers in Californië, en identiteitskaart van de Koekje van Google voor alle andere gebruikers. |
 | [!DNL Google] cookie-id | [!DNL Google] cookie-id | [!DNL Google] gebruikt deze id om gebruikers buiten Californië als doel in te stellen. |
 | RIDA | Roku-id voor Advertising. Deze id identificeert unieke Roku-apparaten. |  |
 | GEMAAKT | Microsoft Advertising ID. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
@@ -75,7 +75,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 >[!NOTE]
 >
 >Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Display & Video 360] -bestemming in Experience Platform instelt. Controleer of het hieronder beschreven proces voor het aanbieden van een geldige aanbieding door [!DNL Google] is voltooid voordat u een bestemming maakt.
->&#x200B;>De uitzondering op deze regel is voor [&#x200B; Audience Manager &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, hoeft je het proces voor het aanbieden van objecten in de lijst niet opnieuw te doorlopen en kunt je doorgaan met de volgende stappen.
+>&#x200B;>De uitzondering op deze regel is voor [&#x200B; Audience Manager &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=nl-NL) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, hoeft je het proces voor het aanbieden van objecten in de lijst niet opnieuw te doorlopen en kunt je doorgaan met de volgende stappen.
 
 Voordat u de [!DNL Google Display & Video 360] -bestemming maakt in Experience Platform, moet u contact opnemen met Google om Adobe op te nemen in de lijst met toegestane gegevensproviders en om uw account toe te voegen aan de lijst van gewenste personen. Neem contact op met Google en geef de volgende informatie op:
 

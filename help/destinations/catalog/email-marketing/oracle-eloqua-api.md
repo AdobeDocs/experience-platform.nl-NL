@@ -27,7 +27,7 @@ De marketingafdeling van een onlineplatform wil een marketingcampagne op basis v
 
 ### Experience Platform-voorwaarden {#prerequisites-in-experience-platform}
 
-Alvorens gegevens aan de [!DNL Oracle Eloqua] bestemming te activeren, moet u a [&#x200B; schema &#x200B;](/help/xdm/schema/composition.md), a [&#x200B; dataset &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [&#x200B; segmenten &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) die in [!DNL Experience Platform] worden gecreeerd.
+Alvorens gegevens aan de [!DNL Oracle Eloqua] bestemming te activeren, moet u a [&#x200B; schema &#x200B;](/help/xdm/schema/composition.md), a [&#x200B; dataset &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) hebben, en [&#x200B; segmenten &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL) die in [!DNL Experience Platform] worden gecreeerd.
 
 Verwijs naar de documentatie van Experience Platform voor [&#x200B; het schemagroep van de Details van het Lidmaatschap van de Publiek &#x200B;](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatus nodig hebt.
 

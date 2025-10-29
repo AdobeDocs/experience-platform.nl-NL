@@ -29,7 +29,7 @@ Als markeerteken kunt u uw gebruikers een persoonlijke ervaring bieden op basis 
 
 ### Experience Platform-voorwaarden {#prerequisites-in-experience-platform}
 
-Alvorens gegevens aan de [!DNL Dynamics 365] bestemming te activeren, moet u a [&#x200B; schema &#x200B;](/help/xdm/schema/composition.md), a [&#x200B; dataset &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [&#x200B; publiek &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dat in [!DNL Experience Platform] wordt gecreeerd.
+Alvorens gegevens aan de [!DNL Dynamics 365] bestemming te activeren, moet u a [&#x200B; schema &#x200B;](/help/xdm/schema/composition.md), a [&#x200B; dataset &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) hebben, en [&#x200B; publiek &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=nl-NL) dat in [!DNL Experience Platform] wordt gecreeerd.
 
 Verwijs naar de documentatie van Adobe voor [&#x200B; het schemagroep van de Details van het Lidmaatschap van het Publiek &#x200B;](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatistieken nodig hebt.
 

@@ -158,4 +158,4 @@ Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voo
 
 ## Aanvullende bronnen {#additional-resources}
 
-* [&#x200B; RainFocus Streaming Source Connector &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [&#x200B; RainFocus Streaming Source Connector &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/sources/connectors/analytics/rainfocus)

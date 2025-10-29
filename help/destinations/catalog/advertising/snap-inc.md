@@ -140,7 +140,7 @@ Na het activeren van publiek aan de *Magnetische bestemming Inc.*, zult u het pu
 
 ![Doelgroepen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Houd er rekening mee dat wanneer een Adobe-publiek voor het eerst wordt geactiveerd op Snap Inc, dit eerst als een leeg publiek wordt weergegeven. Adobe Experience Platform exporteert ledengegevens namelijk pas naar Snap Inc als het publiek wordt geëvalueerd. Voor meer informatie over hoe het publiek in Experience Platform wordt geëvalueerd, gelieve te verwijzen naar het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Houd er rekening mee dat wanneer een Adobe-publiek voor het eerst wordt geactiveerd op Snap Inc, dit eerst als een leeg publiek wordt weergegeven. Adobe Experience Platform exporteert ledengegevens namelijk pas naar Snap Inc als het publiek wordt geëvalueerd. Voor meer informatie over hoe het publiek in Experience Platform wordt geëvalueerd, gelieve te verwijzen naar het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=nl-NL#evaluate-segments).
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

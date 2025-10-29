@@ -67,7 +67,7 @@ Lees meer over [&#x200B; Metagegevens van de Taxonomie &#x200B;](https://develop
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Verizon Media] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+[!DNL Verizon Media] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl-NL#getting-started).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -127,7 +127,7 @@ Lees [&#x200B; activeer profielen en publiek aan een bestemming &#x200B;](../../
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
 
 ## Aanvullende bronnen {#additional-resources}
 
