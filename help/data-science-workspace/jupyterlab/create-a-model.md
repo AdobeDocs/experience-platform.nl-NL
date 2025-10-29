@@ -69,7 +69,7 @@ De rest van deze zelfstudie heeft betrekking op de volgende bestanden die vooraf
 
 In de volgende videozelfstudie wordt uitgelegd hoe u de laptop met het Luminantiemodel kunt gebruiken:
 
->[!VIDEO](https://video.tv.adobe.com/v/333570)
+>[!VIDEO](https://video.tv.adobe.com/v/3452498?captions=dut)
 
 ### Vereisten, bestand {#requirements-file}
 

@@ -99,7 +99,7 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een Mar
 >* De twee beperkingen die in de video worden aangeroepen, zijn niet meer van toepassing. U kunt nu veel andere profielkenmerkvelden toewijzen naast de lidmaatschapsgegevens voor het publiek die werden ondersteund op het moment dat de video werd opgenomen. U kunt ook publieksleden exporteren naar Marketo die nog niet in uw statische Marketo-lijsten voorkomen. Deze personen worden toegevoegd aan de lijsten.
 >* In **[!UICONTROL Schedule audience step]** van de activeringsworkflow moest u in Marketo V1 handmatig een **[!UICONTROL Mapping ID]** toevoegen om gegevens te kunnen exporteren naar Marketo. Deze handmatige stap is niet meer vereist in Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440164?captions=dut&quality=12)
 
 ## Doel van monitor {#monitor-destination}
 
