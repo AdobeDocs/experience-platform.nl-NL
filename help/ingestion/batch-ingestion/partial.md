@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van partiële batchverwerking
 description: Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opname.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: bc72f77b1b4a48126be9b49c5c663ff11e9054ea
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -21,18 +21,18 @@ Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opnam
 
 Deze zelfstudie vereist een praktische kennis van de verschillende Adobe Experience Platform-services die betrokken zijn bij gedeeltelijke batchopname. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [&#x200B; Inname van de Partij &#x200B;](./overview.md): De methode die [!DNL Experience Platform] gegevens van gegevensdossiers, zoals CSV en Parquet opneemt en opslaat.
+- [ Inname van de Partij ](./overview.md): De methode die [!DNL Experience Platform] gegevens van gegevensdossiers, zoals CSV en Parquet opneemt en opslaat.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om aanroepen van [!DNL Experience Platform] API&#39;s te kunnen uitvoeren.
 
 ### API-voorbeeldaanroepen lezen
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -44,17 +44,17 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 ## Een batch voor gedeeltelijke batch-opname inschakelen in de API {#enable-api}
 
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u een batch voor gedeeltelijke batch-opname via de API inschakelt. Voor instructies bij het gebruiken van UI, te lezen gelieve [&#x200B; een partij voor gedeeltelijke partijingestitie in de UI &#x200B;](#enable-ui) stap toelaten.
+>In deze sectie wordt beschreven hoe u een batch voor gedeeltelijke batch-opname via de API inschakelt. Voor instructies bij het gebruiken van UI, te lezen gelieve [ een partij voor gedeeltelijke partijingestitie in de UI ](#enable-ui) stap toelaten.
 
 U kunt een nieuwe partij tot stand brengen met gedeeltelijke toegelaten opname.
 
-Om een nieuwe partij tot stand te brengen, volg de stappen in de [&#x200B; handleiding van de partijontwikkelaar &#x200B;](./api-overview.md). Wanneer u de stap **[!UICONTROL Create batch]** hebt bereikt, voegt u het volgende veld toe binnen de aanvraaginstantie:
+Om een nieuwe partij tot stand te brengen, volg de stappen in de [ handleiding van de partijontwikkelaar ](./api-overview.md). Wanneer u de stap **[!UICONTROL Create batch]** hebt bereikt, voegt u het volgende veld toe binnen de aanvraaginstantie:
 
 ```json
 {
@@ -79,7 +79,7 @@ Om een partij voor gedeeltelijke opname door [!DNL Experience Platform] UI toe t
 
 ### Een nieuwe bronverbinding maken {#new-source}
 
-Om een nieuwe bronverbinding tot stand te brengen, volg de vermelde stappen in het [&#x200B; Bronoverzicht &#x200B;](../../sources/home.md). Wanneer u de stap **[!UICONTROL Dataflow detail]** hebt bereikt, neemt u de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** op.
+Om een nieuwe bronverbinding tot stand te brengen, volg de vermelde stappen in het [ Bronoverzicht ](../../sources/home.md). Wanneer u de stap **[!UICONTROL Dataflow detail]** hebt bereikt, neemt u de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** op.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
@@ -109,7 +109,7 @@ Nu, kunt u gegevens uploaden gebruikend **gegevens** knoop toevoegen, en het zal
 
 ### De &quot;[!UICONTROL Map CSV to XDM schema]&quot;-stroom gebruiken {#map-flow}
 
-Om de &quot;[!UICONTROL Map CSV to XDM schema]&quot;stroom te gebruiken, volg de vermelde stappen in [&#x200B; Kaart een CSV- dossierleerprogramma &#x200B;](../tutorials/map-csv/overview.md). Wanneer u de stap **[!UICONTROL Add data]** hebt bereikt, neemt u de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** op.
+Om de &quot;[!UICONTROL Map CSV to XDM schema]&quot;stroom te gebruiken, volg de vermelde stappen in [ Kaart een CSV- dossierleerprogramma ](../tutorials/map-csv/overview.md). Wanneer u de stap **[!UICONTROL Add data]** hebt bereikt, neemt u de velden **[!UICONTROL Partial ingestion]** en **[!UICONTROL Error diagnostics]** op.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
@@ -121,8 +121,108 @@ De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wann
 
 In **[!UICONTROL Error threshold]** kunt u het percentage acceptabele fouten instellen voordat de volledige batch mislukt. Deze waarde is standaard ingesteld op 5%.
 
+## Gedeeltelijke inname en foutdiagnose inschakelen voor een bestaande gegevensstroom
+
+Als een gegevensstroom in Experience Platform is gemaakt zonder gedeeltelijke inname of foutdiagnose in te schakelen, kunt u deze functies nog steeds inschakelen zonder de gegevensstroom opnieuw te maken. Door gedeeltelijke opname en robuuste foutendiagnostiek toe te laten, kunt u de betrouwbaarheid en het gemak van het oplossen van problemen in uw werkschema&#39;s van de gegevensopname zeer verbeteren. Lees de onderstaande secties voor meer informatie over het inschakelen van gedeeltelijke inname en foutdiagnose voor een bestaande gegevensstroom met de API [!DNL Flow Service] .
+
+Standaard is voor gegevensstromen mogelijk geen gedeeltelijke inname of foutdiagnose ingeschakeld. Deze functies zijn handig voor het identificeren en isoleren van problemen tijdens het invoeren van gegevens. Met behulp van de [!DNL Flow Service] API kunt u de huidige gegevensstroomconfiguratie ophalen en de benodigde wijzigingen toepassen met behulp van een PATCH-aanvraag.
+
+Voer de onderstaande stappen uit om gedeeltelijke inname en foutdiagnose voor een bestaande gegevensstroom mogelijk te maken.
+
+### Stroomdetails ophalen
+
+Als u uw gegevensstroomconfiguraties wilt ophalen, vraagt u GET het `/flows/{FLOW_ID}` -eindpunt aan en geeft u de id van de gegevensstroom op. Voor meer informatie bij het terugwinnen van dataflow details, verwijs naar [ dataflows die van de Update  [!DNL Flow Service]  API ](../../sources/tutorials/api/update-dataflows.md) gids gebruiken.
+
+Sla de waarde op van het veld `etag` dat wordt geretourneerd in het antwoord. Dit is nodig voor de updateaanvraag om consistentie van de versie te garanderen.
+
+### Stroomconfiguratie bijwerken
+
+Voer vervolgens een PATCH-aanvraag in bij het `/flows/` -eindpunt en geef de id van de gegevensstroom op waarvoor u gedeeltelijke inname en foutdiagnose wilt inschakelen.
+
+>[!IMPORTANT]
+>
+>- Neem de eerder opgeslagen `etag` -waarde op in de aanvraagkoptekst met behulp van de if-Match-toets.
+>- U kunt de waarde van `partialIngestionPercent` aanpassen aan uw specifieke behoeften.
+
+**API formaat**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Verzoek**
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+        {
+            "op": "add",
+            "path": "/options",
+            "value": {
+                "partialIngestionPercent": "10"
+            }
+        },
+        {
+            "op": "add",
+            "path": "/options/errorDiagnosticsEnabled",
+            "value": true
+        }
+    ]'
+```
+
+**Reactie**
+
+Een succesvol antwoord retourneert de dataflow `id` en een bijgewerkte `etag` .
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
+### De update verifiëren
+
+Nadat de PATCH is voltooid, dient u een GET-aanvraag in en haalt u uw gegevensstroom op om te controleren of de wijzigingen zijn voltooid.
+
+**API formaat**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+**Verzoek**
+
+Met het volgende verzoek wordt bijgewerkte informatie over uw flow-id opgehaald.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Reactie**
+
+Een succesvol antwoord retourneert uw gegevens over de gegevensstroom, waarmee wordt bevestigd dat gedeeltelijke inname en foutdiagnose nu zijn ingeschakeld in de sectie `options` .
+
+```json
+"options": {
+    "partialIngestionPercent": 10,
+    "errorDiagnosticsEnabled": true
+}
+```
+
 ## Volgende stappen {#next-steps}
 
-Dit leerprogramma behandelde hoe te om een dataset tot stand te brengen of te wijzigen om gedeeltelijke partijingestie toe te laten. Voor meer informatie over partijingestie, te lezen gelieve de [&#x200B; gids van de partijontwikkelaar &#x200B;](./api-overview.md).
+Dit leerprogramma behandelde hoe te om een dataset tot stand te brengen of te wijzigen om gedeeltelijke partijingestie toe te laten. Voor meer informatie over partijingestie, te lezen gelieve de [ gids van de partijontwikkelaar ](./api-overview.md).
 
-Voor informatie bij het controleren van gedeeltelijke innamefouten, te lezen gelieve de [&#x200B; gids van de de foutendiagnostiek van de partijingestie &#x200B;](../quality/error-diagnostics.md).
+Voor informatie bij het controleren van gedeeltelijke innamefouten, te lezen gelieve de [ gids van de de foutendiagnostiek van de partijingestie ](../quality/error-diagnostics.md).
