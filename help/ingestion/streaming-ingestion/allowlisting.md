@@ -31,7 +31,7 @@ De IP voegende op lijst van gewenste personen eigenschap werkt als volgt:
 
 ## Belangrijkste overwegingen
 
-* De IP adres voegende op lijst van gewenste personen eigenschap is slechts op [ van toepassing Streaming Ingestie API ](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) (`dcs.adobedc.net`) en **** is niet van toepassing `server.adobedc.net` of `edge.adobedc.net`.
+* De IP adres voegende op lijst van gewenste personen eigenschap is slechts op [&#x200B; van toepassing Streaming Ingestie API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) (`dcs.adobedc.net`) en **&#x200B;**&#x200B;is niet van toepassing `server.adobedc.net` of `edge.adobedc.net`.
 * Nieuwe sandboxen zijn standaard geopend totdat voegend op lijst van gewenste personen maken is ingeschakeld.
 * Als u een sandbox uit de lijst van gewenste personen verwijdert, wordt deze weer op internet geopend.
 * U moet de volledige lijst van zandbak-aan-IP-adresafbeeldingen op uw kant handhaven en altijd de volledige lijst in het IP adres voorleggen voegend op lijst van gewenste personen vorm. Incrementele updates worden niet ondersteund.
@@ -40,7 +40,7 @@ De IP voegende op lijst van gewenste personen eigenschap werkt als volgt:
 
 Volg de stappen hieronder om IP adres toe te laten voegend op lijst van gewenste personen voor uw organisatie:
 
-1. De download en voltooit het [ IP adres voegend op lijst van gewenste personen vorm ](../images/assets/ip_allowlisting_aep.xlsx.zip).
+1. De download en voltooit het [&#x200B; IP adres voegend op lijst van gewenste personen vorm &#x200B;](../images/assets/ip_allowlisting_aep.xlsx.zip).
 2. Open een steunkaartje en dossier het onderwerp als **AEP DCS &amp; Streaming Ingestie - IP Voegend op lijst van gewenste personen verzoek**. Voeg het ingevulde formulier bij dit ticket.
 3. Na het verzenden van uw ticket stuurt de klantenservice van Adobe uw aanvraag door naar de technicus.
 4. De ingenieurs laten voegend op lijst van gewenste personen toe en bevestigen opstelling.
