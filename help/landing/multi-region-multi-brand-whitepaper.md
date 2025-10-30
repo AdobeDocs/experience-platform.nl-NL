@@ -19,7 +19,7 @@ Experience Platform stelt u in staat om structuur te vertegenwoordigen en uw bed
 
 Dit whitepaper dient als referentie en biedt een productief standpunt en een aantal richtlijnen. Het hoofddoel is om u en uw implementatieteams de middelen en inzichten te geven die nodig zijn om effectief door de ingewikkeldheid van Experience Platform te navigeren. Door een gestructureerd kader te bieden voor het evalueren van uw specifieke vereisten, overwegingen en praktijkgevallen, beschikt u over de kennis die nodig is om het volledige potentieel van Experience Platform en platformgebaseerde toepassingen te ontsluiten. Als u de volgende secties leest, zult u waardevolle inzichten en aanbevelingen vinden om het implementatieproces te stroomlijnen en het vermogen van uw organisatie te verhogen om uitzonderlijke ervaringen aan uw publiek te leveren terwijl het verstrekken van bestuur en controles om privacy en naleving te handhaven.
 
-![ CDP-Verenigd Profiel ](./images/whitepaper/CDPoverview.png)
+![&#x200B; CDP-Verenigd Profiel &#x200B;](./images/whitepaper/CDPoverview.png)
 
 ## Werken met de multibrand-onderneming met meerdere regio&#39;s
 
@@ -48,7 +48,7 @@ Een belangrijk architectuurbeginsel in Experience Platform is een beginsel waarb
 
 Als uw organisatie een specifieke gegevensomgeving nodig heeft om uw marketingervaring op schaal te kunnen gebruiken, kunt u er de voorkeur aan geven al uw gegevens te consolideren in één Experience Platform-sandbox met minimale vereisten voor gegevensisolatie. Binnen deze set-up worden gegevens opgenomen in een sandbox en worden alle verwante identiteiten weergegeven als één enkel, eenvormig profiel, ongeacht of dit wordt geïdentificeerd door een pseudoniem of een bekende identiteit. Dit betekent dat uw marketers binnen Experience Platform toegang hebben tot alle profielkenmerken en gebeurtenisgegevens kunnen ervaren. Ze kunnen deze gegevens gebruiken met platformgebaseerde toepassingen om een publiek en reizen te maken met een minimale behoefte om marketers te beperken in het gebruik van alle gegevens, ongeacht het merk of de regio. Deze benadering vergemakkelijkt naadloze segmentatie en publieksactivering in de bestemmingen die door de toepassingen van Experience Platform worden gesteund. Deze strategie werkt goed als u probeert om uw volledige klantenbasis, ongeacht regionale of merkspecifieke verschillen, voor verenigde en samenhangende marketing inspanningen te hefboomwerken.
 
-![ CDP-Architectuur Enige Sandbox van de Productie ](./images/whitepaper/Architecture-single-prod-sandbox.png)
+![&#x200B; CDP-Architectuur Enige Sandbox van de Productie &#x200B;](./images/whitepaper/Architecture-single-prod-sandbox.png)
 
 #### Hoe werkt dit
 
@@ -70,9 +70,9 @@ Sandboxen zijn virtuele partities binnen één exemplaar van Experience Platform
 
 U kunt veelvoudige zandbakken van om het even welk type tot stand brengen, en voor dit type van onderneming, zullen wij één productie en één ontwikkelingszandbak gebruiken om te illustreren hoe te om dit type van onderneming in werking te stellen en in werking te stellen.
 
-![ CDP-creeer een zandbak ](./images/whitepaper/Create-sandbox.png)
+![&#x200B; CDP-creeer een zandbak &#x200B;](./images/whitepaper/Create-sandbox.png)
 
-In de productiesandbox, verwachten wij u om uw productieprofiel in te voeren en gebeurtenisgegevens te ervaren om een verenigd profiel voor uw marketing activiteiten te bouwen. Voor meer details op hoe te om bekende en anonieme gegevens van veelvoudige ondernemingsbronnen te combineren om klantenprofielen tot stand te brengen die kunnen worden gebruikt om gepersonaliseerde klantenervaringen over alle kanalen en apparaten in real time te verstrekken, zie de [ documentatie van Adobe Real-Time Customer Data Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home).
+In de productiesandbox, verwachten wij u om uw productieprofiel in te voeren en gebeurtenisgegevens te ervaren om een verenigd profiel voor uw marketing activiteiten te bouwen. Voor meer details op hoe te om bekende en anonieme gegevens van veelvoudige ondernemingsbronnen te combineren om klantenprofielen tot stand te brengen die kunnen worden gebruikt om gepersonaliseerde klantenervaringen over alle kanalen en apparaten in real time te verstrekken, zie de [&#x200B; documentatie van Adobe Real-Time Customer Data Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home).
 
 **controles van de Toegang**
 
@@ -80,13 +80,13 @@ U kunt toegangscontroles met rollen en toestemmingen bepalen om toegang tot toep
 
 Overweeg een gegevensengineer die mogelijk geen toegang nodig heeft tot alle Experience Platform en platformgebaseerde toepassingsfunctionaliteit. Zij zijn typisch verantwoordelijk voor het creëren van gegevensdefinities (schema&#39;s), het vormen gegevensbronnen aan ingeschrevene gegevens, en het creëren van datasets. Nochtans, kunnen zij niet de zelfde persoon zijn die tot publiek voor gepersonaliseerde klantenervaringen leidt en activeert. Voor deze persoon, creeer een rol, voeg de aangewezen toestemmingen toe, en verleent toegang slechts tot de vereiste functionaliteit. Een markeringspersoneel daarentegen zou geen schema&#39;s maken en gegevens invoeren, maar zich richten op het maken en activeren van publiek om persoonlijke klantenervaringen mogelijk te maken.
 
-Indien gewenst, denk na toevoegend korrelige toegangscontroles om toegang tot specifieke gebieden op het verenigde klantenprofiel met op attribuut-gebaseerde toegangsbeheer/gebied-vlakke toegangsbeheercapaciteit te beperken. Dit zijn governancemechanismen in Experience Platform waarmee u de toegang tot gegevenskenmerken kunt beperken op basis van vooraf gedefinieerde labels. Met toegangsbeheer op veldniveau kunnen persoonlijke identificeerbare gegevens worden beheerd en is de toegang beperkt tot alle Experience Platform- en toepassingsworkflows. Voor meer details op toegangsbeheermogelijkheden, zie de [ documentatie van de toegangscontrole ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
+Indien gewenst, denk na toevoegend korrelige toegangscontroles om toegang tot specifieke gebieden op het verenigde klantenprofiel met op attribuut-gebaseerde toegangsbeheer/gebied-vlakke toegangsbeheercapaciteit te beperken. Dit zijn governancemechanismen in Experience Platform waarmee u de toegang tot gegevenskenmerken kunt beperken op basis van vooraf gedefinieerde labels. Met toegangsbeheer op veldniveau kunnen persoonlijke identificeerbare gegevens worden beheerd en is de toegang beperkt tot alle Experience Platform- en toepassingsworkflows. Voor meer details op toegangsbeheermogelijkheden, zie de [&#x200B; documentatie van de toegangscontrole &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
-![ CDP-Toegang Controles, vorm de Toestemmingen van de Rol ](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
+![&#x200B; CDP-Toegang Controles, vorm de Toestemmingen van de Rol &#x200B;](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **Levenscyclus van de Ontwikkeling met ontwikkelingszandbakken**
 
-Een ontwikkelingssandbox gedraagt zich in alle functionele aspecten op dezelfde manier als een productiesandbox. Het is anders omdat het een aantal contractuele garanties zal hebben om je binnen de grenzen van je licentie te houden. Het is uitsluitend ontworpen voor ontwikkeling en het testen met niet-productieprofielen, die tot 10% van uw vergunning gegeven profielverplichting steunen (cumulatief die over alle erkende ontwikkelingszandbakken wordt gemeten). Voor extra details en begeleiding, zie de [ documentatie van het zandbakenoverzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) en de [ pagina van de productbeschrijvingen ](https://helpx.adobe.com/legal/product-descriptions.html) voor machtigingsdetails.
+Een ontwikkelingssandbox gedraagt zich in alle functionele aspecten op dezelfde manier als een productiesandbox. Het is anders omdat het een aantal contractuele garanties zal hebben om je binnen de grenzen van je licentie te houden. Het is uitsluitend ontworpen voor ontwikkeling en het testen met niet-productieprofielen, die tot 10% van uw vergunning gegeven profielverplichting steunen (cumulatief die over alle erkende ontwikkelingszandbakken wordt gemeten). Voor extra details en begeleiding, zie de [&#x200B; documentatie van het zandbakenoverzicht &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) en de [&#x200B; pagina van de productbeschrijvingen &#x200B;](https://helpx.adobe.com/legal/product-descriptions.html) voor machtigingsdetails.
 
 U kunt meerdere ontwikkelingssandboxen gebruiken (tot 4 in dit bedrijfsvoorbeeld, aangezien we één productiesandbox gebruiken) voor de ontwikkelings- en testlevenscyclus.
 
@@ -102,16 +102,16 @@ Met de functie voor het gereedmaken van de sandbox kunt u verschillende objecten
 
 U kunt Experience Platform API&#39;s gebruiken om sandboximplementaties en configuratietaken te automatiseren. API&#39;s maken programmeerbare controle mogelijk voor herhaalde taken zoals het exporteren, importeren of wijzigen van sandboxconfiguraties, zodat u over flexibiliteit beschikt als u de voorkeur geeft aan geautomatiseerde workflows.
 
-Voor extra details op zandbak tooling, zie de [ zandbak tooling documentatie ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Voor extra details op zandbak tooling, zie de [&#x200B; zandbak tooling documentatie &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
-| ![ CDP-creeer een Pakket ](./images/whitepaper/create-package.png) | ![ CDP-Lijst Pakketten ](./images/whitepaper/list-packages.png) |
+| ![&#x200B; CDP-creeer een Pakket &#x200B;](./images/whitepaper/create-package.png) | ![&#x200B; CDP-Lijst Pakketten &#x200B;](./images/whitepaper/list-packages.png) |
 | --- | --- |
 
 ### Regio of merkspecifieke gegevensisolatie
 
 Als u volledig geïsoleerd moet zijn (bijvoorbeeld regionaal of op merk gebaseerd), kunt u werken onder strikte beleidsregels voor gegevenstoegang of wettelijke vereisten die de toegang van uw merkteams tot gegevens beperken specifiek voor hun respectieve regio&#39;s of merken. U bepaalt toegangspatronen die op gebied of merkspecifieke gegevens worden gebaseerd, die naleving van interne, regelgevende, en protocollen van het gegevensbeheer verzekeren. Deze aanpak is van cruciaal belang als u werkt in sterk gereguleerde bedrijfstakken (zoals het verwerken van PII-gegevens) of als u afzonderlijke en gesegmenteerde gegevens moet bijhouden voor verschillende geografische regio&#39;s of merkidentiteiten.
 
-![ CDP-Architectuur Veelvoudige Sandboxen van de Productie ](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
+![&#x200B; CDP-Architectuur Veelvoudige Sandboxen van de Productie &#x200B;](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
 
 #### Hoe werkt dit
 
@@ -215,7 +215,7 @@ Wanneer een onderneming met meerdere productiesandboxen werkt, die elk een regio
 
 **Specifieke globale zandbak**
 
-![ CDP-Dedicated Globale het Melden Sandbox ](./images/whitepaper/dedicated-global-reporting-sandbox.png)
+![&#x200B; CDP-Dedicated Globale het Melden Sandbox &#x200B;](./images/whitepaper/dedicated-global-reporting-sandbox.png)
 
 Deze sandbox fungeert als een centrale opslagplaats waar gegevens van afzonderlijke regionale of merkspecifieke sandboxen worden geconsolideerd. Een gemeenschappelijke oplossing is de Dienst van de Vraag binnen elke zandbak te gebruiken om relevante klantengegevens te halen. Dit kunnen profielen en ervaringsgebeurtenissen zijn die voor verschillende regio&#39;s of merken moeten worden geanalyseerd. Zodra de gegevens van elke zandbak worden voorbereid, wordt het opgenomen in de globale rapporteringszandbak voor analyse en publieksverwezenlijking.
 
@@ -229,7 +229,7 @@ Bovendien kunt u de Overeenkomst van het Segment van Experience Platform gebruik
 
 Deze segment-delende dienst staat twee of meer gebruikers toe om segmentgegevens op een veilige, beheerde, en privacy-vriendelijke manier uit te wisselen.
 
-Voor extra details op de eigenschap van de Gelijke van het Segment, zie de [ documentatie van de Gelijke van het Segment ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
+Voor extra details op de eigenschap van de Gelijke van het Segment, zie de [&#x200B; documentatie van de Gelijke van het Segment &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### Een overvloeiing van benaderingen voor wereldwijde, regionale en merkspecifieke bewerkingen
 
@@ -237,7 +237,7 @@ Veel multibrand-ondernemingen opereren op mondiale schaal en streven als zodanig
 
 Experience Platform is zich bewust van deze uiteenlopende vereisten en kan zo worden geconfigureerd dat u beschikt over een zeer aanpasbare en flexibele oplossing voor gegevensbeheer, zodat bedrijven met meerdere merken en regio&#39;s uw bedrijf binnen het platform effectief kunnen vertegenwoordigen. Of het nu gaat om het maximaliseren van de collectieve klantgegevens, het behouden van een strikte gegevensisolatie of het bereiken van een evenwicht tussen beide, Experience Platform is uitgerust om aan de uiteenlopende behoeften van uw onderneming te voldoen.
 
-![ CDP-Architectuur een mengselbenadering ](./images/whitepaper/Architecture-blend-sandbox.png)
+![&#x200B; CDP-Architectuur een mengselbenadering &#x200B;](./images/whitepaper/Architecture-blend-sandbox.png)
 
 #### Hoe werkt dit
 
@@ -317,7 +317,7 @@ Individueel XDM-profielschema:
 
 - Voeg labels toe aan de juiste rol. Voeg bijvoorbeeld het label &quot;Duitsland&quot; toe aan de rol &quot;Marketer-Duitsland&quot;.
 
-![ CDP-Etiket Soorten publiek ](./images/whitepaper/label-audience.png)
+![&#x200B; CDP-Etiket Soorten publiek &#x200B;](./images/whitepaper/label-audience.png)
 
 ###### Een standaardpubliek opnemen wanneer u een merk-/landspecifiek publiek maakt
 
@@ -329,7 +329,7 @@ Individueel XDM-profielschema:
 
 - Er is geen mechanisme om een of meer soorten publiek automatisch toe te voegen op het moment van compositie.
 
-![ CDP-voeg een StandaardPubliek ](./images/whitepaper/default-audience.png) toe
+![&#x200B; CDP-voeg een StandaardPubliek &#x200B;](./images/whitepaper/default-audience.png) toe
 
 ###### Filteren van profielen voor activering en merk/land
 
@@ -347,7 +347,7 @@ Zo kunt u profielen besturen of filteren op het moment van activering:
 >
 > De SKU Privacy en het Veiligheidsschild is vereist om toestemmingsbeleid tot stand te brengen.
 
-![ CDP-Aangepast Beleid van de Toestemming en het Filtreren van de Activering ](./images/whitepaper/custom-consent-policy.png)
+![&#x200B; CDP-Aangepast Beleid van de Toestemming en het Filtreren van de Activering &#x200B;](./images/whitepaper/custom-consent-policy.png)
 
 Complexiteit van multimerkactivering en -beleid:
 
@@ -371,7 +371,7 @@ In sommige scenario&#39;s, kunt u verkiezen voor het opstellen van Experience Pl
 
 - In het algemeen wordt een organisatie-id geïmplementeerd in één geografische regio.
 
-![ CDP-Architectuur Veelvoudige IMS Orgs Optie ](./images/whitepaper/Architecture-multi-imsorg.png)
+![&#x200B; CDP-Architectuur Veelvoudige IMS Orgs Optie &#x200B;](./images/whitepaper/Architecture-multi-imsorg.png)
 
 **Veelvoudige organisatie IDs: Voordelen en overwegingen &#x200B;**
 
@@ -381,7 +381,7 @@ In sommige scenario&#39;s, kunt u verkiezen voor het opstellen van Experience Pl
 
 **Enige organisatie identiteitskaart: Voordelen en overwegingen**
 
-![ CDP-Architectuur Veelvoudige Sandboxen van de Productie ](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
+![&#x200B; CDP-Architectuur Veelvoudige Sandboxen van de Productie &#x200B;](./images/whitepaper/Architecture-multiple-prod-sandbox.png)
 
 | Voordelen | Overwegingen |
 | -------- | -------------- |
