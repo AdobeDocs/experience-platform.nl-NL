@@ -2,9 +2,9 @@
 title: Toewijzingsvelden voor de Adobe Analytics Source Connector
 description: Wijs Adobe Analytics-velden toe aan XDM-velden met behulp van de Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
-source-wordcount: '3854'
+source-wordcount: '3838'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de bron Analytics. Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes worden in kaart gebracht.
 
-![&#x200B; een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
+![ een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
 
 ## Streaming media-parameters
 
@@ -197,7 +197,7 @@ Lees deze sectie voor informatie over verouderde analytische toewijzingsvelden.
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | getal | Beacon minor mobiele diensten. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | string | Mobile Services-baken UUID. |
 | `mobileinstalls` | `application.firstLaunches` | Object | Dit wordt geactiveerd bij de eerste uitvoering na installatie of herinstallatie `{id (string), value (number)}` |
-| `mobileupgrades` | `application.upgrades` | Object | Meldt het aantal upgrades van de app. Triggers bij de eerste looppas na verbetering of om het even welk ogenblik verandert het versieaantal. | `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | Object | Meldt het aantal upgrades van de app. Triggers bij de eerste looppas na verbetering of om het even welk ogenblik verandert het versieaantal. `{id (string), value (number)}` |
 | `mobilelaunches` | `application.launches` | Object | Het aantal keren dat de app is gestart.  `{id (string), value (number)}` |
 | `mobilecrashes` | `application.crashes` | Object | `{id (string), value (number)}` |
 | `mobilemessageclicks` | `directMarketing.clicks` | Object | `{id (string), value (number)}` |
@@ -224,13 +224,13 @@ Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd, waarb
 
 | Gegevensfeed | XDM-veld | XDM-type | Beschrijving |
 | --- | --- | --- | --- |
-| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Props voor aangepaste analyse, geconfigureerd als lijsteigenschappen. Het bevat een lijst met gescheiden waarden. | {} |
-| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Wordt gebruikt door hiërarchievariabelen. Het bevat een lijst met gescheiden waarden. | {values (array), delimiter (tekenreeks)} |
-| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Aangepaste analytische lijstvariabelen. Bevat een lijst met gescheiden waarden. | {value (string), key (string)} |
+| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Props voor aangepaste analyse, geconfigureerd als lijsteigenschappen. Het bevat een lijst met gescheiden waarden. `{}` |
+| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Wordt gebruikt door hiërarchievariabelen. Het bevat een lijst met gescheiden waarden. `{values (array), delimiter (string)}` |
+| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Aangepaste analytische lijstvariabelen. Bevat een lijst met gescheiden waarden.  `{value (string), key (string)}` |
 | `m_color` | `device.colorDepth` | integer | De kleurdiepte-id, die is gebaseerd op de waarde van de kolom c_color. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | Een variabele die in de dimensie van de Steun van het Koekje wordt gebruikt. |
-| `m_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Object | De standaard handelgebeurtenissen teweegbrachten op de slag. | {id (string), value (number)} |
-| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Aangepaste gebeurtenissen die worden geactiveerd tijdens de hit. | {id (Object), value (Object)} |
+| `m_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Object | De standaard handelgebeurtenissen teweegbrachten op de slag. `{id (string), value (number)}` |
+| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Aangepaste gebeurtenissen die worden geactiveerd tijdens de hit. `{id (Object), value (Object)}` |
 | `m_geo_country` | `placeContext.geo.countryCode` | string | Afkorting van het land waar de treffer vandaan kwam, dat van het OT is gebaseerd. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | getal | |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | getal | |
@@ -291,9 +291,9 @@ Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen 
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) die gegevens bevatten nadat Adobe de waarden ervan heeft aangepast met de verwerkingsregels, de VISTA-regels en de opzoektabellen. De meeste postwaarden hebben een vooraf verwerkte tegenhanger.
 
-De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
-Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
 +++Selecteren om een lijst met afgekeurde geavanceerde toewijzingsvelden weer te geven
 

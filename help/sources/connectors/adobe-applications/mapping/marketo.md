@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Toewijzingsvelden voor de Marketo Engage Source
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 4%
@@ -21,13 +21,13 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 ## Activiteiten {#activities}
 
-De bron [!DNL Marketo] ondersteunt nu aanvullende standaardactiviteiten. Om standaardactiviteiten te gebruiken, moet u uw schema bijwerken gebruikend het [&#x200B; schema auto-generatienut &#x200B;](../marketo/marketo-namespaces.md) omdat als u nieuwe `activities` dataflow creeert zonder uw schema bij te werken, de afbeeldingsmalplaatjes zullen ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nieuwe of bijgewerkte velden worden echter niet in Experience Platform opgenomen.
+De bron [!DNL Marketo] ondersteunt nu aanvullende standaardactiviteiten. Om standaardactiviteiten te gebruiken, moet u uw schema bijwerken gebruikend het [ schema auto-generatienut ](../marketo/marketo-namespaces.md) omdat als u nieuwe `activities` dataflow creeert zonder uw schema bij te werken, de afbeeldingsmalplaatjes zullen ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nieuwe of bijgewerkte velden worden echter niet in Experience Platform opgenomen.
 
-Lees de documentatie over [&#x200B; de klasse van de Gebeurtenis van de Ervaring XDM &#x200B;](../../../../xdm/classes/experienceevent.md) voor meer informatie over de Klasse XDM en de Groep(s) van het Gebied XDM.
+Lees de documentatie over [ de klasse van de Gebeurtenis van de Ervaring XDM ](../../../../xdm/classes/experienceevent.md) voor meer informatie over de Klasse XDM en de Groep(s) van het Gebied XDM.
 
 >[!NOTE]
 >
->Het bronveld `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` is een berekend veld dat moet worden toegevoegd met de optie **[!UICONTROL Add calculated field]** in de gebruikersinterface van Experience Platform. Lees het leerprogramma op [&#x200B; toevoegend berekende gebieden &#x200B;](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie.
+>Het bronveld `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` is een berekend veld dat moet worden toegevoegd met de optie **[!UICONTROL Add calculated field]** in de gebruikersinterface van Experience Platform. Lees het leerprogramma op [ toevoegend berekende gebieden ](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie.
 
 | Marketo-bronveld | Type activiteit-id | Source-gegevensset | XDM-doelveld | Notities |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
@@ -66,7 +66,7 @@ Lees de documentatie over [&#x200B; de klasse van de Gebeurtenis van de Ervaring
 | primaryAttributeValueId wanneer activityTypeId in (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong> activityTypeId = 8 </strong><ul><li>1099 → BERICHT GEBLOKKEERD</li><li>1003 → SPAM BLOKKEERD OP SOURCE</li><li>1004 → SPAM BLOKKEERD OP BERICHT</li><li>2003 → E-MAILADRES ONGELDIG</li><li>2001 → FOUT BIJ E-MAILADRES</li><li>*` &rarr;`ONBEKENDE REDEN VOOR HET OPSTARTEN</li></ul></li><li><strong> activityTypeId = 27 </strong><ul><li>3999 → BERICHT NIET AANVAARD</li><li>3001 → MAILBOX VOLLEDIG</li><li>3004 → TIMEOUT OPGETREDEN</li><li>4003 → DNS-FOUT</li><li>4002 → BERICHT TE GROOT</li><li>4006 → BELEIDSSCHENDING</li><li>4999 → OVERGANGSMISLUKKING</li><li>9999 → ONTVANGEN ONJUISTE REACTIE</li><li>*→ ONBEKENDE REDEN VOOR ZACHTE BOUNTIE</li></ul></li></ul> | 8 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong> activityTypeId = 8 </strong><ul><li>1099 → BERICHT GEBLOKKEERD</li><li>1003 → SPAM BLOKKEERD OP SOURCE</li><li>1004 → SPAM BLOKKEERD OP BERICHT</li><li>2003 → E-MAILADRES ONGELDIG</li><li>2001 → FOUT BIJ E-MAILADRES</li><li> `&rarr;` ONBEKENDE REDEN VOOR HET OPSTARTEN</li></ul></li><li><strong> activityTypeId = 27 </strong><ul><li>3999 → BERICHT NIET AANVAARD</li><li>3001 → MAILBOX VOLLEDIG</li><li>3004 → TIMEOUT OPGETREDEN</li><li>4003 → DNS-FOUT</li><li>4002 → BERICHT TE GROOT</li><li>4006 → BELEIDSSCHENDING</li><li>4999 → OVERGANGSMISLUKKING</li><li>9999 → ONTVANGEN ONJUISTE REACTIE</li><li> → ONBEKENDE REDEN VOOR ZACHTE BOUNTIE</li></ul></li></ul> | 8 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |
@@ -136,7 +136,7 @@ Lees de documentatie over [&#x200B; de klasse van de Gebeurtenis van de Ervaring
 
 ## Programma&#39;s {#programs}
 
-Lees het [&#x200B; XDM BedrijfsCampagne overzicht &#x200B;](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [&#x200B; gids van het het schemagebied van de Details van de BedrijfsCampagne &#x200B;](../../../../xdm/field-groups/b2b-campaign/details.md).
+Lees het [ XDM BedrijfsCampagne overzicht ](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van het het schemagebied van de Details van de BedrijfsCampagne ](../../../../xdm/field-groups/b2b-campaign/details.md).
 
 >[!NOTE]
 >
@@ -171,7 +171,7 @@ Lees het [&#x200B; XDM BedrijfsCampagne overzicht &#x200B;](../../../../xdm/clas
 
 ## Lidmaatschap van programma {#program-memberships}
 
-Lees het [&#x200B; XDM overzicht van de Leden Bedrijfs van de Campagne &#x200B;](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [&#x200B; gids van het het schemagebied van de Details van het Lid van de BedrijfsCampagne van de 0&rbrace; XDM.](../../../../xdm/field-groups/b2b-campaign-members/details.md)
+Lees het [ XDM overzicht van de Leden Bedrijfs van de Campagne ](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van het het schemagebied van de Details van het Lid van de BedrijfsCampagne van de 0} XDM.](../../../../xdm/field-groups/b2b-campaign-members/details.md)
 
 | Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | --------------- | ----- |
@@ -204,7 +204,7 @@ Lees het [&#x200B; XDM overzicht van de Leden Bedrijfs van de Campagne &#x200B;]
 
 ## Bedrijven {#companies}
 
-Lees het [&#x200B; XDM overzicht van de BedrijfsRekening &#x200B;](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de BedrijfsRekening ](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
 
 | Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -236,7 +236,7 @@ Lees het [&#x200B; XDM overzicht van de BedrijfsRekening &#x200B;](../../../../x
 
 ## Statische lijsten {#static-lists}
 
-Lees het [&#x200B; XDM overzicht van de Bedrijfs Marketing van de Lijst &#x200B;](../../../../xdm/classes/b2b/business-marketing-list.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de Bedrijfs Marketing van de Lijst ](../../../../xdm/classes/b2b/business-marketing-list.md) voor meer informatie over de klasse XDM.
 
 | Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | --------------- | ----- |
@@ -254,7 +254,7 @@ Lees het [&#x200B; XDM overzicht van de Bedrijfs Marketing van de Lijst &#x200B;
 
 ## Statische lijstlidmaatschappen {#static-list-memberships}
 
-Lees het [&#x200B; XDM Bedrijfs van de Marketing Lijst Leden overzicht &#x200B;](../../../../xdm/classes/b2b/business-marketing-list-members.md) voor meer informatie over de Klasse XDM.
+Lees het [ XDM Bedrijfs van de Marketing Lijst Leden overzicht ](../../../../xdm/classes/b2b/business-marketing-list-members.md) voor meer informatie over de Klasse XDM.
 
 | Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | --------------- | ----- |
@@ -275,7 +275,7 @@ Lees het [&#x200B; XDM Bedrijfs van de Marketing Lijst Leden overzicht &#x200B;]
 >
 >De genoemde rekeningen dataset is slechts noodzakelijk met de op rekening-gebaseerde marketing van Marketo (ABM) eigenschap. Als u ABM niet gebruikt, hoeft u geen toewijzingen in te stellen voor benoemde accounts.
 
-Lees het [&#x200B; XDM overzicht van de BedrijfsRekening &#x200B;](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de BedrijfsRekening ](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
 
 | Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | --------------- | ----- |
@@ -303,7 +303,7 @@ Lees het [&#x200B; XDM overzicht van de BedrijfsRekening &#x200B;](../../../../x
 
 ## Kansen {#opportunities}
 
-Lees het [&#x200B; XDM overzicht van de BedrijfsKans &#x200B;](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de BedrijfsKans ](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
 
 | Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | --------------- | ----- |
@@ -340,7 +340,7 @@ Lees het [&#x200B; XDM overzicht van de BedrijfsKans &#x200B;](../../../../xdm/c
 
 ## Contactrollen opportunity {#opportunity-contact-roles}
 
-Lees het [&#x200B; XDM overzicht van de Verhouding van de Person van de Bedrijfs van de Opportunity &#x200B;](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
+Lees het [ XDM overzicht van de Verhouding van de Person van de Bedrijfs van de Opportunity ](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
 
 | Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | --------------- | ----- |
@@ -361,7 +361,7 @@ Lees het [&#x200B; XDM overzicht van de Verhouding van de Person van de Bedrijfs
 
 ## Personen {#persons}
 
-Lees het [&#x200B; XDM Individuele overzicht van het Profiel &#x200B;](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [&#x200B; gids van de het schemagroep van de Details van de BedrijfsPersoon van 0&rbrace; XDM &lbrace;en &#x200B;](../../../../xdm/field-groups/profile/business-person-details.md) XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten [.](../../../../xdm/field-groups/profile/business-person-components.md)
+Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van de het schemagroep van de Details van de BedrijfsPersoon van 0} XDM {en ](../../../../xdm/field-groups/profile/business-person-details.md) XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten [.](../../../../xdm/field-groups/profile/business-person-components.md)
 
 | Source-veld | Doel XDM-veld | Notities |
 |---|---|---|
@@ -418,4 +418,4 @@ Lees het [&#x200B; XDM Individuele overzicht van het Profiel &#x200B;](../../../
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u insight verworven op de toewijzingsverhouding tussen uw [!DNL Marketo] datasets en hun overeenkomstige gebieden XDM. Zie het leerprogramma op [&#x200B; creërend a  [!DNL Marketo]  bronverbinding &#x200B;](../../../tutorials/ui/create/adobe-applications/marketo.md) om uw [!DNL Marketo] dataflow te voltooien.
+Door dit document te lezen, hebt u insight verworven op de toewijzingsverhouding tussen uw [!DNL Marketo] datasets en hun overeenkomstige gebieden XDM. Zie het leerprogramma op [ creërend a  [!DNL Marketo]  bronverbinding ](../../../tutorials/ui/create/adobe-applications/marketo.md) om uw [!DNL Marketo] dataflow te voltooien.
