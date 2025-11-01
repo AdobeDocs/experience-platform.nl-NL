@@ -15,7 +15,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Salesforce] bronv
 
 ## Contact {#contact}
 
-Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van de het schemagroep van de Details van de BedrijfsPersoon van 0} XDM {en ](../../../../xdm/field-groups/profile/business-person-details.md) XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten [.](../../../../xdm/field-groups/profile/business-person-components.md)
+Lees het [&#x200B; XDM Individuele overzicht van het Profiel &#x200B;](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [&#x200B; gids van de het schemagroep van de Details van de BedrijfsPersoon van 0&rbrace; XDM &lbrace;en &#x200B;](../../../../xdm/field-groups/profile/business-person-details.md) XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten [.](../../../../xdm/field-groups/profile/business-person-components.md)
 
 | Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -75,7 +75,7 @@ Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/i
 
 ## Lood {#lead}
 
-Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van de het schemagroep van de Details van de BedrijfsPersoon van 0} XDM {en ](../../../../xdm/field-groups/profile/business-person-details.md) XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten [.](../../../../xdm/field-groups/profile/business-person-components.md)
+Lees het [&#x200B; XDM Individuele overzicht van het Profiel &#x200B;](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [&#x200B; gids van de het schemagroep van de Details van de BedrijfsPersoon van 0&rbrace; XDM &lbrace;en &#x200B;](../../../../xdm/field-groups/profile/business-person-details.md) XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten [.](../../../../xdm/field-groups/profile/business-person-components.md)
 
 | Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -126,7 +126,7 @@ Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/i
 
 ## Account {#account}
 
-Lees het [ XDM overzicht van de details van de BedrijfsRekening ](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
+Lees het [&#x200B; XDM overzicht van de details van de BedrijfsRekening &#x200B;](../../../../xdm/classes/b2b/business-account.md) voor meer informatie over de klasse XDM.
 
 | Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -182,7 +182,7 @@ Lees het [ XDM overzicht van de details van de BedrijfsRekening ](../../../../xd
 
 ## Kans {#opportunity}
 
-Lees het [ XDM overzicht van de BedrijfsKans ](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
+Lees het [&#x200B; XDM overzicht van de BedrijfsKans &#x200B;](../../../../xdm/classes/b2b/business-opportunity.md) voor meer informatie over de klasse XDM.
 
 | Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -223,7 +223,7 @@ Lees het [ XDM overzicht van de BedrijfsKans ](../../../../xdm/classes/b2b/busin
 
 ## Contactrol opportunity {#opportunity-contact-role}
 
-Lees [ XDM de klassenoverzicht van de Verhouding van de Onderneming van de Opportunity ](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) voor meer informatie over de klasse XDM.
+Lees [&#x200B; XDM de klassenoverzicht van de Verhouding van de Onderneming van de Opportunity &#x200B;](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) voor meer informatie over de klasse XDM.
 
 | Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -249,7 +249,7 @@ Lees [ XDM de klassenoverzicht van de Verhouding van de Onderneming van de Oppor
 
 ## Campaign {#campaign}
 
-Lees het [ XDM BedrijfsCampagne klassenoverzicht ](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van het de detailsschema van de BedrijfsCampagne van de 0} XDM van de de detailhandel van de Campagne groep {.](../../../../xdm/field-groups/b2b-campaign/details.md)
+Lees het [&#x200B; XDM BedrijfsCampagne klassenoverzicht &#x200B;](../../../../xdm/classes/b2b/business-campaign.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [&#x200B; gids van het de detailsschema van de BedrijfsCampagne van de 0&rbrace; XDM van de de detailhandel van de Campagne groep &lbrace;.](../../../../xdm/field-groups/b2b-campaign/details.md)
 
 | Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -280,7 +280,7 @@ Lees het [ XDM BedrijfsCampagne klassenoverzicht ](../../../../xdm/classes/b2b/b
 
 ## Campagnelid {#campaign-member}
 
-Lees het [ XDM overzicht van de Leden Bedrijfs van de Campagne ](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees het [ XDM Van Bedrijfs het detailsschemagebied van het Lid van de Campagne ](../../../../xdm/field-groups/b2b-campaign/details.md) document.
+Lees het [&#x200B; XDM overzicht van de Leden Bedrijfs van de Campagne &#x200B;](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees het [&#x200B; XDM Van Bedrijfs het detailsschemagebied van het Lid van de Campagne &#x200B;](../../../../xdm/field-groups/b2b-campaign/details.md) document.
 
 | Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -306,7 +306,7 @@ Lees het [ XDM overzicht van de Leden Bedrijfs van de Campagne ](../../../../xdm
 
 ## Contactpersoon account {#account-contact-relation}
 
-Lees de [ klasse van de Verhouding van de Person van de BedrijfsRekening XDM ](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
+Lees de [&#x200B; klasse van de Verhouding van de Person van de BedrijfsRekening XDM &#x200B;](../../../../xdm/classes/b2b/business-account-person-relation.md) voor meer informatie over de klasse XDM.
 
 | Source-veld | Doel XDM-veldpad | Notities |
 | --- | --- | --- |
@@ -331,4 +331,4 @@ Lees de [ klasse van de Verhouding van de Person van de BedrijfsRekening XDM ](.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u insight opgehaald voor de toewijzingsrelatie tussen [!DNL Salesforce] bronvelden en de bijbehorende XDM-velden. Zie de documentatie bij [ het creëren van a  [!DNL Salesforce]  bronverbinding ](../../../connectors/crm/salesforce.md) voor meer informatie.
+Door dit document te lezen, hebt u insight opgehaald voor de toewijzingsrelatie tussen [!DNL Salesforce] bronvelden en de bijbehorende XDM-velden. Zie de documentatie bij [&#x200B; het creëren van a  [!DNL Salesforce]  bronverbinding &#x200B;](../../../connectors/crm/salesforce.md) voor meer informatie.
