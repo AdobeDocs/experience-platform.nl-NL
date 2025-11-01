@@ -2,7 +2,7 @@
 title: Gegevenslandingszone verbinden met Adobe Experience Platform met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met Data Landing Zone met behulp van de Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '1417'
 ht-degree: 1%
@@ -13,20 +13,20 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* schakelaar in Experience Platform. Voor informatie bij het verbinden met de [!DNL Data Landing Zone] *bestemmings* schakelaar, verwijs naar de [[!DNL Data Landing Zone]  pagina van de bestemmingsdocumentatie &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* schakelaar in Experience Platform. Voor informatie bij het verbinden met de [!DNL Data Landing Zone] *bestemmings* schakelaar, verwijs naar de [[!DNL Data Landing Zone]  pagina van de bestemmingsdocumentatie ](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] is een veilige, op de cloud gebaseerde opslagvoorziening voor bestanden die naar Adobe Experience Platform kunnen worden overgebracht. Gegevens worden automatisch na zeven dagen uit de [!DNL Data Landing Zone] verwijderd.
 
-Dit leerprogramma begeleidt u door de stappen op hoe te om a [!DNL Data Landing Zone] bronverbinding tot stand te brengen gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/). Deze zelfstudie bevat ook instructies voor het ophalen van [!DNL Data Landing Zone] en het weergeven en vernieuwen van uw referenties.
+Dit leerprogramma begeleidt u door de stappen op hoe te om a [!DNL Data Landing Zone] bronverbinding tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/). Deze zelfstudie bevat ook instructies voor het ophalen van [!DNL Data Landing Zone] en het weergeven en vernieuwen van uw referenties.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-Dit leerprogramma vereist u ook om de gids te lezen over [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md) om te leren hoe te aan Experience Platform APIs voor authentiek te verklaren en de voorbeeldvraag te interpreteren die in de documentatie wordt verstrekt.
+Dit leerprogramma vereist u ook om de gids te lezen over [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md) om te leren hoe te aan Experience Platform APIs voor authentiek te verklaren en de voorbeeldvraag te interpreteren die in de documentatie wordt verstrekt.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om een [!DNL Data Landing Zone] -bronverbinding met de [!DNL Flow Service] API te kunnen maken.
 
@@ -34,7 +34,7 @@ De volgende secties bevatten aanvullende informatie die u moet weten om een [!DN
 
 >[!IMPORTANT]
 >
->U moet de toegangsbeheermachtiging van **[!UICONTROL Manage Sources]** hebben om de [!DNL Data Landing Zone] API&#39;s te kunnen gebruiken en `type=user_drop_zone` op te halen. Voor meer informatie, lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](../../../../../access-control/home.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>U moet de toegangsbeheermachtiging van **[!UICONTROL Manage Sources]** hebben om de [!DNL Data Landing Zone] API&#39;s te kunnen gebruiken en `type=user_drop_zone` op te halen. Voor meer informatie, lees het [ overzicht van de toegangscontrole ](../../../../../access-control/home.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
 De eerste stap bij het gebruik van API&#39;s voor toegang tot [!DNL Data Landing Zone] is het indienen van een GET-aanvraag voor het `/landingzone` eindpunt van de [!DNL Connectors] API terwijl `type=user_drop_zone` wordt opgegeven als onderdeel van de aanvraagheader.
 
@@ -395,7 +395,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Parameter | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Landing Zone] . Deze vaste id is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8` . |
+| `{CONNECTION_SPEC_ID}` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Landing Zone] . Deze vaste id is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8` . |  |
 | `{OBJECT_TYPE}` | Het type object waartoe u toegang wilt hebben. | `file` |
 | `{OBJECT}` | Het pad en de naam van het object waartoe u toegang wilt hebben. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | Het type bestand. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -517,7 +517,7 @@ curl -X GET \
 
 Een succesvol antwoord retourneert de structuur van het bestand waarop de vraag betrekking heeft, inclusief bestandsnamen en gegevenstypen, en ook een `properties` -sleutel met informatie over `fileType` , `compressionType` en `columnDelimiter` .
 
-+++klik op mij
++++Klik op mij
 
 ```json
 {
@@ -673,4 +673,4 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw [!DNL Data Landing Zone] -gegevens opgehaald, de bestandsstructuur onderzocht om het bestand te zoeken dat u naar Experience Platform wilt verzenden, en een bronverbinding gemaakt om uw gegevens naar Experience Platform te verzenden. U kunt nu aan het volgende leerprogramma te werk gaan, waar u zult leren hoe te [&#x200B; een dataflow creëren om de gegevens van de wolkenopslag aan Experience Platform te brengen gebruikend  [!DNL Flow Service]  API &#x200B;](../../collect/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u uw [!DNL Data Landing Zone] -gegevens opgehaald, de bestandsstructuur onderzocht om het bestand te zoeken dat u naar Experience Platform wilt verzenden, en een bronverbinding gemaakt om uw gegevens naar Experience Platform te verzenden. U kunt nu aan het volgende leerprogramma te werk gaan, waar u zult leren hoe te [ een dataflow creëren om de gegevens van de wolkenopslag aan Experience Platform te brengen gebruikend  [!DNL Flow Service]  API ](../../collect/cloud-storage.md).

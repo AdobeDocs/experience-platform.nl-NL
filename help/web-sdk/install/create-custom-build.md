@@ -1,13 +1,13 @@
 ---
 title: Een aangepaste Web SDK-build maken met behulp van het NPM-pakket
 description: Maak een aangepaste SDK-build voor het web die alleen de modules bevat die u nodig hebt.
-source-git-commit: 0f77023b07102ac2bc812034afacb1522ef209e5
+exl-id: 0ba5ae55-9ec0-41b6-9675-e76ade8ca4cd
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 3%
 
 ---
-
 
 # Een aangepaste Web SDK-build maken
 
@@ -27,7 +27,7 @@ Als u alleen meetgegevens voor gebruikers wilt verzamelen en Adobe Target of Jou
 
 ## Vereisten {#prerequisites}
 
-Als u een aangepaste Web SDK-build wilt maken, hebt u het Web SDK NPM-pakket nodig. Zorg ervoor u [&#x200B; Node.js &#x200B;](https://nodejs.org/en/download/package-manager/all) geïnstalleerd op uw machine hebt. Zie de documentatie op hoe te [&#x200B; SDK van het Web installeren gebruikend het pakket NPM &#x200B;](npm.md) voor meer details.
+Als u een aangepaste Web SDK-build wilt maken, hebt u het Web SDK NPM-pakket nodig. Zorg ervoor u [ Node.js ](https://nodejs.org/en/download/package-manager/all) geïnstalleerd op uw machine hebt. Zie de documentatie op hoe te [ SDK van het Web installeren gebruikend het pakket NPM ](npm.md) voor meer details.
 
 ## Componenten en afhankelijkheden {#components-dependencies}
 
@@ -40,7 +40,7 @@ De lijst toont hieronder het verband tussen de modules van SDK van het Web en de
 | Activiteitenkorps | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | N.v.t. | Medium |
 | Doelgroepen | N.v.t. | N.v.t. | Klein |
 | Context | [`context`](../commands/configure/context.md) | N.v.t. | Klein |
-| Regelengine | `personalizationStorageEnabled` | | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Medium |
+| Regelengine | `personalizationStorageEnabled` | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Medium |
 | Gebeurtenissamenvoeging | N.v.t. | `createEventMergeId` | Klein |
 | Media Analytics Bridge | N.v.t. | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | Groot |
 | Personalisatie | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul> | N.v.t. | Groot |
@@ -51,7 +51,7 @@ De lijst toont hieronder het verband tussen de modules van SDK van het Web en de
 
 1. Open de terminal en voer `npx @adobe/alloy` uit. U wordt gevraagd om de componenten van SDK van het Web te selecteren die u uw douane bouwt om wilt omvatten.
 
-   ![&#x200B; Beeld van een terminal die de douane toont bouwt moduleselectie.](../assets/custom-build/npx.png)
+   ![ Beeld van een terminal die de douane toont bouwt moduleselectie.](../assets/custom-build/npx.png)
 
    Gebruik de pijltoetsen om omhoog en omlaag te gaan in de lijst met modules.
 
@@ -62,13 +62,12 @@ De lijst toont hieronder het verband tussen de modules van SDK van het Web en de
 
 1. Nadat u de modules hebt geselecteerd om in uw douane te omvatten bouwt, kunt u tussen het bewaren van een geminificeerde of ongeminificeerde versie van uw de bibliotheekbouwstijl van de SDK van het douaneWeb kiezen. Selecteer de gewenste optie en druk op `Enter` .
 
-   ![&#x200B; Beeld van een terminal die de douane toont verklein selectie.](../assets/custom-build/minify.png)
+   ![ Beeld van een terminal die de douane toont verklein selectie.](../assets/custom-build/minify.png)
 
 1. Vervolgens wordt u gevraagd waar u de build op uw lokale computer wilt opslaan. Druk op `Enter` om de vooraf geselecteerde locatie te bevestigen of een nieuwe locatie in te voeren.
 
-   ![&#x200B; Beeld van een terminal die de douane toont bouwt sparen optie.](../assets/custom-build/save.png)
+   ![ Beeld van een terminal die de douane toont bouwt sparen optie.](../assets/custom-build/save.png)
 
 1. Nadat u de locatie hebt bevestigd, wordt uw aangepaste build gegenereerd en opgeslagen.
 
-   ![&#x200B; Beeld van een terminal die de douane toont bouwt bewaarde plaats.](../assets/custom-build/saved.png)
-
+   ![ Beeld van een terminal die de douane toont bouwt bewaarde plaats.](../assets/custom-build/saved.png)

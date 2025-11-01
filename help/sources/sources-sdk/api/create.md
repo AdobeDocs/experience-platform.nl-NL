@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
 title: Een nieuwe verbindingsspecificatie maken met de Flow Service API
 description: Het volgende document verstrekt stappen op hoe te om een verbindingsspecificatie tot stand te brengen gebruikend de Dienst API van de Stroom en een nieuwe bron door Zelfbediening Bronnen te integreren.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ In het volgende document worden de stappen beschreven voor het maken van een ver
 
 ## Aan de slag
 
-Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Artefacten verzamelen
 
-Als u een nieuwe batchbron wilt maken met behulp van Self-Serve Sources, moet u eerst coördineren met Adobe, een persoonlijke Git-opslagplaats aanvragen en uitlijnen met de Adobe voor de details betreffende het label, de beschrijving, de categorie en het pictogram van de bron.
+Als u een nieuwe batchbron wilt maken met behulp van Self-Serve Sources, moet u eerst coördineren met Adobe, een persoonlijke Git-opslagplaats aanvragen en zich uitlijnen met Adobe op de details betreffende het label, de beschrijving, de categorie en het pictogram voor uw bron.
 
 Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
 
@@ -39,10 +39,10 @@ Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
 | Artefacten (bestandsnamen) | Beschrijving | Voorbeeld |
 | --- | --- | --- |
 | {your_source} | De naam van de bron. Deze map moet alle artefacten bevatten die betrekking hebben op uw bron, in uw persoonlijke Git-opslagplaats. | `mailchimp-members` |
-| {your_source}-category.txt | De categorie waartoe uw bron behoort, opgemaakt als een tekstbestand. De lijst van beschikbare broncategorieën die door Zelfbediening Bronnen (de Band SDK) worden gesteund omvat: <ul><li>Advertising</li><li>Analytics</li><li>Toestemming en voorkeuren</li><li>CRM</li><li>Klant geslaagd</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Betalingen</li><li>Protocollen</li></ul> **Nota**: Als u gelooft dat uw bron niet in om het even welke bovengenoemde categorieën past, gelieve uw vertegenwoordiger van de Adobe te contacteren om te bespreken. | `mailchimp-members-category.txt` Geef in het bestand bijvoorbeeld de categorie van de bron op. `marketingAutomation` |
-| {your_source} -description.txt | Een korte beschrijving van de bron. | [!DNL Mailchimp Members] is een marketingautomatiseringsbron die u kunt gebruiken om [!DNL Mailchimp Members] -gegevens naar het Experience Platform te brengen. |
-| {your_source} -icon.svg | De afbeelding die moet worden gebruikt om uw bron weer te geven in de catalogus met bronnen in het Experience Platform. Dit pictogram moet een SVG-bestand zijn. |
-| {your_source} -label.txt | De naam van de bron zoals deze moet worden weergegeven in de catalogus met bronnen van het Experience Platform. | Mailchimp-leden |
+| {your_source}-category.txt | De categorie waartoe uw bron behoort, opgemaakt als een tekstbestand. De lijst van beschikbare broncategorieën die door ZelfbedieningBronnen (Batch SDK) worden gesteund omvat: <ul><li>Advertising</li><li>Analytics</li><li>Toestemming en voorkeuren</li><li>CRM</li><li>Klant geslaagd</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Betalingen</li><li>Protocollen</li></ul> **Nota**: Als u gelooft dat uw bron niet in om het even welke bovengenoemde categorieën past, gelieve uw vertegenwoordiger van Adobe te contacteren om te bespreken. | `mailchimp-members-category.txt` Geef in het bestand bijvoorbeeld de categorie van de bron op. `marketingAutomation` |
+| {your_source} -description.txt | Een korte beschrijving van de bron. | [!DNL Mailchimp Members] is een marketingautomatiseringsbron die u kunt gebruiken om [!DNL Mailchimp Members] -gegevens over te brengen naar Experience Platform. |
+| {your_source} -icon.svg | De afbeelding die u wilt gebruiken om uw bron weer te geven in de catalogus met Experience Platform-bronnen. Dit pictogram moet een SVG-bestand zijn. |  |
+| {your_source} -label.txt | De naam van de bron zoals deze moet worden weergegeven in de catalogus met Experience Platform-bronnen. | Mailchimp-leden |
 | {your_source} -connectionSpec.json | Een JSON-bestand dat de verbindingsspecificatie van uw bron bevat. Dit bestand is in eerste instantie niet vereist omdat u de verbindingsspecificatie invult als u deze handleiding invult. | `mailchimp-members-connectionSpec.json` |
 
 {style="table-layout:auto"}
@@ -51,9 +51,9 @@ Zodra u de Git-opslagruimte hebt opgegeven, moet u deze als volgt structureren:
 >
 >Tijdens de testperiode van de verbindingsspecificatie kunt u in plaats van de sleutelwaarden `text` gebruiken in de verbindingsspecificatie.
 
-Nadat u de benodigde bestanden hebt toegevoegd aan uw persoonlijke Git-opslagplaats, moet u een pull-aanvraag (PR) maken die door de Adobe kan worden gecontroleerd. Wanneer uw PR wordt goedgekeurd en samengevoegd, zult u van identiteitskaart worden voorzien die voor uw verbindingsspecificatie kan worden gebruikt om naar het etiket, de beschrijving, en het pictogram van uw bron te verwijzen.
+Nadat u de benodigde bestanden hebt toegevoegd aan uw persoonlijke Git-opslagplaats, moet u een pull-aanvraag (PR) voor Adobe maken om deze te controleren. Wanneer uw PR wordt goedgekeurd en samengevoegd, zult u van identiteitskaart worden voorzien die voor uw verbindingsspecificatie kan worden gebruikt om naar het etiket, de beschrijving, en het pictogram van uw bron te verwijzen.
 
-Voer vervolgens de onderstaande stappen uit om uw verbindingsspecificatie te configureren. Voor extra begeleiding op de verschillende functionaliteiten die u aan uw bron, zoals geavanceerde het plannen, douaneschema, of verschillende paginatietypen kunt toevoegen, te herzien gelieve de gids op [&#x200B; vormend bronspecificaties &#x200B;](../config/sourcespec.md).
+Voer vervolgens de onderstaande stappen uit om uw verbindingsspecificatie te configureren. Voor extra begeleiding op de verschillende functionaliteiten die u aan uw bron, zoals geavanceerde het plannen, douaneschema, of verschillende paginatietypen kunt toevoegen, te herzien gelieve de gids op [ vormend bronspecificaties ](../config/sourcespec.md).
 
 ## Sjabloon voor verbindingsspecificatie kopiëren
 
@@ -452,7 +452,7 @@ Zie de volgende documenten voor instructies over hoe u de waarden van elk deel v
 * [Uw bronspecificatie configureren](../config/sourcespec.md)
 * [Uw verkenningsspecificatie configureren](../config/explorespec.md)
 
-Wanneer de opgegeven gegevens zijn bijgewerkt, kunt u de nieuwe verbindingsspecificatie verzenden door een aanvraag voor een POST in te dienen bij het `/connectionSpecs` -eindpunt van de [!DNL Flow Service] API.
+Als de opgegeven gegevens zijn bijgewerkt, kunt u de nieuwe verbindingsspecificatie verzenden door een POST-aanvraag in te dienen bij het `/connectionSpecs` -eindpunt van de [!DNL Flow Service] API.
 
 **API formaat**
 
@@ -835,6 +835,6 @@ Een geslaagde reactie retourneert de zojuist gemaakte verbindingsspecificatie, i
 
 ## Volgende stappen
 
-Nu u een nieuwe verbindingsspecificatie hebt gecreeerd, moet u zijn overeenkomstige identiteitskaart van de verbindingsspecificatie aan een bestaande stroomspecificatie toevoegen. Zie het leerprogramma bij [&#x200B; het bijwerken stroomspecificaties &#x200B;](./update-flow-specs.md) voor meer informatie.
+Nu u een nieuwe verbindingsspecificatie hebt gecreeerd, moet u zijn overeenkomstige identiteitskaart van de verbindingsspecificatie aan een bestaande stroomspecificatie toevoegen. Zie het leerprogramma bij [ het bijwerken stroomspecificaties ](./update-flow-specs.md) voor meer informatie.
 
-Om wijzigingen in de verbindingsspecificatie te maken die u creeerde, zie het leerprogramma bij [&#x200B; het bijwerken van verbindingsspecificaties &#x200B;](./update-connection-specs.md).
+Om wijzigingen in de verbindingsspecificatie te maken die u creeerde, zie het leerprogramma bij [ het bijwerken van verbindingsspecificaties ](./update-connection-specs.md).

@@ -2,9 +2,9 @@
 title: Toewijzingsvelden voor de Adobe Analytics Source Connector
 description: Wijs Adobe Analytics-velden toe aan XDM-velden met behulp van de Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3832'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de bron Analytics. Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes worden in kaart gebracht.
 
-![&#x200B; een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
+![ een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
 
 ## Streaming media-parameters
 
@@ -242,7 +242,7 @@ Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd, waarb
 | `m_page_type` | `web.webPageDetails.isErrorPage` | boolean | Een variabele die wordt gebruikt om de pagina&#39;s te vullen die niet worden gevonden. Deze variabele moet leeg zijn of &quot;ErrorPage&quot; bevatten. |
 | `m_pagename_no_url` | `web.webPageDetails.name` | getal | De naam van de pagina (indien ingesteld). Als er geen pagina is opgegeven, blijft deze waarde leeg. |
 | `m_paid_search` | `search.isPaid` | boolean | Een vlag die wordt geplaatst als de treffer betaalde onderzoeksopsporing aanpast. |
-| `m_product_list` | `productListItems[].items` | array | De productlijst, zoals die door de productvariabele wordt overgegaan. | {SKU (tekenreeks), quantity (geheel getal), priceTotal (getal)} |
+| `m_product_list` | `productListItems[].items` | array | De productlijst, zoals die door de productvariabele wordt overgegaan. `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | string | Een numerieke id die het verwijzingstype voor de treffer vertegenwoordigt.<br/>`1`: Binnen uw plaats <br/>`2`: Andere websites <br/>`3`: de motoren van het onderzoek <br/>`4`: Harde aandrijving <br/>`5`: USENET <br/>`6`: Typed/Bladwijzer (geen verwijzer) <br/>`7`: E-mail <br/>`8`: Geen JavaScript <br/>`9`: Sociale Netwerken |
 | `m_search_engine` | `search.searchEngine` | string | De numerieke id die staat voor het zoekprogramma waarmee de bezoeker naar uw site is doorverwezen. |
 | `post_currency` | `commerce.order.currencyCode` | string | De valutacode die tijdens de transactie werd gebruikt. |
@@ -291,9 +291,9 @@ Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen 
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) die gegevens bevatten nadat Adobe de waarden ervan heeft aangepast met de verwerkingsregels, de VISTA-regels en de opzoektabellen. De meeste postwaarden hebben een vooraf verwerkte tegenhanger.
 
-De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
-Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
 +++Selecteren om een lijst met afgekeurde geavanceerde toewijzingsvelden weer te geven
 

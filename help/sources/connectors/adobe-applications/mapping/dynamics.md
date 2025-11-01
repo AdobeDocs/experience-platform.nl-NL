@@ -2,7 +2,7 @@
 title: Microsoft Dynamics-toewijzingsvelden
 description: De onderstaande tabellen bevatten de toewijzingen tussen Microsoft Dynamics-bronvelden en de bijbehorende XDM-velden.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -171,8 +171,8 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |  |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |  |
 | `connectionrole1.name` | `personRole` |  |
-| `record1objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [&#x200B; hoe te om een picklist type brongebied aan een doelXDM schema &#x200B;](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record1objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit &#x200B;](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [&#x200B; hoe te om een picklist type brongebied aan een doelXDM schema &#x200B;](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record2objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit &#x200B;](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [ hoe te om een picklist type brongebied aan een doelXDM schema ](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record1objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *de groep van het douanegebied van A moet als doelschema worden bepaald.* Zie de appendix sectie voor stappen op [ hoe te om een picklist type brongebied aan een doelXDM schema ](#picklist-type-fields) voor meer informatie in kaart te brengen. | Voor een lijst van mogelijke en waarden en etiketten voor het `record2objecttypecode` brongebied, zie dit [[!DNL Microsoft Dynamics]  document van de verbindingsentiteit ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
 {style="table-layout:auto"}
 
@@ -222,7 +222,7 @@ De onderstaande tabellen bevatten de toewijzingen tussen [!DNL Microsoft Dynamic
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
-| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
+| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |  |
 | `listmemberid` | `marketingListMemberKey.sourceID` |  |
 | `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Primaire identiteit. De waarde voor `"${CRM_ORG_ID}"` wordt automatisch vervangen. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |  |
@@ -236,7 +236,7 @@ De onderstaande secties bevatten aanvullende informatie die u kunt gebruiken bij
 
 ### Tekstvelden voor keuzelijst {#picklist-type-fields}
 
-U kunt [&#x200B; berekende gebieden &#x200B;](../../../../data-prep/ui/mapping.md#calculated-fields) gebruiken om een picklist type brongebied van [!DNL Microsoft Dynamics] aan een doelXDM gebied in kaart te brengen.
+U kunt [ berekende gebieden ](../../../../data-prep/ui/mapping.md#calculated-fields) gebruiken om een picklist type brongebied van [!DNL Microsoft Dynamics] aan een doelXDM gebied in kaart te brengen.
 
 Het veld `genderCode` bevat bijvoorbeeld twee opties:
 
@@ -265,4 +265,4 @@ In dit scenario komt de waarde overeen met de sleutel, als de sleutel wordt gevo
 >
 >Een geneste herhaling van de bovenstaande bewerking lijkt op: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))` .
 
-Voor meer informatie is het [&#x200B; document over logische exploitanten in  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Voor meer informatie is het [ document over logische exploitanten in  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
