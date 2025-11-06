@@ -49,7 +49,7 @@ In de volgende zelfstudie wordt een aangepast model voor de koopsterkte van lumi
 
 ### Maak het schema met webinhoud Luma-gegevens en voer de gegevens in
 
-Als u een model wilt maken, moet u een gegevensset in Experience Platform hebben waarmee u uw model kunt trainen en behalen. Het volgende videoleerprogramma van de [&#x200B; cursus van Workspace van de Wetenschap van Gegevens &#x200B;](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) begeleidt u door het creëren van het schema van de Luma en het opnemen van de gegevens die door het model van de koopkrachtbron worden gebruikt.
+Als u een model wilt maken, moet u een gegevensset in Experience Platform hebben waarmee u uw model kunt trainen en behalen. Het volgende videoleerprogramma van de [&#x200B; cursus van Workspace van de Wetenschap van Gegevens &#x200B;](https://experienceleague.adobe.com/?lang=nl&recommended=ExperiencePlatform-U-1-2021.1.dsw) begeleidt u door het creëren van het schema van de Luma en het opnemen van de gegevens die door het model van de koopkrachtbron worden gebruikt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 
