@@ -51,13 +51,13 @@ In de volgende zelfstudie wordt een aangepast model voor de koopsterkte van lumi
 
 Als u een model wilt maken, moet u een gegevensset in Experience Platform hebben waarmee u uw model kunt trainen en behalen. Het volgende videoleerprogramma van de [&#x200B; cursus van Workspace van de Wetenschap van Gegevens &#x200B;](https://experienceleague.adobe.com/?lang=nl&recommended=ExperiencePlatform-U-1-2021.1.dsw) begeleidt u door het creëren van het schema van de Luma en het opnemen van de gegevens die door het model van de koopkrachtbron worden gebruikt.
 
->[!VIDEO](https://video.tv.adobe.com/v/333312)
+>[!VIDEO](https://video.tv.adobe.com/v/3447160?captions=dut)
 
 ### De datasets voor trainingsresultaten, scores en scores maken
 
 Als u het recept builder-notebook wilt gebruiken of de API wilt gebruiken om een model op te leiden en te scoren, moet u de dataset(s) en schema(s) opgeven die worden gebruikt voor training/scoring. De volgende videozelfstudie begeleidt u door het instellen van de gegevenssets voor training, scoring en scoring, evenals het schema voor scoringresultaten dat wordt gebruikt in het koopmodel Luma.
 
->[!VIDEO](https://video.tv.adobe.com/v/333426)
+>[!VIDEO](https://video.tv.adobe.com/v/3447427?captions=dut)
 
 ## Volgende stappen
 
