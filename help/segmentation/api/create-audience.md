@@ -4,7 +4,7 @@ description: Leer hoe u de metagegevens voor een extern publiek maakt met de API
 hide: true
 hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
+source-git-commit: a3b82eb1efaf257723208504c90210850a44b4a4
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 2%
@@ -21,7 +21,7 @@ Het POST `/audiences` eindpunt kan worden gebruikt creeert de meta-gegevens voor
 >
 >De eindpunten in deze handleiding worden voorafgegaan door `/core/ais` , in tegenstelling tot `/core/ups` .
 
-om Experience Platform APIs te gebruiken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) hebben voltooid. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+om Experience Platform APIs te gebruiken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) hebben voltooid. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -33,7 +33,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie bij het werken met zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakenoverzicht &#x200B;](../../sandboxes/home.md).
+>Voor meer informatie bij het werken met zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakenoverzicht ](../../sandboxes/home.md).
 
 **API formaat**
 
@@ -52,7 +52,7 @@ POST /audiences?createAudienceMetaOnly=true
 >U **moet** de `Accept: application/vnd.adobe.external.audiences+json; version=2` kopbal als deel van het API verzoek omvatten.
 
 ```shell
-curl -X POST https://platform.adobe.io/core/ais/audiences?createAudienceMetaOnly=true \
+curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMetaOnly=true \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
