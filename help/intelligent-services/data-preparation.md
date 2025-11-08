@@ -96,7 +96,7 @@ Het CEE-schema legt, net als alle XDM ExperienceEvent-schema&#39;s, de op tijdre
 
 Net als alle XDM-schema&#39;s is de veldgroep van het CEE-schema uitbreidbaar. Met andere woorden, er kunnen extra velden worden toegevoegd aan de CEE-veldgroep en indien nodig kunnen verschillende variaties in meerdere schema&#39;s worden opgenomen.
 
-Een volledig voorbeeld van de gebiedsgroep kan in de [&#x200B; openbare bewaarplaats worden gevonden XDM &#x200B;](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Bovendien kunt u het volgende [&#x200B; JSON- dossier &#x200B;](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) voor een voorbeeld van bekijken en kopiëren hoe de gegevens kunnen worden gestructureerd om aan het CEE schema te voldoen. Verwijs naar beide voorbeelden aangezien u over de belangrijkste gebieden leert die in de sectie worden geschetst hieronder, om te bepalen hoe u uw eigen gegevens aan het schema kunt in kaart brengen.
+Een volledig voorbeeld van de gebiedsgroep kan in de [&#x200B; openbare bewaarplaats worden gevonden XDM &#x200B;](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Bovendien kunt u het volgende [&#x200B; JSON- dossier &#x200B;](https://github.com/AdobeDocs/experience-platform.nl-NL/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) voor een voorbeeld van bekijken en kopiëren hoe de gegevens kunnen worden gestructureerd om aan het CEE schema te voldoen. Verwijs naar beide voorbeelden aangezien u over de belangrijkste gebieden leert die in de sectie worden geschetst hieronder, om te bepalen hoe u uw eigen gegevens aan het schema kunt in kaart brengen.
 
 ## Hoofdvelden
 
@@ -355,7 +355,7 @@ Als u gegevens van een lokaal Csv- dossier opneemt, kunt u vooruit aan de volgen
 
 #### Gegevens toewijzen en opnemen {#ingest}
 
-Nadat u een CEE-schema en -gegevensset hebt gemaakt, kunt u uw gegevenstabellen aan het schema toewijzen en die gegevens in Experience Platform invoeren. Zie het leerprogramma op [&#x200B; in kaart brengen een Csv- dossier aan een XDM- schema &#x200B;](../ingestion/tutorials/map-csv/overview.md) voor stappen op hoe te om dit in UI uit te voeren. U kunt het volgende [&#x200B; steekproefJSON- dossier &#x200B;](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) gebruiken om het innameproces te testen alvorens uw eigen gegevens te gebruiken.
+Nadat u een CEE-schema en -gegevensset hebt gemaakt, kunt u uw gegevenstabellen aan het schema toewijzen en die gegevens in Experience Platform invoeren. Zie het leerprogramma op [&#x200B; in kaart brengen een Csv- dossier aan een XDM- schema &#x200B;](../ingestion/tutorials/map-csv/overview.md) voor stappen op hoe te om dit in UI uit te voeren. U kunt het volgende [&#x200B; steekproefJSON- dossier &#x200B;](https://github.com/AdobeDocs/experience-platform.nl-NL/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) gebruiken om het innameproces te testen alvorens uw eigen gegevens te gebruiken.
 
 Zodra een dataset is bevolkt, kan de zelfde dataset worden gebruikt om extra gegevensdossiers in te voeren.
 

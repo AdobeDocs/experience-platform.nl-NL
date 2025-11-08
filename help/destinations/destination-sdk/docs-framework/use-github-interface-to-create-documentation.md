@@ -23,7 +23,7 @@ De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan au
 
 ## Opstelling uw GitHub auteursmilieu {#set-up-environment}
 
-1. Navigeer in uw browser naar `https://github.com/AdobeDocs/experience-platform.en` .
+1. Navigeer in uw browser naar `https://github.com/AdobeDocs/experience-platform.nl-NL` .
 1. Aan [&#x200B; vork &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL#fork-the-repository) de bewaarplaats, klik **Fork** zoals hieronder getoond. Dit leidt tot een exemplaar van de bewaarplaats van Experience Platform in uw eigen rekening GitHub.
 
    ![&#x200B; de documentatiebewaarplaats van Adobe van het Fork &#x200B;](../assets/docs-framework/ssd-fork-repository.gif)
@@ -75,7 +75,7 @@ De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan au
 
 1. Op dit moment wordt een melding weergegeven waarin u wordt gevraagd de Adobe Contributor License Agreement (CLA) te ondertekenen. Dit is een verplichte stap. Nadat u CLA ondertekent, vernieuw de PR pagina en verzend het trekkingsverzoek.
 
-1. U kunt bevestigen dat het trekkingsverzoek is voorgelegd door de **verzoeken van de Trek** tabel in `https://github.com/AdobeDocs/experience-platform.en` te inspecteren.
+1. U kunt bevestigen dat het trekkingsverzoek is voorgelegd door de **verzoeken van de Trek** tabel in `https://github.com/AdobeDocs/experience-platform.nl-NL` te inspecteren.
 
    ![&#x200B; PR succesvol &#x200B;](../assets/docs-framework/ssd-pr-successful.png)
 

@@ -25,7 +25,7 @@ Het volgende leerprogramma vereist dat u Desktop GitHub hebt die op uw lokale ma
 
 ## Verbind met GitHub en opstelling uw lokale auteursmilieu
 
-De eerste stap in vestiging uw lokaal auteursmilieu moet aan de [&#x200B; bewaarplaats van Adobe Experience Platform navigeren GitHub &#x200B;](https://github.com/AdobeDocs/experience-platform.en).
+De eerste stap in vestiging uw lokaal auteursmilieu moet aan de [&#x200B; bewaarplaats van Adobe Experience Platform navigeren GitHub &#x200B;](https://github.com/AdobeDocs/experience-platform.nl-NL).
 
 ![&#x200B; platform-repo &#x200B;](../assets/platform-repo.png)
 
@@ -97,6 +97,6 @@ Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een no
 
 ![&#x200B; creeer-pr &#x200B;](../assets/create-pr.png)
 
-U kunt bevestigen dat het trekkingsverzoek is voorgelegd door het lusje van trekkingsverzoeken in https://github.com/AdobeDocs/experience-platform.en te inspecteren.
+U kunt bevestigen dat het trekkingsverzoek is voorgelegd door het lusje van trekkingsverzoeken in https://github.com/AdobeDocs/experience-platform.nl-NL te inspecteren.
 
 ![&#x200B; bevestigen-pr &#x200B;](../assets/confirm-pr.png)
