@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Dataflows bijwerken met behulp van de Flow Service API
 
-Dit leerprogramma behandelt de stappen voor het bijwerken van een dataflow, met inbegrip van zijn basisinformatie, programma, en kaartreeksen die [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) gebruiken.
+Dit leerprogramma behandelt de stappen voor het bijwerken van een dataflow, met inbegrip van zijn basisinformatie, programma, en kaartreeksen die [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) gebruiken.
 
 >[!TIP]
 >
@@ -19,16 +19,16 @@ Dit leerprogramma behandelt de stappen voor het bijwerken van een dataflow, met 
 
 ## Aan de slag
 
-Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stroom identiteitskaart hebt, selecteer uw schakelaar van keus van het [ overzicht van bronnen ](../../home.md) en volg de stappen die vóór het proberen van dit leerprogramma worden geschetst.
+Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stroom identiteitskaart hebt, selecteer uw schakelaar van keus van het [&#x200B; overzicht van bronnen &#x200B;](../../home.md) en volg de stappen die vóór het proberen van dit leerprogramma worden geschetst.
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
 
 ## Gegevens over gegevensstroom opzoeken
 
@@ -293,4 +293,4 @@ Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de 
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de basisinformatie-, planning- en toewijzingssets van uw gegevensstroom bijgewerkt met behulp van de [!DNL Flow Service] API. Voor meer informatie bij het gebruiken van bronschakelaars, zie het [ overzicht van bronnen ](../../home.md).
+Door deze zelfstudie te volgen, hebt u de basisinformatie-, planning- en toewijzingssets van uw gegevensstroom bijgewerkt met behulp van de [!DNL Flow Service] API. Voor meer informatie bij het gebruiken van bronschakelaars, zie het [&#x200B; overzicht van bronnen &#x200B;](../../home.md).
