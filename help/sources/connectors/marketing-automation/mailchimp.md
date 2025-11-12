@@ -19,16 +19,16 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een de
 
 ## IP adres lijst van gewenste personen
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Mailchimp] en Experience Platform en het verzenden van [!DNL Mailchimp Campaigns] - of [!DNL Mailchimp Members] -gegevens via API&#39;s of de gebruikersinterface:
 
 ## Verbinden [!DNL Mailchimp Campaigns] met Experience Platform
 
-* [ creeer een bronverbinding om  [!DNL Mailchimp Campaigns]  gegevens aan Experience Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-* [ creeer een bronverbinding om  [!DNL Mailchimp Campaigns]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface ](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+* [&#x200B; creeer een bronverbinding om  [!DNL Mailchimp Campaigns]  gegevens aan Experience Platform te brengen gebruikend APIs &#x200B;](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
+* [&#x200B; creeer een bronverbinding om  [!DNL Mailchimp Campaigns]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface &#x200B;](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
 ## Verbinden [!DNL Mailchimp Members] met Experience Platform
 
-* [ creeer een bronverbinding om  [!DNL Mailchimp Members]  gegevens aan Experience Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-* [ creeer een bronverbinding om  [!DNL Mailchimp Members]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface ](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+* [&#x200B; creeer een bronverbinding om  [!DNL Mailchimp Members]  gegevens aan Experience Platform te brengen gebruikend APIs &#x200B;](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+* [&#x200B; creeer een bronverbinding om  [!DNL Mailchimp Members]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface &#x200B;](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
