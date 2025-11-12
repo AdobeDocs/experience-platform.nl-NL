@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Generic OData Source - Overzicht
 description: Leer hoe u Generic OData met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Generic OData] en [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
 

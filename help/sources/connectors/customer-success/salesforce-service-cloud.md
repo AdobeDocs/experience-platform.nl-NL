@@ -2,9 +2,9 @@
 title: Overzicht Salesforce Service Cloud Source Connector
 description: Leer hoe u Salesforce Service Cloud met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het nalaten om uw gebied-specifieke IP adressen aan uw lijst van gewenste personen toe te voegen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#x200B; IP pagina van de lijst van gewenste personen van het adres &#x200B;](../../ip-address-allow-list.md) voor meer informatie.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Salesforce Service Cloud] en [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
 

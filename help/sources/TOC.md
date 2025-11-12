@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 7%
 
 ---
@@ -102,7 +102,7 @@ ht-degree: 7%
       - [Schopify](connectors/ecommerce/shopify.md)
       - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
-      - [&#x200B; Lokale dossier uploadt schakelaar &#x200B;](connectors/local-system/local-file-upload.md)
+      - [ Lokale dossier uploadt schakelaar ](connectors/local-system/local-file-upload.md)
    - Loyalty {#loyalty}
       - [Capillary Streaming-gebeurtenissen](connectors/loyalty/capillary.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
@@ -313,7 +313,7 @@ ht-degree: 7%
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
-         - [&#x200B; Lokale dossier uploadt &#x200B;](tutorials/ui/create/local-system/local-file-upload.md)
+         - [ Lokale dossier uploadt ](tutorials/ui/create/local-system/local-file-upload.md)
       - Loyalty {#loyalty}
          - [Capillary Streaming-gebeurtenissen](tutorials/ui/create/loyalty/capillary.md)
          - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
@@ -400,5 +400,5 @@ ht-degree: 7%
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
-- [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

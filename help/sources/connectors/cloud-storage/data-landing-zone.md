@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: Leer hoe u Data Landing Zone kunt verbinden met Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* schakelaar in Experience Platform. Voor informatie bij het verbinden met de [!DNL Data Landing Zone] *bestemmings* schakelaar, verwijs naar de [[!DNL Data Landing Zone]  pagina van de bestemmingsdocumentatie &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Deze pagina is specifiek voor de [!DNL Data Landing Zone] *bron* schakelaar in Experience Platform. Voor informatie bij het verbinden met de [!DNL Data Landing Zone] *bestemmings* schakelaar, verwijs naar de [[!DNL Data Landing Zone]  pagina van de bestemmingsdocumentatie ](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht en waarmee u toegang hebt tot een veilige, op de cloud gebaseerde opslagfaciliteit voor bestanden om bestanden naar Experience Platform te brengen. U hebt toegang tot één [!DNL Data Landing Zone] container per sandbox en het totale gegevensvolume voor alle containers is beperkt tot de totale gegevens die worden geleverd bij uw Experience Platform-licentie voor producten en services. Alle klanten van Experience Platform beschikken over één [!DNL Data Landing Zone] -container per sandbox. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of de opdrachtregelinterface.
 
-[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren. Experience Platform past een strikte vervaltijd van zeven dagen toe op alle bestanden en mappen die naar een [!DNL Data Landing Zone] -container zijn geüpload. Alle bestanden en mappen worden na zeven dagen verwijderd.
+[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkveranderingen vereist voor u om tot uw [!DNL Data Landing Zone] container toegang te hebben, wat betekent u geen lijsten van gewenste personen of dwars-regio montages voor uw netwerk hoeft te vormen. Experience Platform past een strikte vervaltijd van zeven dagen toe op alle bestanden en mappen die naar een [!DNL Data Landing Zone] -container zijn geüpload. Alle bestanden en mappen worden na zeven dagen verwijderd.
 
 ## Stel uw [!DNL Data Landing Zone] source in voor Experience Platform on Azure {#azure}
 
@@ -25,7 +25,7 @@ Volg de onderstaande stappen om te leren hoe u uw [!DNL Data Landing Zone] -acco
 
 >[!NOTE]
 >
->Als u [!DNL Data Landing Zone] van [!DNL Azure Data Factory] wilt toegang hebben, dan moet u de verbonden dienst voor [!DNL Data Landing Zone] tot stand brengen gebruikend de [&#x200B; SAS geloofsbrieven &#x200B;](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) die door Experience Platform worden verstrekt. Nadat u de gekoppelde service hebt gemaakt, kunt u de [!DNL Data Landing Zone] verkennen door het containerpad te selecteren in plaats van het standaardhoofdpad.
+>Als u [!DNL Data Landing Zone] van [!DNL Azure Data Factory] wilt toegang hebben, dan moet u de verbonden dienst voor [!DNL Data Landing Zone] tot stand brengen gebruikend de [ SAS geloofsbrieven ](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) die door Experience Platform worden verstrekt. Nadat u de gekoppelde service hebt gemaakt, kunt u de [!DNL Data Landing Zone] verkennen door het containerpad te selecteren in plaats van het standaardhoofdpad.
 
 ### Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -35,20 +35,20 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden bij het
 - De folder en de dossiernamen kunnen niet met een voorwaartse schuine streep (`/`) beëindigen. Indien beschikbaar wordt deze automatisch verwijderd.
 - De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 - De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?` .
-- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (zoals `0x00` tot en met `0x1F` , `\u0081` enzovoort), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [&#x200B; RFC 2616, Sectie 2.2: BasisRegels &#x200B;](https://www.ietf.org/rfc/rfc2616.txt) en [&#x200B; RFC 3987 &#x200B;](https://www.ietf.org/rfc/rfc3987.txt).
+- Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (zoals `0x00` tot en met `0x1F` , `\u0081` enzovoort), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
 ### De inhoud van uw gegevenslandingszone beheren{#manage-the-contents-of-your-data-landing-zone}
 
-U kunt [[!DNL Azure Storage Explorer] gebruiken &#x200B;](https://azure.microsoft.com/en-us/features/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container te beheren.
+U kunt [[!DNL Azure Storage Explorer] gebruiken ](https://azure.microsoft.com/en-us/features/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container te beheren.
 
 Selecteer in de gebruikersinterface van [!DNL Azure Storage Explorer] het verbindingspictogram in de linkernavigatie. Het **Uitgezochte venster van het Middel** verschijnt, die u van opties voorzien om met te verbinden. Selecteer **[!DNL Blob container]** om verbinding te maken met [!DNL Data Landing Zone] .
 
-![&#x200B; de uitgezochte middelwerkruimte op Azure Explorer.](../../images/tutorials/create/dlz/select-resource.png)
+![ de uitgezochte middelwerkruimte op Azure Explorer.](../../images/tutorials/create/dlz/select-resource.png)
 
 Daarna, selecteer **Gedeelde toegangshandtekening URL (SAS)** als uw verbindingsmethode, en selecteer dan **daarna**.
 
-![&#x200B; de uitgezochte verbindingsmethode op Azure Explorer, met gedeelde geselecteerde toegangshandtekening.](../../images/tutorials/create/dlz/select-connection-method.png)
+![ de uitgezochte verbindingsmethode op Azure Explorer, met gedeelde geselecteerde toegangshandtekening.](../../images/tutorials/create/dlz/select-connection-method.png)
 
 Na het selecteren van uw verbindingsmethode, moet u a **vertoningsnaam** en **[!DNL Blob]container SAS URL** daarna verstrekken die met uw [!DNL Data Landing Zone] container beantwoordt.
 
@@ -58,19 +58,19 @@ Na het selecteren van uw verbindingsmethode, moet u a **vertoningsnaam** en **[!
 
 Verstrek uw [!DNL Data Landing Zone] SAS URL en selecteer dan **daarna**
 
-![&#x200B; gaat de werkruimte van verbindingsinfo op Azure Explorer in waar de vertoningsnaam en SAS URL worden ingevoerd.](../../images/tutorials/create/dlz/enter-connection-info.png)
+![ gaat de werkruimte van verbindingsinfo op Azure Explorer in waar de vertoningsnaam en SAS URL worden ingevoerd.](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 Het **Summiere** venster verschijnt, die u van een overzicht van uw montages, met inbegrip van informatie over uw [!DNL Blob] eindpunt en toestemmingen voorzien. Wanneer klaar, uitgezochte **verbindt**.
 
-![&#x200B; de Azure summiere werkruimte van de Ontdekkingsreiziger die de montages van uw middelverbinding opnieuw overlapt.](../../images/tutorials/create/dlz/summary.png)
+![ de Azure summiere werkruimte van de Ontdekkingsreiziger die de montages van uw middelverbinding opnieuw overlapt.](../../images/tutorials/create/dlz/summary.png)
 
 Een geslaagde verbinding werkt de gebruikersinterface van [!DNL Azure Storage Explorer] bij met uw [!DNL Data Landing Zone] -container.
 
-![&#x200B; de gegevens landende de navigatiewerkruimte van de streek op Azure Explorer.](../../images/tutorials/create/dlz/dlz-user-container.png)
+![ de gegevens landende de navigatiewerkruimte van de streek op Azure Explorer.](../../images/tutorials/create/dlz/dlz-user-container.png)
 
 Als de [!DNL Data Landing Zone] -container is aangesloten op [!DNL Azure Storage Explorer] , kunt u nu bestanden uploaden naar de [!DNL Data Landing Zone] -container. Om te uploaden, **te selecteren uploadt** en dan **selecteert uploadt Dossiers**.
 
-![&#x200B; uploadt de werkruimte van dossiers van Azure Explorer.](../../images/tutorials/create/dlz/upload.png)
+![ uploadt de werkruimte van dossiers van Azure Explorer.](../../images/tutorials/create/dlz/upload.png)
 
 Wanneer u het bestand hebt geselecteerd dat u wilt uploaden, moet u vervolgens het [!DNL Blob] type identificeren dat u het wilt uploaden als en de gewenste doelmap. Wanneer gebeëindigd, uitgezochte **uploadt**.
 
@@ -79,7 +79,7 @@ Wanneer u het bestand hebt geselecteerd dat u wilt uploaden, moet u vervolgens h
 | Blok [!DNL Blob] | Blok [!DNL Blobs] is geoptimaliseerd voor het efficiënt uploaden van grote hoeveelheden gegevens. Blok [!DNL Blobs] is de standaardoptie voor [!DNL Data Landing Zone] . |
 | Toevoegen [!DNL Blob] | Toevoegen [!DNL Blobs] is geoptimaliseerd voor het toevoegen van gegevens aan het einde van het bestand. |
 
-![&#x200B; uploadt het venster van dossiers van Azure Explorer waar de geselecteerde dossiers, het type van Blob, en bestemmingscategorie worden getoond.](../../images/tutorials/create/dlz/upload-files.png)
+![ uploadt het venster van dossiers van Azure Explorer waar de geselecteerde dossiers, het type van Blob, en bestemmingscategorie worden getoond.](../../images/tutorials/create/dlz/upload-files.png)
 
 ### Bestanden uploaden naar de [!DNL Data Landing Zone] via de opdrachtregelinterface
 
@@ -117,7 +117,7 @@ In het volgende voorbeeld wordt [!DNL Microsoft's] Python v12 SDK gebruikt om ee
 
 >[!TIP]
 >
->In het onderstaande voorbeeld wordt de volledige SAS URI gebruikt om verbinding te maken met een [!DNL Azure Blob] -container, maar u kunt andere methoden en bewerkingen gebruiken voor verificatie. Zie dit [[!DNL Microsoft]  document op Python v12 SDK &#x200B;](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) voor meer informatie.
+>In het onderstaande voorbeeld wordt de volledige SAS URI gebruikt om verbinding te maken met een [!DNL Azure Blob] -container, maar u kunt andere methoden en bewerkingen gebruiken voor verificatie. Zie dit [[!DNL Microsoft]  document op Python v12 SDK ](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) voor meer informatie.
 
 ```py
 import os
@@ -146,7 +146,7 @@ In het volgende voorbeeld wordt het hulpprogramma [!DNL Microsoft's] [!DNL AzCop
 
 >[!TIP]
 >
->In het onderstaande voorbeeld wordt de opdracht `copy` gebruikt, maar u kunt andere opdrachten en opties gebruiken om een bestand naar uw [!DNL Data Landing Zone] te uploaden met [!DNL AzCopy] . Zie dit [[!DNL Microsoft AzCopy]  document &#x200B;](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) voor meer informatie.
+>In het onderstaande voorbeeld wordt de opdracht `copy` gebruikt, maar u kunt andere opdrachten en opties gebruiken om een bestand naar uw [!DNL Data Landing Zone] te uploaden met [!DNL AzCopy] . Zie dit [[!DNL Microsoft AzCopy]  document ](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) voor meer informatie.
 
 ```bat
 set sasUri=<FULL SAS URI, PROPERLY ESCAPED>
@@ -159,17 +159,17 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/multi-cloud).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Volg de onderstaande stappen om te leren hoe u uw [!DNL Data Landing Zone] -account voor Experience Platform op Amazon Web Services (AWS) kunt instellen.
 
 ### IP adres lijst van gewenste personen voor verbinding op AWS
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op AWS aan te sluiten. Voor meer informatie, lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform op AWS &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op AWS aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform op AWS ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ### AWS CLI instellen en bewerkingen uitvoeren
 
-- Lees de gids bij [&#x200B; het installeren van of het bijwerken aan de recentste versie van AWS CLI &#x200B;](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+- Lees de gids bij [ het installeren van of het bijwerken aan de recentste versie van AWS CLI ](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 ### AWS CLI configureren met tijdelijke referenties
 
@@ -305,9 +305,9 @@ Navigeer ten slotte naar de gegenereerde URL om u rechtstreeks aan te melden bij
 
 >[!IMPORTANT]
 >
->- Als u verbinding wilt maken met de bron, hebt u de toegangsbeheermachtigingen **[!UICONTROL View Sources]** en **[!UICONTROL Manage Sources]** nodig. Voor meer informatie, lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](../../../access-control/home.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>- Als u verbinding wilt maken met de bron, hebt u de toegangsbeheermachtigingen **[!UICONTROL View Sources]** en **[!UICONTROL Manage Sources]** nodig. Voor meer informatie, lees het [ overzicht van de toegangscontrole ](../../../access-control/home.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 >
->- Privékoppelingen worden momenteel niet ondersteund wanneer verbinding wordt gemaakt met Experience Platform via [!DNL Data Landing Zone] . De enige gesteunde methodes voor toegang zijn de hier vermelde methodes [&#128279;](#manage-the-contents-of-your-data-landing-zone).
+>- Privékoppelingen worden momenteel niet ondersteund wanneer verbinding wordt gemaakt met Experience Platform via [!DNL Data Landing Zone] . De enige gesteunde methodes voor toegang zijn de hier vermelde methodes [ ](#manage-the-contents-of-your-data-landing-zone).
 
 In de onderstaande documentatie vindt u informatie over het overbrengen van gegevens van uw [!DNL Data Landing Zone] -container naar Adobe Experience Platform met behulp van API&#39;s of de gebruikersinterface.
 
