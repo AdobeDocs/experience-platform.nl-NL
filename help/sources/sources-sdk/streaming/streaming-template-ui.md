@@ -94,7 +94,7 @@ Selecteer **[!UICONTROL Next]** als u klaar bent.
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=nl-NL).
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
@@ -123,7 +123,7 @@ Als u het streamingeindpunt wilt ophalen, gaat u naar de [!UICONTROL Dataflow ac
 
 *de Werkschema&#39;s voor de resterende stappen van het creëren van een dataflow worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
 
-Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR &lbrace;gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
+Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR &lbrace;gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=nl-NL) te brengen.
 
 ## Aanvullende bronnen
 

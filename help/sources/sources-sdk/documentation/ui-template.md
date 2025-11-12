@@ -79,7 +79,7 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 *de Werkschema&#39;s voor de resterende stappen van het creëren van een dataflow worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
 
-Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR &lbrace;gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
+Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR &lbrace;gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=nl-NL) te brengen.
 
 ## Aanvullende bronnen
 
