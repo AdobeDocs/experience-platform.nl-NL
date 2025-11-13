@@ -14,21 +14,21 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> Google geeft veranderingen in de [ Adds API van Google ](https://developers.google.com/google-ads/api/docs/start), [ Overeenkomst van de Klant ](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) vrij, en [ Vertoning &amp; Video 360 API ](https://developers.google.com/display-video/api/guides/getting-started/overview) om de naleving en toestemmings-gerelateerde vereisten te steunen die onder de [ Wet van de Markten ](https://digital-markets-act.ec.europa.eu/index_nl) (DMA) worden bepaald in de Europese Unie ([ EU het Beleid van de Toestemming van de Gebruiker ](https://www.google.com/about/company/user-consent-policy/)). De handhaving van deze wijzigingen in de toestemmingsvereisten is vanaf 6 maart 2024 van kracht.
+> Google geeft veranderingen in de [&#x200B; Adds API van Google &#x200B;](https://developers.google.com/google-ads/api/docs/start), [&#x200B; Overeenkomst van de Klant &#x200B;](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) vrij, en [&#x200B; Vertoning &amp; Video 360 API &#x200B;](https://developers.google.com/display-video/api/guides/getting-started/overview) om de naleving en toestemmings-gerelateerde vereisten te steunen die onder de [&#x200B; Wet van de Markten &#x200B;](https://digital-markets-act.ec.europa.eu/index_nl) (DMA) worden bepaald in de Europese Unie ([&#x200B; EU het Beleid van de Toestemming van de Gebruiker &#x200B;](https://www.google.com/about/company/user-consent-policy/)). De handhaving van deze wijzigingen in de toestemmingsvereisten is vanaf 6 maart 2024 van kracht.
 ><br/>
 >Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
 ><br/>
->De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
+>De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [&#x200B; toestemming &#x200B;](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
 ><br/>
->De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de [ mogelijkheden van de segmentdefinitie ](../../../segmentation/home.md#segment-definitions) binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
+>De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de [&#x200B; mogelijkheden van de segmentdefinitie &#x200B;](../../../segmentation/home.md#segment-definitions) binnen [&#x200B; de Bouwer van het Segment &#x200B;](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
 
-[[!DNL Google Customer Match] ](https://support.google.com/google-ads/answer/6379332?hl=en) laat u uw online en off-line gegevens gebruiken om met uw klanten over Google bezeten en in werking gestelde eigenschappen, zoals: [!DNL Search], [!DNL Shopping], en [!DNL Gmail] te bereiken en opnieuw in dienst te nemen.
+[[!DNL Google Customer Match] &#x200B;](https://support.google.com/google-ads/answer/6379332?hl=en) laat u uw online en off-line gegevens gebruiken om met uw klanten over Google bezeten en in werking gestelde eigenschappen, zoals: [!DNL Search], [!DNL Shopping], en [!DNL Gmail] te bereiken en opnieuw in dienst te nemen.
 
 >[!TIP]
 >
->Om klanten op [!DNL YouTube] inventaris te bereiken, gebruik de [ Gelijke van de Klant van Google + bestemming DV360 ](/help/destinations/catalog/advertising/google-customer-match-dv360.md), die de Partner API van het Publiek van Google gebruikt.
+>Om klanten op [!DNL YouTube] inventaris te bereiken, gebruik de [&#x200B; Gelijke van de Klant van Google + bestemming DV360 &#x200B;](/help/destinations/catalog/advertising/google-customer-match-dv360.md), die de Partner API van het Publiek van Google gebruikt.
 
-![ de Klant van Google de bestemming van de Gelijke in Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![&#x200B; de Klant van Google de bestemming van de Gelijke in Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -42,7 +42,7 @@ Een atletisch merkje wil bestaande klanten bereiken via [!DNL Google Search] en 
 
 >[!TIP]
 >
->Om dit gebruiksgeval op [!DNL YouTube] inventaris uit te voeren, gebruik de nieuwe [ Gelijke van de Klant van Google + bestemming DV360 ](/help/destinations/catalog/advertising/google-customer-match-dv360.md), die de Partner API van het Publiek van Google gebruikt.
+>Om dit gebruiksgeval op [!DNL YouTube] inventaris uit te voeren, gebruik de nieuwe [&#x200B; Gelijke van de Klant van Google + bestemming DV360 &#x200B;](/help/destinations/catalog/advertising/google-customer-match-dv360.md), die de Partner API van het Publiek van Google gebruikt.
 
 Een vooraanstaande technologiebedrijf lanceerde een nieuwe telefoon. Om dit nieuwe telefoonmodel te bevorderen, kijken zij om bewustzijn van de nieuwe eigenschappen en de functionaliteit van de telefoon aan klanten te drijven die vorige modellen van hun telefoons bezitten.
 
@@ -50,22 +50,22 @@ Om de release te promoten, uploaden ze e-mailadressen vanuit hun CRM-database na
 
 ## Gegevensbeheer voor [!DNL Google Customer Match] doelen {#data-governance}
 
-Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichtingen voor gegevens die naar het bestemmingsplatform worden verzonden of van het bestemmingsplatform worden ontvangen. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [ leer meer ](../../../data-governance/labels/overview.md) over de hulpmiddelen en het beleid van het gegevensbeheer.
+Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichtingen voor gegevens die naar het bestemmingsplatform worden verzonden of van het bestemmingsplatform worden ontvangen. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform en het doelplatform. Adobe Experience Platform biedt tools voor gegevensbeheer om u te helpen bij het beheren van een aantal van deze gegevensgebruiksverplichtingen. [&#x200B; leer meer &#x200B;](../../../data-governance/labels/overview.md) over de hulpmiddelen en het beleid van het gegevensbeheer.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Google Customer Match] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL Google Customer Match] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
 | `GAID` | GOOGLE ADVERTISING ID | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | `IDFA` | Apple-id voor adverteerders | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
-| `phone_sha256_e.164` | Telefoonnummers in E164-indeling, gehasht met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
-| `email_lc_sha256` | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| `phone_sha256_e.164` | Telefoonnummers in E164-indeling, gehasht met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Volg de instructies in de [&#x200B; passende vereisten van identiteitskaart &#x200B;](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| `email_lc_sha256` | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [&#x200B; passende vereisten van identiteitskaart &#x200B;](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | `user_id` | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
 | `address_info_first_name` | Voornaam gebruiker | Deze doelidentiteit moet samen met `address_info_last_name`, `address_info_country_code` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of als er gegevens ontbreken, matcht Google het adres niet. |
 | `address_info_last_name` | Achternaam van de gebruiker | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_country_code` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of als er gegevens ontbreken, matcht Google het adres niet. |
-| `address_info_country_code` | Landcode gebruikersadres | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_last_name` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. <br><br> Toegelaten formaat: Kleine letters, 2-brief landcodes in [ ISO 3166-1 alpha-2 ](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formaat. |
+| `address_info_country_code` | Landcode gebruikersadres | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_last_name` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. <br><br> Toegelaten formaat: Kleine letters, 2-brief landcodes in [&#x200B; ISO 3166-1 alpha-2 &#x200B;](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formaat. |
 | `address_info_postal_code` | Postcode van gebruikersadres | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_last_name` en `address_info_country_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of als er gegevens ontbreken, matcht Google het adres niet. |
 
 {style="table-layout:auto"}
@@ -76,8 +76,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -88,19 +88,19 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer en andere) die in de [!DNL Google Customer Match] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## [!DNL Google Customer Match] -accountvoorwaarden {#google-account-prerequisites}
 
-Alvorens vestiging een [!DNL Google Customer Match] bestemming in Experience Platform, zorg ervoor u leest en aan het beleid van Google hanteert voor het gebruiken van [!DNL Customer Match], die in de [ de steundocumentatie van Google ](https://support.google.com/google-ads/answer/6299717) wordt geschetst.
+Alvorens vestiging een [!DNL Google Customer Match] bestemming in Experience Platform, zorg ervoor u leest en aan het beleid van Google hanteert voor het gebruiken van [!DNL Customer Match], die in de [&#x200B; de steundocumentatie van Google &#x200B;](https://support.google.com/google-ads/answer/6299717) wordt geschetst.
 
-Controleer vervolgens of uw [!DNL Google] -account is geconfigureerd voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
+Controleer vervolgens of uw [!DNL Google] -account is geconfigureerd voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [&#x200B; documentatie van Ads van Google &#x200B;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
 
 ### Lijst van gewenste personen {#allowlist}
 
-Alvorens de [!DNL Google Customer Match] bestemming in Experience Platform te creëren, zorg ervoor dat uw [!DNL Google Ads] rekening met het [[!DNL Google Customer Match]  beleid ](https://support.google.com/google-ads/answer/6299717/customer-match-policy) voldoet.
+Alvorens de [!DNL Google Customer Match] bestemming in Experience Platform te creëren, zorg ervoor dat uw [!DNL Google Ads] rekening met het [[!DNL Google Customer Match]  beleid &#x200B;](https://support.google.com/google-ads/answer/6299717/customer-match-policy) voldoet.
 
 Klanten met compatibele accounts worden automatisch gevoegd op lijst van gewenste personen door Google.
 
@@ -127,25 +127,25 @@ U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nem
 
 Raadpleeg de volgende secties in de documentatie bij Google voor meer informatie over de hashingvereisten voor Google en andere activeringsbeperkingen:
 
-* [[!DNL Customer Match]  met e-mailadres, adres, of gebruiker - identiteitskaart ](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
-* [[!DNL Customer Match]  overwegingen ](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
-* [[!DNL Customer Match]  met telefoonaantal ](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
-* [[!DNL Customer Match]  met mobiele apparaat IDs ](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
+* [[!DNL Customer Match]  met e-mailadres, adres, of gebruiker - identiteitskaart &#x200B;](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match]  overwegingen &#x200B;](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
+* [[!DNL Customer Match]  met telefoonaantal &#x200B;](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
+* [[!DNL Customer Match]  met mobiele apparaat IDs &#x200B;](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
-Om over het opnemen van e-mailadressen in Experience Platform te leren, zie het [ overzicht van de partijopname ](../../../ingestion/batch-ingestion/overview.md) en [ het stromen ingestitieoverzicht ](../../../ingestion/streaming-ingestion/overview.md).
+Om over het opnemen van e-mailadressen in Experience Platform te leren, zie het [&#x200B; overzicht van de partijopname &#x200B;](../../../ingestion/batch-ingestion/overview.md) en [&#x200B; het stromen ingestitieoverzicht &#x200B;](../../../ingestion/streaming-ingestion/overview.md).
 
 Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u voldoen aan de Google-vereisten die in de bovenstaande koppelingen worden beschreven.
 
 ### Hashingvereisten voor adresvelden {#address-field-hashing}
 
-Wanneer het in kaart brengen van adres-verwante gebieden aan [!DNL Google Customer Match], hakt Experience Platform **** automatisch de `address_info_first_name` en `address_info_last_name` waarden alvorens hen naar Google te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Google.
+Wanneer het in kaart brengen van adres-verwante gebieden aan [!DNL Google Customer Match], hakt Experience Platform **&#x200B;**&#x200B;automatisch de `address_info_first_name` en `address_info_last_name` waarden alvorens hen naar Google te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Google.
 
-Verstrek **** niet pre-gehakt waarden voor `address_info_first_name` of `address_info_last_name`. Als u al gehashte waarden opgeeft, mislukt het overeenkomende proces.
+Verstrek **&#x200B;**&#x200B;niet pre-gehakt waarden voor `address_info_first_name` of `address_info_last_name`. Als u al gehashte waarden opgeeft, mislukt het overeenkomende proces.
 
 ### Aangepaste naamruimten gebruiken {#custom-namespaces}
 
-Voordat u de naamruimte `User_ID` kunt gebruiken om gegevens naar Google te verzenden, moet u uw eigen id&#39;s eerst synchroniseren met [!DNL gTag] . Verwijs naar de [ officiële documentatie van Google ](https://support.google.com/google-ads/answer/9199250) voor gedetailleerde informatie.
+Voordat u de naamruimte `User_ID` kunt gebruiken om gegevens naar Google te verzenden, moet u uw eigen id&#39;s eerst synchroniseren met [!DNL gTag] . Verwijs naar de [&#x200B; officiële documentatie van Google &#x200B;](https://support.google.com/google-ads/answer/9199250) voor gedetailleerde informatie.
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
@@ -168,17 +168,17 @@ Bekijk de onderstaande video voor een uitleg van de voordelen en hoe u gegevens 
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven.
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+Terwijl [&#x200B; vestiging &#x200B;](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: geef een naam op voor deze doelverbinding
 * **[!UICONTROL Description]**: geef een beschrijving voor deze doelverbinding
-* **[!UICONTROL Account ID]**: uw [ Google voegt klantenidentiteitskaart ](https://support.google.com/google-ads/answer/1704344?hl=en) toe. De indeling van de id is xxx-xxxx. Als u [!DNL Google Ads Manager Account (My Client Center)] gebruikt, gebruik dan niet uw account-id voor Manager. Gebruik in plaats hiervan [ Google Adds klant ID ](https://support.google.com/google-ads/answer/1704344?hl=en).
+* **[!UICONTROL Account ID]**: uw [&#x200B; Google voegt klantenidentiteitskaart &#x200B;](https://support.google.com/google-ads/answer/1704344?hl=en) toe. De indeling van de id is xxx-xxxx. Als u [!DNL Google Ads Manager Account (My Client Center)] gebruikt, gebruik dan niet uw account-id voor Manager. Gebruik in plaats hiervan [&#x200B; Google Adds klant ID &#x200B;](https://support.google.com/google-ads/answer/1704344?hl=en).
 
 >[!NOTE]
 >
@@ -192,11 +192,11 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 
 Wanneer u een verbinding tot stand brengt met uw Google Ads-account, vraagt Google u om toegang tot de Adobe-toepassing te verlenen. U moet de Google Ads API-machtiging goedkeuren, zodat Adobe uw klantlijsten kan maken en beheren. Gebruik een Google Ads-gebruiker met standaard of hoger toegang op de klantenaccount waarmee u wilt activeren. Als u een Manager-account (MCC) gebruikt, meldt u zich aan bij een gebruiker op de klantenaccount en geeft u de id van de klantenaccount op (niet de MCC-id).
 
-Als de Google Ads-machtiging niet wordt verleend tijdens de OAuth-flow, kunnen activeringen later mislukken met fouten van de Google Ads API. Zie de [ het oplossen van problemensectie ](#troubleshooting) voor meer informatie over hoe te om op toestemming betrekking hebbende fouten op te lossen.
+Als de Google Ads-machtiging niet wordt verleend tijdens de OAuth-flow, kunnen activeringen later mislukken met fouten van de Google Ads API. Zie de [&#x200B; het oplossen van problemensectie &#x200B;](#troubleshooting) voor meer informatie over hoe te om op toestemming betrekking hebbende fouten op te lossen.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -204,16 +204,16 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* naar bestemmingen uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* naar bestemmingen uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [&#x200B; publieksgegevens aan het stromen publiek de uitvoerbestemmingen &#x200B;](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 In de stap **[!UICONTROL Segment schedule]** moet u [!UICONTROL App ID] opgeven wanneer u [!DNL IDFA] of [!DNL GAID] soorten publiek naar [!DNL Google Customer Match] verzendt.
 
-![ de Klant van Google het gebied van App ID van de Klant die in de het programmastap van het Segment van het activeringswerkschema wordt benadrukt.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![&#x200B; de Klant van Google het gebied van App ID van de Klant die in de het programmastap van het Segment van het activeringswerkschema wordt benadrukt.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Voor details op hoe te om [!DNL App ID] te vinden, verwijs naar de [ officiële documentatie van Google ](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) of vraag uw vertegenwoordiger van Google.
+Voor details op hoe te om [!DNL App ID] te vinden, verwijs naar de [&#x200B; officiële documentatie van Google &#x200B;](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) of vraag uw vertegenwoordiger van Google.
 
 ### Voorbeeld van toewijzing: publieksgegevens activeren in [!DNL Google Customer Match] {#example-gcm}
 
@@ -222,9 +222,9 @@ Dit is een voorbeeld van correcte identiteitstoewijzing wanneer het activeren va
 Bronvelden selecteren:
 
 * Selecteer de naamruimte `Email` als bronidentiteit als de e-mailadressen die u gebruikt geen hashing zijn.
-* Selecteer `Email_LC_SHA256` namespace als bronidentiteit als u klant e-mailadressen op gegevensinvoer in [!DNL Experience Platform], volgens [!DNL Google Customer Match] [ e-mailhashing vereisten ](#hashing-requirements) hashing.
+* Selecteer `Email_LC_SHA256` namespace als bronidentiteit als u klant e-mailadressen op gegevensinvoer in [!DNL Experience Platform], volgens [!DNL Google Customer Match] [&#x200B; e-mailhashing vereisten &#x200B;](#hashing-requirements) hashing.
 * Selecteer de naamruimte `PHONE_E.164` als bronidentiteit als uw gegevens uit niet-gehashte telefoonnummers bestaan. [!DNL Experience Platform] hasht de telefoonnummers om te voldoen aan [!DNL Google Customer Match] -vereisten.
-* Selecteer `Phone_SHA256_E.164` namespace als bronidentiteit als u telefoonaantallen op gegevensinvoer in [!DNL Experience Platform] hashing, volgens [!DNL Google Customer Match] [ de hashing vereisten van het telefoonaantal ](#phone-number-hashing-requirements).
+* Selecteer `Phone_SHA256_E.164` namespace als bronidentiteit als u telefoonaantallen op gegevensinvoer in [!DNL Experience Platform] hashing, volgens [!DNL Google Customer Match] [&#x200B; de hashing vereisten van het telefoonaantal &#x200B;](#phone-number-hashing-requirements).
 * Selecteer de naamruimte `IDFA` als bronidentiteit als uw gegevens uit [!DNL Apple] apparaat-id&#39;s bestaan.
 * Selecteer de naamruimte `GAID` als bronidentiteit als uw gegevens uit [!DNL Android] apparaat-id&#39;s bestaan.
 * Selecteer de naamruimte `Custom` als bronidentiteit als uw gegevens uit andere id&#39;s bestaan.
@@ -236,17 +236,17 @@ Doelvelden selecteren:
 * Selecteer `IDFA` of `GAID` naamruimten als doelidentiteit wanneer uw bronnaamruimten `IDFA` of `GAID` zijn.
 * Selecteer de naamruimte `User_ID` als doelidentiteit wanneer de bronnaamruimte een aangepaste naamruimte is.
 
-![ Identiteitskaart die tussen bron en doelgebieden in de stap van de Afbeelding van het activeringswerkschema wordt getoond.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![&#x200B; Identiteitskaart die tussen bron en doelgebieden in de stap van de Afbeelding van het activeringswerkschema wordt getoond.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 Gegevens uit naamruimten zonder hashing worden automatisch gehasht door [!DNL Experience Platform] bij activering.
 
 Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] .
 
-![ pas transformatiecontrole toe die in de stap van de Afbeelding van het activeringswerkschema wordt benadrukt.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![&#x200B; pas transformatiecontrole toe die in de stap van de Afbeelding van het activeringswerkschema wordt benadrukt.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Doel van monitor {#monitor-destination}
 
-Na het verbinden met de bestemming en het vestigen van een bestemmingsdataflow, kunt u de [ controlefunctionaliteit ](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP gebruiken om uitgebreide informatie over de profielverslagen te krijgen die aan uw bestemming in elke dataflow in werking worden gesteld.
+Na het verbinden met de bestemming en het vestigen van een bestemmingsdataflow, kunt u de [&#x200B; controlefunctionaliteit &#x200B;](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP gebruiken om uitgebreide informatie over de profielverslagen te krijgen die aan uw bestemming in elke dataflow in werking worden gesteld.
 
 >[!IMPORTANT]
 >
@@ -266,7 +266,7 @@ Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Deze fout komt voor wanneer de klantenrekeningen niet aan de [ eerste vereisten ](#google-account-prerequisites) voldoen. Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat uw account op de lijst met toegestane items staat en geconfigureerd is voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
+Deze fout komt voor wanneer de klantenrekeningen niet aan de [&#x200B; eerste vereisten &#x200B;](#google-account-prerequisites) voldoen. Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat uw account op de lijst met toegestane items staat en geconfigureerd is voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [&#x200B; documentatie van Ads van Google &#x200B;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
 
 ### 500 Interne serverfout - Onvoldoende verificatiebereik {#insufficient-scopes}
 
@@ -288,5 +288,5 @@ Ga als volgt te werk om dit probleem op te lossen:
 
 Als het probleem zich blijft voordoen:
 
-* Verifieer dat uw rekening van Google Ads voor de Gelijke van de Klant wordt gevoegd op lijst van gewenste personen en aan de [ beleidsvereisten ](#google-account-prerequisites) voldoet.
-* Zorg ervoor dat het toegangsniveau van de gebruiker [!DNL Standard] of hoger is in de Google Ads-klantenaccount. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
+* Verifieer dat uw rekening van Google Ads voor de Gelijke van de Klant wordt gevoegd op lijst van gewenste personen en aan de [&#x200B; beleidsvereisten &#x200B;](#google-account-prerequisites) voldoet.
+* Zorg ervoor dat het toegangsniveau van de gebruiker [!DNL Standard] of hoger is in de Google Ads-klantenaccount. Zie de [&#x200B; documentatie van Ads van Google &#x200B;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
