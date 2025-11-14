@@ -4,9 +4,9 @@ title: Voorbeeld van voorbeeldstatus (profiel voorvertoning) API-eindpunt
 description: Het eindpunt van de voorproefvoorbeeldstatus van het Real-Time Profiel van de Klant API staat u toe om de recentste succesvolle steekproef van uw gegevens van het Profiel, de distributie van het lijstprofiel door dataset en door identiteit, voor te vertonen en rapporten te produceren die datasetoverlapping, identiteitsoverlap, en ongestipte profielen tonen.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: d1eb9191c74add1ab21cd268327bab9a3255d182
+source-git-commit: bb2cfb479031f9e204006ba489281b389e6c6c04
 workflow-type: tm+mt
-source-wordcount: '2904'
+source-wordcount: '2306'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ De resultaten van deze voorbeeldbaan kunnen worden bekeken gebruikend het `/prev
 
 >[!NOTE]
 >
->Er zijn schatting en voorproef eindpunten beschikbaar als deel van de Dienst API van de Segmentatie van Adobe Experience Platform die u toestaan om samenvatting-vlakke informatie betreffende segmentdefinities te bekijken helpen ervoor zorgen u het verwachte publiek isoleert. Om gedetailleerde stappen voor het werken met voorproef te vinden en eindpunten te schatten, gelieve te bezoeken de [&#x200B; voorproeven en de gids van geschatte eindpunten &#x200B;](../../segmentation/api/previews-and-estimates.md), een deel van de [!DNL Segmentation] API ontwikkelaarsgids.
+>Er zijn schatting en voorproef eindpunten beschikbaar als deel van de Dienst API van de Segmentatie van Adobe Experience Platform die u toestaan om samenvatting-vlakke informatie betreffende segmentdefinities te bekijken helpen ervoor zorgen u het verwachte publiek isoleert. Om gedetailleerde stappen voor het werken met voorproef te vinden en eindpunten te schatten, gelieve te bezoeken de [ voorproeven en de gids van geschatte eindpunten ](../../segmentation/api/previews-and-estimates.md), een deel van de [!DNL Segmentation] API ontwikkelaarsgids.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Real-Time Customer Profile]  API &#x200B;](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Real-Time Customer Profile]  API ](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke [!DNL Experience Platform] API met succes te maken.
 
 ## Profielfragmenten versus samengevoegde profielen
 
@@ -33,7 +33,7 @@ Elk individueel klantprofiel bestaat uit meerdere profielfragmenten die zijn sam
 
 Wanneer profielfragmenten in Experience Platform worden opgenomen, worden ze samengevoegd (op basis van een samenvoegbeleid) om één profiel voor die klant te maken. Daarom is het totale aantal profielfragmenten waarschijnlijk altijd hoger dan het totale aantal samengevoegde profielen, aangezien elk profiel uit veelvoudige fragmenten bestaat.
 
-Meer over profielen en hun rol binnen Experience Platform leren, gelieve te beginnen door het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../home.md) te lezen.
+Meer over profielen en hun rol binnen Experience Platform leren, gelieve te beginnen door het [ overzicht van het Profiel van de Klant in real time ](../home.md) te lezen.
 
 ## Hoe de voorbeeldtaak wordt geactiveerd
 
@@ -42,11 +42,11 @@ Aangezien gegevens die voor het Profiel van de Klant in real time worden toegela
 * Voor **het stromen gegevenswerkschema&#39;s**, wordt een controle gedaan op een uurbasis om te bepalen als de 3% toename of dalingsdrempel is voldaan aan. Als dit het geval is, wordt er automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
 * Voor **partijingestie**, binnen 15 minuten van met succes het opnemen van een partij in de opslag van het Profiel, als de 3% verhoging of dalingsdrempel wordt ontmoet, wordt een baan in werking gesteld om de telling bij te werken. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
 
-Het aantal profielen en de profielen op basis van naamruimtewaarden zijn ook beschikbaar in de sectie [!UICONTROL Profiles] van de gebruikersinterface van Experience Platform. Voor informatie over hoe te om tot de gegevens van het Profiel toegang te hebben gebruikend UI, gelieve de [[!DNL Profile]  gids UI &#x200B;](../ui/user-guide.md) te bezoeken.
+Het aantal profielen en de profielen op basis van naamruimtewaarden zijn ook beschikbaar in de sectie [!UICONTROL Profiles] van de gebruikersinterface van Experience Platform. Voor informatie over hoe te om tot de gegevens van het Profiel toegang te hebben gebruikend UI, gelieve de [[!DNL Profile]  gids UI ](../ui/user-guide.md) te bezoeken.
 
 ## Laatste voorbeeldstatus weergeven {#view-last-sample-status}
 
-U kunt een GET-aanvraag naar het `/previewsamplestatus` -eindpunt uitvoeren om de details te bekijken van de laatste voorbeeldtaak die voor uw organisatie is uitgevoerd. Dit omvat het totale aantal profielen in de steekproef, evenals de metrische profieltelling, of het totale aantal profielen uw organisatie heeft binnen Experience Platform.
+U kunt de details voor de laatste succesvolle steekproefbaan bekijken die voor uw organisatie door een verzoek van GET aan het `/previewsamplestatus` eindpunt werd in werking gesteld. Dit rapport bevat het totale aantal profielen in het voorbeeld, evenals het aantal profielen of het totale aantal profielen dat uw organisatie in Experience Platform heeft.
 
 Het aantal profielen wordt gegenereerd na het samenvoegen van profielfragmenten om één profiel voor elke afzonderlijke klant te vormen. Met andere woorden, wanneer profielfragmenten samen worden samengevoegd, wordt een getal van &quot;1&quot;-profiel geretourneerd omdat ze allemaal verwant zijn aan hetzelfde individu.
 
@@ -60,6 +60,8 @@ GET /previewsamplestatus
 
 **Verzoek**
 
++++ Een voorbeeldverzoek om de laatste voorbeeldstatus weer te geven.
+
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus \
@@ -69,9 +71,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 **Reactie**
 
-De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de organisatie is uitgevoerd.
+Een succesvolle reactie keert status 200 van HTTP terug en omvat de details voor de laatste succesvolle steekproefbaan die voor de organisatie in werking werd gesteld.
+
++++ Een voorbeeldreactie die de laatste voorbeeldstatus bevat.
 
 >[!NOTE]
 >
@@ -98,23 +104,25 @@ De reactie bevat de details voor de laatste geslaagde voorbeeldtaak die voor de 
 ```
 
 | Eigenschap | Beschrijving |
-|---|---|
+| -------- | ----------- |
 | `numRowsToRead` | Het totale aantal samengevoegde profielen in de steekproef. |
 | `sampleJobRunning` | Een Booleaanse waarde die `true` retourneert wanneer een voorbeeldtaak wordt uitgevoerd. Hiermee krijgt u transparantie in de latentie die optreedt wanneer een batchbestand wordt geüpload naar het moment dat het daadwerkelijk wordt toegevoegd aan de profielopslag. |
 | `docCount` | Totaal aantal documenten in database. |
 | `totalFragmentCount` | Het totale aantal profielfragmenten in het archief met profielen. |
 | `lastSuccessfulBatchTimestamp` | Tijdstempel voor laatste succes bij het invoeren van batch. |
 | `streamingDriven` | *Dit gebied is afgekeurd en bevat geen betekenis aan de reactie.* |
-| `totalRows` | Het totale aantal samengevoegde profielen in Experience Platform, ook wel &#39;aantal profielen&#39; genoemd. |
+| `totalRows` | Het totale aantal samengevoegde profielen in Experience Platform, ook bekend als het aantal profielen. |
 | `lastBatchId` | Laatste batch-inname-id. |
 | `status` | Status van laatste sample. |
 | `samplingRatio` | Verhouding van samengevoegde profielen (`numRowsToRead`) tot het totaal van samengevoegde profielen (`totalRows`), uitgedrukt als een percentage in decimale notatie. |
 | `mergeStrategy` | Samenvoegingsstrategie gebruikt in de steekproef. |
 | `lastSampledTimestamp` | Laatste succesvolle voorbeeld van tijdstempel. |
 
++++
+
 ## Profieldistributie per gegevensset weergeven
 
-Als u de verdeling van profielen op gegevensset wilt zien, kunt u een GET-aanvraag naar het eindpunt van `/previewsamplestatus/report/dataset` uitvoeren.
+U kunt de verdeling van profielen door dataset zien door een GET- verzoek aan het `/previewsamplestatus/report/dataset` eindpunt te doen.
 
 **API formaat**
 
@@ -123,30 +131,39 @@ GET /previewsamplestatus/report/dataset
 GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Beschrijving |
-|---|---|
-| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als er meerdere rapporten op de datum werden uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: JJJ-MM-DD. Voorbeeld: `date=2024-12-31` |
+| Query-parameter | Beschrijving | Voorbeeld |
+| --------------- | ----------- | ------- |
+| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als er meerdere rapporten op de datum werden uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: JJJ-MM-DD. | `date=2024-12-31` |
 
 **Verzoek**
 
 In het volgende verzoek wordt de parameter `date` gebruikt om het meest recente rapport voor de opgegeven datum te retourneren.
 
++++ Een steekproefverzoek om de profieldistributie door dataset terug te winnen.
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Reactie**
++++
 
-De reactie bevat een array `data` die een lijst met gegevenssetobjecten bevat. De getoonde reactie is beknot om drie datasets te tonen.
+**Reactie**
 
 >[!NOTE]
 >
 >Als er meerdere rapporten voor de datum bestaan, wordt alleen het laatste rapport geretourneerd. Als er geen gegevenssetrapport bestaat voor de opgegeven datum, wordt HTTP Status 404 (Niet gevonden) geretourneerd.
+
+Een geslaagde reactie retourneert HTTP-status 200 en bevat een `data` -array die een lijst met gegevenssetobjecten bevat.
+
++++ Een steekproefreactie die de recentste datasetvoorwerpen bevat.
+
+>[!NOTE]
+>
+>De volgende getoonde reactie is beknot om drie datasets te tonen.
 
 ```json
 {
@@ -193,11 +210,11 @@ De reactie bevat een array `data` die een lijst met gegevenssetobjecten bevat. D
 ```
 
 | Eigenschap | Beschrijving |
-|---|---|
+| -------- | ----------- |
 | `sampleCount` | Het totale aantal gesamplede profielen met deze gegevensset-id. |
-| `samplePercentage` | `sampleCount` als percentage van het totale aantal gesamplede profielen (de `numRowsToRead` waarde zoals teruggekeerd in de [&#x200B; laatste steekproefstatus &#x200B;](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
+| `samplePercentage` | `sampleCount` als percentage van het totale aantal gesamplede profielen (de `numRowsToRead` waarde zoals teruggekeerd in de [ laatste steekproefstatus ](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
 | `fullIDsCount` | Het totale aantal samengevoegde profielen met deze dataset-id. |
-| `fullIDsPercentage` | `fullIDsCount` als percentage van het totale aantal samengevoegde profielen (de `totalRows` waarde zoals teruggekeerd in de [&#x200B; laatste steekproefstatus &#x200B;](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
+| `fullIDsPercentage` | `fullIDsCount` als percentage van het totale aantal samengevoegde profielen (de `totalRows` waarde zoals teruggekeerd in de [ laatste steekproefstatus ](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
 | `name` | De naam van de dataset, zoals die tijdens de verwezenlijking van dataset wordt verstrekt. |
 | `description` | De beschrijving van de dataset, zoals die tijdens de verwezenlijking van dataset wordt verstrekt. |
 | `value` | De id van de gegevensset. |
@@ -205,11 +222,13 @@ De reactie bevat een array `data` die een lijst met gegevenssetobjecten bevat. D
 | `createdUser` | De gebruikers-id van de gebruiker die de gegevensset heeft gemaakt. |
 | `reportTimestamp` | De tijdstempel van het rapport. Als een parameter `date` tijdens het verzoek werd verstrekt, is het teruggekeerde rapport voor de verstrekte datum. Als er geen parameter `date` is opgegeven, wordt het meest recente rapport geretourneerd. |
 
++++
+
 ## Profieldistributie weergeven op naamruimte van identiteit
 
 U kunt een GET-aanvraag naar het eindpunt van `/previewsamplestatus/report/namespace` uitvoeren om de uitsplitsing naar naamruimte van de identiteit weer te geven voor alle samengevoegde profielen in het archief Profiel. Dit geldt zowel voor de standaardidentiteiten die door Adobe worden geleverd als voor de aangepaste identiteiten die door uw organisatie zijn gedefinieerd.
 
-Identiteitsnaamruimten zijn een belangrijk onderdeel van de Adobe Experience Platform Identity Service dat als indicatoren dient voor de context waarop de klantgegevens betrekking hebben. Om meer te leren, begin door het [&#x200B; overzicht van identiteitskaart te lezen namespace &#x200B;](../../identity-service/features/namespaces.md).
+Identiteitsnaamruimten zijn een belangrijk onderdeel van de Adobe Experience Platform Identity Service dat als indicatoren dient voor de context waarop de klantgegevens betrekking hebben. Om meer te leren, begin door het [ overzicht van identiteitskaart te lezen namespace ](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -222,26 +241,31 @@ GET /previewsamplestatus/report/namespace
 GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Beschrijving |
-|---|---|
-| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als er meerdere rapporten op de datum werden uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: JJJ-MM-DD. Voorbeeld: `date=2024-12-31` |
+| Query-parameter | Beschrijving | Voorbeeld |
+| --------------- | ----------- | ------- |
+| `date` | Geeft de datum aan van het rapport dat moet worden geretourneerd. Als er meerdere rapporten op de datum werden uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: `YYYY-MM-DD`. | `date=2025-6-20` |
 
 **Verzoek**
 
-In het volgende verzoek wordt geen parameter `date` opgegeven en wordt daarom het meest recente rapport geretourneerd.
+In het volgende verzoek wordt geen parameter `date` opgegeven en wordt het meest recente rapport geretourneerd.
+
++++ Een steekproefverzoek om het meest recente rapport voor profieldistributie door namespace terug te keren. 
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 **Reactie**
 
-De reactie bevat een array `data` met afzonderlijke objecten die de details voor elke naamruimte bevatten. De getoonde reactie is afgebroken om vier naamruimten te tonen.
+Een succesvol antwoord retourneert HTTP-status 200 en bevat een `data` -array, met afzonderlijke objecten die de details voor elke naamruimte bevatten. De getoonde reactie is afgebroken om vier naamruimten te tonen.
+
++++ Een voorbeeldreactie bevat informatie over de profieldistributie per naamruimte.
 
 ```json
 {
@@ -292,306 +316,232 @@ De reactie bevat een array `data` met afzonderlijke objecten die de details voor
 ```
 
 | Eigenschap | Beschrijving |
-|---|---|
+| -------- | ----------- |
 | `sampleCount` | Het totale aantal gesamplede profielen in de naamruimte. |
-| `samplePercentage` | `sampleCount` als percentage gesamplede profielen (de `numRowsToRead` waarde zoals teruggekeerd in de [&#x200B; laatste steekproefstatus &#x200B;](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
+| `samplePercentage` | `sampleCount` als percentage gesamplede profielen (de `numRowsToRead` waarde zoals teruggekeerd in de [ laatste steekproefstatus ](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
 | `reportTimestamp` | De tijdstempel van het rapport. Als een parameter `date` tijdens het verzoek werd verstrekt, is het teruggekeerde rapport voor de verstrekte datum. Als er geen parameter `date` is opgegeven, wordt het meest recente rapport geretourneerd. |
 | `fullIDsFragmentCount` | Het totale aantal profielfragmenten in de naamruimte. |
 | `fullIDsCount` | Het totale aantal samengevoegde profielen in de naamruimte. |
-| `fullIDsPercentage` | `fullIDsCount` als percentage van totaal samengevoegde profielen (de `totalRows` waarde zoals teruggekeerd in de [&#x200B; laatste steekproefstatus &#x200B;](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
-| `code` | De `code` voor de naamruimte. Dit kan worden gevonden wanneer het werken met namespaces gebruikend [&#x200B; de Dienst API van de Identiteit van Adobe Experience Platform &#x200B;](../../identity-service/api/list-namespaces.md) en ook bedoeld als [!UICONTROL Identity symbol] in Experience Platform UI. Om meer te leren, bezoek het [&#x200B; overzicht van identiteitskaart namespace &#x200B;](../../identity-service/features/namespaces.md). |
-| `value` | De `id` -waarde voor de naamruimte. Dit kan worden gevonden wanneer het werken met namespaces gebruikend de [&#x200B; Dienst API van de Identiteit &#x200B;](../../identity-service/api/list-namespaces.md). |
+| `fullIDsPercentage` | `fullIDsCount` als percentage van totaal samengevoegde profielen (de `totalRows` waarde zoals teruggekeerd in de [ laatste steekproefstatus ](#view-last-sample-status)), die in decimaal formaat wordt uitgedrukt. |
+| `code` | De `code` voor de naamruimte. Dit kan worden gevonden wanneer het werken met namespaces gebruikend [ de Dienst API van de Identiteit van Adobe Experience Platform ](../../identity-service/api/list-namespaces.md) en ook bedoeld als [!UICONTROL Identity symbol] in Experience Platform UI. Om meer te leren, bezoek het [ overzicht van identiteitskaart namespace ](../../identity-service/features/namespaces.md). |
+| `value` | De `id` -waarde voor de naamruimte. Dit kan worden gevonden wanneer het werken met namespaces gebruikend de [ Dienst API van de Identiteit ](../../identity-service/api/list-namespaces.md). |
 
-## Genereer het overlappingsrapport voor de gegevensset
++++
 
-Het rapport van de datasetoverlapping verstrekt zicht in de samenstelling van de opslag van het Profiel van uw organisatie door de datasets bloot te stellen die het meest aan uw adresseerbare publiek (samengevoegde profielen) bijdragen. Naast het verstrekken van inzichten in uw gegevens, kan dit rapport u acties helpen om vergunningsgebruik te optimaliseren, zoals het plaatsen van vervalsingen voor bepaalde datasets.
+## Een lijst maken van de gegevenssetstatistieken {#dataset-stats}
 
-U kunt het rapport van de datasetoverlapping produceren door een verzoek van GET aan het `/previewsamplestatus/report/dataset/overlap` eindpunt uit te voeren.
-
-Voor geleidelijke instructies die hoe te om het rapport van de datasetoverlapping te produceren gebruikend de bevellijn of Postman UI schetsen, gelieve te verwijzen naar [&#x200B; producerend de datasetoverlapping rapporttutorial &#x200B;](../tutorials/dataset-overlap-report.md).
+U kunt een rapport produceren dat statistieken over de dataset door een GET- verzoek aan het `/previewsamplestatus/report/dataset_stats` eindpunt te doen geeft.
 
 **API formaat**
 
 ```http
-GET /previewsamplestatus/report/dataset/overlap
-GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
-```
-
-| Parameter | Beschrijving |
-|---|---|
-| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als meerdere rapporten op dezelfde datum zijn uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: JJJ-MM-DD. Voorbeeld: `date=2024-12-31` |
-
-**Verzoek**
-
-In het volgende verzoek wordt de parameter `date` gebruikt om het meest recente rapport voor de opgegeven datum te retourneren.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-```
-
-**Reactie**
-
-Een succesvol verzoek keert de Status 200 van HTTP terug (OK) en de dataset overlapt rapport.
-
-```json
-{
-    "data": {
-        "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
-        "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
-        "5eeda0032af7bb19162172a7": 107
-    },
-    "reportTimestamp": "2021-12-29T19:55:31.147"
-}
-```
-
-| Eigenschap | Beschrijving |
-|---|---|
-| `data` | Het `data` -object bevat door komma&#39;s gescheiden lijsten met gegevenssets en hun respectievelijke aantal profielen. |
-| `reportTimestamp` | De tijdstempel van het rapport. Als een parameter `date` tijdens het verzoek werd verstrekt, is het teruggekeerde rapport voor de verstrekte datum. Als er geen parameter `date` is opgegeven, wordt het meest recente rapport geretourneerd. |
-
-### Het rapport van de gegevensset-overlapping interpreteren
-
-De resultaten van het rapport kunnen van de datasets en profieltellingen in de reactie worden geïnterpreteerd. Bekijk het volgende voorbeeldrapport `data` -object:
-
-```json
-  "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
-  "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
-  "5eeda0032af7bb19162172a7": 107
-```
-
-Dit rapport bevat de volgende informatie:
-
-* Er zijn 123 profielen die bestaan uit gegevens die afkomstig zijn uit de volgende datasets: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98` .
-* Er zijn 454.412 profielen die bestaan uit gegevens die afkomstig zijn uit deze twee gegevenssets: `5d92921872831c163452edc8` en `5eb2cdc6fa3f9a18a7592a98` .
-* Er zijn 107 profielen die slechts van gegevens van dataset `5eeda0032af7bb19162172a7` worden samengesteld.
-* Er zijn in totaal 454.642 profielen in de organisatie.
-
-## Rapport voor overlappende naamruimte genereren {#identity-overlap-report}
-
-De identiteitsnaamruimte overlapt rapport geeft inzicht in de samenstelling van de opslag van het Profiel van uw organisatie door de naamruimten toegankelijk te maken die het meest bijdragen aan uw adresseerbare publiek (samengevoegde profielen). Dit omvat zowel de standaard naamruimten die door Adobe worden verschaft als de aangepaste naamruimten die door uw organisatie worden gedefinieerd.
-
-U kunt het rapport voor naamruimte-overlapping genereren door een GET-aanvraag naar het `/previewsamplestatus/report/namespace/overlap` -eindpunt uit te voeren.
-
-**API formaat**
-
-```http
-GET /previewsamplestatus/report/namespace/overlap
-GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
-```
-
-| Parameter | Beschrijving |
-|---|---|
-| `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als meerdere rapporten op dezelfde datum zijn uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Als een rapport niet bestaat voor de opgegeven datum, wordt een fout 404 (Niet gevonden) geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. Indeling: JJJ-MM-DD. Voorbeeld: `date=2024-12-31` |
-
-**Verzoek**
-
-In het volgende verzoek wordt de parameter `date` gebruikt om het meest recente rapport voor de opgegeven datum te retourneren.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-```
-
-**Reactie**
-
-Een succesvol verzoek retourneert HTTP Status 200 (OK) en de naamruimte overlapt het rapport.
-
-```json
-{
-    "data": {
-        "Email,crmid,loyal": 2,
-        "ECID,Email,crmid": 7,
-        "ECID,Email,mobilenr": 12,
-        "AAID,ECID,loyal": 1,
-        "mobilenr": 25,
-        "AAID,ECID": 1508,
-        "ECID,crmid": 1,
-        "AAID,ECID,crmid": 2,
-        "Email,crmid": 328,
-        "CORE": 49,
-        "AAID": 446,
-        "crmid,loyal": 20988,
-        "Email": 10904,
-        "crmid": 249,
-        "ECID,Email": 74,
-        "Phone": 40,
-        "Email,Phone,loyal": 48,
-        "AAID,AVID,ECID": 85,
-        "Email,loyal": 1002,
-        "AAID,ECID,Email,Phone,crmid": 5,
-        "AAID,ECID,Email,crmid,loyal": 23,
-        "AAID,AVID,ECID,Email,crmid": 2,
-        "AVID": 3,
-        "AAID,ECID,Phone": 1,
-        "loyal": 43,
-        "ECID,Email,crmid,loyal": 6,
-        "AAID,ECID,Email,Phone,crmid,loyal": 1,
-        "AAID,ECID,Email": 2,
-        "AAID,ECID,Email,crmid": 142,
-        "AVID,ECID": 24,
-        "ECID": 6565
-    },
-    "reportTimestamp": "2021-12-29T16:55:03.624"
-}
-```
-
-| Eigenschap | Beschrijving |
-|---|---|
-| `data` | Het `data` -object bevat door komma&#39;s gescheiden lijsten met unieke combinaties van naamruimtecodes en hun respectievelijke profielaantallen. |
-| Namespace-codes | `code` is een kort formulier voor elke naamruimtenaam van een identiteit. Een afbeelding van elk `code` aan zijn `name` kan worden gevonden gebruikend [&#x200B; de Dienst API van de Identiteit van Adobe Experience Platform &#x200B;](../../identity-service/api/list-namespaces.md). `code` wordt ook wel de [!UICONTROL Identity symbol] genoemd in de gebruikersinterface van Experience Platform. Om meer te leren, bezoek het [&#x200B; overzicht van identiteitskaart namespace &#x200B;](../../identity-service/features/namespaces.md). |
-| `reportTimestamp` | De tijdstempel van het rapport. Als een parameter `date` tijdens het verzoek werd verstrekt, is het teruggekeerde rapport voor de verstrekte datum. Als er geen parameter `date` is opgegeven, wordt het meest recente rapport geretourneerd. |
-
-### Rapport voor overlappende naamruimte interpreteren
-
-De resultaten van het rapport kunnen van de identiteiten en profieltellingen in de reactie worden geïnterpreteerd. De numerieke waarde van elke rij vertelt u hoeveel profielen uit die nauwkeurige combinatie standaard en douaneidentiteitsnamespaces bestaan.
-
-Bekijk het volgende fragment van het object `data` :
-
-```json
-  "AAID,ECID,Email,crmid": 142,
-  "AVID,ECID": 24,
-  "ECID": 6565
-```
-
-Dit rapport bevat de volgende informatie:
-
-* Er zijn 142 profielen die zijn samengesteld uit `AAID` , `ECID` en `Email` standaard-id&#39;s en uit een aangepaste naamruimte `crmid` identity.
-* Er zijn 24 profielen die bestaan uit `AAID` en `ECID` naamruimten.
-* Er zijn 6.565 profielen die alleen een `ECID` id bevatten.
-
-## Rapport voor niet-geselecteerde profielen genereren
-
-U kunt de samenstelling van de opslag van het Profiel van uw organisatie door het niet-gesloten profielrapport meer zichtbaar maken. Een &quot;niet-gekoppeld&quot; profiel is een profiel dat slechts één profielfragment bevat. Een &quot;onbekend&quot; profiel is een profiel dat is gekoppeld aan pseudonieme naamruimten zoals `ECID` en `AAID` . Onbekende profielen zijn inactief, wat betekent dat er geen nieuwe gebeurtenissen zijn toegevoegd voor de opgegeven periode. Het rapport met niet-opgeslagen profielen bevat een indeling van profielen voor een periode van 7, 30, 60, 90 en 120 dagen.
-
-U kunt het rapport met niet-gekoppelde profielen genereren door een GET-aanvraag uit te voeren naar het eindpunt van `/previewsamplestatus/report/unstitchedProfiles` .
-
-**API formaat**
-
-```http
-GET /previewsamplestatus/report/unstitchedProfiles
+GET /previewsamplestatus/report/dataset_stats
 ```
 
 **Verzoek**
 
-Het volgende verzoek retourneert het rapport met niet-ingestelde profielen.
++++ Een steekproefverzoek om het rapport van de datasetstatistieken te produceren.
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset_stats \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
++++
 
 **Reactie**
 
-Een succesvolle aanvraag retourneert HTTP Status 200 (OK) en het rapport met niet-opgeslagen profielen.
+Een succesvolle reactie keert status 200 van HTTP met informatie over de statistieken van de dataset terug.
+
++++ Een steekproefreactie die informatie over de statistieken van de dataset bevat.
 
 >[!NOTE]
 >
->In het kader van deze handleiding is het rapport afgekapt, zodat alleen `"120days"` - en `7days` -tijdsperioden worden opgenomen. Het volledige rapport met ongeordende profielen bevat een uitsplitsing van profielen voor een periode van 7, 30, 60, 90 en 120 dagen.
+>De volgende reactie is beknot om drie datasets te tonen.
 
 ```json
 {
-  "data": {
-      "totalNumberOfProfiles": 63606,
-      "totalNumberOfEvents": 130977,
-      "unstitchedProfiles": {
-          "120days": {
-              "countOfProfiles": 1644,
-              "eventsAssociated": 26824,
-              "nsDistribution": {
-                  "Email": {
-                      "countOfProfiles": 18,
-                      "eventsAssociated": 95
-                  },
-                  "loyal": {
-                      "countOfProfiles": 26,
-                      "eventsAssociated": 71
-                  },
-                  "ECID": {
-                      "countOfProfiles": 1600,
-                      "eventsAssociated": 26658
-                  }
-              }
-          },
-          "7days": {
-              "countOfProfiles": 1782,
-              "eventsAssociated": 29151,
-              "nsDistribution": {
-                  "Email": {
-                      "countOfProfiles": 19,
-                      "eventsAssociated": 97
-                  },
-                  "ECID": {
-                      "countOfProfiles": 1734,
-                      "eventsAssociated": 28591
-                  },
-                  "loyal": {
-                      "countOfProfiles": 29,
-                      "eventsAssociated": 463
-                  }
-              }
-          }
-      }
-  },
-  "reportTimestamp": "2025-08-25T22:14:55.186"
+    "data": [
+        {
+            "120days": 4,
+            "14days": 4,
+            "30days": 4,
+            "365days": 4,
+            "60days": 4,
+            "7days": 4,
+            "90days": 4,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "ExperienceEvents",
+            "percentEvents": 0.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 1,
+            "records": 4,
+            "totalProfiles": 1
+        },
+        {
+            "120days": 155435837,
+            "14days": 32888631,
+            "30days": 66496282,
+            "365days": 155435837,
+            "60days": 116433804,
+            "7days": 18202004,
+            "90days": 155435837,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "ExperienceEvents",
+            "percentEvents": 16.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 5410745,
+            "records": 155435837,
+            "totalProfiles": 4524723
+        },
+        {
+            "120days": 0,
+            "14days": 0,
+            "30days": 0,
+            "365days": 0,
+            "60days": 0,
+            "7days": 0,
+            "90days": 0,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "Profiles",
+            "percentEvents": 0.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 3589,
+            "records": 3589,
+            "totalProfiles": 3589
+        }
+    ],
+    "reportTimestamp": "2025-10-29T16:20:18.956"
 }
 ```
 
 | Eigenschap | Beschrijving |
-|---|---|
-| `data` | Het `data` -object bevat de informatie die wordt geretourneerd voor het rapport met niet-gekoppelde profielen. |
-| `totalNumberOfProfiles` | Het totale aantal unieke profielen in het archief Profiel. Dit is gelijk aan het adresseerbare aantal. Het bevat zowel bekende als niet-gebonden profielen. |
-| `totalNumberOfEvents` | Het totale aantal ExperienceEvents in het archief met profielen. |
-| `unstitchedProfiles` | Een object met een uitsplitsing van niet-opgegeven profielen naar tijdsperiode. Het rapport met niet-opgeslagen profielen bevat een uitsplitsing van profielen voor tijdvakken van 7, 30, 60, 90 en 120 dagen. |
-| `countOfProfiles` | Het aantal niet-gekoppelde profielen voor de tijdsperiode of het aantal niet-gebonden profielen voor de naamruimte. |
-| `eventsAssociated` | Het aantal ExperienceEvents voor het tijdbereik of het aantal gebeurtenissen voor de naamruimte. |
-| `nsDistribution` | Een object dat afzonderlijke naamruimten bevat met de distributie van niet-gekoppelde profielen en gebeurtenissen voor elke naamruimte. Opmerking: het totaal `countOfProfiles` voor elke naamruimte van de identiteit in het `nsDistribution` -object wordt gelijk aan de `countOfProfiles` voor de tijdsperiode. Hetzelfde geldt voor `eventsAssociated` per naamruimte en het totaal `eventsAssociated` per tijdsperiode. |
-| `reportTimestamp` | De tijdstempel van het rapport. |
+| -------- | ----------- |
+| `120days` | Het aantal verslagen die in de dataset na een gegevensvervaldatum van 120 dagen zullen blijven. |
+| `14days` | Het aantal verslagen die in de dataset na een gegevensvervaldatum van 14 dagen zullen blijven. |
+| `30days` | Het aantal verslagen die in de dataset na een gegevensvervaldatum van 30 dagen zullen blijven. |
+| `365days` | Het aantal verslagen die in de dataset na een gegevensvervaldatum van 365 dagen zullen blijven. |
+| `60days` | Het aantal verslagen die in de dataset na een gegevensvervaldatum van 60 dagen zullen blijven. |
+| `7days` | Het aantal verslagen die in de dataset na een gegevensvervaldatum van 7 dagen zullen blijven. |
+| `90days` | Het aantal verslagen die in de dataset na een gegevensvervaldatum van 90 dagen zullen blijven. |
+| `datasetId` | De id van de gegevensset. |
+| `datasetType` | Het gegevenstype van de dataset. Deze waarde kan `Profiles` of `ExperienceEvents` zijn. |
+| `percentEvents` | Het percentage van de verslagen van de Gebeurtenissen van de Ervaring die binnen de dataset zijn. |
+| `percentProfiles` | Het percentage van de verslagen van het Profiel die binnen de dataset zijn. |
+| `profileFragments` | Het totale aantal profielfragmenten dat in de dataset bestaat. |
+| `records` | Het totale aantal profielverslagen die in de dataset worden opgenomen. |
+| `totalProfiles` | Het totale aantal profielen dat in de gegevensset wordt opgenomen. |
 
-### Het rapport met niet-opgeslagen profielen interpreteren
++++
 
-De resultaten van het rapport kunnen insight een overzicht geven van het aantal niet-opgeslagen en niet-actieve profielen dat uw organisatie heeft in de Profile Store.
+## Hiermee wordt de grootte van de gegevensset opgehaald {#character-count}
 
-Bekijk het volgende fragment van het object `data` :
+U kunt dit eindpunt gebruiken om de grootte van de dataset in bytes op een week-door-week basis te krijgen.
 
-```json
-  "7days": {
-    "countOfProfiles": 1782,
-    "eventsAssociated": 29151,
-    "nsDistribution": {
-      "Email": {
-        "countOfProfiles": 19,
-        "eventsAssociated": 97
-      },
-      "ECID": {
-        "countOfProfiles": 1734,
-        "eventsAssociated": 28591
-      },
-      "loyal": {
-        "countOfProfiles": 29,
-        "eventsAssociated": 463
-      }
-    }
-  }
+**API formaat**
+
+```http
+GET /previewsamplestatus/report/character_count
 ```
 
-Dit rapport bevat de volgende informatie:
+**Verzoek**
 
-* Er zijn 1.782 profielen die slechts één profielfragment bevatten en de afgelopen zeven dagen geen nieuwe gebeurtenissen hebben.
-* Er zijn 29.151 ExperienceEvents die zijn gekoppeld aan de 1.782 niet-ingestelde profielen.
-* Er zijn 1.734 niet-gekoppelde profielen die één profielfragment uit de naamruimte ECID bevatten.
-* Er zijn 28.591 gebeurtenissen gekoppeld aan de 1.734 niet-gekoppelde profielen die één profielfragment uit de naamruimte van de ECID bevatten.
++++Een steekproefverzoek om het rapport van de karaktertelling te produceren.
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
+**Reactie**
+
+Een succesvolle reactie keert status 200 van HTTP met informatie over de grootte van de dataset door de weken terug.
+
++++ Een steekproefreactie die informatie over de grootte van de dataset na gegevensvervaldata bevat.
+
+>[!NOTE]
+>
+>De volgende reactie is beknot om drie datasets te tonen.
+
+```json
+{
+    "data": [
+        {
+            "datasetIds": [
+                {
+                    "datasetId": "67aba91a453f7d298cd2a643",
+                    "recordType": "keyvalue",
+                    "weeks": [
+                        {
+                            "size": 107773533894,
+                            "week": "2025-10-26"
+                        }
+                    ]
+                },
+                {
+                    "datasetId": "67aa6c867c3110298b017f0e",
+                    "recordType": "timeseries",
+                    "weeks": [
+                        {
+                            "size": 242902062440,
+                            "week": "2025-10-26"
+                        },
+                        {
+                            "size": 837539413062,
+                            "week": "2025-10-19"
+                        },
+                        {
+                            "size": 479253986484,
+                            "week": "2025-10-12"
+                        },
+                        {
+                            "size": 358911988990,
+                            "week": "2025-10-05"
+                        },
+                        {
+                            "size": 349701073042,
+                            "week": "2025-09-28"
+                        }
+                    ]
+                },
+                {
+                    "datasetId": "680c043667c0d7298c9ea275",
+                    "recordType": "keyvalue",
+                    "weeks": [
+                        {
+                            "size": 18392459832,
+                            "week": "2025-10-26"
+                        }
+                    ]
+                }
+            ],
+            "modelName": "_xdm.context.profile",
+            "reportTimestamp": "2025-10-30T00:28:30.069Z"
+        }
+    ],
+    "reportTimestamp": "2025-10-30T00:28:30.069Z"
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `datasetId` | De id van de gegevensset. |
+| `recordType` | Het type gegevens binnen de dataset. Het recordtype beïnvloedt de waarde van de `weeks` variabele. Tot de ondersteunde waarden behoren `keyvalue` en `timeseries` . |
+| `weeks` | Een serie die de grootteinformatie over de dataset bevat. Voor datasets van recordtype `keyvalue`, bevat dit de meest recente week evenals de totale grootte van de dataset in bytes. Voor datasets van recordtype `timeseries`, bevat dit elke week van de opname van de dataset aan de meest recente week en de totale grootte van de dataset in bytes voor elk van die weken. |
+| `modelName` | De naam van het model voor de dataset. Mogelijke waarden zijn `_xdm.context.profile` en `_xdm.context.experienceevent` . |
+| `reportTimestamp` | De datum en tijd waarop het rapport is gegenereerd. |
+
++++
 
 ## Volgende stappen
 
-Nu u weet hoe te om steekproefgegevens in de opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproefpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt u ervoor te zorgen dat u uw verwachte publiek isoleert. Om meer over het werken met voorproeven en ramingen te leren die de Segmentatie API gebruiken, gelieve de [&#x200B; voorproef en de gids van de schattingseindpunten &#x200B;](../../segmentation/api/previews-and-estimates.md) te bezoeken.
+Nu u weet hoe te om steekproefgegevens in de opslag van het Profiel voor te vertonen en veelvoudige rapporten over de gegevens in werking te stellen, kunt u de schatting en voorproefpunten van de Dienst API van de Segmentatie ook gebruiken om summiere-vlakke informatie betreffende uw segmentdefinities te bekijken. Deze informatie helpt u ervoor te zorgen dat u uw verwachte publiek isoleert. Om meer over het werken met voorproeven en ramingen te leren die de Segmentatie API gebruiken, gelieve de [ voorproef en de gids van de schattingseindpunten ](../../segmentation/api/previews-and-estimates.md) te bezoeken.
 
