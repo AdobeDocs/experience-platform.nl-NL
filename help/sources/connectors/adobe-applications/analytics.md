@@ -19,11 +19,11 @@ Dit document biedt een overzicht van [!DNL Analytics] en beschrijft de mogelijke
 
 [!DNL Analytics] is een krachtige engine waarmee u meer kunt leren over uw klanten, hoe ze met uw wegeigenschappen werken, kunt zien waar uw uitgaven voor digitale marketing effectief zijn en verbeteringsgebieden kunt identificeren. Met [!DNL Analytics] worden biljoenen webtransacties per jaar afgehandeld en met de [!DNL Analytics] -bronconnector kunt u eenvoudig tikken op deze rijke gedragsgegevens en de [!DNL Real-Time Customer Profile] binnen enkele minuten verrijken.
 
-![ grafisch die A de reis van gegevens van verschillende toepassingen van Adobe, met inbegrip van Adobe Analytics illustreert.](./images/analytics-data-experience-platform.png)
+![&#x200B; grafisch die A de reis van gegevens van verschillende toepassingen van Adobe, met inbegrip van Adobe Analytics illustreert.](./images/analytics-data-experience-platform.png)
 
 Op hoog niveau verzamelt [!DNL Analytics] gegevens via verschillende digitale kanalen en meerdere datacenters over de hele wereld. Zodra de gegevens worden verzameld, worden de de Identificatie van de Bezoeker, de Regels van de Segmentatie en van de Transformatie van de Architectuur (VISTA), en verwerkingsregels toegepast om de inkomende gegevens te vormen. Nadat onbewerkte gegevens deze lichte verwerking hebben doorlopen, wordt deze vervolgens als gebruiksklaar beschouwd door [!DNL Real-Time Customer Profile] . In een parallel aan het bovenstaande proces worden dezelfde verwerkte gegevens op micro-basis gebatcheerd en opgenomen in Experience Platform-gegevenssets voor gebruik door [!DNL Query Service] en andere toepassingen voor gegevensdetectie.
 
-Zie het [ overzicht van verwerkingsregels ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=nl) voor meer informatie over verwerkingsregels.
+Zie het [&#x200B; overzicht van verwerkingsregels &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=nl) voor meer informatie over verwerkingsregels.
 
 ## Experience Data Model (XDM)
 
@@ -31,7 +31,7 @@ XDM is een openbaar gedocumenteerde specificatie die gemeenschappelijke structur
 
 Door te voldoen aan XDM-standaarden kunnen gegevens op uniforme wijze worden opgenomen, waardoor het eenvoudiger wordt om gegevens te leveren en informatie te verzamelen.
 
-Om meer over XDM te leren, te zien gelieve het [ XDM overzicht van het Systeem ](../../../xdm/home.md).
+Om meer over XDM te leren, te zien gelieve het [&#x200B; XDM overzicht van het Systeem &#x200B;](../../../xdm/home.md).
 
 ## Hoe worden velden toegewezen van Adobe Analytics aan XDM?
 
@@ -39,17 +39,17 @@ Om meer over XDM te leren, te zien gelieve het [ XDM overzicht van het Systeem ]
 >
 >Transformaties van de Prep van gegevens kunnen latentie aan algemene dataflow toevoegen. De extra toegevoegde latentie is afhankelijk van de complexiteit van de transformatielogica.
 
-Wanneer een bronverbinding tot stand is gebracht voor het verzenden van [!DNL Analytics] -gegevens naar Experience Platform via de Experience Platform-gebruikersinterface, worden gegevensvelden automatisch toegewezen aan en opgenomen in [!DNL Real-Time Customer Profile] binnen enkele minuten. Voor instructies bij het creëren van een bronverbinding met [!DNL Analytics] gebruikend Experience Platform UI, zie het [ Van de bron Analyse schakelaarleerprogramma ](../../tutorials/ui/create/adobe-applications/analytics.md).
+Wanneer een bronverbinding tot stand is gebracht voor het verzenden van [!DNL Analytics] -gegevens naar Experience Platform via de Experience Platform-gebruikersinterface, worden gegevensvelden automatisch toegewezen aan en opgenomen in [!DNL Real-Time Customer Profile] binnen enkele minuten. Voor instructies bij het creëren van een bronverbinding met [!DNL Analytics] gebruikend Experience Platform UI, zie het [&#x200B; Van de bron Analyse schakelaarleerprogramma &#x200B;](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-Voor gedetailleerde informatie over de gebiedstoewijzing die tussen [!DNL Analytics] en Experience Platform voorkomt, zie de [ het gebiedstoewijzing van Adobe Analytics ](./mapping/analytics.md) gids.
+Voor gedetailleerde informatie over de gebiedstoewijzing die tussen [!DNL Analytics] en Experience Platform voorkomt, zie de [&#x200B; het gebiedstoewijzing van Adobe Analytics &#x200B;](./mapping/analytics.md) gids.
 
 >[!TIP]
 >
 >Volg deze beste praktijken om te vermijden overschrijdend uw vergunningsrechten en overweldigend uw totale opslag en gegevensrijkheidsmetriek:
 >
->* Stel in het begin de bewaartijd-naar-live (TTL) retentietijd van de Experience Event Dataset in om het beheer van de gegevenslevenscyclus en de efficiëntie van de opslag te optimaliseren. Voor meer details, zie de gids op [ het leiden het Behouden van de Dataset van de Gebeurtenis van de Ervaring in het gegevenshoop gebruikend TTL ](../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+>* Stel in het begin de bewaartijd-naar-live (TTL) retentietijd van de Experience Event Dataset in om het beheer van de gegevenslevenscyclus en de efficiëntie van de opslag te optimaliseren. Voor meer details, zie de gids op [&#x200B; het leiden het Behouden van de Dataset van de Gebeurtenis van de Ervaring in het gegevenshoop gebruikend TTL &#x200B;](../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
 >
->* Wanneer u een bron van Analytics dataflow creeert, begin door de schakelaar te vormen om gegevens slechts in het gegevensmeer in te nemen. Na het bevestigen dat dataflow werkt, kunt u profielopname voor de dataset toelaten. Deze aanpak werkt het beste wanneer rij- en kolomfilters het gegevensvolume verminderen. Leer meer in [ verbindend Adobe Analytics met Experience Platform ](../../tutorials/ui/create/adobe-applications/analytics.md) documentatie.
+>* Wanneer u een bron van Analytics dataflow creeert, begin door de schakelaar te vormen om gegevens slechts in het gegevensmeer in te nemen. Na het bevestigen dat dataflow werkt, kunt u profielopname voor de dataset toelaten. Deze aanpak werkt het beste wanneer rij- en kolomfilters het gegevensvolume verminderen. Leer meer in [&#x200B; verbindend Adobe Analytics met Experience Platform &#x200B;](../../tutorials/ui/create/adobe-applications/analytics.md) documentatie.
 
 ## Wat is de verwachte latentie voor Analytics Data on Experience Platform?
 
@@ -57,14 +57,14 @@ De verwachte latentie voor Analytics Data on Experience Platform wordt in de ond
 
 | Analysegegevens | Verwachte vertraging |
 | -------------- | ---------------- |
-| Nieuwe gegevens aan [!DNL Real-Time Customer Profile] (A4T **** toegelaten niet) | &lt; 2 minuten |
+| Nieuwe gegevens aan [!DNL Real-Time Customer Profile] (A4T **&#x200B;**&#x200B;toegelaten niet) | &lt; 2 minuten |
 | Nieuwe gegevens aan [!DNL Real-Time Customer Profile] (A4T **wordt** toegelaten) | tot 30 minuten |
 | Nieuwe gegevens voor Data Lake | &lt; 2,25 uur |
-| Nieuwe gegevens aan Customer Journey Analytics zonder [ stitching ](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 uur |
+| Nieuwe gegevens aan Customer Journey Analytics zonder [&#x200B; stitching &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 uur |
 | Nieuwe gegevens voor Customer Journey Analytics met stitching | &lt; 7 uur |
 | Terugvulling van gebeurtenissen van minder dan 10 miljard | &lt; 4 weken |
 
-Voor meer informatie over de latentie van Customer Journey Analytics, zie: [ Guardrails van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
+Voor meer informatie over de latentie van Customer Journey Analytics, zie: [&#x200B; Guardrails van Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 De back-up van Analytics voor productiesandboxen wordt standaard ingesteld op 13 maanden. Voor analysegegevens in niet-productiesandboxen wordt de backfill ingesteld op drie maanden. De limiet van 10 miljard gebeurtenissen die in bovenstaande tabel worden genoemd, is strikt in verhouding tot de verwachte latentie.
 
@@ -87,9 +87,9 @@ De volgende tabel bevat meer informatie over identiteitsvelden in uw [!DNL Analy
 
 | Identiteitsveld | Beschrijving |
 | --- | --- |
-| STEUN | De HULP is de primaire apparaat-id in Adobe Analytics en is gegarandeerd aanwezig op elke gebeurtenis die via de [!DNL Analytics] -bron wordt doorgegeven. AID wordt soms bedoeld als *identiteitskaart van de Analyse van de Oudheid* of als `s_vi` koekjesidentiteitskaart Ondanks dit, wordt een STEUN gecreeerd zelfs als het `s_vi` koekje niet aanwezig is. AID wordt vertegenwoordigd door `post_visid_high` en `post_visid_low` kolommen in [[!DNL Analytics]  gegevensvoer ](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). Voor om het even welke bepaalde gebeurtenis, bevat het gebied van STEUN één enkele identiteit die één van de verscheidene verschillende types kan zijn die in de [ orde van verrichtingen voor  [!DNL Analytics]  worden beschreven IDs ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **Nota**: Binnen een volledige rapportenreeks, kan AID een mengeling van types over gebeurtenissen bevatten. |
-| ECID | De ECID (Experience Cloud-id) is een apart veld voor apparaat-id dat in Adobe Analytics wordt ingevuld wanneer [!DNL Analytics] wordt geïmplementeerd met de Experience Cloud Identity Service. De ECID wordt ook wel MCID (Marketing Cloud ID) genoemd. Als ECID op een gebeurtenis bestaat, kan STEUN op ECID afhankelijk van worden gebaseerd of de Analytics [ respijtperiode ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) wordt gevormd. De ECID wordt vertegenwoordigd door de `mcvisid` in de gegevensinvoer Analytics. Voor meer informatie over ECID, zie het [ overzicht ECID ](../../../identity-service/features/ecid.md). Voor informatie over hoe ECID met [!DNL Analytics] werkt, zie het document op [ Analytics en de Verzoeken van identiteitskaart van Experience Cloud ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html). |
-| AACUSTOMID | De AACUSTOMID is een apart identifier-veld dat in Adobe Analytics wordt ingevuld op basis van het gebruik van de variabele `s.VisitorID` in de [!DNL Analytics] -implementatie. AACUSTOMID wordt vertegenwoordigd door de `cust_visid` kolom in [[!DNL Analytics]  gegevensvoer ](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). Als AACUSTOMID aanwezig is, dan zal STEUN op AACUSTOMID worden gebaseerd omdat AACUSTOMID alle andere herkenningstekens zoals die door de [ orde van verrichtingen voor  [!DNL Analytics]  IDs ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html) worden bepaald. |
+| STEUN | De HULP is de primaire apparaat-id in Adobe Analytics en is gegarandeerd aanwezig op elke gebeurtenis die via de [!DNL Analytics] -bron wordt doorgegeven. AID wordt soms bedoeld als *identiteitskaart van de Analyse van de Oudheid* of als `s_vi` koekjesidentiteitskaart Ondanks dit, wordt een STEUN gecreeerd zelfs als het `s_vi` koekje niet aanwezig is. AID wordt vertegenwoordigd door `post_visid_high` en `post_visid_low` kolommen in [[!DNL Analytics]  gegevensvoer &#x200B;](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). Voor om het even welke bepaalde gebeurtenis, bevat het gebied van STEUN één enkele identiteit die één van de verscheidene verschillende types kan zijn die in de [&#x200B; orde van verrichtingen voor  [!DNL Analytics]  worden beschreven IDs &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **Nota**: Binnen een volledige rapportenreeks, kan AID een mengeling van types over gebeurtenissen bevatten. |
+| ECID | De ECID (Experience Cloud-id) is een apart veld voor apparaat-id dat in Adobe Analytics wordt ingevuld wanneer [!DNL Analytics] wordt geïmplementeerd met de Experience Cloud Identity Service. De ECID wordt ook wel MCID (Marketing Cloud ID) genoemd. Als ECID op een gebeurtenis bestaat, kan STEUN op ECID afhankelijk van worden gebaseerd of de Analytics [&#x200B; respijtperiode &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) wordt gevormd. De ECID wordt vertegenwoordigd door de `mcvisid` in de gegevensinvoer Analytics. Voor meer informatie over ECID, zie het [&#x200B; overzicht ECID &#x200B;](../../../identity-service/features/ecid.md). Voor informatie over hoe ECID met [!DNL Analytics] werkt, zie het document op [&#x200B; Analytics en de Verzoeken van identiteitskaart van Experience Cloud &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html). |
+| AACUSTOMID | De AACUSTOMID is een apart identifier-veld dat in Adobe Analytics wordt ingevuld op basis van het gebruik van de variabele `s.VisitorID` in de [!DNL Analytics] -implementatie. AACUSTOMID wordt vertegenwoordigd door de `cust_visid` kolom in [[!DNL Analytics]  gegevensvoer &#x200B;](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). Als AACUSTOMID aanwezig is, dan zal STEUN op AACUSTOMID worden gebaseerd omdat AACUSTOMID alle andere herkenningstekens zoals die door de [&#x200B; orde van verrichtingen voor  [!DNL Analytics]  IDs &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html) worden bepaald. |
 
 ### Hoe de [!DNL Analytics] -bron omgaat met identiteiten
 
@@ -111,7 +111,7 @@ Wanneer de identiteit of identiteiten naar `identityMap` worden gekopieerd, word
 * Als ECID aanwezig is, wordt `endUserIDs._experience.mcid.namespace.code` ingesteld op ECID.
 * Als AACUSTOMID aanwezig is, wordt `endUserIDs._experience.aacustomid.namespace.code` ingesteld op &quot;AACUSTOMID&quot;.
 
-Als ECID aanwezig is in het identiteitsoverzicht, wordt dit gemarkeerd als de primaire identiteit voor de gebeurtenis. In dit geval, kan de STEUN op ECID wegens de [ periode van de de respijtperiode van de Dienst van de Identiteit ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) worden gebaseerd. Anders wordt STEUN gemarkeerd als de primaire identiteit voor de gebeurtenis. AACUSTOMID is nooit gemarkeerd als primaire id voor de gebeurtenis. Als AACUSTOMID echter aanwezig is, is de STEUN gebaseerd op AACUSTOMID vanwege de volgorde van Experience Cloud.
+Als ECID aanwezig is in het identiteitsoverzicht, wordt dit gemarkeerd als de primaire identiteit voor de gebeurtenis. In dit geval, kan de STEUN op ECID wegens de [&#x200B; periode van de de respijtperiode van de Dienst van de Identiteit &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) worden gebaseerd. Anders wordt STEUN gemarkeerd als de primaire identiteit voor de gebeurtenis. AACUSTOMID is nooit gemarkeerd als primaire id voor de gebeurtenis. Als AACUSTOMID echter aanwezig is, is de STEUN gebaseerd op AACUSTOMID vanwege de volgorde van Experience Cloud.
 
 >[!NOTE]
 >
