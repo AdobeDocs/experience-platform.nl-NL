@@ -45,7 +45,7 @@ U hebt ook een goed inzicht in de publicatiestroom voor tags en het doorsturen v
 >id="platform_eventforwarding_secrets_environments"
 >title="Omgevingen voor geheimen"
 >abstract="Opdat een geheim door gebeurtenis te gebruiken door:sturen, moet het aan een bestaand milieu worden toegewezen. Als u geen milieu&#39;s hebt die voor uw gebeurtenis door:sturen bezit worden gecreeerd, moet u hen vormen alvorens verder te gaan."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Overzicht van omgevingen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=nl-NL" text="Overzicht van omgevingen"
 
 Als u een geheim wilt maken, selecteert u **[!UICONTROL Event Forwarding]** in de linkernavigatie en opent u vervolgens de eigenschap voor het doorsturen van gebeurtenissen waaraan u het geheim onder wilt toevoegen. Selecteer vervolgens **[!UICONTROL Secrets]** in de linkernavigatie, gevolgd door **[!UICONTROL Create New Secret]** .
 

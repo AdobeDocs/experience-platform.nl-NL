@@ -82,7 +82,7 @@ Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe s
 >* Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of Audience Core Service kan na een waarschuwingsbericht worden hersteld.
 >* Voordat u een sandbox-reset start, moet u de composities handmatig verwijderen om ervoor te zorgen dat de bijbehorende publieksgegevens op de juiste wijze worden opgeschoond.
 >* De sandbox-id verandert nadat de reset is voltooid.
->* Voor [&#x200B; Journey Optimizer B2B edition &#x200B;](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview), wordt het terugstellen van de zandbak momenteel niet gesteund **&#x200B;**. Als u een sandbox die is toegewezen aan Journey Optimizer B2B edition opnieuw instelt of verwijdert, kan dit leiden tot een permanent gegevensverlies in Journey Optimizer B2B edition en kan het nodig zijn een nieuwe Journey Optimizer B2B edition-instantie in te stellen.
+>* Voor [&#x200B; Journey Optimizer B2B edition &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/guide-overview), wordt het terugstellen van de zandbak momenteel niet gesteund **&#x200B;**. Als u een sandbox die is toegewezen aan Journey Optimizer B2B edition opnieuw instelt of verwijdert, kan dit leiden tot een permanent gegevensverlies in Journey Optimizer B2B edition en kan het nodig zijn een nieuwe Journey Optimizer B2B edition-instantie in te stellen.
 
 ### Advertentiecomposities verwijderen
 

@@ -44,7 +44,7 @@ Voor meer informatie over hoe de automatische handhaving in Experience Platform 
 
 [!DNL Experience Platform] heeft de mogelijkheid om segmenten te delen met Adobe Audience Manager. Alle besturingselementen voor gegevensexport die zijn toegepast op Audience Manager-segmenten, worden omgezet in equivalente labels en marketingacties die worden herkend door [!DNL Experience Platform] Data Governance.
 
-Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in [!DNL Experience Platform] in kaart brengen, gelieve te verwijzen naar de [&#x200B; documentatie van Audience Manager &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in [!DNL Experience Platform] in kaart brengen, gelieve te verwijzen naar de [&#x200B; documentatie van Audience Manager &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL#aam-data-export-control-in-aep).
 
 ## Labels voor gegevensgebruik beheren in [!DNL Experience Platform] {#manage-labels}
 

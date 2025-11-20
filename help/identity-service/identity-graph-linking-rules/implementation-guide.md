@@ -94,7 +94,7 @@ Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek 
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/nl/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ U zou **niet** een nuttige lading als hieronder moeten verzenden:
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/nl/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ In dit voorbeeld kunt u ervan uitgaan dat de volgende gebeurtenis naar Experienc
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/",
+            "URL": "https://business.adobe.com/nl/",
             "name": "Adobe Business"
         }
     }

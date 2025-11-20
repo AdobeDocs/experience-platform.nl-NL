@@ -24,7 +24,7 @@ Deze gebruikershandleiding bevat stappen voor het controleren van gegevens in de
 >title="Inktsnelheid"
 >abstract="Het aantal gebeurtenissen dat per seconde correct wordt verwerkt."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Dataflows controleren voor bronnen in de gebruikersinterface"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=nl-NL" text="Dataflows controleren voor bronnen in de gebruikersinterface"
 
 >[!TIP]
 >

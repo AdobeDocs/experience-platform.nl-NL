@@ -40,12 +40,12 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -54,7 +54,7 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Overzicht van regels voor identiteitsgrafiek" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Overzicht van regels voor identiteitsgrafiek" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Overzicht van regels voor identiteitsgrafiek"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -63,11 +63,11 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" title="Overzicht van regels voor identiteitsgrafiek"> grafiek die van de Identiteit regels verbindt overzicht </a>
+                        <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" title="Overzicht van regels voor identiteitsgrafiek"> grafiek die van de Identiteit regels verbindt overzicht </a>
                     </p>
                     <p class="is-size-6">Krijg een overzicht van hoe de grafiek die van de identiteitsgrafiek regels verbindt gegevensarchitecten nauwkeurige klantenprofielen handhaaft en grafiekondergang verhindert.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                 </a>
             </div>
@@ -77,7 +77,7 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -86,11 +86,11 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek"> grafiek die van de Identiteit regels verbindt - de Simulatie van de Grafiek </a>
+                        <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek"> grafiek die van de Identiteit regels verbindt - de Simulatie van de Grafiek </a>
                     </p>
                     <p class="is-size-6">Leer hoe u de koppelingsregels voor identiteitsgrafieken test met de grafieksimulator.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                 </a>
             </div>
@@ -100,7 +100,7 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -109,11 +109,11 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen"> grafiek die van de Identiteit regels verbindt - de montages van de Identiteit </a>
+                        <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen"> grafiek die van de Identiteit regels verbindt - de montages van de Identiteit </a>
                     </p>
                     <p class="is-size-6">Leer hoe te om identiteitsgrafiek toe te laten en te vormen die regels verbindt om nauwkeurige klantenprofielen te bouwen</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                 </a>
             </div>

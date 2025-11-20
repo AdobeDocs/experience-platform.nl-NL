@@ -16,7 +16,7 @@ ht-degree: 0%
 >id="platform_permissions_users_about"
 >title="Wat zijn gebruikers?"
 >abstract="Gebruikers zijn de personen die toegang hebben tot Experience Platform. De toegang van een individuele gebruiker tot de middelen van een organisatie wordt beheerd door rollen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Rollen beheren"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Rollen beheren"
 
 Als u gebruikersdetails en rollen wilt bekijken zij aan worden toegewezen, selecteer **[!UICONTROL Users]** tabel.
 

@@ -78,7 +78,7 @@ Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager 360
 
 >[!NOTE]
 >
->De uitzondering op deze regel is voor bestaande [&#x200B; Audience Manager &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, hoeft je het proces voor het aanbieden van objecten in de lijst niet opnieuw te doorlopen en kunt je doorgaan met de volgende stappen.
+>De uitzondering op deze regel is voor bestaande [&#x200B; Audience Manager &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=nl-NL) klanten. Als je al een verbinding met deze Google-bestemming in Audience Manager hebt gemaakt, hoeft je het proces voor het aanbieden van objecten in de lijst niet opnieuw te doorlopen en kunt je doorgaan met de volgende stappen.
 
 1. Volg de stappen in [&#x200B; worden beschreven Google en de documentatie van de Manager &#x200B;](https://support.google.com/admanager/answer/3289669?hl=en) om Adobe als verbonden Platform van het Beheer van Gegevens toe te voegen (DMP) die.
 2. Ga in de interface [!DNL Google Ad Manager] naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en schakel de schuifregelaar **[!UICONTROL API Access]** in.
@@ -90,7 +90,7 @@ Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager 360
 > 
 >Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=nl-NL) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 

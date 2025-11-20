@@ -46,11 +46,11 @@ De sectie **[!UICONTROL Expiring credentials]** bevat de volgende informatie:
 >
 >![&#x200B; het de montageslusje van Admin Console met Privacy en Veiligheid, de montages van de Authentificatie, en Max benadrukt zittingsleven.](../images/ui/credentials/max-session-life.png)
 >
->Zie de documentatie van de Hulp van Adobe voor meer informatie over de [&#x200B; Geavanceerde montages &#x200B;](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) die door Admin console worden aangeboden.
+>Zie de documentatie van de Hulp van Adobe voor meer informatie over de [&#x200B; Geavanceerde montages &#x200B;](https://helpx.adobe.com/nl/enterprise/using/authentication-settings.html#advanced-settings) die door Admin console worden aangeboden.
 
 ### Verbinding maken met Customer Journey Analytics-gegevens binnen querysessies {#connect-to-customer-journey-analytics}
 
-Gebruik de uitbreiding van Customer Journey Analytics BI met Power BI of Tableau om tot uw Customer Journey Analytics [&#x200B; gegevensmeningen &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) met SQL toegang te hebben. Door de Dienst van de Vraag met de uitbreiding te integreren BI, kunt u tot uw gegevensmeningen direct binnen de zittingen van de Dienst van de Vraag toegang hebben. Deze integratie stroomlijnt functionaliteit voor hulpmiddelen BI die de Dienst van de Vraag als hun interface PostgreSQL gebruiken. Deze functionaliteit elimineert de behoefte om gegevensmeningen in hulpmiddelen van BI te dupliceren, verzekert verenigbare rapportering over platforms, en vereenvoudigt de integratie van de gegevens van Customer Journey Analytics met andere bronnen in platforms van BI.
+Gebruik de uitbreiding van Customer Journey Analytics BI met Power BI of Tableau om tot uw Customer Journey Analytics [&#x200B; gegevensmeningen &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-dataviews/data-views) met SQL toegang te hebben. Door de Dienst van de Vraag met de uitbreiding te integreren BI, kunt u tot uw gegevensmeningen direct binnen de zittingen van de Dienst van de Vraag toegang hebben. Deze integratie stroomlijnt functionaliteit voor hulpmiddelen BI die de Dienst van de Vraag als hun interface PostgreSQL gebruiken. Deze functionaliteit elimineert de behoefte om gegevensmeningen in hulpmiddelen van BI te dupliceren, verzekert verenigbare rapportering over platforms, en vereenvoudigt de integratie van de gegevens van Customer Journey Analytics met andere bronnen in platforms van BI.
 
 Zie de documentatie leren hoe te om de Dienst van de Vraag aan een verscheidenheid van de toepassingen van de Desktopcliënt [&#x200B; zoals &#x200B;](../clients/overview.md) Power BI [&#x200B; of &#x200B;](../clients/power-bi.md) Tableau [&#x200B; te verbinden](../clients/tableau.md)
 
@@ -68,7 +68,7 @@ Als u uw Customer Journey Analytics-gegevens in Power BI of Tableau wilt openen,
 
 U kunt uw gegevens van Customer Journey Analytics tot direct van de Redacteur van de Vraag of CLI van Postgres toegang hebben. U doet dit door naar de `cja` -database te verwijzen wanneer u uw query schrijft. Zie de redacteur van de Vraag [&#x200B; vraag auteursgids &#x200B;](./user-guide.md#query-authoring) voor meer informatie over hoe te schrijven, uit te voeren en, vragen te bewaren.
 
-Zie de [&#x200B; BI uitbreidingsgids &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) voor volledige instructies bij de toegang tot van uw de gegevensmeningen van Customer Journey Analytics met SQL.
+Zie de [&#x200B; BI uitbreidingsgids &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-dataviews/bi-extension) voor volledige instructies bij de toegang tot van uw de gegevensmeningen van Customer Journey Analytics met SQL.
 
 ## Niet-verlopen referenties {#non-expiring-credentials}
 
@@ -99,7 +99,7 @@ Voordat u niet-vervallende gegevens kunt genereren, moet u de volgende stappen i
 2. [Selecteer een productprofiel.](../../access-control/ui/browse.md)
 3. [&#x200B; vormt zowel de **Sandboxes** als **de Toestemmingen van de Integratie van de Dienst van de Vraag** &#x200B;](../../access-control/ui/permissions.md) voor het productprofiel.
 4. [&#x200B; voeg een nieuwe gebruiker aan een productprofiel &#x200B;](../../access-control/ui/users.md) toe zodat worden zij verleend zijn gevormde toestemmingen.
-5. [&#x200B; voeg de gebruiker als admin van het productprofiel &#x200B;](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) toe om een rekeningsverwezenlijking voor om het even welk actief productprofiel toe te staan.
+5. [&#x200B; voeg de gebruiker als admin van het productprofiel &#x200B;](https://helpx.adobe.com/nl/enterprise/using/manage-product-profiles.html) toe om een rekeningsverwezenlijking voor om het even welk actief productprofiel toe te staan.
 6. [&#x200B; voeg de gebruiker als ontwikkelaar van het productprofiel &#x200B;](https://helpx.adobe.com/nl/enterprise/using/manage-developers.html) toe om een integratie tot stand te brengen.
 
 Na deze stappen, worden de vereiste toestemmingen gevormd in [&#x200B; Adobe Developer Console &#x200B;](https://developer.adobe.com/console/) voor u om Server-aan-Server geloofsbrieven te produceren OAuth en de het verlopen of niet-verlopen geloofsbrieven te gebruiken.

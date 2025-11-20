@@ -16,7 +16,7 @@ ht-degree: 0%
 >id="platform_permissions_roles_about"
 >title="Wat zijn rollen?"
 >abstract="De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebruiker aan middelen in uw organisatie moet hebben. Zij categoriseren de gebruikers die met uw instantie van Experience Platform in wisselwerking staan en zijn de bouwstenen van toegangsbeheerbeleid. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Rollen beheren"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=nl-NL" text="Rollen beheren"
 
 >[!IMPORTANT]
 >
@@ -53,8 +53,8 @@ Als u een filter wilt verwijderen, selecteert u de &quot;X&quot; op het vulpicto
 >id="platform_permissions_roles_details"
 >title="Roloverzicht"
 >abstract="In het dialoogvenster Roloverzicht worden de details van de rol weergegeven, inclusief de bronnen en sandboxen waartoe een bepaalde rol toegang heeft. U kunt labels, gebruikers, gebruikersgroepen en API-referenties voor de rol beheren door naar het bijbehorende tabblad te navigeren in de werkruimte van de rol."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Labels voor een rol beheren"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gebruikers voor een rol beheren"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Labels voor een rol beheren"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gebruikers voor een rol beheren"
 
 Selecteer de rol op het tabblad **[!UICONTROL Roles]** , waarop het [!UICONTROL Details] -dashboard van de rol wordt geopend.
 
@@ -124,7 +124,7 @@ De volgende video is bedoeld om uw begrip van het creëren van een nieuwe rol en
 >id="platform_permissions_apicredentials_about"
 >title="Wat zijn API-referenties?"
 >abstract="API-referenties worden toegewezen aan rollen om gebruikers en ontwikkelaars toegang te verlenen tot Experience Platform API&#39;s. Met Experience Platform API&#39;s kunt u via programmacode elementaire CRUD-bewerkingen (Maken, Lezen, Bijwerken, Verwijderen) uitvoeren op gegevens, zoals het configureren van berekende kenmerken, het openen van gegevens/entiteiten, het exporteren van gegevens, het verwijderen van overbodige gegevens of batches, enzovoort."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform API-handleiding"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform API-handleiding"
 
 >[!IMPORTANT]
 >
@@ -160,7 +160,7 @@ U wordt teruggestuurd naar het tabblad **[!UICONTROL API credentials]** .
 >id="platform_permissions_usergroups_about"
 >title="Wat zijn gebruikersgroepen?"
 >abstract="Gebruikersgroepen zijn verzamelingen van meerdere gebruikers die toegang tot dezelfde functies delen. De toegang tot middelen binnen een organisatie wordt beheerd door rollen die aan gebruikersgroepen worden toegewezen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Rollen beheren"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Rollen beheren"
 
 Gebruikersgroepen zijn meerdere gebruikers die zijn gegroepeerd en die toegang hebben om dezelfde functies uit te voeren.
 

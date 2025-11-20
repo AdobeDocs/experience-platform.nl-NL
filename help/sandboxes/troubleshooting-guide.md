@@ -27,7 +27,7 @@ Sandboxen zijn virtuele partities binnen één instantie van Experience Platform
 >id="platform_sandboxes_sandboxtypes"
 >title="Sandbox-type"
 >abstract="Het type sandbox geeft aan of dit een productie- of ontwikkelingssandbox is. Productiesandboxen bevatten live data- en ontwikkelingssandboxen die worden gebruikt voor testen en ontwikkelen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Een sandbox maken in de gebruikersinterface"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=nl-NL#create" text="Een sandbox maken in de gebruikersinterface"
 
 Er zijn twee sandboxtypen beschikbaar in Experience Platform:
 
