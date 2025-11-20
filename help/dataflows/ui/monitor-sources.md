@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Het stromen bronnen, zoals de [ bron van HTTP API ](../../sources/connectors/streaming/http.md) wordt momenteel niet gesteund door het controledashboard. Op dit moment kunt u het dashboard alleen gebruiken om batchbronnen te controleren.
+>Het stromen bronnen, zoals de [&#x200B; bron van HTTP API &#x200B;](../../sources/connectors/streaming/http.md) wordt momenteel niet gesteund door het controledashboard. Op dit moment kunt u het dashboard alleen gebruiken om batchbronnen te controleren.
 
 U kunt het controledashboard in de gebruikersinterface van Adobe Experience Platform gebruiken om metriek rond uw gegevensopname en gegevensbewaarnemings processen in gegevens meer terug te winnen. Gebruik de grafieken in de interface om inname- en retentietrends in de loop der tijd te controleren en de prestaties in al uw gegevensstromen van bronnen samen te vatten.
 
@@ -23,12 +23,12 @@ Lees dit document om te leren hoe u het dashboard voor bewaking kunt gebruiken o
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
-   * [ looppas Dataflow ](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
-* [ Bronnen ](../../sources/home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Dienst van de Identiteit ](../../identity-service/home.md): Verkrijg een betere mening van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-* [ Real-Time Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [ Sandboxes ](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Dataflows &#x200B;](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+   * [&#x200B; looppas Dataflow &#x200B;](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
+* [&#x200B; Bronnen &#x200B;](../../sources/home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Dienst van de Identiteit &#x200B;](../../identity-service/home.md): Verkrijg een betere mening van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
+* [&#x200B; Real-Time Profiel van de Klant &#x200B;](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [&#x200B; Sandboxes &#x200B;](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Het dashboard voor toezicht op het opnemen van gegevens in het meer gebruiken
 
@@ -46,17 +46,17 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 Selecteer **[!UICONTROL Data lake]** in de hoofdkoptekst van het dashboard voor controle om de opnamesnelheid van het gegevensmeer weer te geven.
 
-![ het controledashboard met de geselecteerde bronkaart.](../assets/ui/monitor-sources/data-lake.png)
+![&#x200B; het controledashboard met de geselecteerde bronkaart.](../assets/ui/monitor-sources/data-lake.png)
 
-In de grafiek [!UICONTROL Ingestion rate] wordt de gegevensinnamesnelheid weergegeven op basis van het geconfigureerde tijdkader. Standaard geeft het dashboard voor de bewaking de innamesnelheden van de laatste 24 uur weer. Voor stappen op hoe te om uw tijdkader te vormen, leest de gids bij [ vormend controletijdkader ](monitor.md#configure-monitoring-time-frame).
+In de grafiek [!UICONTROL Ingestion rate] wordt de gegevensinnamesnelheid weergegeven op basis van het geconfigureerde tijdkader. Standaard geeft het dashboard voor de bewaking de innamesnelheden van de laatste 24 uur weer. Voor stappen op hoe te om uw tijdkader te vormen, leest de gids bij [&#x200B; vormend controletijdkader &#x200B;](monitor.md#configure-monitoring-time-frame).
 
 De grafiek wordt standaard weergegeven. Als u de grafiek wilt verbergen, selecteert u **[!UICONTROL Metrics and graphs]** om het schakelen uit te schakelen en de grafiek te verbergen.
 
-![ de grafiek van het innametarief.](../assets/ui/monitor-sources/metrics-graph.png)
+![&#x200B; de grafiek van het innametarief.](../assets/ui/monitor-sources/metrics-graph.png)
 
 Het onderste gedeelte van het dashboard toont een lijst die het huidige metriekrapport voor alle bestaande brongegevens schetst.
 
-![ de metrietabel van het controledashboard.](../assets/ui/monitor-sources/metrics-table.png)
+![&#x200B; de metrietabel van het controledashboard.](../assets/ui/monitor-sources/metrics-table.png)
 
 | Metrics | Beschrijving |
 | --- | --- |
@@ -82,39 +82,39 @@ U kunt uw gegevens verder filteren met de opties boven de metrieke tabel:
 
 {style="table-layout:auto"}
 
-Om uw kolomvertoning aan te passen, selecteer het pictogram van kolommontages ![ kolom-pictogram ](/help/images/icons/column-settings.png).
+Om uw kolomvertoning aan te passen, selecteer het pictogram van kolommontages ![&#x200B; kolom-pictogram &#x200B;](/help/images/icons/column-settings.png).
 
-![ het controledashboard met het geselecteerde pictogram van kolommontages.](../assets/ui/monitor-sources/edit-columns.png)
+![&#x200B; het controledashboard met het geselecteerde pictogram van kolommontages.](../assets/ui/monitor-sources/edit-columns.png)
 
 Gebruik vervolgens het venster *[!UICONTROL Customize table]* om de kolommen te selecteren die u op het dashboard wilt weergeven. Selecteer **[!UICONTROL Apply]** als u klaar bent.
 
-![ aanpast kolom pop-up venster in het controledashboard.](../assets/ui/monitor-sources/customize-table.png)
+![&#x200B; aanpast kolom pop-up venster in het controledashboard.](../assets/ui/monitor-sources/customize-table.png)
 
-Om de gegevens te controleren die in een specifieke dataflow worden opgenomen, selecteer het filterpictogram ![ filter ](/help/images/icons/filter-add.png) naast een bron.
+Om de gegevens te controleren die in een specifieke dataflow worden opgenomen, selecteer het filterpictogram ![&#x200B; filter &#x200B;](/help/images/icons/filter-add.png) naast een bron.
 
 >[!TIP]
 >
->U kunt het controledashboard gebruiken om gegevens te controleren schrappingsmetriek voor verslagen die gebruikend het beleid van het gegevensbehoud worden geschrapt. Voor meer informatie over gegevensbehoud, lees de gids over [ plaatsend het beleid van het gegevensbehoud ](../../catalog/datasets/user-guide.md#data-retention-policy).
+>U kunt het controledashboard gebruiken om gegevens te controleren schrappingsmetriek voor verslagen die gebruikend het beleid van het gegevensbehoud worden geschrapt. Voor meer informatie over gegevensbehoud, lees de gids over [&#x200B; plaatsend het beleid van het gegevensbehoud &#x200B;](../../catalog/datasets/user-guide.md#data-retention-policy).
 
-![ Monitor een specifieke dataflow door het filterpictogram naast een bepaalde bron te selecteren.](../assets/ui/monitor-sources/monitor-dataflow.png)
+![&#x200B; Monitor een specifieke dataflow door het filterpictogram naast een bepaalde bron te selecteren.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 De metrietabel werkt aan een lijst van actieve gegevens bij die aan de bron beantwoorden die u selecteerde. Tijdens deze stap, kunt u extra informatie over uw gegevensstromen, met inbegrip van hun overeenkomstige dataset en gegevenstype, evenals een tijdstempel bekijken om erop te wijzen wanneer zij het laatst actief waren.
 
-Om een dataflow verder te inspecteren, selecteer het filterpictogram ![ filter ](/help/images/icons/filter-add.png) naast een dataflow.
+Om een dataflow verder te inspecteren, selecteer het filterpictogram ![&#x200B; filter &#x200B;](/help/images/icons/filter-add.png) naast een dataflow.
 
-![ de dataflows lijst in het controledashboard.](../assets/ui/monitor-sources/select-dataflow.png)
+![&#x200B; de dataflows lijst in het controledashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
 Daarna, wordt u genomen aan een interface die van alle dataflow looplooploopherhalingen van dataflow een lijst maakt die u selecteerde.
 
 Dataflow-uitvoering is een instantie van de uitvoering van de gegevensstroom. Bijvoorbeeld, als een dataflow om bij 9 :00 AM, 10 :00 AM, en 11 :00 AM gepland is te lopen, dan zou u drie instanties van een stroomlooppas hebben. De looppas van de stroom is specifiek voor uw bepaalde organisatie.
 
-Om metriek van een specifieke dataflow looploopherhaling te inspecteren, selecteer het filterpictogram ![ filter ](/help/images/icons/filter-add.png) naast uw dataflow.
+Om metriek van een specifieke dataflow looploopherhaling te inspecteren, selecteer het filterpictogram ![&#x200B; filter &#x200B;](/help/images/icons/filter-add.png) naast uw dataflow.
 
-![ de dataflow looppas metrische pagina.](../assets/ui/monitor-sources/dataflow-page.png)
+![&#x200B; de dataflow looppas metrische pagina.](../assets/ui/monitor-sources/dataflow-page.png)
 
 Gebruik de gegevenspagina van de dataflow looppas om metriek en informatie van uw geselecteerde looppas herhaling te bekijken.
 
-![ de dataflow looppas detailpagina.](../assets/ui/monitor-sources/dataflow-run-details.png)
+![&#x200B; de dataflow looppas detailpagina.](../assets/ui/monitor-sources/dataflow-run-details.png)
 
 | Gegevens gegevensstroom uitvoeren | Beschrijving |
 | --- | --- |
@@ -147,5 +147,5 @@ In de sectie [!UICONTROL Records failed] kunt u metrische gegevens weergeven voo
 
 Aan de hand van deze zelfstudie hebt u geleerd hoe u de opnamesnelheid van het gegevensmeer kunt controleren met behulp van het dashboard **[!UICONTROL Monitoring]** . U leerde ook fouten identificeren die dataflow-fouten tijdens inname veroorzaken. Raadpleeg de volgende documenten voor meer informatie:
 
-* [ de identiteitsgegevens van de Controle ](./monitor-identities.md).
-* [ het profielgegevens van de Controle ](./monitor-profiles.md).
+* [&#x200B; de identiteitsgegevens van de Controle &#x200B;](./monitor-identities.md).
+* [&#x200B; het profielgegevens van de Controle &#x200B;](./monitor-profiles.md).

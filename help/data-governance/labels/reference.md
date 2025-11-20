@@ -19,7 +19,7 @@ ht-degree: 0%
 >abstract="Er zijn verschillende categorieën labels voor gegevensgebruik. Adobe-gedefinieerde labels bevatten contractlabels, identiteitslabels en gevoelige labels. De etiketten die door uw organisatie worden bepaald zijn gecategoriseerd als douanelabels."
 >text="See the data usage labels glossary for more information on these label types."
 
-De etiketten van het gebruik van gegevens staan u toe om datasets en gebieden volgens [ governance beleid ](../policies/overview.md) en [ toegangsbeheerbeleid ](../../access-control/abac/overview.md) te categoriseren dat op die gegevens van toepassing is. Adobe Experience Platform biedt verschillende basislabels voor gegevensgebruik die u kunt gebruiken om uw gegevens te categoriseren.
+De etiketten van het gebruik van gegevens staan u toe om datasets en gebieden volgens [&#x200B; governance beleid &#x200B;](../policies/overview.md) en [&#x200B; toegangsbeheerbeleid &#x200B;](../../access-control/abac/overview.md) te categoriseren dat op die gegevens van toepassing is. Adobe Experience Platform biedt verschillende basislabels voor gegevensgebruik die u kunt gebruiken om uw gegevens te categoriseren.
 
 In dit document worden de basislabels voor gegevensgebruik beschreven die momenteel door Experience Platform worden geleverd.
 
@@ -29,18 +29,18 @@ De etiketten van het contract &quot;C&quot;worden gebruikt om gegevens te catego
 
 | Label | Definitie |
 | --- | --- |
-| [ C1 ](#c1) | Gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerde vorm, zonder individuele of apparaat-id&#39;s. |
-| [ C2 ](#c2) | Gegevens kunnen niet naar derden worden geëxporteerd. |
-| [ C3 ](#c3) | Gegevens kunnen niet met rechtstreeks identificeerbare informatie worden gecombineerd of anderszins worden gebruikt. |
-| [ C4 ](#c4) | Gegevens kunnen niet worden gebruikt voor advertenties of inhoud die on-site of intersite zijn. |
-| [ C5 ](#c5) | Gegevens kunnen niet worden gebruikt voor op rente gebaseerde, cross-site gerichte adressering van inhoud of advertenties. |
-| [ C6 ](#c6) | Gegevens kunnen niet worden gebruikt voor on-site advertenties. |
-| [ C7 ](#c7) | Gegevens kunnen niet worden gebruikt voor het on-site maken van inhoud. |
-| [ C8 ](#c8) | Gegevens kunnen niet worden gebruikt voor het meten van de websites of apps van uw organisatie. |
-| [ C9 ](#c9) | Gegevens kunnen niet worden gebruikt in workflows voor gegevenswetenschap. |
-| [ C10 ](#c10) | Gegevens kunnen niet worden gebruikt voor activering van een gestikte identiteit. |
-| [ C11 ](#c11) | De gegevens kunnen niet met de partners van de Aanpassing van het Segment worden gedeeld. |
-| [ C12 ](#c12) | Gegevens kunnen op geen enkele manier worden geëxporteerd. |
+| [&#x200B; C1 &#x200B;](#c1) | Gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd in een geaggregeerde vorm, zonder individuele of apparaat-id&#39;s. |
+| [&#x200B; C2 &#x200B;](#c2) | Gegevens kunnen niet naar derden worden geëxporteerd. |
+| [&#x200B; C3 &#x200B;](#c3) | Gegevens kunnen niet met rechtstreeks identificeerbare informatie worden gecombineerd of anderszins worden gebruikt. |
+| [&#x200B; C4 &#x200B;](#c4) | Gegevens kunnen niet worden gebruikt voor advertenties of inhoud die on-site of intersite zijn. |
+| [&#x200B; C5 &#x200B;](#c5) | Gegevens kunnen niet worden gebruikt voor op rente gebaseerde, cross-site gerichte adressering van inhoud of advertenties. |
+| [&#x200B; C6 &#x200B;](#c6) | Gegevens kunnen niet worden gebruikt voor on-site advertenties. |
+| [&#x200B; C7 &#x200B;](#c7) | Gegevens kunnen niet worden gebruikt voor het on-site maken van inhoud. |
+| [&#x200B; C8 &#x200B;](#c8) | Gegevens kunnen niet worden gebruikt voor het meten van de websites of apps van uw organisatie. |
+| [&#x200B; C9 &#x200B;](#c9) | Gegevens kunnen niet worden gebruikt in workflows voor gegevenswetenschap. |
+| [&#x200B; C10 &#x200B;](#c10) | Gegevens kunnen niet worden gebruikt voor activering van een gestikte identiteit. |
+| [&#x200B; C11 &#x200B;](#c11) | De gegevens kunnen niet met de partners van de Aanpassing van het Segment worden gedeeld. |
+| [&#x200B; C12 &#x200B;](#c12) | Gegevens kunnen op geen enkele manier worden geëxporteerd. |
 
 ## Identiteitslabels {#identity}
 
@@ -90,7 +90,7 @@ Sommige gegevens kunnen alleen uit Adobe Experience Cloud worden geëxporteerd i
 
 #### C2 {#c2}
 
-Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. Het C2 etiket is restrictiever dan [ C1 ](#c1), dat slechts samenvoeging en anonieme gegevens vereist, maar het is minder restrictief dan [ C12 ](#c12), die gegevensuitvoer volledig ongeacht de bestemming verhindert.
+Sommige gegevensleveranciers hebben bedingen in hun contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. Het C2 etiket is restrictiever dan [&#x200B; C1 &#x200B;](#c1), dat slechts samenvoeging en anonieme gegevens vereist, maar het is minder restrictief dan [&#x200B; C12 &#x200B;](#c12), die gegevensuitvoer volledig ongeacht de bestemming verhindert.
 
 #### C3 {#c3}
 
@@ -98,7 +98,7 @@ Sommige gegevensleveranciers hebben bedingen in hun contracten die het combinere
 
 #### C4 {#c4}
 
-C4 omvat etiketten [ C5 ](#c5), [ C6 ](#c6), en [ C7 ](#c7). Het is één van de meest beperkende etiketten, tweede slechts aan [ C12 ](#c12).
+C4 omvat etiketten [&#x200B; C5 &#x200B;](#c5), [&#x200B; C6 &#x200B;](#c6), en [&#x200B; C7 &#x200B;](#c7). Het is één van de meest beperkende etiketten, tweede slechts aan [&#x200B; C12 &#x200B;](#c12).
 
 #### C5 {#c5}
 
@@ -118,7 +118,7 @@ DAA: online gedragsreclame. Gegevens van een bepaalde computer of een bepaald ap
 
 #### C6 {#c6}
 
-Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Adds zijn gescheiden van inhoud ter plaatse, die door etiket [ C7 ](#c7) wordt behandeld. Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van deze voorkeuren in on-site advertenties niet worden aangemerkt als een op rente gebaseerde gerichte actie (ook wel personalisatie genoemd), aangezien deze niet voldoet aan alle drie de vereisten die vereist zijn voor op rente gebaseerde doelwitten. *[zie etiket C5 voor deze vereisten.](#c5)*
+Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Adds zijn gescheiden van inhoud ter plaatse, die door etiket [&#x200B; C7 &#x200B;](#c7) wordt behandeld. Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van deze voorkeuren in on-site advertenties niet worden aangemerkt als een op rente gebaseerde gerichte actie (ook wel personalisatie genoemd), aangezien deze niet voldoet aan alle drie de vereisten die vereist zijn voor op rente gebaseerde doelwitten. *[zie etiket C5 voor deze vereisten.](#c5)*
 
 Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-frameworks hieronder gegeven:
 
@@ -128,7 +128,7 @@ DAA: Online gedragsreclame omvat niet de activiteiten van Eerste Partijen, Ad De
 
 #### C7 {#c7}
 
-Onsite inhoud is tekst en afbeeldingen die zijn ontworpen om te informeren, te onderwijzen of te vermaken, en die niet zijn gemaakt om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van de inhoud te bepalen, met inbegrip van of de inhoud als inheemse reclame zou kwalificeren. Het C7 etiket is niet bedoeld om onsite advertenties te behandelen, die door etiket [ C6 ](#c6) worden behandeld. Gegevens met een C7-label kunnen niet worden gebruikt voor het aanwijzen van inhoud op locatie, zoals de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten. Dit omvat eerder verzamelde informatie over gebruikersbelangen in geselecteerde inhoud, het verwerken van gegevens over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld, het selecteren van inhoud hebben ondernomen. Doorgaans wordt het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van deze voorkeuren bij het zoeken naar inhoud op locatie niet beschouwd als een op rente gebaseerde keuze (ook wel personalisatie genoemd), omdat het niet voldoet aan alle drie de vereisten die vereist zijn voor het maken van doelwitbestanden. *[zie etiket C5 voor deze vereisten.](#c5)*
+Onsite inhoud is tekst en afbeeldingen die zijn ontworpen om te informeren, te onderwijzen of te vermaken, en die niet zijn gemaakt om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van de inhoud te bepalen, met inbegrip van of de inhoud als inheemse reclame zou kwalificeren. Het C7 etiket is niet bedoeld om onsite advertenties te behandelen, die door etiket [&#x200B; C6 &#x200B;](#c6) worden behandeld. Gegevens met een C7-label kunnen niet worden gebruikt voor het aanwijzen van inhoud op locatie, zoals de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten. Dit omvat eerder verzamelde informatie over gebruikersbelangen in geselecteerde inhoud, het verwerken van gegevens over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld, het selecteren van inhoud hebben ondernomen. Doorgaans wordt het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van deze voorkeuren bij het zoeken naar inhoud op locatie niet beschouwd als een op rente gebaseerde keuze (ook wel personalisatie genoemd), omdat het niet voldoet aan alle drie de vereisten die vereist zijn voor het maken van doelwitbestanden. *[zie etiket C5 voor deze vereisten.](#c5)*
 
 Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-frameworks hieronder gegeven:
 

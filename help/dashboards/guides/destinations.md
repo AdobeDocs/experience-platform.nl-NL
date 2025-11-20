@@ -15,7 +15,7 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over de actieve bestemmingen van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Deze gids schetst hoe te om tot het dashboard van bestemmingen in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de metriek die in het dashboard wordt getoond.
 
-Voor een overzicht van bestemmingen, evenals een catalogus van alle beschikbare bestemmingen binnen Experience Platform, gelieve de [ documentatie van bestemmingen ](../../destinations/home.md) te bezoeken.
+Voor een overzicht van bestemmingen, evenals een catalogus van alle beschikbare bestemmingen binnen Experience Platform, gelieve de [&#x200B; documentatie van bestemmingen &#x200B;](../../destinations/home.md) te bezoeken.
 
 ## [!UICONTROL Destinations] dashboardgegevens {#destinations-dashboard-data}
 
@@ -33,27 +33,27 @@ De datum en tijd van de meest recente momentopname worden getoond bij de bovenka
 
 >[!NOTE]
 >
->Als uw organisatie nieuw is voor Experience Platform en nog geen actieve doelen heeft, zijn het dashboard Doelen en het tabblad [!UICONTROL Overview] niet zichtbaar. Als u in plaats daarvan [!UICONTROL Destinations] selecteert in de linkernavigatie, wordt het tabblad [!UICONTROL Catalog] weergegeven. Raadpleeg de [!UICONTROL Catalog] handleiding voor de werkruimte [[!UICONTROL Destinations] voor meer informatie over de tab ](../../destinations/ui/destinations-workspace.md) .
+>Als uw organisatie nieuw is voor Experience Platform en nog geen actieve doelen heeft, zijn het dashboard Doelen en het tabblad [!UICONTROL Overview] niet zichtbaar. Als u in plaats daarvan [!UICONTROL Destinations] selecteert in de linkernavigatie, wordt het tabblad [!UICONTROL Catalog] weergegeven. Raadpleeg de [!UICONTROL Catalog] handleiding voor de werkruimte [[!UICONTROL Destinations] voor meer informatie over de tab &#x200B;](../../destinations/ui/destinations-workspace.md) .
 
-![ het Overzicht van Doelen UI van Experience Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
+![&#x200B; het Overzicht van Doelen UI van Experience Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
 
 ### Het dashboard [!UICONTROL Destinations] wijzigen {#modify}
 
 Selecteer **[!UICONTROL Modify dashboard]** om de weergave van het dashboard met doelen te wijzigen. Wijzigingen in het dashboard zijn per gebruiker en niet voor de hele organisatie. U kunt widgets verplaatsen, toevoegen, vergroten, verkleinen en verwijderen van het dashboard en tot de widgetbibliotheek toegang hebben om uw dashboard aan te passen. In de widgetbibliotheek kunt u de beschikbare widgets verkennen en aangepaste widgets maken voor uw organisatie.
 
-Gelieve te verwijzen naar [ wijzigend dashboards ](../customize/modify.md) en [ het overzicht van de widgetbibliotheek ](../customize/widget-library.md) documentatie om meer te leren.
+Gelieve te verwijzen naar [&#x200B; wijzigend dashboards &#x200B;](../customize/modify.md) en [&#x200B; het overzicht van de widgetbibliotheek &#x200B;](../customize/widget-library.md) documentatie om meer te leren.
 
 ### Widgets toevoegen {#add-widget}
 
 Selecteer **[!UICONTROL Add widget]** om naar de widgetbibliotheek te navigeren en een lijst met de beschikbare widgets weer te geven die u aan het dashboard wilt toevoegen.
 
-![ het dashboardoverzicht van Doelen met Add benadrukte widget.](../images/destinations/destinations-overview-add-widget.png)
+![&#x200B; het dashboardoverzicht van Doelen met Add benadrukte widget.](../images/destinations/destinations-overview-add-widget.png)
 
-In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Voor informatie over hoe te om widgets toe te voegen, te zien gelieve de documentatie van de widgetbibliotheek over hoe te [ een widget ](../customize/widget-library.md#add-widgets) toevoegen.
+In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aangepaste publiekswidgets. Voor informatie over hoe te om widgets toe te voegen, te zien gelieve de documentatie van de widgetbibliotheek over hoe te [&#x200B; een widget &#x200B;](../customize/widget-library.md#add-widgets) toevoegen.
 
 ### SQL weergeven {#view-sql}
 
-U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten van de gegevens van Experience Platform afleiden die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [ SQL gids van de Mening UI ](../view-sql.md).
+U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten van de gegevens van Experience Platform afleiden die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [&#x200B; SQL gids van de Mening UI &#x200B;](../view-sql.md).
 
 ## Standaardwidgets {#default-widgets}
 
@@ -66,11 +66,11 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 >[!NOTE]
 >
 >Vanaf 26 juli 2023 zijn [!UICONTROL Profiles] , [!UICONTROL Audiences] en [!UICONTROL Destinations] overzichtsdashboards opnieuw ingesteld op een nieuwe standaardwidgetbelasting voor alle gebruikers die hun weergaven in de afgelopen zes maanden niet hebben gewijzigd.
->Verwijs naar de documentatie in de [ Profielen ](./profiles.md#default-widgets) en [ de 3} standaardwidgetsecties van het publiek {voor details waarop widgets als deel van standaard widget lading-outs inbegrepen zijn. ](./audiences.md#default-widgets) U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
+>Verwijs naar de documentatie in de [&#x200B; Profielen &#x200B;](./profiles.md#default-widgets) en [&#x200B; de 3&rbrace; standaardwidgetsecties van het publiek &lbrace;voor details waarop widgets als deel van standaard widget lading-outs inbegrepen zijn. &#x200B;](./audiences.md#default-widgets) U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
 
 ## Standaardwidgets {#standard-widgets}
 
-Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende maatstaven voor uw doelen en het beoordelen van de volledigheid van het publiek dat beschikbaar is voor uw gegevensanalyse. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library] . Om meer over het creëren van douanewidgets te leren, gelieve te beginnen door het [ overzicht van de bibliotheek van Widget ](../customize/widget-library.md) te lezen.
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende maatstaven voor uw doelen en het beoordelen van de volledigheid van het publiek dat beschikbaar is voor uw gegevensanalyse. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library] . Om meer over het creëren van douanewidgets te leren, gelieve te beginnen door het [&#x200B; overzicht van de bibliotheek van Widget &#x200B;](../customize/widget-library.md) te lezen.
 
 ### Vereisten {#prerequisites}
 
@@ -115,7 +115,7 @@ Het aantal toegewezen soorten publiek dat wordt weergegeven in de kolom [!UICONT
 
 Selecteer de naam van een bestemming in de lijst die op widget wordt getoond om naar de bestemmingsdetails voor die bepaalde bestemming te navigeren. U kunt ook **[!UICONTROL View All]** selecteren om naar het tabblad **[!UICONTROL Browse]** te navigeren en vervolgens de naam van een doel selecteren om de details ervan weer te geven.
 
-![ het lusje van het Overzicht van het dashboard van Doelen met de Meest gebruikte benadrukte bestemmingswidget.](../images/destinations/most-used-destinations.png)
+![&#x200B; het lusje van het Overzicht van het dashboard van Doelen met de Meest gebruikte benadrukte bestemmingswidget.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL Recently created destinations] {#recently-created-destinations}
 
@@ -130,9 +130,9 @@ De gecreeerde getoonde datum is nauwkeurig aan de laatste dagelijkse momentopnam
 
 Als u de naam van een doel selecteert in de lijst die wordt weergegeven op de widget, gaat u naar de doeldetails die worden gekoppeld via het tabblad **[!UICONTROL Browse]** . U kunt ook **[!UICONTROL View All]** selecteren om naar het tabblad **[!UICONTROL Browse]** te navigeren en vervolgens de naam van een doel selecteren om de details ervan weer te geven.
 
-Meer over leren hoe te om specifieke soorten bestemmingen te vormen, bezoek de [ documentatie van bestemmingen ](../../destinations/home.md).
+Meer over leren hoe te om specifieke soorten bestemmingen te vormen, bezoek de [&#x200B; documentatie van bestemmingen &#x200B;](../../destinations/home.md).
 
-![ het lusje van het Overzicht van het dashboard van Doelen met onlangs gecreeerde benadrukte bestemmingswidget.](../images/destinations/recently-created-destinations.png)
+![&#x200B; het lusje van het Overzicht van het dashboard van Doelen met onlangs gecreeerde benadrukte bestemmingswidget.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Recently activated audiences] {#recently-activated-audiences}
 
@@ -147,9 +147,9 @@ De [!UICONTROL Updated] getoonde datum toont de laatste tijd het publiek aan de 
 
 Als u de naam van een publiek selecteert in de lijst die wordt weergegeven op de widget, gaat u naar de publieksdetails. U kunt ook **[!UICONTROL View All]** selecteren om naar het tabblad [!UICONTROL Audiences] [!UICONTROL Browse] te navigeren en vervolgens de naam van een publiek selecteren om de details ervan weer te geven.
 
-Voor meer informatie bij het werken met publiek in Experience Platform, gelieve te verwijzen naar het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
+Voor meer informatie bij het werken met publiek in Experience Platform, gelieve te verwijzen naar het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](../../segmentation/home.md).
 
-![ het lusje van het Overzicht van het dashboard van Doelen met onlangs geactiveerde benadrukte publiek widget.](../images/destinations/recently-activated-audiences.png)
+![&#x200B; het lusje van het Overzicht van het dashboard van Doelen met onlangs geactiveerde benadrukte publiek widget.](../images/destinations/recently-activated-audiences.png)
 
 ### [!UICONTROL Recently activated audiences by destination] {#recently-activated-audiences-by-destination}
 
@@ -164,9 +164,9 @@ Deze widget bevat twee metriek: de naam van het publiek en de datum waarop het p
 
 U kunt de details van een publiek bekijken door de naam van het publiek van de getoonde lijst te selecteren.
 
-![ Onlangs geactiveerd publiek door bestemmingswidget.](../images/destinations/recently-activated-audiences-by-destination.png)
+![&#x200B; Onlangs geactiveerd publiek door bestemmingswidget.](../images/destinations/recently-activated-audiences-by-destination.png)
 
-Gelieve te zien de eerste vereisten sectie voor de [ definities van termen die ](#prerequisites) in deze beschrijving worden gebruikt.
+Gelieve te zien de eerste vereisten sectie voor de [&#x200B; definities van termen die &#x200B;](#prerequisites) in deze beschrijving worden gebruikt.
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
@@ -181,11 +181,11 @@ Een tijdsperiode voor de publiekstrend over de afgelopen 30 dagen, 90 dagen, of 
 
 Het tweede vervolgkeuzemenu bevat alle beschikbare doelgroepen die naar de doelaccount kunnen worden verzonden die boven aan het dashboard is gekozen.
 
-![ de de trendwidget van de Omvang van de Publiek.](../images/destinations/audience-size-trend.png)
+![&#x200B; de de trendwidget van de Omvang van de Publiek.](../images/destinations/audience-size-trend.png)
 
 De **[!UICONTROL Audience size trend]** -widget biedt een [!UICONTROL Captions] -knop in de rechterbovenhoek van de widget. Selecteer **[!UICONTROL Captions]** om het dialoogvenster voor automatische bijschriften te openen. Een machine het leren model produceert automatisch titels om de belangrijkste tendensen en de belangrijke gebeurtenissen te beschrijven door de grafiek en de publieksgegevens te analyseren.
 
-![ de automatische dialoog van titels voor de de fotoment van de grootte van het Publiek widget.](../images/destinations/audience-size-trend-captions.png)
+![&#x200B; de automatische dialoog van titels voor de de fotoment van de grootte van het Publiek widget.](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL Unmapped audiences by identity] {#unmapped-audiences-by-identity}
 
@@ -200,9 +200,9 @@ Met het vervolgkeuzemenu voor de doel-id filtert u het beschikbare publiek. De f
 
 In de kolom met identiteiten wordt het aantal bron-id&#39;s in het publiek geteld dat kan worden toegewezen aan de id die is gekozen in het vervolgkeuzemenu voor de widget-id.
 
-![ Unmapped publiek door identiteit widget.](../images/destinations/unmapped-audiences-by-identity.png)
+![&#x200B; Unmapped publiek door identiteit widget.](../images/destinations/unmapped-audiences-by-identity.png)
 
-Gelieve te zien de eerste vereisten sectie voor de [ definities van termen die ](#prerequisites) in deze beschrijving worden gebruikt.
+Gelieve te zien de eerste vereisten sectie voor de [&#x200B; definities van termen die &#x200B;](#prerequisites) in deze beschrijving worden gebruikt.
 
 ### [!UICONTROL Mapped audiences by identity] {#mapped-audiences-by-identity}
 
@@ -213,7 +213,7 @@ Gelieve te zien de eerste vereisten sectie voor de [ definities van termen die ]
 
 Deze widget verstrekt een hoogste vijf lijst van **in kaart gebrachte** publiek. De lijst is van hoog tot laag geordend op basis van het aantal bron-id&#39;s in het publiek. De doel-id die moet worden geteld, wordt geselecteerd in het vervolgkeuzemenu onder de titel van de widget. De doel-id&#39;s die beschikbaar zijn in de vervolgkeuzelijst in de widget, worden gewijzigd op basis van het doelaccountfilter dat boven aan het overzichtsdashboard is gekozen.
 
-![ het Toegewezen publiek door identiteitswidget.](../images/destinations/mapped-audiences-by-identity.png)
+![&#x200B; het Toegewezen publiek door identiteitswidget.](../images/destinations/mapped-audiences-by-identity.png)
 
 De widget **[!UICONTROL Mapped audiences by identity]** markeert in één oogopslag de kans dat u zich met succes richt op profielkansen voor een campagne binnen de gekozen bestemming. Een efficiënte gerichte campagne is niet afhankelijk van het aantal profielen dat naar de bestemming wordt verzonden, maar van het aantal bron-id&#39;s dat waarschijnlijk met de doel-id&#39;s wordt aangepast om nuttige en uitvoerbare gegevens te verschaffen.
 
@@ -228,7 +228,7 @@ De **[!UICONTROL Common audiences]** -widget biedt een lijst met de bovenste vij
 
 De kolom [!UICONTROL AUDIENCE SIZE] bevat het totale aantal profielen van elk vermeld publiek.
 
-![ Gemeenschappelijke publiek widget.](../images/destinations/common-audiences.png)
+![&#x200B; Gemeenschappelijke publiek widget.](../images/destinations/common-audiences.png)
 
 ### Toegewezen publiek {#mapped-audiences}
 
@@ -236,7 +236,7 @@ De widget [!UICONTROL Mapped audiences] geeft het totale aantal toegewezen soort
 
 Selecteer **[!UICONTROL Audiences]** om naar het dashboard Soorten publiek [!UICONTROL Browse] te navigeren. Deze werkruimte toont een lijst van alle segmentdefinities voor uw organisatie.
 
-![ de Gemaakt publiek widget.](../images/destinations/mapped-audiences.png)
+![&#x200B; de Gemaakt publiek widget.](../images/destinations/mapped-audiences.png)
 
 ### Gewijzigde volksgezondheid {#mapped-audience-health}
 
@@ -257,9 +257,9 @@ Als een publiek in de [!UICONTROL Mapped audience health] -widget met een grote 
 
 >[!NOTE]
 >
->De standaardgrootte van de widget voor de volksgezondheid toewijzen kan de tabelinformatie belemmeren. Wijzig de grootte van de widget om de leesbaarheid van uw toegewezen publieksnamen en kolomtitels te verbeteren. Zie wijzigen dashboarddocumentatie voor begeleiding op [ hoe te resize een widget ](../customize/modify.md).
+>De standaardgrootte van de widget voor de volksgezondheid toewijzen kan de tabelinformatie belemmeren. Wijzig de grootte van de widget om de leesbaarheid van uw toegewezen publieksnamen en kolomtitels te verbeteren. Zie wijzigen dashboarddocumentatie voor begeleiding op [&#x200B; hoe te resize een widget &#x200B;](../customize/modify.md).
 
-![ de Toegewezen widget van de publieksgezondheid.](../images/destinations/mapped-audience-health.png)
+![&#x200B; de Toegewezen widget van de publieksgezondheid.](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL Destinations count] {#destinations-count}
 
@@ -272,7 +272,7 @@ De [!UICONTROL Destinations count] -widget geeft het totale aantal beschikbare e
 
 Onder het totale aantal, uitgezochte **[!UICONTROL Destinations]** om aan de bestemmingen te navigeren doorbladert tabel. Deze pagina bevat een lijst met alle doelen waarmee u tot op heden verbinding hebt gemaakt.
 
-![ De widget van de Aantal Doelen.](../images/destinations/destinations-count.png)
+![&#x200B; De widget van de Aantal Doelen.](../images/destinations/destinations-count.png)
 
 ### [!UICONTROL Destination status] {#destination-status}
 
@@ -280,38 +280,38 @@ De [!UICONTROL Destination status] widget toont het totale aantal toegelaten bes
 
 Individuele tellingen voor of toegelaten of gehandicapte bestemmingen worden getoond in een dialoog wanneer de curseur over de respectieve sectie van de donutgrafiek beweegt.
 
-![ De de statuswidget van de Bestemming.](../images/destinations/destination-status.png)
+![&#x200B; De de statuswidget van de Bestemming.](../images/destinations/destination-status.png)
 
 ### [!UICONTROL Active destinations by destination platform] {#active-destinations-by-destination-platform}
 
 Widget verstrekt een twee kolomlijst om een lijst van actieve bestemmingsplatforms en het totale aantal actieve bestemmingen voor elk bestemmingsplatform te tonen. De lijst met doelplatforms is van hoog naar laag geordend.
 
-![ de Actieve bestemmingen door bestemmingsplatform widget.](../images/destinations/active-destinations-by-destination-platform.png)
+![&#x200B; de Actieve bestemmingen door bestemmingsplatform widget.](../images/destinations/active-destinations-by-destination-platform.png)
 
 ### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
 
 De [!UICONTROL Activated audiences across all destinations] widget verstrekt het totale aantal publiek dat over alle bestemmingen in één enkele metrisch wordt geactiveerd. Dit getal is nauwkeurig tot aan de meest recente opname.
 
-![ het Geactiveerde publiek over alle bestemmingen widget.](../images/destinations/activated-audiences-across-all-destinations.png)
+![&#x200B; het Geactiveerde publiek over alle bestemmingen widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Selecteer **[!UICONTROL Audiences]** om naar de doelen [!UICONTROL Browse] tab te navigeren. Deze pagina verstrekt een lijst van alle toegelaten bestemmingen en een verscheidenheid van relevante metriek. Zie de documentatie voor meer informatie over het [[!UICONTROL Browse] lusje ](../../destinations/ui/destinations-workspace.md#browse).
+Selecteer **[!UICONTROL Audiences]** om naar de doelen [!UICONTROL Browse] tab te navigeren. Deze pagina verstrekt een lijst van alle toegelaten bestemmingen en een verscheidenheid van relevante metriek. Zie de documentatie voor meer informatie over het [[!UICONTROL Browse] lusje &#x200B;](../../destinations/ui/destinations-workspace.md#browse).
 
-Gelieve te zien de eerste vereisten sectie voor de [ definities van termen die ](#prerequisites) in deze beschrijving worden gebruikt.
+Gelieve te zien de eerste vereisten sectie voor de [&#x200B; definities van termen die &#x200B;](#prerequisites) in deze beschrijving worden gebruikt.
 
 ### [!UICONTROL Activated audiences] {#activated-audiences}
 
 Deze widget biedt één meting voor het totale aantal soorten publiek dat aan een doel wordt geactiveerd.
 
-![ Geactiveerde publiek widget.](../images/destinations/activated-audiences.png)
+![&#x200B; Geactiveerde publiek widget.](../images/destinations/activated-audiences.png)
 
 Selecteer **[!UICONTROL Audiences]** om naar de detailspagina van het dashboard van bestemmingen te navigeren. Op het tabblad [!UICONTROL Activation data] wordt een lijst weergegeven met soorten publiek die aan de bestemming zijn toegewezen, inclusief de begindatum en einddatum (indien van toepassing) en andere relevante informatie voor de gegevensexport, zoals het exporttype, de planning en de frequentie. Als u de details over een bepaald publiek wilt weergeven, selecteert u de naam in de kolom [!UICONTROL Audience Name] .
 
-![ de de detailspagina van bestemmingendashboard met benadrukte gegevens van de Activering.](../images/destinations/activation-data-tab.png)
+![&#x200B; de de detailspagina van bestemmingendashboard met benadrukte gegevens van de Activering.](../images/destinations/activation-data-tab.png)
 
 Deze widget helpt u de waarde van uw bestemmingen te begrijpen die op het aantal publiek wordt gebaseerd dat bij een blik wordt geactiveerd. Het biedt ook eenvoudig toegang tot meer gedetailleerde informatie voor verdere analyse.
 
-Gelieve te zien de eerste vereisten sectie voor de [ definities van termen die ](#prerequisites) in deze beschrijving worden gebruikt.
+Gelieve te zien de eerste vereisten sectie voor de [&#x200B; definities van termen die &#x200B;](#prerequisites) in deze beschrijving worden gebruikt.
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu het dashboard voor doelen vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Meer leren over het werken met bestemmingen in Experience Platform, gelieve te verwijzen naar de [ documentatie van bestemmingen ](../../destinations/home.md).
+Als u dit document volgt, kunt u nu het dashboard voor doelen vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Meer leren over het werken met bestemmingen in Experience Platform, gelieve te verwijzen naar de [&#x200B; documentatie van bestemmingen &#x200B;](../../destinations/home.md).

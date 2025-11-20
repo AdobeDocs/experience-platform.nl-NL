@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De functionaliteit om transformaties op gegevens uit te voeren die naar de bestemmingen van de wolkenopslag worden uitgevoerd is over het algemeen beschikbaar voor de volgende bestemmingen: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md), evenals om het even welke douane partner-authored wolkenopslag die bestemmingen door [ Destination SDK ](/help/destinations/destination-sdk/overview.md) worden authored.
+>De functionaliteit om transformaties op gegevens uit te voeren die naar de bestemmingen van de wolkenopslag worden uitgevoerd is over het algemeen beschikbaar voor de volgende bestemmingen: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md), evenals om het even welke douane partner-authored wolkenopslag die bestemmingen door [&#x200B; Destination SDK &#x200B;](/help/destinations/destination-sdk/overview.md) worden authored.
 
 Voor het uitvoeren van verschillende transformaties op gegevens die naar de bestemmingen van de wolkenopslag worden uitgevoerd, moet u de berekende gebiedsfunctionaliteit in de kaartstap van het de uitvoerwerkschema gebruiken. Ga voor meer informatie over berekende velden naar de onderstaande pagina&#39;s. Deze pagina&#39;s bevatten een inleiding op berekende velden in Data Prep en meer informatie over alle beschikbare functies:
 
@@ -31,8 +31,8 @@ Voor het uitvoeren van verschillende transformaties op gegevens die naar de best
 
 Berekende velden gebruiken voor gegevenstransformaties:
 
-1. [ verbind ](/help/destinations/ui/connect-destination.md) met een gewenste bestemming van de wolkenopslag. Wanneer het verbinden met de gewenste wolkenbestemming, knevel de **[!UICONTROL Export arrays, maps, objects]** [ optie weg ](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
-2. Ga door de [ activeringsstappen voor de bestemmingen van de wolkenopslag ](/help/destinations/ui/activate-batch-profile-destinations.md) en krijg aan de [ kaartings ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) stap.
+1. [&#x200B; verbind &#x200B;](/help/destinations/ui/connect-destination.md) met een gewenste bestemming van de wolkenopslag. Wanneer het verbinden met de gewenste wolkenbestemming, knevel de **[!UICONTROL Export arrays, maps, objects]** [&#x200B; optie weg &#x200B;](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+2. Ga door de [&#x200B; activeringsstappen voor de bestemmingen van de wolkenopslag &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) en krijg aan de [&#x200B; kaartings &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) stap.
 
 ## Werken met berekende velden {#how-to-export-calculated-fields}
 
@@ -44,7 +44,7 @@ Berekende velden gebruiken voor gegevenstransformaties:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Berekende velden uitgeschakeld toevoegen"
->abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel ** wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de **series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
+>abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel **&#x200B; wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de &#x200B;** series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
 
 >[!IMPORTANT]
 >
@@ -56,33 +56,33 @@ Selecteer **[!UICONTROL Add calculated field]** in de toewijzingsstap van de act
 >
 >Het besturingselement **[!UICONTROL Add calculated field]** is uitgeschakeld voor doelverbindingen waarvoor het besturingselement **[!UICONTROL Export arrays, maps, and objects]** is uitgeschakeld. [Meer informatie](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
-![ voeg berekend gebied toe dat in de afbeeldingsstap van het werkschema van de partijactivering wordt benadrukt.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![&#x200B; voeg berekend gebied toe dat in de afbeeldingsstap van het werkschema van de partijactivering wordt benadrukt.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 Dit opent een modaal venster waar u functies en gebieden kunt selecteren om attributen uit Experience Platform uit te voeren.
 
-![ Modal venster van de berekende gebiedsfunctionaliteit zonder nog geselecteerde functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![&#x200B; Modal venster van de berekende gebiedsfunctionaliteit zonder nog geselecteerde functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-Gebruik bijvoorbeeld de functie `array_to_string` in het veld `organizations` , zoals hieronder wordt weergegeven, om de array met organisaties te exporteren als een tekenreeks in een CSV-bestand. Bekijk [ meer informatie over dit en andere voorbeelden verder onder ](#array-to-string-function-export-arrays).
+Gebruik bijvoorbeeld de functie `array_to_string` in het veld `organizations` , zoals hieronder wordt weergegeven, om de array met organisaties te exporteren als een tekenreeks in een CSV-bestand. Bekijk [&#x200B; meer informatie over dit en andere voorbeelden verder onder &#x200B;](#array-to-string-function-export-arrays).
 
-![ Modal venster van de berekende gebiedsfunctionaliteit met de serie-aan-koord geselecteerde functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![&#x200B; Modal venster van de berekende gebiedsfunctionaliteit met de serie-aan-koord geselecteerde functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Selecteer **[!UICONTROL Save]** om het berekende veld te behouden en terug te keren naar de toewijzingsstap.
 
-![ Modal venster van de berekende gebiedsfunctionaliteit met de serie-aan-koord geselecteerde functie en sparen benadrukte controle.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![&#x200B; Modal venster van de berekende gebiedsfunctionaliteit met de serie-aan-koord geselecteerde functie en sparen benadrukte controle.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 Vul de **[!UICONTROL Target field]** weer in de toewijzingsstap van de workflow met een waarde in de kolomkop die u voor dit veld wilt gebruiken in de geëxporteerde bestanden.
 
-![ Afbeeldingsstap met het benadrukte doelgebied.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+![&#x200B; Afbeeldingsstap met het benadrukte doelgebied.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
-![ Uitgezochte doelgebied 2 ](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
+![&#x200B; Uitgezochte doelgebied 2 &#x200B;](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
 Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan naar de volgende stap van de activeringsworkflow.
 
-![ de stap van de afbeelding met het benadrukte doelgebied en een doelwaarde die binnen wordt gevuld.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![&#x200B; de stap van de afbeelding met het benadrukte doelgebied en een doelwaarde die binnen wordt gevuld.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## Voorbeeld van ondersteunde functies voor het uitvoeren van gegevenstransformaties {#supported-functions}
 
-Alle gedocumenteerde [ functies van de Prep van Gegevens ](/help/data-prep/functions.md) worden gesteund wanneer het activeren van gegevens aan op dossier-gebaseerde bestemmingen.
+Alle gedocumenteerde [&#x200B; functies van de Prep van Gegevens &#x200B;](/help/data-prep/functions.md) worden gesteund wanneer het activeren van gegevens aan op dossier-gebaseerde bestemmingen.
 
 De functies hieronder, specifiek voor het behandelen van de uitvoer van series, of het toepassen van het hakken op gebieden, worden gedocumenteerd samen met voorbeelden.
 
@@ -101,7 +101,7 @@ De functies hieronder, specifiek voor het behandelen van de uitvoer van series, 
 
 ## Voorbeelden van functies die worden gebruikt om gegevenstransformaties uit te voeren {#examples}
 
-Zie voorbeelden en verdere informatie in de onderstaande secties voor enkele van de bovenstaande functies. Voor de rest van de vermelde functies, verwijs naar de [ algemene functiedocumentatie in de sectie van de Prep van Gegevens ](/help/data-prep/functions.md).
+Zie voorbeelden en verdere informatie in de onderstaande secties voor enkele van de bovenstaande functies. Voor de rest van de vermelde functies, verwijs naar de [&#x200B; algemene functiedocumentatie in de sectie van de Prep van Gegevens &#x200B;](/help/data-prep/functions.md).
 
 ### `array_to_string` functie om arrays te exporteren {#array-to-string-function-export-arrays}
 
@@ -114,7 +114,7 @@ U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals wordt wee
 * `person.name.lastName` tekenreeks
 * `personalEmail.address` tekenreeks
 
-![ het Voorbeeld van de Toewijzing met inbegrip van de serie_to_string functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
+![&#x200B; het Voorbeeld van de Toewijzing met inbegrip van de serie_to_string functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. U ziet hoe de elementen van de array met het teken `_` worden samengevoegd tot één tekenreeks.
 
@@ -129,7 +129,7 @@ Gebruik de functie `filterArray` om de elementen van een geëxporteerde array te
 
 Als u het arrayobject `organizations` van boven doorloopt, kunt u een functie zoals `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))` schrijven die de organisaties met een waarde voor `founded` in het jaar 2021 of recenter retourneert.
 
-![ Voorbeeld van de filterArray functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
+![&#x200B; Voorbeeld van de filterArray functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. De twee elementen van de array die aan het criterium voldoen, worden met het teken `_` samengevoegd tot één tekenreeks.
 
@@ -143,7 +143,7 @@ Gebruik de functie `transformArray` om de elementen van een geëxporteerde array
 
 Als u doorgaat met het array-object `organizations` van bovenaf, kunt u een functie als `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))` schrijven die de namen retourneert van de organisaties die in hoofdletters zijn omgezet.
 
-![ Voorbeeld van de functie transformArray.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
+![&#x200B; Voorbeeld van de functie transformArray.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. De drie elementen van de array worden getransformeerd en samengevoegd tot één tekenreeks met het teken `_` .
 
@@ -155,7 +155,7 @@ John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 
 Gebruik de functie `iif` om elementen van een array onder bepaalde omstandigheden te exporteren. Als u bijvoorbeeld verdergaat met het array-object `organizations` van boven, kunt u een eenvoudige voorwaardelijke functie schrijven, zoals `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")` .
 
-![ het Voorbeeld van de Toewijzing met inbegrip van de functie iif.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![&#x200B; het Voorbeeld van de Toewijzing met inbegrip van de functie iif.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. In dit geval, is het eerste element van de serie Marketing, zodat is de persoon lid van de marketing afdeling.
 
@@ -170,7 +170,7 @@ Gebruik de functie `add_to_array` om elementen aan een geëxporteerde array toe 
 
 Als u doorgaat met het array-object `organizations` van bovenaf, kunt u een functie als `source: array_to_string('_', add_to_array(organizations,"2023"))` schrijven, die de organisaties retourneert waarvan een persoon lid is in 2023.
 
-![ Voorbeeld van de Afbeelding met inbegrip van de add_to_array functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+![&#x200B; Voorbeeld van de Afbeelding met inbegrip van de add_to_array functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. De drie elementen van de array worden samengevoegd tot één tekenreeks met het teken `_` en 2023 wordt ook toegevoegd aan het einde van de tekenreeks.
 
@@ -198,7 +198,7 @@ U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals wordt get
 * `person.name.lastName` tekenreeks
 * `personalEmail.address` tekenreeks
 
-![ het Voorbeeld van de afbeelding met inbegrip van de kaalkrachtfunctie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![&#x200B; het Voorbeeld van de afbeelding met inbegrip van de kaalkrachtfunctie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. De eerste niet-null `true` waarde in de array wordt geëxporteerd naar het bestand.
 
@@ -216,7 +216,7 @@ U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals in de sch
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` array die vijf afzonderlijke aankooptijden door de klant aangeeft
 * `personalEmail.address` tekenreeks
 
-![ Voorbeeld van het Toewijzen met inbegrip van size_of functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![&#x200B; Voorbeeld van het Toewijzen met inbegrip van size_of functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
 In dit geval ziet het uitvoerbestand er hieronder uit. De tweede kolom geeft het aantal elementen in de array aan, overeenkomend met het aantal afzonderlijke aankopen dat de klant heeft gedaan.
 
@@ -233,7 +233,7 @@ johndoe@acme.org,"5"
 
 U kunt toegang krijgen tot een index van een array om één item uit de array te exporteren. Als u bijvoorbeeld, net als in het bovenstaande voorbeeld voor de functie `size_of` , alleen de eerste keer dat een klant een bepaald product heeft aangeschaft, toegang wilt tot dit bestand en het bestand wilt exporteren, kunt u `purchaseTime[0]` gebruiken om het eerste element van de tijdstempel te exporteren, `purchaseTime[1]` om het tweede element van de tijdstempel te exporteren, `purchaseTime[2]` om het derde element van de tijdstempel te exporteren, enzovoort.
 
-![ het Voorbeeld dat van de afbeelding toont hoe een element van een serie kan worden betreden.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![&#x200B; het Voorbeeld dat van de afbeelding toont hoe een element van een serie kan worden betreden.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
 In dit geval ziet het uitvoerbestand er als volgt uit: de eerste keer dat de klant een aankoop heeft gedaan, wordt geëxporteerd:
 
@@ -246,7 +246,7 @@ johndoe@acme.org,"1538097126"
 
 Gebruik de functies `first` en `last` om het eerste of laatste element in een array te exporteren. Als u bijvoorbeeld doorgaat met het array-object `purchaseTime` met meerdere tijdstempels uit de vorige voorbeelden, kunt u deze gebruiken om de eerste of laatste aanschaftijd die door een persoon is gemaakt, te exporteren.
 
-![ Voorbeeld van het Toewijzen met inbegrip van de eerste en laatste functies.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![&#x200B; Voorbeeld van het Toewijzen met inbegrip van de eerste en laatste functies.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
 In dit geval ziet uw uitvoerbestand er als volgt uit: u exporteert de eerste en laatste keer dat de klant een aankoop heeft gedaan:
 

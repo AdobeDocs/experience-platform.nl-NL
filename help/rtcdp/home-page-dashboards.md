@@ -19,18 +19,18 @@ De Real-Time CDP-startpagina bevat een widget Aan de slag waarmee u snel toegang
 
 Dit document biedt een overzicht van de Real-Time CDP-startpagina en het dashboard voor meetgegevens.
 
-![ de homepage van UI van Experience Platform.](assets/platform-home/home.png)
+![&#x200B; de homepage van UI van Experience Platform.](assets/platform-home/home.png)
 
 ## Aan de slag-widget
 
 De widget [!UICONTROL Getting started with Real-Time Customer Profile] bestaat uit vier secties:
 
 * **Ingest gegevens in Experience Platform**: Deze widget leidt u aan de broncatalogus. Gebruik de broncatalogus om een bron te selecteren en uw gegevens in te voeren naar Experience Platform. Selecteer **[vormen bronnen]** om aan de broncatalogus te navigeren. Voor meer informatie raadpleegt u het [overzicht van bronnen](../sources/home.md).
-* **Model gegevensstructuren**: Deze widget leidt u aan het schemaoverzicht. Gebruik het schemaoverzicht om naar bestaande schema&#39;s te doorbladeren of een blauwdruk tot stand te brengen die de structuur van uw gegevens beschrijven. Selecteer **[!UICONTROL Create schema]** om naar de interface voor het maken van het schema te navigeren. Voor meer informatie, lees het [ schema&#39;s overzicht ](../xdm/home.md).
-* **bouwt publiek**: Deze widget richt u aan de Bouwer van het Segment in UI. Gebruik de Bouwer van het Segment om met de gegevenselementen van het Profiel in wisselwerking te staan en de criteria voor uw segmentdefinitie te bepalen. Selecteer **[!UICONTROL Create audience]** om naar de Segment Builder te navigeren. Voor meer informatie, lees het [ overzicht van de Dienst van de Segmentatie ](../segmentation/home.md).
+* **Model gegevensstructuren**: Deze widget leidt u aan het schemaoverzicht. Gebruik het schemaoverzicht om naar bestaande schema&#39;s te doorbladeren of een blauwdruk tot stand te brengen die de structuur van uw gegevens beschrijven. Selecteer **[!UICONTROL Create schema]** om naar de interface voor het maken van het schema te navigeren. Voor meer informatie, lees het [&#x200B; schema&#39;s overzicht &#x200B;](../xdm/home.md).
+* **bouwt publiek**: Deze widget richt u aan de Bouwer van het Segment in UI. Gebruik de Bouwer van het Segment om met de gegevenselementen van het Profiel in wisselwerking te staan en de criteria voor uw segmentdefinitie te bepalen. Selecteer **[!UICONTROL Create audience]** om naar de Segment Builder te navigeren. Voor meer informatie, lees het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](../segmentation/home.md).
 * **verzendt gegevens naar bestemmingen**: Deze widget richt u aan de catalogus van bestemmingen. Gebruik de bestemmingscatalogus om een bestemming te selecteren die u dan met kunt verbinden en publiek naar verzenden. Selecteer **[!UICONTROL Set up destinations]** om naar de doelcatalogus te navigeren. Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../destinations/home.md).
 
-![ de homepage UI van Experience Platform die het worden begonnen widget ](assets/platform-home/getting-started-widget.png) toont
+![&#x200B; de homepage UI van Experience Platform die het worden begonnen widget &#x200B;](assets/platform-home/getting-started-widget.png) toont
 
 ## Metrisch dashboard {#metrics-dashboard}
 
@@ -46,29 +46,29 @@ Op het dashboard Metrics wordt actuele informatie over uw Experience Platform-ge
 
 Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profielen en soorten publiek in uw organisatie en de meest recente updatedatum.
 
-![ de leaderboard sectie in de Experience Platform UI homepage.](assets/platform-home/leaderboard.png)
+![&#x200B; de leaderboard sectie in de Experience Platform UI homepage.](assets/platform-home/leaderboard.png)
 
-* **Totale schema&#39;s**: De **Totale schema&#39;s** teller toont het aantal schema&#39;s in het systeem. Deze teller wordt bijgewerkt wanneer een schema wordt gecreeerd. Voor meer informatie, lees het [ schema&#39;s overzicht ](../xdm/home.md).
-* **Totale datasets**: De **Totale datasets** teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in Experience Platform. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd. Voor meer informatie over datasets, lees het [ overzicht van datasets ](../catalog/datasets/overview.md).
-* **Totale profielen**: De **3} telling van Profielen {toont het totale aantal profielen uw organisatie binnen Experience Platform heeft.** Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek. Dit aantal gebruikt het standaard [ samenvoegbeleid ](profile/merge-policies.md) zoals die in de configuratie van het fusiebeleid in het Profiel van de Klant in real time wordt geplaatst. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt. Selecteer **[!UICONTROL Profiles]** om naar de overzichtspagina Profielen te navigeren en alle maatstaven van uw profiel weer te geven. Voor meer informatie over profielen, lees het [ overzicht van het Profiel van de Klant in real time ](../profile/home.md).
-* **Totaal publiek**: Het **Totale publiek** teller toont het totale aantal publiek dat voor uw organisatie wordt gecreeerd. Dit nummer wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Voor meer informatie over publiek, lees het [ overzicht van de Dienst van de Segmentatie ](../segmentation/home.md).
+* **Totale schema&#39;s**: De **Totale schema&#39;s** teller toont het aantal schema&#39;s in het systeem. Deze teller wordt bijgewerkt wanneer een schema wordt gecreeerd. Voor meer informatie, lees het [&#x200B; schema&#39;s overzicht &#x200B;](../xdm/home.md).
+* **Totale datasets**: De **Totale datasets** teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in Experience Platform. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd. Voor meer informatie over datasets, lees het [&#x200B; overzicht van datasets &#x200B;](../catalog/datasets/overview.md).
+* **Totale profielen**: De **3&rbrace; telling van Profielen &lbrace;toont het totale aantal profielen uw organisatie binnen Experience Platform heeft.** Het bevat geen profielfragmenten. Dit is uw totaal adresseerbare publiek. Dit aantal gebruikt het standaard [&#x200B; samenvoegbeleid &#x200B;](profile/merge-policies.md) zoals die in de configuratie van het fusiebeleid in het Profiel van de Klant in real time wordt geplaatst. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt. Selecteer **[!UICONTROL Profiles]** om naar de overzichtspagina Profielen te navigeren en alle maatstaven van uw profiel weer te geven. Voor meer informatie over profielen, lees het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../profile/home.md).
+* **Totaal publiek**: Het **Totale publiek** teller toont het totale aantal publiek dat voor uw organisatie wordt gecreeerd. Dit nummer wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Voor meer informatie over publiek, lees het [&#x200B; overzicht van de Dienst van de Segmentatie &#x200B;](../segmentation/home.md).
 
 ### Recente objecten
 
 Recente items geven een overzicht van de meest recente wijzigingen in uw organisatie. In het onderstaande voorbeeld hebben de meest recente wijzigingen betrekking op gegevenssets, bronnen, doelgroepen en bestemmingen.
 
-![ de recente puntensectie in de homepage van UI van Experience Platform.](assets/platform-home/recent-items.png)
+![&#x200B; de recente puntensectie in de homepage van UI van Experience Platform.](assets/platform-home/recent-items.png)
 
-* **Recente datasets**: De **[!UICONTROL Recent datasets]** kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Selecteer een dataset om de details voor dat punt te bekijken, of **[!UICONTROL View all]** voor een lijst van datasets te selecteren. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over datasets, zie het [ overzicht van datasets ](../catalog/datasets/overview.md).
-* **Recente bronnen**: De **[!UICONTROL Recent sources]** metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt. Selecteer een bron om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met bronnen. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over bronnen, zie [ Overzicht van Bronnen ](../sources/home.md).
-* **Recent publiek**: De **[!UICONTROL Recent audiences]** metrische kaart toont de vijf meest recente die publiek binnen de organisatie wordt gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Selecteer een publiek om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met soorten publiek. Voor meer informatie over publiek, zie [ Overzicht van de Dienst van de Segmentatie ](../segmentation/home.md).
+* **Recente datasets**: De **[!UICONTROL Recent datasets]** kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Selecteer een dataset om de details voor dat punt te bekijken, of **[!UICONTROL View all]** voor een lijst van datasets te selecteren. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over datasets, zie het [&#x200B; overzicht van datasets &#x200B;](../catalog/datasets/overview.md).
+* **Recente bronnen**: De **[!UICONTROL Recent sources]** metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt. Selecteer een bron om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met bronnen. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over bronnen, zie [&#x200B; Overzicht van Bronnen &#x200B;](../sources/home.md).
+* **Recent publiek**: De **[!UICONTROL Recent audiences]** metrische kaart toont de vijf meest recente die publiek binnen de organisatie wordt gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuw publiek wordt gemaakt. Selecteer een publiek om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met soorten publiek. Voor meer informatie over publiek, zie [&#x200B; Overzicht van de Dienst van de Segmentatie &#x200B;](../segmentation/home.md).
 * **Recente bestemmingen**: De **[!UICONTROL Recent destinations]** metrische kaart toont de vijf meest recente bestemmingen die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bestemming wordt gecreeerd. Selecteer een bestemming om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met doelen. Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../destinations/home.md).
 
 ## Bronnen
 
 Tot slot verstrekt de middelen widget u van extra documentatiemiddelen die u kunt verwijzen. Deze omvatten:
 
-![ de middelensectie in de homepage van UI van Experience Platform.](assets/platform-home/resources.png)
+![&#x200B; de middelensectie in de homepage van UI van Experience Platform.](assets/platform-home/resources.png)
 
 * [Schema&#39;s begrijpen](../xdm/schema/composition.md)
 * [Bronnen verbinden](../sources/home.md)

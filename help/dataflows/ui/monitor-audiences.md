@@ -20,13 +20,13 @@ Gebruik het controledashboard om een visuele vertegenwoordiging van de activitei
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
-   - [ looppas Dataflow ](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
-- [ Segmentatie ](../../segmentation/home.md): De segmentatie staat u toe om publiek van uw gegevens van het Profiel van de Klant in real time tot stand te brengen.
-   - [ de banen van de Activering ](../../destinations/ui/activation-overview.md): Een activeringsbaan wordt gebruikt om uw publiek aan een gespecificeerde bestemming te activeren.
-   - [ de banen van de Evaluatie ](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Een evaluatietaak is een asynchroon proces dat het publiek evalueert.
-   - [ de banen van de Uitvoer ](../../segmentation/api/export-jobs.md): Een uitvoerbaan is een asynchrone processen die worden gebruikt om publieksleden aan datasets voort te zetten.
-- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [&#x200B; Dataflows &#x200B;](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+   - [&#x200B; looppas Dataflow &#x200B;](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
+- [&#x200B; Segmentatie &#x200B;](../../segmentation/home.md): De segmentatie staat u toe om publiek van uw gegevens van het Profiel van de Klant in real time tot stand te brengen.
+   - [&#x200B; de banen van de Activering &#x200B;](../../destinations/ui/activation-overview.md): Een activeringsbaan wordt gebruikt om uw publiek aan een gespecificeerde bestemming te activeren.
+   - [&#x200B; de banen van de Evaluatie &#x200B;](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Een evaluatietaak is een asynchroon proces dat het publiek evalueert.
+   - [&#x200B; de banen van de Uitvoer &#x200B;](../../segmentation/api/export-jobs.md): Een uitvoerbaan is een asynchrone processen die worden gebruikt om publieksleden aan datasets voort te zetten.
+- [&#x200B; Sandboxen &#x200B;](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Het dashboard voor publiek controleren {#monitoring-audiences-dashboard}
 
@@ -37,17 +37,17 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 Als u het dashboard **[!UICONTROL Audiences]** wilt openen, selecteert u **[!UICONTROL Monitoring]** in de linkernavigatie. Selecteer eenmaal op de pagina **[!UICONTROL Monitoring]** de **[!UICONTROL Audiences]** -kaart.
 
-![ de kaart van het publiek. De informatie over de laatste evaluatietaak en de laatste uitvoerbaan wordt getoond.](../assets/ui/monitor-audiences/audience-card.png)
+![&#x200B; de kaart van het publiek. De informatie over de laatste evaluatietaak en de laatste uitvoerbaan wordt getoond.](../assets/ui/monitor-audiences/audience-card.png)
 
 Op het hoofddashboard van **[!UICONTROL Audiences]** geeft de **[!UICONTROL Audiences]** -kaart de status en datum van de laatste evaluatietaak en de laatste exporttaak weer.
 
-Het dashboard zelf bevat meetgegevens voor zowel publiek- als segmentatietaken. Standaard ziet u op het dashboard de meetgegevens voor het publiek voor de laatste 24 uur. Meer over de de baanmening van de segmentatie leren, gelieve te lezen [ controlerend segmentatietaken ](#monitoring-segmentation-jobs-dashboard) sectie.
+Het dashboard zelf bevat meetgegevens voor zowel publiek- als segmentatietaken. Standaard ziet u op het dashboard de meetgegevens voor het publiek voor de laatste 24 uur. Meer over de de baanmening van de segmentatie leren, gelieve te lezen [&#x200B; controlerend segmentatietaken &#x200B;](#monitoring-segmentation-jobs-dashboard) sectie.
 
 >[!IMPORTANT]
 >
->Momenteel, slechts worden het publiek dat aan [ (op dossier-gebaseerde) bestemmingen ](../../destinations/destination-types.md#file-based) wordt geactiveerd gesteund voor het dashboard van het controlepubliek.
+>Momenteel, slechts worden het publiek dat aan [&#x200B; (op dossier-gebaseerde) bestemmingen &#x200B;](../../destinations/destination-types.md#file-based) wordt geactiveerd gesteund voor het dashboard van het controlepubliek.
 
-![ het publiek dashboard. De informatie over de verschillende soorten publiek in uw organisatie en zandbak wordt getoond.](../assets/ui/monitor-audiences/audience-dashboard.png)
+![&#x200B; het publiek dashboard. De informatie over de verschillende soorten publiek in uw organisatie en zandbak wordt getoond.](../assets/ui/monitor-audiences/audience-dashboard.png)
 
 De volgende metriek is beschikbaar voor deze dashboardmening:
 
@@ -64,17 +64,17 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Last activation identities]** | Het aantal identiteiten dat is geactiveerd in de laatste activeringstaak van het publiek. |
 | **[!UICONTROL Last activation destination]** | De naam van de bestemming waarop de laatste activeringstaak van het publiek is geactiveerd. |
 
-U kunt de resultaten aan een specifiek publiek filtreren en zijn segmentatietaken bekijken door het filterpictogram (![ te selecteren het filterpictogram.](/help/images/icons/filter-add.png)). De segmentatietaken worden gesorteerd in chronologische volgorde, waarbij de meest recente segmentatietaken bovenaan worden weergegeven.
+U kunt de resultaten aan een specifiek publiek filtreren en zijn segmentatietaken bekijken door het filterpictogram (![&#x200B; te selecteren het filterpictogram.](/help/images/icons/filter-add.png)). De segmentatietaken worden gesorteerd in chronologische volgorde, waarbij de meest recente segmentatietaken bovenaan worden weergegeven.
 
-![ het filterpictogram wordt benadrukt. Het selecteren van dit staat u toe om de segmentatietaken voor het gespecificeerde publiek te bekijken.](../assets/ui/monitor-audiences/filter-audience.png)
+![&#x200B; het filterpictogram wordt benadrukt. Het selecteren van dit staat u toe om de segmentatietaken voor het gespecificeerde publiek te bekijken.](../assets/ui/monitor-audiences/filter-audience.png)
 
 Het gefilterde publieksdashboard verschijnt. Op de **[!UICONTROL Audiences]** -kaart staan de status en datum van de laatste evaluatietaak en de laatste activeringstaak.
 
-![ de kaart van het publiek. De informatie over de laatste evaluatietaak en de laatste activeringsbaan wordt getoond.](../assets/ui/monitor-audiences/specified-audience-card.png)
+![&#x200B; de kaart van het publiek. De informatie over de laatste evaluatietaak en de laatste activeringsbaan wordt getoond.](../assets/ui/monitor-audiences/specified-audience-card.png)
 
 Het dashboard zelf toont de tijd en de status van de laatste evaluatie en activeringstaken, een grafiek die de profieltelling van de publieksevaluatie, en metriek voor de segmentatietaken toont die werden in werking gesteld. Standaard worden op het dashboard de gegevens van de segmentatietaak voor de laatste 24 uur weergegeven.
 
-![ het gefilterde publieksdashboard. De informatie over de diverse segmentatietaken die voor dit publiek in werking zijn gesteld wordt getoond.](../assets/ui/monitor-audiences/filter-audience.png)
+![&#x200B; het gefilterde publieksdashboard. De informatie over de diverse segmentatietaken die voor dit publiek in werking zijn gesteld wordt getoond.](../assets/ui/monitor-audiences/filter-audience.png)
 
 De volgende metriek is beschikbaar voor deze dashboardmening:
 
@@ -89,13 +89,13 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Identity activated]** | Het aantal identiteiten dat de segmentatietaak activeert. Elk profiel kan meerdere identiteiten hebben. Een profiel kan bijvoorbeeld een e-mail, telefoonnummer en een loyaliteitsnummer als identiteiten hebben. |
 | **[!UICONTROL Destination name]** | De naam van het doel waarop de segmentatietaak wordt geactiveerd. |
 
-U kunt aan een specifieke segmentatietaak verder filtreren en zijn details zien door het filterpictogram (![ te selecteren het filterpictogram.](/help/images/icons/filter.png)). Er zijn twee verschillende soorten segmentatietaken die gefilterd kunnen worden: activeringsbanen en evaluatietaken.
+U kunt aan een specifieke segmentatietaak verder filtreren en zijn details zien door het filterpictogram (![&#x200B; te selecteren het filterpictogram.](/help/images/icons/filter.png)). Er zijn twee verschillende soorten segmentatietaken die gefilterd kunnen worden: activeringsbanen en evaluatietaken.
 
 ### Gegevens activeringstaak {#activation-job-details}
 
 De pagina met gegevens over de uitvoering van de activeringstaak bevat informatie over de metriek van de uitvoering, fouten bij uitvoering van de gegevensstroom en soorten publiek die betrekking hebben op de segmentatietaak. Een activeringstaak wordt gebruikt om uw publiek voor een gespecificeerde bestemming te activeren.
 
-![ het dashboard van de activeringstaak. De informatie over de diverse segmentatietaken die voor dit publiek in werking zijn gesteld wordt getoond.](../assets/ui/monitor-audiences/activation-job-dashboard.png)
+![&#x200B; het dashboard van de activeringstaak. De informatie over de diverse segmentatietaken die voor dit publiek in werking zijn gesteld wordt getoond.](../assets/ui/monitor-audiences/activation-job-dashboard.png)
 
 De volgende metriek is beschikbaar voor deze dashboardmening:
 
@@ -115,7 +115,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 
 Onder de sectie Soorten publiek ziet u een lijst met soorten publiek die zijn geactiveerd als onderdeel van de activeringstaak.
 
-![ het dashboard van de activeringstaak. De informatie over de identiteiten die ontbrak of werd uitgesloten wordt benadrukt.](../assets/ui/monitor-audiences/activation-job-audiences.png)
+![&#x200B; het dashboard van de activeringstaak. De informatie over de identiteiten die ontbrak of werd uitgesloten wordt benadrukt.](../assets/ui/monitor-audiences/activation-job-audiences.png)
 
 Voor de sectie publiek zijn de volgende meetgegevens beschikbaar:
 
@@ -129,13 +129,13 @@ Voor de sectie publiek zijn de volgende meetgegevens beschikbaar:
 
 Bovendien kunt u details over de dataflow looppas fouten bekijken. In de sectie met uitvoerfouten voor gegevensstroom kunt u zowel de mislukte identiteiten als de uitgesloten identiteiten weergeven. De sectie Fouten bevat details over de foutcode en het aantal mislukte of uitgesloten identiteiten.
 
-![ het dashboard van de activeringstaak. De informatie over de identiteiten die ontbrak of werd uitgesloten wordt benadrukt.](../assets/ui/monitor-audiences/activation-job-errors.png)
+![&#x200B; het dashboard van de activeringstaak. De informatie over de identiteiten die ontbrak of werd uitgesloten wordt benadrukt.](../assets/ui/monitor-audiences/activation-job-errors.png)
 
 ### Gegevens van evaluatietaken {#evaluation-job-details}
 
 De dataflow van de evaluatietaak looppas detailpagina toont informatie over de metriek en het publiek van de looppas die met de segmentatietaak verwant zijn.
 
-![ het dashboard van de evaluatietaak. De informatie over de de evaluatietaak van het publiek wordt getoond.](../assets/ui/monitor-audiences/evaluation-job-details.png)
+![&#x200B; het dashboard van de evaluatietaak. De informatie over de de evaluatietaak van het publiek wordt getoond.](../assets/ui/monitor-audiences/evaluation-job-details.png)
 
 De volgende metriek is beschikbaar voor deze dashboardmening:
 
@@ -178,7 +178,7 @@ Als u het dashboard **[!UICONTROL Segmentation Jobs]** wilt openen, selecteert u
 >
 >Slechts **de banen van de segmentatieevaluatie** worden gesteund voor per-publiekscontrole. De de uitvoerbanen van de segmentatie steunen slechts organisatie-vlakke controle.
 
-![ de segmentatietaken die dashboard controleren wordt getoond. De knevel om tussen de banen van het publiek en van de Segmentatie te schakelen wordt benadrukt.](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
+![&#x200B; de segmentatietaken die dashboard controleren wordt getoond. De knevel om tussen de banen van het publiek en van de Segmentatie te schakelen wordt benadrukt.](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
 
 Gebruik het dashboard van [!UICONTROL Segmentation Jobs] om te begrijpen als de profielevaluatie en de uitvoer op tijd en zonder enige uitzonderingen voorkomen, zodat kunnen de stroomafwaartse diensten voor bestemmingsactivering de recentste geëvalueerde profielgegevens hebben.
 
@@ -187,7 +187,7 @@ De volgende metriek is beschikbaar voor segmentatietaken:
 | Metrisch | Beschrijving |
 | ------ | ----------- |
 | **[!UICONTROL Segmentation job]** | Geeft de naam van de segmentatietaak aan. |
-| **[!UICONTROL Type]** | Geeft het type segmentatietaak aan: exporteren of evalueren. Merk op dat in beide gevallen, de segmentatietaak **alle** publiek evalueert of uitvoert die tot een organisatie behoren. Om meer over de uitvoerbanen te leren, te lezen gelieve de gids op het [ eindpunt van de uitvoerbanen ](../../segmentation/api/export-jobs.md). Meer over evaluatietaken leren, te lezen gelieve het leerprogramma op [ beoordelend een segmentdefinitie ](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
+| **[!UICONTROL Type]** | Geeft het type segmentatietaak aan: exporteren of evalueren. Merk op dat in beide gevallen, de segmentatietaak **alle** publiek evalueert of uitvoert die tot een organisatie behoren. Om meer over de uitvoerbanen te leren, te lezen gelieve de gids op het [&#x200B; eindpunt van de uitvoerbanen &#x200B;](../../segmentation/api/export-jobs.md). Meer over evaluatietaken leren, te lezen gelieve het leerprogramma op [&#x200B; beoordelend een segmentdefinitie &#x200B;](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
 | **[!UICONTROL Job start]** | De datum en tijd waarop de segmentatietaak is gestart. |
 | **[!UICONTROL Job end]** | De datum en tijd waarop de segmentatietaak is voltooid. |
 | **[!UICONTROL Status]** | De status van de voltooide taak. Mogelijke statussen voor de segmentatietaak zijn geslaagd of mislukt. |

@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Abonneren op in-context-bestemmingswaarschuwingen
 
-Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Het alarm vermindert of elimineert de behoefte om [[!DNL Observability Insights]  API ](../../observability/api/overview.md) te peilen om te controleren als een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke fouten zijn voorgekomen.
+Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Het alarm vermindert of elimineert de behoefte om [[!DNL Observability Insights]  API &#x200B;](../../observability/api/overview.md) te peilen om te controleren als een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke fouten zijn voorgekomen.
 
 U kunt zich op alarm abonneren wanneer het creëren van een gegevensstroom om waakzame berichten betreffende de status, het succes, of het mislukken van uw looppas te ontvangen.
 
@@ -22,9 +22,9 @@ In dit document worden de stappen beschreven voor de manier waarop u zich abonne
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [ Doelen ](../home.md): Vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
-* [ Observability ](../../observability/home.md): [!DNL Observability Insights] staat u toe om de activiteiten van Experience Platform door het gebruik van statistische metriek en gebeurtenisberichten te controleren.
-   * [ Alarm ](../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van Experience Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan Experience Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen zijn ingetekend.
+* [&#x200B; Doelen &#x200B;](../home.md): Vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
+* [&#x200B; Observability &#x200B;](../../observability/home.md): [!DNL Observability Insights] staat u toe om de activiteiten van Experience Platform door het gebruik van statistische metriek en gebeurtenisberichten te controleren.
+   * [&#x200B; Alarm &#x200B;](../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van Experience Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan Experience Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen zijn ingetekend.
 
 ## Abonneren op waarschuwingen in de gebruikersinterface {#subscribe-destination-alerts}
 
@@ -38,9 +38,9 @@ Voor dit document is een goed begrip van de volgende Adobe Experience Platform-c
 >
 >U moet directe meldingen van e-mails voor uw Experience Platform-account inschakelen om e-mailmeldingen voor uw gegevensstromen te ontvangen.
 
-U kunt alarm voor uw gegevensstromen tijdens de [!UICONTROL Configure new destination] stap van het [ werkschema van de bestemmingsverbinding ](connect-destination.md) toelaten.
+U kunt alarm voor uw gegevensstromen tijdens de [!UICONTROL Configure new destination] stap van het [&#x200B; werkschema van de bestemmingsverbinding &#x200B;](connect-destination.md) toelaten.
 
-![ beeld UI die de sectie van het bestemmingsalarm toont.](../assets/ui/alerts/destination-alerts.png)
+![&#x200B; beeld UI die de sectie van het bestemmingsalarm toont.](../assets/ui/alerts/destination-alerts.png)
 
 Selecteer de waarschuwingen waarop u zich wilt abonneren en selecteer vervolgens **[!UICONTROL Next]** om uw gegevensstroom te bekijken en af te ronden.
 
@@ -65,54 +65,54 @@ Zodra uw doelgegevensstroom loopt, kunt u alarm door UI of door e-mail ontvangen
 
 Waarschuwingen worden in de gebruikersinterface vertegenwoordigd door een berichtpictogram in de bovenste koptekst van de gebruikersinterface van Experience Platform. Selecteer het berichtpictogram om specifieke waakzame berichten betreffende uw gegevens te zien.
 
-![ beeld UI die het berichtpictogram in Experience Platform toont ](../assets/ui/alerts/notification.png)
+![&#x200B; beeld UI die het berichtpictogram in Experience Platform toont &#x200B;](../assets/ui/alerts/notification.png)
 
 Het deelvenster met meldingen wordt weergegeven met een lijst met statusupdates in de gegevensstroom die u hebt gemaakt.
 
-![ beeld UI die het kennisgevingspaneel ](../assets/ui/alerts/alert-window.png) tonen
+![&#x200B; beeld UI die het kennisgevingspaneel &#x200B;](../assets/ui/alerts/alert-window.png) tonen
 
 U kunt de muisaanwijzer op een waarschuwingsbericht plaatsen om deze als gelezen te markeren of u kunt het klokpictogram selecteren om toekomstige herinneringen op de status van uw gegevensstroom in te stellen.
 
-![ beeld UI die de opties van de berichtherinnering tonen ](../assets/ui/alerts/remind-me.png)
+![&#x200B; beeld UI die de opties van de berichtherinnering tonen &#x200B;](../assets/ui/alerts/remind-me.png)
 
 Selecteer het waakzame bericht om specifieke informatie op uw gegevensstroom te zien.
 
-![ beeld UI die tonen hoe te om een bericht ](../assets/ui/alerts/select-alert-message.png) te selecteren
+![&#x200B; beeld UI die tonen hoe te om een bericht &#x200B;](../assets/ui/alerts/select-alert-message.png) te selecteren
 
 De pagina [!UICONTROL Dataflow run details] wordt weergegeven. In de bovenste helft van het scherm wordt een overzicht van uw gegevensstroom weergegeven, inclusief informatie over de kenmerken, de bijbehorende id voor de uitvoering van de gegevensstroom en het overzicht van de fouten op hoog niveau.
 
-![ beeld UI die de dataflow looppas detailpagina toont.](../assets/ui/alerts/dataflow-overview.png)
+![&#x200B; beeld UI die de dataflow looppas detailpagina toont.](../assets/ui/alerts/dataflow-overview.png)
 
-In de onderste helft van de pagina worden alle [!UICONTROL Dataflow run errors] weergegeven die zich tijdens het werkgebied met gegevensstroom hebben voorgedaan. Van hier, kunt u foutendiagnostiek voorproef of [[!DNL Data Access]  API ](https://www.adobe.io/experience-platform-apis/references/data-access/) gebruiken om foutendiagnostiek of dossiermanifest te downloaden die aan uw dataflow beantwoordt.
+In de onderste helft van de pagina worden alle [!UICONTROL Dataflow run errors] weergegeven die zich tijdens het werkgebied met gegevensstroom hebben voorgedaan. Van hier, kunt u foutendiagnostiek voorproef of [[!DNL Data Access]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/data-access/) gebruiken om foutendiagnostiek of dossiermanifest te downloaden die aan uw dataflow beantwoordt.
 
-![ beeld UI die de dataflow looppas detailpagina toont, met een hoogtepunt op de foutensectie.](../assets/ui/alerts/dataflow-run-error.png)
+![&#x200B; beeld UI die de dataflow looppas detailpagina toont, met een hoogtepunt op de foutensectie.](../assets/ui/alerts/dataflow-run-error.png)
 
-Voor meer informatie bij de behandeling van dataflow fouten, zie de gids over [ controlebestemmingen dataflows in UI ](../../dataflows/ui/monitor-destinations.md).
+Voor meer informatie bij de behandeling van dataflow fouten, zie de gids over [&#x200B; controlebestemmingen dataflows in UI &#x200B;](../../dataflows/ui/monitor-destinations.md).
 
 ### Waarschuwingen ontvangen per e-mail {#receiving-alerts-by-email}
 
 Waarschuwingen voor uw gegevensstromen worden ook via e-mail aan u verzonden. Selecteer de naam van de gegevensstroom in de hoofdtekst van de e-mail om meer informatie over uw gegevensstroom te zien.
 
-![ Schermafbeelding van een waakzame e-mail ](../assets/ui/alerts/email.png)
+![&#x200B; Schermafbeelding van een waakzame e-mail &#x200B;](../assets/ui/alerts/email.png)
 
 Net als de UI-waarschuwing wordt de pagina [!UICONTROL Dataflow run overview] weergegeven, die u een interface biedt om eventuele fouten die aan uw gegevensstroom zijn gekoppeld, te onderzoeken.
 
-![ dataflow-overview ](../assets/ui/alerts/dataflow-overview.png)
+![&#x200B; dataflow-overview &#x200B;](../assets/ui/alerts/dataflow-overview.png)
 
 ## Abonneren op waarschuwingen en je abonnement opzeggen {#subscribe-and-unsubscribe}
 
 U kunt zich abonneren op meer waarschuwingen of uw abonnement opzeggen voor bestaande doelgegevensstroom op de pagina [!UICONTROL Browse] met doelen.
 
-![ beeld UI die de Doelen tonen doorbladert pagina ](../assets/ui/alerts/destination-list.png)
+![&#x200B; beeld UI die de Doelen tonen doorbladert pagina &#x200B;](../assets/ui/alerts/destination-list.png)
 
 Zoek de doelverbinding waarvoor u waarschuwingen wilt ontvangen en selecteer de ellipsen (`...`) om een vervolgkeuzemenu met opties weer te geven. Selecteer vervolgens **[!UICONTROL Subscribe to alerts]** om de waarschuwingsinstellingen van de doelgegevensstroom te wijzigen.
 
-![ beeld UI die de bestemmingsopties tonen ](../assets/ui/alerts/destination-alerts-subscribe.png)
+![&#x200B; beeld UI die de bestemmingsopties tonen &#x200B;](../assets/ui/alerts/destination-alerts-subscribe.png)
 
 Er wordt een pop-upvenster weergegeven met een lijst met doelwaarschuwingen. Selecteer de waarschuwingen waarvan u zich wilt abonneren of hef de selectie van waarschuwingen op. Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![ beeld UI die het beeld van het bestemmingsalarm pagina toont van abonnementen ](../assets/ui/alerts/destination-alerts-list.png)
+![&#x200B; beeld UI die het beeld van het bestemmingsalarm pagina toont van abonnementen &#x200B;](../assets/ui/alerts/destination-alerts-list.png)
 
 ## Volgende stappen {#next-steps}
 
-Dit document verstrekte een geleidelijke gids over hoe te om aan in-context alarm voor uw bestemmingsdataflows in te tekenen. Voor meer informatie, zie het [ alarm UI gids ](../../observability/alerts/ui.md).
+Dit document verstrekte een geleidelijke gids over hoe te om aan in-context alarm voor uw bestemmingsdataflows in te tekenen. Voor meer informatie, zie het [&#x200B; alarm UI gids &#x200B;](../../observability/alerts/ui.md).

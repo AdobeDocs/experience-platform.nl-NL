@@ -35,21 +35,21 @@ Hoewel schemarelaties kunnen worden afgeleid door het gebruik van het samenvoegi
 
 >[!NOTE]
 >
->Als zowel de bron als bestemmingsschema&#39;s tot de zelfde klasse behoren, zou een specifiek relatiegebied **niet** moeten worden gebruikt. In dit geval, gebruik het unieschema UI om de verhouding te zien. De instructies op hoe te om dit te doen kunnen in de [ sectie van meningsverhoudingen ](../../profile/ui/union-schema.md#view-relationships) van de gids UI van het unieschema worden gevonden.
+>Als zowel de bron als bestemmingsschema&#39;s tot de zelfde klasse behoren, zou een specifiek relatiegebied **niet** moeten worden gebruikt. In dit geval, gebruik het unieschema UI om de verhouding te zien. De instructies op hoe te om dit te doen kunnen in de [&#x200B; sectie van meningsverhoudingen &#x200B;](../../profile/ui/union-schema.md#view-relationships) van de gids UI van het unieschema worden gevonden.
 
-Dit document bevat een zelfstudie voor het definiëren van een relatie tussen twee schema&#39;s met behulp van de Schema-editor in de gebruikersinterface van [!DNL Experience Platform] . Voor stappen bij het bepalen van schemaverhoudingen die API gebruiken, zie het leerprogramma op [ het bepalen van een verhouding gebruikend de Registratie API van het Schema ](relationship-api.md).
+Dit document bevat een zelfstudie voor het definiëren van een relatie tussen twee schema&#39;s met behulp van de Schema-editor in de gebruikersinterface van [!DNL Experience Platform] . Voor stappen bij het bepalen van schemaverhoudingen die API gebruiken, zie het leerprogramma op [&#x200B; het bepalen van een verhouding gebruikend de Registratie API van het Schema &#x200B;](relationship-api.md).
 
 >[!NOTE]
 >
->Voor stappen op hoe te om een vele-aan-één verhouding in Adobe Real-Time Customer Data Platform B2B edition tot stand te brengen, zie de gids op [ het creëren van B2B verhoudingen ](./relationship-b2b.md).
+>Voor stappen op hoe te om een vele-aan-één verhouding in Adobe Real-Time Customer Data Platform B2B edition tot stand te brengen, zie de gids op [&#x200B; het creëren van B2B verhoudingen &#x200B;](./relationship-b2b.md).
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van [!DNL XDM System] en de Schema-editor in de gebruikersinterface van [!DNL Experience Platform] . Lees de volgende documentatie voordat u met deze zelfstudie begint:
 
-* [ XDM Systeem in Experience Platform ](../home.md): Een overzicht van XDM en zijn implementatie in [!DNL Experience Platform].
-* [ Grondbeginselen van schemacompositie ](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
-* [ creeer een schema gebruikend  [!DNL Schema Editor]](create-schema-ui.md): Een leerprogramma dat de grondbeginselen van het werken met [!DNL Schema Editor] behandelt.
+* [&#x200B; XDM Systeem in Experience Platform &#x200B;](../home.md): Een overzicht van XDM en zijn implementatie in [!DNL Experience Platform].
+* [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
+* [&#x200B; creeer een schema gebruikend  [!DNL Schema Editor]](create-schema-ui.md): Een leerprogramma dat de grondbeginselen van het werken met [!DNL Schema Editor] behandelt.
 
 ## Een bron- en referentieschema definiëren
 
@@ -57,7 +57,7 @@ Verwacht wordt dat u reeds de twee schema&#39;s hebt gecreeerd die in de verhoud
 
 >[!IMPORTANT]
 >
->Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en voor [!DNL Real-Time Customer Profile] worden toegelaten. Zie de sectie op [ toelatend een schema voor gebruik in Profiel ](./create-schema-ui.md#profile) in het leerprogramma van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
+>Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en voor [!DNL Real-Time Customer Profile] worden toegelaten. Zie de sectie op [&#x200B; toelatend een schema voor gebruik in Profiel &#x200B;](./create-schema-ui.md#profile) in het leerprogramma van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
 
 De verhoudingen van het schema worden vertegenwoordigd door een specifiek gebied binnen a **bronschema** dat aan een ander gebied binnen a **verwijzingsschema** richt. In de stappen die volgen, &quot;[!DNL Loyalty Members]&quot;zal het bronschema zijn, terwijl &quot;[!DNL Hotels]&quot;als verwijzingsschema zal dienst doen.
 
@@ -73,17 +73,17 @@ Het bronschema &quot;[!DNL Loyalty Members]&quot;is gebaseerd op de [!DNL XDM In
 
 Het verwijzingsschema &quot;[!DNL Hotels]&quot;is gebaseerd op een douane &quot;[!DNL Hotels]&quot;klasse, en bevat gebieden die een hotel beschrijven. Als u wilt deelnemen aan een relatie, moet voor het referentieschema ook een primaire identiteit zijn gedefinieerd en ingeschakeld voor [!UICONTROL Profile] . In dit geval, `_tenantId.hotelId` handelt als primaire identiteit voor het schema, gebruikend een douane &quot;[!DNL Hotel ID]&quot;identiteitsnaamruimte.
 
-![ laat voor Profiel ](../images/tutorials/relationship/hotels.png) toe
+![&#x200B; laat voor Profiel &#x200B;](../images/tutorials/relationship/hotels.png) toe
 
 >[!NOTE]
 >
->Leren hoe te om douaneidentiteit te creëren namespaces, verwijs naar de [ documentatie van de Dienst van de Identiteit ](../../identity-service/features/namespaces.md#manage-namespaces).
+>Leren hoe te om douaneidentiteit te creëren namespaces, verwijs naar de [&#x200B; documentatie van de Dienst van de Identiteit &#x200B;](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## Een relatieveldgroep maken
 
 >[!NOTE]
 >
->Deze stap wordt slechts vereist als uw bronschema geen specifiek koord-type gebied heeft dat als wijzer aan de primaire identiteit van het verwijzingsschema moet worden gebruikt. Als dit gebied reeds in uw bronschema wordt bepaald, overslaan aan de volgende stap van [ die een relatiegebied ](#relationship-field) bepalen.
+>Deze stap wordt slechts vereist als uw bronschema geen specifiek koord-type gebied heeft dat als wijzer aan de primaire identiteit van het verwijzingsschema moet worden gebruikt. Als dit gebied reeds in uw bronschema wordt bepaald, overslaan aan de volgende stap van [&#x200B; die een relatiegebied &#x200B;](#relationship-field) bepalen.
 
 Om een verhouding tussen twee schema&#39;s te bepalen, moet het bronschema een specifiek gebied hebben dat op de primaire identiteit van het verwijzingsschema zal wijzen. U kunt dit gebied aan het bronschema toevoegen door een nieuwe groep van het schemagebied te creëren of bestaande uit te breiden.
 
@@ -113,15 +113,15 @@ Zodra uw bronschema een specifiek die verwijzingsgebied heeft wordt bepaald, kun
 
 Selecteer het veld `preferredHotel` op het canvas en selecteer vervolgens **[!UICONTROL Add relationship]** in het zijpaneel van **[!UICONTROL Field properties]** .
 
-![ de Redacteur van het Schema met Add verhouding die in de eigenschappen sidebar van het Gebied wordt benadrukt.](../images/tutorials/relationship/add-relationship.png)
+![&#x200B; de Redacteur van het Schema met Add verhouding die in de eigenschappen sidebar van het Gebied wordt benadrukt.](../images/tutorials/relationship/add-relationship.png)
 
 Het dialoogvenster [!UICONTROL Add relationship] wordt weergegeven. In dit dialoogvenster kunt u vereiste parameters instellen voor het configureren van een relatieveld. Voor Real-Time CDP B2C gebruikers, kunt u **slechts** plaatsen een één-aan-één verhouding tussen de bron en verwijzingsschema.
 
 >[!NOTE]
 >
->Als u toegang tot Real-Time CDP B2B edition hebt, kunt u de de juiste-spoorcontroles van het canvas gebruiken om een relatieveld te bepalen, evenals een vele-aan-één verhouding te bouwen gebruikend de [ zelfde dialoog ](./relationship-b2b.md#relationship-field).
+>Als u toegang tot Real-Time CDP B2B edition hebt, kunt u de de juiste-spoorcontroles van het canvas gebruiken om een relatieveld te bepalen, evenals een vele-aan-één verhouding te bouwen gebruikend de [&#x200B; zelfde dialoog &#x200B;](./relationship-b2b.md#relationship-field).
 
-![ de Add relatiedialoog.](../images/tutorials/relationship/add-relationship-dialog.png)
+![&#x200B; de Add relatiedialoog.](../images/tutorials/relationship/add-relationship-dialog.png)
 
 Gebruik dropdown voor **[!UICONTROL Reference schema]** en selecteer het verwijzingsschema voor de verhouding (&quot;[!DNL Hotels]&quot;in dit voorbeeld).
 
@@ -131,28 +131,28 @@ Gebruik dropdown voor **[!UICONTROL Reference schema]** en selecteer het verwijz
 
 De identiteitsnaamruimte van het verwijzingsschema (in dit geval &quot;[!DNL Hotel ID]&quot;) wordt automatisch onder **[!UICONTROL Reference identity namespace]** gevuld. Selecteer **[!UICONTROL Apply]** wanneer u klaar bent.
 
-![ voegt relatiedialoog met de gevormde relatieparameters toe en is benadrukt van toepassing.](../images/tutorials/relationship/apply-relationship.png)
+![&#x200B; voegt relatiedialoog met de gevormde relatieparameters toe en is benadrukt van toepassing.](../images/tutorials/relationship/apply-relationship.png)
 
 Het veld `preferredHotel` wordt nu gemarkeerd als een relatie op het canvas en geeft de naam van het referentieschema weer. Selecteer **[!UICONTROL Save]** om uw wijzigingen op te slaan en de workflow te voltooien.
 
-![ de Redacteur van het Schema met de relatieverwijzingen en sparen benadrukte.](../images/tutorials/relationship/relationship-save.png)
+![&#x200B; de Redacteur van het Schema met de relatieverwijzingen en sparen benadrukte.](../images/tutorials/relationship/relationship-save.png)
 
 ### Een bestaand relatieveld bewerken {#edit-relationship}
 
 Als u het referentieschema wilt wijzigen, selecteert u een veld met een bestaande relatie en selecteert u vervolgens **[!UICONTROL Edit relationship]** in de zijbalk van **[!UICONTROL Field properties]** .
 
-![ de Redacteur van het Schema met Edit benadrukte verhouding.](../images/tutorials/relationship/edit-relationship.png)
+![&#x200B; de Redacteur van het Schema met Edit benadrukte verhouding.](../images/tutorials/relationship/edit-relationship.png)
 
-Het dialoogvenster [!UICONTROL Edit relationship] wordt weergegeven. Van hier, kunt u het proces volgen dat in [ wordt geschetst bepalend een relatieveld ](#relationship-field) of de verhouding schrappen. Selecteer **[!UICONTROL Delete relationship]** om de relatie met het referentieschema te verwijderen.
+Het dialoogvenster [!UICONTROL Edit relationship] wordt weergegeven. Van hier, kunt u het proces volgen dat in [&#x200B; wordt geschetst bepalend een relatieveld &#x200B;](#relationship-field) of de verhouding schrappen. Selecteer **[!UICONTROL Delete relationship]** om de relatie met het referentieschema te verwijderen.
 
-![ de Edit relatiedialoog.](../images/tutorials/relationship/edit-relationship-dialog.png)
+![&#x200B; de Edit relatiedialoog.](../images/tutorials/relationship/edit-relationship-dialog.png)
 
 ## Filter en zoek naar relaties {#filter-and-search}
 
-U kunt filteren en naar specifieke relaties in uw schema&#39;s zoeken op het tabblad [!UICONTROL Relationships] van de [!UICONTROL Schemas] -werkruimte. Met deze weergave kunt u snel uw relaties zoeken en beheren. Lees het document op [ het onderzoeken van schemamiddelen ](../ui/explore.md#lookup) voor gedetailleerde instructies op de het filtreren opties.
+U kunt filteren en naar specifieke relaties in uw schema&#39;s zoeken op het tabblad [!UICONTROL Relationships] van de [!UICONTROL Schemas] -werkruimte. Met deze weergave kunt u snel uw relaties zoeken en beheren. Lees het document op [&#x200B; het onderzoeken van schemamiddelen &#x200B;](../ui/explore.md#lookup) voor gedetailleerde instructies op de het filtreren opties.
 
-![ het lusje van Verhoudingen in de werkruimte van Schema&#39;s.](../images/tutorials/relationship-b2b/relationship-tab.png)
+![&#x200B; het lusje van Verhoudingen in de werkruimte van Schema&#39;s.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een één-op-één verhouding tussen twee schema&#39;s tot stand gebracht gebruikend [!DNL Schema Editor]. Voor stappen op hoe te om verhoudingen te bepalen die API gebruiken, zie het leerprogramma op [ bepalend een verband gebruikend de Registratie API van het Schema ](relationship-api.md).
+Door deze zelfstudie te volgen, hebt u met succes een één-op-één verhouding tussen twee schema&#39;s tot stand gebracht gebruikend [!DNL Schema Editor]. Voor stappen op hoe te om verhoudingen te bepalen die API gebruiken, zie het leerprogramma op [&#x200B; bepalend een verband gebruikend de Registratie API van het Schema &#x200B;](relationship-api.md).
