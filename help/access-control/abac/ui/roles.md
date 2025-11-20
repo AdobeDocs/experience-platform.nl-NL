@@ -20,81 +20,81 @@ De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebru
 >id="platform_permissions_roles_about_create"
 >title="Nieuwe rol maken"
 >abstract="Maak nieuwe rollen om gebruikers die met uw Experience Platform-instantie werken beter te categoriseren. U kunt bijvoorbeeld een rol maken voor een intern marketingteam en het label Gereglementeerde gezondheidsgegevens (RHD) op die rol toepassen, zodat uw interne marketingteam toegang krijgt tot de beschermde gezondheidsinformatie (PHI). Alternatief, kunt u een rol voor een extern agentschap ook tot stand brengen en die roltoegang tot PHI gegevens ontkennen door het etiket RHD op die rol niet toe te passen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=nl-NL" text="Rollen beheren"
->additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Labels op een rol toepassen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Rollen beheren"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Labels op een rol toepassen"
 
 Als u een nieuwe rol wilt maken, selecteert u de tab **[!UICONTROL Roles]** in het zijpaneel en selecteert u **[!UICONTROL Create Role]** .
 
-![&#x200B; flac-new-role &#x200B;](../../images/flac-ui/flac-new-role.png)
+![ flac-new-role ](../../images/flac-ui/flac-new-role.png)
 
 Het dialoogvenster **[!UICONTROL Create a new role]** wordt weergegeven, waarin u wordt gevraagd een naam en een optionele beschrijving in te voeren.
 
 Selecteer **[!UICONTROL Confirm]** als u klaar bent.
 
-![&#x200B; flc-creeer-new-role &#x200B;](../../images/flac-ui/flac-create-new-role.png)
+![ flc-creeer-new-role ](../../images/flac-ui/flac-create-new-role.png)
 
 Selecteer vervolgens de bronmachtigingen die u in de rol wilt opnemen via het vervolgkeuzemenu.
 
-![&#x200B; fc-toe:voegen-rol-toestemming &#x200B;](../../images/flac-ui/flac-add-role-permission.png)
+![ fc-toe:voegen-rol-toestemming ](../../images/flac-ui/flac-add-role-permission.png)
 
 Als u aanvullende bronnen wilt toevoegen, selecteert u **[!UICONTROL Adobe Experience Platform]** in het navigatievenster aan de linkerkant, dat een lijst met bronnen weergeeft. U kunt ook de naam van de bron invoeren in de zoekbalk in het linkernavigatievenster.
 
-![&#x200B; flc-add-additional-resources &#x200B;](../../images/flac-ui/flac-add-additional-resources.png)
+![ flc-add-additional-resources ](../../images/flac-ui/flac-add-additional-resources.png)
 
 Klik op de relevante bron en sleep deze naar het hoofddeelvenster.
 
-![&#x200B; fc-extra-middelen-toegevoegd &#x200B;](../../images/flac-ui/flac-additional-resources-added.png)
+![ fc-extra-middelen-toegevoegd ](../../images/flac-ui/flac-additional-resources-added.png)
 
 Selecteer de bronmachtigingen die u in de rol wilt opnemen via het vervolgkeuzemenu. Herhaal dit voor alle bronnen die u voor de rol wilt opnemen. Selecteer **[!UICONTROL Save and exit]** als u klaar bent.
 
-![&#x200B; flc-sparen-middelen &#x200B;](../../images/flac-ui/flac-save-resources.png)
+![ flc-sparen-middelen ](../../images/flac-ui/flac-save-resources.png)
 
 De nieuwe rol is gemaakt en u wordt omgeleid naar de **[!UICONTROL Roles]** -pagina, waar de nieuw gemaakte rol in de lijst wordt weergegeven.
 
-![&#x200B; fc-rol-bewaarde &#x200B;](../../images/flac-ui/flac-role-saved.png)
+![ fc-rol-bewaarde ](../../images/flac-ui/flac-role-saved.png)
 
-Zie de secties op [&#x200B; het leiden toestemmingen voor een rol &#x200B;](#manage-permissions-for-a-role) voor meer details over hoe te om roltoestemmingen te beheren zodra zij worden gecreeerd.
+Zie de secties op [ het leiden toestemmingen voor een rol ](#manage-permissions-for-a-role) voor meer details over hoe te om roltoestemmingen te beheren zodra zij worden gecreeerd.
 
 De volgende video is bedoeld om uw begrip van het creëren van een nieuwe rol en het leiden van gebruikers voor die rol te steunen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475979/?captions=dut&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Een rol dupliceren
 
 Als u een bestaande rol wilt dupliceren, selecteert u de rol op het tabblad **[!UICONTROL Roles]** . U kunt ook de filteroptie gebruiken om de resultaten te filteren om de rol te zoeken die u wilt dupliceren.
 
-![&#x200B; fc-dubbel-rol &#x200B;](../../images/flac-ui/flac-duplicate-role.png)
+![ fc-dubbel-rol ](../../images/flac-ui/flac-duplicate-role.png)
 
 Selecteer vervolgens **[!UICONTROL Duplicate]** in de rechterbovenhoek van het scherm.
 
-![&#x200B; flac-duplicate &#x200B;](../../images/flac-ui/flac-duplicate.png)
+![ flac-duplicate ](../../images/flac-ui/flac-duplicate.png)
 
 Het dialoogvenster **[!UICONTROL Duplicate role]** wordt weergegeven, waarin u wordt gevraagd de duplicatie te bevestigen.
 
-![&#x200B; flc-dubbel-bevestig &#x200B;](../../images/flac-ui/flac-duplicate-confirm.png)
+![ flc-dubbel-bevestig ](../../images/flac-ui/flac-duplicate-confirm.png)
 
-Vervolgens gaat u naar de detailpagina van de rol waar u de naam en machtigingen voor de rol kunt wijzigen. De details, de Etiketten, en de Sandboxen worden gedupliceerd van de vorige rol. Gebruikers moeten via het tabblad Gebruikers worden toegevoegd. U kunt [&#x200B; bekijken beheert toestemmingen voor een rol &#x200B;](permissions.md) document om meer over het toevoegen van Details, Etiketten, Sandboxes, en Gebruikers aan een rol te leren.
+Vervolgens gaat u naar de detailpagina van de rol waar u de naam en machtigingen voor de rol kunt wijzigen. De details, de Etiketten, en de Sandboxen worden gedupliceerd van de vorige rol. Gebruikers moeten via het tabblad Gebruikers worden toegevoegd. U kunt [ bekijken beheert toestemmingen voor een rol ](permissions.md) document om meer over het toevoegen van Details, Etiketten, Sandboxes, en Gebruikers aan een rol te leren.
 
 Klik op de linkerpijl om terug te keren naar de tab **[!UICONTROL Roles]** .
 
-![&#x200B; fc-terugkeer-aan-rollen &#x200B;](../../images/flac-ui/flac-return-to-roles.png)
+![ fc-terugkeer-aan-rollen ](../../images/flac-ui/flac-return-to-roles.png)
 
 De nieuwe rol wordt weergegeven in de lijst op de pagina **[!UICONTROL Roles]** .
 
-![&#x200B; fc-rol-dubbel-bewaarde &#x200B;](../../images/flac-ui/flac-role-duplicate-saved.png)
+![ fc-rol-dubbel-bewaarde ](../../images/flac-ui/flac-role-duplicate-saved.png)
 
 ## Een rol verwijderen
 
 Selecteer de ellips (`…`) naast de naam van een rol, en een dropdown vertoningencontroles om, de rol uit te geven te schrappen of te dupliceren. Selecteer Verwijderen in het vervolgkeuzemenu.
 
-![&#x200B; fc-rol-schrapping &#x200B;](../../images/flac-ui/flac-role-delete.png)
+![ fc-rol-schrapping ](../../images/flac-ui/flac-role-delete.png)
 
 Het dialoogvenster **[!UICONTROL Delete user role]** verschijnt waarin u wordt gevraagd de verwijdering te bevestigen.
 
-![&#x200B; fc-confirm-rol-schrapping &#x200B;](../../images/flac-ui/flac-confirm-role-delete.png)
+![ fc-confirm-rol-schrapping ](../../images/flac-ui/flac-confirm-role-delete.png)
 
 U wordt teruggestuurd naar het tabblad **[!UICONTROL Roles]** .
 
 ## Volgende stappen
 
-Met een nieuwe gecreeerde rol, kunt u aan de volgende stap te werk gaan [&#x200B; toestemmingen voor een rol &#x200B;](permissions.md) beheren.
+Met een nieuwe gecreeerde rol, kunt u aan de volgende stap te werk gaan [ toestemmingen voor een rol ](permissions.md) beheren.

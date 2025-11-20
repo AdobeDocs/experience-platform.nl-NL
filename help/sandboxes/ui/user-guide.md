@@ -19,21 +19,21 @@ Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met 
 
 Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sandboxes]** in de linkernavigatie en selecteer vervolgens de tab **[!UICONTROL Browse]** om het dashboard van [!UICONTROL Sandboxes] te openen. In het dashboard worden alle beschikbare sandboxen voor uw organisatie vermeld, inclusief de respectievelijke typen (productie of ontwikkeling).
 
-![&#x200B; het zandbakendashboard met het doorbladerlusje selecteerde dat een lijst van beschikbare zandbakken toont.](../images/ui/view-sandboxes.png)
+![ het zandbakendashboard met het doorbladerlusje selecteerde dat een lijst van beschikbare zandbakken toont.](../images/ui/view-sandboxes.png)
 
 ## Schakelen tussen sandboxen
 
 De sandboxindicator bevindt zich in de bovenste header van de gebruikersinterface van Experience Platform en geeft de titel van de sandbox weer waarin u zich momenteel bevindt, het gebied en het type van de sandbox.
 
-![&#x200B; het zandbakendashboard met de benadrukte zandbakindicator.](../images/ui/sandbox-indicator.png)
+![ het zandbakendashboard met de benadrukte zandbakindicator.](../images/ui/sandbox-indicator.png)
 
 Als u wilt schakelen tussen sandboxen, selecteert u de sandboxindicator en selecteert u de gewenste sandbox in de vervolgkeuzelijst. U kunt ook naar de gewenste sandbox zoeken met de zoekfunctie in het vervolgkeuzemenu.
 
-![&#x200B; het dropdown menu van de zandbakindicator wordt getoond, tonend een lijst van zandbakken u toegang tot hebt.](../images/ui/switcher-interface.png)
+![ het dropdown menu van de zandbakindicator wordt getoond, tonend een lijst van zandbakken u toegang tot hebt.](../images/ui/switcher-interface.png)
 
 Als een sandbox is geselecteerd, wordt het scherm vernieuwd en wordt de door u geselecteerde sandbox bijgewerkt.
 
-![&#x200B; het zandbakdashboard met de veranderde benadrukte zandbakindicator.](../images/ui/sandbox-switched.png)
+![ het zandbakdashboard met de veranderde benadrukte zandbakindicator.](../images/ui/sandbox-switched.png)
 
 ## Een nieuwe sandbox maken {#create}
 
@@ -49,29 +49,29 @@ Als een sandbox is geselecteerd, wordt het scherm vernieuwd en wordt de door u g
 
 >[!WARNING]
 >
->Wanneer u een nieuwe sandbox wilt maken, moet u deze toevoegen aan een rol in [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md) voordat u deze kunt gebruiken. Leren hoe te om een zandbak voor een rol te verstrekken, verwijs naar [&#x200B; het leiden zandbakken voor een rol &#x200B;](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) documentatie.
+>Wanneer u een nieuwe sandbox wilt maken, moet u deze toevoegen aan een rol in [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md) voordat u deze kunt gebruiken. Leren hoe te om een zandbak voor een rol te verstrekken, verwijs naar [ het leiden zandbakken voor een rol ](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) documentatie.
 
 Gebruik de volgende video voor een snel overzicht van het gebruik van sandboxen in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430294/?quality=12&learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
 Als u een nieuwe sandbox wilt maken, selecteert u **[!UICONTROL Create sandbox]** in de rechterbovenhoek van het scherm.
 
-![&#x200B; creeer-zandbak &#x200B;](../images/ui/create-sandbox.png)
+![ creeer-zandbak ](../images/ui/create-sandbox.png)
 
 Het dialoogvenster **[!UICONTROL Create sandbox]** wordt weergegeven. Selecteer het vervolgkeuzemenu **[!UICONTROL Type]** en kies het type [!UICONTROL Development] of [!UICONTROL Production] sandbox.
 
-![&#x200B; creeer zandbak dialoogdoos met de zandbaktype benadrukte selecteur.](../images/ui/sandbox-type.png)
+![ creeer zandbak dialoogdoos met de zandbaktype benadrukte selecteur.](../images/ui/sandbox-type.png)
 
 Nadat u het type hebt geselecteerd, geeft u een naam voor de sandbox op in het veld **[!UICONTROL Name]** . De naam van de sandbox is een id in kleine letters voor gebruik in API-aanroepen en moet daarom uniek en beknopt zijn. De naam van de sandbox moet beginnen met een letter, maximaal 256 tekens bevatten en mag alleen bestaan uit alfanumerieke tekens en afbreekstreepjes (-). Geef vervolgens een titel voor de sandbox op in het veld **[!UICONTROL Title]** . De titel moet leesbaar zijn en moet beschrijvend genoeg zijn om gemakkelijk te kunnen worden herkend.
 
 Selecteer **[!UICONTROL Create]** als u klaar bent.
 
-![&#x200B; creeer zandbak dialoog met de Naam en Titled binnen en de Create benadrukte optie.](../images/ui/sandbox-info.png)
+![ creeer zandbak dialoog met de Naam en Titled binnen en de Create benadrukte optie.](../images/ui/sandbox-info.png)
 
 Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe sandbox in het **[!UICONTROL Sandboxes]** -dashboard met de status &quot;[!UICONTROL Creating]&quot;. De nieuwe zandbakken nemen ongeveer 30 seconden in om door het systeem worden provisioned, waarna hun status in &quot;[!UICONTROL Active]&quot;verandert.
 
-![&#x200B; het zandbakendashboard met de onlangs gecreeerd benadrukte zandbak.](../images/ui/new-sandbox.png)
+![ het zandbakendashboard met de onlangs gecreeerd benadrukte zandbak.](../images/ui/new-sandbox.png)
 
 ## Een sandbox opnieuw instellen
 
@@ -82,7 +82,7 @@ Nadat u de sandbox hebt gemaakt, vernieuwt u de pagina en verschijnt de nieuwe s
 >* Een door de gebruiker gemaakte productiesandbox die wordt gebruikt voor bidirectioneel segmentdelen met Adobe Audience Manager of Audience Core Service kan na een waarschuwingsbericht worden hersteld.
 >* Voordat u een sandbox-reset start, moet u de composities handmatig verwijderen om ervoor te zorgen dat de bijbehorende publieksgegevens op de juiste wijze worden opgeschoond.
 >* De sandbox-id verandert nadat de reset is voltooid.
->* Voor [&#x200B; Journey Optimizer B2B edition &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/guide-overview), wordt het terugstellen van de zandbak momenteel niet gesteund **&#x200B;**. Als u een sandbox die is toegewezen aan Journey Optimizer B2B edition opnieuw instelt of verwijdert, kan dit leiden tot een permanent gegevensverlies in Journey Optimizer B2B edition en kan het nodig zijn een nieuwe Journey Optimizer B2B edition-instantie in te stellen.
+>* Voor [ Journey Optimizer B2B edition ](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview), wordt het terugstellen van de zandbak momenteel niet gesteund ****. Als u een sandbox die is toegewezen aan Journey Optimizer B2B edition opnieuw instelt of verwijdert, kan dit leiden tot een permanent gegevensverlies in Journey Optimizer B2B edition en kan het nodig zijn een nieuwe Journey Optimizer B2B edition-instantie in te stellen.
 
 ### Advertentiecomposities verwijderen
 
@@ -90,11 +90,11 @@ De compositie van het publiek is momenteel niet geïntegreerd met de functie voo
 
 Selecteer **[!UICONTROL Audiences]** in de sectie **[!UICONTROL Customers]** links in de navigatie en selecteer vervolgens de tab **[!UICONTROL Compositions]** .
 
-![&#x200B; het dashboard van het publiek met het geselecteerde en benadrukte lusje van Samenstellingen.](../images/ui/audiences.png)
+![ het dashboard van het publiek met het geselecteerde en benadrukte lusje van Samenstellingen.](../images/ui/audiences.png)
 
 Selecteer vervolgens de ellips (`...`) naast het eerste publiek en selecteer **[!UICONTROL Delete]** .
 
-![&#x200B; het publieksmenu dat de [!UICONTROL Delete] optie benadrukt.](../images/ui/delete-composition.png)
+![ het publieksmenu dat de [!UICONTROL Delete] optie benadrukt.](../images/ui/delete-composition.png)
 
 Er wordt een bevestiging van een geslaagde verwijdering weergegeven en u wordt teruggestuurd naar het tabblad **[!UICONTROL Compositions]** .
 
@@ -106,15 +106,15 @@ Als u een productie- of ontwikkelingssandbox opnieuw instelt, worden alle bronne
 
 Selecteer de sandbox die u wilt herstellen in de lijst met sandboxen. Selecteer **[!UICONTROL Sandbox reset]** in het rechternavigatievenster dat wordt weergegeven.
 
-![&#x200B; het zandbakdashboard met de gekozen geselecteerde geselecteerde zandbak en Sandbox benadrukte het terugstellen optie.](../images/ui/reset.png)
+![ het zandbakdashboard met de gekozen geselecteerde geselecteerde zandbak en Sandbox benadrukte het terugstellen optie.](../images/ui/reset.png)
 
 Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteer **[!UICONTROL Continue]** om door te gaan.
 
-![&#x200B; het terugstellendialoog wordt getoond met de verdere benadrukte optie.](../images/ui/reset-warning.png)
+![ het terugstellendialoog wordt getoond met de verdere benadrukte optie.](../images/ui/reset-warning.png)
 
 Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogvenster in en selecteer **[!UICONTROL Reset]** .
 
-![&#x200B; het terugstellendialoog met het bevestigingsnaamgebied en terugstellenoptie benadrukte.](../images/ui/reset-confirm.png)
+![ het terugstellendialoog met het bevestigingsnaamgebied en terugstellenoptie benadrukte.](../images/ui/reset-confirm.png)
 
 ## Een sandbox verwijderen
 
@@ -126,18 +126,18 @@ Als u een productie- of ontwikkelingssandbox verwijdert, worden alle bronnen die
 
 Selecteer de sandbox die u wilt verwijderen uit de lijst met sandboxen. Selecteer **[!UICONTROL Delete]** in het rechternavigatievenster dat wordt weergegeven.
 
-![&#x200B; het zandbakdashboard met de gekozen geselecteerde zandbak en benadrukte optie van de Schrapping.](../images/ui/delete.png)
+![ het zandbakdashboard met de gekozen geselecteerde zandbak en benadrukte optie van de Schrapping.](../images/ui/delete.png)
 
 Er verschijnt een dialoogvenster waarin u wordt gevraagd uw keuze te bevestigen. Selecteer **[!UICONTROL Continue]** om door te gaan.
 
-![&#x200B; de schrappingsdialoog wordt getoond met de verdere benadrukte optie.](../images/ui/delete-warning.png)
+![ de schrappingsdialoog wordt getoond met de verdere benadrukte optie.](../images/ui/delete-warning.png)
 
 Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogvenster in en selecteer **[!UICONTROL Continue]** .
 
-![&#x200B; schrapt dialoog met het bevestigingsnaamgebied en blijft benadrukte optie.](../images/ui/delete-confirm.png)
+![ schrapt dialoog met het bevestigingsnaamgebied en blijft benadrukte optie.](../images/ui/delete-confirm.png)
 
 ## Volgende stappen
 
-Dit document laat zien hoe u sandboxen beheert in de gebruikersinterface van Experience Platform. Nu u weet hoe te om zandbakken te beheren, leer hoe te om configuratienauwkeurigheid over zandbakken te verbeteren en naadloos zandbakconfiguraties tussen zandbakken met de [&#x200B; zandbak tooling eigenschap](./sandbox-tooling.md) gids uit te voeren en in te voeren.
+Dit document laat zien hoe u sandboxen beheert in de gebruikersinterface van Experience Platform. Nu u weet hoe te om zandbakken te beheren, leer hoe te om configuratienauwkeurigheid over zandbakken te verbeteren en naadloos zandbakconfiguraties tussen zandbakken met de [ zandbak tooling eigenschap](./sandbox-tooling.md) gids uit te voeren en in te voeren.
 
-Voor informatie over hoe te om zandbakken te beheren gebruikend zandbak API, zie de [&#x200B; gids van de zandbakontwikkelaar &#x200B;](../api/getting-started.md).
+Voor informatie over hoe te om zandbakken te beheren gebruikend zandbak API, zie de [ gids van de zandbakontwikkelaar ](../api/getting-started.md).

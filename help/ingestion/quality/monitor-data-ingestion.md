@@ -24,13 +24,13 @@ Deze gebruikershandleiding bevat stappen voor het controleren van gegevens in de
 >title="Inktsnelheid"
 >abstract="Het aantal gebeurtenissen dat per seconde correct wordt verwerkt."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=nl-NL" text="Dataflows controleren voor bronnen in de gebruikersinterface"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Dataflows controleren voor bronnen in de gebruikersinterface"
 
 >[!TIP]
 >
 >Als u het totaal van de gebeurtenissen op een bepaalde datum wilt berekenen, gebruikt u de expressie: `total events / day = ingestion rate * 60 * 60 * 24` .
 
-In [&#x200B; Experience Platform UI &#x200B;](https://platform.adobe.com), uitgezochte **[!UICONTROL Monitoring]** op het linkernavigatiemenu, die door **[!UICONTROL Streaming end-to-end]** wordt gevolgd.
+In [ Experience Platform UI ](https://platform.adobe.com), uitgezochte **[!UICONTROL Monitoring]** op het linkernavigatiemenu, die door **[!UICONTROL Streaming end-to-end]** wordt gevolgd.
 
 De controlepagina van **[!UICONTROL Streaming end-to-end]** wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Experience Platform] , een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-Time Customer Profile]](../../profile/home.md) , en een gedetailleerde lijst met binnenkomende gegevens.
 
@@ -44,7 +44,7 @@ In de onderste grafiek wordt de snelheid van de gestreamde gebeurtenissen van [!
 
 >[!NOTE]
 >
->Opdat de gegevens op deze grafiek verschijnen, moeten de gegevens **uitdrukkelijk** worden toegelaten voor [!DNL Profile]. Leren hoe te om het stromen gegevens voor [!DNL Profile] toe te laten, lees de [&#x200B; gids van de datasetgebruiker &#x200B;](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Opdat de gegevens op deze grafiek verschijnen, moeten de gegevens **uitdrukkelijk** worden toegelaten voor [!DNL Profile]. Leren hoe te om het stromen gegevens voor [!DNL Profile] toe te laten, lees de [ gids van de datasetgebruiker ](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -72,7 +72,7 @@ Bovendien bevatten mislukte records details over de fouten die zijn opgetreden t
 
 ## Gegevens van begin tot einde bijhouden in batch
 
-Selecteer **[!UICONTROL Monitoring]** in het navigatiemenu links van [[!DNL Experience Platform UI] &#x200B;](https://platform.adobe.com) .
+Selecteer [[!DNL Experience Platform UI] in het navigatiemenu links van ](https://platform.adobe.com) **[!UICONTROL Monitoring]** .
 
 De controlepagina van **[!UICONTROL Batch end-to-end]** verschijnt, die een lijst van de eerder opgenomen partijen toont. U kunt elke gewenste batch selecteren voor meer gedetailleerde informatie over die record.
 

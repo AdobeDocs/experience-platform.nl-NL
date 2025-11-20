@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Richtlijnen voor het oplossen van problemen met sandboxen
 
-Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van Experience Platform, gelieve te verwijzen naar de [&#x200B; het oplossen van problemengids van Experience Platform &#x200B;](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over sandboxen in Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van Experience Platform, gelieve te verwijzen naar de [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md).
 
 Sandboxen verdelen één Experience Platform-instantie in afzonderlijke virtuele omgevingen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen. Zie het [sandboxoverzicht](home.md) voor meer informatie.
 
@@ -27,7 +27,7 @@ Sandboxen zijn virtuele partities binnen één instantie van Experience Platform
 >id="platform_sandboxes_sandboxtypes"
 >title="Sandbox-type"
 >abstract="Het type sandbox geeft aan of dit een productie- of ontwikkelingssandbox is. Productiesandboxen bevatten live data- en ontwikkelingssandboxen die worden gebruikt voor testen en ontwikkelen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=nl-NL#create" text="Een sandbox maken in de gebruikersinterface"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Een sandbox maken in de gebruikersinterface"
 
 Er zijn twee sandboxtypen beschikbaar in Experience Platform:
 
@@ -53,7 +53,7 @@ Een Experience Platform-instantie ondersteunt meerdere productie- en ontwikkelin
 
 Een Experience Platform-standaardlicentie geeft u in totaal vijf sandboxen, die u kunt indelen als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal.
 
-De zandbakken van de productie kunnen worden teruggesteld of worden geschrapt, behalve productiezandbakken die ook door Adobe Analytics voor de [&#x200B; Analyse van het Apparaat kruis (CDA) &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) eigenschap worden gebruikt, of als de identiteitsgrafiek binnen het ook wordt ontvangen door Adobe Audience Manager voor de [&#x200B; Mensen Gebaseerde Eigenschappen (PBD) &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) eigenschap.
+De zandbakken van de productie kunnen worden teruggesteld of worden geschrapt, behalve productiezandbakken die ook door Adobe Analytics voor de [ Analyse van het Apparaat kruis (CDA) ](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) eigenschap worden gebruikt, of als de identiteitsgrafiek binnen het ook wordt ontvangen door Adobe Audience Manager voor de [ Mensen Gebaseerde Eigenschappen (PBD) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) eigenschap.
 
 U kunt de titel van een productiesandbox bijwerken. De naam van een productiesandbox kan echter niet worden gewijzigd.
 
@@ -73,4 +73,4 @@ De Adobe Admin Console koppelt gebruikers aan sandboxen en machtigingen via het 
 
 Als u unieke machtigingen wilt toevoegen aan gebruikers van een bepaalde sandbox, moet u mogelijk een nieuw productprofiel maken met de desbetreffende sandboxen en machtigingen die zijn toegepast, en die gebruikers toewijzen aan dat profiel.
 
-Zie de [&#x200B; gebruikershandleiding van de toegangscontrole &#x200B;](../access-control/ui/overview.md) voor meer informatie bij het beheren van zandbakken en toestemmingen in Admin Console.
+Zie de [ gebruikershandleiding van de toegangscontrole ](../access-control/ui/overview.md) voor meer informatie bij het beheren van zandbakken en toestemmingen in Admin Console.

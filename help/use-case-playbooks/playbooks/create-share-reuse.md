@@ -22,19 +22,19 @@ Als u een afspeelboek wilt gebruiken, navigeert u naar **[!UICONTROL Use Case Pl
 >title="Instantie maken"
 >abstract="Genereer een lijst met middelen zoals reizen, publiek, schema&#39;s of bestemmingen die in reis- of activeringsscenario&#39;s kunnen worden gebruikt."
 
-Alvorens tot een playbook instantie te leiden, onderzoek de beschikbare playbooks aan [&#x200B; het juiste playbook &#x200B;](/help/use-case-playbooks/playbooks/choose.md) kiezen. Wanneer u gereed bent om verder te gaan met een afspeelboek en een instantie te maken, selecteert u **[!UICONTROL Create Instance]** om verder te gaan met het afspeelboek en technische elementen te genereren.
+Alvorens tot een playbook instantie te leiden, onderzoek de beschikbare playbooks aan [ het juiste playbook ](/help/use-case-playbooks/playbooks/choose.md) kiezen. Wanneer u gereed bent om verder te gaan met een afspeelboek en een instantie te maken, selecteert u **[!UICONTROL Create Instance]** om verder te gaan met het afspeelboek en technische elementen te genereren.
 
-![&#x200B; creeer een geval van playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
+![ creeer een geval van playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
 Deze actie genereert verschillende elementen die u kunt gebruiken om het gebruik van hoofdletters en kleine letters te bereiken die in de afspeellijst worden beschreven.
 
-![&#x200B; mening van het Playbook van geproduceerde activa na wordt toegelaten.](/help/use-case-playbooks/assets/playbooks/ui-guide/play-view.png)
+![ mening van het Playbook van geproduceerde activa na wordt toegelaten.](/help/use-case-playbooks/assets/playbooks/ui-guide/play-view.png)
 
 ### Gebruik de configuratiebesturingselementen om instantienamen en beschrijvingen te bewerken {#edit-instance-metadata}
 
 Nadat u een instantie hebt gemaakt op basis van een afspeelboek, kunt u deze personaliseren om deze te onderscheiden van andere instanties die zijn gemaakt op basis van hetzelfde afspeelboek. Selecteer de configuratiecontrole zoals hieronder getoond. Bewerk de naam, beschrijving en notities en selecteer **[!UICONTROL Save]** wanneer u klaar bent.
 
-![&#x200B; geef naam en beschrijving van een instantie uit.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
+![ geef naam en beschrijving van een instantie uit.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
 
 ### De gegenereerde elementen begrijpen {#understand-assets}
 
@@ -49,7 +49,7 @@ Het is belangrijk om te begrijpen dat de gegenereerde elementen verschillen op b
 
 Ter illustratie van een voorbeeld kunt u voor de **[!UICONTROL Abandoned Cart: Merchandise]** playbook zien dat er een specifieke reis wordt gemaakt die de berichten bevat die voor dit gebruik worden gemaakt.
 
-![&#x200B; Reis die van gebruikscasplaybook wordt gecreeerd.](/help/use-case-playbooks/assets/playbooks/ui-guide/journey-preview.png)
+![ Reis die van gebruikscasplaybook wordt gecreeerd.](/help/use-case-playbooks/assets/playbooks/ui-guide/journey-preview.png)
 
 ### De gegenereerde elementen gebruiken en bewerken {#use-and-edit-assets}
 
@@ -63,7 +63,7 @@ Het hierboven beschreven gedrag geldt voor alle elementen die worden gemaakt, be
 >
 >Test in de ontwikkelingssandbox en ga naar productie als u klaar bent.
 >
->Wanneer objecten zijn gegenereerd, kunt u in de ontwikkelingssandboxen blijven testen door gegevens toe te voegen. U kunt de elementen zo lang testen als u wilt in de ontwikkelingssandbox en u kunt de elementlogica (publieksdefinities, reizen, schema&#39;s, enzovoort) in de productiesandbox herhalen wanneer u klaar bent. U kunt zich naar de ontwikkelingszandbak en dan naar de productiestandaard bewegen door de [&#x200B; functionaliteit van het gegevensbewustzijn &#x200B;](/help/use-case-playbooks/playbooks/data-awareness.md) te gebruiken.
+>Wanneer objecten zijn gegenereerd, kunt u in de ontwikkelingssandboxen blijven testen door gegevens toe te voegen. U kunt de elementen zo lang testen als u wilt in de ontwikkelingssandbox en u kunt de elementlogica (publieksdefinities, reizen, schema&#39;s, enzovoort) in de productiesandbox herhalen wanneer u klaar bent. U kunt zich naar de ontwikkelingszandbak en dan naar de productiestandaard bewegen door de [ functionaliteit van het gegevensbewustzijn ](/help/use-case-playbooks/playbooks/data-awareness.md) te gebruiken.
 
 ## Afspeelboeken opnieuw gebruiken {#reuse-playbooks}
 
@@ -73,7 +73,7 @@ Door veelvoudige instanties van zelfde playbook te creëren, kunt u het zelfde g
 
 U kunt de gegenereerde instantie en elementen delen met andere teamleden. Hiervoor kopieert u de URL-koppeling van de browser en deelt u deze met uw team om een overzicht van de gegenereerde elementen te krijgen.
 
-![&#x200B; URL benadrukte in een mening van het gebruiksgeval playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+![ URL benadrukte in een mening van het gebruiksgeval playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
 
 ## De videoanalyse van het playbook proces van begin tot eind
 
@@ -85,4 +85,4 @@ Bekijk deze video om te leren om instanties van een Hoofdlettergebruik Playbook 
 
 Door deze handleiding te lezen en de handleiding over het ontdekken van het juiste afspeelboek voor u, weet u nu hoe u de verschillende gedeelten van een afspeelboek kunt interpreteren en hoe u de elementen kunt gebruiken die worden gegenereerd nadat u een instantie van een afspeelboek hebt gemaakt.
 
-Daarna, kunt u de playbooks catalogus doorbladeren om het juiste playbook voor uw gebruiksgeval te vinden en de [&#x200B; het oplossen van problemengids &#x200B;](/help/use-case-playbooks/playbooks/troubleshooting.md) te lezen als u om het even welke kwesties ontmoet.
+Daarna, kunt u de playbooks catalogus doorbladeren om het juiste playbook voor uw gebruiksgeval te vinden en de [ het oplossen van problemengids ](/help/use-case-playbooks/playbooks/troubleshooting.md) te lezen als u om het even welke kwesties ontmoet.

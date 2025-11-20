@@ -23,11 +23,11 @@ ht-degree: 0%
 
 Met de werkruimte van **[!UICONTROL Data Lifecycle]** in de gebruikersinterface van Adobe Experience Platform kunt u verschillende beheertaken voor de gegevenslevenscyclus maken en controleren, zoals het verwijderen van records en het plannen van gegevenssetvervaldatums.
 
-In deze handleiding wordt beschreven hoe u taken in de levenscyclus van gegevens kunt beheren in de gebruikersinterface van Experience Platform. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie de [&#x200B; gids van de Hygiëne van Gegevens &#x200B;](../api/overview.md).
+In deze handleiding wordt beschreven hoe u taken in de levenscyclus van gegevens kunt beheren in de gebruikersinterface van Experience Platform. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie de [ gids van de Hygiëne van Gegevens ](../api/overview.md).
 
 Om tot de werkruimte toegang te hebben, selecteer **Levenscyclus van Gegevens** in de linkernavigatie.
 
-![&#x200B; de [!UICONTROL Data Lifecycle] werkruimte in Experience Platform UI, met [!UICONTROL Data Lifecycle] benadrukt in de linkernavigatie.](../images/ui/overview/home.png)
+![ de [!UICONTROL Data Lifecycle] werkruimte in Experience Platform UI, met [!UICONTROL Data Lifecycle] benadrukt in de linkernavigatie.](../images/ui/overview/home.png)
 
 Van hier, kunt u bestaande het werkorden doorbladeren en nieuwe verrichtingen van de gegevenslevenscyclus vormen. Raadpleeg de volgende secties van deze handleiding voor meer informatie:
 

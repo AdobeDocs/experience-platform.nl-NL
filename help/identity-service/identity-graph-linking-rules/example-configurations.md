@@ -20,9 +20,9 @@ Lees dit document voor meer informatie over verschillende implementatietypen die
 
 De de grafiekscenario&#39;s van de klant kunnen in drie verschillende categorieën worden gegroepeerd.
 
-* **Basis**: [&#x200B; Basisimplementaties &#x200B;](#basic-implementations) omvatten grafieken die het vaakst eenvoudige implementaties omvatten. Deze implementaties draaien doorgaans rond één apparaatnaamruimte (bijvoorbeeld CRMID). Terwijl de basisimplementaties vrij ongecompliceerd zijn, kan de grafiekondergang nog voorkomen, vaak toe te schrijven aan **gedeelde apparaat** scenario&#39;s.
-* **Middelen**: [&#x200B; Tussenliggende implementaties &#x200B;](#intermediate-implementations) omvatten verscheidene variabelen zoals **veelvoudige dwars-apparaat namespaces**, **niet-unieke identiteiten**, en **veelvoudige unieke namespaces**.
-* **Geavanceerd**: [&#x200B; Geavanceerde implementaties &#x200B;](#advanced-implementations) impliceren complexe en multi-layered grafiekscenario&#39;s. Voor geavanceerde implementaties is het van essentieel belang dat de juiste naamruimte-prioriteitsvolgorde wordt ingesteld om ervoor te zorgen dat de juiste koppelingen worden verwijderd, zodat de grafiek niet wordt samengevouwen.
+* **Basis**: [ Basisimplementaties ](#basic-implementations) omvatten grafieken die het vaakst eenvoudige implementaties omvatten. Deze implementaties draaien doorgaans rond één apparaatnaamruimte (bijvoorbeeld CRMID). Terwijl de basisimplementaties vrij ongecompliceerd zijn, kan de grafiekondergang nog voorkomen, vaak toe te schrijven aan **gedeelde apparaat** scenario&#39;s.
+* **Middelen**: [ Tussenliggende implementaties ](#intermediate-implementations) omvatten verscheidene variabelen zoals **veelvoudige dwars-apparaat namespaces**, **niet-unieke identiteiten**, en **veelvoudige unieke namespaces**.
+* **Geavanceerd**: [ Geavanceerde implementaties ](#advanced-implementations) impliceren complexe en multi-layered grafiekscenario&#39;s. Voor geavanceerde implementaties is het van essentieel belang dat de juiste naamruimte-prioriteitsvolgorde wordt ingesteld om ervoor te zorgen dat de juiste koppelingen worden verwijderd, zodat de grafiek niet wordt samengevouwen.
 
 ## Aan de slag
 
@@ -71,7 +71,7 @@ Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvore
 
 In deze grafiek wordt John (de eindgebruiker) vertegenwoordigd door CRMID. `{ECID: 123}` vertegenwoordigt Webbrowser die John op zijn personal computer gebruikte om uw e-commerceplatform te bezoeken. `{ECID: 999}` vertegenwoordigt de browser die hij op zijn [!DNL iPhone] en `{IDFA: a-b-c}` gebruikt vertegenwoordigt zijn [!DNL iPhone].
 
-![&#x200B; een eenvoudige implementatie met één dwars-apparaat namespace.](../images/configs/basic/simple-implementation.png)
+![ een eenvoudige implementatie met één dwars-apparaat namespace.](../images/configs/basic/simple-implementation.png)
 
 **Uitoefening**
 
@@ -99,7 +99,7 @@ In deze grafiek worden John en Jane vertegenwoordigd door hun eigen respectieve 
 
 De browser op de bureaubladcomputer die beide gebruiken om uw e-commerceplatform te bezoeken, wordt aangeduid met `{ECID: 111}` . In dit grafiekscenario is Jane de laatst geverifieerde eindgebruiker en daarom wordt de koppeling tussen `{ECID: 111}` en `{CRMID: John}` verwijderd.
 
-![&#x200B; A gesimuleerde grafiek voor een gedeeld apparaat (PC).](../images/configs/basic/shared-device-pc.png)
+![ A gesimuleerde grafiek voor een gedeeld apparaat (PC).](../images/configs/basic/shared-device-pc.png)
 
 >[!TAB  Gedeeld apparaat (mobiel) ]
 
@@ -116,7 +116,7 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 In deze grafiek worden John en Jane allebei vertegenwoordigd door hun eigen respectieve CRMIDs. De browser die ze gebruiken, wordt aangeduid met `{ECID: 111}` en de [!DNL iPad] die ze delen, wordt aangeduid met `{IDFA: a-b-c}` . In dit grafiekscenario is Jane de laatst geverifieerde eindgebruiker en daarom worden de koppelingen van `{ECID: 111}` en `{IDFA: a-b-c}` naar `{CRMID: John}` verwijderd.
 
-![&#x200B; A gesimuleerde grafiek voor een gedeeld apparaat (mobiel).](../images/configs/basic/shared-device-mobile.png)
+![ A gesimuleerde grafiek voor een gedeeld apparaat (mobiel).](../images/configs/basic/shared-device-mobile.png)
 
 >[!ENDTABS]
 
@@ -161,7 +161,7 @@ Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvore
 
 **Gesimuleerde grafiek**
 
-![&#x200B; Beeld van de gesimuleerde grafiek &#x200B;](../images/configs/basic/simple-implementation-non-unique.png)
+![ Beeld van de gesimuleerde grafiek ](../images/configs/basic/simple-implementation-non-unique.png)
 
 Er zijn geen garanties dat deze creditcardnummers of andere niet-unieke naamruimten altijd aan één eindgebruiker worden gekoppeld. Twee eindgebruikers kunnen zich registreren bij dezelfde creditcard. Er kunnen niet-unieke plaatsaanduidingswaarden zijn die ten onrechte zijn ingevoerd. Eenvoudig gezegd, er is geen garantie dat niet-unieke naamruimten geen grafiek doen samenvouwen.
 
@@ -186,7 +186,7 @@ CRMID: Jane, ECID:123
 
 **Gesimuleerde grafiek**
 
-![&#x200B; een middengedeelde apparatengrafiek met knoeiboel.](../images/configs/intermediate/intermediate-shared-device.png)
+![ een middengedeelde apparatengrafiek met knoeiboel.](../images/configs/intermediate/intermediate-shared-device.png)
 
 >[!TAB  twee eind-gebruikers met de zelfde creditcard ]
 
@@ -203,7 +203,7 @@ CRMID: Jane, ECID:456
 
 **Gesimuleerde grafiek**
 
-![&#x200B; een grafiek waar twee eind-gebruikers omhoog met de zelfde creditcard ondertekenen.](../images/configs/intermediate/graph-with-same-credit-card.png)
+![ een grafiek waar twee eind-gebruikers omhoog met de zelfde creditcard ondertekenen.](../images/configs/intermediate/graph-with-same-credit-card.png)
 
 >[!TAB  Ongeldig creditcardaantal ]
 
@@ -220,7 +220,7 @@ CRMID: Jill, CChash: undefined
 
 **Gesimuleerde grafiek**
 
-![&#x200B; een grafiek waar het hakken in een ongeldige creditcard resulteert.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
+![ een grafiek waar het hakken in een ongeldige creditcard resulteert.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
 
 >[!ENDTABS]
 
@@ -265,7 +265,7 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![&#x200B; Gedeelde apparatengrafiek met gehakt CRMID &#x200B;](../images/configs/intermediate/shared-device-hashed-crmid.png)
+![ Gedeelde apparatengrafiek met gehakt CRMID ](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
 >[!TAB  Onjuiste gegevens ]
 
@@ -278,7 +278,7 @@ CRMID: John, CRMIDhash: aaaa
 CRMID: Jane, CRMIDhash: aaaa
 ```
 
-![&#x200B; A gedeelde apparatengrafiek met een fout in het het hakken proces, die tot een niet-unieke gehakt CRMID leiden.](../images/configs/intermediate/hashing-error.png)
+![ A gedeelde apparatengrafiek met een fout in het het hakken proces, die tot een niet-unieke gehakt CRMID leiden.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
 <!-- 
@@ -377,7 +377,7 @@ CRMID: John, ECID: 111
 CRMID: Jane, ECID: 111
 ```
 
-![&#x200B; een grafiek die twee eind-gebruikers toont die login aan uw website gebruikend het zelfde apparaat.](../images/configs/intermediate/two-end-users-log-ing.png)
+![ een grafiek die twee eind-gebruikers toont die login aan uw website gebruikend het zelfde apparaat.](../images/configs/intermediate/two-end-users-log-ing.png)
 
 >[!TAB  een eindgebruiker verandert hun e-mail ]
 
@@ -388,7 +388,7 @@ CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
 CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 ```
 
-![&#x200B; een grafiek die een eind-gebruiker toont die hun e-mail heeft veranderd.](../images/configs/intermediate/end-user-changes-email.png)
+![ een grafiek die een eind-gebruiker toont die hun e-mail heeft veranderd.](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
@@ -396,7 +396,7 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 Geavanceerde implementaties omvatten complexe en gelaagde grafiekscenario&#39;s. Deze types van implementaties omvatten het gebruik van **namespace prioriteit** om de correcte verbindingen te identificeren die moeten worden verwijderd om grafiekineenstorting te verhinderen.
 
-**prioriteit Namespace** is meta-gegevens die van namespaces door hun belang rangschikt. Als een grafiek twee identiteiten bevat, elk met verschillende unieke naamruimten, gebruikt de Dienst van de Identiteit namespace prioriteit om te beslissen welke verbindingen om te verwijderen. Voor meer informatie, lees de [&#x200B; documentatie over namespace prioriteit &#x200B;](../identity-graph-linking-rules/namespace-priority.md).
+**prioriteit Namespace** is meta-gegevens die van namespaces door hun belang rangschikt. Als een grafiek twee identiteiten bevat, elk met verschillende unieke naamruimten, gebruikt de Dienst van de Identiteit namespace prioriteit om te beslissen welke verbindingen om te verwijderen. Voor meer informatie, lees de [ documentatie over namespace prioriteit ](../identity-graph-linking-rules/namespace-priority.md).
 
 De prioriteit Namespace speelt een kritieke rol in complexe grafiekscenario&#39;s. Grafieken kunnen veelvoudige lagen hebben - een eindgebruiker kan met veelvoudige login IDs worden geassocieerd, en deze login IDs kon worden gehakt. Bovendien kunnen verschillende ECID&#39;s worden gekoppeld aan verschillende aanmeldings-id&#39;s. Om ervoor te zorgen dat de juiste verbinding, in de juiste laag wordt verwijderd, moeten uw configuraties van de namespaceprioriteit correct zijn.
 
@@ -435,7 +435,7 @@ Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvore
 
 **Gesimuleerde grafiek**
 
-![&#x200B; een identiteitsgrafiek voor een eindgebruiker met zaken en een persoonlijke e-mail.](../images/configs/advanced/advanced.png)
+![ een identiteitsgrafiek voor een eindgebruiker met zaken en een persoonlijke e-mail.](../images/configs/advanced/advanced.png)
 
 **Uitoefening**
 
@@ -456,7 +456,7 @@ loginID: JohnPersonal, ECID: 111
 loginID: JanePersonal, ECID: 111
 ```
 
-![&#x200B; een grafiek van een geavanceerd gedeeld apparaat.](../images/configs/advanced/advanced-shared-device.png)
+![ een grafiek van een geavanceerd gedeeld apparaat.](../images/configs/advanced/advanced-shared-device.png)
 
 >[!TAB  het Onjuiste gegeven wordt verzonden naar Real-Time CDP ]
 
@@ -471,7 +471,7 @@ loginID: JohnPersonal, ECID: 111
 loginID: JanePersonal, ECID: 222
 ```
 
-![&#x200B; een grafiek die een scenario toont waar de slechte gegevens naar Real-Time CDP worden verzonden.](../images/configs/advanced/advanced-bad-data.png)
+![ een grafiek die een scenario toont waar de slechte gegevens naar Real-Time CDP worden verzonden.](../images/configs/advanced/advanced-bad-data.png)
 
 >[!ENDTABS]
 
@@ -534,7 +534,7 @@ CRMID: John, ECID: 111
 CRMID: Jane, ECID: 111
 ```
 
-![&#x200B; Een complex grafiekvoorbeeld van gedeeld apparaat.](../images/configs/advanced/complex-shared-device.png)
+![ Een complex grafiekvoorbeeld van gedeeld apparaat.](../images/configs/advanced/complex-shared-device.png)
 
 >[!TAB  Eind-gebruiker verandert hun e-mailadres ]
 
@@ -545,7 +545,7 @@ CRMID: John, loyaltyID: John, Email: john@g
 CRMID: John, loyaltyID: John, Email: john@y
 ```
 
-![&#x200B; een grafiek die identiteitsgedrag toont gegeven een e-mailverandering.](../images/configs/advanced/complex-email-change.png)
+![ een grafiek die identiteitsgedrag toont gegeven een e-mailverandering.](../images/configs/advanced/complex-email-change.png)
 
 >[!TAB  de derdePartyID verenigingsveranderingen ]
 
@@ -558,7 +558,7 @@ CRMID: John, thirdPartyID: xyz
 CRMID: Jane, thirdPartyID: xyz
 ```
 
-![&#x200B; een grafiek die identiteitsgedrag toont gegeven een verandering in derdeidentiteitskaart vereniging.](../images/configs/advanced/complex-third-party-change.png)
+![ een grafiek die identiteitsgedrag toont gegeven een verandering in derdeidentiteitskaart vereniging.](../images/configs/advanced/complex-third-party-change.png)
 
 >[!TAB  Niet-unieke orderID ]
 
@@ -571,7 +571,7 @@ Email: john@g, orderID: aaa
 Email: jane@g, orderID: aaa
 ```
 
-![&#x200B; een grafiek die identiteitsgedrag toont dat een niet-unieke orde identiteitskaart wordt gegeven.](../images/configs/advanced/complex-non-unique.png)
+![ een grafiek die identiteitsgedrag toont dat een niet-unieke orde identiteitskaart wordt gegeven.](../images/configs/advanced/complex-non-unique.png)
 
 >[!TAB  Onjuiste loyaltyID ]
 
@@ -582,7 +582,7 @@ CRMID: John, loyaltyID: aaa, Email: john@g
 CRMID: Jane, loyaltyID: aaa, Email: jane@g
 ```
 
-![&#x200B; een grafiek die identiteitsgedrag toont dat een onjuiste loyaliteitsidentiteitskaart wordt gegeven.](../images/configs/advanced/complex-error.png)
+![ een grafiek die identiteitsgedrag toont dat een onjuiste loyaliteitsidentiteitskaart wordt gegeven.](../images/configs/advanced/complex-error.png)
 
 >[!ENDTABS]
 

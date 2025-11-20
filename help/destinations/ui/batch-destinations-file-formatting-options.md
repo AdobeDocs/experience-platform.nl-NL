@@ -15,7 +15,7 @@ ht-degree: 0%
 > 
 >De opmaakopties voor bestanden die in dit document worden beschreven, zijn momenteel alleen beschikbaar voor CSV-bestanden.
 
-De optie om diverse dossier te vormen formatterend opties voor de uitgevoerde dossiers is beschikbaar aan u wanneer u [&#128279;](/help/destinations/ui/connect-destination.md) met een op dossier-gebaseerde bestemming, zoals [&#x200B; Amazon S3 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [&#x200B; Azure Blob &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) verbindt, of [&#x200B; SFTP &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md#connect).
+De optie om diverse dossier te vormen formatterend opties voor de uitgevoerde dossiers is beschikbaar aan u wanneer u [ ](/help/destinations/ui/connect-destination.md) met een op dossier-gebaseerde bestemming, zoals [ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [ Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) verbindt, of [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
 U kunt verschillende opmaakopties voor geëxporteerde bestanden configureren met de gebruikersinterface van Experience Platform. U kunt verschillende eigenschappen van de geëxporteerde bestanden aanpassen aan de vereisten van het systeem voor het ontvangen van bestanden aan uw zijde, zodat u de bestanden die u van Experience Platform hebt ontvangen, optimaal kunt lezen en interpreteren.
 
@@ -26,15 +26,15 @@ U kunt verschillende opmaakopties voor geëxporteerde bestanden configureren met
 
 ## Configuratie van bestandsindeling voor CSV-bestanden {#file-configuration}
 
-Om het dossier te tonen die opties formatteren, begin [&#x200B; met bestemmings &#x200B;](/help/destinations/ui/connect-destination.md) werkschema verbinden. Selecteer **Type van Gegevens: Segmenten** en **het type van Dossier: CSV** om de dossier te tonen formatterend montages beschikbaar voor de uitgevoerde `CSV` dossiers.
+Om het dossier te tonen die opties formatteren, begin [ met bestemmings ](/help/destinations/ui/connect-destination.md) werkschema verbinden. Selecteer **Type van Gegevens: Segmenten** en **het type van Dossier: CSV** om de dossier te tonen formatterend montages beschikbaar voor de uitgevoerde `CSV` dossiers.
 
 >[!IMPORTANT]
 >
 >Mogelijk zijn niet al deze opties beschikbaar voor de bestemming waarmee u verbinding maakt. Het is aan de bestemmingsontwikkelaar om te bepalen welke dossier het formatteren opties zij in hun bestemming willen steunen. De bestemmingsontwikkelaar kan bepalen welke opties beschikbaar zijn wanneer het verbinden met de bestemming. De vereiste opties zijn gemarkeerd met een sterretje in de gebruikersinterface van Experience Platform.
 > 
->De Adobe-gebouwde bestemmingen van de wolkenopslag - [&#x200B; Amazon S3 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md), [&#x200B; Azure Blob &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md), [&#x200B; Azure Gegevens meer van de Opslag Gen2 &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md), [&#x200B; Gegevens Landing Zone &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [&#x200B; de Opslag van de Wolk van Google &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [&#x200B; SFTP &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md) - momenteel steunt slechts de zes hieronder benadrukte opties CSV.
+>De Adobe-gebouwde bestemmingen van de wolkenopslag - [ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ Azure Gegevens meer van de Opslag Gen2 ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ Gegevens Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [ de Opslag van de Wolk van Google ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md) - momenteel steunt slechts de zes hieronder benadrukte opties CSV.
 
-![&#x200B; Beeld dat enkele beschikbare dossier het formatteren opties toont.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![ Beeld dat enkele beschikbare dossier het formatteren opties toont.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
 ### Scheidingsteken {#delimiter}
 
@@ -188,4 +188,4 @@ Voorbeeld van uitvoer met **[!UICONTROL False]** geselecteerd: `"male ","John","
 
 ### Volgende stappen {#next-steps}
 
-Na het lezen van dit document, weet u nu hoe te om dossieruitvoeropties voor uw Csv- gegevensdossiers te vormen om de dossierinhoud aan de vereisten van uw stroomafwaartse systeem van de dossierontvangst aan te passen. Daarna, kunt u het [&#x200B; op dossier-gebaseerde zelfstudie van de bestemmingsactivering &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) lezen beginnen dossiers naar uw aangewezen plaats van de wolkenopslag uit te voeren.
+Na het lezen van dit document, weet u nu hoe te om dossieruitvoeropties voor uw Csv- gegevensdossiers te vormen om de dossierinhoud aan de vereisten van uw stroomafwaartse systeem van de dossierontvangst aan te passen. Daarna, kunt u het [ op dossier-gebaseerde zelfstudie van de bestemmingsactivering ](/help/destinations/ui/activate-batch-profile-destinations.md) lezen beginnen dossiers naar uw aangewezen plaats van de wolkenopslag uit te voeren.

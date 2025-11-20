@@ -31,7 +31,7 @@ In Adobe Experience Platform kunt u de vervaltijden van gegevens configureren vo
 Een profiel wordt overwogen voor Pseudoniem gegevensvervaldatum als het aan de volgende voorwaarden voldoet:
 
 - De identiteitsnaamruimten van het verbonden profiel komen overeen met de naamruimte die de klant heeft opgegeven als een pseudoniem of onbekend naamgebied.
-   - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID` of `AAID` is. Het gekoppelde profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld, heeft een vastgemaakt profiel **&#x200B;**&#x200B;of geen e-mail of identiteit van CRM.
+   - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID` of `AAID` is. Het gekoppelde profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld, heeft een vastgemaakt profiel **** of geen e-mail of identiteit van CRM.
 - Er heeft zich geen activiteit voorgedaan in een door de gebruiker gedefinieerde hoeveelheid tijd. De activiteit wordt bepaald of door om het even welke Gebeurtenissen van de Ervaring die of klant-in werking gestelde updates aan de profielattributen worden opgenomen.
    - Bijvoorbeeld, wordt een nieuwe gebeurtenis van de paginamening of de update van het paginakenmerk beschouwd als een activiteit. Nochtans, wordt een niet-gebruiker-in werking gestelde update van het publiekslidmaatschap **niet** beschouwd als een activiteit. Op dit moment is het bijhouden van gegevens op profielniveau gebaseerd op de tijd van de gebeurtenis voor Experience Events en de tijd van inname voor profielkenmerken om de gegevensvervaldatum te berekenen.
 
@@ -47,11 +47,11 @@ Een profiel wordt overwogen voor Pseudoniem gegevensvervaldatum als het aan de v
 >
 >De **beheert de toestemmingen van de Montages van het Profiel** laten u de gegevensvervalsingen plaatsen, de **toestemming van de Profielen van de Mening** laat u de gegevensvervalsingen bekijken, en de **toestemming van de Namespaces van de Identiteit van de Mening** laat u de beschikbare identiteitsnaamruimten bekijken die u kunt gebruiken.
 >
->Meer informatie over toestemmingen binnen Experience Platform kan in het [&#x200B; overzicht van de toegangscontrole &#x200B;](../access-control/home.md#permissions) worden gevonden.
+>Meer informatie over toestemmingen binnen Experience Platform kan in het [ overzicht van de toegangscontrole ](../access-control/home.md#permissions) worden gevonden.
 
 Ga naar het dashboard Profiel en selecteer **[!UICONTROL Settings]** om de vervaldatum van Pseudoniem-profielgegevens aan uw organisatie toe te voegen.
 
-![&#x200B; de knoop van Montages op het dashboard van het Profiel wordt benadrukt.](./images/pseudonymous-profiles/profile-settings.png)
+![ de knoop van Montages op het dashboard van het Profiel wordt benadrukt.](./images/pseudonymous-profiles/profile-settings.png)
 
 De pop-up [!UICONTROL Profile settings] wordt weergegeven. Op deze popover, kunt u het aantal dagen voor de vervaldatum van Pseudoniem- profielgegevens evenals identiteitsnamespace plaatsen die voor de gegevensvervalsing wordt gebruikt.
 
@@ -59,7 +59,7 @@ Voor productiesandboxen, is de standaard Pseudoniem profielgegevensvervaldatum 1
 
 Selecteer **[!UICONTROL Apply]** om de instellingen voor de gegevensvervaldatum op te slaan.
 
-![&#x200B; popover voor het toevoegen van de Vervaldatum van het Pseudoniem profielgegevens aan de profielen van uw organisatie. De knop Toepassen is gemarkeerd.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
+![ popover voor het toevoegen van de Vervaldatum van het Pseudoniem profielgegevens aan de profielen van uw organisatie. De knop Toepassen is gemarkeerd.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
 ## Veelgestelde vragen {#faq}
 
@@ -79,7 +79,7 @@ De gegevensvervaldatum van de Gebeurtenis van de ervaring werkt op het niveau va
 
 #### Identiteitstypen
 
-De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **&#x200B;**&#x200B;niet worden geschrapt.
+De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **** niet worden geschrapt.
 
 De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert gebeurtenissen **slechts** die op timestamp van het gebeurtenisverslag wordt gebaseerd. De inbegrepen identiteitsnamespaces zijn **genegeerd** voor vervaldoeleinden.
 
@@ -110,7 +110,7 @@ In een typisch geval kunt u de vervaldatum van de Ervaring-gebeurtenisgegevens i
 - Als u Web SDK gebruikt om gegevens rechtstreeks naar Experience Platform te verzenden.
 - Als u een website hebt die ongeautoriseerde klanten massaal bedient.
 - Als u buitensporige profieltellingen in uw datasets hebt en bevestigd dat deze bovenmatige profieltelling wegens anonieme op koekje-gebaseerde identiteitsnaamruimte is.
-   - Om dit te bepalen, zou u het overlappende rapport van de identiteitsnaamruimte moeten gebruiken. Meer informatie over dit rapport kan in de [&#x200B; sectie van het het overlappingsrapport van de identiteitsoverlapping &#x200B;](./api/preview-sample-status.md#identity-overlap-report) van de gids van de voorproefstatus API worden gevonden.
+   - Om dit te bepalen, zou u het overlappende rapport van de identiteitsnaamruimte moeten gebruiken. Meer informatie over dit rapport kan in de [ sectie van het het overlappingsrapport van de identiteitsoverlapping ](./api/preview-sample-status.md#identity-overlap-report) van de gids van de voorproefstatus API worden gevonden.
 
 +++
 
@@ -131,12 +131,12 @@ In een typisch geval kunt u de vervaldatum van de Ervaring-gebeurtenisgegevens i
 
 +++ Antwoord
 
-- De Dienst van de Identiteit [&#x200B; &quot;eerste-binnen, eerste-uit&quot;schrappingssysteem &#x200B;](../identity-service/guardrails.md) kon ECIDs van de identiteitsgrafiek schrappen, die in de Dienst van de Identiteit worden opgeslagen.
+- De Dienst van de Identiteit [ &quot;eerste-binnen, eerste-uit&quot;schrappingssysteem ](../identity-service/guardrails.md) kon ECIDs van de identiteitsgrafiek schrappen, die in de Dienst van de Identiteit worden opgeslagen.
 - Als dit verwijderingsgedrag ertoe leidt dat een ECID-profiel wordt opgeslagen in het Real-Time Klantprofiel (Profielarchief), verwijdert de vervaldatum van de Pseudoniem-profielgegevens dit profiel uit het profielarchief.
 
 +++
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, kunt u de vervaldatum van Pseudoniem-profielgegevens weergeven en maken. Voor meer informatie over gegevensbeheer over Experience Platform als geheel, gelieve te lezen de [&#x200B; gids van de het beheervergunning van Gegevens best practices &#x200B;](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+Nadat u deze handleiding hebt gelezen, kunt u de vervaldatum van Pseudoniem-profielgegevens weergeven en maken. Voor meer informatie over gegevensbeheer over Experience Platform als geheel, gelieve te lezen de [ gids van de het beheervergunning van Gegevens best practices ](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 

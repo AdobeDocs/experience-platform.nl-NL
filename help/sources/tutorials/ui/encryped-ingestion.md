@@ -19,9 +19,9 @@ Lees deze handleiding om te leren hoe u gecodeerde gegevens met bronnen voor ops
 
 Lees voordat u verdergaat met deze zelfstudie de volgende documenten om de volgende Experience Platform-functies en -concepten beter te begrijpen.
 
-* [&#x200B; Bronnen &#x200B;](../../home.md): De bronnen van het gebruik in Experience Platform om gegevens van een Toepassing van Adobe of een derdegegevensbron in te voeren.
-* [&#x200B; Dataflows &#x200B;](../../../dataflows/home.md): Dataflows zijn vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. U kunt de werkruimte voor bronnen gebruiken om gegevensstromen te maken die gegevens van een bepaalde bron naar Experience Platform invoeren.
-* [&#x200B; Sandboxes &#x200B;](../../../sandboxes/home.md): De zandbakken van het gebruik in Experience Platform om virtuele verdelingen tussen uw instanties van Experience Platform tot stand te brengen en milieu&#39;s te creëren gewijd aan ontwikkeling of productie.
+* [ Bronnen ](../../home.md): De bronnen van het gebruik in Experience Platform om gegevens van een Toepassing van Adobe of een derdegegevensbron in te voeren.
+* [ Dataflows ](../../../dataflows/home.md): Dataflows zijn vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. U kunt de werkruimte voor bronnen gebruiken om gegevensstromen te maken die gegevens van een bepaalde bron naar Experience Platform invoeren.
+* [ Sandboxes ](../../../sandboxes/home.md): De zandbakken van het gebruik in Experience Platform om virtuele verdelingen tussen uw instanties van Experience Platform tot stand te brengen en milieu&#39;s te creëren gewijd aan ontwikkeling of productie.
 
 ### Overzicht op hoog niveau
 
@@ -53,27 +53,27 @@ U kunt een sleutelpaar voor versleuteling maken via de gebruikersinterface van E
 
 Navigeer in de gebruikersinterface van Experience Platform naar de werkruimte voor bronnen en selecteer vervolgens [!UICONTROL Key Pairs] in de bovenste koptekst.
 
-![&#x200B; de broncatalogus met de &quot;Belangrijkste Geselecteerde kopbal van Paren&quot;.](../../images/tutorials/edi/catalog.png)
+![ de broncatalogus met de &quot;Belangrijkste Geselecteerde kopbal van Paren&quot;.](../../images/tutorials/edi/catalog.png)
 
 U wordt genomen aan een pagina die een lijst van bestaande encryptie zeer belangrijke paren in uw organisatie toont. Deze pagina bevat informatie over de titel, de id, het type, het versleutelingsalgoritme, de vervaldatum en de status van een bepaalde sleutel. Selecteer **[!UICONTROL Create Key]** als u een nieuw sleutelpaar wilt maken.
 
-![&#x200B; de Zeer belangrijke pagina van Paren, met &quot;encryptiesleutel&quot;geselecteerd als zeer belangrijk type en &quot;creeer sleutel&quot;knoop.](../../images/tutorials/edi/encryption_key_page.png)
+![ de Zeer belangrijke pagina van Paren, met &quot;encryptiesleutel&quot;geselecteerd als zeer belangrijk type en &quot;creeer sleutel&quot;knoop.](../../images/tutorials/edi/encryption_key_page.png)
 
 Kies vervolgens het toetstype dat u wilt maken. Als u een coderingssleutel wilt maken, selecteert u **[!UICONTROL Encryption Key]** en vervolgens **[!UICONTROL Continue]** .
 
-![&#x200B; het zeer belangrijke creatievenster, met geselecteerde encryptiesleutel.](../../images/tutorials/edi/choose_encryption_key_type.png)
+![ het zeer belangrijke creatievenster, met geselecteerde encryptiesleutel.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
 Geef een titel en een wachtwoordzin op voor de coderingssleutel. Passphrase is een extra laag van bescherming voor uw encryptiesleutels. Bij het maken slaat Experience Platform de passphrase op in een andere veilige kluis dan de openbare sleutel. U moet een niet-lege tekenreeks opgeven als een wachtwoordzin. Selecteer **[!UICONTROL Create]** als u klaar bent.
 
-![&#x200B; het venster van de encryptiesleutel verwezenlijking, waar een titel en een passphrase wordt verstrekt.](../../images/tutorials/edi/create_encryption_key.png)
+![ het venster van de encryptiesleutel verwezenlijking, waar een titel en een passphrase wordt verstrekt.](../../images/tutorials/edi/create_encryption_key.png)
 
 Als dit gelukt is, wordt een nieuw venster weergegeven met de nieuwe coderingssleutel, inclusief de titel, openbare sleutel en sleutel-id. Gebruik de waarde van de openbare sleutel om uw gegevens te coderen. U gebruikt de sleutel-id later om uw identiteit te bewijzen wanneer u uw gecodeerde gegevens opgeeft tijdens het maken van de gegevensstroom.
 
-![&#x200B; het venster dat informatie over uw onlangs gecreeerd encryptie zeer belangrijk paar toont.](../../images/tutorials/edi/encryption_key_details.png)
+![ het venster dat informatie over uw onlangs gecreeerd encryptie zeer belangrijk paar toont.](../../images/tutorials/edi/encryption_key_details.png)
 
 Om informatie over een bestaande encryptiesleutel te bekijken, selecteer de ellipsen (`...`) naast de belangrijkste titel. Selecteer **[!UICONTROL Key details]** om de openbare sleutel en belangrijkste identiteitskaart te bekijken Of selecteer **[!UICONTROL Delete]** als u de coderingssleutel wilt verwijderen.
 
-![&#x200B; de belangrijkste paren pagina, waar een lijst van encryptiesleutels wordt getoond. De ellipsen naast &quot;acme-encryptie-sleutel&quot;wordt geselecteerd en dropdown vertoningenopties om zeer belangrijke details te bekijken of de sleutels te schrappen.](../../images/tutorials/edi/configuration_options.png)
+![ de belangrijkste paren pagina, waar een lijst van encryptiesleutels wordt getoond. De ellipsen naast &quot;acme-encryptie-sleutel&quot;wordt geselecteerd en dropdown vertoningenopties om zeer belangrijke details te bekijken of de sleutels te schrappen.](../../images/tutorials/edi/configuration_options.png)
 
 ### Een verificatietoets voor handtekeningen maken {#create-a-sign-verification-key}
 
@@ -92,15 +92,15 @@ Een verificatiesleutel is een ander versleutelingsmechanisme dat een persoonlijk
 
 Als u een verificatietoets voor handtekeningen wilt maken, selecteert u **[!UICONTROL Sign Verification Key]** in het selectievenster voor het type sleutel en selecteert u vervolgens **[!UICONTROL Continue]** .
 
-![&#x200B; het zeer belangrijke venster van de typeselectie waar de sleutel van de handtekeningscontrole wordt geselecteerd.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
+![ het zeer belangrijke venster van de typeselectie waar de sleutel van de handtekeningscontrole wordt geselecteerd.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
 Geef vervolgens een titel en een [!DNL Base64] -gecodeerde PGP-sleutel op als openbare sleutel en selecteer **[!UICONTROL Create]** .
 
-![&#x200B; creeer de sleutel van de sign controle venster.](../../images/tutorials/edi/create_sign_verification_key.png)
+![ creeer de sleutel van de sign controle venster.](../../images/tutorials/edi/create_sign_verification_key.png)
 
 Als dit gelukt is, wordt een nieuw venster weergegeven met daarin de nieuwe verificatietoets voor handtekeningen, inclusief de titel en sleutel-id.
 
-![&#x200B; de details van de pas gecreëerde sleutel van de gebarentverificatie.](../../images/tutorials/edi/sign_verification_key_details.png)
+![ de details van de pas gecreëerde sleutel van de gebarentverificatie.](../../images/tutorials/edi/sign_verification_key_details.png)
 
 ## Gecodeerde gegevens verzamelen {#ingest-encrypted-data}
 
@@ -129,23 +129,23 @@ U kunt gecodeerde gegevens invoeren met de volgende batchbronnen voor cloudopsla
 
 Verifieer met de bron van de wolkenopslag van uw keus. Selecteer tijdens de stap voor gegevensselectie van de workflow het gecodeerde bestand of de gecodeerde map die u wilt invoegen en schakel vervolgens de **[!UICONTROL Is the file encrypted]** -schakeloptie in.
 
-![&#x200B; de &quot;uitgezochte gegevens&quot;stap van het bronwerkschema, waar een gecodeerd gegevensdossier voor ingebed wordt geselecteerd.](../../images/tutorials/edi/select_data.png)
+![ de &quot;uitgezochte gegevens&quot;stap van het bronwerkschema, waar een gecodeerd gegevensdossier voor ingebed wordt geselecteerd.](../../images/tutorials/edi/select_data.png)
 
 Selecteer vervolgens een voorbeeldbestand uit de brongegevens. Aangezien uw gegevens gecodeerd zijn, heeft Experience Platform een voorbeeldbestand nodig om een XDM-schema te maken dat aan uw brongegevens kan worden toegewezen.
 
-![&#x200B; &quot;Is dit dossier gecodeerd?&quot; knevel toegelaten en de &quot;Uitgezochte knoop van het steekproefdossier&quot;selecteerde &#x200B;](../../images/tutorials/edi/select_sample_file.png).
+![ &quot;Is dit dossier gecodeerd?&quot; knevel toegelaten en de &quot;Uitgezochte knoop van het steekproefdossier&quot;selecteerde ](../../images/tutorials/edi/select_sample_file.png).
 
 Nadat u het voorbeeldbestand hebt geselecteerd, configureert u instellingen voor uw gegevens, zoals de bijbehorende gegevensindeling, het scheidingsteken en het compressietype. Zorg ervoor dat de voorvertoningsinterface enige tijd heeft om volledig te renderen en selecteer vervolgens **[!UICONTROL Save]** .
 
-![&#x200B; een steekproef van A wordt geselecteerd voor opname en de dossiervoorproef wordt volledig geladen.](../../images/tutorials/edi/file_preview.png)
+![ een steekproef van A wordt geselecteerd voor opname en de dossiervoorproef wordt volledig geladen.](../../images/tutorials/edi/file_preview.png)
 
 Van hier, gebruik dropdown menu om de openbare zeer belangrijke titel van openbare zeer belangrijke identiteitskaart te selecteren die met de openbare sleutel beantwoordt die u gebruikte om uw gegevens te coderen.
 
-![&#x200B; de openbare zeer belangrijke titel van openbare zeer belangrijke identiteitskaart die met de openbare sleutel beantwoordt die wordt gebruikt om uw gegevens te coderen.](../../images/tutorials/edi/public_key_id.png)
+![ de openbare zeer belangrijke titel van openbare zeer belangrijke identiteitskaart die met de openbare sleutel beantwoordt die wordt gebruikt om uw gegevens te coderen.](../../images/tutorials/edi/public_key_id.png)
 
 Als u ook het sleutelpaar voor handtekeningverificatie hebt gebruikt om een extra coderingslaag op te geven, schakelt u het selectievakje voor handtekeningverificatie in en selecteert u op dezelfde manier de sleutel-id voor tekenverificatie die overeenkomt met de sleutel waarmee u uw gegevens hebt versleuteld.
 
-![&#x200B; De sleuteltitel van de ondertekeningscontrole van zeer belangrijke identiteitskaart die met uw encryptie van de gebarentverificatie beantwoordt.](../../images/tutorials/edi/custom_key_id.png)
+![ De sleuteltitel van de ondertekeningscontrole van zeer belangrijke identiteitskaart die met uw encryptie van de gebarentverificatie beantwoordt.](../../images/tutorials/edi/custom_key_id.png)
 
 Selecteer **[!UICONTROL Next]** wanneer u klaar bent.
 
@@ -156,8 +156,8 @@ Voltooi de overige stappen in de workflow voor bronnen om het maken van de gegev
 * [Vorm een innameschema voor uw gegevensstroom](../ui/dataflow/batch/cloud-storage.md#schedule-ingestion-runs)
 * [Controleer uw gegevensstroom](../ui/dataflow/batch/cloud-storage.md#review-your-dataflow)
 
-U kunt blijven [&#x200B; updates aan uw dataflow &#x200B;](../ui/update-dataflows.md) maken zodra het met succes is gecreeerd.
+U kunt blijven [ updates aan uw dataflow ](../ui/update-dataflows.md) maken zodra het met succes is gecreeerd.
 
 ## Volgende stappen
 
-Door dit document te lezen, kunt u nu gecodeerde gegevens van uw blokbron voor cloudopslag opnemen in Experience Platform. Voor informatie over hoe te om gecodeerde gegevens in te voeren gebruikend APIs, lees de gids over [&#x200B; het opnemen van gecodeerde gegevens gebruikend  [!DNL Flow Service]  API &#x200B;](../api/encrypt-data.md). Voor algemene informatie over bronnen op Experience Platform, lees het [&#x200B; overzicht van bronnen &#x200B;](../../home.md).
+Door dit document te lezen, kunt u nu gecodeerde gegevens van uw blokbron voor cloudopslag opnemen in Experience Platform. Voor informatie over hoe te om gecodeerde gegevens in te voeren gebruikend APIs, lees de gids over [ het opnemen van gecodeerde gegevens gebruikend  [!DNL Flow Service]  API ](../api/encrypt-data.md). Voor algemene informatie over bronnen op Experience Platform, lees het [ overzicht van bronnen ](../../home.md).

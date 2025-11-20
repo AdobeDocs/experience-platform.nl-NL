@@ -47,9 +47,9 @@ De prioriteit Namespace bepaalt hoe het Algoritme van de Optimalisering van de I
 
 Naamruimten in Identiteitsservice hebben een impliciete relatieve volgorde van belang. Bekijk een grafiek die gestructureerd is als een piramide. Er is één knoop op de hoogste laag, twee knopen op de middelste laag, en vier knopen op de bodemlaag. De prioriteit Namespace moet deze relatieve orde weerspiegelen om ervoor te zorgen dat een persoonentiteit correct wordt vertegenwoordigd.
 
-Voor een diepgaande blik bij namespace prioriteit en zijn volledige functionaliteit en gebruik, lees de [&#x200B; namespace prioritaire gids &#x200B;](./namespace-priority.md).
+Voor een diepgaande blik bij namespace prioriteit en zijn volledige functionaliteit en gebruik, lees de [ namespace prioritaire gids ](./namespace-priority.md).
 
-![&#x200B; de grafieklagen en namespace prioriteit.](../images/namespace-priority/graph-layers.png " de grafieklagen en namespace prioriteit."){zoomable="yes"}
+![ de grafieklagen en namespace prioriteit.](../images/namespace-priority/graph-layers.png " de grafieklagen en namespace prioriteit."){zoomable="yes"}
 
 ## Proces {#process}
 
@@ -68,7 +68,7 @@ Wanneer de unieke naamruimtebeperking wordt overtreden, worden de koppelingen op
 * De grafiek zou op basis van de bovenstaande volgorde opnieuw tot stand komen. Als het toevoegen van de koppeling de limietbeperking schendt (de grafiek bevat bijvoorbeeld twee of meer identiteiten met een unieke naamruimte), worden de koppelingen verwijderd.
 * De resulterende grafiek zal dan volgzaam met de unieke namespace beperking zijn die u vormde.
 
-![&#x200B; een diagram dat het Algoritme van de Optimalisering van de Identiteit visualiseert.](../images/ido_algorithm.png " een diagram dat het Algoritme van de Optimalisering van de Identiteit visualiseert."){zoomable="yes"}
+![ een diagram dat het Algoritme van de Optimalisering van de Identiteit visualiseert.](../images/ido_algorithm.png " een diagram dat het Algoritme van de Optimalisering van de Identiteit visualiseert."){zoomable="yes"}
 
 ## Voorbeeldscenario&#39;s voor algoritme voor identiteitsoptimalisatie
 
@@ -95,7 +95,7 @@ In dit voorbeeld worden zowel CRMID als e-mail aangewezen als unieke naamruimten
 * Vanwege de unieke naamruimteconfiguratie die een maximum van één CRMID-naamruimte en één E-mailnaamruimte per grafiek instelt, wordt de grafiek in tweeën gesplitst.
    * Ten slotte, omdat John de laatste geverifieerde gebruiker is, blijft de ECID die de laptop vertegenwoordigt gekoppeld aan zijn grafiek in plaats van aan Jane.
 
-![&#x200B; Geval één van gedeeld apparaat.](../images/identity-settings/shared-device-case-one.png " Geval één van gedeeld apparaat."){zoomable="yes"}
+![ Geval één van gedeeld apparaat.](../images/identity-settings/shared-device-case-one.png " Geval één van gedeeld apparaat."){zoomable="yes"}
 
 >[!TAB  Voorbeeld twee ]
 
@@ -112,7 +112,7 @@ In dit voorbeeld wordt de naamruimte CRMID aangewezen als een unieke naamruimte.
    * Dientengevolge, verwijdert het Algoritme van de Optimalisering van de Identiteit de oudere verbinding, die in dit geval CRMID van Jane is die bij `timestamp=1` werd verbonden.
    * Nochtans, terwijl CRMID van Jane niet meer als grafiek op de Dienst van de Identiteit zal bestaan, zal het nog als profiel op het Profiel van de Klant in real time blijven. Dit komt omdat een identiteitsgrafiek minstens twee verbonden identiteiten moet bevatten, en als resultaat van het verwijderen van de verbindingen, heeft CRMID van Jane niet meer een andere identiteit om met te verbinden.
 
-![&#x200B; Geval twee van gedeeld apparaat.](../images/identity-settings/shared-device-case-two.png " Geval twee van gedeeld apparaat."){zoomable="yes"}
+![ Geval twee van gedeeld apparaat.](../images/identity-settings/shared-device-case-two.png " Geval twee van gedeeld apparaat."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ In dit voorbeeld worden de naamruimten CRMID en Email als uniek aangeduid. Overw
 
 Met het Algoritme van de Optimalisering van de Identiteit, worden de slechte identiteitswaarden zoals bogus e-mails of telefoonaantallen niet verspreid over verscheidene verschillende identiteitsgrafieken.
 
-![&#x200B; een diagram van een slechte e-mailopname.](../images/identity-settings/bad-email.png " een diagram van een slechte e-mailopname."){zoomable="yes"}
+![ een diagram van een slechte e-mailopname.](../images/identity-settings/bad-email.png " een diagram van een slechte e-mailopname."){zoomable="yes"}
 
 ## Anonieme gebeurtenisassociatie
 
@@ -154,7 +154,7 @@ Bekijk het onderstaande diagram om beter te begrijpen hoe anonieme gebeurtenisas
       * Vóór zijn eerste aanmelding vóór `timestamp=1`; en
       * Om het even welke activiteiten hij of Nora deed terwijl het doorbladeren anoniem in-tussen Kevin&#39;s eerste en tweede logins.
 
-![&#x200B; een diagram van anonieme gebeurtenisvereniging.](../images/identity-settings/anon-event-association.png " een diagram van anonieme gebeurtenisvereniging."){zoomable="yes"}
+![ een diagram van anonieme gebeurtenisvereniging.](../images/identity-settings/anon-event-association.png " een diagram van anonieme gebeurtenisvereniging."){zoomable="yes"}
 
 
 ## Volgende stappen

@@ -22,7 +22,7 @@ Met de gebruikersinterface van Privacy Service kunt u privacy- en compatibilitei
 
 >[!NOTE]
 >
->Voor informatie bij het beheren van nalevingsverzoeken programmatically gebruikend Privacy Service API, gelieve te zien de [&#x200B; gids van Privacy Service API &#x200B;](../api/overview.md). Zie het document geen [&#x200B; het beheren van de toestemmingen van Privacy Service &#x200B;](../permissions.md) voor meer informatie.
+>Voor informatie bij het beheren van nalevingsverzoeken programmatically gebruikend Privacy Service API, gelieve te zien de [ gids van Privacy Service API ](../api/overview.md). Zie het document geen [ het beheren van de toestemmingen van Privacy Service ](../permissions.md) voor meer informatie.
 
 ## Aanmelden bij de gebruikersinterface van [!DNL Privacy Service]
 
@@ -30,17 +30,17 @@ Met de gebruikersinterface van Privacy Service kunt u privacy- en compatibilitei
 >
 >U moet beschikken over een Adobe ID om te verifiëren bij de gebruikersinterface van [!DNL Privacy Service] .
 
-Om tot UI toegang te hebben, login aan [&#x200B; Adobe Experience Cloud &#x200B;](https://experience.adobe.com/) en selecteer **[!UICONTROL Privacy Service]** onder het snelle toegangsmenu.
+Om tot UI toegang te hebben, login aan [ Adobe Experience Cloud ](https://experience.adobe.com/) en selecteer **[!UICONTROL Privacy Service]** onder het snelle toegangsmenu.
 
-![&#x200B; het dashboard van Experience Cloud met benadrukte Privacy Service.](../images/ui-overview/quick-access.png)
+![ het dashboard van Experience Cloud met benadrukte Privacy Service.](../images/ui-overview/quick-access.png)
 
 
 ### Aanmelden vanuit [!DNL Experience Platform]
 
 Als u toegang hebt tot de gebruikersinterface van Adobe Experience Platform, kunt u de gebruikersinterface van [!DNL Privacy Service] ook openen via het tabblad **[!UICONTROL Requests]** in de linkernavigatie.
 
-![&#x200B; UI van Adobe Experience Platform met Verzoeken die in de linkernavigatiebar worden benadrukt.](../images/ui-overview/platform.png)
+![ UI van Adobe Experience Platform met Verzoeken die in de linkernavigatiebar worden benadrukt.](../images/ui-overview/platform.png)
 
 ## Volgende stappen
 
-Nu u met succes het programma hebt geopend, gelieve te verwijzen naar de [&#x200B; gebruikersgids &#x200B;](user-guide.md) voor stappen op hoe diverse verrichtingen uitvoeren gebruikend [!DNL Privacy Service] UI.
+Nu u met succes het programma hebt geopend, gelieve te verwijzen naar de [ gebruikersgids ](user-guide.md) voor stappen op hoe diverse verrichtingen uitvoeren gebruikend [!DNL Privacy Service] UI.

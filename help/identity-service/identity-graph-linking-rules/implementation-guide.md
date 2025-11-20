@@ -41,21 +41,21 @@ U moet ervoor zorgen dat de unieke naamruimte met de hoogste prioriteit altijd a
 
 Zonder een unieke naamruimte die uw persoon-id vertegenwoordigt, kunt u eindigen met een grafiek die een koppeling bevat naar verschillende personen-id&#39;s voor dezelfde ECID. In dit voorbeeld zijn zowel B2BCRM als B2CCRM tegelijkertijd gekoppeld aan dezelfde ECID. Deze grafiek suggereert dat Tom, met zijn B2C-aanmeldingsaccount, een apparaat deelde met Summer, met haar B2B-aanmeldingsaccount. Het systeem herkent echter dat dit één profiel is (grafiek samenvouwen).
 
-![&#x200B; een grafiekscenario waar twee persoon herkenningstekens met zelfde ECID verbonden zijn.](../images/graph-examples/multi_namespaces.png " de grafiekscenario van A waar twee persoonherkenningstekens met zelfde ECID verbonden zijn."){zoomable="yes"}
+![ een grafiekscenario waar twee persoon herkenningstekens met zelfde ECID verbonden zijn.](../images/graph-examples/multi_namespaces.png " de grafiekscenario van A waar twee persoonherkenningstekens met zelfde ECID verbonden zijn."){zoomable="yes"}
 
 +++
 
-+++Selecteren om een voorbeeld weer te geven van een grafiek met naamruimte voor één persoon-id
++++Selecteren om een voorbeeld weer te geven van een grafiek met een naamruimte voor één persoon-id
 
 Op basis van een unieke naamruimte (in dit geval een CRMID in plaats van twee verschillende naamruimten) kan de identiteitsdienst de persoon-id zien die het laatst aan de ECID is gekoppeld. In dit voorbeeld, omdat een unieke CRMID bestaat, kan de Dienst van de Identiteit een &quot;gedeeld apparaat&quot;scenario erkennen, waar twee entiteiten het zelfde apparaat delen.
 
-![&#x200B; een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd.](../images/graph-examples/crmid_only_multi.png " een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd."){zoomable="yes"}
+![ een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd.](../images/graph-examples/crmid_only_multi.png " een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd."){zoomable="yes"}
 
 +++
 
 ### Prioriteitsconfiguratie naamruimte
 
-Als u [&#x200B; Adobe Analytics bronschakelaar &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt om gegevens in te voeren, dan moet u uw ECIDs een hogere prioriteit geven dan identiteitskaart van Adobe Analytics (HULP) omdat de Dienst van de Identiteit HULP blokkeert. Door ECID een prioriteit te geven, kunt u Real-Time Klantprofiel de opdracht geven om niet-geverifieerde gebeurtenissen op te slaan naar ECID in plaats van naar HULP.
+Als u [ Adobe Analytics bronschakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt om gegevens in te voeren, dan moet u uw ECIDs een hogere prioriteit geven dan identiteitskaart van Adobe Analytics (HULP) omdat de Dienst van de Identiteit HULP blokkeert. Door ECID een prioriteit te geven, kunt u Real-Time Klantprofiel de opdracht geven om niet-geverifieerde gebeurtenissen op te slaan naar ECID in plaats van naar HULP.
 
 ### XDM Experience-gebeurtenissen {#xdm-experience-events}
 
@@ -94,7 +94,7 @@ Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek 
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/nl/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ U zou **niet** een nuttige lading als hieronder moeten verzenden:
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/nl/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -149,7 +149,7 @@ Daarom is het aan te raden slechts één persoon-id met uw geverifieerde gebeurt
 
 In grafieksimulatie kan deze opname er als volgt uitzien:
 
-![&#x200B; de grafieksimulatie UI met een getoonde voorbeeldgrafiek.](../images/implementation/example-graph.png " de grafieksimulatie UI met een getoonde voorbeeldgrafiek."){zoomable="yes"}
+![ de grafieksimulatie UI met een getoonde voorbeeldgrafiek.](../images/implementation/example-graph.png " de grafieksimulatie UI met een getoonde voorbeeldgrafiek."){zoomable="yes"}
 
 >[!TAB  Voor authentiek verklaarde gebeurtenissen zonder enige persoonherkenningstekens ]
 
@@ -169,7 +169,7 @@ In dit voorbeeld kunt u ervan uitgaan dat de volgende gebeurtenis naar Experienc
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/nl/",
+            "URL": "https://business.adobe.com/",
             "name": "Adobe Business"
         }
     }
@@ -185,23 +185,23 @@ De eerste stap in het implementatieproces voor Identity Service is ervoor te zor
 * [!UICONTROL View Identity Settings]: pas deze machtiging toe om unieke naamruimten en naamruimtenprioriteit weer te geven in de pagina Bladeren naar naamruimte voor identiteiten.
 * [!UICONTROL Edit Identity Settings]: pas deze machtiging toe om uw identiteitsinstellingen te kunnen bewerken en opslaan.
 
-Voor meer informatie over toestemmingen, lees de [&#x200B; gids van toestemmingen &#x200B;](../../access-control/abac/ui/permissions.md).
+Voor meer informatie over toestemmingen, lees de [ gids van toestemmingen ](../../access-control/abac/ui/permissions.md).
 
 ## Uw naamruimten maken {#namespace}
 
-Als dit voor uw gegevens nodig is, moet u eerst de juiste naamruimten voor uw organisatie maken. Voor stappen op hoe te om tot een douane te leiden namespace, lees de gids bij [&#x200B; creërend een douanespatie in UI &#x200B;](../features/namespaces.md#create-custom-namespaces).
+Als dit voor uw gegevens nodig is, moet u eerst de juiste naamruimten voor uw organisatie maken. Voor stappen op hoe te om tot een douane te leiden namespace, lees de gids bij [ creërend een douanespatie in UI ](../features/namespaces.md#create-custom-namespaces).
 
 ## Het gereedschap Grafieksimulatie gebruiken {#graph-simulation}
 
-Daarna, navigeer aan het [&#x200B; hulpmiddel van de grafieksimulatie &#x200B;](./graph-simulation.md) in de werkruimte UI van de Dienst van de Identiteit. U kunt het hulpmiddel van de grafieksimulatie gebruiken om identiteitsgrafieken te simuleren, die met een verscheidenheid van verschillende unieke namespace en namespace prioritaire configuraties worden gebouwd.
+Daarna, navigeer aan het [ hulpmiddel van de grafieksimulatie ](./graph-simulation.md) in de werkruimte UI van de Dienst van de Identiteit. U kunt het hulpmiddel van de grafieksimulatie gebruiken om identiteitsgrafieken te simuleren, die met een verscheidenheid van verschillende unieke namespace en namespace prioritaire configuraties worden gebouwd.
 
 Door verschillende configuraties te creëren, kunt u het hulpmiddel van de grafieksimulatie gebruiken om te leren en beter te begrijpen hoe het Algoritme van de Optimalisering van de Identiteit en bepaalde configuraties kunnen beïnvloeden hoe uw grafiek zich gedraagt.
 
 ## Identiteitsinstellingen configureren {#identity-settings}
 
-Zodra u een beter idee van hebt hoe u uw grafiek wilt gedragen, navigeer aan de [&#x200B; montages UI van de Identiteit &#x200B;](./identity-settings-ui.md) in de werkruimte UI van de Dienst van de Identiteit. Als u de gebruikersinterface voor identiteitsinstellingen wilt openen, selecteert u **[!UICONTROL Identities]** in de navigatie links en selecteert u **[!UICONTROL Settings]** .
+Zodra u een beter idee van hebt hoe u uw grafiek wilt gedragen, navigeer aan de [ montages UI van de Identiteit ](./identity-settings-ui.md) in de werkruimte UI van de Dienst van de Identiteit. Als u de gebruikersinterface voor identiteitsinstellingen wilt openen, selecteert u **[!UICONTROL Identities]** in de navigatie links en selecteert u **[!UICONTROL Settings]** .
 
-![&#x200B; de identiteiten doorbladeren pagina met de benadrukte montagesknoop.](../images/implementation/settings.png " de identiteiten doorbladeren pagina met de benadrukte montagesknoop."){zoomable="yes"}
+![ de identiteiten doorbladeren pagina met de benadrukte montagesknoop.](../images/implementation/settings.png " de identiteiten doorbladeren pagina met de benadrukte montagesknoop."){zoomable="yes"}
 
 Gebruik de interface voor identiteitsinstellingen om uw unieke naamruimten aan te wijzen en uw naamruimten op volgorde van prioriteit te configureren.
 
@@ -209,7 +209,7 @@ Gebruik de interface voor identiteitsinstellingen om uw unieke naamruimten aan t
 >
 >Zodra u met het toepassen van uw montages wordt gebeëindigd, moet u minstens 24 uren wachten alvorens u aan ingeste gegevens kunt te werk gaan, aangezien het minstens 24 uren voor nieuwe montages vergt om in de Dienst van de Identiteit worden weerspiegeld.
 
-Voor meer informatie, lees de [&#x200B; gids UI van de identiteitsmontages &#x200B;](./identity-settings-ui.md).
+Voor meer informatie, lees de [ gids UI van de identiteitsmontages ](./identity-settings-ui.md).
 
 ## Een XDM-schema maken {#schema}
 
@@ -217,13 +217,13 @@ Wanneer uw unieke naamruimten en naamruimteprioriteiten zijn ingesteld, kunt u n
 
 Om gegevens in het Profiel van de Klant in real time in te voeren, moet u ervoor zorgen dat uw schema minstens één gebied bevat dat als primaire identiteit is aangewezen. Door een primaire identiteit in te stellen, kunt u een bepaald schema inschakelen voor profielopname.
 
-Voor instructies op hoe te om een schema tot stand te brengen, lees de gids bij [&#x200B; creërend een schema XDM in UI &#x200B;](../../xdm/tutorials/create-schema-ui.md).
+Voor instructies op hoe te om een schema tot stand te brengen, lees de gids bij [ creërend een schema XDM in UI ](../../xdm/tutorials/create-schema-ui.md).
 
 ## Een gegevensset maken {#dataset}
 
 Daarna, creeer een dataset om een structuur voor de gegevens te verstrekken die u gaat opnemen. Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. Datasets werken in combinatie met schema&#39;s en om gegevens in te voeren in het Real-Time Klantprofiel, moet uw gegevensset zijn ingeschakeld voor het opnemen van profielen. Opdat uw dataset voor Profiel wordt toegelaten, moet het een schema van verwijzingen voorzien dat voor de opname van het Profiel wordt toegelaten.
 
-Voor instructies op hoe te om een dataset tot stand te brengen, lees de [&#x200B; gids UI van de dataset &#x200B;](../../catalog/datasets/user-guide.md).
+Voor instructies op hoe te om een dataset tot stand te brengen, lees de [ gids UI van de dataset ](../../catalog/datasets/user-guide.md).
 
 ## Gegevens verzamelen {#ingest}
 
@@ -237,7 +237,7 @@ Op dit punt, zou u het volgende moeten hebben:
 
 Als je alle hierboven vermelde objecten hebt, kun je je gegevens aan Experience Platform doorgeven. U kunt gegevensinvoer op verschillende manieren uitvoeren. U kunt de volgende services gebruiken om uw gegevens over te brengen naar Experience Platform:
 
-* [&#x200B; Partij en het stromen opname &#x200B;](../../ingestion/home.md)
+* [ Partij en het stromen opname ](../../ingestion/home.md)
 * [Gegevensverzameling in Experience Platform](../../collection/home.md)
 * [Experience Platform-bronnen](../../sources/home.md)
 
@@ -253,11 +253,11 @@ Gebruik het identiteitsdashboard voor inzicht in de staat van uw identiteitsgraf
 
 Selecteer de ellipsen (`...`) en selecteer vervolgens **[!UICONTROL View more]** voor meer informatie en om te controleren of er geen samengevouwen grafieken zijn.
 
-![&#x200B; het identiteitsdashboard in de werkruimte UI van de Dienst van de Identiteit.](../images/implementation/identity_dashboard.png " het identiteitsdashboard in de werkruimte UI van de Dienst van de Identiteit."){zoomable="yes"}
+![ het identiteitsdashboard in de werkruimte UI van de Dienst van de Identiteit.](../images/implementation/identity_dashboard.png " het identiteitsdashboard in de werkruimte UI van de Dienst van de Identiteit."){zoomable="yes"}
 
 Gebruik het venster dat verschijnt om informatie over uw samengevouwen grafieken te bekijken. In dit voorbeeld zijn zowel e-mail als telefoon gemarkeerd als unieke naamruimte. Er zijn daarom geen samengevouwen grafieken in uw sandbox.
 
-![&#x200B; het pop-up venster voor grafieken met veelvoudige identiteiten.](../images/implementation/graphs.png " het pop-up venster voor grafieken met veelvoudige identiteiten."){zoomable="yes"}
+![ het pop-up venster voor grafieken met veelvoudige identiteiten.](../images/implementation/graphs.png " het pop-up venster voor grafieken met veelvoudige identiteiten."){zoomable="yes"}
 
 ## Bijlage {#appendix}
 
@@ -273,13 +273,13 @@ De volgende grafiek simuleert een &quot;gevaarlijk&quot;loginID scenario. In dit
 
 In dit voorbeeld blijft `{loginID: ID_C}` gevaarlijk en is het niet gekoppeld aan een CRMID. Aldus, wordt de persoonentiteit waaraan deze loginID zou moeten worden geassocieerd dubbelzinnig verlaten.
 
-![&#x200B; een voorbeeld van een grafiek met een &quot;gevaarlijk&quot;loginID scenario.](../images/graph-examples/dangling_example.png " een voorbeeld van een grafiek met een gevaarlijk loginID scenario."){zoomable="yes"}
+![ een voorbeeld van een grafiek met een &quot;gevaarlijk&quot;loginID scenario.](../images/graph-examples/dangling_example.png " een voorbeeld van een grafiek met een gevaarlijk loginID scenario."){zoomable="yes"}
 
 >[!TAB  loginID is verbonden met een CRMID ]
 
 In dit voorbeeld is `{loginID: ID_C}` gekoppeld aan `{CRMID: Tom}` . Daarom kan het systeem vaststellen dat deze loginID aan Tom is gekoppeld.
 
-![&#x200B; LoginID is verbonden met een CRMID.](../images/graph-examples/id_c_tom.png " LoginID is verbonden met een CRMID."){zoomable="yes"}
+![ LoginID is verbonden met een CRMID.](../images/graph-examples/id_c_tom.png " LoginID is verbonden met een CRMID."){zoomable="yes"}
 
 >[!TAB  loginID is verbonden met een andere CRMID ]
 
@@ -287,7 +287,7 @@ In dit voorbeeld is `{loginID: ID_C}` gekoppeld aan `{CRMID: Summer}` . Daarom k
 
 In dit voorbeeld wordt ook getoond dat Tom en Summer verschillende persoonentiteiten moeten hebben die een apparaat delen, dat wordt vertegenwoordigd door `{ECID: 111}` .
 
-![&#x200B; LoginID is verbonden met een andere CRMID.](../images/graph-examples/id_c_summer.png " LoginID is verbonden met een andere CRMID."){zoomable="yes"}
+![ LoginID is verbonden met een andere CRMID.](../images/graph-examples/id_c_summer.png " LoginID is verbonden met een andere CRMID."){zoomable="yes"}
 
 >[!ENDTABS]
 

@@ -23,11 +23,11 @@ Gebruik eenvoudige query&#39;s in de [!UICONTROL Permission Manager] om beknopte
 >id="platform_permission_manager"
 >title="Machtigingsmanager"
 >abstract="Gebruik de dropdown selecteurs op de pagina om de rapporten van het toegangsniveau van verschillende granularity niveaus voor gebruikers en rollen te krijgen."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=nl-NL" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
 Selecteer het kenmerk **[!UICONTROL Users]** met het keuzemenu.
 
-![&#x200B; de daling van attributen neer het benadrukken Gebruikers.](../../images/permission-manager/users-select.png)
+![ de daling van attributen neer het benadrukken Gebruikers.](../../images/permission-manager/users-select.png)
 
 Selecteer vervolgens de **[!UICONTROL User Group]** waarnaar u wilt zoeken in de vervolgkeuzelijst.
 
@@ -35,7 +35,7 @@ Selecteer vervolgens de **[!UICONTROL User Group]** waarnaar u wilt zoeken in de
 >
 >[!UICONTROL User Group] is geen verplicht veld. U kunt slechts één gebruikersgroep voor elk rapport selecteren.
 
-![&#x200B; het drop-down van de gebruikersgroep benadrukte.](../../images/permission-manager/user-group-select.png)
+![ het drop-down van de gebruikersgroep benadrukte.](../../images/permission-manager/user-group-select.png)
 
 Voor een meer korrelig rapport kunt u de bron opgeven met handelingen in een bepaalde sandbox. Selecteer **[!UICONTROL Resource]**, **[!UICONTROL Actions]** en **[!UICONTROL Sandboxes]** met de vervolgkeuzelijst en selecteer vervolgens **[!UICONTROL Show Results]** .
 
@@ -43,11 +43,11 @@ Voor een meer korrelig rapport kunt u de bron opgeven met handelingen in een bep
 >
 >[!UICONTROL Resource] , [!UICONTROL Actions] en [!UICONTROL Sandboxes] zijn geen verplichte velden. Een actie of een zandbak kan worden verwijderd zodra toegevoegd door **&quot;x&quot;te selecteren** naast de selectie u zou willen verwijderen.
 
-![&#x200B; het Middel, de Acties, de dalingsonderverdelingen van Sandboxen, en tonen Gemarkeerde Resultaten &#x200B;](../../images/permission-manager/users-additional-attributes-select.png)
+![ het Middel, de Acties, de dalingsonderverdelingen van Sandboxen, en tonen Gemarkeerde Resultaten ](../../images/permission-manager/users-additional-attributes-select.png)
 
 Er wordt een lijst met gebruikers en hun e-mailadres gerapporteerd op basis van de geselecteerde criteria. Gebruik het filtermenu links om de kenmerken en resultaten bij te werken. Voor meer informatie over een specifieke gebruiker selecteert u de gebruikersnaam in de lijst.
 
-![&#x200B; het geproduceerde die rapport op de geselecteerde attributen wordt gebaseerd &#x200B;](../../images/permission-manager/users-report.png)
+![ het geproduceerde die rapport op de geselecteerde attributen wordt gebaseerd ](../../images/permission-manager/users-report.png)
 
 ## Zoeken naar rollen met specifieke labels {#search-roles}
 
@@ -57,11 +57,11 @@ Selecteer het kenmerk **[!UICONTROL Roles]** met het keuzemenu.
 >
 >[!UICONTROL Labels] is geen verplicht veld. U kunt meerdere labels selecteren. Deze worden onder deze vervolgkeuzelijst weergegeven wanneer u deze selecteert. Een etiket kan worden verwijderd zodra toegevoegd door **&quot;x&quot;te selecteren** naast de actie.
 
-![&#x200B; de daling van attributen neer het benadrukken Rollen.](../../images/permission-manager/roles-select.png)
+![ de daling van attributen neer het benadrukken Rollen.](../../images/permission-manager/roles-select.png)
 
 Selecteer vervolgens de **[!UICONTROL Labels]** waarnaar u wilt zoeken in de vervolgkeuzelijst.
 
-![&#x200B; de daling van Etiketten neer benadrukt.](../../images/permission-manager/roles-labels-select.png)
+![ de daling van Etiketten neer benadrukt.](../../images/permission-manager/roles-labels-select.png)
 
 Voor een meer korrelig rapport kunt u de bron opgeven met handelingen in een bepaalde sandbox. Selecteer **[!UICONTROL Resource]**, **[!UICONTROL Actions]** en **[!UICONTROL Sandboxes]** met de vervolgkeuzelijst en selecteer vervolgens **[!UICONTROL Show Results]** .
 
@@ -69,7 +69,7 @@ Voor een meer korrelig rapport kunt u de bron opgeven met handelingen in een bep
 >
 >[!UICONTROL Resource] , [!UICONTROL Actions] en [!UICONTROL Sandboxes] zijn geen verplichte velden. Voor elk rapport kan slechts één [!UICONTROL Resource] worden geselecteerd. Een actie of een zandbak kan worden verwijderd zodra toegevoegd door **&quot;x&quot;te selecteren** naast de selectie u zou willen verwijderen.
 
-![&#x200B; het Middel, de Acties, de dalingsonderverdelingen van Sandboxen, en tonen Gemarkeerde Resultaten &#x200B;](../../images/permission-manager/roles-additional-attributes-select.png)
+![ het Middel, de Acties, de dalingsonderverdelingen van Sandboxen, en tonen Gemarkeerde Resultaten ](../../images/permission-manager/roles-additional-attributes-select.png)
 
 Er wordt een lijst met rollen gerapporteerd op basis van de geselecteerde criteria. Gebruik het filtermenu links om de kenmerken en resultaten bij te werken. Selecteer de rol in de lijst voor meer informatie over een specifieke rol.
 
@@ -84,8 +84,8 @@ De volgende informatie wordt weergegeven voor elke rol die aan uw criteria voldo
 | Gemaakt op | De datum en tijdstempel van wanneer de rol is gemaakt. |
 | Gemaakt door | Details van de maker van de rol. |
 
-![&#x200B; het geproduceerde die rapport op de geselecteerde attributen wordt gebaseerd &#x200B;](../../images/permission-manager/roles-report.png)
+![ het geproduceerde die rapport op de geselecteerde attributen wordt gebaseerd ](../../images/permission-manager/roles-report.png)
 
 ## Volgende stappen
 
-U hebt nu geleerd hoe u rapporten kunt genereren voor gebruikers en rollen. Meer over op attribuut-gebaseerde toegangscontrole leren, zie het [&#x200B; op attributen-gebaseerde toegangsbeheeroverzicht &#x200B;](../overview.md).
+U hebt nu geleerd hoe u rapporten kunt genereren voor gebruikers en rollen. Meer over op attribuut-gebaseerde toegangscontrole leren, zie het [ op attributen-gebaseerde toegangsbeheeroverzicht ](../overview.md).

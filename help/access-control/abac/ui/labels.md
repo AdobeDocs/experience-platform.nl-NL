@@ -29,7 +29,7 @@ Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiks
 >id="platform_permissions_labels_about_create"
 >title="Nieuw label maken"
 >abstract="U kunt uw eigen aangepaste labels maken die aansluiten op de behoeften van uw organisatie. De etiketten van de douane kunnen worden gebruikt om zowel gegevensbeheer als toegangsbeheerconfiguraties op uw gegevens toe te passen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=nl-NL#manage-labels" text="Aangepaste labels beheren"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="Aangepaste labels beheren"
 
 >[!NOTE]
 >
@@ -37,10 +37,10 @@ Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiks
 
 Als u een nieuw label wilt maken, selecteert u de tab **[!UICONTROL Labels]** in het zijpaneel en selecteert u **[!UICONTROL Create Label]** .
 
-![&#x200B; flac-new-label &#x200B;](../../images/flac-ui/create-label.png)
+![ flac-new-label ](../../images/flac-ui/create-label.png)
 
 Het dialoogvenster **[!UICONTROL Create a new label]** wordt weergegeven, waarin u wordt gevraagd een naam, een optionele vriendelijke naam en een optionele beschrijving in te voeren.
 
-![&#x200B; nieuw-label-info &#x200B;](../../images/flac-ui/new-label-info.png)
+![ nieuw-label-info ](../../images/flac-ui/new-label-info.png)
 
 Selecteer **[!UICONTROL Confirm]** als u klaar bent.

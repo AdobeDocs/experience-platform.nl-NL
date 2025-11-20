@@ -23,14 +23,14 @@ Voor elk schema dat u in de gebruikersinterface van Experience Platform definiee
 
 Selecteer **[!UICONTROL Schemas]** in de gebruikersinterface van Experience Platform in de linkernavigatie. Zoek onder het tabblad **[!UICONTROL Browse]** het schema waarvoor u voorbeeldgegevens wilt genereren. Selecteer het uit de lijst, en de juiste spoorupdates om details over het schema te tonen. Selecteer **[!UICONTROL Download sample file]** van hier.
 
-![&#x200B; het Browse lusje van de werkruimte van Schema&#39;s met een geselecteerd schema en benadrukt dossier van de downloadsteekproef.](../images/ui/sample/sample-data.png)
+![ het Browse lusje van de werkruimte van Schema&#39;s met een geselecteerd schema en benadrukt dossier van de downloadsteekproef.](../images/ui/sample/sample-data.png)
 
 Een voorbeeld-JSON-bestand wordt gedownload door de browser. U kunt dit dossier nu als verwijzing voor gebruiken hoe te om uw gegevens te structureren wanneer het opnemen in datasets die dit schema gebruiken.
 
 ## Volgende stappen
 
-Deze handleiding besprak hoe u een voorbeeld-JSON-bestand kunt genereren op basis van een XDM-schema in de gebruikersinterface van Experience Platform. Leren hoe te om steekproefgegevens te produceren gebruikend de Registratie API van het Schema, zie de [&#x200B; gids van het het eindpunt van steekproefgegevens &#x200B;](../api/sample-data.md).
+Deze handleiding besprak hoe u een voorbeeld-JSON-bestand kunt genereren op basis van een XDM-schema in de gebruikersinterface van Experience Platform. Leren hoe te om steekproefgegevens te produceren gebruikend de Registratie API van het Schema, zie de [ gids van het het eindpunt van steekproefgegevens ](../api/sample-data.md).
 
-Zodra u bereid bent om gegevens in te voeren, zie het leerprogramma op [&#x200B; in kaart brengen een Csv- dossier aan XDM &#x200B;](../../ingestion/tutorials/map-csv/overview.md) om te leren hoe te om een vlak gegevensdossier (zoals CSV) aan een XDM- schema in kaart te brengen en het in Experience Platform in te voeren. Alternatief, kunt u a [&#x200B; bronverbinding &#x200B;](../../sources/home.md) vestigen om uw gegevens van een externe bron in te brengen en het in kaart te brengen aan XDM.
+Zodra u bereid bent om gegevens in te voeren, zie het leerprogramma op [ in kaart brengen een Csv- dossier aan XDM ](../../ingestion/tutorials/map-csv/overview.md) om te leren hoe te om een vlak gegevensdossier (zoals CSV) aan een XDM- schema in kaart te brengen en het in Experience Platform in te voeren. Alternatief, kunt u a [ bronverbinding ](../../sources/home.md) vestigen om uw gegevens van een externe bron in te brengen en het in kaart te brengen aan XDM.
 
-Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte in UI, verwijs naar het [[!UICONTROL Schemas] overzicht van de werkruimte &#x200B;](./overview.md).
+Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte in UI, verwijs naar het [[!UICONTROL Schemas] overzicht van de werkruimte ](./overview.md).

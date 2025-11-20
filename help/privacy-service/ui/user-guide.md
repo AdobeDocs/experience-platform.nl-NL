@@ -30,13 +30,13 @@ Dit document bevat stappen voor het maken en beheren van privacyverzoeken via de
 
 Het dashboard voor [!DNL Privacy Service] UI verstrekt twee widgets die u toestaan om de status van uw privacybanen te bekijken: &quot;[!UICONTROL Status Report]&quot; en &quot;[!UICONTROL Job Requests]&quot;. Op het dashboard wordt ook de huidige geselecteerde regelgeving voor de weergegeven taken weergegeven.
 
-![&#x200B; UI dashboard &#x200B;](../images/user-guide/dashboard.png)
+![ UI dashboard ](../images/user-guide/dashboard.png)
 
 ### Type verordening
 
 [!DNL Privacy Service] ondersteunt taakaanvragen voor verschillende privacyregels. In de volgende tabel worden de ondersteunde regels en het bijbehorende label weergegeven, zoals weergegeven in de gebruikersinterface.
 
-Verwijs naar het [&#x200B; overzicht van de Regels van de Privacy &#x200B;](../regulations/overview.md) voor een beschrijving van elke verordening die de consumentenrechten en mandated bedrijfsverplichtingen verklaart.
+Verwijs naar het [ overzicht van de Regels van de Privacy ](../regulations/overview.md) voor een beschrijving van elke verordening die de consumentenrechten en mandated bedrijfsverplichtingen verklaart.
 
 >[!TIP]
 >
@@ -80,15 +80,15 @@ Verwijs naar het [&#x200B; overzicht van de Regels van de Privacy &#x200B;](../r
 
 >[!NOTE]
 >
->Zie het overzicht op [&#x200B; gesteunde privacyverordeningen &#x200B;](../regulations/overview.md) voor meer informatie over de wettelijke context van elke verordening.
+>Zie het overzicht op [ gesteunde privacyverordeningen ](../regulations/overview.md) voor meer informatie over de wettelijke context van elke verordening.
 
 Taken voor elk type regelgeving worden afzonderlijk bijgehouden. Als u wilt schakelen tussen regelgevingstypen, selecteert u het vervolgkeuzemenu **[!UICONTROL Regulation Type]** en selecteert u de gewenste regeling in de lijst.
 
-![&#x200B; de console van Privacy Service met het drop-down Type van Reglement.](../images/user-guide/regulation.png)
+![ de console van Privacy Service met het drop-down Type van Reglement.](../images/user-guide/regulation.png)
 
 Als u het regulatietype wijzigt, wordt het dashboard bijgewerkt en worden alle bewerkingen, filters, widgets en dialoogvensters voor het creëren van werkgelegenheid weergegeven die van toepassing zijn op de geselecteerde verordening.
 
-![&#x200B; Bijgewerkt dashboard &#x200B;](../images/user-guide/dashboard-update.png)
+![ Bijgewerkt dashboard ](../images/user-guide/dashboard-update.png)
 
 ### Statusrapport
 
@@ -100,11 +100,11 @@ Selecteer een van de twee schakelknoppen boven de grafiek om de desbetreffende c
 
 U kunt het exacte aantal taken dat aan elk gegevenspunt op de grafieken is gekoppeld, weergeven door de muis boven het desbetreffende gegevenspunt te plaatsen.
 
-![&#x200B; muis-over gegevenspunten &#x200B;](../images/user-guide/mouse-over.png)
+![ muis-over gegevenspunten ](../images/user-guide/mouse-over.png)
 
 Als u meer details over een bepaald gegevenspunt wilt weergeven, selecteert u het desbetreffende gegevenspunt om de bijbehorende taken weer te geven in de widget Taakverzoeken. Neem nota van het filter dat net boven de baanlijst wordt toegepast.
 
-![&#x200B; Toegepast filter van widget &#x200B;](../images/user-guide/apply-filter.png)
+![ Toegepast filter van widget ](../images/user-guide/apply-filter.png)
 
 >[!NOTE]
 >
@@ -118,21 +118,21 @@ De werkruimte [!UICONTROL Job Requests] bevat details over de recente taakaanvra
 >
 >De gegevens voor eerder gecreëerde banen zijn slechts 30 dagen na de voltooiingsdatum toegankelijk.
 
-U kunt de lijst filteren door trefwoorden in de zoekbalk onder de titel [!UICONTROL Job Requests] te typen. De lijst filtert automatisch terwijl u typt, tonend verzoeken die waarden bevatten die uw onderzoekstermijnen aanpassen. Het zoekveld voert een &#39;snelle&#39; zoekopdracht uit die overeenkomt met de privacytaak-id&#39;s van de taken die momenteel zijn gerenderd of geladen in de gebruikersinterface. Het is geen uitgebreide zoekopdracht naar al uw ingediende taken. Het is eerder een filter dat op de geladen resultaten wordt toegepast. Gebruik Privacy Service API aan [&#x200B; terugkeerbanen die op een specifieke verordening, datumwaaiers, of één enkele baan &#x200B;](../api/privacy-jobs.md#list) worden gebaseerd.
+U kunt de lijst filteren door trefwoorden in de zoekbalk onder de titel [!UICONTROL Job Requests] te typen. De lijst filtert automatisch terwijl u typt, tonend verzoeken die waarden bevatten die uw onderzoekstermijnen aanpassen. Het zoekveld voert een &#39;snelle&#39; zoekopdracht uit die overeenkomt met de privacytaak-id&#39;s van de taken die momenteel zijn gerenderd of geladen in de gebruikersinterface. Het is geen uitgebreide zoekopdracht naar al uw ingediende taken. Het is eerder een filter dat op de geladen resultaten wordt toegepast. Gebruik Privacy Service API aan [ terugkeerbanen die op een specifieke verordening, datumwaaiers, of één enkele baan ](../api/privacy-jobs.md#list) worden gebaseerd.
 
 >[!TIP]
 >
 >Als u records vanaf de afgelopen 30 dagen in de gebruikersinterface wilt laden, moet u naar beneden schuiven en meer batches records laden.
 
-![&#x200B; de sectie van het Verzoek van de Baan van de Console van de Privacy met het benadrukte onderzoeksgebied.](../images/user-guide/job-search.png)
+![ de sectie van het Verzoek van de Baan van de Console van de Privacy met het benadrukte onderzoeksgebied.](../images/user-guide/job-search.png)
 
 U kunt ook de zoekknop gebruiken om een query voor een privacytaak uit te voeren die een bepaald datumbereik omvat. Deze actie retourneert alle privacytaken die door uw organisatie tijdens de opgegeven tijdsperiode zijn ingediend. Selecteer het vervolgkeuzemenu **[!UICONTROL Requested on]** om een begin- en einddatum voor de query te kiezen. De beschikbare opties zijn [!UICONTROL Today] , [!UICONTROL Last 7 Days] , [!UICONTROL Last 2 Weeks] , [!UICONTROL Last 30 Days] of [!UICONTROL Custom] . Wanneer de zoekfunctie wordt gebruikt met de optie [!UICONTROL Requested on] , worden alleen taakaanvragen weergegeven die zijn verzonden tussen de gekozen datumbereiken.
 
-![&#x200B; de sectie van het Verzoek van de Baan met het onderzoeksgebied, die op dropdown menu wordt gevraagd, en benadrukte knoop van het Onderzoek.](../images/user-guide/requested-on-dropdown-menu.png)
+![ de sectie van het Verzoek van de Baan met het onderzoeksgebied, die op dropdown menu wordt gevraagd, en benadrukte knoop van het Onderzoek.](../images/user-guide/requested-on-dropdown-menu.png)
 
 Als u de details van een bepaalde taakaanvraag wilt bekijken, selecteert u de taak-id van de aanvraag in de lijst om de pagina **[!UICONTROL Job Details]** te openen.
 
-![&#x200B; GDPR UI de Details van de Baan &#x200B;](../images/user-guide/job-details.png)
+![ GDPR UI de Details van de Baan ](../images/user-guide/job-details.png)
 
 Dit dialoogvenster bevat statusinformatie over elke [!DNL Experience Cloud] -oplossing en de huidige status ten opzichte van de algemene taak. Aangezien elke privacybaan asynchroon is, toont de pagina de recentste communicatie datum en tijd (GMT) van elke oplossing, aangezien sommige meer tijd dan anderen vereisen om het verzoek te verwerken.
 
@@ -145,11 +145,11 @@ Als u de volledige taakgegevens als CSV-bestand wilt downloaden, selecteert u **
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="Instructies"
->abstract="<ul><li>Selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=nl-NL#logging-in-from-experience-platform"> Verzoeken </a> in de linkernavigatie om Ul van de Privacy te openen, dan uitgezocht <b> creeer Verzoek </b>.</li><li>Vanaf hier kunt u de aanvraagbuilder gebruiken of een JSON-bestand van betrokkenen uploaden.</li><li>Als u de aanvraagbuilder gebruikt, selecteert u het taaktype (toegang en/of verwijderen) en kiest u het type identiteit dat u opgeeft (e-mail, ECID of AID), of voert u een naamruimte voor een aangepaste identiteit in. Ga de aangewezen identiteitswaarden voor de klanten in en selecteer <b> creëren </b> wanneer gebeëindigd.</li><li>Als u een JSON-bestand uploadt, selecteert u de pijl naast Verzoek maken. Van de lijst van opties, uitgezochte <b> uploadt JSON </b> en uploadt uw dossier. Als u geen JSON- dossier hebt om te uploaden, uitgezochte <b> Download Adobe-GDPR-Request.json </b> om een malplaatje te downloaden dat u kunt bevolken. Upload JSON en selecteer <b> creëren </b> wanneer gebeëindigd.</li><li>Voor meer hulp met deze eigenschap, verwijs naar de <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=nl-NL"> gebruikersgids van Privacy Service </a> op Experience League.</li></ul>"
+>abstract="<ul><li>Selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform"> Verzoeken </a> in de linkernavigatie om Ul van de Privacy te openen, dan uitgezocht <b> creeer Verzoek </b>.</li><li>Vanaf hier kunt u de aanvraagbuilder gebruiken of een JSON-bestand van betrokkenen uploaden.</li><li>Als u de aanvraagbuilder gebruikt, selecteert u het taaktype (toegang en/of verwijderen) en kiest u het type identiteit dat u opgeeft (e-mail, ECID of AID), of voert u een naamruimte voor een aangepaste identiteit in. Ga de aangewezen identiteitswaarden voor de klanten in en selecteer <b> creëren </b> wanneer gebeëindigd.</li><li>Als u een JSON-bestand uploadt, selecteert u de pijl naast Verzoek maken. Van de lijst van opties, uitgezochte <b> uploadt JSON </b> en uploadt uw dossier. Als u geen JSON- dossier hebt om te uploaden, uitgezochte <b> Download Adobe-GDPR-Request.json </b> om een malplaatje te downloaden dat u kunt bevolken. Upload JSON en selecteer <b> creëren </b> wanneer gebeëindigd.</li><li>Voor meer hulp met deze eigenschap, verwijs naar de <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html"> gebruikersgids van Privacy Service </a> op Experience League.</li></ul>"
 
 >[!NOTE]
 >
->Als u een privacytaakverzoek wilt maken, moet u identiteitsgegevens opgeven voor de specifieke klanten van wie de gegevens moeten worden benaderd of verwijderd. Gelieve te herzien het document op [&#x200B; identiteitsgegevens voor privacyverzoeken &#x200B;](../identity-data.md) alvorens met deze sectie verder te gaan.
+>Als u een privacytaakverzoek wilt maken, moet u identiteitsgegevens opgeven voor de specifieke klanten van wie de gegevens moeten worden benaderd of verwijderd. Gelieve te herzien het document op [ identiteitsgegevens voor privacyverzoeken ](../identity-data.md) alvorens met deze sectie verder te gaan.
 
 De gebruikersinterface van [!DNL Privacy Service] biedt twee methoden om nieuwe taakaanvragen te maken:
 
@@ -160,11 +160,11 @@ De stappen voor het gebruiken van elk van deze methodes worden verstrekt in de v
 
 ### De Request Builder gebruiken {#request-builder}
 
-Met de Request Builder kunt u handmatig een nieuw verzoek voor een privacytaak maken in de gebruikersinterface. De Bouwer van het Verzoek wordt best gebruikt voor eenvoudigere en kleinere reeksen verzoeken, omdat de de grensverzoeken van de Bouwer van het Verzoek om slechts identiteitskaart type per gebruiker te hebben. Voor meer gecompliceerde verzoeken, kan het beter [&#x200B; een JSON- dossier &#x200B;](#json) in plaats daarvan uploaden.
+Met de Request Builder kunt u handmatig een nieuw verzoek voor een privacytaak maken in de gebruikersinterface. De Bouwer van het Verzoek wordt best gebruikt voor eenvoudigere en kleinere reeksen verzoeken, omdat de de grensverzoeken van de Bouwer van het Verzoek om slechts identiteitskaart type per gebruiker te hebben. Voor meer gecompliceerde verzoeken, kan het beter [ een JSON- dossier ](#json) in plaats daarvan uploaden.
 
 Selecteer **[!UICONTROL Create Request]** onder de widget Statusrapport aan de rechterkant van het scherm om de Request Builder te gaan gebruiken.
 
-![&#x200B; Uitgezochte Create Verzoek &#x200B;](../images/user-guide/create-request.png)
+![ Uitgezochte Create Verzoek ](../images/user-guide/create-request.png)
 
 Het dialoogvenster **[!UICONTROL Create Request]** wordt geopend met de beschikbare opties voor het indienen van een aanvraag voor een privacytaak voor het momenteel geselecteerde regulatietype.
 
@@ -200,7 +200,7 @@ Wanneer u complexere aanvragen maakt, zoals aanvragen die meerdere id-typen gebr
 
 Selecteer de pijl naast **[!UICONTROL Create Request]** onder de widget Statusrapport aan de rechterkant van het scherm. Selecteer **[!UICONTROL Upload JSON]** in de lijst met opties die wordt weergegeven.
 
-![&#x200B; de creatieopties van het verzoek &#x200B;](../images/user-guide/create-options.png)
+![ de creatieopties van het verzoek ](../images/user-guide/create-options.png)
 
 Het dialoogvenster **[!UICONTROL Upload JSON]** wordt weergegeven en geeft u een venster waarin u uw JSON-bestand kunt slepen en neerzetten.
 
@@ -220,4 +220,4 @@ Selecteer **[!UICONTROL Create]** als u klaar bent. Het dialoogvenster verdwijnt
 
 Door dit document te lezen, hebt u geleerd hoe u de gebruikersinterface van [!DNL Privacy Service] kunt gebruiken om een privacytaak te maken, de gegevens van een taak te bekijken en de verwerkingsstatus van de taak te controleren en de resultaten te downloaden zodra deze zijn voltooid.
 
-Voor stappen op hoe te om deze verrichtingen programmatically uit te voeren gebruikend [!DNL Privacy Service] API, gelieve te verwijzen naar de [&#x200B; API gids &#x200B;](../api/overview.md).
+Voor stappen op hoe te om deze verrichtingen programmatically uit te voeren gebruikend [!DNL Privacy Service] API, gelieve te verwijzen naar de [ API gids ](../api/overview.md).

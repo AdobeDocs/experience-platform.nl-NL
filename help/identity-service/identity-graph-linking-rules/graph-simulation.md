@@ -16,11 +16,11 @@ ht-degree: 0%
 >title="Grafieksimulatie"
 >abstract="Simuleer grafieken om te begrijpen hoe de Dienst van de Identiteit identiteiten verbindt, en hoe het Algoritme van de Optimalisering van de Identiteit werkt."
 
-[!DNL Graph Simulation] is een hulpmiddel in de Dienst UI van de Identiteit die u kunt gebruiken om te simuleren hoe een identiteitsgrafiek zich op een bepaalde combinatie van identiteiten gedraagt en hoe u het [&#x200B; Algoritme van de Optimalisering van de Identiteit &#x200B;](./identity-optimization-algorithm.md) vormt.
+[!DNL Graph Simulation] is een hulpmiddel in de Dienst UI van de Identiteit die u kunt gebruiken om te simuleren hoe een identiteitsgrafiek zich op een bepaalde combinatie van identiteiten gedraagt en hoe u het [ Algoritme van de Optimalisering van de Identiteit ](./identity-optimization-algorithm.md) vormt.
 
 Bekijk de volgende video voor aanvullende informatie over het gebruik van de interface [!DNL Graph Simulation] in de gebruikersinterface van de identiteitsservice:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444049/?learn=on&enablevpops&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Lees dit document om te leren hoe u [!DNL Graph Simulation] kunt gebruiken om het gedrag van identiteitsgrafieken en hoe het grafiekalgoritme werkt beter te begrijpen.
 
@@ -28,7 +28,7 @@ Lees dit document om te leren hoe u [!DNL Graph Simulation] kunt gebruiken om he
 
 U kunt [!DNL Graph Simulation] openen in de gebruikersinterface van Adobe Experience Platform. Selecteer **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Graph Simulation]** in de bovenste koptekst.
 
-![&#x200B; de interface van de Simulatie van de Grafiek in Adobe Experience Platform UI.](../images/graph-simulation/graph-simulation.png)
+![ de interface van de Simulatie van de Grafiek in Adobe Experience Platform UI.](../images/graph-simulation/graph-simulation.png)
 
 De interface van [!DNL Graph Simulation] kan in drie secties worden verdeeld:
 
@@ -38,19 +38,19 @@ De interface van [!DNL Graph Simulation] kan in drie secties worden verdeeld:
 
 Gebeurtenissen: gebruik het deelvenster **[!UICONTROL Events]** om identiteiten toe te voegen om een grafiek te simuleren. Een volledig gekwalificeerde identiteit moet een naamruimte voor de identiteit en de bijbehorende identiteitswaarde hebben. U moet ten minste twee identiteiten toevoegen om een grafiek te simuleren. U kunt ook **[!UICONTROL Load Example]** selecteren om een vooraf geconfigureerde gebeurtenis en algoritme-instelling in te voeren.
 
-![&#x200B; het gebeurtenispaneel van het hulpmiddel van de Simulatie van de Grafiek.](../images/graph-simulation/events.png)
+![ het gebeurtenispaneel van het hulpmiddel van de Simulatie van de Grafiek.](../images/graph-simulation/events.png)
 
 >[!TAB  configuratie van het Algoritme ]
 
 Algoritmconfiguratie: gebruik het deelvenster **[!UICONTROL Algorithm configuration]** om het optimalisatiealgoritme voor uw naamruimten toe te voegen en te configureren. U kunt een naamruimte slepen en neerzetten om de respectievelijke prioriteitsvolgorde te wijzigen. U kunt ook **[!UICONTROL Unique Per Graph]** selecteren om te bepalen of een naamruimte uniek is.
 
-![&#x200B; de algoritmeconfiguratie van het hulpmiddel van de Simulatie van de Grafiek.](../images/graph-simulation/algorithm-configuration.png)
+![ de algoritmeconfiguratie van het hulpmiddel van de Simulatie van de Grafiek.](../images/graph-simulation/algorithm-configuration.png)
 
 >[!TAB  Gesimuleerde grafiekkijker ]
 
 Gesimuleerde grafiekviewer: de gesimuleerde grafiekviewer geeft de resulterende grafiek weer op basis van de gebeurtenissen die u hebt toegevoegd en het algoritme dat u hebt geconfigureerd. Een rechte lijn tussen twee identiteiten betekent dat er een koppeling tot stand wordt gebracht. Een stippellijn geeft aan dat een koppeling is verwijderd.
 
-![&#x200B; het gesimuleerde paneel van de grafiekkijker, met een voorbeeld van een gesimuleerde grafiek.](../images/graph-simulation/simulated-graph.png)
+![ het gesimuleerde paneel van de grafiekkijker, met een voorbeeld van een gesimuleerde grafiek.](../images/graph-simulation/simulated-graph.png)
 
 >[!ENDTABS]
 
@@ -58,11 +58,11 @@ Gesimuleerde grafiekviewer: de gesimuleerde grafiekviewer geeft de resulterende 
 
 Selecteer eerst **[!UICONTROL Add events]** .
 
-![&#x200B; Add geselecteerde gebeurtenisknoop.](../images/graph-simulation/add-events.png)
+![ Add geselecteerde gebeurtenisknoop.](../images/graph-simulation/add-events.png)
 
 Er wordt een pop-upvenster weergegeven voor [!UICONTROL Event #1] . Voer van hieruit de naamruimte en de combinatie van identiteitswaarden in. U kunt het vervolgkeuzemenu gebruiken om een naamruimte voor identiteit te selecteren. U kunt ook in de eerste paar letters van een naamruimte typen en vervolgens de opties selecteren die in het vervolgkeuzemenu zijn opgegeven. Nadat u de naamruimte hebt geselecteerd, geeft u een identiteitswaarde op die overeenkomt met de naamruimte.
 
-![&#x200B; het venster van Event #1 met een lege interface.](../images/graph-simulation/event-one.png)
+![ het venster van Event #1 met een lege interface.](../images/graph-simulation/event-one.png)
 
 >[!TIP]
 >
@@ -70,25 +70,25 @@ Er wordt een pop-upvenster weergegeven voor [!UICONTROL Event #1] . Voer van hie
 
 Zodra uw eerste identiteit volledig is, selecteer toevoegen pictogram (**`+`**) om een tweede identiteit toe te voegen.
 
-![&#x200B; de eerste volledig gekwalificeerde identiteit van {E-mail: tom@acme.com} wordt ingevoerd in het paneel van Gebeurtenissen van de Simulatie van de Grafiek.](../images/graph-simulation/event-one-added.png)
+![ de eerste volledig gekwalificeerde identiteit van {E-mail: tom@acme.com} wordt ingevoerd in het paneel van Gebeurtenissen van de Simulatie van de Grafiek.](../images/graph-simulation/event-one-added.png)
 
 Herhaal vervolgens dezelfde stappen en voeg een tweede identiteit toe. Twee volledig gekwalificeerde identiteiten zijn vereist om een identiteitsgrafiek te produceren. In het onderstaande voorbeeld wordt een ECID toegevoegd als een naamruimte en krijgt deze de waarde `111` . Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![&#x200B; Een tweede identiteit van {ECID: 111} wordt toegevoegd aan Gebeurtenis #1.](../images/graph-simulation/first-event.png)
+![ Een tweede identiteit van {ECID: 111} wordt toegevoegd aan Gebeurtenis #1.](../images/graph-simulation/first-event.png)
 
 De interface van [!UICONTROL Events] wordt bijgewerkt om uw eerste gebeurtenis weer te geven, in dit geval: `{Email: tom@acme.com, ECID: 111}` .
 
-![&#x200B; de bijgewerkte gebeurtenisinterface met {E-mail: tom@acme.com, ECID: 111}.](../images/graph-simulation/add-second-event.png)
+![ de bijgewerkte gebeurtenisinterface met {E-mail: tom@acme.com, ECID: 111}.](../images/graph-simulation/add-second-event.png)
 
 Herhaal vervolgens dezelfde stappen om een tweede gebeurtenis toe te voegen. Voeg bij Gebeurtenis nr. 2 `{Email: summer@acme.com}` toe als uw eerste identiteit en voeg vervolgens hetzelfde `{ECID: 111}` toe als de tweede identiteit, zodat een tweede gebeurtenis van: `{Email: summer@acme.com}, {ECID: 111}` wordt gemaakt. Als u klaar bent, hebt u twee gebeurtenissen nodig: een voor `{Email: tom@acme.com, ECID: 111}` en een voor `{Email: summer@acme.com}, {ECID: 111}` .
 
-![&#x200B; de bijgewerkte gebeurtenisinterface met twee gebeurtenissen.](../images/graph-simulation/two-events.png)
+![ de bijgewerkte gebeurtenisinterface met twee gebeurtenissen.](../images/graph-simulation/two-events.png)
 
 ### Voorbeeld laden {#load-example}
 
 Selecteer **[!UICONTROL Load example]** om een voorbeeldgrafiek met een vooraf ingestelde algoritme en gebeurtenisconfiguratie op te zetten.
 
-![&#x200B; de geselecteerde het voorbeeldoptie van de Lading.](../images/graph-simulation/load-example.png)
+![ de geselecteerde het voorbeeldoptie van de Lading.](../images/graph-simulation/load-example.png)
 
 Er verschijnt een pop-upvenster met beschikbare grafiekscenario&#39;s waaruit u kunt kiezen:
 
@@ -98,37 +98,37 @@ Er verschijnt een pop-upvenster met beschikbare grafiekscenario&#39;s waaruit u 
 | Ongeldige (niet-unieke) telefoon | Ongeldige of niet-unieke telefoon verwijst naar scenario&#39;s waar twee verschillende gebruikers het zelfde telefoonaantal gebruiken om een rekening tot stand te brengen. | Een moeder en haar dochter gebruiken hun gedeelde huistelefoonnummer om zich aan te melden voor e-commerceaccounts. |
 | Ongeldige identiteitswaarden | De &quot;slechte&quot;identiteitswaarden verwijzen naar scenario&#39;s waar de Dienst van de Identiteit niet-unieke IDFAs wegens onjuiste implementatie produceert. | WebSDK verzendt ten onrechte een `user_null` -waarde voor elke gebeurtenis vanwege problemen met de implementatie van code. |
 
-![&#x200B; een venster van A dat de beschikbare pre-gevormde voorbeelden toont: gedeeld apparaat, ongeldige telefoon, en slechte identiteitswaarden.](../images/graph-simulation/example-options.png)
+![ een venster van A dat de beschikbare pre-gevormde voorbeelden toont: gedeeld apparaat, ongeldige telefoon, en slechte identiteitswaarden.](../images/graph-simulation/example-options.png)
 
 Selecteer een van de opties om [!DNL Graph Simulation] te laden met vooraf geconfigureerde gebeurtenissen en algoritme. U kunt nog verdere configuraties aan om het even welke vooraf geladen voorbeelden van grafiekscenario&#39;s maken.
 
-![&#x200B; de gebeurtenissen en het algoritme voor ongeldige telefoon wordt gevormd die.](../images/graph-simulation/example-loaded.png)
+![ de gebeurtenissen en het algoritme voor ongeldige telefoon wordt gevormd die.](../images/graph-simulation/example-loaded.png)
 
 Selecteer **[!UICONTROL Simulate]** als u klaar bent.
 
-![&#x200B; een voorbeeldgrafiek die voor ongeldige telefoon wordt gesimuleerd.](../images/graph-simulation/example-simulated.png)
+![ een voorbeeldgrafiek die voor ongeldige telefoon wordt gesimuleerd.](../images/graph-simulation/example-simulated.png)
 
 ### Tekstversie gebruiken {#use-text-version}
 
 U kunt de tekstmodus ook gebruiken om gebeurtenissen te configureren. Als u de tekstmodus wilt gebruiken, selecteert u het instellingspictogram en selecteert u vervolgens **[!UICONTROL Text (Advanced users)]** .
 
-![&#x200B; het geselecteerde montagespictogram.](../images/graph-simulation/settings.png)
+![ het geselecteerde montagespictogram.](../images/graph-simulation/settings.png)
 
 U kunt uw identiteiten handmatig invoeren in de tekstmodus. Gebruik een dubbele punt (`:`) om de identiteitswaarde te onderscheiden die met namespace beantwoordt die u invoert, en dan een komma (`,`) gebruikt om uw identiteiten te scheiden. Als u verschillende gebeurtenissen van elkaar wilt onderscheiden, gebruikt u een nieuwe regel voor elke gebeurtenis.
 
-![&#x200B; het gebeurtenispaneel dat de versie van de tekstwijze gebruikt.](../images/graph-simulation/text-version.png)
+![ het gebeurtenispaneel dat de versie van de tekstwijze gebruikt.](../images/graph-simulation/text-version.png)
 
 ### Gebeurtenis Edit {#edit-event}
 
 Als u een gebeurtenis wilt bewerken, selecteert u de ovalen (`...`) naast een bepaalde gebeurtenis en selecteert u vervolgens **[!UICONTROL Edit]** .
 
-![&#x200B; uitgeeft geselecteerd gebeurtenispictogram.](../images/graph-simulation/edit.png)
+![ uitgeeft geselecteerd gebeurtenispictogram.](../images/graph-simulation/edit.png)
 
 ### Gebeurtenis delete {#delete-event}
 
 Als u een gebeurtenis wilt verwijderen, selecteert u de ovalen (`...`) naast een bepaalde gebeurtenis en selecteert u vervolgens **[!UICONTROL Delete]** .
 
-![&#x200B; het geselecteerde pictogram van de schrappingsgebeurtenis.](../images/graph-simulation/delete.png)
+![ het geselecteerde pictogram van de schrappingsgebeurtenis.](../images/graph-simulation/delete.png)
 
 ## Algoritme configureren {#configure-algorithm}
 
@@ -138,11 +138,11 @@ Als u een gebeurtenis wilt verwijderen, selecteert u de ovalen (`...`) naast een
 
 Nadat u de gebeurtenissen hebt toegevoegd, kunt u nu het algoritme configureren dat wordt gebruikt om de grafiek te simuleren. Selecteer eerst **[!UICONTROL Add config]** .
 
-![&#x200B; het paneel van de algoritmeconfiguratie.](../images/graph-simulation/add-config.png)
+![ het paneel van de algoritmeconfiguratie.](../images/graph-simulation/add-config.png)
 
 Er wordt een lege configuratieregel weergegeven. Voer eerst dezelfde naamruimte in als u hebt gebruikt voor uw gebeurtenissen. In dit geval voert u eerst e-mail in. Nadat u de naamruimte hebt ingevoerd, worden de kolommen voor [!UICONTROL Identity Symbol] en [!UICONTROL Identity Type] automatisch ingevuld.
 
-![&#x200B; De eerste configuratieingang.](../images/graph-simulation/add-namespace.png)
+![ De eerste configuratieingang.](../images/graph-simulation/add-namespace.png)
 
 Herhaal vervolgens dezelfde stappen en voeg uw tweede naamruimte toe, in dit geval de ECID. Zodra al uw namespaces zijn ingegaan, kunt u beginnen hun prioriteiten en uniciteit te vormen.
 
@@ -153,7 +153,7 @@ Om namespace prioriteit te vormen, selecteer en sleep de namespace rijen aan de 
 
 Selecteer **[!UICONTROL Simulate]** als u klaar bent.
 
-![&#x200B; Alle gevormde namespaces.](../images/graph-simulation/all-namespaces.png)
+![ Alle gevormde namespaces.](../images/graph-simulation/all-namespaces.png)
 
 ## Gesimuleerde grafiek weergeven
 
@@ -170,7 +170,7 @@ In de onderstaande voorbeeldgrafiek bestaat een stippellijn tussen `{Email: tom@
 * De e-mail is als uniek aangewezen tijdens de stap van de algoritmeconfiguratie. Daarom kan er slechts één identiteit met een naamruimte E-mail in een grafiek bestaan.
 * De koppeling tussen `{Email: tom@acme.com}` en `{ECID: 111}` was de eerste bestaande identiteit (gebeurtenis nr. 1). Het is de oudste schakel en wordt daarom verwijderd.
 
-![&#x200B; het gesimuleerde paneel van de grafiekkijker, met een voorbeeld van een gesimuleerde grafiek.](../images/graph-simulation/simulated-graph.png)
+![ het gesimuleerde paneel van de grafiekkijker, met een voorbeeld van een gesimuleerde grafiek.](../images/graph-simulation/simulated-graph.png)
 
 ## Volgende stappen
 

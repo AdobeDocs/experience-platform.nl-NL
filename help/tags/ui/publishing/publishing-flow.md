@@ -18,7 +18,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 De publicatiestroom voor tags in Adobe Experience Platform verwijst naar het proces van het maken van bibliotheken, het testen van builds en het goedkeuren van deze voor productie.
 
@@ -36,7 +36,7 @@ Er zijn verschillende niveaus van gebruikersmachtigingen die belangrijk zijn voo
 
 Deze rechten zijn niet inclusief. Eén persoon kan de workflow van begin tot eind alleen uitvoeren als aan die persoon alle drie rechten binnen een bepaalde eigenschap zijn toegekend.
 
-Zie de [&#x200B; gids van de gebruikerstoestemmingen &#x200B;](../administration/user-permissions.md) voor meer informatie bij het beheren van toestemmingen voor markeringen.
+Zie de [ gids van de gebruikerstoestemmingen ](../administration/user-permissions.md) voor meer informatie bij het beheren van toestemmingen voor markeringen.
 
 ## Status van bibliotheek {#state}
 
@@ -127,4 +127,4 @@ De sectie breidt zich uit om de individuele middelen te tonen die van upstream w
 
 ## Volgende stappen
 
-Deze handleiding biedt een uitgebreid overzicht van de publicatiestroom voor bibliotheken in Adobe Experience Platform. Meer over leren hoe te om uw bibliotheken te publiceren, verwijs naar het [&#x200B; het publiceren overzicht &#x200B;](./overview.md).
+Deze handleiding biedt een uitgebreid overzicht van de publicatiestroom voor bibliotheken in Adobe Experience Platform. Meer over leren hoe te om uw bibliotheken te publiceren, verwijs naar het [ het publiceren overzicht ](./overview.md).
