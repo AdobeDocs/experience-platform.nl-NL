@@ -182,4 +182,4 @@ Om de beschikbare pre-gevormde metriek en visualisaties voor de [&#x200B; profie
 
 Bekijk de volgende video om uw inzicht in dashboards in Experience Platform te versterken:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432449?captions=dut&quality=12&learn=on)

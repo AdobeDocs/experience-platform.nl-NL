@@ -409,7 +409,7 @@ Het schema &quot;Loyalty Member&quot; is ook beschikbaar voor weergave en beheer
 
 In de volgende video ziet u hoe u een eenvoudig schema maakt in de gebruikersinterface van [!DNL Experience Platform] .
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430226?captions=dut&quality=12&learn=on)
 
 De volgende video is bedoeld om u meer inzicht te geven in het werken met veldgroepen en klassen.
 

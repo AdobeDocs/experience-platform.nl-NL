@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Bekijk de volgende video voor aanvullende informatie over het gebruik van de interface [!DNL Graph Simulation] in de gebruikersinterface van de identiteitsservice:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444049/?captions=dut&learn=on&enablevpops)
 
 Lees dit document om te leren hoe u [!DNL Graph Simulation] kunt gebruiken om het gedrag van identiteitsgrafieken en hoe het grafiekalgoritme werkt beter te begrijpen.
 

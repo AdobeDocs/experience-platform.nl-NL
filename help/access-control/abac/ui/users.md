@@ -42,7 +42,7 @@ De overgang naar Adobe Experience Platform-machtigingen bevat aanvullende stappe
 
 De volgende video is bedoeld om uw inzicht in ontwikkelaars en API geloofsbrieven te steunen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446404/?captions=dut&learn=on)
 
 ## Volgende stappen
 

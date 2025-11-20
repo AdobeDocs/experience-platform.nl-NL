@@ -325,5 +325,5 @@ De volgende video is bedoeld als ondersteuning voor uw inzicht in het opnemen va
 >
 > De gebruikersinterface van [!DNL Experience Platform] in de volgende video is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
->[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430252?captions=dut&quality=12&learn=on)
 
