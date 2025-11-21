@@ -49,5 +49,5 @@ ht-degree: 50%
    * [De namen van de lijst van toestemmingen en middeltypes](api/permissions-and-resource-types.md)
    * [Effectief beleid weergeven](api/effective-policies.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/access-control/)
+* [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/access-control/)
 * [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

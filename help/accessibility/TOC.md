@@ -16,5 +16,5 @@ ht-degree: 71%
 * [Toegankelijkheidsfuncties](features.md)
 * [Aangepaste toegankelijkheid voor Experience Platform](custom.md)
 * [Experience Platform-documentatie](https://experienceleague.adobe.com/docs/experience-platform.html)
-* [ overzicht van Experience Platform ](https://www.adobe.com/go/platform-overview-en)
+* [&#x200B; overzicht van Experience Platform &#x200B;](https://www.adobe.com/go/platform-overview-en)
 * [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

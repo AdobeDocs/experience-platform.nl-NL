@@ -28,7 +28,7 @@ Meer details over de verbeteringen die voor Real-Time CDP B2B edition zijn aange
 
 ## XDM
 
-Real-Time CDP B2B edition biedt verschillende nieuwe XDM-schemaklassen, veldgroepen en relatietypen om uw gegevens specifiek voor B2B-doeleinden vast te leggen en te structureren. Zie het overzicht op [ XDM in Real-Time CDP B2B edition ](./schemas/b2b.md) voor een uitsplitsing van elk van deze verhogingen.
+Real-Time CDP B2B edition biedt verschillende nieuwe XDM-schemaklassen, veldgroepen en relatietypen om uw gegevens specifiek voor B2B-doeleinden vast te leggen en te structureren. Zie het overzicht op [&#x200B; XDM in Real-Time CDP B2B edition &#x200B;](./schemas/b2b.md) voor een uitsplitsing van elk van deze verhogingen.
 
 Door vooraf geconfigureerde B2B-schema&#39;s te gebruiken, kunt u gegevens in een gestandaardiseerde, activeerbare structuur inbrengen. Veel van de nieuwe schemaklassen wijzen bijna direct aan die in mainstream CRMs zoals [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo], en andere B2B gegevensbronnen aan. Met Real-Time CDP B2B edition kunt u gegevens van B2B-bronnen op een eenvoudige manier naar Experience Platform overbrengen, met resultaten die eenvoudig te controleren zijn.
 
@@ -65,13 +65,13 @@ Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen 
 >
 >De [!DNL Marketo] bron is **niet** wordt vereist om Real-Time CDP B2B edition te gebruiken.
 
-Zie de [ bronnen in Real-Time CDP B2B edition ](./sources/b2b.md) documentatie voor meer informatie over Marketo en het brengen van B2B gegevens in Experience Platform.
+Zie de [&#x200B; bronnen in Real-Time CDP B2B edition &#x200B;](./sources/b2b.md) documentatie voor meer informatie over Marketo en het brengen van B2B gegevens in Experience Platform.
 
 ## B2B-bestemmingen
 
 Experience Platform-bestemmingen zoals Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads en Google Ad Manager zijn beschikbaar en volledig ondersteund door Real-Time CDP B2B edition. De Marketo Engage-bestemming streamt ook segmentlidmaatschapsgegevens uit Experience Platform en maakt deze beschikbaar als lijsten in Marketo.
 
-Zie het overzicht op de [ Bestemming van Marketo Engage ](../destinations/catalog/adobe/marketo-engage.md) voor meer informatie.
+Zie het overzicht op de [&#x200B; Bestemming van Marketo Engage &#x200B;](../destinations/catalog/adobe/marketo-engage.md) voor meer informatie.
 
 Voor bedrijven met meer dan één CRM biedt Real-Time CDP B2B edition de optie om bestemmingsschakelaars aan afzonderlijke instanties van Marketo of CRM te vormen. Indien vereist, kunt u bestemmingsschakelaars aan elke instantie vormen en publiek naar elk van de instanties van CRM onafhankelijk verzenden.
 

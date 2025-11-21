@@ -17,7 +17,7 @@ ht-degree: 2%
 >
 >Aangezien waarschuwingen worden ondersteund in zowel productie- als ontwikkelingssandboxen, kunt u zich hierop in elke sandbox abonneren. Wanneer een sandbox opnieuw wordt ingesteld, worden ook alle abonnementswaarschuwingen opnieuw ingesteld. Wanneer een sandbox wordt verwijderd, worden alle abonnementswaarschuwingen verwijderd.
 
-Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Het alarm vermindert of elimineert de behoefte om [[!DNL Observability Insights]  API ](../api/overview.md) te peilen om te controleren als een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke fouten zijn voorgekomen.
+Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Het alarm vermindert of elimineert de behoefte om [[!DNL Observability Insights]  API &#x200B;](../api/overview.md) te peilen om te controleren als een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke fouten zijn voorgekomen.
 
 Wanneer een bepaalde set voorwaarden in uw Experience Platform-bewerkingen is bereikt (zoals een mogelijk probleem wanneer het systeem een drempelwaarde overschrijdt), kan Experience Platform waarschuwingsberichten verzenden aan gebruikers in uw organisatie die zich op deze gebruikers hebben geabonneerd. Deze berichten kunnen over een vooraf bepaald tijdinterval herhalen tot het alarm is opgelost.
 
@@ -41,7 +41,7 @@ Een alarm kan in de volgende componenten worden verdeeld:
 
 | Component | Beschrijving |
 | --- | --- |
-| **Metrisch** | Een metrische van de Waarneming [ ](../api/metrics.md#available-metrics) de waarvan waarde het alarm, zoals het aantal ontbroken partijingestitiegebeurtenissen teweegbrengt (`timeseries.ingestion.dataset.batchfailed.count`). |
+| **Metrisch** | Een metrische van de Waarneming [&#x200B; &#x200B;](../api/metrics.md#available-metrics) de waarvan waarde het alarm, zoals het aantal ontbroken partijingestitiegebeurtenissen teweegbrengt (`timeseries.ingestion.dataset.batchfailed.count`). |
 | **Condition** | Een voorwaarde met betrekking tot metrisch die het alarm teweegbrengt als het aan waar, zoals telmetrisch die een bepaald aantal overschrijdt. Deze voorwaarde kan aan een vooraf bepaald tijdvenster worden geassocieerd. |
 | **Venster** | (Optioneel) De voorwaarde voor een waarschuwing kan worden beperkt tot een vooraf gedefinieerd tijdvenster. Een waarschuwing kan bijvoorbeeld worden geactiveerd afhankelijk van het aantal mislukte batches in de afgelopen vijf minuten. |
 | **Actie** | Wanneer een alarm wordt teweeggebracht, wordt een actie uitgevoerd. Specifiek, worden de berichten verzonden naar toepasselijke ontvangers door een leveringskanaal, zoals een pre-gevormde webhaak of UI van Experience Platform. |
@@ -58,7 +58,7 @@ U kunt waarschuwingen ontvangen en beheren via twee kanalen:
 
 ### I/O-gebeurtenissen {#events}
 
-U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u berichten wilt ontvangen via webhaak, moet u uw webhaak registreren voor Experience Platform-waarschuwingen in Adobe Developer Console. Zie de gids op [ het intekenen aan de berichten van de Gebeurtenis van Adobe I/O ](./subscribe.md) voor specifieke stappen.
+U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u berichten wilt ontvangen via webhaak, moet u uw webhaak registreren voor Experience Platform-waarschuwingen in Adobe Developer Console. Zie de gids op [&#x200B; het intekenen aan de berichten van de Gebeurtenis van Adobe I/O &#x200B;](./subscribe.md) voor specifieke stappen.
 
 ### EXPERIENCE PLATFORM UI {#ui}
 
@@ -81,9 +81,9 @@ Als u met waarschuwingen wilt werken in de gebruikersinterface van Experience Pl
 
 >[!NOTE]
 >
->Voor meer informatie over hoe te om toestemmingen in Experience Platform te beheren, verwijs naar de [ documentatie van de toegangscontrole ](../../access-control/ui/overview.md).
+>Voor meer informatie over hoe te om toestemmingen in Experience Platform te beheren, verwijs naar de [&#x200B; documentatie van de toegangscontrole &#x200B;](../../access-control/ui/overview.md).
 
-Met de toestemming van het Alarm van de Mening, kan ontvangen alarm bekijken door het klokpictogram (![ Pictogram van de Telling ](/help/images/icons/bell.png)) in de hoger-juiste hoek te selecteren.
+Met de toestemming van het Alarm van de Mening, kan ontvangen alarm bekijken door het klokpictogram (![&#x200B; Pictogram van de Telling &#x200B;](/help/images/icons/bell.png)) in de hoger-juiste hoek te selecteren.
 
 ![](../images/alerts/overview/ui.png)
 
@@ -91,7 +91,7 @@ Met de toestemming van het Alarm van de Mening, kan ontvangen alarm bekijken doo
 >
 > Selecteer een waarschuwing om naar een verwant dashboard te navigeren voor meer gedetailleerde informatie over waarom de alarm is teweeggebracht.
 
-Bovendien staat het [!UICONTROL Alerts] lusje in UI individuele gebruikers toe om aan specifieke waakzame types in te tekenen, en staat beheerders toe om waakzame regels geheel toe te laten of onbruikbaar te maken. Zie de [ gids UI ](./ui.md) voor meer informatie bij het beheren van alarm.
+Bovendien staat het [!UICONTROL Alerts] lusje in UI individuele gebruikers toe om aan specifieke waakzame types in te tekenen, en staat beheerders toe om waakzame regels geheel toe te laten of onbruikbaar te maken. Zie de [&#x200B; gids UI &#x200B;](./ui.md) voor meer informatie bij het beheren van alarm.
 
 ## Volgende stappen
 

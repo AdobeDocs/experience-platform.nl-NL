@@ -18,7 +18,7 @@ ht-degree: 20%
 * [Overzicht van meerdere wolken](multi-cloud.md)
 * [Whitepaper voor multibrand-ondernemingen met meerdere regio&#39;s](./multi-region-multi-brand-whitepaper.md)
 * [Edge Network- en hubvergelijking](./edge-and-hub-comparison.md)
-* [ zelfstudies van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [&#x200B; zelfstudies van Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Een klantervaring met Experience Platform (video)](video/customer-experience.md)
 * [Achter de schermen van een klantervaring met Experience Platform (video)](video/customer-experience-bts.md)
 * Aan de slag {#getting-started}
@@ -38,13 +38,13 @@ ht-degree: 20%
    * [Experience Platform-API&#39;s verifiëren en openen](api-authentication.md)
    * [API-basisbeginselen](api-fundamentals.md)
    * [Postman gebruiken met Experience Platform API&#39;s](postman.md)
-   * [ API verwijzingsdocumenten ](https://www.adobe.com/go/platform-api-reference-en)
+   * [&#x200B; API verwijzingsdocumenten &#x200B;](https://www.adobe.com/go/platform-api-reference-en)
 * Experience Platform-documentatie {#documentation}
    * [Overzicht](documentation/overview.md)
    * [Taalondersteuning](documentation/language-support.md)
 * Op Experience Platform gebaseerde toepassingen {#ecosystem}
    * [Overzicht](application-services.md)
-   * [ Adobe Real-Time Customer Data Platform (alle uitgaven) ](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [&#x200B; Adobe Real-Time Customer Data Platform (alle uitgaven) &#x200B;](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
@@ -60,7 +60,7 @@ ht-degree: 20%
       * IAB TCF 2.0 {#iab}
          * [Overzicht](./governance-privacy-security/consent/iab/overview.md)
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/iab/dataset.md)
-      * [ integreer het Web SDK van Experience Platform om toestemmings en voorkeursgegevens te verwerken ](./governance-privacy-security/consent/sdk.md)
+      * [&#x200B; integreer het Web SDK van Experience Platform om toestemmings en voorkeursgegevens te verwerken &#x200B;](./governance-privacy-security/consent/sdk.md)
    * Controlelogboeken {#audit-logs}
       * [Overzicht](./governance-privacy-security/audit-logs/overview.md)
       * Audit Query API {#audit-api}
@@ -83,11 +83,11 @@ ht-degree: 20%
 * Licentiegebruik en guardrails {#license}
    * [Aanbevolen best practices voor licentierechten voor gegevensbeheer](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)
-   * [ het gebruik en de capaciteit van de Vergunning ](./license-usage-and-guardrails/capacity.md)
+   * [&#x200B; het gebruik en de capaciteit van de Vergunning &#x200B;](./license-usage-and-guardrails/capacity.md)
    * [Totaal gegevensvolume](./license-usage-and-guardrails/total-data-volume.md)
-   * [ de guardrails van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
-   * [ de guardrails van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
-   * [ de guardrails van Real-Time CDP ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
+   * [&#x200B; de guardrails van Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [&#x200B; de guardrails van Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [&#x200B; de guardrails van Real-Time CDP &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [Gen2-gegevensmeermigratie](adls2-gen2-migration.md)
 * [Woordenlijst](glossary.md)

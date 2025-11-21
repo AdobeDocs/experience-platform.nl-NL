@@ -36,6 +36,6 @@ ht-degree: 34%
    * [Een gegevensset inschakelen voor profielupdates (upsert)](datasets/enable-upsert.md)
    * [Retentie dataset Experience-gebeurtenis in data lake](datasets/experience-event-dataset-retention-ttl-guide.md)
 * [Behandeling van een privacyverzoek in het Data Lake](privacy.md)
-* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/catalog/)
+* [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Veelgestelde vragen](catalog-faq.md)
 * [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
