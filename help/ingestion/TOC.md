@@ -49,4 +49,4 @@ ht-degree: 20%
 - [Source-connectors](source-connectors.md)
 - [&#x200B; Verwijzing van de Opname API van de Partij &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [&#x200B; Streaming Ingestie API verwijzing &#x200B;](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)

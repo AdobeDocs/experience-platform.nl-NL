@@ -63,4 +63,4 @@ ht-degree: 25%
    * [Power BI](integrations/power-bi.md)
 * [Gegevensbestanden van het query-dashboard](query.md)
 * [Insight SQL weergeven](view-sql.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
