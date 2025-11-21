@@ -75,7 +75,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 >id="platform_destinations_custom_personalization_datastream"
 >title="Gegevensstromen"
 >abstract="Met deze optie bepaalt u in welke gegevensverzamelingsgegevensstroom het publiek wordt opgenomen in het antwoord op de pagina. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. U moet een gegevensstroom vormen alvorens u uw bestemming kunt vormen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="Leer hoe u een gegevensstroom configureert"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=nl-NL" text="Leer hoe u een gegevensstroom configureert"
 
 >[!IMPORTANT]
 > 
