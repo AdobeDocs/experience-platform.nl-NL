@@ -29,4 +29,4 @@ ht-degree: 19%
    - [Gegevens controleren voor streamingsegmentatie](./ui/monitor-streaming-audiences.md)
    - B2B-bewaking {#b2b}
       - [Verbeteringstaken voor profielen controleren](./ui/b2b/monitor-profile-enrichment.md)
-- [&#x200B; de Dienst API van de Stroom &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [ de Dienst API van de Stroom ](https://www.adobe.io/experience-platform-apis/references/flow-service/)

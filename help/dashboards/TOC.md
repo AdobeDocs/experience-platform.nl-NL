@@ -30,7 +30,7 @@ ht-degree: 25%
       * [Identiteit publiek overlapt](sql-insights-query-pro-mode/templates/identity-overlaps.md)
    * Filters {#filters}
       * [Datumfilter](sql-insights-query-pro-mode/filters/date-filter.md)
-      * [&#x200B; Globale filter &#x200B;](sql-insights-query-pro-mode/filters/global-filter.md)
+      * [ Globale filter ](sql-insights-query-pro-mode/filters/global-filter.md)
    * [Doorboor](sql-insights-query-pro-mode/drill-through.md)
    * [Meer weergeven](sql-insights-query-pro-mode/view-more.md)
    * [SQL weergeven](sql-insights-query-pro-mode/view-sql.md)
@@ -63,4 +63,4 @@ ht-degree: 25%
    * [Power BI](integrations/power-bi.md)
 * [Gegevensbestanden van het query-dashboard](query.md)
 * [Insight SQL weergeven](view-sql.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

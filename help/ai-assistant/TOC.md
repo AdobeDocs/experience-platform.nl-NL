@@ -7,7 +7,7 @@ role: Admin,User,Developer,Leader
 source-git-commit: 40f7ea3e6477590dc2eed5af8aa9848901a8c204
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 27%
+ht-degree: 30%
 
 ---
 
@@ -32,5 +32,5 @@ ht-degree: 27%
    * [Overzicht van modeldetails](./model-details/overview.md)
    * [AI Assistent Natural Operational Insights Language to SQL](./model-details/natural-language-to-sql.md)
    * [Send-Time optimalisatie](./model-details/send-time-optimization.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

@@ -8,14 +8,14 @@ role: Developer
 source-git-commit: 0209c873438a3bda1b0df6434f49735c2d3e150b
 workflow-type: tm+mt
 source-wordcount: '67'
-ht-degree: 55%
+ht-degree: 56%
 
 ---
 
 
 # Adobe Experience Platform Assurance {#assurance}
 
-- [Overzicht van betrouwbaarheid](./home.md)
+- [Assurance-overzicht](./home.md)
 - [Toegang van gebruikers](./user-access.md)
 - Weergaven {#view}
    - [Gebeurtenistransacties](./views/event-transactions.md)
@@ -29,6 +29,6 @@ ht-degree: 55%
    - [Adobe Analytics](./views/adobe-analytics.md)
    - [Adobe Analytics Streaming Media](./views/adobe-analytics-streaming-media.md)
 - Tutorials {#tutorials}
-   - [Betrouwbaarheid implementeren](./tutorials/implement-assurance.md)
-   - [Betrouwbaarheid gebruiken](./tutorials/using-assurance.md)
+   - [Assurance implementeren](./tutorials/implement-assurance.md)
+   - [Assurance gebruiken](./tutorials/using-assurance.md)
 - [Problemen oplossen](./troubleshooting.md)

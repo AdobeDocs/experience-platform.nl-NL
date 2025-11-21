@@ -37,5 +37,5 @@ ht-degree: 52%
    * [Back-upobjectconfiguraties](use-cases/backup-object-configuration.md)
    * [Uitstekingscentrum](use-cases/center-of-excellence.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/sandbox)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -50,15 +50,15 @@ Met Real-Time CDP, aangedreven door Adobe Experience Platform, kan de marketingo
 
 Deze zelfstudie bevat de volgende stappen:
 
-1. Bouw het [&#x200B; klantenprofiel &#x200B;](#customer-profile).
-1. [&#x200B; personaliseer &#x200B;](#personalizing-the-user-experience) de gebruikerservaring.
-1. Gebruik [&#x200B; veelvoudige gegevensbronnen &#x200B;](#using-multiple-data-sources).
-1. [&#x200B; vorm een gegevensbron &#x200B;](#configuring-a-data-source).
-1. [&#x200B; verzamel de gegevens &#x200B;](#bringing-the-data-together-for-a-specific-customer) voor een specifieke klant.
-1. Opstelling [&#x200B; publiek &#x200B;](#audiences).
-1. Opstelling [&#x200B; bestemmingen &#x200B;](#destinations).
-1. [&#x200B; Tik het profiel over apparaten &#x200B;](#cross-device-identity-stitching).
-1. [&#x200B; analyseer het profiel &#x200B;](#analyzing-the-profile).
+1. Bouw het [ klantenprofiel ](#customer-profile).
+1. [ personaliseer ](#personalizing-the-user-experience) de gebruikerservaring.
+1. Gebruik [ veelvoudige gegevensbronnen ](#using-multiple-data-sources).
+1. [ vorm een gegevensbron ](#configuring-a-data-source).
+1. [ verzamel de gegevens ](#bringing-the-data-together-for-a-specific-customer) voor een specifieke klant.
+1. Opstelling [ publiek ](#audiences).
+1. Opstelling [ bestemmingen ](#destinations).
+1. [ Tik het profiel over apparaten ](#cross-device-identity-stitching).
+1. [ analyseer het profiel ](#analyzing-the-profile).
 
 ## Klantprofiel
 

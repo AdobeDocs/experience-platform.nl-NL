@@ -19,6 +19,6 @@ ht-degree: 64%
    * [Aan de slag](api/getting-started.md)
    * [Mappen](api/folders.md)
    * [Tags](api/tags.md)
-* UI voor Unified Tags {#ui}
+* Gebruikersinterface voor Unified Tags {#ui}
    * [Tags beheren](ui/managing-tags.md)
    * [Categorieën tags](ui/tags-categories.md)

@@ -49,11 +49,11 @@ ht-degree: 27%
       - [Inzichten ontdekken](customer-ai/user-guide/discover-insights.md)
       - [Segmenten maken met behulp van AI-scores van de klant](customer-ai/user-guide/create-segment.md)
       - [Muziek downloaden](customer-ai/user-guide/download-scores.md)
-   - [&#x200B; het oplossen van problemen van de Fout &#x200B;](customer-ai/troubleshooting.md)
+   - [ het oplossen van problemen van de Fout ](customer-ai/troubleshooting.md)
    - Datagovernance {#cai-data-governance}
       - [Toegangsbesturingselementen](customer-ai/cai-data-governance/access-controls.md)
       - [Controlelogboeken](customer-ai/cai-data-governance/audit-logs.md)
       - [Door de klant beheerde sleutels](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Datagovernance](customer-ai/cai-data-governance/data-governance.md)
       - [Beleid inzake governance](customer-ai/cai-data-governance/governance-policies.md)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

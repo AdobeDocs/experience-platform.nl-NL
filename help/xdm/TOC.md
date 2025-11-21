@@ -48,7 +48,7 @@ ht-degree: 9%
          * [Organisatie](./schema/healthcare/field-groups/organization.md)
          * [Patiënt](./schema/healthcare/field-groups/patient.md)
          * [Praktijkster](./schema/healthcare/field-groups/practioner.md)
-         * [&#x200B; Programma &#x200B;](./schema/healthcare/field-groups/schedule.md)
+         * [ Programma ](./schema/healthcare/field-groups/schedule.md)
       * Gegevenstypen {#data-types}
          * [Adres](./schema/healthcare/data-types/address.md)
          * [Aantekening](./schema/healthcare/data-types/annotation.md)
@@ -287,5 +287,5 @@ ht-degree: 9%
    * [De labels voor gegevensgebruik voor een schema beheren](tutorials/labels.md)
    * [Een ad-hocschema maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

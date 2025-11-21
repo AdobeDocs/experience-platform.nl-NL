@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '36'
-ht-degree: 69%
+ht-degree: 72%
 
 ---
 
@@ -17,6 +17,6 @@ ht-degree: 69%
 
 - [Overzicht van gegevenstoegang](home.md)
 - [API voor gegevenstoegang](api.md)
-- Zelfstudies {#tutorials}
+- Tutorials {#tutorials}
    - [Gegevenssetgegevens weergeven](tutorials/dataset-data.md)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

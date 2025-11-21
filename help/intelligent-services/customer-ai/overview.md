@@ -48,8 +48,8 @@ De volgende video is ontworpen ter ondersteuning van uw inzicht in AI van de kla
 
 ## Werking
 
-De AI van de klant werkt door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om karn of de scores van de omzetneigheidswaarde te voorspellen. De Adobe beseft dat de definitie van kurn en omzetting niet over alle gebruiksgevallen uniform is en om deze reden, hebt u de capaciteit om douanedoeldoelstellingen als reeks voorwaarden te bepalen. U kunt het voorspelde doel vormen zolang de gebeurtenis van belang binnen de gegevens van de de Gebeurtenis van de Ervaring van de consument van de input aanwezig is.
+De AI van de klant werkt door bestaande gegevens van de Gebeurtenis van de Consumentenervaring te analyseren om karn of de scores van de omzetneigheidswaarde te voorspellen. Adobe beseft dat de definitie van kurn en conversie niet overal gelijk is en daarom hebt u de mogelijkheid om aangepaste doeldoelen als een reeks voorwaarden te definiëren. U kunt het voorspelde doel vormen zolang de gebeurtenis van belang binnen de gegevens van de de Gebeurtenis van de Ervaring van de consument van de input aanwezig is.
 
 ## Volgende stappen
 
-U kunt beginnen door [&#x200B; te volgen begonnen wordt &#x200B;](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor Klant AI. Als u al uw geloofsbrieven en gegevens klaar hebt, bezoek [&#x200B; vormend een instantie van de Klant AI &#x200B;](./user-guide/configure.md). Het biedt stappen voor het gebruik van AI van de Klant.
+U kunt beginnen door [ te volgen begonnen wordt ](./getting-started.md) gids. Deze gids begeleidt u door vestiging alle vereiste eerste vereisten voor Klant AI. Als u al uw geloofsbrieven en gegevens klaar hebt, bezoek [ vormend een instantie van de Klant AI ](./user-guide/configure.md). Het biedt stappen voor het gebruik van AI van de Klant.

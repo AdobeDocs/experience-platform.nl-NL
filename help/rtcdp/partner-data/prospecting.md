@@ -14,15 +14,15 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [&#x200B; productbeschrijvingen &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
 
 Gebruik gegevensondersteuning van derden in Real-Time CDP om uw profielbasis uit te breiden met perspectiefprofielen van gegevenspartners en met hen in gesprek te gaan om nieuwe klanten te verkrijgen of te bereiken.
 
-![&#x200B; Klant die gebruikscase op hoog niveau visueel overzicht prospecteert.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
+![ Klant die gebruikscase op hoog niveau visueel overzicht prospecteert.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
 ## Waarom dit gebruiksgeval overwegen {#why-this-use-case}
 
-Merken worden tegelijkertijd geconfronteerd met enorme uitdagingen van verantwoord het uitvoeren van top-of-the-funnel gebruiksgevallen van de klantenverwerving zonder afhankelijkheid van derdekoekjes, beperkte begrotingen, en hogere vraag naar transparantie en terugkeer op ad-uitgavenpost.
+Merken worden tegelijkertijd geconfronteerd met enorme uitdagingen als het verantwoord uitvoeren van de gebruiksscenario&#39;s voor aankopen van klanten van de top-of-funnel zonder afhankelijkheid van cookies van derden, beperkte budgetten en een hogere vraag naar transparantie en rendement op ad-uitgavenuitgaven.
 
 Adobe Real-Time Customer Data Platform kan merken helpen hun door DMP ondersteunde gebruiksgevallen veilig over te zetten naar alternatieven zonder cookie, en dit op een manier die de volledige complexiteit en kracht van zelfzuchtige segmentatie, publieksbeperking en activering in één systeem brengt. Dit alles zonder afbreuk te doen aan de onvoorwaardelijke nadruk die Adobe legt op een verantwoord gebruik van gegevens via een geoctrooieerd kader voor gegevensbeheer en instemming.
 
@@ -42,9 +42,9 @@ Aangezien u het bereiken aan en het verwerven van nieuwe klanten overweegt, over
 
 Voordat u Real-Time CDP uitbreidt om nieuwe klanten aan te trekken, moet u ervoor zorgen dat u Real-Time CDP gebruikt om een robuuste basis voor uw eerste gegevens te bouwen. De workflows om dit gebruiksgeval te bereiken zijn gelijkaardig aan werkschema&#39;s om met uw bekende klanten in dienst te nemen.
 
-![&#x200B; Klant die gebruikscase op hoog niveau visueel overzicht prospecteert.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-steps.png)
+![ Klant die gebruikscase op hoog niveau visueel overzicht prospecteert.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-steps.png)
 
-1. Als a **klant**, geeft u de profielen van het vergunningsvooruitzicht van één of meerdere **gegevenspartners** om aandrijvingsbovenkant van de aanwinst van de kanaalklant te helpen.
+1. Als a **klant**, geeft u de profielen van het vergunningsperspectief van één of meerdere **gegevenspartners** om aandrijvingsbovenkant van de de klantenverwerving van funnel te helpen.
 2. Als a **klant**, breidt u uw profielgegevens en governancemodel uit om de **partner** - verstrekte lijst van perspectiefprofielen in te nemen.
 3. Als a **klant**, laadt u perspectiefprofielen in Real-Time CDP en bouwt governancebeleid om verantwoordelijk gebruik te verzekeren.
 4. Als a **klant**, bouwt u geconcentreerd publiek van de lijst van perspectiefprofielen.
@@ -55,7 +55,7 @@ Voordat u Real-Time CDP uitbreidt om nieuwe klanten aan te trekken, moet u ervoo
 
 Bekijk hieronder de videozelfstudie voor een analyse van hoe te om perspectiefpubliek te bereiken en in dienst te nemen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452863/?learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## Hoe het gebruiksgeval te bereiken: Step-by-step instructies {#step-by-step-instructions}
 
@@ -76,7 +76,7 @@ Wanneer u de stappen voor het implementeren van het gebruiksscenario uitvoert, m
 
 ### De details van het het profielprofiel van de vergunning derde van de partner {#license-profiles-from-partner}
 
-Deze stap wordt behandeld in de [&#x200B; eerste vereisten &#x200B;](#prerequisites-and-planning) en Adobe veronderstelt dat u de juiste contractuele overeenkomsten op zijn plaats met vertrouwde op gegevensverkopers hebt om perspectiefprofielen in te voeren die door de gegevenspartner worden verstrekt.
+Deze stap wordt behandeld in de [ eerste vereisten ](#prerequisites-and-planning) en Adobe veronderstelt dat u de juiste contractuele overeenkomsten op zijn plaats met vertrouwde op gegevensverkopers hebt om perspectiefprofielen in te voeren die door de gegevenspartner worden verstrekt.
 
 ### Breid uw profielgegevens en governancemodel uit om partner-verstrekte perspectiefprofielen aan te passen {#extend-governance-model}
 
@@ -93,22 +93,22 @@ De volgende componenten worden gebruikt voor identiteit, gegevensbeheer en behee
 
 Begin door een nieuw identiteitstype voor de profielen te creëren die u van de partner zult ontvangen. Hiervoor moet u in het gedeelte Identiteit een nieuwe naamruimte maken van het type **[!UICONTROL Partner ID]** .
 
-![&#x200B; creeer een nieuwe identiteitskaart van identiteitskaart van de Partner namespace.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
+![ creeer een nieuwe identiteitskaart van identiteitskaart van de Partner namespace.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* Lees meer over identiteitskaart van de Partner namespaces in de [&#x200B; sectie van identiteitstypes &#x200B;](/help/identity-service/features/namespaces.md).
-* Lees over [&#x200B; hoe te om identiteitsgebieden &#x200B;](/help/xdm/ui/fields/identity.md) in het gebruikersinterface van Experience Platform te bepalen.
+* Lees meer over identiteitskaart van de Partner namespaces in de [ sectie van identiteitstypes ](/help/identity-service/features/namespaces.md).
+* Lees over [ hoe te om identiteitsgebieden ](/help/xdm/ui/fields/identity.md) in het gebruikersinterface van Experience Platform te bepalen.
 
 #### Een nieuw schema maken met de klasse **[!UICONTROL XDM Individual Prospect Profile]**
 
 Maak vervolgens in **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** een nieuw schema en wijs hieraan de klasse **[!UICONTROL XDM Individual Prospect Profile]** toe.
 
-![&#x200B; Onderzoek naar de Individuele klasse van het Profiel van het Vooruitzicht XDM in het XDM schemabouwer.](/help/rtcdp/assets/partner-data/prospecting/xdm-individual-prospect-class.png)
+![ Onderzoek naar de Individuele klasse van het Profiel van het Vooruitzicht XDM in het XDM schemabouwer.](/help/rtcdp/assets/partner-data/prospecting/xdm-individual-prospect-class.png)
 
-Lees hoe te [&#x200B; creeer en geef schema&#39;s in UI &#x200B;](/help/xdm/ui/resources/schemas.md) uit en krijg volledige informatie over de individuele klasse van het Profiel van het Vooruitzicht XDM (verbinding aanstaande).
+Lees hoe te [ creeer en geef schema&#39;s in UI ](/help/xdm/ui/resources/schemas.md) uit en krijg volledige informatie over de individuele klasse van het Profiel van het Vooruitzicht XDM (verbinding aanstaande).
 
 De **[!UICONTROL XDM Individual Prospect Profile]** -klasse wordt vooraf geconfigureerd met de onderstaande velden. Om uw schema met partner-verstrekte attributen voor de perspectiefprofielen te verrijken, kunt u of een nieuwe gebiedsgroep met de attributen tot stand brengen die u verwacht en het aan het schema toevoegt, of u kunt één van de pre-gevormde gebiedsgroepen gebruiken die door Adobe worden verstrekt.
 
-![&#x200B; preconfigured gebieden voor de individuele klasse van het Profiel van het Vooruitzicht XDM.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
+![ preconfigured gebieden voor de individuele klasse van het Profiel van het Vooruitzicht XDM.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
 Daarna, moet u de partnerID identiteit selecteren die u vroeger als primaire identiteit voor het schema creeerde. Profielrecords moeten een primaire id bevatten. Deze stap wordt vereist om ervoor te zorgen dat de perspectiefgegevens in de opslag van het Profiel kunnen worden geladen en voor segmentatie en activering ter beschikking worden gesteld.
 
@@ -116,15 +116,15 @@ Daarna, moet u de partnerID identiteit selecteren die u vroeger als primaire ide
 >
 >De profielen van het vooruitzicht worden automatisch beperkt tot gebruiken identiteitskaart namespaces van het type van identiteitskaart van de Partner. Dit is door ontwerp en verzekert schone scheiding tussen uw eerste-partij en perspectiefprofielen.
 
-![&#x200B; Uitgezochte eerder gevormde identiteitskaart van de Partner als primaire identiteit in het schema.](/help/rtcdp/assets/partner-data/prospecting/select-partner-id-as-primary-identity.gif)
+![ Uitgezochte eerder gevormde identiteitskaart van de Partner als primaire identiteit in het schema.](/help/rtcdp/assets/partner-data/prospecting/select-partner-id-as-primary-identity.gif)
 
-Het schema is nog niet ingeschakeld voor het profiel. Schakel de profielknop in of uit om dit schema in te schakelen voor opname in de profielservice. Voor meer informatie over het toelaten van het schema voor gebruik in het Profiel van de Klant in real time, leest [&#x200B; schema tot leerprogramma.](/help/xdm/tutorials/create-schema-ui.md#profile)
+Het schema is nog niet ingeschakeld voor het profiel. Schakel de profielknop in of uit om dit schema in te schakelen voor opname in de profielservice. Voor meer informatie over het toelaten van het schema voor gebruik in het Profiel van de Klant in real time, leest [ schema tot leerprogramma.](/help/xdm/tutorials/create-schema-ui.md#profile)
 
-![&#x200B; laat schema voor profiel toe.](/help/rtcdp/assets/partner-data/prospecting/enable-schema-for-profile.png)
+![ laat schema voor profiel toe.](/help/rtcdp/assets/partner-data/prospecting/enable-schema-for-profile.png)
 
 #### Het label voor gegevensbeheer van derden toevoegen aan alle velden in het schema
 
-Overweeg labels voor gegevensbeheer van derden toe te voegen aan alle velden die het schema vormen. Dit is belangrijk om een verantwoord gebruik van gegevens van derden te waarborgen en het risico van gegevenslekkage tot een minimum te beperken. Vind meer informatie over [&#x200B; de etiketten van het het beleid van derdegegevens &#x200B;](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+Overweeg labels voor gegevensbeheer van derden toe te voegen aan alle velden die het schema vormen. Dit is belangrijk om een verantwoord gebruik van gegevens van derden te waarborgen en het risico van gegevenslekkage tot een minimum te beperken. Vind meer informatie over [ de etiketten van het het beleid van derdegegevens ](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 Hiervoor voert u de volgende stappen uit:
 
@@ -141,7 +141,7 @@ Hiervoor voert u de volgende stappen uit:
 Ook in deze stap, denk over hoe uw model van gegevensbeheer verandert aangezien u uw gegevensbeheerstrategie uitbreidt om dergegevens te omvatten die door de partner worden verstrekt. Verken de overwegingen in de documentatiekoppelingen hieronder:
 
 * (**komende spoedig**) houd derdegegevens in een afzonderlijke dataset zodat het schrappen van het en het ongedaan maken van integraties gemakkelijk is.
-* (**komende spoedig**) Gebruik de [&#x200B; functionaliteit van de gegevenssetvervaldatum &#x200B;](/help/hygiene/ui/dataset-expiration.md) op de dataset voor cliënten die de toe:voegen-op van de gegevenshygiëne kochten.
+* (**komende spoedig**) Gebruik de [ functionaliteit van de gegevenssetvervaldatum ](/help/hygiene/ui/dataset-expiration.md) op de dataset voor cliënten die de toe:voegen-op van de gegevenshygiëne kochten.
 * (**komende spoedig**) oefent voorzichtigheid uit wanneer het creëren van afgeleide datasets die zich in derdegegevens trekken, omdat eens de enige oplossing samengevoegd om de derdegegevens te verwijderen de volledige afgeleide dataset moet schrappen.
 
 ### Laad de lijst met perspectiefprofielen en inspecteer de weergave met perspectiefprofielen
@@ -158,17 +158,17 @@ Om sommige steekproefgegevens te laden en perspectiefprofielen te bevolken, cree
 4. Geef uw dataset een naam en naar keuze een beschrijving.
 5. Selecteer **[!UICONTROL Finish]**.
 
-![&#x200B; een opname van de stappen om een dataset voor perspectiefprofielen tot stand te brengen.](/help/rtcdp/assets/partner-data/prospecting/create-dataset-for-prospect-profiles.gif)
+![ een opname van de stappen om een dataset voor perspectiefprofielen tot stand te brengen.](/help/rtcdp/assets/partner-data/prospecting/create-dataset-for-prospect-profiles.gif)
 
-Merk op dat gelijkend op de stap om een schema tot stand te brengen, u de dataset moet toelaten om in het Profiel van de Klant in real time worden omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant in real time, leest [&#x200B; schema tot leerprogramma.](/help/xdm/tutorials/create-schema-ui.md#profile)
+Merk op dat gelijkend op de stap om een schema tot stand te brengen, u de dataset moet toelaten om in het Profiel van de Klant in real time worden omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant in real time, leest [ schema tot leerprogramma.](/help/xdm/tutorials/create-schema-ui.md#profile)
 
-![&#x200B; laat dataset voor profiel toe.](/help/rtcdp/assets/partner-data/prospecting/enable-dataset-for-profile.png)
+![ laat dataset voor profiel toe.](/help/rtcdp/assets/partner-data/prospecting/enable-dataset-for-profile.png)
 
 Als u een bestand wilt laden dat u van de partner hebt ontvangen in de gegevensset, selecteert u de gegevensset, schuift u omlaag in de rechtertrack en selecteert u **[!UICONTROL Add data]** . U kunt neerzetten uw dossier slepen of **[!UICONTROL Choose files]** selecteren om aan de dossierplaats te navigeren en het te selecteren.
 
-![&#x200B; voeg dossier aan dataset toe.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
+![ voeg dossier aan dataset toe.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
 
-Na het laden van de lijst van profielen van de gegevenspartner in Real-Time CDP, ga aan [&#x200B; te werk inspecteer de geladen sectie van de perspectiefprofielen &#x200B;](#inspect-profiles) om te controleren dat de perspectiefprofielen in UI bevolken.
+Na het laden van de lijst van profielen van de gegevenspartner in Real-Time CDP, ga aan [ te werk inspecteer de geladen sectie van de perspectiefprofielen ](#inspect-profiles) om te controleren dat de perspectiefprofielen in UI bevolken.
 
 #### Opzienbare gegevens door bronschakelaars
 
@@ -191,13 +191,13 @@ Het kan maximaal twee uur duren voordat de perspectiefprofielen die u net in Rea
 >
 >Let op de aanwezigheid van de kolom **[!UICONTROL Identity Namespace]** . Als u met veelvoudige gegevensverkopers werkt, gebruik deze kolom om de oorsprong van perspectiefprofielen af te leiden.
 
-![&#x200B; Mening van de perspectiefprofielen die in Real-Time CDP worden geladen.](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
+![ Mening van de perspectiefprofielen die in Real-Time CDP worden geladen.](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
 
 U kunt ook elk perspectiefprofiel selecteren voor verdere inspectie, zoals hieronder wordt weergegeven.
 
-![&#x200B; Mening van hoe te om perspectiefprofielen te inspecteren.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
+![ Mening van hoe te om perspectiefprofielen te inspecteren.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-Lees meer over [&#x200B; perspectiefprofielen &#x200B;](/help/profile/ui/prospect-profile.md).
+Lees meer over [ perspectiefprofielen ](/help/profile/ui/prospect-profile.md).
 
 ### Perspectiefpubliek maken {#create-prospect-audiences}
 
@@ -205,7 +205,7 @@ Gebruik de segmentatiefunctionaliteit in Real-Time CDP om een publiek te maken o
 
 Navigeer naar **[!UICONTROL Prospects]** > **[!UICONTROL Audiences]** om aan de slag te gaan en een publiek samen te stellen dat is samengesteld uit perspectiefprofielen.
 
-![&#x200B; Mening van perspectiefpubliek.](/help/rtcdp/assets/partner-data/prospecting/prospect-audiences.png)
+![ Mening van perspectiefpubliek.](/help/rtcdp/assets/partner-data/prospecting/prospect-audiences.png)
 
 Merk op dat de ervaring van de publieksopbouw voor perspectiefprofielen van de ervaring verschilt om publiek van uw bekende, eerste partijklanten te bouwen. Deze weergave is beperkt tot:
 
@@ -213,20 +213,20 @@ Merk op dat de ervaring van de publieksopbouw voor perspectiefprofielen van de e
 * Alleen batchprofielevaluatie.
 * Steunt niet het bouwen van publiek dat op tijd-reeksgebeurtenissen wordt gebaseerd.
 
-Lees meer over [&#x200B; perspectiefpubliek &#x200B;](/help/segmentation/types/prospect-audiences.md).
+Lees meer over [ perspectiefpubliek ](/help/segmentation/types/prospect-audiences.md).
 
 ### Activeren perspectiefprofielen aan bestemmingen {#activate-to-destinations}
 
 Maak gebruik van het potentiële publiek door hen naar bestemmingen uit te voeren. Momenteel ondersteunen alleen bepaalde cloudopslagdoelen activering van perspectiefprofielen.
 
-![&#x200B; Doelen die vooruitgangspubliek steunen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![ Doelen die vooruitgangspubliek steunen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[&#x200B; las meer &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) over het activeren van vooruitzichten aan de bestemmingen van de wolkenopslag.
+[ las meer ](/help/destinations/ui/activate-prospect-audiences.md) over het activeren van vooruitzichten aan de bestemmingen van de wolkenopslag.
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 
 Verken verdere gebruiksgevallen die door de steun van partnergegevens in Real-Time CDP worden toegelaten:
 
-* [&#x200B; Supplement eerste-partijprofielen met attributen van vertrouwde op gegevenspartners &#x200B;](/help/rtcdp/partner-data/supplement-first-party-profiles.md) om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te verkrijgen en betere publieksoptimalisering te bereiken.
-* [&#x200B; Personaliseer onsite ervaringen voor onbekende bezoekers gebruikend partner-gesteunde bezoekerserkenning &#x200B;](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder de gebruiker die of het hebben vroegere geschiedenis met uw merk voor authentiek verklaart.
-* [&#x200B; Uitgebreide activering van perspectiefprofielen en perspectiefpubliek &#x200B;](/help/destinations/ui/activate-prospect-audiences.md) om bestemmingen te selecteren.
+* [ Supplement eerste-partijprofielen met attributen van vertrouwde op gegevenspartners ](/help/rtcdp/partner-data/supplement-first-party-profiles.md) om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te verkrijgen en betere publieksoptimalisering te bereiken.
+* [ Personaliseer onsite ervaringen voor onbekende bezoekers gebruikend partner-gesteunde bezoekerserkenning ](/help/rtcdp/partner-data/onsite-personalization.md) tijdens het bezoek zonder de gebruiker die of het hebben vroegere geschiedenis met uw merk voor authentiek verklaart.
+* [ Uitgebreide activering van perspectiefprofielen en perspectiefpubliek ](/help/destinations/ui/activate-prospect-audiences.md) om bestemmingen te selecteren.

@@ -20,7 +20,7 @@ ht-degree: 20%
    - [Overzicht](streaming-ingestion/overview.md)
    - [Kafka-connector](streaming-ingestion/kafka.md)
    - [Problemen oplossen](streaming-ingestion/troubleshooting.md)
-   - [IP Adres Voegende op lijst van gewenste personen &#x200B;](streaming-ingestion/allowlisting.md)
+   - [IP Adres Voegende op lijst van gewenste personen ](streaming-ingestion/allowlisting.md)
 - Inname in batch{#batch}
    - [Aan de slag met batch-opname-API&#39;s](batch-ingestion/getting-started.md)
    - [API-overzicht](batch-ingestion/overview.md)
@@ -47,6 +47,6 @@ ht-degree: 20%
    - [Validatie van gestreamde invoer](quality/streaming-validation.md)
 - [Guardrails voor gegevensinvoer](guardrails.md)
 - [Source-connectors](source-connectors.md)
-- [&#x200B; Verwijzing van de Opname API van de Partij &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
-- [&#x200B; Streaming Ingestie API verwijzing &#x200B;](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [ Verwijzing van de Opname API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [ Streaming Ingestie API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

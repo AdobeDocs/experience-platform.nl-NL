@@ -27,7 +27,7 @@ ht-degree: 16%
    * [Onderzoeksgegevens (EDA)](jupyterlab/eda-notebook.md)
    * [Een model maken met de functie voor het maken van recept](jupyterlab/create-a-model.md)
    * [Samenwerken in JupyterLab met behulp van Git](jupyterlab/using-git-for-collaboration.md)
-* Sensei Machine Learning-API {#api}
+* API voor leren werken met Sensei {#api}
    * [Aan de slag](api/getting-started.md)
    * [Motoren](api/engines.md)
    * [MLInstances (recepten)](api/mlinstances.md)
@@ -40,7 +40,7 @@ ht-degree: 16%
    * [Recept voor productaanbevelingen](pre-built-recipes/product-recommendations.md)
    * [Voorspelling van productaankoop](pre-built-recipes/product-purchase-prediction.md)
    * [Detailhandelrecept](pre-built-recipes/retail-sales.md)
-* Modellen ontwerpen {#authoring}
+* Model Authoring {#authoring}
    * [Model Authoring SDK](authoring/sdk.md)
    * [Een functiepijpleiding maken](authoring/feature-pipeline.md)
    * [Modellen maken met de Experience Platform SDK (Python)](authoring/platform-sdk.md)
@@ -64,5 +64,5 @@ ht-degree: 16%
    * [Een model publiceren als service (API)](models-recipes/publish-model-service-api.md)
    * [Geautomatiseerde training en scoring op een service (UI) plannen](models-recipes/schedule-models-ui.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [&#x200B; API verwijzing &#x200B;](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [ API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

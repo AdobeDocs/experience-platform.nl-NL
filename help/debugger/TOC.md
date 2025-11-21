@@ -19,7 +19,7 @@ ht-degree: 50%
 * [De extensie installeren](./install-debugger.md)
 * [De extensie configureren](./configure-debugger.md)
 * [Tabblad Samenvatting](./summary.md)
-* Tabblad Oplossingen {#solutions}
+* Het tabblad Oplossingen {#solutions}
    * [Overzicht](./solutions/overview.md)
    * [Adobe Target](./solutions/target.md)
 * [Tabblad Logs](./logs.md)

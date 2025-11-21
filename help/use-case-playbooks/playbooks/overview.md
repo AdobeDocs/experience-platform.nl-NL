@@ -36,13 +36,13 @@ Gebruik de hoofdletters en kleine letters om u hier te helpen:
 * [Maak kennis met een catalogus met beschikbare afspeelboeken om sneller aan de slag te gaan met de gebruikte toepassingen](../playbooks/playbooks-list.md)
 * [Verschillende elementen maken](../playbooks/create-share-reuse.md)
 
-![&#x200B; Mening van alle playbooks &#x200B;](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
+![ Mening van alle playbooks ](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
 Elke playbook omvat informatie over het specifieke gebruiksgeval dat het oplost.
 
 Als u bijvoorbeeld een Real-Time CDP-afspeelboek selecteert, kunt u het beste een publiek genereren dat u vervolgens kunt toewijzen aan een bestemming om een marketingcampagne uit te voeren. Als u een Adobe Journey Optimizer playbook selecteert, zou uw doel kunnen zijn een klantenreis binnen uw product te construeren, en relevante overseinen naar uw klanten te verzenden.
 
-Creeer een geval van playbook om specifieke activa zoals schema&#39;s, publiek, of reizen te produceren die aan uw gebruiksgeval worden aangepast en in Experience Platform herbruikbaar zijn. Het doel van deze voorwerpen is u te helpen alle middelen begrijpen die worden vereist om uw specifiek gebruiksgeval uit te voeren. Ze bevatten geen gegevens en worden gemaakt in ontwikkelingssandboxen. Begin deze middelen te gebruiken of geef hen uit alvorens hen te gebruiken en hen te delen met uw team in Real-Time CDP of Journey Optimizer. Verhoog de gewenste elementen van de inspirerende sandbox naar een ontwikkelingssandbox en ga vervolgens verder naar een productiesandbox.
+Maak een instantie van een afspeelboek voor het genereren van specifieke elementen, zoals schema&#39;s, soorten publiek of ritten die zijn aangepast aan uw gebruikscase en die opnieuw kunnen worden gebruikt in Experience Platform. Het doel van deze voorwerpen is u te helpen alle middelen begrijpen die worden vereist om uw specifiek gebruiksgeval uit te voeren. Ze bevatten geen gegevens en worden gemaakt in ontwikkelingssandboxen. Begin deze middelen te gebruiken of geef hen uit alvorens hen te gebruiken en hen te delen met uw team in Real-Time CDP of Journey Optimizer. Verhoog de gewenste elementen van de inspirerende sandbox naar een ontwikkelingssandbox en ga vervolgens verder naar een productiesandbox.
 
 ### Video-overzicht
 
@@ -52,12 +52,12 @@ Bekijk deze video om te leren om instanties van een Hoofdlettergebruik Playbook 
 
 ## Beschikbaarheid {#availability}
 
-Sommige [!UICONTROL Use Case Playbooks] zijn toegesneden op Real-Time CDP-gebruiksgevallen, terwijl andere het meest geschikt zijn voor klanten die Journey Optimizer gebruiken. Blader in de catalogus naar de afspeelboeken die het meest geschikt zijn voor uw product en gebruik. Ontdek meer over Real-Time CDP en Journey Optimizer in de [&#x200B; beschrijvingen van het product van de Adobe &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions.html).
+Sommige [!UICONTROL Use Case Playbooks] zijn toegesneden op Real-Time CDP-gebruiksgevallen, terwijl andere het meest geschikt zijn voor klanten die Journey Optimizer gebruiken. Blader in de catalogus naar de afspeelboeken die het meest geschikt zijn voor uw product en gebruik. Ontdek meer over Real-Time CDP en Journey Optimizer in de [ productbeschrijvingen van Adobe ](https://helpx.adobe.com/legal/product-descriptions.html).
 
 ## UI-hulplijnen {#ui-guides}
 
-Nadat u de gewenste versie van het afspeelboek hebt gekozen, selecteert u deze in de gebruikersinterface en gaat u ermee aan de slag. Lees de gidsen UI op [&#x200B; hoe te om het juiste playbook van een selectie &#x200B;](/help/use-case-playbooks/playbooks/choose.md) voor u te kiezen en [&#x200B; om, playbook instanties &#x200B;](/help/use-case-playbooks/playbooks/create-share-reuse.md) voor volledige informatie tot stand te brengen te delen en opnieuw te gebruiken over hoe te om instanties tot stand te brengen en het grootste deel van een playbook te maken. Leren hoe te om diverse activa van inspirerende zandbak aan andere ontwikkelingszandbakken, en dan aan productie te bevorderen, lees de documentatie over [&#x200B; gegevensbewustzijn &#x200B;](/help/use-case-playbooks/playbooks/data-awareness.md).
+Nadat u de gewenste versie van het afspeelboek hebt gekozen, selecteert u deze in de gebruikersinterface en gaat u ermee aan de slag. Lees de gidsen UI op [ hoe te om het juiste playbook van een selectie ](/help/use-case-playbooks/playbooks/choose.md) voor u te kiezen en [ om, playbook instanties ](/help/use-case-playbooks/playbooks/create-share-reuse.md) voor volledige informatie tot stand te brengen te delen en opnieuw te gebruiken over hoe te om instanties tot stand te brengen en het grootste deel van een playbook te maken. Leren hoe te om diverse activa van inspirerende zandbak aan andere ontwikkelingszandbakken, en dan aan productie te bevorderen, lees de documentatie over [ gegevensbewustzijn ](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Problemen oplossen en bekende beperkingen {#trouble-shooting-known-limitations}
 
-Voor om het even welke kwesties kunt u terwijl het gebruiken van playbooks tegenkomen, verwijs naar het [&#x200B; oplossen van problemen en bekende beperkingen &#x200B;](/help/use-case-playbooks/playbooks/troubleshooting.md) pagina.
+Voor om het even welke kwesties kunt u terwijl het gebruiken van playbooks tegenkomen, verwijs naar het [ oplossen van problemen en bekende beperkingen ](/help/use-case-playbooks/playbooks/troubleshooting.md) pagina.

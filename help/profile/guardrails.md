@@ -18,9 +18,9 @@ Met Adobe Experience Platform kunt u persoonlijke interkanaalervaringen bieden o
 
 >[!IMPORTANT]
 >
->Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [&#x200B; Beschrijving van het Product &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 >
->Alternatief, kunt u de [&#x200B; dienst van de Capaciteit &#x200B;](../landing/license-usage-and-guardrails/capacity.md) gebruiken om uw het stromen productie en andere binnen Experience Platform te controleren en te plaatsen.
+>Alternatief, kunt u de [ dienst van de Capaciteit ](../landing/license-usage-and-guardrails/capacity.md) gebruiken om uw het stromen productie en andere binnen Experience Platform te controleren en te plaatsen.
 
 Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
 
@@ -33,9 +33,9 @@ Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw profie
 De volgende Experience Platform-services zijn betrokken bij het modelleren van realtime-klantprofielgegevens:
 
 * [[!DNL Real-Time Customer Profile]](home.md): Maak uniforme consumentenprofielen met behulp van gegevens uit meerdere bronnen.
-* [&#x200B; Identiteiten &#x200B;](../identity-service/home.md): De identiteiten van Bridge van verschillende gegevensbronnen aangezien zij in Experience Platform worden opgenomen.
-* [&#x200B; Schema&#39;s &#x200B;](../xdm/home.md): De schema&#39;s van de Gegevens van de ervaring van het Model (XDM) zijn het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-* [&#x200B; Soorten publiek &#x200B;](../segmentation/home.md): De segmenteringsmotor binnen Experience Platform wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
+* [ Identiteiten ](../identity-service/home.md): De identiteiten van Bridge van verschillende gegevensbronnen aangezien zij in Experience Platform worden opgenomen.
+* [ Schema&#39;s ](../xdm/home.md): De schema&#39;s van de Gegevens van de ervaring van het Model (XDM) zijn het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+* [ Soorten publiek ](../segmentation/home.md): De segmenteringsmotor binnen Experience Platform wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
 
 ## Limiettypen
 
@@ -54,9 +54,9 @@ Dit document bevat twee typen standaardlimieten:
 
 ## Gegevensmodellimieten
 
-De volgende instructies bieden aanbevolen limieten bij het modelleren van gegevens in realtime-klantprofiel. Meer over primaire entiteiten en afmetingsentiteiten leren, zie de sectie over [&#x200B; entiteittypes &#x200B;](#entity-types) in de Bijlage.
+De volgende instructies bieden aanbevolen limieten bij het modelleren van gegevens in realtime-klantprofiel. Meer over primaire entiteiten en afmetingsentiteiten leren, zie de sectie over [ entiteittypes ](#entity-types) in de Bijlage.
 
-![&#x200B; een diagram dat de verschillende gidsen voor de gegevens van het Profiel in Adobe Experience Platform toont.](./images/guardrails/profile-guardrails.png)
+![ een diagram dat de verschillende gidsen voor de gegevens van het Profiel in Adobe Experience Platform toont.](./images/guardrails/profile-guardrails.png)
 
 ### Primaire entiteitsinstructies
 
@@ -64,12 +64,12 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 | --------- | ----- | ---------- | ----------- |
 | Gegevenssets voor de klasse XDM Individueel profiel | 20 | Prestatiegerichting | Een maximum van 20 datasets die hefboomwerking de individuele klasse van het Profiel XDM wordt geadviseerd. |
 | Gegevenssets voor de klasse XDM ExperienceEvent | 20 | Prestatiegerichting | Een maximum van 20 datasets die hefboomwerking de klasse XDM ExperienceEvent wordt geadviseerd. |
-| Gegevenssets van Adobe Analytics-rapportsuite ingeschakeld voor profiel | 1 | Prestatiegerichting | Een maximum van één (1) dataset van de het rapportreeks van Analytics zou voor Profiel moeten worden toegelaten. Het proberen om veelvoudige datasets van de het rapportreeks van Analytics voor Profiel toe te laten kan onbedoelde gevolgen voor gegevenskwaliteit hebben. Voor meer informatie, zie de sectie over [&#x200B; datasets van Adobe Analytics &#x200B;](#aa-datasets) in de Bijlage. |
+| Gegevenssets van Adobe Analytics-rapportsuite ingeschakeld voor profiel | 1 | Prestatiegerichting | Een maximum van één (1) dataset van de het rapportreeks van Analytics zou voor Profiel moeten worden toegelaten. Het proberen om veelvoudige datasets van de het rapportreeks van Analytics voor Profiel toe te laten kan onbedoelde gevolgen voor gegevenskwaliteit hebben. Voor meer informatie, zie de sectie over [ datasets van Adobe Analytics ](#aa-datasets) in de Bijlage. |
 | Relaties met meerdere entiteiten | 5 | Prestatiegerichting | Er worden maximaal vijf relaties tussen primaire entiteiten en dimensie-entiteiten aanbevolen. Aanvullende relatietoewijzingen moeten pas worden gemaakt wanneer een bestaande relatie is verwijderd of uitgeschakeld. |
 | JSON-diepte voor id-veld gebruikt in relatie met meerdere entiteiten | 4 | Prestatiegerichting | De aanbevolen maximale JSON-diepte voor een id-veld in relaties met meerdere entiteiten is 4. Dit betekent dat in een hoogst genest schema, gebieden die meer dan 4 niveaus diep worden genesteld niet als gebied van identiteitskaart in een verhouding zouden moeten worden gebruikt. |
 | Arraycardinaliteit in een profielfragment | &lt;=500 | Prestatiegerichting | De optimale arraycardinaliteit in een profielfragment (tijdonafhankelijke gegevens) is &lt;=500. |
 | Array-kardinaliteit in ExperienceEvent | &lt;=10 | Prestatiegerichting | De optimale arraycardinaliteit in een ExperienceEvent (tijdreeksgegevens) is &lt;=10. |
-| Identiteitstelling voor individueel profiel Identiteitsgrafiek | 50 | Door het systeem afgedwongen geleiding | **het maximumaantal identiteiten in een Grafiek van de Identiteit voor een individueel profiel is 50.** Profielen met meer dan 50 identiteiten zijn uitgesloten van segmentatie, export en zoekopdrachten. Voor meer informatie, lees de gids over [&#x200B; het begrip logica van de identiteitsschrapping &#x200B;](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). |
+| Identiteitstelling voor individueel profiel Identiteitsgrafiek | 50 | Door het systeem afgedwongen geleiding | **het maximumaantal identiteiten in een Grafiek van de Identiteit voor een individueel profiel is 50.** Profielen met meer dan 50 identiteiten zijn uitgesloten van segmentatie, export en zoekopdrachten. Voor meer informatie, lees de gids over [ het begrip logica van de identiteitsschrapping ](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 
 ## Limieten voor gegevensgrootte
 
-De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen limieten voor gegevens die kunnen worden ingevoerd, opgeslagen en opgevraagd, zoals bedoeld. Meer over primaire entiteiten en afmetingsentiteiten leren, zie de sectie over [&#x200B; entiteittypes &#x200B;](#entity-types) in de Bijlage.
+De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen limieten voor gegevens die kunnen worden ingevoerd, opgeslagen en opgevraagd, zoals bedoeld. Meer over primaire entiteiten en afmetingsentiteiten leren, zie de sectie over [ entiteittypes ](#entity-types) in de Bijlage.
 
 >[!NOTE]
 >
@@ -97,8 +97,8 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 | --------- | ----- | ---------- | ----------- |
 | Maximale grootte van ExperienceEvent | 10 KB | Door het systeem afgedwongen geleiding | **de maximumgrootte van een gebeurtenis is 10KB.** De inname gaat door, maar gebeurtenissen die groter zijn dan 10 kB worden verwijderd. |
 | Maximale recordgrootte profiel | 100 kB | Door het systeem afgedwongen geleiding | **de maximumgrootte van een profielverslag is 100KB.** De inname gaat door, maar profielrecords die groter zijn dan 100 kB worden verwijderd. |
-| Maximale framegrootte profiel | 50 MB | Door het systeem afgedwongen geleiding | **de maximumgrootte van één enkel profielfragment is 50MB.** de segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welk [&#x200B; profielfragment &#x200B;](#profile-fragments) ontbreken dat groter is dan 50MB. |
-| Maximale grootte voor profielopslag | 50 MB | Prestatiegerichting | **de maximumgrootte van een opgeslagen profiel is 50MB.** Toevoegend nieuwe [&#x200B; profielfragmenten &#x200B;](#profile-fragments) in een profiel dat groter is dan 50MB zal systeemprestaties beïnvloeden. Een profiel kan bijvoorbeeld één fragment bevatten dat 50 MB is of meerdere fragmenten kan bevatten voor meerdere datasets met een gecombineerde totale grootte van 50 MB. Het opslaan van een profiel met één fragment dat groter is dan 50 MB of meerdere fragmenten die samen meer dan 50 MB groot zijn, heeft invloed op de systeemprestaties. |
+| Maximale framegrootte profiel | 50 MB | Door het systeem afgedwongen geleiding | **de maximumgrootte van één enkel profielfragment is 50MB.** de segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welk [ profielfragment ](#profile-fragments) ontbreken dat groter is dan 50MB. |
+| Maximale grootte voor profielopslag | 50 MB | Prestatiegerichting | **de maximumgrootte van een opgeslagen profiel is 50MB.** Toevoegend nieuwe [ profielfragmenten ](#profile-fragments) in een profiel dat groter is dan 50MB zal systeemprestaties beïnvloeden. Een profiel kan bijvoorbeeld één fragment bevatten dat 50 MB is of meerdere fragmenten kan bevatten voor meerdere datasets met een gecombineerde totale grootte van 50 MB. Het opslaan van een profiel met één fragment dat groter is dan 50 MB of meerdere fragmenten die samen meer dan 50 MB groot zijn, heeft invloed op de systeemprestaties. |
 | Aantal per dag ingenomen Profile- of ExperienceEvent-batches | 90 | Prestatiegerichting | **het maximumaantal per dag ingebedde partijen van het Profiel of van de ExperienceEvent is 90.** Dit betekent dat het gecombineerde totaal van de elke dag ingeslikte profielen Profile en ExperienceEvent niet meer dan 90 mag zijn. Door extra batches in te voeren worden de systeemprestaties beïnvloed. |
 | Aantal ExperienceEvents per profielrecord | 5000 | Prestatiegerichting | **het maximumaantal ExperienceEvents per profielverslag is 5000.** Profielen met meer dan 5000 ExperienceEvents zullen slechts **recentste** 5000 ExperienceEvents wanneer gebruikt met segmentatie gebruiken. |
 
@@ -120,23 +120,23 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
-| Soorten publiek per sandbox | 4000 | Prestatiegerichting | U kunt tot 4000 **actieve** publiek per zandbak hebben. U kunt meer dan 4000 soorten publiek per organisatie hebben, zolang er minder dan 4000 soorten publiek in elke **individuele** zandbak zijn. Dit is inclusief publiek in batch, streaming en edge. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. Lees meer over [&#x200B; creërend publiek &#x200B;](/help/segmentation/ui/segment-builder.md) door de segmentbouwer. |
-| Edge-publiek per sandbox | 150 | Prestatiegerichting | U kunt tot 150 **actieve** randpubliek per zandbak hebben. U kunt meer dan 150 randpubliek per organisatie hebben, zolang er minder dan 150 randpubliek in elke **individuele** zandbak zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. Lees meer over [&#x200B; randpubliek &#x200B;](/help/segmentation/methods/edge-segmentation.md). |
-| Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | De segmentatie van Edge steunt een gecombineerde piekwaarde van 1500 binnenkomende gebeurtenissen per seconde die Adobe Experience Platform Edge Network over uw productie en ontwikkelingszandbakken ingaan. Edge-segmentatie kan tot 350 milliseconden duren om een binnenkomende gebeurtenis te verwerken nadat deze de Adobe Experience Platform Edge Network is binnengekomen. Lees meer over [&#x200B; randpubliek &#x200B;](/help/segmentation/methods/edge-segmentation.md). |
-| Streaming publiek per sandbox | 500 | Prestatiegerichting | U kunt tot 500 **actieve** het stromen publiek per zandbak hebben. U kunt meer dan 500 het stromen publiek per organisatie hebben, zolang er minder dan 500 het stromen publiek in elke **individuele** zandbak zijn. Dit geldt zowel voor streaming als voor randpubliek. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. Lees meer over [&#x200B; het stromen publiek &#x200B;](/help/segmentation/methods/streaming-segmentation.md). |
-| Doorvoer streamen voor alle sandboxen | 1500 RPS | Prestatiegerichting | Streaming segmentatie ondersteunt een gecombineerde piekwaarde van 1500 inkomende gebeurtenissen per seconde voor uw productie- en ontwikkelingssandboxen. Het kan tot 5 minuten duren voordat streamingsegmentatie in aanmerking komt voor een profiel voor segmentlidmaatschap. Lees meer over [&#x200B; het stromen publiek &#x200B;](/help/segmentation/methods/streaming-segmentation.md). |
+| Soorten publiek per sandbox | 4000 | Prestatiegerichting | U kunt tot 4000 **actieve** publiek per zandbak hebben. U kunt meer dan 4000 soorten publiek per organisatie hebben, zolang er minder dan 4000 soorten publiek in elke **individuele** zandbak zijn. Dit is inclusief publiek in batch, streaming en edge. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. Lees meer over [ creërend publiek ](/help/segmentation/ui/segment-builder.md) door de segmentbouwer. |
+| Edge-publiek per sandbox | 150 | Prestatiegerichting | U kunt tot 150 **actieve** randpubliek per zandbak hebben. U kunt meer dan 150 randpubliek per organisatie hebben, zolang er minder dan 150 randpubliek in elke **individuele** zandbak zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. Lees meer over [ randpubliek ](/help/segmentation/methods/edge-segmentation.md). |
+| Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | De segmentatie van Edge steunt een gecombineerde piekwaarde van 1500 binnenkomende gebeurtenissen per seconde die Adobe Experience Platform Edge Network over uw productie en ontwikkelingszandbakken ingaan. Edge-segmentatie kan tot 350 milliseconden duren om een binnenkomende gebeurtenis te verwerken nadat deze de Adobe Experience Platform Edge Network is binnengekomen. Lees meer over [ randpubliek ](/help/segmentation/methods/edge-segmentation.md). |
+| Streaming publiek per sandbox | 500 | Prestatiegerichting | U kunt tot 500 **actieve** het stromen publiek per zandbak hebben. U kunt meer dan 500 het stromen publiek per organisatie hebben, zolang er minder dan 500 het stromen publiek in elke **individuele** zandbak zijn. Dit geldt zowel voor streaming als voor randpubliek. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. Lees meer over [ het stromen publiek ](/help/segmentation/methods/streaming-segmentation.md). |
+| Doorvoer streamen voor alle sandboxen | 1500 RPS | Prestatiegerichting | Streaming segmentatie ondersteunt een gecombineerde piekwaarde van 1500 inkomende gebeurtenissen per seconde voor uw productie- en ontwikkelingssandboxen. Het kan tot 5 minuten duren voordat streamingsegmentatie in aanmerking komt voor een profiel voor segmentlidmaatschap. Lees meer over [ het stromen publiek ](/help/segmentation/methods/streaming-segmentation.md). |
 | Batchpubliek per sandbox | 4000 | Prestatiegerichting | U kunt tot 4000 **actieve** partijpubliek per zandbak hebben. U kunt meer dan 4000 partijpubliek per organisatie hebben, zolang er minder dan 4000 partijpubliek in elke **individuele** zandbak zijn. Het maken van extra batchdoelgroepen kan van invloed zijn op de systeemprestaties. |
-| Accountsoorten per sandbox | 50 | Door het systeem afgedwongen geleiding | U kunt maximaal 50 accountsoorten gebruiken in een sandbox. Wanneer u 50 soorten publiek bereikt in een sandbox, wordt het besturingselement **[!UICONTROL Create audience]** uitgeschakeld wanneer u een nieuw publiek voor een account probeert te maken. Lees meer over [&#x200B; rekeningspubliek &#x200B;](/help/segmentation/types/account-audiences.md). |
-| Gepubliceerde composities per sandbox | 10 | Prestatiegerichting | U kunt maximaal 10 gepubliceerde composities in een sandbox hebben. Lees meer over [&#x200B; publiekssamenstelling in de gids UI &#x200B;](/help/segmentation/ui/audience-composition.md). **Nota**: De samenstellingen die met de Federatieve Samenstelling van het Publiek worden gecreeerd worden **niet** geteld met deze guardrail. |
+| Accountsoorten per sandbox | 50 | Door het systeem afgedwongen geleiding | U kunt maximaal 50 accountsoorten gebruiken in een sandbox. Wanneer u 50 soorten publiek bereikt in een sandbox, wordt het besturingselement **[!UICONTROL Create audience]** uitgeschakeld wanneer u een nieuw publiek voor een account probeert te maken. Lees meer over [ rekeningspubliek ](/help/segmentation/types/account-audiences.md). |
+| Gepubliceerde composities per sandbox | 10 | Prestatiegerichting | U kunt maximaal 10 gepubliceerde composities in een sandbox hebben. Lees meer over [ publiekssamenstelling in de gids UI ](/help/segmentation/ui/audience-composition.md). **Nota**: De samenstellingen die met de Federatieve Samenstelling van het Publiek worden gecreeerd worden **niet** geteld met deze guardrail. |
 | Maximale doelgrootte | 30% | Prestatiegerichting | Het geadviseerde maximum lidmaatschap van een publiek is 30 percent van het totale aantal profielen in het systeem. Het is mogelijk een publiek te maken met meer dan 30% van de profielen als leden of met meerdere grote doelgroepen, maar dit heeft gevolgen voor de systeemprestaties. |
 | Flexibele evaluatietests voor het publiek | 50 per jaar (productie zandbak) <br/> 100 per jaar (ontwikkelingszandbak) | Door het systeem afgedwongen geleiding | U hebt een maximum van 50 flexibele de looppas van de publieksevaluatie per jaar per **productie** zandbak. U hebt een maximum van 100 flexibele de looppas van de publieksevaluatie per jaar per **zandbak van de ontwikkelings**. |
 | Flexibele evaluatietests voor het publiek | 2 per dag | Door het systeem afgedwongen geleiding | U hebt maximaal 2 regels per dag per sandbox. |
 | Soorten publiek per flexibele evaluatieronde voor publiek | 20 | Door het systeem afgedwongen geleiding | U kunt maximaal 20 publiek per flexibele uitvoering van de publieksevaluatie hebben. |
-| Segmentdefinities per B2B-sandbox | 400 | Prestatiehandleiding | Een organisatie kan in totaal meer dan 400 segmentdefinities hebben, zolang er minder dan 400 segmentdefinities in elke individuele B2B-sandbox zijn. Het proberen om extra segmentdefinities tot stand te brengen kan systeemprestaties beïnvloeden. Voor meer informatie, lees de [&#x200B; standaardgidsen voor Real-Time Customer Data Platform B2B edition &#x200B;](../rtcdp/b2b-guardrails.md). |
+| Segmentdefinities per B2B-sandbox | 400 | Prestatiehandleiding | Een organisatie kan in totaal meer dan 400 segmentdefinities hebben, zolang er minder dan 400 segmentdefinities in elke individuele B2B-sandbox zijn. Het proberen om extra segmentdefinities tot stand te brengen kan systeemprestaties beïnvloeden. Voor meer informatie, lees de [ standaardgidsen voor Real-Time Customer Data Platform B2B edition ](../rtcdp/b2b-guardrails.md). |
 
 {style="table-layout:auto"}
 
-Meer over B2B-Specifieke guardrails leren, gelieve te verwijzen naar de [&#x200B; standaardgidsen voor Real-Time Customer Data Platform B2B edition &#x200B;](../rtcdp/b2b-guardrails.md) documentatie.
+Meer over B2B-Specifieke guardrails leren, gelieve te verwijzen naar de [ standaardgidsen voor Real-Time Customer Data Platform B2B edition ](../rtcdp/b2b-guardrails.md) documentatie.
 
 ## Verwachte beschikbaarheid
 
@@ -156,7 +156,7 @@ Deze sectie bevat aanvullende details voor de limieten in dit document.
 
 ### Typen entiteiten
 
-Het [!DNL Profile] model van opslaggegevens bestaat uit twee types van kernentiteit: [&#x200B; primaire entiteiten &#x200B;](#primary-entity) en [&#x200B; afmetingsentiteiten &#x200B;](#dimension-entity).
+Het [!DNL Profile] model van opslaggegevens bestaat uit twee types van kernentiteit: [ primaire entiteiten ](#primary-entity) en [ afmetingsentiteiten ](#dimension-entity).
 
 #### Primaire entiteit
 
@@ -164,36 +164,36 @@ Een primaire entiteit, of profielentiteit, voegt gegevens samen om een &quot;eni
 
 Tijdonafhankelijke kenmerken, ook wel &#39;recordgegevens&#39; genoemd, worden gemodelleerd met [!DNL XDM Individual Profile] , terwijl tijdreeksgegevens, ook wel &#39;gebeurtenisgegevens&#39; genoemd, worden gemodelleerd met [!DNL XDM ExperienceEvent] . Wanneer in Adobe Experience Platform record- en tijdreeksgegevens worden opgenomen, wordt [!DNL Real-Time Customer Profile] geactiveerd om te beginnen met het opnemen van gegevens die voor het gebruik ervan zijn ingeschakeld. Hoe meer interacties en details worden opgenomen, hoe robuuster de afzonderlijke profielen worden.
 
-![&#x200B; Infographic die de verschillen tussen verslaggegevens en tijd-reeksen gegevens schetsen.](images/guardrails/profile-entity.png)
+![ Infographic die de verschillen tussen verslaggegevens en tijd-reeksen gegevens schetsen.](images/guardrails/profile-entity.png)
 
 #### Dimension
 
-Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relationele opslag is, staat het Profiel integratie met kleine afmetingsentiteiten toe om publiek op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie is gekend als [&#x200B; multi-entiteitsegmentatie &#x200B;](../segmentation/tutorials/multi-entity-segmentation.md).
+Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relationele opslag is, staat het Profiel integratie met kleine afmetingsentiteiten toe om publiek op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie is gekend als [ multi-entiteitsegmentatie ](../segmentation/tutorials/multi-entity-segmentation.md).
 
-Uw organisatie kan ook klassen XDM bepalen om dingen buiten individuen, zoals opslag, producten, of eigenschappen te beschrijven. Deze schema&#39;s, die gebruikend klassen XDM buiten de individuele klasse van het Profiel XDM worden gemodelleerd, worden genoemd &quot;afmetingsentiteiten&quot;(die ook als &quot;raadplegingsentiteiten&quot;worden bekend) en bevatten geen tijd-reeksgegevens. De schema&#39;s die afmetingsentiteiten vertegenwoordigen zijn verbonden met profielentiteiten door het gebruik van [&#x200B; schemaverhoudingen &#x200B;](../xdm/tutorials/relationship-ui.md).
+Uw organisatie kan ook klassen XDM bepalen om dingen buiten individuen, zoals opslag, producten, of eigenschappen te beschrijven. Deze schema&#39;s, die gebruikend klassen XDM buiten de individuele klasse van het Profiel XDM worden gemodelleerd, worden genoemd &quot;afmetingsentiteiten&quot;(die ook als &quot;raadplegingsentiteiten&quot;worden bekend) en bevatten geen tijd-reeksgegevens. De schema&#39;s die afmetingsentiteiten vertegenwoordigen zijn verbonden met profielentiteiten door het gebruik van [ schemaverhoudingen ](../xdm/tutorials/relationship-ui.md).
 
 Dimension-entiteiten bieden opzoekgegevens die de definities van segmenten met meerdere entiteiten ondersteunen en vereenvoudigen. Deze moeten zo klein zijn dat de segmenteringsengine de volledige gegevensset in het geheugen kan laden voor optimale verwerking (snelle puntzoekopdracht).
 
-![&#x200B; Infographic die toont dat een profielentiteit uit afmetingsentiteiten bestaat.](images/guardrails/profile-and-dimension-entities.png)
+![ Infographic die toont dat een profielentiteit uit afmetingsentiteiten bestaat.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Profielfragmenten
 
-In dit document zijn er verschillende hulplijnen die naar &quot;profielfragmenten&quot; verwijzen. In Experience Platform worden meerdere profielfragmenten samengevoegd tot het realtime klantprofiel. Elk fragment vertegenwoordigt een unieke primaire identiteit en de corresponderende record of volledige set gebeurtenisgegevens voor die id binnen een bepaalde gegevensset. Meer over profielfragmenten leren, verwijs naar het [&#x200B; overzicht van het Profiel &#x200B;](home.md#profile-fragments-vs-merged-profiles).
+In dit document zijn er verschillende hulplijnen die naar &quot;profielfragmenten&quot; verwijzen. In Experience Platform worden meerdere profielfragmenten samengevoegd tot het realtime klantprofiel. Elk fragment vertegenwoordigt een unieke primaire identiteit en de corresponderende record of volledige set gebeurtenisgegevens voor die id binnen een bepaalde gegevensset. Meer over profielfragmenten leren, verwijs naar het [ overzicht van het Profiel ](home.md#profile-fragments-vs-merged-profiles).
 
 ### Beleid samenvoegen {#merge-policies}
 
-Wanneer het samenbrengen van gegevens uit veelvoudige bronnen, is het fusiebeleid de regels die Experience Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Experience Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens uit meerdere bronnen conflicteren, bepaalt het samenvoegbeleid welke informatie moet worden opgenomen in het profiel voor de persoon. Per sandbox zijn maximaal vijf (5) samenvoegbeleidsregels die het `_xdm.context.profile` -schema gebruiken, toegestaan. Om meer over fusiebeleid te leren, te lezen gelieve het [&#x200B; overzicht van het samenvoegbeleid &#x200B;](merge-policies/overview.md).
+Wanneer het samenbrengen van gegevens uit veelvoudige bronnen, is het fusiebeleid de regels die Experience Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Experience Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens uit meerdere bronnen conflicteren, bepaalt het samenvoegbeleid welke informatie moet worden opgenomen in het profiel voor de persoon. Per sandbox zijn maximaal vijf (5) samenvoegbeleidsregels die het `_xdm.context.profile` -schema gebruiken, toegestaan. Om meer over fusiebeleid te leren, te lezen gelieve het [ overzicht van het samenvoegbeleid ](merge-policies/overview.md).
 
 ### Adobe Analytics-rapportenpakket, gegevenssets in Experience Platform {#aa-datasets}
 
-De veelvoudige rapportsuites kunnen voor Profiel worden toegelaten zolang alle gegevensconflicten worden opgelost. U kunt de functie Gegevensvoorbeeld gebruiken om gegevensconflicten op te lossen over eVars, Lijsten, en Props. Om meer over te leren hoe te om de functionaliteit van Prep van Gegevens te gebruiken, te lezen gelieve de [&#x200B; de schakelaargids UI van Adobe Analytics &#x200B;](../sources/tutorials/ui/create/adobe-applications/analytics.md).
+De veelvoudige rapportsuites kunnen voor Profiel worden toegelaten zolang alle gegevensconflicten worden opgelost. U kunt de functie Gegevensvoorbeeld gebruiken om gegevensconflicten op te lossen over eVars, Lijsten, en Props. Om meer over te leren hoe te om de functionaliteit van Prep van Gegevens te gebruiken, te lezen gelieve de [ de schakelaargids UI van Adobe Analytics ](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
 ## Volgende stappen
 
 Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platform Services-instructies, informatie over end-to-end latentie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [&#x200B; de diagrammen van de de latentie van begin tot eind &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=nl-NL#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
-* [&#x200B; Real-Time Customer Data Platform (B2C Edition - Prime en de Pakketten van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [&#x200B; Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [&#x200B; Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ de diagrammen van de de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
+* [ Real-Time Customer Data Platform (B2C Edition - Prime en de Pakketten van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

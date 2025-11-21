@@ -7,7 +7,7 @@ role: User
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -38,20 +38,20 @@ ht-degree: 22%
    * [Handleiding voor de API voor berekende kenmerken](computed-attributes/api.md)
    * [Gebruikershandleiding voor berekende kenmerken](computed-attributes/ui.md)
    * [Veelgestelde vragen](computed-attributes/faq.md)
-* Beleid voor samenvoegen {#merge-policies}
+* Beleid samenvoegen {#merge-policies}
    * [Overzicht](merge-policies/overview.md)
    * [API voor beleid samenvoegen](api/merge-policies.md)
    * [UI-gids voor samenvoegen](merge-policies/ui-guide.md)
    * [Samenvoegbeleid maken (video)](video/create-merge-policies.md)
-* Unieschema&#39;s {#union-schemas}
+* Unieregelingen {#union-schemas}
    * [UI-hulplijn verenigingsschema](ui/union-schema.md)
    * [Overzicht van Unieschema (video)](video/union-schemas-overview.md)
-* Zelfstudies {#tutorials}
+* Tutorials {#tutorials}
    * [Gegevens toevoegen aan realtime klantprofiel](tutorials/add-profile-data.md)
    * [Een gegevensset voor profiel configureren](tutorials/dataset-configuration.md)
    * [Genereer het overlappingsrapport voor de gegevensset](tutorials/dataset-overlap-report.md)
-   * [&#x200B; Meer leerprogramma&#39;s &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=nl-NL)
+   * [ Meer leerprogramma&#39;s ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Verwerking van privacyverzoeken](privacy.md)
 * [[!DNL Profile] gids voor probleemoplossing](troubleshooting.md)
-* [&#x200B; API van het Profiel verwijzing &#x200B;](https://www.adobe.com/go/profile-apis-en)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [ API van het Profiel verwijzing ](https://www.adobe.com/go/profile-apis-en)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
