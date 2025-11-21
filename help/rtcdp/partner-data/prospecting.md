@@ -55,7 +55,7 @@ Voordat u Real-Time CDP uitbreidt om nieuwe klanten aan te trekken, moet u ervoo
 
 Bekijk hieronder de videozelfstudie voor een analyse van hoe te om perspectiefpubliek te bereiken en in dienst te nemen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452863/?captions=dut&learn=on)
 
 ## Hoe het gebruiksgeval te bereiken: Step-by-step instructies {#step-by-step-instructions}
 

@@ -64,7 +64,7 @@ Als u dit geval wilt gebruiken, moet u meerdere gebieden van Real-Time Customer 
 
 Bekijk de videozelfstudie hieronder voor een analyse van hoe u onsite ervaringen kunt personaliseren voor onbekende bezoekers:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449258/?captions=dut&learn=on)
 
 ## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 
