@@ -3,10 +3,10 @@ title: Werkorders verwijderen opnemen
 description: Leer hoe te om het /workorder eindpunt in de Hygiene API van Gegevens te gebruiken om het werkorden van het verslag te beheren schrapt in Adobe Experience Platform. Deze handleiding heeft betrekking op quota, verwerkingstijdlijnen en API-gebruik.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4f4b668c2b29228499dc28b2c6c54656e98aaeab
+source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
 workflow-type: tm+mt
-source-wordcount: '2104'
-ht-degree: 1%
+source-wordcount: '2440'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +16,11 @@ Gebruik het `/workorder` eindpunt in de API voor gegevenshygiëne om werkorders 
 
 >[!IMPORTANT]
 >
->De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [&#x200B; Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
+>De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
 
 ## Aan de slag
 
-Alvorens u begint, zie het [&#x200B; overzicht &#x200B;](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
+Alvorens u begint, zie het [ overzicht ](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
 
 ## Quoten en verwerkingstijdlijnen {#quotas}
 
@@ -67,7 +67,7 @@ Als uw organisatie hogere limieten nodig heeft, neemt u contact op met uw Adobe-
 
 >[!TIP]
 >
->Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [&#x200B; gids van de de verwijzingsverwijzing van de Quota &#x200B;](../api/quota.md).
+>Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [ gids van de de verwijzingsverwijzing van de Quota ](../api/quota.md).
 
 ## Werkorders voor het verwijderen van records weergeven {#list}
 
@@ -247,7 +247,7 @@ In de volgende tabel worden de eigenschappen beschreven voor het maken van een w
 | `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
 | `action` | De gevraagde actie voor het verslag schrapt werkorde. Gebruik `delete_identity` om records te verwijderen die aan een bepaalde identiteit zijn gekoppeld. |
 | `datasetId` | De unieke id voor de gegevensset. Gebruik dataset ID voor een specifieke dataset, of `ALL` om alle datasets te richten. Datasets moeten een primaire identiteit of een identiteitskaart hebben. Als er een identiteitskaart bestaat, is deze aanwezig als een veld op hoofdniveau met de naam `identityMap` .<br> Merk op dat een datasetrij vele identiteiten in zijn identiteitskaart kan hebben, maar slechts één kan als primair worden gemerkt. `"primary": true` moet worden opgenomen om ervoor te zorgen dat de `id` overeenkomt met een primaire identiteit. |
-| `namespacesIdentities` | Een serie van voorwerpen, elk die:<br> bevatten<ul><li> `namespace`: Een object met een eigenschap `code` die de naamruimte voor identiteit opgeeft (bijvoorbeeld &quot;email&quot;).</li><li> `IDs`: een array met identiteitswaarden die voor deze naamruimte moeten worden verwijderd.</li></ul>Naamruimten bieden context voor identiteitsgegevens. U kunt de standaardnaamruimten van Experience Platform gebruiken of zelf naamruimten maken. Meer leren, zie de [&#x200B; documentatie van identiteitsnamespace &#x200B;](../../identity-service/features/namespaces.md) en de [&#x200B; Dienst API specificatie van de Identiteit &#x200B;](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `namespacesIdentities` | Een serie van voorwerpen, elk die:<br> bevatten<ul><li> `namespace`: Een object met een eigenschap `code` die de naamruimte voor identiteit opgeeft (bijvoorbeeld &quot;email&quot;).</li><li> `IDs`: een array met identiteitswaarden die voor deze naamruimte moeten worden verwijderd.</li></ul>Naamruimten bieden context voor identiteitsgegevens. U kunt de standaardnaamruimten van Experience Platform gebruiken of zelf naamruimten maken. Meer leren, zie de [ documentatie van identiteitsnamespace ](../../identity-service/features/namespaces.md) en de [ Dienst API specificatie van de Identiteit ](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Reactie**
 
@@ -300,6 +300,110 @@ In de volgende tabel worden de eigenschappen in het antwoord beschreven.
 >[!NOTE]
 >
 >De handelingseigenschap voor recordverwijderwerkorders is momenteel `identity-delete` in API-reacties. Als de API verandert om een andere waarde te gebruiken (zoals `delete_identity`), wordt deze documentatie dienovereenkomstig bijgewerkt.
+
+## ID-lijsten converteren naar JSON voor aanvragen voor het verwijderen van records
+
+Als u een werkvolgorde voor het verwijderen van records wilt maken vanuit CSV-, TSV- of TXT-bestanden met id&#39;s, kunt u conversiescripts gebruiken om de vereiste JSON-nuttige ladingen voor het `/workorder` -eindpunt te maken. Deze aanpak is vooral handig wanneer u met bestaande gegevensbestanden werkt. Voor gebruiksklare manuscripten en uitvoerige instructies, bezoek de [ csv-aan-gegeven-hygiëne bewaarplaats GitHub ](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+### JSON-payloads genereren
+
+De volgende voorbeelden van basscript tonen hoe u de conversiescripts in Python of Ruby kunt uitvoeren:
+
+>[!BEGINTABS]
+
+>[!TAB  Voorbeeld om manuscript Python in werking te stellen ]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB  Voorbeeld om Ruby manuscript ] in werking te stellen
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+In de onderstaande tabel worden de parameters in de basscripts beschreven.
+
+| Parameter | Beschrijving |
+| ---           | ---     |
+| `verbose` | Brede uitvoer inschakelen. |
+| `column` | De index (op 1 gebaseerd) of koptekstnaam van de kolom die de identiteitswaarden bevat die moeten worden verwijderd. Wordt standaard ingesteld op de eerste kolom als deze niet is opgegeven. |
+| `namespace` | Een object met een eigenschap `code` die de naamruimte van de identiteit opgeeft (bijvoorbeeld &#39;email&#39;). |
+| `dataset-id` | De unieke identificatie voor de dataset verbonden aan de het werkorde. Als het verzoek op alle datasets van toepassing is, zal dit gebied aan `ALL` worden geplaatst. |
+| `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
+| `output-dir` | De map voor het schrijven van de JSON-uitvoerlading. |
+
+{style="table-layout:auto"}
+
+In het onderstaande voorbeeld ziet u een JSON-laadbewerking die is omgezet vanuit een CSV-, TSV- of TXT-bestand. Deze bevat records die zijn gekoppeld aan de opgegeven naamruimte en wordt gebruikt om records te verwijderen die worden geïdentificeerd door e-mailadressen.
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+In de volgende tabel worden de eigenschappen in de JSON-payload beschreven.
+
+| Eigenschap | Beschrijving |
+| ---          | ---     |
+| `action` | De gevraagde actie voor het verslag schrapt werkorde. Automatisch ingesteld op `delete_identity` door het conversiescript. |
+| `datasetId` | De unieke id voor de gegevensset. |
+| `displayName` | Een leesbaar label voor deze record waarmee de werkvolgorde wordt verwijderd. |
+| `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
+| `identities` | Een serie van voorwerpen, elk die:<br> bevatten<ul><li> `namespace`: Een object met een eigenschap `code` die de naamruimte voor identiteit opgeeft (bijvoorbeeld &#39;email&#39;).</li><li> `id`: De identiteitswaarde die voor deze naamruimte moet worden verwijderd.</li></ul> |
+
+{style="table-layout:auto"}
+
+### Verzend de gegenereerde JSON-gegevens naar het eindpunt van `/workorder`
+
+Om een verzoek voor te leggen, volg de instructies in [ creeer een verslag schrapt werkorde ](#create) sectie. Zorg ervoor dat u de omgezette JSON-payload als de aanvraaginstantie (`-d`) gebruikt wanneer u uw `curl` POST-aanvraag naar het API-eindpunt `/workorder` verzendt.
 
 ## Gegevens ophalen voor een specifieke werkorder voor het verwijderen van records {#lookup}
 
