@@ -25,7 +25,7 @@ Lees deze sectie voor de vereiste stappen die u moet voltooien om de [!DNL SFTP]
 
 ### IP adres lijst van gewenste personen
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ### Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -35,7 +35,7 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 * De folder en de dossiernamen kunnen niet met een voorwaartse schuine streep (`/`) beëindigen. Indien beschikbaar wordt deze automatisch verwijderd.
 * De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 * De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?` .
-* Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
+* Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [&#x200B; RFC 2616, Sectie 2.2: BasisRegels &#x200B;](https://www.ietf.org/rfc/rfc2616.txt) en [&#x200B; RFC 3987 &#x200B;](https://www.ietf.org/rfc/rfc3987.txt).
 * De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
 ### Een Base64-gecodeerde OpenSSH-privésleutel instellen voor [!DNL SFTP]
@@ -48,21 +48,21 @@ De [!DNL SFTP] -bron ondersteunt verificatie met behulp van de [!DNL Base64] -ge
 
 ### [!DNL Windows] gebruikers
 
-Als u een [!DNL Windows] machine gebruikt, open omhoog het **2} menu van het Begin {en selecteer dan** Montages **.**
+Als u een [!DNL Windows] machine gebruikt, open omhoog het **2&rbrace; menu van het Begin &lbrace;en selecteer dan** Montages **.**
 
-![ montages ](../../images/tutorials/create/sftp/settings.png)
+![&#x200B; montages &#x200B;](../../images/tutorials/create/sftp/settings.png)
 
 Van het **menu van Montages** dat verschijnt, uitgezochte **Apps**.
 
-![ apps ](../../images/tutorials/create/sftp/apps.png)
+![&#x200B; apps &#x200B;](../../images/tutorials/create/sftp/apps.png)
 
 Daarna, uitgezochte **Facultatieve eigenschappen**.
 
-![ facultatief-eigenschappen ](../../images/tutorials/create/sftp/optional-features.png)
+![&#x200B; facultatief-eigenschappen &#x200B;](../../images/tutorials/create/sftp/optional-features.png)
 
-Er wordt een lijst met optionele functies weergegeven. Als **Cliënt OpenSSH** reeds vooraf geïnstalleerd in uw machine is, dan zal het in de **Geïnstalleerde 3} lijst van eigenschappen** Facultatieve eigenschappen **worden omvat.**
+Er wordt een lijst met optionele functies weergegeven. Als **Cliënt OpenSSH** reeds vooraf geïnstalleerd in uw machine is, dan zal het in de **Geïnstalleerde 3&rbrace; lijst van eigenschappen** Facultatieve eigenschappen **worden omvat.**
 
-![ open-ssh ](../../images/tutorials/create/sftp/open-ssh.png)
+![&#x200B; open-ssh &#x200B;](../../images/tutorials/create/sftp/open-ssh.png)
 
 Als niet geïnstalleerd, selecteer **installeer** en open dan **[!DNL Powershell]** en stel het volgende bevel in werking om uw privé sleutel te produceren:
 
