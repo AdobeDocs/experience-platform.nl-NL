@@ -16,24 +16,24 @@ ht-degree: 0%
 
 [!DNL Schema Registry] wordt gebruikt om [!DNL Schema Library] binnen Adobe Experience Platform te openen. [!DNL Schema Library] bevat bronnen die beschikbaar zijn gesteld door Adobe, [!DNL Experience Platform] -partners en leveranciers van wie u de toepassingen gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
-Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u het gebruikersinterface in [!DNL Experience Platform] liever zou gebruiken, verstrekt het [ Zelfstudie van de Redacteur van het Schema ](create-schema-ui.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de schemaredacteur.
+Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u het gebruikersinterface in [!DNL Experience Platform] liever zou gebruiken, verstrekt het [&#x200B; Zelfstudie van de Redacteur van het Schema &#x200B;](create-schema-ui.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de schemaredacteur.
 
 >[!NOTE]
 >
->Als u CSV gegevens in Experience Platform opneemt, kunt u [ kaart die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md) wordt gecreeerd (momenteel in bèta) zonder het moeten manueel het schema creëren zelf.
+>Als u CSV gegevens in Experience Platform opneemt, kunt u [&#x200B; kaart die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen &#x200B;](../../ingestion/tutorials/map-csv/recommendations.md) wordt gecreeerd (momenteel in bèta) zonder het moeten manueel het schema creëren zelf.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
-   * [ Grondbeginselen van schemacompositie ](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-Alvorens dit leerprogramma te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Schema Registry] API met succes te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header `Accept` en de mogelijke waarden ervan).
+Alvorens dit leerprogramma te beginnen, te herzien gelieve de [&#x200B; ontwikkelaarsgids &#x200B;](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Schema Registry] API met succes te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header `Accept` en de mogelijke waarden ervan).
 
-Deze zelfstudie doorloopt de stappen voor het samenstellen van een schema voor leden van Loyalty&#39;s dat gegevens beschrijft die betrekking hebben op de leden van een programma voor loyaliteit in de detailhandel. Alvorens te beginnen, kunt u aan voorproef het [ volledige schema van de Leden van de Loyalty ](#complete-schema) in het bijlage wensen.
+Deze zelfstudie doorloopt de stappen voor het samenstellen van een schema voor leden van Loyalty&#39;s dat gegevens beschrijft die betrekking hebben op de leden van een programma voor loyaliteit in de detailhandel. Alvorens te beginnen, kunt u aan voorproef het [&#x200B; volledige schema van de Leden van de Loyalty &#x200B;](#complete-schema) in het bijlage wensen.
 
 ## Een schema met een standaardklasse samenstellen
 
@@ -43,7 +43,7 @@ Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u wilt inv
 
 Het proces van de schemacompositie begint met de selectie van een klasse. De klasse definieert de belangrijkste gedragsaspecten van de gegevens (record- versus tijdreeks) en de minimale velden die vereist zijn om de gegevens te beschrijven die worden ingevoerd.
 
-Het schema dat u in deze zelfstudie maakt, gebruikt de klasse [!DNL XDM Individual Profile] . [!DNL XDM Individual Profile] is een standaardklasse die door Adobe wordt opgegeven voor het definiëren van recordgedrag. Meer informatie over gedrag kan in [ grondbeginselen van schemacompositie ](../schema/composition.md) worden gevonden.
+Het schema dat u in deze zelfstudie maakt, gebruikt de klasse [!DNL XDM Individual Profile] . [!DNL XDM Individual Profile] is een standaardklasse die door Adobe wordt opgegeven voor het definiëren van recordgedrag. Meer informatie over gedrag kan in [&#x200B; grondbeginselen van schemacompositie &#x200B;](../schema/composition.md) worden gevonden.
 
 Om een klasse toe te wijzen, wordt een API vraag gemaakt om (POST) een nieuw schema in de huurderscontainer tot stand te brengen. Deze vraag omvat de klasse het schema zal uitvoeren. Elk schema mag slechts één klasse implementeren.
 
@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Verzoek**
 
-Dit verzoek werkt het schema van de Leden van de Loyalty bij om de gebieden binnen de [[!UICONTROL Demographic Details] gebiedsgroep ](../field-groups/profile/demographic-details.md) (`profile-person-details`) te omvatten.
+Dit verzoek werkt het schema van de Leden van de Loyalty bij om de gebieden binnen de [[!UICONTROL Demographic Details] gebiedsgroep &#x200B;](../field-groups/profile/demographic-details.md) (`profile-person-details`) te omvatten.
 
 Door de `profile-person-details` gebiedsgroep toe te voegen, vangt het schema van de Leden van de Loyalty nu demografische informatie voor de leden van het loyaliteitsprogramma zoals hun voornaam, familienaam, en verjaardag.
 
@@ -588,7 +588,7 @@ Een geslaagde aanvraag retourneert HTTP Response Status 201 (Gemaakt) met een an
 
 ### De aangepaste veldgroep toevoegen aan het schema
 
-U kunt de zelfde stappen voor [ nu volgen toevoegend een standaardgebiedsgroep ](#add-a-field-group) om deze pas gecreëerde gebiedsgroep aan uw schema toe te voegen.
+U kunt de zelfde stappen voor [&#x200B; nu volgen toevoegend een standaardgebiedsgroep &#x200B;](#add-a-field-group) om deze pas gecreëerde gebiedsgroep aan uw schema toe te voegen.
 
 **API formaat**
 
@@ -726,7 +726,7 @@ curl -X GET \
 
 **Reactie**
 
-Door de header `application/vnd.adobe.xed-full+json; version=1` `Accept` te gebruiken, ziet u het volledige schema met alle eigenschappen. Deze eigenschappen zijn de gebieden die door de klasse en de gebiedsgroepen worden bijgedragen die zijn gebruikt om het schema samen te stellen. In het onderstaande voorbeeldantwoord worden alleen de onlangs toegevoegde velden weergegeven voor de ruimte. U kunt het volledige schema, met inbegrip van alle eigenschappen en hun attributen, in [ bijlage ](#appendix) aan het eind van dit document bekijken.
+Door de header `application/vnd.adobe.xed-full+json; version=1` `Accept` te gebruiken, ziet u het volledige schema met alle eigenschappen. Deze eigenschappen zijn de gebieden die door de klasse en de gebiedsgroepen worden bijgedragen die zijn gebruikt om het schema samen te stellen. In het onderstaande voorbeeldantwoord worden alleen de onlangs toegevoegde velden weergegeven voor de ruimte. U kunt het volledige schema, met inbegrip van alle eigenschappen en hun attributen, in [&#x200B; bijlage &#x200B;](#appendix) aan het eind van dit document bekijken.
 
 Onder `"properties"` ziet u de naamruimte `_{TENANT_ID}` die is gemaakt toen u de aangepaste veldgroep toevoegde. Binnen die naamruimte bevinden zich het `loyaltyTier` -object en de velden die zijn gedefinieerd toen de veldgroep werd gemaakt.
 
@@ -1114,11 +1114,11 @@ Als u een GET-verzoek uitvoert om het schema nu op te zoeken, geeft de eigenscha
 
 Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform] . Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen vervolgens worden benaderd door [[!DNL Real-Time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] -services voor een aan elkaar gekoppelde weergave van elke afzonderlijke klant.
 
-Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html), identiteitskaart van CRM, of andere unieke gebieden van identiteitskaart Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
+Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html), identiteitskaart van CRM, of andere unieke gebieden van identiteitskaart Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
 
 Identiteitsdescriptors geven aan dat de `sourceProperty` van de `sourceSchema` een unieke id is die als een identiteit moet worden beschouwd.
 
-Voor meer informatie bij het werken met beschrijvers, zie de [ de ontwikkelaarsgids van de Registratie van het Schema ](../api/getting-started.md).
+Voor meer informatie bij het werken met beschrijvers, zie de [&#x200B; de ontwikkelaarsgids van de Registratie van het Schema &#x200B;](../api/getting-started.md).
 
 **API formaat**
 
@@ -1128,7 +1128,7 @@ POST /tenant/descriptors
 
 **Verzoek**
 
-In het volgende verzoek wordt een identiteitsbeschrijving gedefinieerd in het veld `personalEmail.address` voor het schema Loyalty-leden. Dit vertelt [!DNL Experience Platform] om het e-mailadres van het loyaliteitslid als herkenningsteken te gebruiken helpen informatie over het individu verenigen. Deze vraag plaatst ook dit gebied als primaire identiteit voor het schema door `xdm:isPrimary` aan `true` te plaatsen, dat een vereiste voor [ toelatend het schema voor gebruik in het Profiel van de Klant in real time ](#profile) is.
+In het volgende verzoek wordt een identiteitsbeschrijving gedefinieerd in het veld `personalEmail.address` voor het schema Loyalty-leden. Dit vertelt [!DNL Experience Platform] om het e-mailadres van het loyaliteitslid als herkenningsteken te gebruiken helpen informatie over het individu verenigen. Deze vraag plaatst ook dit gebied als primaire identiteit voor het schema door `xdm:isPrimary` aan `true` te plaatsen, dat een vereiste voor [&#x200B; toelatend het schema voor gebruik in het Profiel van de Klant in real time &#x200B;](#profile) is.
 
 ```SHELL
 curl -X POST \
@@ -1151,7 +1151,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->U kunt beschikbare &quot;xdm :namespace&quot;waarden een lijst maken, of nieuwe degenen creëren, gebruikend [[!DNL Identity Service API] ](https://www.adobe.io/experience-platform-apis/references/identity-service). De waarde voor &quot;xdm :property&quot;kan of &quot;xdm :code&quot;of &quot;xdm :id&quot;zijn, afhankelijk van &quot;xdm :namespace&quot;gebruikt.
+>U kunt beschikbare &quot;xdm :namespace&quot;waarden een lijst maken, of nieuwe degenen creëren, gebruikend [[!DNL Identity Service API] &#x200B;](https://www.adobe.io/experience-platform-apis/references/identity-service). De waarde voor &quot;xdm :property&quot;kan of &quot;xdm :code&quot;of &quot;xdm :id&quot;zijn, afhankelijk van &quot;xdm :namespace&quot;gebruikt.
 
 **Reactie**
 
@@ -1181,7 +1181,7 @@ Wanneer op het schema een primaire identiteitsbeschrijving is toegepast, kunt u 
 
 >[!NOTE]
 >
->Voor meer informatie bij het werken met vakbondsmeningen, zie de sectie over [ vakbonden ](../api/unions.md) in de [!DNL Schema Registry] ontwikkelaarsgids.
+>Voor meer informatie bij het werken met vakbondsmeningen, zie de sectie over [&#x200B; vakbonden &#x200B;](../api/unions.md) in de [!DNL Schema Registry] ontwikkelaarsgids.
 
 ### Een tag `union` toevoegen
 
@@ -1376,7 +1376,7 @@ Gebruik de gebruikersinterface van Experience Platform om te controleren of het 
 
 Navigeer eerst naar **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** . Gebruik het gebied van de tekstinput aan onderzoek naar de schemanaam (bijvoorbeeld, `Campaign Member`) en selecteer de schemanaam van de lijst.
 
-![ Schema&#39;s doorbladert mening met het gebied van de tekstinput dat aan onderzoek naar wordt benadrukt en uw schema selecteert.](../images/tutorials/create-schema/schemas-browse.png)
+![&#x200B; Schema&#39;s doorbladert mening met het gebied van de tekstinput dat aan onderzoek naar wordt benadrukt en uw schema selecteert.](../images/tutorials/create-schema/schemas-browse.png)
 
 ### De schemastructuur bevestigen
 
@@ -1385,7 +1385,7 @@ Het schemacanvas toont de volledige structuur van uw schema. Controleren of:
 * Alle standaardveldgroepen die u hebt toegevoegd, worden weergegeven op het canvas.
 * De aangepaste veldgroep wordt weergegeven in de structuur en uitgevouwen om de bijbehorende velden weer te geven.
 
-![ het schemacanvas die de volledige schemastructuur met standaard en uitgevouwen groepen van het douaneveld tonen.](../images/tutorials/create-schema/schema-canvas.png)
+![&#x200B; het schemacanvas die de volledige schemastructuur met standaard en uitgevouwen groepen van het douaneveld tonen.](../images/tutorials/create-schema/schema-canvas.png)
 
 ### Schema-eigenschappen controleren
 
@@ -1401,7 +1401,7 @@ De `$id` moet overeenkomen met de waarde die wordt geretourneerd in de API-react
 >
 >De toegewezen klasse (**[!UICONTROL XDM Business Campaign Members]** in dit voorbeeld) wordt weergegeven in het linkerdeelvenster **[!UICONTROL Composition]** .
 
-![ de mening van de Redacteur van het Schema met geselecteerde schemawortel en het de eigenschappen van het Schema open om zeer belangrijke meta-gegevens te herzien.](../images/tutorials/create-schema/review-schema-properties.png)
+![&#x200B; de mening van de Redacteur van het Schema met geselecteerde schemawortel en het de eigenschappen van het Schema open om zeer belangrijke meta-gegevens te herzien.](../images/tutorials/create-schema/review-schema-properties.png)
 
 ### Naamvelden valideren
 
@@ -1410,7 +1410,7 @@ Elk identiteitsveld dat aan het schema wordt toegevoegd, wordt weergegeven in de
 * De naamruimte identity is correct.
 * Het veld wordt, indien van toepassing, als primaire identiteit gemarkeerd.
 
-![ het paneelIdentiteiten van de Samenstelling sectie met een geselecteerd identiteitsgebied en zijn identiteitseigenschappen die in het juiste paneel worden getoond.](../images/tutorials/create-schema/identitiy-confirmation.png)
+![&#x200B; het paneelIdentiteiten van de Samenstelling sectie met een geselecteerd identiteitsgebied en zijn identiteitseigenschappen die in het juiste paneel worden getoond.](../images/tutorials/create-schema/identitiy-confirmation.png)
 
 Als de structuur, eigenschappen en identiteitsconfiguratie overeenkomen met uw API-configuratie, hebt u het schema gemaakt en geconfigureerd via de [!DNL Schema Registry] API.
 
@@ -1420,7 +1420,7 @@ Door deze zelfstudie te volgen, hebt u een schema samengesteld met gebruik van z
 
 Het volledige schema van de Leden van de Loyalty, zoals die door dit leerprogramma wordt gecreeerd, is beschikbaar in het bijlage dat volgt. Als u het schema bekijkt, kunt u zien hoe de veldgroepen bijdragen aan de algemene structuur en welke velden beschikbaar zijn voor gegevensinvoer.
 
-Zodra u meer dan één schema hebt gecreeerd, kunt u verhoudingen tussen hen door het gebruik van relatiebeschrijvers bepalen. Zie het leerprogramma voor [ bepalend een verband tussen twee schema&#39;s ](relationship-api.md) voor meer informatie. Voor gedetailleerde voorbeelden van hoe te om alle verrichtingen (GET, POST, PUT, PATCH, en DELETE) in de registratie uit te voeren, gelieve te verwijzen naar de [ de ontwikkelaarsgids van de Registratie van het Schema ](../api/getting-started.md) terwijl het werken met API.
+Zodra u meer dan één schema hebt gecreeerd, kunt u verhoudingen tussen hen door het gebruik van relatiebeschrijvers bepalen. Zie het leerprogramma voor [&#x200B; bepalend een verband tussen twee schema&#39;s &#x200B;](relationship-api.md) voor meer informatie. Voor gedetailleerde voorbeelden van hoe te om alle verrichtingen (GET, POST, PUT, PATCH, en DELETE) in de registratie uit te voeren, gelieve te verwijzen naar de [&#x200B; de ontwikkelaarsgids van de Registratie van het Schema &#x200B;](../api/getting-started.md) terwijl het werken met API.
 
 ## Bijlage {#appendix}
 
