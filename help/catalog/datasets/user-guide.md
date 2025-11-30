@@ -58,13 +58,13 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Geordende campagnes"
 >abstract="Schakel deze schakeloptie in om het gebruik van de geselecteerde gegevensset in Adobe Journey Optimizer Orchestrated-campagnes toe te staan. De dataset moet een relationeel schema gebruiken en slechts één dataset kan per schema worden gecreeerd."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Dataset inschakelen voor geordende campagnes"
+>additional-url="https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Dataset inschakelen voor geordende campagnes"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="Opzoeken inschakelen"
 >abstract="Laat deze dataset voor raadpleging toe om zijn gegevens in Journey Optimizer voor verpersoonlijking, Beslissing, en reisorchestratie te gebruiken."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Adobe Experience Platform-gegevens gebruiken in Journey Optimizer"
+>additional-url="https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Adobe Experience Platform-gegevens gebruiken in Journey Optimizer"
 
 Selecteer in de gebruikersinterface van [!DNL Experience Platform] de optie **[!UICONTROL Datasets]** in de linkernavigatie om het dashboard van **[!UICONTROL Datasets]** te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
 
