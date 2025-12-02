@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [&#x200B; productbeschrijvingen &#x200B;](https://helpx.adobe.com/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
+>Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [&#x200B; productbeschrijvingen &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
 
 Leer hoe u een publiek van niet-geverifieerde bezoekers kunt maken en deze opnieuw kunt richten met behulp van door de partner geleverde duurzame id&#39;s.
 

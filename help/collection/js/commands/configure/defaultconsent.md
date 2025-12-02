@@ -61,7 +61,7 @@ Zie de onderstaande tabel om te begrijpen wanneer gegevensverzameling plaatsvind
 | `out` | `out` | Nee | Ja |
 | `out` | Niet ingesteld | Nee | Nee |
 
-Zie [&#x200B; de koekjes van SDK van het Web van Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) voor een lijst van koekjes die de bibliotheekreeksen.
+Zie [&#x200B; de koekjes van SDK van het Web van Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/cookies/web-sdk) voor een lijst van koekjes die de bibliotheekreeksen.
 
 >[!NOTE]
 >

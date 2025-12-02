@@ -25,8 +25,8 @@ Voor details bij vestiging technische rekeningen en het toewijzen van de vereist
 
 Raadpleeg voor aanvullende informatie over het maken en configureren van een technische account:
 
-- [&#x200B; de opstelling van Developer Console &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Step-by-step instructies voor het vormen van Adobe Developer Console en het verkrijgen van geloofsbrieven OAuth.
-- [&#x200B; technische de rekeningsopstelling van begin tot eind &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): Een uitvoerige analyse voor het creëren van en het vormen van een technische rekening in Adobe Experience Platform.
+- [&#x200B; de opstelling van Developer Console &#x200B;](https://experienceleague.adobe.com/nl/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Step-by-step instructies voor het vormen van Adobe Developer Console en het verkrijgen van geloofsbrieven OAuth.
+- [&#x200B; technische de rekeningsopstelling van begin tot eind &#x200B;](https://experienceleague.adobe.com/nl/docs/platform-learn/tutorial-comprehensive-technical/setup): Een uitvoerige analyse voor het creëren van en het vormen van een technische rekening in Adobe Experience Platform.
 
 Als u slechts de Dienst UI van de Vraag gebruikt, zorg ervoor u de noodzakelijke toestemmingen hebt of met een beheerder coördineert die technische rekeningen beheert. Alle geplande query&#39;s worden toegevoegd aan de lijst op het tabblad [!UICONTROL Scheduled queries] , waar u de status, de planningsdetails en de foutberichten voor alle geplande querytaken kunt controleren en zich kunt abonneren op waarschuwingen. Voor meer informatie bij het controleren van en het beheren van uw vragen, zie het [&#x200B; document van de controlemonitor geplande vragen &#x200B;](./monitor-queries.md).
 

@@ -35,11 +35,11 @@ Foutopsporing in Experience Platform geeft de volgende informatie weer voor elke
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versie </p> </td> 
-   <td colname="col2"> <p>De <a href="https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html" format="html" scope="external"> AppMeasurement </a> -versie die is gedefinieerd voor de pagina </p> </td> 
+   <td colname="col2"> <p>De <a href="https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL" format="html" scope="external"> AppMeasurement </a> -versie die is gedefinieerd voor de pagina </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versie bezoeker </p> </td> 
-   <td colname="col2"> <p>De versie van de <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external"> bezoekersidentiteitskaart </a> bibliotheek. </p> </td> 
+   <td colname="col2"> <p>De versie van de <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=nl-NL" format="html" scope="external"> bezoekersidentiteitskaart </a> bibliotheek. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Paginanaam </p> </td> 
@@ -77,7 +77,7 @@ Foutopsporing in Experience Platform geeft de volgende informatie weer voor elke
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Naam </p> </td> 
-   <td colname="col2"> <p>De naam van de eigenschap tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> </a> </p> </td> 
+   <td colname="col2"> <p>De naam van de eigenschap tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=nl-NL" format="https" scope="external"> </a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versie </p> </td> 
@@ -85,11 +85,11 @@ Foutopsporing in Experience Platform geeft de volgende informatie weer voor elke
   </tr> 
   <tr> 
    <td colname="col1"> <p>Bouwdatum </p> </td> 
-   <td colname="col2"> <p>De tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> bibliotheek </a> bouwdatum </p> </td> 
+   <td colname="col2"> <p>De tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=nl-NL" format="https" scope="external"> bibliotheek </a> bouwdatum </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Omgeving </p> </td> 
-   <td colname="col2"> <p>De <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> omgeving </a> die door de tagbibliotheek wordt gebruikt </p> </td> 
+   <td colname="col2"> <p>De <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=nl-NL" format="https" scope="external"> omgeving </a> die door de tagbibliotheek wordt gebruikt </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Extensies </p> </td> 
@@ -139,7 +139,7 @@ Foutopsporing in Experience Platform geeft de volgende informatie weer voor elke
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versie </p> </td> 
-   <td colname="col2"> <p>De versie van de <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external"> bezoekersidentiteitskaart </a> bibliotheek </p> </td> 
+   <td colname="col2"> <p>De versie van de <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=nl-NL" format="html" scope="external"> bezoekersidentiteitskaart </a> bibliotheek </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -150,47 +150,47 @@ Foutopsporing in Experience Platform geeft de volgende informatie weer voor elke
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Clientcode </p> </td> 
-   <td colname="col2"> <p>Uw doel- <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/deploy-at-js/implementing-target-without-a-tag-manager.html" format="html" scope="external"> clientcode </a> </p> </td> 
+   <td colname="col2"> <p>Uw doel- <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=nl-NL" format="html" scope="external"> clientcode </a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versie </p> </td> 
-   <td colname="col2"> <p>Uw huidige versie <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/target-atjs-versions.html" format="html" scope="external"> at.js </a> of mbox.js </p> </td> 
+   <td colname="col2"> <p>Uw huidige versie <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/target-atjs-versions.html?lang=nl-NL" format="html" scope="external"> at.js </a> of mbox.js </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Algemene aanvraagnaam </p> </td> 
-   <td colname="col2"> <p><a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html" format="html" scope="external"> globale mbox </a> verwijst naar de enige servervraag die bij de bovenkant van elke Web-pagina in uw implementatie van het Doel wordt gemaakt </p> </td> 
+   <td colname="col2"> <p><a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html?lang=nl-NL" format="html" scope="external"> globale mbox </a> verwijst naar de enige servervraag die bij de bovenkant van elke Web-pagina in uw implementatie van het Doel wordt gemaakt </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Gebeurtenis bij laden van pagina </p> </td> 
-   <td colname="col2"> <p>Het type van <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html" format="html" scope="external"> gebeurtenis </a> dat brandt wanneer de pagina laadt </p> </td> 
+   <td colname="col2"> <p>Het type van <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=nl-NL" format="html" scope="external"> gebeurtenis </a> dat brandt wanneer de pagina laadt </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Naam aanvraag </p> </td> 
-   <td colname="col2"> <p>De naam van een verzoek rond een <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html" format="html" scope="external"> plaats </a> op de pagina. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
+   <td colname="col2"> <p>De naam van een verzoek rond een <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html?lang=nl-NL" format="html" scope="external"> plaats </a> op de pagina. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Naam activiteit </p> </td> 
-   <td colname="col2"> <p>De naam van de doelcampagne of -activiteit <a href="https://experienceleague.adobe.com/docs/target/using/activities/activities.html" format="html" scope="external"> </a> . Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
+   <td colname="col2"> <p>De naam van de doelcampagne of -activiteit <a href="https://experienceleague.adobe.com/docs/target/using/activities/activities.html?lang=nl-NL" format="html" scope="external"> </a> . Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Activiteits-id </p> </td> 
-   <td colname="col2"> <p>De id van de doelactiviteit. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
+   <td colname="col2"> <p>De id van de doelactiviteit. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Naam van ervaring </p> </td> 
-   <td colname="col2"> <p>De naam van het Doel <a href="https://experienceleague.adobe.com/docs/target/using/experiences/experiences.html" format="html" scope="external"> ervaring </a>. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
+   <td colname="col2"> <p>De naam van het Doel <a href="https://experienceleague.adobe.com/docs/target/using/experiences/experiences.html?lang=nl-NL" format="html" scope="external"> ervaring </a>. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Ervaring-id </p> </td> 
-   <td colname="col2"> <p>De id van de doelervaring. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
+   <td colname="col2"> <p>De id van de doelervaring. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Naam voorstel</p> </td> 
-   <td colname="col2"> <p>De naam van het Doel <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> aanbieding </a>. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
+   <td colname="col2"> <p>De naam van het Doel <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=nl-NL" format="html" scope="external"> aanbieding </a>. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Aanbieding-id </p> </td> 
-   <td colname="col2"> <p>De id van de Target-aanbieding. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
+   <td colname="col2"> <p>De id van de Target-aanbieding. Beschikbaar zonder authentificatie slechts als u de het Zuiveren gebeurtenisluisteraar in uw code of markeringsmanager implementeert en de noodzakelijke <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL" format="html" scope="external"> reactietokens </a> in het Doel UI aanzet. </p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -229,7 +229,7 @@ De definities van het publiek worden binnen een uur doorgegeven aan de Edge Netw
 ### Waar zie ik de geactiveerde kenmerken in Adobe Target?
 
 +++Antwoord
-De attributen zullen beschikbaar in Doel in [&#x200B; JSON &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [&#x200B; HTML &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) aanbiedingen zijn te gebruiken.
+De attributen zullen beschikbaar in Doel in [&#x200B; JSON &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=nl-NL) en [&#x200B; HTML &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=nl-NL) aanbiedingen zijn te gebruiken.
 +++
 
 ### Kan ik een bestemming zonder een gegevensstroom tot stand brengen en dan een gegevensstroom aan de zelfde bestemming op een recentere punt toevoegen?
@@ -265,7 +265,7 @@ Ja. Het [&#x200B; Beheers en Toestemmingsbeleid van Gegevens &#x200B;](../data-g
 ### Zijn de [!DNL Adobe Target] en [!DNL Custom Personalization] bestemmingen [!DNL HIPAA] compatibel?
 
 +++Antwoord
-[!DNL Adobe Target] is niet [!DNL HIPPA] - volgzaam met [[!DNL Adobe Healthcare Shield] &#x200B;](https://business.adobe.com/solutions/industries/healthcare.html). Klanten dienen met hun eigen juridische teams na te gaan of [!DNL HIPPA] gereed is voor aangepaste optimalisatiekanalen voordat ze de randaanpassing via [!DNL Adobe Target] of de [!DNL Custom Personalization] -doelen gebruiken.
+[!DNL Adobe Target] is niet [!DNL HIPPA] - volgzaam met [[!DNL Adobe Healthcare Shield] &#x200B;](https://business.adobe.com/nl/solutions/industries/healthcare.html). Klanten dienen met hun eigen juridische teams na te gaan of [!DNL HIPPA] gereed is voor aangepaste optimalisatiekanalen voordat ze de randaanpassing via [!DNL Adobe Target] of de [!DNL Custom Personalization] -doelen gebruiken.
 
 Wanneer het beheer van het toestemmingsbeleid op schaal moet worden toegepast, moeten klanten [!DNL Adobe Privacy & Security Shield] kopen. [!DNL Adobe Privacy & Security Shield] -functies worden verkocht als een geavanceerde suite van mogelijkheden en worden mogelijk niet afzonderlijk aangeschaft.
 

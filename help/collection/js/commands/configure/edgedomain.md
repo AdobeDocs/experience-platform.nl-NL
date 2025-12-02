@@ -11,9 +11,9 @@ ht-degree: 1%
 
 # `edgeDomain`
 
-Met de eigenschap `edgeDomain` kunt u het domein wijzigen waar de Web SDK gegevens verzendt. Dit bezit wordt vaak gebruikt door organisaties die [&#x200B; eerste partijkoekjes &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) gebruiken. De gegevens worden verzonden naar het eigen domein van de organisatie, dan een verslag CNAME door:sturen die gegevens naar Adobe.
+Met de eigenschap `edgeDomain` kunt u het domein wijzigen waar de Web SDK gegevens verzendt. Dit bezit wordt vaak gebruikt door organisaties die [&#x200B; eerste partijkoekjes &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=nl-NL) gebruiken. De gegevens worden verzonden naar het eigen domein van de organisatie, dan een verslag CNAME door:sturen die gegevens naar Adobe.
 
-De waarde die u voor `edgeDomain` gebruikt hangt van uw participatie in het [&#x200B; Adobe-Beheerde certificaatprogramma &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) af:
+De waarde die u voor `edgeDomain` gebruikt hangt van uw participatie in het [&#x200B; Adobe-Beheerde certificaatprogramma &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/adobe-managed-cert) af:
 
 **als uw organisatie aan het Adobe-Beheerde certificaatprogramma** deelneemt, plaats de waarde aan het eerste partijdomein dat toen vestiging het certificaat werd geselecteerd. Deze waarde is doorgaans een subdomein dat eigendom is van uw organisatie. Bijvoorbeeld `data.example.com` . CNAME-records in uw organisatie leiden die gegevens om naar Adobe.
 

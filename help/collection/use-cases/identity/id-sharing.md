@@ -53,7 +53,7 @@ De parameter van het vraagkoord omvat:
 
 Bij het delen van een id van mobiel naar web wordt de parameter `adobe_mc` gebruikt. Wanneer de parameter `adobe_mc` aanwezig en geldig is, wordt `ECID` van de queryreeks automatisch toegevoegd aan de identiteitskaart in de eerste aanvraag die naar de Edge Network wordt uitgevoerd. Alle volgende Edge Network-interacties gebruiken die `ECID` .
 
-Voor meer informatie over hoe te om bezoekers IDs van een mobiele app tot een WebView over te gaan, zie de documentatie over [&#x200B; behandelend WebViews &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Voor meer informatie over hoe te om bezoekers IDs van een mobiele app tot een WebView over te gaan, zie de documentatie over [&#x200B; behandelend WebViews &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=nl-NL#implementation).
 
 ## Id&#39;s delen naar andere domeinen implementeren {#cross-domain-sharing}
 

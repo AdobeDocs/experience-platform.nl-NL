@@ -63,7 +63,7 @@ Experience Platform biedt u de mogelijkheid om gegevens over uw toestemming te v
 
 Naast SDK-opdrachten die worden geactiveerd door de haken voor wijziging van de toestemming van CMP, kunnen toestemmingsgegevens ook naar Experience Platform stromen via door de klant gegenereerde XDM-gegevens die rechtstreeks naar een [!DNL Profile] -gegevensset worden geüpload.
 
-Alle segmenten die Adobe Audience Manager met Experience Platform deelt (via de [!DNL Audience Manager] source connector of anderszins) kunnen ook gegevens over de toestemming bevatten als de desbetreffende velden op die segmenten zijn toegepast via [!DNL Experience Cloud Identity Service] . Voor meer informatie bij het verzamelen van toestemmingsgegevens in [!DNL Audience Manager], zie het document op het [&#x200B; elektrische toestel van Adobe Audience Manager voor IAB TCF &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Alle segmenten die Adobe Audience Manager met Experience Platform deelt (via de [!DNL Audience Manager] source connector of anderszins) kunnen ook gegevens over de toestemming bevatten als de desbetreffende velden op die segmenten zijn toegepast via [!DNL Experience Cloud Identity Service] . Voor meer informatie bij het verzamelen van toestemmingsgegevens in [!DNL Audience Manager], zie het document op het [&#x200B; elektrische toestel van Adobe Audience Manager voor IAB TCF &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=nl-NL).
 
 ### Goedkeuring stroomafwaarts
 
@@ -245,7 +245,7 @@ TCF 2.0 vereist ook dat de bron van gegevens de de verkoperstoestemming van de b
 
 >[!NOTE]
 >
->Om het even welke segmenten die met Adobe Audience Manager worden gedeeld bevatten de zelfde TCF 2.0 toestemmingswaarden zoals hun Experience Platform tegenhangers. Aangezien [!DNL Audience Manager] dezelfde leverancier-id heeft als Experience Platform (565), zijn dezelfde doeleinden en machtiging van de leverancier vereist. Zie het document op het [&#x200B; elektrische toestel van Adobe Audience Manager voor IAB TCF &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) voor meer informatie.
+>Om het even welke segmenten die met Adobe Audience Manager worden gedeeld bevatten de zelfde TCF 2.0 toestemmingswaarden zoals hun Experience Platform tegenhangers. Aangezien [!DNL Audience Manager] dezelfde leverancier-id heeft als Experience Platform (565), zijn dezelfde doeleinden en machtiging van de leverancier vereist. Zie het document op het [&#x200B; elektrische toestel van Adobe Audience Manager voor IAB TCF &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=nl-NL) voor meer informatie.
 
 ## Implementatie testen {#test-implementation}
 

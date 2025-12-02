@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-[[!DNL Customer Attributes] &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) in Experience Cloud laat u toe om uw gevangen ondernemingsgegevens van een (CRM) gegevensbestand van het klantenrelatiebeheer te uploaden. U kunt de gegevens uploaden naar een gegevensbron voor klantkenmerken in de Experience Cloud en vervolgens de gegevens in Adobe Analytics en Adobe Target gebruiken.
+[[!DNL Customer Attributes] &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=nl-NL) in Experience Cloud laat u toe om uw gevangen ondernemingsgegevens van een (CRM) gegevensbestand van het klantenrelatiebeheer te uploaden. U kunt de gegevens uploaden naar een gegevensbron voor klantkenmerken in de Experience Cloud en vervolgens de gegevens in Adobe Analytics en Adobe Target gebruiken.
 
 Experience Platform biedt ondersteuning voor het opnemen van [!DNL Customer Attributes] -profielgegevens in Adobe Experience Platform.
 
@@ -31,7 +31,7 @@ U kunt bij het gebruik van [!DNL Customer Attributes] source geen bestaande naam
 
 [!DNL Customer Attributes] -gegevens kunnen alleen worden gekoppeld aan andere [!DNL Profile] -gegevenssets als de gegevens en identiteiten ervan kunnen worden gekoppeld aan een Experience Cloud-id.
 
-U kunt `CORE` namespace vestigen door identiteitskaart van Experience Cloud voor de bezoeker te plaatsen die [&#x200B; SDK van het Web &#x200B;](/help/collection/use-cases/identity/id-overview.md) gebruikt, [&#x200B; Mobiele SDK &#x200B;](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/), of [&#x200B; de Dienst API van identiteitskaart van Experience Cloud &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html).
+U kunt `CORE` namespace vestigen door identiteitskaart van Experience Cloud voor de bezoeker te plaatsen die [&#x200B; SDK van het Web &#x200B;](/help/collection/use-cases/identity/id-overview.md) gebruikt, [&#x200B; Mobiele SDK &#x200B;](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/), of [&#x200B; de Dienst API van identiteitskaart van Experience Cloud &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=nl-NL).
 
 In het bestand [!DNL Customer Attributes] worden andere identiteitsrelaties niet meer ingevuld. Bijvoorbeeld, als a [!DNL Customer Attributes] brondataset een **E-mail** en gebied van identiteitskaart van de a **Loyalty** bevat, dan moeten die gebieden als identiteitsgebieden in het schema worden geëtiketteerd om in [!DNL Identity Service] te worden verwerkt.
 

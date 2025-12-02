@@ -39,16 +39,16 @@ Om dit te bereiken, bestaat de vereiste technologie uit twee Experience Platform
 >
 >Zorg ervoor dat u de noodzakelijke [&#x200B; op attributen-gebaseerde toegangsbeheertoestemmingen &#x200B;](/help/access-control/abac/end-to-end-guide.md) voor al deze gebieden hebt, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)] &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html): Integreer gegevens over gegevensbronnen om de campagne te voeden. Deze gegevens worden vervolgens gebruikt om het campagnepubliek te maken en gepersonaliseerde gegevenselementen aan de oppervlakte te brengen die worden gebruikt in de e-mail en de webpromo-elementen (bijvoorbeeld naam of aan account gerelateerde informatie). Tot slot wordt Real-Time CDP ook gebruikt om het publiek naar betaalmedia-bestemmingen te activeren.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)] &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=nl-NL): Integreer gegevens over gegevensbronnen om de campagne te voeden. Deze gegevens worden vervolgens gebruikt om het campagnepubliek te maken en gepersonaliseerde gegevenselementen aan de oppervlakte te brengen die worden gebruikt in de e-mail en de webpromo-elementen (bijvoorbeeld naam of aan account gerelateerde informatie). Tot slot wordt Real-Time CDP ook gebruikt om het publiek naar betaalmedia-bestemmingen te activeren.
    * [Schema&#39;s](/help/xdm/home.md)
    * [Profielen](/help/profile/home.md)
    * [Gegevenssets](/help/catalog/datasets/overview.md)
    * [Doelgroepen](/help/segmentation/home.md)
    * [Bestemmingen](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer] &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): De reizen van het ontwerp, opstellingstrekkers, en creeer het juiste overseinen om uw bezoekers te richten.
-   * [&#x200B; de Trigger van de Gebeurtenis of van het Publiek &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [&#x200B; Soorten publiek en Gebeurtenissen &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
-   * [&#x200B; Reizen &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+* [[!DNL Adobe Journey Optimizer] &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=nl-NL): De reizen van het ontwerp, opstellingstrekkers, en creeer het juiste overseinen om uw bezoekers te richten.
+   * [&#x200B; de Trigger van de Gebeurtenis of van het Publiek &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=nl-NL)
+   * [&#x200B; Soorten publiek en Gebeurtenissen &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=nl-NL)
+   * [&#x200B; Reizen &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=nl-NL)
 
 ## Real-Time CDP- en Journey Optimizer-architectuur
 
@@ -268,9 +268,9 @@ Voor meer informatie over hoe te om a [&#x200B; dataset &#x200B;](/help/catalog/
 
 >[!IMPORTANT]
 >
->Het is een wettelijke vereiste om klanten de mogelijkheid te bieden zich niet langer te abonneren op het ontvangen van communicatie van een merk, en om ervoor te zorgen dat deze keuze wordt nagekomen. Leer meer over de toepasselijke wetgeving in het [&#x200B; overzicht van de Regels van de Privacy &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Het is een wettelijke vereiste om klanten de mogelijkheid te bieden zich niet langer te abonneren op het ontvangen van communicatie van een merk, en om ervoor te zorgen dat deze keuze wordt nagekomen. Leer meer over de toepasselijke wetgeving in het [&#x200B; overzicht van de Regels van de Privacy &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=nl-NL).
 
-Overweeg het uitvoeren van het volgende [&#x200B; toestemmingsbeleid &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) en het vragen van uw bezoekers om toestemming alvorens u uit naar hen reist:
+Overweeg het uitvoeren van het volgende [&#x200B; toestemmingsbeleid &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=nl-NL) en het vragen van uw bezoekers om toestemming alvorens u uit naar hen reist:
 
 * Als `consents.marketing.email.val = "Y"` dan kan e-mailen
 * Indien `consents.marketing.sms.val = "Y"` dan kan SMS
@@ -298,7 +298,7 @@ Er zijn geen [&#x200B; marketing beleid &#x200B;](/help/data-governance/policies
 
 Voor dit gebruiksgeval moet u twee soorten publiek maken om specifieke kenmerken of gedragingen te definiëren die worden gedeeld door een subset van profielen in het archief Profiel om een verhandelbare groep personen te onderscheiden. In Adobe Experience Platform kunnen soorten publiek op meerdere manieren worden gemaakt:
 
-* Voor informatie over hoe te om een publiek tot stand te brengen, lees de [&#x200B; de dienstgids van het publiek UI &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
+* Voor informatie over hoe te om een publiek tot stand te brengen, lees de [&#x200B; de dienstgids van het publiek UI &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=nl-NL#create-audience).
 * Voor informatie over hoe te om [&#x200B; publiek &#x200B;](/help/segmentation/home.md) samen te stellen, lees de [&#x200B; gids UI van de Samenstelling van het publiek &#x200B;](/help/segmentation/ui/audience-composition.md).
 * Voor informatie over hoe te om publiek door Experience Platform-Afgeleide segmentdefinities te bouwen, lees de [&#x200B; gids UI van de Bouwer van het publiek van het publiek UI &#x200B;](/help/segmentation/ui/segment-builder.md).
 
@@ -344,7 +344,7 @@ Dit publiek wordt gemaakt om profielen op te nemen die in de afgelopen drie maan
 >
 >[!DNL Adobe Journey Optimizer] omvat niet alles die in de diagrammen wordt getoond. Alle [&#x200B; betaalde media advertenties &#x200B;](/help/destinations/catalog/social/overview.md) worden gecreeerd in de [!UICONTROL destinations] [&#x200B; werkruimte &#x200B;](/help/destinations/ui/destinations-workspace.md).
 
-[[!DNL Adobe Journey Optimizer] &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helpt u verbonden, contextafhankelijke, en gepersonaliseerde ervaringen aan uw klanten leveren. De reis van de klant is het volledige proces van interactie van een klant met het merk. Voor elke gebruiksreis is specifieke informatie vereist.
+[[!DNL Adobe Journey Optimizer] &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=nl-NL) helpt u verbonden, contextafhankelijke, en gepersonaliseerde ervaringen aan uw klanten leveren. De reis van de klant is het volledige proces van interactie van een klant met het merk. Voor elke gebruiksreis is specifieke informatie vereist.
 
 Voor dit gebruiksgeval moet u twee aparte ritten maken:
 
@@ -367,15 +367,15 @@ De levenslange reis richt het publiek van high-value en laag-frequente klanten d
 
 De hierboven getoonde reis volgt de volgende logica.
 
-1. Lees publiek: Gebruik a [&#x200B; gelezen publieksactiviteit &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) voor het eerste publiek dat in de sectie van het publiek hierboven wordt gecreeerd.
+1. Lees publiek: Gebruik a [&#x200B; gelezen publieksactiviteit &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=nl-NL) voor het eerste publiek dat in de sectie van het publiek hierboven wordt gecreeerd.
 
-2. Voorwaarde - Gewenste Kanaal: Gebruik de activiteit van de a [&#x200B; voorwaarde &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) om te bepalen hoe te om uit aan klanten te bereiken, hetzij door e-mail, SMS, of dupberichten. Gebruik drie actieactiviteiten om de drie takken tot stand te brengen.
+2. Voorwaarde - Gewenste Kanaal: Gebruik de activiteit van de a [&#x200B; voorwaarde &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=nl-NL) om te bepalen hoe te om uit aan klanten te bereiken, hetzij door e-mail, SMS, of dupberichten. Gebruik drie actieactiviteiten om de drie takken tot stand te brengen.
 
-3. Wacht: Het gebruik a [&#x200B; wacht activiteit &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) om te wachten tot u op aankopen luistert.
+3. Wacht: Het gebruik a [&#x200B; wacht activiteit &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=nl-NL) om te wachten tot u op aankopen luistert.
 
 4. Voorwaarde - Aangeschafte Abonnement in afgelopen 7 dagen?: gebruik een voorwaardenactiviteit om te luisteren naar productaankopen in de afgelopen 7 dagen.
 
-5. JourneyStepEventTracker - Abonnement niet Gekochte: Gebruik a [&#x200B; douaneactie &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) voor de bezoekers die uw abonnement nog niet hebben gekocht, ondanks het ontvangen van uw bericht. Als onderdeel van de aangepaste voorwaarde aan het einde van de rit maakt u een `journey.feedback` -gebeurtenis en voegt u deze toe aan een gegevensset die is gebaseerd op het [!UICONTROL Journey Step Event] -schema. U gebruikt deze gebeurtenis om het publiek te segmenteren dat het abonnement niet heeft aangeschaft en dat u kunt richten via betaalde mediadeslagen.
+5. JourneyStepEventTracker - Abonnement niet Gekochte: Gebruik a [&#x200B; douaneactie &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=nl-NL) voor de bezoekers die uw abonnement nog niet hebben gekocht, ondanks het ontvangen van uw bericht. Als onderdeel van de aangepaste voorwaarde aan het einde van de rit maakt u een `journey.feedback` -gebeurtenis en voegt u deze toe aan een gegevensset die is gebaseerd op het [!UICONTROL Journey Step Event] -schema. U gebruikt deze gebeurtenis om het publiek te segmenteren dat het abonnement niet heeft aangeschaft en dat u kunt richten via betaalde mediadeslagen.
 
 +++
 
@@ -436,7 +436,7 @@ Gebruik de voorgestelde gebeurtenissen, gebieden, en acties hieronder in uw beve
 
 >[!ENDTABS]
 
-Voor meer informatie over het creëren van reizen in [!DNL Adobe Journey Optimizer], lees [&#x200B; begonnen met reizen &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) gids.
+Voor meer informatie over het creëren van reizen in [!DNL Adobe Journey Optimizer], lees [&#x200B; begonnen met reizen &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=nl-NL) gids.
 
 ### Een bestemming instellen om betaalde mediaciliteiten weer te geven {#paid-media-ads}
 

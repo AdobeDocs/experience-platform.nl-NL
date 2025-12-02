@@ -18,7 +18,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) voor een geconsolideerde referentie van de terminologiewijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=nl-NL) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 De gebeurtenis die van de Brievenchimp [&#x200B; &#x200B;](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen verzendt gebeurtenissen naar de Marketing API van Mailchimp die e-mails voor de marketing van Mailchimp campagnes, reizen, of transacties kan teweegbrengen.
 
