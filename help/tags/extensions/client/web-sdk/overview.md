@@ -1,20 +1,20 @@
 ---
-title: Overzicht van Web SDK-extensie
-description: Meer informatie over de Web SDK-tagextensie in Adobe Experience Platform.
+title: Overzicht van Web SDK-tags
+description: Leer over de de markeringsuitbreiding van SDK van het Web in de Inzameling van Gegevens van Adobe Experience Platform.
 exl-id: 2bc738b9-5939-47a6-a829-429937e4c673
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 34%
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform Web SDK-extensie - overzicht
+# Overzicht van Adobe Experience Platform Web SDK-tags
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+De Adobe Experience Platform Web SDK-tagextensie verzendt gegevens naar de Adobe Experience Cloud vanuit wegeigenschappen via de Adobe Experience Platform Edge Network. Met de extensie Experience Platform Web SDK kunt u gegevens streamen naar een platform, identiteiten synchroniseren, inbellen en automatisch contextgegevens verzamelen.
 
-De extensie Adobe Experience Platform Web SDK verzendt gegevens naar de Adobe Experience Cloud vanuit wegeigenschappen via de Adobe Experience Platform Edge Network. Met de extensie Experience Platform Web SDK kunt u gegevens streamen naar een platform, identiteiten synchroniseren, inbellen en automatisch contextgegevens verzamelen.
+Zie [ Begonnen worden ](getting-started.md) om te leren hoe te opstelling en deze markeringsuitbreiding op te stellen beginnen gegevens te verzamelen.
 
-Voor details over het vormen van de uitbreiding van SDK van het Web van Experience Platform, zie [&#x200B; de de markeringsuitbreiding van SDK van het Web &#x200B;](web-sdk-extension-configuration.md) vormen.
+Bekijk de onderstaande video om Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network] in actie te zien, met behulp van één aanroep om gegevens naar [!DNL Experience Platform] , [!DNL Analytics] , [!DNL Audience Manager] en [!DNL Target] te verzenden.
+
+>[!VIDEO](https://video.tv.adobe.com/v/34148)

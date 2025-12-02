@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;bronnen;bron;gegevensve
 title: Adobe-gegevensverzameling
 description: Dit document biedt een overzicht van de Adobe-gegevensbron voor gegevensverzameling.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
@@ -24,16 +24,16 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Selecteer onder de categorie [!UICONTROL Adobe applications] de optie **[!UICONTROL Adobe Data Collection]** en selecteer vervolgens **[!UICONTROL Set up]** .
 
-![&#x200B; gegevens-inzameling &#x200B;](./images/data-collection/catalog.png)
+![ gegevens-inzameling ](./images/data-collection/catalog.png)
 
 De gebruikersinterface voor gegevensverzameling wordt weergegeven op het tabblad **[!UICONTROL Datastreams]** .
 
 Een gegevensstroom is een configuratie die de Edge Network vertelt waar u uw gegevens wilt worden verzonden. Specifiek, specificeert een gegevensstroom welke producten van Experience Cloud u de gegevens naar wilt verzenden, en hoe u de gegevens wilt worden behandeld en in elk product worden opgeslagen.
 
-![&#x200B; gegevensstromen &#x200B;](./images/data-collection/datastreams.png)
+![ gegevensstromen ](./images/data-collection/datastreams.png)
 
-Voor uitvoerige stappen op hoe te om gegevensinzameling in UI te vormen, zie het [&#x200B; overzicht van begin tot eind van de gegevensinzameling &#x200B;](../../../collection/e2e.md).
+Voor uitvoerige stappen op hoe te om gegevensinzameling in UI te vormen, zie [ Begonnen het worden met de de markeringsuitbreiding van SDK van het Web ](/help/tags/extensions/client/web-sdk/getting-started.md).
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe te om tot de Inzameling van Gegevens UI toegang te hebben gebruikend de bronwerkruimte. Voor meer informatie over de Inzameling van Gegevens, zie het [&#x200B; overzicht van de Inzameling van Gegevens &#x200B;](../../../collection/e2e.md).
+Door dit document te lezen, hebt u geleerd hoe te om tot de Inzameling van Gegevens UI toegang te hebben gebruikend de bronwerkruimte. Voor meer informatie over de Inzameling van Gegevens, zie het [ overzicht van de Inzameling van Gegevens ](/help/collection/home.md).

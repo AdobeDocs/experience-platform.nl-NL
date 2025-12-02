@@ -1,8 +1,8 @@
 ---
 title: Overzicht gegevensstromen
-description: Leer hoe de gegevensstromen u helpen uw cliënt-zijintegratie van Experience Platform SDK met de producten van de Adobe en derdebestemmingen verbinden.
+description: Leer hoe gegevensstromen u helpen uw cliënt-kant integratie van Experience Platform SDK met de producten van Adobe en derdebestemmingen verbinden.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 0%
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # Overzicht gegevensstromen
 
-Een gegevensstroom vertegenwoordigt de server-zijconfiguratie voor het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de opdracht [`configure`](/help/web-sdk/commands/configure/overview.md) in de SDK de client-side instellingen (zoals de `edgeDomain` ) verwerkt, beheren gegevensstreams alle andere configuraties.
+Een gegevensstroom vertegenwoordigt de server-zijconfiguratie voor het Web van Adobe Experience Platform en Mobiele SDKs. Terwijl de opdracht [`configure`](/help/collection/js/commands/configure/overview.md) in de SDK de client-side instellingen (zoals de `edgeDomain` ) verwerkt, beheren gegevensstreams alle andere configuraties.
 
 Wanneer u een aanvraag naar de Edge Network verzendt, verwijst `datastreamId` naar de gegevensstroom waarnaar de gegevens worden verzonden. Zo kunt u de serverconfiguratie bijwerken zonder de code van uw website te wijzigen.
 
 U kunt gegevensstromen tot stand brengen en beheren door **[!UICONTROL Datastreams]** in de linkernavigatie binnen de UI van Adobe Experience Platform of UI van de Inzameling van Gegevens te selecteren.
 
-![&#x200B; Het lusje van gegevensstromen in UI &#x200B;](assets/overview/datastreams-tab.png)
+![ Het lusje van gegevensstromen in UI ](assets/overview/datastreams-tab.png)
 
-Voor meer informatie over hoe te om een gegevensstroom in UI te vormen, zie de [&#x200B; configuratiegids &#x200B;](./configure.md).
+Voor meer informatie over hoe te om een gegevensstroom in UI te vormen, zie de [ configuratiegids ](./configure.md).
 
 ## Vertrouwelijke gegevens in gegevensstromen verwerken {#sensitive}
 
@@ -37,21 +37,21 @@ De stromen van gegevensstromen verstrekken drie methodes om u bij de veilige beh
 
 ### Verbeterde codering {#encryption}
 
-Alle gegevens in doorgang door de Edge Network over veilige, gecodeerde verbindingen wordt geleid gebruikend [&#x200B; HTTPS TLS 1.2 &#x200B;](https://datatracker.ietf.org/doc/html/rfc5246). Als de gegevensstroom gegevens in Experience Platform brengt, worden de gegevens dan gecodeerd in rust in het de gegevensmeer van het Experience Platform. Zie het document over [&#x200B; gegevensencryptie in Experience Platform &#x200B;](../landing/governance-privacy-security/encryption.md) voor meer informatie.
+Alle gegevens in doorgang door Edge Network wordt geleid over veilige, gecodeerde verbindingen gebruikend [ HTTPS TLS 1.2 ](https://datatracker.ietf.org/doc/html/rfc5246). Als de gegevensstroom gegevens naar Experience Platform brengt, worden de gegevens vervolgens in rust gecodeerd in het Experience Platform data Lake. Zie het document over [ gegevensencryptie in Experience Platform ](../landing/governance-privacy-security/encryption.md) voor meer informatie.
 
 ### Datagovernance {#governance}
 
-De stromen van gegevens gebruiken de Experience Platform ingebouwde mogelijkheden van het gegevensbeheer om gevoelige gegevens te verhinderen worden verzonden naar de niet-HIPAA-klaar diensten. Door specifieke gebieden te etiketteren die gevoelige gegevens in uw gegevensstroomschema&#39;s bevatten, kunt u korrelige controle nemen over welke gegevensgebieden voor specifieke doeleinden kunnen worden gebruikt.
+De gegevensstromen gebruiken de ingebouwde mogelijkheden van het gegevensbeheer van Experience Platform om gevoelige gegevens te verhinderen worden verzonden naar de niet-HIPAA-klaar diensten. Door specifieke gebieden te etiketteren die gevoelige gegevens in uw gegevensstroomschema&#39;s bevatten, kunt u korrelige controle nemen over welke gegevensgebieden voor specifieke doeleinden kunnen worden gebruikt.
 
 De volgende video verstrekt een kort overzicht van hoe de beperkingen van het gegevensgebruik voor gegevensstromen in UI worden gevormd en worden afgedwongen:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
-In Experience Platform, kunt u [&#x200B; gevoelige etiketten van het gegevensgebruik &#x200B;](../data-governance/labels/reference.md#sensitive) op schema&#39;s en gebieden toepassen die gegevens bevatten die uw organisatie gevoelig acht. Het label `RHD` wordt bijvoorbeeld gebruikt om PHI-gegevens (Protected Health Information) aan te geven en het label `S1` geeft gegevens over de geolocatie aan.
+In Experience Platform, kunt u [ gevoelige etiketten van het gegevensgebruik ](../data-governance/labels/reference.md#sensitive) op schema&#39;s en gebieden toepassen die gegevens bevatten die uw organisatie gevoelig acht. Het label `RHD` wordt bijvoorbeeld gebruikt om PHI-gegevens (Protected Health Information) aan te geven en het label `S1` geeft gegevens over de geolocatie aan.
 
 >[!NOTE]
 >
->Voor details op hoe te om de etiketten van het gegevensgebruik binnen het [!UICONTROL Schemas] lusje in het Experience Platform UI of de Inzameling UI van Gegevens toe te passen, zie het [&#x200B; schema etiketterend leerprogramma &#x200B;](../xdm/tutorials/labels.md).
+>Voor details op hoe te om de etiketten van het gegevensgebruik binnen het [!UICONTROL Schemas] lusje in Experience Platform UI of de Inzameling UI van Gegevens toe te passen, zie het [ schema etiketterend leerprogramma ](../xdm/tutorials/labels.md).
 
 Wanneer u een gegevensstroom creeert, als het geselecteerde schema gevoelige etiketten van het gegevensgebruik bevat, kunt u de gegevensstroom slechts vormen om die gegevens naar bestemmingen te verzenden HIPAA-klaar. Momenteel, is de enige bestemming HIPAA-klaar die door gegevensstromen wordt gesteund Adobe Experience Platform. Andere bestemmingsdiensten met inbegrip van Adobe Target, Adobe Analytics, Adobe Audience Manager, gebeurtenis het door:sturen, en randbestemmingen zijn gehandicapt voor gegevensstromen die gevoelige etiketten van het gegevensgebruik bevatten.
 
@@ -61,10 +61,10 @@ Als een schema in een bestaande gegevensstroom met de niet-HIPAA-klaar diensten 
 
 In Experience Platform kunnen gegevensstroomactiviteiten worden gecontroleerd in de vorm van auditlogboeken. De logboeken van de controle wijzen op **die** **uitvoerde wat** actie, en **wanneer**, samen met andere contextafhankelijke gegevens die u kunnen helpen kwesties met betrekking tot gegevensstromen problemen oplossen om uw zaken te helpen aan het beleid en de regelgevende vereisten van het collectieve gegevensbeheer voldoen.
 
-Wanneer een gebruiker een gegevensstroom maakt, bijwerkt of verwijdert, wordt een controlelogboek gemaakt om de handeling op te nemen. Het zelfde komt voor wanneer een gebruiker creeert, bijwerkt, of schrapt een afbeelding door [&#x200B; Prep van Gegevens voor de Inzameling van Gegevens &#x200B;](./data-prep.md). Ongeacht of het een gegevensstroom of een afbeelding was die werd bijgewerkt, wordt het resulterende controlelogboek gecategoriseerd onder het [!UICONTROL Datastreams] middeltype.
+Wanneer een gebruiker een gegevensstroom maakt, bijwerkt of verwijdert, wordt een controlelogboek gemaakt om de handeling op te nemen. Het zelfde komt voor wanneer een gebruiker creeert, bijwerkt, of schrapt een afbeelding door [ Prep van Gegevens voor de Inzameling van Gegevens ](./data-prep.md). Ongeacht of het een gegevensstroom of een afbeelding was die werd bijgewerkt, wordt het resulterende controlelogboek gecategoriseerd onder het [!UICONTROL Datastreams] middeltype.
 
-Zie de documentatie op [&#x200B; controlelogboeken &#x200B;](../landing/governance-privacy-security/audit-logs/overview.md) voor meer informatie over hoe te om logboeken van gegevensstromen en andere gesteunde diensten te interpreteren.
+Zie de documentatie op [ controlelogboeken ](../landing/governance-privacy-security/audit-logs/overview.md) voor meer informatie over hoe te om logboeken van gegevensstromen en andere gesteunde diensten te interpreteren.
 
 ## Volgende stappen
 
-Deze gids verstrekte een overzicht op hoog niveau van gegevensstromen en hun gebruik in de Inzameling van Gegevens en de verwerking van gevoelige gegevens. Voor stappen op hoe te opstelling een nieuwe gegevensstroom, zie de [&#x200B; gids van de gegevensstroomconfiguratie &#x200B;](./configure.md).
+Deze gids verstrekte een overzicht op hoog niveau van gegevensstromen en hun gebruik in de Inzameling van Gegevens en de verwerking van gevoelige gegevens. Voor stappen op hoe te opstelling een nieuwe gegevensstroom, zie de [ gids van de gegevensstroomconfiguratie ](./configure.md).

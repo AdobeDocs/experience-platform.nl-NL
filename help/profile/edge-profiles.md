@@ -2,9 +2,9 @@
 title: Edge-profielen
 description: Meer informatie over Edge-profielen en de bijbehorende terminologie, beschikbare gebieden voor randprofielen en de beschikbare services voor randprofielen.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform is Real-Time Customer Profile de enige waarheidsbron voor entiteitsgegevens. Deze profielgegevens bevinden zich in een centraal knooppunt en kunnen gevallen gebruiken die afhankelijk zijn van de volledigheid en volledigheid van uw gegevens. In meer real-time gebruiksgevallen, waarbij tijdgevoeligheid belangrijker is, hebben randprofielen echter de voorkeur. Edge-profielen zijn lichtgewicht profielen die zich aan de randen bevinden en u helpen bij het gebruik van realtime-personalisatie.
 
-Bijvoorbeeld, gebruiken de toepassingen van de Adobe zoals Adobe Target, de Bestemming van Personalization van de Douane, en Adobe Campaign randen om gepersonaliseerde klantenervaringen in real time te verstrekken. Gegevens worden met een projectie naar een rand omgeleid, waarbij een projectiebestemming de rand definieert waarnaar gegevens worden verzonden.
+Adobe-toepassingen zoals Adobe Target, Aangepaste Personalization-bestemming en Adobe Campaign gebruiken bijvoorbeeld randen om persoonlijke klantervaring in real-time te bieden. Gegevens worden met een projectie naar een rand omgeleid, waarbij een projectiebestemming de rand definieert waarnaar gegevens worden verzonden.
 
 ## Terminologie {#terminology}
 
@@ -55,7 +55,7 @@ Met de Express Profile Service (XPS) worden de profielen aan de verschillende ra
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Voor meer informatie over de Ervaring Edge van de Adobe, te lezen gelieve het [&#x200B; overzicht van de Edge Network &#x200B;](../web-sdk/home.md#edge-network).
+Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Voor meer informatie over de Ervaring Edge van Adobe, zie [ het overzicht van de inzameling van Gegevens ](/help/collection/home.md).
 
 ## Bijlage
 
@@ -69,7 +69,7 @@ Bovendien heeft elk Edge-profiel een schemakenmerk dat het UAR-gebied (User Acti
 
 ### Hoe werkt gegevensvervaltijden met randprofielen?
 
-Voor randprofielen bepaalt de vervaldatum van de gegevens hoe lang het profiel op de rand blijft voordat het wordt verwijderd. Het verstrijken van gegevens is het rollen **&#x200B;**, zo betekent het dat telkens als het profiel op rand wordt betreden, de tijd van de gegevensvervalsing terugstelt. De gegevensvervaldatum duurt standaard 14 dagen.
+Voor randprofielen bepaalt de vervaldatum van de gegevens hoe lang het profiel op de rand blijft voordat het wordt verwijderd. Het verstrijken van gegevens is het rollen ****, zo betekent het dat telkens als het profiel op rand wordt betreden, de tijd van de gegevensvervalsing terugstelt. De gegevensvervaldatum duurt standaard 14 dagen.
 
 ### Welke gegevens zijn opgeslagen in het randprofiel?
 

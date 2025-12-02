@@ -4,7 +4,7 @@ description: Leer hoe u de Adobe Experience Platform Web SDK integreert om gegev
 role: Developer
 feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 0%
@@ -27,8 +27,8 @@ In deze zelfstudie wordt ervan uitgegaan dat u al hebt bepaald hoe u gegevens ov
 Deze handleiding volgt de workflow voor het instellen van de SDK met de tagextensie in de gebruikersinterface. Raadpleeg de volgende documenten in plaats van deze handleiding als u de extensie niet wilt gebruiken en de zelfstandige versie van de SDK liever rechtstreeks op uw site wilt insluiten:
 
 * [Een gegevensstroom configureren](/help/datastreams/overview.md)
-* [De SDK installeren](/help/web-sdk/install/overview.md)
-* [SDK configureren voor toestemmingsopdrachten](/help/web-sdk/commands/configure/defaultconsent.md)
+* [De SDK installeren](/help/collection/js/install/overview.md)
+* [SDK configureren voor toestemmingsopdrachten](/help/collection/js/commands/configure/defaultconsent.md)
 
 De installatiestappen in deze handleiding vereisen een goed begrip van de uitbreidingen van tags en hoe deze in webtoepassingen worden geïnstalleerd. Raadpleeg de volgende documentatie voor meer informatie:
 
@@ -46,9 +46,9 @@ Nadat u een nieuwe gegevensstroom hebt gemaakt of een bestaande gegevensstroom h
 
 | Veld DataStream | Waarde |
 | --- | --- |
-| [!UICONTROL Sandbox] | De naam van de zandbak van Experience Platform [&#128279;](../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling bevat de datastream. |
+| [!UICONTROL Sandbox] | De naam van de zandbak van Experience Platform [ ](/help/sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling bevat de datastream. |
 | [!UICONTROL Event Dataset] | Een [!DNL XDM ExperienceEvent] dataset die u van plan bent om gebeurtenisgegevens naar het gebruiken van SDK te verzenden. Hoewel u een gebeurtenissendataset moet verstrekken om een Experience Platform datastream te creëren, gelieve te merken dat toestemmingsgegevens die via gebeurtenissen worden verzonden niet in stroomafwaartse handhavingswerkschema&#39;s worden nageleefd. |
-| [!UICONTROL Profile Dataset] | [!DNL Profile] - toegelaten dataset met de gebieden van de klantentoestemming die u [&#128279;](#prerequisites) creeerde. |
+| [!UICONTROL Profile Dataset] | [!DNL Profile] - toegelaten dataset met de gebieden van de klantentoestemming die u [ ](#prerequisites) creeerde. |
 
 Als u klaar bent, selecteert u **[!UICONTROL Save]** onder aan het scherm en gaat u verder met het volgen van eventuele extra aanwijzingen om de configuratie te voltooien.
 
@@ -92,7 +92,7 @@ Zodra het gegevenselement wordt gecreeerd, navigeer terug naar de de uitbreiding
 
 ### De extensie op uw website implementeren
 
-Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Verwijs naar de [&#x200B; het publiceren gids &#x200B;](../../../tags/ui/publishing/overview.md) in de markeringen documentatie voor gedetailleerde informatie over hoe te om uw bijgewerkte bibliotheek op te stellen bouwt.
+Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. Verwijs naar de [ het publiceren gids ](/help/tags/ui/publishing/overview.md) in de markeringen documentatie voor gedetailleerde informatie over hoe te om uw bijgewerkte bibliotheek op te stellen bouwt.
 
 ## Opdrachten voor wijzigen van toestemming maken {#commands}
 
@@ -101,7 +101,7 @@ Als u de SDK-extensie eenmaal in uw website hebt geïntegreerd, kunt u de Experi
 De opdracht `setConsent` voert twee handelingen uit:
 
 1. Hiermee werkt u de profielkenmerken van de gebruiker rechtstreeks bij in het archief Profiel. Hiermee worden geen gegevens naar het datumpigment verzonden.
-1. Creeert een [&#x200B; Gebeurtenis van de Ervaring &#x200B;](../../../xdm/classes/experienceevent.md) die een timestamped rekening van de gebeurtenis van de toestemmingsverandering registreert. Deze gegevens worden rechtstreeks naar het datumpigment verzonden en kunnen worden gebruikt om wijzigingen in de voorkeur voor toestemming in de loop van de tijd bij te houden.
+1. Creeert een [ Gebeurtenis van de Ervaring ](/help/xdm/classes/experienceevent.md) die een timestamped rekening van de gebeurtenis van de toestemmingsverandering registreert. Deze gegevens worden rechtstreeks naar het datumpigment verzonden en kunnen worden gebruikt om wijzigingen in de voorkeur voor toestemming in de loop van de tijd bij te houden.
 
 ### Wanneer wordt `setConsent` aangeroepen
 
@@ -112,7 +112,7 @@ Er zijn twee situaties waarin `setConsent` op uw site moet worden aangeroepen:
 
 ### `setConsent` syntaxis
 
-De opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) verwacht een payload-object dat een enkele array-type eigenschap bevat: `consent` . De array `consent` moet ten minste één object bevatten dat de vereiste toestemmingsvelden voor de Adobe-standaard bevat.
+De opdracht [`setConsent`](/help/collection/js/commands/setconsent.md) verwacht een payload-object dat een enkele array-type eigenschap bevat: `consent` . De array `consent` moet ten minste één object bevatten dat de vereiste toestemmingsvelden voor de Adobe-standaard bevat.
 
 De vereiste toestemmingsgebieden voor de norm van Adobe worden getoond in het volgende voorbeeld `setConsent` vraag:
 
@@ -195,9 +195,9 @@ var setConsent = function () {
 
 ## SDK-reacties verwerken
 
-Alle [!DNL Experience Platform SDK] opdrachten retourneren beloftes die aangeven of de aanroep is geslaagd of mislukt. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie [&#x200B; reacties van het Bevel &#x200B;](/help/web-sdk/commands/command-responses.md) voor meer informatie.
+Alle [!DNL Experience Platform SDK] opdrachten retourneren beloftes die aangeven of de aanroep is geslaagd of mislukt. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie [ reacties van het Bevel ](/help/collection/js/commands/command-responses.md) voor meer informatie.
 
-Nadat u `setConsent` -aanroepen met de SDK hebt uitgevoerd, kunt u met de profielviewer in de Experience Platform-gebruikersinterface controleren of gegevens in het Profile Store worden gedownload. Zie de sectie over [&#x200B; doorbladerend profielen door identiteit &#x200B;](../../../profile/ui/user-guide.md#browse-identity) voor meer informatie.
+Nadat u `setConsent` -aanroepen met de SDK hebt uitgevoerd, kunt u met de profielviewer in de Experience Platform-gebruikersinterface controleren of gegevens in het Profile Store worden gedownload. Zie de sectie over [ doorbladerend profielen door identiteit ](/help/profile/ui/user-guide.md#browse-identity) voor meer informatie.
 
 ## Volgende stappen
 

@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
 workflow-type: tm+mt
-source-wordcount: '2957'
+source-wordcount: '2949'
 ht-degree: 5%
 
 ---
@@ -12,20 +12,20 @@ ht-degree: 5%
 
 # Opmerkingen bij de release Web SDK
 
-In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [&#x200B; de versienota&#39;s van SDK van het Web van Experience Platform &#x200B;](/help/web-sdk/release-notes.md).
+In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van Experience Platform ](/help/collection/js/release-notes.md).
 
 ## Versie 2.33.0 - 24 september 2025
 
 **Nieuwe functies**
 
-- Extra ondersteuning voor het weergeven van pushmeldingen
-- Bevat [&#x200B; versie 2.30.0 &#x200B;](../../../../web-sdk/release-notes.md#2-30-0) van het Web SDK van Adobe Experience Platform.
+- Extra ondersteuning voor het weergeven van pushmeldingen.
+- Bevat [ versie 2.30.0 ](/help/collection/js/release-notes.md#2-30-0) van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.32.0 - 4 september 2025
 
 **Nieuwe functies**
 
-- Bevat [&#x200B; versie 2.29.0 &#x200B;](../../../../web-sdk/release-notes.md#2-29-0) van het Web SDK van Adobe Experience Platform.
+- Bevat [ versie 2.29.0 ](/help/collection/js/release-notes.md#2-29-0) van het Web SDK van Adobe Experience Platform.
 - Toegevoegde ondersteuning voor Adobe Advertising als een nieuwe aangepaste build-component. Vorm in de uitbreidingsconfiguratie en in verzend gebeurtenisvraag.
 - Extra ondersteuning voor het opnemen van gegevens voor pushabonnementen in Profiel. Dit gebeurt via een nieuwe handeling, &quot;Push subscription details&quot;
 
@@ -36,13 +36,13 @@ In dit document worden de releaseopmerkingen voor de Adobe Experience Platform W
 ## Versie 2.31.1 - vrijdag 31 juli 2025
 
 - Probleem verholpen waardoor aangepaste builds niet konden worden uitgevoerd.
-- Bevat [&#x200B; versie 2.28.1 &#x200B;](../../../../web-sdk/release-notes.md#2-28-1) van het Web SDK van Adobe Experience Platform.
+- Bevat [ versie 2.28.1 ](/help/collection/js/release-notes.md#2-28-1) van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.31.0 - vrijdag 24 juli 2025
 
 **Nieuwe functies**
 
-- Bevat [&#x200B; versie 2.28.0 &#x200B;](../../../../web-sdk/release-notes.md#2-28-0) van het Web SDK van Adobe Experience Platform.
+- Bevat [ versie 2.28.0 ](/help/collection/js/release-notes.md#2-28-0) van het Web SDK van Adobe Experience Platform.
 
 **Bevestigingen en verbeteringen**
 
@@ -52,7 +52,7 @@ In dit document worden de releaseopmerkingen voor de Adobe Experience Platform W
 
 **Bekende kwesties**
 
-- Na de versie van v2.31.0, werd een probleem geïdentificeerd met [&#x200B; de componenten van de douanevorm bouwen &#x200B;](/help/web-sdk/install/create-custom-build.md) proces. Terwijl de douane bouwt blijft werken, zijn alle componenten momenteel inbegrepen in de bouwstijl, resulterend in een volledig-gerangschikt pakket ongeacht componentenselectie. Er wordt een oplossing voor dit probleem ontwikkeld. Als u gebruikmaakt van de selectie van aangepaste componenten om de grootte van de build te minimaliseren, is het raadzaam te wachten op een toekomstige release.
+- Na de versie van v2.31.0, werd een probleem geïdentificeerd met [ de componenten van de douanevorm bouwen ](/help/collection/js/install/create-custom-build.md) proces. Terwijl de douane bouwt blijft werken, zijn alle componenten momenteel inbegrepen in de bouwstijl, resulterend in een volledig-gerangschikt pakket ongeacht componentenselectie. Er wordt een oplossing voor dit probleem ontwikkeld. Als u gebruikmaakt van de selectie van aangepaste componenten om de grootte van de build te minimaliseren, is het raadzaam te wachten op een toekomstige release.
 
 ## Versie 2.30.1 - woensdag 27 mei 2025
 
@@ -66,7 +66,7 @@ In dit document worden de releaseopmerkingen voor de Adobe Experience Platform W
 
 - U kunt nu een gegevenselement opgeven wanneer u cookies van andere leveranciers inschakelt.
 - Wissen van knoppen toegevoegd aan codevelden.
-- Bevat [&#x200B; versie 2.27.0 &#x200B;](../../../../web-sdk/release-notes.md#2-27-0) van het Web SDK van Adobe Experience Platform.
+- Bevat [ versie 2.27.0 ](/help/collection/js/release-notes.md) van het Web SDK van Adobe Experience Platform.
 
 **Bevestigingen en verbeteringen**
 
@@ -82,13 +82,13 @@ In dit document worden de releaseopmerkingen voor de Adobe Experience Platform W
 
 **Nieuwe functies**
 
-- U kunt nu aangepaste Web SDK-builds maken en de benodigde componenten kiezen in de gebruikersinterface voor de tagextensie. Dit kan in kleinere bouwstijlen resulteren door ongebruikte componenten uit te sluiten. Zie de documentatie bij [&#x200B; het creëren van een SDK van het douaneWeb bouwt &#x200B;](web-sdk-extension-configuration.md#custom-build).
-- Bevat [&#x200B; versie 2.26.0 &#x200B;](../../../../web-sdk/release-notes.md#2-26-0) van het Web SDK van Adobe Experience Platform.
+- U kunt nu aangepaste Web SDK-builds maken en de benodigde componenten kiezen in de gebruikersinterface voor de tagextensie. Dit kan in kleinere bouwstijlen resulteren door ongebruikte componenten uit te sluiten. Zie [ Aangepast bouwt componenten ](configure/custom-build-components.md).
+- Bevat [ versie 2.26.0 ](/help/collection/js/release-notes.md) van het Web SDK van Adobe Experience Platform.
 
 **Bevestigingen en verbeteringen**
 
-- Toegevoegde graceful behandeling van ontbrekende gegevenselementen in [&#x200B; update veranderlijke &#x200B;](action-types.md#update-variable) acties. Eerder werd bij het bewerken van een actie voor een updatevariabele met een ontbrekend gegevenselement een foutbericht weergegeven. Nu kunt u een ander gegevenselement kiezen en worden alle instellingen voor de actie voor de updatevariabele nog steeds toegepast. Gegevenselementen kunnen ontbreken als ze worden verwijderd of als een eigenschap Codes wordt gedupliceerd.
-- Toegevoegde steun voor het openen van een nieuw lusje met [&#x200B; richt met identiteit &#x200B;](action-types.md#redirect-with-identity) actie opnieuw. Wanneer u de handeling gebruikt, wordt het kenmerk `target` van de ankertag gebruikt wanneer u de browser omleidt.
+- Toegevoegde graceful behandeling van ontbrekende gegevenselementen in [ update veranderlijke ](actions/update-variable.md) acties. Eerder werd bij het bewerken van een actie voor een updatevariabele met een ontbrekend gegevenselement een foutbericht weergegeven. Nu kunt u een ander gegevenselement kiezen en worden alle instellingen voor de actie voor de updatevariabele nog steeds toegepast. Gegevenselementen kunnen ontbreken als ze worden verwijderd of als een eigenschap Codes wordt gedupliceerd.
+- Toegevoegde steun voor het openen van een nieuw lusje met [ richt met identiteit ](actions/redirect-with-identity.md) actie opnieuw. Wanneer u de handeling gebruikt, wordt het kenmerk `target` van de ankertag gebruikt wanneer u de browser omleidt.
 - Probleem verholpen waarbij Adobe Audience Manager niet kon worden uitgeschakeld in configuratieoverschrijvingen.
 
 ## Versie 2.28.0 - vrijdag 23 januari 2025
@@ -102,14 +102,14 @@ In dit document worden de releaseopmerkingen voor de Adobe Experience Platform W
 **Nieuwe functies**
 
 - Er is een nieuwe functie toegevoegd om te schakelen tussen technische namen en weergavenamen in het XDM-object.
-- Bevat [&#x200B; versie 2.25.0 &#x200B;](../../../../web-sdk/release-notes.md#2-25-0) van het Web SDK van Adobe Experience Platform.
+- Bevat [ versie 2.25.0 ](/help/collection/js/release-notes.md) van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.27.0 - vrijdag 31 oktober 2024
 
 **Nieuwe functies**
 
-- [&#x200B; DataStream treedt &#x200B;](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) nu montages met voeten om de oplossingen van Experience Cloud en de diensten van Adobe Experience Platform onbruikbaar te maken.
-- U kunt [&#x200B; datastream overschrijvingen &#x200B;](../web-sdk/web-sdk-extension-configuration.md) voor media zittingen nu tot stand brengen.
+- [ de met voeten treedt van de Configuratie ](configure/configuration-overrides.md) omvat nu montages om de oplossingen van Experience Cloud en de diensten van Adobe Experience Platform onbruikbaar te maken.
+- U kunt nu configuratieoverschrijvingen voor mediasessies maken.
 
 Bevat versie 2.24.0 van Adobe Experience Platform Web SDK.
 
@@ -126,12 +126,12 @@ Bevat versie 2.23.0 van Adobe Experience Platform Web SDK.
 **Nieuwe functies**
 
 - Toegevoegde controlehaakgebeurtenis `triggered` .
-- [&#x200B; Geleide gebeurtenissen &#x200B;](action-types.md#instance), [&#x200B; verzoek standaardverpersoonlijking &#x200B;](action-types.md#personalization), [&#x200B; Abonneren heersersset punten &#x200B;](event-types.md#subscribe-ruleset-items), en [&#x200B; evalueert heersers &#x200B;](action-types.md#evaluate-rulesets) zijn nu algemeen beschikbaar.
+- [ Geleide gebeurtenissen ](actions/actions-overview.md), [ verzoek standaardverpersoonlijking ](configure/personalization.md), [ Abonneren heersersset punten ](event-types.md#subscribe-ruleset-items), en [ evalueert heersers ](actions/evaluate-rulesets.md) zijn nu algemeen beschikbaar.
 
 **Bevestigingen en verbeteringen**
 
 - Probleem verholpen waarbij gedupliceerde variabele-gegevenselementen elkaar konden overschrijven.
-- Wanneer het gebruiken van de [&#x200B; standaardverpersoonlijking van het Verzoek &#x200B;](action-types.md#personalization) geleide gebeurtenis, worden de visuele verpersoonlijkingsbesluiten nu automatisch toegelaten.
+- Wanneer het gebruiken van de [ standaardverpersoonlijking van het Verzoek ](configure/personalization.md) geleide gebeurtenis, worden de visuele verpersoonlijkingsbesluiten nu automatisch toegelaten.
 
 Bevat versie 2.2.2.0 van Adobe Experience Platform Web SDK.
 
@@ -159,15 +159,15 @@ Bevat versie 2.20.0 van Adobe Experience Platform Web SDK.
 
 **Nieuwe functies**
 
-- Toegevoegde ondersteuning voor de component [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) in de extensieconfiguratie.
-- De handeling [`Send Media Event`](action-types.md#send-media-event) is toegevoegd voor de functie [!DNL Streaming Media Collection] .
+- Toegevoegde ondersteuning voor de component [`Streaming Media Collection`](configure/streaming-media.md) in de extensieconfiguratie.
+- De handeling [`Send Media Event`](actions/send-media-event.md) is toegevoegd voor de functie [!DNL Streaming Media Collection] .
 - Het gegevenselement [`Media: Quality of Experience`](data-element-types.md#quality-experience) is toegevoegd voor de functie [!DNL Streaming Media Collection] .
 
 Bevat versie 2.20.0 van Adobe Experience Platform Web SDK.
 
 **Bevestigingen en verbeteringen**
 
-- Vaste een fout die voorkwam wanneer het zoeken naar gegevenselementen in de [&#x200B; veranderlijke &#x200B;](action-types.md#update-variable) actie van de Update.
+- Vaste een fout die voorkwam wanneer het zoeken naar gegevenselementen in de [ veranderlijke ](actions/update-variable.md) actie van de Update.
 - [!UICONTROL Media] -gebeurtenistypen zijn verwijderd uit de gebeurtenistypen die worden voorgesteld voor gebruik in de `sendEvent` -handeling.
 
 ## Versie 2.22.0 - zaterdag 3 mei 2024
@@ -226,7 +226,7 @@ Bevat versie 2.19.1 van Adobe Experience Platform Web SDK.
 
 **Nieuwe functies**
 
-- Toegevoegde steun voor [&#x200B; per-bevel treedt van datastream identiteitskaart &#x200B;](../../../../datastreams/overrides.md) met voeten.
+- Toegevoegde steun voor [ per-bevel treedt van datastream identiteitskaart ](../../../../datastreams/overrides.md) met voeten.
 
 **Bevestigingen en verbeteringen**
 
@@ -246,7 +246,7 @@ Bevat versie 2.19.1 van Adobe Experience Platform Web SDK.
 **Nieuwe functies**
 
 - Bevat versie 2.16.0 van Adobe Experience Platform Web SDK.
-- Toegevoegde steun voor [&#x200B; datastream configuratie treedt met voeten &#x200B;](/help/datastreams/overrides.md).
+- Toegevoegde steun voor [ datastream configuratie treedt met voeten ](/help/datastreams/overrides.md).
 - Voeg een bericht over de vervangen toe aan de optie `datasetId` in de opdracht `sendEvent` .
 
 **Bevestigingen en verbeteringen**
@@ -262,7 +262,7 @@ Bevat versie 2.19.1 van Adobe Experience Platform Web SDK.
 **Nieuwe functies**
 
 - (Beta) Toegevoegde handeling **[!UICONTROL Update variable]** en gegevenselement **[!UICONTROL Variable]** .
-- Toegevoegde configuratie voor de callback-functie [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) .
+- Toegevoegde configuratie voor de callback-functie [`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md) .
 
 **Bevestigingen en verbeteringen**
 
@@ -385,10 +385,10 @@ Bevat versie 2.5.0 van de Adobe Experience Platform Web SDK-bibliotheek.
 
 Bevat versie 2.4.0 van de Adobe Experience Platform Web SDK-bibliotheek.
 
-- Toegevoegd [&#x200B; &quot;Document het ontladen&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) checkbox om de actie UI van de Gebeurtenis te verzenden.
-- Toegevoegde steun voor een `out` optie wanneer [&#x200B; vormend standaardtoestemming &#x200B;](/help/web-sdk/commands/configure/defaultconsent.md) die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie maakt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
+- Toegevoegd &quot;Document het ontladen&quot;checkbox aan [ verzendt gebeurtenis ](actions/send-event.md) actie.
+- Toegevoegde steun voor een `out` optie wanneer [ vormend standaardtoestemming ](configure/consent.md) die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie maakt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
 - Knopinfo is toegevoegd aan het veld Standaardtoestemming.
-- Toegevoegde ondersteuning voor de standaard Adobe toestemming 2.0 bij gebruik van de opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) .
+- Toegevoegde ondersteuning voor de Adobe Action 2.0-standaard voor toestemming bij gebruik van de handeling [`Set consent`](actions/set-consent.md) .
 - Er wordt nu een betere fout weergegeven in de gebruikersinterface van het XDM Object-gegevenselement als het toegangstoken van de gebruiker ongeldig is of niet correct is ingericht.
 - Probleem verholpen waarbij een kruisoorsprongfout (die geen invloed heeft op de werking van de extensie) is verholpen die tijdens het weergeven van een XDM Object-gegevenselement in de browserontwikkelingsconsole werd weergegeven.
 
@@ -413,7 +413,7 @@ Bevat versie 2.3.0 van de Adobe Experience Platform Web SDK-bibliotheek.
 ## Versie 2.1.0 - 5 augustus 2020
 
 - Doorlopende wijziging: verwijder de handeling `syncIdentity` en geef in plaats daarvan ondersteuning voor het doorgeven van deze id&#39;s in de handeling `sendEvent` . Schakel bestaande regels met deze handeling uit voordat u de extensie upgradet.
-- Update aan Alloy v. 2.1.0 ([&#x200B; de Nota&#39;s van de Versie &#x200B;](/help/web-sdk/release-notes.md))
+- Bijgewerkt naar Alloy versie 2.1.0.
 - Ondersteuning voor IAB 2.0 Consent Standard in de handeling `setConsent` .
 - Ondersteuning voor het overschrijven van de gegevensset-id in de handeling `sendEvent` .
 - Voeg een nieuw gegevenselement van het type `IdentityMap` toe dat kan worden gebruikt om de `identityMap` -vermelding te vullen in het XDM Object Data Element dat nu is ingeschakeld, en in de `setConsent` -actie.

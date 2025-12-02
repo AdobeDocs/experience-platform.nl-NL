@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van identiteitsservice
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -32,12 +32,12 @@ Lees, voordat u op de details van Identity Service gaat duiken, de volgende tabe
 | Term | Definitie |
 | --- | --- |
 | Identiteit | Een identiteit is gegevens die uniek zijn voor een entiteit. Dit is doorgaans een echt object, zoals een individuele persoon, een hardwareapparaat of een webbrowser (vertegenwoordigd door een cookie). Een volledig gekwalificeerde identiteit bestaat uit twee elementen: een **identiteit namespace** en een **identiteitswaarde**. |
-| Naamruimte identiteit | Een naamruimte voor identiteiten is de context van een bepaalde identiteit. Bijvoorbeeld, kon een namespace van `Email` met de identiteitswaarde beantwoorden: **julien <span>@acme.com**. Een naamruimte van `Phone` kan ook overeenkomen met de identiteitswaarde: `555-555-1234` . Voor meer informatie, lees het [&#x200B; overzicht van identiteitsnamespace &#x200B;](./features/namespaces.md). |
+| Naamruimte identiteit | Een naamruimte voor identiteiten is de context van een bepaalde identiteit. Bijvoorbeeld, kon een namespace van `Email` met de identiteitswaarde beantwoorden: **julien <span>@acme.com**. Een naamruimte van `Phone` kan ook overeenkomen met de identiteitswaarde: `555-555-1234` . Voor meer informatie, lees het [ overzicht van identiteitsnamespace ](./features/namespaces.md). |
 | Identiteitswaarde | Een identiteitswaarde is een koord dat een real-world entiteit vertegenwoordigt en binnen de Dienst van de Identiteit door namespace gecategoriseerd is. Bijvoorbeeld, zou de identiteitswaarde (koord) **julien <span>@acme.com** als `Email` namespace kunnen worden gecategoriseerd. |
 | Identiteitstype | Een identiteitstype is een component van een naamruimte voor identiteiten. Het identiteitstype geeft aan of identiteitsgegevens al dan niet zijn gekoppeld in een identiteitsgrafiek. |
 | Koppeling | Een koppeling of een koppeling is een methode om vast te stellen dat twee verschillende identiteiten dezelfde entiteit vertegenwoordigen. Bijvoorbeeld, betekent een verbinding tussen &quot;`Email` = julien <span>@acme.com&quot; en &quot;`Phone` = 555-555-1234&quot;dat beide identiteiten de zelfde entiteit vertegenwoordigen. Dit suggereert dat de klant die met uw merk met zowel het e-mailadres van julien <span>@acme.com als het telefoonnummer 555-555-1234 heeft gecommuniceerd het zelfde is. |
 | Identiteitsservice | Identity Service is een service in Experience Platform die identiteiten koppelt (of ontkoppelt) om identiteitsgrafieken te onderhouden. |
-| Identiteitsgrafiek | De identiteitsgrafiek is een inzameling van identiteiten die één enkele klant vertegenwoordigen. Voor meer informatie, lees de gids op [&#x200B; gebruikend de kijker van de identiteitsgrafiek &#x200B;](./features/identity-graph-viewer.md). |
+| Identiteitsgrafiek | De identiteitsgrafiek is een inzameling van identiteiten die één enkele klant vertegenwoordigen. Voor meer informatie, lees de gids op [ gebruikend de kijker van de identiteitsgrafiek ](./features/identity-graph-viewer.md). |
 | Real-Time Customer Profile | Real-Time klantprofiel is een service in Adobe Experience Platform die: <ul><li>Hiermee voegt u profielfragmenten samen om een profiel te maken op basis van een identiteitsgrafiek.</li><li>Segmenteert profielen zodat deze vervolgens naar de bestemming kunnen worden verzonden voor activering.</li></ul> |
 | Profiel | Een profiel is een weergave van een onderwerp, een organisatie of een individu. Een profiel bestaat uit vier elementen: <ul><li>Attributen: kenmerken geven informatie zoals naam, leeftijd of geslacht.</li><li>Gedrag: gedrag geeft informatie over de activiteiten van een bepaald profiel. Een profielgedrag kan bijvoorbeeld zien of een bepaald profiel &quot;naar sandalen zoeken&quot; of &quot;naar t-shirts opdracht geven&quot; was.</li><li>Identiteiten: voor een samengevoegd profiel wordt hier informatie gegeven over alle identiteiten die aan de persoon zijn gekoppeld. Identiteiten kunnen in drie categorieën worden ingedeeld: Persoon (CRMID, e-mail, telefoon), apparaat (IDFA, GAID) en cookie (ECID, STEUN).</li><li>Lidmaatschap van het publiek: De groepen waarin het profiel tot (loyale gebruikers, gebruikers die in Californië wonen, enz.) behoort</li></ul> |
 
@@ -45,7 +45,7 @@ Lees, voordat u op de details van Identity Service gaat duiken, de volgende tabe
 
 ## Wat is identiteitsdienst?
 
-![&#x200B; Identiteitsstitching op Experience Platform &#x200B;](./images/identity-service-stitching.png)
+![ Identiteitsstitching op Experience Platform ](./images/identity-service-stitching.png)
 
 In een B2C-context (Business-To-Customer) communiceren klanten met uw bedrijf en maken ze een relatie met uw merk. Een typische klant kan actief zijn in om het even welk aantal systemen binnen de gegevensinfrastructuur van uw organisatie. Om het even welke bepaalde klant kan binnen uw e-handel, loyaliteit, en helpdesksystemen actief zijn. Die zelfde klant kan ook anoniem of door voor authentiek verklaarde middelen op om het even welk aantal verschillende apparaten aanspreken.
 
@@ -97,25 +97,25 @@ Bekijk het volgende voorbeeld:
 
 Gezien de bovenstaande scenario&#39;s legt Identity Service een koppeling tot stand tussen `{CRM_ID:ABC, ECID:123}` en `{CRM_ID:ABC, ECID:456}` . Dit resulteert in een identiteitsgrafiek waarbij u drie identiteiten &quot;bezit&quot;: één voor persoon-id (CRMID) en twee voor cookie-id&#39;s (ECID&#39;s).
 
-Voor meer informatie, lees de gids op [&#x200B; hoe de Dienst van de Identiteit identiteiten &#x200B;](./features/identity-linking-logic.md) verbindt.
+Voor meer informatie, lees de gids op [ hoe de Dienst van de Identiteit identiteiten ](./features/identity-linking-logic.md) verbindt.
 
 ## Identiteitsgrafieken
 
-Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteitsnamespaces, toestaand u om te visualiseren en beter te begrijpen welke klantenidentiteiten samen, en hoe worden vastgemaakt. Lees het leerprogramma op [&#x200B; gebruikend de kijker van de identiteitsgrafiek &#x200B;](./features/identity-graph-viewer.md) voor meer informatie.
+Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteitsnamespaces, toestaand u om te visualiseren en beter te begrijpen welke klantenidentiteiten samen, en hoe worden vastgemaakt. Lees het leerprogramma op [ gebruikend de kijker van de identiteitsgrafiek ](./features/identity-graph-viewer.md) voor meer informatie.
 
 De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten en identiteitsgrafieken.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432349?captions=dut&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Inzicht in de rol van Identity Service binnen de Experience Platform-infrastructuur
 
 Identiteitsdienst speelt een cruciale rol in Experience Platform. Enkele van deze belangrijke integraties zijn:
 
-* [&#x200B; Schema&#39;s &#x200B;](../xdm/home.md): Binnen een bepaald schema, staan de schemagebieden die als identiteit duidelijk zijn voor identiteitsgrafieken toe om worden gebouwd.
-* [&#x200B; Datasets &#x200B;](../catalog/datasets/overview.md): Wanneer een dataset voor opname in het Profiel van de Klant in real time wordt toegelaten, worden de identiteitsgrafieken geproduceerd van de dataset, gegeven dat de dataset minstens twee gebieden duidelijk als identiteit heeft.
-* [&#x200B; SDK van het Web &#x200B;](../web-sdk/home.md): SDK van het Web verzendt ervaringsgebeurtenissen naar Adobe Experience Platform, en de Dienst van de Identiteit produceert een grafiek wanneer twee of meer identiteiten in de gebeurtenis bestaan.
-* [&#x200B; Real-Time Profiel van de Klant &#x200B;](../profile/home.md): Alvorens de attributen en de gebeurtenissen voor een bepaald profiel worden samengevoegd, kon het Profiel van de Klant in real time de identiteitsgrafiek van verwijzingen voorzien. Voor meer informatie, lees de gids op [&#x200B; het begrip van het verband tussen de Dienst van de Identiteit en het Profiel van de Klant in real time &#x200B;](./identity-and-profile.md).
-* [&#x200B; Doelen &#x200B;](../destinations/home.md): De bestemmingen kunnen profielinformatie naar andere systemen verzenden die op een identiteit worden gebaseerd namespace, zoals gehakt e-mail.
-* [&#x200B; Overeenkomst van het Segment &#x200B;](../segmentation/ui/segment-match/overview.md): De Overeenkomst van het segment past twee profielen over twee verschillende zandbakken aan die de zelfde identiteit namespace en identiteitswaarde hebben.
-* [&#x200B; Privacy Service &#x200B;](../privacy-service/home.md): Als het schrappingsverzoek `identity` omvat, dan kan de gespecificeerde namespace en de combinatie van de identiteitswaarde van de Dienst van de Identiteit worden geschrapt gebruikend de eigenschap van de privacyverzoekverwerking in Privacy Service.
+* [ Schema&#39;s ](../xdm/home.md): Binnen een bepaald schema, staan de schemagebieden die als identiteit duidelijk zijn voor identiteitsgrafieken toe om worden gebouwd.
+* [ Datasets ](../catalog/datasets/overview.md): Wanneer een dataset voor opname in het Profiel van de Klant in real time wordt toegelaten, worden de identiteitsgrafieken geproduceerd van de dataset, gegeven dat de dataset als minstens twee gebieden duidelijk als identiteit is.
+* [ de inzameling van Gegevens ](/help/collection/home.md): De bibliotheken van de inzameling van gegevens (zoals het Web SDK) verzenden ervaringsgebeurtenissen naar Adobe Experience Platform. De identiteitsdienst produceert een grafiek wanneer twee of meer identiteiten in de gebeurtenis bestaan.
+* [ Real-Time Profiel van de Klant ](../profile/home.md): Alvorens de attributen en de gebeurtenissen voor een bepaald profiel worden samengevoegd, kon het Profiel van de Klant in real time de identiteitsgrafiek van verwijzingen voorzien. Voor meer informatie, lees de gids op [ het begrip van het verband tussen de Dienst van de Identiteit en het Profiel van de Klant in real time ](./identity-and-profile.md).
+* [ Doelen ](../destinations/home.md): De bestemmingen kunnen profielinformatie naar andere systemen verzenden die op een identiteit worden gebaseerd namespace, zoals gehakt e-mail.
+* [ Overeenkomst van het Segment ](../segmentation/ui/segment-match/overview.md): De Overeenkomst van het segment past twee profielen over twee verschillende zandbakken aan die de zelfde identiteit namespace en identiteitswaarde hebben.
+* [ Privacy Service ](../privacy-service/home.md): Als het schrappingsverzoek `identity` omvat, dan kan de gespecificeerde namespace en de combinatie van de identiteitswaarde van de Dienst van de Identiteit worden geschrapt gebruikend de eigenschap van de privacyverzoekverwerking in Privacy Service.
 

@@ -1,18 +1,17 @@
 ---
-title: Gegevenselementen in de extensie Adobe Experience Platform Web SDK
-description: Leer over de verschillende types van gegevenselement die door de de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform worden verstrekt.
+title: Gegevenstelelementtypen in Adobe Experience Platform Web SDK Extension
+description: Leer meer over de verschillende gegevenselemetypen die door de de marktextensie van Adobe Experience Platform Web SDK worden verstrekt.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: e34a9ee5b1a09ff3391e5b0e981215fefbc157fc
+source-git-commit: 8cb8dcf7217440da98f6856293c530a66d4c3444
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
 
-
 # Gegevenstelelementtypen
 
-Nadat u uw [&#x200B; actietypes &#x200B;](action-types.md) in de [&#x200B; de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform &#x200B;](web-sdk-extension-configuration.md) plaatst, moet u uw types van gegevenselement vormen. Op deze pagina worden de beschikbare gegevenselemetypen beschreven.
+Nadat u uw [ actietypes ](actions/actions-overview.md) in de markeringsuitbreiding plaatst, moet u uw types van gegevenselement vormen. Op deze pagina worden de beschikbare gegevenselemetypen beschreven.
 
 ## Identiteitskaart {#identity-map}
 
@@ -20,11 +19,11 @@ Met een identiteitsoverzicht kunt u identiteiten instellen voor de bezoeker van 
 
 In het gegevenselement [!UICONTROL Identity map] geeft u de volgende gegevens voor elke id op:
 
-* **[!UICONTROL ID]**: De waarde die de bezoeker identificeert. Bijvoorbeeld, als het herkenningsteken tot de _telefoon_ namespace behoort, kan [!UICONTROL ID] _555-555-5555_ zijn. Deze waarde wordt doorgaans afgeleid van een JavaScript-variabele of een ander stukje gegevens op de pagina. Het is daarom verstandig een gegevenselement te maken dat naar de paginagegevens verwijst en vervolgens te verwijzen naar het gegevenselement in het [!UICONTROL ID] -veld in het [!UICONTROL Identity map] -gegevenselement. Als de id op de pagina wordt uitgevoerd en de id-waarde alleen een gevulde tekenreeks is, wordt de id automatisch verwijderd uit het identiteitsoverzicht.
+* **[!UICONTROL ID]**: De waarde die de bezoeker identificeert. Bijvoorbeeld, als het herkenningsteken tot de _telefoon_ namespace behoort, zou [!UICONTROL ID] _555-555-5555_ kunnen zijn. Deze waarde wordt doorgaans afgeleid van een JavaScript-variabele of een ander stukje gegevens op de pagina. Het is daarom verstandig een gegevenselement te maken dat naar de paginagegevens verwijst en vervolgens te verwijzen naar het gegevenselement in het [!UICONTROL ID] -veld in het [!UICONTROL Identity map] -gegevenselement. Als de id op de pagina wordt uitgevoerd en de id-waarde alleen een gevulde tekenreeks is, wordt de id automatisch verwijderd uit het identiteitsoverzicht.
 * **[!UICONTROL Authenticated state]**: een selectie die aangeeft of de bezoeker is geverifieerd.
 * **[!UICONTROL Primary]**: Een selectie die aangeeft of de id moet worden gebruikt als primaire id voor de individu. Als er geen id als primair wordt gemarkeerd, wordt de ECID gebruikt als primaire id.
 
-![&#x200B; beeld UI die het Edit scherm van het Element van Gegevens tonen.](assets/identity-map-data-element.png)
+![ beeld UI die het Edit scherm van het Element van Gegevens tonen.](assets/identity-map-data-element.png)
 
 >[!TIP]
 >
@@ -34,15 +33,15 @@ In het gegevenselement [!UICONTROL Identity map] geeft u de volgende gegevens vo
 
 Geef geen [!DNL ECID] op wanneer u een identiteitsoverzicht maakt. Wanneer u de SDK gebruikt, wordt automatisch een [!DNL ECID] gegenereerd op de server en opgenomen in het identiteitsoverzicht.
 
-Het element van de identiteitskaartgegevens wordt vaak gebruikt in combinatie met het [[!UICONTROL XDM object] type van gegevenselement &#x200B;](#xdm-object) en het [[!UICONTROL Set consent] actietype &#x200B;](action-types.md#set-consent).
+Het gegevenselement van de identiteitskaart wordt vaak gebruikt met het [[!UICONTROL Variable]](#variable) gegevenselement en de [[!UICONTROL Set consent]](actions/set-consent.md) actie.
 
-Lees meer over [&#x200B; de Dienst van de Identiteit van Adobe Experience Platform &#x200B;](../../../../identity-service/home.md).
+Lees meer over de [ Dienst van de Identiteit van Adobe Experience Platform ](/help/identity-service/home.md).
 
 ## XDM-object {#xdm-object}
 
 Het formatteren van uw gegevens aan XDM is gemakkelijker met het XDM objectelement. Wanneer u dit gegevenselement voor het eerst opent, selecteert u de juiste Adobe Experience Platform-sandbox en -schema. Nadat u het schema hebt geselecteerd, ziet u de structuur van uw schema, dat u gemakkelijk kunt invullen.
 
-![&#x200B; beeld UI die de XDM objecten structuur toont.](assets/XDM-object.png)
+![ beeld UI die de XDM objecten structuur toont.](assets/XDM-object.png)
 
 Wanneer u bepaalde velden in uw schema opent, zoals `web.webPageDetails.URL` , worden sommige items automatisch verzameld. Hoewel meerdere items automatisch worden verzameld, kunt u indien nodig alle items overschrijven. Alle waarden kunnen handmatig of met andere gegevenselementen worden ingevuld.
 
@@ -57,16 +56,16 @@ U kunt payload-objecten maken met het gegevenselement **[!UICONTROL Variable]** 
 * Wanneer u [!UICONTROL XDM] selecteert, selecteert u de gewenste [!UICONTROL Sandbox] en [!UICONTROL Schema] .
 * Wanneer u [!UICONTROL Data] selecteert, selecteert u de gewenste oplossingen. Beschikbare oplossingen zijn [!UICONTROL Adobe Analytics] en [!UICONTROL Adobe Target] .
 
-![&#x200B; Beeld van Markeringen UI die de opties van het gegevenselement tonen.](assets/variable-data-element.png)
+![ Beeld van Markeringen UI die de opties van het gegevenselement tonen.](assets/variable-data-element.png)
 
-Nadat u dit gegevenselement creeert, kunt u de [&#x200B; veranderlijke &#x200B;](./action-types.md#update-variable) actie van de Update gebruiken om het te wijzigen. Wanneer klaar, kunt u dit gegevenselement in [&#x200B; omvatten verzendt gebeurtenis &#x200B;](./action-types.md#send-event) actie om gegevens naar een gegevensstroom te verzenden.
+Nadat u dit gegevenselement creeert, kunt u de [ veranderlijke ](actions/update-variable.md) actie van de Update gebruiken om het te wijzigen. Wanneer klaar, kunt u dit gegevenselement in [ omvatten verzendt gebeurtenis ](actions/send-event.md) actie om gegevens naar een gegevensstroom te verzenden.
 
 ## Media: kwaliteit van ervaring {#quality-experience}
 
 Een **[!UICONTROL Quality of Experience]** -gegevenselement is handig wanneer u streaming media-gebeurtenissen naar Adobe Experience Platform verzendt. U kunt dit element toevoegen tijdens het maken van een mediasessie. De volgende media-gebeurtenissen bevatten bijgewerkte gegevens over de kwaliteit van de ervaring.
 
-![&#x200B; beeld UI die de Create Kwaliteit van het scherm van het Element van Gegevens van de Ervaring toont.](assets/qoe-data-element.png)
+![ beeld UI die de Create Kwaliteit van het scherm van het Element van Gegevens van de Ervaring toont.](assets/qoe-data-element.png)
 
 ## Volgende stappen {#next-steps}
 
-Leer over specifieke gebruiksgevallen zoals [&#x200B; die tot ECID &#x200B;](accessing-the-ecid.md) toegang hebben.
+Leer over specifieke gebruiksgevallen zoals [ die tot ECID ](accessing-the-ecid.md) toegang hebben.
