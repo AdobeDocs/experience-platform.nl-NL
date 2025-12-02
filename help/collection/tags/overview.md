@@ -15,7 +15,7 @@ Het `_satellite` -object stelt verschillende ondersteunde ingangspunten beschikb
 
 * Gebruik in uw tagbibliotheek in aangepaste codeblokken, zodat u volledige toegang hebt tot de tagbibliotheek zelf.
 * Fouten opsporen in uw geïmplementeerde implementatie binnen een omgeving (ontwikkeling, staging of productie)
-* Directe implementatie op uw website, waardoor u volledige controle hebt over het moment waarop gebeurtenissen of tagregels worden geactiveerd. Voor nieuwe implementaties, adviseert Adobe het gebruiken van een flexibelere strategie zoals de [ Laag van Gegevens van de Cliënt van Adobe ](/help/tags/extensions/client/client-data-layer/overview.md).
+* Directe implementatie op uw website, waardoor u volledige controle hebt over het moment waarop gebeurtenissen of tagregels worden geactiveerd. Voor nieuwe implementaties, adviseert Adobe het gebruiken van een flexibelere strategie zoals de [&#x200B; Laag van Gegevens van de Cliënt van Adobe &#x200B;](/help/tags/extensions/client/client-data-layer/overview.md).
 
 >[!IMPORTANT]
 >

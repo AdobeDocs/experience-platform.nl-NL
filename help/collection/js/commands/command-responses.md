@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Sommige Web SDK-opdrachten kunnen een object retourneren dat gegevens bevat die mogelijk nuttig zijn voor uw organisatie. U kunt desgewenst kiezen wat u met die gegevens wilt doen. De reacties van het bevel zijn waardevol voor voorstellen en bestemmingen, aangezien zij de gegevens van Edge Network vereisen effectief te werken.
 
-De reacties van het bevel gebruiken JavaScript [ beloften ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), handelend als volmacht voor een waarde die niet gekend is wanneer de belofte wordt gecreeerd. Zodra de waarde gekend is, wordt de belofte &quot;opgelost&quot;met de waarde.
+De reacties van het bevel gebruiken JavaScript [&#x200B; beloften &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), handelend als volmacht voor een waarde die niet gekend is wanneer de belofte wordt gecreeerd. Zodra de waarde gekend is, wordt de belofte &quot;opgelost&quot;met de waarde.
 
 Gebruik de methoden `then` en `catch` om te bepalen wanneer een opdracht slaagt of mislukt. U kunt `then` of `catch` weglaten als hun doeleinden niet belangrijk voor uw implementatie zijn.
 

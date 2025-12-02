@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >* De berichten van de Update van de Entiteit van het Model van de Gegevens van de Ervaring (XDM) (met verrichtingen JSON PATCH) voor de updates van het Profiel via de inlaat DCS zijn verouderd. Volg de stappen in deze handleiding als alternatief.
 >
->* U kunt de bron van HTTP ook gebruiken API aan [ binnengaan ruwe gegevens in de inlaat DCS ](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) en de noodzakelijke gegevenstoewijzingen specificeren om uw gegevens in XDM-Volgzame berichten voor de updates van het Profiel om te zetten.
+>* U kunt de bron van HTTP ook gebruiken API aan [&#x200B; binnengaan ruwe gegevens in de inlaat DCS &#x200B;](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) en de noodzakelijke gegevenstoewijzingen specificeren om uw gegevens in XDM-Volgzame berichten voor de updates van het Profiel om te zetten.
 >
 >* Wanneer u arrays gebruikt in streaming upserts, moet u expliciet `upsert_array_append` of `upsert_array_replace` gebruiken om een duidelijke intentie van de bewerking te definiëren. Er kunnen fouten optreden als deze functies ontbreken.
 
@@ -24,11 +24,11 @@ Gebruik streaming upserts in [!DNL Data Prep] om gedeeltelijke rij-updates naar 
 
 Door upserts te streamen, kunt u het formaat van uw gegevens behouden terwijl het omzetten van die gegevens in [!DNL Real-Time Customer Profile] PATCH verzoeken tijdens opname. Met [!DNL Data Prep] kunt u op basis van de ingevoerde gegevens één API-lading verzenden en de gegevens omzetten naar zowel [!DNL Real-Time Customer Profile] PATCH- als [!DNL Identity Service] CREATE-aanvragen.
 
-[!DNL Data Prep] gebruikt headerparameters om onderscheid te maken tussen invoegen en invoegen. Alle rijen die upserts gebruiken, moeten een kopbal hebben. U kunt updates met of zonder identiteitsbeschrijvingen gebruiken. Als u updates met identiteiten gebruikt, moet u de configuratiestappen volgen die in de sectie op [ worden geschetst vormend de identiteitsdataset ](#configure-the-identity-dataset). Als u updates zonder identiteiten gebruikt, dan te hoeven u niet om identiteitsconfiguraties in uw verzoek te verstrekken. Lees de sectie over [ het stromen upserts zonder identiteiten ](#payload-without-identity-configuration) voor meer informatie.
+[!DNL Data Prep] gebruikt headerparameters om onderscheid te maken tussen invoegen en invoegen. Alle rijen die upserts gebruiken, moeten een kopbal hebben. U kunt updates met of zonder identiteitsbeschrijvingen gebruiken. Als u updates met identiteiten gebruikt, moet u de configuratiestappen volgen die in de sectie op [&#x200B; worden geschetst vormend de identiteitsdataset &#x200B;](#configure-the-identity-dataset). Als u updates zonder identiteiten gebruikt, dan te hoeven u niet om identiteitsconfiguraties in uw verzoek te verstrekken. Lees de sectie over [&#x200B; het stromen upserts zonder identiteiten &#x200B;](#payload-without-identity-configuration) voor meer informatie.
 
 >[!NOTE]
 >
->Aan hefboomwerking upsert functionaliteit, wordt het geadviseerd dat u XDM-compatibele configuraties tijdens gegevensopname uitzet en de inkomende nuttige lading opnieuw in kaart brengt gebruikend [ Prep Mapper van Gegevens ](./ui/mapping.md).
+>Aan hefboomwerking upsert functionaliteit, wordt het geadviseerd dat u XDM-compatibele configuraties tijdens gegevensopname uitzet en de inkomende nuttige lading opnieuw in kaart brengt gebruikend [&#x200B; Prep Mapper van Gegevens &#x200B;](./ui/mapping.md).
 
 Dit document bevat informatie over het streamen van upserts in [!DNL Data Prep] .
 
@@ -38,8 +38,8 @@ Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] stelt gegevensengineers in staat gegevens toe te wijzen, te transformeren en te valideren van en naar het XDM-model (Experience Data Model).
 * [[!DNL Identity Service]](../identity-service/home.md): verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-* [ Real-Time Profiel van de Klant ](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time gebaseerd op samengevoegde gegevens van veelvoudige bronnen.
-* [ Bronnen ](../sources/home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Real-Time Profiel van de Klant &#x200B;](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time gebaseerd op samengevoegde gegevens van veelvoudige bronnen.
+* [&#x200B; Bronnen &#x200B;](../sources/home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
 
 ## Streaming upserts gebruiken in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 
@@ -51,7 +51,7 @@ Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-
 
 Streaming upserts in [!DNL Data Prep] werken als volgt:
 
-* U moet eerst een dataset voor [!DNL Profile] consumptie creëren en toelaten. Zie de gids op [ toelatend een dataset voor  [!DNL Profile]](../catalog/datasets/enable-for-profile.md) voor meer informatie.
+* U moet eerst een dataset voor [!DNL Profile] consumptie creëren en toelaten. Zie de gids op [&#x200B; toelatend een dataset voor  [!DNL Profile]](../catalog/datasets/enable-for-profile.md) voor meer informatie.
 * Als de nieuwe identiteiten moeten worden verbonden, dan moet u een extra dataset **met het zelfde schema** ook tot stand brengen zoals uw [!DNL Profile] dataset.
 * Zodra uw dataset(s) worden voorbereid, moet u een dataflow creëren om uw inkomende verzoek aan de [!DNL Profile] dataset in kaart te brengen;
 * Vervolgens moet u de binnenkomende aanvraag bijwerken om de benodigde koppen op te nemen. Deze kopteksten definiëren:
@@ -64,7 +64,7 @@ Als nieuwe identiteiten moeten worden verbonden, dan moet u een extra dataset in
 
 * De identiteitsdataset moet zijn bijbehorend schema als [!DNL Profile] dataset hebben. Een afwijking van schema&#39;s kan tot inconsistent systeemgedrag leiden.
 * U moet er echter voor zorgen dat de identiteitsgegevensset anders is dan de gegevensset [!DNL Profile] . Als de datasets het zelfde zijn, dan zullen de gegevens in plaats van bijgewerkt worden beschreven.
-* Terwijl de aanvankelijke dataset voor [!DNL Profile] moet worden toegelaten, zou de identiteitsdataset **niet** voor [!DNL Profile] moeten worden toegelaten. Anders worden gegevens ook overschreven in plaats van bijgewerkt. Nochtans, zou de identiteitsdataset **** voor [!DNL Identity Service] moeten worden toegelaten.
+* Terwijl de aanvankelijke dataset voor [!DNL Profile] moet worden toegelaten, zou de identiteitsdataset **niet** voor [!DNL Profile] moeten worden toegelaten. Anders worden gegevens ook overschreven in plaats van bijgewerkt. Nochtans, zou de identiteitsdataset **&#x200B;**&#x200B;voor [!DNL Identity Service] moeten worden toegelaten.
 
 #### Vereiste gebieden in de schema&#39;s verbonden aan de identiteitsdataset {#identity-dataset-required-fileds}
 
@@ -271,8 +271,8 @@ In het volgende voorbeeld wordt een lijst met bekende beperkingen beschreven die
 
 * De streaming upserts methode zou slechts moeten worden gebruikt wanneer het verzenden van gedeeltelijke rijupdates naar [!DNL Real-Time Customer Profile]. De gedeeltelijke rijupdates worden **niet** verbruikt door gegevens meer.
 * De streaming upserts-methode ondersteunt het bijwerken, vervangen en verwijderen van identiteiten niet. Er worden nieuwe identiteiten gemaakt als deze niet bestaan. Daarom moet de bewerking `identity` altijd zijn ingesteld op maken. Als er al een identiteit bestaat, is de bewerking een no-op.
-* De het stromen upserts methode steunt momenteel niet het [ Web SDK van Adobe Experience Platform ](/help/collection/js/js-overview.md) of [ Mobiele SDK van Adobe Experience Platform ](https://developer.adobe.com/client-sdks/documentation/).
+* De het stromen upserts methode steunt momenteel niet het [&#x200B; Web SDK van Adobe Experience Platform &#x200B;](/help/collection/js/js-overview.md) of [&#x200B; Mobiele SDK van Adobe Experience Platform &#x200B;](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Volgende stappen
 
-Door dit document te lezen, moet u nu begrijpen hoe u upserts in [!DNL Data Prep] kunt streamen om gedeeltelijke rijupdates naar uw [!DNL Real-Time Customer Profile] -gegevens te verzenden, terwijl u tegelijkertijd identiteiten maakt en koppelt met één API-aanvraag. Voor meer informatie over andere [!DNL Data Prep] eigenschappen, te lezen gelieve het [[!DNL Data Prep]  overzicht ](./home.md). Leer hoe te om kaartreeksen binnen [!DNL Data Prep] API te gebruiken, gelieve de [[!DNL Data Prep]  ontwikkelaarsgids ](./api/overview.md) te lezen.
+Door dit document te lezen, moet u nu begrijpen hoe u upserts in [!DNL Data Prep] kunt streamen om gedeeltelijke rijupdates naar uw [!DNL Real-Time Customer Profile] -gegevens te verzenden, terwijl u tegelijkertijd identiteiten maakt en koppelt met één API-aanvraag. Voor meer informatie over andere [!DNL Data Prep] eigenschappen, te lezen gelieve het [[!DNL Data Prep]  overzicht &#x200B;](./home.md). Leer hoe te om kaartreeksen binnen [!DNL Data Prep] API te gebruiken, gelieve de [[!DNL Data Prep]  ontwikkelaarsgids &#x200B;](./api/overview.md) te lezen.

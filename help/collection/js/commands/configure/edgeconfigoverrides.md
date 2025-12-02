@@ -10,18 +10,18 @@ ht-degree: 0%
 
 # `edgeConfigOverrides` (`configure` opdracht)
 
-Met het `edgeConfigOverrides` -object kunt u configuratie-instellingen negeren voor opdrachten die op de huidige pagina worden uitgevoerd. Dit object is handig wanneer u verschillende websites of subdomeinen voor verschillende landen hebt of wanneer u meerdere Experience Platform-sandboxen hebt om gegevens op te slaan die specifiek zijn voor verschillende bedrijfseenheden. Als u configuratiemontages voor slechts één enkel bevel op de pagina wilt met voeten treden, denk na gebruikend het [`edgeConfigOverrides` voorwerp in het `sendEvent` bevel ](../sendevent/edgeconfigoverrides.md).
+Met het `edgeConfigOverrides` -object kunt u configuratie-instellingen negeren voor opdrachten die op de huidige pagina worden uitgevoerd. Dit object is handig wanneer u verschillende websites of subdomeinen voor verschillende landen hebt of wanneer u meerdere Experience Platform-sandboxen hebt om gegevens op te slaan die specifiek zijn voor verschillende bedrijfseenheden. Als u configuratiemontages voor slechts één enkel bevel op de pagina wilt met voeten treden, denk na gebruikend het [`edgeConfigOverrides` voorwerp in het `sendEvent` bevel &#x200B;](../sendevent/edgeconfigoverrides.md).
 
 Het configuratieoverschrijfproces van de gegevensstroom bestaat uit twee hoofdstappen:
 
-1. Eerst, moet u uw de configuratieopheffing van de gegevensstroom bepalen wanneer [ vormend een datastream ](/help/datastreams/configure.md) in de UI van Gegevensstromen. Zie [ de configuratie DataStream met voeten treedt ](/help/datastreams/overrides.md) in de documentatie van gegevensstromen voor instructies op hoe te om met voeten te treden.
+1. Eerst, moet u uw de configuratieopheffing van de gegevensstroom bepalen wanneer [&#x200B; vormend een datastream &#x200B;](/help/datastreams/configure.md) in de UI van Gegevensstromen. Zie [&#x200B; de configuratie DataStream met voeten treedt &#x200B;](/help/datastreams/overrides.md) in de documentatie van gegevensstromen voor instructies op hoe te om met voeten te treden.
 1. Nadat u de gegevensstroomoverschrijving in de gegevensstreams-gebruikersinterface hebt geconfigureerd, kunt u het `edgeConfigOverrides` -object configureren.
 
 Wanneer u het `edgeConfigOverrides` -object instelt in de opdracht `configure` , geldt dit voor alle gegevens die naar Adobe worden verzonden. De volgende bevelen __ steunen ook het `edgeConfigOverrides` voorwerp:
 
 * [` sendEvent`](../sendevent/edgeconfigoverrides.md)
 * [` setConsent`](../setconsent.md)
-* [getIdentity`](../getidentity.md)
+* [getIdentity&grave;](../getidentity.md)
 * [` appendIdentityToUrl`](../appendidentitytourl.md)
 
 Het instellen van `edgeConfigOverrides` in een van de bovenstaande opdrachten heeft voorrang op het object `edgeConfigOverrides` in de opdracht `configure` als beide opdrachten zijn ingesteld. Als een van deze opdrachten geen `edgeConfigOverrides` -object bevat, wordt het `edgeConfigOverrides` -object in de opdracht `configure` gebruikt.
@@ -97,4 +97,4 @@ alloy("configure", {
 
 ## Configuratieoverschrijvingen met de Web SDK-tagextensie
 
-Het de markeringsequivalent van SDK van het Web van dit gebied is onder [ met voeten treedt van de Configuratie ](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) wanneer het vormen van de markeringsuitbreiding.
+Het de markeringsequivalent van SDK van het Web van dit gebied is onder [&#x200B; met voeten treedt van de Configuratie &#x200B;](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) wanneer het vormen van de markeringsuitbreiding.

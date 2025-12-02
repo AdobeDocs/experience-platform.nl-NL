@@ -25,4 +25,4 @@ alloy("configure", {
 
 ## Edge-basispad met de webtagextensie SDK
 
-Het de markeringsuitbreidingsequivalent van SDK van het Web van dit gebied is onder [ Geavanceerde configuratiemontages ](/help/tags/extensions/client/web-sdk/configure/advanced-settings.md) wanneer het vormen van de markeringsuitbreiding.
+Het de markeringsuitbreidingsequivalent van SDK van het Web van dit gebied is onder [&#x200B; Geavanceerde configuratiemontages &#x200B;](/help/tags/extensions/client/web-sdk/configure/advanced-settings.md) wanneer het vormen van de markeringsuitbreiding.

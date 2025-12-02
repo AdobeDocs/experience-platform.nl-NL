@@ -10,7 +10,7 @@ ht-degree: 2%
 
 # `cookie`
 
-Het `_satellite.cookie` -object bevat methoden waarmee u cookies waarnaar de tagregels kunnen verwijzen, kunt schrijven, bewerken of verwijderen. Het is een gedeeltelijke kopie van [`js-cookie` ](https://github.com/js-cookie/js-cookie), die vele kerneigenschappen van die bibliotheek bevatten.
+Het `_satellite.cookie` -object bevat methoden waarmee u cookies waarnaar de tagregels kunnen verwijzen, kunt schrijven, bewerken of verwijderen. Het is een gedeeltelijke kopie van [`js-cookie` &#x200B;](https://github.com/js-cookie/js-cookie), die vele kerneigenschappen van die bibliotheek bevatten.
 
 ## `cookie.set()`
 
@@ -38,11 +38,11 @@ Het `attributes` -object ondersteunt de volgende eigenschappen:
 
 | Kenmerknaam | Type | Vereist | Standaard | Beschrijving |
 |---|---|---|---|---|
-| **`expires`** | `number` of [`Date` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | Nee | Het cookie verloopt aan het einde van de browsersessie | Het aantal dagen dat de cookie moet verlopen. |
+| **`expires`** | `number` of [`Date` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | Nee | Het cookie verloopt aan het einde van de browsersessie | Het aantal dagen dat de cookie moet verlopen. |
 | **`path`** | `string` | Nee | Zichtbare cookie voor de hele site | Waar op uw domein is de cookie zichtbaar. |
 | **`domain`** | `string` | Nee | Cookie is zichtbaar voor het domein waaronder het is gemaakt | Een geldig domein (met of zonder een subdomein) waar het cookie zichtbaar is. Als een domein zonder subdomein wordt omvat, is het koekje zichtbaar aan alle subdomeinen onder dat domein. |
 | **`secure`** | `boolean` | Nee | Geen kenmerkset | Bepaalt als het koekje een veilig protocol (`https://`) vereist. Indien weggelaten, is er geen veilig protocolvereiste. |
-| **`sameSite`** | `'Strict' \| 'Lax' \| 'None'` | Nee | Geen kenmerkset | Hiermee kunt u het kenmerk [`sameSite` ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) van een cookie instellen. Als u `sameSite` instelt op `None` , moet u ook `secure` instellen op `true` . |
+| **`sameSite`** | `'Strict' \| 'Lax' \| 'None'` | Nee | Geen kenmerkset | Hiermee kunt u het kenmerk [`sameSite` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) van een cookie instellen. Als u `sameSite` instelt op `None` , moet u ook `secure` instellen op `true` . |
 
 ```js
 // Sets a cookie valid across the entire site, expires on session close

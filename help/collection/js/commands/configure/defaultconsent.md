@@ -61,7 +61,7 @@ Zie de onderstaande tabel om te begrijpen wanneer gegevensverzameling plaatsvind
 | `out` | `out` | Nee | Ja |
 | `out` | Niet ingesteld | Nee | Nee |
 
-Zie [ de koekjes van SDK van het Web van Adobe Experience Platform ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) voor een lijst van koekjes die de bibliotheekreeksen.
+Zie [&#x200B; de koekjes van SDK van het Web van Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) voor een lijst van koekjes die de bibliotheekreeksen.
 
 >[!NOTE]
 >
@@ -85,4 +85,4 @@ In het bovenstaande codeblok wordt de opdracht `configure` aangeroepen nadat `tc
 
 ## Standaardtoestemming met de Web SDK-tagextensie
 
-Zie [ de montages van de Toestemming ](/help/tags/extensions/client/web-sdk/configure/consent.md) in de de markeringsuitbreidingsdocumentatie van SDK van het Web leren hoe te om deze acties uit te voeren gebruikend markeringen.
+Zie [&#x200B; de montages van de Toestemming &#x200B;](/help/tags/extensions/client/web-sdk/configure/consent.md) in de de markeringsuitbreidingsdocumentatie van SDK van het Web leren hoe te om deze acties uit te voeren gebruikend markeringen.

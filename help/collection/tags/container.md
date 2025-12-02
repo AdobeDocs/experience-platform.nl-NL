@@ -168,7 +168,7 @@ readonly _satellite._container.property: {
 
 | Naam instellen | Type | Beschrijving |
 |---|---|---|
-| **`domains`** | `string[]` | De gevormde domeinen voor het bezit, zoals geplaatst wanneer [ vormend een markeringsbezit ](/help/tags/ui/administration/companies-and-properties.md). |
+| **`domains`** | `string[]` | De gevormde domeinen voor het bezit, zoals geplaatst wanneer [&#x200B; vormend een markeringsbezit &#x200B;](/help/tags/ui/administration/companies-and-properties.md). |
 | **`ruleComponentSequencingEnabled`** | `boolean` | Hiermee wordt bepaald of het selectievakje **[!UICONTROL Run rule components in sequence]** is ingeschakeld bij het configureren van de eigenschap tag. |
 | **`undefinedVarsReturnEmpty`** | `boolean` | Hiermee wordt bepaald of het selectievakje **[!UICONTROL Return an empty string for undefined data elements]** is ingeschakeld bij het configureren van de eigenschap tag. |
 

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Gegevenstelelementtypen
 
-Nadat u uw [ actietypes ](actions/actions-overview.md) in de markeringsuitbreiding plaatst, moet u uw types van gegevenselement vormen. Op deze pagina worden de beschikbare gegevenselemetypen beschreven.
+Nadat u uw [&#x200B; actietypes &#x200B;](actions/actions-overview.md) in de markeringsuitbreiding plaatst, moet u uw types van gegevenselement vormen. Op deze pagina worden de beschikbare gegevenselemetypen beschreven.
 
 ## Identiteitskaart {#identity-map}
 
@@ -23,7 +23,7 @@ In het gegevenselement [!UICONTROL Identity map] geeft u de volgende gegevens vo
 * **[!UICONTROL Authenticated state]**: een selectie die aangeeft of de bezoeker is geverifieerd.
 * **[!UICONTROL Primary]**: Een selectie die aangeeft of de id moet worden gebruikt als primaire id voor de individu. Als er geen id als primair wordt gemarkeerd, wordt de ECID gebruikt als primaire id.
 
-![ beeld UI die het Edit scherm van het Element van Gegevens tonen.](assets/identity-map-data-element.png)
+![&#x200B; beeld UI die het Edit scherm van het Element van Gegevens tonen.](assets/identity-map-data-element.png)
 
 >[!TIP]
 >
@@ -35,13 +35,13 @@ Geef geen [!DNL ECID] op wanneer u een identiteitsoverzicht maakt. Wanneer u de 
 
 Het gegevenselement van de identiteitskaart wordt vaak gebruikt met het [[!UICONTROL Variable]](#variable) gegevenselement en de [[!UICONTROL Set consent]](actions/set-consent.md) actie.
 
-Lees meer over de [ Dienst van de Identiteit van Adobe Experience Platform ](/help/identity-service/home.md).
+Lees meer over de [&#x200B; Dienst van de Identiteit van Adobe Experience Platform &#x200B;](/help/identity-service/home.md).
 
 ## XDM-object {#xdm-object}
 
 Het formatteren van uw gegevens aan XDM is gemakkelijker met het XDM objectelement. Wanneer u dit gegevenselement voor het eerst opent, selecteert u de juiste Adobe Experience Platform-sandbox en -schema. Nadat u het schema hebt geselecteerd, ziet u de structuur van uw schema, dat u gemakkelijk kunt invullen.
 
-![ beeld UI die de XDM objecten structuur toont.](assets/XDM-object.png)
+![&#x200B; beeld UI die de XDM objecten structuur toont.](assets/XDM-object.png)
 
 Wanneer u bepaalde velden in uw schema opent, zoals `web.webPageDetails.URL` , worden sommige items automatisch verzameld. Hoewel meerdere items automatisch worden verzameld, kunt u indien nodig alle items overschrijven. Alle waarden kunnen handmatig of met andere gegevenselementen worden ingevuld.
 
@@ -56,16 +56,16 @@ U kunt payload-objecten maken met het gegevenselement **[!UICONTROL Variable]** 
 * Wanneer u [!UICONTROL XDM] selecteert, selecteert u de gewenste [!UICONTROL Sandbox] en [!UICONTROL Schema] .
 * Wanneer u [!UICONTROL Data] selecteert, selecteert u de gewenste oplossingen. Beschikbare oplossingen zijn [!UICONTROL Adobe Analytics] en [!UICONTROL Adobe Target] .
 
-![ Beeld van Markeringen UI die de opties van het gegevenselement tonen.](assets/variable-data-element.png)
+![&#x200B; Beeld van Markeringen UI die de opties van het gegevenselement tonen.](assets/variable-data-element.png)
 
-Nadat u dit gegevenselement creeert, kunt u de [ veranderlijke ](actions/update-variable.md) actie van de Update gebruiken om het te wijzigen. Wanneer klaar, kunt u dit gegevenselement in [ omvatten verzendt gebeurtenis ](actions/send-event.md) actie om gegevens naar een gegevensstroom te verzenden.
+Nadat u dit gegevenselement creeert, kunt u de [&#x200B; veranderlijke &#x200B;](actions/update-variable.md) actie van de Update gebruiken om het te wijzigen. Wanneer klaar, kunt u dit gegevenselement in [&#x200B; omvatten verzendt gebeurtenis &#x200B;](actions/send-event.md) actie om gegevens naar een gegevensstroom te verzenden.
 
 ## Media: kwaliteit van ervaring {#quality-experience}
 
 Een **[!UICONTROL Quality of Experience]** -gegevenselement is handig wanneer u streaming media-gebeurtenissen naar Adobe Experience Platform verzendt. U kunt dit element toevoegen tijdens het maken van een mediasessie. De volgende media-gebeurtenissen bevatten bijgewerkte gegevens over de kwaliteit van de ervaring.
 
-![ beeld UI die de Create Kwaliteit van het scherm van het Element van Gegevens van de Ervaring toont.](assets/qoe-data-element.png)
+![&#x200B; beeld UI die de Create Kwaliteit van het scherm van het Element van Gegevens van de Ervaring toont.](assets/qoe-data-element.png)
 
 ## Volgende stappen {#next-steps}
 
-Leer over specifieke gebruiksgevallen zoals [ die tot ECID ](accessing-the-ecid.md) toegang hebben.
+Leer over specifieke gebruiksgevallen zoals [&#x200B; die tot ECID &#x200B;](accessing-the-ecid.md) toegang hebben.

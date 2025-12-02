@@ -23,7 +23,7 @@ alloy("sendEvent", {
 });
 ```
 
-Het volgende voorbeeld gebruikt de [ het schemagroep van Details van Commerce ](/help/xdm/field-groups/event/commerce-details.md):
+Het volgende voorbeeld gebruikt de [&#x200B; het schemagroep van Details van Commerce &#x200B;](/help/xdm/field-groups/event/commerce-details.md):
 
 ```javascript
 alloy("sendEvent",{
@@ -49,4 +49,4 @@ alloy("sendEvent",{
 
 ## Het `xdm` -object gebruiken met de extensie van de Web SDK-tag
 
-Het `xdm` voorwerp is beschikbaar als of a [ Variabel gegevenselement ](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) of [ XDM objecten gegevenselement ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) wanneer het gebruiken van de de markeringsuitbreiding van SDK van het Web. Adobe raadt in de meeste gevallen aan een gegevenselement met variabele gegevens te gebruiken.
+Het `xdm` voorwerp is beschikbaar als of a [&#x200B; Variabel gegevenselement &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) of [&#x200B; XDM objecten gegevenselement &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) wanneer het gebruiken van de de markeringsuitbreiding van SDK van het Web. Adobe raadt in de meeste gevallen aan een gegevenselement met variabele gegevens te gebruiken.

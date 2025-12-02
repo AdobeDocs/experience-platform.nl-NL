@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De extensie is bedoeld voor gebruik met de Adobe Experience Platform Web SDK-extensie. Om informatie over de versie te zien die bedoeld is om met AppMeasurement te worden gebruikt, verwijs naar het overzicht over de [ Gemeenschappelijke uitbreiding van de Insteekmodules van Analytics ](../plugins/overview.md).
+>De extensie is bedoeld voor gebruik met de Adobe Experience Platform Web SDK-extensie. Om informatie over de versie te zien die bedoeld is om met AppMeasurement te worden gebruikt, verwijs naar het overzicht over de [&#x200B; Gemeenschappelijke uitbreiding van de Insteekmodules van Analytics &#x200B;](../plugins/overview.md).
 
-Dit document behandelt hoe te om de de markeringsuitbreiding van de Insteekmodules van SDK van het Web te vormen en het te gebruiken om de [ uitbreiding van SDK van het Web van Adobe Experience Platform ](../web-sdk/overview.md) te verhogen.
+Dit document behandelt hoe te om de de markeringsuitbreiding van de Insteekmodules van SDK van het Web te vormen en het te gebruiken om de [&#x200B; uitbreiding van SDK van het Web van Adobe Experience Platform &#x200B;](../web-sdk/overview.md) te verhogen.
 
 ## De algemene extensie SDK-plug-ins voor het web configureren
 
@@ -29,16 +29,16 @@ Deze sectie verstrekt een verwijzing voor de opties beschikbaar wanneer het vorm
 
 Er is geen configuratie nodig om een insteekmodule te initialiseren of toe te voegen aan uw bibliotheek buiten het gebruik van de volgende native gegevenselementen die worden geleverd door de extensie Algemene SDK-insteekmodules voor het web:
 
-* [getAndPersistValue`](web-sdk-plugins.md#getandpersistvalue)
-* [getGeoCoordinates`](#getgeocoordinates)
+* [getAndPersistValue&grave;](web-sdk-plugins.md#getandpersistvalue)
+* [getGeoCoordinates&grave;](#getgeocoordinates)
 * [` getNewRepeat`](#getnewrepeat)
 * [` getPageName`](#getpagename)
-* [getPreviousValue`](#getpreviousvalue)
+* [getPreviousValue&grave;](#getpreviousvalue)
 * [` getQueryParam`](#getqueryparam)
-* [getTimeParting`](#gettimeparting)
-* [getTimeSinceLastVisit`](#gettimesincelastvisit)
-* [getValOnce`](#getvalonce)
-* [getVisitDuration`](#getvisitduration)
+* [getTimeParting&grave;](#gettimeparting)
+* [getTimeSinceLastVisit&grave;](#gettimesincelastvisit)
+* [getValOnce&grave;](#getvalonce)
+* [getVisitDuration&grave;](#getvisitduration)
 * [` getVisitNum`](#getvisitnum)
 * [` p_fo`](#p_fo-page-first-only)
 
@@ -50,7 +50,7 @@ Er is geen configuratie nodig om een insteekmodule te initialiseren of toe te vo
 >
 >Met dit gegevenselement kunt u cookies instellen en door de gebruiker gegenereerde waarden in cookies opslaan. Raadpleeg de specifieke documentatie van de plug-in voor meer informatie.
 
-Hiermee kunt u de [`getAndPersistValue` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html) instellen en configureren. In het gegevenselement `getAndPersistValue` wordt een waarde opgeslagen in een cookie die later tijdens een bezoek kan worden opgehaald.
+Hiermee kunt u de [`getAndPersistValue` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html) instellen en configureren. In het gegevenselement `getAndPersistValue` wordt een waarde opgeslagen in een cookie die later tijdens een bezoek kan worden opgehaald.
 
 Het gegevenselement `getAndPersistValue` bevat de volgende argumenten:
 
@@ -66,7 +66,7 @@ Als de variabele in het argument `vtp` is ingesteld, wordt het cookie door het g
 >
 >Voor deze insteekmodule is locatietoegang op de client vereist, maar er wordt geen uitzondering gegenereerd als deze niet wordt opgehaald.
 
-Hiermee kunt u de [`getGeoCoordinates` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html) instellen en configureren. Met het gegevenselement `getGeoCoordinates` worden de breedte en lengte van bezoekersapparaten vastgelegd.
+Hiermee kunt u de [`getGeoCoordinates` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html) instellen en configureren. Met het gegevenselement `getGeoCoordinates` worden de breedte en lengte van bezoekersapparaten vastgelegd.
 
 Het gegevenselement `getGeoCoordinates` gebruikt geen argumenten. Deze geeft een van de volgende waarden:
 
@@ -80,7 +80,7 @@ Het gegevenselement `getGeoCoordinates` gebruikt geen argumenten. Deze geeft een
 >
 >Met dit gegevenselement worden cookies ingesteld. Raadpleeg de specifieke documentatie van de plug-in voor meer informatie.
 
-Hiermee kunt u de [`getNewRepeat` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html) instellen en configureren. Het gegevenselement `getNewRepeat` bepaalt of een bezoeker van de site een nieuwe bezoeker of een herhaalde bezoeker binnen een gewenst aantal dagen is.
+Hiermee kunt u de [`getNewRepeat` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html) instellen en configureren. Het gegevenselement `getNewRepeat` bepaalt of een bezoeker van de site een nieuwe bezoeker of een herhaalde bezoeker binnen een gewenst aantal dagen is.
 
 Het gegevenselement `getNewRepeat` gebruikt de volgende argumenten:
 
@@ -90,7 +90,7 @@ Dit gegevenselement retourneert de waarde van `"New"` als de cookie die door het
 
 ### `getPageName`
 
-Hiermee kunt u de [`getPageName` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html) instellen en configureren. Met het gegevenselement `getPageName` kunt u een leesbare, vriendelijke opgemaakte versie van de huidige URL maken.
+Hiermee kunt u de [`getPageName` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html) instellen en configureren. Met het gegevenselement `getPageName` kunt u een leesbare, vriendelijke opgemaakte versie van de huidige URL maken.
 
 Het gegevenselement `getPageName` gebruikt de volgende argumenten:
 
@@ -107,7 +107,7 @@ Het gegevenselement retourneert een tekenreeks met een gebruiksvriendelijke vers
 >
 >Met dit gegevenselement kunt u cookies instellen en door de gebruiker gegenereerde waarden in cookies opslaan. Raadpleeg de specifieke documentatie van de plug-in voor meer informatie.
 
-Hiermee kunt u de [`getPreviousValue` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html) instellen en configureren. Het gegevenselement `getPreviousValue` stelt een variabele in op een waarde die bij een vorige hit is ingesteld.
+Hiermee kunt u de [`getPreviousValue` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html) instellen en configureren. Het gegevenselement `getPreviousValue` stelt een variabele in op een waarde die bij een vorige hit is ingesteld.
 
 Het gegevenselement `getPreviousValue` gebruikt de volgende argumenten:
 
@@ -118,7 +118,7 @@ Wanneer u dit gegevenselement aanroept, wordt de tekenreekswaarde in het cookie 
 
 ### `getQueryParam`
 
-Hiermee kunt u de [`getQueryParam` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html) instellen en configureren. Het gegevenselement `getQueryParam` extraheert de waarde van elke querytekenreeksparameter in een URL. Het is nuttig om campagnecodes, zowel intern als extern, uit het landen van pagina URLs te halen. Het is ook nuttig wanneer het halen van onderzoekstermijnen of andere parameters van het vraagkoord. Dit gegevenselement verstrekt robuuste eigenschappen in het ontleden van complexe URLs, met inbegrip van knoeiboel en URLs die veelvoudige parameters van het vraagkoord bevatten.
+Hiermee kunt u de [`getQueryParam` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html) instellen en configureren. Het gegevenselement `getQueryParam` extraheert de waarde van elke querytekenreeksparameter in een URL. Het is nuttig om campagnecodes, zowel intern als extern, uit het landen van pagina URLs te halen. Het is ook nuttig wanneer het halen van onderzoekstermijnen of andere parameters van het vraagkoord. Dit gegevenselement verstrekt robuuste eigenschappen in het ontleden van complexe URLs, met inbegrip van knoeiboel en URLs die veelvoudige parameters van het vraagkoord bevatten.
 
 Het gegevenselement `getQueryParam` gebruikt de volgende argumenten:
 
@@ -135,11 +135,11 @@ Wanneer dit gegevenselement wordt aangeroepen, wordt een waarde geretourneerd di
 
 ### `getTimeParting`
 
-Hiermee kunt u de [`getTimeParting` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html) instellen en configureren. In het gegevenselement `getTimeParting` worden de details vastgelegd van het tijdstip waarop een meetbare activiteit op uw site plaatsvindt. Dit gegevenselement is waardevol wanneer u metriek door om het even welke herhaalbare verdeling van tijd over een bepaalde datumwaaier wilt breken. U kunt bijvoorbeeld de conversiekoersen vergelijken tussen twee verschillende dagen van de week, zoals alle zondag en alle donderdag. U kunt periodes van de dag ook vergelijken, zoals alle ochtenden tegenover alle avonden.
+Hiermee kunt u de [`getTimeParting` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html) instellen en configureren. In het gegevenselement `getTimeParting` worden de details vastgelegd van het tijdstip waarop een meetbare activiteit op uw site plaatsvindt. Dit gegevenselement is waardevol wanneer u metriek door om het even welke herhaalbare verdeling van tijd over een bepaalde datumwaaier wilt breken. U kunt bijvoorbeeld de conversiekoersen vergelijken tussen twee verschillende dagen van de week, zoals alle zondag en alle donderdag. U kunt periodes van de dag ook vergelijken, zoals alle ochtenden tegenover alle avonden.
 
 Het gegevenselement `getTimeParting` gebruikt het volgende argument:
 
-`t` (Optioneel maar aanbevolen, tekenreeks): de naam van de tijdzone waarnaar de lokale tijd van de bezoeker moet worden omgezet.  Wordt standaard ingesteld op UTC/GMT. Verwijs naar de [ Lijst van TZ de tijdstreken van de gegevensbestandtijd ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) op Wikipedia voor een volledige lijst van geldige waarden.
+`t` (Optioneel maar aanbevolen, tekenreeks): de naam van de tijdzone waarnaar de lokale tijd van de bezoeker moet worden omgezet.  Wordt standaard ingesteld op UTC/GMT. Verwijs naar de [&#x200B; Lijst van TZ de tijdstreken van de gegevensbestandtijd &#x200B;](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) op Wikipedia voor een volledige lijst van geldige waarden.
 
 Veelvoorkomende geldige waarden zijn:
 
@@ -162,7 +162,7 @@ Het roepen van dit gegevenselement keert een koord terug dat het volgende door e
 >
 >Met dit gegevenselement worden cookies ingesteld. Raadpleeg de specifieke documentatie van de plug-in voor meer informatie.
 
-Hiermee kunt u de [`getTimeSinceLastVisit` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html) instellen en configureren. Het gegevenselement `getTimeSinceLastVisit` houdt in hoelang een bezoeker heeft geduurd om na zijn laatste bezoek terug te keren naar uw site.
+Hiermee kunt u de [`getTimeSinceLastVisit` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html) instellen en configureren. Het gegevenselement `getTimeSinceLastVisit` houdt in hoelang een bezoeker heeft geduurd om na zijn laatste bezoek terug te keren naar uw site.
 
 Het gegevenselement `getTimeSinceLastVisit` gebruikt geen argumenten. Het retourneert de hoeveelheid tijd die is verstreken sinds de bezoeker voor het laatst naar de site is gekomen. Deze tijd wordt als volgt geplakt:
 
@@ -177,7 +177,7 @@ Het gegevenselement `getTimeSinceLastVisit` gebruikt geen argumenten. Het retour
 >
 >Met dit gegevenselement kunt u cookies instellen en door de gebruiker gegenereerde waarden in cookies opslaan. Raadpleeg de specifieke documentatie van de plug-in voor meer informatie.
 
-Hiermee kunt u de [`getValOnce` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html) instellen en configureren. Met het gegevenselement `getValOnce` voorkomt u dat een variabele meerdere keren op dezelfde waarde wordt ingesteld.
+Hiermee kunt u de [`getValOnce` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html) instellen en configureren. Met het gegevenselement `getValOnce` voorkomt u dat een variabele meerdere keren op dezelfde waarde wordt ingesteld.
 
 Het gegevenselement `getValOnce` gebruikt de volgende argumenten:
 
@@ -194,7 +194,7 @@ Wanneer het argument `vtc` en de waarde van het cookie overeenkomen, retourneert
 >
 >Met dit gegevenselement worden cookies ingesteld. Raadpleeg de specifieke documentatie van de plug-in voor meer informatie.
 
-Hiermee kunt u de [`getVisitDuration` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html) instellen en configureren. Het gegevenselement `getVisitDuration` houdt de hoeveelheid tijd in minuten bij die de bezoeker tot dat punt op de site is geweest.
+Hiermee kunt u de [`getVisitDuration` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html) instellen en configureren. Het gegevenselement `getVisitDuration` houdt de hoeveelheid tijd in minuten bij die de bezoeker tot dat punt op de site is geweest.
 
 Het gegevenselement `getVisitDuration` gebruikt geen argumenten. Deze geeft een van de volgende waarden:
 
@@ -209,7 +209,7 @@ Het gegevenselement `getVisitDuration` gebruikt geen argumenten. Deze geeft een 
 >
 >Met dit gegevenselement worden cookies ingesteld. Raadpleeg de specifieke documentatie van de plug-in voor meer informatie.
 
-Hiermee kunt u de [`getVisitNum` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html) instellen en configureren. Het gegevenselement `getVisitNum` retourneert het bezoeknummer voor alle bezoekers die binnen het gewenste aantal dagen naar de site komen.
+Hiermee kunt u de [`getVisitNum` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html) instellen en configureren. Het gegevenselement `getVisitNum` retourneert het bezoeknummer voor alle bezoekers die binnen het gewenste aantal dagen naar de site komen.
 
 Het gegevenselement `getVisitNum` gebruikt de volgende argumenten:
 
@@ -223,7 +223,7 @@ Het aantal bezoekers neemt toe wanneer de bezoeker na 30 minuten inactiviteit te
 
 ### `p_fo` (Alleen pagina eerst)
 
-Hiermee kunt u de [`p_fo` plug-in Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html) instellen en configureren. Het gegevenselement `p_fo` is een hulpprogramma dat controleert of een specifiek JavaScript-object bestaat. Als het object niet bestaat, maakt de plug-in het object en wordt `true` geretourneerd. Als het JavaScript-object al op de pagina aanwezig is, wordt `false` geretourneerd. Dit gegevenselement is nuttig om code precies één keer op een pagina uit te voeren.
+Hiermee kunt u de [`p_fo` plug-in Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html) instellen en configureren. Het gegevenselement `p_fo` is een hulpprogramma dat controleert of een specifiek JavaScript-object bestaat. Als het object niet bestaat, maakt de plug-in het object en wordt `true` geretourneerd. Als het JavaScript-object al op de pagina aanwezig is, wordt `false` geretourneerd. Dit gegevenselement is nuttig om code precies één keer op een pagina uit te voeren.
 
 Het gegevenselement `p_fo` gebruikt de volgende argumenten:
 

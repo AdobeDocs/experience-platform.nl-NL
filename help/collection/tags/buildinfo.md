@@ -33,7 +33,7 @@ De volgende velden zijn beschikbaar wanneer u dit object aanroept.
 | --- | --- | --- |
 | **`minified`** | `boolean` | Hiermee wordt aangegeven of de bibliotheek is geminiaterd. Productiebuilds worden doorgaans geminiateerd (`true`), terwijl ontwikkelings- en staging builds doorgaans niet (`false`). |
 | **`buildDate`** | `string (ISO-8601 datetime)` | De datum en tijd waarop uw JavaScript-bestand is gemaakt en gepubliceerd. |
-| **`turbineBuildDate`** | `string (ISO-8601 datetime)` | [ Turbine ](https://github.com/adobe/reactor-turbine) is de motor van Adobe die markeringsregels verwerkt en logica delegeert aan markeringsuitbreidingen. Dit gebied bevat de datum en de tijd van de Turbine bouwstijl die wordt gebruikt om uw markeringsbezit te publiceren. |
+| **`turbineBuildDate`** | `string (ISO-8601 datetime)` | [&#x200B; Turbine &#x200B;](https://github.com/adobe/reactor-turbine) is de motor van Adobe die markeringsregels verwerkt en logica delegeert aan markeringsuitbreidingen. Dit gebied bevat de datum en de tijd van de Turbine bouwstijl die wordt gebruikt om uw markeringsbezit te publiceren. |
 | **`turbineVersion`** | `string` | De versie van Turbine die wordt gebruikt om uw markeringsbezit te bouwen en te publiceren. |
 
 Vergelijkbare informatie vindt u ook in `_satellite._container.buildInfo` . Zie [`_container`](container.md) voor meer informatie.

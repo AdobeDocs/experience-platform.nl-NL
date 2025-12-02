@@ -13,7 +13,7 @@ ht-degree: 0%
 
 De Adobe Experience Platform Web SDK-tagextensie verzendt gegevens naar de Adobe Experience Cloud vanuit wegeigenschappen via de Adobe Experience Platform Edge Network. Met de extensie Experience Platform Web SDK kunt u gegevens streamen naar een platform, identiteiten synchroniseren, inbellen en automatisch contextgegevens verzamelen.
 
-Zie [ Begonnen worden ](getting-started.md) om te leren hoe te opstelling en deze markeringsuitbreiding op te stellen beginnen gegevens te verzamelen.
+Zie [&#x200B; Begonnen worden &#x200B;](getting-started.md) om te leren hoe te opstelling en deze markeringsuitbreiding op te stellen beginnen gegevens te verzamelen.
 
 Bekijk de onderstaande video om Adobe Experience Platform [!DNL Web SDK] en [!DNL Edge Network] in actie te zien, met behulp van één aanroep om gegevens naar [!DNL Experience Platform] , [!DNL Analytics] , [!DNL Audience Manager] en [!DNL Target] te verzenden.
 

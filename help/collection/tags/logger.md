@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # `logger`
 
-Het `_satellite.logger` voorwerp bevat methodes die u toestaan om kenmerkende of informatieberichten aan de browser console uit te voeren wanneer [ het Zuiveren ](../use-cases/debugging.md) wordt toegelaten. Als foutopsporing niet is ingeschakeld, doen alle aanroepen van de methode `logger` niets.
+Het `_satellite.logger` voorwerp bevat methodes die u toestaan om kenmerkende of informatieberichten aan de browser console uit te voeren wanneer [&#x200B; het Zuiveren &#x200B;](../use-cases/debugging.md) wordt toegelaten. Als foutopsporing niet is ingeschakeld, doen alle aanroepen van de methode `logger` niets.
 
 Met deze methoden kunnen ontwikkelaars, technische marketers en testers eenvoudig zien wat er wordt geactiveerd binnen een tag-eigenschap en wanneer. Aangezien deze consoleberichten slechts verschijnen wanneer het zuiveren wordt toegelaten, kunt u `logger` berichten in plaatsingen aan productie verlaten zonder de browser console van bezoekers aan uw plaats te beïnvloeden.
 

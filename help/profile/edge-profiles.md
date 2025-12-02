@@ -55,7 +55,7 @@ Met de Express Profile Service (XPS) worden de profielen aan de verschillende ra
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Voor meer informatie over de Ervaring Edge van Adobe, zie [ het overzicht van de inzameling van Gegevens ](/help/collection/home.md).
+Nadat u deze handleiding hebt gelezen, hebt u een basiskennis van de randprofielen, waaronder informatie over de beschikbare gebieden en services voor randprofielen. Voor meer informatie over de Ervaring Edge van Adobe, zie [&#x200B; het overzicht van de inzameling van Gegevens &#x200B;](/help/collection/home.md).
 
 ## Bijlage
 
@@ -69,7 +69,7 @@ Bovendien heeft elk Edge-profiel een schemakenmerk dat het UAR-gebied (User Acti
 
 ### Hoe werkt gegevensvervaltijden met randprofielen?
 
-Voor randprofielen bepaalt de vervaldatum van de gegevens hoe lang het profiel op de rand blijft voordat het wordt verwijderd. Het verstrijken van gegevens is het rollen ****, zo betekent het dat telkens als het profiel op rand wordt betreden, de tijd van de gegevensvervalsing terugstelt. De gegevensvervaldatum duurt standaard 14 dagen.
+Voor randprofielen bepaalt de vervaldatum van de gegevens hoe lang het profiel op de rand blijft voordat het wordt verwijderd. Het verstrijken van gegevens is het rollen **&#x200B;**, zo betekent het dat telkens als het profiel op rand wordt betreden, de tijd van de gegevensvervalsing terugstelt. De gegevensvervaldatum duurt standaard 14 dagen.
 
 ### Welke gegevens zijn opgeslagen in het randprofiel?
 

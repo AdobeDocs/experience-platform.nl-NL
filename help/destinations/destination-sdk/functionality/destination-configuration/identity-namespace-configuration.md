@@ -15,7 +15,7 @@ Experience Platform gebruikt naamruimten om het type van specifieke identiteiten
 
 Houd, afhankelijk van het type doel dat u maakt (streaming of op bestand gebaseerd), rekening met de volgende vereisten voor naamruimte voor identiteiten:
 
-* Wanneer het creëren van bestemmingen in real time (het stromen) door Destination SDK, naast [ vormend een partnerschema ](schema-configuration.md) waaraan de gebruikers profielattributen en identiteiten kunnen in kaart brengen, moet u *minstens één* identiteitsnamespaces ook bepalen die door uw bestemmingsplatform wordt gesteund. Bijvoorbeeld, als uw bestemmingsplatform gehakt e-mail en [!DNL IDFA] goedkeurt, moet u deze twee identiteiten bepalen zoals [ verder in dit document ](#supported-parameters) wordt beschreven.
+* Wanneer het creëren van bestemmingen in real time (het stromen) door Destination SDK, naast [&#x200B; vormend een partnerschema &#x200B;](schema-configuration.md) waaraan de gebruikers profielattributen en identiteiten kunnen in kaart brengen, moet u *minstens één* identiteitsnamespaces ook bepalen die door uw bestemmingsplatform wordt gesteund. Bijvoorbeeld, als uw bestemmingsplatform gehakt e-mail en [!DNL IDFA] goedkeurt, moet u deze twee identiteiten bepalen zoals [&#x200B; verder in dit document &#x200B;](#supported-parameters) wordt beschreven.
 
   >[!IMPORTANT]
   >
@@ -23,15 +23,15 @@ Houd, afhankelijk van het type doel dat u maakt (streaming of op bestand gebasee
 
 * Wanneer het creëren van op dossier-gebaseerde bestemmingen door Destination SDK, is de configuratie van identiteit namespaces facultatief __.
 
-Meer over identiteit namespaces in Experience Platform leren, zie de [ documentatie van identiteitsnaamruimten ](../../../../identity-service/features/namespaces.md).
+Meer over identiteit namespaces in Experience Platform leren, zie de [&#x200B; documentatie van identiteitsnaamruimten &#x200B;](../../../../identity-service/features/namespaces.md).
 
 Wanneer het vormen van identiteitsnamespaces voor uw bestemming, kunt u de afbeelding van de doelidentiteit verfijnen die door uw bestemming wordt gesteund, zoals:
 
 * Gebruikers toestaan XDM-kenmerken toe te wijzen aan naamruimten.
-* Toestaan van gebruikers om [ standaardidentiteitsnamespaces ](../../../../identity-service/features/namespaces.md#standard) aan uw eigen identiteitsnaamruimten in kaart te brengen.
-* Toestaan van gebruikers om [ naamruimten van de douanetechniek ](../../../../identity-service/features/namespaces.md#manage-namespaces) aan uw eigen identiteitsnaamruimten in kaart te brengen.
+* Toestaan van gebruikers om [&#x200B; standaardidentiteitsnamespaces &#x200B;](../../../../identity-service/features/namespaces.md#standard) aan uw eigen identiteitsnaamruimten in kaart te brengen.
+* Toestaan van gebruikers om [&#x200B; naamruimten van de douanetechniek &#x200B;](../../../../identity-service/features/namespaces.md#manage-namespaces) aan uw eigen identiteitsnaamruimten in kaart te brengen.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [&#x200B; configuratieopties &#x200B;](../configuration-options.md) documentatie of zie de gids op hoe te [&#x200B; Destination SDK gebruiken om een op dossier-gebaseerde bestemming &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
 
 U kunt ondersteunde naamruimten configureren via het `/authoring/destinations` -eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -61,7 +61,7 @@ Wanneer het bepalen van de doelidentiteiten die uw bestemming steunt, kunt u de 
 |---------|----------|---|------|
 | `acceptsAttributes` | Boolean | Optioneel | Geeft aan of klanten standaardprofielkenmerken kunnen toewijzen aan de identiteit die u configureert. |
 | `acceptsCustomNamespaces` | Boolean | Optioneel | Geeft aan of klanten aangepaste naamruimten kunnen toewijzen aan de naamruimte van de identiteit die u configureert. |
-| `acceptedGlobalNamespaces` | - | Optioneel | Wijst op welke [ standaardidentiteitsnamespaces ](../../../../identity-service/features/namespaces.md#standard) (bijvoorbeeld, [!UICONTROL IDFA]) klanten aan de identiteit kunnen in kaart brengen die u vormt. |
+| `acceptedGlobalNamespaces` | - | Optioneel | Wijst op welke [&#x200B; standaardidentiteitsnamespaces &#x200B;](../../../../identity-service/features/namespaces.md#standard) (bijvoorbeeld, [!UICONTROL IDFA]) klanten aan de identiteit kunnen in kaart brengen die u vormt. |
 | `transformation` | String | Optioneel | Hiermee wordt het selectievakje [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) weergegeven in de gebruikersinterface van Experience Platform wanneer het bronveld een XDM-kenmerk of een naamruimte voor een aangepaste identiteit is. Gebruik deze optie om gebruikers de mogelijkheid te geven bronkenmerken bij het exporteren te hashen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))` . |
 | `requiredTransformation` | String | Optioneel | Wanneer klanten deze naamruimte voor de bronidentiteit selecteren, wordt het selectievakje [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) automatisch toegepast op de toewijzing en kunnen klanten deze naamruimte niet uitschakelen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))` . |
 
@@ -90,7 +90,7 @@ U moet aangeven welke [!DNL Experience Platform] -identiteiten klanten kunnen ex
 Naamruimten vereisen geen 1-op-1 overeenkomst tussen [!DNL Experience Platform] en uw doel.
 Klanten kunnen bijvoorbeeld een naamruimte [!DNL Experience Platform] [!DNL IDFA] aan een naamruimte [!DNL IDFA] toewijzen vanuit uw doel, of ze kunnen dezelfde naamruimte [!DNL Experience Platform] [!DNL IDFA] toewijzen aan een naamruimte [!DNL Customer ID] in uw doel.
 
-Lees meer over identiteiten in het [ overzicht van identiteitskaart namespace ](../../../../identity-service/features/namespaces.md).
+Lees meer over identiteiten in het [&#x200B; overzicht van identiteitskaart namespace &#x200B;](../../../../identity-service/features/namespaces.md).
 
 ## Toewijzingsoverwegingen
 
@@ -100,7 +100,7 @@ Als klanten een naamruimte voor de bronidentiteit selecteren en geen doeltoewijz
 
 Experience Platform-klanten kunnen ervoor kiezen om gegevens in te voeren in Experience Platform met een hashing-indeling of in onbewerkte tekst. Als uw bestemmingsplatform zowel gehakt als unhashed gegevens goedkeurt, kunt u klanten de optie geven om te kiezen of Experience Platform de waarden van de brongebieden zou moeten hakken wanneer zij naar uw bestemming worden uitgevoerd.
 
-De configuratie hieronder laat facultatieve [ toe past transformatie ](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) optie in Experience Platform UI, in de stap van de Afbeelding toe.
+De configuratie hieronder laat facultatieve [&#x200B; toe past transformatie &#x200B;](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) optie in Experience Platform UI, in de stap van de Afbeelding toe.
 
 ```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{

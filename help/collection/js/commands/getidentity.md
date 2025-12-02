@@ -32,7 +32,7 @@ Voer het `getIdentity` bevel in werking wanneer het roepen van uw gevormde insta
 
   U kunt `"ECID"` en `"CORE ID"` tegelijkertijd aanvragen. Voorbeeld: `"namespaces": ["ECID","CORE"]` .
 
-* **`edgeConfigOverrides`**: A [ datastream configuratieopheffingsvoorwerp ](configure/edgeconfigoverrides.md).
+* **`edgeConfigOverrides`**: A [&#x200B; datastream configuratieopheffingsvoorwerp &#x200B;](configure/edgeconfigoverrides.md).
 
 ```js
 alloy("getIdentity",{
@@ -43,7 +43,7 @@ alloy("getIdentity",{
 
 ## Object Response
 
-Als u besluit om [ reacties ](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
+Als u besluit om [&#x200B; reacties &#x200B;](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
 
 * **`identity.ECID`**: Een tekenreeks die de ECID van de bezoeker bevat.
 * **`identity.CORE`**: Een tekenreeks met de CORE-id van de bezoeker.

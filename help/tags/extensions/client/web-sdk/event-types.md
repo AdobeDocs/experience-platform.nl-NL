@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # Gebeurtenistypen
 
-Op deze pagina worden de Adobe Experience Platform-gebeurtenistypen beschreven die worden geleverd door de tagextensie Adobe Experience Platform Web SDK. Deze worden gebruikt aan [ bouwt regels ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) en zou niet met het `eventType` gebied in het [`xdm` voorwerp ](/help/collection/js/commands/sendevent/xdm.md) moeten worden verward.
+Op deze pagina worden de Adobe Experience Platform-gebeurtenistypen beschreven die worden geleverd door de tagextensie Adobe Experience Platform Web SDK. Deze worden gebruikt aan [&#x200B; bouwt regels &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) en zou niet met het `eventType` gebied in het [`xdm` voorwerp &#x200B;](/help/collection/js/commands/sendevent/xdm.md) moeten worden verward.
 
 ## Monitoringhaak geactiveerd {#monitoring-hook-triggered}
 
 De Adobe Experience Platform Web SDK bevat controleluks die u kunt gebruiken om verschillende systeemgebeurtenissen te controleren. Deze hulpmiddelen zijn nuttig om uw eigen het zuiveren hulpmiddelen te ontwikkelen en de logboeken van SDK van het Web te vangen.
 
-Voor volledige details over welke parameters elke controlehaakgebeurtenis bevat, zie het [ Web SDK controlehaks documentatie ](/help/collection/js/monitoring-hooks.md).
+Voor volledige details over welke parameters elke controlehaakgebeurtenis bevat, zie het [&#x200B; Web SDK controlehaks documentatie &#x200B;](/help/collection/js/monitoring-hooks.md).
 
-![ het gebruikersinterfacebeeld van Markeringen die het type van de controlehaakgebeurtenis tonen ](assets/monitoring-hook-triggered.png)
+![&#x200B; het gebruikersinterfacebeeld van Markeringen die het type van de controlehaakgebeurtenis tonen &#x200B;](assets/monitoring-hook-triggered.png)
 
 De Web SDK-tagextensie ondersteunt de volgende controleluks:
 
@@ -68,7 +68,7 @@ Als `event.propositions` bestaat, is het een array die objecten voor een verpers
 
 Voor dit eerste scenario gaat u ervan uit dat u het selectievakje [!UICONTROL Render decisions] niet hebt ingeschakeld en geen [!UICONTROL decision scopes] in de [!UICONTROL Send event] -actie hebt opgegeven die verantwoordelijk is voor het verzenden van de gebeurtenis.
 
-![ img.png ](assets/send-event-render-unchecked-without-scopes.png)
+![&#x200B; img.png &#x200B;](assets/send-event-render-unchecked-without-scopes.png)
 
 In dit voorbeeld bevat de array `propositions` alleen voorstellingen met betrekking tot de gebeurtenis die in aanmerking komen voor automatische rendering.
 
@@ -121,7 +121,7 @@ Tot dusver, hebt u slechts tot verpersoonlijkingsinhoud gekeken die voor automat
 
 De handeling [!UICONTROL Send event] ziet er als volgt uit:
 
-![ img.png ](assets/send-event-render-unchecked-with-scopes.png)
+![&#x200B; img.png &#x200B;](assets/send-event-render-unchecked-with-scopes.png)
 
 Als in dit voorbeeld proposities worden gevonden op de server die overeenkomt met het bereik `salutation` of `discount` , worden deze geretourneerd en opgenomen in de array `propositions` . Houd er rekening mee dat proposities die in aanmerking komen voor automatische rendering, ook in de toekomst in de array `propositions` worden opgenomen, ongeacht hoe u de velden [!UICONTROL Render decisions] of [!UICONTROL Decision scopes] in de handeling [!UICONTROL Send event] configureert. De array `propositions` ziet er in dit geval ongeveer als volgt uit:
 
@@ -245,7 +245,7 @@ if (discountHtml) {
 
 ### Adobe Target-respontokens openen
 
-De inhoud van Personalization die van Adobe Target is teruggekeerd omvat [ reactietokens ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
+De inhoud van Personalization die van Adobe Target is teruggekeerd omvat [&#x200B; reactietokens &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
 
 In de actie van de Code van de Douane, die in de regel voor de behandeling van reactiegegevens is, kunt u tot verpersoonlijkingsvoorstellen toegang hebben die van de server zijn teruggekeerd. Voer hiertoe de volgende aangepaste code in:
 
@@ -253,7 +253,7 @@ In de actie van de Code van de Douane, die in de regel voor de behandeling van r
 var propositions = event.propositions;
 ```
 
-Als `event.propositions` bestaat, is het een array die objecten voor een verpersoonlijkingsvoorstel bevat. Zie [ manueel gepersonaliseerde inhoud ](#manually-render-personalized-content) voor meer informatie over de inhoud van `result.propositions` teruggeven.
+Als `event.propositions` bestaat, is het een array die objecten voor een verpersoonlijkingsvoorstel bevat. Zie [&#x200B; manueel gepersonaliseerde inhoud &#x200B;](#manually-render-personalized-content) voor meer informatie over de inhoud van `result.propositions` teruggeven.
 
 Stel dat u alle activiteitnamen wilt verzamelen van alle voorstellingen die automatisch door het web-SDK zijn gerenderd en deze in één array wilt plaatsen. Vervolgens kunt u de ene array naar een derde verzenden. In dit geval schrijft u aangepaste code binnen de handeling [!UICONTROL Custom code] naar:
 
@@ -293,7 +293,7 @@ if (propositions) {
 
 Met het gebeurtenistype **[!UICONTROL Subscribe ruleset items]** kunt u zich abonneren op Adobe Journey Optimizer-inhoudskaarten voor een oppervlak. Telkens wanneer de regels worden geëvalueerd, ontvangt de callback die aan dit bevel wordt verstrekt een resultaatvoorwerp met voorstellen die de gegevens van de inhoudskaart houden.
 
-![ Beeld van het de markeringen gebruikersinterface die van Experience Platform het Abonneren regeleset punten gebeurtenistype tonen.](assets/subscribe-ruleset-items.png)
+![&#x200B; Beeld van het de markeringen gebruikersinterface die van Experience Platform het Abonneren regeleset punten gebeurtenistype tonen.](assets/subscribe-ruleset-items.png)
 
 Dit gebeurtenistype ondersteunt de volgende configureerbare eigenschappen:
 

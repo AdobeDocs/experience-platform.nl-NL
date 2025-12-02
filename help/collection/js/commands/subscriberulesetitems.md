@@ -42,7 +42,7 @@ Deze opdracht heeft een `options` -object met de volgende eigenschappen:
 | --- | --- | --- |
 | `surfaces` | Tekenreeksarray | Een lijst met oppervlakken. De callback functie zal slechts voorstellen ontvangen als zij één van de hier verstrekte oppervlakten aanpassen. |
 | `schemas` | Tekenreeksarray | Een lijst met schema&#39;s. De voorstellen zullen slechts door de callback functie worden ontvangen als zij één van de hier verstrekte schema&#39;s aanpassen. |
-| `callback` | Functie | Een callback-functie die wordt aangeroepen wanneer voorstellingen het resultaat zijn van bevredigende regels. De callback-functie ontvangt twee parameters wanneer deze wordt aangeroepen: `result` en `collectEvent` . Zie [ callback parameters ](#callback-parameters) voor details. |
+| `callback` | Functie | Een callback-functie die wordt aangeroepen wanneer voorstellingen het resultaat zijn van bevredigende regels. De callback-functie ontvangt twee parameters wanneer deze wordt aangeroepen: `result` en `collectEvent` . Zie [&#x200B; callback parameters &#x200B;](#callback-parameters) voor details. |
 
 ### Callback-parameters {#callback-parameters}
 
@@ -50,7 +50,7 @@ De callback functie ontvangt de twee parameters die in de lijst hieronder worden
 
 | Parameter | Type | Beschrijving |
 | --- | --- | --- |
-| `result` | Object | Dit object bevat een array `propositions` .  Deze voorstellen zijn het directe resultaat van tevreden regels. Het `result` voorwerp is gestructureerd het zelfde als het [ resultaatvoorwerp ](command-responses.md) dat door `sendEvent` gebruikend een `then` clausule is teruggekeerd. |
+| `result` | Object | Dit object bevat een array `propositions` .  Deze voorstellen zijn het directe resultaat van tevreden regels. Het `result` voorwerp is gestructureerd het zelfde als het [&#x200B; resultaatvoorwerp &#x200B;](command-responses.md) dat door `sendEvent` gebruikend een `then` clausule is teruggekeerd. |
 | `collectEvent` | Functie | Een gebruiksvriendelijke functie die u kunt gebruiken om Edge Network-gebeurtenissen te verzenden om interacties, weergaven en andere gebeurtenissen te volgen. |
 
 ### `collectEvent` functie {#collectevent-function}

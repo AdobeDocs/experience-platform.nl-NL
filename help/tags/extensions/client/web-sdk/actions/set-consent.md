@@ -10,9 +10,9 @@ ht-degree: 0%
 
 # Goedkeuring instellen
 
-De **[!UICONTROL Set consent]** actie bepaalt als de markeringsuitbreiding gegevens (opt in) zou moeten verzenden, gegevens (opt out) zou verwerpen, of [ standaardtoestemming ](../configure/consent.md) (onbekende toestemming) gebruiken. Wanneer een gebruiker toestemming op uw site toestaat of weigert, kunt u deze handeling gebruiken om hun voorkeuren te synchroniseren met de tagextensie. Het JavaScript-bibliotheekequivalent van deze actie is de opdracht [`setConsent`](/help/collection/js/commands/setconsent.md) .
+De **[!UICONTROL Set consent]** actie bepaalt als de markeringsuitbreiding gegevens (opt in) zou moeten verzenden, gegevens (opt out) zou verwerpen, of [&#x200B; standaardtoestemming &#x200B;](../configure/consent.md) (onbekende toestemming) gebruiken. Wanneer een gebruiker toestemming op uw site toestaat of weigert, kunt u deze handeling gebruiken om hun voorkeuren te synchroniseren met de tagextensie. Het JavaScript-bibliotheekequivalent van deze actie is de opdracht [`setConsent`](/help/collection/js/commands/setconsent.md) .
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -23,8 +23,8 @@ De tagextensie ondersteunt de volgende standaarden:
 
 * **[norm Adobe](/help/landing/governance-privacy-security/consent/adobe/overview.md)**: Zowel worden 1.0 als 2.0 normen gesteund.
 * **[het Kader van de Transparantie &amp; van de Toestemming IAB](/help/landing/governance-privacy-security/consent/iab/overview.md)**: Als u deze norm gebruikt, wordt het Echte Profiel van de Klant van de bezoeker - tijd bijgewerkt met de toestemmingsinformatie als uw implementatie correct wordt gevormd:
-   1. Het XDM individuele profielschema bevat [ IAB TCF 2.0 de gebiedsgroep van de Toestemming ](/help/xdm/field-groups/profile/iab.md).
-   1. Het schema van de Gebeurtenis van de Ervaring bevat [ IAB TCF 2.0 de gebiedsgroep van de Toestemming ](/help/xdm/field-groups/event/iab.md).
+   1. Het XDM individuele profielschema bevat [&#x200B; IAB TCF 2.0 de gebiedsgroep van de Toestemming &#x200B;](/help/xdm/field-groups/profile/iab.md).
+   1. Het schema van de Gebeurtenis van de Ervaring bevat [&#x200B; IAB TCF 2.0 de gebiedsgroep van de Toestemming &#x200B;](/help/xdm/field-groups/event/iab.md).
 
 Adobe raadt u aan om voorkeuren voor het bevestigingsvenster afzonderlijk op te slaan, bijvoorbeeld in een gegevenselement. De uitbreiding van de tag biedt geen manier om toestemming op te halen. Om ervoor te zorgen dat de gebruikersvoorkeuren synchroon blijven met de tagextensie, kunt u deze actie uitvoeren op elke pagina die wordt geladen.
 
@@ -37,7 +37,7 @@ Dit handelingstype ondersteunt de volgende configuratieopties:
 * **[!UICONTROL Consent information]**: hiermee wordt bepaald of u een formulier wilt invullen of een gegevenselement wilt opgeven met informatie over toestemming.
 * **[!UICONTROL Standard]**: De toestemmingsnorm die u wilt gebruiken. Beschikbare opties omvatten &quot;[!UICONTROL Adobe]&quot;en &quot;[!UICONTROL IAB TCF]&quot;.
 * **[!UICONTROL Version]**: De versie van de toestemmingsnorm die u wilt gebruiken.
-* **[!UICONTROL Datastream configuration overrides]**: deze opdracht ondersteunt de configuratieoverschrijvingen van de gegevensstroom, zodat u zelf kunt bepalen welke apps en services deze gegevens ontvangen. Wanneer u een gegevensstroomconfiguratieopheffing in zowel een individueel bevel als binnen de de configuratiemontages van de markeringsuitbreiding plaatst, neemt het individuele bevel belangrijkheid. Zie [ de configuratiemet voeten treedt van de Gegevensstroom ](../configure/configuration-overrides.md) voor meer informatie.
+* **[!UICONTROL Datastream configuration overrides]**: deze opdracht ondersteunt de configuratieoverschrijvingen van de gegevensstroom, zodat u zelf kunt bepalen welke apps en services deze gegevens ontvangen. Wanneer u een gegevensstroomconfiguratieopheffing in zowel een individueel bevel als binnen de de configuratiemontages van de markeringsuitbreiding plaatst, neemt het individuele bevel belangrijkheid. Zie [&#x200B; de configuratiemet voeten treedt van de Gegevensstroom &#x200B;](../configure/configuration-overrides.md) voor meer informatie.
 
 ## Een regel maken die informatie over toestemming bijwerkt
 
@@ -89,7 +89,7 @@ Deze gegevenselementen zijn nuttig wanneer het plaatsen van de &quot;[!UICONTROL
    * **[!UICONTROL Value]**: `%IAB TCF Consent String%`
    * **[!UICONTROL Does GDPR apply to this consent value]**: [!UICONTROL Provide a data element] , met de waarde `%IAB TCF Consent GDPR%`
 
-![ IAB plaatste de Actie van de Toestemming ](../assets/iab-action.png)
+![&#x200B; IAB plaatste de Actie van de Toestemming &#x200B;](../assets/iab-action.png)
 
 >[!NOTE]
 >

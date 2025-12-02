@@ -15,9 +15,9 @@ De eigenschap `orgId` is een tekenreeks die Adobe vertelt naar welke organisatie
 
 Ga als volgt te werk om de `orgID` te zoeken:
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Druk op **`[Ctrl]`** + **`[I]`** op een willekeurige plaats in de Adobe Experience Cloud. Er wordt een [!UICONTROL User Data Debugger] -venster geopend.
-1. Klik **[!UICONTROL Copy]** ![ Exemplaar ](../../assets/copy.png) naast [!UICONTROL Current Org ID], of klik het **[!UICONTROL Assigned Orgs]** lusje om andere org IDs te zien die u kunt toegang hebben.
+1. Klik **[!UICONTROL Copy]** ![&#x200B; Exemplaar &#x200B;](../../assets/copy.png) naast [!UICONTROL Current Org ID], of klik het **[!UICONTROL Assigned Orgs]** lusje om andere org IDs te zien die u kunt toegang hebben.
 1. Klik op **[!UICONTROL Close]** wanneer u de gewenste gegevens hebt gevonden.
 
 Org-id&#39;s zijn altijd alfanumerieke tekenreeksen van 24 tekens en eindigen altijd in `@AdobeOrg` .
@@ -33,4 +33,4 @@ alloy("configure", {
 
 ## De organisatie-id instellen met de Web SDK-tagextensie
 
-Dit plaatsen kan in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [ de montages van de instantieconfiguratie van SDK ](/help/tags/extensions/client/web-sdk/configure/general.md). Het veld wordt automatisch ingevuld op basis van de organisatie waarin de eigenschap tag is gemaakt.
+Dit plaatsen kan in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [&#x200B; de montages van de instantieconfiguratie van SDK &#x200B;](/help/tags/extensions/client/web-sdk/configure/general.md). Het veld wordt automatisch ingevuld op basis van de organisatie waarin de eigenschap tag is gemaakt.

@@ -52,7 +52,7 @@ Het trefwoord `"placeContext"` verzamelt informatie over de locatie van de gebru
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
-| Lokale tijd | Lokale timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [ formaat van ISO 8601 ](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
+| Lokale tijd | Lokale timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [&#x200B; formaat van ISO 8601 &#x200B;](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Verschuiving lokale tijdzone | Het aantal minuten dat de gebruiker wordt verschoven ten opzichte van GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
 | Landcode | De landcode van de eindgebruiker. | `xdm.placeContext.geo.countryCode` | `US` |
 | Provincie | De provinciecode van de eindgebruiker. | `xdm.placeContext.geo.stateProvince` | `CA` |
@@ -65,7 +65,7 @@ Het trefwoord `"timestamp"` verzamelt informatie over de tijdstempel van de gebe
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
-| Tijdstempel van de gebeurtenis | UTC timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [ formaat van ISO 8601 ](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
+| Tijdstempel van de gebeurtenis | UTC timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [&#x200B; formaat van ISO 8601 &#x200B;](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
 
 ### Implementatiedetails
 
@@ -81,7 +81,7 @@ Het trefwoord `implementationDetails` verzamelt informatie over de SDK-versie di
 
 Het trefwoord `"highEntropyUserAgentHints"` verzamelt gedetailleerde informatie over het apparaat van de gebruiker. Deze gegevens worden opgenomen in de HTTP-header van het verzoek dat naar Adobe wordt verzonden. Nadat de gegevens naar het Edge-netwerk zijn gearriveerd, vult het XDM-object het desbetreffende XDM-pad. Als u het respectieve pad XDM in uw `sendEvent` vraag plaatst, neemt het belangrijkheid over de kopbalwaarde van HTTP.
 
-Als u apparatenraadplegingen gebruikt wanneer [ vormend uw datastream ](/help/datastreams/configure.md), kunnen de gegevens worden ontruimd ten gunste van de waarden van de apparatenraadpleging. Bepaalde velden voor client-hint en opzoekvelden van apparaten kunnen niet bestaan in dezelfde hit.
+Als u apparatenraadplegingen gebruikt wanneer [&#x200B; vormend uw datastream &#x200B;](/help/datastreams/configure.md), kunnen de gegevens worden ontruimd ten gunste van de waarden van de apparatenraadpleging. Bepaalde velden voor client-hint en opzoekvelden van apparaten kunnen niet bestaan in dezelfde hit.
 
 | Eigenschap | Beschrijving | HTTP-header | XDM-pad | Voorbeeld |
 | --- | --- | --- | --- | --- |
@@ -93,7 +93,7 @@ Als u apparatenraadplegingen gebruikt wanneer [ vormend uw datastream ](/help/da
 | Browsernaam | De gebruikte browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Browserversie | De significante versie van de browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . Exacte browserversie wordt niet automatisch verzameld. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-Zie [ de wenken van de de agentencliënt van de Gebruiker ](/help/collection/use-cases/client-hints.md) voor meer informatie.
+Zie [&#x200B; de wenken van de de agentencliënt van de Gebruiker &#x200B;](/help/collection/use-cases/client-hints.md) voor meer informatie.
 
 Stel de array `context` van tekenreeksen in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de SDK, worden standaard alle contextgegevens behalve `"highEntropyUserAgentHints"` verzameld. Stel deze eigenschap in als u hoge entropieclientiptips wilt verzamelen of als u andere contextgegevens uit gegevensverzameling wilt weglaten. Tekenreeksen kunnen in elke willekeurige volgorde worden opgenomen.
 
@@ -111,4 +111,4 @@ alloy("configure", {
 
 ## Verzamel contextinformatie met de Web SDK-tagextensie
 
-Zie [ montages van de Context ](/help/tags/extensions/client/web-sdk/configure/data-collection.md#context-settings) onder de configuratiemontages van de gegevensinzameling in de de markeringsuitbreidingsdocumentatie van SDK van het Web.
+Zie [&#x200B; montages van de Context &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md#context-settings) onder de configuratiemontages van de gegevensinzameling in de de markeringsuitbreidingsdocumentatie van SDK van het Web.

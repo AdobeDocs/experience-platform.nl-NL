@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Met de eigenschap `eventType` kunt u het type gebeurtenis definiëren dat u verzendt via de Web SDK. In dit veld wordt het veld `xdm.eventType` uiteindelijk gevuld. Het is nuttig wanneer u de gebeurtenistypen wilt onderscheiden die u naar Adobe verzendt.
 
-Adobe bevat enkele vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken. Zie [ Beschikbare waarden voor `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) in de XDM gebruikersgids voor een volledige lijst van vooraf bepaalde waarden. U kunt desgewenst ook uw eigen waarden gebruiken.
+Adobe bevat enkele vooraf gedefinieerde gebeurtenistypen die u kunt gebruiken. Zie [&#x200B; Beschikbare waarden voor `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) in de XDM gebruikersgids voor een volledige lijst van vooraf bepaalde waarden. U kunt desgewenst ook uw eigen waarden gebruiken.
 
 Wanneer u zowel `type` hier als `xdm.eventType` in het [`xdm`](xdm.md) -object instelt, krijgt de waarde in dit veld prioriteit.
 

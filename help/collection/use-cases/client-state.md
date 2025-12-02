@@ -140,11 +140,11 @@ U kunt de cookies van de eerste fabrikant niet schrijven (zelfs niet als onderst
 
 ## Koekjesbeveiliging
 
-Alle koekjes hebben de [ Veilige vlag ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#restrict_access_to_cookies) toegelaten waar mogelijk.
+Alle koekjes hebben de [&#x200B; Veilige vlag &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#restrict_access_to_cookies) toegelaten waar mogelijk.
 
-Alle veilige koekjes hebben het [ attribuut SameSite ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) geplaatst aan `None`, betekenend dat de koekjes in alle contexten, zowel 1st partij als dwars-oorsprong worden verzonden.
+Alle veilige koekjes hebben het [&#x200B; attribuut SameSite &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) geplaatst aan `None`, betekenend dat de koekjes in alle contexten, zowel 1st partij als dwars-oorsprong worden verzonden.
 
-* Voor de eerste-partijkoekjes (`kndcrt_*`), wordt de `Secure` vlag slechts geplaatst wanneer de verzoekcontext veilig (HTTPS) is en wanneer verwijzer ([ de Kopbal van HTTP van de Verwijzing ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)) ook HTTPS is. Als de verwijzer niet veilig (HTTP) is, wordt de `Secure` vlag weggelaten om het Web SDK toe te staan om hen te lezen. Een beveiligde cookie kan niet worden gelezen vanuit een onveilige context.
+* Voor de eerste-partijkoekjes (`kndcrt_*`), wordt de `Secure` vlag slechts geplaatst wanneer de verzoekcontext veilig (HTTPS) is en wanneer verwijzer ([&#x200B; de Kopbal van HTTP van de Verwijzing &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)) ook HTTPS is. Als de verwijzer niet veilig (HTTP) is, wordt de `Secure` vlag weggelaten om het Web SDK toe te staan om hen te lezen. Een beveiligde cookie kan niet worden gelezen vanuit een onveilige context.
 * Voor het cookie van derden (demdex) wordt de markering `Secure` altijd ingesteld, aangezien alle aanvragen HTTPS zijn. De aanvraagcontext is dus veilig en deze cookie wordt nooit gelezen vanuit JavaScript.
 
 De markering `Secure` is niet aanwezig in de metagegevensweergave van cookies. Alleen het kenmerk `SameSite` wordt opgenomen. In dit geval is het de verantwoordelijkheid van de client om de markering `Secure` correct in te stellen wanneer het kenmerk `SameSite` aanwezig is. Cookies met `SameSite=None` moeten ook het kenmerk `Secure` opgeven, omdat hiervoor een beveiligde context (HTTPS) is vereist.

@@ -113,6 +113,6 @@ De Web SDK-tagextensie die equivalent is aan dit veld, gebruikt de handeling [[!
 
 >[!MORELIKETHIS]
 >
->* [ vorm dupberichten ](configure/pushnotifications.md)
->* [ Push API specificatie van het Web ](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
->* [ de Arbeider API van de Dienst ](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+>* [&#x200B; vorm dupberichten &#x200B;](configure/pushnotifications.md)
+>* [&#x200B; Push API specificatie van het Web &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
+>* [&#x200B; de Arbeider API van de Dienst &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)

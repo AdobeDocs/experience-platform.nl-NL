@@ -12,7 +12,7 @@ ht-degree: 1%
 
 Met het actietype **[!UICONTROL Redirect with identity]** kunt u een bezoeker-id delen van de huidige pagina naar een ander domein dat eigendom is van uw organisatie. Deze is ontworpen voor gebruik met een klikgebeurtenis en een vergelijkingsvoorwaarde voor waarden. Deze lijkt functioneel op de opdracht [`appendIdentityToUrl`](/help/collection/js/commands/appendidentitytourl.md) in de JavaScript-bibliotheek.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -27,7 +27,7 @@ Met het actietype **[!UICONTROL Redirect with identity]** kunt u een bezoeker-id
 ## Beschikbare velden
 
 * **[!UICONTROL Instance]**: De SDK-instantie waarop de handeling van toepassing is. Dit vervolgkeuzemenu is uitgeschakeld als uw implementatie één SDK-exemplaar gebruikt.
-* **[!UICONTROL Datastream configuration overrides]**: deze opdracht ondersteunt de configuratieoverschrijvingen van de gegevensstroom, zodat u zelf kunt bepalen welke apps en services deze gegevens ontvangen. Wanneer u een gegevensstroomconfiguratieopheffing in zowel een individueel bevel als binnen de de configuratiemontages van de markeringsuitbreiding plaatst, neemt het individuele bevel belangrijkheid. Zie [ de configuratiemet voeten treedt van de Gegevensstroom ](../configure/configuration-overrides.md) voor meer informatie.
+* **[!UICONTROL Datastream configuration overrides]**: deze opdracht ondersteunt de configuratieoverschrijvingen van de gegevensstroom, zodat u zelf kunt bepalen welke apps en services deze gegevens ontvangen. Wanneer u een gegevensstroomconfiguratieopheffing in zowel een individueel bevel als binnen de de configuratiemontages van de markeringsuitbreiding plaatst, neemt het individuele bevel belangrijkheid. Zie [&#x200B; de configuratiemet voeten treedt van de Gegevensstroom &#x200B;](../configure/configuration-overrides.md) voor meer informatie.
 
 ## Voorbeeldregel
 
@@ -42,7 +42,7 @@ Triggers wanneer op een ankertag met een eigenschap `href` wordt geklikt.
 * **[!UICONTROL When the user clicks on]**: specifieke elementen
 * **[!UICONTROL Elements matching the CSS selector]**: `a[href]`
 
-![ gebeurtenis van de Regel ](../assets/id-sharing-event-configuration.png)
+![&#x200B; gebeurtenis van de Regel &#x200B;](../assets/id-sharing-event-configuration.png)
 
 +++
 
@@ -57,7 +57,7 @@ Triggers worden alleen op de gewenste domeinen geactiveerd.
 * **[!UICONTROL Operator]**: Komt overeen met Regex
 * **[!UICONTROL Right Operand]**: Een reguliere expressie die overeenkomt met de gewenste domeinen. Bijvoorbeeld: `adobe.com$|behance.com$`
 
-![ voorwaarde van de Regel ](../assets/id-sharing-condition-configuration.png)
+![&#x200B; voorwaarde van de Regel &#x200B;](../assets/id-sharing-condition-configuration.png)
 
 +++
 
@@ -68,6 +68,6 @@ Voeg de identiteit toe aan de URL.
 * **[!UICONTROL Extension]**: Adobe Experience Platform Web SDK
 * **[!UICONTROL Action Type]**: Omleiden met identiteit
 
-![ actie van de Regel ](../assets/id-sharing-action-configuration.png)
+![&#x200B; actie van de Regel &#x200B;](../assets/id-sharing-action-configuration.png)
 
 +++

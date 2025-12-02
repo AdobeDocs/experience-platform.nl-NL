@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Gegevensvoorvoegsel voor gegevensverzameling
 
-Prep van gegevens is de dienst van Adobe Experience Platform die u toestaat om, gegevens in kaart te brengen en te bevestigen aan en van [ het Model van Gegevens van de Ervaring (XDM) ](../xdm/home.md). Wanneer het vormen van een Experience Platform-Toegelaten [ datastream ](./overview.md), kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar Experience Platform Edge Network.
+Prep van gegevens is de dienst van Adobe Experience Platform die u toestaat om, gegevens in kaart te brengen en te bevestigen aan en van [&#x200B; het Model van Gegevens van de Ervaring (XDM) &#x200B;](../xdm/home.md). Wanneer het vormen van een Experience Platform-Toegelaten [&#x200B; datastream &#x200B;](./overview.md), kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar Experience Platform Edge Network.
 
 Alle gegevens die vanaf een webpagina worden verzonden, moeten in Experience Platform als XDM worden geland. Er zijn drie manieren om gegevens van een op pagina gegevenslaag te vertalen naar de XDM die door Experience Platform wordt geaccepteerd:
 
@@ -40,11 +40,11 @@ De rest van deze gids zal zich op hoe te om de gegevenslaag aan normen in kaart 
 >
 >Raadpleeg de volgende documentatie voor uitgebreide informatie over alle mogelijkheden van Data Prep, inclusief transformatiefuncties voor berekende velden:
 >
->* [ Prep overzicht van Gegevens ](../data-prep/home.md)
->* [ de kaartfuncties van de Prep van Gegevens ](../data-prep/functions.md)
->* [ Behandelend gegevensformaten met Gegevens prep ](../data-prep/data-handling.md)
+>* [&#x200B; Prep overzicht van Gegevens &#x200B;](../data-prep/home.md)
+>* [&#x200B; de kaartfuncties van de Prep van Gegevens &#x200B;](../data-prep/functions.md)
+>* [&#x200B; Behandelend gegevensformaten met Gegevens prep &#x200B;](../data-prep/data-handling.md)
 
-In deze handleiding wordt uitgelegd hoe u uw gegevens in de gebruikersinterface kunt toewijzen. Om samen met de stappen te volgen, begin het proces om een datastream tot (en met inbegrip van) de [ basisconfiguratiestap ](./overview.md#create) tot stand te brengen.
+In deze handleiding wordt uitgelegd hoe u uw gegevens in de gebruikersinterface kunt toewijzen. Om samen met de stappen te volgen, begin het proces om een datastream tot (en met inbegrip van) de [&#x200B; basisconfiguratiestap &#x200B;](./overview.md#create) tot stand te brengen.
 
 Raadpleeg de volgende video voor een snelle demonstratie van het proces Gegevensvoorbereiding voor gegevensverzameling:
 
@@ -154,7 +154,7 @@ Als u eigenschappen van een XDM-objectelement wilt vastleggen, zijn dezelfde reg
 
 U kunt de optie selecteren om het object als een bestand te uploaden of het onbewerkte object in het tekstvak dat wordt weergegeven plakken. Als de JSON geldig is, wordt een voorvertoningsschema weergegeven in het rechterdeelvenster. Selecteer **[!UICONTROL Next]** om door te gaan.
 
-![ JSON steekproef van verwachte inkomende gegevens.](assets/data-prep/select-data.png)
+![&#x200B; JSON steekproef van verwachte inkomende gegevens.](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -164,8 +164,8 @@ U kunt de optie selecteren om het object als een bestand te uploaden of het onbe
 
 De stap **[!UICONTROL Mapping]** wordt weergegeven, zodat u de velden in uw brongegevens kunt toewijzen aan die van het doelgebeurtenisschema in Experience Platform. Van hier, kunt u de afbeelding op twee manieren vormen:
 
-* [ creeer toewijzingsregels ](#create-mapping) voor deze gegevensstroom door een handproces.
-* [ de toewijzingsregels van de Invoer ](#import-mapping) van een bestaande datastream.
+* [&#x200B; creeer toewijzingsregels &#x200B;](#create-mapping) voor deze gegevensstroom door een handproces.
+* [&#x200B; de toewijzingsregels van de Invoer &#x200B;](#import-mapping) van een bestaande datastream.
 
 >[!IMPORTANT]
 >
@@ -175,25 +175,25 @@ De stap **[!UICONTROL Mapping]** wordt weergegeven, zodat u de velden in uw bron
 
 Selecteer **[!UICONTROL Add new mapping]** om een toewijzingsregel te maken.
 
-![ Toevoegend een nieuwe afbeelding.](assets/data-prep/add-new-mapping.png)
+![&#x200B; Toevoegend een nieuwe afbeelding.](assets/data-prep/add-new-mapping.png)
 
-Selecteer het bronpictogram (![ het pictogram van Source ](/help/images/icons/source.png)), en in de dialoog die verschijnt selecteer het brongebied dat u in kaart wilt brengen in het verstrekte canvas. Nadat u een veld hebt gekozen, drukt u op de knop **[!UICONTROL Select]** om door te gaan.
+Selecteer het bronpictogram (![&#x200B; het pictogram van Source &#x200B;](/help/images/icons/source.png)), en in de dialoog die verschijnt selecteer het brongebied dat u in kaart wilt brengen in het verstrekte canvas. Nadat u een veld hebt gekozen, drukt u op de knop **[!UICONTROL Select]** om door te gaan.
 
-![ Selecterend het gebied dat in het bronschema moet worden in kaart gebracht.](assets/data-prep/source-mapping.png)
+![&#x200B; Selecterend het gebied dat in het bronschema moet worden in kaart gebracht.](assets/data-prep/source-mapping.png)
 
-Daarna, selecteer het schemapictogram (![ pictogram van het Schema ](/help/images/icons/schema.png)) om een gelijkaardige dialoog voor het schema van de doelgebeurtenis te openen. Kies het veld waaraan u de gegevens wilt toewijzen voordat u bevestigt met **[!UICONTROL Select]** .
+Daarna, selecteer het schemapictogram (![&#x200B; pictogram van het Schema &#x200B;](/help/images/icons/schema.png)) om een gelijkaardige dialoog voor het schema van de doelgebeurtenis te openen. Kies het veld waaraan u de gegevens wilt toewijzen voordat u bevestigt met **[!UICONTROL Select]** .
 
-![ Selecterend het gebied dat in het doelschema moet worden in kaart gebracht.](assets/data-prep/target-mapping.png)
+![&#x200B; Selecterend het gebied dat in het doelschema moet worden in kaart gebracht.](assets/data-prep/target-mapping.png)
 
 De toewijzingspagina wordt opnieuw weergegeven met de voltooide veldtoewijzing weergegeven. De sectie **[!UICONTROL Mapping progress]** wordt bijgewerkt op basis van het totale aantal velden dat is toegewezen.
 
-![ Gebied met succes in kaart gebracht met weerspiegelde vooruitgang.](assets/data-prep/field-mapped.png)
+![&#x200B; Gebied met succes in kaart gebracht met weerspiegelde vooruitgang.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Als u een array van objecten (in het bronveld) wilt toewijzen aan een array van verschillende objecten (in het doelveld), voegt u `[*]` toe na de arraynaam in de bron- en doelveldpaden, zoals hieronder wordt weergegeven.
 >
->![ de objecten van de Serie afbeelding.](assets/data-prep/array-object-mapping.png)
+>![&#x200B; de objecten van de Serie afbeelding.](assets/data-prep/array-object-mapping.png)
 
 ### Bestaande toewijzingsregels importeren {#import-mapping}
 
@@ -205,23 +205,23 @@ Als u eerder een gegevensstroom hebt gecreeerd, kunt u zijn gevormde toewijzings
 
 Selecteer **[!UICONTROL Import Mapping]** om te beginnen.
 
-![ de knoop die van de Toewijzing van de Invoer wordt geselecteerd.](assets/data-prep/import-mapping-button.png)
+![&#x200B; de knoop die van de Toewijzing van de Invoer wordt geselecteerd.](assets/data-prep/import-mapping-button.png)
 
 Selecteer in het dialoogvenster dat wordt weergegeven de gegevensstroom waarvan u de toewijzingsregels wilt importeren. Wanneer de gegevensstroom is gekozen, selecteert u **[!UICONTROL Preview]** .
 
-![ Selecterend een bestaande gegevensstroom.](assets/data-prep/select-mapping-rules.png)
+![&#x200B; Selecterend een bestaande gegevensstroom.](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
->De stromen van gegevens kunnen slechts binnen de zelfde [ zandbak ](../sandboxes/home.md) worden ingevoerd. Met andere woorden, u kunt geen gegevensstroom van één zandbak in een andere invoeren.
+>De stromen van gegevens kunnen slechts binnen de zelfde [&#x200B; zandbak &#x200B;](../sandboxes/home.md) worden ingevoerd. Met andere woorden, u kunt geen gegevensstroom van één zandbak in een andere invoeren.
 
 In het volgende scherm ziet u een voorvertoning van de opgeslagen toewijzingsregels voor de geselecteerde gegevensstroom. Zorg ervoor dat de weergegeven toewijzingen zijn wat u verwacht en selecteer vervolgens **[!UICONTROL Import]** om de toewijzingen te bevestigen en toe te voegen aan de nieuwe gegevensstroom.
 
-![ de regels van de Afbeelding die moeten worden ingevoerd.](assets/data-prep/import-mapping-rules.png)
+![&#x200B; de regels van de Afbeelding die moeten worden ingevoerd.](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
->Als om het even welke brongebieden in de ingevoerde kaartregels niet inbegrepen in de steekproefJSON gegevens zijn die u [ vroeger ](#select-data) verstrekte, zullen die gebiedsafbeeldingen niet in de invoer inbegrepen zijn.
+>Als om het even welke brongebieden in de ingevoerde kaartregels niet inbegrepen in de steekproefJSON gegevens zijn die u [&#x200B; vroeger &#x200B;](#select-data) verstrekte, zullen die gebiedsafbeeldingen niet in de invoer inbegrepen zijn.
 
 ### De toewijzing voltooien
 
@@ -229,8 +229,8 @@ Ga verder met de bovenstaande stappen om de rest van de velden toe te wijzen aan
 
 Als het vereiste aantal velden nul heeft bereikt en u tevreden bent met de toewijzing, selecteert u **[!UICONTROL Save]** om de wijzigingen te voltooien.
 
-![ Volledige Afbeelding van de afbeelding ](assets/data-prep/mapping-complete.png)
+![&#x200B; Volledige Afbeelding van de afbeelding &#x200B;](assets/data-prep/mapping-complete.png)
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u uw gegevens aan XDM kunt toewijzen bij het instellen van een gegevensstroom in de gebruikersinterface. Als u algemene datastreams leerprogramma volgde, kunt u aan de stap op [ nu terugkeren het bekijken van datastreamdetails ](./overview.md).
+In deze handleiding wordt beschreven hoe u uw gegevens aan XDM kunt toewijzen bij het instellen van een gegevensstroom in de gebruikersinterface. Als u algemene datastreams leerprogramma volgde, kunt u aan de stap op [&#x200B; nu terugkeren het bekijken van datastreamdetails &#x200B;](./overview.md).

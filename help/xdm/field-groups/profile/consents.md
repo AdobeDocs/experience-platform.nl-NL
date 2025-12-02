@@ -12,23 +12,23 @@ ht-degree: 0%
 
 # [!UICONTROL Consents and Preferences] veldgroep
 
-[!UICONTROL Consents and Preferences] is een standaardgebiedsgroep voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md) die toestemming en voorkeurinformatie voor een individuele klant vangt.
+[!UICONTROL Consents and Preferences] is een standaardgebiedsgroep voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../classes/individual-profile.md) die toestemming en voorkeurinformatie voor een individuele klant vangt.
 
 >[!NOTE]
 >
->Aangezien deze veldgroep alleen compatibel is met [!DNL XDM Individual Profile] , kan deze niet worden gebruikt voor [!DNL XDM ExperienceEvent] -schema&#39;s. Als u toestemmings en voorkeursgegevens in uw schema van de Gebeurtenis van de Ervaring wilt omvatten, voeg het [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] gegevenstype ](../../data-types/consents.md) aan het schema door het gebruik van de groep van het a [ douanegebied ](../../ui/resources/field-groups.md#create) in plaats daarvan toe.
+>Aangezien deze veldgroep alleen compatibel is met [!DNL XDM Individual Profile] , kan deze niet worden gebruikt voor [!DNL XDM ExperienceEvent] -schema&#39;s. Als u toestemmings en voorkeursgegevens in uw schema van de Gebeurtenis van de Ervaring wilt omvatten, voeg het [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] gegevenstype &#x200B;](../../data-types/consents.md) aan het schema door het gebruik van de groep van het a [&#x200B; douanegebied &#x200B;](../../ui/resources/field-groups.md#create) in plaats daarvan toe.
 
 ## Groepsstructuur van veld {#structure}
 
-De veldgroep [!UICONTROL Consents and Preferences] biedt één objecttype veld, `consents` , waarin toestemmings- en voorkeursgegevens worden vastgelegd. Dit veld is een uitbreiding van het [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] gegevenstype ](../../data-types/consents.md) , waarbij het veld `adID` wordt verwijderd en een kaartveld `idSpecific` wordt toegevoegd.
+De veldgroep [!UICONTROL Consents and Preferences] biedt één objecttype veld, `consents` , waarin toestemmings- en voorkeursgegevens worden vastgelegd. Dit veld is een uitbreiding van het [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] gegevenstype &#x200B;](../../data-types/consents.md) , waarbij het veld `adID` wordt verwijderd en een kaartveld `idSpecific` wordt toegevoegd.
 
 ![](../../images/field-groups/consent.png)
 
 >[!TIP]
 >
->Zie de gids op [ het onderzoeken van middelen XDM ](../../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in Experience Platform UI te inspecteren.
+>Zie de gids op [&#x200B; het onderzoeken van middelen XDM &#x200B;](../../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in Experience Platform UI te inspecteren.
 
-In het volgende JSON-voorbeeld ziet u het type gegevens dat de veldgroep [!UICONTROL Consents and Preferences] kan verwerken. Voor informatie over hoe te om de meeste gebieden te gebruiken die door de gebiedsgroep worden verstrekt, verwijs naar de gids op het [ gegevenstype van de Inhoud en van de Voorkeur ](../../data-types/consents.md). De subsecties hieronder richten zich op de unieke attributen die de gebiedsgroep aan het gegevenstype toevoegt.
+In het volgende JSON-voorbeeld ziet u het type gegevens dat de veldgroep [!UICONTROL Consents and Preferences] kan verwerken. Voor informatie over hoe te om de meeste gebieden te gebruiken die door de gebiedsgroep worden verstrekt, verwijs naar de gids op het [&#x200B; gegevenstype van de Inhoud en van de Voorkeur &#x200B;](../../data-types/consents.md). De subsecties hieronder richten zich op de unieke attributen die de gebiedsgroep aan het gegevenstype toevoegt.
 
 ```json
 {
@@ -92,8 +92,8 @@ In het volgende JSON-voorbeeld ziet u het type gegevens dat de veldgroep [!UICON
 >
 >U kunt voorbeeld-JSON-gegevens genereren voor elk XDM-schema dat u in Experience Platform definieert om te helpen visualiseren hoe de toestemming en voorkeursgegevens van uw klant moeten worden toegewezen. Raadpleeg de volgende documentatie voor meer informatie:
 >
->* [ produceer steekproefgegevens in UI ](../../ui/sample.md)
->* [ produceer steekproefgegevens in API ](../../api/sample-data.md)
+>* [&#x200B; produceer steekproefgegevens in UI &#x200B;](../../ui/sample.md)
+>* [&#x200B; produceer steekproefgegevens in API &#x200B;](../../api/sample-data.md)
 
 ### `idSpecific`
 
@@ -106,7 +106,7 @@ In het volgende JSON-voorbeeld ziet u het type gegevens dat de veldgroep [!UICON
 >* Als de klant heeft opgegeven dat de toepassing is uitgeschakeld op het kanaalniveau, worden gelijkwaardige toestemmingen of voorkeuren in `idSpecific` genegeerd.
 >* Als de toestemming of voorkeur op kanaalniveau niet is ingesteld of als de klant zich heeft aangemeld, worden de equivalente toestemmingen of voorkeuren in `idSpecific` gerespecteerd.
 
-Elke sleutel in het `idSpecific` -object vertegenwoordigt een specifieke naamruimte die wordt herkend door de Adobe Experience Platform Identity Service. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-Time Klantprofiel te reduceren. Voor meer informatie over identiteit namespaces, zie het [ overzicht van identiteitskaart namespace ](/help/identity-service/features/namespaces.md) in de documentatie van de Dienst van de Identiteit.
+Elke sleutel in het `idSpecific` -object vertegenwoordigt een specifieke naamruimte die wordt herkend door de Adobe Experience Platform Identity Service. Hoewel u uw eigen aangepaste naamruimten kunt definiëren om verschillende id&#39;s te categoriseren, wordt u aangeraden een van de standaardnaamruimten van Identity Service te gebruiken om opslaggrootten voor Real-Time Klantprofiel te reduceren. Voor meer informatie over identiteit namespaces, zie het [&#x200B; overzicht van identiteitskaart namespace &#x200B;](/help/identity-service/features/namespaces.md) in de documentatie van de Dienst van de Identiteit.
 
 De sleutels voor elk namespacevoorwerp vertegenwoordigen de unieke identiteitswaarden waarvoor de klant voorkeur heeft geplaatst. Elke identiteitswaarde kan een volledige reeks toestemmingen en voorkeur bevatten, die op de zelfde manier zoals `consents` wordt geformatteerd.
 
@@ -175,13 +175,13 @@ De `adID` toestemming geeft de toestemming van de klant weer om te bepalen of ee
 
 Als u de veldgroep [!UICONTROL Consents and Preferences] wilt gebruiken om toestemmingsgegevens van uw klanten in te voeren, moet u een dataset tot stand brengen die op een schema wordt gebaseerd dat die gebiedsgroep bevat.
 
-Zie het leerprogramma op [ creërend een schema in UI ](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gebiedsgroepen aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met de [!UICONTROL Consents and Preferences] gebiedsgroep bevat, verwijs naar de sectie op [ creërend een dataset ](/help/catalog/datasets/user-guide.md#create) in de gids van de datasetgebruiker, na de stappen om een dataset met een bestaand schema tot stand te brengen.
+Zie het leerprogramma op [&#x200B; creërend een schema in UI &#x200B;](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) voor stappen op hoe te om gebiedsgroepen aan gebieden toe te wijzen. Zodra u een schema hebt gecreeerd dat een gebied met de [!UICONTROL Consents and Preferences] gebiedsgroep bevat, verwijs naar de sectie op [&#x200B; creërend een dataset &#x200B;](/help/catalog/datasets/user-guide.md#create) in de gids van de datasetgebruiker, na de stappen om een dataset met een bestaand schema tot stand te brengen.
 
 >[!IMPORTANT]
 >
 >Als u toestemmingsgegevens naar [!DNL Real-Time Customer Profile] wilt verzenden, is het vereist dat u een [!DNL Profile] -ingeschakeld schema maakt op basis van de [!DNL XDM Individual Profile] -klasse die de [!UICONTROL Consents and Preferences] -veldgroep bevat. De dataset die u creeert die op dat schema wordt gebaseerd moet ook voor [!DNL Profile] worden toegelaten. Raadpleeg de zelfstudies die hierboven zijn gekoppeld voor specifieke stappen met betrekking tot [!DNL Real-Time Customer Profile] -vereisten voor schema&#39;s en gegevenssets.
 >
->Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [ fusiebeleid ](/help/rtcdp/profile/merge-policies.md) voor meer informatie.
+>Bovendien moet u ook ervoor zorgen dat uw samenvoegingsbeleid wordt gevormd om aan de dataset(s) voorrang te geven die de recentste toestemmings en voorkeursgegevens bevatten, opdat de klantenprofielen correct worden bijgewerkt. Zie het overzicht op [&#x200B; fusiebeleid &#x200B;](/help/rtcdp/profile/merge-policies.md) voor meer informatie.
 
 ## Verwerking van toestemmings- en preferenties
 
@@ -189,4 +189,4 @@ Wanneer een klant zijn toestemming of voorkeuren op uw website wijzigt, moeten d
 
 ## Volgende stappen
 
-Dit document behandelt de structuur en het gebruik van de veldgroep [!UICONTROL Consents and Preferences] . Zie het document over het [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] gegevenstype ](../../data-types/consents.md) voor meer informatie over de andere velden die door de veldgroep worden verschaft.
+Dit document behandelt de structuur en het gebruik van de veldgroep [!UICONTROL Consents and Preferences] . Zie het document over het [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] gegevenstype &#x200B;](../../data-types/consents.md) voor meer informatie over de andere velden die door de veldgroep worden verschaft.

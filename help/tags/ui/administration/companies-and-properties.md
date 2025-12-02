@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 ## Web-eigenschappen
 
@@ -93,9 +93,9 @@ Deze sectie biedt richtlijnen voor het maken of configureren van een tag-eigensc
 
 >[!NOTE]
 >
->Alleen gebruikers met voldoende rechten kunnen een eigenschap maken. Zie [ Gebruikersbeheer ](user-permissions.md).
+>Alleen gebruikers met voldoende rechten kunnen een eigenschap maken. Zie [&#x200B; Gebruikersbeheer &#x200B;](user-permissions.md).
 
-Alvorens te beginnen, herzie [ Beste praktijken voor het plannen van eigenschappen ](companies-and-properties.md#best-practices-for-planning-properties) voor eigenschappen.
+Alvorens te beginnen, herzie [&#x200B; Beste praktijken voor het plannen van eigenschappen &#x200B;](companies-and-properties.md#best-practices-for-planning-properties) voor eigenschappen.
 
 Navigeer naar de pagina van uw bedrijf en selecteer vervolgens **[!UICONTROL Add Property]** of selecteer een bestaande eigenschap in de lijst en selecteer **[!UICONTROL Configure]** .
 

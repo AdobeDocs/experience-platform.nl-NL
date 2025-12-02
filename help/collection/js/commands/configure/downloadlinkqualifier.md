@@ -32,4 +32,4 @@ alloy("configure", {
 
 ## Koppelingskwalificatie downloaden met de Web SDK-tagextensie
 
-Het de markeringsequivalent van SDK van het Web van dit gebied is onder [ de configuratiemontages van de inzamelingsconfiguratie van Gegevens ](/help/tags/extensions/client/web-sdk/configure/data-collection.md#download-link-qualifier) wanneer het vormen van de markeringsuitbreiding.
+Het de markeringsequivalent van SDK van het Web van dit gebied is onder [&#x200B; de configuratiemontages van de inzamelingsconfiguratie van Gegevens &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md#download-link-qualifier) wanneer het vormen van de markeringsuitbreiding.

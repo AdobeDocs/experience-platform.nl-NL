@@ -10,8 +10,8 @@ ht-degree: 0%
 
 # Overzicht van Brightscript
 
-**Adobe Experience Platform Roku SDK** staat u toe om gegevens naar a [ datastream ](/help/datastreams/overview.md) van een apparaat van Roku te verzenden gebruikend Helderscript.
+**Adobe Experience Platform Roku SDK** staat u toe om gegevens naar a [&#x200B; datastream &#x200B;](/help/datastreams/overview.md) van een apparaat van Roku te verzenden gebruikend Helderscript.
 
 De SDK en de documentatie voor deze bibliotheek worden ontvangen op GitHub:
 
-**[Adobe Experience Platform Roku SDK ](https://github.com/adobe/aepsdk-roku)**
+**[Adobe Experience Platform Roku SDK &#x200B;](https://github.com/adobe/aepsdk-roku)**

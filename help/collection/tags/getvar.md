@@ -10,7 +10,7 @@ ht-degree: 1%
 
 # `getVar()`
 
-De `_satellite.getVar()` methode keert de huidige waarde van het element van a [ Gegevens ](/help/tags/ui/managing-resources/data-elements.md) of een waarde terug die [`_satellite.setVar()`](setvar.md) wordt geplaatst. Als een gegevenselement en een `setVar()` -waarde dezelfde naam hebben, heeft het gegevenselement voorrang. Wanneer u een tekenreeks-id aanroept die nog niet bestaat, retourneert de methode `undefined` . De evaluatie is synchroon.
+De `_satellite.getVar()` methode keert de huidige waarde van het element van a [&#x200B; Gegevens &#x200B;](/help/tags/ui/managing-resources/data-elements.md) of een waarde terug die [`_satellite.setVar()`](setvar.md) wordt geplaatst. Als een gegevenselement en een `setVar()` -waarde dezelfde naam hebben, heeft het gegevenselement voorrang. Wanneer u een tekenreeks-id aanroept die nog niet bestaat, retourneert de methode `undefined` . De evaluatie is synchroon.
 
 ```js
 _satellite.getVar(name: string, event?: unknown) => unknown
@@ -46,4 +46,4 @@ De methode `getVar()` ondersteunt twee argumenten. In de meeste gevallen is het 
 | Naam | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
 | **`name`** | `string` | Ja | De naam van het gegevenselement dat u wilt ophalen. Namen van gegevenselementen zijn hoofdlettergevoelig. |
-| **`event`** | `object` | Nee | Gebeurteniscontext van de activeringsregel. Slechts gebruikt in geavanceerde gebruiksgevallen door gegevenselementen die [ douanecode ](/help/tags/ui/managing-resources/data-elements.md#custom-code) gebruiken of douaneversies. Wanneer een regel wordt geactiveerd door een gebeurtenis (zoals een klik, het verzenden van een formulier of een aangepaste JavaScript-verzending), wordt het bijbehorende gebeurtenisobject hier opgenomen. Gegevenselementen kunnen deze informatie gebruiken om contextafhankelijke waarden te retourneren, zoals de details van het aangeklikte element of eigenschappen van een aangepaste gebeurtenis. |
+| **`event`** | `object` | Nee | Gebeurteniscontext van de activeringsregel. Slechts gebruikt in geavanceerde gebruiksgevallen door gegevenselementen die [&#x200B; douanecode &#x200B;](/help/tags/ui/managing-resources/data-elements.md#custom-code) gebruiken of douaneversies. Wanneer een regel wordt geactiveerd door een gebeurtenis (zoals een klik, het verzenden van een formulier of een aangepaste JavaScript-verzending), wordt het bijbehorende gebeurtenisobject hier opgenomen. Gegevenselementen kunnen deze informatie gebruiken om contextafhankelijke waarden te retourneren, zoals de details van het aangeklikte element of eigenschappen van een aangepaste gebeurtenis. |

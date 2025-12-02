@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # `getMediaAnalyticsTracker`
 
-Met deze Web SDK-opdracht haalt u een Media Analytics Tracker op. U kunt dit bevel gebruiken om een objecten instantie tot stand te brengen en dan, gebruikend zelfde APIs zoals die door de [ bibliotheek JS van Media ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html) worden verstrekt, de gebeurtenissen van de spoormedia.
+Met deze Web SDK-opdracht haalt u een Media Analytics Tracker op. U kunt dit bevel gebruiken om een objecten instantie tot stand te brengen en dan, gebruikend zelfde APIs zoals die door de [&#x200B; bibliotheek JS van Media &#x200B;](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html) worden verstrekt, de gebeurtenissen van de spoormedia.
 
 De opdracht `getMediaAnalyticsTracker` retourneert de API voor oude media-analyse.
 

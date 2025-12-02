@@ -88,4 +88,4 @@ De Web SDK-tagextensie die equivalent is aan deze eigenschap, is de [[!UICONTROL
 
 ## Volgende stappen {#next-steps}
 
-Na het vormen van duw berichten, gebruik het [ sendPushSubscription ](../sendpushsubscription.md) bevel om dupabonnementen met Adobe Experience Platform te registreren.
+Na het vormen van duw berichten, gebruik het [&#x200B; sendPushSubscription &#x200B;](../sendpushsubscription.md) bevel om dupabonnementen met Adobe Experience Platform te registreren.

@@ -12,13 +12,13 @@ ht-degree: 0%
 
 In deze configuratiesectie kunt u bepalen hoe u bepaalde delen van de pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen. Wanneer correct gevormd, zorgen deze montages ervoor dat uw bezoekers de juiste gepersonaliseerde inhoud zien.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 1. Schuif omlaag naar de sectie **[!UICONTROL Personalization]** .
 
-![ Beeld dat de verpersoonlijkingsmontages van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont ](../assets/web-sdk-ext-personalization.png)
+![&#x200B; Beeld dat de verpersoonlijkingsmontages van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont &#x200B;](../assets/web-sdk-ext-personalization.png)
 
 De volgende opties zijn beschikbaar:
 

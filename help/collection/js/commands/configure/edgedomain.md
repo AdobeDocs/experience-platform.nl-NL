@@ -11,15 +11,15 @@ ht-degree: 1%
 
 # `edgeDomain`
 
-Met de eigenschap `edgeDomain` kunt u het domein wijzigen waar de Web SDK gegevens verzendt. Dit bezit wordt vaak gebruikt door organisaties die [ eerste partijkoekjes ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) gebruiken. De gegevens worden verzonden naar het eigen domein van de organisatie, dan een verslag CNAME door:sturen die gegevens naar Adobe.
+Met de eigenschap `edgeDomain` kunt u het domein wijzigen waar de Web SDK gegevens verzendt. Dit bezit wordt vaak gebruikt door organisaties die [&#x200B; eerste partijkoekjes &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) gebruiken. De gegevens worden verzonden naar het eigen domein van de organisatie, dan een verslag CNAME door:sturen die gegevens naar Adobe.
 
-De waarde die u voor `edgeDomain` gebruikt hangt van uw participatie in het [ Adobe-Beheerde certificaatprogramma ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) af:
+De waarde die u voor `edgeDomain` gebruikt hangt van uw participatie in het [&#x200B; Adobe-Beheerde certificaatprogramma &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) af:
 
 **als uw organisatie aan het Adobe-Beheerde certificaatprogramma** deelneemt, plaats de waarde aan het eerste partijdomein dat toen vestiging het certificaat werd geselecteerd. Deze waarde is doorgaans een subdomein dat eigendom is van uw organisatie. Bijvoorbeeld `data.example.com` . CNAME-records in uw organisatie leiden die gegevens om naar Adobe.
 
 **als het niet deelnemen aan het certificaatprogramma**, plaats de waarde aan subdomain van `data.adobedc.net`. Adobe raadt u aan de bedrijfs-id van uw organisatie te gebruiken voor consistentie. Bijvoorbeeld `example.data.adobedc.net` . Gebruik de volgende stappen om uw bedrijfs-id te bepalen:
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Druk overal in de Experience Cloud-interface op `[Cmd]` + `[I]` (iOS) of `[Ctrl]` + `[I]` (Windows).
 1. Er verschijnt een **[!UICONTROL User data debugger]** . Selecteer het tabblad **[!UICONTROL Assigned orgs]**. 
 1. Breid de gewenste organisatie IMS uit.
@@ -37,4 +37,4 @@ alloy("configure", {
 
 ## Edge-domein dat de Web SDK-tagextensie gebruikt
 
-Het equivalent van de markeringsuitbreiding aan dit bezit is het **[!UICONTROL Edge domain]** gebied onder [ de montages van de instantieconfiguratie van SDK ](/help/tags/extensions/client/web-sdk/configure/general.md) wanneer het vormen van de uitbreiding.
+Het equivalent van de markeringsuitbreiding aan dit bezit is het **[!UICONTROL Edge domain]** gebied onder [&#x200B; de montages van de instantieconfiguratie van SDK &#x200B;](/help/tags/extensions/client/web-sdk/configure/general.md) wanneer het vormen van de uitbreiding.

@@ -10,13 +10,13 @@ ht-degree: 0%
 
 # `setDebug()`
 
-De `_satellite.setDebug()` methode staat u toe om [ het Zuiveren ](../use-cases/debugging.md) op uw plaats toe te laten of onbruikbaar te maken. Deze methode is bedoeld om lokaal in uw browser console te lopen; Adobe adviseert tegen het roepen van deze methode binnen markeringsregels.
+De `_satellite.setDebug()` methode staat u toe om [&#x200B; het Zuiveren &#x200B;](../use-cases/debugging.md) op uw plaats toe te laten of onbruikbaar te maken. Deze methode is bedoeld om lokaal in uw browser console te lopen; Adobe adviseert tegen het roepen van deze methode binnen markeringsregels.
 
 ```ts
 _satellite.setDebug(enabled: boolean): void
 ```
 
-* **`_satellite.setDebug(true);`**: Laat [ het Zuiveren ](../use-cases/debugging.md) toe. Berichten die door de tagbibliotheek (inclusief [`_satellite.logger`](logger.md)) worden gegenereerd, zijn zichtbaar in uw browserconsole.
+* **`_satellite.setDebug(true);`**: Laat [&#x200B; het Zuiveren &#x200B;](../use-cases/debugging.md) toe. Berichten die door de tagbibliotheek (inclusief [`_satellite.logger`](logger.md)) worden gegenereerd, zijn zichtbaar in uw browserconsole.
 * **`_satellite.setDebug(false);`**: schakelt foutopsporing uit. Console-berichten die door de tagbibliotheek worden gegenereerd, zijn niet zichtbaar.
 
 ```js
@@ -48,4 +48,4 @@ Wanneer het roepen van deze methode, zuivert wijze gebruikt het volgende werking
 * **Oorsprong-scoped**: zuivert wijze voortduurt slechts voor de zelfde plaats (domein + haven + protocol).
 * **per browser profiel**: zuivert wijze is niet dwars-profiel.
 
-Andere vormen van [ het Zuiveren ](../use-cases/debugging.md) kunnen beïnvloeden en beschrijven zuivert wijze gebruikend de browser consolemethode.
+Andere vormen van [&#x200B; het Zuiveren &#x200B;](../use-cases/debugging.md) kunnen beïnvloeden en beschrijven zuivert wijze gebruikend de browser consolemethode.

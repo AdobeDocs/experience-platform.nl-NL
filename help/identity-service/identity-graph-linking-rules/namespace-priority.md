@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Elke klantenimplementatie is uniek en gemaakt om de doelstellingen van een bepaalde organisatie te ontmoeten, en als dusdanig, varieert het belang van bepaalde namespace van klant tot klant. Voorbeelden in de praktijk zijn:
 
-* Uw bedrijf zou elk e-mailadres kunnen overwegen om een enig-persoonentiteit te vertegenwoordigen en daarom [ identiteitsmontages ](./identity-settings-ui.md) gebruiken om e-mailnamespace als uniek te vormen. Een ander bedrijf, echter, zou eenpersoonsentiteiten kunnen willen vertegenwoordigen aangezien het hebben van veelvoudige e-mailadressen, en zo e-mailnamespace vormen niet-uniek. Deze bedrijven zouden een andere naamruimte voor identiteiten als uniek moeten gebruiken, zoals een naamruimte CRMID, zodat er een id voor één persoon kan zijn die is gekoppeld aan de meerdere e-mailadressen.
+* Uw bedrijf zou elk e-mailadres kunnen overwegen om een enig-persoonentiteit te vertegenwoordigen en daarom [&#x200B; identiteitsmontages &#x200B;](./identity-settings-ui.md) gebruiken om e-mailnamespace als uniek te vormen. Een ander bedrijf, echter, zou eenpersoonsentiteiten kunnen willen vertegenwoordigen aangezien het hebben van veelvoudige e-mailadressen, en zo e-mailnamespace vormen niet-uniek. Deze bedrijven zouden een andere naamruimte voor identiteiten als uniek moeten gebruiken, zoals een naamruimte CRMID, zodat er een id voor één persoon kan zijn die is gekoppeld aan de meerdere e-mailadressen.
 * U kunt online gedrag verzamelen met behulp van een naamruimte &quot;Aanmeldings-id&quot;. Deze login identiteitskaart kon een 1 :1 verhouding met CRMID hebben, die dan attributen van een systeem van CRM opslaat en als belangrijkste namespace kan worden beschouwd. In dit geval, bepaalt u dan dat CRMID namespace een nauwkeurigere vertegenwoordiging van een persoon is, terwijl Login ID namespace de tweede belangrijkste is.
 
 U moet configuraties in de identiteitsservice maken die het belang van uw naamruimten weerspiegelen, aangezien dit van invloed is op de manier waarop profielen en de bijbehorende identiteitsgrafieken worden gevormd en gesplitst.
@@ -37,7 +37,7 @@ Als de grafiekstructuur van uw organisatie gelaagd is, dan zou de namespaceprior
 >
 >* Een gelaagde grafiek verwijst naar identiteitsgrafieken die meerdere niveaus van verbindingen hebben. Bekijk de onderstaande afbeelding voor een voorbeeld van een grafiek met drie lagen.
 
-![ A diagram van grafieklagen ](../images/namespace-priority/graph-layers.png " A diagram van grafieklagen "){zoomable="yes"}
+![&#x200B; A diagram van grafieklagen &#x200B;](../images/namespace-priority/graph-layers.png " A diagram van grafieklagen "){zoomable="yes"}
 
 ### Semantische betekenis van de naamruimte
 
@@ -53,11 +53,11 @@ Een andere manier om dit onderwerp te benaderen is door kardinaliteit. Hoeveel i
 
 ## Valideer uw instellingen voor naamruimteprioriteit
 
-Zodra u een idee van hebt hoe u aan uw namespaces voorrang zult geven, kunt u het hulpmiddel van de Simulatie van de Grafiek in UI gebruiken om diverse scenario&#39;s van de grafiekondergang uit te testen en ervoor te zorgen dat uw prioritaire configuraties de verwachte grafiekresultaten terugkeren. Voor meer informatie, lees de gids bij het gebruiken van het [ hulpmiddel van de Simulatie van de Grafiek ](./graph-simulation.md).
+Zodra u een idee van hebt hoe u aan uw namespaces voorrang zult geven, kunt u het hulpmiddel van de Simulatie van de Grafiek in UI gebruiken om diverse scenario&#39;s van de grafiekondergang uit te testen en ervoor te zorgen dat uw prioritaire configuraties de verwachte grafiekresultaten terugkeren. Voor meer informatie, lees de gids bij het gebruiken van het [&#x200B; hulpmiddel van de Simulatie van de Grafiek &#x200B;](./graph-simulation.md).
 
 ## Naamruimteprioriteit configureren
 
-De prioriteit van Namespace kan worden gevormd gebruikend [ identiteitsmontages UI ](./identity-settings-ui.md). In de interface van identiteitsinstellingen kunt u een naamruimte slepen en neerzetten om het relatieve belang ervan te bepalen.
+De prioriteit van Namespace kan worden gevormd gebruikend [&#x200B; identiteitsmontages UI &#x200B;](./identity-settings-ui.md). In de interface van identiteitsinstellingen kunt u een naamruimte slepen en neerzetten om het relatieve belang ervan te bepalen.
 
 >[!IMPORTANT]
 >
@@ -65,13 +65,13 @@ De prioriteit van Namespace kan worden gevormd gebruikend [ identiteitsmontages 
 
 ## Prioriteitsgebruik voor naamruimte
 
-Momenteel, beïnvloedt de nameprioriteit systeemgedrag van het Profiel van de Klant in real time. In het onderstaande diagram wordt dit concept geïllustreerd. Voor meer informatie, lees de gids op [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Momenteel, beïnvloedt de nameprioriteit systeemgedrag van het Profiel van de Klant in real time. In het onderstaande diagram wordt dit concept geïllustreerd. Voor meer informatie, lees de gids op [&#x200B; Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur &#x200B;](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-![ een diagram van namespace prioritaire toepassingswerkingsgebied.](../images/namespace-priority/application-scope.png " een diagram van namespace prioritaire toepassingswerkingsgebied."){zoomable="yes"}
+![&#x200B; een diagram van namespace prioritaire toepassingswerkingsgebied.](../images/namespace-priority/application-scope.png " een diagram van namespace prioritaire toepassingswerkingsgebied."){zoomable="yes"}
 
 ## Identity Service: Identity Optimization Algorithm
 
-Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangrijke rol bij het verwijderen van de juiste koppelingen wanneer de scenario&#39;s voor het samenvouwen van grafieken worden uitgevoerd. Voor meer informatie lees het [ overzicht van het Algoritme van de Optimalisering van de Identiteit ](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangrijke rol bij het verwijderen van de juiste koppelingen wanneer de scenario&#39;s voor het samenvouwen van grafieken worden uitgevoerd. Voor meer informatie lees het [&#x200B; overzicht van het Algoritme van de Optimalisering van de Identiteit &#x200B;](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ## Klantprofiel in realtime: primaire identiteitsbepaling voor ervaringsgebeurtenissen
 
@@ -82,7 +82,7 @@ Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangr
    * Alle velden die als primaire identiteit zijn gemarkeerd in een schema van de klasse Event van de XDM-ervaring.
    * Standaard primaire identiteitsinstellingen in de Adobe Analytics-bronconnector (ECID of AID).
 * Anderzijds, **namespace de prioriteit bepaalt geen primaire identiteit voor profielverslagen**.
-   * Voor profielverslagen, zou u uw identiteitsgebieden in het schema, met inbegrip van de primaire identiteit moeten blijven bepalen. Lees de gids op [ bepalend identiteitsgebieden in UI ](/help/xdm/ui/fields/identity.md) voor meer informatie.
+   * Voor profielverslagen, zou u uw identiteitsgebieden in het schema, met inbegrip van de primaire identiteit moeten blijven bepalen. Lees de gids op [&#x200B; bepalend identiteitsgebieden in UI &#x200B;](/help/xdm/ui/fields/identity.md) voor meer informatie.
 
 >[!TIP]
 >
@@ -120,7 +120,7 @@ Gezien de bovenstaande configuraties, zullen gebruikersacties en bepaling van de
 
 ## Segmentatieservice: opslag van metagegevens voor segmentlidmaatschap
 
-![ een diagram van de opslag van het segmentlidmaatschap.](../images/namespace-priority/segment-membership-storage.png " een diagram van de opslag van het segmentlidmaatschap."){zoomable="yes"}
+![&#x200B; een diagram van de opslag van het segmentlidmaatschap.](../images/namespace-priority/segment-membership-storage.png " een diagram van de opslag van het segmentlidmaatschap."){zoomable="yes"}
 
 Voor een bepaald samengevoegd profiel, zullen de segmentlidmaatschappen tegen de identiteit met de hoogste namespace prioriteit worden opgeslagen.
 
@@ -148,23 +148,23 @@ Gegevens-hygiënebestanden verwijderen de aanvraagfuncties voor een bepaalde ide
 * Klantprofiel in realtime: verwijdert elk profielfragment met de opgegeven identiteit als primaire identiteit. **De primaire identiteit op Profiel zal nu gebaseerd op namespace prioriteit worden bepaald.**
 * Gegevensmeer: hiermee verwijdert u alle records met de opgegeven identiteit als primaire identiteit. In tegenstelling tot het Profiel van de Klant in real time, is de primaire identiteit in gegevensmeer gebaseerd op primaire identiteit die op WebSDK (`primary=true`) wordt gespecificeerd, of een gebied duidelijk als primaire identiteit
 
-Voor meer informatie, lees het [ geavanceerde overzicht van het levenscyclusbeheer ](/help/hygiene/home.md).
+Voor meer informatie, lees het [&#x200B; geavanceerde overzicht van het levenscyclusbeheer &#x200B;](/help/hygiene/home.md).
 
 ### Berekende kenmerken
 
-Als identiteitsinstellingen zijn ingeschakeld, gebruiken berekende kenmerken naamruimteprioriteit om de berekende kenmerkwaarde op te slaan. Voor een bepaalde gebeurtenis, zal de identiteit met de hoogste namespace prioriteit de waarde van de gegevens verwerkte attributen hebben die tegen het worden geschreven. Voor meer informatie, lees de [ gegevens verwerkte handleiding van attributen UI ](/help/profile/computed-attributes/ui.md).
+Als identiteitsinstellingen zijn ingeschakeld, gebruiken berekende kenmerken naamruimteprioriteit om de berekende kenmerkwaarde op te slaan. Voor een bepaalde gebeurtenis, zal de identiteit met de hoogste namespace prioriteit de waarde van de gegevens verwerkte attributen hebben die tegen het worden geschreven. Voor meer informatie, lees de [&#x200B; gegevens verwerkte handleiding van attributen UI &#x200B;](/help/profile/computed-attributes/ui.md).
 
 ### Gegevensmeer
 
-Het opnemen van gegevens aan gegevens zal meer de primaire identiteitsmontages blijven respecteren die op [ SDK van het Web ](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) en schema&#39;s worden gevormd.
+Het opnemen van gegevens aan gegevens zal meer de primaire identiteitsmontages blijven respecteren die op [&#x200B; SDK van het Web &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) en schema&#39;s worden gevormd.
 
 Het meer van gegevens zal geen primaire identiteit bepalen die op namespaceprioriteit wordt gebaseerd. Adobe Customer Journey Analytics zal bijvoorbeeld waarden in de identiteitskaart blijven gebruiken, zelfs nadat naamruimtenioriteit is ingeschakeld (zoals het toevoegen van een gegevensset aan een nieuwe verbinding), omdat Customer Journey Analytics gegevens uit het datumpeer gebruikt.
 
 ### Schema&#39;s voor Experience Data Model (XDM)
 
-Om het even welk schema dat geen Gebeurtenis van de Ervaring XDM, zoals Individuele Profielen XDM is, zal blijven om het even welke [ gebieden respecteren die u als identiteit ](/help/xdm/ui/fields/identity.md) merkt.
+Om het even welk schema dat geen Gebeurtenis van de Ervaring XDM, zoals Individuele Profielen XDM is, zal blijven om het even welke [&#x200B; gebieden respecteren die u als identiteit &#x200B;](/help/xdm/ui/fields/identity.md) merkt.
 
-Voor meer informatie over schema&#39;s XDM, lees het [ schema&#39;s overzicht ](/help/xdm/home.md).
+Voor meer informatie over schema&#39;s XDM, lees het [&#x200B; schema&#39;s overzicht &#x200B;](/help/xdm/home.md).
 
 ### Intelligente diensten
 
@@ -175,7 +175,7 @@ Wanneer u uw gegevens selecteert, moet u een naamruimte opgeven die wordt gebrui
 
 Deze configuratie resulteert in computerscores die alleen gebruikmaken van geverifieerde gebeurtenissen.
 
-Voor meer informatie, lees de documenten op [ AI van de Attributie ](/help/intelligent-services/attribution-ai/overview.md) en [ Klant AI ](/help/intelligent-services/customer-ai/overview.md).
+Voor meer informatie, lees de documenten op [&#x200B; AI van de Attributie &#x200B;](/help/intelligent-services/attribution-ai/overview.md) en [&#x200B; Klant AI &#x200B;](/help/intelligent-services/customer-ai/overview.md).
 
 ### Partner-gebouwde bestemmingen
 
@@ -184,16 +184,16 @@ De bijgewerkte resultaten van de publieksuitsluiting voor profielen verbonden aa
 * De kwalificatie van het publiek is slechts gebaseerd op anonieme activiteit.
 * De logins over veelvoudige profielen komen in een korte periode voor.
 
-Voor meer informatie over partner-gebouwde bestemmingen, lees het [ overzicht van bestemmingen ](/help/destinations/home.md#adobe-built-and-partner-built-destinations).
+Voor meer informatie over partner-gebouwde bestemmingen, lees het [&#x200B; overzicht van bestemmingen &#x200B;](/help/destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacyservice
 
-[ Privacy Service schrappingsverzoeken ](../privacy.md) functie op de volgende manier, voor een bepaalde identiteit:
+[&#x200B; Privacy Service schrappingsverzoeken &#x200B;](../privacy.md) functie op de volgende manier, voor een bepaalde identiteit:
 
 * Klantprofiel in realtime: verwijdert elk profielfragment met de opgegeven identiteitswaarde als primaire identiteit. **De primaire identiteit op Profiel zal nu gebaseerd op namespace prioriteit worden bepaald.**
 * Gegevensmeer: hiermee verwijdert u alle records met de opgegeven identiteit als primaire of secundaire identiteit.
 
-Voor meer informatie, lees het [ de dienstoverzicht van de Privacy ](/help/privacy-service/home.md).
+Voor meer informatie, lees het [&#x200B; de dienstoverzicht van de Privacy &#x200B;](/help/privacy-service/home.md).
 
 ### Edge-segmentering en Edge Network-toepassingen
 
@@ -204,17 +204,17 @@ In de context van [!DNL Identity Graph Linking Rules] zijn er twee belangrijke g
 
 #### Edge-segmentatie
 
-In een bepaalde gebeurtenis, zorg ervoor dat al uw namespaces die een persoonentiteit vertegenwoordigen inbegrepen in `identityMap` zijn omdat [ identiteiten die als XDM gebieden ](/help/xdm/ui/fields/identity.md) worden verzonden worden genegeerd en niet voor de opslag van de meta-gegevens van het segmentlidmaatschap worden gebruikt.
+In een bepaalde gebeurtenis, zorg ervoor dat al uw namespaces die een persoonentiteit vertegenwoordigen inbegrepen in `identityMap` zijn omdat [&#x200B; identiteiten die als XDM gebieden &#x200B;](/help/xdm/ui/fields/identity.md) worden verzonden worden genegeerd en niet voor de opslag van de meta-gegevens van het segmentlidmaatschap worden gebruikt.
 
-* **toepasselijkheid van de Gebeurtenis**: Dit gedrag is slechts op gebeurtenissen van toepassing die rechtstreeks naar Edge Network (zoals WebSDK en Mobiele SDK) worden verzonden. Gebeurtenissen die van [ worden ingegrepen de hub van Experience Platform ](/help/landing/edge-and-hub-comparison.md), zoals die ingebed met de bron van HTTP API, andere het stromen bronnen, en partijbronnen, zijn niet onderworpen aan deze beperking.
-* **de segmenteringsspecificiteit van Edge**: Dit gedrag is specifiek voor randsegmentatie. De partij en het stromen segmentatie zijn de afzonderlijke diensten die op de hub worden geëvalueerd en volgen niet het zelfde proces. Lees de [ gids van de randsegmentatie ](/help/segmentation/methods/edge-segmentation.md) voor meer informatie.
-* Lees de [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) en [ Edge Network en hubvergelijking ](/help/landing/edge-and-hub-comparison.md) pagina&#39;s voor meer informatie.
+* **toepasselijkheid van de Gebeurtenis**: Dit gedrag is slechts op gebeurtenissen van toepassing die rechtstreeks naar Edge Network (zoals WebSDK en Mobiele SDK) worden verzonden. Gebeurtenissen die van [&#x200B; worden ingegrepen de hub van Experience Platform &#x200B;](/help/landing/edge-and-hub-comparison.md), zoals die ingebed met de bron van HTTP API, andere het stromen bronnen, en partijbronnen, zijn niet onderworpen aan deze beperking.
+* **de segmenteringsspecificiteit van Edge**: Dit gedrag is specifiek voor randsegmentatie. De partij en het stromen segmentatie zijn de afzonderlijke diensten die op de hub worden geëvalueerd en volgen niet het zelfde proces. Lees de [&#x200B; gids van de randsegmentatie &#x200B;](/help/segmentation/methods/edge-segmentation.md) voor meer informatie.
+* Lees de [&#x200B; Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur &#x200B;](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) en [&#x200B; Edge Network en hubvergelijking &#x200B;](/help/landing/edge-and-hub-comparison.md) pagina&#39;s voor meer informatie.
 
 #### Edge Network-toepassingen
 
 Om ervoor te zorgen dat toepassingen op de Edge Network onverwijld toegang hebben tot het Edge-profiel, moet u ervoor zorgen dat uw gebeurtenissen `primary=true` op de CRMID worden opgenomen. Dit verzekert directe beschikbaarheid zonder het wachten op de updates van de identiteitsgrafiek van hub.
 
 * Toepassingen op Edge Network zoals Adobe Target, Offer Decisioning en Aangepaste Personalization-bestemmingen blijven afhankelijk van de primaire identiteit in gebeurtenissen voor toegang tot profielen via Edge Profile.
-* Lees het [ Experience Platform Web SDK &amp; Edge Network architectuurdiagram ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) voor meer informatie over het gedrag van Edge Network.
-* Lees de documentatie over [ het elementtypes van Gegevens ](/help/tags/extensions/client/web-sdk/data-element-types.md) en [ Gegevens van de Identiteit in SDK van het Web ](/help/collection/use-cases/identity/id-overview.md) voor meer informatie over hoe te om primaire identiteit op SDK van het Web te vormen.
+* Lees het [&#x200B; Experience Platform Web SDK &amp; Edge Network architectuurdiagram &#x200B;](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) voor meer informatie over het gedrag van Edge Network.
+* Lees de documentatie over [&#x200B; het elementtypes van Gegevens &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md) en [&#x200B; Gegevens van de Identiteit in SDK van het Web &#x200B;](/help/collection/use-cases/identity/id-overview.md) voor meer informatie over hoe te om primaire identiteit op SDK van het Web te vormen.
 * Zorg ervoor dat de ECID is opgenomen in de ervaringsgebeurtenis. Als de ECID ontbreekt, wordt deze met `primary=true` toegevoegd aan de gebeurtenislading, wat tot onverwachte resultaten kan leiden.

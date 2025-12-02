@@ -27,4 +27,4 @@ alloy("configure", {
 
 ## Migratie van bezoekersidentiteitskaart inschakelen met de Web SDK-tagextensie
 
-Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [ de configuratiemontages van de Identiteit ](/help/tags/extensions/client/web-sdk/configure/identity.md).
+Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [&#x200B; de configuratiemontages van de Identiteit &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md).

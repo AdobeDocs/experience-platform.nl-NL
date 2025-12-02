@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `sendMediaEvent`
 
-De opdracht `sendMediaEvent` maakt deel uit van de Web SDK `streamingMedia` -component. Met deze component kunt u gegevens verzamelen die betrekking hebben op mediasessies op uw website. Zie `streamingMedia` [ documentatie ](configure/streamingmedia.md) leren hoe te om deze component te vormen.
+De opdracht `sendMediaEvent` maakt deel uit van de Web SDK `streamingMedia` -component. Met deze component kunt u gegevens verzamelen die betrekking hebben op mediasessies op uw website. Zie `streamingMedia` [&#x200B; documentatie &#x200B;](configure/streamingmedia.md) leren hoe te om deze component te vormen.
 
 Gebruik de opdracht `sendMediaEvent` om het afspelen van media, pauzes, voltooiing, updates van de spelerstatus en andere gerelateerde gebeurtenissen bij te houden.
 

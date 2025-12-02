@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `debugEnabled`
 
-Met de eigenschap `debugEnabled` kunt u foutopsporing in- of uitschakelen met behulp van Web SDK-code. Het is één van de beschikbare manieren om [ het zuiveren ](/help/collection/use-cases/debugging.md) toe te laten. Het inschakelen van foutopsporing binnen uw implementatie kan handiger zijn dan andere methoden tijdens de ontwikkeling van websites wanneer u foutopsporing altijd wilt inschakelen. Deze methode van het zuiveren laat het voor alle bezoekers toe, zodat wordt het niet geadviseerd voor productiepagina&#39;s. Zie [ het Zuiveren ](/help/collection/use-cases/debugging.md) gebruiken gevalpagina voor meer manieren om het zuiveren toe te laten.
+Met de eigenschap `debugEnabled` kunt u foutopsporing in- of uitschakelen met behulp van Web SDK-code. Het is één van de beschikbare manieren om [&#x200B; het zuiveren &#x200B;](/help/collection/use-cases/debugging.md) toe te laten. Het inschakelen van foutopsporing binnen uw implementatie kan handiger zijn dan andere methoden tijdens de ontwikkeling van websites wanneer u foutopsporing altijd wilt inschakelen. Deze methode van het zuiveren laat het voor alle bezoekers toe, zodat wordt het niet geadviseerd voor productiepagina&#39;s. Zie [&#x200B; het Zuiveren &#x200B;](/help/collection/use-cases/debugging.md) gebruiken gevalpagina voor meer manieren om het zuiveren toe te laten.
 
 Stel `debugEnabled` boolean in op `true` wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de SDK, wordt standaard ingesteld op `false` .
 
@@ -25,4 +25,4 @@ alloy("configure", {
 
 ## Foutopsporing inschakelen met de Web SDK-tagextensie
 
-Er zijn geen foutopsporingsopties beschikbaar die native de Web SDK-tagextensie gebruiken. Gebruik een [ afwisselende het zuiveren methode ](/help/collection/use-cases/debugging.md) wanneer het vormen van uw markeringsbezit.
+Er zijn geen foutopsporingsopties beschikbaar die native de Web SDK-tagextensie gebruiken. Gebruik een [&#x200B; afwisselende het zuiveren methode &#x200B;](/help/collection/use-cases/debugging.md) wanneer het vormen van uw markeringsbezit.

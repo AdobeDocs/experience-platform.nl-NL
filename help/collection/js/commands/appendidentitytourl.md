@@ -51,8 +51,8 @@ Deze opdracht ondersteunt het object [`edgeConfigOverrides`](configure/edgeconfi
 
 ## Object Response
 
-Wanneer [ behandelende reacties ](command-responses.md) met dit bevel, bevat het reactievoorwerp **`url`**, nieuwe URL met identiteitsinformatie die als parameter van het vraagkoord wordt toegevoegd.
+Wanneer [&#x200B; behandelende reacties &#x200B;](command-responses.md) met dit bevel, bevat het reactievoorwerp **`url`**, nieuwe URL met identiteitsinformatie die als parameter van het vraagkoord wordt toegevoegd.
 
 ## Identiteit toevoegen aan URL met de extensie Web SDK
 
-De de markeringsuitbreiding van SDK van het Web gelijkwaardig aan dit bevel is [ opnieuw richt met identiteit ](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) actie.
+De de markeringsuitbreiding van SDK van het Web gelijkwaardig aan dit bevel is [&#x200B; opnieuw richt met identiteit &#x200B;](/help/tags/extensions/client/web-sdk/actions/redirect-with-identity.md) actie.

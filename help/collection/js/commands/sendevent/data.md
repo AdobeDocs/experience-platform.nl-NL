@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `data`
 
-Met het `data` -object kunt u een payload naar Adobe verzenden die niet overeenkomt met een XDM-schema. Het is handig in niet-XDM-scenario&#39;s, zoals het rechtstreeks verzenden van gegevens naar Adobe Analytics, Adobe Target of Adobe Audience Manager. Wanneer de gegevens bij de gegevensstroom aankomen, kunt u [ Afbeelding van de Prep van Gegevens gebruiken ](/help/data-prep/ui/mapping.md) om gebieden XDM aan elk gebied in het `data` voorwerp toe te wijzen. Als Adobe al een product heeft geconfigureerd om velden binnen het `data` -object te detecteren, kunt u die gegevens ongewijzigd naar een gegevensstroom verzenden.
+Met het `data` -object kunt u een payload naar Adobe verzenden die niet overeenkomt met een XDM-schema. Het is handig in niet-XDM-scenario&#39;s, zoals het rechtstreeks verzenden van gegevens naar Adobe Analytics, Adobe Target of Adobe Audience Manager. Wanneer de gegevens bij de gegevensstroom aankomen, kunt u [&#x200B; Afbeelding van de Prep van Gegevens gebruiken &#x200B;](/help/data-prep/ui/mapping.md) om gebieden XDM aan elk gebied in het `data` voorwerp toe te wijzen. Als Adobe al een product heeft geconfigureerd om velden binnen het `data` -object te detecteren, kunt u die gegevens ongewijzigd naar een gegevensstroom verzenden.
 
 >[!IMPORTANT]
 >
@@ -32,8 +32,8 @@ alloy("sendEvent", {
 
 ## Het object `data` gebruiken met Adobe Analytics {#analytics}
 
-U kunt het `data` -object met Adobe Analytics gebruiken om gegevens naar een rapportsuite zonder een XDM-schema te verzenden. Variabelen zijn geconfigureerd om dezelfde syntaxis te gebruiken als AppMeasurement-variabelen, waardoor het upgradeproces naar het web SDK wordt vereenvoudigd. Zie [ objecten van Gegevens veranderlijke afbeelding aan Adobe Analytics ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) in de de implementatiegids van Adobe Analytics voor meer informatie.
+U kunt het `data` -object met Adobe Analytics gebruiken om gegevens naar een rapportsuite zonder een XDM-schema te verzenden. Variabelen zijn geconfigureerd om dezelfde syntaxis te gebruiken als AppMeasurement-variabelen, waardoor het upgradeproces naar het web SDK wordt vereenvoudigd. Zie [&#x200B; objecten van Gegevens veranderlijke afbeelding aan Adobe Analytics &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) in de de implementatiegids van Adobe Analytics voor meer informatie.
 
 ## Het `data` -object gebruiken met de extensie van de Web SDK-tag
 
-Het `data` voorwerp is beschikbaar als a [ Variabel gegevenselement ](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) wanneer het gebruiken van de de markeringsuitbreiding van SDK van het Web.
+Het `data` voorwerp is beschikbaar als a [&#x200B; Variabel gegevenselement &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#variable) wanneer het gebruiken van de de markeringsuitbreiding van SDK van het Web.

@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # `edgeConfigOverrides` (`sendEvent` opdracht)
 
-Met het `edgeConfigOverrides` -object kunt u alleen voor de huidige `sendEvent` -opdracht de configuratie-instellingen overschrijven. Dit object is handig wanneer u specifieke opdrachten op dezelfde pagina hebt die u met andere configuratie-instellingen wilt uitvoeren dan de rest van de SDK-implementatie voor Web. Als u configuratiemontages voor alle bevelen op een bepaalde pagina wilt met voeten treden, denk na gebruikend het [`edgeConfigOverrides` voorwerp in het `configure` bevel ](../configure/edgeconfigoverrides.md).
+Met het `edgeConfigOverrides` -object kunt u alleen voor de huidige `sendEvent` -opdracht de configuratie-instellingen overschrijven. Dit object is handig wanneer u specifieke opdrachten op dezelfde pagina hebt die u met andere configuratie-instellingen wilt uitvoeren dan de rest van de SDK-implementatie voor Web. Als u configuratiemontages voor alle bevelen op een bepaalde pagina wilt met voeten treden, denk na gebruikend het [`edgeConfigOverrides` voorwerp in het `configure` bevel &#x200B;](../configure/edgeconfigoverrides.md).
 
 Het overkoepelende proces van de gegevensstroomconfiguratie bestaat uit twee belangrijkste stappen:
 
-1. Eerst, moet u uw de configuratieopheffing van de gegevensstroom bepalen wanneer [ vormend een datastream ](/help/datastreams/configure.md) in de UI van Gegevensstromen. Zie [ de configuratie DataStream met voeten treedt ](/help/datastreams/overrides.md) in de documentatie van gegevensstromen voor instructies op hoe te om met voeten te treden.
+1. Eerst, moet u uw de configuratieopheffing van de gegevensstroom bepalen wanneer [&#x200B; vormend een datastream &#x200B;](/help/datastreams/configure.md) in de UI van Gegevensstromen. Zie [&#x200B; de configuratie DataStream met voeten treedt &#x200B;](/help/datastreams/overrides.md) in de documentatie van gegevensstromen voor instructies op hoe te om met voeten te treden.
 1. Nadat u de gegevensstroomoverschrijving in de gegevensstreams-gebruikersinterface hebt geconfigureerd, kunt u het `edgeConfigOverrides` -object configureren.
 
 De opdracht `configure` ondersteunt ook een object `edgeConfigOverrides` . Zie [`edgeConfigOverrides`](../configure/edgeconfigoverrides.md) onder de opdracht `configure` . Het object `edgeConfigOverrides` in de opdracht `sendEvent` heeft voorrang op het object `edgeConfigOverrides` in de opdracht `configure` als beide zijn ingesteld.
@@ -72,4 +72,4 @@ alloy("sendEvent", {
 
 ## De configuratie DataStream treedt met voeten gebruikend de de markeringsuitbreiding van SDK van het Web
 
-Het de markeringsuitbreidingsequivalent van SDK van het Web van dit voorwerp is de [ configuratie DataStream treedt ](/help/tags/extensions/client/web-sdk/actions/send-event.md#datastream-configuration-overrides) sectie met voeten wanneer het vormen van &quot;[!UICONTROL Send event]&quot;actie.
+Het de markeringsuitbreidingsequivalent van SDK van het Web van dit voorwerp is de [&#x200B; configuratie DataStream treedt &#x200B;](/help/tags/extensions/client/web-sdk/actions/send-event.md#datastream-configuration-overrides) sectie met voeten wanneer het vormen van &quot;[!UICONTROL Send event]&quot;actie.

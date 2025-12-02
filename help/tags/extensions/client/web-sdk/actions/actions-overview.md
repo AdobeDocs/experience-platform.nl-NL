@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Deze pagina bevat een lijst met alle ondersteunde acties binnen een labelregel. U kunt als volgt de acties binnen een labelregel maken of bewerken:
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Rules]** en selecteer vervolgens de gewenste regel.
@@ -31,4 +31,4 @@ De Web SDK-tagextensie biedt de volgende acties:
 * [**[!UICONTROL Send event]**](send-event.md): verzendt gebeurtenisgegevens naar de Edge Network.
 * [**[!UICONTROL Send media event]**](send-media-event.md): verzendt mediagegevens naar de Edge Network.
 * [**[!UICONTROL Set consent]**](set-consent.md): geeft de gewenste toestemming voor de bezoeker op.
-* [**[!UICONTROL Update variable]**](update-variable.md): Wijzigt a [ veranderlijk ](../data-element-types.md#variable) gegevenselement.
+* [**[!UICONTROL Update variable]**](update-variable.md): Wijzigt a [&#x200B; veranderlijk &#x200B;](../data-element-types.md#variable) gegevenselement.

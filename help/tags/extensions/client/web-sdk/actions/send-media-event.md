@@ -45,7 +45,7 @@ Dit gebeurtenistype ondersteunt ook de mogelijkheid om aangepaste metagegevens t
 
 ## [!UICONTROL Bitrate change]
 
-* **[!UICONTROL Quality of experience data]**: A [ Kwaliteit van Ervaring ](/help/xdm/data-types/qoe-data-details-collection.md) voorwerp dat bitrate, gelaten vallen kaders, kaders per seconde, en tijd specificeert te beginnen.
+* **[!UICONTROL Quality of experience data]**: A [&#x200B; Kwaliteit van Ervaring &#x200B;](/help/xdm/data-types/qoe-data-details-collection.md) voorwerp dat bitrate, gelaten vallen kaders, kaders per seconde, en tijd specificeert te beginnen.
 
 ## [!UICONTROL Chapter start]
 
@@ -115,7 +115,7 @@ Hiermee kunt u de details van mediasessies configureren.
 * **[!UICONTROL Stream format]**: De indeling van de stream, zoals HD of SD.
 * **[!UICONTROL Station]**: De naam of id van het radiostation.
 
-Dit gebeurtenistype ondersteunt ook de mogelijkheid om aangepaste metagegevens te leveren als onderdeel van de payload van een mediagebeurtenis. Het staat ook de configuratieoverschrijvingen van de gegevensstroom toe, die u controle geven over welke apps en de diensten deze gegevens ontvangen. Wanneer u een gegevensstroomconfiguratieopheffing in zowel een individueel bevel als binnen de de configuratiemontages van de markeringsuitbreiding plaatst, neemt het individuele bevel belangrijkheid. Zie [ de configuratiemet voeten treedt van de Gegevensstroom ](../configure/configuration-overrides.md) voor meer informatie.
+Dit gebeurtenistype ondersteunt ook de mogelijkheid om aangepaste metagegevens te leveren als onderdeel van de payload van een mediagebeurtenis. Het staat ook de configuratieoverschrijvingen van de gegevensstroom toe, die u controle geven over welke apps en de diensten deze gegevens ontvangen. Wanneer u een gegevensstroomconfiguratieopheffing in zowel een individueel bevel als binnen de de configuratiemontages van de markeringsuitbreiding plaatst, neemt het individuele bevel belangrijkheid. Zie [&#x200B; de configuratiemet voeten treedt van de Gegevensstroom &#x200B;](../configure/configuration-overrides.md) voor meer informatie.
 
 ## [!UICONTROL States update]
 

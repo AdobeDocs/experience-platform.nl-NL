@@ -20,7 +20,7 @@ De verzamelde gegevens kunnen informatie over media playbacks, pauzes, voltooiin
 Als u de `streamingMedia` -component van de Web SDK wilt gebruiken, moet u aan de volgende voorwaarden voldoen:
 
 * Zorg ervoor dat je toegang hebt tot Adobe Experience Platform of Adobe Analytics.
-* U moet Web SDK versie 2.20.0 of later gebruiken. Zie het [ de installatieoverzicht van SDK van het Web ](../../install/overview.md) leren hoe te om de recentste versie te installeren.
+* U moet Web SDK versie 2.20.0 of later gebruiken. Zie het [&#x200B; de installatieoverzicht van SDK van het Web &#x200B;](../../install/overview.md) leren hoe te om de recentste versie te installeren.
 * Schakel de optie **[[!UICONTROL Media Analytics]](/help/datastreams/configure.md#advanced-options)** in voor de gegevensstroom die u gebruikt.
 * Zorg ervoor dat het schema dat door uw gegevensstroom wordt gebruikt de het schemagebieden van de Inzameling van Media omvat.
 * Configureer de functie Streaming Media in de Web SDK, zoals weergegeven op deze pagina.
@@ -44,9 +44,9 @@ alloy("configure", {
 | **`channel`** | String | Ja | De naam van het kanaal waar de het stromen media inzameling voorkomt. Voorbeeld: `Video channel` . |
 | **`playerName`** | String | Ja | De naam van de mediaspeler. |
 | **`appVersion`** | String | Nee | De versie van de mediaspeler. |
-| **`mainPingInterval`** | Geheel | Nee | Frequentie van pings voor belangrijkste inhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `10` tot `50` seconden.  Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [ automatisch-gevolgde zittingen ](../createmediasession.md#automatic). |
-| **`adPingInterval`** | Geheel | Nee | Frequentie van pingelt voor advertentie-inhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `1` tot `10` seconden. Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [ automatisch-gevolgde zittingen ](../createmediasession.md#automatic). |
+| **`mainPingInterval`** | Geheel | Nee | Frequentie van pings voor belangrijkste inhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `10` tot `50` seconden.  Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [&#x200B; automatisch-gevolgde zittingen &#x200B;](../createmediasession.md#automatic). |
+| **`adPingInterval`** | Geheel | Nee | Frequentie van pingelt voor advertentie-inhoud, in seconden. De standaardwaarde is `10` . Waarden kunnen variëren van `1` tot `10` seconden. Als geen waarde wordt gespecificeerd, wordt de standaardwaarde gebruikt wanneer het gebruiken van [&#x200B; automatisch-gevolgde zittingen &#x200B;](../createmediasession.md#automatic). |
 
 ## Configuratie van streaming media met gebruik van de webtag SDK
 
-Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [ het stromen media configuratiemontages ](/help/tags/extensions/client/web-sdk/configure/streaming-media.md).
+Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [&#x200B; het stromen media configuratiemontages &#x200B;](/help/tags/extensions/client/web-sdk/configure/streaming-media.md).

@@ -10,11 +10,11 @@ ht-degree: 1%
 
 # `track()`
 
-De `_satellite.track()` methode staat u toe om a [ Directe vraagregel ](/help/tags/extensions/client/core/overview.md#direct-call-event) teweeg te brengen.
+De `_satellite.track()` methode staat u toe om a [&#x200B; Directe vraagregel &#x200B;](/help/tags/extensions/client/core/overview.md#direct-call-event) teweeg te brengen.
 
 >[!IMPORTANT]
 >
->Adobe overweegt `_satellite.track()` de methode van de a **erfenisimplementatie**. Terwijl het nog volledig wordt gesteund, adviseert Adobe sterk het gebruiken van modernere implementatiepraktijken, zoals de [ Laag van Gegevens van de Cliënt van Adobe ](/help/tags/extensions/client/client-data-layer/overview.md), die de geadviseerde benadering voor nieuwe implementaties is.
+>Adobe overweegt `_satellite.track()` de methode van de a **erfenisimplementatie**. Terwijl het nog volledig wordt gesteund, adviseert Adobe sterk het gebruiken van modernere implementatiepraktijken, zoals de [&#x200B; Laag van Gegevens van de Cliënt van Adobe &#x200B;](/help/tags/extensions/client/client-data-layer/overview.md), die de geadviseerde benadering voor nieuwe implementaties is.
 >
 >Als u verkiest om `_satellite.track()` op uw plaats te gebruiken, **bescherming elke vraag** zodat uw plaats niet strak aan de markeringsbibliotheek wordt gekoppeld. Als de eigenschap tag niet wordt bewaakt, leidt het verwijderen van de eigenschap tag in de toekomst tot fouten in alle verwijzingen naar het object `_satellite` .
 

@@ -52,6 +52,6 @@ Deze methode is alleen van toepassing op uw lokale computer, zodat u foutopspori
 
 De Adobe Experience Platform Debugger is een krachtig hulpmiddel dat uw webpagina&#39;s controleert en u helpt bij het opsporen van fouten in uw implementatie van Experience Cloud-producten. U kunt foutopsporing inschakelen op het tabblad Configuratie van de sectie AEP Web SDK.
 
-![ laat debugger ](../js/assets/enable-debugging.png) toe
+![&#x200B; laat debugger &#x200B;](../js/assets/enable-debugging.png) toe
 
-Zie [ overzicht van Adobe Experience Platform Debugger ](/help/debugger/home.md) voor meer informatie.
+Zie [&#x200B; overzicht van Adobe Experience Platform Debugger &#x200B;](/help/debugger/home.md) voor meer informatie.

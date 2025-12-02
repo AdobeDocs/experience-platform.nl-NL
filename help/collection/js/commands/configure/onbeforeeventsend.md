@@ -71,4 +71,4 @@ alloy("configure", {
 
 ## Vorm vóór gebeurtenis verzend callback gebruikend de de markeringsuitbreiding van SDK van het Web
 
-Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [ de configuratiemontages van de inzameling van Gegevens ](/help/tags/extensions/client/web-sdk/configure/data-collection.md#on-before-event-send-callback).
+Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [&#x200B; de configuratiemontages van de inzameling van Gegevens &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md#on-before-event-send-callback).

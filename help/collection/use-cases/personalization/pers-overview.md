@@ -16,7 +16,7 @@ De SDK ondersteunt flexibele architecturen, waaronder client-side, server-side e
 
 ## Web SDK-voorbeelden
 
-Naast de documentpagina&#39;s in deze map houdt Adobe een opslagplaats bij van voorbeeldtoepassingen waarnaar u kunt verwijzen. Zie {de steekproeven van SDK van 0} Web [ op GitHub voor meer verpersoonlijkingsgebruiksgevallen, die omvatten:](https://github.com/adobe/alloy-samples/)
+Naast de documentpagina&#39;s in deze map houdt Adobe een opslagplaats bij van voorbeeldtoepassingen waarnaar u kunt verwijzen. Zie {de steekproeven van SDK van 0} Web [&#x200B; op GitHub voor meer verpersoonlijkingsgebruiksgevallen, die omvatten:](https://github.com/adobe/alloy-samples/)
 
 * Aanpassing aan clientzijde
 * Aanpassing aan server
