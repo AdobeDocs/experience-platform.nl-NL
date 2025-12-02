@@ -4,9 +4,9 @@ title: Ga aan de slag met Hoofdletters gebruiken
 description: Leer hoe u aan de slag gaat met de functie Hoofdletters gebruiken.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: d6b62b9539a04be2d2adc7aa66436a294e08303a
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -14,34 +14,34 @@ ht-degree: 0%
 
 # Aan de slag
 
-Leer hoe u uw account instelt voor Use Case Playbooks, die zijn ontworpen voor Real-time Customer Data Platform en Adobe Journey Optimizer als dit niet automatisch is ingesteld. De drie belangrijkste configuratiestappen zijn:
+Leer hoe u uw account instelt voor Use Case Playbooks, die zijn ontworpen voor Real-Time Customer Data Platform en Adobe Journey Optimizer als dit niet automatisch is ingesteld. De drie belangrijkste configuratiestappen zijn:
 
 * Een sandbox maken
 * Gebruikersmachtigingen configureren
 * Journey Optimizer-kanaaloppervlakken configureren voor e-mail-, push- en SMS-berichten (als u Journey Optimizer-afspeelboeken wilt gebruiken)
 
-Als u een uitgebreide galerie met gebruikscase-afspeelboeken wilt openen in de gebruikersinterface van het Experience Platform, selecteert u **[!UICONTROL Playbooks]** in de linkernavigatie. Lees de documentatie op hoe te [&#x200B; om Hoofdletters van het Gebruik &#x200B;](../playbooks/navigate.md) te navigeren en begonnen te worden met een [&#x200B; inspirerende zandbak &#x200B;](../playbooks/navigate.md).
+Selecteer **[!UICONTROL Playbooks]** in de linkernavigatie voor toegang tot een uitgebreide galerie met gebruikscaseafspeelboeken in de gebruikersinterface van Experience Platform. Lees de documentatie op hoe te [ om Hoofdletters van het Gebruik ](../playbooks/navigate.md) te navigeren en begonnen te worden met een [ inspirerende zandbak ](../playbooks/navigate.md).
 
 ## Configureer Use Case Playbooks - Video Walthrough {#video}
 
 Bekijk deze video voor meer informatie over de stappen die nodig zijn om uw sandbox te maken, machtigingen te configureren en kanaaloppervlakken te configureren voor e-mail-, push- en SMS-berichten in Journey Optimizer.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449832?learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
 
 ## Een ontwikkelingssandbox maken {#create-development-sandbox}
 
-In Use Case Playbooks is een speciaal type ontwikkelingssandbox gebruikt. Om begonnen te worden en toegang tot de [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionaliteit te krijgen, [&#x200B; creeer een nieuwe ontwikkelingszandbak &#x200B;](/help/sandboxes/ui/user-guide.md#create) (zorg ervoor u geen productiesandbox) met de naam (niet de titel) die of `-ucp` of `-UCP` in het achtervoegsel, zoals hieronder getoond bevat.
+In Use Case Playbooks is een speciaal type ontwikkelingssandbox gebruikt. Om begonnen te worden en toegang tot de [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionaliteit te krijgen, [ creeer een nieuwe ontwikkelingszandbak ](/help/sandboxes/ui/user-guide.md#create) (zorg ervoor u geen productiesandbox) met de naam (niet de titel) die of `-ucp` of `-UCP` in het achtervoegsel, zoals hieronder getoond bevat.
 
 >[!IMPORTANT]
 >
 >Wanneer u een nieuwe ontwikkelingssandbox maakt, moet u ervoor zorgen dat de naam `-ucp` of `-UCP` bevat in het achtervoegsel.
 
 
-![&#x200B; creeer een ontwikkelingszandbak voor gebruikscase playbooks &#x200B;](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
+![ creeer een ontwikkelingszandbak voor gebruikscase playbooks ](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
 U moet nu [!UICONTROL Playbooks] in de linkerrail onder [!UICONTROL Use Case Playbooks] zien.
 
-![&#x200B; Playbooks van het Geval van het Gebruik in UI na het creëren van zandbak.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
+![ Playbooks van het Geval van het Gebruik in UI na het creëren van zandbak.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
 Als u [!UICONTROL Playbooks] niet ziet in de linkertrack, zoals hierboven is weergegeven, gebruikt u deze koppeling `https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates` om er rechtstreeks naartoe te navigeren. In de koppeling is `<YOUR_ORG>` de naam van uw organisatie en is `<YOUR_SANDBOX_NAME>` de naam van de ontwikkelingssandbox die u hebt gemaakt.
 
@@ -51,17 +51,17 @@ Om met [!UICONTROL Use Case Playbooks] te beginnen, hebben de leden van uw marke
 
 **Vereiste toestemmingen**
 
-Om de vereiste toestemmingen, in de Toestemmingen UI toe te voegen, omvat de nieuwe zandbak van het gebruiksgeval playbook in [&#x200B; rollen die u reeds &#x200B;](/help/access-control/abac/ui/permissions.md#managing-sandboxes-for-role) hebt gevormd, met inbegrip van die gebruikt voor andere ontwikkelingszandbakken.
+Om de vereiste toestemmingen, in de Toestemmingen UI toe te voegen, omvat de nieuwe zandbak van het gebruiksgeval playbook in [ rollen die u reeds ](/help/access-control/abac/ui/permissions.md#managing-sandboxes-for-role) hebt gevormd, met inbegrip van die gebruikt voor andere ontwikkelingszandbakken.
 
-![&#x200B; zandbak van het Playbook voor rollen reeds gevormd &#x200B;](/help/use-case-playbooks/assets/playbooks/get-started/permissions-to-existing-roles.png)
+![ zandbak van het Playbook voor rollen reeds gevormd ](/help/use-case-playbooks/assets/playbooks/get-started/permissions-to-existing-roles.png)
 
 **opstelling een rol voor Playbooks:**
 
-Alternatief, kon u ook overwegen toevoegend nieuwe rollen met [&#x200B; de vereiste toestemmingen &#x200B;](/help/access-control/home.md#sandboxes-and-permissions).
+Alternatief, kon u ook overwegen toevoegend nieuwe rollen met [ de vereiste toestemmingen ](/help/access-control/home.md#sandboxes-and-permissions).
 
-[&#x200B; opstelling een nieuwe rol &#x200B;](/help/access-control/abac/ui/permissions.md) met de noodzakelijke toestemmingen voor essentiële playbook taken. Maak een rol en voeg de nieuwe sandbox eraan toe, zoals hieronder wordt weergegeven.
+[ opstelling een nieuwe rol ](/help/access-control/abac/ui/permissions.md) met de noodzakelijke toestemmingen voor essentiële playbook taken. Maak een rol en voeg de nieuwe sandbox eraan toe, zoals hieronder wordt weergegeven.
 
-![&#x200B; creeer een rol en voeg het aan Sandbox &#x200B;](/help/use-case-playbooks/assets/playbooks/get-started/create-new-role.png) toe
+![ creeer een rol en voeg het aan Sandbox ](/help/use-case-playbooks/assets/playbooks/get-started/create-new-role.png) toe
 
 **Toestemmingen voor playbook instanties**
 
@@ -81,38 +81,38 @@ Als u ritten wilt maken en beheren, gebruikt u de machtigingen voor reizen; **[!
 
 In de onderstaande afbeelding ziet u een momentopname van de aanbevolen rechten voor gebruikers om afspeelboeken en de elementen die door afspeelboeken zijn gegenereerd, weer te geven, te maken en te beheren.
 
-![&#x200B; Momentopname van alle toestemmingspunten nodig om alle instanties van playbooks tot stand te brengen &#x200B;](/help/use-case-playbooks/assets/playbooks/get-started/permission-snapshot.png)
+![ Momentopname van alle toestemmingspunten nodig om alle instanties van playbooks tot stand te brengen ](/help/use-case-playbooks/assets/playbooks/get-started/permission-snapshot.png)
 
 **voeg gebruikers aan de rol** toe
 
-Zodra u [&#x200B; een nieuwe rol &#x200B;](/help/access-control/abac/ui/permissions.md#managing-users-for-role) zoals hierboven van verwijzingen voorzien hebt gecreeerd, voeg me als gebruiker aan het toe. Als u een rol met beperkte toegang voor een andere reeks gebruikers met mening-slechts toegang creeert, omvat slechts de noodzakelijke meningspunten verbonden aan deze toestemmingen.
+Zodra u [ een nieuwe rol ](/help/access-control/abac/ui/permissions.md#managing-users-for-role) zoals hierboven van verwijzingen voorzien hebt gecreeerd, voeg me als gebruiker aan het toe. Als u een rol met beperkte toegang voor een andere reeks gebruikers met mening-slechts toegang creeert, omvat slechts de noodzakelijke meningspunten verbonden aan deze toestemmingen.
 
 ## Sandbox- en kanaaloppervlakken configureren in Journey Optimizer {#configure-channel-surfaces}
 
-Als uw organisatie voor [&#x200B; Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=nl-NL) vergunning wordt gegeven, en u wilt playbooks gebruiken die voor Journey Optimizer worden ontworpen, zult u het kanaal moeten vormen vooraf instelt in uw zandbak, die de technische parameters bepaalt die voor uw berichten worden vereist. [&#x200B; Leer hoe te de oppervlakten van het opstellingskanaal in Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=nl-NL).
+Als uw organisatie voor [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/ajo-home) vergunning wordt gegeven en u playbooks wilt gebruiken die voor Journey Optimizer worden ontworpen, vorm de kanaaloppervlakten in uw zandbak. Kanaaloppervlakken definiëren alle technische parameters die voor uw berichten vereist zijn, zoals het e-mailtype, de naam van de afzender en e-mail, mobiele apps, de configuratie van SMS en meer. [ Leer hoe te de oppervlakten van het opstellingskanaal in Adobe Journey Optimizer ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Als u instanties van afspeelboeken wilt maken in Journey Optimizer, moet u kanaaloppervlakken configureren voor e-mail-, push- en SMS-berichten.
 
 ### Oppervlak e-mailkanaal
 
-Ga naar `Channels` in de Journey Optimizer-interface. Vorm afzonderlijke subdomeinen en IP pools voor marketing e-mail en transactioneel overseinen, als niet reeds gevormd. Dit zijn beste praktijken om ervoor te zorgen dat de transactieberichten zoals de bevestigingse-mail van de orde, door aan uw klanten krijgen. Voer namen, e-mailadressen en aanvullende instellingen in. Selecteer **voorleggen** bij het hoogste recht van de pagina om de oppervlakte van het marketing kanaal tot stand te brengen. Lees de documentatie op [&#x200B; hoe te opstellings e-mailkanaaloppervlakken &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=nl-NL).
+Ga naar `Channels` in de Journey Optimizer-interface. Vorm afzonderlijke subdomeinen en IP pools voor marketing e-mail en transactioneel overseinen, als niet reeds gevormd. Dit zijn beste praktijken om ervoor te zorgen dat de transactieberichten zoals de bevestigingse-mail van de orde, door aan uw klanten krijgen. Voer namen, e-mailadressen en aanvullende instellingen in. Selecteer **voorleggen** bij het hoogste recht van de pagina om de oppervlakte van het marketing kanaal tot stand te brengen. Lees de documentatie op [ hoe te opstellings e-mailkanaaloppervlakken ](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
 ### SMS-kanaal
 
-Om een het kanaaloppervlakte van SMS tot stand te brengen, creeer eerst een referentie van SMS API, en selecteer de aangewezen verkoper (bijvoorbeeld, Sinch). Geef het oppervlak van het SMS-kanaal een naam (bijvoorbeeld SMS Marketing), selecteer de configuratie en voer een nummer voor de afzender in. Selecteer **voorleggen** bij het hoogste recht van de pagina om de het kanaaloppervlakte van SMS te bewaren. Lees de documentatie op [&#x200B; hoe te de het kanaaloppervlakten van opstellingsSMS &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=nl-NL#message-preset-sms).
+Om een het kanaaloppervlakte van SMS tot stand te brengen, creeer eerst een referentie van SMS API, en selecteer de aangewezen verkoper (bijvoorbeeld, Sinch). Geef het oppervlak van het SMS-kanaal een naam (bijvoorbeeld SMS Marketing), selecteer de configuratie en voer een nummer voor de afzender in. Selecteer **voorleggen** bij het hoogste recht van de pagina om de het kanaaloppervlakte van SMS te bewaren. Lees de documentatie op [ hoe te de het kanaaloppervlakten van opstellingsSMS ](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=en#message-preset-sms).
 
 Configureer ook kanalen voor afspeelboeken die transactieberichten bevatten, zoals orderbevestigingen.
 
 ### Push-kanaaloppervlak
 
-Bevestig dat de kanaalconfiguraties of van het Experience Platform of de interface van de Inzamelingen van Gegevens worden gevormd. Zo zien kanaalconfiguraties er uit in de omgeving van gegevensverzamelingen.
+Controleer of de kanaalconfiguraties zijn geconfigureerd via de interface van Experience Platform of Gegevensverzamelingen. Zo zien kanaalconfiguraties er uit in de omgeving van gegevensverzamelingen.
 
 <!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
 Selecteer vervolgens het kanaal, de platformen en de apps die u hebt bekeken in de kanaalconfiguraties. Selecteer **voorleggen** om de oppervlakte van het drukkanaal tot stand te brengen.
 
-Lees de documentatie op [&#x200B; hoe te opstellings de oppervlakken van het drukkanaal &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=nl-NL).
+Lees de documentatie op [ hoe te opstellings de oppervlakken van het drukkanaal ](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 
 ## Volgende stappen {#next-steps}
 
-Nu u alle stappen in dit document hebt gevolgd, had u een ontwikkelingssandbox moeten maken met Use Case Playbooks die beschikbaar is in de linkernavigatie. U weet nu ook hoe u uw teamleden de vereiste machtigingen kunt geven om afspeelboeken te bekijken en te beheren en elementen te genereren. Als volgende stap, lees hoe te [&#x200B; het juiste playbook &#x200B;](/help/use-case-playbooks/playbooks/choose.md) voor u te kiezen en [&#x200B; dan tot instanties van het &#x200B;](/help/use-case-playbooks/playbooks/create-share-reuse.md) leiden.
+Nu u alle stappen in dit document hebt gevolgd, had u een ontwikkelingssandbox moeten maken met Use Case Playbooks die beschikbaar is in de linkernavigatie. U weet nu ook hoe u uw teamleden de vereiste machtigingen kunt geven om afspeelboeken te bekijken en te beheren en elementen te genereren. Als volgende stap, lees hoe te [ het juiste playbook ](/help/use-case-playbooks/playbooks/choose.md) voor u te kiezen en [ dan tot instanties van het ](/help/use-case-playbooks/playbooks/create-share-reuse.md) leiden.
