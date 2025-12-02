@@ -105,7 +105,7 @@ Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identi
 
 De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten en identiteitsgrafieken.
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432349?captions=dut&quality=12&learn=on)
 
 ## Inzicht in de rol van Identity Service binnen de Experience Platform-infrastructuur
 
