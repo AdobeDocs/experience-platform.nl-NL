@@ -89,17 +89,17 @@ Zodra u [&#x200B; een nieuwe rol &#x200B;](/help/access-control/abac/ui/permissi
 
 ## Sandbox- en kanaaloppervlakken configureren in Journey Optimizer {#configure-channel-surfaces}
 
-Als uw organisatie voor [&#x200B; Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/ajo-home) vergunning wordt gegeven en u playbooks wilt gebruiken die voor Journey Optimizer worden ontworpen, vorm de kanaaloppervlakten in uw zandbak. Kanaaloppervlakken definiëren alle technische parameters die voor uw berichten vereist zijn, zoals het e-mailtype, de naam van de afzender en e-mail, mobiele apps, de configuratie van SMS en meer. [&#x200B; Leer hoe te de oppervlakten van het opstellingskanaal in Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
+Als uw organisatie voor [&#x200B; Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/ajo-home) vergunning wordt gegeven en u playbooks wilt gebruiken die voor Journey Optimizer worden ontworpen, vorm de kanaaloppervlakten in uw zandbak. Kanaaloppervlakken definiëren alle technische parameters die voor uw berichten vereist zijn, zoals het e-mailtype, de naam van de afzender en e-mail, mobiele apps, de configuratie van SMS en meer. [&#x200B; Leer hoe te de oppervlakten van het opstellingskanaal in Adobe Journey Optimizer &#x200B;](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Als u instanties van afspeelboeken wilt maken in Journey Optimizer, moet u kanaaloppervlakken configureren voor e-mail-, push- en SMS-berichten.
 
 ### Oppervlak e-mailkanaal
 
-Ga naar `Channels` in de Journey Optimizer-interface. Vorm afzonderlijke subdomeinen en IP pools voor marketing e-mail en transactioneel overseinen, als niet reeds gevormd. Dit zijn beste praktijken om ervoor te zorgen dat de transactieberichten zoals de bevestigingse-mail van de orde, door aan uw klanten krijgen. Voer namen, e-mailadressen en aanvullende instellingen in. Selecteer **voorleggen** bij het hoogste recht van de pagina om de oppervlakte van het marketing kanaal tot stand te brengen. Lees de documentatie op [&#x200B; hoe te opstellings e-mailkanaaloppervlakken &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Ga naar `Channels` in de Journey Optimizer-interface. Vorm afzonderlijke subdomeinen en IP pools voor marketing e-mail en transactioneel overseinen, als niet reeds gevormd. Dit zijn beste praktijken om ervoor te zorgen dat de transactieberichten zoals de bevestigingse-mail van de orde, door aan uw klanten krijgen. Voer namen, e-mailadressen en aanvullende instellingen in. Selecteer **voorleggen** bij het hoogste recht van de pagina om de oppervlakte van het marketing kanaal tot stand te brengen. Lees de documentatie op [&#x200B; hoe te opstellings e-mailkanaaloppervlakken &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=nl-NL).
 
 ### SMS-kanaal
 
-Om een het kanaaloppervlakte van SMS tot stand te brengen, creeer eerst een referentie van SMS API, en selecteer de aangewezen verkoper (bijvoorbeeld, Sinch). Geef het oppervlak van het SMS-kanaal een naam (bijvoorbeeld SMS Marketing), selecteer de configuratie en voer een nummer voor de afzender in. Selecteer **voorleggen** bij het hoogste recht van de pagina om de het kanaaloppervlakte van SMS te bewaren. Lees de documentatie op [&#x200B; hoe te de het kanaaloppervlakten van opstellingsSMS &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=en#message-preset-sms).
+Om een het kanaaloppervlakte van SMS tot stand te brengen, creeer eerst een referentie van SMS API, en selecteer de aangewezen verkoper (bijvoorbeeld, Sinch). Geef het oppervlak van het SMS-kanaal een naam (bijvoorbeeld SMS Marketing), selecteer de configuratie en voer een nummer voor de afzender in. Selecteer **voorleggen** bij het hoogste recht van de pagina om de het kanaaloppervlakte van SMS te bewaren. Lees de documentatie op [&#x200B; hoe te de het kanaaloppervlakten van opstellingsSMS &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=nl-NL#message-preset-sms).
 
 Configureer ook kanalen voor afspeelboeken die transactieberichten bevatten, zoals orderbevestigingen.
 
@@ -111,7 +111,7 @@ Controleer of de kanaalconfiguraties zijn geconfigureerd via de interface van Ex
 
 Selecteer vervolgens het kanaal, de platformen en de apps die u hebt bekeken in de kanaalconfiguraties. Selecteer **voorleggen** om de oppervlakte van het drukkanaal tot stand te brengen.
 
-Lees de documentatie op [&#x200B; hoe te opstellings de oppervlakken van het drukkanaal &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
+Lees de documentatie op [&#x200B; hoe te opstellings de oppervlakken van het drukkanaal &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=nl-NL).
 
 ## Volgende stappen {#next-steps}
 
