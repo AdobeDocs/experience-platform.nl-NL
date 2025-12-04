@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Adobe Experience Platform Assurance gebruiken
 
-In deze zelfstudie wordt uitgelegd hoe u Adobe Experience Platform Assurance kunt gebruiken. Voor instructies op hoe te om de uitbreiding van Adobe Experience Platform Assurance te installeren en uit te voeren, te lezen gelieve het leerprogramma over [ het uitvoeren van de uitbreiding van Assurance ](./implement-assurance.md).
+In deze zelfstudie wordt uitgelegd hoe u Adobe Experience Platform Assurance kunt gebruiken. Voor instructies op hoe te om de uitbreiding van Adobe Experience Platform Assurance te installeren en uit te voeren, te lezen gelieve het leerprogramma over [&#x200B; het uitvoeren van de uitbreiding van Assurance &#x200B;](./implement-assurance.md).
 
 ## Sessies maken
 
-Na het registreren in [ Assurance UI ](https://experience.adobe.com/assurance), kunt u selecteren **[!UICONTROL Create Session]** beginnen creërend een zitting.
+Na het registreren in [&#x200B; Assurance UI &#x200B;](https://experience.adobe.com/assurance), kunt u selecteren **[!UICONTROL Create Session]** beginnen creërend een zitting.
 
-![ creeer zittingsknoop wordt benadrukt, tonend u waar u een zitting kunt tot stand brengen.](./images/using-assurance/create-session.png)
+![&#x200B; creeer zittingsknoop wordt benadrukt, tonend u waar u een zitting kunt tot stand brengen.](./images/using-assurance/create-session.png)
 
 Het dialoogvenster **[!UICONTROL Create New Session]** wordt weergegeven met twee opties voor het maken van een sessie:
 
@@ -27,7 +27,7 @@ Selecteer deze optie om een unieke zitting-URL, QR code, en SPELD te produceren.
 
 Selecteer **[!UICONTROL Deep link connect]** en ga door te selecteren **[!UICONTROL Start]**.
 
-![ de Create Nieuwe dialoog van de Zitting die Deep verbindt geselecteerde optie toont.](./images/using-assurance/create-new-session-deep-link.png)
+![&#x200B; de Create Nieuwe dialoog van de Zitting die Deep verbindt geselecteerde optie toont.](./images/using-assurance/create-new-session-deep-link.png)
 
 U kunt nu een naam invoeren om de sessie te identificeren en vervolgens een **[!UICONTROL Base URL]** (deep linking-URL voor uw app) opgeven. Selecteer **[!UICONTROL Next]** nadat u deze gegevens hebt opgegeven.
 
@@ -35,7 +35,7 @@ U kunt nu een naam invoeren om de sessie te identificeren en vervolgens een **[!
 >
 >De basis-URL is de basisdefinitie die wordt gebruikt om uw app via een URL te starten. Er wordt een sessie-URL gegenereerd waarmee u de Assurance-sessie kunt starten. Een voorbeeldwaarde kan er als volgt uitzien: `myapp://default` Typ in het veld **[!UICONTROL Base URL]** de diepgaande-koppelingsdefinitie van de basis van uw app.
 
-![ de zittingsnaam en de Invoergebieden van de Basis URL worden getoond.](./images/using-assurance/create-session-form-deep-link.png)
+![&#x200B; de zittingsnaam en de Invoergebieden van de Basis URL worden getoond.](./images/using-assurance/create-session-form-deep-link.png)
 
 ### Snelle verbinding
 
@@ -59,11 +59,11 @@ Controleer voordat u Quick Connect gebruikt of uw toepassing de vereiste SDK-ver
 
 **Implementatie:**
 
-Uw app moet de [`startSession` API ](https://developer.adobe.com/client-sdks/home/base/assurance/api-reference/#startsession-quick-connect) implementeren om de Assurance-verbinding te activeren. Deze API-aanroep wordt meestal opgenomen in een handelingenset of geactiveerd in uw app.
+Uw app moet de [`startSession` API &#x200B;](https://developer.adobe.com/client-sdks/home/base/assurance/api-reference/#startsession-quick-connect) implementeren om de Assurance-verbinding te activeren. Deze API-aanroep wordt meestal opgenomen in een handelingenset of geactiveerd in uw app.
 
 #### Snel een verbindingssessie maken
 
-![ de Create Nieuwe dialoog van de Zitting die Snelle geselecteerde optie toont verbindt.](./images/using-assurance/create-new-session-quick-connect.png)
+![&#x200B; de Create Nieuwe dialoog van de Zitting die Snelle geselecteerde optie toont verbindt.](./images/using-assurance/create-new-session-quick-connect.png)
 
 Selecteer **[!UICONTROL Quick connect]** en selecteer **[!UICONTROL Start]** om door te gaan, wordt de interface van de apparaatkiezer weergegeven:
 
@@ -71,7 +71,7 @@ Selecteer **[!UICONTROL Quick connect]** en selecteer **[!UICONTROL Start]** om 
 
 2. **selecteer en verbind uw apparaat** - Zodra uw apparaat in de lijst van beschikbare apparaten verschijnt, selecteer het en klik **[!UICONTROL Connect]**.
 
-![ de Snelle Connect interface van de apparatenplukker die beschikbare apparaten toont.](./images/using-assurance/quick-connect-device-picker.png)
+![&#x200B; de Snelle Connect interface van de apparatenplukker die beschikbare apparaten toont.](./images/using-assurance/quick-connect-device-picker.png)
 
 ## Verbinding maken met een sessie
 
@@ -85,7 +85,7 @@ Voor sessies gemaakt met **[!UICONTROL Deep Link Connect]** :
 2. Gebruik de camera-app van uw apparaat om de QR-code te scannen of kopieer de koppeling en open deze in uw app
 3. Wanneer uw app wordt gestart, wordt het scherm PIN-invoer bedekt. Voer de pincode in en druk op **[!UICONTROL Connect]**
 
-![ een dialoog die de opties toont om met uw zitting van Assurance te verbinden wordt getoond.](./images/using-assurance/deep-link-connection.png)
+![&#x200B; een dialoog die de opties toont om met uw zitting van Assurance te verbinden wordt getoond.](./images/using-assurance/deep-link-connection.png)
 
 ### Sessies voor Snel verbinden
 
@@ -96,7 +96,7 @@ Voor sessies die zijn gemaakt met **[!UICONTROL Quick Connect]** (identificeerba
 3. De handelingenset in uw app activeren om het apparaat te kunnen detecteren
 4. Selecteer het apparaat in de lijst en klik op **[!UICONTROL Connect]**
 
-![ de interface die van de apparatenplukker beschikbare apparaten toont om te verbinden.](./images/using-assurance/quick-connect-device-picker.png)
+![&#x200B; de interface die van de apparatenplukker beschikbare apparaten toont om te verbinden.](./images/using-assurance/quick-connect-device-picker.png)
 
 ### Verbinding controleren
 
@@ -106,6 +106,6 @@ U kunt controleren of uw app is verbonden met Assurance wanneer het Adobe Experi
 
 Als u een Assurance-sessie wilt exporteren, selecteert u **[!UICONTROL Export to JSON]** in een sessie op de detailpagina van uw app:
 
-![ Exporterend een zitting ](./images/using-assurance/export-session.png)
+![&#x200B; Exporterend een zitting &#x200B;](./images/using-assurance/export-session.png)
 
 De exportoptie respecteert de resultaten van het zoekfilter en exporteert alleen gebeurtenissen die in de gebeurtenisweergave worden weergegeven. Als u bijvoorbeeld hebt gezocht naar gebeurtenissen &#39;track&#39; en vervolgens **[!UICONTROL Export to JSON]** selecteert, worden alleen de resultaten van de gebeurtenis &#39;track&#39; geëxporteerd.
