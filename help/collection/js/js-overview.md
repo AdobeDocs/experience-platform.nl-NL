@@ -17,8 +17,8 @@ Het Web SDK verzendt gegevens op een oplossing-agnostische manier (XDM) naar Exp
 
 U kunt SDK van het Web op twee manieren uitvoeren:
 
-* Handmatige implementatie die de [&#x200B; bibliotheek van JavaScript &#x200B;](install/library.md) gebruikt (deze documentatie)
-* De [&#x200B; SDK van het Web markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/overview.md)
+* Handmatige implementatie die de [ bibliotheek van JavaScript ](install/library.md) gebruikt (deze documentatie)
+* De [ SDK van het Web markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/overview.md)
 
 Deze handleiding bevat instructies voor het werken met Experience Cloud-oplossingen via de Web SDK JavaScript-bibliotheek.
 
