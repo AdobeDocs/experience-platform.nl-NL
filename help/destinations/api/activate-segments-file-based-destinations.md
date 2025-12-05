@@ -15,10 +15,10 @@ ht-degree: 0%
 
 Gebruik de verbeterde mogelijkheden voor het exporteren van bestanden om toegang te krijgen tot de verbeterde aanpassingsfunctionaliteit wanneer u bestanden exporteert vanuit Experience Platform:
 
-* Aanvullende [ dossier noemende opties ](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* Mogelijkheid om de kopballen van het douanedossier in uw uitgevoerde dossiers via de [ verbeterde toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) te plaatsen.
-* Mogelijkheid om het [ dossiertype ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) van het uitgevoerde dossier te selecteren.
-* [ Mogelijkheid om het formatteren van uitgevoerde CSV gegevensdossiers ](/help/destinations/ui/batch-destinations-file-formatting-options.md) aan te passen.
+* Aanvullende [&#x200B; dossier noemende opties &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* Mogelijkheid om de kopballen van het douanedossier in uw uitgevoerde dossiers via de [&#x200B; verbeterde toewijzingsstap &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) te plaatsen.
+* Mogelijkheid om het [&#x200B; dossiertype &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) van het uitgevoerde dossier te selecteren.
+* [&#x200B; Mogelijkheid om het formatteren van uitgevoerde CSV gegevensdossiers &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md) aan te passen.
 
 Deze functionaliteit wordt ondersteund door de zes hieronder vermelde cloudopslagkaarten:
 
@@ -29,11 +29,11 @@ Deze functionaliteit wordt ondersteund door de zes hieronder vermelde cloudopsla
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-Dit artikel verklaart het werkschema dat wordt vereist om de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) te gebruiken om gekwalificeerde profielen van Adobe Experience Platform naar één van de hierboven verbonden plaatsen van de wolkenopslag uit te voeren.
+Dit artikel verklaart het werkschema dat wordt vereist om de [&#x200B; Dienst API van de Stroom &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/) te gebruiken om gekwalificeerde profielen van Adobe Experience Platform naar één van de hierboven verbonden plaatsen van de wolkenopslag uit te voeren.
 
 >[!TIP]
 >
->U kunt de Experience Platform-gebruikersinterface ook gebruiken om profielen te exporteren naar opslagdoelen in de cloud. Lees het [ activeer op dossier-gebaseerde bestemmingsleerprogramma ](/help/destinations/ui/activate-batch-profile-destinations.md) voor meer informatie.
+>U kunt de Experience Platform-gebruikersinterface ook gebruiken om profielen te exporteren naar opslagdoelen in de cloud. Lees het [&#x200B; activeer op dossier-gebaseerde bestemmingsleerprogramma &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor meer informatie.
 
 <!--
 
@@ -45,7 +45,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ## Aan de slag {#get-started}
 
-![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png) is
+![&#x200B; Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker &#x200B;](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png) is
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
@@ -57,17 +57,17 @@ De volgende secties verstrekken extra informatie die u moet weten om gegevens aa
 
 ### Vereiste machtigingen {#permissions}
 
-Om profielen uit te voeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+Om profielen uit te voeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
+Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [&#x200B; hoe te om voorbeeld API vraag &#x200B;](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
 
 ### Waarden verzamelen voor vereiste en optionele koppen {#gather-values-headers}
 
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ de authentificatieleerprogramma van Experience Platform ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [&#x200B; de authentificatieleerprogramma van Experience Platform &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -79,7 +79,7 @@ Bronnen in [!DNL Experience Platform] kunnen worden geïsoleerd naar specifieke 
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakoverzicht &#x200B;](../../sandboxes/home.md).
 
 Alle verzoeken die een payload (`POST`, `PUT`, `PATCH`) bevatten vereisen een extra media type kopbal:
 
@@ -87,15 +87,15 @@ Alle verzoeken die een payload (`POST`, `PUT`, `PATCH`) bevatten vereisen een ex
 
 ### API-naslagdocumentatie {#api-reference-documentation}
 
-In deze zelfstudie vindt u begeleidende referentiedocumentatie voor alle API-bewerkingen. Verwijs naar de [ Dienst van de Stroom - Doelen API documentatie op de website van Adobe Developer ](https://developer.adobe.com/experience-platform-apis/references/destinations/). We raden u aan deze zelfstudie en de API-naslagdocumentatie parallel te gebruiken.
+In deze zelfstudie vindt u begeleidende referentiedocumentatie voor alle API-bewerkingen. Verwijs naar de [&#x200B; Dienst van de Stroom - Doelen API documentatie op de website van Adobe Developer &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/). We raden u aan deze zelfstudie en de API-naslagdocumentatie parallel te gebruiken.
 
 ### Woordenlijst {#glossary}
 
-Voor beschrijvingen van de termijnen die u in dit API leerprogramma zult ontmoeten, lees de [ verklarende woordenlijstsectie ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) van de API verwijzingsdocumentatie.
+Voor beschrijvingen van de termijnen die u in dit API leerprogramma zult ontmoeten, lees de [&#x200B; verklarende woordenlijstsectie &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) van de API verwijzingsdocumentatie.
 
 ## Doel selecteren waar publiek moet worden geëxporteerd {#select-destination}
 
-![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step1.png) is
+![&#x200B; Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker &#x200B;](/help/destinations/assets/api/file-based-segment-export/step1.png) is
 
 Voordat u de workflow voor het exporteren van profielen start, moet u de specificaties van de verbinding en de stroom identificeren van het doel waarnaar u het publiek wilt exporteren. Gebruik de onderstaande tabel ter referentie.
 
@@ -324,9 +324,9 @@ Voer de onderstaande stappen uit om een doelpubliek voor het exporteren van gege
 
 ## Een Source-verbinding maken {#create-source-connection}
 
-![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step2.png) is
+![&#x200B; Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker &#x200B;](/help/destinations/assets/api/file-based-segment-export/step2.png) is
 
-Nadat u hebt bepaald naar welk doel u het publiek exporteert, moet u een bronverbinding maken. De [ bronverbinding ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) vertegenwoordigt de verbinding aan de interne [ opslag van het Profiel van Experience Platform ](/help/profile/home.md#profile-data-store).
+Nadat u hebt bepaald naar welk doel u het publiek exporteert, moet u een bronverbinding maken. De [&#x200B; bronverbinding &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) vertegenwoordigt de verbinding aan de interne [&#x200B; opslag van het Profiel van Experience Platform &#x200B;](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -374,9 +374,9 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe bronverbinding en e
 
 ## Een basisverbinding maken {#create-base-connection}
 
-![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step3.png) is
+![&#x200B; Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker &#x200B;](/help/destinations/assets/api/file-based-segment-export/step3.png) is
 
-A [ basisverbinding ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) slaat veilig de geloofsbrieven aan uw bestemming op. Afhankelijk van het bestemmingstype, kunnen de geloofsbrieven nodig om tegen die bestemming voor authentiek te verklaren variëren. Om deze authentificatieparameters te vinden, wint eerst `connection spec` voor uw gewenste bestemming zoals die in de sectie [ wordt beschreven Uitgezochte bestemming waar te om publiek ](#select-destination) uit te voeren en bekijk dan `authSpec` van de reactie. Verwijs in de onderstaande tabbladen naar de eigenschappen `authSpec` van alle ondersteunde doelen.
+A [&#x200B; basisverbinding &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) slaat veilig de geloofsbrieven aan uw bestemming op. Afhankelijk van het bestemmingstype, kunnen de geloofsbrieven nodig om tegen die bestemming voor authentiek te verklaren variëren. Om deze authentificatieparameters te vinden, wint eerst `connection spec` voor uw gewenste bestemming zoals die in de sectie [&#x200B; wordt beschreven Uitgezochte bestemming waar te om publiek &#x200B;](#select-destination) uit te voeren en bekijk dan `authSpec` van de reactie. Verwijs in de onderstaande tabbladen naar de eigenschappen `authSpec` van alle ondersteunde doelen.
 
 >[!BEGINTABS]
 
@@ -715,7 +715,7 @@ Met behulp van de eigenschappen die zijn opgegeven in de verificatietoets (d.w.z
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) sectie van de pagina van de de bestemmingsdocumentatie van Amazon S3.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) sectie van de pagina van de de bestemmingsdocumentatie van Amazon S3.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -749,7 +749,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) sectie van de pagina van de de bestemmingsdocumentatie van Amazon S3.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) sectie van de pagina van de de bestemmingsdocumentatie van Amazon S3.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -799,7 +799,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de opslag van Azure Blob.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de opslag van Azure Blob.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) sectie van de Azure pagina van de de bestemmingsdocumentatie van het Leer van Gegevens 2 (ADLS Gen2).
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) sectie van de Azure pagina van de de bestemmingsdocumentatie van het Leer van Gegevens 2 (ADLS Gen2).
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -902,7 +902,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Er zijn geen verificatiereferenties vereist voor de bestemming Landing Zone voor gegevens. Voor meer informatie, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) sectie van de Gegevens Landing de documentatiepagina van de Zone van de bestemmingsbestemming.
+>Er zijn geen verificatiereferenties vereist voor de bestemming Landing Zone voor gegevens. Voor meer informatie, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) sectie van de Gegevens Landing de documentatiepagina van de Zone van de bestemmingsbestemming.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -940,7 +940,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de Opslag van de Wolk van Google.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) sectie van de de bestemmingsdocumentatiepagina van de Opslag van de Wolk van Google.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -991,7 +991,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1037,7 +1037,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
+>Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [&#x200B; voor authentiek verklaren aan bestemmings &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1198,9 +1198,9 @@ Noteer de verbinding-id in het antwoord. Deze id is vereist in de volgende stap 
 
 ## Een doelverbinding maken {#create-target-connection}
 
-![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step4.png) is
+![&#x200B; Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker &#x200B;](/help/destinations/assets/api/file-based-segment-export/step4.png) is
 
-Vervolgens moet u een doelverbinding maken. [ de verbindingen van het Doel ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) slaan de uitvoerparameters voor het uitgevoerde publiek op. Exportparameters zijn onder andere exportlocatie, bestandsindeling, compressie en andere details. Voor CSV-bestanden kunt u bijvoorbeeld verschillende exportopties selecteren. Krijg uitgebreide informatie over alle gesteunde CSV de uitvoeropties in de [ dossier formatterende configuratiepagina ](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+Vervolgens moet u een doelverbinding maken. [&#x200B; de verbindingen van het Doel &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) slaan de uitvoerparameters voor het uitgevoerde publiek op. Exportparameters zijn onder andere exportlocatie, bestandsindeling, compressie en andere details. Voor CSV-bestanden kunt u bijvoorbeeld verschillende exportopties selecteren. Krijg uitgebreide informatie over alle gesteunde CSV de uitvoeropties in de [&#x200B; dossier formatterende configuratiepagina &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Raadpleeg de `targetSpec` -eigenschappen in de doelmap `connection spec` voor meer informatie over de ondersteunde eigenschappen voor elk doeltype. Verwijs in de onderstaande tabbladen naar de eigenschappen `targetSpec` van alle ondersteunde doelen.
 
@@ -2402,7 +2402,7 @@ Aan de hand van de bovenstaande specificatie kunt u een aanvraag voor een doelve
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invullen bestemmingsdetails ](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) sectie van de [!DNL Amazon S3] pagina van de bestemmingsdocumentatie.
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invullen bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) sectie van de [!DNL Amazon S3] pagina van de bestemmingsdocumentatie.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -2438,7 +2438,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [ dossier formatterende configuratiepagina ](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+>Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [&#x200B; dossier formatterende configuratiepagina &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2496,7 +2496,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invullen bestemmingsdetails ](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) sectie van de [!DNL Azure Blob Storage] pagina van de bestemmingsdocumentatie.
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invullen bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) sectie van de [!DNL Azure Blob Storage] pagina van de bestemmingsdocumentatie.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -2532,7 +2532,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [ dossier formatterende configuratiepagina ](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+>Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [&#x200B; dossier formatterende configuratiepagina &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2590,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invul in bestemmingsdetails ](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) sectie van de Azure [!DNL Data Lake Gen 2(ADLS Gen2)] pagina van de bestemmingsdocumentatie.
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invul in bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) sectie van de Azure [!DNL Data Lake Gen 2(ADLS Gen2)] pagina van de bestemmingsdocumentatie.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -2625,7 +2625,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [ dossier formatterende configuratiepagina ](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+>Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [&#x200B; dossier formatterende configuratiepagina &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2683,7 +2683,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invullen bestemmingsdetails ](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) sectie van de [!DNL Data Landing Zone] pagina van de bestemmingsdocumentatie.
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invullen bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) sectie van de [!DNL Data Landing Zone] pagina van de bestemmingsdocumentatie.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -2718,7 +2718,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [ dossier formatterende configuratiepagina ](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+>Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [&#x200B; dossier formatterende configuratiepagina &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2776,7 +2776,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invullen bestemmingsdetails ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sectie van de [!DNL Google Cloud Storage] pagina van de bestemmingsdocumentatie.
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invullen bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sectie van de [!DNL Google Cloud Storage] pagina van de bestemmingsdocumentatie.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -2812,7 +2812,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [ dossier formatterende configuratiepagina ](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+>Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [&#x200B; dossier formatterende configuratiepagina &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2870,7 +2870,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [ invul in bestemmingsdetails ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
+>Voor informatie over hoe te om de vereiste doelparameters te verkrijgen, verwijs naar [&#x200B; invul in bestemmingsdetails &#x200B;](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) sectie van de pagina van de de bestemmingsdocumentatie van SFTP.
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -2905,7 +2905,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [ dossier formatterende configuratiepagina ](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+>Voor uitgebreide informatie over de beschikbare opties CSV voor dossieruitvoer, verwijs naar de [&#x200B; dossier formatterende configuratiepagina &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2963,9 +2963,9 @@ Een geslaagde reactie retourneert de id (`id`) van de nieuwe doelbronverbinding 
 
 ## Een gegevensstroom maken {#create-dataflow}
 
-![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step5.png) is
+![&#x200B; Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker &#x200B;](/help/destinations/assets/api/file-based-segment-export/step5.png) is
 
-De volgende stap in de bestemmingsconfiguratie moet een dataflow tot stand brengen. A [ dataflow ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) verbindt eerder gecreeerd entiteiten samen en verstrekt ook opties om het programma van de publieksuitvoer te vormen. Als u de gegevensstroom wilt maken, gebruikt u de onderstaande ladingen, afhankelijk van uw gewenste bestemming voor de cloudopslag, en vervangt u de id&#39;s van de flowentiteit uit vorige stappen. Merk op dat in deze stap, u geen informatie met betrekking tot attribuut of identiteitstoewijzing aan dataflow toevoegt. Dat zal in de volgende stap gebeuren.
+De volgende stap in de bestemmingsconfiguratie moet een dataflow tot stand brengen. A [&#x200B; dataflow &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) verbindt eerder gecreeerd entiteiten samen en verstrekt ook opties om het programma van de publieksuitvoer te vormen. Als u de gegevensstroom wilt maken, gebruikt u de onderstaande ladingen, afhankelijk van uw gewenste bestemming voor de cloudopslag, en vervangt u de id&#39;s van de flowentiteit uit vorige stappen. Merk op dat in deze stap, u geen informatie met betrekking tot attribuut of identiteitstoewijzing aan dataflow toevoegt. Dat zal in de volgende stap gebeuren.
 
 >[!BEGINTABS]
 
@@ -3275,12 +3275,12 @@ Noteer de Dataflow-id uit het antwoord. Deze id is vereist in latere stappen.
 
 ### Soorten publiek toevoegen aan de exportbewerking
 
-In deze stap kunt u ook selecteren welk publiek u naar het doel wilt exporteren. Voor uitgebreide informatie over deze stap en het verzoekformaat om een publiek aan dataflow toe te voegen, bekijk de voorbeelden in de [ Update een sectie van bestemmingsdataflow ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) van de API verwijzingsdocumentatie.
+In deze stap kunt u ook selecteren welk publiek u naar het doel wilt exporteren. Voor uitgebreide informatie over deze stap en het verzoekformaat om een publiek aan dataflow toe te voegen, bekijk de voorbeelden in de [&#x200B; Update een sectie van bestemmingsdataflow &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) van de API verwijzingsdocumentatie.
 
 
 ## Kenmerk en identiteitstoewijzing instellen {#attribute-and-identity-mapping}
 
-![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step6.png) is
+![&#x200B; Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker &#x200B;](/help/destinations/assets/api/file-based-segment-export/step6.png) is
 
 Nadat u de gegevensstroom hebt gemaakt, moet u toewijzingen instellen voor de kenmerken en identiteiten die u wilt exporteren. Dit bestaat uit drie stappen, die hieronder worden vermeld:
 
@@ -3290,13 +3290,13 @@ Nadat u de gegevensstroom hebt gemaakt, moet u toewijzingen instellen voor de ke
 
 Bijvoorbeeld, om de volgende afbeelding te verkrijgen die in UI wordt getoond, zou u door de drie hierboven vermelde stappen moeten gaan en in de volgende rubrieken worden gedetailleerd.
 
-![ Voorbeeld van afbeeldingsstap ](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
+![&#x200B; Voorbeeld van afbeeldingsstap &#x200B;](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
 ### Een invoerschema maken
 
-Om een inputschema tot stand te brengen, moet u eerst uw [ verenigingsschema ](/help/profile/ui/union-schema.md) en de identiteiten terugwinnen die naar de bestemming kunnen worden uitgevoerd. Dit is het schema van attributen en identiteiten die u als bronafbeelding kunt selecteren.
+Om een inputschema tot stand te brengen, moet u eerst uw [&#x200B; verenigingsschema &#x200B;](/help/profile/ui/union-schema.md) en de identiteiten terugwinnen die naar de bestemming kunnen worden uitgevoerd. Dit is het schema van attributen en identiteiten die u als bronafbeelding kunt selecteren.
 
-![ Opname die de attributen en identiteitsopties in de uitgezochte mening van het brongebied tonen ](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
+![&#x200B; Opname die de attributen en identiteitsopties in de uitgezochte mening van het brongebied tonen &#x200B;](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
 
 Hieronder vindt u voorbeelden van verzoeken en reacties om kenmerken en identiteiten op te halen.
 
@@ -3489,7 +3489,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Beschikbare identiteiten weergeven die moeten worden gebruikt in het invoerschema
 
-De reactie retourneert de identiteiten die u kunt gebruiken bij het maken van het invoerschema. Merk op dat deze reactie zowel [ standaard ](/help/identity-service/features/namespaces.md#standard) als [ douane ](/help/identity-service/features/namespaces.md#manage-namespaces) identiteitsnaamruimten terugkeert die u opstelling in Experience Platform.
+De reactie retourneert de identiteiten die u kunt gebruiken bij het maken van het invoerschema. Merk op dat deze reactie zowel [&#x200B; standaard &#x200B;](/help/identity-service/features/namespaces.md#standard) als [&#x200B; douane &#x200B;](/help/identity-service/features/namespaces.md#manage-namespaces) identiteitsnaamruimten terugkeert die u opstelling in Experience Platform.
 
 ```json
 [
@@ -4376,7 +4376,7 @@ De id in de reactie vertegenwoordigt de unieke id van het invoerschema dat u heb
 
 ### Toewijzingsset maken {#create-mapping-set}
 
-Daarna, gebruik prep API van 0} gegevens [ om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet)
+Daarna, gebruik prep API van 0&rbrace; gegevens [&#x200B; om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet)
 
 >[!BEGINSHADEBOX]
 
@@ -4462,7 +4462,7 @@ Vervolgens haalt u de id op van de gegevensstroom die u wilt bijwerken.
 
 >[!BEGINSHADEBOX]
 
-Zie [ de details van een bestemmingsdataflow ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/getFlowById) voor informatie terugwinnen over het terugwinnen van identiteitskaart van een dataflow.
+Zie [&#x200B; de details van een bestemmingsdataflow &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/getFlowById) voor informatie terugwinnen over het terugwinnen van identiteitskaart van een dataflow.
 
 >[!ENDSHADEBOX]
 
@@ -4514,13 +4514,13 @@ De reactie van de Dienst API van de Stroom keert identiteitskaart van bijgewerkt
 
 ## Andere updates voor gegevensstroom uitvoeren {#other-dataflow-updates}
 
-![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step7.png) is
+![&#x200B; Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker &#x200B;](/help/destinations/assets/api/file-based-segment-export/step7.png) is
 
 Gebruik de bewerking `PATCH` om updates van de gegevensstroom uit te voeren. Bijvoorbeeld, kunt u een marketing actie aan uw gegevensstroom toevoegen, uw gegevensstromen bijwerken om gebieden als verplichte sleutels of deduplicatietoetsen te selecteren, of de productie van dossiermanifest aan bestaande bestemmingen toevoegen.
 
 ### Een marketingactie toevoegen {#add-marketing-action}
 
-Om a [ marketing actie ](/help/data-governance/api/marketing-actions.md) toe te voegen, zie hieronder de verzoek en reactievoorbeelden.
+Om a [&#x200B; marketing actie &#x200B;](/help/data-governance/api/marketing-actions.md) toe te voegen, zie hieronder de verzoek en reactievoorbeelden.
 
 >[!IMPORTANT]
 >
@@ -4536,7 +4536,7 @@ Om a [ marketing actie ](/help/data-governance/api/marketing-actions.md) toe te 
 
 >[!TIP]
 >
->Voordat u een marketingactie toevoegt aan een gegevensstroom, kunt u de bestaande core- en aangepaste marketingacties opzoeken. Bekijk [ hoe te om een lijst van bestaande marketing acties ](/help/data-governance/api/marketing-actions.md#list) terug te winnen.
+>Voordat u een marketingactie toevoegt aan een gegevensstroom, kunt u de bestaande core- en aangepaste marketingacties opzoeken. Bekijk [&#x200B; hoe te om een lijst van bestaande marketing acties &#x200B;](/help/data-governance/api/marketing-actions.md#list) terug te winnen.
 
 +++Een marketingactie toevoegen aan een doelgegevensstroom - Aanvragen
 
@@ -4589,7 +4589,7 @@ Een geslaagde reactie retourneert de antwoordcode `200` samen met de id van de b
 
 ### Een verplichte toets toevoegen {#add-mandatory-key}
 
-Om a [ verplichte sleutel ](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) toe te voegen, zie hieronder de verzoek en reactievoorbeelden.
+Om a [&#x200B; verplichte sleutel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) toe te voegen, zie hieronder de verzoek en reactievoorbeelden.
 
 >[!IMPORTANT]
 >
@@ -4668,7 +4668,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ### Een deduplicatietoets toevoegen {#add-deduplication-key}
 
-Om a [ deduplicatiesleutel ](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) toe te voegen, zie hieronder de verzoek en reactievoorbeelden
+Om a [&#x200B; deduplicatiesleutel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) toe te voegen, zie hieronder de verzoek en reactievoorbeelden
 
 >[!IMPORTANT]
 >
@@ -4753,9 +4753,9 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ### Bestandmanifest-generatie toevoegen aan bestaande bestemming {#add-file-manifest}
 
-Manifest JSON-bestanden bevatten informatie over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Bekijk a [ steekproef manifestdossier ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
+Manifest JSON-bestanden bevatten informatie over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Bekijk a [&#x200B; steekproef manifestdossier &#x200B;](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
 
-* `flowRunId`: De [ dataflow looppas ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.
+* `flowRunId`: De [&#x200B; dataflow looppas &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.
 * `scheduledTime`: De tijd in UTC toen het bestand werd geëxporteerd.
 * `exportResults.sinkPath`: Het pad in uw opslaglocatie waar het geëxporteerde bestand is opgeslagen.
 * `exportResults.name`: De naam van het geëxporteerde bestand.
@@ -4799,7 +4799,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## Gegevensstroom valideren (de dataflow-runtime ophalen) {#get-dataflow-runs}
 
-![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step8.png) is
+![&#x200B; Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker &#x200B;](/help/destinations/assets/api/file-based-segment-export/step8.png) is
 
 Om de uitvoering van een gegevensstroom te controleren, gebruik Dataflow loops API:
 
@@ -4871,11 +4871,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-U kunt informatie over de [ diverse parameters vinden die door de looppasAPI van Dataflow ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in de API verwijzingsdocumentatie zijn teruggekeerd.
+U kunt informatie over de [&#x200B; diverse parameters vinden die door de looppasAPI van Dataflow &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in de API verwijzingsdocumentatie zijn teruggekeerd.
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Experience Platform API-foutbericht. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform voor meer informatie bij het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Experience Platform API-foutbericht. Verwijs naar [&#x200B; API statuscodes &#x200B;](/help/landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform voor meer informatie bij het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 

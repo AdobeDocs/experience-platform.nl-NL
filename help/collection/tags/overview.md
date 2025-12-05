@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # `_satellite` objectverwijzing
 
-_Deze pagina&#39;s schetsen hoe te om het `_satellite` voorwerp te gebruiken, dat u toestaat om uw markeringslogica te beheren en aan te passen gebruikend JavaScript. Zie {de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform 0} [ voor details op hoe te opstelling uw implementatie in de Inzameling UI van Gegevens.](/help/tags/extensions/client/web-sdk/overview.md)_
+_Deze pagina&#39;s schetsen hoe te om het `_satellite` voorwerp te gebruiken, dat u toestaat om uw markeringslogica te beheren en aan te passen gebruikend JavaScript. Zie {de markeringsuitbreiding van SDK van het Web van Adobe Experience Platform 0} [&#x200B; voor details op hoe te opstelling uw implementatie in de Inzameling UI van Gegevens.](/help/tags/extensions/client/web-sdk/overview.md)_
 
 Het `_satellite` -object stelt verschillende ondersteunde ingangspunten beschikbaar die u helpen te communiceren met de tagbibliotheek die op uw site is gepubliceerd. Alle tagimplementaties geven `_satellite` weer als de loader-tag correct is geïmplementeerd. Er zijn verschillende hoofdgebruikscenario&#39;s voor dit object:
 
 * Gebruik in uw tagbibliotheek in aangepaste codeblokken, zodat u volledige toegang hebt tot de tagbibliotheek zelf.
 * Fouten opsporen in uw geïmplementeerde implementatie binnen een omgeving (ontwikkeling, staging of productie)
-* Directe implementatie op uw website, waardoor u volledige controle hebt over het moment waarop gebeurtenissen of tagregels worden geactiveerd. Voor nieuwe implementaties, adviseert Adobe het gebruiken van een flexibelere strategie zoals de [ Laag van Gegevens van de Cliënt van Adobe ](/help/tags/extensions/client/client-data-layer/overview.md).
+* Directe implementatie op uw website, waardoor u volledige controle hebt over het moment waarop gebeurtenissen of tagregels worden geactiveerd. Voor nieuwe implementaties, adviseert Adobe het gebruiken van een flexibelere strategie zoals de [&#x200B; Laag van Gegevens van de Cliënt van Adobe &#x200B;](/help/tags/extensions/client/client-data-layer/overview.md).
 
 >[!IMPORTANT]
 >
