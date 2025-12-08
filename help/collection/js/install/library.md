@@ -1,24 +1,24 @@
 ---
-title: Web SDK installeren met de JavaScript-bibliotheek
+title: De Web SDK JavaScript-bibliotheek installeren
 description: Verwijs naar de bibliotheek van SDK van het Web gebruikend een standalone CDN dossier.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-# Web SDK installeren met de JavaScript-bibliotheek
+# De Web SDK JavaScript-bibliotheek installeren
 
-Een alternatief aan het installeren van het Web SDK zonder [&#x200B; het gebruiken van de markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/overview.md) moet de bibliotheek van JavaScript van verwijzingen voorzien die op een CDN wordt ontvangen. U kunt rechtstreeks naar de bibliotheek verwijzen of deze downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in geminiatuurde en volledige formaten.
+Een alternatief aan het installeren van het Web SDK zonder [ het gebruiken van de markeringsuitbreiding ](/help/tags/extensions/client/web-sdk/overview.md) moet de bibliotheek van JavaScript van het Web van verwijzingen voorzien die op een CDN wordt ontvangen. U kunt rechtstreeks naar de bibliotheek verwijzen of deze downloaden en op uw eigen infrastructuur hosten. Het is beschikbaar in geminiatuurde en volledige formaten.
 
 De Web SDK-bibliotheek is beschikbaar via de volgende URL-structuur:
 
 * **Minified**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js`
 * **Volledig**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.js`
 
-Zie de [&#x200B; versienota&#39;s &#x200B;](../release-notes.md) voor de recentste versie om in URL te omvatten. De URL voor de volledige versie van versie 2.19.1 is bijvoorbeeld `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` .
+Zie de [ versienota&#39;s ](../release-notes.md) voor de recentste versie om in URL te omvatten. De URL voor de volledige versie van versie 2.19.1 is bijvoorbeeld `https://cdn1.adoberesources.net/alloy/2.19.1/alloy.js` .
 
 ## De code toevoegen
 

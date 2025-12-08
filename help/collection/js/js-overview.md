@@ -1,26 +1,19 @@
 ---
-title: JavaScript-overzicht
+title: Overzicht van de Web SDK JavaScript-bibliotheek
 description: Gegevens verzenden naar de Adobe Experience Platform Edge Network met JavaScript.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
 
-# JavaScript-overzicht
+# Overzicht van de Web SDK JavaScript-bibliotheek
 
-**SDK van het Web van Adobe Experience Platform** is een cliënt-kant bibliotheek van JavaScript die u toestaat om gegevens naar Adobe Experience Platform Edge Network te verzenden.
+**SDK van het Web van Adobe Experience Platform** is een cliënt-kant bibliotheek van JavaScript die u toestaat om gegevens naar Adobe Experience Platform Edge Network te verzenden. Deze gids documenteert de de bibliotheek van SDK van het Web JavaScript (`alloy.js`) implementatiepad, met inbegrip van kernconcepten, installatie, configuratie, en bevelen. Voor de de markeringsuitbreiding van SDK van het Web in UI van de Inzameling van Gegevens, zie de [ de markeringsuitbreiding van SDK van het Web ](/help/tags/extensions/client/web-sdk/overview.md).
 
 Het Web SDK verzendt gegevens op een oplossing-agnostische manier (XDM) naar Experience Platform Edge Network, die dan de gegevens aan oplossing-specifieke formaten en bestemmingen in real time in kaart brengt en het verzendt.
-
-U kunt SDK van het Web op twee manieren uitvoeren:
-
-* Handmatige implementatie die de [&#x200B; bibliotheek van JavaScript &#x200B;](install/library.md) gebruikt (deze documentatie)
-* De [&#x200B; SDK van het Web markeringsuitbreiding &#x200B;](/help/tags/extensions/client/web-sdk/overview.md)
-
-Deze handleiding bevat instructies voor het werken met Experience Cloud-oplossingen via de Web SDK JavaScript-bibliotheek.
 
 ## Experience Platform Edge Network {#edge-network}
 
