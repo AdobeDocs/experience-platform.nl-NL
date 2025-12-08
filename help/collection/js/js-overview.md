@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Overzicht van de Web SDK JavaScript-bibliotheek
 
-**SDK van het Web van Adobe Experience Platform** is een cliënt-kant bibliotheek van JavaScript die u toestaat om gegevens naar Adobe Experience Platform Edge Network te verzenden. Deze gids documenteert de de bibliotheek van SDK van het Web JavaScript (`alloy.js`) implementatiepad, met inbegrip van kernconcepten, installatie, configuratie, en bevelen. Voor de de markeringsuitbreiding van SDK van het Web in UI van de Inzameling van Gegevens, zie de [ de markeringsuitbreiding van SDK van het Web ](/help/tags/extensions/client/web-sdk/overview.md).
+**SDK van het Web van Adobe Experience Platform** is een cliënt-kant bibliotheek van JavaScript die u toestaat om gegevens naar Adobe Experience Platform Edge Network te verzenden. Deze gids documenteert de de bibliotheek van SDK van het Web JavaScript (`alloy.js`) implementatiepad, met inbegrip van kernconcepten, installatie, configuratie, en bevelen. Voor de de markeringsuitbreiding van SDK van het Web in UI van de Inzameling van Gegevens, zie de [&#x200B; de markeringsuitbreiding van SDK van het Web &#x200B;](/help/tags/extensions/client/web-sdk/overview.md).
 
 Het Web SDK verzendt gegevens op een oplossing-agnostische manier (XDM) naar Experience Platform Edge Network, die dan de gegevens aan oplossing-specifieke formaten en bestemmingen in real time in kaart brengt en het verzendt.
 
