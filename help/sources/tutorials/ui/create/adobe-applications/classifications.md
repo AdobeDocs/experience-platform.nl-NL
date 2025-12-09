@@ -63,4 +63,4 @@ Door deze zelfstudie te volgen, hebt u een de classificatieconnector van Analyti
 
 * [Overzicht van Adobe Analytics-bronconnector](../../../../connectors/adobe-applications/analytics.md)
 * [Creeer een Analytics bronverbinding voor rapportgegevens in UI](./analytics.md)
-* [&#x200B; Ongeveer classificaties &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [&#x200B; Ongeveer classificaties &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=nl-NL)
