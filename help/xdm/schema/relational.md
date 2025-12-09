@@ -34,7 +34,7 @@ Relationele schema&#39;s gebruiken voor:
 
 ## Hoe relationele schema&#39;s van standaardXDM schema&#39;s verschillen
 
-De standaard XDM- schema&#39;s in Experience Platform volgen één van drie gegevensgedrag: Verslag, tijdreeks, of ad hoc. Voor definities en details, zie [&#x200B; XDM gegevensgedrag &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
+De standaard XDM- schema&#39;s in Experience Platform volgen één van drie gegevensgedrag: Verslag, tijdreeks, of ad hoc. Voor definities en details, zie [&#x200B; XDM gegevensgedrag &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/home#data-behaviors).
 
 In het traditionele model, nemen het verslag en de tijd-reeksen schema&#39;s aan [&#x200B; verenigingsschema&#39;s &#x200B;](../api/unions.md) deel (zie ook de [&#x200B; gids UI van het unieschema &#x200B;](../../profile/ui/union-schema.md)). Deze schema&#39;s evolueren automatisch als gedeelde [&#x200B; gebiedsgroepen &#x200B;](./composition.md#field-group) worden bijgewerkt en de douanegebieden moeten onder een huurdersnamespace worden genest. Hoewel dit model krachtig is, kan het instappen vertragen, overdreven complexe schema&#39;s met ongebruikte gebieden produceren, en extra gegevenstoewijzing of transformatie vereisen. Deze factoren verhogen de leercurve en de voortdurende onderhoudsinspanningen.
 
