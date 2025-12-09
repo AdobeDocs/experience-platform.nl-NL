@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM-systeemoverzicht
 description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), dat door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2411'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consist
 
 Voordat gegevens in Experience Platform kunnen worden ingevoerd, moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. De schema&#39;s bestaan uit een basisklasse en nul of meer groepen van het schemagebied.
 
-Voor meer informatie over het model van de schemacompositie, met inbegrip van ontwerpprincipes, en beste praktijken, zie de [&#x200B; grondbeginselen van schemacompositie &#x200B;](schema/composition.md).
+Voor meer informatie over het model van de schemacompositie, met inbegrip van ontwerpprincipes, en beste praktijken, zie de [ grondbeginselen van schemacompositie ](schema/composition.md).
 
 ### Standaard XDM-componenten {#Standard-xdm-components}
 
@@ -35,7 +35,7 @@ XDM verstrekt een robuuste inzameling van standaardgebiedsgroepen en gegevenstyp
 
 Wanneer het construeren van schema&#39;s in Experience Platform UI, worden de vermelde gebiedsgroepen getoond met populariteit metrisch. Deze maatstaf wordt bepaald door hoe vaak andere Experience Platform-gebruikers de veldgroep in hun schema&#39;s gebruiken. Hoe hoger het getal, hoe populairder de veldgroep. Standaard worden de resultaten weergegeven van populairste tot minst populaire gegevens, zodat u op de hoogte blijft van trends in de modellering van gegevens in uw branche.
 
-![&#x200B; de populariteitskolom van de [!UICONTROL Add field group] dialoog.](./images/overview/popularity.png)
+![ de populariteitskolom van de [!UICONTROL Add field group] dialoog.](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 
@@ -67,7 +67,7 @@ Hoewel u uw eigen klassen binnen [!DNL Schema Registry] kunt definiëren, wordt 
 
 >[!NOTE]
 >
->Er zijn geen standaardklassen op basis van het ad-hocgedrag. Ad-hoc schema&#39;s worden automatisch geproduceerd door de processen van Experience Platform die hen gebruiken, maar zij kunnen ook [&#x200B; manueel worden gecreeerd gebruikend de Registratie API van het Schema &#x200B;](./tutorials/ad-hoc.md).
+>Er zijn geen standaardklassen op basis van het ad-hocgedrag. Ad-hoc schema&#39;s worden automatisch geproduceerd door de processen van Experience Platform die hen gebruiken, maar zij kunnen ook [ manueel worden gecreeerd gebruikend de Registratie API van het Schema ](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -77,7 +77,7 @@ Minder geïdentificeerde profielen kunnen alleen uit anonieme gedragssignalen be
 
 Naarmate een profiel blijft groeien, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identificatiegegevens, contactgegevens en communicatievoorkeuren van een individu.
 
-Zie de [[!UICONTROL XDM Individual Profile] verwijzingsgids &#x200B;](./classes/individual-profile.md) voor meer informatie over de structuur en het gebruik-geval van de gebieden die door de klasse worden verstrekt.
+Zie de [[!UICONTROL XDM Individual Profile] verwijzingsgids ](./classes/individual-profile.md) voor meer informatie over de structuur en het gebruik-geval van de gebieden die door de klasse worden verstrekt.
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -87,9 +87,9 @@ De Gebeurtenissen van de ervaring kunnen of expliciet of impliciet zijn. Explici
 
 Hoewel niet alle gebeurtenissen gemakkelijk over alle gegevensbronnen worden gecategoriseerd, is het uiterst waardevol om gelijkaardige gebeurtenissen in gelijkaardige types te harmoniseren waar mogelijk voor verwerking.
 
-![&#x200B; Infographic van de Reis van de Klant die met ervaringsgebeurtenissen in tijd wordt visualiseerd.](images/overview/experience-event-journey.png)
+![ Infographic van de Reis van de Klant die met ervaringsgebeurtenissen in tijd wordt visualiseerd.](images/overview/experience-event-journey.png)
 
-Zie de [[!UICONTROL XDM ExperienceEvent] verwijzingsgids &#x200B;](./classes/experienceevent.md) voor meer informatie over de structuur en het gebruik-geval van de gebieden die door de klasse worden verstrekt.
+Zie de [[!UICONTROL XDM ExperienceEvent] verwijzingsgids ](./classes/experienceevent.md) voor meer informatie over de structuur en het gebruik-geval van de gebieden die door de klasse worden verstrekt.
 
 ## XDM-schema&#39;s en Experience Platform-services {#schemas-and-platform-services}
 
@@ -103,7 +103,7 @@ Catalogusgegevens worden opgeslagen in het datumpigment, een zeer granulaire geg
 
 Om met het opnemen van gegevens in Experience Platform te beginnen, kunt u de Dienst van de Catalogus gebruiken om een dataset tot stand te brengen. De dataset verwijst naar een XDM-schema dat de structuur van de gegevens beschrijft die moeten worden opgenomen. Als een dataset zonder een schema wordt gecreeerd, leidt Experience Platform een &quot;waargenomen schema&quot;af door het type en de inhoud van opgenomen gegevensgebieden te inspecteren. Datasets worden vervolgens bijgehouden in de Catalogusservice en opgeslagen in het datumpomeer naast de schema&#39;s en waargenomen schema&#39;s waarop ze zijn gebaseerd.
 
-Zie het [&#x200B; overzicht van de Dienst van de Catalogus &#x200B;](../catalog/home.md) voor meer informatie. Zie het [&#x200B; overzicht van de Ingestie van Gegevens &#x200B;](../ingestion/home.md) voor meer informatie over de Ingestie van Gegevens van Adobe Experience Platform.
+Zie het [ overzicht van de Dienst van de Catalogus ](../catalog/home.md) voor meer informatie. Zie het [ overzicht van de Ingestie van Gegevens ](../ingestion/home.md) voor meer informatie over de Ingestie van Gegevens van Adobe Experience Platform.
 
 ### Data Mirror en relationele schema&#39;s {#relational-schemas}
 
@@ -111,15 +111,11 @@ Zie het [&#x200B; overzicht van de Dienst van de Catalogus &#x200B;](../catalog/
 >
 >Data Mirror en relationele schema&#39;s zijn beschikbaar aan Adobe Journey Optimizer **Geordende campagnes** vergunninghouders. Zij zijn ook beschikbaar als a **beperkte versie** voor de gebruikers van Customer Journey Analytics, afhankelijk van uw vergunning en eigenschapenactivering. Neem contact op met uw Adobe-vertegenwoordiger voor toegang.
 
->[!NOTE]
->
->Relationele schema&#39;s werden eerder bedoeld als model-gebaseerde schema&#39;s in vroegere versies van de documentatie van Adobe Experience Platform. De functionaliteit blijft hetzelfde, alleen de terminologie is voor de duidelijkheid veranderd.
-
-Data Mirror is een Adobe Experience Platform-mogelijkheid die geavanceerde databasesynchronisatie mogelijk maakt met behulp van relationele schema&#39;s. Voor een volledig overzicht van de mogelijkheden en gebruiksgevallen van Data Mirror, zie het [&#x200B; overzicht van Data Mirror &#x200B;](./data-mirror/overview.md).
+Data Mirror is een Adobe Experience Platform-mogelijkheid die geavanceerde databasesynchronisatie mogelijk maakt met behulp van relationele schema&#39;s. Voor een volledig overzicht van de mogelijkheden en gebruiksgevallen van Data Mirror, zie het [ overzicht van Data Mirror ](./data-mirror/overview.md).
 
 Data Mirror werkt via relationele schema&#39;s, die zijn ontworpen voor gestructureerde, relationele gegevenspatronen. Zij dwingen primaire sleutels af, steunen versie herkenningstekens, en bepalen schema-aan-schema verhoudingen gebruikend primaire en buitenlandse sleutels. In tegenstelling tot standaard XDM-schema&#39;s, vereisen ze geen klassen of veldgroepen en zijn ze geoptimaliseerd voor workflows voor het vastleggen van gewijzigde gegevens.
 
-Voor details op hoe te om schema-aan-schema verhoudingen te bepalen, zie de [&#x200B; documentatie van het beschrijvingseindpunt &#x200B;](./api/descriptors.md).
+Voor details op hoe te om schema-aan-schema verhoudingen te bepalen, zie de [ documentatie van het beschrijvingseindpunt ](./api/descriptors.md).
 
 Gebruik Data Mirror wanneer u het volgende moet doen:
 
@@ -136,8 +132,8 @@ Als u een relationeel schema wilt maken, selecteert u **[!UICONTROL Relational]*
 
 Zie voor gedetailleerde stappen en gebruiksaanwijzingen:
 
-* [&#x200B; overzicht van Data Mirror &#x200B;](./data-mirror/overview.md) - Mogelijkheden, gebruiksgevallen, en implementatie planning
-* [&#x200B; Relationele schema technische verwijzing &#x200B;](./schema/relational.md) - Technische specificaties en beperkingen
+* [ overzicht van Data Mirror ](./data-mirror/overview.md) - Mogelijkheden, gebruiksgevallen, en implementatie planning
+* [ Relationele schema technische verwijzing ](./schema/relational.md) - Technische specificaties en beperkingen
 * [UI-zelfstudie](./ui/resources/schemas.md#create-relational-schema)
 * [API-zelfstudie](./api/schemas.md#create-relational-schema)
 * [Documentatie beschrijver (id)](./api/descriptors.md#relationship-descriptor)
@@ -149,7 +145,7 @@ U kunt standaard SQL gebruiken om Experience Platform-gegevens te vragen ter ond
 
 Nadat een schema is samengesteld en een dataset is gecreeerd die verwijzingen dat schema, wordt het gegeven dan ingebed en opgeslagen in het gegevensmeer. U kunt de Dienst van de Vraag dan gebruiken om zich bij om het even welke datasets in het gegevensmeer aan te sluiten en de vraagresultaten als nieuwe dataset voor gebruik in rapportering, machine het leren, of opname in het Profiel van de Klant in real time te vangen.
 
-Verwijs naar het [&#x200B; overzicht van de Dienst van de Vraag &#x200B;](../query-service/home.md) voor meer informatie over de dienst.
+Verwijs naar het [ overzicht van de Dienst van de Vraag ](../query-service/home.md) voor meer informatie over de dienst.
 
 ### Real-Time Customer Profile {#real-time-customer-profile}
 
@@ -163,7 +159,7 @@ Aangezien [!UICONTROL XDM Individual Profile] en [!UICONTROL XDM ExperienceEvent
 
 Met [!UICONTROL XDM Individual Profile] -gegevens kunt u acties via elk kanaal of via Adobe-productintegratie informeren en inschakelen. Als deze gegevens worden gecombineerd met een rijke geschiedenis van gedrags- en interactiegegevens, kunnen ze worden gebruikt om het leren van machines te stimuleren. De real-time API van het Profiel van de Klant kan ook worden gebruikt om de functionaliteit van derdeoplossingen, CRMs, en merkgebonden oplossingen te verrijken.
 
-Zie het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../profile/home.md) voor meer informatie.
+Zie het [ overzicht van het Profiel van de Klant in real time ](../profile/home.md) voor meer informatie.
 
 ### Data Science-werkruimte {#data-science-workspace}
 
@@ -175,13 +171,13 @@ Adobe Experience Platform Data Science Workspace maakt gebruik van machinaal ler
 
 Met Data Science Workspace kunnen gegevenswetenschappers eenvoudig intelligente service-API&#39;s maken die aangedreven worden door machinaal leren. Deze services werken samen met andere Adobe-oplossingen, waaronder Adobe Target en Adobe Analytics Cloud, om u te helpen persoonlijke, doelgerichte digitale ervaringen te automatiseren.
 
-Voor meer informatie bij het gebruiken van de gegevens van Experience Platform aan machtsinzichten, zie het [&#x200B; overzicht van Workspace van de Wetenschap van Gegevens &#x200B;](../data-science-workspace/home.md).
+Voor meer informatie bij het gebruiken van de gegevens van Experience Platform aan machtsinzichten, zie het [ overzicht van Workspace van de Wetenschap van Gegevens ](../data-science-workspace/home.md).
 
 ## Volgende stappen en extra bronnen
 
 Nu je de rol van schema&#39;s in Experience Platform beter begrijpt, ben je klaar om je eigen schema&#39;s samen te stellen.
 
-Om ontwerpprincipes en beste praktijken voor het samenstellen van schema&#39;s te leren die met Experience Platform moeten worden gebruikt, begin door de [&#x200B; grondbeginselen van schemacompositie &#x200B;](schema/composition.md) te lezen. Voor geleidelijke instructies op hoe te om een schema tot stand te brengen, zie de leerprogramma&#39;s bij het creëren van een schema [&#x200B; gebruikend API &#x200B;](tutorials/create-schema-api.md) of [&#x200B; gebruikend het gebruikersinterface &#x200B;](tutorials/create-schema-ui.md).
+Om ontwerpprincipes en beste praktijken voor het samenstellen van schema&#39;s te leren die met Experience Platform moeten worden gebruikt, begin door de [ grondbeginselen van schemacompositie ](schema/composition.md) te lezen. Voor geleidelijke instructies op hoe te om een schema tot stand te brengen, zie de leerprogramma&#39;s bij het creëren van een schema [ gebruikend API ](tutorials/create-schema-api.md) of [ gebruikend het gebruikersinterface ](tutorials/create-schema-ui.md).
 
 Bekijk de volgende video om uw begrip van [!DNL XDM System] in Experience Platform te versterken:
 

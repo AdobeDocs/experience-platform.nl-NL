@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schemas API Endpoint
 description: Het /schemas eindpunt in de Registratie API van het Schema staat u toe om schema's XDM binnen uw ervaringstoepassing programmatically te beheren.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2122'
+source-wordcount: '2091'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Een lijst met schema&#39;s ophalen {#list}
 
@@ -25,7 +25,7 @@ U kunt alle schema&#39;s weergeven onder de container `global` of `tenant` door 
 
 >[!NOTE]
 >
->Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [&#x200B; vraagparameters &#x200B;](./appendix.md#query) in het bijlage document voor meer informatie.
+>Bij het vermelden van bronnen, beperkt het resultaat van de Registratie van het Schema aan 300 punten. Om middelen voorbij deze grens terug te keren, moet u het pagineren parameters gebruiken. Men adviseert ook dat u extra vraagparameters gebruikt om resultaten te filtreren en het aantal teruggekeerde middelen te verminderen. Zie de sectie over [ vraagparameters ](./appendix.md#query) in het bijlage document voor meer informatie.
 
 **API formaat**
 
@@ -36,7 +36,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | Parameter | Beschrijving |
 | --- | --- |
 | `{CONTAINER_ID}` | De container waarin de schema&#39;s zijn opgeslagen die u wilt ophalen: `global` voor door Adobe gemaakte schema&#39;s of `tenant` voor schema&#39;s die eigendom zijn van uw organisatie. |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [&#x200B; bijlage document &#x200B;](./appendix.md#query) voor een lijst van beschikbare parameters. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
 
@@ -198,11 +198,11 @@ Een succesvolle reactie keert de details van het schema terug. Welke velden word
 
 Het proces van de schemacompositie begint door een klasse toe te wijzen. De klasse definieert de belangrijkste gedragsaspecten van de gegevens (record- of tijdreeks) en de minimale velden die vereist zijn om de gegevens te beschrijven die worden ingevoerd.
 
-Voor instructies bij het creëren van een schema zonder klassen of gebiedsgroepen, die als relationeel schema worden bekend, zie [&#x200B; een relationele schema &#x200B;](#create-relational-schema) sectie creëren.
+Voor instructies bij het creëren van een schema zonder klassen of gebiedsgroepen, die als relationeel schema worden bekend, zie [ een relationele schema ](#create-relational-schema) sectie creëren.
 
 >[!NOTE]
 >
->De voorbeeldaanroep hieronder is slechts een basislijnvoorbeeld van hoe u een schema in de API maakt, met de minimale compositievereisten van een klasse en geen veldgroepen. Voor volledige stappen op hoe te om een schema in API tot stand te brengen, met inbegrip van hoe te om gebieden toe te wijzen die gebiedsgroepen en gegevenstypes gebruiken, zie de [&#x200B; zelfstudie van de schemaverwezenlijking &#x200B;](../tutorials/create-schema-api.md).
+>De voorbeeldaanroep hieronder is slechts een basislijnvoorbeeld van hoe u een schema in de API maakt, met de minimale compositievereisten van een klasse en geen veldgroepen. Voor volledige stappen op hoe te om een schema in API tot stand te brengen, met inbegrip van hoe te om gebieden toe te wijzen die gebiedsgroepen en gegevenstypes gebruiken, zie de [ zelfstudie van de schemaverwezenlijking ](../tutorials/create-schema-api.md).
 
 **API formaat**
 
@@ -277,9 +277,9 @@ Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) en een lading die d
 }
 ```
 
-Het uitvoeren van een verzoek van GET aan [&#x200B; lijst alle schema&#39;s &#x200B;](#list) in de huurderscontainer zou nu het nieuwe schema omvatten. U kunt a [&#x200B; raadpleging (GET) verzoek &#x200B;](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe schema direct te bekijken.
+Het uitvoeren van een verzoek van GET aan [ lijst alle schema&#39;s ](#list) in de huurderscontainer zou nu het nieuwe schema omvatten. U kunt a [ raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe schema direct te bekijken.
 
-Om extra gebieden aan een schema toe te voegen, kunt u de verrichting van a [&#x200B; PATCH &#x200B;](#patch) uitvoeren om gebiedsgroepen aan de 2&rbrace; en `allOf` series van het schema toe te voegen.`meta:extends`
+Om extra gebieden aan een schema toe te voegen, kunt u de verrichting van a [ PATCH ](#patch) uitvoeren om gebiedsgroepen aan de 2} en `allOf` series van het schema toe te voegen.`meta:extends`
 
 ## Een relationeel schema maken {#create-relational-schema}
 
@@ -287,22 +287,18 @@ Om extra gebieden aan een schema toe te voegen, kunt u de verrichting van a [&#x
 >
 >Data Mirror en relationele schema&#39;s zijn beschikbaar aan Adobe Journey Optimizer **Geordende campagnes** vergunninghouders. Zij zijn ook beschikbaar als a **beperkte versie** voor de gebruikers van Customer Journey Analytics, afhankelijk van uw vergunning en eigenschapenactivering. Neem contact op met uw Adobe-vertegenwoordiger voor toegang.
 
->[!NOTE]
->
->Relationele schema&#39;s werden eerder als model-gebaseerde schema&#39;s bedoeld in vroegere versies van de documentatie van Adobe Experience Platform API. De functionaliteit blijft hetzelfde - alleen de terminologie is voor de duidelijkheid gewijzigd.
-
 Maak een relationeel schema door een POST-aanvraag in te dienen bij het eindpunt van `/schemas` . De relationele schema&#39;s slaan gestructureerde, relationele-stijlgegevens **zonder** klassen of gebiedsgroepen op. Definieer velden rechtstreeks in het schema en identificeer het schema als relationeel met behulp van een logische gedragstag.
 
 >[!IMPORTANT]
 >
->Stel `meta:extends` in op `"https://ns.adobe.com/xdm/data/adhoc-v2"` om een relationeel schema te maken. Dit is a **logisch gedragsherkenningsteken** (niet een fysiek gedrag of een klasse). **niet** verwijzingsklassen of gebiedsgroepen in `allOf`, en **&#x200B;**&#x200B;omvat geen klassen of gebiedsgroepen in `meta:extends`.
+>Stel `meta:extends` in op `"https://ns.adobe.com/xdm/data/adhoc-v2"` om een relationeel schema te maken. Dit is a **logisch gedragsherkenningsteken** (niet een fysiek gedrag of een klasse). **niet** verwijzingsklassen of gebiedsgroepen in `allOf`, en **** omvat geen klassen of gebiedsgroepen in `meta:extends`.
 
-Maak eerst het schema met `POST /tenant/schemas` . Dan voeg de vereiste beschrijvers met [&#x200B; toe Beschrijvers API (`POST /tenant/descriptors`) &#x200B;](../api/descriptors.md):
+Maak eerst het schema met `POST /tenant/schemas` . Dan voeg de vereiste beschrijvers met [ toe Beschrijvers API (`POST /tenant/descriptors`) ](../api/descriptors.md):
 
-- [&#x200B; Primaire zeer belangrijke beschrijver &#x200B;](../api/descriptors.md#primary-key-descriptor): Een primair-zeer belangrijk gebied moet op **wortel-niveau** zijn en **duidelijk zoals vereist**.
-- [&#x200B; beschrijver van de Versie &#x200B;](../api/descriptors.md#version-descriptor): **Vereist** wanneer een primaire sleutel bestaat.
-- [&#x200B; beschrijver van de Verhouding &#x200B;](../api/descriptors.md#relationship-descriptor): Facultatief, bepaalt toetreedt; kardinaliteit niet afgedwongen bij opname.
-- [&#x200B; de beschrijver van de tijdstempel &#x200B;](../api/descriptors.md#timestamp-descriptor): Voor tijd-reeksen schema&#39;s, moet de primaire sleutel a **samengestelde** sleutel zijn die het timestamp gebied omvat.
+- [ Primaire zeer belangrijke beschrijver ](../api/descriptors.md#primary-key-descriptor): Een primair-zeer belangrijk gebied moet op **wortel-niveau** zijn en **duidelijk zoals vereist**.
+- [ beschrijver van de Versie ](../api/descriptors.md#version-descriptor): **Vereist** wanneer een primaire sleutel bestaat.
+- [ beschrijver van de Verhouding ](../api/descriptors.md#relationship-descriptor): Facultatief, bepaalt toetreedt; kardinaliteit niet afgedwongen bij opname.
+- [ de beschrijver van de tijdstempel ](../api/descriptors.md#timestamp-descriptor): Voor tijd-reeksen schema&#39;s, moet de primaire sleutel a **samengestelde** sleutel zijn die het timestamp gebied omvat.
 
 >[!NOTE]
 >
@@ -310,7 +306,7 @@ Maak eerst het schema met `POST /tenant/schemas` . Dan voeg de vereiste beschrij
 
 >[!CAUTION]
 >
->De relationele schema&#39;s zijn **niet compatibel met unieschema&#39;s**. Pas de tag `union` niet toe op `meta:immutableTags` wanneer u werkt met relationele schema&#39;s. Deze configuratie is geblokkeerd in de gebruikersinterface, maar wordt momenteel niet geblokkeerd door de API. Zie de [&#x200B; gids van het vakbondseindpunt &#x200B;](./unions.md) voor meer informatie over het gedrag van het unieschema.
+>De relationele schema&#39;s zijn **niet compatibel met unieschema&#39;s**. Pas de tag `union` niet toe op `meta:immutableTags` wanneer u werkt met relationele schema&#39;s. Deze configuratie is geblokkeerd in de gebruikersinterface, maar wordt momenteel niet geblokkeerd door de API. Zie de [ gids van het vakbondseindpunt ](./unions.md) voor meer informatie over het gedrag van het unieschema.
 
 **API formaat**
 
@@ -459,7 +455,7 @@ Een succesvol verzoek keert **HTTP 201 (Gemaakt)** en het gecreeerde schema teru
 | `meta:behaviorType` | String | Gedragstype (`record` of `time-series` , indien ingeschakeld). |
 | `meta:containerId` | String | Container waarin het schema is opgeslagen (bijvoorbeeld `tenant`). |
 
-Om gebieden aan een relationeel schema toe te voegen nadat het is gecreeerd, doe het verzoek van a [&#x200B; PATCH &#x200B;](#patch). Relationele schema&#39;s nemen of automatisch evolueren niet over. Structurele wijzigingen zoals het wijzigen van de naam of het verwijderen van velden zijn alleen toegestaan als er geen gegevens in de gegevensset zijn opgenomen. Zodra het gegeven bestaat, slechts **additieve veranderingen** (zoals het toevoegen van nieuwe gebieden) worden gesteund.
+Om gebieden aan een relationeel schema toe te voegen nadat het is gecreeerd, doe het verzoek van a [ PATCH ](#patch). Relationele schema&#39;s nemen of automatisch evolueren niet over. Structurele wijzigingen zoals het wijzigen van de naam of het verwijderen van velden zijn alleen toegestaan als er geen gegevens in de gegevensset zijn opgenomen. Zodra het gegeven bestaat, slechts **additieve veranderingen** (zoals het toevoegen van nieuwe gebieden) worden gesteund.
 
 U kunt nieuwe velden op hoofdniveau toevoegen (binnen de basisdefinitie of basiscode `properties` ), maar u kunt het type van bestaande velden niet verwijderen, hernoemen of wijzigen.
 
@@ -469,11 +465,11 @@ U kunt nieuwe velden op hoofdniveau toevoegen (binnen de basisdefinitie of basis
 
 ## Een schema bijwerken {#put}
 
-U kunt een volledig schema door een verrichting van PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een schema door een verzoek van PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [&#x200B; creërend een nieuw schema &#x200B;](#create) in een POST- verzoek.
+U kunt een volledig schema door een verrichting van PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een schema door een verzoek van PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuw schema ](#create) in een POST- verzoek.
 
 >[!NOTE]
 >
->Als u slechts een deel van een schema wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [&#x200B; het bijwerken van een gedeelte van een schema &#x200B;](#patch).
+>Als u slechts een deel van een schema wilt bijwerken in plaats van het volledig te vervangen, zie de sectie op [ het bijwerken van een gedeelte van een schema ](#patch).
 
 **API formaat**
 
@@ -550,11 +546,11 @@ Een succesvolle reactie keert de details van het bijgewerkte schema terug.
 
 ## Een gedeelte van een schema bijwerken {#patch}
 
-U kunt een gedeelte van een schema bijwerken door een PATCH-verzoek te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [&#x200B; API fundamentals gids &#x200B;](../../landing/api-fundamentals.md#json-patch).
+U kunt een gedeelte van een schema bijwerken door een PATCH-verzoek te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [&#x200B; het vervangen van een schema gebruikend een verrichting van PUT &#x200B;](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een schema gebruikend een verrichting van PUT ](#put).
 
 Een van de meest voorkomende PATCH-bewerkingen bestaat uit het toevoegen van eerder gedefinieerde veldgroepen aan een schema, zoals in het onderstaande voorbeeld wordt getoond.
 
@@ -643,7 +639,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De veldgr
 
 ## Een schema inschakelen voor gebruik in realtime-klantprofiel {#union}
 
-Opdat een schema om aan [&#x200B; in real time Profiel van de Klant &#x200B;](../../profile/home.md) deel te nemen, moet u a `union` markering aan de 3&rbrace; serie van het schema &lbrace;toevoegen. `meta:immutableTags` U kunt dit bereiken door een PATCH-aanvraag voor het desbetreffende schema in te dienen.
+Opdat een schema om aan [ in real time Profiel van de Klant ](../../profile/home.md) deel te nemen, moet u a `union` markering aan de 3} serie van het schema {toevoegen. `meta:immutableTags` U kunt dit bereiken door een PATCH-aanvraag voor het desbetreffende schema in te dienen.
 
 >[!IMPORTANT]
 >
@@ -726,7 +722,7 @@ Een succesvol antwoord retourneert de details van het bijgewerkte schema, waarbi
 }
 ```
 
-U kunt nu de samenvoeging voor de klasse van dit schema bekijken om te bevestigen dat de gebieden van het schema worden vertegenwoordigd. Zie de [&#x200B; gids van het vakbondseindpunt &#x200B;](./unions.md) voor meer informatie.
+U kunt nu de samenvoeging voor de klasse van dit schema bekijken om te bevestigen dat de gebieden van het schema worden vertegenwoordigd. Zie de [ gids van het vakbondseindpunt ](./unions.md) voor meer informatie.
 
 ## Schema verwijderen {#delete}
 
