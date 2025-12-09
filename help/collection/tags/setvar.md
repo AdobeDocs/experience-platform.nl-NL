@@ -1,9 +1,9 @@
 ---
 title: setVar()
 description: Stelt een waarde in die u later kunt ophalen met getVar().
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+source-git-commit: 54c32803136bf37a13bb9ca14b1d1c7b09a2041c
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ _satellite.getVar('title'); // Blinding Light
 _satellite.getVar('category'); // Game
 _satellite.getVar('genre'); // Tower defense
 ```
+
+>[!NOTE]
+>
+>Vermijd het gebruik van punten (`.`) bij het instellen van variabelenamen met deze methode. De methode `getVar()` herkent geen variabelen die punten bevatten die zijn ingesteld met `setVar()` . Nochtans, `getVar()` _erkent_ gegevenselementen die periodes gebruiken wanneer zij in de markeringen UI worden bepaald.
