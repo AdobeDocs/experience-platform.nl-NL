@@ -40,10 +40,10 @@ Plan voor schrapping en gegevenshygiënevereisten wanneer het uitvoeren van rela
 
 Voordat u aan de slag gaat, moet u de volgende onderdelen van Experience Platform begrijpen en controleren of uw omgeving voldoet aan de technische en structurele vereisten:
 
-* [ creeer schema&#39;s in Experience Platform UI ](../ui/resources/schemas.md) of [ API ](../api/schemas.md)
+* [&#x200B; creeer schema&#39;s in Experience Platform UI &#x200B;](../ui/resources/schemas.md) of [&#x200B; API &#x200B;](../api/schemas.md)
 * [Cloubron-verbindingen configureren](../../sources/home.md#cloud-storage)
-* [ pas veranderingsgegevens toe vangen concepten ](../../sources/tutorials/api/change-data-capture.md) (upserts, schrapt)
-* Distinguish tussen [ standaard ](../schema/composition.md) en [ relationele schema&#39;s ](../schema/relational.md)
+* [&#x200B; pas veranderingsgegevens toe vangen concepten &#x200B;](../../sources/tutorials/api/change-data-capture.md) (upserts, schrapt)
+* Distinguish tussen [&#x200B; standaard &#x200B;](../schema/composition.md) en [&#x200B; relationele schema&#39;s &#x200B;](../schema/relational.md)
 * [Structurele relaties definiëren met descriptors](../api/descriptors.md)
 
 ### Implementatievereisten
@@ -62,17 +62,17 @@ In tegenstelling tot de standaardbenaderingen van de opname, behoudt Data Mirror
 
 ### De schemastructuur definiëren
 
-Creeer [ relationele schema&#39;s ](../schema/relational.md) met vereiste beschrijvers (meta-gegevens die schemagedrag en beperkingen bepalen). Kies een methode die in de workflow van uw team past, via de gebruikersinterface of rechtstreeks via de API.
+Creeer [&#x200B; relationele schema&#39;s &#x200B;](../schema/relational.md) met vereiste beschrijvers (meta-gegevens die schemagedrag en beperkingen bepalen). Kies een methode die in de workflow van uw team past, via de gebruikersinterface of rechtstreeks via de API.
 
-* **benadering UI**: [ creeer relationele schema&#39;s in de Redacteur van het Schema ](../ui/resources/schemas.md#create-relational-schema)
-* **API benadering**: [ creeer schema&#39;s via de Registratie API van het Schema ](../api/schemas.md#create-relational-schema)
+* **benadering UI**: [&#x200B; creeer relationele schema&#39;s in de Redacteur van het Schema &#x200B;](../ui/resources/schemas.md#create-relational-schema)
+* **API benadering**: [&#x200B; creeer schema&#39;s via de Registratie API van het Schema &#x200B;](../api/schemas.md#create-relational-schema)
 
 ### Relaties toewijzen en gegevensbeheer definiëren
 
 Bepaal verbindingen tussen datasets gebruikend relatiebeschrijvers. Relaties beheren en de gegevenskwaliteit in verschillende gegevenssets behouden. Deze taken zorgen voor consistente verbindingen en ondersteunen de naleving van de gegevenshygiënevoorschriften.
 
-* **relaties van het Schema**: [ bepalen verband tussen datasets gebruikend beschrijvers ](../api/descriptors.md)
-* **hygiëne van het Verslag**: [ beheert precisierecord schrapt voor datasets die op relationele schema&#39;s ](../../hygiene/ui/record-delete.md#relational-record-delete) worden gebaseerd
+* **relaties van het Schema**: [&#x200B; bepalen verband tussen datasets gebruikend beschrijvers &#x200B;](../api/descriptors.md)
+* **hygiëne van het Verslag**: [&#x200B; beheert precisierecord schrapt voor datasets die op relationele schema&#39;s &#x200B;](../../hygiene/ui/record-delete.md#relational-record-delete) worden gebaseerd
 
 ### De bronverbinding configureren
 
@@ -86,7 +86,7 @@ Selecteer een innamemethode op basis van uw bronsysteem en gebruikscase. Elke op
 
 Verbindingen voor het vastleggen van wijzigingsgegevens instellen met ondersteunde wolkengegevenspakhuizen. Breng veranderingen op rijniveau met behoud van uniciteit voor en pas updates in de correcte orde toe.
 
-* **Gegevens van de Verandering vangen**: [ laat veranderingsgegevens toe vangen in bronverbindingen ](../../sources/tutorials/api/change-data-capture.md)
+* **Gegevens van de Verandering vangen**: [&#x200B; laat veranderingsgegevens toe vangen in bronverbindingen &#x200B;](../../sources/tutorials/api/change-data-capture.md)
 
 ## Vaak voorkomende gebruiksscenario&#39;s {#use-cases}
 
@@ -94,7 +94,7 @@ Bekijk hieronder de veelvoorkomende gebruiksgevallen waarin Data Mirror nauwkeur
 
 ### Relationele gegevensmodellering
 
-Het gebruik [ relationele schema&#39;s ](../schema/relational.md) in Data Mirror om entiteiten, procestussenvoegsels, updates, en schrapt op het rijniveau te vertegenwoordigen, en de primaire en buitenlandse zeer belangrijke verhoudingen te handhaven die in uw gegevensbronnen bestaan. Deze benadering brengt de beginselen van relationele gegevensmodellering naar Experience Platform en zorgt voor structurele consistentie tussen gegevensreeksen.
+Het gebruik [&#x200B; relationele schema&#39;s &#x200B;](../schema/relational.md) in Data Mirror om entiteiten, procestussenvoegsels, updates, en schrapt op het rijniveau te vertegenwoordigen, en de primaire en buitenlandse zeer belangrijke verhoudingen te handhaven die in uw gegevensbronnen bestaan. Deze benadering brengt de beginselen van relationele gegevensmodellering naar Experience Platform en zorgt voor structurele consistentie tussen gegevensreeksen.
 
 ### Synchronisatie van aardehuis naar meer
 
@@ -122,7 +122,7 @@ Herzie deze zeer belangrijke overwegingen om uw implementatie te verzekeren rich
 
 ### Gegevensverwijdering en hygiënevoorschriften
 
-Alle toepassingen die relationele schema&#39;s en Data Mirror gebruiken moeten implicaties van de gegevensschrapping begrijpen. Relationele schema&#39;s laten nauwkeurige verslag-vlakke schrappingen toe die verwante gegevens over verbonden datasets kunnen beïnvloeden. Deze verwijderingsmogelijkheden zijn van invloed op gegevensintegriteit, compatibiliteit en gedrag van downstreamtoepassingen, ongeacht uw specifieke gebruiksscenario. Herzie [ vereisten van de gegevenshygiëne voor datasets die op relationele schema&#39;s ](../../hygiene/ui/record-delete.md#relational-record-delete) worden gebaseerd en plan voor schrappingsscenario&#39;s vóór implementatie.
+Alle toepassingen die relationele schema&#39;s en Data Mirror gebruiken moeten implicaties van de gegevensschrapping begrijpen. Relationele schema&#39;s laten nauwkeurige verslag-vlakke schrappingen toe die verwante gegevens over verbonden datasets kunnen beïnvloeden. Deze verwijderingsmogelijkheden zijn van invloed op gegevensintegriteit, compatibiliteit en gedrag van downstreamtoepassingen, ongeacht uw specifieke gebruiksscenario. Herzie [&#x200B; vereisten van de gegevenshygiëne voor datasets die op relationele schema&#39;s &#x200B;](../../hygiene/ui/record-delete.md#relational-record-delete) worden gebaseerd en plan voor schrappingsscenario&#39;s vóór implementatie.
 
 ### Selectie van schemagedrag
 
@@ -151,4 +151,4 @@ Na het bekijken van dit overzicht, zou u moeten kunnen bepalen als Data Mirror u
 3. **de ontwerpers van het Schema** zouden uw schemastructuur moeten plannen om vereiste beschrijvers, gebiedsverhoudingen, en de behoeften van het gegevensbeheer te identificeren.
 4. **de teams van de Implementatie** zouden een innamemethode moeten kiezen die op uw bronsystemen, vereisten in real time, en operationele werkschema&#39;s wordt gebaseerd.
 
-Voor implementatiedetails, zie de [ relationele schemadocumentatie ](../schema/relational.md).
+Voor implementatiedetails, zie de [&#x200B; relationele schemadocumentatie &#x200B;](../schema/relational.md).
