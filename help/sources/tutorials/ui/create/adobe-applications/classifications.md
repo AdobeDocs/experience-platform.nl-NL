@@ -2,9 +2,9 @@
 description: Leer hoe u een Adobe Analytics-bronaansluiting voor de gebruikersinterface maakt om classificatiegegevens over te brengen naar Adobe Experience Platform.
 title: Een Adobe Analytics Source Connection maken voor classificatiegegevens in de gebruikersinterface
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lees deze zelfstudie voor stappen over hoe u uw Adobe Analytics-classificatiegeg
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform biedt virtuele sandboxen die één Experience Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
@@ -37,13 +37,13 @@ Onder de *de toepassingen van Adobe* categorie, selecteer **[!UICONTROL Adobe An
 >
 >Bronnen in de broncatalogus geven de optie **[!UICONTROL Set up]** weer als er geen geverifieerde account is. Als een account eenmaal is geverifieerd, verandert de optie in **[!UICONTROL Add data]** .
 
-![&#x200B; de broncatalogus in Experience Platform UI met de geselecteerde bron van Adobe Analytics.](../../../../images/tutorials/create/classifications/catalog.png)
+![ de broncatalogus in Experience Platform UI met de geselecteerde bron van Adobe Analytics.](../../../../images/tutorials/create/classifications/catalog.png)
 
-Selecteer vervolgens [!UICONTROL Classifications] en selecteer de classificatiegegevens die u aan Experience Platform wilt toevoegen.
+Selecteer vervolgens [!UICONTROL Classifications] en selecteer de gegevenssets voor classificaties die u aan Experience Platform wilt toevoegen. U kunt ook zoeken gebruiken om te filteren en te selecteren voor specifieke classificaties.
 
 U kunt tot 30 verschillende classificatiedatasets selecteren om in Experience Platform te brengen. Alle gegevenssets die u selecteert, worden weergegeven in de rechterrail. Als u klaar bent, selecteert u [!UICONTROL Next] om door te gaan.
 
-![&#x200B; de classificatiepagina met verscheidene geselecteerde classificatiedatasets.](../../../../images/tutorials/create/classifications/select.png)
+![ de classificatiepagina met verscheidene geselecteerde classificatiedatasets.](../../../../images/tutorials/create/classifications/select.png)
 
 ## Uw classificaties bekijken
 
@@ -55,7 +55,7 @@ De stap **[!UICONTROL Review]** verschijnt, die u toestaat om uw geselecteerde c
 
 Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Finish]** en laat u enige tijd over tot de gegevensstroom.
 
-![&#x200B; de overzichtspagina voor de classificatiegegevens van Adobe Analytics.](../../../../images/tutorials/create/classifications/review.png)
+![ de overzichtspagina voor de classificatiegegevens van Adobe Analytics.](../../../../images/tutorials/create/classifications/review.png)
 
 ## Volgende stappen
 
@@ -63,4 +63,4 @@ Door deze zelfstudie te volgen, hebt u een de classificatieconnector van Analyti
 
 * [Overzicht van Adobe Analytics-bronconnector](../../../../connectors/adobe-applications/analytics.md)
 * [Creeer een Analytics bronverbinding voor rapportgegevens in UI](./analytics.md)
-* [&#x200B; Ongeveer classificaties &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=nl-NL)
+* [ Ongeveer classificaties ](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
