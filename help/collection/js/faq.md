@@ -78,7 +78,7 @@ Nee. Elke Adobe Digital Experience-klant kan de Adobe Experience Platform Web SD
 * De klanten die ** hebben geen toegang tot Experience Platform of in real time CDP en wensen te gebruiken [!DNL Web SDK] zullen de juiste toestemmingen moeten vormen om schema&#39;s en gegevensstromen in de Inzameling UI van Gegevens of UI te creëren Experience Platform.
 * Klanten die toegang hebben tot Experience Platform of Real-time CDP en [!DNL Web SDK] willen gebruiken, moeten de juiste machtigingen configureren om schema&#39;s, gegevenssets, naamruimten en gegevensstromen te maken in de gebruikersinterface van de gegevensverzameling of de gebruikersinterface van Experience Platform.
 
-Voor meer informatie bij het vormen van deze toestemmingen zie onze documentatie over [&#x200B; het beheer van de toestemmingen van de gegevensinzameling &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
+Voor meer informatie bij het vormen van deze toestemmingen zie onze documentatie over [&#x200B; het beheer van de toestemmingen van de gegevensinzameling &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=nl-NL).
 
 ## Wie moet de Web SDK gebruiken?
 
@@ -144,11 +144,11 @@ Als u onze SDKs gebruikt en XDM naar Edge Network verzendt, staat deze nieuwe ei
 
 ## Wat is een CNAME of een Domein van de Eerste Partij en waarom maakt het van belang?
 
-Zie het [&#x200B; Adobe-Beheerde certificaatprogramma &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) in de gids van de Diensten van de Kern.
+Zie het [&#x200B; Adobe-Beheerde certificaatprogramma &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/adobe-managed-cert) in de gids van de Diensten van de Kern.
 
 ## Gebruikt de Adobe Experience Platform Web SDK cookies? Zo ja, welke cookies gebruikt zij?
 
-Zie {de koekjes van SDK van het Web van Adobe Experience Platform 1} in de gids van de Diensten van de Kern.[&#128279;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)
+Zie {de koekjes van SDK van het Web van Adobe Experience Platform 1} in de gids van de Diensten van de Kern.[&#128279;](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/cookies/web-sdk)
 
 ## Welke browsers worden door de Adobe Experience Platform Web SDK ondersteund?
 

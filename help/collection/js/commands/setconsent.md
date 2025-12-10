@@ -22,7 +22,7 @@ Web SDK ondersteunt de volgende standaarden:
    1. Het schema van de Gebeurtenis van de Ervaring bevat [&#x200B; IAB TCF 2.0 de gebiedsgroep van de Toestemming &#x200B;](/help/xdm/field-groups/event/iab.md).
    1. U omvat IAB toestemmingsinformatie in het gebeurtenis [&#x200B; voorwerp XDM &#x200B;](sendevent/xdm.md). De SDK van het Web omvat automatisch niet de toestemmingsinformatie wanneer het verzenden van gebeurtenisgegevens.
 
-Wanneer het gebruiken van dit bevel, schrijft het Web SDK de voorkeur van de gebruiker aan het [`kndctr_<orgId>_consent` &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) koekje. Dit cookie wordt ingesteld ongeacht de voorkeuren van de bezoeker voor toestemming, omdat de voorkeuren van de bezoeker voor toestemming worden opgeslagen. De volgende keer dat de gebruiker uw website in de browser laadt, haalt de SDK deze voorkeuren op om te bepalen of gebeurtenissen naar Adobe kunnen worden verzonden.
+Wanneer het gebruiken van dit bevel, schrijft het Web SDK de voorkeur van de gebruiker aan het [`kndctr_<orgId>_consent` &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/cookies/web-sdk) koekje. Dit cookie wordt ingesteld ongeacht de voorkeuren van de bezoeker voor toestemming, omdat de voorkeuren van de bezoeker voor toestemming worden opgeslagen. De volgende keer dat de gebruiker uw website in de browser laadt, haalt de SDK deze voorkeuren op om te bepalen of gebeurtenissen naar Adobe kunnen worden verzonden.
 
 Adobe raadt u aan om voorkeuren voor het bevestigingsvenster los van de toestemming van Web SDK op te slaan. De Web SDK biedt geen manier om toestemming terug te winnen. Om ervoor te zorgen dat de gebruikersvoorkeuren synchroon blijven met de SDK, kunt u de opdracht `setConsent` aanroepen bij elke pagina die wordt geladen. Web SDK maakt slechts een servervraag wanneer de toestemming verandert.
 
@@ -51,7 +51,7 @@ Wanneer deze instellingen samen worden gebruikt, kunnen ze leiden tot verschille
 | `out` | `out` | Nee | Ja |
 | `out` | Niet ingesteld | Nee | Nee |
 
-Zie {de koekjes van SDK van het Web van Adobe Experience Platform 1} in de gids van de Diensten van de Kern voor een volledige lijst van koekjes die kunnen worden geplaatst.[&#128279;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)
+Zie {de koekjes van SDK van het Web van Adobe Experience Platform 1} in de gids van de Diensten van de Kern voor een volledige lijst van koekjes die kunnen worden geplaatst.[&#128279;](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/cookies/web-sdk)
 
 ## De opdracht `setConsent` gebruiken
 
