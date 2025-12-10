@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Identiteitsgegevens in de Web SDK
 
-Het Web SDK van Adobe Experience Platform gebruikt [ Adobe Experience Cloud IDs (ECIDs) ](/help/identity-service/features/ecid.md) om bezoekersgedrag te volgen. Met [!DNL ECIDs] kunt u ervoor zorgen dat elk apparaat een unieke id heeft die tijdens meerdere sessies kan blijven bestaan, zodat alle resultaten die tijdens en tussen websessies optreden, worden gekoppeld aan een specifiek apparaat.
+Het Web SDK van Adobe Experience Platform gebruikt [&#x200B; Adobe Experience Cloud IDs (ECIDs) &#x200B;](/help/identity-service/features/ecid.md) om bezoekersgedrag te volgen. Met [!DNL ECIDs] kunt u ervoor zorgen dat elk apparaat een unieke id heeft die tijdens meerdere sessies kan blijven bestaan, zodat alle resultaten die tijdens en tussen websessies optreden, worden gekoppeld aan een specifiek apparaat.
 
 Dit document biedt een overzicht van het beheren van [!DNL ECIDs] en [!DNL CORE IDs] met de Web SDK.
 
@@ -19,17 +19,17 @@ Dit document biedt een overzicht van het beheren van [!DNL ECIDs] en [!DNL CORE 
 
 Het Web SDK wijst en volgt [!DNL ECIDs] toe door koekjes te gebruiken, met veelvoudige beschikbare methodes om te vormen hoe deze koekjes worden geproduceerd.
 
-Wanneer een nieuwe gebruiker op uw website aankomt, probeert de [ Dienst van de Identiteit van Adobe Experience Cloud ](/help/identity-service/home.md) om een koekje van de apparatenidentificatie voor die gebruiker te plaatsen.
+Wanneer een nieuwe gebruiker op uw website aankomt, probeert de [&#x200B; Dienst van de Identiteit van Adobe Experience Cloud &#x200B;](/help/identity-service/home.md) om een koekje van de apparatenidentificatie voor die gebruiker te plaatsen.
 
 * Voor nieuwe bezoekers wordt een [!DNL ECID] gegenereerd en geretourneerd in de eerste reactie van de Experience Platform Edge Network.
-* Voor het terugkeren van bezoekers, wordt [!DNL ECID] teruggewonnen van het [`kndctr_<orgId>_identity` ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) koekje en toegevoegd aan de verzoeklading door Edge Network.
+* Voor het terugkeren van bezoekers, wordt [!DNL ECID] teruggewonnen van het [`kndctr_<orgId>_identity` &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) koekje en toegevoegd aan de verzoeklading door Edge Network.
 
 Nadat de cookie met [!DNL ECID] is ingesteld, bevat elke volgende aanvraag die door de Web SDK wordt gegenereerd, een gecodeerde [!DNL ECID] in het `kndctr_<orgId>_identity` -cookie.
 
 Wanneer u cookies gebruikt voor apparaatidentificatie, hebt u twee manieren om te werken met de Edge Network:
 
-1. Creeer een NAAM op uw eigen domein dat aan `adobedc.net` richt. Deze methode wordt bedoeld als [ de inzameling van eerste partijgegevens ](#first-party).
-1. Gegevens rechtstreeks verzenden naar het Edge Network-domein `adobedc.net` . Deze methode wordt bedoeld als [ de inzameling van derdegegevens ](#third-party).
+1. Creeer een NAAM op uw eigen domein dat aan `adobedc.net` richt. Deze methode wordt bedoeld als [&#x200B; de inzameling van eerste partijgegevens &#x200B;](#first-party).
+1. Gegevens rechtstreeks verzenden naar het Edge Network-domein `adobedc.net` . Deze methode wordt bedoeld als [&#x200B; de inzameling van derdegegevens &#x200B;](#third-party).
 
 Zoals in de onderstaande secties wordt uitgelegd, heeft de methode voor gegevensverzameling die u kiest, een directe invloed op de levensduur van cookies in verschillende browsers.
 
@@ -37,7 +37,7 @@ Zoals in de onderstaande secties wordt uitgelegd, heeft de methode voor gegevens
 
 Als u Google Chrome gebruikt en cookies van derden hebt ingeschakeld en er geen `kndctr_<orgId>_identity` -cookie is ingesteld, doorloopt het eerste Edge Network-verzoek een `demdex.net` -domein waarin een demdex-cookie wordt ingesteld. Deze cookie bevat een [!DNL CORE ID] . Dit is een unieke gebruiker-id die afwijkt van de [!DNL ECID] .
 
-Afhankelijk van uw implementatie, zou u [ tot  [!DNL CORE ID]](#retrieve-coreid) kunnen willen toegang hebben.
+Afhankelijk van uw implementatie, zou u [&#x200B; tot  [!DNL CORE ID]](#retrieve-coreid) kunnen willen toegang hebben.
 
 ### Gegevensverzameling van eerste partijen {#first-party}
 
@@ -55,7 +55,7 @@ Ook, wanneer het gebruiken van derdegegevensinzameling, beperken sommige en blok
 
 ### Effecten van de levensduur van cookies op Adobe Experience Cloud-toepassingen {#lifespans}
 
-Ongeacht of u eerste-partij of derdegegevensinzameling kiest, kan de tijdsduur een koekje een directe invloed op bezoekersaantallen in [ Adobe Analytics ](https://experienceleague.adobe.com/en/docs/analytics) en [ Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/customer-journey-analytics) aanhouden. Ook, kunnen de eindgebruikers inconsistente verpersoonlijkingservaringen ervaren wanneer [ Adobe Target ](https://experienceleague.adobe.com/en/docs/target) of [ Offer Decisioning ](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) op de plaats wordt gebruikt.
+Ongeacht of u eerste-partij of derdegegevensinzameling kiest, kan de tijdsduur een koekje een directe invloed op bezoekersaantallen in [&#x200B; Adobe Analytics &#x200B;](https://experienceleague.adobe.com/en/docs/analytics) en [&#x200B; Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/en/docs/customer-journey-analytics) aanhouden. Ook, kunnen de eindgebruikers inconsistente verpersoonlijkingservaringen ervaren wanneer [&#x200B; Adobe Target &#x200B;](https://experienceleague.adobe.com/en/docs/target) of [&#x200B; Offer Decisioning &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) op de plaats wordt gebruikt.
 
 Neem bijvoorbeeld een situatie waarin u een personaliseringservaring hebt gemaakt waarmee elk item op de homepage wordt bevorderd als een gebruiker dit de afgelopen zeven dagen drie keer heeft bekeken.
 
@@ -63,18 +63,18 @@ Als een eindgebruiker drie keer per week bezoekt en vervolgens zeven dagen niet 
 
 ### FPID&#39;s (First-party device ID&#39;s) {#fpid}
 
-Als u rekening wilt houden met de effecten van de levensduur van cookies zoals hierboven beschreven, kunt u uw eigen apparaat-id&#39;s instellen en beheren. Zie de gids op [ eerste-partijapparaat IDs ](./first-party-device-ids.md) voor meer informatie.
+Als u rekening wilt houden met de effecten van de levensduur van cookies zoals hierboven beschreven, kunt u uw eigen apparaat-id&#39;s instellen en beheren. Zie de gids op [&#x200B; eerste-partijapparaat IDs &#x200B;](./first-party-device-ids.md) voor meer informatie.
 
 ## De ECID en het gebied voor de huidige gebruiker ophalen {#retrieve-ecid}
 
 Afhankelijk van uw gebruiksgeval zijn er twee manieren waarop u toegang kunt krijgen tot [!DNL ECID] :
 
-* [ wint  [!DNL ECID]  door Gegevens voor de Inzameling van Gegevens ](#retrieve-ecid-data-prep) terug: Dit is de geadviseerde methode die u zou moeten gebruiken.
-* [ wint  [!DNL ECID]  door het `getIdentity()` bevel ](#retrieve-ecid-getidentity) terug: Gebruik slechts deze methode wanneer u de [!DNL ECID] informatie op de cliënt-kant vereist.
+* [&#x200B; wint  [!DNL ECID]  door Gegevens voor de Inzameling van Gegevens &#x200B;](#retrieve-ecid-data-prep) terug: Dit is de geadviseerde methode die u zou moeten gebruiken.
+* [&#x200B; wint  [!DNL ECID]  door het `getIdentity()` bevel &#x200B;](#retrieve-ecid-getidentity) terug: Gebruik slechts deze methode wanneer u de [!DNL ECID] informatie op de cliënt-kant vereist.
 
 ### De [!DNL ECID] ophalen via Data Prep voor gegevensverzameling {#retrieve-ecid-data-prep}
 
-Het gebruik [ Prep van Gegevens voor de Inzameling van Gegevens ](/help/datastreams/data-prep.md) om [!DNL ECID] aan een [!DNL XDM] gebied in kaart te brengen. Dit is de aanbevolen manier om toegang te krijgen tot [!DNL ECID] .
+Het gebruik [&#x200B; Prep van Gegevens voor de Inzameling van Gegevens &#x200B;](/help/datastreams/data-prep.md) om [!DNL ECID] aan een [!DNL XDM] gebied in kaart te brengen. Dit is de aanbevolen manier om toegang te krijgen tot [!DNL ECID] .
 
 U doet dit door het bronveld in te stellen op het volgende pad:
 
@@ -84,14 +84,14 @@ xdm.identityMap.ECID[0].id
 
 Stel het doelveld vervolgens in op een XDM-pad waar het veld van het type `string` is.
 
-![ DataStream kaartschermafbeelding ](/help/tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
+![&#x200B; DataStream kaartschermafbeelding &#x200B;](/help/tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
 
 
 ### De [!DNL ECID] ophalen via de opdracht `getIdentity()` {#retrieve-ecid-getidentity}
 
 >[!IMPORTANT]
 >
->U moet de ECID alleen via de opdracht `getIdentity()` ophalen als u de instructie [!DNL ECID] aan de clientzijde nodig hebt. Als u slechts ECID aan een XDM gebied wilt in kaart brengen, gebruik [ Prep van Gegevens voor de Inzameling van Gegevens ](#retrieve-ecid-data-prep) in plaats daarvan.
+>U moet de ECID alleen via de opdracht `getIdentity()` ophalen als u de instructie [!DNL ECID] aan de clientzijde nodig hebt. Als u slechts ECID aan een XDM gebied wilt in kaart brengen, gebruik [&#x200B; Prep van Gegevens voor de Inzameling van Gegevens &#x200B;](#retrieve-ecid-data-prep) in plaats daarvan.
 
 Gebruik de opdracht `getIdentity` om de unieke ECID voor de huidige bezoeker op te halen. Voor nieuwe bezoekers die nog geen [!DNL ECID] hebben, genereert deze opdracht een nieuwe [!DNL ECID] . `getIdentity` retourneert ook de regio-id voor de bezoeker.
 
@@ -124,7 +124,7 @@ alloy("getIdentity",{
 
 ## `identityMap` gebruiken {#using-identitymap}
 
-Gebruikend een XDM [`identityMap` gebied ](/help/xdm/schema/composition.md#identityMap), kunt u een apparaat/een gebruiker identificeren gebruikend veelvoudige identiteiten, hun authentificatiestatus plaatsen, en beslissen welke herkenningsteken als primaire wordt beschouwd. Als er geen id is ingesteld als `primary` , wordt standaard de waarde `ECID` gebruikt.
+Gebruikend een XDM [`identityMap` gebied &#x200B;](/help/xdm/schema/composition.md#identityMap), kunt u een apparaat/een gebruiker identificeren gebruikend veelvoudige identiteiten, hun authentificatiestatus plaatsen, en beslissen welke herkenningsteken als primaire wordt beschouwd. Als er geen id is ingesteld als `primary` , wordt standaard de waarde `ECID` gebruikt.
 
 `identityMap` -velden worden bijgewerkt met de opdracht `sentEvent` .
 
@@ -148,7 +148,7 @@ alloy("sendEvent", {
 >
 >Adobe raadt aan naamruimten die een persoon, zoals `CRMID` , als primaire identiteit vertegenwoordigen, te verzenden.
 
-Elk bezit binnen `identityMap` vertegenwoordigt identiteiten die tot een bepaalde [ identiteit namespace ](/help/identity-service/features/namespaces.md) behoren. De bezitsnaam zou het symbool van identiteitskaart namespace moeten zijn, die u in het gebruikersinterface van Adobe Experience Platform onder &quot;[!UICONTROL Identities]&quot;kunt vinden. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
+Elk bezit binnen `identityMap` vertegenwoordigt identiteiten die tot een bepaalde [&#x200B; identiteit namespace &#x200B;](/help/identity-service/features/namespaces.md) behoren. De bezitsnaam zou het symbool van identiteitskaart namespace moeten zijn, die u in het gebruikersinterface van Adobe Experience Platform onder &quot;[!UICONTROL Identities]&quot;kunt vinden. De eigenschapswaarde moet een array zijn met identiteiten die betrekking hebben op die naamruimte identity.
 
 >[!IMPORTANT]
 >
@@ -162,7 +162,7 @@ Elk identiteitsobject in de array identities bevat de volgende eigenschappen:
 | `authenticatedState` | String | **(Vereist)** De authentificatiestatus van identiteitskaart Mogelijke waarden zijn `ambiguous` , `authenticated` en `loggedOut` . |
 | `primary` | Boolean | Hiermee wordt bepaald of deze identiteit moet worden gebruikt als primair fragment in het profiel. Standaard wordt de ECID ingesteld als de primaire id voor de gebruiker. Als deze waarde wordt weggelaten, wordt deze standaard ingesteld op `false` . |
 
-Als u het veld `identityMap` gebruikt om apparaten of gebruikers te identificeren, leidt dit tot hetzelfde resultaat als wanneer u de methode [`setCustomerIDs` ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) van de [!DNL ID Service API] . Zie de [ API documentatie van de Dienst van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) voor meer details.
+Als u het veld `identityMap` gebruikt om apparaten of gebruikers te identificeren, leidt dit tot hetzelfde resultaat als wanneer u de methode [`setCustomerIDs` &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) van de [!DNL ID Service API] . Zie de [&#x200B; API documentatie van de Dienst van identiteitskaart &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) voor meer details.
 
 ## Migreren van Bezoeker-API naar ECID {#migrating-visitor-api-ecid}
 
@@ -174,8 +174,8 @@ Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies mig
 
 ### Functies voor migratie bijwerken
 
-Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten deze gegevens tijdens het migreren worden omgezet in signalen. Uw kenmerken moeten worden bijgewerkt om de nieuwe sleutels te weerspiegelen die XDM verstrekt. Dit proces wordt gemakkelijker gemaakt door het [ hulpmiddel te gebruiken BAAAM ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) dat Audience Manager heeft gecreeerd.
+Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten deze gegevens tijdens het migreren worden omgezet in signalen. Uw kenmerken moeten worden bijgewerkt om de nieuwe sleutels te weerspiegelen die XDM verstrekt. Dit proces wordt gemakkelijker gemaakt door het [&#x200B; hulpmiddel te gebruiken BAAAM &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) dat Audience Manager heeft gecreeerd.
 
 ## Gebruiken in gebeurtenis door:sturen
 
-Als u momenteel [ gebeurtenis door:sturen ](/help/tags/ui/event-forwarding/overview.md) toegelaten hebt en `appmeasurement.js` en `visitor.js` gebruikt, kunt u toegelaten gebeurtenis-door:sturen eigenschap houden en dit zal geen kwesties veroorzaken. Op het achterste eind, haalt Adobe om het even welke segmenten van AAM en voegt hen aan de vraag aan Analytics toe. Als de vraag aan Analytics die segmenten bevat, zal de Analyse Audience Manager niet roepen om het even welke gegevens door:sturen, zodat is er geen dubbele gegevensinzameling. Er is ook geen behoefte aan de Hint van de Plaats wanneer het gebruiken van het Web SDK omdat de zelfde segmentatie eindpunten in het achterste eind worden geroepen.
+Als u momenteel [&#x200B; gebeurtenis door:sturen &#x200B;](/help/tags/ui/event-forwarding/overview.md) toegelaten hebt en `appmeasurement.js` en `visitor.js` gebruikt, kunt u toegelaten gebeurtenis-door:sturen eigenschap houden en dit zal geen kwesties veroorzaken. Op het achterste eind, haalt Adobe om het even welke segmenten van AAM en voegt hen aan de vraag aan Analytics toe. Als de vraag aan Analytics die segmenten bevat, zal de Analyse Audience Manager niet roepen om het even welke gegevens door:sturen, zodat is er geen dubbele gegevensinzameling. Er is ook geen behoefte aan de Hint van de Plaats wanneer het gebruiken van het Web SDK omdat de zelfde segmentatie eindpunten in het achterste eind worden geroepen.

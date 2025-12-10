@@ -78,7 +78,7 @@ Nee. Elke Adobe Digital Experience-klant kan de Adobe Experience Platform Web SD
 * De klanten die ** hebben geen toegang tot Experience Platform of in real time CDP en wensen te gebruiken [!DNL Web SDK] zullen de juiste toestemmingen moeten vormen om schema&#39;s en gegevensstromen in de Inzameling UI van Gegevens of UI te creëren Experience Platform.
 * Klanten die toegang hebben tot Experience Platform of Real-time CDP en [!DNL Web SDK] willen gebruiken, moeten de juiste machtigingen configureren om schema&#39;s, gegevenssets, naamruimten en gegevensstromen te maken in de gebruikersinterface van de gegevensverzameling of de gebruikersinterface van Experience Platform.
 
-Voor meer informatie bij het vormen van deze toestemmingen zie onze documentatie over [ het beheer van de toestemmingen van de gegevensinzameling ](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
+Voor meer informatie bij het vormen van deze toestemmingen zie onze documentatie over [&#x200B; het beheer van de toestemmingen van de gegevensinzameling &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Wie moet de Web SDK gebruiken?
 
@@ -98,11 +98,11 @@ Het Web SDK is momenteel beschikbaar voor het grote publiek en kan worden gebrui
 
 Er is geen vergoeding voor de SDK en deze wordt gratis door Adobe gehost. Indien nodig, kunt u het downloaden en op uw eigen servers hosten zonder kosten.
 
-SDK van het Web vereist toegang tot [ datastreamconfiguraties ](/help/datastreams/overview.md) en Experience Platform [ XDM schemabouwer ](/help/xdm/tutorials/create-schema-ui.md), zodat de servers van Adobe binnenkomende gegevens behoorlijk behandelen die uit SDK komen. Als u toegang wilt krijgen, neemt u contact op met uw Adobe-accountteam om het aanvraagproces te starten.
+SDK van het Web vereist toegang tot [&#x200B; datastreamconfiguraties &#x200B;](/help/datastreams/overview.md) en Experience Platform [&#x200B; XDM schemabouwer &#x200B;](/help/xdm/tutorials/create-schema-ui.md), zodat de servers van Adobe binnenkomende gegevens behoorlijk behandelen die uit SDK komen. Als u toegang wilt krijgen, neemt u contact op met uw Adobe-accountteam om het aanvraagproces te starten.
 
 ## Welke gebruiksgevallen worden momenteel ondersteund door de Web SDK?
 
-De Web SDK ontwikkelt zich snel. Er wordt gewerkt aan meer gebruiksgevallen. U kunt de [ lijst van gebruiksgevallen vinden momenteel hier gesteund.](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
+De Web SDK ontwikkelt zich snel. Er wordt gewerkt aan meer gebruiksgevallen. U kunt de [&#x200B; lijst van gebruiksgevallen vinden momenteel hier gesteund.](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
 
 ## Moeten de huidige klanten hun plaatsen in de detailhandel brengen?
 
@@ -116,7 +116,7 @@ Met andere woorden, als u besluit Adobe Experience Platform Web SDK te gebruiken
 
 ## Kan ik de ECID&#39;s migreren als ik Web SDK ga gebruiken, zodat mijn websitebezoekers niet beginnen op te roepen als nieuwe bezoekers?
 
-Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor de migratie van identiteitskaart in de [ identiteitsdocumentatie van SDK van het Web van Experience Platform ](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) voor meer details.
+Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor de migratie van identiteitskaart in de [&#x200B; identiteitsdocumentatie van SDK van het Web van Experience Platform &#x200B;](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) voor meer details.
 
 ## Hoe is het Web SDK anders dan tags?
 
@@ -144,11 +144,11 @@ Als u onze SDKs gebruikt en XDM naar Edge Network verzendt, staat deze nieuwe ei
 
 ## Wat is een CNAME of een Domein van de Eerste Partij en waarom maakt het van belang?
 
-Zie het [ Adobe-Beheerde certificaatprogramma ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) in de gids van de Diensten van de Kern.
+Zie het [&#x200B; Adobe-Beheerde certificaatprogramma &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) in de gids van de Diensten van de Kern.
 
 ## Gebruikt de Adobe Experience Platform Web SDK cookies? Zo ja, welke cookies gebruikt zij?
 
-Zie {de koekjes van SDK van het Web van Adobe Experience Platform 1} in de gids van de Diensten van de Kern.[](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)
+Zie {de koekjes van SDK van het Web van Adobe Experience Platform 1} in de gids van de Diensten van de Kern.[&#128279;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)
 
 ## Welke browsers worden door de Adobe Experience Platform Web SDK ondersteund?
 
@@ -156,4 +156,4 @@ De Adobe Experience Platform Web SDK is ontworpen om optimaal te werken in de ni
 
 ## Waar kan ik de broncode aan het Web SDK krijgen?
 
-Zie de [ plaats van het Alloy ](https://github.com/adobe/alloy) op GitHub.
+Zie de [&#x200B; plaats van het Alloy &#x200B;](https://github.com/adobe/alloy) op GitHub.
