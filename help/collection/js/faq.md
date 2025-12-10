@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: U krijgt antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '1665'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ Nee. Elke Adobe Digital Experience-klant kan de Adobe Experience Platform Web SD
 * De klanten die ** hebben geen toegang tot Experience Platform of in real time CDP en wensen te gebruiken [!DNL Web SDK] zullen de juiste toestemmingen moeten vormen om schema&#39;s en gegevensstromen in de Inzameling UI van Gegevens of UI te creëren Experience Platform.
 * Klanten die toegang hebben tot Experience Platform of Real-time CDP en [!DNL Web SDK] willen gebruiken, moeten de juiste machtigingen configureren om schema&#39;s, gegevenssets, naamruimten en gegevensstromen te maken in de gebruikersinterface van de gegevensverzameling of de gebruikersinterface van Experience Platform.
 
-Voor meer informatie bij het vormen van deze toestemmingen zie onze documentatie over [&#x200B; het beheer van de toestemmingen van de gegevensinzameling &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=nl-NL).
+Voor meer informatie bij het vormen van deze toestemmingen zie onze documentatie over [ het beheer van de toestemmingen van de gegevensinzameling ](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Wie moet de Web SDK gebruiken?
 
@@ -98,11 +98,11 @@ Het Web SDK is momenteel beschikbaar voor het grote publiek en kan worden gebrui
 
 Er is geen vergoeding voor de SDK en deze wordt gratis door Adobe gehost. Indien nodig, kunt u het downloaden en op uw eigen servers hosten zonder kosten.
 
-SDK van het Web vereist toegang tot [&#x200B; datastreamconfiguraties &#x200B;](/help/datastreams/overview.md) en Experience Platform [&#x200B; XDM schemabouwer &#x200B;](/help/xdm/tutorials/create-schema-ui.md), zodat de servers van Adobe binnenkomende gegevens behoorlijk behandelen die uit SDK komen. Als u toegang wilt krijgen, neemt u contact op met uw Adobe-accountteam om het aanvraagproces te starten.
+SDK van het Web vereist toegang tot [ datastreamconfiguraties ](/help/datastreams/overview.md) en Experience Platform [ XDM schemabouwer ](/help/xdm/tutorials/create-schema-ui.md), zodat de servers van Adobe binnenkomende gegevens behoorlijk behandelen die uit SDK komen. Als u toegang wilt krijgen, neemt u contact op met uw Adobe-accountteam om het aanvraagproces te starten.
 
 ## Welke gebruiksgevallen worden momenteel ondersteund door de Web SDK?
 
-De Web SDK ontwikkelt zich snel. Er wordt gewerkt aan meer gebruiksgevallen. U kunt de [&#x200B; lijst van gebruiksgevallen vinden momenteel hier gesteund.](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
+De Web SDK ontwikkelt zich snel. Er wordt gewerkt aan meer gebruiksgevallen. U kunt de [ lijst van gebruiksgevallen vinden momenteel hier gesteund.](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
 
 ## Moeten de huidige klanten hun plaatsen in de detailhandel brengen?
 
@@ -116,7 +116,7 @@ Met andere woorden, als u besluit Adobe Experience Platform Web SDK te gebruiken
 
 ## Kan ik de ECID&#39;s migreren als ik Web SDK ga gebruiken, zodat mijn websitebezoekers niet beginnen op te roepen als nieuwe bezoekers?
 
-Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor de migratie van identiteitskaart in de [&#x200B; identiteitsdocumentatie van SDK van het Web van Experience Platform &#x200B;](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) voor meer details.
+Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor de migratie van identiteitskaart in de [ identiteitsdocumentatie van SDK van het Web van Experience Platform ](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) voor meer details.
 
 ## Hoe is het Web SDK anders dan tags?
 
@@ -144,25 +144,11 @@ Als u onze SDKs gebruikt en XDM naar Edge Network verzendt, staat deze nieuwe ei
 
 ## Wat is een CNAME of een Domein van de Eerste Partij en waarom maakt het van belang?
 
-Meer informatie over een NAAM is beschikbaar in de [&#x200B; documentatie van Adobe &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=nl-NL)
+Zie het [ Adobe-Beheerde certificaatprogramma ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) in de gids van de Diensten van de Kern.
 
 ## Gebruikt de Adobe Experience Platform Web SDK cookies? Zo ja, welke cookies gebruikt zij?
 
-Ja, momenteel gebruikt de SDK van het Web overal tussen één tot zeven koekjes afhankelijk van uw implementatie. Hieronder volgt een lijst van de koekjes die u met het Web SDK en de manier zou kunnen zien dat zij worden gebruikt:
-
-| **Naam** | **maxAge** | **Vriendelijke leeftijd** | **Beschrijving** |
-|---|---|---|---|
-| **kCt_orgid_identity** | 34128000 | 395 dagen | In het identiteitscookie wordt de ECID opgeslagen, evenals andere informatie over de ECID. |
-| **kndctr_orgid_permission_check** | 7200 | 2 uur | Deze op zitting-gebaseerde koekje geeft de server aan om de server van de toestemmingsvoorkeur omhoog te kijken. |
-| **kndctr_orgid_permission** | 15552000 | 180 dagen | In dit cookie wordt de voorkeur van de gebruiker voor toestemming voor de website opgeslagen. |
-| **kndctr_orgid_cluster** | 1800 | 30 minuten | In dit cookie wordt het Edge Network-gebied opgeslagen dat de huidige gebruikersverzoeken indient. Het gebied wordt gebruikt in de weg URL zodat de Edge Network het verzoek aan het correcte gebied kan leiden. Dit koekje heeft een leven van 30 minuten, zodat als een gebruiker met een verschillend IP adres verbindt, het verzoek aan het dichtste gebied kan worden verpletterd. |
-| **mbox** | 63072000 | 2 jaar | Dit cookie wordt weergegeven wanneer de migratie-instelling Doel is ingesteld op true. Dit zal het koekje van het Doel [&#x200B; mbox &#x200B;](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) toestaan om door het Web SDK worden geplaatst. |
-| **mboxEdgeCluster** | 1800 | 30 minuten | Dit cookie wordt weergegeven wanneer de migratie-instelling Doel is ingesteld op true. Met dit cookie kan de Web SDK de juiste Edge-cluster aan at.js communiceren, zodat de doelprofielen synchroon kunnen blijven terwijl gebruikers door een site navigeren. |
-| **AMCV_##@AdobeOrg** | 34128000 | 395 dagen | Deze cookie wordt alleen weergegeven wanneer ID-migratie op de Adobe Experience Platform Web SDK is ingeschakeld. Deze cookie helpt bij het overschakelen naar Web SDK terwijl sommige delen van de site nog steeds bezoeker.js gebruiken. Zie [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) voor meer informatie. |
-
-Als u de Web SDK gebruikt, stelt de Edge Network een of meer van de bovenstaande cookies in. De Edge Network stelt alle cookies in met de kenmerken `secure` en `sameSite="none"` .
-
-Als u momenteel zowel beveiligde als niet-beveiligde secties op uw website hebt, kan dit problemen opleveren met de gebruikersidentificatie. Wanneer een gebruiker van een beveiligde sectie van de site naar een niet-beveiligde sectie navigeert, genereert de Edge Network een nieuwe `ECID` met de aanvraag.
+Zie {de koekjes van SDK van het Web van Adobe Experience Platform 1} in de gids van de Diensten van de Kern.[](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)
 
 ## Welke browsers worden door de Adobe Experience Platform Web SDK ondersteund?
 
@@ -170,4 +156,4 @@ De Adobe Experience Platform Web SDK is ontworpen om optimaal te werken in de ni
 
 ## Waar kan ik de broncode aan het Web SDK krijgen?
 
-Zie de [&#x200B; plaats van het Alloy &#x200B;](https://github.com/adobe/alloy) op GitHub.
+Zie de [ plaats van het Alloy ](https://github.com/adobe/alloy) op GitHub.
