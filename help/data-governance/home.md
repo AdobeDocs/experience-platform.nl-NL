@@ -26,7 +26,7 @@ Beheer klantgegevens en zorg ervoor dat u zich houdt aan de voorschriften, beper
 
 >[!NOTE]
 >
->In Experience Platform gaat het gegevensbeheer alleen over de manier waarop gegevens worden gebruikt of geactiveerd, ongeacht de gebruiker die de handeling uitvoert. Voor informatie over hoe te om toegang tot specifieke gegevensgebieden voor bepaalde gebruikers van Experience Platform binnen uw organisatie te controleren, zie in plaats daarvan de documentatie op [ op attribuut-gebaseerde toegangsbeheer ](../access-control/abac/overview.md).
+>In Experience Platform gaat het gegevensbeheer alleen over de manier waarop gegevens worden gebruikt of geactiveerd, ongeacht de gebruiker die de handeling uitvoert. Voor informatie over hoe te om toegang tot specifieke gegevensgebieden voor bepaalde gebruikers van Experience Platform binnen uw organisatie te controleren, zie in plaats daarvan de documentatie op [&#x200B; op attribuut-gebaseerde toegangsbeheer &#x200B;](../access-control/abac/overview.md).
 
 ## Functies voor gegevensbeheer {#data-governance-roles}
 
@@ -34,7 +34,7 @@ Het gegevensbeheer is niet automatisch en ook niet in een vacuüm. Wat begon als
 
 Hoewel het beheer van gegevens de verantwoordelijkheid van elk individu in de organisatie moet zijn, zijn er enkele essentiële functies binnen de cyclus van gegevensbeheer:
 
-![ Grafisch om de vier rollen van het gegevensbeheer, met citaten over de taken van elke rol over te brengen.](./images/overview/roles.png)
+![&#x200B; Grafisch om de vier rollen van het gegevensbeheer, met citaten over de taken van elke rol over te brengen.](./images/overview/roles.png)
 
 ### Data steward {#data-steward}
 
@@ -67,7 +67,7 @@ Het Beleid van gegevens laat gegevens toe stewards om gebruiksetiketten op het n
 
 Het gegevensbeheerframework bevat vooraf gedefinieerde labels voor gegevensgebruik waarmee gegevens op drie manieren kunnen worden gecategoriseerd:
 
-![ de drie categorieën van het gegevensgebruik etiketteren.](./images/overview/label-categories.png)
+![&#x200B; de drie categorieën van het gegevensgebruik etiketteren.](./images/overview/label-categories.png)
 
 * **Etiketten van Gegevens &quot;C&quot;van het Contract:** Etiket en categoriseer gegevens die contractuele verplichtingen hebben of met het beleid van het de gegevensbeheer van de klant verwant zijn.
 * **Etiketten van Gegevens &quot;I&quot;van de Identiteit:** Etiket en categoriseer gegevens die een specifieke persoon kunnen identificeren of contacteren.
@@ -75,11 +75,11 @@ Het gegevensbeheerframework bevat vooraf gedefinieerde labels voor gegevensgebru
 
 >[!NOTE]
 >
->Zie de gids op [ gesteunde etiketten van het gegevensgebruik ](labels/reference.md) voor een volledige lijst van beschikbare etiketten, en definities voor elk etikettype.
+>Zie de gids op [&#x200B; gesteunde etiketten van het gegevensgebruik &#x200B;](labels/reference.md) voor een volledige lijst van beschikbare etiketten, en definities voor elk etikettype.
 
 Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens wanneer het in Experience Platform wordt opgenomen, of zodra de gegevens in [!DNL Experience Platform] beschikbaar worden.
 
-Zie het overzicht op [ de etiketten van het gegevensgebruik ](./labels/overview.md) voor meer informatie over hoe de etiketten van het gegevensgebruik worden gebruikt helpen naleving van het gegevensbeheer afdwingen.
+Zie het overzicht op [&#x200B; de etiketten van het gegevensgebruik &#x200B;](./labels/overview.md) voor meer informatie over hoe de etiketten van het gegevensgebruik worden gebruikt helpen naleving van het gegevensbeheer afdwingen.
 
 ## Beleid voor gegevensgebruik {#data-usage-policies}
 
@@ -91,9 +91,9 @@ Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naa
 Er zijn twee soorten beleid beschikbaar:
 
 * **[!UICONTROL Data governance policy]**: de activering van gegevens beperken op basis van de marketingactie die wordt uitgevoerd en de labels voor gegevensgebruik die door de gegevens in kwestie worden meegevoerd.
-* **[!UICONTROL Consent policy]**: Filter de profielen die aan [ bestemmingen ](../destinations/home.md) kunnen worden geactiveerd die op de toestemming of de voorkeur van uw klanten worden gebaseerd.
+* **[!UICONTROL Consent policy]**: Filter de profielen die aan [&#x200B; bestemmingen &#x200B;](../destinations/home.md) kunnen worden geactiveerd die op de toestemming of de voorkeur van uw klanten worden gebaseerd.
 
-Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend de Dienst API van het Beleid of de gebruikersinterface van Experience Platform. Voor meer informatie over het beleid van het gegevensgebruik en marketing acties, zie het [ beleidsoverzicht ](./policies/overview.md).
+Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend de Dienst API van het Beleid of de gebruikersinterface van Experience Platform. Voor meer informatie over het beleid van het gegevensgebruik en marketing acties, zie het [&#x200B; beleidsoverzicht &#x200B;](./policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensste
 
 ## Volgende stappen
 
-Dit document bevatte een inleiding op hoog niveau op het gebied van gegevensbeheer en gegevensbeheer. U kunt nu aan de [ gebruikersgids van de gebruiksetiketten van het gegevensgebruik ](labels/user-guide.md) verdergaan en beginnen gebruiksetiketten aan uw ervaringsgegevens toe te voegen.
+Dit document bevatte een inleiding op hoog niveau op het gebied van gegevensbeheer en gegevensbeheer. U kunt nu aan de [&#x200B; gebruikersgids van de gebruiksetiketten van het gegevensgebruik &#x200B;](labels/user-guide.md) verdergaan en beginnen gebruiksetiketten aan uw ervaringsgegevens toe te voegen.
 
 ## Bijlage
 
@@ -134,7 +134,7 @@ De volgende video is bedoeld om uw begrip van het kader van het Beheer van Gegev
 
 >[!IMPORTANT]
 >
->De videoverwijzingen die etiketten op individuele datasetgebieden toepassen. Deze workflow is vervangen. [ de Etiketten moeten nu op het niveau van het schemagebied ](./e2e.md#labels) worden toegepast. De concepten in de video blijven accuraat, maar de labelworkflow is gewijzigd.
+>De videoverwijzingen die etiketten op individuele datasetgebieden toepassen. Deze workflow is vervangen. [&#x200B; de Etiketten moeten nu op het niveau van het schemagebied &#x200B;](./e2e.md#labels) worden toegepast. De concepten in de video blijven accuraat, maar de labelworkflow is gewijzigd.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
