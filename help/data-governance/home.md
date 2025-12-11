@@ -17,8 +17,8 @@ ht-degree: 0%
 >id="platform_datagovernance_framework"
 >title="Verplichting tot gegevensbeheer"
 >abstract="Vergeet niet dat u als enige verantwoordelijk bent voor het naleven van het beleid voor gegevensbeheer van uw organisatie en voor het voldoen aan uw wettelijke vereisten. Experience Platform biedt tools voor gegevensbeheer waarmee u uw gegevensgebruiksverplichtingen kunt beheren. Pas de juiste labels voor gegevensgebruik toe voordat u gegevens opvraagt of verwerkt. Raadpleeg de documentatie voor meer informatie over de tools en best practices voor gegevensbeheer."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html" text="Overzicht van gegevensbeheer"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html" text="Overzicht van labels voor gegevensbeheer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL" text="Overzicht van gegevensbeheer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=nl-NL" text="Overzicht van labels voor gegevensbeheer"
 
 Een van de kernmogelijkheden van Adobe Experience Platform is om gegevens van meerdere bedrijfssystemen samen te brengen, zodat marketeers klanten beter kunnen identificeren, begrijpen en betrekken. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk dat u ervoor zorgt dat uw gegevensbewerkingen in [!DNL Experience Platform] voldoen aan het beleid voor gegevensgebruik.
 
