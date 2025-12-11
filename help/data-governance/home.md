@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht gegevensbeheer
 description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. Het speelt binnen Experience Platform een sleutelrol op verschillende niveaus, zoals catalogisering, gegevenskoppeling, etikettering van het gegevensgebruik, het beleid voor gegevensgebruik en het controleren van het gebruik van gegevens voor marketingacties.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9b1630a4876c0bcd7331f8da264e4f19ce00b59a
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
@@ -17,8 +17,8 @@ ht-degree: 0%
 >id="platform_datagovernance_framework"
 >title="Verplichting tot gegevensbeheer"
 >abstract="Vergeet niet dat u als enige verantwoordelijk bent voor het naleven van het beleid voor gegevensbeheer van uw organisatie en voor het voldoen aan uw wettelijke vereisten. Experience Platform biedt tools voor gegevensbeheer waarmee u uw gegevensgebruiksverplichtingen kunt beheren. Pas de juiste labels voor gegevensgebruik toe voordat u gegevens opvraagt of verwerkt. Raadpleeg de documentatie voor meer informatie over de tools en best practices voor gegevensbeheer."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL" text="Overzicht van gegevensbeheer"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=nl-NL" text="Overzicht van labels voor gegevensbeheer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html" text="Overzicht van gegevensbeheer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html" text="Overzicht van labels voor gegevensbeheer"
 
 Een van de kernmogelijkheden van Adobe Experience Platform is om gegevens van meerdere bedrijfssystemen samen te brengen, zodat marketeers klanten beter kunnen identificeren, begrijpen en betrekken. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk dat u ervoor zorgt dat uw gegevensbewerkingen in [!DNL Experience Platform] voldoen aan het beleid voor gegevensgebruik.
 
@@ -26,7 +26,7 @@ Beheer klantgegevens en zorg ervoor dat u zich houdt aan de voorschriften, beper
 
 >[!NOTE]
 >
->In Experience Platform gaat het gegevensbeheer alleen over de manier waarop gegevens worden gebruikt of geactiveerd, ongeacht de gebruiker die de handeling uitvoert. Voor informatie over hoe te om toegang tot specifieke gegevensgebieden voor bepaalde gebruikers van Experience Platform binnen uw organisatie te controleren, zie in plaats daarvan de documentatie op [&#x200B; op attribuut-gebaseerde toegangsbeheer &#x200B;](../access-control/abac/overview.md).
+>In Experience Platform gaat het gegevensbeheer alleen over de manier waarop gegevens worden gebruikt of geactiveerd, ongeacht de gebruiker die de handeling uitvoert. Voor informatie over hoe te om toegang tot specifieke gegevensgebieden voor bepaalde gebruikers van Experience Platform binnen uw organisatie te controleren, zie in plaats daarvan de documentatie op [ op attribuut-gebaseerde toegangsbeheer ](../access-control/abac/overview.md).
 
 ## Functies voor gegevensbeheer {#data-governance-roles}
 
@@ -34,7 +34,7 @@ Het gegevensbeheer is niet automatisch en ook niet in een vacuüm. Wat begon als
 
 Hoewel het beheer van gegevens de verantwoordelijkheid van elk individu in de organisatie moet zijn, zijn er enkele essentiële functies binnen de cyclus van gegevensbeheer:
 
-![&#x200B; Grafisch om de vier rollen van het gegevensbeheer, met citaten over de taken van elke rol over te brengen.](./images/overview/roles.png)
+![ Grafisch om de vier rollen van het gegevensbeheer, met citaten over de taken van elke rol over te brengen.](./images/overview/roles.png)
 
 ### Data steward {#data-steward}
 
@@ -67,7 +67,7 @@ Het Beleid van gegevens laat gegevens toe stewards om gebruiksetiketten op het n
 
 Het gegevensbeheerframework bevat vooraf gedefinieerde labels voor gegevensgebruik waarmee gegevens op drie manieren kunnen worden gecategoriseerd:
 
-![&#x200B; de drie categorieën van het gegevensgebruik etiketteren.](./images/overview/label-categories.png)
+![ de drie categorieën van het gegevensgebruik etiketteren.](./images/overview/label-categories.png)
 
 * **Etiketten van Gegevens &quot;C&quot;van het Contract:** Etiket en categoriseer gegevens die contractuele verplichtingen hebben of met het beleid van het de gegevensbeheer van de klant verwant zijn.
 * **Etiketten van Gegevens &quot;I&quot;van de Identiteit:** Etiket en categoriseer gegevens die een specifieke persoon kunnen identificeren of contacteren.
@@ -75,11 +75,11 @@ Het gegevensbeheerframework bevat vooraf gedefinieerde labels voor gegevensgebru
 
 >[!NOTE]
 >
->Zie de gids op [&#x200B; gesteunde etiketten van het gegevensgebruik &#x200B;](labels/reference.md) voor een volledige lijst van beschikbare etiketten, en definities voor elk etikettype.
+>Zie de gids op [ gesteunde etiketten van het gegevensgebruik ](labels/reference.md) voor een volledige lijst van beschikbare etiketten, en definities voor elk etikettype.
 
 Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens wanneer het in Experience Platform wordt opgenomen, of zodra de gegevens in [!DNL Experience Platform] beschikbaar worden.
 
-Zie het overzicht op [&#x200B; de etiketten van het gegevensgebruik &#x200B;](./labels/overview.md) voor meer informatie over hoe de etiketten van het gegevensgebruik worden gebruikt helpen naleving van het gegevensbeheer afdwingen.
+Zie het overzicht op [ de etiketten van het gegevensgebruik ](./labels/overview.md) voor meer informatie over hoe de etiketten van het gegevensgebruik worden gebruikt helpen naleving van het gegevensbeheer afdwingen.
 
 ## Beleid voor gegevensgebruik {#data-usage-policies}
 
@@ -91,9 +91,9 @@ Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naa
 Er zijn twee soorten beleid beschikbaar:
 
 * **[!UICONTROL Data governance policy]**: de activering van gegevens beperken op basis van de marketingactie die wordt uitgevoerd en de labels voor gegevensgebruik die door de gegevens in kwestie worden meegevoerd.
-* **[!UICONTROL Consent policy]**: Filter de profielen die aan [&#x200B; bestemmingen &#x200B;](../destinations/home.md) kunnen worden geactiveerd die op de toestemming of de voorkeur van uw klanten worden gebaseerd.
+* **[!UICONTROL Consent policy]**: Filter de profielen die aan [ bestemmingen ](../destinations/home.md) kunnen worden geactiveerd die op de toestemming of de voorkeur van uw klanten worden gebaseerd.
 
-Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend de Dienst API van het Beleid of de gebruikersinterface van Experience Platform. Voor meer informatie over het beleid van het gegevensgebruik en marketing acties, zie het [&#x200B; beleidsoverzicht &#x200B;](./policies/overview.md).
+Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend de Dienst API van het Beleid of de gebruikersinterface van Experience Platform. Voor meer informatie over het beleid van het gegevensgebruik en marketing acties, zie het [ beleidsoverzicht ](./policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensste
 
 ## Volgende stappen
 
-Dit document bevatte een inleiding op hoog niveau op het gebied van gegevensbeheer en gegevensbeheer. U kunt nu aan de [&#x200B; gebruikersgids van de gebruiksetiketten van het gegevensgebruik &#x200B;](labels/user-guide.md) verdergaan en beginnen gebruiksetiketten aan uw ervaringsgegevens toe te voegen.
+Dit document bevatte een inleiding op hoog niveau op het gebied van gegevensbeheer en gegevensbeheer. U kunt nu aan de [ gebruikersgids van de gebruiksetiketten van het gegevensgebruik ](labels/user-guide.md) verdergaan en beginnen gebruiksetiketten aan uw ervaringsgegevens toe te voegen.
 
 ## Bijlage
 
@@ -131,6 +131,10 @@ De volgende tabel geeft een overzicht van de belangrijkste termen met betrekking
 ## Aanvullende bronnen
 
 De volgende video is bedoeld om uw begrip van het kader van het Beheer van Gegevens te steunen.
+
+>[!IMPORTANT]
+>
+>De videoverwijzingen die etiketten op individuele datasetgebieden toepassen. Deze workflow is vervangen. [ de Etiketten moeten nu op het niveau van het schemagebied ](./e2e.md#labels) worden toegepast. De concepten in de video blijven accuraat, maar de labelworkflow is gewijzigd.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
