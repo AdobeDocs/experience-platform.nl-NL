@@ -12,13 +12,13 @@ ht-degree: 0%
 
 In deze configuratiesectie kunt u bepalen hoe u bepaalde delen van de pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen. Wanneer correct gevormd, zorgen deze montages ervoor dat uw bezoekers de juiste gepersonaliseerde inhoud zien.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 1. Schuif omlaag naar de sectie **[!UICONTROL Personalization]** .
 
-![ Beeld dat de verpersoonlijkingsmontages van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont ](../assets/web-sdk-ext-personalization.png)
+![&#x200B; Beeld dat de verpersoonlijkingsmontages van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont &#x200B;](../assets/web-sdk-ext-personalization.png)
 
 De volgende opties zijn beschikbaar:
 
@@ -26,7 +26,7 @@ De volgende opties zijn beschikbaar:
 
 Met deze optie stelt u de Web SDK in staat de verouderde `mbox` - en `mboxEdgeCluster` -cookies te lezen en te schrijven die door de `at.js` 1.x- of 2.x-bibliotheken worden gebruikt. Deze instelling helpt bezoekersprofielen intact te houden terwijl er wordt geschakeld tussen pagina&#39;s met de Web SDK of `at.js` op dezelfde website. Als u `at.js` niet ergens op uw site hebt geïmplementeerd, hoeft u dit selectievakje niet in te schakelen. Het JavaScript-bibliotheekequivalent aan dit selectievakje is [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md) .
 
-Wanneer u deze optie inschakelt, moet u ook [`overrideMboxEdgeServer` ](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` inschakelen.
+Wanneer u deze optie inschakelt, moet u ook [`overrideMboxEdgeServer` &#x200B;](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` inschakelen.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 
