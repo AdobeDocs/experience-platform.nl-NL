@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!BEGINSHADEBOX]
 
-Als u een klant van Adobe Journey Optimizer bent, te lezen gelieve [&#x200B; begonnen met de gids van de publiekssamenstelling &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) in de documentatie van Adobe Journey Optimizer voor meer informatie bij het werken met publiekssamenstelling in die context.
+Als u een klant van Adobe Journey Optimizer bent, te lezen gelieve [&#x200B; begonnen met de gids van de publiekssamenstelling &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=nl-NL) in de documentatie van Adobe Journey Optimizer voor meer informatie bij het werken met publiekssamenstelling in die context.
 
 >[!ENDSHADEBOX]
 
