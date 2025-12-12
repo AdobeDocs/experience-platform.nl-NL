@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # `targetMigrationEnabled`
 
-De eigenschap `targetMigrationEnabled` is een Booleaanse waarde waarmee de Web SDK de cookies [`mbox` en `mboxEdgeCluster` &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) die de Adobe Target 1.x- en 2.x-bibliotheken gebruiken, kan lezen en schrijven. Met deze optie kunt u het bezoekersprofiel tussen pagina&#39;s behouden met behulp van eerdere Adobe Target-implementaties en pagina&#39;s met behulp van de Web SDK.
+De eigenschap `targetMigrationEnabled` is een Booleaanse waarde waarmee de Web SDK de cookies [`mbox` en `mboxEdgeCluster` &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/cookies/web-sdk) die de Adobe Target 1.x- en 2.x-bibliotheken gebruiken, kan lezen en schrijven. Met deze optie kunt u het bezoekersprofiel tussen pagina&#39;s behouden met behulp van eerdere Adobe Target-implementaties en pagina&#39;s met behulp van de Web SDK.
 
 Stel de Booleaanse waarde `targetMigrationEnabled` in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de Web SDK, wordt standaard `false` gebruikt. Stel deze waarde in op `true` als u sommige pagina&#39;s hebt die nog steeds de Adobe Target 1.x- of 2.x-bibliotheken gebruiken.
 
-Wanneer u deze eigenschap gebruikt, moet u [`overrideMboxEdgeServer` &#x200B;](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` ook inschakelen in de Adobe Target-implementatie.
+Wanneer u deze eigenschap gebruikt, moet u [`overrideMboxEdgeServer` &#x200B;](https://experienceleague.adobe.com/nl/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` ook inschakelen in de Adobe Target-implementatie.
 
 ```js
 alloy("configure", {
