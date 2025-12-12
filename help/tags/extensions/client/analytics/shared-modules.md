@@ -15,7 +15,7 @@ De [&#x200B; uitbreiding van Adobe Analytics &#x200B;](./overview.md) verstrekt 
 
 ## [!DNL get-tracker]
 
-Voordat Adobe Analytics bakens verzendt, moet het het tracker-object initialiseren. Het initialisatieproces begint door [&#x200B; AppMeasurement &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) te laden, die door een spoorboekvoorwerp te creëren wordt gevolgd.
+Voordat Adobe Analytics bakens verzendt, moet het het tracker-object initialiseren. Het initialisatieproces begint door [&#x200B; AppMeasurement &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL) te laden, die door een spoorboekvoorwerp te creëren wordt gevolgd.
 
 U kunt als volgt toegang krijgen tot het tracker-object nadat het volledig is geïnitialiseerd met de gedeelde module `get-tracker` :
 

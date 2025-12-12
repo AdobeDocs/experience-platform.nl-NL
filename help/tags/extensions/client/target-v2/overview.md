@@ -45,13 +45,13 @@ Het serverdomein verwijst naar het domein waar de verzoeken van het Doel worden 
 
 #### GDPR Opt-In
 
-Als deze optie is ingeschakeld, biedt Adobe Target aanmeldingsfunctionaliteit waarmee u uw strategie voor het beheer van uw toestemming kunt ondersteunen. Met de functie Inschakelen kunnen klanten bepalen hoe en wanneer de tag Doel wordt geactiveerd.  Voor meer informatie over Adobe Opt-binnen, zie [&#x200B; Privacy en Algemene Verordening van de Bescherming van Gegevens (GDPR) &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Als deze optie is ingeschakeld, biedt Adobe Target aanmeldingsfunctionaliteit waarmee u uw strategie voor het beheer van uw toestemming kunt ondersteunen. Met de functie Inschakelen kunnen klanten bepalen hoe en wanneer de tag Doel wordt geactiveerd.  Voor meer informatie over Adobe Opt-binnen, zie [&#x200B; Privacy en Algemene Verordening van de Bescherming van Gegevens (GDPR) &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=nl-NL).
 
 #### Time-out (ms)
 
 Als de reactie van Doel niet binnen de bepaalde periode wordt ontvangen, de vraagtijden uit en de standaardinhoud wordt getoond. Tijdens de bezoekerssessie wordt nog steeds geprobeerd om aanvullende verzoeken in te dienen. Het gebrek is 3000ms, die van de Onderbreking verschillend zou kunnen zijn die in het gebruikersinterface van het Doel wordt gevormd.
 
-Voor meer informatie over hoe de Onderbreking het plaatsen van de Onderbreking werkt, verwijs naar de [&#x200B; hulp van Adobe Target &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html).
+Voor meer informatie over hoe de Onderbreking het plaatsen van de Onderbreking werkt, verwijs naar de [&#x200B; hulp van Adobe Target &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=nl-NL).
 
 ## Handelingstypen voor doelextensie
 
@@ -67,7 +67,7 @@ Er is geen configuratie nodig.
 
 ### Doel laden met apparaatbeslissingen
 
-Voeg deze actie aan uw markeringsregel toe waar het zinvol is om Doel met [&#x200B; op-apparatenbeslissing &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) te laden die in de context van uw regel wordt toegelaten. Hierdoor wordt de bibliotheek at.js geladen met apparaatbesluitvorming ingeschakeld op de pagina. In de meeste implementaties moet Doel op elke pagina van uw site worden geladen. Adobe adviseert gebruikend het Doel van de Lading met op-apparaat beslissingsactie slechts als het door een vraag van het Doel wordt voorafgegaan. Anders, zou u op kwesties zoals de vraag van Analytics kunnen lopen die wordt vertraagd.
+Voeg deze actie aan uw markeringsregel toe waar het zinvol is om Doel met [&#x200B; op-apparatenbeslissing &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=nl-NL) te laden die in de context van uw regel wordt toegelaten. Hierdoor wordt de bibliotheek at.js geladen met apparaatbesluitvorming ingeschakeld op de pagina. In de meeste implementaties moet Doel op elke pagina van uw site worden geladen. Adobe adviseert gebruikend het Doel van de Lading met op-apparaat beslissingsactie slechts als het door een vraag van het Doel wordt voorafgegaan. Anders, zou u op kwesties zoals de vraag van Analytics kunnen lopen die wordt vertraagd.
 
 >[!IMPORTANT]
 >
@@ -96,7 +96,7 @@ U moet opgeven of het verbergen van het lichaam moet worden ingeschakeld om flik
 * **Bodyverbergen:** u kunt dit het plaatsen toelaten of onbruikbaar maken. De standaardwaarde is Enabled, wat betekent dat de HTML BODY verborgen is.
 * **Verborgen Stijl van het Lichaam:** de standaardwaarde is lichaam {opacity:0}. Deze waarde kan in iets verschillend, zoals lichaam {display:none} worden veranderd.
 
-Voor meer informatie, verwijs naar de [&#x200B; online hulpdocumentatie van het Doel &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html).
+Voor meer informatie, verwijs naar de [&#x200B; online hulpdocumentatie van het Doel &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=nl-NL).
 
 ### Triggerweergave
 
@@ -105,7 +105,7 @@ De actie Weergave activeren kan worden aangeroepen wanneer een nieuwe pagina wor
 1. Geef de weergavenaam op die moet worden geactiveerd.
 1. Geef aan of de weergave moet worden geactiveerd door het selectievakje Pagina in te schakelen. Als de weergave is gecorreleerd aan een component die opnieuw wordt weergegeven en niet aan een indruk voor rapportage wordt toegewezen, schakelt u het selectievakje Pagina niet in.
 
-Raadpleeg de [`triggerView()` Help-documentatie &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html) voor meer informatie over het activeren van een weergave.
+Raadpleeg de [`triggerView()` Help-documentatie &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html?lang=nl-NL) voor meer informatie over het activeren van een weergave.
 
 ## Basisimplementatie van Adobe Target
 

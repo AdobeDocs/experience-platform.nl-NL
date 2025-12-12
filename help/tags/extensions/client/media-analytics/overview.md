@@ -170,7 +170,7 @@ De extensie MA stelt de gedeelde `get-instance` en `media-heartbeat` modules bes
    ...
    ```
 
-1. Gebruikend de instantie van de Hartslag van Media, volg de [&#x200B; documentatie van SDK JS van Media &#x200B;](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) en [&#x200B; JS API documentatie &#x200B;](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om media het volgen uit te voeren.
+1. Gebruikend de instantie van de Hartslag van Media, volg de [&#x200B; documentatie van SDK JS van Media &#x200B;](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=nl-NL) en [&#x200B; JS API documentatie &#x200B;](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om media het volgen uit te voeren.
 
 >[!NOTE]
 >

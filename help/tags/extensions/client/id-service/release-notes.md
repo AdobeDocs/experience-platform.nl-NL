@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # Opmerkingen bij de release van Adobe Experience Cloud Identity Service
 
-In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van Experience Cloud zelf, gelieve te verwijzen naar de [&#x200B; documentatie van de Dienst van de Identiteit &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
+In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van Experience Cloud zelf, gelieve te verwijzen naar de [&#x200B; documentatie van de Dienst van de Identiteit &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=nl-NL).
 
 ## 17 okt. 2022
 

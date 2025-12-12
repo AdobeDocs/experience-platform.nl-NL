@@ -26,7 +26,7 @@ Dit document biedt een uitgebreid overzicht van het doorsturen van gebeurtenisse
 >
 >Voor informatie over hoe gebeurtenis het door:sturen past binnen het ecosysteem van de gegevensinzameling in Experience Platform, zie het [&#x200B; overzicht van de gegevensinzameling &#x200B;](/help/collection/home.md).
 
-De gebeurtenis die met Adobe Experience Platform [&#x200B; wordt gecombineerd SDK van het Web &#x200B;](/help/collection/js/js-overview.md) en [&#x200B; Mobiele SDK &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) verstrekt de volgende voordelen:
+De gebeurtenis die met Adobe Experience Platform [&#x200B; wordt gecombineerd SDK van het Web &#x200B;](/help/collection/js/js-overview.md) en [&#x200B; Mobiele SDK &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=nl-NL) verstrekt de volgende voordelen:
 
 **Prestaties**:
 

@@ -23,7 +23,7 @@ De extensie [!DNL Adobe Analytics Product String Builder] stelt de variabele `pr
 Category;Product;Quantity;Price;eventN=X|eventN2=X2;eVarN=merch_category|eVarN2=merch_category2
 ```
 
-Voor volledige documentatie, bezoek [&#x200B; Producten &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html).
+Voor volledige documentatie, bezoek [&#x200B; Producten &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=nl-NL).
 
 ## Extensieinstructies
 

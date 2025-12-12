@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # AEM Asset Insights-extensie - overzicht
 
-Deze uitbreiding is bedoeld om samen met [&#x200B; de Inzichten van het Activa van AEM &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) worden gebruikt. Meer bepaald vervangt deze code het proces pageTracker en sluit deze in. Wanneer gevormd, verzendt deze uitbreiding de Indrukking van Activa ** en *klikt* metriek aan Adobe Analytics, waarna zij in de rapporten van de Inzichten van de Activa van AEM zullen worden ingevoerd. De gegevens van de activa kunnen dan worden gemeld door of AEM Asset Insights of de Werkruimten van het Project van Adobe Analytics te gebruiken.
+Deze uitbreiding is bedoeld om samen met [&#x200B; de Inzichten van het Activa van AEM &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=nl-NL) worden gebruikt. Meer bepaald vervangt deze code het proces pageTracker en sluit deze in. Wanneer gevormd, verzendt deze uitbreiding de Indrukking van Activa ** en *klikt* metriek aan Adobe Analytics, waarna zij in de rapporten van de Inzichten van de Activa van AEM zullen worden ingevoerd. De gegevens van de activa kunnen dan worden gemeld door of AEM Asset Insights of de Werkruimten van het Project van Adobe Analytics te gebruiken.
 
 ## Voorwaarden voor extensies
 
@@ -34,7 +34,7 @@ De &quot;*Adobe Analytics*&quot;markeringsuitbreiding voor Adobe Experience Plat
 
 ### Adobe Experience Manager (AEM)
 
-1. Laat [&#x200B; de Inzichten van Activa van AEM &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) toe. Selecteer **[!UICONTROL Tools > Assets]** in AEM en open vervolgens het deelvenster **[!UICONTROL Insights Configuration]** .
+1. Laat [&#x200B; de Inzichten van Activa van AEM &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=nl-NL) toe. Selecteer **[!UICONTROL Tools > Assets]** in AEM en open vervolgens het deelvenster **[!UICONTROL Insights Configuration]** .
 
 1. UUID-tracking uitschakelen.
 
@@ -50,15 +50,15 @@ In deze sectie wordt beschreven hoe u AEM kunt configureren met tags in Adobe Ex
 
 ### AEM integreren met tags
 
-De geadviseerde integratie van [&#x200B; Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html) met Adobe Experience Manager wordt gedaan via Adobe I/O.
+De geadviseerde integratie van [&#x200B; Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=nl-NL) met Adobe Experience Manager wordt gedaan via Adobe I/O.
 
-1. [&#x200B; verbind AEM met markeringen gebruikend Adobe I/O &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
+1. [&#x200B; verbind AEM met markeringen gebruikend Adobe I/O &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=nl-NL).
 
-2. [&#x200B; creeer een configuratie van Adobe Experience Platform Cloud Service &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html).
+2. [&#x200B; creeer een configuratie van Adobe Experience Platform Cloud Service &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=nl-NL).
 
 ### Asset Insight inschakelen in AEM
 
-Voor instructies bij het toelaten van de Inzichten van Activa, zie [&#x200B; Experience Manager 6.5 de gebruikersgids van Assets &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html).
+Voor instructies bij het toelaten van de Inzichten van Activa, zie [&#x200B; Experience Manager 6.5 de gebruikersgids van Assets &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=nl-NL).
 
 ### UUID-tracking inschakelen voor Assets
 
@@ -129,7 +129,7 @@ Vorm drie Regels zoals hierboven beschreven:
 
    * Er is nooit een element gevonden in het weergavegebied van de browser
 
-   * Er waren geen activa op de pagina die met [&#x200B; Inzichten van Activa &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) wordt gevormd die in AEM wordt toegelaten.
+   * Er waren geen activa op de pagina die met [&#x200B; Inzichten van Activa &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=nl-NL) wordt gevormd die in AEM wordt toegelaten.
 
 **klikken**
 
@@ -139,7 +139,7 @@ Vorm drie Regels zoals hierboven beschreven:
 
 Als `a.assets.idlist` in het resulterende verzoek om een analysebestand (van de volgende pagina) de element-id&#39;s op de doelpagina heeft en `a.assets.clickedid` de element-id heeft van het element dat op de startpagina is geselecteerd, werkt de regel correct.
 
-Als `a.assets.clickedid` niet in het beeldverzoek is, is het meestal waarschijnlijk omdat het Activum dat werd geselecteerd niet [&#x200B; Inzichten van Activa &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) toegelaten in AEM had.
+Als `a.assets.clickedid` niet in het beeldverzoek is, is het meestal waarschijnlijk omdat het Activum dat werd geselecteerd niet [&#x200B; Inzichten van Activa &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=nl-NL) toegelaten in AEM had.
 
 **klikken zonder bestemming**
 
@@ -149,4 +149,4 @@ Als `a.assets.clickedid` niet in het beeldverzoek is, is het meestal waarschijnl
 
 Als `a.assets.clickedid` in de aanvraag voor de afbeelding Analytics de element-id heeft, werkt de regel correct.
 
-Als `a.assets.clickedid` niet in het beeldverzoek is, is het meestal waarschijnlijk omdat de activa die werden geselecteerd niet [&#x200B; Inzicht van Activa &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) hebben toegelaten in AEM.
+Als `a.assets.clickedid` niet in het beeldverzoek is, is het meestal waarschijnlijk omdat de activa die werden geselecteerd niet [&#x200B; Inzicht van Activa &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=nl-NL) hebben toegelaten in AEM.

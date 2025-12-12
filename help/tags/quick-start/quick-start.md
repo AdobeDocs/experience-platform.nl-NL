@@ -132,4 +132,4 @@ Raadpleeg de volgende bronnen voor meer informatie over tags:
 
 * **[Gemeenschap van de Inzameling van Gegevens &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: Vraag en beantwoord vragen, voorlegt ideeën, stem op de ideeën van anderen. Meld u aan bij uw Adobe ID.
 * **[Docs van de Ontwikkelaar](../api/overview.md)**: Krijg betrokken met de gemeenschap van de markeringsontwikkelaar om uitbreidingen te bouwen of de markeringen APIs te gebruiken
-* **[het Overzicht van Leerprogramma&#39;s &#x200B;](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: Deze documenten introduceren u aan markeringsconcepten met inbegrip van gebeurtenis door:sturen en Mobiele SDK in de Apps van Android.
+* **[het Overzicht van Leerprogramma&#39;s &#x200B;](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=nl-NL)**: Deze documenten introduceren u aan markeringsconcepten met inbegrip van gebeurtenis door:sturen en Mobiele SDK in de Apps van Android.
