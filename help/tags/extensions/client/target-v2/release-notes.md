@@ -103,7 +103,7 @@ ht-degree: 0%
 
 ## v0.14 (14 mei 2021)
 
-- Toegevoegd een nieuw doel van de actielading met [ Beslissing op Apparaat ](./overview.md#load-target-with-on-device-decisioning), dat {2.5 met de mogelijkheden van het Beslissen op Apparaat laadt`at.js`
+- Toegevoegd een nieuw doel van de actielading met [&#x200B; Beslissing op Apparaat &#x200B;](./overview.md#load-target-with-on-device-decisioning), dat &lbrace;2.5 met de mogelijkheden van het Beslissen op Apparaat laadt`at.js`
 - Bijgewerkt `at.js` naar 2.5
 
 

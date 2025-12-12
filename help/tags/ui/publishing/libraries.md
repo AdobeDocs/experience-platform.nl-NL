@@ -67,10 +67,10 @@ Nadat u een bibliotheek hebt gemaakt, selecteert u een van de volgende opties in
 
 Voer de volgende stappen uit om een bibliotheek toe te voegen.
 
-1. Installeer de [ uitbreidingen ](../managing-resources/extensions/overview.md) u wilt toevoegen.
-1. Creeer de [ gegevenselementen ](../managing-resources/data-elements.md) en de regels u wilt toevoegen.
+1. Installeer de [&#x200B; uitbreidingen &#x200B;](../managing-resources/extensions/overview.md) u wilt toevoegen.
+1. Creeer de [&#x200B; gegevenselementen &#x200B;](../managing-resources/data-elements.md) en de regels u wilt toevoegen.
 1. Open de tab **[!UICONTROL Publishing]** .
-1. Selecteer de [ bibliotheek ](libraries.md) u wilt veranderen, dan selecteren **[!UICONTROL Edit]**.
+1. Selecteer de [&#x200B; bibliotheek &#x200B;](libraries.md) u wilt veranderen, dan selecteren **[!UICONTROL Edit]**.
 1. Gebruik de knoppen voor regels, gegevenselementen en extensies om de items te selecteren die u wilt toevoegen aan de bibliotheek.
 1. Sla de wijzigingen op.
 
@@ -115,8 +115,8 @@ Extensies, regels en gegevenselementen kunnen nu rechtstreeks worden opgeslagen 
 
 De volgende lijst bevat meer informatie over het beheer van een actieve bibliotheek.
 
-1. [ creeer een nieuwe bibliotheek ](libraries.md#create-a-library).
-1. Ga naar [ Regels ](../managing-resources/rules.md), [ Elementen van Gegevens ](../managing-resources/data-elements.md), of [ Uitbreidingen ](../managing-resources/extensions/overview.md).
+1. [&#x200B; creeer een nieuwe bibliotheek &#x200B;](libraries.md#create-a-library).
+1. Ga naar [&#x200B; Regels &#x200B;](../managing-resources/rules.md), [&#x200B; Elementen van Gegevens &#x200B;](../managing-resources/data-elements.md), of [&#x200B; Uitbreidingen &#x200B;](../managing-resources/extensions/overview.md).
 1. Selecteer uw actieve bibliotheek.
 1. Breng de wijzigingen aan en sla de bibliotheek op en maak deze samen.
 1. Test de wijzigingen en herhaal deze stappen zo nodig.

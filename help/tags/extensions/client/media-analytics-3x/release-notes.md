@@ -25,4 +25,4 @@ ht-degree: 1%
 * Gebruikt de Media Collection API voor het volgen van media
 * Ondersteunt het bijhouden van spelerstatussen
 
-De [ Analytics van de Media van Adobe (3.x SDK) voor Audio en Video Uitbreiding ](./overview.md) voegt de Analyse van de Media van de kernMedia 3.x JavaScript bibliotheek toe. Deze bibliotheek biedt de functionaliteit voor het bijhouden van media naar een site of project waarvoor tags zijn ingeschakeld.
+De [&#x200B; Analytics van de Media van Adobe (3.x SDK) voor Audio en Video Uitbreiding &#x200B;](./overview.md) voegt de Analyse van de Media van de kernMedia 3.x JavaScript bibliotheek toe. Deze bibliotheek biedt de functionaliteit voor het bijhouden van media naar een site of project waarvoor tags zijn ingeschakeld.

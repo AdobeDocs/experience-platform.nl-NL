@@ -31,8 +31,8 @@ console.log(turbine.buildInfo.turbineBuildDate);
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `turbineVersion` | De [ Turbine ](https://www.npmjs.com/package/@adobe/reactor-turbine) versie die binnen de huidige bibliotheek wordt gebruikt. |
-| `turbineBuildDate` | ISO 8601 datum toen de versie van [ Turbine ](https://www.npmjs.com/package/@adobe/reactor-turbine) binnen de container werd gebruikt werd gebouwd. |
+| `turbineVersion` | De [&#x200B; Turbine &#x200B;](https://www.npmjs.com/package/@adobe/reactor-turbine) versie die binnen de huidige bibliotheek wordt gebruikt. |
+| `turbineBuildDate` | ISO 8601 datum toen de versie van [&#x200B; Turbine &#x200B;](https://www.npmjs.com/package/@adobe/reactor-turbine) binnen de container werd gebruikt werd gebouwd. |
 | `buildDate` | De ISO 8601-datum waarop de huidige bibliotheek is gemaakt. |
 
 {style="table-layout:auto"}
@@ -79,7 +79,7 @@ Retourneert de waarde van een gegevenselement.
 var extensionSettings = turbine.getExtensionSettings();
 ```
 
-Keert het montagesobject terug dat het laatst van de [ mening van de uitbreidingsconfiguratie ](./configuration.md) werd bewaard.
+Keert het montagesobject terug dat het laatst van de [&#x200B; mening van de uitbreidingsconfiguratie &#x200B;](./configuration.md) werd bewaard.
 
 Waarden binnen de geretourneerde instellingen komen mogelijk uit gegevenselementen. Daarom kan het aanroepen van `getExtensionSettings()` op verschillende momenten verschillende resultaten opleveren als de waarden van de gegevenselementen zijn gewijzigd. Als u de meest actuele waarden wilt ophalen, moet u zo lang mogelijk wachten voordat u `getExtensionSettings()` aanroept.
 
@@ -92,7 +92,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 })
 ```
 
-Het [ hostedLibFiles ](./manifest.md) bezit kan binnen uitbreidingsmanifest worden bepaald om diverse dossiers samen met de markering runtime bibliotheek te ontvangen. Deze module retourneert de URL waar het opgegeven bibliotheekbestand wordt gehost.
+Het [&#x200B; hostedLibFiles &#x200B;](./manifest.md) bezit kan binnen uitbreidingsmanifest worden bepaald om diverse dossiers samen met de markering runtime bibliotheek te ontvangen. Deze module retourneert de URL waar het opgegeven bibliotheekbestand wordt gehost.
 
 ## `getSharedModule` {#shared}
 
@@ -100,7 +100,7 @@ Het [ hostedLibFiles ](./manifest.md) bezit kan binnen uitbreidingsmanifest word
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 ```
 
-Hiermee wordt een module opgehaald die via een andere extensie is gedeeld. Als er geen overeenkomende module wordt gevonden, wordt `undefined` geretourneerd. Zie [ het Uitvoeren Gedeelde Modules ](./web/shared.md) voor meer informatie betreffende gedeelde modules.
+Hiermee wordt een module opgehaald die via een andere extensie is gedeeld. Als er geen overeenkomende module wordt gevonden, wordt `undefined` geretourneerd. Zie [&#x200B; het Uitvoeren Gedeelde Modules &#x200B;](./web/shared.md) voor meer informatie betreffende gedeelde modules.
 
 ## `logger`
 
@@ -108,7 +108,7 @@ Hiermee wordt een module opgehaald die via een andere extensie is gedeeld. Als e
 turbine.logger.error('Error!');
 ```
 
-Het logboeknut wordt gebruikt om berichten aan de console te registreren. De berichten zullen slechts in de console tonen als het zuiveren door de gebruiker wordt aangezet. De geadviseerde manier om het zuiveren aan te zetten is [ Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) te gebruiken. Als alternatief kan de gebruiker de volgende opdracht `_satellite.setDebug(true)` uitvoeren in de browserontwikkelaarsconsole. Het logger heeft de volgende methodes:
+Het logboeknut wordt gebruikt om berichten aan de console te registreren. De berichten zullen slechts in de console tonen als het zuiveren door de gebruiker wordt aangezet. De geadviseerde manier om het zuiveren aan te zetten is [&#x200B; Adobe Experience Platform Debugger &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) te gebruiken. Als alternatief kan de gebruiker de volgende opdracht `_satellite.setDebug(true)` uitvoeren in de browserontwikkelaarsconsole. Het logger heeft de volgende methodes:
 
 * `logger.log(message: string)`: meldt een bericht aan de console.
 * `logger.info(message: string)`: meldt een informatief bericht aan de console.

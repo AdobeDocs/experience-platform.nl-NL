@@ -38,7 +38,7 @@ ht-degree: 3%
 
 #### **Functies**
 
-[ Adobe Analytics for VideoUitbreiding ](../media-analytics/overview.md) voegt de bibliotheek van JavaScript van de Analyse van de kernVideo toe. Deze bibliotheek biedt de functionaliteit voor het toevoegen van de MediaHeartmaatinstantie aan een tag-compatibele site of project. Voor de extensie Adobe Analytics for Video (VA) zijn twee extra extensies nodig:
+[&#x200B; Adobe Analytics for VideoUitbreiding &#x200B;](../media-analytics/overview.md) voegt de bibliotheek van JavaScript van de Analyse van de kernVideo toe. Deze bibliotheek biedt de functionaliteit voor het toevoegen van de MediaHeartmaatinstantie aan een tag-compatibele site of project. Voor de extensie Adobe Analytics for Video (VA) zijn twee extra extensies nodig:
 
 * Extensie Analytics
 * Experience Cloud ID Extension

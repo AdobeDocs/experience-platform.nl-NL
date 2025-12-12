@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # TLS-informatie (Transport Layer Security)
 
-TLS (Transport Layer Security) is een cryptografisch protocol dat end-to-end beveiliging biedt voor gegevens die via internet tussen toepassingen worden verzonden. Voor meer gedetailleerde informatie over TLS, lees de [ basisbeginselen van TLS ](https://www.internetsociety.org/deploy360/tls/basics/) documentatie.
+TLS (Transport Layer Security) is een cryptografisch protocol dat end-to-end beveiliging biedt voor gegevens die via internet tussen toepassingen worden verzonden. Voor meer gedetailleerde informatie over TLS, lees de [&#x200B; basisbeginselen van TLS &#x200B;](https://www.internetsociety.org/deploy360/tls/basics/) documentatie.
 
 Tags in Adobe Experience Platform zijn een systeem voor tagbeheer dat is ontworpen om scripts op uw website dynamisch te laden. TLS beveiligt de communicatie tussen de Adobe-host `assets.adobedtm.com` en uw website wanneer deze scripts worden geladen.
 
@@ -47,4 +47,4 @@ PORT    STATE SERVICE
 
 ### Zelfhosting
 
-Als u [ zelf-gastheer ](../publishing/hosts/self-hosting-libraries.md) uw bibliotheek bent, dan zullen de gesteunde versies TLS door uw eigen het ontvangen dienst worden bepaald.
+Als u [&#x200B; zelf-gastheer &#x200B;](../publishing/hosts/self-hosting-libraries.md) uw bibliotheek bent, dan zullen de gesteunde versies TLS door uw eigen het ontvangen dienst worden bepaald.

@@ -19,11 +19,11 @@ In dit document wordt beschreven hoe u gebeurtenistypen voor een webextensie in 
 
 >[!NOTE]
 >
->In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) voor een inleiding aan hun implementatie alvorens op deze gids terug te keren.
+>In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Zie het overzicht op [&#x200B; het formatteren van de bibliotheekmodule &#x200B;](./format.md) voor een inleiding aan hun implementatie alvorens op deze gids terug te keren.
 
 Gebeurtenistypen worden gedefinieerd door extensies en bestaan doorgaans uit de volgende kenmerken:
 
-1. A [ mening ](./views.md) getoond binnen Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de gebeurtenis te wijzigen.
+1. A [&#x200B; mening &#x200B;](./views.md) getoond binnen Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de gebeurtenis te wijzigen.
 2. Een bibliotheekmodule die wordt uitgegeven in de tagruntime-bibliotheek om de instellingen te interpreteren en te controleren of een bepaalde activiteit plaatsvindt.
 
 `module.exports` accepteert zowel de parameter `settings` als de parameter `trigger` . Dit maakt het aanpassen van het gebeurtenistype mogelijk.

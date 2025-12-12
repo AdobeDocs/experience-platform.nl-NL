@@ -15,11 +15,11 @@ Extensies, regels en gegevenselementen zijn bouwstenen. Wanneer u wilt dat uw to
 
 De gastheren bepalen beschikbare bestemmingen waar de bouwstijlen kunnen worden geleverd. Ze bestaan uit twee soorten:
 
-* [ Beheerd door Adobe ](./managed-by-adobe-host.md)
+* [&#x200B; Beheerd door Adobe &#x200B;](./managed-by-adobe-host.md)
 * [SFTP](./sftp-host.md)
 
 Gebruik de bovenstaande koppelingen voor gedetailleerde informatie over elk type host.
 
 Dezelfde host kan worden gebruikt voor meerdere omgevingen binnen een eigenschap.
 
-Voor meer informatie om u te helpen tussen zelf-ontvangen beslissen en het hebben van Adobe leidt het ontvangen voor u, gelieve [ zelf-ontvangende gids ](./self-hosting-libraries.md) te lezen.
+Voor meer informatie om u te helpen tussen zelf-ontvangen beslissen en het hebben van Adobe leidt het ontvangen voor u, gelieve [&#x200B; zelf-ontvangende gids &#x200B;](./self-hosting-libraries.md) te lezen.

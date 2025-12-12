@@ -20,13 +20,13 @@ Door:sturen van gebeurtenissen in Adobe Experience Platform (vroeger genoemd gew
 
 Dit document biedt een uitgebreid overzicht van het doorsturen van gebeurtenissen in Experience Platform.
 
-![ Gebeurtenis die in het ecosysteem van de gegevensinzameling door:sturen.](/help/collection/assets/event-forwarding.png)
+![&#x200B; Gebeurtenis die in het ecosysteem van de gegevensinzameling door:sturen.](/help/collection/assets/event-forwarding.png)
 
 >[!NOTE]
 >
->Voor informatie over hoe gebeurtenis het door:sturen past binnen het ecosysteem van de gegevensinzameling in Experience Platform, zie het [ overzicht van de gegevensinzameling ](/help/collection/home.md).
+>Voor informatie over hoe gebeurtenis het door:sturen past binnen het ecosysteem van de gegevensinzameling in Experience Platform, zie het [&#x200B; overzicht van de gegevensinzameling &#x200B;](/help/collection/home.md).
 
-De gebeurtenis die met Adobe Experience Platform [ wordt gecombineerd SDK van het Web ](/help/collection/js/js-overview.md) en [ Mobiele SDK ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) verstrekt de volgende voordelen:
+De gebeurtenis die met Adobe Experience Platform [&#x200B; wordt gecombineerd SDK van het Web &#x200B;](/help/collection/js/js-overview.md) en [&#x200B; Mobiele SDK &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) verstrekt de volgende voordelen:
 
 **Prestaties**:
 
@@ -40,7 +40,7 @@ De gebeurtenis die met Adobe Experience Platform [ wordt gecombineerd SDK van he
 
 ## Verschillen tussen het doorsturen van gebeurtenissen en tags {#differences-from-tags}
 
-In termen van configuratie, gebruikt de gebeurtenis door:sturen vele van de zelfde concepten zoals markeringen, zoals [ regels ](../managing-resources/rules.md), [ gegevenselementen ](../managing-resources/data-elements.md), en [ uitbreidingen ](../managing-resources/extensions/overview.md). Het belangrijkste verschil tussen beide kan als volgt worden samengevat:
+In termen van configuratie, gebruikt de gebeurtenis door:sturen vele van de zelfde concepten zoals markeringen, zoals [&#x200B; regels &#x200B;](../managing-resources/rules.md), [&#x200B; gegevenselementen &#x200B;](../managing-resources/data-elements.md), en [&#x200B; uitbreidingen &#x200B;](../managing-resources/extensions/overview.md). Het belangrijkste verschil tussen beide kan als volgt worden samengevat:
 
 * Tags **verzamelt** gebeurtenisgegevens van een website of een inheemse mobiele toepassing en verzendt het naar Experience Platform Edge Network.
 * De gebeurtenis die **door:sturen verzendt** inkomende gebeurtenisgegevens van Experience Platform Edge Network naar een eindpunt dat een definitieve bestemming of een eindpunt vertegenwoordigt dat gegevens verstrekt die u de originele nuttige lading wilt verrijken met.
@@ -55,21 +55,21 @@ Gebeurtenis doorsturen behoudt een eigen reeks eigenschappen, gescheiden van lab
 >
 >Gebruik in product hulp in het juiste paneel om meer over gebeurtenis te leren door:sturen en extra beschikbare middelen te bekijken.
 
-![ Gebeurtenis door:sturen eigenschappen in de Inzameling UI van Gegevens.](../../images/ui/event-forwarding/overview/properties.png)
+![&#x200B; Gebeurtenis door:sturen eigenschappen in de Inzameling UI van Gegevens.](../../images/ui/event-forwarding/overview/properties.png)
 
 Alle gebeurtenis die eigenschappen door:sturen maakt een lijst **[!UICONTROL Edge]** als hun platform. Ze maken geen onderscheid tussen web en mobiele apparaten, omdat ze alleen gegevens verwerken die ze van Experience Platform Edge Network hebben ontvangen, die zelf gebeurtenisgegevens van zowel internet- als mobiele platforms kan ontvangen.
 
 ### Extensies {#extensions}
 
-De gebeurtenis door:sturen heeft zijn eigen catalogus van compatibele uitbreidingen, zoals de [ uitbreiding van de Kern ](../../extensions/server/core/overview.md) en [ de 3} uitbreiding van de Verbinding van de Wolk van Adobe. ](../../extensions/server/cloud-connector/overview.md) U kunt de beschikbare extensies voor eigenschappen voor het doorsturen van gebeurtenissen weergeven in de gebruikersinterface door **[!UICONTROL Extensions]** te selecteren in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]** .
+De gebeurtenis door:sturen heeft zijn eigen catalogus van compatibele uitbreidingen, zoals de [&#x200B; uitbreiding van de Kern &#x200B;](../../extensions/server/core/overview.md) en [&#x200B; de 3&rbrace; uitbreiding van de Verbinding van de Wolk van Adobe. &#x200B;](../../extensions/server/cloud-connector/overview.md) U kunt de beschikbare extensies voor eigenschappen voor het doorsturen van gebeurtenissen weergeven in de gebruikersinterface door **[!UICONTROL Extensions]** te selecteren in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]** .
 
-U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![ over ](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
+U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![&#x200B; over &#x200B;](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
 
-![ Gebeurtenis door:sturen uitbreidingen in de Inzameling UI van Gegevens.](../../images/ui/event-forwarding/overview/extensions.png)
+![&#x200B; Gebeurtenis door:sturen uitbreidingen in de Inzameling UI van Gegevens.](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### Gegevenselementen {#data-elements}
 
-De types van gegevenselementen die in gebeurtenis beschikbaar zijn door:sturen zijn beperkt tot de catalogus van compatibele [ uitbreidingen ](#extensions) die hen verstrekken.
+De types van gegevenselementen die in gebeurtenis beschikbaar zijn door:sturen zijn beperkt tot de catalogus van compatibele [&#x200B; uitbreidingen &#x200B;](#extensions) die hen verstrekken.
 
 Terwijl de gegevenselementen zelf worden gecreeerd en gevormd de zelfde manier in gebeurtenis door:sturen zoals zij voor markeringen zijn, zijn er sommige belangrijke syntaxisverschillen wanneer het over hoe zij gegevens van Experience Platform Edge Network van verwijzingen voorzien.
 
@@ -79,27 +79,27 @@ Als u wilt verwijzen naar gegevens uit Experience Platform Edge Network, moet u 
 
 De **[!UICONTROL Path]** -waarde voor het gegevenselement moet het patroon `arc.event.{ELEMENT}` volgen (bijvoorbeeld: `arc.event.xdm.web.webPageDetails.URL` ). Dit pad moet correct zijn opgegeven om gegevens te kunnen verzenden.
 
-U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![ over ](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
+U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![&#x200B; over &#x200B;](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
 
-![ Voorbeeld van een wegtype gegevenselement voor gebeurtenis door:sturen.](../../images/ui/event-forwarding/overview/data-reference.png)
+![&#x200B; Voorbeeld van een wegtype gegevenselement voor gebeurtenis door:sturen.](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### Regels {#rules}
 
-Het maken van regels bij het doorsturen van eigenschappen voor gebeurtenissen werkt op vergelijkbare wijze als labels, waarbij het belangrijkste verschil is dat u geen gebeurtenissen als regelcomponenten kunt selecteren. In plaats daarvan, verwerkt een gebeurtenis die regel door:sturen alle gebeurtenissen het van [ datastream ](/help/datastreams/overview.md) ontvangt en door:sturen die gebeurtenissen aan bestemmingen als bepaalde voorwaarden worden voldaan.
+Het maken van regels bij het doorsturen van eigenschappen voor gebeurtenissen werkt op vergelijkbare wijze als labels, waarbij het belangrijkste verschil is dat u geen gebeurtenissen als regelcomponenten kunt selecteren. In plaats daarvan, verwerkt een gebeurtenis die regel door:sturen alle gebeurtenissen het van [&#x200B; datastream &#x200B;](/help/datastreams/overview.md) ontvangt en door:sturen die gebeurtenissen aan bestemmingen als bepaalde voorwaarden worden voldaan.
 
 Bovendien is er een onderbreking van 30 seconden die op één enkele gebeurtenis van toepassing is aangezien het over alle regels (en vandaar alle acties) binnen een gebeurtenis wordt verwerkt die bezit door:sturen. Dit betekent dat alle regels en alle handelingen voor één gebeurtenis binnen dit tijdsbestek moeten worden voltooid.
 
-U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![ over ](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
+U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![&#x200B; over &#x200B;](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
 
-![ Gebeurtenis door:sturen regels in de Inzameling UI van Gegevens.](../../images/ui/event-forwarding/overview/rules.png)
+![&#x200B; Gebeurtenis door:sturen regels in de Inzameling UI van Gegevens.](../../images/ui/event-forwarding/overview/rules.png)
 
 #### Tokenisering gegevenselement {#tokenization}
 
 In labelregels worden gegevenselementen verdeeld met een `%` aan het begin en einde van de naam van het gegevenselement (bijvoorbeeld: `%viewportHeight%` ). In geval van regels voor het doorsturen van gegevens worden gegevenselementen in plaats daarvan samengevoegd met `{{` aan het begin en `}}` aan het einde van de naam van het gegevenselement (bijvoorbeeld: `{{viewportHeight}}` ).
 
-U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![ over ](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
+U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![&#x200B; over &#x200B;](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
 
-![ Voorbeeld van een wegtype gegevenselement voor gebeurtenis door:sturen.](../../images/ui/event-forwarding/overview/tokenization.png)
+![&#x200B; Voorbeeld van een wegtype gegevenselement voor gebeurtenis door:sturen.](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Reeks handelingen {#action-sequencing}
 
@@ -107,7 +107,7 @@ De [!UICONTROL Actions] sectie van een gebeurtenis die regel door:sturen wordt a
 
 ## Geheimen {#secrets}
 
-Gebeurtenis door:sturen staat u toe om, geheimen tot stand te brengen te leiden en op te slaan die kunnen worden gebruikt om aan de servers voor authentiek te verklaren die u gegevens verzendt naar. Zie de gids op [ geheimen ](./secrets.md) op de verschillende soorten beschikbare geheime types en hoe zij in UI worden uitgevoerd.
+Gebeurtenis door:sturen staat u toe om, geheimen tot stand te brengen te leiden en op te slaan die kunnen worden gebruikt om aan de servers voor authentiek te verklaren die u gegevens verzendt naar. Zie de gids op [&#x200B; geheimen &#x200B;](./secrets.md) op de verschillende soorten beschikbare geheime types en hoe zij in UI worden uitgevoerd.
 
 ## Video-overzicht {#video}
 
@@ -117,4 +117,4 @@ De volgende video is bedoeld om u te helpen Gebeurtenis door:sturen en de verbin
 
 ## Volgende stappen
 
-Dit document verstrekte een inleiding op hoog niveau aan gebeurtenis het door:sturen. Voor meer informatie over hoe te opstelling deze eigenschap voor uw organisatie, zie [ begonnen gids ](./getting-started.md) worden.
+Dit document verstrekte een inleiding op hoog niveau aan gebeurtenis het door:sturen. Voor meer informatie over hoe te opstelling deze eigenschap voor uw organisatie, zie [&#x200B; begonnen gids &#x200B;](./getting-started.md) worden.

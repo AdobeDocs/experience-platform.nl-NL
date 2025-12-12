@@ -11,32 +11,32 @@ ht-degree: 0%
 
 # Extensie manifest
 
-In de basismap van de extensie moet u een bestand met de naam `extension.json` maken. Dit bevat belangrijke informatie over uw extensie waarmee Adobe Experience Platform deze correct kan gebruiken. Sommige inhoud wordt gevormd na de manier van [ npm `package.json` ](https://docs.npmjs.com/files/package.json).
+In de basismap van de extensie moet u een bestand met de naam `extension.json` maken. Dit bevat belangrijke informatie over uw extensie waarmee Adobe Experience Platform deze correct kan gebruiken. Sommige inhoud wordt gevormd na de manier van [&#x200B; npm `package.json` &#x200B;](https://docs.npmjs.com/files/package.json).
 
-Een voorbeeld `extension.json` kan de [ uitbreiding van de Wereld van Hello ](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json) bewaarplaats GitHub worden gevonden.
+Een voorbeeld `extension.json` kan de [&#x200B; uitbreiding van de Wereld van Hello &#x200B;](https://github.com/adobe/reactor-helloworld-extension/blob/master/extension.json) bewaarplaats GitHub worden gevonden.
 
 Een extensiemanifest moet uit het volgende bestaan:
 
 | Eigenschap | Beschrijving |
 |--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `name` | De naam van de extensie. Het moet van alle andere uitbreidingen uniek zijn en moet [ het noemen regels ](#naming-rules) naleven. **dit wordt gebruikt door markeringen als herkenningsteken en zou niet moeten worden veranderd nadat u uw uitbreiding publiceert.** |
+| `name` | De naam van de extensie. Het moet van alle andere uitbreidingen uniek zijn en moet [&#x200B; het noemen regels &#x200B;](#naming-rules) naleven. **dit wordt gebruikt door markeringen als herkenningsteken en zou niet moeten worden veranderd nadat u uw uitbreiding publiceert.** |
 | `platform` | Het platform voor uw extensie. De enige waarde die op dit moment wordt geaccepteerd, is `web` . |
-| `version` | De versie van uw extensie. Het moet het [ semver ](https://semver.org/) versioning formaat volgen. Dit is verenigbaar met [ npm versiegebied ](https://docs.npmjs.com/files/package.json#version). |
+| `version` | De versie van uw extensie. Het moet het [&#x200B; semver &#x200B;](https://semver.org/) versioning formaat volgen. Dit is verenigbaar met [&#x200B; npm versiegebied &#x200B;](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | De leesbare naam van de extensie. Dit wordt weergegeven aan Experience Platform-gebruikers. Het is niet nodig om &quot;tags&quot; of &quot;extensie&quot; te vermelden. Gebruikers weten dan al dat ze naar een extensie voor tags kijken. |
 | `description` | De beschrijving van de extensie. Dit wordt weergegeven aan Experience Platform-gebruikers. Als uw extensie gebruikers de mogelijkheid biedt om uw product te implementeren op hun website, moet u beschrijven wat uw product doet. Het is niet nodig om &quot;tags&quot; of &quot;extensie&quot; te vermelden. Gebruikers weten dan al dat ze naar een extensie voor tags kijken. |
 | `iconPath` *(Optioneel)* | Het relatieve pad naar het pictogram dat voor de extensie wordt weergegeven. Het mag niet beginnen met een slash. Het moet verwijzen naar een SVG-bestand met een `.svg` -extensie. De SVG moet vierkant zijn en kan door Experience Platform worden geschaald. |
-| `author` | De &quot;auteur&quot; is een object met de volgende structuur: <ul><li>`name`: De naam van de auteur van de extensie. De bedrijfsnaam kan hier ook worden gebruikt.</li><li>`url` *(Facultatief)*: Een URL waar u meer over de uitbreidingsauteur kunt weten.</li><li>`email` *(Facultatief)*: Het e-mailadres van de auteur van de uitbreiding.</li></ul>Dit is verenigbaar met [ npm auteursgebied ](https://docs.npmjs.com/files/package.json#people-fields-author-contributors) regels. |
+| `author` | De &quot;auteur&quot; is een object met de volgende structuur: <ul><li>`name`: De naam van de auteur van de extensie. De bedrijfsnaam kan hier ook worden gebruikt.</li><li>`url` *(Facultatief)*: Een URL waar u meer over de uitbreidingsauteur kunt weten.</li><li>`email` *(Facultatief)*: Het e-mailadres van de auteur van de uitbreiding.</li></ul>Dit is verenigbaar met [&#x200B; npm auteursgebied &#x200B;](https://docs.npmjs.com/files/package.json#people-fields-author-contributors) regels. |
 | `releaseNotesUrl` *(Optioneel)* | De URL naar de releaseopmerkingen van uw extensie als u over een locatie beschikt om deze gegevens te publiceren. Deze URL wordt gebruikt in de gebruikersinterface voor Adobe-tags om deze koppeling weer te geven tijdens de installatie en upgrade van de extensie. Deze eigenschap wordt alleen ondersteund voor Web- en Edge-extensies. |
 | `exchangeUrl` *(Vereist voor openbare extensies)* | De URL naar de aanbieding van je extensie op Adobe Exchange. Deze moet overeenkomen met het patroon `https://www.adobeexchange.com/experiencecloud.details.######.html` . |
 | `viewBasePath` | Het relatieve pad naar de submap met al uw weergaven en aan de weergave gerelateerde bronnen (HTML, JavaScript, CSS, afbeeldingen). Experience Platform host deze map op een webserver en laadt er iframe-inhoud uit. Dit is een verplicht veld en mag niet beginnen met een schuine streep. Als bijvoorbeeld al uw weergaven zich in `src/view/` bevinden, is de waarde van `viewBasePath` gelijk aan `src/view/` . |
-| `hostedLibFiles` *(Optioneel)* | Veel van onze gebruikers hebben de voorkeur aan het hosten van alle op tags betrekking hebbende dossiers op hun eigen server. Dit biedt gebruikers meer zekerheid over de beschikbaarheid van bestanden tijdens runtime en kan de code gemakkelijk scannen op beveiligingskwetsbaarheden. Als het bibliotheekgedeelte van uw extensie JavaScript-bestanden tijdens runtime moet laden, wordt u aangeraden deze eigenschap te gebruiken om deze bestanden weer te geven. De weergegeven bestanden worden samen met de tagruntimebibliotheek gehost. Uw uitbreiding kan de dossiers via URL dan laden die gebruikend [ wordt teruggewonnen getHostedLibFileUrl ](./turbine.md#get-hosted-lib-file) methode.<br><br> deze optie bevat een serie met relatieve wegen van derdebibliotheekdossiers die moeten worden ontvangen. |
+| `hostedLibFiles` *(Optioneel)* | Veel van onze gebruikers hebben de voorkeur aan het hosten van alle op tags betrekking hebbende dossiers op hun eigen server. Dit biedt gebruikers meer zekerheid over de beschikbaarheid van bestanden tijdens runtime en kan de code gemakkelijk scannen op beveiligingskwetsbaarheden. Als het bibliotheekgedeelte van uw extensie JavaScript-bestanden tijdens runtime moet laden, wordt u aangeraden deze eigenschap te gebruiken om deze bestanden weer te geven. De weergegeven bestanden worden samen met de tagruntimebibliotheek gehost. Uw uitbreiding kan de dossiers via URL dan laden die gebruikend [&#x200B; wordt teruggewonnen getHostedLibFileUrl &#x200B;](./turbine.md#get-hosted-lib-file) methode.<br><br> deze optie bevat een serie met relatieve wegen van derdebibliotheekdossiers die moeten worden ontvangen. |
 | `main` *(Optioneel)* | Het relatieve pad van een bibliotheekmodule die bij uitvoering moet worden uitgevoerd.<br><br> deze module zal altijd inbegrepen in de runtime bibliotheek en uitgevoerd zijn. Omdat de module altijd is opgenomen in de runtimebibliotheek, raden we u aan alleen een &#39;main&#39;-module te gebruiken als dit absoluut noodzakelijk is en de codegrootte minimaal te houden.<br><br> Deze module wordt gegarandeerd niet eerst worden uitgevoerd; andere modules kunnen vóór het worden uitgevoerd. |
-| `configuration` *(Optioneel)* | Dit beschrijft het [ gedeelte van de uitbreidingsconfiguratie ](./configuration.md) van de uitbreiding. Dit is nodig als u wilt dat gebruikers algemene instellingen voor de extensie opgeven. Zie [ bijlage ](#config-object) voor details op hoe dit gebied zou moeten worden gestructureerd. |
-| `events` *(Optioneel)* | Een serie van [ gebeurtenis ](./web/event-types.md) typedefinities. Zie de bijlage sectie op [ typedefinities ](#type-definitions) voor de structuur van elk voorwerp in de serie. |
-| `conditions` *(Optioneel)* | Een serie van [ voorwaarde ](./web/condition-types.md) typedefinities. Zie de bijlage sectie op [ typedefinities ](#type-definitions) voor de structuur van elk voorwerp in de serie. |
-| `actions` *(Optioneel)* | Een serie van [ actie ](./web/action-types.md) typedefinities. Zie de bijlage sectie op [ typedefinities ](#type-definitions) voor de structuur van elk voorwerp in de serie. |
-| `dataElements` *(Optioneel)* | Een serie van [ gegevens element ](./web/data-element-types.md) typedefinities. Zie de bijlage sectie op [ typedefinities ](#type-definitions) voor de structuur van elk voorwerp in de serie. |
-| `sharedModules` *(Optioneel)* | Een array van gezamenlijke moduledefinitieobjecten. Elk gezamenlijk moduleobject in de array moet als volgt zijn gestructureerd: <ul><li>`name`: De naam van de gedeelde module. Merk op dat deze naam zal worden gebruikt wanneer het van verwijzingen voorzien van gedeelde modules van andere uitbreidingen zoals die in [ Gedeelde Modules ](./web/shared.md) worden beschreven. Deze naam wordt nooit weergegeven in een gebruikersinterface. Het zou van de namen van andere gedeelde modules binnen uw uitbreiding uniek moeten zijn en moet [ het noemen regels ](#naming-rules) naleven. **dit wordt gebruikt door markeringen als herkenningsteken en zou niet moeten worden veranderd nadat u uw uitbreiding publiceert.**</li><li>`libPath`: Het relatieve pad naar de gedeelde module. Het mag niet beginnen met een slash. Er moet worden verwezen naar een JavaScript-bestand met een extensie `.js` .</li></ul> |
+| `configuration` *(Optioneel)* | Dit beschrijft het [&#x200B; gedeelte van de uitbreidingsconfiguratie &#x200B;](./configuration.md) van de uitbreiding. Dit is nodig als u wilt dat gebruikers algemene instellingen voor de extensie opgeven. Zie [&#x200B; bijlage &#x200B;](#config-object) voor details op hoe dit gebied zou moeten worden gestructureerd. |
+| `events` *(Optioneel)* | Een serie van [&#x200B; gebeurtenis &#x200B;](./web/event-types.md) typedefinities. Zie de bijlage sectie op [&#x200B; typedefinities &#x200B;](#type-definitions) voor de structuur van elk voorwerp in de serie. |
+| `conditions` *(Optioneel)* | Een serie van [&#x200B; voorwaarde &#x200B;](./web/condition-types.md) typedefinities. Zie de bijlage sectie op [&#x200B; typedefinities &#x200B;](#type-definitions) voor de structuur van elk voorwerp in de serie. |
+| `actions` *(Optioneel)* | Een serie van [&#x200B; actie &#x200B;](./web/action-types.md) typedefinities. Zie de bijlage sectie op [&#x200B; typedefinities &#x200B;](#type-definitions) voor de structuur van elk voorwerp in de serie. |
+| `dataElements` *(Optioneel)* | Een serie van [&#x200B; gegevens element &#x200B;](./web/data-element-types.md) typedefinities. Zie de bijlage sectie op [&#x200B; typedefinities &#x200B;](#type-definitions) voor de structuur van elk voorwerp in de serie. |
+| `sharedModules` *(Optioneel)* | Een array van gezamenlijke moduledefinitieobjecten. Elk gezamenlijk moduleobject in de array moet als volgt zijn gestructureerd: <ul><li>`name`: De naam van de gedeelde module. Merk op dat deze naam zal worden gebruikt wanneer het van verwijzingen voorzien van gedeelde modules van andere uitbreidingen zoals die in [&#x200B; Gedeelde Modules &#x200B;](./web/shared.md) worden beschreven. Deze naam wordt nooit weergegeven in een gebruikersinterface. Het zou van de namen van andere gedeelde modules binnen uw uitbreiding uniek moeten zijn en moet [&#x200B; het noemen regels &#x200B;](#naming-rules) naleven. **dit wordt gebruikt door markeringen als herkenningsteken en zou niet moeten worden veranderd nadat u uw uitbreiding publiceert.**</li><li>`libPath`: Het relatieve pad naar de gedeelde module. Het mag niet beginnen met een slash. Er moet worden verwezen naar een JavaScript-bestand met een extensie `.js` .</li></ul> |
 
 ## Bijlage
 
@@ -49,7 +49,7 @@ De waarde van elk `name` veld in `extension.json` moet aan de volgende regels vo
 * Mag geen hoofdletters bevatten
 * Alleen URL-veilige tekens bevatten
 
-Deze zijn verenigbaar met [ npm pakketnaam ](https://docs.npmjs.com/files/package.json#name) regels.
+Deze zijn verenigbaar met [&#x200B; npm pakketnaam &#x200B;](https://docs.npmjs.com/files/package.json#name) regels.
 
 ### Eigenschappen van Configuration-objecten {#config-object}
 
@@ -71,20 +71,20 @@ Het configuratieobject moet als volgt zijn gestructureerd:
       <td><code>schema</code></td>
       <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig voorwerp dat van de mening van de uitbreidingsconfiguratie wordt bewaard. Aangezien u de ontwikkelaar van de configuratiemening bent, is het uw verantwoordelijkheid om ervoor te zorgen dat om het even welk die montagesvoorwerp aan dit schema aanpast. Dit schema wordt ook gebruikt voor validatie wanneer gebruikers gegevens proberen op te slaan met Experience Platform-services.<br><br> een voorwerp van het voorbeeldschema is als volgt:
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Wij adviseren gebruikend een hulpmiddel zoals <a href="https://www.jsonschemavalidator.net/"> JSON- Schema validator </a> om uw schema manueel te testen.</td>
     </tr>
@@ -131,20 +131,20 @@ Een typedefinitie is een voorwerp dat wordt gebruikt om een gebeurtenis, een voo
       <td><code>schema</code></td>
       <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig montagesvoorwerp dat door de gebruiker kan worden bewaard. De montages worden gewoonlijk gevormd en door een gebruiker bewaard gebruikend het gebruikersinterface van de Inzameling van Gegevens. In deze gevallen kan de weergave van de extensie de nodige stappen ondernemen om door de gebruiker opgegeven instellingen te valideren. Anderzijds kiezen sommige gebruikers ervoor om tags-API's rechtstreeks te gebruiken zonder de hulp van een gebruikersinterface. Het doel van dit schema is om Experience Platform toe te staan correct te bevestigen dat de montagesobjecten die door gebruikers worden bewaard, ongeacht of een gebruikersinterface wordt gebruikt, in een formaat zijn dat met de bibliotheekmodule compatibel is die op het montagesobject tijdens runtime zal handelen.<br><br> een voorwerp van het voorbeeldschema is als volgt:<br>
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Wij adviseren gebruikend een hulpmiddel zoals <a href="https://www.jsonschemavalidator.net/"> JSON- Schema validator </a> om uw schema manueel te testen.</td>
     </tr>
@@ -206,7 +206,7 @@ Wanneer de gebruiker de regel opslaat, ziet het instellingsobject dat in de weer
 
 Wanneer een regel die onze actie gebruikt, in de runtimebibliotheek van de tag wordt geactiveerd, willen we de code van de gebruiker uitvoeren en deze een gebruikersnaam doorgeven.
 
-Op het punt dat het instellingsobject wordt opgeslagen vanuit de weergave van het handelingstype, is de code van de gebruiker gewoon een tekenreeks. Dit is goed omdat het behoorlijk aan en van JSON kan behoorlijk in series worden vervaardigd; nochtans, is het ook slecht omdat het typisch in de markering runtime bibliotheek als koord evenals in plaats van een uitvoerbare functie zou worden uitgestoten. Hoewel u kon proberen om de code binnen de de bibliotheekmodule van uw actietype uit te voeren gebruikend [`eval` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) of de aannemer van de Functie van a [ ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function), is het hoogst ontmoedigd toe te schrijven aan [ inhoudsveiligheidsbeleid ](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) potentieel blokkerend uitvoering.
+Op het punt dat het instellingsobject wordt opgeslagen vanuit de weergave van het handelingstype, is de code van de gebruiker gewoon een tekenreeks. Dit is goed omdat het behoorlijk aan en van JSON kan behoorlijk in series worden vervaardigd; nochtans, is het ook slecht omdat het typisch in de markering runtime bibliotheek als koord evenals in plaats van een uitvoerbare functie zou worden uitgestoten. Hoewel u kon proberen om de code binnen de de bibliotheekmodule van uw actietype uit te voeren gebruikend [`eval` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) of de aannemer van de Functie van a [&#x200B; &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function), is het hoogst ontmoedigd toe te schrijven aan [&#x200B; inhoudsveiligheidsbeleid &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) potentieel blokkerend uitvoering.
 
 Als tussenoplossing voor deze situatie, vertelt het gebruiken van de functietransformatie Experience Platform om de code van de gebruiker in een uitvoerbare functie te verpakken wanneer het in de markering runtime bibliotheek wordt uitgegeven. Om ons voorbeeldprobleem op te lossen, zouden wij de transformatie op de typedefinitie in `extension.json` als volgt bepalen:
 

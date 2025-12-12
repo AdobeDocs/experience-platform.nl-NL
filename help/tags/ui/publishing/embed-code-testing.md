@@ -15,11 +15,11 @@ Als u wijzigingen aanbrengt in uw tagbibliotheek die in Adobe Experience Platfor
 
 ## Vereisten
 
-Deze zelfstudie vereist een goed begrip van het gebruik van omgevingen en insluitcodes voor tags. Zie het [ milieu&#39;s overzicht ](./environments.md) voor meer informatie.
+Deze zelfstudie vereist een goed begrip van het gebruik van omgevingen en insluitcodes voor tags. Zie het [&#x200B; milieu&#39;s overzicht &#x200B;](./environments.md) voor meer informatie.
 
 Deze zelfstudie vereist ook dat u de browserextensie van Experience Platform Debugger hebt geïnstalleerd. Experience Platform Debugger is beschikbaar voor de browser van Chrome. Gebruik de volgende koppeling om de extensie te installeren voordat u de zelfstudie start:
 
-* [ Debugger van Experience Platform voor Chrome ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [&#x200B; Debugger van Experience Platform voor Chrome &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ## Experience Platform Debugger openen op uw website
 
@@ -53,4 +53,4 @@ Het tabblad **[!UICONTROL Configuration]** wordt weer weergegeven, zodat u kunt 
 
 ## Volgende stappen
 
-In deze zelfstudie wordt beschreven hoe u met Experience Platform Debugger lokaal kunt schakelen tussen insluitcodes voor testdoeleinden. Verwijs naar de [ Debugger van Experience Platform documentatie ](../../../debugger/home.md) voor meer informatie over zijn diverse mogelijkheden.
+In deze zelfstudie wordt beschreven hoe u met Experience Platform Debugger lokaal kunt schakelen tussen insluitcodes voor testdoeleinden. Verwijs naar de [&#x200B; Debugger van Experience Platform documentatie &#x200B;](../../../debugger/home.md) voor meer informatie over zijn diverse mogelijkheden.

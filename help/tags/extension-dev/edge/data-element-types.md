@@ -19,9 +19,9 @@ In dit document wordt beschreven hoe u gegevenselemetypen definieert voor een ra
 
 >[!IMPORTANT]
 >
->Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids over [ types van gegevenselement voor Webuitbreidingen ](../web/data-element-types.md).
+>Als u een Webuitbreiding ontwikkelt, zie in plaats daarvan de gids over [&#x200B; types van gegevenselement voor Webuitbreidingen &#x200B;](../web/data-element-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in randextensies. Als u een inleiding vereist, zie het overzicht op [&#x200B; het formatteren van de bibliotheekmodule &#x200B;](./format.md) alvorens aan deze gids terug te keren.
 
 Gegevenselementen bestaan gewoonlijk uit de volgende elementen:
 
@@ -56,4 +56,4 @@ module.exports = (context) => {
 
 ## Context van de module Bibliotheek
 
-Alle modules van gegevenselementen hebben toegang tot een `context` variabele die wordt verstrekt wanneer de module wordt geroepen. U kunt meer [ hier ](./context.md) leren.
+Alle modules van gegevenselementen hebben toegang tot een `context` variabele die wordt verstrekt wanneer de module wordt geroepen. U kunt meer [&#x200B; hier &#x200B;](./context.md) leren.

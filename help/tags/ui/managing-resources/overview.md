@@ -13,8 +13,8 @@ ht-degree: 0%
 
 In de context van tags in Experience Platform verwijst het woord &quot;resources&quot; naar:
 
-* [ Uitbreidingen ](extensions/overview.md) - de uitbreidingen verstrekken de types en de regels van gegevenselement voor u om met te werken
-* [ Elementen van Gegevens ](data-elements.md) - de elementen van Gegevens zijn een gemakkelijke manier om het even welke gegevens van verwijzingen te voorzien die elders bestaan.  Zij creëren kortere weg die binnen regels en uitbreidingsconfiguraties kan worden gebruikt.  Wanneer de locatie van de onderliggende gegevens verandert, kunnen deze worden bijgewerkt zodat ze naar de nieuwe locatie verwijzen zonder dat afzonderlijke regels of extensies moeten worden bijgewerkt.
-* [ Regels ](rules.md) - de Regels zijn een inzameling van regelcomponenten (gebeurtenissen, voorwaarden, en acties) die het gedrag van de opgestelde markeringen controleren.
+* [&#x200B; Uitbreidingen &#x200B;](extensions/overview.md) - de uitbreidingen verstrekken de types en de regels van gegevenselement voor u om met te werken
+* [&#x200B; Elementen van Gegevens &#x200B;](data-elements.md) - de elementen van Gegevens zijn een gemakkelijke manier om het even welke gegevens van verwijzingen te voorzien die elders bestaan.  Zij creëren kortere weg die binnen regels en uitbreidingsconfiguraties kan worden gebruikt.  Wanneer de locatie van de onderliggende gegevens verandert, kunnen deze worden bijgewerkt zodat ze naar de nieuwe locatie verwijzen zonder dat afzonderlijke regels of extensies moeten worden bijgewerkt.
+* [&#x200B; Regels &#x200B;](rules.md) - de Regels zijn een inzameling van regelcomponenten (gebeurtenissen, voorwaarden, en acties) die het gedrag van de opgestelde markeringen controleren.
 
 U kunt meer over elk van deze middeltypes leren door de verbindingen hierboven te selecteren.

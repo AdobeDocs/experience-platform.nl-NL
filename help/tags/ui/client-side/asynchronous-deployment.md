@@ -16,7 +16,7 @@ ht-degree: 0%
 >title="Asynchrone implementatie"
 >abstract="Als deze optie is ingeschakeld, zal de browser bij het parseren van deze scripttag beginnen met het laden van het JavaScript-bestand, maar in plaats van te wachten tot de bibliotheek is geladen en uitgevoerd, de rest van het document blijven parseren en renderen. Dit kan de prestaties van webpagina&#39;s verbeteren, maar heeft belangrijke gevolgen voor de manier waarop bepaalde regels worden uitgevoerd. Raadpleeg de documentatie voor meer informatie."
 
-Prestaties en het niet blokkeren van de implementatie van de JavaScript-bibliotheken die onze producten vereisen, worden steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed] ](https://developers.google.com/speed/pagespeed/insights/) raden gebruikers aan hun manier van implementatie van de Adobe-bibliotheken op hun site te wijzigen. In dit artikel wordt uitgelegd hoe u de Adobe JavaScript-bibliotheken asynchroon kunt gebruiken.
+Prestaties en het niet blokkeren van de implementatie van de JavaScript-bibliotheken die onze producten vereisen, worden steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed] &#x200B;](https://developers.google.com/speed/pagespeed/insights/) raden gebruikers aan hun manier van implementatie van de Adobe-bibliotheken op hun site te wijzigen. In dit artikel wordt uitgelegd hoe u de Adobe JavaScript-bibliotheken asynchroon kunt gebruiken.
 
 ## Synchroon versus asynchroon
 
@@ -48,11 +48,11 @@ Dit geeft aan de browser aan dat wanneer deze scripttag wordt geparseerd, de bro
 
 Zoals hierboven beschreven, pauzeert de browser bij synchrone implementaties het parseren en renderen van de pagina terwijl de Adobe Experience Platform-tagbibliotheek wordt geladen en uitgevoerd. Bij asynchrone implementaties parseert en rendert de browser de pagina terwijl de bibliotheek wordt geladen. Er moet rekening worden gehouden met de variabiliteit van het tijdstip waarop de tagbibliotheek kan zijn geladen ten opzichte van het parseren en renderen van pagina&#39;s.
 
-Ten eerste, omdat de tagbibliotheek al kan worden geladen voordat of nadat de onderkant van de pagina is geparseerd en uitgevoerd, moet u `_satellite.pageBottom()` niet meer aanroepen vanuit de paginacode (`_satellite` is pas beschikbaar nadat de bibliotheek is geladen). Dit wordt verklaard in [ Lading de markeringen inbedden asynchroon code ](#loading-the-tags-embed-code-asynchronously).
+Ten eerste, omdat de tagbibliotheek al kan worden geladen voordat of nadat de onderkant van de pagina is geparseerd en uitgevoerd, moet u `_satellite.pageBottom()` niet meer aanroepen vanuit de paginacode (`_satellite` is pas beschikbaar nadat de bibliotheek is geladen). Dit wordt verklaard in [&#x200B; Lading de markeringen inbedden asynchroon code &#x200B;](#loading-the-tags-embed-code-asynchronously).
 
-Ten tweede kan de tagbibliotheek klaar zijn met laden voor of nadat de [`DOMContentLoaded` ](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) browser-gebeurtenis (DOM Ready) is opgetreden.
+Ten tweede kan de tagbibliotheek klaar zijn met laden voor of nadat de [`DOMContentLoaded` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) browser-gebeurtenis (DOM Ready) is opgetreden.
 
-Wegens deze twee punten, is het de moeite waard om aan te tonen hoe de [ Geladen Bibliotheek ](../../extensions/client/core/overview.md#library-loaded-page-top), [ Onderkant van de Pagina ](../../extensions/client/core/overview.md#page-bottom), [ Klaar DOM ](../../extensions/client/core/overview.md#page-bottom), en [ Venster ](../../extensions/client/core/overview.md#window-loaded) gebeurtenistypen van de de uitbreidingsfunctie van de Kern wanneer het laden van een markeringsbibliotheek asynchroon.
+Wegens deze twee punten, is het de moeite waard om aan te tonen hoe de [&#x200B; Geladen Bibliotheek &#x200B;](../../extensions/client/core/overview.md#library-loaded-page-top), [&#x200B; Onderkant van de Pagina &#x200B;](../../extensions/client/core/overview.md#page-bottom), [&#x200B; Klaar DOM &#x200B;](../../extensions/client/core/overview.md#page-bottom), en [&#x200B; Venster &#x200B;](../../extensions/client/core/overview.md#window-loaded) gebeurtenistypen van de de uitbreidingsfunctie van de Kern wanneer het laden van een markeringsbibliotheek asynchroon.
 
 Als de eigenschap tag de volgende vier regels bevat:
 
@@ -68,8 +68,8 @@ Regel A → Regel B → Regel C → Regel D
 Hoewel de volgorde altijd wordt gehandhaafd, kunnen sommige regels direct worden uitgevoerd wanneer de tagbibliotheek klaar is met laden, terwijl andere later wellicht worden uitgevoerd. Het volgende gebeurt wanneer de tagbibliotheek klaar is met laden:
 
 1. Regel A wordt onmiddellijk uitgevoerd.
-1. Als de browsergebeurtenis `DOMContentLoaded` (DOM Ready) al heeft plaatsgevonden, worden de regels B en C direct uitgevoerd. Anders, worden Regel B en Regel C uitgevoerd later wanneer de [`DOMContentLoaded` ](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) browser gebeurtenis voorkomt.
-1. Als de [`load` ](https://developer.mozilla.org/en-US/docs/Web/Events/load) browser gebeurtenis (Venster Geladen) reeds voorkwam, wordt Regel D uitgevoerd onmiddellijk. Anders, zal Regel D later worden uitgevoerd wanneer de [`load` ](https://developer.mozilla.org/en-US/docs/Web/Events/load) browser gebeurtenis voorkomt. Merk op dat als u de markeringsbibliotheek volgens de instructies hebt geïnstalleerd, de markeringsbibliotheek *altijd* klaar is ladend alvorens de [`load` ](https://developer.mozilla.org/en-US/docs/Web/Events/load) browser gebeurtenis voorkomt.
+1. Als de browsergebeurtenis `DOMContentLoaded` (DOM Ready) al heeft plaatsgevonden, worden de regels B en C direct uitgevoerd. Anders, worden Regel B en Regel C uitgevoerd later wanneer de [`DOMContentLoaded` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) browser gebeurtenis voorkomt.
+1. Als de [`load` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Events/load) browser gebeurtenis (Venster Geladen) reeds voorkwam, wordt Regel D uitgevoerd onmiddellijk. Anders, zal Regel D later worden uitgevoerd wanneer de [`load` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Events/load) browser gebeurtenis voorkomt. Merk op dat als u de markeringsbibliotheek volgens de instructies hebt geïnstalleerd, de markeringsbibliotheek *altijd* klaar is ladend alvorens de [`load` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Events/load) browser gebeurtenis voorkomt.
 
 Houd rekening met het volgende wanneer u deze principes toepast op uw eigen website:
 
@@ -80,7 +80,7 @@ Als u dingen die uit orde voorkomen ziet, is het waarschijnlijk dat u sommige ti
 
 ## De ingesloten code van tags asynchroon laden
 
-De markeringen verstrekken een knevel om asynchrone lading aan te zetten wanneer het creëren van inbedcode wanneer u een [ milieu ](../publishing/environments.md) vormt. U kunt het asynchrone laden ook zelf configureren:
+De markeringen verstrekken een knevel om asynchrone lading aan te zetten wanneer het creëren van inbedcode wanneer u een [&#x200B; milieu &#x200B;](../publishing/environments.md) vormt. U kunt het asynchrone laden ook zelf configureren:
 
 1. Voeg een asynchroon kenmerk toe aan de tag `<script>` om het script asynchroon te laden.
 

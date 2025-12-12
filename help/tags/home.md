@@ -27,7 +27,7 @@ Tags worden aan [!DNL Adobe Experience Cloud] klanten aangeboden als een opgenom
 
 Gebruik de Help in het product in het rechterdeelvenster voor meer informatie over tags en om aanvullende beschikbare bronnen weer te geven.
 
-![ de eigenschappen van Markeringen in de Inzameling UI van Gegevens.](./images/ui/tags-overview/tags-properties.png)
+![&#x200B; de eigenschappen van Markeringen in de Inzameling UI van Gegevens.](./images/ui/tags-overview/tags-properties.png)
 
 ### Extensies {#extensions}
 
@@ -75,7 +75,7 @@ Automatiseer implementaties van individuele technologieën of een groep technolo
 
 ### Lichte, modulaire containertag {#modular-tag}
 
-De inhoud van de container wordt geminiatuurd, inclusief de aangepaste code. Alles is modulair. Als u geen punt nodig hebt, is het niet inbegrepen in uw bibliotheek. Het resultaat is een snelle en compacte implementatie. Zie [ Minificatie ](./ui/publishing/builds.md).
+De inhoud van de container wordt geminiatuurd, inclusief de aangepaste code. Alles is modulair. Als u geen punt nodig hebt, is het niet inbegrepen in uw bibliotheek. Het resultaat is een snelle en compacte implementatie. Zie [&#x200B; Minificatie &#x200B;](./ui/publishing/builds.md).
 
 ## Overige hooglichten {#other-highlights}
 

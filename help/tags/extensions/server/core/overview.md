@@ -137,11 +137,11 @@ De volgende vergelijkingsoperatoren voor waarden zijn beschikbaar:
 
 **is Waar:** de voorwaarde keert waar terug als de waarde boolean met de waarde waar is. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
 
-**is Waarheid:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean waar is. Zie [ van de Vertrouwelijke documentatie van 0} MDN voor voorbeelden van waarheidswaarden.](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+**is Waarheid:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean waar is. Zie [&#x200B; van de Vertrouwelijke documentatie van 0&rbrace; MDN voor voorbeelden van waarheidswaarden.](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
 
 **is Vals:** de voorwaarde keert waar terug als de waarde boolean met de waarde van vals is. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde false resulteert in de voorwaarde die false retourneert.
 
-**is vals:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean vals is. Zie {de documentatie van het Falsy van 0} MDN [ voor voorbeelden van valse waarden.](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+**is vals:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean vals is. Zie {de documentatie van het Falsy van 0} MDN [&#x200B; voor voorbeelden van valse waarden.](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
 
 

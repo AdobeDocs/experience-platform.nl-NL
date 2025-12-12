@@ -21,21 +21,21 @@ In dit document wordt beschreven hoe u end-to-end tests voor uw extensie kunt im
 
 ## Uw extensie valideren {#validate}
 
-Zodra uw team met de prestaties van uw uitbreiding en de resultaten wordt tevredengesteld die zij in het [ Sandbox ](https://www.npmjs.com/package/@adobe/reactor-sandbox#running-the-sandbox) hulpmiddel zien, zou u bereid moeten zijn om uw uitbreidingspakket aan markeringen te uploaden.
+Zodra uw team met de prestaties van uw uitbreiding en de resultaten wordt tevredengesteld die zij in het [&#x200B; Sandbox &#x200B;](https://www.npmjs.com/package/@adobe/reactor-sandbox#running-the-sandbox) hulpmiddel zien, zou u bereid moeten zijn om uw uitbreidingspakket aan markeringen te uploaden.
 
-Voordat u gaat uploaden, moet u controleren of de vereiste velden of instellingen aanwezig zijn. Bijvoorbeeld, die uw [ uitbreidingsmanifest ](../manifest.md) herzien, is uw [ uitbreidingsconfiguratie ](../configuration.md), uw [ meningen ](../web/views.md), en uw [ bibliotheekmodules ](../web/format.md) (bij een minimum) goede praktijk.
+Voordat u gaat uploaden, moet u controleren of de vereiste velden of instellingen aanwezig zijn. Bijvoorbeeld, die uw [&#x200B; uitbreidingsmanifest &#x200B;](../manifest.md) herzien, is uw [&#x200B; uitbreidingsconfiguratie &#x200B;](../configuration.md), uw [&#x200B; meningen &#x200B;](../web/views.md), en uw [&#x200B; bibliotheekmodules &#x200B;](../web/format.md) (bij een minimum) goede praktijk.
 
-Een specifiek voorbeeld is uw logobestand: voeg een `"iconPath": "example.svg",` -regel toe aan uw `extension.json` -bestand en neem dat logoafbeeldingsbestand op in uw project. Dit is het relatieve pad naar het pictogram dat voor de extensie wordt weergegeven. Het mag niet beginnen met een schuine streep. Het moet verwijzen naar een SVG-bestand met een `.svg` -extensie. De SVG wordt normaal weergegeven wanneer deze vierkant wordt gerenderd en kan door de gebruikersinterface worden geschaald. Zie [ hoe te artikel van SVG ](https://css-tricks.com/scale-svg/) voor meer details schrapen.
+Een specifiek voorbeeld is uw logobestand: voeg een `"iconPath": "example.svg",` -regel toe aan uw `extension.json` -bestand en neem dat logoafbeeldingsbestand op in uw project. Dit is het relatieve pad naar het pictogram dat voor de extensie wordt weergegeven. Het mag niet beginnen met een schuine streep. Het moet verwijzen naar een SVG-bestand met een `.svg` -extensie. De SVG wordt normaal weergegeven wanneer deze vierkant wordt gerenderd en kan door de gebruikersinterface worden geschaald. Zie [&#x200B; hoe te artikel van SVG &#x200B;](https://css-tricks.com/scale-svg/) voor meer details schrapen.
 
 >[!NOTE]
 >
->Neem voor openbare extensies een item in de `extension.json` op met een koppeling naar de aanbieding op eBay Exchange. Uw [ uitbreidingsmanifest ](../manifest.md) zou een ingang als dit moeten omvatten: `"exchangeUrl":"https://www.adobeexchange.com/experiencecloud.details.12345.html"` die aan URL van uw lijst van de Uitwisseling richten.
+>Neem voor openbare extensies een item in de `extension.json` op met een koppeling naar de aanbieding op eBay Exchange. Uw [&#x200B; uitbreidingsmanifest &#x200B;](../manifest.md) zou een ingang als dit moeten omvatten: `"exchangeUrl":"https://www.adobeexchange.com/experiencecloud.details.12345.html"` die aan URL van uw lijst van de Uitwisseling richten.
 
 ## Een Adobe I/O-integratie maken {#integration}
 
 Als u de API- of opdrachtregelprogramma&#39;s wilt gebruiken, hebt u een technisch account bij Adobe I/O nodig. U moet de technische account maken in de I/O-console en vervolgens het gereedschap Uploader gebruiken om het extensiepakket te uploaden.
 
-Voor informatie bij het creëren van een technische rekening voor gebruik met markeringen in Adobe Experience Platform, gelieve te verwijzen naar [ Reactor API die ](../../api/getting-started.md) gids Aan de slag wordt.
+Voor informatie bij het creëren van een technische rekening voor gebruik met markeringen in Adobe Experience Platform, gelieve te verwijzen naar [&#x200B; Reactor API die &#x200B;](../../api/getting-started.md) gids Aan de slag wordt.
 
 >[!IMPORTANT]
 >
@@ -60,9 +60,9 @@ Met `npx` kunt u een npm-pakket downloaden en uitvoeren zonder het daadwerkelijk
 >[!NOTE]
 > Standaard verwacht de uploader Adobe I/O-referenties voor een server-naar-server Oauth-flow. De oudere `jwt-auth` gebruikersgegevens
 > kan worden gebruikt door `npx @adobe/reactor-uploader@v5.2.0` tot aan afschrijving uit te voeren op 1 januari 2025. De vereiste parameters
-> om de `jwt-auth` versie in werking te stellen kan [ hier ](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452) worden gevonden.
+> om de `jwt-auth` versie in werking te stellen kan [&#x200B; hier &#x200B;](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452) worden gevonden.
 
-Voor uploader hoeft u slechts enkele gegevens in te voeren. De `clientId` en `clientSecret` kunnen worden opgehaald uit de Adobe I/O-console. Navigeer aan de [ pagina van Integraties ](https://console.adobe.io/integrations) in de I/O console. Selecteer de juiste organisatie in het vervolgkeuzemenu, zoek de juiste integratie en selecteer **[!UICONTROL View]** .
+Voor uploader hoeft u slechts enkele gegevens in te voeren. De `clientId` en `clientSecret` kunnen worden opgehaald uit de Adobe I/O-console. Navigeer aan de [&#x200B; pagina van Integraties &#x200B;](https://console.adobe.io/integrations) in de I/O console. Selecteer de juiste organisatie in het vervolgkeuzemenu, zoek de juiste integratie en selecteer **[!UICONTROL View]** .
 
 - Wat is uw `clientId`? Kopieer en plak deze vanuit de I/O-console.
 - Wat is uw `clientSecret`? Kopieer en plak deze vanuit de I/O-console.
@@ -76,9 +76,9 @@ Uw extensiepakket wordt vervolgens geüpload en de uploader geeft u de id van he
 
 >[!NOTE]
 >
->Als u de uploader vaak wilt uitvoeren, kan het lastig zijn al deze informatie telkens in te voeren. U kunt deze ook als argumenten doorgeven vanaf de opdrachtregel. Controle uit de [ sectie van de Argumenten van de Lijn van het Bevel ](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) van de NPM- documenten voor meer info.
+>Als u de uploader vaak wilt uitvoeren, kan het lastig zijn al deze informatie telkens in te voeren. U kunt deze ook als argumenten doorgeven vanaf de opdrachtregel. Controle uit de [&#x200B; sectie van de Argumenten van de Lijn van het Bevel &#x200B;](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) van de NPM- documenten voor meer info.
 
-Als u het uploaden van uw uitbreiding wilt beheren gebruikend direct API, zie de voorbeeldvraag [ creërend ](../../api/endpoints/extension-packages.md#create) of [ bijwerkt ](../../api/endpoints/extension-packages.md#update) een uitbreidingspakket in API docs voor meer detail.
+Als u het uploaden van uw uitbreiding wilt beheren gebruikend direct API, zie de voorbeeldvraag [&#x200B; creërend &#x200B;](../../api/endpoints/extension-packages.md#create) of [&#x200B; bijwerkt &#x200B;](../../api/endpoints/extension-packages.md#update) een uitbreidingspakket in API docs voor meer detail.
 
 ## Een ontwikkeleigenschap maken {#property}
 
@@ -112,7 +112,7 @@ Om uw uitbreiding toe te voegen, selecteer de **Catalogus** tabel.
 
 In de catalogus worden kaartpictogrammen weergegeven voor elke beschikbare extensie. Als uw extensie niet wordt weergegeven in de catalogus, controleert u of u de bovenstaande stappen hebt uitgevoerd in de secties Adobe Administration Console Set Up and Creating Your Extension Package. Uw extensiepakket wordt mogelijk ook weergegeven als In behandeling als Experience Platform de eerste verwerking niet heeft voltooid.
 
-Als u de vorige stappen hebt uitgevoerd en nog steeds geen extensiepakket in behandeling of Mislukt ziet in de catalogus, moet u de status van het extensiepakket rechtstreeks controleren met de API. Voor informatie over hoe te om de aangewezen API vraag te maken, lees [ Vets een ExtensionPackage ](../../api/endpoints/extension-packages.md#lookup) in de API documentatie.
+Als u de vorige stappen hebt uitgevoerd en nog steeds geen extensiepakket in behandeling of Mislukt ziet in de catalogus, moet u de status van het extensiepakket rechtstreeks controleren met de API. Voor informatie over hoe te om de aangewezen API vraag te maken, lees [&#x200B; Vets een ExtensionPackage &#x200B;](../../api/endpoints/extension-packages.md#lookup) in de API documentatie.
 
 Nadat uw extensiepakket verwerking heeft gebeëindigd, selecteert u **Installeren** onder aan de kaart.
 
@@ -162,7 +162,7 @@ Voeg met het voorbeeld van de Facebook-extensie een gebeurtenis toe telkens wann
 
 Het `Window Loaded` **Type van Gebeurtenis** zorgt ervoor dat om het even welke tijd een pagina op de testplaats laadt deze regel zal worden teweeggebracht. Selecteer **houden Veranderingen**. Voor dit voorbeeld, negeer **Voorwaarden** aangezien de regel voor om het even welke pagina op de testplaats zou moeten worden teweeggebracht.
 
-Onder **ACTIES** uitgezocht **voeg** toe. Het **scherm van de Configuratie van de Actie** verschijnt.Daarna moet u de uitbreiding kiezen dat de regel moet worden toegepast op, en de actie om voor te komen wanneer de regel wordt teweeggebracht. Selecteer **het Pixel van Facebook** van de **3} dropdown lijst van de Uitbreiding {, en** verzend de Mening van de Pagina **van het** Type van Actie **dropdown lijst.** Selecteer **houden Veranderingen**, en dan **sparen** op het volgende **uitgeven het scherm van de Regel**.
+Onder **ACTIES** uitgezocht **voeg** toe. Het **scherm van de Configuratie van de Actie** verschijnt.Daarna moet u de uitbreiding kiezen dat de regel moet worden toegepast op, en de actie om voor te komen wanneer de regel wordt teweeggebracht. Selecteer **het Pixel van Facebook** van de **3&rbrace; dropdown lijst van de Uitbreiding &lbrace;, en** verzend de Mening van de Pagina **van het** Type van Actie **dropdown lijst.** Selecteer **houden Veranderingen**, en dan **sparen** op het volgende **uitgeven het scherm van de Regel**.
 
 ![](../images/getting-started/action-configuration.png)
 
@@ -176,7 +176,7 @@ In de belangrijkste navigatie, uitgezochte **het Publiceren**, dan op **voeg Nie
 
 Een bibliotheek is een set instructies voor hoe extensies, gegevenselementen en regels met elkaar en met een website communiceren. Bibliotheken worden gecompileerd in builds. Een bibliotheek kan net zoveel wijzigingen bevatten als een gebruiker op een gemakkelijke manier tegelijk kan maken of testen.
 
-Op **creeer Bibliotheek** scherm, voeg een naam op het **3} tekstgebied van de Naam {toe.** De markeringen verstrekken een standaardontwikkelomgeving genoemd **Ontwikkeling**. Selecteer **Ontwikkeling** van de **milieu** dropdown lijst. Voeg voor het gemak alle beschikbare bronnen toe. Selecteer **toevoegen Alle Gewijzigde Middelen**, dan uitgezocht **sparen**.
+Op **creeer Bibliotheek** scherm, voeg een naam op het **3&rbrace; tekstgebied van de Naam &lbrace;toe.** De markeringen verstrekken een standaardontwikkelomgeving genoemd **Ontwikkeling**. Selecteer **Ontwikkeling** van de **milieu** dropdown lijst. Voeg voor het gemak alle beschikbare bronnen toe. Selecteer **toevoegen Alle Gewijzigde Middelen**, dan uitgezocht **sparen**.
 
 >[!NOTE]
 >
@@ -196,7 +196,7 @@ De tagbibliotheek is nu gepubliceerd en beschikbaar voor gebruik. De testpagina 
 
 ## Tags op een testsite installeren {#install-data-collection-tags}
 
-Installatie-instructies zijn beschikbaar op het tabblad Omgevingen. Op deze pagina worden alle beschikbare omgevingen weergegeven en kunt u meer maken. Aangezien de bibliotheek aan het milieu van de Ontwikkeling werd gepubliceerd selecteer het bakpictogram in de **INSTALLEER** kolom op de **3} rij van de Ontwikkeling.**
+Installatie-instructies zijn beschikbaar op het tabblad Omgevingen. Op deze pagina worden alle beschikbare omgevingen weergegeven en kunt u meer maken. Aangezien de bibliotheek aan het milieu van de Ontwikkeling werd gepubliceerd selecteer het bakpictogram in de **INSTALLEER** kolom op de **3&rbrace; rij van de Ontwikkeling.**
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
@@ -224,7 +224,7 @@ Wanneer u veranderingen ontdekt die aan uw uitbreidingspakket moeten worden aang
 
    >[!NOTE]
    >
-   >Argumenten kunnen op de bevellijn worden overgegaan om tijd te besparen door het herhaalde ingaan van geloofsbrieven te vermijden. Voor meer informatie over dit, lees de [ reactor-uploader documentatie ](https://www.npmjs.com/package/@adobe/reactor-uploader).
+   >Argumenten kunnen op de bevellijn worden overgegaan om tijd te besparen door het herhaalde ingaan van geloofsbrieven te vermijden. Voor meer informatie over dit, lees de [&#x200B; reactor-uploader documentatie &#x200B;](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. De installatiestap kan worden overgeslagen wanneer een bestaand pakket wordt bijgewerkt.
 1. Wijzig middelen - als de configuratie voor om het even welk van uw uitbreidingscomponenten is veranderd, zult u die middelen in UI moeten bijwerken.
 1. Voeg de meest recente wijzigingen toe aan uw bibliotheek en maak de bibliotheek opnieuw.

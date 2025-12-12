@@ -17,7 +17,7 @@ CSP&#39;s worden geïmplementeerd door een `Content-Security-Policy` HTTP-header
 
 >[!NOTE]
 >
-> Voor meer gedetailleerde informatie over CSP, verwijs naar de [ MDN Webdocumenten ](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
+> Voor meer gedetailleerde informatie over CSP, verwijs naar de [&#x200B; MDN Webdocumenten &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
 
 Tags in Adobe Experience Platform zijn een systeem voor tagbeheer dat is ontworpen om scripts op uw website dynamisch te laden. Een standaard CSP blokkeert deze dynamisch geladen manuscripten toe te schrijven aan potentiële veiligheidsproblemen. In dit document wordt uitgelegd hoe u uw CSP zo configureert dat dynamisch geladen scripts van tags worden toegestaan.
 
@@ -34,7 +34,7 @@ Wanneer u een CSP gebruikt, moet u vertrouwde domeinen opnemen in de waarde van 
 
 ### Zelfhosting
 
-Als u [ zelf-gastheer ](../publishing/hosts/self-hosting-libraries.md) uw bibliotheek bent, dan is de bron voor uw bouwstijl waarschijnlijk uw eigen domein. U kunt specificeren dat het gastheerdomein een veilige bron door de volgende configuratie te gebruiken is:
+Als u [&#x200B; zelf-gastheer &#x200B;](../publishing/hosts/self-hosting-libraries.md) uw bibliotheek bent, dan is de bron voor uw bouwstijl waarschijnlijk uw eigen domein. U kunt specificeren dat het gastheerdomein een veilige bron door de volgende configuratie te gebruiken is:
 
 **HTTP- kopbal**
 
@@ -50,7 +50,7 @@ Content-Security-Policy: script-src 'self'
 
 ### Door Adobe beheerde hosting
 
-Als u een [ Adobe-Beheerde gastheer ](../publishing/hosts/managed-by-adobe-host.md) gebruikt, dan wordt uw bouwstijl gehandhaafd op `assets.adobedtm.com`. U moet `self` als een veilig domein opgeven zodat u geen scripts afbreekt die u al laadt, maar u moet `assets.adobedtm.com` ook als veilig weergeven of uw tagbibliotheek wordt niet op de pagina geladen. In dit geval, zou u de volgende configuratie moeten gebruiken:
+Als u een [&#x200B; Adobe-Beheerde gastheer &#x200B;](../publishing/hosts/managed-by-adobe-host.md) gebruikt, dan wordt uw bouwstijl gehandhaafd op `assets.adobedtm.com`. U moet `self` als een veilig domein opgeven zodat u geen scripts afbreekt die u al laadt, maar u moet `assets.adobedtm.com` ook als veilig weergeven of uw tagbibliotheek wordt niet op de pagina geladen. In dit geval, zou u de volgende configuratie moeten gebruiken:
 
 **HTTP- kopbal**
 
@@ -61,7 +61,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>` markering**
 
 
-Er is een zeer belangrijke voorwaarde: U moet de markeringsbibliotheek [ asynchroon ](./asynchronous-deployment.md) laden. Dit werkt niet met een synchrone lading van de markeringsbibliotheek (wat in consolefouten en regels resulteert niet behoorlijk).
+Er is een zeer belangrijke voorwaarde: U moet de markeringsbibliotheek [&#x200B; asynchroon &#x200B;](./asynchronous-deployment.md) laden. Dit werkt niet met een synchrone lading van de markeringsbibliotheek (wat in consolefouten en regels resulteert niet behoorlijk).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
@@ -73,12 +73,12 @@ U moet `self` opgeven als een veilig domein, zodat alle scripts die u al laadt, 
 
 CSP maakt gealigneerde manuscripten door gebrek onbruikbaar, en daarom moet manueel worden gevormd om hen toe te staan. U hebt twee opties om inlinescripts toe te staan:
 
-* [ toestaan door nonce ](#nonce) (goede veiligheid)
-* [ staat alle gealigneerde manuscripten ](#unsafe-inline) (minst veilig) toe
+* [&#x200B; toestaan door nonce &#x200B;](#nonce) (goede veiligheid)
+* [&#x200B; staat alle gealigneerde manuscripten &#x200B;](#unsafe-inline) (minst veilig) toe
 
 >[!NOTE]
 >
->De CSP-specificatie bevat details voor een derde optie met behulp van hashes, maar deze aanpak is niet mogelijk voor systemen voor tagbeheer zoals tags. Voor meer informatie over de beperkingen om haken met markeringen in Experience Platform te gebruiken, zie de [ gids van de Integriteit Subresource (SRI) ](./sri.md).
+>De CSP-specificatie bevat details voor een derde optie met behulp van hashes, maar deze aanpak is niet mogelijk voor systemen voor tagbeheer zoals tags. Voor meer informatie over de beperkingen om haken met markeringen in Experience Platform te gebruiken, zie de [&#x200B; gids van de Integriteit Subresource (SRI) &#x200B;](./sri.md).
 
 ### Eenmaal toestaan {#nonce}
 
@@ -86,7 +86,7 @@ Deze methode omvat het genereren van een cryptografische id en het toevoegen van
 
 >[!IMPORTANT]
 >
->Als u deze methode wilt gebruiken, moet u de build asynchroon laden. Dit werkt niet wanneer het laden van de bouwstijl synchroon, wat in consolefouten en regels resulteert niet behoorlijk uitvoeren. Zie de gids op [ asynchrone plaatsing ](./asynchronous-deployment.md) voor meer informatie.
+>Als u deze methode wilt gebruiken, moet u de build asynchroon laden. Dit werkt niet wanneer het laden van de bouwstijl synchroon, wat in consolefouten en regels resulteert niet behoorlijk uitvoeren. Zie de gids op [&#x200B; asynchrone plaatsing &#x200B;](./asynchronous-deployment.md) voor meer informatie.
 
 De voorbeelden tonen hieronder hoe u uw nonce aan de CSP configuratie voor een Adobe-Beheerde gastheer kunt toevoegen. Als u zelfhosting gebruikt, kunt u `assets.adobedtm.com` uitsluiten.
 
@@ -154,4 +154,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 Door dit document te lezen, moet u nu begrijpen hoe u de CSP-header zo kunt configureren dat het bibliotheekbestand van de tag en inlinescripts worden geaccepteerd.
 
-Als extra veiligheidsmaatregel, kunt u ook verkiezen om de Integriteit Subresource (SRI) te gebruiken om opgehaalde bibliotheekbouwt te bevestigen. Deze functie heeft echter enkele belangrijke beperkingen bij gebruik in systemen voor tagbeheer, zoals tags. Zie de gids op [ verenigbaarheid SRI in Experience Platform ](./sri.md) voor meer informatie.
+Als extra veiligheidsmaatregel, kunt u ook verkiezen om de Integriteit Subresource (SRI) te gebruiken om opgehaalde bibliotheekbouwt te bevestigen. Deze functie heeft echter enkele belangrijke beperkingen bij gebruik in systemen voor tagbeheer, zoals tags. Zie de gids op [&#x200B; verenigbaarheid SRI in Experience Platform &#x200B;](./sri.md) voor meer informatie.

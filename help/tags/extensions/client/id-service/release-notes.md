@@ -11,13 +11,13 @@ ht-degree: 2%
 
 # Opmerkingen bij de release van Adobe Experience Cloud Identity Service
 
-In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van Experience Cloud zelf, gelieve te verwijzen naar de [ documentatie van de Dienst van de Identiteit ](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
+In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van Experience Cloud zelf, gelieve te verwijzen naar de [&#x200B; documentatie van de Dienst van de Identiteit &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
 
 ## 17 okt. 2022
 
 ### Experience Cloud ID Extension 5.5.0
 
-* De uitbreiding steunt nu versie 5.5.0 van de [ Cliënt JS van de Bezoeker ](https://github.com/Adobe-Marketing-Cloud/id-service). Verwijs naar de [ de versienota&#39;s van de Bezoeker ](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) voor specifieke updates.
+* De uitbreiding steunt nu versie 5.5.0 van de [&#x200B; Cliënt JS van de Bezoeker &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service). Verwijs naar de [&#x200B; de versienota&#39;s van de Bezoeker &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) voor specifieke updates.
 
 ## 9 mrt. 2022
 
@@ -61,7 +61,7 @@ Deze config ondersteunt de volgende waarden voor het kenmerk `SameSite` :
    * `Lax`
    * `None`
 
-De details van deze attributenwaarden zijn op [ web.dev ](https://web.dev/samesite-cookies-explained/) en [ chroom ](https://www.chromium.org/updates/same-site)
+De details van deze attributenwaarden zijn op [&#x200B; web.dev &#x200B;](https://web.dev/samesite-cookies-explained/) en [&#x200B; chroom &#x200B;](https://www.chromium.org/updates/same-site)
 
 
 ## 13 augustus 2020

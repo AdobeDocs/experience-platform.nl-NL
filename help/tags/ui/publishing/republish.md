@@ -47,7 +47,7 @@ Om deze reden, deelt Experience Platform u mee dat een bezit in een opnieuw gepu
 
 ### Een oudere bibliotheek opnieuw publiceren
 
-![ publiceer een bibliotheek ](images/retrieve_republish.png)
+![&#x200B; publiceer een bibliotheek &#x200B;](images/retrieve_republish.png)
 
 Vanuit het scherm Publiceren:
 
@@ -61,7 +61,7 @@ Het downloaden van een gearchiveerde bibliotheek is eenvoudiger. U verwijst niet
 
 ### Hoe te om een oudere bibliotheek te downloaden
 
-![ Download een bibliotheek ](images/retrieve_download.png)
+![&#x200B; Download een bibliotheek &#x200B;](images/retrieve_download.png)
 
 Vanuit het scherm Publiceren:
 

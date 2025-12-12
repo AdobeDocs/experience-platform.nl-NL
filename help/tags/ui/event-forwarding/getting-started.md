@@ -19,8 +19,8 @@ ht-degree: 1%
 Als u gebeurtenissen wilt doorsturen in Adobe Experience Platform, moeten gegevens naar Adobe Experience Platform Edge Network worden verzonden met een of meer van de volgende drie opties:
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
-* [ Adobe Experience Platform Mobile SDK ](https://sdkdocs.com)
-* [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/)
+* [&#x200B; Adobe Experience Platform Mobile SDK &#x200B;](https://sdkdocs.com)
+* [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
 >Experience Platform Web SDK en Experience Platform Mobile SDK vereisen geen implementatie via tags in Adobe Experience Platform. Het gebruik van labels voor de implementatie van deze SDK&#39;s wordt echter aanbevolen.
@@ -50,7 +50,7 @@ Maak uw schema in Adobe Experience Platform.
 
 1. Sla het schema op en noteer de naam die u het hebt gegeven.
 
-Voor meer informatie over schema&#39;s, zie [ de ModelHulp van de Gegevens van de Ervaring (XDM) van het Systeem ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl).
+Voor meer informatie over schema&#39;s, zie [&#x200B; de ModelHulp van de Gegevens van de Ervaring (XDM) van het Systeem &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl).
 
 ## Een eigenschap voor het doorsturen van gebeurtenissen maken
 
@@ -100,7 +100,7 @@ Na het vormen, neem nota van milieu IDs voor het nieuwe bezit.
 
 Maak uw eigenschap in de **[!UICONTROL Tags]** -werkruimte en navigeer naar **[!UICONTROL Extensions]** en selecteer de Experience Platform Web SDK-extensie in de catalogus om deze te configureren en installeren.
 
-Zie de [ de uitbreidingsdocumentatie van SDK van het Web ](../../extensions/client/web-sdk/overview.md) voor details op configuratieopties.
+Zie de [&#x200B; de uitbreidingsdocumentatie van SDK van het Web &#x200B;](../../extensions/client/web-sdk/overview.md) voor details op configuratieopties.
 
 ## Een labelregel maken om gegevens naar Experience Platform Web SDK te verzenden
 

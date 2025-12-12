@@ -23,7 +23,7 @@ De extensie [!DNL Adobe Analytics Product String Builder] stelt de variabele `pr
 Category;Product;Quantity;Price;eventN=X|eventN2=X2;eVarN=merch_category|eVarN2=merch_category2
 ```
 
-Voor volledige documentatie, bezoek [ Producten ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html).
+Voor volledige documentatie, bezoek [&#x200B; Producten &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html).
 
 ## Extensieinstructies
 
@@ -31,13 +31,13 @@ Voor volledige documentatie, bezoek [ Producten ](https://experienceleague.adobe
 
 Voeg de actie &quot;Adobe Analytics Product String - Set s.products&quot; toe aan uw regel.
 
-![ configuratie van de Actie ](./images/screenshot-action-config.png)
+![&#x200B; configuratie van de Actie &#x200B;](./images/screenshot-action-config.png)
 
 ### Standaardproductgegevens instellen
 
 Definieer vervolgens de gegevenslaagvariabelen. Nadat u de handeling hebt geconfigureerd zoals beschreven in de vorige stap, wordt het volgende scherm weergegeven:
 
-![ Standaardgebieden ](./images/screenshot-standard-fields.png)
+![&#x200B; Standaardgebieden &#x200B;](./images/screenshot-standard-fields.png)
 
 Voor elk van de gegevenspunten u in het productkoord wilt omvatten, ga de weg aan de aangewezen variabele van de gegevenslaag in.
 
@@ -69,11 +69,11 @@ digitalData.transaction.item.productInfo.productName
 
 De parameter `price` in de [!DNL Adobe Analytics] -productreeks moet de totale prijs weergeven voor het aantal eenheden dat is aangeschaft, niet de eenheidsprijs voor dat product. Wanneer u het veld Prijs inschakelt in de extensiehandeling, moet u opgeven of de gegevenslaag de totale prijs of de eenheidsprijs blootstelt. Wanneer u de eenheidsprijs gebruikt, vermenigvuldigt de extensie [!DNL Adobe Analytics Product String] automatisch de eenheidsprijs met de hoeveelheid om de totale prijs op te halen en de productreeks correct in te stellen.
 
-![ Type van Prijs ](./images/screenshot-price-type.png)
+![&#x200B; Type van Prijs &#x200B;](./images/screenshot-price-type.png)
 
 ### Aangepaste gebeurtenissen en wijzigingen in handelsversies
 
-![ Gebeurtenissen en eVars ](./images/screenshot-events-evars.png)
+![&#x200B; Gebeurtenissen en eVars &#x200B;](./images/screenshot-events-evars.png)
 
 Voer de volgende stappen uit als uw implementatie aangepaste gebeurtenissen gebruikt of eVars verkoopt:
 
@@ -85,9 +85,9 @@ Voer de volgende stappen uit als uw implementatie aangepaste gebeurtenissen gebr
 
 Deze actie moet vergezeld gaan van een actie &quot;Adobe Analytics - Set Variables&quot; die de corresponderende succesgebeurtenissen instelt, en van een actie &quot;Adobe Analytics - Send Beacon&quot;. De juiste volgorde van handelingen wordt hieronder weergegeven.
 
-![ Standaardgebieden ](./images/screenshot-action-type.png)
+![&#x200B; Standaardgebieden &#x200B;](./images/screenshot-action-type.png)
 
 ### Vereisten
 
-* Een op voorwerp-gebaseerde [ gegevenslaag ](https://theblog.adobe.com/data-layers-buzzword-best-practice/) met variabelen voor alle product verwante gegevens (zoals product ID, hoeveelheid, prijs). Deze extensie werkt niet met op arrays gebaseerde gegevenslagen.
-* De [ uitbreiding van Adobe Analytics ](../analytics/overview.md) moet worden geïnstalleerd.
+* Een op voorwerp-gebaseerde [&#x200B; gegevenslaag &#x200B;](https://theblog.adobe.com/data-layers-buzzword-best-practice/) met variabelen voor alle product verwante gegevens (zoals product ID, hoeveelheid, prijs). Deze extensie werkt niet met op arrays gebaseerde gegevenslagen.
+* De [&#x200B; uitbreiding van Adobe Analytics &#x200B;](../analytics/overview.md) moet worden geïnstalleerd.

@@ -20,5 +20,5 @@ v1.3.1
 
 v1.3.0
 
-* Voeg acties voor alle hier vermelde standaardgebeurtenissen toe: [ https://developers.facebook.com/docs/meta-pixel/reference#standard-events ](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+* Voeg acties voor alle hier vermelde standaardgebeurtenissen toe: [&#x200B; https://developers.facebook.com/docs/meta-pixel/reference#standard-events &#x200B;](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
 * Verplaats de gebeurtenis-id uit de configuratieweergave van de extensie en voeg de velden voor de gebeurtenis-id toe aan alle acties.

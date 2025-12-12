@@ -25,7 +25,7 @@ Dit document bevat stappen voor het installeren, configureren en maken van versc
 
 ## Omgevingstypen
 
-De markeringen steunen drie verschillende milieutypes, elk die aan een verschillende staat in het [ het publiceren werkschema ](./publishing-flow.md) beantwoorden:
+De markeringen steunen drie verschillende milieutypes, elk die aan een verschillende staat in het [&#x200B; het publiceren werkschema &#x200B;](./publishing-flow.md) beantwoorden:
 
 | Type omgeving | Beschrijving |
 | --- | --- |
@@ -57,7 +57,7 @@ Als u een webeigenschap gebruikt, krijgt u een insluitcode die moet worden gebru
 
 ![](./images/environments/web-instructions.png)
 
-Als u een mobiel bezit gebruikt, krijgt u afzonderlijke instructies voor het installeren van gebiedsdelen voor Android (via [ Gradle ](https://gradle.org/)) en iOS (via [ CocoaPods ](https://cocoapods.org/)).
+Als u een mobiel bezit gebruikt, krijgt u afzonderlijke instructies voor het installeren van gebiedsdelen voor Android (via [&#x200B; Gradle &#x200B;](https://gradle.org/)) en iOS (via [&#x200B; CocoaPods &#x200B;](https://cocoapods.org/)).
 
 ![](./images/environments/mobile-instructions.png)
 
@@ -67,7 +67,7 @@ Voor mobiele eigenschappen kunt u de configuratieopties voor een omgeving bekijk
 
 ![](./images/environments/mobile-config.png)
 
-Zie het overzicht op [ gastheren ](./hosts/hosts-overview.md) voor meer informatie.
+Zie het overzicht op [&#x200B; gastheren &#x200B;](./hosts/hosts-overview.md) voor meer informatie.
 
 ## Webconfiguratie
 
@@ -87,7 +87,7 @@ Selecteer **[!UICONTROL Host]** om een vooraf geconfigureerde host voor de omgev
 
 ![](./images/environments/select-host.png)
 
-Wanneer een bouwstijl wordt gecreeerd, wordt die bouwstijl geleverd aan de plaats u voor de toegewezen gastheer specificeerde. Voor informatie over om markeringsgastheren tot stand te brengen en te vormen, verwijs naar het [ overzicht van gastheren ](./hosts/hosts-overview.md).
+Wanneer een bouwstijl wordt gecreeerd, wordt die bouwstijl geleverd aan de plaats u voor de toegewezen gastheer specificeerde. Voor informatie over om markeringsgastheren tot stand te brengen en te vormen, verwijs naar het [&#x200B; overzicht van gastheren &#x200B;](./hosts/hosts-overview.md).
 
 ### Archiefinstelling {#archive}
 
@@ -121,7 +121,7 @@ Wanneer u de installatie-instructies bekijkt, kunt u ervoor kiezen om het script
 
 Met asynchrone implementatie kan de browser de rest van de pagina blijven laden terwijl de bibliotheek wordt opgehaald. Er is slechts één insluitcode wanneer u deze instelling gebruikt, die in het document `<head>` moet worden geplaatst.
 
-Voor meer informatie over dit plaatsen, zie de gids op [ asynchrone plaatsing ](../client-side/asynchronous-deployment.md).
+Voor meer informatie over dit plaatsen, zie de gids op [&#x200B; asynchrone plaatsing &#x200B;](../client-side/asynchronous-deployment.md).
 
 #### Synchrone implementatie
 
@@ -165,4 +165,4 @@ Het tabblad [!UICONTROL Environments] wordt weer weergegeven, met de installatie
 
 Door dit document te lezen, hebt u een goed begrip voor het configureren van omgevingen in de gebruikersinterface en het installeren van deze omgevingen in uw website of app. U kunt nu beginnen met het publiceren van uw bibliotheekbuilds.
 
-Wanneer u in de loop der tijd herhalingen van uw bibliotheek publiceert, is het mogelijk nodig om eerdere builds bij te houden en te archiveren voor probleemoplossing en terugdraaidoeleinden. Zie de gids bij [ opnieuw publiceren oudere bibliotheken ](./republish.md) voor meer informatie.
+Wanneer u in de loop der tijd herhalingen van uw bibliotheek publiceert, is het mogelijk nodig om eerdere builds bij te houden en te archiveren voor probleemoplossing en terugdraaidoeleinden. Zie de gids bij [&#x200B; opnieuw publiceren oudere bibliotheken &#x200B;](./republish.md) voor meer informatie.

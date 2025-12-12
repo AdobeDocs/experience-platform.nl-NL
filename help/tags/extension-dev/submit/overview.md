@@ -25,7 +25,7 @@ Selecteer de gewenste koppeling voor meer informatie over elk van deze stappen.
 
 ## Ondersteuning
 
-Ondersteuning is beschikbaar via de Slack-werkruimte voor tagontwikkelaars terwijl u uw extensie bouwt en test. De Slack-werkruimte is een online gemeenschap waar auteurs van extensies elkaar ondersteunen. U kunt toegang verzoeken gebruikend de volgende [ online vorm ](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+Ondersteuning is beschikbaar via de Slack-werkruimte voor tagontwikkelaars terwijl u uw extensie bouwt en test. De Slack-werkruimte is een online gemeenschap waar auteurs van extensies elkaar ondersteunen. U kunt toegang verzoeken gebruikend de volgende [&#x200B; online vorm &#x200B;](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 >[!NOTE]
 >

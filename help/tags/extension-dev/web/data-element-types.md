@@ -19,13 +19,13 @@ In dit document wordt beschreven hoe u gegevenselematypen voor een webextensie i
 
 >[!IMPORTANT]
 >
->Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ types van gegevenselement voor randuitbreidingen ](../edge/data-element-types.md).
+>Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [&#x200B; types van gegevenselement voor randuitbreidingen &#x200B;](../edge/data-element-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [&#x200B; het formatteren van de bibliotheekmodule &#x200B;](./format.md) alvorens aan deze gids terug te keren.
 
 Gegevenselementen bestaan gewoonlijk uit de volgende elementen:
 
-1. A [ mening ](./views.md) getoond binnen Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
+1. A [&#x200B; mening &#x200B;](./views.md) getoond binnen Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en gegevens op te halen.
 
 Neem bijvoorbeeld een situatie waarin u gebruikers wilt toestaan gegevens op te halen uit een lokaal opslagitem met de naam `productName` . Uw module kan als volgt kijken:

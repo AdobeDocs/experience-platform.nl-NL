@@ -72,6 +72,6 @@ Als u de niet-geminiaterde code wilt zien, verwijdert u .min uit de bestandsnaam
 
 Als een extensieontwikkelaar geminificeerde code met de extensie levert, biedt Experience Platform geen niet-geminiateerde code in de niet-geminiateerde build. Op dezelfde manier als een gebruiker van Experience Platform geminificeerde code in een doos van de douanecode zet, wordt die code nog geminiatuurd in niet-geminiateerde bouwstijlen. Experience Platform maakt niets uit.
 
-Voor meer informatie over minificatie, zie [ dit stapelpadartikel ](https://blog.stackpath.com/glossary/minification/).
+Voor meer informatie over minificatie, zie [&#x200B; dit stapelpadartikel &#x200B;](https://blog.stackpath.com/glossary/minification/).
 
 Wanneer het uitvoeren van een bouwstijl zal het eerst de niet-geminiateerde bibliotheek construeren, dan de volledige bibliotheek in één keer minieme.

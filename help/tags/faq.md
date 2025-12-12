@@ -41,7 +41,7 @@ Tags hebben een vrijwel zelfbedieningsportaal geopend, dat door ontwikkelaars va
 
 Wij hebben vele klanten die ook verkiezen om hun eigen privé uitbreidingen voor gebruik slechts binnen hun eigen bedrijven te bouwen gebruikend de zelfde methodes van de uitbreidingsontwikkeling.
 
-Om een uitbreiding te ontwikkelen, controleer de [ pagina van het Overzicht van de Ontwikkeling van de Uitbreiding van de Uitbreiding ](./extension-dev/overview.md).
+Om een uitbreiding te ontwikkelen, controleer de [&#x200B; pagina van het Overzicht van de Ontwikkeling van de Uitbreiding van de Uitbreiding &#x200B;](./extension-dev/overview.md).
 
 ## Voldoen de labels aan de beveiligingsnormen van mijn bedrijf?
 
@@ -69,24 +69,24 @@ Tags zijn ontworpen om marketing- en advertentietechnologieën zo efficiënt mog
 
 ## Welke browsers ondersteunen tags?
 
-Zie gesteunde browsers [ hier ](./extension-dev/browsers.md).
+Zie gesteunde browsers [&#x200B; hier &#x200B;](./extension-dev/browsers.md).
 
 De meeste Adobe-clients maken gebruik van modernere functies van webplatforms in de huidige browsers om een betere gebruikerservaring te creëren, waaronder toepassingen van één pagina en interactieve Ajax-zware websites en pagina&#39;s. Terwijl de meeste klanten naar modernere benaderingen met hun sites gaan, vragen ze om een oplossing zoals tags die deze benaderingen mogelijk maakt.
 
 ## Werken labels voor systeemeigen mobiele apps?
 
-Ja! De markeringen steunen nu mobiele eigenschappen en configuratie voor nieuwe Adobe Experience Platform [ Mobiele SDKs ](https://sdkdocs.com) om gegevensinzameling en levering in een inheems mobiel toepassingsmilieu uit te voeren. Gelieve te bezoeken [ documentatie ](https://sdkdocs.com) om meer te leren.
+Ja! De markeringen steunen nu mobiele eigenschappen en configuratie voor nieuwe Adobe Experience Platform [&#x200B; Mobiele SDKs &#x200B;](https://sdkdocs.com) om gegevensinzameling en levering in een inheems mobiel toepassingsmilieu uit te voeren. Gelieve te bezoeken [&#x200B; documentatie &#x200B;](https://sdkdocs.com) om meer te leren.
 
 ## Waarom zegt de UI dat er een fout is opgetreden bij het laden van mijn account?
 
-Als u een bericht ontvangt met de mededeling dat er een fout is opgetreden bij het laden van uw account, betekent dit dat uw account niet tot productprofielen voor tags behoort. Zie de gids op [ het leiden toestemmingen ](../collection/permissions.md) leren hoe te om een productprofiel in Adobe Admin Console te vormen om toegang tot de eigenschappen van de Inzameling van Gegevens in UI te verlenen.
+Als u een bericht ontvangt met de mededeling dat er een fout is opgetreden bij het laden van uw account, betekent dit dat uw account niet tot productprofielen voor tags behoort. Zie de gids op [&#x200B; het leiden toestemmingen &#x200B;](../collection/permissions.md) leren hoe te om een productprofiel in Adobe Admin Console te vormen om toegang tot de eigenschappen van de Inzameling van Gegevens in UI te verlenen.
 
 ## Waarom kan ik geen eigenschappen in UI toevoegen?
 
 Als u bij het aanmelden bij de gebruikersinterface geen nieuwe eigenschappen kunt maken, betekent dit dat uw account niet tot een productprofiel behoort dat het recht Eigenschappen beheren heeft.
 
-Zie de gids op [ het leiden toestemmingen ](../collection/permissions.md) leren hoe te om een productprofiel in Adobe Admin Console te vormen om het Manage recht van Eigenschappen te verlenen. Voor meer informatie over de verschillende rechten voor markeringen, zie het overzicht op [ gebruikerstoestemmingen voor markeringen ](./ui/administration/user-permissions.md).
+Zie de gids op [&#x200B; het leiden toestemmingen &#x200B;](../collection/permissions.md) leren hoe te om een productprofiel in Adobe Admin Console te vormen om het Manage recht van Eigenschappen te verlenen. Voor meer informatie over de verschillende rechten voor markeringen, zie het overzicht op [&#x200B; gebruikerstoestemmingen voor markeringen &#x200B;](./ui/administration/user-permissions.md).
 
 ## Wat als ik andere vragen heb?
 
-Als u andere vragen hebt, kunt u op de [ de communautaire pagina van de Inzameling van Gegevens van Adobe Experience Platform ](https://adobe.com/go/launchme) op Experience League vragen, of zich bij de [ gemeenschapSlack werkruimte ](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) voor ontwikkelaars &amp; technische implementatieonderwerpen aansluiten.
+Als u andere vragen hebt, kunt u op de [&#x200B; de communautaire pagina van de Inzameling van Gegevens van Adobe Experience Platform &#x200B;](https://adobe.com/go/launchme) op Experience League vragen, of zich bij de [&#x200B; gemeenschapSlack werkruimte &#x200B;](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) voor ontwikkelaars &amp; technische implementatieonderwerpen aansluiten.

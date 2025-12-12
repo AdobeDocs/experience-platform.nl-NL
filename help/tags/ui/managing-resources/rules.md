@@ -25,7 +25,7 @@ U kunt meer gebeurtenistypen toevoegen. De veelvoudige gebeurtenissen worden aan
 
 >[!IMPORTANT]
 >
->De veranderingen treden niet van kracht tot zij [ worden gepubliceerd ](../publishing/overview.md).
+>De veranderingen treden niet van kracht tot zij [&#x200B; worden gepubliceerd &#x200B;](../publishing/overview.md).
 
 ### Gebeurtenissen en voorwaarden (indien van toepassing)
 
@@ -37,7 +37,7 @@ Als een opgegeven gebeurtenis plaatsvindt, worden de voorwaarden geëvalueerd en
 
 * **Voorwaarden**: Verklein de gebeurtenis door om het even welke voorwaarden te vormen die voor een gebeurtenis waar moeten zijn om de regel teweeg te brengen. Een uitzondering wordt gedefinieerd als een NOT-voorwaarde. De veelvoudige voorwaarden worden aangesloten bij door EN.
 
-Welke gebeurtenissen beschikbaar zijn, is afhankelijk van de extensies die zijn geïnstalleerd. Voor informatie over de gebeurtenissen in de uitbreiding van de Kern, zie [ de types van de uitbreidingsgebeurtenis van de Kern ](../../extensions/client/core/overview.md#core-extension-event-types).
+Welke gebeurtenissen beschikbaar zijn, is afhankelijk van de extensies die zijn geïnstalleerd. Voor informatie over de gebeurtenissen in de uitbreiding van de Kern, zie [&#x200B; de types van de uitbreidingsgebeurtenis van de Kern &#x200B;](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Handelingen (dan)
 
@@ -49,17 +49,17 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
 >[!TIP]
 >
->U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![ over ](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
+>U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![&#x200B; over &#x200B;](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
 
 1. Open het tabblad [!UICONTROL Rules] en selecteer vervolgens **[!UICONTROL Create New Rule]** .
 
-   ![ Regels tabel die het naamgebied benadrukken.](../../images/launch-rule-builder.png)
+   ![&#x200B; Regels tabel die het naamgebied benadrukken.](../../images/launch-rule-builder.png)
 
 1. Geef de regel een naam.
 1. Selecteer het pictogram Gebeurtenissen **[!UICONTROL Add]** .
 1. Selecteer uw extensie en een van de gebeurtenistypen die beschikbaar zijn voor die extensie en configureer vervolgens de instellingen voor de gebeurtenis.
 
-   ![ de pagina van de gebeurtenisconfiguratie van Regels.](../../images/rule-event-config.png)
+   ![&#x200B; de pagina van de gebeurtenisconfiguratie van Regels.](../../images/rule-event-config.png)
 
    Welke gebeurtenistypen beschikbaar zijn, is afhankelijk van de extensie die u hebt geselecteerd. Gebeurtenisinstellingen verschillen afhankelijk van het gebeurtenistype. Sommige gebeurtenissen hebben geen instellingen die moeten worden geconfigureerd.
 
@@ -85,11 +85,11 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
    * Regels die dezelfde volgorde hebben, worden in geen enkele volgorde uitgevoerd.
    * Regels worden op volgorde afgegaan, maar hoeven niet noodzakelijkerwijs in dezelfde volgorde af te lopen. Als Regel A en Regel B een gebeurtenis delen, en u orde toewijst zodat Regel A eerst komt, dan als Regel A iets asynchroon doet, is er geen garantie dat Regel A eindigt alvorens Regel B begint.
 
-     Als u het later wilt uitvoeren, geef het een aantal hoger dan 50. Voor meer informatie over het opdracht geven tot, zie [ Regel het opdracht geven tot ](rules.md#rule-ordering).
+     Als u het later wilt uitvoeren, geef het een aantal hoger dan 50. Voor meer informatie over het opdracht geven tot, zie [&#x200B; Regel het opdracht geven tot &#x200B;](rules.md#rule-ordering).
 
 1. Selecteer het pictogram Voorwaarden **[!UICONTROL Add]** en selecteer vervolgens een logicatype, extensie, type voorwaarde en configureer de instellingen voor uw voorwaarde. Selecteer vervolgens **[!UICONTROL Keep Changes]** .
 
-   ![ de configuratiepagina van de voorwaardenconfiguratie van Regels.](../../images/condition-settings.png)
+   ![&#x200B; de configuratiepagina van de voorwaardenconfiguratie van Regels.](../../images/condition-settings.png)
 
    De beschikbare voorwaardetypen hangen van de uitbreiding af u hebt geselecteerd. Voorwaarde-instellingen verschillen op basis van het type voorwaarde.
 
@@ -104,7 +104,7 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
 1. Selecteer het pictogram Handelingen **[!UICONTROL Add]** , selecteer vervolgens uw extensie en een van de actietypen die beschikbaar zijn voor die extensie, configureer de instellingen voor de handeling en selecteer **[!UICONTROL Keep Changes]** .
 
-   ![ pagina van de actieconfiguratie van Regels.](../../images/action-settings.png)
+   ![&#x200B; pagina van de actieconfiguratie van Regels.](../../images/action-settings.png)
 
    Welke handelingstypen beschikbaar zijn, is afhankelijk van de extensie die u hebt geselecteerd. De instellingen voor handelingen verschillen afhankelijk van het type handeling.
 
@@ -115,9 +115,9 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
 1. Controleer uw regel en selecteer vervolgens **[!UICONTROL Save Rule]** .
 
-   Later, wanneer u [ ](../publishing/overview.md) publiceert, zult u deze regel aan een bibliotheek toevoegen en het opstellen.
+   Later, wanneer u [&#x200B; &#x200B;](../publishing/overview.md) publiceert, zult u deze regel aan een bibliotheek toevoegen en het opstellen.
 
-Wanneer het creëren van of het uitgeven van regels, kunt u sparen en aan uw [ actieve bibliotheek ](../publishing/libraries.md#active-library) bouwen. Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven.
+Wanneer het creëren van of het uitgeven van regels, kunt u sparen en aan uw [&#x200B; actieve bibliotheek &#x200B;](../publishing/libraries.md#active-library) bouwen. Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven.
 
 ## Regelvolgorde {#rule-ordering}
 
@@ -167,9 +167,9 @@ Het gedrag van de runtimeomgeving hangt af van het feit of **[!UICONTROL Run rul
 
 >[!IMPORTANT]
 >
->Dit het plaatsen bepaalt slechts hoe de voorwaarden en de acties binnen elke regel worden geëvalueerd, en beïnvloedt niet de opeenvolging waarin de regels zelf op uw bezit worden uitgevoerd. Verwijs naar de vorige sectie op [ regel die ](#rule-ordering) voor meer informatie opdracht geeft tot hoe te om de uitvoeringsorde voor veelvoudige regels te bepalen.
+>Dit het plaatsen bepaalt slechts hoe de voorwaarden en de acties binnen elke regel worden geëvalueerd, en beïnvloedt niet de opeenvolging waarin de regels zelf op uw bezit worden uitgevoerd. Verwijs naar de vorige sectie op [&#x200B; regel die &#x200B;](#rule-ordering) voor meer informatie opdracht geeft tot hoe te om de uitvoeringsorde voor veelvoudige regels te bepalen.
 >
->In [ gebeurtenis die ](../event-forwarding/overview.md) eigenschappen door:sturen, worden de regelacties altijd opeenvolgend uitgevoerd en dit het plaatsen is niet beschikbaar. Zorg ervoor de orde correct is wanneer u de regel creeert.
+>In [&#x200B; gebeurtenis die &#x200B;](../event-forwarding/overview.md) eigenschappen door:sturen, worden de regelacties altijd opeenvolgend uitgevoerd en dit het plaatsen is niet beschikbaar. Zorg ervoor de orde correct is wanneer u de regel creeert.
 
 ### Ingeschakeld
 

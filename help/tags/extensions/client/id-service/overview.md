@@ -85,7 +85,7 @@ Bepaal welke categorieën worden goedgekeurd of geweigerd wanneer geen voorkeur 
 
 ### Variabelen
 
-Stel naam-waardeparen in als Experience Cloud ID-instantie-eigenschappen. Gebruik de vervolgkeuzelijst om een variabele te selecteren en typ of selecteer een waarde. Voor informatie over elke variabele, verwijs naar de [ documentatie van de Dienst van de Identiteit van Experience Cloud ](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
+Stel naam-waardeparen in als Experience Cloud ID-instantie-eigenschappen. Gebruik de vervolgkeuzelijst om een variabele te selecteren en typ of selecteer een waarde. Voor informatie over elke variabele, verwijs naar de [&#x200B; documentatie van de Dienst van de Identiteit van Experience Cloud &#x200B;](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
 
 ## Handelingstypen voor Experience Cloud ID-extensie
 

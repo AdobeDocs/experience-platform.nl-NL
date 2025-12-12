@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Bronnen verwijderen
 
-Als u een bron verwijdert, wordt die bron permanent uit Adobe Experience Platform verwijderd. Als u een middel uit een specifieke markeringsbibliotheek wilt verwijderen, maar nog dat middel beschikbaar voor gebruik in andere bibliotheken wilt zijn, zie de gids op [ verwijderend middelen uit een bibliotheek ](remove-resources-from-library.md).
+Als u een bron verwijdert, wordt die bron permanent uit Adobe Experience Platform verwijderd. Als u een middel uit een specifieke markeringsbibliotheek wilt verwijderen, maar nog dat middel beschikbaar voor gebruik in andere bibliotheken wilt zijn, zie de gids op [&#x200B; verwijderend middelen uit een bibliotheek &#x200B;](remove-resources-from-library.md).
 
 U kunt gegevenselementen, regels, extensies, hosts, omgevingen en eigenschappen verwijderen. Zodra geschrapt, zijn deze middelen niet terugvorderbaar.
 
