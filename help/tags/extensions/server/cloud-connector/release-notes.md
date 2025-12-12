@@ -2,18 +2,14 @@
 title: Aanvullende informatie voor de Adobe Experience Platform Cloud Connector-extensie
 description: De nieuwste aanvullende informatie voor de Cloud Connector-extensie in Adobe Experience Platform.
 exl-id: 5ee85d9f-71f4-46ee-9064-4ceee1cf90e7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '128'
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+workflow-type: tm+mt
+source-wordcount: '83'
 ht-degree: 100%
 
 ---
 
 # Aanvullende informatie voor de Adobe Experience Platform Cloud Connector-extensie
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 ## 17 januari 2023
 

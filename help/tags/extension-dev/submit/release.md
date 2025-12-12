@@ -2,18 +2,14 @@
 title: Een extensie opheffen
 description: Leer hoe u een tagextensie privé of openbaar kunt maken in Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 9%
+source-wordcount: '433'
+ht-degree: 0%
 
 ---
 
 # Een extensie opheffen
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Zodra het testen en het documenteren volledig zijn, is de uitbreiding klaar voor versie. Er zijn momenteel twee soorten versies die u kunt uitvoeren:
 
@@ -28,7 +24,7 @@ U moet uw extensie eerst vrijgeven als een persoonlijke extensie voordat deze op
 
 ## Persoonlijke release
 
-De gemakkelijkste manier om uw uitbreiding met privé beschikbaarheid vrij te geven is de [&#x200B; versie van de markeringsuitbreiding releaser &#x200B;](https://www.npmjs.com/package/@adobe/reactor-releaser) te gebruiken.
+De gemakkelijkste manier om uw uitbreiding met privé beschikbaarheid vrij te geven is de [ versie van de markeringsuitbreiding releaser ](https://www.npmjs.com/package/@adobe/reactor-releaser) te gebruiken.
 
 ```bash
 npx @adobe/reactor-releaser
@@ -38,10 +34,10 @@ Met `npx` kunt u een npm-pakket downloaden en uitvoeren zonder het daadwerkelijk
 
 >[!NOTE]
 > Standaard verwacht de releaseprovider Adobe I/O-referenties voor een server-naar-server Oauth-flow. De oudere `jwt-auth` gebruikersgegevens
-> &#x200B;> kan worden gebruikt door `npx @adobe/reactor-releaser@v3.1.3` tot aan afschrijving uit te voeren op 1 januari 2025. De vereiste parameters
-> &#x200B;> om de `jwt-auth` versie in werking te stellen kan [&#x200B; hier &#x200B;](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5) worden gevonden.
+> kan worden gebruikt door `npx @adobe/reactor-releaser@v3.1.3` tot aan afschrijving uit te voeren op 1 januari 2025. De vereiste parameters
+> om de `jwt-auth` versie in werking te stellen kan [ hier ](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5) worden gevonden.
 
-U hoeft slechts enkele gegevens in te voeren. De `clientId` en `clientSecret` kunnen worden opgehaald uit de Adobe I/O-console. Navigeer aan de [&#x200B; pagina van Integraties &#x200B;](https://console.adobe.io/integrations) in de I/O console. Selecteer de juiste organisatie in het vervolgkeuzemenu, zoek de juiste integratie en selecteer **[!UICONTROL View]** .
+U hoeft slechts enkele gegevens in te voeren. De `clientId` en `clientSecret` kunnen worden opgehaald uit de Adobe I/O-console. Navigeer aan de [ pagina van Integraties ](https://console.adobe.io/integrations) in de I/O console. Selecteer de juiste organisatie in het vervolgkeuzemenu, zoek de juiste integratie en selecteer **[!UICONTROL View]** .
 
 - Wat is uw `clientId`? Kopieer en plak deze vanuit de I/O-console.
 - Wat is uw `clientSecret`? Kopieer en plak deze vanuit de I/O-console.
@@ -49,10 +45,10 @@ U hoeft slechts enkele gegevens in te voeren. De `clientId` en `clientSecret` ku
 De releaser leest de `name` - en `platform` -velden van uw extensiemanifest en vraagt de API om een overeenkomend extensiepakket in de beschikbaarheid van Development.
 De releasewerker zal u dan vragen om te bevestigen dat het juiste uitbreidingspakket vond dat u aan privé beschikbaarheid zou willen vrijgeven.
 
-Als u uw uitbreiding met privé beschikbaarheid zou willen vrijgeven die API gebruiken direct, zie de voorbeeldvraag [&#x200B; privé het vrijgeven van een uitbreidingspakket &#x200B;](/help/tags/api/endpoints/extension-packages.md#private-release) in API voor meer detail.
+Als u uw uitbreiding met privé beschikbaarheid zou willen vrijgeven die API gebruiken direct, zie de voorbeeldvraag [ privé het vrijgeven van een uitbreidingspakket ](/help/tags/api/endpoints/extension-packages.md#private-release) in API voor meer detail.
 
 ## Openbare release
 
 Nadat u de persoonlijke release hebt voltooid, kunt u Adobe vragen deze openbaar te maken.  Hierdoor wordt uw extensie beschikbaar in de openbare catalogus. Om het even welke gebruiker van de gegevensinzameling kan uw uitbreiding aan om het even welk bezit installeren.
 
-Gelieve te voltooien de [&#x200B; openbare versie aanvraagvorm &#x200B;](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) om met het versieproces te beginnen.
+Gelieve te voltooien de [ openbare versie aanvraagvorm ](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) om met het versieproces te beginnen.

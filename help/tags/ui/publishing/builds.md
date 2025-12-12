@@ -2,18 +2,14 @@
 title: Builds
 description: Leer meer over het concept van builds en hoe ze binnen Adobe Experience Platform werken.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 5%
+source-wordcount: '746'
+ht-degree: 0%
 
 ---
 
 # Builds
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Een build is de set bestanden met alle code die op het clientapparaat wordt uitgevoerd.
 
@@ -76,6 +72,6 @@ Als u de niet-geminiaterde code wilt zien, verwijdert u .min uit de bestandsnaam
 
 Als een extensieontwikkelaar geminificeerde code met de extensie levert, biedt Experience Platform geen niet-geminiateerde code in de niet-geminiateerde build. Op dezelfde manier als een gebruiker van Experience Platform geminificeerde code in een doos van de douanecode zet, wordt die code nog geminiatuurd in niet-geminiateerde bouwstijlen. Experience Platform maakt niets uit.
 
-Voor meer informatie over minificatie, zie [&#x200B; dit stapelpadartikel &#x200B;](https://blog.stackpath.com/glossary/minification/).
+Voor meer informatie over minificatie, zie [ dit stapelpadartikel ](https://blog.stackpath.com/glossary/minification/).
 
 Wanneer het uitvoeren van een bouwstijl zal het eerst de niet-geminiateerde bibliotheek construeren, dan de volledige bibliotheek in één keer minieme.

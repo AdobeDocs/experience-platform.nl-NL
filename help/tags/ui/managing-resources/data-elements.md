@@ -2,18 +2,14 @@
 title: Gegevenselementen
 description: Gegevenselementen zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1594'
-ht-degree: 3%
+source-wordcount: '1549'
+ht-degree: 0%
 
 ---
 
 # Gegevenselementen
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Gegevenselementen zijn de bouwstenen voor uw gegevenswoordenboek (of gegevenskaart). Gebruik gegevenselementen om gegevens te verzamelen, te organiseren en te leveren over marketing- en advertentietechnologie.
 
@@ -21,7 +17,7 @@ Eén gegevenselement is een variabele waarvan de waarde kan worden toegewezen aa
 
 >[!IMPORTANT]
 >
->De veranderingen treden niet van kracht tot zij [&#x200B; worden gepubliceerd &#x200B;](../publishing/overview.md).
+>De veranderingen treden niet van kracht tot zij [ worden gepubliceerd ](../publishing/overview.md).
 
 Gebruik gegevenselementen zo breed mogelijk tijdens het maken van regels om de definitie van dynamische gegevens te consolideren en de efficiëntie van het coderingsproces te verbeteren. U definieert de gegevensregels eenmaal en gebruikt deze vervolgens op meerdere plaatsen.
 
@@ -37,8 +33,8 @@ Als u bijvoorbeeld de paginanaam gebruikt, kunt u een bepaald paginanaamschema g
 
 De elementen van gegevens worden bevolkt met gegevens wanneer zij in regels worden gebruikt of wanneer manueel geroepen in een manuscript. Op een hoog niveau kunt u:
 
-1. [&#x200B; creeer een gegevenselement &#x200B;](#create-a-data-element), als u dit niet reeds hebt gedaan.
-1. Gebruik het gegevenselement in a [&#x200B; regel &#x200B;](./rules.md) of een douanescript.
+1. [ creeer een gegevenselement ](#create-a-data-element), als u dit niet reeds hebt gedaan.
+1. Gebruik het gegevenselement in a [ regel ](./rules.md) of een douanescript.
 
 ## Gebruik van gegevenselementen
 
@@ -60,7 +56,7 @@ De elementen van gegevens zijn de bouwstenen voor regels. Met gegevenselementen 
 1. Geef het gegevenselement een naam.
 1. Selecteer een extensie en typ deze.
 
-   De beschikbare elementtypen worden bepaald door de extensie. Voor informatie over de types beschikbaar met de de markeringsuitbreiding van de Kern, verwijs naar [&#x200B; Types van gegevenselementen &#x200B;](data-elements.md#types-of-data-elements).
+   De beschikbare elementtypen worden bepaald door de extensie. Voor informatie over de types beschikbaar met de de markeringsuitbreiding van de Kern, verwijs naar [ Types van gegevenselementen ](data-elements.md#types-of-data-elements).
 
 1. Geef alle gevraagde informatie over het gekozen type op in de opgegeven velden.
 1. (Optioneel) Voer een standaardwaarde in.
@@ -87,7 +83,7 @@ De elementen van gegevens zijn de bouwstenen voor regels. Met gegevenselementen 
 
 1. Selecteer **[!UICONTROL Save]**.
 
-Wanneer het creëren van of het uitgeven van elementen, kunt u sparen en aan uw [&#x200B; actieve bibliotheek &#x200B;](../publishing/libraries.md#active-library) bouwen. Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven. U kunt ook een nieuwe bibliotheek maken via het vervolgkeuzemenu [!UICONTROL Active Library] .
+Wanneer het creëren van of het uitgeven van elementen, kunt u sparen en aan uw [ actieve bibliotheek ](../publishing/libraries.md#active-library) bouwen. Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven. U kunt ook een nieuwe bibliotheek maken via het vervolgkeuzemenu [!UICONTROL Active Library] .
 
 ## Typen gegevenselementen {#types-of-data-elements}
 
@@ -186,7 +182,7 @@ Als u een gegevensverzamelingsobject gebruikt als onderdeel van uw gegevenslaag,
 
 Geef de naam van het lokale opslagitem op in het veld [!UICONTROL Local Storage Item Name] .
 
-De lokale opslag geeft browsers een manier om informatie van pagina aan pagina ([&#x200B; https://www.w3schools.com/html/html5\_webstorage.asp &#x200B;](https://www.w3schools.com/html/html5_webstorage.asp)) op te slaan. Lokale opslag werkt veel zoals cookies, maar is veel groter en flexibeler.
+De lokale opslag geeft browsers een manier om informatie van pagina aan pagina ([ https://www.w3schools.com/html/html5\_webstorage.asp ](https://www.w3schools.com/html/html5_webstorage.asp)) op te slaan. Lokale opslag werkt veel zoals cookies, maar is veel groter en flexibeler.
 
 Gebruik het opgegeven veld om de waarde op te geven die u voor een lokaal opslagitem hebt gemaakt, zoals `lastProductViewed.`
 

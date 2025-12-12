@@ -3,10 +3,10 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 6%
+source-wordcount: '809'
+ht-degree: 1%
 
 ---
 
@@ -16,15 +16,11 @@ ht-degree: 6%
 >
 >Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het aanbod van de Verbindingen van Adobe Real-Time Customer Data Platform, Prime, of Ultimate inbegrepen is.
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
-
 Als u gebeurtenissen wilt doorsturen in Adobe Experience Platform, moeten gegevens naar Adobe Experience Platform Edge Network worden verzonden met een of meer van de volgende drie opties:
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
-* [&#x200B; Adobe Experience Platform Mobile SDK &#x200B;](https://sdkdocs.com)
-* [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/)
+* [ Adobe Experience Platform Mobile SDK ](https://sdkdocs.com)
+* [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
 >Experience Platform Web SDK en Experience Platform Mobile SDK vereisen geen implementatie via tags in Adobe Experience Platform. Het gebruik van labels voor de implementatie van deze SDK&#39;s wordt echter aanbevolen.
@@ -54,7 +50,7 @@ Maak uw schema in Adobe Experience Platform.
 
 1. Sla het schema op en noteer de naam die u het hebt gegeven.
 
-Voor meer informatie over schema&#39;s, zie [&#x200B; de ModelHulp van de Gegevens van de Ervaring (XDM) van het Systeem &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl).
+Voor meer informatie over schema&#39;s, zie [ de ModelHulp van de Gegevens van de Ervaring (XDM) van het Systeem ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=nl).
 
 ## Een eigenschap voor het doorsturen van gebeurtenissen maken
 
@@ -104,7 +100,7 @@ Na het vormen, neem nota van milieu IDs voor het nieuwe bezit.
 
 Maak uw eigenschap in de **[!UICONTROL Tags]** -werkruimte en navigeer naar **[!UICONTROL Extensions]** en selecteer de Experience Platform Web SDK-extensie in de catalogus om deze te configureren en installeren.
 
-Zie de [&#x200B; de uitbreidingsdocumentatie van SDK van het Web &#x200B;](../../extensions/client/web-sdk/overview.md) voor details op configuratieopties.
+Zie de [ de uitbreidingsdocumentatie van SDK van het Web ](../../extensions/client/web-sdk/overview.md) voor details op configuratieopties.
 
 ## Een labelregel maken om gegevens naar Experience Platform Web SDK te verzenden
 

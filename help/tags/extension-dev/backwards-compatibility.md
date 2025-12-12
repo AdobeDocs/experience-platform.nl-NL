@@ -2,18 +2,14 @@
 title: Compatibiliteitsnorm met achterwaartse compatibiliteit
 description: Leer meer over de standaard voor achterwaartse compatibiliteit in Adobe Experience Platform die ervoor zorgt dat bijgewerkte versies van tagextensies compatibel zijn met eerdere versies.
 exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
 
 # Achterwaartse compatibiliteitsnorm
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Updates van een tagextensie in Adobe Experience Platform moeten compatibel zijn met eerdere versies van de extensie. Dit betekent dat:
 

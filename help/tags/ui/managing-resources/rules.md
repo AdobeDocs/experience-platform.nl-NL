@@ -2,22 +2,18 @@
 title: Regels
 description: Leer hoe tagextensies werken in Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2007'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
 
 # Regels
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+Tags in Adobe Experience Platform volgen een op regels gebaseerd systeem. Zij zoeken gebruikersinteractie en bijbehorende gegevens. Wanneer aan de criteria die in uw regels worden geschetst wordt voldaan, teweegbrengt de regel de uitbreiding, het manuscript, of cliënt-zijcode in werking u identificeerde.
 
-Tags in Adobe Experience Platform worden gebaseerd op een systeem dat is gebaseerd op regels. Ze zoeken naar gebruikersinteractie en bijbehorende gegevens. Wanneer wordt voldaan aan de criteria in uw regels, wordt de door u geïdentificeerde extensie-, script- of client-side code geactiveerd.
-
-Stel regels samen voor de integratie van de gegevens en functionaliteit van marketing- en advertentietechnologie waarmee de afzonderlijke producten in één oplossing worden samengevoegd.
+Bouw regels om de gegevens en de functionaliteit van marketing en advertentietechnologie te integreren die ongelijksoortige producten in één enkele oplossing verenigt.
 
 ## Regelstructuur
 
@@ -29,7 +25,7 @@ U kunt meer gebeurtenistypen toevoegen. De veelvoudige gebeurtenissen worden aan
 
 >[!IMPORTANT]
 >
->De veranderingen treden niet van kracht tot zij [&#x200B; worden gepubliceerd &#x200B;](../publishing/overview.md).
+>De veranderingen treden niet van kracht tot zij [ worden gepubliceerd ](../publishing/overview.md).
 
 ### Gebeurtenissen en voorwaarden (indien van toepassing)
 
@@ -39,13 +35,13 @@ Als een opgegeven gebeurtenis plaatsvindt, worden de voorwaarden geëvalueerd en
 
 * **Gebeurtenissen**: specificeer één of meerdere gebeurtenissen die moeten plaatsvinden om de regel teweeg te brengen. Bij meerdere gebeurtenissen hoort een OR. Om het even welke gespecificeerde gebeurtenissen zullen de regel teweegbrengen.
 
-* **Voorwaarden**: Verklein de gebeurtenis door om het even welke voorwaarden te vormen die voor een gebeurtenis waar moeten zijn om de regel teweeg te brengen. Een uitzondering wordt gedefinieerd als een NIET-voorwaarde. Meerdere voorwaarden worden samengevoegd door een AND.
+* **Voorwaarden**: Verklein de gebeurtenis door om het even welke voorwaarden te vormen die voor een gebeurtenis waar moeten zijn om de regel teweeg te brengen. Een uitzondering wordt gedefinieerd als een NOT-voorwaarde. De veelvoudige voorwaarden worden aangesloten bij door EN.
 
-Welke gebeurtenissen beschikbaar zijn, zijn afhankelijk van de geïnstalleerde extensies. Voor informatie over de gebeurtenissen in de uitbreiding van de Kern, zie [&#x200B; de types van de uitbreidingsgebeurtenis van de Kern &#x200B;](../../extensions/client/core/overview.md#core-extension-event-types).
+Welke gebeurtenissen beschikbaar zijn, is afhankelijk van de extensies die zijn geïnstalleerd. Voor informatie over de gebeurtenissen in de uitbreiding van de Kern, zie [ de types van de uitbreidingsgebeurtenis van de Kern ](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Handelingen (dan)
 
-De acties zijn het *toen* gedeelte van een regel. Zij bepalen wat u wilt gebeuren wanneer de regel loopt. Wanneer een gebeurtenis in werking wordt gesteld, als de voorwaarden aan waar evalueren en de uitzonderingen aan vals evalueren, worden de acties uitgevoerd. U kunt handelingen slepen en neerzetten om ze naar wens te orden.
+De acties zijn het *toen* gedeelte van een regel. Zij bepalen wat u wilt gebeuren wanneer de regel loopt. Wanneer een gebeurtenis in werking wordt gesteld, als de voorwaarden aan waar evalueren en de uitzonderingen aan vals evalueren, worden de acties uitgevoerd. U kunt acties slepen en neerzetten om ze naar wens te bestellen.
 
 ## Een regel maken
 
@@ -53,19 +49,19 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
 >[!TIP]
 >
->U kunt extra bronnen weergeven die beschikbaar zijn voor meer informatie over deze functie door een info![&#128279;](../../images/ui/event-forwarding/overview/about.png) over te selecteren in het rechterdeelvenster.
+>U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![ over ](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
 
-1. Open het [!UICONTROL Rules] tabblad en selecteer **[!UICONTROL Create New Rule]** vervolgens .
+1. Open het tabblad [!UICONTROL Rules] en selecteer vervolgens **[!UICONTROL Create New Rule]** .
 
-   ![Het tabblad Regels waarin het naamveld wordt gemarkeerd.](../../images/launch-rule-builder.png)
+   ![ Regels tabel die het naamgebied benadrukken.](../../images/launch-rule-builder.png)
 
 1. Geef de regel een naam.
 1. Selecteer het pictogram Gebeurtenissen **[!UICONTROL Add]** .
-1. Selecteer uw extensie en een van de beschikbare gebeurtenistypen voor de extensie en configureer vervolgens de instellingen voor de gebeurtenis.
+1. Selecteer uw extensie en een van de gebeurtenistypen die beschikbaar zijn voor die extensie en configureer vervolgens de instellingen voor de gebeurtenis.
 
-   ![Bepaalt de configuratiepagina voor gebeurtenissen.](../../images/rule-event-config.png)
+   ![ de pagina van de gebeurtenisconfiguratie van Regels.](../../images/rule-event-config.png)
 
-   De beschikbare gebeurtenistypen zijn afhankelijk van de extensie die u hebt geselecteerd. De gebeurtenisinstellingen verschillen al naar gelang het type gebeurtenis. Sommige gebeurtenissen hebben geen instellingen die moeten worden geconfigureerd.
+   Welke gebeurtenistypen beschikbaar zijn, is afhankelijk van de extensie die u hebt geselecteerd. Gebeurtenisinstellingen verschillen afhankelijk van het gebeurtenistype. Sommige gebeurtenissen hebben geen instellingen die moeten worden geconfigureerd.
 
    >[!IMPORTANT]
    >
@@ -73,7 +69,7 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
    Als u wilt verwijzen naar gegevens van het Edge-netwerk, moet het pad voor het gegevenselement `arc.event._<element>_` zijn.
 
-   `arc` staat voor de context van de Reactie van de Adobe.
+   `arc` staat voor Adobe Response Context.
 
    Bijvoorbeeld: `arc.event.xdm.web.webPageDetails.URL`
 
@@ -89,11 +85,11 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
    * Regels die dezelfde volgorde hebben, worden in geen enkele volgorde uitgevoerd.
    * Regels worden op volgorde afgegaan, maar hoeven niet noodzakelijkerwijs in dezelfde volgorde af te lopen. Als Regel A en Regel B een gebeurtenis delen, en u orde toewijst zodat Regel A eerst komt, dan als Regel A iets asynchroon doet, is er geen garantie dat Regel A eindigt alvorens Regel B begint.
 
-     Als je wilt dat het later wordt uitgevoerd, geef je het een getal dat hoger is dan 50. Zie [Regelbestelling voor meer informatie over bestellen](rules.md#rule-ordering).
+     Als u het later wilt uitvoeren, geef het een aantal hoger dan 50. Voor meer informatie over het opdracht geven tot, zie [ Regel het opdracht geven tot ](rules.md#rule-ordering).
 
 1. Selecteer het pictogram Voorwaarden **[!UICONTROL Add]** en selecteer vervolgens een logicatype, extensie, type voorwaarde en configureer de instellingen voor uw voorwaarde. Selecteer vervolgens **[!UICONTROL Keep Changes]** .
 
-   ![&#x200B; de configuratiepagina van de voorwaardenconfiguratie van Regels.](../../images/condition-settings.png)
+   ![ de configuratiepagina van de voorwaardenconfiguratie van Regels.](../../images/condition-settings.png)
 
    De beschikbare voorwaardetypen hangen van de uitbreiding af u hebt geselecteerd. Voorwaarde-instellingen verschillen op basis van het type voorwaarde.
 
@@ -106,22 +102,22 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
    U kunt zoveel voorwaarden toevoegen als u wilt. De veelvoudige voorwaarden binnen de zelfde regel worden aangesloten bij EN.
 
-1. Selecteer het pictogram Handelingen **[!UICONTROL Add]** , selecteer de extensie en een van de typen handelingen die beschikbaar zijn voor die extensie, configureer de instellingen voor de handeling en selecteer **[!UICONTROL Keep Changes]** vervolgens .
+1. Selecteer het pictogram Handelingen **[!UICONTROL Add]** , selecteer vervolgens uw extensie en een van de actietypen die beschikbaar zijn voor die extensie, configureer de instellingen voor de handeling en selecteer **[!UICONTROL Keep Changes]** .
 
-   ![Bepaalt de configuratiepagina voor handelingen.](../../images/action-settings.png)
+   ![ pagina van de actieconfiguratie van Regels.](../../images/action-settings.png)
 
-   De beschikbare typen handelingen zijn afhankelijk van de geselecteerde extensie. De instellingen voor handelingen verschillen al naar gelang het type handeling.
+   Welke handelingstypen beschikbaar zijn, is afhankelijk van de extensie die u hebt geselecteerd. De instellingen voor handelingen verschillen afhankelijk van het type handeling.
 
-   (Geavanceerd) Wacht tot de volgende handeling is uitgevoerd: deze optie is beschikbaar wanneer sequentiebepaling van regelcomponenten is ingeschakeld voor uw eigenschap. Als deze optie is ingeschakeld, worden de volgende handelingen pas door de labels aangeroepen wanneer deze zijn voltooid. Als deze optie is uitgeschakeld, wordt de volgende actie direct uitgevoerd. De standaardwaarde is **[!UICONTROL Checked]** .
+   (Geavanceerd) Wacht om volgende actie in werking te stellen: Deze optie is beschikbaar wanneer de regelcomponent het rangschikken op uw bezit wordt toegelaten. Als deze optie is ingeschakeld, worden de volgende handelingen pas door de labels aangeroepen wanneer deze zijn voltooid. Als deze optie is uitgeschakeld, wordt de volgende actie direct uitgevoerd. De standaardwaarde is **[!UICONTROL Checked]** .
 
    (Geavanceerd) Onderbreking: deze optie is beschikbaar wanneer de regelcomponent het rangschikken op uw bezit wordt toegelaten. Hiermee wordt de maximale hoeveelheid tijd gedefinieerd die de handeling mag voltooien. Als de onderbreking wordt bereikt, ontbreekt de actie en om het even welke verdere acties voor deze regel zullen worden verwijderd uit de verwerkingsrij. De standaardwaarde is 2000 ms.
 
 
 1. Controleer uw regel en selecteer vervolgens **[!UICONTROL Save Rule]** .
 
-   Later, wanneer u [&#128279;](../publishing/overview.md) publiceert, zult u deze regel aan een bibliotheek toevoegen en het opstellen.
+   Later, wanneer u [ ](../publishing/overview.md) publiceert, zult u deze regel aan een bibliotheek toevoegen en het opstellen.
 
-Wanneer het creëren van of het uitgeven van regels, kunt u sparen en aan uw [&#x200B; actieve bibliotheek &#x200B;](../publishing/libraries.md#active-library) bouwen. Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven.
+Wanneer het creëren van of het uitgeven van regels, kunt u sparen en aan uw [ actieve bibliotheek ](../publishing/libraries.md#active-library) bouwen. Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven.
 
 ## Regelvolgorde {#rule-ordering}
 
@@ -129,55 +125,55 @@ De orde die van de regel toestaat u om de orde van uitvoering voor regels te con
 
 Overweeg een reeks van vijf regels die allen een gebeurtenis delen en allen standaardprioriteit hebben:
 
-* Als u een regel als laatste wilt uitvoeren, kunt u die ene regelcomponent bewerken en deze een hoger getal dan 50 geven (bijvoorbeeld 60).
-* Als u een regel als eerste wilt uitvoeren, kunt u die ene regelcomponent bewerken en deze een getal geven dat lager is dan 50 (bijvoorbeeld 40).
+* Als er een regel is die u als laatste wilt uitvoeren, kunt u die ene regelcomponent bewerken en er een getal hoger dan 50 (bijvoorbeeld 60) aan geven.
+* Als er een regel is die u het eerst wilt uitvoeren, kunt u die ene regelcomponent bewerken en er een getal lager dan 50 (bijvoorbeeld 40) aan geven.
 
 >[!NOTE]
 >
->Uiteindelijk ligt de verantwoordelijkheid voor het uitvoeren van handelingen in volgorde bij de extensieontwikkelaar van het gebeurtenistype dat u gebruikt. Ontwikkelaars van extensies voor Adoben zorgen ervoor dat hun extensies werken zoals bedoeld. Adobe biedt ontwikkelaars van extensies van derden aanwijzingen om dit naar behoren te doen, maar kan niet garanderen hoe deze richtsnoeren worden gevolgd.
+>Uiteindelijk ligt de verantwoordelijkheid voor het uitvoeren van handelingen in volgorde bij de extensieontwikkelaar van het gebeurtenistype dat u gebruikt. Ontwikkelaars van Adobe-extensies zorgen ervoor dat hun extensies werken zoals bedoeld. Adobe biedt ontwikkelaars van extensies van derden aanwijzingen om dit naar behoren te doen, maar kan niet garanderen hoe deze richtlijnen worden gevolgd.
 
 Het wordt ten zeerste aanbevolen om uw regels te bestellen met positieve getallen tussen 1 en 100 (de standaardwaarde is 50). Aangezien de regelorde manueel moet worden gehandhaafd, is het beste praktijken om uw het bestel zo eenvoudig mogelijk te houden. Als er randgevallen zijn waarin deze beperking te beperkt is, ondersteunen de labels volgordenummers +/- 2,147,483,648.
 
-### Verwerking van regels aan clientzijde
+### Regelafhandeling op de client
 
-De volgorde van het laden van regels is afhankelijk van het feit of de regelhandeling is geconfigureerd met JavaScript-, HTML- of andere client-side code en of in de regels een onderste of bovenste gebeurtenis van de pagina wordt gebruikt, of van een ander type gebeurtenis.
+De ladingsorde voor regels hangt af van of de regelactie met JavaScript, HTML, of andere cliënt-zijcode wordt gevormd, en of de regels een pagina bodem of hoogste gebeurtenis, of een verschillend type van gebeurtenis gebruiken.
 
-U kunt deze scripts in uw aangepaste scripts gebruiken `document.write` ongeacht de gebeurtenissen die voor de regel zijn geconfigureerd.
+U kunt `document.write` in uw douanescripts ongeacht de gebeurtenissen gebruiken die voor de regel worden gevormd.
 
-U kunt verschillende aangepaste codetypen onder elkaar bestellen. U kunt nu bijvoorbeeld een aangepaste JavaScript-codeactie gebruiken, vervolgens een aangepaste HTML-codeactie en vervolgens een aangepaste JavaScript-codeactie. Codes zorgen ervoor dat de bestanden in die volgorde worden uitgevoerd.
+U kunt verschillende aangepaste codetypen onder elkaar bestellen. U kunt nu bijvoorbeeld een aangepaste code van JavaScript gebruiken, vervolgens een aangepaste code van HTML en vervolgens een aangepaste code van JavaScript. Tags zorgen ervoor dat ze in die volgorde worden uitgevoerd.
 
 ## Regelbundeling
 
-Regelgebeurtenissen en -voorwaarden worden altijd gebundeld in de hoofdtagbibliotheek. Handelingen kunnen in de hoofdbibliotheek worden gebundeld of kunnen laat als subbronnen worden geladen als dat nodig is. Of de handelingen worden gebundeld, wordt bepaald door het gebeurtenistype van de regel.
+Regelgebeurtenissen en -voorwaarden worden altijd gebundeld in de hoofdtagbibliotheek. Acties kunnen in de hoofdbibliotheek worden gebundeld of te laat worden geladen als subbronnen. Of de acties gebundeld zijn of niet wordt bepaald door het gebeurtenistype van de regel.
 
-### Regels met de gebeurtenissen &#39;Kern - Bibliotheek geladen&#39; of &#39;Kern - Pagina boven&#39;
+### Regels met gebeurtenissen &quot;Core - Library Loaded&quot; of &quot;Core - Page Top&quot;
 
-Deze gebeurtenissen moeten bijna altijd worden uitgevoerd (tenzij de omstandigheden worden geëvalueerd als onwaar), dus worden ze voor efficiëntie gebundeld in de hoofdbibliotheek, het bestand waarnaar wordt verwezen door uw insluitcode.
+Deze gebeurtenissen moeten bijna altijd worden uitgevoerd (tenzij de omstandigheden false opleveren). Voor efficiëntie worden ze gebundeld in de hoofdbibliotheek, het bestand waarnaar wordt verwezen door uw insluitcode.
 
-* **Javascript:** Het JavaScript is ingesloten in de bibliotheek met hoofdtags. Het aangepaste script wordt ondergebracht in een scripttag en met `document.write` naar het document geschreven. Als de regel meerdere aangepaste scripts heeft, worden deze op volgorde geschreven.
+* **Javascript:** JavaScript wordt ingebed in de belangrijkste markeringsbibliotheek. Het aangepaste script wordt ondergebracht in een scripttag en met `document.write` naar het document geschreven. Als de regel meerdere aangepaste scripts heeft, worden deze op volgorde geschreven.
 
-* **HTML:** De HTML is ingesloten in de bibliotheek met hoofdtags. `document.write` wordt gebruikt om de HTML naar het document te schrijven. Als de regel meerdere aangepaste scripts heeft, worden deze in de volgorde geschreven.
+* **HTML:** HTML wordt ingebed in de belangrijkste markeringsbibliotheek. `document.write` wordt gebruikt om de HTML naar het document te schrijven. Als de regel meerdere aangepaste scripts heeft, worden deze op volgorde geschreven.
 
 ### Regels met andere gebeurtenissen
 
-Adobe kan niet garanderen dat er daadwerkelijk andere regels in werking zullen treden en dat hun actiecode nodig zal zijn. Daarom worden de acties voor alle gebeurtenistypen die hierboven niet worden vermeld, niet in de hoofdbibliotheek verpakt. In plaats daarvan worden ze opgeslagen als subbronnen en wordt zo nodig verwezen door de hoofdbibliotheek.
+Adobe kan niet garanderen dat andere regels daadwerkelijk in werking zullen treden en dat hun actiecode nodig zal zijn. Daarom worden de acties voor alle gebeurtenistypen die hierboven niet worden vermeld, niet in de hoofdbibliotheek verpakt. In plaats daarvan worden ze opgeslagen als subbronnen en wordt zo nodig verwezen door de hoofdbibliotheek.
 
-* **JavaScript:** Het JavaScript wordt vanaf de server geladen als gewone tekst, omsloten in een scripttag en met Behulp van Postscribe aan het document toegevoegd. Als de regel meerdere aangepaste JavaScript-scripts heeft, worden deze gelijktijdig vanaf de server geladen, maar uitgevoerd in dezelfde volgorde die in de regel is geconfigureerd.
-* **HTML:** De HTML wordt vanaf de server geladen en aan het document toegevoegd met behulp van Postscribe. Als de regel meerdere aangepaste HTML-scripts heeft, worden deze gelijktijdig vanaf de server geladen, maar uitgevoerd in dezelfde volgorde die in de regel is geconfigureerd.
+* **JavaScript:** JavaScript wordt geladen van de server als regelmatige tekst, verpakt in een manuscriptmarkering, en toegevoegd aan het document gebruikend Postscribe. Als de regel meerdere aangepaste JavaScript-scripts heeft, worden deze parallel van de server geladen, maar in dezelfde volgorde uitgevoerd als die in de regel was geconfigureerd.
+* **HTML:** HTML wordt geladen van de server en aan het document toegevoegd gebruikend Postscribe. Als de regel veelvoudige manuscripten van douaneHTML heeft, worden zij geladen parallel van de server, maar uitgevoerd in de zelfde orde die in de regel werd gevormd.
 
-## Sequencing van regelcomponenten {#sequencing}
+## Reeksen van componenten van de regel {#sequencing}
 
-Het gedrag van de runtime-omgeving is afhankelijk van het feit of **[!UICONTROL Run rule components in sequence]** deze is ingeschakeld voor uw property. Dit het plaatsen bepaalt of de componenten van een regel parallel (asynchroon) kunnen worden geëvalueerd of of zij in opeenvolging moeten worden geëvalueerd.
+Het gedrag van de runtimeomgeving hangt af van het feit of **[!UICONTROL Run rule components in sequence]** voor uw eigenschap is in- of uitgeschakeld. Dit het plaatsen bepaalt of de componenten van een regel parallel (asynchroon) kunnen worden geëvalueerd of of zij in opeenvolging moeten worden geëvalueerd.
 
 >[!IMPORTANT]
 >
->Dit het plaatsen bepaalt slechts hoe de voorwaarden en de acties binnen elke regel worden geëvalueerd, en beïnvloedt niet de opeenvolging waarin de regels zelf op uw bezit worden uitgevoerd. Verwijs naar de vorige sectie op [&#x200B; regel die &#x200B;](#rule-ordering) voor meer informatie opdracht geeft tot hoe te om de uitvoeringsorde voor veelvoudige regels te bepalen.
+>Dit het plaatsen bepaalt slechts hoe de voorwaarden en de acties binnen elke regel worden geëvalueerd, en beïnvloedt niet de opeenvolging waarin de regels zelf op uw bezit worden uitgevoerd. Verwijs naar de vorige sectie op [ regel die ](#rule-ordering) voor meer informatie opdracht geeft tot hoe te om de uitvoeringsorde voor veelvoudige regels te bepalen.
 >
->In [&#x200B; gebeurtenis die &#x200B;](../event-forwarding/overview.md) eigenschappen door:sturen, worden de regelacties altijd opeenvolgend uitgevoerd en dit het plaatsen is niet beschikbaar. Controleer of de volgorde correct is wanneer u de regel maakt.
+>In [ gebeurtenis die ](../event-forwarding/overview.md) eigenschappen door:sturen, worden de regelacties altijd opeenvolgend uitgevoerd en dit het plaatsen is niet beschikbaar. Zorg ervoor de orde correct is wanneer u de regel creeert.
 
 ### Ingeschakeld
 
-Als de instelling is ingeschakeld wanneer een gebeurtenis tijdens runtime wordt geactiveerd, worden de voorwaarden en handelingen van de regel toegevoegd aan een verwerkingswachtrij (op basis van de volgorde die u hebt gedefinieerd) en een voor een verwerkt op FIFO-basis (first in, first out). De regel wacht tot de component is voltooid voordat naar de volgende wordt gegaan.
+Als het plaatsen wordt toegelaten wanneer een gebeurtenis bij runtime wordt teweeggebracht, worden de de voorwaarden en de acties van de regel toegevoegd aan een verwerkingsrij (die op de orde wordt gebaseerd u) hebt bepaald en verwerkt één voor één op een &quot;eerste binnen, eerste uit&quot;basis (FIFO). De regel wacht tot de component is voltooid voordat naar de volgende wordt gegaan.
 
 Als een voorwaarde als vals evalueert of zijn bepaalde onderbreking bereikt, worden de verdere voorwaarden en de acties van die regel verwijderd uit de rij.
 

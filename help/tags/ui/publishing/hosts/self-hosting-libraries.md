@@ -2,20 +2,16 @@
 title: Zelf-hostingbibliotheken
 description: Leer hoe u zelfhosting voor uw tagbibliotheek kunt implementeren in Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 9%
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 # Bibliotheken die zichzelf hosten
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
-
-De markeringen in Adobe Experience Platform staan voor de productie van een reeks dossiers toe genoemd a [&#x200B; bouwt &#x200B;](../builds.md). Deze set bestanden bepaalt het gedrag van de toepassing tijdens runtime.
+De markeringen in Adobe Experience Platform staan voor de productie van een reeks dossiers toe genoemd a [ bouwt ](../builds.md). Deze set bestanden bepaalt het gedrag van de toepassing tijdens runtime.
 
 Builds moeten ergens worden gehost, zodat clientapparaten ze tijdens runtime kunnen ophalen.
 
@@ -57,10 +53,10 @@ Er zijn twee methodes u kunt gebruiken om voltooide bouwstijlen te verwerven zod
 
 De builds kunnen worden geleverd als een gecomprimeerd ZIP-bestand (codering optioneel). Vervolgens kunt u het pakket uitpakken en de inhoud in uw releasecyclus invoegen en deze op uw eigen servers plaatsen.
 
-Gebruik a [&#x200B; die door de gastheer van Adobe &#x200B;](self-hosting-libraries.md) wordt beheerd en selecteer de [&#x200B; optie van het Archief &#x200B;](../environments.md) op uw milieu. De omgeving biedt een downloadkoppeling. Wanneer een build wordt gemaakt, kunt u deze ophalen via de downloadkoppeling van de omgeving.
+Gebruik a [ die door de gastheer van Adobe ](self-hosting-libraries.md) wordt beheerd en selecteer de [ optie van het Archief ](../environments.md) op uw milieu. De omgeving biedt een downloadkoppeling. Wanneer een build wordt gemaakt, kunt u deze ophalen via de downloadkoppeling van de omgeving.
 
 #### Directe levering
 
 De builds kunnen ook rechtstreeks aan een server worden geleverd SFTP die u creeerde. U neemt de verantwoordelijkheid om deze gegevens in uw releasecyclus in te voeren en ze live te zetten.
 
-Om een directe levering uit te voeren, zou u een [&#x200B; gastheer van SFTP &#x200B;](sftp-host.md) moeten creëren en die gastheer aan uw milieu toewijzen. Wanneer u in die omgeving een bibliotheek maakt, worden de bestanden geleverd aan uw SFTP-server.
+Om een directe levering uit te voeren, zou u een [ gastheer van SFTP ](sftp-host.md) moeten creëren en die gastheer aan uw milieu toewijzen. Wanneer u in die omgeving een bibliotheek maakt, worden de bestanden geleverd aan uw SFTP-server.

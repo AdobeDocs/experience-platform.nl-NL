@@ -2,18 +2,14 @@
 title: Overzicht van YouTube Video Tracking Extension
 description: Meer informatie over de YouTube Video Tracking-tagextensie in Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 6%
+source-wordcount: '852'
+ht-degree: 1%
 
 ---
 
 # Overzicht van YouTube Video Tracking-extensie
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 **Vereisten**
 
@@ -23,7 +19,7 @@ Elke markeringseigenschap in Adobe Experience Platform vereist dat de volgende e
 * Experience Cloud Visitor ID Service
 * Kernextensie
 
-Gebruik [&#x200B; &quot;bed een speler in gebruikend een \ &lt;iframe \> markering&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) codefragment van de de ontwikkelaarsdocs van Google in HTML van elke Web-pagina waar een videospeler moet teruggeven.
+Gebruik [ &quot;bed een speler in gebruikend een \ &lt;iframe \> markering&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) codefragment van de de ontwikkelaarsdocs van Google in HTML van elke Web-pagina waar een videospeler moet teruggeven.
 
 Deze extensie, versie 2.0.1, ondersteunt het insluiten van een of meer YouTube-video&#39;s op één webpagina door een `id` -kenmerk in te voegen met een unieke waarde in de iFrame-scripttag en `enablejsapi=1` en `rel=0` toe te voegen aan het einde van de `src` -kenmerkwaarde, als dit nog niet het geval is. Bijvoorbeeld:
 
@@ -98,9 +94,9 @@ De volgende video-extensieobjecten moeten worden opgenomen.
 
 >[!TIP]
 > 
->Voor implementaties waar de veelvoudige steunen of eVars voor elk videoelement niet kunnen worden gebruikt, kunnen de waarden van het gegevenselement binnen Experience Platform worden samengevoegd, die in classificatierapporten worden geparseerd gebruikend het hulpmiddel van de Bouwer van de Regel van de Classificatie, zoals die in [&#x200B; https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=nl-NL &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=nl-NL) wordt verklaard, en dan als segment in Analysis Workspace worden toegepast.
+>Voor implementaties waar de veelvoudige steunen of eVars voor elk videoelement niet kunnen worden gebruikt, kunnen de waarden van het gegevenselement binnen Experience Platform worden samengevoegd, die in classificatierapporten worden geparseerd gebruikend het hulpmiddel van de Bouwer van de Regel van de Classificatie, zoals die in [ https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html ](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) wordt verklaard, en dan als segment in Analysis Workspace worden toegepast.
 
-Als u videogegevenswaarden wilt samenvoegen, maakt u een nieuw gegevenselement met de naam &quot;Videometagegevens&quot; en programmeert u dit om alle videogegevenselementen (hierboven vermeld) te verzamelen en samen te voegen. Bijvoorbeeld:
+Als u videogegevenswaarden wilt samenvoegen, maakt u een nieuw gegevenselement met de naam &quot;Video Meta-gegevens&quot; en programmeert u dit om alle videogegevenselementen (hierboven vermeld) te verzamelen en samen te voegen. Bijvoorbeeld:
 
 ```javascript
 var r = [];
@@ -114,4 +110,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Voor meer informatie over hoe te om en hefboomwerking gegevenselementen effectief binnen Experience Platform tot stand te brengen, lees de [&#x200B; elementen van gegevenselementen &#x200B;](../../../ui/managing-resources/data-elements.md) documentatie.
+Voor meer informatie over hoe te om en hefboomwerking gegevenselementen effectief binnen Experience Platform tot stand te brengen, lees de [ elementen van gegevenselementen ](../../../ui/managing-resources/data-elements.md) documentatie.

@@ -2,18 +2,14 @@
 title: Overzicht van door Adobe beheerde hosts
 description: Leer meer over de standaardhostingoptie voor het implementeren van builds van tagbibliotheken in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 4%
+source-wordcount: '1129'
+ht-degree: 0%
 
 ---
 
 # Overzicht van door Adobe beheerde hosts
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Door Adobe beheerde hosts zijn de standaardhostinstellingen voor de implementatie van uw tagbibliotheekbuilds in Adobe Experience Platform. Wanneer u een nieuw bezit door het gebruikersinterface van de Inzameling van Gegevens creeert, wordt een standaard Adobe-Beheerde gastheer gecreeerd voor u.
 
@@ -23,7 +19,7 @@ Dit document biedt een overzicht van door Adobe beheerde hosts in Experience Pla
 
 ## Akamai
 
-Momenteel, is de primaire leverancier CDN voor Adobe [&#x200B; Akamai &#x200B;](https://www.akamai.com/). De robuuste CDN van Akamai is gebouwd om inhoud aan een globaal, hoog-volume publiek van Webbezoekers te dienen. CDN stelt overtollige netwerken van lading-in evenwicht gebrachte, geo-geoptimaliseerde knopen in werking om inhoud zo snel mogelijk aan bezoekers te dienen die door de wereld worden gevestigd.
+Momenteel, is de primaire leverancier CDN voor Adobe [ Akamai ](https://www.akamai.com/). De robuuste CDN van Akamai is gebouwd om inhoud aan een globaal, hoog-volume publiek van Webbezoekers te dienen. CDN stelt overtollige netwerken van lading-in evenwicht gebrachte, geo-geoptimaliseerde knopen in werking om inhoud zo snel mogelijk aan bezoekers te dienen die door de wereld worden gevestigd.
 
 Akamai voert meer dan 137.000 servers uit in 87 landen binnen meer dan 1.150 netwerken. In termen van overtolligheid, kan CDN niet alleen routes van één server aan een andere maar ook van één knoop van servers aan een andere knoop van servers leiden zoals nodig. Met andere woorden, elke knoop bestaat uit veelvoudige servers, zodat één server die neer gaat nooit een kwestie wordt aangezien de andere servers op de zelfde knoop kunnen overnemen.
 
@@ -74,7 +70,7 @@ Deze gefaseerde cachevervalsingen geven de groepen van de oorspronkelijke server
 
 ### Browser in cache plaatsen {#browser}
 
-Bibliotheekbuilds worden ook in de cache van de browser opgeslagen via de `cache-control` HTTP-header. Als u hosts met Adobe-beheer gebruikt, hebt u geen controle over de headers die worden geretourneerd in API-reacties. De Adobe-standaardinstelling voor het in cache plaatsen wordt dus gebruikt. Met andere woorden, u kunt geen aangepaste kopteksten gebruiken voor door Adobe beheerde hosts. Als u een douane `cache-control` kopbal vereist, kunt u [&#x200B; zelf-ontvangen &#x200B;](self-hosting-libraries.md) in plaats daarvan willen overwegen.
+Bibliotheekbuilds worden ook in de cache van de browser opgeslagen via de `cache-control` HTTP-header. Als u hosts met Adobe-beheer gebruikt, hebt u geen controle over de headers die worden geretourneerd in API-reacties. De Adobe-standaardinstelling voor het in cache plaatsen wordt dus gebruikt. Met andere woorden, u kunt geen aangepaste kopteksten gebruiken voor door Adobe beheerde hosts. Als u een douane `cache-control` kopbal vereist, kunt u [ zelf-ontvangen ](self-hosting-libraries.md) in plaats daarvan willen overwegen.
 
 De vervaltijd voor de in de browser opgeslagen bibliotheekbuild (bepaald door de header `cache-control` ) hangt af van de tagomgeving die u gebruikt:
 
@@ -108,4 +104,4 @@ Dit document bevat een overzicht van door Adobe beheerde hosting van tagbiblioth
 * [SFTP-hosting](./sftp-host.md)
 * [Bibliotheken die zichzelf hosten](./self-hosting-libraries.md)
 
-Voor details op hoe te om gastheren voor uw milieu&#39;s te beheren, zie de [&#x200B; milieu&#39;s gids &#x200B;](../environments.md).
+Voor details op hoe te om gastheren voor uw milieu&#39;s te beheren, zie de [ milieu&#39;s gids ](../environments.md).

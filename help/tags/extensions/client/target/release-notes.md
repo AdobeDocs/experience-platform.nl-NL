@@ -2,20 +2,16 @@
 title: Opmerkingen bij de release Adobe Target Extension
 description: De meest recente release bevat informatie over de Adobe Target-tagextensie in Adobe Experience Platform.
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 2%
+source-wordcount: '533'
+ht-degree: 4%
 
 ---
 
 # Opmerkingen bij de release van Adobe Target
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
-
-## 16 september 2021
+## vrijdag 16 september 2021
 
 ### Adobe Target Extension 0.11.4
 
@@ -70,17 +66,17 @@ ht-degree: 2%
 
 * Bijgewerkte extensie-versie voor gebruik in versie 1.js 1.7.1
 
-## 20 februari 2019
+## donderdag 20 februari 2019
 
 ### Adobe Target Extension 0.9.2
 
 * Correctie van zeldzame omstandigheden tussen de extensies Doel en Analyse
 
-## 12 februari 2019
+## woensdag 12 februari 2019
 
 ### Adobe Target Extension 0.9.1
 
-#### **Eigenschappen**
+#### **Functies**
 
 * Bijgewerkte extensie voor gebruik in versie 1.js 1.7.0 met de functie Inkoopprivacy die wordt ondersteund via tags om te bepalen hoe en wanneer de tag Doel wordt geactiveerd. Raadpleeg de documentatie bij de tags over het instellen van de implementatie van Opt-in. Toegevoegde mogelijkheid om aan te passen als een mbox-parameter met een lege waarde al dan niet naar Target moet worden verzonden.
 
@@ -89,9 +85,9 @@ ht-degree: 2%
 ### Adobe Target Extension 0.8.4
 
 * Bijgewerkt te.js aan versie 1.6.4
-* Extension UI is gemigreerd naar Adobe Spectrum
+* Extension UI is gemigreerd naar Adobe-spectrum
 
-## 15 november 2018
+## vrijdag 15 november 2018
 
 ### Adobe Target Extension 0.8.2
 
@@ -133,28 +129,28 @@ ht-degree: 2%
 
 ### Adobe Target Extension 0.6.0
 
-#### **Eigenschappen**
+#### **Functies**
 
 * De doelextensie is bijgewerkt voor gebruik op versie 1.js v1.3.1. Wanneer u Doel met Analytics opstelt, wachten wij nu tot alle vraag van het Doel (met inbegrip van omleidingsaanbiedingen) alvorens Analytics heeft opgelost, die de rasvoorwaarde oplost die eerder bestond.
 
-## 22 februari 2018
+## vrijdag 22 februari 2018
 
 ### Adobe Target Extension 0.4.1
 
-#### **Eigenschappen**
+#### **Functies**
 
-* Lijst met Adoben Exchange toegevoegd aan extension.json
+* Adobe Exchange-vermelding toegevoegd aan extension.json
 * Er zijn controles toegevoegd om te zien of Doel is uitgeschakeld en of Authoring is ingeschakeld
 
 #### **Bugfixes**
 
 * Oplossing voor een fout in de Adobe Target-extensie die ervoor zorgde dat Visual Experience Composer de pagina niet kon verbergen wanneer deze via tags werd geïmplementeerd.
 
-## 8 februari 2018
+## vrijdag 8 februari 2018
 
 ### Adobe Target Extension 0.4.0
 
-#### **Eigenschappen**
+#### **Functies**
 
 * Bijgewerkte weergaven in extensieconfiguratieschermen
 * at.js is bijgewerkt naar versie 1.2.3 (voegt ondersteuning voor JSON-aanbiedingen toe)

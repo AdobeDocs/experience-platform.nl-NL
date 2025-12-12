@@ -2,18 +2,14 @@
 title: Overzicht van Adobe Media Analytics for Audio and Video Extension
 description: Meer informatie over de extensie Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 5%
+source-wordcount: '892'
+ht-degree: 0%
 
 ---
 
 # Overzicht van Adobe Media Analytics voor audio- en video-extensie
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Gebruik deze documentatie voor informatie over het installeren, configureren en implementeren van de extensie Adobe Media Analytics voor audio en video (extensie Media Analytics). Omvat zijn de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel, samen met voorbeelden en verbindingen aan steekproeven te bouwen.
 
@@ -37,7 +33,7 @@ Nadat u alle drie bovengenoemde uitbreidingen in uw markeringsproject hebt omvat
 
 * **vormt -** om de uitbreiding van MA te vormen, open het [!UICONTROL Extensions] lusje, over de uitbreiding te bewegen, en dan te selecteren **[!UICONTROL Configure]**:
 
-![&#x200B; de Configuratie van de Uitbreiding van MA &#x200B;](../../../images/ext-va-config.jpg)
+![ de Configuratie van de Uitbreiding van MA ](../../../images/ext-va-config.jpg)
 
 ### Configuratieopties:
 
@@ -53,7 +49,7 @@ Nadat u alle drie bovengenoemde uitbreidingen in uw markeringsproject hebt omvat
 | API&#39;s exporteren naar vensterobject | Het exporteren van media-API&#39;s voor analyse naar een algemeen bereik in- of uitschakelen |
 | Naam variabele | Een variabele die u gebruikt om Media Analytics API&#39;s te exporteren onder het `window` -object |
 
-**Herinnering:** de uitbreiding van MA vereist de [&#x200B; Analytics &#x200B;](../analytics/overview.md) en [&#x200B; identiteitskaart van Experience Cloud &#x200B;](../id-service/overview.md) uitbreidingen. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
+**Herinnering:** de uitbreiding van MA vereist de [ Analytics ](../analytics/overview.md) en [ identiteitskaart van Experience Cloud ](../id-service/overview.md) uitbreidingen. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
 
 ## De extensie MA gebruiken
 
@@ -78,9 +74,9 @@ De extensie MA exporteert de MediaHeartbone-API&#39;s in het algemene vensterobj
 
 1. **De Constanten van MediaHeartbeat van de Toegang:** `window["CONFIGURED_VARIABLE_NAME"].MediaHeartbeat`
 
-   Dit stelt alle constanten en statische methodes van de [`MediaHeartbeat` &#x200B;](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html) klasse bloot.
+   Dit stelt alle constanten en statische methodes van de [`MediaHeartbeat` ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html) klasse bloot.
 
-   U kunt de steekproefspeler hier verkrijgen: [&#x200B; Speler van de Steekproef van MA &#x200B;](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/2.x). De voorbeeldspeler fungeert als een referentie waarmee u kunt laten zien hoe u de extensie MA kunt gebruiken om Media Analytics rechtstreeks vanuit een webapp te ondersteunen.
+   U kunt de steekproefspeler hier verkrijgen: [ Speler van de Steekproef van MA ](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/2.x). De voorbeeldspeler fungeert als een referentie waarmee u kunt laten zien hoe u de extensie MA kunt gebruiken om Media Analytics rechtstreeks vanuit een webapp te ondersteunen.
 
 1. Maak als volgt de instantie van MediaHeartbone tracker:
 
@@ -109,7 +105,7 @@ De extensie MA exporteert de MediaHeartbone-API&#39;s in het algemene vensterobj
 
 ### Werken met andere extensies
 
-De extensie MA stelt de gedeelde `get-instance` en `media-heartbeat` modules beschikbaar voor andere extensies. (Voor extra informatie over Gedeelde Modules, zie [&#x200B; Gedeelde documentatie van Modules &#x200B;](../../../extension-dev/web/shared.md).)
+De extensie MA stelt de gedeelde `get-instance` en `media-heartbeat` modules beschikbaar voor andere extensies. (Voor extra informatie over Gedeelde Modules, zie [ Gedeelde documentatie van Modules ](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
@@ -138,7 +134,7 @@ De extensie MA stelt de gedeelde `get-instance` en `media-heartbeat` modules bes
 
 1. **De Constanten van MediaHeartbeat van de Toegang:** `media-heartbeat` Gedeelde Module
 
-   Deze module stelt alle constanten en statische methodes van deze klasse bloot: [&#x200B; https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html &#x200B;](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html).
+   Deze module stelt alle constanten en statische methodes van deze klasse bloot: [ https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/MediaHeartbeat.html).
 
 1. Maak als volgt de instantie van MediaHeartbone tracker:
 
@@ -174,11 +170,11 @@ De extensie MA stelt de gedeelde `get-instance` en `media-heartbeat` modules bes
    ...
    ```
 
-1. Gebruikend de instantie van de Hartslag van Media, volg de [&#x200B; documentatie van SDK JS van Media &#x200B;](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=nl-NL) en [&#x200B; JS API documentatie &#x200B;](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om media het volgen uit te voeren.
+1. Gebruikend de instantie van de Hartslag van Media, volg de [ documentatie van SDK JS van Media ](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) en [ JS API documentatie ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om media het volgen uit te voeren.
 
 >[!NOTE]
 >
->**het Testen:** voor deze versie, om uw uitbreiding te testen moet u het aan [&#x200B; Experience Platform &#x200B;](../../../extension-dev/submit/upload-and-test.md) uploaden, waar u toegang tot alle afhankelijke uitbreidingen hebt.
+>**het Testen:** voor deze versie, om uw uitbreiding te testen moet u het aan [ Experience Platform ](../../../extension-dev/submit/upload-and-test.md) uploaden, waar u toegang tot alle afhankelijke uitbreidingen hebt.
 
 
 <!--

@@ -2,18 +2,14 @@
 title: Overzicht van Adobe Media Analytics (3.x SDK) voor audio- en video-extensie
 description: Meer informatie over de extensie Adobe Media Analytics (3.x SDK) voor Audio en Video in Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 6%
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
 # Overzicht van Adobe Media Analytics (3.x SDK) voor audio- en video-extensie
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Gebruik deze documentatie voor informatie over het installeren, configureren en implementeren van de Adobe Media Analytics (3.x SDK) voor audio- en video-extensie (extensie Media Analytics). Omvat zijn de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel, samen met voorbeelden en verbindingen aan steekproeven te bouwen.
 
@@ -37,7 +33,7 @@ Nadat u alle drie bovengenoemde uitbreidingen in uw markering-toegelaten project
 
 * **vormt:** om de uitbreiding van MA te vormen, open het [!UICONTROL Extensions] lusje, over de uitbreiding te bewegen, en dan te selecteren **[!UICONTROL Configure]**:
 
-![&#x200B; de Configuratie van de Uitbreiding van MA &#x200B;](../../../images/ext-ma-config.png)
+![ de Configuratie van de Uitbreiding van MA ](../../../images/ext-ma-config.png)
 
 ### Configuratieopties:
 
@@ -52,7 +48,7 @@ Nadat u alle drie bovengenoemde uitbreidingen in uw markering-toegelaten project
 | API&#39;s exporteren naar vensterobject | Het exporteren van media-API&#39;s voor analyse naar een algemeen bereik in- of uitschakelen |
 | Naam variabele | Een variabele die u gebruikt om Media Analytics API&#39;s te exporteren onder het `window` -object |
 
-**Herinnering:** de uitbreiding van MA vereist de [&#x200B; Analytics &#x200B;](../analytics/overview.md) en [&#x200B; identiteitskaart van Experience Cloud &#x200B;](../id-service/overview.md) uitbreidingen. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
+**Herinnering:** de uitbreiding van MA vereist de [ Analytics ](../analytics/overview.md) en [ identiteitskaart van Experience Cloud ](../id-service/overview.md) uitbreidingen. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
 
 ## De extensie MA gebruiken
 
@@ -66,7 +62,7 @@ De extensie MA exporteert de media-API&#39;s in het algemene vensterobject door 
 
 1. **Media APIs:** `window["CONFIGURED_VARIABLE_NAME"].Media`
 
-   Dit stelt alle APIs en constanten van Media SDK bloot: [&#x200B; https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
+   Dit stelt alle APIs en constanten van Media SDK bloot: [ https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
 
 1. **creeer de Instantie van de Beheerder van Media:** `window["CONFIGURED_VARIABLE_NAME"].Media.getInstance`
 
@@ -78,14 +74,14 @@ De extensie MA exporteert de media-API&#39;s in het algemene vensterobject door 
    var tracker = Media.getInstance();
    ```
 
-1. Gebruikend de instantie van de Tracker van Media, volg de [&#x200B; JS API documentatie &#x200B;](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) om media het volgen uit te voeren.
+1. Gebruikend de instantie van de Tracker van Media, volg de [ JS API documentatie ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) om media het volgen uit te voeren.
 
-U kunt de steekproefspeler hier verkrijgen: [&#x200B; Speler van de Steekproef van MA &#x200B;](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x). De voorbeeldspeler fungeert als een referentie waarmee u kunt laten zien hoe u de extensie MA kunt gebruiken om Media Analytics rechtstreeks vanuit een webapp te ondersteunen.
+U kunt de steekproefspeler hier verkrijgen: [ Speler van de Steekproef van MA ](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/samples/launch/js/3.x). De voorbeeldspeler fungeert als een referentie waarmee u kunt laten zien hoe u de extensie MA kunt gebruiken om Media Analytics rechtstreeks vanuit een webapp te ondersteunen.
 
 
 ### Werken met andere extensies
 
-De extensie MA stelt `media` als een gedeelde module beschikbaar voor andere extensies. (Voor extra informatie over Gedeelde Modules, zie [&#x200B; Gedeelde documentatie van Modules &#x200B;](../../../extension-dev/web/shared.md).)
+De extensie MA stelt `media` als een gedeelde module beschikbaar voor andere extensies. (Voor extra informatie over Gedeelde Modules, zie [ Gedeelde documentatie van Modules ](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
@@ -93,7 +89,7 @@ De extensie MA stelt `media` als een gedeelde module beschikbaar voor andere ext
 
 1. **Media APIs:** `media` Gedeelde Module
 
-   Dit stelt alle APIs en constanten van Media SDK bloot: [&#x200B; https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
+   Dit stelt alle APIs en constanten van Media SDK bloot: [ https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
 
 1. Maak de instantie van Media tracker als volgt:
 
@@ -106,8 +102,8 @@ De extensie MA stelt `media` als een gedeelde module beschikbaar voor andere ext
    var tracker = Media.getInstance();
    ```
 
-1. Gebruikend de instantie van de Tracker van Media, volg de [&#x200B; JS API documentatie &#x200B;](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) om media het volgen uit te voeren.
+1. Gebruikend de instantie van de Tracker van Media, volg de [ JS API documentatie ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/index.html) om media het volgen uit te voeren.
 
 >[!NOTE]
 >
->**het Testen:** voor deze versie, om uw uitbreiding te testen moet u het aan [&#x200B; Experience Platform &#x200B;](../../../extension-dev/submit/upload-and-test.md) uploaden, waar u toegang tot alle afhankelijke uitbreidingen hebt.
+>**het Testen:** voor deze versie, om uw uitbreiding te testen moet u het aan [ Experience Platform ](../../../extension-dev/submit/upload-and-test.md) uploaden, waar u toegang tot alle afhankelijke uitbreidingen hebt.

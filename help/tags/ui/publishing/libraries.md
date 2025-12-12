@@ -2,18 +2,14 @@
 title: Bibliotheken
 description: Leer meer over het concept tagbibliotheken en hoe ze in Adobe Experience Platform werken.
 exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
 
 # Bibliotheken
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Een bibliotheek is een reeks instructies voor hoe de uitbreidingen, gegevenselementen, en de regels met elkaar in wisselwerking staan nadat zij worden opgesteld. Wanneer u een bibliotheek maakt, geeft u de wijzigingen op die u in de bibliotheek wilt aanbrengen. Tijdens het maken worden deze wijzigingen gecombineerd met alles wat in vorige bibliotheken is verzonden, goedgekeurd of gepubliceerd.
 
@@ -71,10 +67,10 @@ Nadat u een bibliotheek hebt gemaakt, selecteert u een van de volgende opties in
 
 Voer de volgende stappen uit om een bibliotheek toe te voegen.
 
-1. Installeer de [&#x200B; uitbreidingen &#x200B;](../managing-resources/extensions/overview.md) u wilt toevoegen.
-1. Creeer de [&#x200B; gegevenselementen &#x200B;](../managing-resources/data-elements.md) en de regels u wilt toevoegen.
+1. Installeer de [ uitbreidingen ](../managing-resources/extensions/overview.md) u wilt toevoegen.
+1. Creeer de [ gegevenselementen ](../managing-resources/data-elements.md) en de regels u wilt toevoegen.
 1. Open de tab **[!UICONTROL Publishing]** .
-1. Selecteer de [&#x200B; bibliotheek &#x200B;](libraries.md) u wilt veranderen, dan selecteren **[!UICONTROL Edit]**.
+1. Selecteer de [ bibliotheek ](libraries.md) u wilt veranderen, dan selecteren **[!UICONTROL Edit]**.
 1. Gebruik de knoppen voor regels, gegevenselementen en extensies om de items te selecteren die u wilt toevoegen aan de bibliotheek.
 1. Sla de wijzigingen op.
 
@@ -119,8 +115,8 @@ Extensies, regels en gegevenselementen kunnen nu rechtstreeks worden opgeslagen 
 
 De volgende lijst bevat meer informatie over het beheer van een actieve bibliotheek.
 
-1. [&#x200B; creeer een nieuwe bibliotheek &#x200B;](libraries.md#create-a-library).
-1. Ga naar [&#x200B; Regels &#x200B;](../managing-resources/rules.md), [&#x200B; Elementen van Gegevens &#x200B;](../managing-resources/data-elements.md), of [&#x200B; Uitbreidingen &#x200B;](../managing-resources/extensions/overview.md).
+1. [ creeer een nieuwe bibliotheek ](libraries.md#create-a-library).
+1. Ga naar [ Regels ](../managing-resources/rules.md), [ Elementen van Gegevens ](../managing-resources/data-elements.md), of [ Uitbreidingen ](../managing-resources/extensions/overview.md).
 1. Selecteer uw actieve bibliotheek.
 1. Breng de wijzigingen aan en sla de bibliotheek op en maak deze samen.
 1. Test de wijzigingen en herhaal deze stappen zo nodig.

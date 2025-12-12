@@ -2,10 +2,10 @@
 title: Aanvullende informatie voor tags en het doorsturen van gebeurtenissen
 description: De nieuwste aanvullende informatie voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 93%
+source-wordcount: '770'
+ht-degree: 92%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->In de toekomst zijn aanvullende informatie voor tags en het doorsturen van gebeurtenissen niet meer op deze pagina te vinden. Raadpleeg de recentste [Aanvullende informatie voor Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=nl-NL#data-collection) voor gedetailleerde tags en updates voor het doorsturen van gebeurtenissen.
+>In de toekomst zijn aanvullende informatie voor tags en het doorsturen van gebeurtenissen niet meer op deze pagina te vinden. Raadpleeg de recentste [Aanvullende informatie voor Adobe Experience Platform](/help/release-notes/latest/latest.md) voor gedetailleerde tags en updates voor het doorsturen van gebeurtenissen.
 
 ## 26 april 2023
 
-* **OAuth JWT Secret**: met het [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=nl-NL) kunnen klanten Adobe- en Google Service-tokens gebruiken om server-naar-server-interacties bij het doorsturen van gebeurtenissen te ondersteunen.
+* **OAuth JWT Secret**: met het [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) kunnen klanten Adobe- en Google Service-tokens gebruiken om server-naar-server-interacties bij het doorsturen van gebeurtenissen te ondersteunen.
 
 De volgende nieuwe extensie is uitgebracht:
 
-* **[!DNL Pinterest Conversions API]-extensie**: met de [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=nl-NL)-extensie voor het doorsturen van gebeurtenissen kunt u gebruikmaken van gegevens die zijn vastgelegd in het Adobe Experience Platform Edge Network en deze naar [!DNL Pinterest] verzenden als gebeurtenissen aan de serverzijde met behulp van de [!DNL Pinterest Conversions API].
+* **[!DNL Pinterest Conversions API]-extensie**: met de [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html)-extensie voor het doorsturen van gebeurtenissen kunt u gebruikmaken van gegevens die zijn vastgelegd in het Adobe Experience Platform Edge Network en deze naar [!DNL Pinterest] verzenden als gebeurtenissen aan de serverzijde met behulp van de [!DNL Pinterest Conversions API].
 
 ## 29 maart 2023
 
@@ -29,14 +29,14 @@ De volgende nieuwe extensie is uitgebracht:
 
 Krijg toegang tot nieuwe snelstartworkflows onder Aan de slag vanuit het startscherm voor gegevensverzameling. De volgende workflows zijn nu beschikbaar voor klanten als openbare beta.
 
-* **[API voor metaconversies](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=nl-NL#quick-start)**: klanten met toegang tot de functie Gebeurtenis doorsturen kunnen snel gebeurtenisgegevens verzamelen en aan serverzijde doorsturen naar Meta voor advertentieconversies in slechts een paar eenvoudige stappen.
+* **[API voor metaconversies](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: klanten met toegang tot de functie Gebeurtenis doorsturen kunnen snel gebeurtenisgegevens verzamelen en aan serverzijde doorsturen naar Meta voor advertentieconversies in slechts een paar eenvoudige stappen.
 * **[Mobiele SDK](https://developer.adobe.com/client-sdks/documentation/)**: klanten kunnen de mobiele SDK snel implementeren en fundamentele mobiele gebeurtenissen in een paar eenvoudige stappen bevestigen.
 
 Er zijn nieuwe extensies uitgebracht:
 
-* **[!DNL Braze]-extensie voor het doorsturen van gebeurtenissen**: met de [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=nl-NL)-extensie voor het doorsturen van gebeurtenissen kunt u gebruikmaken van gegevens die zijn vastgelegd in het Adobe Experience Platform Edge Network en deze naar [!DNL Braze] verzenden als gebeurtenissen aan de serverzijde met behulp van de [!DNL Braze] User Track API&#39;s.
-* **[Epsilon Events-API]-extensie voor het doorsturen van gebeurtenissen**: met de extensie [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=nl-NL) kunt u gebruikmaken van het doorsturen van gebeurtenissen om gebeurtenisgegevens vast te leggen in het Adobe Experience Platform Edge Network en deze naar [!DNL Epsilon] te verzenden met behulp van de [!DNL Epsilon] Event-API.
-* **[!DNL Mixpanel]-extensie voor het doorsturen van gebeurtenissen**: met de extensie [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=nl-NL) kunt u gebruikmaken van het doorsturen van gebeurtenissen om gebeurtenisgegevens vast te leggen in het Adobe Experience Platform Edge Network en deze naar [!DNL Mixpanel] te verzenden met behulp van de API voor het bijhouden van gebeurtenissen.
+* **[!DNL Braze]-extensie voor het doorsturen van gebeurtenissen**: met de [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html)-extensie voor het doorsturen van gebeurtenissen kunt u gebruikmaken van gegevens die zijn vastgelegd in het Adobe Experience Platform Edge Network en deze naar [!DNL Braze] verzenden als gebeurtenissen aan de serverzijde met behulp van de [!DNL Braze] User Track API&#39;s.
+* **[Epsilon Events-API]-extensie voor het doorsturen van gebeurtenissen**: met de extensie [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) kunt u gebruikmaken van het doorsturen van gebeurtenissen om gebeurtenisgegevens vast te leggen in het Adobe Experience Platform Edge Network en deze naar [!DNL Epsilon] te verzenden met behulp van de [!DNL Epsilon] Event-API.
+* **[!DNL Mixpanel]-extensie voor het doorsturen van gebeurtenissen**: met de extensie [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) kunt u gebruikmaken van het doorsturen van gebeurtenissen om gebeurtenisgegevens vast te leggen in het Adobe Experience Platform Edge Network en deze naar [!DNL Mixpanel] te verzenden met behulp van de API voor het bijhouden van gebeurtenissen.
 
 ## 25 januari 2023
 
@@ -68,7 +68,7 @@ Er zijn nieuwe extensies uitgebracht:
 ## 27 juli 2022
 
 * Toegang tot tags en mogelijkheden voor het doorsturen van gebeurtenissen wordt nu beheerd via de Adobe Admin Console onder de kaart voor Adobe Experience Platform Data Collection. Zie de gids over [machtigingen voor dataverzameling](../../collection/permissions.md) voor meer informatie.
-* Ondersteuning voor Internet Explorer 10 en 11 is [afgeschaft](../ie-deprecation.md).
+* Ondersteuning voor Internet Explorer 10 en 11 is afgekeurd.
 
 ## 22 juni 2022
 

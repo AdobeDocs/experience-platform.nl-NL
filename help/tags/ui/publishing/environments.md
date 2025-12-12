@@ -2,18 +2,14 @@
 title: Omgevingen
 description: Leer meer over het concept van labelomgevingen en hoe deze werken in Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
 
 # Omgevingen
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Tagomgevingen definiëren verschillende belangrijke aspecten van de bibliotheekbuilds die u op uw website of app implementeert:
 
@@ -29,7 +25,7 @@ Dit document bevat stappen voor het installeren, configureren en maken van versc
 
 ## Omgevingstypen
 
-De markeringen steunen drie verschillende milieutypes, elk die aan een verschillende staat in het [&#x200B; het publiceren werkschema &#x200B;](./publishing-flow.md) beantwoorden:
+De markeringen steunen drie verschillende milieutypes, elk die aan een verschillende staat in het [ het publiceren werkschema ](./publishing-flow.md) beantwoorden:
 
 | Type omgeving | Beschrijving |
 | --- | --- |
@@ -61,7 +57,7 @@ Als u een webeigenschap gebruikt, krijgt u een insluitcode die moet worden gebru
 
 ![](./images/environments/web-instructions.png)
 
-Als u een mobiel bezit gebruikt, krijgt u afzonderlijke instructies voor het installeren van gebiedsdelen voor Android (via [&#x200B; Gradle &#x200B;](https://gradle.org/)) en iOS (via [&#x200B; CocoaPods &#x200B;](https://cocoapods.org/)).
+Als u een mobiel bezit gebruikt, krijgt u afzonderlijke instructies voor het installeren van gebiedsdelen voor Android (via [ Gradle ](https://gradle.org/)) en iOS (via [ CocoaPods ](https://cocoapods.org/)).
 
 ![](./images/environments/mobile-instructions.png)
 
@@ -71,7 +67,7 @@ Voor mobiele eigenschappen kunt u de configuratieopties voor een omgeving bekijk
 
 ![](./images/environments/mobile-config.png)
 
-Zie het overzicht op [&#x200B; gastheren &#x200B;](./hosts/hosts-overview.md) voor meer informatie.
+Zie het overzicht op [ gastheren ](./hosts/hosts-overview.md) voor meer informatie.
 
 ## Webconfiguratie
 
@@ -79,7 +75,7 @@ De instellingen van de toegewezen omgeving bepalen het volgende voor wegeigensch
 
 * **Gastheer**: De serverplaats waar u uw bouwstijl wilt worden opgesteld.
 * **Archivering die** plaatst: Of het systeem een plaatsbare reeks dossiers zou moeten uitvoeren of hen gecomprimeerd in een archiefformaat hebben.
-* **bedt code** in: De `<script>` code die binnen de HTML van uw websitepagina&#39;s moet worden ingebed, wordt gebruikt om de bibliotheek op te stellen bouwt bij runtime.
+* **bedt code** in: De `<script>` code die binnen HTML van uw websitepagina&#39;s moet worden ingebed, wordt gebruikt om de bibliotheek op te stellen bouwt bij runtime.
 
 Selecteer op het tabblad [!UICONTROL Environments] een weergegeven omgeving om de bijbehorende besturingselementen voor configuratie weer te geven.
 
@@ -91,7 +87,7 @@ Selecteer **[!UICONTROL Host]** om een vooraf geconfigureerde host voor de omgev
 
 ![](./images/environments/select-host.png)
 
-Wanneer een bouwstijl wordt gecreeerd, wordt die bouwstijl geleverd aan de plaats u voor de toegewezen gastheer specificeerde. Voor informatie over om markeringsgastheren tot stand te brengen en te vormen, verwijs naar het [&#x200B; overzicht van gastheren &#x200B;](./hosts/hosts-overview.md).
+Wanneer een bouwstijl wordt gecreeerd, wordt die bouwstijl geleverd aan de plaats u voor de toegewezen gastheer specificeerde. Voor informatie over om markeringsgastheren tot stand te brengen en te vormen, verwijs naar het [ overzicht van gastheren ](./hosts/hosts-overview.md).
 
 ### Archiefinstelling {#archive}
 
@@ -125,7 +121,7 @@ Wanneer u de installatie-instructies bekijkt, kunt u ervoor kiezen om het script
 
 Met asynchrone implementatie kan de browser de rest van de pagina blijven laden terwijl de bibliotheek wordt opgehaald. Er is slechts één insluitcode wanneer u deze instelling gebruikt, die in het document `<head>` moet worden geplaatst.
 
-Voor meer informatie over dit plaatsen, zie de gids op [&#x200B; asynchrone plaatsing &#x200B;](../client-side/asynchronous-deployment.md).
+Voor meer informatie over dit plaatsen, zie de gids op [ asynchrone plaatsing ](../client-side/asynchronous-deployment.md).
 
 #### Synchrone implementatie
 
@@ -137,13 +133,13 @@ Synchrone insluitcodes bestaan uit twee `<script>` -tags die in de HTML van uw w
 
 Aangezien insluitcodes worden gegenereerd op basis van uw omgevingsconfiguraties, wordt de insluitcode voor de desbetreffende omgeving door sommige configuratiewijzigingen automatisch bijgewerkt. Deze wijzigingen zijn onder meer:
 
-* Het schakelen van een Adobe-beheerde gastheer aan een gastheer SFTP, of vice versa.
+* Het schakelen van een Adobe-geleide gastheer aan een gastheer SFTP, of vice versa.
 * De archiefinstelling wijzigen.
 * Het padveld bijwerken als de archiefinstelling is ingeschakeld.
 
 >[!WARNING]
 >
->Wanneer de insluitcode van een tagomgeving verandert, moet u de insluitcodes in uw HTML handmatig bijwerken. Om kostbaar onderhoud te voorkomen, dient u uw insluitcode(s) alleen bij te werken als dat absoluut noodzakelijk is.
+>Wanneer de insluitcode van een tagomgeving verandert, moet u de insluitcodes handmatig bijwerken in uw HTML. Om kostbaar onderhoud te voorkomen, dient u uw insluitcode(s) alleen bij te werken als dat absoluut noodzakelijk is.
 
 ## Een omgeving maken
 
@@ -169,4 +165,4 @@ Het tabblad [!UICONTROL Environments] wordt weer weergegeven, met de installatie
 
 Door dit document te lezen, hebt u een goed begrip voor het configureren van omgevingen in de gebruikersinterface en het installeren van deze omgevingen in uw website of app. U kunt nu beginnen met het publiceren van uw bibliotheekbuilds.
 
-Wanneer u in de loop der tijd herhalingen van uw bibliotheek publiceert, is het mogelijk nodig om eerdere builds bij te houden en te archiveren voor probleemoplossing en terugdraaidoeleinden. Zie de gids bij [&#x200B; opnieuw publiceren oudere bibliotheken &#x200B;](./republish.md) voor meer informatie.
+Wanneer u in de loop der tijd herhalingen van uw bibliotheek publiceert, is het mogelijk nodig om eerdere builds bij te houden en te archiveren voor probleemoplossing en terugdraaidoeleinden. Zie de gids bij [ opnieuw publiceren oudere bibliotheken ](./republish.md) voor meer informatie.

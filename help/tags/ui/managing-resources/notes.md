@@ -2,18 +2,14 @@
 title: Notities
 description: Leer hoe u tekstuele annotaties kunt toevoegen aan bepaalde tagbronnen in Adobe Experience Platform.
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
 
 # Notities
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Opmerkingen zijn tekstuele annotaties die u kunt toevoegen aan bepaalde codebronnen in Adobe Experience Platform. De nota&#39;s kunnen aan de volgende middelen worden vastgemaakt:
 

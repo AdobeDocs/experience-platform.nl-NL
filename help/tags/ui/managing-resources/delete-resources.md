@@ -2,20 +2,16 @@
 title: Bronnen verwijderen
 description: Leer hoe u tagbronnen kunt verwijderen in Adobe Experience Platform.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
 
 # Bronnen verwijderen
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
-
-Als u een bron verwijdert, wordt die bron permanent uit Adobe Experience Platform verwijderd. Als u een middel uit een specifieke markeringsbibliotheek wilt verwijderen, maar nog dat middel beschikbaar voor gebruik in andere bibliotheken wilt zijn, zie de gids op [&#x200B; verwijderend middelen uit een bibliotheek &#x200B;](remove-resources-from-library.md).
+Als u een bron verwijdert, wordt die bron permanent uit Adobe Experience Platform verwijderd. Als u een middel uit een specifieke markeringsbibliotheek wilt verwijderen, maar nog dat middel beschikbaar voor gebruik in andere bibliotheken wilt zijn, zie de gids op [ verwijderend middelen uit een bibliotheek ](remove-resources-from-library.md).
 
 U kunt gegevenselementen, regels, extensies, hosts, omgevingen en eigenschappen verwijderen. Zodra geschrapt, zijn deze middelen niet terugvorderbaar.
 
@@ -73,7 +69,7 @@ Voordat u een bron kunt verwijderen, moet u deze verwijderen uit alle bibliothek
 #### Productie
 
 1. Schakel de resource uit.
-1. Publish the disabled resource through to Production.
+1. Publiceer de uitgeschakelde bron tot aan Production.
 1. Verwijder de bron.
 
 ## Een bron verwijderen

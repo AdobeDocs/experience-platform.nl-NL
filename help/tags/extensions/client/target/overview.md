@@ -2,18 +2,14 @@
 title: Overzicht Adobe Target-extensie
 description: Meer informatie over de tagextensie voor Adobe Target in Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
 
 # Overzicht Adobe Target-extensie
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
@@ -68,7 +64,7 @@ Bepaalt waar Doel cookies instelt in de browsers.
 
 Als de reactie van Doel niet binnen de bepaalde periode wordt ontvangen, de vraagtijden uit en de standaardinhoud wordt getoond. Tijdens de bezoekerssessie wordt nog steeds geprobeerd om aanvullende verzoeken in te dienen. Het gebrek is 3000ms, die van de Onderbreking verschillend zou kunnen zijn die in het gebruikersinterface van het Doel wordt gevormd.
 
-Voor meer informatie over hoe de Onderbreking het plaatsen van de Onderbreking werkt, verwijs naar de [&#x200B; hulp van Adobe Target &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=nl-NL).
+Voor meer informatie over hoe de Onderbreking het plaatsen van de Onderbreking werkt, verwijs naar de [ hulp van Adobe Target ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html).
 
 #### Andere at.js-instellingen beschikbaar in de gebruikersinterface van Doel
 
@@ -112,10 +108,10 @@ Geef op of het verbergen van het lichaam moet worden ingeschakeld om flikkering 
 
 De volgende opties zijn beschikbaar:
 
-* **Bodyverbergen:** u kunt dit het plaatsen toelaten of onbruikbaar maken. De standaardwaarde is Enabled, wat betekent HTML BODY verborgen is.
+* **Bodyverbergen:** u kunt dit het plaatsen toelaten of onbruikbaar maken. De standaardwaarde is Enabled, wat betekent dat de HTML BODY verborgen is.
 * **Verborgen Stijl van het Lichaam:** de standaardwaarde is `body{opacity:0}`. Deze waarde kan worden gewijzigd in iets anders, zoals `body{display:none}` .
 
-Voor meer informatie, verwijs naar de [&#x200B; online hulpdocumentatie van het Doel &#x200B;](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=nl-NL).
+Voor meer informatie, verwijs naar de [ online hulpdocumentatie van het Doel ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html).
 
 ## Basisimplementatie van Adobe Target
 
@@ -185,7 +181,7 @@ Het codefragment dat u vooraf verbergt, ziet er als volgt uit en kan worden gemi
 }(window, document, "body {opacity: 0 !important}", 3000));
 ```
 
-Standaard wordt in het fragment het hele HTML-BODY verborgen. In sommige gevallen wilt u mogelijk alleen bepaalde HTML-elementen vooraf verbergen, en niet de hele pagina. U kunt dit bereiken door de stijlparameter aan te passen. Vervang de pagina door iets dat alleen bepaalde gebieden op de pagina vooraf verbergt.
+Standaard wordt in het fragment de hele HTML-instantie vooraf verborgen. In sommige gevallen wilt u mogelijk alleen bepaalde HTML-elementen vooraf verbergen, en niet de hele pagina. U kunt dit bereiken door de stijlparameter aan te passen. Vervang de pagina door iets dat alleen bepaalde gebieden op de pagina vooraf verbergt.
 
 Als u bijvoorbeeld twee gebieden hebt die worden aangeduid met ID&#39;s container-1 en container-2, kan de stijl worden vervangen door:
 

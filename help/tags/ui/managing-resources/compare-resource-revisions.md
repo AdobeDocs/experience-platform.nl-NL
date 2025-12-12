@@ -2,18 +2,14 @@
 title: Bronrevisies vergelijken
 description: Leer hoe u de geschiedenis van revisies voor een tagbron in Adobe Experience Platform kunt bekijken.
 exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '859'
 ht-degree: 0%
 
 ---
 
 # Bronrevisies vergelijken
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Vergelijk resourcerevisies om de geschiedenis van een individuele bron te zien.  U kunt de huidige status van de bron vergelijken met oudere versies of de momenteel gepubliceerde versie van een bron vergelijken met de meest recente set wijzigingen die zijn opgeslagen.
 
@@ -21,7 +17,7 @@ Vergelijk resourcerevisies om de geschiedenis van een individuele bron te zien. 
 
 Het initiëren van een vergelijking is het zelfde voor alle middeltypes.  Open de weergave Bewerken voor een afzonderlijke bron en zoek vervolgens het drie puntenpictogram naast de knop **[!UICONTROL Save]** om de beschikbare handelingen voor die bron weer te geven.  Selecteer **[!UICONTROL Compare Revisions]** in de lijst.
 
-![&#x200B; Begin een vergelijking voor een uitbreiding &#x200B;](../../images/compare-initiate-extension.png)
+![ Begin een vergelijking voor een uitbreiding ](../../images/compare-initiate-extension.png)
 
 Voor extensies opent u de detailweergave door de knop **[!UICONTROL Configure]** te selecteren wanneer u de lijst met geïnstalleerde extensies weergeeft.  Selecteer een gegevenselement in de lijst voor gegevenselementen en -regels.
 
@@ -31,7 +27,7 @@ Wanneer u een vergelijking initieert, toont de standaardmening de recentste vers
 
 Links kun je kiezen uit bestaande revisies die je wilt vergelijken met &#39;Nieuwst&#39;.
 
-![&#x200B; Vergelijkende versies van de uitbreiding van de Analyse &#x200B;](../../images/compare-interpret-extension.png)
+![ Vergelijkende versies van de uitbreiding van de Analyse ](../../images/compare-interpret-extension.png)
 
 Selecteer **[!UICONTROL Use These Changes]** om de instellingen van de geselecteerde revisie te kopiëren (links) naar de meest recente versie (rechts).  Hiermee kopieert u de instellingen van de oude revisie naar de laatste niet-opgeslagen wijzigingen.  Als u deze wijzigingen wilt behouden, moet u de vergelijkingsweergave afsluiten met **[!UICONTROL Save]** .
 
@@ -45,7 +41,7 @@ Extensies hebben één scherm om de verschillen tussen versies weer te geven.
 
 In de vergelijkingsweergave worden de verschillen tussen de instellingenversies gemarkeerd.  De toevoeging en de verwijdering aan individuele montages worden vermeld door een uitbreiding van een lijn in één van beide richting.
 
-![&#x200B; die verschillende versies van de uitbreiding van de Analyse vergelijken &#x200B;](../../images/compare-extension.png)
+![ die verschillende versies van de uitbreiding van de Analyse vergelijken ](../../images/compare-extension.png)
 
 Hierboven kunt u de volgende wijzigingen zien:
 
@@ -56,7 +52,7 @@ Hierboven kunt u de volgende wijzigingen zien:
 
 De elementen van gegevens hebben één enkel scherm om verschillen te tonen, maar omdat de gegevenselementen extra attributen naast hun montages hebben, wordt de extra informatie getoond.  Kenmerken die zijn gewijzigd, worden in oranje gemarkeerd.
 
-![&#x200B; het Vergelijken van verschillende versies van een gegevenselement &#x200B;](../../images/compare-data-element.png)
+![ het Vergelijken van verschillende versies van een gegevenselement ](../../images/compare-data-element.png)
 
 Hierboven kunt u de volgende wijzigingen zien:
 
@@ -75,7 +71,7 @@ De regels bestaan uit vele regelcomponenten.  Om de veranderingen in een regel t
 
 Het eerste scherm toont een mening op hoog niveau, die veranderingen in de rangschikking van regelcomponenten binnen de regel benadrukt.  Wijzigingen worden gemarkeerd. Verschillende typen wijzigingen worden weergegeven.
 
-![&#x200B; vergelijkend verschillende versies van een regel &#x200B;](../../images/compare-rule.png)
+![ vergelijkend verschillende versies van een regel ](../../images/compare-rule.png)
 
 Hierboven kunt u de volgende wijzigingen zien:
 
@@ -87,14 +83,14 @@ Hierboven kunt u de volgende wijzigingen zien:
 
 Om de specifieke wijzigingen in één van de regelcomponenten te bekijken, selecteer de specifieke component u zou willen bekijken.  De lijn verandert in blauw wanneer u de muis erboven plaatst.
 
-![&#x200B; selecteer de component u in meer detail zou willen zien &#x200B;](../../images/compare-rule-component-click.png)
+![ selecteer de component u in meer detail zou willen zien ](../../images/compare-rule-component-click.png)
 
 De vergelijking voor een individuele regelcomponent gedraagt zich het zelfde als de vergelijking voor een gegevenselement.
 
-![&#x200B; het Vergelijken van verschillende versies van een individuele regelcomponent &#x200B;](../../images/compare-rule-component.png)
+![ het Vergelijken van verschillende versies van een individuele regelcomponent ](../../images/compare-rule-component.png)
 
 Hierboven ziet u de volgende wijziging:
 
-* De regelcomponent is gewijzigd en voegt eVar2 met de waarde &quot;1&quot; toe.
+* De component rule is gewijzigd en voegt nu eVar2 met de waarde &quot;1&quot; toe.
 
 Als het instellingenblok groot is, kunt u de sectie Instellingen uitvouwen zodat u deze beter kunt zien.

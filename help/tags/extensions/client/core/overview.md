@@ -2,18 +2,14 @@
 title: Overzicht van Core Extension
 description: Meer informatie over de uitbreiding van de tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '5425'
-ht-degree: 1%
+source-wordcount: '5380'
+ht-degree: 0%
 
 ---
 
 # Overzicht van kernextensies
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 De extensie van de tag Core is de standaardextensie die wordt vrijgegeven met Adobe Experience Platform.
 
@@ -21,7 +17,7 @@ Dit document bevat informatie over de beschikbare opties wanneer u de extensie C
 
 ## Gebeurtenistypen van de kernextensie {#core-extension-event-types}
 
-Dit onderwerp beschrijft de gebeurtenistypen beschikbaar in de uitbreiding van de Kern. Voor informatie over de opties die voor verscheidene verschillende gebeurtenistypen kunnen worden geplaatst, zie de [&#x200B; sectie van Opties &#x200B;](#options).
+Dit onderwerp beschrijft de gebeurtenistypen beschikbaar in de uitbreiding van de Kern. Voor informatie over de opties die voor verscheidene verschillende gebeurtenistypen kunnen worden geplaatst, zie de [ sectie van Opties ](#options).
 
 ### Gebeurtenissen op basis van browser
 
@@ -37,52 +33,52 @@ De gebeurtenis tab-focus activeert de actie wanneer een tab de focus krijgt. Er 
 
 #### Vervagen
 
-De gebeurtenis blur activeert de actie wanneer een formulier de focus verliest. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis blur activeert de actie wanneer een formulier de focus verliest. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 #### Focus
 
-De focusgebeurtenis activeert de actie wanneer een formulier de focus krijgt. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De focusgebeurtenis activeert de actie wanneer een formulier de focus krijgt. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 #### Verzenden
 
-De verzendgebeurtenis activeert de actie wanneer een formulier wordt verzonden. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De verzendgebeurtenis activeert de actie wanneer een formulier wordt verzonden. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 ### Keyboard-gebeurtenissen
 
 #### Toetsdruk
 
-De gebeurtenis wordt geactiveerd wanneer op een toets wordt gedrukt. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis wordt geactiveerd wanneer op een toets wordt gedrukt. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 ### Gebeurtenissen op basis van media
 
 #### Media beëindigd
 
-De gebeurtenis wordt geactiveerd wanneer het medium wordt beëindigd. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis wordt geactiveerd wanneer het medium wordt beëindigd. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 #### Gegevens die met media zijn geladen
 
-De gebeurtenis wordt geactiveerd wanneer de media gegevens laden. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis wordt geactiveerd wanneer de media gegevens laden. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 #### Media pauzeren
 
-De gebeurtenis wordt geactiveerd wanneer het medium wordt gepauzeerd. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis wordt geactiveerd wanneer het medium wordt gepauzeerd. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 #### Media afspelen
 
-De gebeurtenis wordt geactiveerd wanneer de media wordt afgespeeld. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis wordt geactiveerd wanneer de media wordt afgespeeld. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 #### Media geïnstalleerd
 
-De gebeurtenis wordt geactiveerd wanneer de media stagneren. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis wordt geactiveerd wanneer de media stagneren. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 #### Media-tijd afgespeeld
 
-De gebeurtenis wordt geactiveerd wanneer de media gedurende een bepaalde periode wordt afgespeeld. U moet de duur opgeven waarvoor de media moeten worden afgespeeld om de gebeurtenis te activeren. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis wordt geactiveerd wanneer de media gedurende een bepaalde periode wordt afgespeeld. U moet de duur opgeven waarvoor de media moeten worden afgespeeld om de gebeurtenis te activeren. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 
 #### Gewijzigd media-volume
 
-De gebeurtenis wordt geactiveerd als het volume wordt verhoogd of verlaagd. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis wordt geactiveerd als het volume wordt verhoogd of verlaagd. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 ### Mobiel-apparaatgeoriënteerde gebeurtenissen
 
@@ -112,17 +108,17 @@ De standaardwaarde voor de vertraging van de koppeling is 100 milliseconden. Tag
 
 Om de vertraging in te voeren is het nodig om zowel het geselecteerde element te verstrekken dat de gebeurtenis teweegbrengt, als de specifieke hoeveelheid tijd alvorens de gebeurtenis wordt teweeggebracht.
 
-Voor de geavanceerde opties zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie.
+Voor de geavanceerde opties zie de [ sectie van Opties ](#options) voor meer informatie.
 
 #### Hover
 
-De gebeurtenis wordt geactiveerd wanneer de gebruiker de muisaanwijzer op een opgegeven element plaatst. U moet ook vormen of de regel onmiddellijk of na een gespecificeerd aantal milliseconden wordt teweeggebracht. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis wordt geactiveerd wanneer de gebruiker de muisaanwijzer op een opgegeven element plaatst. U moet ook vormen of de regel onmiddellijk of na een gespecificeerd aantal milliseconden wordt teweeggebracht. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 ### Andere gebeurtenissen
 
 #### Aangepaste gebeurtenis
 
-De gebeurtenis wordt geactiveerd als een aangepast gebeurtenistype optreedt. Benoemde JavaScript-functies die elders in de codebase zijn gedefinieerd, kunnen worden gebruikt als een aangepast gebeurtenistype. U moet de naam van het type van douanegebeurtenis specificeren en om het even welke andere montages vormen zoals die in [&#x200B; hieronder sectie van Opties &#x200B;](#options) worden beschreven.
+De gebeurtenis wordt geactiveerd als een aangepast gebeurtenistype optreedt. Benoemde JavaScript-functies die elders in de codebase zijn gedefinieerd, kunnen worden gebruikt als een aangepast gebeurtenistype. U moet de naam van het type van douanegebeurtenis specificeren en om het even welke andere montages vormen zoals die in [ hieronder sectie van Opties ](#options) worden beschreven.
 
 #### Gegevenselement gewijzigd
 
@@ -132,19 +128,19 @@ De gebeurtenis wordt geactiveerd wanneer een opgegeven gegevenselement verandert
 
 Een directe vraaggebeurtenis mijdt gebeurtenisopsporing en raadplegingssystemen. De directe vraagregels zijn ideaal voor situaties waar u het systeem precies wilt vertellen wat gebeurt. Bovendien zijn deze ideaal wanneer het systeem geen gebeurtenis in het DOM kan detecteren.
 
-Wanneer u een directe aanroepgebeurtenis definieert, moet u een tekenreeks opgeven die als id van deze gebeurtenis fungeert. Als a [&#x200B; directe vraagactie van de trekker &#x200B;](#direct-call-action) die het zelfde herkenningsteken bevat in brand wordt gestoken, dan zullen om het even welke directe regels van de vraaggebeurtenis die op dat herkenningsteken letten lopen.
+Wanneer u een directe aanroepgebeurtenis definieert, moet u een tekenreeks opgeven die als id van deze gebeurtenis fungeert. Als a [ directe vraagactie van de trekker ](#direct-call-action) die het zelfde herkenningsteken bevat in brand wordt gestoken, dan zullen om het even welke directe regels van de vraaggebeurtenis die op dat herkenningsteken letten lopen.
 
-![&#x200B; Schermafbeelding van een Directe gebeurtenis van de Vraag in de Inzameling UI van Gegevens &#x200B;](../../../images/extensions/client/core/direct-call-event.png)
+![ Schermafbeelding van een Directe gebeurtenis van de Vraag in de Inzameling UI van Gegevens ](../../../images/extensions/client/core/direct-call-event.png)
 
 #### Element bestaat
 
-De gebeurtenis activeert of een opgegeven element bestaat. Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+De gebeurtenis activeert of een opgegeven element bestaat. Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 #### Viewport invoeren
 
 De gebeurtenis wordt geactiveerd als de gebruiker een opgegeven viewport invoert. U moet een CSS-kiezer opgeven als criteria om overeenkomende elementen als doel in te stellen. U moet ook vormen of de regel onmiddellijk of na een gespecificeerd aantal milliseconden wordt teweeggebracht, en of de gebeurtenis zou moeten teweegbrengen telkens als de gebeurtenis of slechts de eerste keer voorkomt.
 
-Zie de [&#x200B; sectie van Opties &#x200B;](#options) voor meer informatie over klantgerichte gebeurtenismontages.
+Zie de [ sectie van Opties ](#options) voor meer informatie over klantgerichte gebeurtenismontages.
 
 #### Geschiedeniswijziging
 
@@ -248,7 +244,7 @@ Voer de regel in een browser uit en inspecteer het geregistreerde gebeurtenisobj
 
 Wanneer de optie &quot;Regelcomponenten in volgorde uitvoeren&quot; van eigenschapinstellingen is ingeschakeld, kunt u volgende regelcomponenten laten wachten terwijl uw voorwaarde een asynchrone taak uitvoert.
 
-Wanneer de voorwaarde a [&#x200B; Beloften &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) terugkeert, zal de volgende voorwaarde in de regel niet uitvoeren tot de teruggekeerde belofte wordt opgelost. Als de belofte wordt verworpen, zijn de markeringen van mening dat de voorwaarde ontbroken en geen verdere voorwaarden of acties van die regel zullen worden uitgevoerd.
+Wanneer de voorwaarde a [ Beloften ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) terugkeert, zal de volgende voorwaarde in de regel niet uitvoeren tot de teruggekeerde belofte wordt opgelost. Als de belofte wordt verworpen, zijn de markeringen van mening dat de voorwaarde ontbroken en geen verdere voorwaarden of acties van die regel zullen worden uitgevoerd.
 
 Een voorbeeld van een voorwaarde die een belofte terugkeert:
 
@@ -307,11 +303,11 @@ De volgende vergelijkingsoperatoren voor waarden zijn beschikbaar:
 
 **is Waar:** de voorwaarde keert waar terug als de waarde boolean met de waarde waar is. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
 
-**is Waarheid:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean waar is. Zie [&#x200B; van de Vertrouwelijke documentatie van 0&rbrace; MDN voor voorbeelden van waarheidswaarden.](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+**is Waarheid:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean waar is. Zie [ van de Vertrouwelijke documentatie van 0} MDN voor voorbeelden van waarheidswaarden.](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
 
 **is Vals:** de voorwaarde keert waar terug als de waarde boolean met de waarde van vals is. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde false resulteert in de voorwaarde die false retourneert.
 
-**is vals:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean vals is. Zie {de documentatie van het Falsy van 0} MDN [&#x200B; voor voorbeelden van valse waarden.](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+**is vals:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean vals is. Zie {de documentatie van het Falsy van 0} MDN [ voor voorbeelden van valse waarden.](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
 #### Variabele
 
@@ -578,7 +574,7 @@ Code uit aangepaste handelingen wordt ingesloten in de hoofdtagbibliotheek. De c
 
 #### Regels voor elke andere gebeurtenis dan de boven- of onderzijde van de pagina
 
-De code van douaneacties wordt geladen van de server en aan het document geschreven gebruikend [&#x200B; Postscript &#x200B;](https://github.com/krux/postscribe). Als een regel veelvoudige acties van de Code van de Douane heeft, wordt de code geladen parallel van de server, maar in de orde geschreven die in de regel wordt gevormd.
+De code van douaneacties wordt geladen van de server en aan het document geschreven gebruikend [ Postscript ](https://github.com/krux/postscribe). Als een regel veelvoudige acties van de Code van de Douane heeft, wordt de code geladen parallel van de server, maar in de orde geschreven die in de regel wordt gevormd.
 
 Tijdens het gebruik van document.write nadat een pagina is geladen, zouden er doorgaans problemen optreden. Dit is echter geen probleem voor code die via aangepaste code-handelingen wordt geleverd. U kunt document.write binnen acties van de Code van de Douane ongeacht gebruiken wanneer de code zal worden uitgevoerd.
 
@@ -592,7 +588,7 @@ Wanneer de optie &quot;Regelcomponenten in volgorde uitvoeren&quot; van eigensch
 
 *JavaScript*
 
-Wanneer het creëren van een actie van de douanecode van JavaScript, kunt u a [&#x200B; Beloften &#x200B;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) van uw actie terugkeren. De volgende actie in de regel zal slechts worden uitgevoerd wanneer de teruggekeerde belofte wordt opgelost. Als de belofte wordt verworpen, zullen de volgende acties van de regel niet worden uitgevoerd.
+Wanneer het creëren van een actie van de douanecode van JavaScript, kunt u a [ Beloften ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) van uw actie terugkeren. De volgende actie in de regel zal slechts worden uitgevoerd wanneer de teruggekeerde belofte wordt opgelost. Als de belofte wordt verworpen, zullen de volgende acties van de regel niet worden uitgevoerd.
 
 >[!NOTE]
 >
@@ -632,9 +628,9 @@ setTimeout(function() {
 
 ### Rechtstreekse oproep activeren {#direct-call-action}
 
-Deze actie brengt alle regels in werking die een specifieke [&#x200B; directe vraaggebeurtenis &#x200B;](#direct-call-event) gebruiken. Wanneer het vormen van de actie, moet u het herkenningstekenkoord voor de directe vraaggebeurtenis verstrekken u wilt teweegbrengen. U kunt ook gegevens doorgeven aan de directe aanroepgebeurtenis via een `detail` -object, dat een aangepaste set sleutelwaardeparen kan bevatten.
+Deze actie brengt alle regels in werking die een specifieke [ directe vraaggebeurtenis ](#direct-call-event) gebruiken. Wanneer het vormen van de actie, moet u het herkenningstekenkoord voor de directe vraaggebeurtenis verstrekken u wilt teweegbrengen. U kunt ook gegevens doorgeven aan de directe aanroepgebeurtenis via een `detail` -object, dat een aangepaste set sleutelwaardeparen kan bevatten.
 
-![&#x200B; Schermafbeelding van een Actie van de Vraag van de Trekker Direct in de Inzameling UI van Gegevens &#x200B;](../../../images/extensions/client/core/direct-call-action.png)
+![ Schermafbeelding van een Actie van de Vraag van de Trekker Direct in de Inzameling UI van Gegevens ](../../../images/extensions/client/core/direct-call-action.png)
 
 Deze handeling wordt rechtstreeks toegewezen aan [`_satellite.track()`](/help/collection/tags/track.md) .
 
@@ -731,7 +727,7 @@ Als u een gegevensverzamelingsobject gebruikt als onderdeel van uw gegevenslaag,
 
 Geef de naam van uw lokale opslagitem op in het veld Itemnaam lokale opslag.
 
-De lokale opslag geeft browsers een manier om informatie van pagina aan pagina ([&#x200B; https://www.w3schools.com/html/html5\_webstorage.asp &#x200B;](https://www.w3schools.com/html/html5_webstorage.asp)) op te slaan. Lokale opslag werkt veel zoals cookies, maar is veel groter en flexibeler.
+De lokale opslag geeft browsers een manier om informatie van pagina aan pagina ([ https://www.w3schools.com/html/html5\_webstorage.asp ](https://www.w3schools.com/html/html5_webstorage.asp)) op te slaan. Lokale opslag werkt veel zoals cookies, maar is veel groter en flexibeler.
 
 Gebruik het opgegeven veld om de waarde op te geven die u voor een lokaal opslagitem hebt gemaakt, zoals `lastProductViewed.`
 
@@ -859,7 +855,7 @@ Enkele gangbare gebruiksgevallen zijn:
 
 ### Voorwaardelijke waarde
 
-Een omslag voor de [&#x200B; Vergelijking van de Waarde &#x200B;](#value-comparison-value-comparison) voorwaarde. Op basis van het resultaat van de vergelijking wordt een van de twee beschikbare waarden in het formulier geretourneerd. Kan hiermee &quot;if... Dan... Anders...&quot; scenario&#39;s zonder de behoefte aan extra regels.
+Een omslag voor de [ Vergelijking van de Waarde ](#value-comparison-value-comparison) voorwaarde. Op basis van het resultaat van de vergelijking wordt een van de twee beschikbare waarden in het formulier geretourneerd. Kan hiermee &quot;if... Dan... Anders...&quot; scenario&#39;s zonder de behoefte aan extra regels.
 
 ### Runtimeomgeving
 

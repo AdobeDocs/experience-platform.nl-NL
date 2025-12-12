@@ -2,18 +2,14 @@
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 4%
+source-wordcount: '1678'
+ht-degree: 1%
 
 ---
 
 # Opmerkingen bij de release Core Extension
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 ## vrijdag 25 september 2025
 
@@ -54,7 +50,7 @@ v3.4.1
       * Parameter querytekenreeks
       * Traffic Source
       * Variabele
-* Verandert de gebeurtenissen/de afgevaardigde EntersViewport om [&#x200B; API van de Waarnemer van de Intersectie te gebruiken &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) in plaats van handopsporing van elementen die viewport ingaan.
+* Verandert de gebeurtenissen/de afgevaardigde EntersViewport om [ API van de Waarnemer van de Intersectie te gebruiken ](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) in plaats van handopsporing van elementen die viewport ingaan.
 * Verwijdert code die DTM koekjes aan LocalStorage migreerde.
 * Logs een waarschuwing aan de console wanneer LocalStorage en SessionStorage APIs niet beschikbaar zijn.
 
@@ -62,7 +58,7 @@ v3.4.1
 
 v3.3.0
 
-* Verandert de [&#x200B; Actie van de Vraag van de Trekker Direct &#x200B;](./overview.md#direct-call-action) zodat u de informatie van de douanegebeurtenis kunt leveren om naar directe vraagregels te verzenden.
+* Verandert de [ Actie van de Vraag van de Trekker Direct ](./overview.md#direct-call-action) zodat u de informatie van de douanegebeurtenis kunt leveren om naar directe vraagregels te verzenden.
 
 ## zaterdag 8 oktober 2021
 
@@ -111,7 +107,7 @@ v3.0.0
 
 * PDCL-6153: Voegt steun toe om volledig - gekwalificeerde URL voor caching acties van de douanecode betrouwbaar te trekken.
 
-v3.0.0 van de uitbreiding van de Kern wordt gekoppeld aan veranderingen in [&#x200B; v27.2.0 van het Web van Turbines runtime &#x200B;](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), die gebruikers toestaat om hun bibliotheek onder vele Adobe-Beheerde ontvangende gebieden te laden als het bedrijf van de gebruiker Premium CDN steunt.
+v3.0.0 van de uitbreiding van de Kern wordt gekoppeld aan veranderingen in [ v27.2.0 van het Web van Turbines runtime ](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), die gebruikers toestaat om hun bibliotheek onder vele Adobe-Beheerde ontvangende gebieden te laden als het bedrijf van de gebruiker Premium CDN steunt.
 
 Deze upgrade is optioneel en achterwaarts compatibel voor gebruikers zonder Premium CDN en is verplicht voor klanten die Premium CDN op hun bedrijf hebben ingeschakeld.
 
@@ -140,7 +136,7 @@ v2.0.4
 
 * Ondersteuning voor gegevenselement toegevoegd voor verschillende velden - Ondersteuning voor gegevenselement is toegevoegd aan de volgende gebeurtenissen: &#39;Tijd op pagina&#39;, &#39;Weergave voor invoer&#39;, &#39;Aanwijzer&#39; en &#39;Afspeeltijd media&#39;. alsmede de volgende voorwaarden: &#39;Time on Site&#39; en &#39;Value Comparison&#39;
 * Hiermee voegt u ondersteuning toe voor standaardgedrag voor ctrl/cmd + klikken en middenmuisklikken bij gebruik van Vertraging koppeling
-* **Gemarkeerde verbindingsvertraging op de klikgebeurtenis als &quot;niet meer gesteund&quot;.** - meer informatie kan op het [&#x200B; Blog van de Inzameling van Gegevens &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) voor Adobe Experience Platform worden gevonden
+* **Gemarkeerde verbindingsvertraging op de klikgebeurtenis als &quot;niet meer gesteund&quot;.** - meer informatie kan op het [ Blog van de Inzameling van Gegevens ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) voor Adobe Experience Platform worden gevonden
 
 ## donderdag 6 januari 2021
 
@@ -180,13 +176,13 @@ v1.8.0
 * **Verbintenissen in de Code van de Douane** - de voorwaarden van de Code van de Douane en de acties van JavaScript die niet in het globale werkingsgebied uitvoeren kunnen nu Beloften terugkeren.  U kunt deze gebruiken om volgende voorwaarden en handelingen te laten wachten tot een asynchroon proces in de aangepaste code is voltooid voordat u naar het volgende item gaat.
 * **Callbacks in de Acties van de Code van de Douane van HTML** - u kunt het zelfde ding in de acties van de Code van de Douane van HTML bereiken gebruikend `onCustomCodeSuccess()` en `onCustomCodeFailure()` callbacks.
 
-Gelieve te verwijzen naar de [&#x200B; Verwijzing van de Uitbreiding van de Kern &#x200B;](./overview.md) in de Voorwaarden > de Code van de Douane en de Acties > de Code van de Douane voor meer gedetailleerde informatie.
+Gelieve te verwijzen naar de [ Verwijzing van de Uitbreiding van de Kern ](./overview.md) in de Voorwaarden > de Code van de Douane en de Acties > de Code van de Douane voor meer gedetailleerde informatie.
 
 ## 7 april 2020
 
 v1.7.3
 
-* &lbrace;de verhoging van de het gebiedslengte van de Tekst **- de inputgebieden van de Tekst werden veranderd in een flex lay-out om het het schermbreedte van de gebruiker beter te gebruiken, en meer ruimte voor langere tekstkoorden te geven.**
+* {de verhoging van de het gebiedslengte van de Tekst **- de inputgebieden van de Tekst werden veranderd in een flex lay-out om het het schermbreedte van de gebruiker beter te gebruiken, en meer ruimte voor langere tekstkoorden te geven.**
 
 ## 1 november 2019
 
@@ -204,7 +200,7 @@ v1.6.2
 
 v1.6.1
 
-* **Steun voor CSP één keer** - de uitbreiding van de Kern heeft nu een facultatieve configuratieparameter. U kunt een gegevenselement toevoegen dat naar één keer verwijst. Indien gevormd, gebruiken alle gealigneerde manuscripten die een markering aan de pagina toevoegt nonce die u hebt gevormd. Deze wijziging ondersteunt het gebruik van een Content Security Policy met een nonce, zodat tagscripts nog steeds in een CSP-omgeving kunnen worden geladen. U kunt meer over het gebruiken van markeringen met CSP [&#x200B; hier &#x200B;](../../../ui/client-side/content-security-policy.md) lezen.
+* **Steun voor CSP één keer** - de uitbreiding van de Kern heeft nu een facultatieve configuratieparameter. U kunt een gegevenselement toevoegen dat naar één keer verwijst. Indien gevormd, gebruiken alle gealigneerde manuscripten die een markering aan de pagina toevoegt nonce die u hebt gevormd. Deze wijziging ondersteunt het gebruik van een Content Security Policy met een nonce, zodat tagscripts nog steeds in een CSP-omgeving kunnen worden geladen. U kunt meer over het gebruiken van markeringen met CSP [ hier ](../../../ui/client-side/content-security-policy.md) lezen.
 
 ## woensdag 18 juni 2019
 

@@ -2,10 +2,10 @@
 title: Overzicht van Adobe Experience Platform Demo-extensie
 description: Meer informatie over de Adobe Experience Platform Demo-extensie in Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 4%
+source-wordcount: '1009'
+ht-degree: 0%
 
 ---
 
@@ -13,11 +13,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
-
->[!NOTE]
->
->Deze uitbreiding is afgekeurd ten gunste van [&#x200B; Adobe Experience Platform Web SDK &#x200B;](../web-sdk/overview.md).
+>Deze uitbreiding is afgekeurd ten gunste van [ Adobe Experience Platform Web SDK ](../web-sdk/overview.md).
 
 De functies van deze extensie worden overgebracht naar een nieuwe extensie. Hier volgt een snelle vergelijking van de huidige functies.
 

@@ -2,18 +2,14 @@
 title: Algemeen overzicht van extensie Analytics
 description: Meer informatie over de extensie Common Analytics in Adobe Experience Platform.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
 # Overzicht van Common Analytics Plugins-extensie
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Gebruik deze naslaggids voor informatie over het configureren van de extensie Algemene analytische plug-ins en de opties die beschikbaar zijn wanneer u deze extensie gebruikt om de extensie [!DNL Adobe Analytics] te verhogen.
 
@@ -54,7 +50,7 @@ In deze handeling kunt u elke plug-in selecteren die u in de implementatie wilt 
 
 ### Insteekmodule initialiseren
 
-Met deze acties initialiseert u de specifieke plug-in die u afzonderlijk wilt gebruiken. Als u alle insteekmodules die u wilt gebruiken in uw eigenschap wilt initialiseren, voegt u gewoon de corresponderende actie aan uw regel toe en slaat u de regel op. Terwijl er iets meer inspanning betrokken bij het vormen van de uitbreiding deze manier is, verstrekt het grotere codeefficiency. Daarom beveelt de Adobe deze aanpak aan.
+Met deze acties initialiseert u de specifieke plug-in die u afzonderlijk wilt gebruiken. Als u alle insteekmodules die u wilt gebruiken in uw eigenschap wilt initialiseren, voegt u gewoon de corresponderende actie aan uw regel toe en slaat u de regel op. Terwijl er iets meer inspanning betrokken bij het vormen van de uitbreiding deze manier is, verstrekt het grotere codeefficiency. Daarom beveelt Adobe deze aanpak aan.
 
 ## Algemene gegevenselementen van plug-ins voor Analytics
 
@@ -71,4 +67,4 @@ De volgende gegevenselementen zijn beschikbaar in de Common Analytics Plugins-ex
 
 >[!NOTE]
 >
->Voor meer informatie over de bovengenoemde stoppen, gelieve de [&#x200B; documentatie van Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=nl-NL) te raadplegen.
+>Voor meer informatie over de bovengenoemde stoppen, gelieve de [ documentatie van Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html) te raadplegen.

@@ -1,28 +1,24 @@
 ---
 title: Opmerkingen bij de release Meta Pixel Extension
-description: De meest recente release bevat opmerkingen voor de extensie Meta Pixel in Adobe Experience Platform.
-source-git-commit: 8e447324e324c9770dcfa348df92c429454b06d6
+description: De meest recente release bevat informatie over de Pixel-extensie van Meta in Adobe Experience Platform.
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 0%
+source-wordcount: '76'
+ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release Meta Pixel Extension
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
-
-## 13 februari 2023
+## dinsdag 13 februari 2023
 
 v1.3.1
 
 * Verbeter een JSON-schemafout die ervoor zorgde dat het inhoudstypeveld niet correct werd opgeslagen.
 
-## 10 februari 2023
+## zaterdag 10 februari 2023
 
 v1.3.0
 
-* Voeg acties voor alle hier vermelde standaardgebeurtenissen toe: [&#x200B; https://developers.facebook.com/docs/meta-pixel/reference#standard-events &#x200B;](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+* Voeg acties voor alle hier vermelde standaardgebeurtenissen toe: [ https://developers.facebook.com/docs/meta-pixel/reference#standard-events ](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
 * Verplaats de gebeurtenis-id uit de configuratieweergave van de extensie en voeg de velden voor de gebeurtenis-id toe aan alle acties.

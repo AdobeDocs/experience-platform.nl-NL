@@ -2,18 +2,14 @@
 title: Ondersteuning voor Subresource Integrity (SRI)
 description: Leer hoe de integriteit van het submiddel (SRI) in Adobe Experience Platform wordt gesteund.
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
 
 # Ondersteuning voor Subresource Integrity (SRI)
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Dit document behandelt hoe de integriteit van subresources (SRI) in Adobe Experience Platform wordt gesteund.
 
@@ -23,7 +19,7 @@ Terwijl hun gebruiksgevallen elkaar aanvullen, is SRI verschillend van een Belei
 
 >[!NOTE]
 >
->Voor meer gedetailleerde informatie over SRI, verwijs naar het [&#x200B; MDN Web docs &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity).
+>Voor meer gedetailleerde informatie over SRI, verwijs naar het [ MDN Web docs ](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity).
 
 Het SRI-validatieproces kan als volgt worden samengevat:
 
@@ -38,11 +34,11 @@ Als TMS-systeem (Tag-Management System) bieden tags in Adobe Experience Platform
 
 Wanneer de inhoud van het script verandert, verandert de cryptografische hash van deze inhoud. Daarom is de enige manier om SRI met TMS te maken werken door uw ingebedde code tezelfdertijd bij te werken dat u een nieuwe bouwstijl publiceert. Voor velen is dit in de eerste plaats het doel van het gebruik van een TMS.
 
-De volgende beste beveiligingsoptie voor tags is het implementeren van een Content Security Policy. Voor meer informatie, zie de gids op [&#x200B; CSPs en markeringen &#x200B;](./content-security-policy.md).
+De volgende beste beveiligingsoptie voor tags is het implementeren van een Content Security Policy. Voor meer informatie, zie de gids op [ CSPs en markeringen ](./content-security-policy.md).
 
 ## SRI integreren in build-implementatie
 
-Als u nog SRI voor uw bibliotheekbouwstijlen wilt gebruiken, moet u zelf-ontvangen gebruiken. Als u Adobe-geleide het ontvangen gebruikt, is er geen manier om SRI te gebruiken zonder enige hoeveelheid tijd te hebben waar de nieuwe bouwstijlinhoud niet het `integrity` attribuut van inbedcode aanpast.
+Als u nog SRI voor uw bibliotheekbouwstijlen wilt gebruiken, moet u zelf-ontvangen gebruiken. Als u het ontvangen van Adobe-Beheerde gebruikt, is er geen manier om SRI te gebruiken zonder enige hoeveelheid tijd te hebben waar de nieuwe bouwstijlinhoud niet het `integrity` attribuut van inbedcode aanpast.
 
 Het automatiseren van het bijwerken van uw insluitcode varieert afhankelijk van de structuur van uw site, maar de algemene stappen kunnen als volgt worden samengevat:
 
@@ -56,4 +52,4 @@ Het automatiseren van het bijwerken van uw insluitcode varieert afhankelijk van 
 
 ## Volgende stappen
 
-Dit document behandelde de beperkingen om SRI met markeringen te gebruiken, en de stappen die worden vereist om het in uw bibliotheek te integreren bouwt plaatsingen ondanks die beperkingen. Als u niet reeds hebt, wordt het sterk geadviseerd dat u de gids op [&#x200B; CSPs en markeringen &#x200B;](./content-security-policy.md) voor een alternatieve veiligheidsoptie leest.
+Dit document behandelde de beperkingen om SRI met markeringen te gebruiken, en de stappen die worden vereist om het in uw bibliotheek te integreren bouwt plaatsingen ondanks die beperkingen. Als u niet reeds hebt, wordt het sterk geadviseerd dat u de gids op [ CSPs en markeringen ](./content-security-policy.md) voor een alternatieve veiligheidsoptie leest.

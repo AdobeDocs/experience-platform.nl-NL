@@ -7,28 +7,24 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 4%
+source-wordcount: '1205'
+ht-degree: 0%
 
 ---
 
 # Overzicht door:sturen van mailchimp-gebeurtenis
 
->[!NOTE]
->  
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=nl-NL) voor een geconsolideerde referentie van de terminologiewijzigingen.
-
-De gebeurtenis die van de Brievenchimp [&#x200B; &#x200B;](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen verzendt gebeurtenissen naar de Marketing API van Mailchimp die e-mails voor de marketing van Mailchimp campagnes, reizen, of transacties kan teweegbrengen.
+De gebeurtenis die van de Brievenchimp [ ](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen verzendt gebeurtenissen naar de Marketing API van Mailchimp die e-mails voor de marketing van Mailchimp campagnes, reizen, of transacties kan teweegbrengen.
 
 In dit document wordt beschreven hoe u de extensie instelt en regels configureert met de handeling Gebeurtenis toevoegen.
 
 ## Vereisten
 
-In dit document wordt ervan uitgegaan dat u bekend bent met de relevante Mailchimp-producten die door de extensie zijn gebruikt. Voor meer informatie, te zien gelieve de de hulpdocumentatie van Mailchimp voor [&#x200B; campagnes &#x200B;](https://mailchimp.com/help/getting-started-with-campaigns/), [&#x200B; reizen &#x200B;](https://mailchimp.com/help/about-customer-journeys/), en [&#x200B; transacties &#x200B;](https://mailchimp.com/help/transactional/).
+In dit document wordt ervan uitgegaan dat u bekend bent met de relevante Mailchimp-producten die door de extensie zijn gebruikt. Voor meer informatie, te zien gelieve de de hulpdocumentatie van Mailchimp voor [ campagnes ](https://mailchimp.com/help/getting-started-with-campaigns/), [ reizen ](https://mailchimp.com/help/about-customer-journeys/), en [ transacties ](https://mailchimp.com/help/transactional/).
 
-Een rekening Mailchimp wordt vereist om deze uitbreiding te gebruiken. U kunt omhoog voor een rekening [&#x200B; hier &#x200B;](https://login.mailchimp.com/signup/) ondertekenen. Noteer in het dashboard voor de Mailchimp-account de volgende waarden voor gebruik in deze handleiding:
+Een rekening Mailchimp wordt vereist om deze uitbreiding te gebruiken. U kunt omhoog voor een rekening [ hier ](https://login.mailchimp.com/signup/) ondertekenen. Noteer in het dashboard voor de Mailchimp-account de volgende waarden voor gebruik in deze handleiding:
 
 - Uw Mailchimp-domeinvoorvoegsel
 - Uw API-sleutel
@@ -39,7 +35,7 @@ Afhankelijk van uw plan van de Rekening van Mailchimp, kunt u beperkte toegang t
 
 >[!TIP]
 >  
->Als u de automatisering van Mailchimp zoals transactie e-mails of de Reizen van de Klant gebruikt, kunnen de stappen en de schermen lichtjes verschillend zijn dan hier vermeld. U hebt echter nog steeds dezelfde informatie nodig om deze extensie te gebruiken als hierboven is beschreven. Zie het [&#x200B; Centrum van de Hulp van Mailchimp &#x200B;](https://mailchimp.com/help/) voor details op elk van deze waarden voor uw specifieke rekening en plan.
+>Als u de automatisering van Mailchimp zoals transactie e-mails of de Reizen van de Klant gebruikt, kunnen de stappen en de schermen lichtjes verschillend zijn dan hier vermeld. U hebt echter nog steeds dezelfde informatie nodig om deze extensie te gebruiken als hierboven is beschreven. Zie het [ Centrum van de Hulp van Mailchimp ](https://mailchimp.com/help/) voor details op elk van deze waarden voor uw specifieke rekening en plan.
 
 ### Domeinvoorvoegsel
 
@@ -51,13 +47,13 @@ Om de API sleutel voor uw rekening te vinden, selecteer uw profielpictogram in M
 
 Selecteer **Extra&#39;s**, toen **API sleutels**:
 
-![&#x200B; het menu van Extra&#39;s, API sleutelverbinding &#x200B;](../../../images/extensions/server/mailchimp/menu-API-keys.png)
+![ het menu van Extra&#39;s, API sleutelverbinding ](../../../images/extensions/server/mailchimp/menu-API-keys.png)
 
-Onder **Uw API sleutels**, kunt u een bestaande sleutel kiezen of u kunt selecteren **een Sleutel** creëren om nieuwe tot stand te brengen. U kunt een nieuwe sleutel tot stand brengen om specifiek met deze uitbreiding te gebruiken. Kopieer de API-sleutel en sla deze op voor een latere stap. Voor meer details, zie de documentatie van Mailchimp op hoe te [&#x200B; uw API sleutel &#x200B;](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) produceren.
+Onder **Uw API sleutels**, kunt u een bestaande sleutel kiezen of u kunt selecteren **een Sleutel** creëren om nieuwe tot stand te brengen. U kunt een nieuwe sleutel tot stand brengen om specifiek met deze uitbreiding te gebruiken. Kopieer de API-sleutel en sla deze op voor een latere stap. Voor meer details, zie de documentatie van Mailchimp op hoe te [ uw API sleutel ](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) produceren.
 
 ### Auditie-id en Van adres
 
-Selecteer **Publiek** in de linkernavigatie, toen **het dashboard van de Publiek**. Selecteer vervolgens het publiek dat u wilt gebruiken met deze extensie. Om meer te leren, zie het document van de Brievenbus op [&#x200B; creërend een publiek &#x200B;](https://mailchimp.com/help/create-audience/).
+Selecteer **Publiek** in de linkernavigatie, toen **het dashboard van de Publiek**. Selecteer vervolgens het publiek dat u wilt gebruiken met deze extensie. Om meer te leren, zie het document van de Brievenbus op [ creërend een publiek ](https://mailchimp.com/help/create-audience/).
 
 Met uw die publiek wordt gecreeerd en wordt geselecteerd, selecteer **leiden Publiek** dropdown en kies **Montages**. In dit scherm ziet u verschillende instellingen voor uw publiek.
 
@@ -75,19 +71,19 @@ Afhankelijk van uw plan Mailchimp en of u transactiemails, de Reizen van de Klan
 
 ## Installatie en configuratie
 
-In deze sectie worden de stappen beschreven voor het installeren en configureren van de extensie. Om veilig de sleutel van de Brievenchimp API te bewaren, moet u gebeurtenis gebruiken door:sturen [&#x200B; geheimen &#x200B;](../../../ui/event-forwarding/secrets.md).
+In deze sectie worden de stappen beschreven voor het installeren en configureren van de extensie. Om veilig de sleutel van de Brievenchimp API te bewaren, moet u gebeurtenis gebruiken door:sturen [ geheimen ](../../../ui/event-forwarding/secrets.md).
 
 ### Een geheim en gegevenselement maken
 
-In een gebeurtenis die bezit door:sturen, [&#x200B; creeer a [!UICONTROL Token] geheim &#x200B;](../../../ui/event-forwarding/secrets.md#token) geroepen `Mailchimp API Key`.
+In een gebeurtenis die bezit door:sturen, [ creeer a [!UICONTROL Token] geheim ](../../../ui/event-forwarding/secrets.md#token) geroepen `Mailchimp API Key`.
 
-Daarna, [&#x200B; creeer een gegevenselement &#x200B;](../../../ui/managing-resources/data-elements.md#create-a-data-element) gebruikend de [!UICONTROL Core] uitbreiding en een [!UICONTROL Secret] type van gegevenselement om naar het `Mailchimp API Key` geheim te verwijzen u enkel creeerde. Voer `Mailchimp Token` in als de naam van het gegevenselement.
+Daarna, [ creeer een gegevenselement ](../../../ui/managing-resources/data-elements.md#create-a-data-element) gebruikend de [!UICONTROL Core] uitbreiding en een [!UICONTROL Secret] type van gegevenselement om naar het `Mailchimp API Key` geheim te verwijzen u enkel creeerde. Voer `Mailchimp Token` in als de naam van het gegevenselement.
 
 ### De extensie installeren en configureren
 
 In de zelfde gebeurtenis die bezit door:sturen, uitgezocht **[!UICONTROL Extensions],** toen **[!UICONTROL Catalog]** om de uitbreidingen te tonen beschikbaar voor installatie. Van hier, onderzoek naar de uitbreiding Mailchimp en selecteer **[!UICONTROL Install]**.
 
-![&#x200B; installeer de uitbreiding van Mailchimp &#x200B;](../../../images/extensions/server/mailchimp/install.png)
+![ installeer de uitbreiding van Mailchimp ](../../../images/extensions/server/mailchimp/install.png)
 
 Het configuratiescherm wordt weergegeven. Voer onder **[!UICONTROL Mailchimp Server Prefix Domain Name]** het domein in dat u eerder van uw Mailchimp-account hebt gekopieerd, inclusief het unieke domeinvoorvoegsel.
 
@@ -95,7 +91,7 @@ Het configuratiescherm wordt weergegeven. Voer onder **[!UICONTROL Mailchimp Ser
 >
 >Neem `http://` of `https://` niet op in dit veld.
 
-![&#x200B; de configuratie van de Uitbreiding &#x200B;](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
+![ de configuratie van de Uitbreiding ](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
 Selecteer onder **[!UICONTROL Mailchimp token]** het pictogram voor het gegevenselement en kies het `Mailchimp Token` -gegevenselement dat u eerder hebt gemaakt. Selecteer **[!UICONTROL Save]** om de wijzigingen op te slaan.
 
@@ -103,13 +99,13 @@ De extensie is nu geïnstalleerd en geconfigureerd voor gebruik in uw eigenschap
 
 ## Dataverzameling
 
-Wanneer het gebruiken van deze uitbreiding in a [&#x200B; regel &#x200B;](../../../ui/managing-resources/rules.md), zijn er verscheidene gegevenswaarden die de uitbreiding naar Mailchimp met elke gebeurtenis verzendt. Voor een typische implementatie, kunt u de [&#x200B; uitbreiding van SDK van het Web van Adobe Experience Platform &#x200B;](../../client/web-sdk/overview.md) vormen om die gegevens naar [!DNL Experience Platform Edge Network] voor gebruik door de uitbreiding in de gebeurtenis te verzenden die bezit door:sturen.
+Wanneer het gebruiken van deze uitbreiding in a [ regel ](../../../ui/managing-resources/rules.md), zijn er verscheidene gegevenswaarden die de uitbreiding naar Mailchimp met elke gebeurtenis verzendt. Voor een typische implementatie, kunt u de [ uitbreiding van SDK van het Web van Adobe Experience Platform ](../../client/web-sdk/overview.md) vormen om die gegevens naar [!DNL Experience Platform Edge Network] voor gebruik door de uitbreiding in de gebeurtenis te verzenden die bezit door:sturen.
 
 De gegevens die door deze extensie worden vereist, kunnen vanuit Web SDK worden verzonden als XDM-gegevens (met behulp van het [`xdm`](/help/collection/js/commands/sendevent/xdm.md) -object) of als niet-XDM-gegevens (met behulp van het [`data`](/help/collection/js/commands/sendevent/data.md) -object).
 
 Als een klant bijvoorbeeld een aankoop doet of zich registreert voor een gebeurtenis op uw site, kunt u een bevestigingsbericht verzenden via Mailchimp met deze extensie. Zodra u de vereiste informatie van Web SDK naar Edge Network verzendt, teweegbrengt de uitbreiding e-mail met Mailchimp in werking.
 
-![&#x200B; voeg de actieconfiguratie van de Gebeurtenis &#x200B;](../../../images/extensions/server/mailchimp/action-configurations.png) toe
+![ voeg de actieconfiguratie van de Gebeurtenis ](../../../images/extensions/server/mailchimp/action-configurations.png) toe
 
 ### Gegevenselementen
 
@@ -130,18 +126,18 @@ In de onderstaande tabel vindt u meer details voor elke mogelijke waarde.
 
 >[!IMPORTANT]
 >  
->De **hierboven waarden van de weg van het 0&rbrace; Voorbeeld &lbrace;zijn slechts voorbeelden.** De gebiedsnamen en [&#x200B; wegen &#x200B;](../../../ui/event-forwarding/overview.md#data-element-path) die in die gegevenselementen van verwijzingen worden voorzien kunnen in uw bezit verschillend zijn, afhankelijk van hoe u genoemd en Web SDK in de stappen hierboven vormde.
+>De **hierboven waarden van de weg van het 0} Voorbeeld {zijn slechts voorbeelden.** De gebiedsnamen en [ wegen ](../../../ui/event-forwarding/overview.md#data-element-path) die in die gegevenselementen van verwijzingen worden voorzien kunnen in uw bezit verschillend zijn, afhankelijk van hoe u genoemd en Web SDK in de stappen hierboven vormde.
 
 In uw gebeurtenis die bezit door:sturen, kunt u een gegevenselement voor elk van de hierboven geschetste gebieden tot stand brengen. Nadat u een extensie hebt gemaakt, kunt u verwijzen naar de gegevenselementen in de handeling [!UICONTROL Add Event] van deze extensie.
 
-![&#x200B; voeg de actieconfiguratie van de Gebeurtenis &#x200B;](../../../images/extensions/server/mailchimp/action-configurations.png) toe
+![ voeg de actieconfiguratie van de Gebeurtenis ](../../../images/extensions/server/mailchimp/action-configurations.png) toe
 
 U kunt deze extensie en de handeling Gebeurtenis toevoegen nu gebruiken om mailchimp-e-mails voor uw publiek te activeren.
 
 ## Gegevensvalidatie
 
-Wanneer het werken met gebeurtenis die uitbreidingen door:sturen, is [&#x200B; Adobe Experience Platform Debugger &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) zeer nuttig. In de sectie Logs, onder de logboeken van Edge kunt u de verzoeken zien die door uw gebeurtenis door:sturen regels worden gemaakt nadat zij worden teweeggebracht. De volgende schermafbeeldingen tonen een verzoek dat aan Mailchimp API door de uitbreiding wordt gedaan.
+Wanneer het werken met gebeurtenis die uitbreidingen door:sturen, is [ Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) zeer nuttig. In de sectie Logs, onder de logboeken van Edge kunt u de verzoeken zien die door uw gebeurtenis door:sturen regels worden gemaakt nadat zij worden teweeggebracht. De volgende schermafbeeldingen tonen een verzoek dat aan Mailchimp API door de uitbreiding wordt gedaan.
 
-![&#x200B; Adobe Experience Platform Debugger &#x200B;](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
+![ Adobe Experience Platform Debugger ](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 
-In het dashboard van Mailchimp, op de mening van de Voeding van de Activiteit van uw Publiek of Lid van het Publiek, wordt een lijst van gebeurtenissen voor dat Publiek of Lid van het Publiek verstrekt. Dit moet overeenkomen met de gebeurtenissen die door de extensie zijn verzonden en met eventuele optionele gegevens die samen met de e-mail of campagne zijn verzonden die ze hebben ontvangen. Zie de [&#x200B; gidsen van de Hulp van de Automatisering van de Brievenjakimp &#x200B;](https://mailchimp.com/help/automation/) voor meer details.
+In het dashboard van Mailchimp, op de mening van de Voeding van de Activiteit van uw Publiek of Lid van het Publiek, wordt een lijst van gebeurtenissen voor dat Publiek of Lid van het Publiek verstrekt. Dit moet overeenkomen met de gebeurtenissen die door de extensie zijn verzonden en met eventuele optionele gegevens die samen met de e-mail of campagne zijn verzonden die ze hebben ontvangen. Zie de [ gidsen van de Hulp van de Automatisering van de Brievenjakimp ](https://mailchimp.com/help/automation/) voor meer details.

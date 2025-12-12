@@ -2,18 +2,14 @@
 title: Bronnen uit een bibliotheek verwijderen
 description: Leer hoe u bronnen uit een tagbibliotheek kunt verwijderen.
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
 # Bronnen uit een bibliotheek verwijderen
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Wanneer u niet meer een middel een effect binnen een bouwstijl wilt hebben, moet u het uit de bibliotheek verwijderen die dat middel bevat en een nieuwe bouwstijl creëren.
 
@@ -52,4 +48,4 @@ In plaats daarvan moet u de resource uitschakelen. Dit het onbruikbaar maken is 
 1. Voeg de `latest` -versie van de uitgeschakelde bron toe.
 1. Opslaan en samenstellen.
 1. Volg uw normale proces voor het promoten van bibliotheken naar Productie.
-1. Publish to Production om de resource te verwijderen.
+1. Publiceren naar productie om de bron te verwijderen.

@@ -2,18 +2,14 @@
 title: Overzicht van Adobe Experience Cloud Identity Service
 description: Meer informatie over de extensie van de Adobe Experience Cloud Identity Service in Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 5%
+source-wordcount: '739'
+ht-degree: 0%
 
 ---
 
 # Overzicht van de extensie Adobe Experience Cloud Identity Service
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Gebruik deze verwijzing voor informatie over het vormen van de uitbreiding van identiteitskaart van Adobe Experience Cloud, en de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
@@ -89,7 +85,7 @@ Bepaal welke categorieën worden goedgekeurd of geweigerd wanneer geen voorkeur 
 
 ### Variabelen
 
-Stel naam-waardeparen in als Experience Cloud ID-instantie-eigenschappen. Gebruik de vervolgkeuzelijst om een variabele te selecteren en typ of selecteer een waarde. Voor informatie over elke variabele, verwijs naar de [&#x200B; documentatie van de Dienst van de Identiteit van Experience Cloud &#x200B;](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
+Stel naam-waardeparen in als Experience Cloud ID-instantie-eigenschappen. Gebruik de vervolgkeuzelijst om een variabele te selecteren en typ of selecteer een waarde. Voor informatie over elke variabele, verwijs naar de [ documentatie van de Dienst van de Identiteit van Experience Cloud ](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
 
 ## Handelingstypen voor Experience Cloud ID-extensie
 

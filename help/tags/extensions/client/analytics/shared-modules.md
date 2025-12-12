@@ -2,24 +2,20 @@
 title: Gedeelde modules voor de extensie Adobe Analytics
 description: Leer meer over de gedeelde bibliotheekmodules die worden geleverd door de Adobe Analytics-tagextensie in Adobe Experience Platform.
 exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
 
 # Gedeelde modules voor de extensie Adobe Analytics
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
-
-De [&#x200B; uitbreiding van Adobe Analytics &#x200B;](./overview.md) verstrekt twee verschillende [&#x200B; gedeelde modules &#x200B;](../../../extension-dev/web/shared.md) die u in uw ervaringstoepassing kunt integreren. Deze modules worden behandeld in de onderstaande secties.
+De [ uitbreiding van Adobe Analytics ](./overview.md) verstrekt twee verschillende [ gedeelde modules ](../../../extension-dev/web/shared.md) die u in uw ervaringstoepassing kunt integreren. Deze modules worden behandeld in de onderstaande secties.
 
 ## [!DNL get-tracker]
 
-Voordat Adobe Analytics bakens verzendt, moet het het tracker-object initialiseren. Het initialisatieproces begint door [&#x200B; AppMeasurement &#x200B;](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL) te laden, die door een spoorboekvoorwerp te creëren wordt gevolgd.
+Voordat Adobe Analytics bakens verzendt, moet het het tracker-object initialiseren. Het initialisatieproces begint door [ AppMeasurement ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) te laden, die door een spoorboekvoorwerp te creëren wordt gevolgd.
 
 U kunt als volgt toegang krijgen tot het tracker-object nadat het volledig is geïnitialiseerd met de gedeelde module `get-tracker` :
 

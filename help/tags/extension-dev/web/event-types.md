@@ -2,18 +2,14 @@
 title: Gebeurtenistypen voor webextensies
 description: Leer hoe u een bibliotheekmodule voor het type gebeurtenis definieert voor een webextensie in Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 4%
+source-wordcount: '1007'
+ht-degree: 0%
 
 ---
 
 # Gebeurtenistypen voor webextensies
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 In een labelregel is een gebeurtenis een activiteit die moet plaatsvinden voordat een regel kan worden geactiveerd. Een webextensie kan bijvoorbeeld een &#39;gebaargebeurtenis&#39; leveren die controleert of een bepaalde muis- of aanraakbeweging plaatsvindt. Zodra de beweging voorkomt, zou de gebeurtenislogica de regel in brand steken.
 
@@ -23,11 +19,11 @@ In dit document wordt beschreven hoe u gebeurtenistypen voor een webextensie in 
 
 >[!NOTE]
 >
->In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Zie het overzicht op [&#x200B; het formatteren van de bibliotheekmodule &#x200B;](./format.md) voor een inleiding aan hun implementatie alvorens op deze gids terug te keren.
+>In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) voor een inleiding aan hun implementatie alvorens op deze gids terug te keren.
 
 Gebeurtenistypen worden gedefinieerd door extensies en bestaan doorgaans uit de volgende kenmerken:
 
-1. A [&#x200B; mening &#x200B;](./views.md) getoond binnen Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de gebeurtenis te wijzigen.
+1. A [ mening ](./views.md) getoond binnen Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de gebeurtenis te wijzigen.
 2. Een bibliotheekmodule die wordt uitgegeven in de tagruntime-bibliotheek om de instellingen te interpreteren en te controleren of een bepaalde activiteit plaatsvindt.
 
 `module.exports` accepteert zowel de parameter `settings` als de parameter `trigger` . Dit maakt het aanpassen van het gebeurtenistype mogelijk.

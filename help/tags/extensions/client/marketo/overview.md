@@ -1,19 +1,15 @@
 ---
-title: Overzicht van Marketo Munchkin-extensie
+title: Marketo Munchkin Extension Overzicht
 description: Meer informatie over de Marketo Munchkin-tagextensie in Adobe Experience Platform.
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
 # Marketo Munchkin-extensie - overzicht
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Gebruik deze extensie om de [!DNL Marketo Munchkin] JavaScript-trackingcode te integreren met uw eigenschap. [!DNL Marketo Munchkin] Met JavaScript kunt u bezoeken aan eindgebruikerspagina&#39;s bijhouden en naar Marketo-openingspagina&#39;s en externe webpagina&#39;s navigeren.
 
@@ -23,7 +19,7 @@ Als de extensie [!DNL Marketo Munchkin] nog niet is geïnstalleerd, opent u de e
 
 Deze extensie heeft geen benodigde configuratie.
 
-## Handelingstypen voor Marketo Munchkin-extensie
+## Marketo Munchkin-extensietypen
 
 In deze sectie worden de actietypen beschreven die beschikbaar zijn in de extensie [!DNL Marketo Munchkin] .
 
@@ -31,9 +27,9 @@ In deze sectie worden de actietypen beschreven die beschikbaar zijn in de extens
 
 ![](../../../images/munchkin-Init.png)
 
-**Munchkin identiteitskaart: (vereist)** identiteitskaart van de Rekening Munchkin die onder Admin > Integratie > menu Munchkin wordt gevonden.
+**identiteitskaart van Munchkin: (vereist)** identiteitskaart van de Rekening van Munchkin die onder Admin > Integratie > het menu van Munchkin wordt gevonden.
 
-**Configuraties:** Alle configureerbare parameters zijn hier gedocumenteerd [&#128279;](https://developers.marketo.com/javascript-api/lead-tracking/configuration/)
+**Configuraties:** Alle configureerbare parameters zijn hier gedocumenteerd [ ](https://developers.marketo.com/javascript-api/lead-tracking/configuration/)
 
 ### Webpagina bezoeken
 

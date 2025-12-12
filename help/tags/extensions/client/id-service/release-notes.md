@@ -2,26 +2,22 @@
 title: Opmerkingen bij de release Adobe Experience Cloud Identity Service Extension
 description: De meest recente release bevat informatie over de extensie van de Adobe Experience Cloud Identity Service in Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 1%
+source-wordcount: '643'
+ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release van Adobe Experience Cloud Identity Service
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
-
-In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van het Experience Cloud zelf, gelieve te verwijzen naar de [&#x200B; documentatie van de Dienst van de Identiteit &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=nl-NL).
+In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van Experience Cloud zelf, gelieve te verwijzen naar de [ documentatie van de Dienst van de Identiteit ](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
 
 ## 17 okt. 2022
 
 ### Experience Cloud ID Extension 5.5.0
 
-* De uitbreiding steunt nu versie 5.5.0 van de [&#x200B; Cliënt JS van de Bezoeker &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service). Verwijs naar de [&#x200B; de versienota&#39;s van de Bezoeker &#x200B;](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) voor specifieke updates.
+* De uitbreiding steunt nu versie 5.5.0 van de [ Cliënt JS van de Bezoeker ](https://github.com/Adobe-Marketing-Cloud/id-service). Verwijs naar de [ de versienota&#39;s van de Bezoeker ](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) voor specifieke updates.
 
 ## 9 mrt. 2022
 
@@ -65,7 +61,7 @@ Deze config ondersteunt de volgende waarden voor het kenmerk `SameSite` :
    * `Lax`
    * `None`
 
-De details van deze attributenwaarden zijn op [&#x200B; web.dev &#x200B;](https://web.dev/samesite-cookies-explained/) en [&#x200B; chroom &#x200B;](https://www.chromium.org/updates/same-site)
+De details van deze attributenwaarden zijn op [ web.dev ](https://web.dev/samesite-cookies-explained/) en [ chroom ](https://www.chromium.org/updates/same-site)
 
 
 ## 13 augustus 2020
@@ -104,7 +100,7 @@ De details van deze attributenwaarden zijn op [&#x200B; web.dev &#x200B;](https:
 * Verbeteringen voor de methode `getVisitorValues` om waarden sneller op te halen
 
 
-## 19 september 2019
+## vrijdag 19 september 2019
 
 ### Experience Cloud ID Extension 4.4.1
 
@@ -132,24 +128,24 @@ De details van deze attributenwaarden zijn op [&#x200B; web.dev &#x200B;](https:
 
   ![](../../../images/ecid-data-element.png)
 
-## woensdag 9 april 2019
+## 9 april 2019
 
 ### Experience Cloud ID Extension 4.2.0
 
-* Bijgewerkte bezoeker.js aan 4.2 die steun voor Audience Manager IAB TCF Plug-in omvatte
+* Bijgewerkte bezoeker.js aan 4.2 die steun voor de Plug-in van Audience Manager IAB TCF omvatte
 
-## 25 februari 2019
+## dinsdag 25 februari 2019
 
 ### Experience Cloud ID Extension 4.1.0
 
 * Bijgewerkte bezoeker.js aan 4.1 die publishDestures per nieuwe API verandering bijwerkte. Met deze update kan de referentie-informatie van de pagina desgewenst worden weergegeven tijdens de id - synchronisatie.
 
-## 15 februari 2019
+## zaterdag 15 februari 2019
 
 ### Experience Cloud ID Extension 4.0.0
 
 * Bijgewerkte bezoeker.js aan 4.0
-* Er zijn configuratieopties toegevoegd voor het nieuwe ingebouwde Opt-In-object. Opti-In montages kunnen worden gebruikt om koekje en bakenvraag van de Oplossingen van de Adobe te onderdrukken om betere steunverordeningen zoals GDPR te steunen
+* Er zijn configuratieopties toegevoegd voor het nieuwe ingebouwde Opt-In-object. Opti-In-instellingen kunnen worden gebruikt om cookie- en baken-aanroepen van Adobe Solutions te onderdrukken om betere ondersteuningsregels zoals GDPR te ondersteunen
 
   ![](../../../images/ext-mcid-opt-in.png)
 

@@ -2,18 +2,14 @@
 title: Opmerkingen bij de release BrightStor Video Tracking Extension
 description: De meest recente release bevat informatie over de extensie van de tag BrightStor Video Tracking in Adobe Experience Platform.
 exl-id: 2e24a28f-b0c6-4aa5-a98f-3056024d312c
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 1%
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
 # Opmerkingen bij de release BrightStor Video Tracking-extensie
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 ## 6 juli 2020
 

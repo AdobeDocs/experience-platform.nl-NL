@@ -2,18 +2,14 @@
 title: Voorwaardetypen voor webextensies
 description: Leer hoe u een bibliotheekmodule van het type condition definieert voor een tagextensie in een webeigenschap.
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
 # Voorwaardetypen voor webextensies
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 In de context van een regel wordt een voorwaarde geëvalueerd nadat een gebeurtenis heeft plaatsgevonden. Alle voorwaarden moeten waar terugkeren opdat de regel verder verwerkt. De uitzondering is wanneer de gebruikers uitdrukkelijk voorwaarden in een &quot;uitzondering&quot;emmer plaatsen, in welk geval alle voorwaarden binnen het emmertje vals voor de regel moeten terugkeren om verwerking voort te zetten.
 
@@ -23,13 +19,13 @@ In dit document wordt beschreven hoe u voorwaardetypen voor een webextensie in A
 
 >[!NOTE]
 >
->Als u een randuitbreiding ontwikkelt, zie de gids op [&#x200B; voorwaardetypen voor randuitbreidingen &#x200B;](../edge/condition-types.md) in plaats daarvan.
+>Als u een randuitbreiding ontwikkelt, zie de gids op [ voorwaardetypen voor randuitbreidingen ](../edge/condition-types.md) in plaats daarvan.
 >
->In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Als u een inleiding vereist, zie het overzicht op [&#x200B; het formatteren van de bibliotheekmodule &#x200B;](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ervan uitgegaan dat u bekend bent met bibliotheekmodules en hoe deze zijn geïntegreerd in webextensies. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
 
 Voorwaardetypen bestaan gewoonlijk uit het volgende:
 
-1. A [&#x200B; mening &#x200B;](./views.md) getoond binnen het Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
+1. A [ mening ](./views.md) getoond binnen Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor de voorwaarde te wijzigen.
 2. Een bibliotheekmodule die in de tagruntime-bibliotheek wordt uitgestraald om de instellingen te interpreteren en een voorwaarde te evalueren.
 
 Een voorwaardetype bibliotheekmodule heeft één doel: evalueer of iets waar of vals is. Wat het evalueert, is aan jou.

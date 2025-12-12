@@ -1,19 +1,15 @@
 ---
 title: Opmerkingen bij de release Adobe Media Analytics for Audio and Video Extension
-description: De meest recente releaseopmerkingen voor de extensie Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
+description: De meest recente release bevat informatie over de extensie van Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
 exl-id: 79d92f42-795f-4685-926f-ebe6f4125539
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 1%
+source-wordcount: '165'
+ht-degree: 3%
 
 ---
 
 # Opmerkingen bij de release Adobe Media Analytics voor audio en video
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 ## zaterdag 25 oktober 2019
 
@@ -21,7 +17,7 @@ ht-degree: 1%
 
 * Werk de MediaSDK-bibliotheek bij naar 2.2.1 die de opt-in ondersteunt.
 
-## 25 februari 2019
+## dinsdag 25 februari 2019
 
 ### Adobe Media Analytics for Audio and Video Extension 1.2
 
@@ -40,9 +36,9 @@ ht-degree: 1%
 
 ### Adobe Analytics for Video Extension 1.0
 
-#### **Eigenschappen**
+#### **Functies**
 
-[&#x200B; Adobe Analytics for VideoUitbreiding &#x200B;](../media-analytics/overview.md) voegt de bibliotheek van JavaScript van de Analyse van de kernVideo toe. Deze bibliotheek biedt de functionaliteit voor het toevoegen van de MediaHeartmaatinstantie aan een tag-compatibele site of project. Voor de extensie Adobe Analytics for Video (VA) zijn twee extra extensies nodig:
+[ Adobe Analytics for VideoUitbreiding ](../media-analytics/overview.md) voegt de bibliotheek van JavaScript van de Analyse van de kernVideo toe. Deze bibliotheek biedt de functionaliteit voor het toevoegen van de MediaHeartmaatinstantie aan een tag-compatibele site of project. Voor de extensie Adobe Analytics for Video (VA) zijn twee extra extensies nodig:
 
 * Extensie Analytics
-* Extensie Experience Cloud-id
+* Experience Cloud ID Extension

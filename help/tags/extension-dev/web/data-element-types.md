@@ -2,18 +2,14 @@
 title: Typen gegevenselementen voor webextensies
 description: Leer hoe u een bibliotheekmodule van het gegevenstype data-element definieert voor een tagextensie in een webeigenschap.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
 
 # Gegevenselementen voor webextensies
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 In gegevensverzamelingstags zijn gegevenselementen in feite aliassen van gegevens op een pagina. Deze gegevens zijn te vinden in parameters van queryreeksen, cookies, DOM-elementen of andere locaties. Een gegevenselement kan door regels worden van verwijzingen voorzien en als abstractie voor de toegang tot van deze stukken van gegevens dienst doen.
 
@@ -23,13 +19,13 @@ In dit document wordt beschreven hoe u gegevenselematypen voor een webextensie i
 
 >[!IMPORTANT]
 >
->Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [&#x200B; types van gegevenselement voor randuitbreidingen &#x200B;](../edge/data-element-types.md).
+>Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ types van gegevenselement voor randuitbreidingen ](../edge/data-element-types.md).
 >
->In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [&#x200B; het formatteren van de bibliotheekmodule &#x200B;](./format.md) alvorens aan deze gids terug te keren.
+>In dit document wordt ook aangenomen dat u bekend bent met bibliotheekmodules en hoe deze in webextensies zijn geïntegreerd. Als u een inleiding vereist, zie het overzicht op [ het formatteren van de bibliotheekmodule ](./format.md) alvorens aan deze gids terug te keren.
 
 Gegevenselementen bestaan gewoonlijk uit de volgende elementen:
 
-1. A [&#x200B; mening &#x200B;](./views.md) getoond binnen het Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
+1. A [ mening ](./views.md) getoond binnen Experience Platform UI en de Inzameling UI van Gegevens die gebruikers toestaat om montages voor het gegevenselement te wijzigen.
 2. Een bibliotheekmodule die in de tagruntimebibliotheek wordt uitgestraald om de instellingen te interpreteren en gegevens op te halen.
 
 Neem bijvoorbeeld een situatie waarin u gebruikers wilt toestaan gegevens op te halen uit een lokaal opslagitem met de naam `productName` . Uw module kan als volgt kijken:

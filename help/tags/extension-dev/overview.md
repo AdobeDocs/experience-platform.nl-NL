@@ -2,18 +2,14 @@
 title: Overzicht van de ontwikkeling van extensies
 description: Meer informatie over de primaire componenten van verschillende typen tagextensies en het ontwikkelingsproces van extensies in Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 7%
+source-wordcount: '893'
+ht-degree: 2%
 
 ---
 
 # Overzicht van de ontwikkeling van extensies
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Een van de belangrijkste doelstellingen van tags in Adobe Experience Platform is het creëren van een open ecosysteem waar ingenieurs buiten Adobe extra functies op hun websites en mobiele toepassingen kunnen blootstellen. Dit wordt gedaan door markeringsuitbreidingen. Nadat een extensie op een eigenschap tag is geïnstalleerd, wordt de functionaliteit van die extensie beschikbaar voor gebruik door alle gebruikers van de eigenschap.
 
@@ -25,11 +21,11 @@ Een extensie bestaat uit een map met bestanden. Specifiek, bestaat een uitbreidi
 
 ### Manifest-bestand
 
-Een manifestdossier ([`extension.json`](./manifest.md)) moet bij de wortel van de folder bestaan. In dit bestand wordt de samenstelling van de extensie beschreven en wordt aangegeven waar bepaalde bestanden zich in de map bevinden. De duidelijke functies zo ook aan a [`package.json` &#x200B;](https://docs.npmjs.com/files/package.json) dossier in een [&#x200B; npm &#x200B;](https://www.npmjs.com/) project.
+Een manifestdossier ([`extension.json`](./manifest.md)) moet bij de wortel van de folder bestaan. In dit bestand wordt de samenstelling van de extensie beschreven en wordt aangegeven waar bepaalde bestanden zich in de map bevinden. De duidelijke functies zo ook aan a [`package.json` ](https://docs.npmjs.com/files/package.json) dossier in een [ npm ](https://www.npmjs.com/) project.
 
 ### Bibliotheekmodules
 
-De modules van de bibliotheek zijn de dossiers die de verschillende [&#x200B; componenten &#x200B;](#components) beschrijven die een uitbreiding (met andere woorden, de logica die binnen de bibliotheek van de markeringsruntime moet worden uitgegeven) verstrekt. De inhoud van elk dossier van de bibliotheekmodule moet de [&#x200B; CommonJS modulenorm &#x200B;](https://nodejs.org/api/modules.html#modules-commonjs-modules) volgen.
+De modules van de bibliotheek zijn de dossiers die de verschillende [ componenten ](#components) beschrijven die een uitbreiding (met andere woorden, de logica die binnen de bibliotheek van de markeringsruntime moet worden uitgegeven) verstrekt. De inhoud van elk dossier van de bibliotheekmodule moet de [ CommonJS modulenorm ](https://nodejs.org/api/modules.html#modules-commonjs-modules) volgen.
 
 Bijvoorbeeld, als u een actietype genoemd &quot;verzend baken&quot;bouwt, moet u een dossier hebben dat de logica bevat die het baken verzendt. Als u JavaScript gebruikt, kan het bestand `sendBeacon.js` worden genoemd. De inhoud van dit bestand wordt weergegeven in de runtimebibliotheek van de tag.
 
@@ -37,9 +33,9 @@ U kunt bibliotheekmodulebestanden op elke gewenste locatie in de extensiemap pla
 
 ### Weergaven
 
-Een mening is een dossier van HTML geschikt om in [`iframe` element &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de markeringstoepassing, specifiek door de UI van Experience Platform en UI van de Inzameling van Gegevens worden geladen. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
+Een mening is een dossier van HTML geschikt om in [`iframe` element ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de markeringstoepassing, specifiek door de UI van Experience Platform en UI van de Inzameling van Gegevens worden geladen. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
 
-Het belangrijkste meningsdossier voor om het even welke uitbreiding is zijn configuratie. Zie de sectie over [&#x200B; uitbreidingsconfiguraties &#x200B;](#configuration) voor meer informatie.
+Het belangrijkste meningsdossier voor om het even welke uitbreiding is zijn configuratie. Zie de sectie over [ uitbreidingsconfiguraties ](#configuration) voor meer informatie.
 
 Er gelden geen beperkingen ten aanzien van de bibliotheken die in uw weergaven worden gebruikt. Met andere woorden, u kunt jQuery, Underscore, React, Angular, Bootstrap of andere gebruiken. Het wordt echter nog steeds aangeraden om uw extensie er net zo uit te laten zien als de interface.
 
@@ -47,15 +43,15 @@ U wordt aangeraden alle weergavegerelateerde bestanden (HTML, CSS, JavaScript) i
 
 ## Bibliotheekcomponenten {#components}
 
-Elke extensie definieert een reeks functies. Deze functies worden uitgevoerd door in a [&#x200B; bibliotheek &#x200B;](../ui/publishing/libraries.md) worden omvat die aan uw website of app wordt opgesteld. Bibliotheken zijn een verzameling afzonderlijke componenten, waaronder voorwaarden, handelingen, gegevenselementen en meer. Elke bibliotheekcomponent is een stuk herbruikbare code (verstrekt door een uitbreiding) die binnen markeringstruntime wordt uitgegeven.
+Elke extensie definieert een reeks functies. Deze functies worden uitgevoerd door in a [ bibliotheek ](../ui/publishing/libraries.md) worden omvat die aan uw website of app wordt opgesteld. Bibliotheken zijn een verzameling afzonderlijke componenten, waaronder voorwaarden, handelingen, gegevenselementen en meer. Elke bibliotheekcomponent is een stuk herbruikbare code (verstrekt door een uitbreiding) die binnen markeringstruntime wordt uitgegeven.
 
 Afhankelijk van het feit of u een webextensie of een randextensie ontwikkelt, verschillen de beschikbare typen componenten en de gebruikte toepassingen. Raadpleeg de onderstaande subsecties voor een overzicht van de componenten die beschikbaar zijn voor elk extensietype.
 
 ### Componenten voor webextensies {#web}
 
-In webextensies worden regels geactiveerd via gebeurtenissen, die vervolgens specifieke acties kunnen uitvoeren als aan een bepaalde set voorwaarden wordt voldaan. Zie het overzicht op [&#x200B; modulestroom in Webuitbreidingen &#x200B;](./web/flow.md) voor meer informatie.
+In webextensies worden regels geactiveerd via gebeurtenissen, die vervolgens specifieke acties kunnen uitvoeren als aan een bepaalde set voorwaarden wordt voldaan. Zie het overzicht op [ modulestroom in Webuitbreidingen ](./web/flow.md) voor meer informatie.
 
-Naast de [&#x200B; kernmodules &#x200B;](./web/core.md) die door Adobe worden verstrekt, kunt u de volgende bibliotheekcomponenten in uw Webuitbreidingen bepalen:
+Naast de [ kernmodules ](./web/core.md) die door Adobe worden verstrekt, kunt u de volgende bibliotheekcomponenten in uw Webuitbreidingen bepalen:
 
 * [Gebeurtenissen](./web/event-types.md)
 * [Voorwaarden](./web/condition-types.md)
@@ -65,11 +61,11 @@ Naast de [&#x200B; kernmodules &#x200B;](./web/core.md) die door Adobe worden ve
 
 >[!NOTE]
 >
->Voor details op het vereiste formaat voor het uitvoeren van bibliotheekcomponenten in Webuitbreidingen, zie het [&#x200B; overzicht van het moduleformaat &#x200B;](./web/format.md).
+>Voor details op het vereiste formaat voor het uitvoeren van bibliotheekcomponenten in Webuitbreidingen, zie het [ overzicht van het moduleformaat ](./web/format.md).
 
 ### Componenten voor randextensies {#edge}
 
-In randuitbreidingen worden de regels geactiveerd door voorwaardencontroles, die vervolgens specifieke acties uitvoeren als die controles slagen. Zie het overzicht op de [&#x200B; stroom van de randuitbreiding &#x200B;](./edge/flow.md) voor meer informatie.
+In randuitbreidingen worden de regels geactiveerd door voorwaardencontroles, die vervolgens specifieke acties uitvoeren als die controles slagen. Zie het overzicht op de [ stroom van de randuitbreiding ](./edge/flow.md) voor meer informatie.
 
 U kunt de volgende bibliotheekcomponenten in uw randuitbreidingen bepalen:
 
@@ -79,7 +75,7 @@ U kunt de volgende bibliotheekcomponenten in uw randuitbreidingen bepalen:
 
 >[!NOTE]
 >
->Voor details op het vereiste formaat voor het uitvoeren van bibliotheekmodules in randuitbreidingen, zie het [&#x200B; overzicht van het moduleformaat &#x200B;](./edge/format.md).
+>Voor details op het vereiste formaat voor het uitvoeren van bibliotheekmodules in randuitbreidingen, zie het [ overzicht van het moduleformaat ](./edge/format.md).
 
 ## Extensieconfiguratie {#configuration}
 
@@ -89,8 +85,8 @@ Neem bijvoorbeeld een extensie die de gebruiker toestaat een baken te verzenden 
 
 Wanneer gebruikers een uitbreiding aan een bezit in UI installeren, worden zij getoond de mening van de uitbreidingsconfiguratie, die zij moeten voltooien om de installatie te voltooien.
 
-Meer leren, zie de gids op [&#x200B; uitbreidingsconfiguraties &#x200B;](./configuration.md).
+Meer leren, zie de gids op [ uitbreidingsconfiguraties ](./configuration.md).
 
 ## Extensies verzenden
 
-Nadat u de extensie hebt gemaakt, kunt u deze verzenden naar een lijst in de extensiecatalogus in Experience Platform. Zie het [&#x200B; overzicht van het proces van de uitbreidingsvoorlegging &#x200B;](./submit/overview.md) voor meer informatie.
+Nadat u de extensie hebt gemaakt, kunt u deze verzenden naar een lijst in de extensiecatalogus in Experience Platform. Zie het [ overzicht van het proces van de uitbreidingsvoorlegging ](./submit/overview.md) voor meer informatie.

@@ -3,18 +3,14 @@ title: Overzicht van Core Event Forwarding Extension
 description: Leer over de gebeurtenis van de Kern door:sturen uitbreiding in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1662'
 ht-degree: 0%
 
 ---
 
 # Overzicht van door:sturen van kerngebeurtenis
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 De de gebeurtenis-door:sturen uitbreiding van de Kern verstrekt de standaardgebeurtenissen, de voorwaarden, en de gegevenstypes voor gebeurtenis door:sturen in Adobe Experience Platform.
 
@@ -141,11 +137,11 @@ De volgende vergelijkingsoperatoren voor waarden zijn beschikbaar:
 
 **is Waar:** de voorwaarde keert waar terug als de waarde boolean met de waarde waar is. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde true resulteert in de voorwaarde die false retourneert.
 
-**is Waarheid:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean waar is. Zie [&#128279;](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) de Vertrouwelijke documentatie van 0&rbrace; MDN voor voorbeelden van waarheidswaarden.
+**is Waarheid:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean waar is. Zie [ van de Vertrouwelijke documentatie van 0} MDN voor voorbeelden van waarheidswaarden.](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
 
 **is Vals:** de voorwaarde keert waar terug als de waarde boolean met de waarde van vals is. De waarde die u opgeeft, wordt niet omgezet in een Booleaanse waarde als het een ander type betreft. Elke andere waarde dan een booleaanse waarde met de waarde false resulteert in de voorwaarde die false retourneert.
 
-**is vals:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean vals is. Zie {de documentatie van het Falsy van 0} MDN [&#128279;](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) voor voorbeelden van valse waarden.
+**is vals:** de voorwaarde keert waar terug als de waarde na wordt omgezet in boolean vals is. Zie {de documentatie van het Falsy van 0} MDN [ voor voorbeelden van valse waarden.](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
 
 
@@ -201,11 +197,11 @@ return getDataElementValue('section').concat(getDataElementValue('pName'));
 
 #### Pad
 
-Een weg aan een zeer belangrijk-waardepaar op een gebeurtenis die naar de Edge Network van Adobe Experience Platform wordt verzonden kan worden van verwijzingen voorzien gebruikend het de elemententype van de Weg.
+Er kan naar een pad naar een sleutelwaardepaar bij een gebeurtenis die naar Adobe Experience Platform Edge Network wordt verzonden, worden verwezen met het gegevenstype Path.
 
-Als u naar het volledige object van een gebeurtenis wilt verwijzen, voert u `arc` in als het pad. Het acroniem `arc` staat voor de Context van het Middel van de Adobe en is de top-level weg voor een gebeurtenis die naar de Edge Network van Adobe Experience Platform wordt verzonden.
+Als u naar het volledige object van een gebeurtenis wilt verwijzen, voert u `arc` in als het pad. Het acroniem `arc` staat voor Adobe Resource Context en is het pad op hoofdniveau voor een gebeurtenis die naar Adobe Experience Platform Edge Network wordt verzonden.
 
-Als de `interact` -aanroep van de client naar de Edge Network bijvoorbeeld de volgende aanvraag bevat, zoals u kunt zien in de browserconsole:
+Als de `interact` -aanroep van de client naar Edge Network bijvoorbeeld de volgende aanvraag bevat, zoals u kunt zien in de browserconsole:
 
 ```javascript
 "events": [ 

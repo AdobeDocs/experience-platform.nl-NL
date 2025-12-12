@@ -2,32 +2,28 @@
 title: Bibliotheekmodules in webextensies
 description: Leer hoe u bibliotheekmodules kunt opmaken voor webextensies in Adobe Experience Platform.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
 # Bibliotheekmodules in webextensies
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
-
 >[!IMPORTANT]
 >
->In dit document wordt de indeling van de module Bibliotheek voor webextensies besproken. Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [&#x200B; het formatteren van de modules van de randuitbreiding &#x200B;](../edge/format.md).
+>In dit document wordt de indeling van de module Bibliotheek voor webextensies besproken. Als u een randuitbreiding ontwikkelt, zie in plaats daarvan de gids op [ het formatteren van de modules van de randuitbreiding ](../edge/format.md).
 
 Een bibliotheekmodule is een stuk herbruikbare code die door een extensie wordt geleverd en die wordt uitgegeven in de runtimebibliotheek van de tag in Adobe Experience Platform. Deze bibliotheek wordt vervolgens op de website van de client uitgevoerd. Een `gesture` -gebeurtenistype heeft bijvoorbeeld een bibliotheekmodule die wordt uitgevoerd op de website van de client en waarmee gebruikersbewegingen worden gedetecteerd.
 
-De bibliotheekmodule is gestructureerd als module a [&#x200B; CommonJS &#x200B;](https://nodejs.org/api/modules.html#modules-commonjs-modules). Binnen een module CommonJS, zijn de volgende variabelen beschikbaar voor gebruik:
+De bibliotheekmodule is gestructureerd als module a [ CommonJS ](https://nodejs.org/api/modules.html#modules-commonjs-modules). Binnen een module CommonJS, zijn de volgende variabelen beschikbaar voor gebruik:
 
 ## `require`
 
 U hebt toegang tot een functie `require` :
 
-1. Kernmodules geleverd door tags. Deze modules zijn toegankelijk via `require('@adobe/reactor-name-of-module')` . Zie het document op beschikbare [&#x200B; kernmodules &#x200B;](./core.md) voor meer informatie.
+1. Kernmodules geleverd door tags. Deze modules zijn toegankelijk via `require('@adobe/reactor-name-of-module')` . Zie het document op beschikbare [ kernmodules ](./core.md) voor meer informatie.
 1. Andere modules in uw extensie. Elke module in de extensie is toegankelijk via een relatief pad. Het relatieve pad moet beginnen met `./` of `../` .
 
 Voorbeeld:
@@ -57,7 +53,7 @@ Voorbeeld:
 exports.sayHello = function(…) { … }
 ```
 
-Dit is een alternatief voor `module.exports` maar het gebruik ervan is beperkter. Gelieve te lezen [&#x200B; Begrijpend module.exporting en de uitvoer in node.js &#x200B;](https://www.sitepoint.com/understanding-module-exports-exports-node-js/) voor een beter inzicht in de verschillen tussen `module.exports` en `exports` en de verwante bedenkingen met het gebruiken `exports`. Als u twijfelt, maakt u uw leven makkelijker en gebruikt u `module.exports` in plaats van `exports` .
+Dit is een alternatief voor `module.exports` maar het gebruik ervan is beperkter. Gelieve te lezen [ Begrijpend module.exporting en de uitvoer in node.js ](https://www.sitepoint.com/understanding-module-exports-exports-node-js/) voor een beter inzicht in de verschillen tussen `module.exports` en `exports` en de verwante bedenkingen met het gebruiken `exports`. Als u twijfelt, maakt u uw leven makkelijker en gebruikt u `module.exports` in plaats van `exports` .
 
 ## Uitvoering en caching
 

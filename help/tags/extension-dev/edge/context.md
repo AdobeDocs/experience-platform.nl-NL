@@ -2,22 +2,18 @@
 title: Context in Edge Extension Modules
 description: Leer over het contextvoorwerp en de rol het in interactie met bibliotheekmodules in markeringsuitbreidingen van randeigenschappen speelt.
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
 
 # Context in Edge-uitbreidingsmodules
 
->[!NOTE]
->
-> Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
-
 Alle bibliotheekmodules in randextensies krijgen een `context` -object wanneer ze worden uitgevoerd. In dit document worden de eigenschappen beschreven die door het `context` -object worden geboden en de rol die ze spelen in bibliotheekmodules.
 
-## Context verzoek Adobe (boog)
+## Adobe Request-context (boog)
 
 De eigenschap `arc` is een object dat informatie bevat over de gebeurtenis die de regel activeert. In de onderstaande secties worden de verschillende subeigenschappen in dit object besproken.
 
@@ -42,7 +38,7 @@ Om niet te worden verward met een aanvraag van het clientapparaat, is `request` 
 logger.log(context.arc.request)
 ```
 
-Het `request` -object heeft twee eigenschappen op hoofdniveau: `body` en `head` . De eigenschap `body` bevat XDM-gegevens (Experience Data Model) en kan in het Adobe Experience Platform Debugger worden geïnspecteerd wanneer u naar **[!UICONTROL Launch]** navigeert en het tabblad **[!UICONTROL Edge Trace]** selecteert.
+Het `request` -object heeft twee eigenschappen op hoofdniveau: `body` en `head` . De eigenschap `body` bevat XDM-gegevens (Experience Data Model) en kan in Adobe Experience Platform Debugger worden geïnspecteerd wanneer u naar **[!UICONTROL Launch]** navigeert en het tabblad **[!UICONTROL Edge Trace]** selecteert.
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -104,7 +100,7 @@ De eigenschap `utils` vertegenwoordigt een object dat hulpprogramma&#39;s bevat 
 
 ### [!DNL logger]
 
-Het `logger` nut staat u toe om berichten te registreren die tijdens het zuiveren zittingen zullen worden getoond wanneer het gebruiken van [&#x200B; Adobe Experience Platform Debugger &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+Het `logger` nut staat u toe om berichten te registreren die tijdens het zuiveren zittingen wanneer het gebruiken van [ Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) zullen worden getoond.
 
 ```js
 context.utils.logger.error('Error!');
@@ -122,7 +118,7 @@ Het logger heeft de volgende methodes, waar `message` het bericht is u wilt regi
 
 ### [!DNL fetch]
 
-Dit nut voert [&#x200B; Fetch API &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) uit. U kunt de functie gebruiken om verzoeken aan derdeeindpunten te doen.
+Dit nut voert [ Fetch API ](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) uit. U kunt de functie gebruiken om verzoeken aan derdeeindpunten te doen.
 
 ```js
 context.utils.fetch('http://example.com/movies.json')
@@ -141,8 +137,8 @@ Het object bevat de volgende waarden:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `turbineVersion` | De [&#x200B; Turbine &#x200B;](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) versie die binnen de huidige bibliotheek wordt gebruikt. |
-| `turbineBuildDate` | ISO 8601 datum toen de versie van [&#x200B; Turbine &#x200B;](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) binnen de container werd gebruikt werd gebouwd. |
+| `turbineVersion` | De [ Turbine ](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) versie die binnen de huidige bibliotheek wordt gebruikt. |
+| `turbineBuildDate` | ISO 8601 datum toen de versie van [ Turbine ](https://www.npmjs.com/package/@adobe/reactor-turbine-edge) binnen de container werd gebruikt werd gebouwd. |
 | `buildDate` | De ISO 8601-datum waarop de huidige bibliotheek is gemaakt. |
 | `environment` | De omgeving waarvoor deze bibliotheek is gemaakt. Mogelijke waarden zijn `development` , `staging` en `production.` |
 
@@ -159,7 +155,7 @@ In het volgende voorbeeld wordt een `getBuildInfo` -object getoond om de geretou
 
 ### [!DNL getExtensionSettings]
 
-Dit nut keert het `settings` voorwerp terug dat het laatst van de [&#x200B; mening van de uitbreidingsconfiguratie &#x200B;](../configuration.md) werd bewaard.
+Dit nut keert het `settings` voorwerp terug dat het laatst van de [ mening van de uitbreidingsconfiguratie ](../configuration.md) werd bewaard.
 
 ```js
 logger.log(context.utils.getExtensionSettings());

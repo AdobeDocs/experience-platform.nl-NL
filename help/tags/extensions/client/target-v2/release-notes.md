@@ -2,18 +2,14 @@
 title: Opmerkingen bij de release Adobe Target v2 Extension
 description: De meest recente release bevat informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
 
 # Opmerkingen bij de release Adobe Target v2-extensie
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 ## v0.20.3 (23 januari 2024)
 
@@ -34,7 +30,7 @@ ht-degree: 0%
 
 - Bijgewerkt ter ondersteuning van `at.js` 2.11.0.
 - Toegevoegde ondersteuning voor het instellen van aangepaste Adobe Experience Platform-sandboxId en sandboxName in targetGlobalSettings, die wordt doorgegeven aan Delivery API voor aanroepen van getOffer/getOffers.
-- Shadow DOM fix for chaining :eq() in selector.
+- Schaduw-DOM-correctie voor ketting van :eq() in kiezer.
 
 ## v0.19.3 (18 september 2023)
 
@@ -95,7 +91,7 @@ ht-degree: 0%
 - A4T klik metrieke details correct zijn teruggekeerd wanneer het gebruiken van prefetch verzoeken
 - Bij het genereren van UID wordt niet langer `Math.random()` gebruikt, maar wordt `window.crypto` gebruikt
 - `sessionId` vervaldatum van cookie wordt correct verlengd bij elke netwerkaanroep
-- SPA de initialisatie van het weergavecache wordt nu correct afgehandeld en voldoet aan de `viewsEnable` -instellingen
+- De initialisatie van het cachegeheugen van de SPA-weergave wordt nu correct afgehandeld en voldoet aan `viewsEnable` -instellingen
 
 ## v0.14.2 (2 juni 2021)
 
@@ -107,7 +103,7 @@ ht-degree: 0%
 
 ## v0.14 (14 mei 2021)
 
-- Toegevoegd een nieuw doel van de actielading met [&#x200B; Beslissing op Apparaat &#x200B;](./overview.md#load-target-with-on-device-decisioning), dat &lbrace;2.5 met de mogelijkheden van het Beslissen op Apparaat laadt`at.js`
+- Toegevoegd een nieuw doel van de actielading met [ Beslissing op Apparaat ](./overview.md#load-target-with-on-device-decisioning), dat {2.5 met de mogelijkheden van het Beslissen op Apparaat laadt`at.js`
 - Bijgewerkt `at.js` naar 2.5
 
 

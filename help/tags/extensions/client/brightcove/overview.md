@@ -2,18 +2,14 @@
 title: Overzicht van extensie voor het bijhouden van video in BrightStor
 description: Meer informatie over de extensie van de tag BrightStor Video Tracking in Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
 
 # Overzicht van de extensie BrightStor Video Tracking
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 ## Voorwaarden
 
@@ -23,7 +19,7 @@ Voor elke tag-eigenschap in Adobe Experience Platform moeten de volgende extensi
 * Experience Cloud Visitor ID Service
 * Geïnstalleerde kernextensies
 
-Gebruik het codefragment &quot;In-Page embed code (Advanced)&quot; in de HTML van elke webpagina waar een videospeler moet renderen. Het &quot;In-Pagina inbedt code (Geavanceerd)&quot;HTML fragment kan in de [&#x200B; documentatie van de Helderheid worden gevonden &#x200B;](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). De volgende verbinding verstrekt meer informatie over [&#x200B; hoe te om ingebedde code voor zowel voorproef als gepubliceerde videospelers &#x200B;](https://studio.support.brightcove.com/players/generating-player-embed-code.html) te produceren.
+Gebruik het codefragment &quot;In-Page embed code (Advanced)&quot; in de HTML van elke webpagina waar een videospeler moet renderen. Het &quot;In-Pagina inbedt code (Geavanceerd)&quot;fragment van HTML kan in de [ documentatie van de Helderheid worden gevonden ](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). De volgende verbinding verstrekt meer informatie over [ hoe te om ingebedde code voor zowel voorproef als gepubliceerde videospelers ](https://studio.support.brightcove.com/players/generating-player-embed-code.html) te produceren.
 
 Deze extensie versie 1.1.0 biedt ondersteuning voor het insluiten van meerdere BrightStorCove-video&#39;s op één webpagina. Als er meerdere `id` -eigenschappen zijn binnen de geavanceerde insluittags, moet u ervoor zorgen dat ze allemaal unieke waarden hebben. Bijvoorbeeld `player1` , `player2` , enzovoort.
 
@@ -33,7 +29,7 @@ Deze extensie versie 1.1.0 biedt ondersteuning voor het insluiten van meerdere B
 
 Als de webpagina die deze extensie gebruikt, communiceert met de video voordat het betreffende script volledig is geladen, kunt u twee handelingen uitvoeren om het probleem op te lossen. Ten eerste kan de tagbibliotheek synchroon worden geladen en ten tweede plaatst u het element `<script type="text/javascript">\_satellite.pageBottom();\</script\>` vóór de video die op de pagina wordt ingesloten.
 
-Zie de [&#x200B; documentatie van BrightStor API &#x200B;](https://docs.brightcove.com/brightcove-player/1.x/Player.html#vjsplayer) voor meer informatie over de componentenmethodes en de gebeurtenissen die in deze uitbreiding worden gebruikt.
+Zie de [ documentatie van BrightStor API ](https://docs.brightcove.com/brightcove-player/1.x/Player.html#vjsplayer) voor meer informatie over de componentenmethodes en de gebeurtenissen die in deze uitbreiding worden gebruikt.
 
 ## Gegevenselementen
 
@@ -92,15 +88,15 @@ De volgende video-uitbreidingsobjecten moeten worden opgenomen:
 
       * De gebeurtenis voor **VideoBegin** (voorbeeld: event17)
       * Prop/eVar voor het **VideoNaam** gegevenselement (voorbeeld: eVar10)
-      * Prop/eVar voor het **gegevenselement van de Duur 0&rbrace; Video (voorbeeld: eVar11)**
-      * Prop/eVar voor het **Huidige Video 1&rbrace; gegevenselement van de Plaats van de Plaats &lbrace;(voorbeeld: eVar12)**
+      * Prop/eVar voor het **gegevenselement van de Duur 0} Video (voorbeeld: eVar11)**
+      * Prop/eVar voor **Huidige VideoPlaats** gegevenselement (voorbeeld: eVar12)
 
    1. De handeling Analytics &quot;Send Beacon&quot; (`s.tl`)
    1. De actie Analytics &quot;Clear Variables&quot;
 
 >[!TIP]
 >
->Voor degenen die niet veelvoudige eVars of steunen voor elk video element zouden kunnen willen verstrekken, worden de waarden van het gegevenselement aaneengeschakeld als alternatieve methode. Daarna worden ze geparseerd in classificatierapporten met het gereedschap Classificatieregel Builder. Zie de [&#128279;](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=nl-NL) documentatie van de Bouwer van de Regel van de Classificatie van 0&rbrace; &lbrace;voor meer informatie.  Tot slot worden zij in Analysis Workspace als een segment toegepast.
+>Voor degenen die niet veelvoudige eVars of steunen voor elk video element zouden kunnen willen verstrekken, worden de waarden van het gegevenselement aaneengeschakeld als alternatieve methode. Daarna worden ze geparseerd in classificatierapporten met het gereedschap Classificatieregel Builder. Zie de [ documentatie van de Bouwer van de Regel van de Classificatie van 0} {voor meer informatie. ](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) Tot slot worden zij in Analysis Workspace als een segment toegepast.
 >
 >Hiertoe maakt u een nieuw gegevenselement, bijvoorbeeld &quot;Video MetaData&quot;, en programmeert u dit om alle videogegevenselementen (hierboven vermeld) aan elkaar te koppelen.
 

@@ -2,20 +2,16 @@
 title: Overzicht van tags
 description: Tags in Adobe Experience Platform zijn de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met labels kunnen klanten eenvoudig alle analytische, marketing- en advertentietags implementeren en beheren die nodig zijn om relevante klantervaringen te stimuleren.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '550'
 ht-degree: 1%
 
 ---
 
 # Overzicht van codes
 
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](./term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
-
-Tags in Adobe Experience Platform zijn de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met labels kunnen klanten eenvoudig alle analytische, marketing- en advertentietags implementeren en beheren die nodig zijn om relevante klantervaringen te stimuleren.
+Tags in Adobe Experience Platform (voorheen Adobe Experience Platform Launch genoemd) zijn de volgende generatie mogelijkheden voor tagbeheer van Adobe. Met labels kunnen klanten eenvoudig alle analytische, marketing- en advertentietags implementeren en beheren die nodig zijn om relevante klantervaringen te stimuleren.
 
 De markeringen machtigen iedereen om hun eigen integratie te bouwen en te handhaven, genoemd *uitbreidingen*. Deze extensies zijn beschikbaar voor [!DNL Adobe Experience Cloud] -klanten in een app-store-ervaring, zodat ze hun tags snel kunnen installeren, configureren en implementeren.
 
@@ -31,7 +27,7 @@ Tags worden aan [!DNL Adobe Experience Cloud] klanten aangeboden als een opgenom
 
 Gebruik de Help in het product in het rechterdeelvenster voor meer informatie over tags en om aanvullende beschikbare bronnen weer te geven.
 
-![&#x200B; de eigenschappen van Markeringen in de Inzameling UI van Gegevens.](./images/ui/tags-overview/tags-properties.png)
+![ de eigenschappen van Markeringen in de Inzameling UI van Gegevens.](./images/ui/tags-overview/tags-properties.png)
 
 ### Extensies {#extensions}
 
@@ -79,7 +75,7 @@ Automatiseer implementaties van individuele technologieën of een groep technolo
 
 ### Lichte, modulaire containertag {#modular-tag}
 
-De inhoud van de container wordt geminiatuurd, inclusief de aangepaste code. Alles is modulair. Als u geen punt nodig hebt, is het niet inbegrepen in uw bibliotheek. Het resultaat is een snelle en compacte implementatie. Zie [&#x200B; Minificatie &#x200B;](./ui/publishing/builds.md).
+De inhoud van de container wordt geminiatuurd, inclusief de aangepaste code. Alles is modulair. Als u geen punt nodig hebt, is het niet inbegrepen in uw bibliotheek. Het resultaat is een snelle en compacte implementatie. Zie [ Minificatie ](./ui/publishing/builds.md).
 
 ## Overige hooglichten {#other-highlights}
 

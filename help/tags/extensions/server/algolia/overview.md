@@ -2,19 +2,15 @@
 title: Algoliaanse gebeurtenis die extensie-overzicht doorstuurt
 description: Leer hoe u de Algoliaanse gebeurtenis kunt instellen en gebruiken voor het doorsturen van de extensie in Adobe Experience Platform. Door:sturen gebruikersgedragsgegevens via de Inzichten API, vormen regels, kaart XDM gebieden, en verifieer gebeurtenislevering.
 last-substantial-update: 2025-05-09T00:00:00Z
-source-git-commit: d1b641ed0b48357a2f4b78d6829ccab52e4889ca
+exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Algolia] overzicht van de extensie voor het doorsturen van gebeurtenissen {#overview}
-
->[!NOTE]
->
->Adobe Experience Platform Launch maakt nu deel uit van Adobe Experience Platform-technologieën voor gegevensverzameling. Als gevolg hiervan zijn de terminologie bijgewerkt in de productdocumentatie. Voor een uitvoerige lijst van deze veranderingen, verwijs naar de [&#x200B; gids van de terminologieupdates &#x200B;](../../../../tags/term-updates.md).
 
 Gebruik [!DNL Algolia] om snelle, relevante en persoonlijke zoekervaringen te bieden. Dankzij de AI-optimalisatie kunt u de zoekresultaten en aanbevelingen verbeteren, zodat gebruikers snel de producten, inhoud of informatie kunnen vinden die ze nodig hebben.
 
@@ -22,9 +18,9 @@ Gebruik de [!DNL Algolia] -gebeurtenis voor het doorsturen van extensies om gebr
 
 ## Vereisten {#prerequisites}
 
-Voordat u de extensie installeert, moet u ervoor zorgen dat u een [!DNL Algolia] -account hebt met toegang tot [!DNL Insights API] . Als u geen rekening hebt, [&#x200B; teken omhoog &#x200B;](https://dashboard.algolia.com/users/sign_up) en laat toegang tot API toe.
+Voordat u de extensie installeert, moet u ervoor zorgen dat u een [!DNL Algolia] -account hebt met toegang tot [!DNL Insights API] . Als u geen rekening hebt, [ teken omhoog ](https://dashboard.algolia.com/users/sign_up) en laat toegang tot API toe.
 
-Zorg er ook voor dat u begrijpt hoe u de [!DNL Algolia] [!DNL Insights API] gebruikt. Voor een overzicht van hoe te om gebeurtenissen te verzenden, zie [&#x200B; verzendend gebeurtenissen met de Inzichten API &#x200B;](https://www.algolia.com/doc/guides/sending-events/getting-started/).
+Zorg er ook voor dat u begrijpt hoe u de [!DNL Algolia] [!DNL Insights API] gebruikt. Voor een overzicht van hoe te om gebeurtenissen te verzenden, zie [ verzendend gebeurtenissen met de Inzichten API ](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
 Verzamel de volgende waarden van het dashboard van uw [!DNL Algolia] account:
 - **[!UICONTROL Application ID]**
@@ -39,18 +35,18 @@ Navigeer naar **[!UICONTROL Data Collection]** in [!DNL Adobe Experience Platfor
 
 Open de extensie **[!UICONTROL Catalog]** , zoek de extensie **[!UICONTROL Algolia Event Forwarding]** en selecteer **[!UICONTROL Install]** .
 
-![&#x200B; het installatieproces voor de Gebeurtenis Algolia die uitbreiding door:sturen in Adobe Experience Platform &#x200B;](../../../images/extensions/server/algolia/install-extension.png)
+![ het installatieproces voor de Gebeurtenis Algolia die uitbreiding door:sturen in Adobe Experience Platform ](../../../images/extensions/server/algolia/install-extension.png)
 
 ### De extensie configureren {#configure-extension}
 
 Als u de extensie [!DNL Algolia] voor het doorsturen van gebeurtenissen wilt configureren, navigeert u naar het tabblad **[!UICONTROL Extensions]** en selecteert u de extensie **[!UICONTROL Algolia]** . Selecteer vervolgens **[!UICONTROL Configure]** .
 
-![&#x200B; het scherm van de Configuratie voor de gebeurtenis Algolia die uitbreiding in Adobe Experience Platform door:sturen &#x200B;](../../../images/extensions/server/algolia/configure.png)
+![ het scherm van de Configuratie voor de gebeurtenis Algolia die uitbreiding in Adobe Experience Platform door:sturen ](../../../images/extensions/server/algolia/configure.png)
 
 | Eigenschap | Beschrijving |
 |----------|-------------|
-| **[!UICONTROL Application ID]** | Ga [!UICONTROL Application ID] in het Algoliaanse dashboard onder de [&#x200B; wordt gevonden API Sleutels &#x200B;](https://www.algolia.com/account/api-keys/all) sectie die. |
-| **[!UICONTROL Search API Key]** | Ga [!UICONTROL Search API Key] in het Algoliaanse dashboard onder de [&#x200B; wordt gevonden API Sleutels &#x200B;](https://www.algolia.com/account/api-keys/all) sectie die. |
+| **[!UICONTROL Application ID]** | Ga [!UICONTROL Application ID] in het Algoliaanse dashboard onder de [ wordt gevonden API Sleutels ](https://www.algolia.com/account/api-keys/all) sectie die. |
+| **[!UICONTROL Search API Key]** | Ga [!UICONTROL Search API Key] in het Algoliaanse dashboard onder de [ wordt gevonden API Sleutels ](https://www.algolia.com/account/api-keys/all) sectie die. |
 | **[!UICONTROL Index Name]** | Voer de [!UICONTROL Index Name] in die uw producten of inhoud bevat. Deze index wordt gebruikt als standaardwaarde. |
 
 {style="table-layout:auto"}
@@ -65,13 +61,13 @@ Configureer de handeling **[!UICONTROL Send event]** om gebeurtenissen door te s
 
 Selecteer **[!UICONTROL Rules]** > **[!UICONTROL Add Rule]** of selecteer een bestaande regel. Voeg in het gedeelte **[!UICONTROL Then]** van de regel een handeling toe en selecteer **[!UICONTROL Extension]**: [!DNL Algolia] Event Forwarding > **[!UICONTROL Action Type]**: **[!UICONTROL Send Events]** .
 
-![&#x200B; Configuratie van de Send actie van de Gebeurtenis in de gebeurtenis Algolia die uitbreiding door:sturen.](../../../images/extensions/server/algolia/send-event.png)
+![ Configuratie van de Send actie van de Gebeurtenis in de gebeurtenis Algolia die uitbreiding door:sturen.](../../../images/extensions/server/algolia/send-event.png)
 
 ## De gebeurtenisveldgroep [!DNL Algolia] implementeren {#algolia-field-group}
 
 Voeg de gebeurtenisveldgroep [!DNL Algolia] toe aan uw schema voordat u de extensie [!DNL Algolia] -gebeurtenis voor doorsturen gebruikt. Het is een van de standaardveldgroepen die via Experience Platform worden aangeboden.
 
-![&#x200B; de configuratie van de de groepsgroep van het gebeurtenisgebied van Algolië &#x200B;](../../../images/extensions/server/algolia/algolia-field-groups.png)
+![ de configuratie van de de groepsgroep van het gebeurtenisgebied van Algolië ](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
 ### Voeg de groep met gebeurtenisvelden [!DNL Algolia] toe aan uw schema {#add-algolia-field-group}
 
@@ -83,7 +79,7 @@ Voeg een nieuw schema toe of werk een bestaand schema bij dat u gebruikt om webg
 
 Selecteer de knop **[!DNL Algolia]Gebeurtenisdetails** veldgroep > **[!UICONTROL Add field group]** > **[!UICONTROL Save]** .
 
-![&#x200B; de configuratie van de het profielgroep van Algolië in Experience Platform &#x200B;](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
+![ de configuratie van de het profielgroep van Algolië in Experience Platform ](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
 ### Gegevens toewijzen en verzenden met de tag [!UICONTROL Data Collection]
 
@@ -95,7 +91,7 @@ De extensie [!DNL Algolia] voor het doorsturen van gebeurtenissen kan met **[!DN
 2. Installeer de extensie [!DNL Adobe Experience Platform Web SDK] .
 3. Gebruik deze extensie om gegevens van HTML toe te wijzen aan de veldgroep **[!DNL Algolia]Event** .
 
-![&#x200B; Voorbeeld van een dataset van HTML die aan de groep van het de gebeurtenisgebied van Algolia &#x200B;](../../../images/extensions/server/algolia/html-dataset.png) wordt in kaart gebracht
+![ Voorbeeld van een dataset van HTML die aan de groep van het de gebeurtenisgebied van Algolia ](../../../images/extensions/server/algolia/html-dataset.png) wordt in kaart gebracht
 
 #### Stap 2: Een gegevenselement maken voor [!DNL XDM] -toewijzing
 
@@ -113,14 +109,14 @@ De extensie [!DNL Algolia] voor het doorsturen van gebeurtenissen kan met **[!DN
 4. Selecteer **[!UICONTROL Send event]** als actietype.
 5. Configureer de actie voor het gebruik van het gegevenselement [!DNL XDM] .
 
-![&#x200B; Voorbeeld van het vormen van een regelactie in de gebeurtenis Algolia die uitbreiding door:sturen &#x200B;](../../../images/extensions/server/algolia/rule-action.png)
+![ Voorbeeld van het vormen van een regelactie in de gebeurtenis Algolia die uitbreiding door:sturen ](../../../images/extensions/server/algolia/rule-action.png)
 
 #### Stap 4: Publiceren en testen
 
 1. Publiceer de regels en de uitbreidingsveranderingen in uw doelmilieu.
 2. Gebruik [!DNL Adobe Experience Platform Debugger] om te controleren of de gegevens naar Adobe Experience Platform zijn verzonden en naar [!DNL Algolia] zijn doorgestuurd.
 
-![&#x200B; vorm een regel om gebeurtenissen te verzenden gebruikend de uitbreiding Algolia &#x200B;](../../../images/extensions/server/algolia/adobe-debugger.png)
+![ vorm een regel om gebeurtenissen te verzenden gebruikend de uitbreiding Algolia ](../../../images/extensions/server/algolia/adobe-debugger.png)
 
 ### Gebeurtenissen verifiëren in [!DNL Algolia]
 
@@ -130,7 +126,7 @@ Navigeer naar het dashboard van [!DNL Algolia] en ga naar **[!UICONTROL Data Sou
 
 Selecteer de gebeurtenis die overeenkomt met de gebeurtenis die van de gebeurtenis van [!DNL Algolia] wordt verzonden door:sturen uitbreiding en controleer of de verwachte gegevens aanwezig zijn in de gebeurtenis.
 
-![&#x200B; verifieer gebeurtenissen in Algolië debugger &#x200B;](../../../images/extensions/server/algolia/algolia-debugger.png)
+![ verifieer gebeurtenissen in Algolië debugger ](../../../images/extensions/server/algolia/algolia-debugger.png)
 
 ## Gemeenschappelijke uitvoeringsscenario&#39;s
 
@@ -163,13 +159,13 @@ Controleer het volgende als gebeurtenissen niet worden weergegeven in [!DNL Algo
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u gegevens naar [!DNL Algolia] kunt verzenden met de [!DNL Algolia Event Forwarding Extension] . Voor meer informatie over gebeurtenis die mogelijkheden in [!DNL Adobe Experience Platform] door:sturen, lees de [&#x200B; gebeurtenis die overzicht &#x200B;](../../../ui/event-forwarding/overview.md) door:sturen.
+In deze handleiding wordt beschreven hoe u gegevens naar [!DNL Algolia] kunt verzenden met de [!DNL Algolia Event Forwarding Extension] . Voor meer informatie over gebeurtenis die mogelijkheden in [!DNL Adobe Experience Platform] door:sturen, lees de [ gebeurtenis die overzicht ](../../../ui/event-forwarding/overview.md) door:sturen.
 
-Voor details op hoe te om uw implementatie te zuiveren gebruikend het Debugger van Experience Platform en het Door:sturen van de Gebeurtenis hulpmiddel van de Controle, lees het [&#x200B; overzicht van Adobe Experience Platform Debugger &#x200B;](../../../../debugger/home.md) en [&#x200B; de activiteiten van de Monitor in gebeurtenis door:sturen &#x200B;](../../../ui/event-forwarding/monitoring.md).
+Voor details op hoe te om uw implementatie te zuiveren gebruikend het Debugger van Experience Platform en het Door:sturen van de Gebeurtenis hulpmiddel van de Controle, lees het [ overzicht van Adobe Experience Platform Debugger ](../../../../debugger/home.md) en [ de activiteiten van de Monitor in gebeurtenis door:sturen ](../../../ui/event-forwarding/monitoring.md).
 
 ## Aanvullende bronnen
 
-- [[!DNL Algolia]  Inzichten API Documentatie &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
-- [[!DNL Algolia]  Documentatie van Gebeurtenissen &#x200B;](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform]  Gebeurtenis door:sturen Documentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=nl-NL)
-- [[!DNL Algolia]  AI het Overzicht van Eigenschappen &#x200B;](https://www.algolia.com/products/ai-search/)
+- [[!DNL Algolia]  Inzichten API Documentatie ](https://www.algolia.com/doc/rest-api/insights/)
+- [[!DNL Algolia]  Documentatie van Gebeurtenissen ](https://www.algolia.com/doc/guides/sending-events/getting-started/)
+- [[!DNL Adobe Experience Platform]  Gebeurtenis door:sturen Documentatie ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
+- [[!DNL Algolia]  AI het Overzicht van Eigenschappen ](https://www.algolia.com/products/ai-search/)

@@ -2,18 +2,14 @@
 title: Bibliotheken van derden implementeren
 description: Leer meer over de verschillende methoden om bibliotheken van derden te hosten in uw Adobe Experience Platform-tagextensies.
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1270'
 ht-degree: 0%
 
 ---
 
 # Bibliotheken van derden implementeren
-
->[!NOTE]
->
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [&#x200B; document &#x200B;](../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
 Een van de belangrijkste doelen van tagextensies in Adobe Experience Platform is om u in staat te stellen bestaande marketingtechnologieën (bibliotheken) eenvoudig op uw website te implementeren. Door extensies te gebruiken, kunt u bibliotheken implementeren die worden geleverd door CDN&#39;s (Content Delivery Networks) van derden zonder dat u de HTML van uw website handmatig hoeft te bewerken.
 
@@ -21,11 +17,11 @@ Er zijn verschillende methoden om bibliotheken van derden (leveranciers) in uw e
 
 ## Vereisten
 
-Dit document vereist een goed begrip van extensies binnen tags, inclusief wat ze kunnen doen en hoe ze zijn samengesteld. Zie het [&#x200B; overzicht van de uitbreidingsontwikkeling &#x200B;](./overview.md) voor meer informatie.
+Dit document vereist een goed begrip van extensies binnen tags, inclusief wat ze kunnen doen en hoe ze zijn samengesteld. Zie het [ overzicht van de uitbreidingsontwikkeling ](./overview.md) voor meer informatie.
 
 ## Laden van basiscode
 
-Buiten de context van tags is het belangrijk om te begrijpen hoe marketingtechnologieën doorgaans op een website worden geladen. Externe leveranciers van bibliotheken verschaffen een codefragment (ook wel basiscode genoemd) dat moet worden ingesloten in de HTML van uw website om de functies van de bibliotheek te kunnen laden.
+Buiten de context van tags is het belangrijk om te begrijpen hoe marketingtechnologieën doorgaans op een website worden geladen. Externe leveranciers van bibliotheken verschaffen een codefragment (een zogenaamde basiscode) dat moet worden ingesloten in de HTML van uw website om de functies van de bibliotheek te kunnen laden.
 
 Over het algemeen worden bij het laden op uw site een aantal verschillende basiscodes voor marketingtechnologieën uitgevoerd:
 
@@ -39,7 +35,7 @@ Wanneer de bibliotheek klaar is met laden, wordt de algemene functie vervangen d
 
 ### Voorbeeld van basiscode
 
-De volgende JavaScript is een voorbeeld van een unminified basiscode voor de [&#x200B; de omzettingsmarkering van Pinterest &#x200B;](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?), die later in dit document zal worden van verwijzingen voorzien om aan te tonen hoe de basiscode voor verschillende implementatiestrategieën met markeringen wordt aangepast:
+De volgende JavaScript is een voorbeeld van een unminified basiscode voor de [ de omzettingsmarkering van Pinterest ](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?), die later in dit document zal worden van verwijzingen voorzien om aan te tonen hoe de basiscode voor verschillende implementatiestrategieën met markeringen wordt aangepast:
 
 ```js
 !function(scriptUrl) {
@@ -65,7 +61,7 @@ pintrk('load', 'YOUR_TAG_ID');
 pintrk('page');
 ```
 
-Samengevat, verstrekt de basiscode hierboven een [&#x200B; onmiddellijk aangehaalde functieuitdrukking (IIFE) &#x200B;](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) die tot een globale functie leidt om met de bibliotheek (`window.pintrk`) in wisselwerking te staan. Er wordt ook een `scriptURL` -variabele toegewezen aan de waarde van `https://s.pinimg.com/ct/core.js` , waar de bibliotheek zich bevindt. Zoals eerder verklaard, worden om het even welke functies die worden geroepen alvorens de bibliotheek heeft geladen geduwd in een rij (`window.pintrk.queue`) die in opeenvolging moet worden uitgevoerd zodra de bibliotheek beschikbaar is.
+Samengevat, verstrekt de basiscode hierboven een [ onmiddellijk aangehaalde functieuitdrukking (IIFE) ](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) die tot een globale functie leidt om met de bibliotheek (`window.pintrk`) in wisselwerking te staan. Er wordt ook een `scriptURL` -variabele toegewezen aan de waarde van `https://s.pinimg.com/ct/core.js` , waar de bibliotheek zich bevindt. Zoals eerder verklaard, worden om het even welke functies die worden geroepen alvorens de bibliotheek heeft geladen geduwd in een rij (`window.pintrk.queue`) die in opeenvolging moet worden uitgevoerd zodra de bibliotheek beschikbaar is.
 
 Het volgende gedeelte van de basiscode is het meest relevant voor het begrijpen van de manier waarop de bibliotheek op uw site wordt geladen:
 
@@ -84,7 +80,7 @@ De basiscode maakt een scriptelement, stelt deze in op asynchroon laden en stelt
 
 ## Implementatieopties voor tags
 
-In de onderstaande secties ziet u de verschillende manieren waarop u bibliotheken van leveranciers in uw extensies kunt laden. Hierbij wordt gebruikgemaakt van de basiscode van Pinterest die eerder als voorbeeld is weergegeven. Elk van deze voorbeelden impliceert het creëren van een [&#x200B; actietype voor een Webuitbreiding &#x200B;](./web/action-types.md) die de bibliotheek op uw website laadt.
+In de onderstaande secties ziet u de verschillende manieren waarop u bibliotheken van leveranciers in uw extensies kunt laden. Hierbij wordt gebruikgemaakt van de basiscode van Pinterest die eerder als voorbeeld is weergegeven. Elk van deze voorbeelden impliceert het creëren van een [ actietype voor een Webuitbreiding ](./web/action-types.md) die de bibliotheek op uw website laadt.
 
 >[!NOTE]
 >
@@ -98,7 +94,7 @@ De volgende methoden zijn van toepassing:
    - [Laden van basiscode](#base-code-loading-process)
       - [Voorbeeld van basiscode](#base-code-example)
    - [Implementatieopties voor tags](#tags-implementation-options)
-      - [Laden bij uitvoering vanaf de host van de leverancier {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
+      - [Laden bij uitvoering vanaf de host van de leverancier](#load-at-runtime-from-the-vendor-host-vendor-host)
       - [Laden bij uitvoering vanaf de host van de tagbibliotheek](#load-at-runtime-from-the-tag-library-host)
       - [De bibliotheek rechtstreeks insluiten](#embed-the-library-directly)
    - [Volgende stappen](#next-steps)
@@ -139,7 +135,7 @@ module.exports = function() {
 
 U kunt desgewenst aanvullende stappen nemen om deze implementatie te vernieuwen. Aangezien de variabelen `scriptElement` en `firstScriptElement` nu binnen het bereik van de geëxporteerde functie vallen, kunt u de IIFE verwijderen omdat deze variabelen niet het risico lopen globaal te worden.
 
-Bovendien verstrekken de markeringen verscheidene [&#x200B; kernmodules &#x200B;](./web/core.md) die nut zijn dat om het even welke uitbreiding kan gebruiken. Met name wordt in de module `@adobe/reactor-load-script` een script vanaf een externe locatie geladen door een scriptelement te maken en dit aan het document toe te voegen. Door deze module voor het scriptlaadproces te gebruiken, kunt u de actiecode nog verder weergeven:
+Bovendien verstrekken de markeringen verscheidene [ kernmodules ](./web/core.md) die nut zijn dat om het even welke uitbreiding kan gebruiken. Met name wordt in de module `@adobe/reactor-load-script` een script vanaf een externe locatie geladen door een scriptelement te maken en dit aan het document toe te voegen. Door deze module voor het scriptlaadproces te gebruiken, kunt u de actiecode nog verder weergeven:
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -170,9 +166,9 @@ U kunt deze problemen verhelpen door de bibliotheek van leveranciers op te nemen
 >
 >In sommige gevallen kan de leverancier extra code laden van servers van derden, zoals in de Pinterest-leveranciersbibliotheek. In deze gevallen kan het bundelen van de leveranciersbibliotheek met uw extensie niet alle risico-gerelateerde problemen volledig wegnemen.
 
-Als u dit wilt implementeren, moet u eerst de bibliotheek van de leverancier downloaden naar uw computer. In het geval van Pinterest, wordt de verkopersbibliotheek gevonden in [&#x200B; https://s.pinimg.com/ct/core.js &#x200B;](https://s.pinimg.com/ct/core.js). Nadat u het bestand hebt gedownload, moet u het in uw extensieproject plaatsen. In het onderstaande voorbeeld heeft het bestand de naam `pinterest.js` en bevindt het zich in een `vendor` -map in de projectmap.
+Als u dit wilt implementeren, moet u eerst de bibliotheek van de leverancier downloaden naar uw computer. In het geval van Pinterest, wordt de verkopersbibliotheek gevonden in [ https://s.pinimg.com/ct/core.js ](https://s.pinimg.com/ct/core.js). Nadat u het bestand hebt gedownload, moet u het in uw extensieproject plaatsen. In het onderstaande voorbeeld heeft het bestand de naam `pinterest.js` en bevindt het zich in een `vendor` -map in de projectmap.
 
-Zodra het bibliotheekdossier in uw project is, moet u uw [&#x200B; uitbreidingsmanifest &#x200B;](./manifest.md) (`extension.json`) bijwerken om erop te wijzen dat de verkopersbibliotheek naast de belangrijkste markeringsbibliotheek zou moeten worden geleverd. Dit wordt gedaan door het pad naar het bibliotheekbestand binnen een array `hostedLibFiles` toe te voegen:
+Zodra het bibliotheekdossier in uw project is, moet u uw [ uitbreidingsmanifest ](./manifest.md) (`extension.json`) bijwerken om erop te wijzen dat de verkopersbibliotheek naast de belangrijkste markeringsbibliotheek zou moeten worden geleverd. Dit wordt gedaan door het pad naar het bibliotheekbestand binnen een array `hostedLibFiles` toe te voegen:
 
 ```json
 {
@@ -180,7 +176,7 @@ Zodra het bibliotheekdossier in uw project is, moet u uw [&#x200B; uitbreidingsm
 }
 ```
 
-Tot slot moet u uw actiecode vormen om de verkopersbibliotheek van de zelfde server te laden die gastheren de belangrijkste bibliotheek. Het voorbeeld gebruikt hieronder de actiecode die in de [&#x200B; vorige sectie &#x200B;](#vendor-host) als uitgangspunt wordt gebouwd. Gebruikend het [&#x200B; turbine voorwerp &#x200B;](./turbine.md), moet u filename (zonder enige weg) van het verkopersdossier als zo overgaan:
+Tot slot moet u uw actiecode vormen om de verkopersbibliotheek van de zelfde server te laden die gastheren de belangrijkste bibliotheek. Het voorbeeld gebruikt hieronder de actiecode die in de [ vorige sectie ](#vendor-host) als uitgangspunt wordt gebouwd. Gebruikend het [ turbine voorwerp ](./turbine.md), moet u filename (zonder enige weg) van het verkopersdossier als zo overgaan:
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -207,7 +203,7 @@ Het is belangrijk om op te merken dat wanneer het gebruiken van deze methode, u 
 
 U kunt omzeilen dat u de bibliotheek van de leverancier volledig moet laden door de bibliotheekcode rechtstreeks in te sluiten in de actiecode zelf, waardoor deze in feite deel uitmaakt van de hoofdtagbibliotheek. Met deze methode wordt de hoofdbibliotheek groter, maar hoeft u geen extra HTTP-aanvraag meer in te dienen om een afzonderlijk bestand op te halen.
 
-Gebruikend de actiecode die in de [&#x200B; vorige sectie &#x200B;](#vendor-host) als uitgangspunt wordt gebouwd, kunt u de lijn vervangen waar het manuscript met de inhoud van het manuscript zelf wordt geladen:
+Gebruikend de actiecode die in de [ vorige sectie ](#vendor-host) als uitgangspunt wordt gebouwd, kunt u de lijn vervangen waar het manuscript met de inhoud van het manuscript zelf wordt geladen:
 
 ```js
 module.exports = function() {
