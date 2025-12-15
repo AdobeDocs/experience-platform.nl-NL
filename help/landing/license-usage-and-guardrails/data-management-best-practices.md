@@ -25,16 +25,16 @@ In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegev
 
 | Functie | Beschrijving |
 | --- | --- |
-| [ Dataset UI - het gegevensbehoud van de Gebeurtenis van de Ervaring ](../../catalog/datasets/user-guide.md#data-retention-policy) | Configureer een vaste retentieperiode voor gegevens in de opslag van gegevens in het meer en het profiel. De verslagen worden geschrapt aangezien de gevormde bewaarperiode beëindigt. |
-| [ laat/maakt Datasets voor het Profiel van de Klant in real time toe ](../../catalog/datasets/user-guide.md) | Schakel gegevenssetinvoer in of uit in realtime-klantprofiel. |
-| [ Verlopen van de Gebeurtenis van de Ervaring in de opslag van het Profiel ](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met uw Adobe-accountteam of de klantenservice om deze functie in te schakelen. |
-| [ Prep van Gegevens van Adobe Analytics filters ](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Pas [!DNL Kafka] -filters toe om onnodige gegevens uit te sluiten van inname. |
-| [ de bronschakelaarfilters van Adobe Audience Manager ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Pas Audience Manager-bronverbindingsfilters toe om overbodige gegevens uit te sluiten van inname. |
-| [ Gebeurtenis die gegevensfilters ](../../tags/ui/event-forwarding/overview.md) door:sturen | Pas server-kant [!DNL Kafka] filters toe om onnodige gegevens van opname uit te sluiten.  Zie de documentatie over [ markeringsregels ](../../tags/ui/managing-resources/rules.md) voor extra informatie. |
-| [ het Dashboard UI van het Gebruik van de Vergunning ](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | De consumptie van Experience Platform-producten door uw organisatie controleren op basis van rechten waarvoor een vergunning is verleend. Toegang tot momentopnamen voor dagelijks gebruik, voorspellende trends en gedetailleerde gegevens op sandboxniveau ter ondersteuning van proactief licentiebeheer. |
-| [ Dataset overlap Rapport API ](../../profile/tutorials/dataset-overlap-report.md) | Output de datasets die het meest aan uw Adresseerbare Publiek bijdraagt. |
-| [ Identiteitsoverlapping Rapport API ](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Output de identiteitsnaamruimten die het meest aan uw Adresseerbare Publiek bijdragen. |
-| [ Pseudoniem de gegevensvervalsing van het Profiel ](../../profile/pseudonymous-profiles.md) | Configureer de vervaltijden van gegevens voor Pseudoniem-profielen en verwijder automatisch gegevens uit de profielopslag. |
+| [&#x200B; Dataset UI - het gegevensbehoud van de Gebeurtenis van de Ervaring &#x200B;](../../catalog/datasets/user-guide.md#data-retention-policy) | Configureer een vaste retentieperiode voor gegevens in de opslag van gegevens in het meer en het profiel. De verslagen worden geschrapt aangezien de gevormde bewaarperiode beëindigt. |
+| [&#x200B; laat/maakt Datasets voor het Profiel van de Klant in real time toe &#x200B;](../../catalog/datasets/user-guide.md) | Schakel gegevenssetinvoer in of uit in realtime-klantprofiel. |
+| [&#x200B; Verlopen van de Gebeurtenis van de Ervaring in de opslag van het Profiel &#x200B;](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met uw Adobe-accountteam of de klantenservice om deze functie in te schakelen. |
+| [&#x200B; Prep van Gegevens van Adobe Analytics filters &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Pas [!DNL Kafka] -filters toe om onnodige gegevens uit te sluiten van inname. |
+| [&#x200B; de bronschakelaarfilters van Adobe Audience Manager &#x200B;](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Pas Audience Manager-bronverbindingsfilters toe om overbodige gegevens uit te sluiten van inname. |
+| [&#x200B; Gebeurtenis die gegevensfilters &#x200B;](../../tags/ui/event-forwarding/overview.md) door:sturen | Pas server-kant [!DNL Kafka] filters toe om onnodige gegevens van opname uit te sluiten.  Zie de documentatie over [&#x200B; markeringsregels &#x200B;](../../tags/ui/managing-resources/rules.md) voor extra informatie. |
+| [&#x200B; het Dashboard UI van het Gebruik van de Vergunning &#x200B;](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | De consumptie van Experience Platform-producten door uw organisatie controleren op basis van rechten waarvoor een vergunning is verleend. Toegang tot momentopnamen voor dagelijks gebruik, voorspellende trends en gedetailleerde gegevens op sandboxniveau ter ondersteuning van proactief licentiebeheer. |
+| [&#x200B; Dataset overlap Rapport API &#x200B;](../../profile/tutorials/dataset-overlap-report.md) | Output de datasets die het meest aan uw Adresseerbare Publiek bijdraagt. |
+| [&#x200B; Identiteitsoverlapping Rapport API &#x200B;](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Output de identiteitsnaamruimten die het meest aan uw Adresseerbare Publiek bijdragen. |
+| [&#x200B; Pseudoniem de gegevensvervalsing van het Profiel &#x200B;](../../profile/pseudonymous-profiles.md) | Configureer de vervaltijden van gegevens voor Pseudoniem-profielen en verwijder automatisch gegevens uit de profielopslag. |
 
 {style="table-layout:auto"}
 
@@ -71,7 +71,7 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 
 De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u een momentopname kunt bekijken van de licentiegegevens van uw organisatie voor Experience Platform. De gegevens in het dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de momentopname is gemaakt. De momentopname is geen benadering of een steekproef van gegevens, en het dashboard werkt niet in real time bij.
 
-Voor meer informatie, zie de gids op [ gebruikend het dashboard van het vergunningsgebruik op Experience Platform UI ](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+Voor meer informatie, zie de gids op [&#x200B; gebruikend het dashboard van het vergunningsgebruik op Experience Platform UI &#x200B;](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
 ## Aanbevolen werkwijzen voor gegevensbeheer
 
@@ -116,7 +116,7 @@ Wanneer u datasets voor raadplegingsdoeleinden vormt, overweeg de twee rollen di
 
 >[!IMPORTANT]
 >
->Laat slechts een opzoekdataset voor het Profiel van de Klant in real time toe wanneer u gebieden van die dataset in het Profiel van de Klant in real time (bijvoorbeeld, voor publieksdefinities, activering, of multi-entiteitssegmentatie) moet gebruiken. Als u een opzoekgegevensset inschakelt voor Real-Time Klantprofiel, neemt het volume van uw profielgegevens toe. Voor meer informatie, zie het leerprogramma op [ multi-entiteitsegmentatie ](../../segmentation/tutorials/multi-entity-segmentation.md).
+>Laat slechts een opzoekdataset voor het Profiel van de Klant in real time toe wanneer u gebieden van die dataset in het Profiel van de Klant in real time (bijvoorbeeld, voor publieksdefinities, activering, of multi-entiteitssegmentatie) moet gebruiken. Als u een opzoekgegevensset inschakelt voor Real-Time Klantprofiel, neemt het volume van uw profielgegevens toe. Voor meer informatie, zie het leerprogramma op [&#x200B; multi-entiteitsegmentatie &#x200B;](../../segmentation/tutorials/multi-entity-segmentation.md).
 
 **wanneer om datasets voor het Profiel van de Klant in real time toe te laten:**
 
@@ -146,7 +146,7 @@ U kunt een aantal tools gebruiken om binnen uw gebruiksrechten voor licenties te
 
 Identiteitsgrafieken tellen niet voor uw totale adresseerbare publieksrecht omdat het adresseerbare publiek naar uw totale aantal klantenprofielen verwijst.
 
-Limieten voor identiteitsgrafieken kunnen echter gevolgen hebben voor het adresseerbare publiek als gevolg van het splitsen van identiteiten. Als bijvoorbeeld de oudste ECID uit de grafiek wordt verwijderd, blijft ECID bestaan in Real-Time klantprofiel als een pseudoniem profiel. U kunt [ Pseudoniem de vervaltijden van profielgegevens ](../../profile/pseudonymous-profiles.md) plaatsen om dit gedrag te ontwijken. Voor meer informatie, lees de [ gidsen voor de gegevens van de Dienst van de Identiteit ](../../identity-service/guardrails.md).
+Limieten voor identiteitsgrafieken kunnen echter gevolgen hebben voor het adresseerbare publiek als gevolg van het splitsen van identiteiten. Als bijvoorbeeld de oudste ECID uit de grafiek wordt verwijderd, blijft ECID bestaan in Real-Time klantprofiel als een pseudoniem profiel. U kunt [&#x200B; Pseudoniem de vervaltijden van profielgegevens &#x200B;](../../profile/pseudonymous-profiles.md) plaatsen om dit gedrag te ontwijken. Voor meer informatie, lees de [&#x200B; gidsen voor de gegevens van de Dienst van de Identiteit &#x200B;](../../identity-service/guardrails.md).
 
 ### Inktfilters {#ingestion-filters}
 
@@ -154,12 +154,12 @@ Met insluitingsfilters kunt u alleen de gegevens invoeren die nodig zijn voor uw
 
 | Inslikken, filter | Beschrijving |
 | --- | --- |
-| Adobe Audience Manager-bronfiltering | Wanneer u een Adobe Audience Manager-bronverbinding maakt, kunt u kiezen welke segmenten en kenmerken u in het [!DNL data lake] en Real-Time Klantprofiel wilt opnemen in plaats van de Audience Manager-gegevens in hun geheel in te voeren. Zie de gids bij [ het creëren van een Audience Manager bronverbinding ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie. |
-| Adobe Analytics Data Prep | U kunt [!DNL Data Prep] -functies gebruiken wanneer u een verbinding maakt met een bron voor Analytics om gegevens uit te filteren die niet vereist zijn voor uw gebruik. Via [!DNL Data Prep] kunt u definiëren welke kenmerken/kolommen naar Profiel moeten worden gepubliceerd. U kunt ook voorwaardelijke instructies opgeven om Experience Platform te laten weten of gegevens naar verwachting naar Profiel zullen worden gepubliceerd, of alleen naar de [!DNL data lake] . Zie de gids bij [ het creëren van een Analytics bronverbinding ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie. |
-| Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in het Profiel van de Klant in real time in te voeren, moet u een dataset voor gebruik in de opslag van het Profiel toelaten. Hiermee voegt u uw rechten [!DNL Addressable Audience] en [!DNL Total Data Volume] toe. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de gids op [ toelatend en onbruikbaar makend datasets voor Profiel ](../../catalog/datasets/enable-for-profile.md) voor meer informatie. |
+| Adobe Audience Manager-bronfiltering | Wanneer u een Adobe Audience Manager-bronverbinding maakt, kunt u kiezen welke segmenten en kenmerken u in het [!DNL data lake] en Real-Time Klantprofiel wilt opnemen in plaats van de Audience Manager-gegevens in hun geheel in te voeren. Zie de gids bij [&#x200B; het creëren van een Audience Manager bronverbinding &#x200B;](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) voor meer informatie. |
+| Adobe Analytics Data Prep | U kunt [!DNL Data Prep] -functies gebruiken wanneer u een verbinding maakt met een bron voor Analytics om gegevens uit te filteren die niet vereist zijn voor uw gebruik. Via [!DNL Data Prep] kunt u definiëren welke kenmerken/kolommen naar Profiel moeten worden gepubliceerd. U kunt ook voorwaardelijke instructies opgeven om Experience Platform te laten weten of gegevens naar verwachting naar Profiel zullen worden gepubliceerd, of alleen naar de [!DNL data lake] . Zie de gids bij [&#x200B; het creëren van een Analytics bronverbinding &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie. |
+| Ondersteuning voor het in- en uitschakelen van gegevenssets voor profiel | Om gegevens in het Profiel van de Klant in real time in te voeren, moet u een dataset voor gebruik in de opslag van het Profiel toelaten. Hiermee voegt u uw rechten [!DNL Addressable Audience] en [!DNL Total Data Volume] toe. Zodra een dataset niet meer voor de gebruiksgevallen van het klantenprofiel wordt vereist, kunt u de integratie van die dataset aan Profiel onbruikbaar maken om ervoor te zorgen dat uw gegevens vergunning volgzaam blijven. Zie de gids op [&#x200B; toelatend en onbruikbaar makend datasets voor Profiel &#x200B;](../../catalog/datasets/enable-for-profile.md) voor meer informatie. |
 | Web SDK en Mobile SDK gegevensuitsluiting | Er zijn twee soorten gegevens die door Web en Mobiele SDK worden verzameld: gegevens die automatisch en gegevens worden verzameld die uitdrukkelijk door uw ontwikkelaar worden verzameld. Voor een beter beheer van de naleving van de licentie kunt u automatische gegevensverzameling in de configuratie van de SDK uitschakelen via de context-instelling. Aangepaste gegevens kunnen ook worden verwijderd of niet worden ingesteld door de ontwikkelaar. |
-| Server-kant die gegevensuitsluiting door:sturen | Als u gegevens naar Experience Platform verzendt gebruikend server-zij door:sturen, kunt u uitsluiten welke gegevens door of de afbeelding in een regelactie te verwijderen worden verzonden om het over alle gebeurtenissen uit te sluiten, of door voorwaarden aan de regel toe te voegen zodat de gegevens slechts voor bepaalde gebeurtenissen in brand steken. Zie de documentatie over [ gebeurtenissen en voorwaarden ](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if) voor meer informatie. |
-| Gegevens filteren op bronniveau | U kunt logische operatoren en vergelijkingsoperatoren gebruiken om gegevens op rijniveau uit uw bronnen te filteren voordat u een verbinding maakt en gegevens aan Experience Platform toevoegt. Voor meer informatie, lees de gids over [ het filtreren rij-vlakke gegevens voor een bron gebruikend  [!DNL Flow Service]  API ](../../sources/tutorials/api/filter.md). |
+| Server-kant die gegevensuitsluiting door:sturen | Als u gegevens naar Experience Platform verzendt gebruikend server-zij door:sturen, kunt u uitsluiten welke gegevens door of de afbeelding in een regelactie te verwijderen worden verzonden om het over alle gebeurtenissen uit te sluiten, of door voorwaarden aan de regel toe te voegen zodat de gegevens slechts voor bepaalde gebeurtenissen in brand steken. Zie de documentatie over [&#x200B; gebeurtenissen en voorwaarden &#x200B;](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if) voor meer informatie. |
+| Gegevens filteren op bronniveau | U kunt logische operatoren en vergelijkingsoperatoren gebruiken om gegevens op rijniveau uit uw bronnen te filteren voordat u een verbinding maakt en gegevens aan Experience Platform toevoegt. Voor meer informatie, lees de gids over [&#x200B; het filtreren rij-vlakke gegevens voor een bron gebruikend  [!DNL Flow Service]  API &#x200B;](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
@@ -172,7 +172,7 @@ De opslag van het Profiel is samengesteld uit de volgende componenten:
 | Profielfragmenten | Elk klantenprofiel is samengesteld uit veelvoudige **profielfragmenten** die zijn samengevoegd om één enkele mening van die klant te vormen. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige **profielfragmenten** met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Experience Platform worden opgenomen, worden ze aan elkaar gehecht met behulp van de identiteitsgrafiek om één profiel voor die klant te maken. {de fragmenten van het 0} Profiel **bestaan uit een identiteit namespace als herkenningsteken, met bijbehorende verslaggegevens en/of tijd-reeksgegevens.** |
 | Opnamegegevens (kenmerken) | Een profiel is een vertegenwoordiging van een onderwerp, een organisatie of een individu, dat uit vele **Attributen** (ook als **wordt bekend verslaggegevens** wordt samengesteld). Het profiel van een product kan bijvoorbeeld een SKU en een beschrijving bevatten, terwijl het profiel van een persoon informatie bevat zoals voornaam, achternaam en e-mailadres. **gegevens van het Verslag** is gewoonlijk laag/gematigd in volume, maar waardevol voor lange periodes. |
 | Gegevens uit tijdreeksen (gedrag) | **tijd-reeksen gegevens** verstrekt informatie over een gebruikersgedrag. De gegevens uit tijdreeksen die worden vertegenwoordigd door het standaard XDM (Experience Data Model) van de schemaklasse [!DNL ExperienceEvent] kunnen gebeurtenissen beschrijven zoals items die worden toegevoegd aan een winkelwagentje, koppelingen waarop wordt geklikt en weergegeven video&#39;s. De waarde van gedrag kan in de loop der tijd afnemen. |
-| Naamruimte (identiteiten) | Aangezien de klantengegevens samenkomen, wordt het samengevoegd in één enkel profiel door het gebruik van **identiteit namespaces**, en de capaciteit om deze identiteiten samen te kleven aangezien meer informatie over de gebruiker gekend wordt. Zie het [ overzicht van identiteitsnaamruimten ](../../identity-service/features/namespaces.md) voor meer informatie. |
+| Naamruimte (identiteiten) | Aangezien de klantengegevens samenkomen, wordt het samengevoegd in één enkel profiel door het gebruik van **identiteit namespaces**, en de capaciteit om deze identiteiten samen te kleven aangezien meer informatie over de gebruiker gekend wordt. Zie het [&#x200B; overzicht van identiteitsnaamruimten &#x200B;](../../identity-service/features/namespaces.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -180,33 +180,33 @@ De opslag van het Profiel is samengesteld uit de volgende componenten:
 
 Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de opslag van het Profiel begrijpen. Met deze rapporten kunt u geïnformeerde beslissingen nemen over hoe en waar u de vervaldatum van de Experience Event moet instellen om uw licentiegebruik beter te optimaliseren:
 
-* **Dataset overlapt Rapport API**: stelt de datasets bloot die het meest aan uw Adresseerbare Publiek bijdragen. U kunt dit rapport gebruiken om aan te geven voor welke [!DNL ExperienceEvent] -gegevenssets een vervaldatum moet worden ingesteld. Zie het leerprogramma bij [ het produceren van de datasetoverlapping rapport ](../../profile/tutorials/dataset-overlap-report.md) voor meer informatie.
-* **Identiteitskaart overlap Rapport API**: Verleent de identiteit namespaces die het meest aan uw Adresseerbare Publiek bijdragen. Zie het leerprogramma op [ producerend het rapport van de identiteitsoverlap ](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) voor meer informatie.
+* **Dataset overlapt Rapport API**: stelt de datasets bloot die het meest aan uw Adresseerbare Publiek bijdragen. U kunt dit rapport gebruiken om aan te geven voor welke [!DNL ExperienceEvent] -gegevenssets een vervaldatum moet worden ingesteld. Zie het leerprogramma bij [&#x200B; het produceren van de datasetoverlapping rapport &#x200B;](../../profile/tutorials/dataset-overlap-report.md) voor meer informatie.
+* **Identiteitskaart overlap Rapport API**: Verleent de identiteit namespaces die het meest aan uw Adresseerbare Publiek bijdragen. Zie het leerprogramma op [&#x200B; producerend het rapport van de identiteitsoverlap &#x200B;](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) voor meer informatie.
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 ### Verlopen van gegevens van pseudoniem profiel {#pseudonymous-profile-expirations}
 
-Met de gegevensvervalfunctie van de Pseudoniem-profielgegevens kunt u automatisch gegevens verwijderen die niet meer geldig of nuttig zijn voor uw gebruiksgevallen in het archief Profiel. Bij het verlopen van gegevens van een pseudoniem profiel worden zowel gebeurtenis- als profielrecords verwijderd. Dientengevolge, zal dit het plaatsen adresseerbare volumes van de Publiek verminderen. Voor meer informatie over deze eigenschap, te lezen gelieve het [ Pseudoniem overzicht van de gegevensvervalsing van het Profiel ](../../profile/pseudonymous-profiles.md).
+Met de gegevensvervalfunctie van de Pseudoniem-profielgegevens kunt u automatisch gegevens verwijderen die niet meer geldig of nuttig zijn voor uw gebruiksgevallen in het archief Profiel. Bij het verlopen van gegevens van een pseudoniem profiel worden zowel gebeurtenis- als profielrecords verwijderd. Dientengevolge, zal dit het plaatsen adresseerbare volumes van de Publiek verminderen. Voor meer informatie over deze eigenschap, te lezen gelieve het [&#x200B; Pseudoniem overzicht van de gegevensvervalsing van het Profiel &#x200B;](../../profile/pseudonymous-profiles.md).
 
 ### Dataset-interface - Behouden gegevensset voor gebeurtenissen ervaren {#data-retention}
 
-Configureer de instellingen voor de vervaldatum en het behoud van gegevenssets om een vaste retentieperiode voor uw gegevens in de opslag van gegevens in het gegevensmeer en het profiel in te stellen. Wanneer de bewaarperiode is afgelopen, worden de gegevens verwijderd. De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert slechts gebeurtenissen en verwijdert geen gegevens van de profielklasse, die [ totaal gegevensvolume ](total-data-volume.md) in metriek van het vergunningsgebruik zullen verminderen. Voor meer informatie, lees de gids over [ plaatsend het beleid van het gegevensbehoud ](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configureer de instellingen voor de vervaldatum en het behoud van gegevenssets om een vaste retentieperiode voor uw gegevens in de opslag van gegevens in het gegevensmeer en het profiel in te stellen. Wanneer de bewaarperiode is afgelopen, worden de gegevens verwijderd. De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert slechts gebeurtenissen en verwijdert geen gegevens van de profielklasse, die [&#x200B; totaal gegevensvolume &#x200B;](total-data-volume.md) in metriek van het vergunningsgebruik zullen verminderen. Voor meer informatie, lees de gids over [&#x200B; plaatsend het beleid van het gegevensbehoud &#x200B;](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Verlopen van gebeurtenissen voor profielervaring {#event-expirations}
 
-Vorm vervaltijden om gedragsgegevens uit uw profiel-toegelaten dataset automatisch te verwijderen zodra zij niet meer waardevol voor uw gebruiksgevallen zijn. Lees het overzicht op [ Verlopen van de Gebeurtenis van de Ervaring ](../../profile/event-expirations.md) voor meer informatie.
+Vorm vervaltijden om gedragsgegevens uit uw profiel-toegelaten dataset automatisch te verwijderen zodra zij niet meer waardevol voor uw gebruiksgevallen zijn. Lees het overzicht op [&#x200B; Verlopen van de Gebeurtenis van de Ervaring &#x200B;](../../profile/event-expirations.md) voor meer informatie.
 
 ## Overzicht van best practices voor compatibiliteit met het gebruik van licenties {#best-practices}
 
 Hieronder volgt een lijst met aanbevolen tips die u kunt volgen om ervoor te zorgen dat u zich beter houdt aan uw gebruiksrechten voor licenties:
 
-* Gebruik het [ dashboard van het vergunningsgebruik ](../../dashboards/guides/license-usage.md) om trends van het klantengebruik te volgen en te controleren. Hierdoor kunt u eventuele overschrijdingen die zich kunnen voordoen, overtreffen.
-* Vorm [ innamefilters ](#ingestion-filters) door de gebeurtenissen te identificeren die voor uw segmentatie en het verpersoonlijkingsgebruik worden vereist gevallen. Op deze manier kunt u alleen belangrijke gebeurtenissen verzenden die vereist zijn voor uw gebruiksgevallen.
-* Zorg ervoor dat u slechts [ toegelaten datasets voor profiel ](#ingestion-filters) hebt die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist.
-* Vorm {de Verlopen van de Gebeurtenis van 0} Ervaring [ en ](../../catalog/datasets/user-guide.md#data-retention-policy) Pseudoniem de gegevensvervalsing van het Profiel [ voor high-frequency gegevens zoals Webgegevens.](../../profile/pseudonymous-profiles.md)
-* Vorm [ tijd-aan-Levende (TTL) bewaarbeleid voor de datasets van de Gebeurtenis van de Ervaring ](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) in het gegevensmeer om verouderde verslagen automatisch te verwijderen en opslaggebruik in lijn met uw vergunningsrechten te optimaliseren.
-* Controleer periodiek de [ Rapporten van de Samenstelling van het Profiel ](#profile-store-composition-reports) om uw de opslagsamenstelling van het Profiel te begrijpen. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
+* Gebruik het [&#x200B; dashboard van het vergunningsgebruik &#x200B;](../../dashboards/guides/license-usage.md) om trends van het klantengebruik te volgen en te controleren. Hierdoor kunt u eventuele overschrijdingen die zich kunnen voordoen, overtreffen.
+* Vorm [&#x200B; innamefilters &#x200B;](#ingestion-filters) door de gebeurtenissen te identificeren die voor uw segmentatie en het verpersoonlijkingsgebruik worden vereist gevallen. Op deze manier kunt u alleen belangrijke gebeurtenissen verzenden die vereist zijn voor uw gebruiksgevallen.
+* Zorg ervoor dat u slechts [&#x200B; toegelaten datasets voor profiel &#x200B;](#ingestion-filters) hebt die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist.
+* Vorm {de Verlopen van de Gebeurtenis van 0} Ervaring [&#x200B; en &#x200B;](../../catalog/datasets/user-guide.md#data-retention-policy) Pseudoniem de gegevensvervalsing van het Profiel [&#x200B; voor high-frequency gegevens zoals Webgegevens.](../../profile/pseudonymous-profiles.md)
+* Vorm [&#x200B; tijd-aan-Levende (TTL) bewaarbeleid voor de datasets van de Gebeurtenis van de Ervaring &#x200B;](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) in het gegevensmeer om verouderde verslagen automatisch te verwijderen en opslaggebruik in lijn met uw vergunningsrechten te optimaliseren.
+* Controleer periodiek de [&#x200B; Rapporten van de Samenstelling van het Profiel &#x200B;](#profile-store-composition-reports) om uw de opslagsamenstelling van het Profiel te begrijpen. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
 
 ## Hoofdlettergebruik: naleving van gebruiksvoorwaarden voor licenties
 
@@ -248,17 +248,17 @@ Eerst, navigeer aan het **dashboard van het vergunningsgebruik van de vergunning
 
 Gebruik de interface [!UICONTROL Metrics] om de gegevens voor uw licentiegebruik weer te geven. De interface geeft standaard informatie voor uw productiesandbox weer.
 
-![ het dashboard UI van het vergunningsgebruik die uw metriek van het vergunningsgebruik voor een productiestandaard toont.](../images/data-management/prod-sandbox.png)
+![&#x200B; het dashboard UI van het vergunningsgebruik die uw metriek van het vergunningsgebruik voor een productiestandaard toont.](../images/data-management/prod-sandbox.png)
 
 >[!TAB  zandbak van de Ontwikkeling ]
 
 Selecteer [!UICONTROL Development] om de gegevens van het licentiegebruik voor uw ontwikkelingssandboxen weer te geven.
 
-![ het dashboard UI van het vergunningsgebruik die uw metriek van het vergunningsgebruik voor ontwikkelingszandbakken toont.](../images/data-management/dev-sandbox.png)
+![&#x200B; het dashboard UI van het vergunningsgebruik die uw metriek van het vergunningsgebruik voor ontwikkelingszandbakken toont.](../images/data-management/dev-sandbox.png)
 
 >[!ENDTABS]
 
-Voor meer informatie, lees de documentatie op [ gebruikend het dashboard van het vergunningsgebruik ](../../dashboards/guides/license-usage.md).
+Voor meer informatie, lees de documentatie op [&#x200B; gebruikend het dashboard van het vergunningsgebruik &#x200B;](../../dashboards/guides/license-usage.md).
 
 **analyseert dataset-vlakke opslaggebruik**
 
@@ -270,13 +270,13 @@ Gebruik de **Dataset doorbladert mening** om uw metriek van het gegevenssetgebru
 
 Uw datasets in gegevens worden meer gesorteerd door opslaggrootte. Gebruik deze functie om de grootste gebruikers van opslag in het datumpomeer te identificeren.
 
-![ de datasets in gegevens die meer van grootste aan kleinste worden gesorteerd.](../images/data-management/data-lake-storage.png)
+![&#x200B; de datasets in gegevens die meer van grootste aan kleinste worden gesorteerd.](../images/data-management/data-lake-storage.png)
 
 >[!TAB  opslag van het Profiel ]
 
 De gegevenssets in Profiel worden gesorteerd op opslaggrootte. Gebruik deze functie om de grootste gebruikers van opslag in Profiel te identificeren.
 
-![ de datasets in Profiel die van grootste aan kleinste wordt gesorteerd.](../images/data-management/profile-storage.png)
+![&#x200B; de datasets in Profiel die van grootste aan kleinste wordt gesorteerd.](../images/data-management/profile-storage.png)
 
 >[!ENDTABS]
 
@@ -284,22 +284,22 @@ De gegevenssets in Profiel worden gesorteerd op opslaggrootte. Gebruik deze func
 
 Daarna, bepaal als uw datasets het aangewezen bewaarbeleid hebben dat op vergunningsgrenzen en bedrijfsvereisten voor Analytics en Segmentation wordt gebaseerd. Om het het behoudbeleid van een dataset te bekijken, selecteer dan de ellipsen (`...`) naast uw dataset, dan **[!UICONTROL Set data retention policy]**.
 
-![ het pop-up paneel met datasetopties, met inbegrip van het &quot;Vastgestelde beleid van het gegevensbehoud&quot;](../images/data-management/set-retention-policy.png)
+![&#x200B; het pop-up paneel met datasetopties, met inbegrip van het &quot;Vastgestelde beleid van het gegevensbehoud&quot;](../images/data-management/set-retention-policy.png)
 
 De interface *[!UICONTROL Set dataset retention]* wordt weergegeven. Gebruik deze interface om een bewaarbeleid voor uw dataset te vormen. U kunt het ook gebruiken om te bekijken hoeveel opslagruimte uw dataset in of het gegevensmeer of Profiel verbruikt.
 
-![ de &quot;reeks interface van het gegevenssetbezit&quot;.](../images/data-management/dataset-retention.png)
+![&#x200B; de &quot;reeks interface van het gegevenssetbezit&quot;.](../images/data-management/dataset-retention.png)
 
 U kunt het effect van het behoud van uw dataset verder analyseren gebruikend het effect voorspelde. Selecteer **[!UICONTROL View ExperienceEvent data distribution]** om een diagram weer te geven waarin uw retentievenster en het totale opslagpercentage worden weergegeven dat is ingesteld op verlopen.
 
 Selecteer **[!UICONTROL Save]** wanneer u klaar bent
 
-![ de impactvoorspelling van binnen de interface van het gegevenssetbehoud.](../images/data-management/impact-forecaster.png)
+![&#x200B; de impactvoorspelling van binnen de interface van het gegevenssetbehoud.](../images/data-management/impact-forecaster.png)
 
 **bevestigt behoudveranderingen**
 
 Nadat u het retentiebeleid hebt toegepast, kunt u de volgende gereedschappen gebruiken om uw wijzigingen te valideren:
 
-* [ het gebruiksmetriek van de Dataset ](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) in de dataset doorbladert mening.
-* Het [ controledashboard ](../../dataflows/ui/monitor.md) om effect van behoud te bekijken en te analyseren.
-* Het [ dashboard van het vergunningsgebruik ](../../dashboards/guides/license-usage.md) om dagelijkse momentopnamen, voorspellende tendensen, en zandbak-vlakke inzichten te bekijken.
+* [&#x200B; het gebruiksmetriek van de Dataset &#x200B;](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) in de dataset doorbladert mening.
+* Het [&#x200B; controledashboard &#x200B;](../../dataflows/ui/monitor.md) om effect van behoud te bekijken en te analyseren.
+* Het [&#x200B; dashboard van het vergunningsgebruik &#x200B;](../../dashboards/guides/license-usage.md) om dagelijkse momentopnamen, voorspellende tendensen, en zandbak-vlakke inzichten te bekijken.
