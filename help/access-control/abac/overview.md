@@ -18,7 +18,7 @@ Gebruik deze functionaliteit om XDM-schemavelden (Experience Data Model) te labe
 
 >[!IMPORTANT]
 >
->Toegangsbeheer op basis van kenmerken mag niet worden verward met Experience Platform-mogelijkheden voor gegevensbeheer, waardoor u labels en beleidsregels kunt gebruiken om te bepalen hoe gegevens in Experience Platform worden gebruikt en niet welke gebruikers in uw organisatie er toegang toe hebben. Zie het [ overzicht van het gegevensbeheer ](../../data-governance/home.md) voor meer informatie.
+>Toegangsbeheer op basis van kenmerken mag niet worden verward met Experience Platform-mogelijkheden voor gegevensbeheer, waardoor u labels en beleidsregels kunt gebruiken om te bepalen hoe gegevens in Experience Platform worden gebruikt en niet welke gebruikers in uw organisatie er toegang toe hebben. Zie het [&#x200B; overzicht van het gegevensbeheer &#x200B;](../../data-governance/home.md) voor meer informatie.
 
 Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot gevoelige persoonlijke gegevens (SPD) controleren, persoonlijk identificeerbare informatie (PII) en aangepast type van gegevens over alle werkschema&#39;s en middelen van Experience Platform. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die bij die velden horen.
 
@@ -50,11 +50,11 @@ Op attributen-gebaseerde toegangsbeheer impliceert de volgende componenten:
 
 Machtigingen zijn het gebied van Experience Cloud waar beheerders gebruikersrollen en toegangsbeleid kunnen definiëren om toegangsmachtigingen voor functies en objecten binnen een producttoepassing te beheren.
 
-Door Toestemmingen, kunt u rollen tot stand brengen en beheren, evenals de gewenste middeltoestemmingen voor deze rollen toewijzen. Met machtigingen kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld. Voor meer informatie, zie de [ gids van Toestemmingen ](ui/browse.md).
+Door Toestemmingen, kunt u rollen tot stand brengen en beheren, evenals de gewenste middeltoestemmingen voor deze rollen toewijzen. Met machtigingen kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld. Voor meer informatie, zie de [&#x200B; gids van Toestemmingen &#x200B;](ui/browse.md).
 
 ## API voor toegangsbeheer op basis van kenmerken
 
-Met de op kenmerken gebaseerde API voor toegangsbeheer kunt u rollen, beleid en producten binnen Experience Platform programmatisch beheren met behulp van API&#39;s. Voor meer informatie zie de gids op [ gebruikend API om op attribuut-gebaseerde configuraties van de toegangscontrole ](api/overview.md) te beheren.
+Met de op kenmerken gebaseerde API voor toegangsbeheer kunt u rollen, beleid en producten binnen Experience Platform programmatisch beheren met behulp van API&#39;s. Voor meer informatie zie de gids op [&#x200B; gebruikend API om op attribuut-gebaseerde configuraties van de toegangscontrole &#x200B;](api/overview.md) te beheren.
 
 ## Toegangsbeheer op basis van kenmerken in Adobe Experience Platform
 
@@ -62,7 +62,7 @@ De volgende secties verstrekken informatie over hoe op attribuut-gebaseerde toeg
 
 ### Toegangsbeheer
 
-Experience Platform hefboomwerkingen [ Adobe Admin Console ](https://adminconsole.adobe.com) rollen om gebruikers met toestemmingen en zandbakken te verbinden. Machtigingen beheren de toegang tot verschillende Experience Platform-mogelijkheden, waaronder gegevensmodellering, profielbeheer en sandboxbeheer. Zodra uw organisatie voor op attributen-gebaseerde toegangsbeheer wordt toegelaten, kunt u beginnen toestemmingen op Adobe Experience Cloud, in plaats van Rollen in Adobe Admin Console te gebruiken, om toestemmingen voor gebruikers, functionaliteit, etiketten, en andere middelen in uw organisatie te beheren.
+Experience Platform hefboomwerkingen [&#x200B; Adobe Admin Console &#x200B;](https://adminconsole.adobe.com) rollen om gebruikers met toestemmingen en zandbakken te verbinden. Machtigingen beheren de toegang tot verschillende Experience Platform-mogelijkheden, waaronder gegevensmodellering, profielbeheer en sandboxbeheer. Zodra uw organisatie voor op attributen-gebaseerde toegangsbeheer wordt toegelaten, kunt u beginnen toestemmingen op Adobe Experience Cloud, in plaats van Rollen in Adobe Admin Console te gebruiken, om toestemmingen voor gebruikers, functionaliteit, etiketten, en andere middelen in uw organisatie te beheren.
 
 Er is beperkte beschikbaarheid voor op attribuut-gebaseerde toegangsbeheer voor klanten die Gezondheidszorg en/of de Schilden van de Privacy kopen. De functies van deze functionaliteit zijn onder andere:
 
@@ -76,7 +76,7 @@ De beleidswerkstromen voor alle Experience Platform-aangedreven toepassingen van
 >
 >Uw rollen worden automatisch gemigreerd aan de interface van Toestemmingen wanneer uw organisatie wordt toegelaten. De rollen in Admin Console blijven voorlopig ongewijzigd. Gelieve te **wijzigt niet** uw rollen nadat uw organisatie is toegelaten.
 
-Voor meer informatie over toegangsbeheer, zie het [ overzicht van de toegangscontrole ](../home.md).
+Voor meer informatie over toegangsbeheer, zie het [&#x200B; overzicht van de toegangscontrole &#x200B;](../home.md).
 
 ### Bestemmingen {#destinations}
 
@@ -93,19 +93,19 @@ Als beheerder, kunt u op attribuut-gebaseerde toegangsbeheerfunctionaliteit gebr
 >
 >Samenvattend, houd in mening de volgende implicaties wanneer het werken met bestemmingen en op attribuut-gebaseerde toegangsbeheer:
 >
->* U kunt publiek slechts activeren dat u toestemming hebt om in [ Portaal van het Publiek ](/help/segmentation/ui/audience-portal.md#browse) toegang te hebben en te bekijken en [ segmentstap ](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) van het activeringswerkschema te selecteren.
->* In de [ afbeeldingsstap van het activeringswerkschema ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), kunt u voor activering slechts bekijken en selecteren de gebieden die u toegangstoestemming hebt om te hebben.
+>* U kunt publiek slechts activeren dat u toestemming hebt om in [&#x200B; Portaal van het Publiek &#x200B;](/help/segmentation/ui/audience-portal.md#browse) toegang te hebben en te bekijken en [&#x200B; segmentstap &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) van het activeringswerkschema te selecteren.
+>* In de [&#x200B; afbeeldingsstap van het activeringswerkschema &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), kunt u voor activering slechts bekijken en selecteren de gebieden die u toegangstoestemming hebt om te hebben.
 >* Wanneer u extra segmenten wilt activeren naar een bestaand doel waar u geen toegang hebt tot alle velden die zijn toegewezen voor export, wordt de activeringsworkflow voor u geblokkeerd.
 
-Voor meer informatie over [!DNL Destinations], verwijs naar het [[!DNL Destinations]  overzicht ](../../destinations/home.md).
+Voor meer informatie over [!DNL Destinations], verwijs naar het [[!DNL Destinations]  overzicht &#x200B;](../../destinations/home.md).
 
 ### Identiteitsservice
 
 Adobe Experience Platform [!DNL Identity Service] helpt u een beter inzicht te krijgen in uw klanten en hun gedrag door identiteiten te overbruggen tussen apparaten en systemen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
-Als deel van op attribuut-gebaseerde toegangscontrole, `view-identity-graph` toestemming staat u toe om te bepalen welke gebruikers in uw organisatie tot de identiteitsgrafiek door de gebruikersinterface of APIs kunnen toegang hebben. Voor meer informatie, zie de gids op [ gebruikend de kijker van de identiteitsgrafiek ](../../identity-service/features/identity-graph-viewer.md).
+Als deel van op attribuut-gebaseerde toegangscontrole, `view-identity-graph` toestemming staat u toe om te bepalen welke gebruikers in uw organisatie tot de identiteitsgrafiek door de gebruikersinterface of APIs kunnen toegang hebben. Voor meer informatie, zie de gids op [&#x200B; gebruikend de kijker van de identiteitsgrafiek &#x200B;](../../identity-service/features/identity-graph-viewer.md).
 
-Voor meer informatie over [!DNL Identity Service], verwijs naar het [[!DNL Identity Service]  overzicht ](../../identity-service/home.md).
+Voor meer informatie over [!DNL Identity Service], verwijs naar het [[!DNL Identity Service]  overzicht &#x200B;](../../identity-service/home.md).
 
 ### Real-Time Customer Profile
 
@@ -118,7 +118,7 @@ Als beheerder, kunt u op attribuut-gebaseerde toegangsbeheerfunctionaliteit gebr
    * Als beheerder, kunt u gebruikers in uw organisatie voorzien om profielattributen slechts te zien die met etiketten worden geëtiketteerd die de gebruikers toegang hebben tot, wanneer het creëren van segmenten;
 * Vorm gebruikerstoegang tot gegevensvoorproef door specifieke gegevensgebieden te etiketteren die in het schema XDM van het gegevensmodel worden gebruikt.
 
-Voor meer informatie over Profiel, verwijs naar het [ overzicht van het Profiel ](../../profile/home.md).
+Voor meer informatie over Profiel, verwijs naar het [&#x200B; overzicht van het Profiel &#x200B;](../../profile/home.md).
 
 ### Segmentatieservice
 
@@ -129,7 +129,7 @@ Als beheerder, kunt u op attribuut-gebaseerde toegangsbeheerfunctionaliteit gebr
 * Vorm gebruikerstoegang om specifieke segmenten te bekijken en te beheren, die op rol, toestemmingen, en etiketten worden gebaseerd;
    * Als beheerder, kunt u gebruikers in uw organisatie voorzien om segmenten slechts te zien die met etiketten worden geëtiketteerd die de gebruikers toegang hebben tot, en segmenten die geen etiketten bevatten, wanneer het gebruiken van de Segmentatie UI.
 
-Voor meer informatie over [!DNL Segmentation Service], verwijs naar het [[!DNL Segmentation Service]  overzicht ](../../segmentation/home.md).
+Voor meer informatie over [!DNL Segmentation Service], verwijs naar het [[!DNL Segmentation Service]  overzicht &#x200B;](../../segmentation/home.md).
 
 ### XDM
 
@@ -137,13 +137,13 @@ Het Model van Gegevens van de ervaring (XDM) is een open-bronspecificatie die wo
 
 Met op attribuut-gebaseerde toegangscontrole, kunt u:
 
-* [ pas de etiketten van het gegevensgebruik op gebiedsgroepen en klassen ](../../xdm/tutorials/labels.md) toe. Hierdoor kunnen in meerdere schema&#39;s met dezelfde veldgroepen of klassen velden worden gelabeld met dezelfde kenmerken, afhankelijk van de configuraties op veldniveau of veldniveau.
+* [&#x200B; pas de etiketten van het gegevensgebruik op gebiedsgroepen en klassen &#x200B;](../../xdm/tutorials/labels.md) toe. Hierdoor kunnen in meerdere schema&#39;s met dezelfde veldgroepen of klassen velden worden gelabeld met dezelfde kenmerken, afhankelijk van de configuraties op veldniveau of veldniveau.
 * Vorm gebruikerstoegang tot specifieke XDM schemagebieden afhankelijk van de toestemmingsreeksen die op rollen worden toegepast die aan gebruikers worden toegewezen.
 
-Voor meer informatie over XDM, verwijs naar het [ XDM overzicht ](../../xdm/home.md).
+Voor meer informatie over XDM, verwijs naar het [&#x200B; XDM overzicht &#x200B;](../../xdm/home.md).
 
 ### Customer Journey Analytics (CJA)
 
 Customer Journey Analytics (CJA)-toegangsmachtigingen worden beheerd op toepassingsniveau in CJA. CJA gebruikt zijn eigen op attributen-gebaseerde toegangscontroles en erft of past geen op attributen-gebaseerde toegangscontroles toe die in Adobe Experience Platform worden bepaald.
 
-Voor meer informatie over de toegangscontrole van CJA, verwijs naar de [ de toegangsbeheer van CJA ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control) documentatie.
+Voor meer informatie over de toegangscontrole van CJA, verwijs naar de [&#x200B; de toegangsbeheer van CJA &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control) documentatie.
