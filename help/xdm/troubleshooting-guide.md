@@ -94,7 +94,7 @@ Deze sectie bevat antwoorden op veelgestelde vragen over het definiëren en behe
 
 ### Hoe definieer ik identiteiten voor mijn schema?
 
-In [!DNL Experience Platform] worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte gebieden voor identiteit omvatten e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html), identiteitskaart van CRM, en andere unieke gebieden van identiteitskaart
+In [!DNL Experience Platform] worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte gebieden voor identiteit omvatten e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL), identiteitskaart van CRM, en andere unieke gebieden van identiteitskaart
 
 Velden kunnen als id&#39;s worden gemarkeerd met de API of de gebruikersinterface.
 
@@ -142,7 +142,7 @@ Het schema wordt niet automatisch toegelaten voor het Profiel van de Klant in re
 
 ### Kan ik profiel-toegelaten schema&#39;s schrappen? {#delete-profile-enabled}
 
-U kunt geen schema schrappen nadat het voor het Profiel van de Klant in real time is toegelaten. Als een schema eenmaal is ingeschakeld voor Profiel, kan het niet worden uitgeschakeld of verwijderd en kunnen velden niet uit het schema worden verwijderd. Daarom is het essentieel om de schemaconfiguratie zorgvuldig te plannen en te verifiëren alvorens het voor Profiel toe te laten. U kunt een profiel-Toegelaten dataset echter schrappen. Hier vindt u informatie: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+U kunt geen schema schrappen nadat het voor het Profiel van de Klant in real time is toegelaten. Als een schema eenmaal is ingeschakeld voor Profiel, kan het niet worden uitgeschakeld of verwijderd en kunnen velden niet uit het schema worden verwijderd. Daarom is het essentieel om de schemaconfiguratie zorgvuldig te plannen en te verifiëren alvorens het voor Profiel toe te laten. U kunt een profiel-Toegelaten dataset echter schrappen. Hier vindt u informatie: <https://experienceleague.adobe.com/nl/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Als u niet meer voor een profiel-toegelaten schema wenst te worden gebruikt, adviseert het om het schema anders te noemen om **te omvatten** of **niet Inactief** gebruiken.
 
