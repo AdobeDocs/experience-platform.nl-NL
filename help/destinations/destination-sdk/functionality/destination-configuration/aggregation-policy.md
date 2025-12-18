@@ -17,7 +17,7 @@ Gebruik configureerbare aggregatie om diep in de montages te duiken die door Des
 
 Wanneer u een realtime (streaming) bestemming maakt met Destination SDK, kunt u configureren hoe de geëxporteerde profielen moeten worden gecombineerd in de resulterende export. Dit gedrag wordt bepaald door de instellingen van het aggregatiebeleid.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een het stromen bestemming ](../../guides/configure-destination-instructions.md#create-destination-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [&#x200B; configuratieopties &#x200B;](../configuration-options.md) documentatie of zie de gids op hoe te [&#x200B; Destination SDK gebruiken om een het stromen bestemming &#x200B;](../../guides/configure-destination-instructions.md#create-destination-configuration) te vormen.
 
 U kunt de montages van het samenvoegingsbeleid via het `/authoring/destinations` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -26,7 +26,7 @@ U kunt de montages van het samenvoegingsbeleid via het `/authoring/destinations`
 
 In dit artikel worden alle ondersteunde instellingen voor samenvoegingsbeleid beschreven die u voor uw bestemming kunt gebruiken.
 
-Na het lezen door dit document, verwijs naar de documentatie op [ gebruikend het templating ](../../functionality/destination-server/message-format.md#using-templating) en de [ belangrijkste voorbeelden van de samenvoeging ](../../functionality/destination-server/message-format.md#template-aggregation-key) om te begrijpen hoe te om het samenvoegingsbeleid in uw malplaatje van de berichttransformatie te omvatten dat op uw geselecteerd samenvoegingsbeleid wordt gebaseerd.
+Na het lezen door dit document, verwijs naar de documentatie op [&#x200B; gebruikend het templating &#x200B;](../../functionality/destination-server/message-format.md#using-templating) en de [&#x200B; belangrijkste voorbeelden van de samenvoeging &#x200B;](../../functionality/destination-server/message-format.md#template-aggregation-key) om te begrijpen hoe te om het samenvoegingsbeleid in uw malplaatje van de berichttransformatie te omvatten dat op uw geselecteerd samenvoegingsbeleid wordt gebaseerd.
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 De beste inspanningssamenvoeging werkt het best voor bestemmingen die minder profielen per verzoek verkiezen en eerder meer verzoeken met minder gegevens dan minder verzoeken met meer gegevens zouden nemen.
 
-In de onderstaande voorbeeldconfiguratie ziet u een aggregatieconfiguratie voor de beste inspanning. Voor een voorbeeld van configureerbare samenvoeging, zie de [ configureerbare samenvoeging ](#configurable-aggregation) sectie. De parameters die van toepassing zijn op de aggregatie van de best mogelijke inspanning worden in de onderstaande tabel beschreven.
+In de onderstaande voorbeeldconfiguratie ziet u een aggregatieconfiguratie voor de beste inspanning. Voor een voorbeeld van configureerbare samenvoeging, zie de [&#x200B; configureerbare samenvoeging &#x200B;](#configurable-aggregation) sectie. De parameters die van toepassing zijn op de aggregatie van de best mogelijke inspanning worden in de onderstaande tabel beschreven.
 
 ```json
 "aggregation":{
@@ -98,7 +98,7 @@ In de onderstaande voorbeeldconfiguratie ziet u een aggregatieconfiguratie voor 
 
 De configureerbare samenvoeging werkt het best als u eerder in grote partijen, met duizenden profielen op de zelfde vraag zou nemen. Met deze optie kunt u ook de geëxporteerde profielen samenvoegen op basis van complexe aggregatieregels.
 
-De voorbeeldconfiguratie toont hieronder een configureerbare samenvoegingsconfiguratie. Voor een voorbeeld van beste inspanningssamenvoeging, zie de [ best inspanningssamenvoeging ](#best-effort-aggregation) sectie. De parameters die van toepassing zijn op configureerbare aggregatie worden in de onderstaande tabel beschreven.
+De voorbeeldconfiguratie toont hieronder een configureerbare samenvoegingsconfiguratie. Voor een voorbeeld van beste inspanningssamenvoeging, zie de [&#x200B; best inspanningssamenvoeging &#x200B;](#best-effort-aggregation) sectie. De parameters die van toepassing zijn op configureerbare aggregatie worden in de onderstaande tabel beschreven.
 
 ```json
 "aggregation":{
