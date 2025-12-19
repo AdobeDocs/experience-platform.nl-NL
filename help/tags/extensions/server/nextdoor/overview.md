@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Gebruik de [[!DNL Nextdoor]  Uitbreiding van de Omzetting API &#x200B;](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API) om omzettingsgebeurtenissen naar [!DNL Nextdoor's] Conversie API direct te verzenden. Met deze extensie kunt u de prestaties van uw [!DNL Nextdoor] advertentiecampagnes bijhouden en meten door conversiegegevens op de server te verzenden.
 
-Deze gids toont u hoe te om te installeren, te vormen en, de [!DNL Nextdoor] API uitbreiding van de Omzetting in uw gebeurtenis te gebruiken die [&#x200B; regels &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) door:sturen.
+Deze gids toont u hoe te om te installeren, te vormen en, de [!DNL Nextdoor] API uitbreiding van de Omzetting in uw gebeurtenis te gebruiken die [&#x200B; regels &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/ui/rules) door:sturen.
 
 ## Vereisten {#prerequisites}
 
