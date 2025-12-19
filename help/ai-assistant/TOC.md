@@ -33,5 +33,5 @@ ht-degree: 30%
    * [Overzicht van modeldetails](./model-details/overview.md)
    * [AI Assistent Natural Operational Insights Language to SQL](./model-details/natural-language-to-sql.md)
    * [Send-Time optimalisatie](./model-details/send-time-optimization.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
 
