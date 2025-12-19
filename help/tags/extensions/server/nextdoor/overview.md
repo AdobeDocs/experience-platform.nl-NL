@@ -16,13 +16,13 @@ ht-degree: 1%
 
 [!DNL Nextdoor] is een sociale netwerkservice voor buurten die mensen verbindt met hun lokale gemeenschappen. Het is een platform waar buren kunnen communiceren, informatie delen, bijgewerkt blijven over lokale gebeurtenissen en nieuws, en objecten kopen en verkopen met anderen in hun gebied.
 
-Gebruik de [[!DNL Nextdoor]  Uitbreiding van de Omzetting API ](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API) om omzettingsgebeurtenissen naar [!DNL Nextdoor's] Conversie API direct te verzenden. Met deze extensie kunt u de prestaties van uw [!DNL Nextdoor] advertentiecampagnes bijhouden en meten door conversiegegevens op de server te verzenden.
+Gebruik de [[!DNL Nextdoor]  Uitbreiding van de Omzetting API &#x200B;](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API) om omzettingsgebeurtenissen naar [!DNL Nextdoor's] Conversie API direct te verzenden. Met deze extensie kunt u de prestaties van uw [!DNL Nextdoor] advertentiecampagnes bijhouden en meten door conversiegegevens op de server te verzenden.
 
-Deze gids toont u hoe te om te installeren, te vormen en, de [!DNL Nextdoor] API uitbreiding van de Omzetting in uw gebeurtenis te gebruiken die [ regels ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) door:sturen.
+Deze gids toont u hoe te om te installeren, te vormen en, de [!DNL Nextdoor] API uitbreiding van de Omzetting in uw gebeurtenis te gebruiken die [&#x200B; regels &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) door:sturen.
 
 ## Vereisten {#prerequisites}
 
-U hebt een geldig account voor [!DNL Nextdoor] Advertentiebeheer nodig om deze extensie te kunnen gebruiken. Als u reeds geen hebt, ga naar de [[!DNL Nextdoor Ads]  registratiepagina ](https://ads.nextdoor.com/v2/signup) om uw rekening te registreren en tot stand te brengen.
+U hebt een geldig account voor [!DNL Nextdoor] Advertentiebeheer nodig om deze extensie te kunnen gebruiken. Als u reeds geen hebt, ga naar de [[!DNL Nextdoor Ads]  registratiepagina &#x200B;](https://ads.nextdoor.com/v2/signup) om uw rekening te registreren en tot stand te brengen.
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 
@@ -37,7 +37,7 @@ Als u Experience Platform wilt verbinden met [!DNL Nextdoor] , hebt u de volgend
 
 Selecteer **[!UICONTROL Extensions]** in de linkernavigatie als u de extensie wilt installeren. Selecteer op het tabblad **[!UICONTROL Catalog]** de **[!UICONTROL Nextdoor Conversion API Extension]** en selecteer vervolgens **[!UICONTROL Install]** .
 
-![ de uitbreidingscatalogus die [!DNL Nextdoor] uitbreidingskaart tonen die installeert benadrukt.](../../../images/extensions/server/nextdoor/install-extension.png)
+![&#x200B; de uitbreidingscatalogus die [!DNL Nextdoor] uitbreidingskaart tonen die installeert benadrukt.](../../../images/extensions/server/nextdoor/install-extension.png)
 
 Op het volgende scherm, ga de configuratiewaarden in u van uw [!DNL Nextdoor Ads Manager] produceerde:
 
@@ -46,15 +46,15 @@ Op het volgende scherm, ga de configuratiewaarden in u van uw [!DNL Nextdoor Ads
 
 Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![[!DNL Nextdoor] configuratiescherm voor de [!DNL Nextdoor] conversie-API-extensie. ](../../../images/extensions/server/nextdoor/configure.png)
+![[!DNL Nextdoor] configuratiescherm voor de [!DNL Nextdoor] conversie-API-extensie. &#x200B;](../../../images/extensions/server/nextdoor/configure.png)
 
 ## Vorm een gebeurtenis door:sturen regel {#config-rule}
 
 Zodra al uw gegevenselementen opstelling zijn, kunt u gebeurtenis tot stand brengen die regels bepaalt wanneer en hoe uw gebeurtenissen worden verzonden naar [!DNL Nextdoor].
 
-Creeer een nieuwe [ regel ](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Nextdoor Conversion API Extension]** . Als u Edge Network-gebeurtenissen naar [!DNL Nextdoor] wilt verzenden, stelt u de **[!UICONTROL Action Type]** in op **[!UICONTROL Report Web Conversions]** .
+Creeer een nieuwe [&#x200B; regel &#x200B;](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Nextdoor Conversion API Extension]** . Als u Edge Network-gebeurtenissen naar [!DNL Nextdoor] wilt verzenden, stelt u de **[!UICONTROL Action Type]** in op **[!UICONTROL Report Web Conversions]** .
 
-![ het [!UICONTROL Report Web Conversions] actietype dat voor een [!DNL Nextdoor] regel in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/server/nextdoor/select-action.png)
+![&#x200B; het [!UICONTROL Report Web Conversions] actietype dat voor een [!DNL Nextdoor] regel in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/server/nextdoor/select-action.png)
 
 Nadat u deze selectie hebt gemaakt, worden extra besturingselementen weergegeven waarmee u de gebeurtenis verder kunt configureren, zoals hieronder wordt beschreven. Nadat u de regel hebt voltooid, selecteert u **[!UICONTROL Keep Changes]** om deze op te slaan.
 
@@ -148,7 +148,7 @@ De volgende gebeurtenistypen worden ondersteund voor verschillende conversiescen
 
 ## Integratie van gegevenselementen {#data-element}
 
-Alle velden ondersteunen Adobe-elementen voor het doorsturen van gegevens. Selecteer het pictogram van het gegevenselement ![ gegevenselementen ](../../../images/extensions/server/nextdoor/data-element-icon.png) naast om het even welk gebied aan:
+Alle velden ondersteunen Adobe-elementen voor het doorsturen van gegevens. Selecteer het pictogram van het gegevenselement ![&#x200B; gegevenselementen &#x200B;](../../../images/extensions/server/nextdoor/data-element-icon.png) naast om het even welk gebied aan:
 
 * **Uitgezochte Bestaande Elementen van Gegevens**: Uitgezocht van gegevenselementen die reeds zijn gecreeerd.
 * **voegt Nieuwe Elementen van Gegevens** toe: Creeer en bepaal nieuwe gegevenselementen zoals nodig.
@@ -188,8 +188,8 @@ Een correcte gegevensverwerking is van essentieel belang voor het maximaliseren 
    * De gebruikersvoorkeuren en verzoeken om gegevens te verwijderen worden gerespecteerd.
    * Gebruik de parameters voor beperkt gegevensgebruik voor gebruikers die hebben geweigerd.
    * **Middelen**:
-      * [ GDPR de Gids van de Naleving ](https://gdpr.eu/compliance/)
-      * [ Vereisten van de Privacy CCPA ](https://oag.ca.gov/privacy/ccpa)
+      * [&#x200B; GDPR de Gids van de Naleving &#x200B;](https://gdpr.eu/compliance/)
+      * [&#x200B; Vereisten van de Privacy CCPA &#x200B;](https://oag.ca.gov/privacy/ccpa)
 
 * **Minimalisering van Gegevens**: Verzend slechts noodzakelijke gegevens voor omzetting het volgen:
 
@@ -217,8 +217,8 @@ Voor de conversie-API van [!DNL Nextdoor] geldt een snelheidsbeperking. De huidi
 
 De extensie [!DNL Nextdoor] Conversion API biedt een krachtige manier om conversies te volgen en de effectiviteit van uw [!DNL Nextdoor] -advertentiecampagnes te meten. Door deze handleiding te volgen en de beste werkwijzen te implementeren, kunt u ervoor zorgen dat uw advertenties nauwkeurig worden bijgehouden en geoptimaliseerd.
 
-Voor de meest bijgewerkte informatie en extra middelen, bezoek [[!DNL Nextdoor Ads Manager] ](https://ads.nextdoor.com).
+Voor de meest bijgewerkte informatie en extra middelen, bezoek [[!DNL Nextdoor Ads Manager] &#x200B;](https://ads.nextdoor.com).
 
 ## Volgende stappen {#next-steps}
 
-In deze handleiding ziet u hoe u gebeurtenisgegevens aan de serverzijde naar [!DNL Nextdoor] verzendt met de [!DNL Nextdoor] Conversion API-extensie. Meer over gebeurtenis het door:sturen mogelijkheden in [!DNL Adobe Experience Platform] leren, zie de [ gebeurtenis het door:sturen overzicht ](../../../ui/event-forwarding/overview.md).
+In deze handleiding ziet u hoe u gebeurtenisgegevens aan de serverzijde naar [!DNL Nextdoor] verzendt met de [!DNL Nextdoor] Conversion API-extensie. Meer over gebeurtenis het door:sturen mogelijkheden in [!DNL Adobe Experience Platform] leren, zie de [&#x200B; gebeurtenis het door:sturen overzicht &#x200B;](../../../ui/event-forwarding/overview.md).
