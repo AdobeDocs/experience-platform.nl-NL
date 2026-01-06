@@ -17,11 +17,11 @@ Dit document verstrekt stappen op hoe te om de het Webinterface van GitHub aan a
 
 >[!TIP]
 >
->De volgende documenten uit de bijdragende gids van Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[&#x200B; installeer Git en de Authoring hulpmiddelen van de Prijsverhoging &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>&lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[&#x200B; GitHub bijdragewerkschema voor belangrijkste veranderingen &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>De volgende documenten uit de bijdragende gids van Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[&#x200B; installeer Git en de Authoring hulpmiddelen van de Prijsverhoging &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=nl-NL)</li><li>&lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL)</li><li>[&#x200B; GitHub bijdragewerkschema voor belangrijkste veranderingen &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=nl-NL)</li></ul>
 
 ## Opstelling uw milieu GitHub
 
-De eerste stap in vestiging uw milieu GitHub moet aan de [&#x200B; bewaarplaats van Adobe Experience Platform navigeren GitHub &#x200B;](https://github.com/AdobeDocs/experience-platform.en).
+De eerste stap in vestiging uw milieu GitHub moet aan de [&#x200B; bewaarplaats van Adobe Experience Platform navigeren GitHub &#x200B;](https://github.com/AdobeDocs/experience-platform.nl-NL).
 
 ![&#x200B; platform-repo &#x200B;](../assets/platform-repo.png)
 
@@ -33,11 +33,11 @@ Zodra de vork volledig is, uitgezochte **belangrijkste** en ga een naam voor uw 
 
 ![&#x200B; creeer-tak &#x200B;](../assets/create-branch.png)
 
-In de GitHub omslagstructuur van uw forked bewaarplaats, navigeer aan [`experience-platform.en/help/sources/tutorials/api/create/` &#x200B;](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) en selecteer dan de aangewezen categorie voor uw bron van de lijst. Bijvoorbeeld, als u documentatie voor een nieuwe bron van CRM creeert, uitgezochte **crm**.
+In de GitHub omslagstructuur van uw forked bewaarplaats, navigeer aan [`experience-platform.en/help/sources/tutorials/api/create/` &#x200B;](https://github.com/AdobeDocs/experience-platform.nl-NL/tree/main/help/sources/tutorials/api/create) en selecteer dan de aangewezen categorie voor uw bron van de lijst. Bijvoorbeeld, als u documentatie voor een nieuwe bron van CRM creeert, uitgezochte **crm**.
 
 >[!TIP]
 >
->Als u documentatie voor UI creeert, dan navigeer aan [`experience-platform.en/help/sources/tutorials/ui/create/` &#x200B;](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) en selecteer de aangewezen categorie voor uw bron. Als u afbeeldingen wilt toevoegen, navigeert u naar [`experience-platform.en/help/sources/images/tutorials/create/sdk` &#x200B;](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) en voegt u uw schermafbeeldingen toe aan de map `sdk` .
+>Als u documentatie voor UI creeert, dan navigeer aan [`experience-platform.en/help/sources/tutorials/ui/create/` &#x200B;](https://github.com/AdobeDocs/experience-platform.nl-NL/tree/main/help/sources/tutorials/ui/create) en selecteer de aangewezen categorie voor uw bron. Als u afbeeldingen wilt toevoegen, navigeert u naar [`experience-platform.en/help/sources/images/tutorials/create/sdk` &#x200B;](https://github.com/AdobeDocs/experience-platform.nl-NL/tree/main/help/sources/images/tutorials/create) en voegt u uw schermafbeeldingen toe aan de map `sdk` .
 
 ![&#x200B; crm &#x200B;](../assets/crm.png)
 
@@ -77,6 +77,6 @@ Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een no
 
 Op dit moment wordt een melding weergegeven waarin u wordt gevraagd de Adobe Contributor License Agreement (CLA) te ondertekenen. Dit is een verplichte stap. Nadat u CLA ondertekent, vernieuw de PR pagina en verzend het trekkingsverzoek.
 
-U kunt bevestigen dat het trekkingsverzoek is voorgelegd door het lusje van trekkingsverzoeken in https://github.com/AdobeDocs/experience-platform.en te inspecteren.
+U kunt bevestigen dat het trekkingsverzoek is voorgelegd door het lusje van trekkingsverzoeken in https://github.com/AdobeDocs/experience-platform.nl-NL te inspecteren.
 
 ![&#x200B; bevestigen-pr &#x200B;](../assets/confirm-pr.png)
