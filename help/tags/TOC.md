@@ -368,5 +368,5 @@ ht-degree: 19%
       * [Bronnen zoeken](./api/guides/search.md)
       * [Geheimen](./api/guides/secrets.md)
 * [Veelgestelde vragen](./faq.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
 
