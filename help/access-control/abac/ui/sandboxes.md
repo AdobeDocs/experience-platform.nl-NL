@@ -16,7 +16,7 @@ ht-degree: 0%
 >id="platform_permissions_sandboxes_about"
 >title="Wat zijn sandboxen?"
 >abstract="Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, worden beperkt tot die sandbox en hebben geen invloed op andere sandboxen. De toegang tot sandboxen wordt beheerd via rollen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Overzicht van sandboxen"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/home" text="Overzicht van sandboxen"
 
 Sandboxen zijn virtuele partities binnen één Adobe Experience Platform-instantie die het ontwikkelingsproces van uw digitale-ervaringstoepassingen naadloos integreren. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Voor meer informatie over zandbakken, zie het [&#x200B; overzicht van Sandboxen &#x200B;](../../../sandboxes/home.md).
 
