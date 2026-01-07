@@ -116,7 +116,7 @@ Om een gebruiker uit een rol te verwijderen, selecteer het **X** pictogram naast
 
 De volgende video is bedoeld om uw begrip van het creëren van een nieuwe rol en het leiden van gebruikers voor die rol te steunen.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475979/?captions=dut&learn=on)
 
 ## API-referenties voor een rol beheren {#manage-api-credentials-for-role}
 
