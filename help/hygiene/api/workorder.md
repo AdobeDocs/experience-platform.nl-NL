@@ -3,9 +3,9 @@ title: Werkorders verwijderen opnemen
 description: Leer hoe te om het /workorder eindpunt in de Hygiene API van Gegevens te gebruiken om het werkorden van het verslag te beheren schrapt in Adobe Experience Platform. Deze handleiding heeft betrekking op quota, verwerkingstijdlijnen en API-gebruik.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
+source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2541'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ Gebruik het `/workorder` eindpunt in de API voor gegevenshygiëne om werkorders 
 
 >[!IMPORTANT]
 >
->De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [&#x200B; Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
+>De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
 
 ## Aan de slag
 
-Alvorens u begint, zie het [&#x200B; overzicht &#x200B;](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
+Alvorens u begint, zie het [ overzicht ](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
 
 ## Quoten en verwerkingstijdlijnen {#quotas}
 
@@ -67,7 +67,7 @@ Als uw organisatie hogere limieten nodig heeft, neemt u contact op met uw Adobe-
 
 >[!TIP]
 >
->Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [&#x200B; gids van de de verwijzingsverwijzing van de Quota &#x200B;](../api/quota.md).
+>Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [ gids van de de verwijzingsverwijzing van de Quota ](../api/quota.md).
 
 ## Werkorders voor het verwijderen van records weergeven {#list}
 
@@ -203,6 +203,14 @@ POST /workorder
 >
 >U kunt verslagen van datasets slechts schrappen de waarvan bijbehorend schema XDM een primaire identiteit of identiteitskaart bepaalt.
 
+>[!IMPORTANT]
+>
+>Het verslag schrapt werkorden handelt exclusief op het **primaire identiteitsgebied**. De volgende beperkingen zijn van toepassing:
+>
+>- **secundaire identiteiten worden niet gescand.** Als een dataset veelvoudige identiteitsgebieden bevat, slechts wordt de primaire identiteit gebruikt voor aanpassing. Records kunnen niet worden aangeroepen of verwijderd op basis van niet-primaire identiteiten.
+>- **Verslagen zonder een bevolkte primaire identiteit worden overgeslagen.** Als een record geen metagegevens van de primaire identiteit heeft ingevuld, kan het niet worden verwijderd.
+>- **Gegevens die vóór identiteitsconfiguratie worden opgenomen zijn niet verkiesbaar.** Als het primaire identiteitsveld na gegevensinvoer aan een schema is toegevoegd, kunnen eerder opgenomen records niet worden verwijderd via werkorders voor het verwijderen van records.
+
 >[!NOTE]
 >
 >Als u probeert om een verslag tot stand te brengen schrap het werkorde voor een dataset die reeds een actieve afloop heeft, keert het verzoek HTTP 400 (Onjuist Verzoek) terug.Een actieve vervaldatum is om het even welke geplande schrapping die nog niet heeft voltooid.
@@ -247,7 +255,7 @@ In de volgende tabel worden de eigenschappen beschreven voor het maken van een w
 | `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
 | `action` | De gevraagde actie voor het verslag schrapt werkorde. Gebruik `delete_identity` om records te verwijderen die aan een bepaalde identiteit zijn gekoppeld. |
 | `datasetId` | De unieke id voor de gegevensset. Gebruik dataset ID voor een specifieke dataset, of `ALL` om alle datasets te richten. Datasets moeten een primaire identiteit of een identiteitskaart hebben. Als er een identiteitskaart bestaat, is deze aanwezig als een veld op hoofdniveau met de naam `identityMap` .<br> Merk op dat een datasetrij vele identiteiten in zijn identiteitskaart kan hebben, maar slechts één kan als primair worden gemerkt. `"primary": true` moet worden opgenomen om ervoor te zorgen dat de `id` overeenkomt met een primaire identiteit. |
-| `namespacesIdentities` | Een serie van voorwerpen, elk die:<br> bevatten<ul><li> `namespace`: Een object met een eigenschap `code` die de naamruimte voor identiteit opgeeft (bijvoorbeeld &quot;email&quot;).</li><li> `IDs`: een array met identiteitswaarden die voor deze naamruimte moeten worden verwijderd.</li></ul>Naamruimten bieden context voor identiteitsgegevens. U kunt de standaardnaamruimten van Experience Platform gebruiken of zelf naamruimten maken. Meer leren, zie de [&#x200B; documentatie van identiteitsnamespace &#x200B;](../../identity-service/features/namespaces.md) en de [&#x200B; Dienst API specificatie van de Identiteit &#x200B;](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `namespacesIdentities` | Een serie van voorwerpen, elk die:<br> bevatten<ul><li> `namespace`: Een object met een eigenschap `code` die de naamruimte voor identiteit opgeeft (bijvoorbeeld &quot;email&quot;).</li><li> `IDs`: een array met identiteitswaarden die voor deze naamruimte moeten worden verwijderd.</li></ul>Naamruimten bieden context voor identiteitsgegevens. U kunt de standaardnaamruimten van Experience Platform gebruiken of zelf naamruimten maken. Meer leren, zie de [ documentatie van identiteitsnamespace ](../../identity-service/features/namespaces.md) en de [ Dienst API specificatie van de Identiteit ](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Reactie**
 
@@ -303,7 +311,7 @@ In de volgende tabel worden de eigenschappen in het antwoord beschreven.
 
 ## ID-lijsten converteren naar JSON voor aanvragen voor het verwijderen van records
 
-Als u een werkvolgorde voor het verwijderen van records wilt maken vanuit CSV-, TSV- of TXT-bestanden met id&#39;s, kunt u conversiescripts gebruiken om de vereiste JSON-nuttige ladingen voor het `/workorder` -eindpunt te maken. Deze aanpak is vooral handig wanneer u met bestaande gegevensbestanden werkt. Voor gebruiksklare manuscripten en uitvoerige instructies, bezoek de [&#x200B; csv-aan-gegeven-hygiëne bewaarplaats GitHub &#x200B;](https://github.com/perlmonger42/csv-to-data-hygiene).
+Als u een werkvolgorde voor het verwijderen van records wilt maken vanuit CSV-, TSV- of TXT-bestanden met id&#39;s, kunt u conversiescripts gebruiken om de vereiste JSON-nuttige ladingen voor het `/workorder` -eindpunt te maken. Deze aanpak is vooral handig wanneer u met bestaande gegevensbestanden werkt. Voor gebruiksklare manuscripten en uitvoerige instructies, bezoek de [ csv-aan-gegeven-hygiëne bewaarplaats GitHub ](https://github.com/perlmonger42/csv-to-data-hygiene).
 
 ### JSON-payloads genereren
 
@@ -330,7 +338,7 @@ for NAME in UTF8 CSV TSV TXT XYZ big; do
 done
 ```
 
->[!TAB Voorbeeld om Ruby manuscript  in werking te stellen]
+>[!TAB  Voorbeeld om Ruby manuscript ] in werking te stellen
 
 ```bash
 #!/usr/bin/env bash
@@ -403,7 +411,7 @@ In de volgende tabel worden de eigenschappen in de JSON-payload beschreven.
 
 ### Verzend de gegenereerde JSON-gegevens naar het eindpunt van `/workorder`
 
-Om een verzoek voor te leggen, volg de instructies in [&#x200B; creeer een verslag schrapt werkorde &#x200B;](#create) sectie. Zorg ervoor dat u de omgezette JSON-payload als de aanvraaginstantie (`-d`) gebruikt wanneer u uw `curl` POST-aanvraag naar het API-eindpunt `/workorder` verzendt.
+Om een verzoek voor te leggen, volg de instructies in [ creeer een verslag schrapt werkorde ](#create) sectie. Zorg ervoor dat u de omgezette JSON-payload als de aanvraaginstantie (`-d`) gebruikt wanneer u uw `curl` POST-aanvraag naar het API-eindpunt `/workorder` verzendt.
 
 ## Gegevens ophalen voor een specifieke werkorder voor het verwijderen van records {#lookup}
 
