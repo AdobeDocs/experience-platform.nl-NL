@@ -41,7 +41,7 @@ Als markeerteken wil ik gebruikers in een mobiele betrokkenheidsbestemming aanwi
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| external_id | Aangepaste [!DNL Braze] id die het toewijzen van elke identiteit ondersteunt. | U kunt om het even welke [ identiteit ](../../../identity-service/features/namespaces.md) naar de [!DNL Braze] bestemming verzenden, zolang u het aan [!DNL Braze] in kaart brengt [`external_id` ](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Aangepaste [!DNL Braze] id die het toewijzen van elke identiteit ondersteunt. | U kunt om het even welke [&#x200B; identiteit &#x200B;](../../../identity-service/features/namespaces.md) naar de [!DNL Braze] bestemming verzenden, zolang u het aan [!DNL Braze] in kaart brengt [`external_id` &#x200B;](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 
@@ -51,8 +51,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam) en/of identiteiten volgens uw veldtoewijzing.[!DNL Adobe Experience Platform] publiek wordt geëxporteerd naar [!DNL Braze] under het `AdobeExperiencePlatformSegments` kenmerk. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -71,15 +71,15 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-* **[!UICONTROL Braze account token]**: dit is de [!DNL Braze] [!DNL API] -toets. U kunt gedetailleerde instructies op vinden hoe te om uw [!DNL API] sleutel hier te verkrijgen: [ REST API Zeer belangrijk Overzicht ](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL Braze account token]**: dit is de [!DNL Braze] [!DNL API] -toets. U kunt gedetailleerde instructies op vinden hoe te om uw [!DNL API] sleutel hier te verkrijgen: [&#x200B; REST API Zeer belangrijk Overzicht &#x200B;](https://www.braze.com/docs/api/api_key/).
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -87,11 +87,11 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 * **[!UICONTROL Name]** : voer een naam in waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]** : voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
-* **[!UICONTROL Endpoint Instance]**: alle [ gebied-specifieke eindpunten ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die door [!DNL Braze] worden gesteund zijn beschikbaar voor selectie. Vraag uw [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken.
+* **[!UICONTROL Endpoint Instance]**: alle [&#x200B; gebied-specifieke eindpunten &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die door [!DNL Braze] worden gesteund zijn beschikbaar voor selectie. Vraag uw [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -99,10 +99,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [&#x200B; publieksgegevens aan het stromen publiek de uitvoerbestemmingen &#x200B;](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ## Toewijzingsoverwegingen {#mapping-considerations}
 
@@ -114,40 +114,40 @@ Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL
 
 Klik in de stap [!UICONTROL Mapping] op **[!UICONTROL Add new mapping]** .
 
-![ Wrijf Bestemming toevoegen Toewijzing ](../../assets/catalog/mobile-engagement/braze/mapping.png)
+![&#x200B; Wrijf Bestemming toevoegen Toewijzing &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
 Klik in de sectie [!UICONTROL Source Field] op de pijlknop naast het lege veld.
 
-![ de Afbeelding van Source van de Bestemming van de Wrijvel ](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![&#x200B; de Afbeelding van Source van de Bestemming van de Wrijvel &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 In het venster [!UICONTROL Select source field] kunt u kiezen uit twee categorieën XDM-velden:
 
 * [!UICONTROL Select attributes]: gebruik deze optie om een specifiek veld van uw XDM-schema toe te wijzen aan een [!DNL Braze] -kenmerk.
 
-![ breid de Attributen van Source van de Bestemming in kaart ](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![&#x200B; breid de Attributen van Source van de Bestemming in kaart &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL Select identity namespace]: Gebruik deze optie om een naamruimte [!DNL Experience Platform] identity aan een naamruimte [!DNL Braze] toe te wijzen.
 
-![ Bodembestemming die Source Namespace ](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png) in kaart brengt
+![&#x200B; Bodembestemming die Source Namespace &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png) in kaart brengt
 
 Kies het bronveld en klik op **[!UICONTROL Select]** .
 
 Klik in de sectie [!UICONTROL Target Field] op het koppelingspictogram rechts van het veld.
 
-![ breid het Doel Toewijzing van het Doel ](../../assets/catalog/mobile-engagement/braze/mapping-target.png) uit
+![&#x200B; breid het Doel Toewijzing van het Doel &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-target.png) uit
 
 In het venster [!UICONTROL Select target field] kunt u kiezen uit twee categorieën doelvelden:
 
 * [!UICONTROL Select identity namespace]: Gebruik deze optie om [!DNL Experience Platform] naamruimten toe te wijzen aan [!DNL Braze] naamruimten.
 * [!UICONTROL Select custom attributes]: Gebruik deze optie om XDM-kenmerken toe te wijzen aan aangepaste [!DNL Braze] -kenmerken die u in uw [!DNL Braze] -account hebt gedefinieerd. <br> U kunt deze optie ook gebruiken om de naam van bestaande XDM-kenmerken te wijzigen in [!DNL Braze] . Als u bijvoorbeeld een `lastName` XDM-kenmerk toewijst aan een aangepast `Last_Name` -kenmerk in [!DNL Braze] , wordt het `Last_Name` -kenmerk in [!DNL Braze] gemaakt, als dat nog niet het geval is, en wordt het `lastName` XDM-kenmerk eraan toegewezen.
 
-![ breid de Gebieden van de Toewijzing van het Doel van de Bestemming ](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png) uit
+![&#x200B; breid de Gebieden van de Toewijzing van het Doel van de Bestemming &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png) uit
 
 Kies het doelveld en klik op **[!UICONTROL Select]** .
 
 Nu wordt de veldtoewijzing weergegeven in de lijst.
 
-![ Volledige Toewijzing van de Bestemming van het Wrijven ](../../assets/catalog/mobile-engagement/braze/mapping-complete.png)
+![&#x200B; Volledige Toewijzing van de Bestemming van het Wrijven &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-complete.png)
 
 Herhaal de vorige stappen om meer toewijzingen toe te voegen.
 
@@ -162,7 +162,7 @@ Stel dat uw XDM-profielschema en uw [!DNL Braze] -instantie de volgende kenmerke
 
 De juiste toewijzing zou er als volgt uitzien:
 
-![ breid het Voorbeeld van de Afbeelding van de Bestemming ](../../assets/catalog/mobile-engagement/braze/mapping-example.png) uit
+![&#x200B; breid het Voorbeeld van de Afbeelding van de Bestemming &#x200B;](../../assets/catalog/mobile-engagement/braze/mapping-example.png) uit
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -178,4 +178,4 @@ Als er een time-outfout optreedt, controleert u de publieksgrootte in het doelpl
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie [ Overzicht van de Governance van Gegevens ](../../../data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie [&#x200B; Overzicht van de Governance van Gegevens &#x200B;](../../../data-governance/home.md).
