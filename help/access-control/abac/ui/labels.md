@@ -56,7 +56,7 @@ Als u een afzonderlijk label wilt weergeven, selecteert u de naam van het label 
 >id="platform_permissions_labels_about_create"
 >title="Nieuw label maken"
 >abstract="U kunt uw eigen aangepaste labels maken die aansluiten op de behoeften van uw organisatie. De etiketten van de douane kunnen worden gebruikt om zowel gegevensbeheer als toegangsbeheerconfiguraties op uw gegevens toe te passen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="Aangepaste labels beheren"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=nl-NL#manage-labels" text="Aangepaste labels beheren"
 
 >[!NOTE]
 >
