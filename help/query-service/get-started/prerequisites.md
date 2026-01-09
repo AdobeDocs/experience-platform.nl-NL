@@ -21,7 +21,7 @@ Voordat u gegevens kunt opvragen, moet u controleren of u beschikt over:
 - **Vereiste toestemmingen**: Uw gebruikersrekening heeft toegang tot de Dienst van de Vraag in Experience Platform. Als de dienst niet beschikbaar in UI is, herzie de [&#x200B; documentatie van toestemmingen &#x200B;](../../access-control/home.md#permissions) en contacteer uw systeembeheerder.
 - **Inname van Gegevens**: U hebt gegevens die in Experience Platform worden opgenomen.
 
-Als u gegevens moet opnemen, herzie de [&#x200B; video van de gegevensopname &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) voor een overzicht van datasetverwezenlijking, schema afbeelding, opname, en bevestiging. Lees de [&#x200B; documentatie van het innameoverzicht &#x200B;](../../ingestion/home.md) voor meer diepgaande informatie en verbindingen aan andere het leren middelen.
+Als u gegevens moet opnemen, herzie de [&#x200B; video van de gegevensopname &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) voor een overzicht van datasetverwezenlijking, schema afbeelding, opname, en bevestiging. Lees de [&#x200B; documentatie van het innameoverzicht &#x200B;](../../ingestion/home.md) voor meer diepgaande informatie en verbindingen aan andere het leren middelen.
 
 ## Snelstartpaden
 
