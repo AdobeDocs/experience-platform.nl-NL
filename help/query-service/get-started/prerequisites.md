@@ -18,10 +18,10 @@ De Dienst van de Vraag van Adobe Experience Platform van het gebruik om SQL vrag
 
 Voordat u gegevens kunt opvragen, moet u controleren of u beschikt over:
 
-- **Vereiste toestemmingen**: Uw gebruikersrekening heeft toegang tot de Dienst van de Vraag in Experience Platform. Als de dienst niet beschikbaar in UI is, herzie de [ documentatie van toestemmingen ](../../access-control/home.md#permissions) en contacteer uw systeembeheerder.
+- **Vereiste toestemmingen**: Uw gebruikersrekening heeft toegang tot de Dienst van de Vraag in Experience Platform. Als de dienst niet beschikbaar in UI is, herzie de [&#x200B; documentatie van toestemmingen &#x200B;](../../access-control/home.md#permissions) en contacteer uw systeembeheerder.
 - **Inname van Gegevens**: U hebt gegevens die in Experience Platform worden opgenomen.
 
-Als u gegevens moet opnemen, herzie de [ video van de gegevensopname ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) voor een overzicht van datasetverwezenlijking, schema afbeelding, opname, en bevestiging. Lees de [ documentatie van het innameoverzicht ](../../ingestion/home.md) voor meer diepgaande informatie en verbindingen aan andere het leren middelen.
+Als u gegevens moet opnemen, herzie de [&#x200B; video van de gegevensopname &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) voor een overzicht van datasetverwezenlijking, schema afbeelding, opname, en bevestiging. Lees de [&#x200B; documentatie van het innameoverzicht &#x200B;](../../ingestion/home.md) voor meer diepgaande informatie en verbindingen aan andere het leren middelen.
 
 ## Snelstartpaden
 
@@ -29,11 +29,11 @@ Nadat u uw gegevens in Experience Platform hebt opgenomen, kunt u beginnen met h
 
 ### [!DNL Query Editor]
 
-Gebruik [!DNL Query Editor] voor analyse, gegevensexploratie, en gezamenlijke vraagontwikkeling. Voor een overzicht van de functionaliteit UI, zie de [ documentatie UI van de Dienst van de Vraag ](../ui/overview.md). Lees [[!DNL Query Editor user guide]](../ui/user-guide.md) voor meer informatie over het schrijven en uitvoeren van query&#39;s in de gebruikersinterface.
+Gebruik [!DNL Query Editor] voor analyse, gegevensexploratie, en gezamenlijke vraagontwikkeling. Voor een overzicht van de functionaliteit UI, zie de [&#x200B; documentatie UI van de Dienst van de Vraag &#x200B;](../ui/overview.md). Lees [[!DNL Query Editor user guide]](../ui/user-guide.md) voor meer informatie over het schrijven en uitvoeren van query&#39;s in de gebruikersinterface.
 
 ### Query Service-API
 
-Gebruik de API van de Dienst van de Vraag voor geautomatiseerde werkschema&#39;s, het beheer van vraagmalplaatjes, en programmatic integratie. Verwijs naar de [ de ontwikkelaarsgids van de Dienst van de Vraag ](../api/getting-started.md) voor gedetailleerde instructies bij het gebruiken van de Dienst API van de Vraag.
+Gebruik de API van de Dienst van de Vraag voor geautomatiseerde werkschema&#39;s, het beheer van vraagmalplaatjes, en programmatic integratie. Verwijs naar de [&#x200B; de ontwikkelaarsgids van de Dienst van de Vraag &#x200B;](../api/getting-started.md) voor gedetailleerde instructies bij het gebruiken van de Dienst API van de Vraag.
 
 ## Volgende stappen
 
@@ -43,7 +43,7 @@ In dit document worden de voorwaarden beschreven die nodig zijn om de functies v
 - [SQL-syntaxis in Query Service](../sql/syntax.md)
 - [Afgeleide datasets maken met SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-Alternatief, om meer over te leren hoe de Dienst van de Vraag gegevensverwerking in Experience Platform begunstigt, op de [ verlaten browse presentatie van het gebruiksgeval ](../use-cases/abandoned-browse.md#video-example) letten.
+Alternatief, om meer over te leren hoe de Dienst van de Vraag gegevensverwerking in Experience Platform begunstigt, op de [&#x200B; verlaten browse presentatie van het gebruiksgeval &#x200B;](../use-cases/abandoned-browse.md#video-example) letten.
 
 De volgende bronnen zijn handig voor een beter begrip van [!DNL Query Service] :
 
