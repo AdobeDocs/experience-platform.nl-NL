@@ -3,20 +3,37 @@ keywords: Experience Platform;query-service;Query-service;query
 title: Aan de slag met Adobe Experience Platform Query Service
 description: Een uitsplitsing van de stappen die nodig zijn om Adobe Experience Platform Query Service volledig te gebruiken
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa22a0ca0c79d5d62fd39de3a808f84a11a80c4d
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
 
 # Aan de slag met Adobe Experience Platform [!DNL Query Service] {#getting-started}
 
-Zodra uw organisatie is ingericht voor Adobe Experience Platform, kan uw beheerder u toegang verlenen tot [!DNL Query Service]. Voordat u alle door [!DNL Query Service] geboden functies kunt gebruiken, moet u echter eerst gegevens in Adobe Experience Platform invoeren.
+De Dienst van de Vraag van Adobe Experience Platform van het gebruik om SQL vragen tegen ingebedde datasets in werking te stellen, zich bij gegevens van veelvoudige bronnen aan te sluiten, en afgeleide datasets voor analyses, machine het leren werkschema&#39;s, of het Profiel van de Klant in real time te produceren. Na het opnemen van gegevens, toegang de Dienst van de Vraag door UI voor interactieve analyse en samenwerking, of door API voor geautomatiseerde en programmatic vraaguitvoering.
 
-Deze [&#x200B; video van de gegevensopname van gegevens &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) verstrekt een overzicht bij het creëren van een dataset, het in kaart brengen van een dataset aan een schema, het toevoegen van gegevens aan de dataset, en het bevestigen van zijn opname. De [&#x200B; documentatie van het inperkingsoverzicht &#x200B;](../../ingestion/home.md) vult dit aan en verstrekt meer diepgaande informatie en verbindingen aan andere het leren middelen.
+## Vereisten {#prerequisites}
 
-Nadat u uw gegevens in Adobe Experience Platform hebt opgenomen, kunt u beginnen werkend met [!DNL Query Service] gebruikend of [[!DNL Query Editor]  in Experience Platform UI &#x200B;](../ui/user-guide.md) of [[!DNL Query Service]  API &#x200B;](../api/getting-started.md). Volledige documentatie over het gebruik van elk van deze gereedschappen vindt u in de desbetreffende secties.
+Voordat u gegevens kunt opvragen, moet u controleren of u beschikt over:
+
+- **Vereiste toestemmingen**: Uw gebruikersrekening heeft toegang tot de Dienst van de Vraag in Experience Platform. Als de dienst niet beschikbaar in UI is, herzie de [ documentatie van toestemmingen ](../../access-control/home.md#permissions) en contacteer uw systeembeheerder.
+- **Inname van Gegevens**: U hebt gegevens die in Experience Platform worden opgenomen.
+
+Als u gegevens moet opnemen, herzie de [ video van de gegevensopname ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) voor een overzicht van datasetverwezenlijking, schema afbeelding, opname, en bevestiging. Lees de [ documentatie van het innameoverzicht ](../../ingestion/home.md) voor meer diepgaande informatie en verbindingen aan andere het leren middelen.
+
+## Snelstartpaden
+
+Nadat u uw gegevens in Experience Platform hebt opgenomen, kunt u beginnen met het werken met de Query Service met de [!DNL Query Editor] in Experience Platform of de Query Service API.
+
+### [!DNL Query Editor]
+
+Gebruik [!DNL Query Editor] voor analyse, gegevensexploratie, en gezamenlijke vraagontwikkeling. Voor een overzicht van de functionaliteit UI, zie de [ documentatie UI van de Dienst van de Vraag ](../ui/overview.md). Lees [[!DNL Query Editor user guide]](../ui/user-guide.md) voor meer informatie over het schrijven en uitvoeren van query&#39;s in de gebruikersinterface.
+
+### Query Service-API
+
+Gebruik de API van de Dienst van de Vraag voor geautomatiseerde werkschema&#39;s, het beheer van vraagmalplaatjes, en programmatic integratie. Verwijs naar de [ de ontwikkelaarsgids van de Dienst van de Vraag ](../api/getting-started.md) voor gedetailleerde instructies bij het gebruiken van de Dienst API van de Vraag.
 
 ## Volgende stappen
 
@@ -26,7 +43,7 @@ In dit document worden de voorwaarden beschreven die nodig zijn om de functies v
 - [SQL-syntaxis in Query Service](../sql/syntax.md)
 - [Afgeleide datasets maken met SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-Alternatief, om meer over te leren hoe de Dienst van de Vraag gegevensverwerking in Experience Platform begunstigt, op de [&#x200B; verlaten browse presentatie van het gebruiksgeval &#x200B;](../use-cases/abandoned-browse.md#video-example) letten.
+Alternatief, om meer over te leren hoe de Dienst van de Vraag gegevensverwerking in Experience Platform begunstigt, op de [ verlaten browse presentatie van het gebruiksgeval ](../use-cases/abandoned-browse.md#video-example) letten.
 
 De volgende bronnen zijn handig voor een beter begrip van [!DNL Query Service] :
 
