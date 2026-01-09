@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aan de slag met Real-Time Customer Data Platform B2B edition
 description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: ed655be7ad274c06deea1e50001c28c58f68796e
 workflow-type: tm+mt
@@ -100,7 +100,7 @@ In de [!UICONTROL Segments] -werkruimte van de gebruikersinterface van Experienc
 
 >[!NOTE]
 > 
->Zie het leerprogramma op [&#x200B; activerend een publiek aan een bestemming &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) voor uitvoerige stappen op hoe te om dit te verwezenlijken.
+>Zie het leerprogramma op [&#x200B; activerend een publiek aan een bestemming &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=nl-NL) voor uitvoerige stappen op hoe te om dit te verwezenlijken.
 
 De Bodea-markeerteken activeert het publiek naar een bestemming, zodat ze publieksgegevens van Experience Platform naar hun marketingautomatiseringsplatform kunnen sturen. Lees de [&#x200B; catalogus van bestemmingen &#x200B;](../destinations/catalog/overview.md) voor meer informatie over beschikbare bestemmingen.
 
