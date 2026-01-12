@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 7a763a978443c0a074e6368448320056759f72bb
 workflow-type: tm+mt
-source-wordcount: '3223'
+source-wordcount: '3429'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Aangezien XDM uiterst veelzijdig en aanpasbaar door ontwerp is, is het belangrij
 
 ## Aan de slag
 
-Alvorens deze gids te lezen, herzie het [&#x200B; XDM overzicht van het Systeem &#x200B;](../home.md) voor een inleiding op hoog niveau aan XDM en zijn rol binnen Experience Platform.
+Alvorens deze gids te lezen, herzie het [ XDM overzicht van het Systeem ](../home.md) voor een inleiding op hoog niveau aan XDM en zijn rol binnen Experience Platform.
 
-Aangezien deze gids zich uitsluitend op zeer belangrijke overwegingen betreffende schemaontwerp concentreert, wordt u sterk geadviseerd om de [&#x200B; grondbeginselen van schemacompositie &#x200B;](./composition.md) voor gedetailleerde verklaringen van de individuele schemaelementen te lezen die door deze gids worden vermeld.
+Aangezien deze gids zich uitsluitend op zeer belangrijke overwegingen betreffende schemaontwerp concentreert, wordt u sterk geadviseerd om de [ grondbeginselen van schemacompositie ](./composition.md) voor gedetailleerde verklaringen van de individuele schemaelementen te lezen die door deze gids worden vermeld.
 
 ## Overzicht van best practices {#summary}
 
@@ -41,7 +41,7 @@ Zodra u de gegevensbronnen hebt bepaald die u in Experience Platform wilt brenge
 
 In het onderstaande voorbeeld wordt een vereenvoudigde ERD voorgesteld voor een bedrijf dat gegevens in Experience Platform wil invoeren. Het diagram benadrukt de essentiële entiteiten die in klassen XDM, met inbegrip van klantenrekeningen, hotels, en verscheidene gemeenschappelijke e-commercegebeurtenissen zouden moeten worden gesorteerd.
 
-![&#x200B; een entiteitrelationeel diagram dat de essentiële entiteiten benadrukt die in klassen XDM voor gegevensopname zouden moeten worden gesorteerd.](../images/best-practices/erd.png)
+![ een entiteitrelationeel diagram dat de essentiële entiteiten benadrukt die in klassen XDM voor gegevensopname zouden moeten worden gesorteerd.](../images/best-practices/erd.png)
 
 ## Entiteiten sorteren in profiel-, zoekopdracht- en gebeurteniscategorieën {#sort-entities}
 
@@ -50,7 +50,7 @@ Nadat u een ERD hebt gemaakt om de essentiële entiteiten te identificeren die u
 | Categorie | Beschrijving |
 | --- | --- |
 | Profielentiteiten | Profielentiteiten vertegenwoordigen kenmerken die betrekking hebben op een individuele persoon, doorgaans een klant. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op de **[!DNL XDM Individual Profile]klasse** worden gebaseerd. |
-| Entiteiten opzoeken | Opzoekentiteiten zijn concepten die betrekking kunnen hebben op een individuele persoon, maar die niet rechtstreeks kunnen worden gebruikt om de persoon te identificeren. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op **worden gebaseerd douaneklassen**, en zijn verbonden met profielen en gebeurtenissen door [&#x200B; schemaverhoudingen &#x200B;](../tutorials/relationship-ui.md). |
+| Entiteiten opzoeken | Opzoekentiteiten zijn concepten die betrekking kunnen hebben op een individuele persoon, maar die niet rechtstreeks kunnen worden gebruikt om de persoon te identificeren. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op **worden gebaseerd douaneklassen**, en zijn verbonden met profielen en gebeurtenissen door [ schemaverhoudingen ](../tutorials/relationship-ui.md). |
 | Gebeurtenisentiteiten | Gebeurtenisentiteiten vertegenwoordigen concepten met betrekking tot acties die een klant kan uitvoeren, systeemgebeurtenissen of andere concepten waarbij u wijzigingen in de loop van de tijd wilt bijhouden. De entiteiten die onder deze categorie vallen zouden door schema&#39;s moeten worden vertegenwoordigd die op de **[!DNL XDM ExperienceEvent]klasse** worden gebaseerd. |
 
 {style="table-layout:auto"}
@@ -83,10 +83,10 @@ Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der 
 
 | Klant-id | Type | Product-id | Aantal | Tijdstempel |
 | --- | --- | --- | --- | --- |
-| 1234567 | Toevoegen | 275098 | 2 | 1 okt. 10:32 |
-| 1234567 | Verwijderen | 275098 | 1 | 1 okt. 10:33 |
-| 1234567 | Toevoegen | 486502 | 1 | 1 okt. 10:41 |
-| 1234567 | Toevoegen | 910482 | 5 | 3 okt. 14:15 |
+| 1234567 | Toevoegen | 275098 | 2 | 1 okt. 10 :32 AM |
+| 1234567 | Verwijderen | 275098 | 1 | 1 okt. 10 :33 AM |
+| 1234567 | Toevoegen | 486502 | 1 | 1 okt. 10 :41 AM |
+| 1234567 | Toevoegen | 910482 | 5 | 3 okt., 2 :15 PM |
 
 {style="table-layout:auto"}
 
@@ -121,7 +121,7 @@ De in uw ERD vastgestelde randvoorwaarden kunnen ook aanwijzingen geven over de 
 
 >[!NOTE]
 >
->Aangezien er geen universele aanpak bestaat om alle gevallen van gebruik te kunnen gebruiken, is het belangrijk om bij de indeling van entiteiten op basis van kardinaliteit rekening te houden met de voor- en nadelen van elke situatie. Zie de [&#x200B; volgende sectie &#x200B;](#pros-and-cons) voor meer informatie.
+>Aangezien er geen universele aanpak bestaat om alle gevallen van gebruik te kunnen gebruiken, is het belangrijk om bij de indeling van entiteiten op basis van kardinaliteit rekening te houden met de voor- en nadelen van elke situatie. Zie de [ volgende sectie ](#pros-and-cons) voor meer informatie.
 
 In de volgende tabel worden enkele gemeenschappelijke entiteitsrelaties en de categorieën beschreven die daaruit kunnen worden afgeleid:
 
@@ -148,7 +148,7 @@ In dit scenario, heeft het bedrijf twee potentiële opties om de abonnementen va
 
 De eerste methode zou zijn om een array van `subscriptionID` in de profielentiteit voor de Klant op te nemen.
 
-![&#x200B; het schema van de Klant in de Redacteur van het Schema met de benadrukte klasse en structuur &#x200B;](../images/best-practices/profile-schema.png)
+![ het schema van de Klant in de Redacteur van het Schema met de benadrukte klasse en structuur ](../images/best-practices/profile-schema.png)
 
 **Pros**
 
@@ -164,7 +164,7 @@ De eerste methode zou zijn om een array van `subscriptionID` in de profielentite
 
 De tweede benadering zou gebeurtenisschema&#39;s moeten gebruiken om een abonnementsgebeurtenis te vertegenwoordigen. Dit omvat de abonnement-id naast een klant-id en een tijdstempel van het tijdstip waarop de abonnementsgebeurtenis plaatsvond.
 
-![&#x200B; een diagram van het schema van de Gebeurtenis van de Abonnement met de benadrukte klassen van de Gebeurtenis van de Ervaring XDM en abonnementenstructuur.](../images/best-practices/event-schema.png)
+![ een diagram van het schema van de Gebeurtenis van de Abonnement met de benadrukte klassen van de Gebeurtenis van de Ervaring XDM en abonnementenstructuur.](../images/best-practices/event-schema.png)
 
 **Pros**
 
@@ -174,13 +174,13 @@ De tweede benadering zou gebeurtenisschema&#39;s moeten gebruiken om een abonnem
 **Kons**
 
 * De segmentatie wordt complexer voor het originele voorgenomen gebruiksgeval (identificerend de status van de recentste abonnementen van klanten). Het publiek heeft nu extra logica nodig om de laatste abonnementsgebeurtenis voor een klant te markeren om zijn status te controleren.
-* Gebeurtenissen hebben een hoger risico om automatisch te vervallen en te worden gewist uit de profielopslag. Zie de gids op [&#x200B; Verlopen van de Gebeurtenis van de Ervaring &#x200B;](../../profile/event-expirations.md) voor meer informatie.
+* Gebeurtenissen hebben een hoger risico om automatisch te vervallen en te worden gewist uit de profielopslag. Zie de gids op [ Verlopen van de Gebeurtenis van de Ervaring ](../../profile/event-expirations.md) voor meer informatie.
 
 ## Schema&#39;s maken op basis van uw gecategoriseerde entiteiten {#schemas-for-categorized-entities}
 
 Nadat u de entiteiten hebt gesorteerd in profiel-, opzoekfunctie- en gebeurteniscategorieën, kunt u beginnen met het omzetten van uw gegevensmodel in XDM-schema&#39;s. Voor demonstratiedoeleinden is het eerder getoonde model van voorbeeldgegevens in aangewezen categorieën in het volgende diagram gesorteerd:
 
-![&#x200B; A diagram van de schema&#39;s bevat in het profiel, de raadpleging, en gebeurtenisentiteiten &#x200B;](../images/best-practices/erd-sorted.png)
+![ A diagram van de schema&#39;s bevat in het profiel, de raadpleging, en gebeurtenisentiteiten ](../images/best-practices/erd-sorted.png)
 
 De categorie waarop een entiteit is gesorteerd, moet de XDM-klasse bepalen waarop u het schema baseert. Herhaal dit:
 
@@ -198,15 +198,15 @@ De onderstaande secties bieden algemene richtlijnen voor het samenstellen van sc
 
 ### Een iteratieve modelleringsaanpak hanteren {#iterative-modeling}
 
-De [&#x200B; regels van schemaevolutie &#x200B;](./composition.md#evolution) dicteren dat slechts niet-destructieve veranderingen aan schema&#39;s kunnen worden aangebracht zodra zij zijn uitgevoerd. Met andere woorden, wanneer u een veld aan een schema toevoegt en er gegevens tegen dat veld zijn ingevoerd, kan het veld niet meer worden verwijderd. Daarom is het van essentieel belang om bij de eerste opzet van uw schema&#39;s een herhalende modelleringsaanpak te volgen, te beginnen met een vereenvoudigde implementatie die in de loop der tijd steeds complexer wordt.
+De [ regels van schemaevolutie ](./composition.md#evolution) dicteren dat slechts niet-destructieve veranderingen aan schema&#39;s kunnen worden aangebracht zodra zij zijn uitgevoerd. Met andere woorden, wanneer u een veld aan een schema toevoegt en er gegevens tegen dat veld zijn ingevoerd, kan het veld niet meer worden verwijderd. Daarom is het van essentieel belang om bij de eerste opzet van uw schema&#39;s een herhalende modelleringsaanpak te volgen, te beginnen met een vereenvoudigde implementatie die in de loop der tijd steeds complexer wordt.
 
 Als u niet zeker bent of een bepaald gebied noodzakelijk is om in een schema te omvatten, is de beste praktijken het uit te sluiten. Als later wordt bepaald dat het veld nodig is, kan dit altijd worden toegevoegd in de volgende versie van het schema.
 
 ### Identiteitsvelden {#identity-fields}
 
-In Experience Platform worden XDM-velden die als identiteiten zijn gemarkeerd, gebruikt om informatie over individuele klanten die uit meerdere gegevensbronnen afkomstig zijn, te koppelen. Hoewel een schema meerdere velden kan hebben die zijn gemarkeerd als identiteiten, moet één primaire identiteit worden gedefinieerd om het schema in te schakelen voor gebruik in [!DNL Real-Time Customer Profile] . Zie de sectie op [&#x200B; identiteitsgebieden &#x200B;](./composition.md#identity) in de grondbeginselen van schemacompositie voor meer gedetailleerde informatie over het gebruiksgeval van deze gebieden.
+In Experience Platform worden XDM-velden die als identiteiten zijn gemarkeerd, gebruikt om informatie over individuele klanten die uit meerdere gegevensbronnen afkomstig zijn, te koppelen. Hoewel een schema meerdere velden kan hebben die zijn gemarkeerd als identiteiten, moet één primaire identiteit worden gedefinieerd om het schema in te schakelen voor gebruik in [!DNL Real-Time Customer Profile] . Zie de sectie op [ identiteitsgebieden ](./composition.md#identity) in de grondbeginselen van schemacompositie voor meer gedetailleerde informatie over het gebruiksgeval van deze gebieden.
 
-Wanneer het ontwerpen van uw schema&#39;s, zijn om het even welke primaire sleutels in uw relationele gegevensbestandlijsten waarschijnlijk kandidaten voor primaire identiteiten. Andere voorbeelden van toepasselijke identiteitsgebieden zijn klant e-mailadressen, telefoonaantallen, rekening IDs, en [&#x200B; ECID &#x200B;](../../identity-service/features/ecid.md).
+Wanneer het ontwerpen van uw schema&#39;s, zijn om het even welke primaire sleutels in uw relationele gegevensbestandlijsten waarschijnlijk kandidaten voor primaire identiteiten. Andere voorbeelden van toepasselijke identiteitsgebieden zijn klant e-mailadressen, telefoonaantallen, rekening IDs, en [ ECID ](../../identity-service/features/ecid.md).
 
 ### Adobe-toepassingsschemagroepen {#adobe-application-schema-field-groups}
 
@@ -217,9 +217,9 @@ Experience Platform biedt verschillende XDM-schemaveldgroepen voor het vastlegge
 * Adobe Campaign
 * Adobe Target
 
-U kunt bijvoorbeeld de [[!UICONTROL Adobe Analytics ExperienceEvent Template] veldgroep &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) gebruiken om [!DNL Analytics] -specifieke velden toe te wijzen aan uw XDM-schema&#39;s. Afhankelijk van de Adobe-toepassingen waarmee u werkt, moet u deze door Adobe verschafte veldgroepen gebruiken in uw schema&#39;s.
+U kunt bijvoorbeeld de [[!UICONTROL Adobe Analytics ExperienceEvent Template] veldgroep ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) gebruiken om [!DNL Analytics] -specifieke velden toe te wijzen aan uw XDM-schema&#39;s. Afhankelijk van de Adobe-toepassingen waarmee u werkt, moet u deze door Adobe verschafte veldgroepen gebruiken in uw schema&#39;s.
 
-![&#x200B; het schemadiagram van A van [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
+![ het schemadiagram van A van [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
 
 Adobe-toepassingsveldgroepen wijzen automatisch een primaire standaardidentiteit toe via het gebruik van het veld `identityMap` . Dit is een door het systeem gegenereerd, alleen-lezen-object dat standaardidentiteitswaarden voor een individuele klant toewijst.
 
@@ -231,35 +231,55 @@ Voor Adobe Analytics is ECID de primaire standaardidentiteit. Als een klant geen
 
 ## Velden voor gegevensvalidatie {#data-validation-fields}
 
-Wanneer u gegevens in het gegevenspeer opneemt, wordt de gegevensbevestiging slechts afgedwongen voor beperkte gebieden. Als u een bepaald veld tijdens een batch-opname wilt valideren, moet u het veld markeren als beperkt in het XDM-schema. Als u wilt voorkomen dat slechte gegevens in Experience Platform worden ingevoerd, kunt u het beste de criteria voor validatie op veldniveau definiëren wanneer u uw schema&#39;s maakt.
+Wanneer u gegevens in het gegevenspeer opneemt, wordt de gegevensbevestiging slechts afgedwongen voor beperkte gebieden. Als u een bepaald veld tijdens het invoeren van batch wilt valideren, moet u het veld markeren als beperkt in het XDM-schema. Als u wilt voorkomen dat slechte gegevens Experience Platform binnenkomen, definieert u uw validatievereisten wanneer u uw schema&#39;s maakt.
 
 >[!IMPORTANT]
 >
 >Validatie geldt niet voor geneste kolommen. Als de veldindeling zich in een arraykolom bevindt, worden de gegevens niet gevalideerd.
 
-Als u beperkingen voor een bepaald veld wilt instellen, selecteert u het veld in de Schema-editor om de zijbalk **[!UICONTROL Field properties]** te openen. Zie de documentatie op [&#x200B; type-specifieke gebiedseigenschappen &#x200B;](../ui/fields/overview.md#type-specific-properties) voor nauwkeurige beschrijvingen van de beschikbare gebieden.
+Als u beperkingen voor een veld wilt instellen, selecteert u het veld in de Schema-editor om de zijbalk **[!UICONTROL Field properties]** te openen. Zie de documentatie op [ type-specifieke gebiedseigenschappen ](../ui/fields/overview.md#type-specific-properties) voor nauwkeurige beschrijvingen van de beschikbare gebieden.
 
-![&#x200B; de Redacteur van het Schema met de beperkingsgebieden die in [!UICONTROL Field properties] worden benadrukt sidebar.](../images/best-practices/data-validation-fields.png)
+![ de Redacteur van het Schema met de beperkingsgebieden die in [!UICONTROL Field properties] worden benadrukt sidebar.](../images/best-practices/data-validation-fields.png)
 
 ### Tips om de gegevensintegriteit te behouden {#data-integrity-tips}
 
-Hieronder volgt een verzameling suggesties voor het behoud van gegevensintegriteit wanneer u een schema maakt.
+De volgende suggesties helpen u gegevensintegriteit handhaven wanneer u een schema creeert.
 
 * **overweeg primaire identiteiten**: Voor de producten van Adobe zoals Web SDK, mobiele SDK, Adobe Analytics, en Adobe Journey Optimizer, dient het `identityMap` gebied vaak als primaire identiteit. Wijs geen extra velden aan als primaire identiteiten voor dat schema.
-* **verzeker `_id` niet als identiteit** wordt gebruikt: Het `_id` gebied in de schema&#39;s van de Gebeurtenis van de Ervaring kan niet als identiteit worden gebruikt aangezien het voor verslaguniciteit wordt bedoeld.
+* **verzeker `_id` niet als identiteit** wordt gebruikt: Het `_id` gebied in de schema&#39;s van de Gebeurtenis van de Ervaring kan niet als identiteit worden gebruikt omdat het voor verslaguniciteit wordt bedoeld.
 * **vastgestelde lengtebeperkingen**: Het is beste praktijken om minimum en maximumlengten op gebieden te plaatsen duidelijk als identiteiten. Er wordt een waarschuwing weergegeven als u een aangepaste naamruimte wilt toewijzen aan een identiteitsveld zonder te voldoen aan de minimale en maximale lengte. Deze beperkingen helpen consistentie en gegevenskwaliteit te behouden.
-* **pas patronen voor verenigbare waarden** toe: Als uw identiteitswaarden een specifiek patroon volgen, zou u **[!UICONTROL Pattern]** het plaatsen moeten gebruiken om deze beperking af te dwingen. Deze instelling kan regels bevatten zoals alleen cijfers, hoofdletters of kleine letters of specifieke tekencombinaties. Gebruik reguliere expressies die overeenkomen met patronen in de tekenreeksen.
+* **pas patronen voor verenigbare waarden** toe: Als uw identiteitswaarden een specifiek patroon volgen, gebruik **[!UICONTROL Pattern]** het plaatsen om beperkingen af te dwingen. Deze instelling kan regels bevatten zoals alleen cijfers, hoofdletters of kleine letters of specifieke tekencombinaties. Gebruik reguliere expressies die overeenkomen met patronen in de tekenreeksen.
 * **Grenswaarden eVars in de schema&#39;s van Analytics**: Typisch, zou een schema Analytics slechts één eVar moeten hebben die als identiteit wordt aangewezen. Als u meer dan één eVar als identiteit wilt gebruiken, moet u controleren of de gegevensstructuur kan worden geoptimaliseerd.
 * **verzekert uniciteit van een geselecteerd gebied**: Uw gekozen gebied zou uniek moeten zijn in vergelijking met de primaire identiteit in het schema. Als dit niet het geval is, merk het dan niet als een identiteit. Als bijvoorbeeld meerdere klanten hetzelfde e-mailadres kunnen opgeven, is die naamruimte geen geschikte identiteit. Dit beginsel is ook van toepassing op andere naamruimten zoals telefoonnummers. Als u een niet-uniek veld als een identiteit markeert, kan dit leiden tot het samenvouwen van het profiel.
 * **verifieer minimumkoordlengten**: Alle koordgebieden zouden minstens één karakter in lengte moeten zijn, aangezien de koordwaarden nooit leeg zouden moeten zijn. Null-waarden voor niet-vereiste velden zijn echter acceptabel. Nieuwe tekenreeksvelden krijgen standaard een minimale lengte van één.
 
+## Profielschema&#39;s beheren {#managing-profile-enabled-schemas}
+
+Deze sectie verklaart hoe te om schema&#39;s te beheren die reeds voor het Profiel van de Klant in real time worden toegelaten. Nadat een schema is ingeschakeld, kunt u het niet uitschakelen of verwijderen. U moet bepalen hoe te om verder gebruik te verhinderen en hoe te om datasets te beheren die u niet kunt schrappen.
+
+Zodra een schema voor Profiel wordt toegelaten, kan de configuratie niet worden omgekeerd. Als een schema niet meer zou moeten worden gebruikt, noem het anders om zijn status te verduidelijken en een vervangingsschema met de correcte structuur en identiteitsconfiguratie tot stand te brengen. Dit helpt onbedoeld hergebruik van het afgekeurde schema verhinderen wanneer de gebruikers nieuwe datasets creëren of inspraakworkflows vormen.
+
+De datasets van het systeem verschijnen soms naast Real-Time Klantprofiel-Toegelaten schema&#39;s. U kunt geen systeemdatasets schrappen, zelfs wanneer het bijbehorende schema verouderd is. Om onbedoeld gebruik te verhinderen, noem het vervangen profiel-Toegelaten schema anders en bevestig dat geen insluitingswerkschema&#39;s aan de systeemdataset richten die op zijn plaats blijft.
+
+Gebruik de volgende beste praktijken om onbedoeld hergebruik van verouderde profiel-Toegelaten schema&#39;s te verhinderen:
+
+* Gebruik een duidelijke naamgevingsconventie wanneer u een schema afwijst. Neem labels op, zoals &quot;Afgekeurd&quot;, &quot;Niet gebruiken&quot; of een versietag.
+* Stop het opnemen van gegevens in om het even welke dataset die op het schema wordt gebaseerd u wilt terugtrekken.
+* Maak een nieuw schema met de juiste structuur, identiteitsconfiguratie en naamgevingspatroon.
+* De gegevensreeksen van het systeem van het overzicht die niet kunnen worden geschrapt en verifiëren dat geen insluitingswerkschema&#39;s hen van verwijzingen voorzien.
+* Documenteer intern de verandering zodat andere gebruikers begrijpen waarom het schema wordt afgekeurd.
+
+>[!TIP]
+>
+>Zie de [ XDM het oplossen van problemengids ](../troubleshooting-guide.md#delete-profile-enabled) voor extra begeleiding op profiel-Toegelaten schema&#39;s en verwante beperkingen.
+
 ## Volgende stappen
 
-In dit document worden de algemene richtlijnen en aanbevolen procedures voor het ontwerpen van uw gegevensmodel voor Experience Platform besproken. Samenvatten:
+In dit document worden algemene richtlijnen en aanbevolen procedures beschreven voor het ontwerpen van uw gegevensmodel voor Experience Platform. Samenvatten:
 
-* Gebruik een top-down benadering door uw gegevenslijsten in profiel, raadpleging, en gebeurteniscategorieën te sorteren alvorens uw schema&#39;s te construeren.
-* Er zijn vaak meerdere benaderingen en opties als het gaat om het ontwerpen van schema&#39;s voor verschillende doeleinden.
-* Uw gegevensmodel zou uw zaken van het bedrijfsgebruik zoals segmentatie of de analyse van de klantenreis moeten steunen.
-* Maak uw schema&#39;s zo eenvoudig mogelijk, en voeg slechts nieuwe gebieden toe wanneer absoluut noodzakelijk.
+* Sorteer uw gegevenstabellen in profiel, raadpleging, en gebeurteniscategorieën alvorens uw schema&#39;s te construeren.
+* Evalueer veelvoudige benaderingen wanneer u schema&#39;s voor verschillende gebruiksgevallen ontwerpt.
+* Zorg ervoor dat uw gegevensmodel uw segmentatie of doelstellingen van de klantenreis steunt.
+* Houd schema&#39;s zo eenvoudig mogelijk. Voeg alleen indien nodig nieuwe velden toe.
 
-Zodra u klaar bent, zie het leerprogramma op [&#x200B; creërend een schema in UI &#x200B;](../tutorials/create-schema-ui.md) voor geleidelijke instructies op hoe te om een schema tot stand te brengen, wijs de aangewezen klasse voor de entiteit toe, en voeg gebieden toe om uw gegevens aan in kaart te brengen.
+Wanneer u klaar bent, zie het leerprogramma op [ creërend een schema in UI ](../tutorials/create-schema-ui.md) voor geleidelijke instructies op schemaverwezenlijking, klassentoewijzing, en gebiedstoewijzing.
