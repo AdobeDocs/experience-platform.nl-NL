@@ -89,7 +89,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ### Bestemmingsdetails invullen {#fill-in-details}
 
-Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een verbinding met uw eigen doelplatform instellen. Terwijl [&#x200B; vestiging &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) deze bestemming, u de volgende informatie moet verstrekken:
+Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een verbinding met uw eigen doelplatform instellen. Terwijl [&#x200B; vestiging &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=nl-NL) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Account Type]**: Kies de optie **[!UICONTROL Existing Account]** .
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
