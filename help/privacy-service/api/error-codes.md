@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Privacy Service-foutcodes {#privacy-service-error-codes}
 
-Gebruik deze verwijzing om de baanresultaten van Privacy Service te identificeren, mislukkingen te diagnostiseren, en aangewezen volgende stappen te bepalen wanneer het voorleggen van of het controleren van privacybanen in **Adobe Experience Platform**. Leren om, privacybanen tot stand te brengen voor te leggen en te controleren, zie de [ gids van de de banen van de privacy ](./privacy-jobs.md) of de [ gebruikersgids van Privacy Service UI ](../ui/user-guide.md).
+Gebruik deze verwijzing om de baanresultaten van Privacy Service te identificeren, mislukkingen te diagnostiseren, en aangewezen volgende stappen te bepalen wanneer het voorleggen van of het controleren van privacybanen in **Adobe Experience Platform**. Leren om, privacybanen tot stand te brengen voor te leggen en te controleren, zie de [&#x200B; gids van de de banen van de privacy &#x200B;](./privacy-jobs.md) of de [&#x200B; gebruikersgids van Privacy Service UI &#x200B;](../ui/user-guide.md).
 
 Privacy Service-foutcodes zijn een stabiel overheidscontract. Elke foutcode identificeert op unieke wijze een fout- of voltooiingsstatus waarop u kunt vertrouwen voor programmatische afhandeling en operationele workflows.
 
@@ -22,7 +22,7 @@ De volgende garanties zijn van toepassing bij het bouwen van automatiserings- of
 * Foutberichten kunnen veranderen om de duidelijkheid te verbeteren, maar de codewaarde niet.
 * Nieuwe foutcodes kunnen in de loop der tijd worden toegevoegd; bestaande codes worden niet opnieuw gebruikt.
 
-Gebruik foutcodes, geen berichttekst, om automatisering of besluitvormingslogica te implementeren. Voor begeleiding bij efficiënte verwerking van privacybanen, de status van de controletaak, en het behandelen van fouten zonder het baseren op opiniepeiling of berichtkoorden, zie [ best practices van Privacy Service ](../best-practices.md).
+Gebruik foutcodes, geen berichttekst, om automatisering of besluitvormingslogica te implementeren. Voor begeleiding bij efficiënte verwerking van privacybanen, de status van de controletaak, en het behandelen van fouten zonder het baseren op opiniepeiling of berichtkoorden, zie [&#x200B; best practices van Privacy Service &#x200B;](../best-practices.md).
 
 ## Opmaak van foutreactie {#error-response-format}
 
@@ -30,7 +30,7 @@ Privacy Service retourneert foutinformatie in taak en vraagt om antwoorden. De r
 
 De foutcode geeft het gezaghebbende resultaat aan. Het bericht biedt extra context voor het oplossen van problemen.
 
-In dit document worden de betekenis en de intentie van elke foutcode beschreven. Voor gebied-vlakke reactieschema&#39;s en verzoekdetails, zie de [ Privacy Service API documentatie ](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
+In dit document worden de betekenis en de intentie van elke foutcode beschreven. Voor gebied-vlakke reactieschema&#39;s en verzoekdetails, zie de [&#x200B; Privacy Service API documentatie &#x200B;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
 ## Foutdomeinen {#error-domains}
 
@@ -38,13 +38,13 @@ Foutcodes worden gegroepeerd op functioneel domein, zodat u problemen sneller ku
 
 De volgende domeinen worden in dit document gebruikt:
 
-* **bevestiging van het Verzoek**: Het verzoek is misvormd of bevat ongeldige waarden. Zie de [ gids van het de baaneindpunt van de privacy ](./privacy-jobs.md) voor verzoekstructuur en bevestigingsvereisten.
-* **Vergunning en levering**: Uw organisatie of gebruiker heeft de vereiste toegang niet. Zie [ toestemmingen ](../permissions.md) beheren om op rol-gebaseerde toestemmingsvereisten te herzien.
-* **Identiteit en toepasselijkheid**: De herkenningstekens of namespaces zijn niet van toepassing op het verzoek. Zie [ identiteitsgegevens voor privacyverzoeken ](../identity-data.md) voor gesteunde identiteitstypes en namespace vereisten.
+* **bevestiging van het Verzoek**: Het verzoek is misvormd of bevat ongeldige waarden. Zie de [&#x200B; gids van het de baaneindpunt van de privacy &#x200B;](./privacy-jobs.md) voor verzoekstructuur en bevestigingsvereisten.
+* **Vergunning en levering**: Uw organisatie of gebruiker heeft de vereiste toegang niet. Zie [&#x200B; toestemmingen &#x200B;](../permissions.md) beheren om op rol-gebaseerde toestemmingsvereisten te herzien.
+* **Identiteit en toepasselijkheid**: De herkenningstekens of namespaces zijn niet van toepassing op het verzoek. Zie [&#x200B; identiteitsgegevens voor privacyverzoeken &#x200B;](../identity-data.md) voor gesteunde identiteitstypes en namespace vereisten.
 * **Beperkend van het Tarief**: Het volume van de verzending overschrijdt platformgrenzen. Als deze fout optreedt, verlaagt u de verzendfrequentie en probeert u het opnieuw.
-* **de toegang en verwerking van Gegevens**: Het systeem kan niet tot de gevraagde gegevens toegang hebben of verwerken. Zie de [ het oplossen van problemengids ](../troubleshooting-guide.md) voor gemeenschappelijke oorzaken en saneringsstappen.
-* **Encryptie en zeer belangrijk beheer**: De vereiste encryptiesleutels zijn niet beschikbaar. Zie [ Klant Beheerde Sleutels ](../../landing/governance-privacy-security/customer-managed-keys/overview.md) voor zeer belangrijke toegang, configuratie, en terugwinningsbegeleiding.
-* **de uitvoeringsstaat van de Baan**: De volledig voltooide baan, gedeeltelijk, of met mislukkingen. Zie de [ gids van het de baaneindpunt van de privacy ](./privacy-jobs.md#status-categories) voor beschrijvingen van de categorieën van de baanstatus en hun betekenis.
+* **de toegang en verwerking van Gegevens**: Het systeem kan niet tot de gevraagde gegevens toegang hebben of verwerken. Zie de [&#x200B; het oplossen van problemengids &#x200B;](../troubleshooting-guide.md) voor gemeenschappelijke oorzaken en saneringsstappen.
+* **Encryptie en zeer belangrijk beheer**: De vereiste encryptiesleutels zijn niet beschikbaar. Zie [&#x200B; Klant Beheerde Sleutels &#x200B;](../../landing/governance-privacy-security/customer-managed-keys/overview.md) voor zeer belangrijke toegang, configuratie, en terugwinningsbegeleiding.
+* **de uitvoeringsstaat van de Baan**: De volledig voltooide baan, gedeeltelijk, of met mislukkingen. Zie de [&#x200B; gids van het de baaneindpunt van de privacy &#x200B;](./privacy-jobs.md#status-categories) voor beschrijvingen van de categorieën van de baanstatus en hun betekenis.
 
 >[!NOTE]
 >

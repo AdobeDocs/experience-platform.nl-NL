@@ -38,5 +38,5 @@ ht-degree: 38%
    * [Terminologie](./regulations/terminology.md)
 * [Best practices](./best-practices.md)
 * [Handleiding voor probleemoplossing](./troubleshooting-guide.md)
-* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
+* [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [Aanvullende informatie](./release-notes.md)
