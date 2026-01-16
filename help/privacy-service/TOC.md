@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor Privacy Service
 user-guide-description: Beheer verzoeken om klantgegevens om te voldoen aan wettelijke privacyregelgeving zoals AVG en CCPA.
 feature: Privacy
 role: User,Admin
-source-git-commit: 306f7fcd09f395895fde241b668c41a2479a8d2d
+source-git-commit: bc180437c42ab2eea946e1a4d6d9dbd77e0896c8
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 36%
+source-wordcount: '94'
+ht-degree: 38%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 36%
    * [Privacytaken](./api/privacy-jobs.md)
    * [Toestemming](./api/consent.md)
    * [Inhoud](./api/content.md)
+   * [Foutcodes](./api/error-codes.md)
    * [Bijlage](./api/appendix.md)
 * PRIVACY SERVICE UI {#ui}
    * [Overzicht](./ui/overview.md)
@@ -37,5 +38,5 @@ ht-degree: 36%
    * [Terminologie](./regulations/terminology.md)
 * [Best practices](./best-practices.md)
 * [Handleiding voor probleemoplossing](./troubleshooting-guide.md)
-* [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
+* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [Aanvullende informatie](./release-notes.md)
