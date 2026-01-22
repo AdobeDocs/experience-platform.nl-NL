@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De bron [!DNL Talon.One] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Talon.One] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees deze zelfstudie om te leren hoe u batchgegevens van uw [!DNL Talon.One] -account in Adobe Experience Platform kunt invoeren met de werkruimte voor bronnen in de gebruikersinterface.
 
@@ -23,14 +23,14 @@ Lees deze zelfstudie om te leren hoe u batchgegevens van uw [!DNL Talon.One] -ac
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 >[!IMPORTANT]
 >
->Lees het [[!DNL Talon.One]  overzicht ](../../../../connectors/loyalty/talon-one.md) om over in de eerste plaats vereiste stappen te leren die u moet voltooien alvorens uw rekening met Experience Platform te verbinden.
+>Lees het [[!DNL Talon.One]  overzicht &#x200B;](../../../../connectors/loyalty/talon-one.md) om over in de eerste plaats vereiste stappen te leren die u moet voltooien alvorens uw rekening met Experience Platform te verbinden.
 
 ## Navigeren door de catalogus met bronnen
 
@@ -42,13 +42,13 @@ Als u gegevens uit [!DNL Talon.One] wilt invoeren, selecteert u de **[!UICONTROL
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus met Talon.One geselecteerde kaart van de partijbronschakelaar.](../../../../images/tutorials/create/talon-one-batch/catalog.png)
+![&#x200B; de broncatalogus met Talon.One geselecteerde kaart van de partijbronschakelaar.](../../../../images/tutorials/create/talon-one-batch/catalog.png)
 
 ### Een nieuwe account maken
 
 Als u een nieuwe account voor uw [!DNL Talon.One] -bron wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en een optionele beschrijving voor uw account op. Geef vervolgens uw [!DNL Talon.One] -domein en uw [!UICONTROL Talon.One Management API Key] op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de verbinding enkele ogenblikken tot stand brengen.
 
-![ creeer nieuwe rekeningsstap van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/new.png)
+![&#x200B; creeer nieuwe rekeningsstap van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/new.png)
 
 ### Een bestaande account gebruiken
 
@@ -58,7 +58,7 @@ Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing 
 
 Zodra u voor authentiek hebt verklaard, verstrek waarden voor uw **applicationId** en **sessionType**. Tijdens deze stap kunt u de voorvertoningsfuncties gebruiken om de structuur van uw gegevens te inspecteren. Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ de uitgezochte gegevens en voorproefstappen van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
+![&#x200B; de uitgezochte gegevens en voorproefstappen van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
 ## Gegevens over gegevensset en gegevensstroom configureren
 
@@ -87,25 +87,25 @@ Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan 
 
 Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegrip van een naam, een facultatieve beschrijving, en waakzame configuraties dan verstrekken.
 
-![ de dataflow detailinterface.](../../../../images/tutorials/create/talon-one-batch/dataflow-detail.png)
+![&#x200B; de dataflow detailinterface.](../../../../images/tutorials/create/talon-one-batch/dataflow-detail.png)
 
 | Dataflow-configuraties | Beschrijving |
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom. Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan waarschuwingen op basis van gebeurtenissen produceren waarop gebruikers zich kunnen abonneren. Met deze opties kan een actieve gegevensstroom deze waarschuwingen activeren.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan waarschuwingen op basis van gebeurtenissen produceren waarop gebruikers zich kunnen abonneren. Met deze opties kan een actieve gegevensstroom deze waarschuwingen activeren.  Voor meer informatie, lees het [&#x200B; alarm overzicht &#x200B;](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Toewijzing
 
-Met uw gevormde dataset en dataflow details, kunt u nu te werk gaan om uw brongegevensgebieden aan hun aangewezen doelXDM gebieden in kaart te brengen. Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren. Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md).
+Met uw gevormde dataset en dataflow details, kunt u nu te werk gaan om uw brongegevensgebieden aan hun aangewezen doelXDM gebieden in kaart te brengen. Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren. Voor meer informatie, lees de [&#x200B; kaartgids in UI &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
->Voor extra begeleiding bij het in kaart brengen van uw [!DNL Talon.One] brongegevens, lees het [[!DNL Talon.One]  overzicht ](../../../../connectors/loyalty/talon-one.md#mapping).
+>Voor extra begeleiding bij het in kaart brengen van uw [!DNL Talon.One] brongegevens, lees het [[!DNL Talon.One]  overzicht &#x200B;](../../../../connectors/loyalty/talon-one.md#mapping).
 
-![ de afbeeldingsinterface van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/mapping.png)
+![&#x200B; de afbeeldingsinterface van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/mapping.png)
 
 ## Plaats uw gegevensstroomopname
 
@@ -128,7 +128,7 @@ Zie de lijst hieronder voor meer informatie over het plannen van configuraties.
 | Begintijd | Het tijdstempel voor de geprojecteerde run, weergegeven in UTC-tijdzone. |
 | Achtergrond | Met Backfill wordt bepaald welke gegevens in eerste instantie worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als terugvullen is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
 
-![ de stap van de planningsconfiguratie van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/scheduling.png)
+![&#x200B; de stap van de planningsconfiguratie van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/scheduling.png)
 
 ## Controleren
 
@@ -139,11 +139,11 @@ De stap *[!UICONTROL Review]* wordt weergegeven, zodat u de details van de gegev
 
 Selecteer **[!UICONTROL Finish]** nadat u hebt bevestigd dat de details juist zijn.
 
-![ de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/review.png)
+![&#x200B; de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/talon-one-batch/review.png)
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie het leerprogramma op [ controlerekeningen en dataflows in UI ](../../../../../dataflows/ui/monitor-sources.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie het leerprogramma op [&#x200B; controlerekeningen en dataflows in UI &#x200B;](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Bekende beperkingen
 
