@@ -4,9 +4,9 @@ description: Leer hoe te om gegevens van Talon.One in Adobe Experience Platform 
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De bron [!DNL Talon.One] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Talon.One] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees deze handleiding voor het maken van verbinding en het streamen van gegevens van [!DNL Talon.One] naar Adobe Experience Platform met de werkruimte voor bronnen in de gebruikersinterface.
 
@@ -23,14 +23,14 @@ Lees deze handleiding voor het maken van verbinding en het streamen van gegevens
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 >[!IMPORTANT]
 >
->Lees het [[!DNL Talon.One]  overzicht &#x200B;](../../../../connectors/loyalty/talon-one.md) om over in de eerste plaats vereiste stappen te leren die u moet voltooien alvorens uw rekening met Experience Platform te verbinden.
+>Lees het [[!DNL Talon.One]  overzicht ](../../../../connectors/loyalty/talon-one.md) om over in de eerste plaats vereiste stappen te leren die u moet voltooien alvorens uw rekening met Experience Platform te verbinden.
 
 ## Navigeren door de catalogus met bronnen
 
@@ -42,13 +42,13 @@ Als u gegevens wilt streamen vanuit [!DNL Talon.One] , selecteert u de **[!UICON
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-![&#x200B; de broncatalogus in UI met de geselecteerde kaart van Gebeurtenissen Talon.One het Streamen.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
+![ de broncatalogus in UI met de geselecteerde kaart van Gebeurtenissen Talon.One het Streamen.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
 
 ## Gegevens selecteren
 
 Gebruik vervolgens de interface van *[!UICONTROL Select data]* om een voorbeeld-JSON-bestand te uploaden om uw bronschema te definiëren. Tijdens deze stap kunt u de voorvertoningsinterface gebruiken om de bestandsstructuur van de laadbewerking weer te geven. Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![&#x200B; de uitgezochte gegevensstap van het bronwerkschema &#x200B;](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
+![ de uitgezochte gegevensstap van het bronwerkschema ](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
 
 ## Gegevens gegevensstroom
 
@@ -77,19 +77,19 @@ Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan 
 
 Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegrip van een naam, een facultatieve beschrijving, en waakzame configuraties dan verstrekken.
 
-![&#x200B; de dataflow detailinterface &#x200B;](../../../../images/tutorials/create/talon-one-streaming/dataflow-details.png)
+![ de dataflow detailinterface ](../../../../images/tutorials/create/talon-one-streaming/dataflow-details.png)
 
 | Dataflow-configuraties | Beschrijving |
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom. Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan waarschuwingen op basis van gebeurtenissen produceren waarop gebruikers zich kunnen abonneren. Met deze opties kan een actieve gegevensstroom deze waarschuwingen activeren.  Voor meer informatie, lees het [&#x200B; alarm overzicht &#x200B;](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan waarschuwingen op basis van gebeurtenissen produceren waarop gebruikers zich kunnen abonneren. Met deze opties kan een actieve gegevensstroom deze waarschuwingen activeren.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Toewijzing
 
-Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren. Voor meer informatie, lees de [&#x200B; kaartgids in UI &#x200B;](../../../../../data-prep/ui/mapping.md).
+Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren. Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md).
 
 <!--
 >[!TIP]
@@ -97,7 +97,7 @@ Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewez
 >You can download the [Events and Profile mappings](../../../../images/tutorials/create/capillary/mappings.zip) for [!DNL Capillary] and [import the files to Data Prep](../../../../../data-prep/ui/mapping.md#import-mapping) when you are ready to map your data.
 -->
 
-![&#x200B; de toewijzingsinterface voor Talon.One die stromen.](../../../../images/tutorials/create/talon-one-streaming/mapping.png)
+![ de toewijzingsinterface voor Talon.One die stromen.](../../../../images/tutorials/create/talon-one-streaming/mapping.png)
 
 ## Controleren
 
@@ -108,14 +108,18 @@ De stap *[!UICONTROL Review]* wordt weergegeven, zodat u de details van de gegev
 
 Selecteer **[!UICONTROL Finish]** nadat u hebt bevestigd dat de details juist zijn.
 
-![&#x200B; de revisiestap in het bronwerkschema.](../../../../images/tutorials/create/talon-one-streaming/review.png)
+![ de revisiestap in het bronwerkschema.](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
 ## De URL van het streamingeindpunt ophalen
 
 Als de verbinding is gemaakt, wordt de pagina met brondetails weergegeven. Deze pagina bevat details van de zojuist gemaakte verbinding, waaronder eerder uitgevoerde dataflows, ID en URL van het streamingeindpunt.
 
-![&#x200B; het stromen eindpunt URL.](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
+![ het stromen eindpunt URL.](../../../../images/tutorials/create/talon-one-streaming/streaming-endpoint.png)
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie het leerprogramma op [&#x200B; controlerekeningen en dataflows in UI &#x200B;](../../monitor-streaming.md)
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie het leerprogramma op [ controlerekeningen en dataflows in UI ](../../monitor-streaming.md).
+
+## Bekende beperkingen
+
+Om nauwkeurige gegevensinvoer te verzekeren, zou u gegevens van de getrouwe punten van [!DNL Talon.One] veranderd, de rijverbetering, en de berichten van de rijdaling aan de schakelaar moeten verzenden. Omdat het bericht van de loyaliteitspunten veranderde geen rijinformatie omvat, moet u deze berichten naar een afzonderlijke profieldataset verzenden. Als u punten veranderde gegevens met rijverbetering of downgradeberichten in de zelfde dataset combineert, zal de lijstinformatie met ongeldige waarden worden verloren of worden beschreven. De verbetering van de rij en de dalingsberichten kunnen de zelfde dataset gebruiken, aangezien beide rijdetails omvatten. Na opname wordt het samengevoegde profiel automatisch bijgewerkt door de regels voor het samenvoegen van profielen, zodat deze de meest recente punten en informatie op de laag weerspiegelen.
