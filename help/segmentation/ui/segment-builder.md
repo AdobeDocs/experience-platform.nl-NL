@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 27071d79f52fa47e27da84b970729eb52fbbb7d3
 workflow-type: tm+mt
-source-wordcount: '5161'
+source-wordcount: '5175'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,38 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Deze gids verklaart hoe te om publiek door **segmentdefinities** tot stand te brengen gebruikend de Bouwer van het Segment. Leren hoe te om publiek tot stand te brengen gebruikend de Samenstelling van het Publiek, te lezen gelieve de [&#x200B; gids UI van de Samenstelling van het Publiek &#x200B;](./audience-composition.md).
+>Deze gids verklaart hoe te om publiek door **segmentdefinities** tot stand te brengen gebruikend de Bouwer van het Segment. Leren hoe te om publiek tot stand te brengen gebruikend de Samenstelling van het Publiek, te lezen gelieve de [ gids UI van de Samenstelling van het Publiek ](./audience-composition.md).
 
 [!DNL Segment Builder] biedt een rijke werkruimte waarmee u kunt werken met [!DNL Profile] -gegevenselementen. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 
-![&#x200B; wordt de Bouwer UI van het Segment getoond.](../images/ui/segment-builder/segment-builder.png)
+![ wordt de Bouwer UI van het Segment getoond.](../images/ui/segment-builder/segment-builder.png)
 
 ## Bouwstenen voor segmentdefinitie {#building-blocks}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="Logische complexiteit"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="Limiet voor gebeurtenisreeksen"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="Efficiëntie van query, waarschuwing"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="Waarschuwing bij telfilter"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="Waarschuwing: geneste gegevens"
+>abstract=""
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
@@ -50,17 +75,17 @@ De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daar
 >
 >Samenvattingsgegevens worden weergegeven als het kenmerk aan de volgende criteria voldoet: alle waarden van het kenmerk zijn 100 tekens of minder en er zijn 3000 of minder unieke waarden voor het kenmerk.
 >
->Nochtans, zal een attribuut **&#x200B;**&#x200B;geen summiere gegevens hebben als het multi-entiteitgegevens verbonden aan het profiel door een verhouding is. Bijvoorbeeld, als u een douaneschema genoemd `Vehicle` hebt, zullen de **eigenschappen** binnen het `Vehicle` schema **&#x200B;**&#x200B;geen summiere gegevens hebben.
+>Nochtans, zal een attribuut **** geen summiere gegevens hebben als het multi-entiteitgegevens verbonden aan het profiel door een verhouding is. Bijvoorbeeld, als u een douaneschema genoemd `Vehicle` hebt, zullen de **eigenschappen** binnen het `Vehicle` schema **** geen summiere gegevens hebben.
 
 U kunt deze bouwstenen zien in de sectie **[!UICONTROL Fields]** aan de linkerkant van de [!DNL Segment Builder] -werkruimte. **[!UICONTROL Fields]** bevat een lusje voor elk van de belangrijkste bouwstenen: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot;, en &quot;[!UICONTROL Audiences]&quot;.
 
-![&#x200B; de gebiedssectie van de Bouwer van het Segment wordt benadrukt.](../images/ui/segment-builder/segment-fields.png)
+![ de gebiedssectie van de Bouwer van het Segment wordt benadrukt.](../images/ui/segment-builder/segment-fields.png)
 
 ### Attributen
 
-Op het tabblad **[!UICONTROL Attributes]** kunt u door [!DNL Profile] -kenmerken bladeren die tot de klasse [!DNL XDM Individual Profile] behoren. Elke map kan worden uitgevouwen om extra kenmerken weer te geven. Elk kenmerk is een tegel die naar het canvas voor regelbuilders in het midden van de werkruimte kan worden gesleept. Het [&#x200B; canvas van de regelbouwer &#x200B;](#rule-builder-canvas) wordt besproken meer in detail later in deze gids.
+Op het tabblad **[!UICONTROL Attributes]** kunt u door [!DNL Profile] -kenmerken bladeren die tot de klasse [!DNL XDM Individual Profile] behoren. Elke map kan worden uitgevouwen om extra kenmerken weer te geven. Elk kenmerk is een tegel die naar het canvas voor regelbuilders in het midden van de werkruimte kan worden gesleept. Het [ canvas van de regelbouwer ](#rule-builder-canvas) wordt besproken meer in detail later in deze gids.
 
-![&#x200B; de attributensectie van de gebieden van de Bouwer van het Segment wordt benadrukt.](../images/ui/segment-builder/attributes.png)
+![ de attributensectie van de gebieden van de Bouwer van het Segment wordt benadrukt.](../images/ui/segment-builder/attributes.png)
 
 ### Gebeurtenissen
 
@@ -68,7 +93,7 @@ Op het tabblad **[!UICONTROL Events]** kunt u een publiek maken op basis van geb
 
 U kunt niet alleen zoeken naar [!DNL ExperienceEvent] -elementen, maar ook naar gebeurtenistypen. Gebeurtenistypen gebruiken dezelfde coderingslogica als [!DNL ExperienceEvents], zonder dat u door de klasse [!DNL XDM ExperienceEvent] hoeft te zoeken om de juiste gebeurtenis te vinden. Bijvoorbeeld, die de onderzoeksbar gebruiken om &quot;wortel&quot;te zoeken keert de Types &quot;[!UICONTROL AddCart]&quot;van Gebeurtenis en &quot;[!UICONTROL RemoveCart] terug, die twee zeer vaak gebruikte kartacties zijn wanneer het bouwen van segmentdefinities.
 
-Om het even welk type van component kan worden gezocht door zijn naam in de onderzoeksbar te typen, die [&#x200B; het onderzoekssyntaxis van Lucene &#x200B;](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) gebruikt. De zoekresultaten beginnen te vullen wanneer hele woorden worden ingevoerd. Als u bijvoorbeeld een regel wilt maken op basis van het XDM-veld `ExperienceEvent.commerce.productViews` , typt u &quot;productweergaven&quot; in het zoekveld. Nadat u het woord &quot;product&quot; hebt getypt, worden de zoekresultaten weergegeven. Elk resultaat bevat de objecthiërarchie waartoe het behoort.
+Om het even welk type van component kan worden gezocht door zijn naam in de onderzoeksbar te typen, die [ het onderzoekssyntaxis van Lucene ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) gebruikt. De zoekresultaten beginnen te vullen wanneer hele woorden worden ingevoerd. Als u bijvoorbeeld een regel wilt maken op basis van het XDM-veld `ExperienceEvent.commerce.productViews` , typt u &quot;productweergaven&quot; in het zoekveld. Nadat u het woord &quot;product&quot; hebt getypt, worden de zoekresultaten weergegeven. Elk resultaat bevat de objecthiërarchie waartoe het behoort.
 
 >[!NOTE]
 >
@@ -76,11 +101,11 @@ Om het even welk type van component kan worden gezocht door zijn naam in de onde
 
 Vervolgens kunt u [!DNL ExperienceEvents] en &quot;[!UICONTROL Event Types]&quot; eenvoudig naar uw segmentdefinitie slepen.
 
-![&#x200B; de gebeurtenissectie van de Bouwer van het Segment wordt benadrukt.](../images/ui/segment-builder/events.png)
+![ de gebeurtenissectie van de Bouwer van het Segment wordt benadrukt.](../images/ui/segment-builder/events.png)
 
 Standaard worden alleen gevulde schemavelden uit de gegevensopslag weergegeven. Dit omvat &quot;[!UICONTROL Event Types]&quot;. Als &quot;[!UICONTROL Event Types]&quot;lijst niet zichtbaar is, of u slechts &quot; [!UICONTROL Any]&quot;als &quot;[!UICONTROL Event Type]&quot;kunt selecteren, selecteer het **tandwielpictogram** naast **[!UICONTROL Fields]**, dan uitgezocht **[!UICONTROL Show full XDM schema]** onder **[!UICONTROL Available Fields]**. Selecteer het **tandwielpictogram** opnieuw om aan het **[!UICONTROL Fields]** lusje terug te keren en u zou veelvoudige &quot;[!UICONTROL Event Types]&quot;en schemagebieden nu moeten kunnen bekijken, ongeacht of zij gegevens bevatten of niet.
 
-![&#x200B; Keuzerondjes die u tussen slechts het tonen van gebieden met gegevens laten kiezen of alle gebieden tonen XDM worden benadrukt.](../images/ui/segment-builder/show-populated.png)
+![ Keuzerondjes die u tussen slechts het tonen van gebieden met gegevens laten kiezen of alle gebieden tonen XDM worden benadrukt.](../images/ui/segment-builder/show-populated.png)
 
 #### Gegevenssets van Adobe Analytics-rapportsuite
 
@@ -88,9 +113,9 @@ U kunt gegevens uit één of meerdere Adobe Analytics-rapportreeksen gebruiken a
 
 Als Experience Platform gegevens uit één analytische rapportsuite gebruikt, worden automatisch beschrijvingen en vriendelijke namen aan Vars toegevoegd, zodat u die velden gemakkelijker kunt vinden in [!DNL Segment Builder] .
 
-![&#x200B; een beeld dat toont hoe generische variabelen (eVars) met een gebruikersvriendelijke naam in kaart worden gebracht.](../images/ui/segment-builder/single-report-suite.png)
+![ een beeld dat toont hoe generische variabelen (eVars) met een gebruikersvriendelijke naam in kaart worden gebracht.](../images/ui/segment-builder/single-report-suite.png)
 
-Wanneer het gebruiken van gegevens van de veelvoudige het rapportreeksen van de Analyse, Experience Platform **kan** automatisch geen beschrijvers of vriendschappelijke namen aan eVars toevoegen. Dientengevolge, alvorens de gegevens van Analytics rapportreeksen te gebruiken, moet u aan XDM gebieden in kaart brengen. Meer informatie over de variabelen van de afbeeldingsanalyse aan XDM kan in de [&#x200B; bron van Adobe Analytics verbindingsgids &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping) worden gevonden.
+Wanneer het gebruiken van gegevens van de veelvoudige het rapportreeksen van de Analyse, Experience Platform **kan** automatisch geen beschrijvers of vriendschappelijke namen aan eVars toevoegen. Dientengevolge, alvorens de gegevens van Analytics rapportreeksen te gebruiken, moet u aan XDM gebieden in kaart brengen. Meer informatie over de variabelen van de afbeeldingsanalyse aan XDM kan in de [ bron van Adobe Analytics verbindingsgids ](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping) worden gevonden.
 
 Neem bijvoorbeeld een situatie waarin u twee rapportsuites met de volgende variabelen had:
 
@@ -107,7 +132,7 @@ Neem bijvoorbeeld een situatie waarin u twee rapportsuites met de volgende varia
 
 In dit geval, kon u de twee rapportreeksen met het volgende schema in kaart brengen:
 
-![&#x200B; een beeld dat toont hoe twee rapportsuites in één verenigingsschema kunnen worden in kaart gebracht.](../images/ui/segment-builder/union-schema.png)
+![ een beeld dat toont hoe twee rapportsuites in één verenigingsschema kunnen worden in kaart gebracht.](../images/ui/segment-builder/union-schema.png)
 
 >[!NOTE]
 >
@@ -131,7 +156,7 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Extern publiek"
 >abstract="Het publiek dat via het tabblad Soorten publiek wordt geïmporteerd, wordt nu automatisch opgezocht via het Poort publiek. Dit omvat publiek dat van Audience Manager, Customer Journey Analytics, Segment Match, en andere douaneintegratie wordt opgenomen.<br/><br/> tegen eind september 2025, zal het publiek uitsluitend door Verenigd Onderzoek worden teruggewonnen, en het vorige werkschema zal niet meer gesteund. De Overeenkomst van het segment blijft beschikbaar slechts voor een klein aantal aangewezen klanten terwijl wij de dienst overgaan. De toegang voor de nieuwe klanten van de Gelijke van het Segment kan nog op verzoek worden toegelaten alvorens de dienst volledig gepensioneerd is.<br/><br/> voor aan de gang zijnde gevallen van het gebruik van gegevenssamenwerking, adviseert Adobe zich aan Collaboration te bewegen, die de op lange termijn gesteunde oplossing is."
->additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/ui/audience-portal#list" text="Poort publiek"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Poort publiek"
 
 >[!NOTE]
 >
@@ -143,7 +168,7 @@ Op het tabblad **[!UICONTROL Audiences]** kunt u alle beschikbare bronnen weerge
 
 U kunt de muisaanwijzer boven de ⓘ naast een doelgroep houden om informatie over het publiek weer te geven, zoals de id, beschrijving en maphiërarchie, om het publiek te zoeken.
 
-![&#x200B; een beeld dat aantoont hoe de omslaghiërarchie voor publiek werkt.](../images/ui/segment-builder/audience-folder-structure.png)
+![ een beeld dat aantoont hoe de omslaghiërarchie voor publiek werkt.](../images/ui/segment-builder/audience-folder-structure.png)
 
 ## Rule builder canvas {#rule-builder-canvas}
 
@@ -159,35 +184,35 @@ Een segmentdefinitie is een inzameling van regels die worden gebruikt om zeer be
 
 Als u een nieuwe regel wilt toevoegen aan de segmentdefinitie, sleept u een tegel van de tab **[!UICONTROL Fields]** naar het canvas van de regelbuilder. Vervolgens krijgt u contextspecifieke opties, afhankelijk van het type gegevens dat u wilt toevoegen. Beschikbare gegevenstypen zijn: tekenreeksen, datums, [!DNL ExperienceEvents] , &quot;[!UICONTROL Event Types]&quot; en soorten publiek.
 
-![&#x200B; het lege canvas van de regelbouwer.](../images/ui/segment-builder/rule-builder-canvas.png)
+![ het lege canvas van de regelbouwer.](../images/ui/segment-builder/rule-builder-canvas.png)
 
 >[!IMPORTANT]
 >
->De meest recente wijzigingen in Adobe Experience Platform hebben het gebruik van de logische operatoren `OR` en `AND` tussen gebeurtenissen bijgewerkt. Deze updates zijn niet van invloed op bestaande segmentdefinities. Nochtans, zullen alle verdere updates aan bestaande segmentdefinities en pas gecreëerde segmentdefinities door deze veranderingen worden beïnvloed. Gelieve te lezen de [&#x200B; update van tijdconstanten &#x200B;](./segment-refactoring.md) voor meer informatie.
+>De meest recente wijzigingen in Adobe Experience Platform hebben het gebruik van de logische operatoren `OR` en `AND` tussen gebeurtenissen bijgewerkt. Deze updates zijn niet van invloed op bestaande segmentdefinities. Nochtans, zullen alle verdere updates aan bestaande segmentdefinities en pas gecreëerde segmentdefinities door deze veranderingen worden beïnvloed. Gelieve te lezen de [ update van tijdconstanten ](./segment-refactoring.md) voor meer informatie.
 
 Wanneer u een waarde voor het kenmerk selecteert, wordt een lijst met opsommingswaarden weergegeven die het kenmerk kan bevatten.
 
-![&#x200B; een beeld dat de lijst van opsommingswaarden toont die een attribuut kan zijn.](../images/ui/segment-builder/enum-list.png)
+![ een beeld dat de lijst van opsommingswaarden toont die een attribuut kan zijn.](../images/ui/segment-builder/enum-list.png)
 
 Als u een waarde in deze lijst met nummers selecteert, krijgt de waarde een effen rand. Nochtans, voor gebieden die `meta:enum` (zachte) opsommingen gebruiken, kunt u een waarde ook selecteren die **niet** van de lijst van lijsten is. Als u uw eigen waarde maakt, krijgt deze de omtrek met een gestippelde rand en een waarschuwing dat deze waarde niet in de opsommingslijst voorkomt.
 
-![&#x200B; een waarschuwing die wordt getoond als u een waarde opneemt die geen deel van de enumlijst uitmaakt.](../images/ui/segment-builder/enum-warning.png)
+![ een waarschuwing die wordt getoond als u een waarde opneemt die geen deel van de enumlijst uitmaakt.](../images/ui/segment-builder/enum-warning.png)
 
-Als u meerdere waarden maakt, kunt u deze allemaal tegelijk toevoegen door de bulkupload te gebruiken. Selecteer het ![&#x200B; plus pictogram &#x200B;](/help/images/icons/add-circle.png) om **[!UICONTROL Add values in bulk]** popover te tonen.
+Als u meerdere waarden maakt, kunt u deze allemaal tegelijk toevoegen door de bulkupload te gebruiken. Selecteer het ![ plus pictogram ](/help/images/icons/add-circle.png) om **[!UICONTROL Add values in bulk]** popover te tonen.
 
-![&#x200B; het plus pictogram wordt benadrukt, tonend de knoop die u kunt selecteren om tot bulkupload toegang te hebben popover.](../images/ui/segment-builder/add-bulk-values.png)
+![ het plus pictogram wordt benadrukt, tonend de knoop die u kunt selecteren om tot bulkupload toegang te hebben popover.](../images/ui/segment-builder/add-bulk-values.png)
 
 In de pop-up **[!UICONTROL Add values in bulk]** kunt u een CSV- of TSV-bestand uploaden.
 
-![&#x200B; voegt waarden in bulkpopover toe wordt getoond. Het dialoogvenster dat u kunt selecteren om een CSV- of TSV-bestand te uploaden, wordt gemarkeerd.](../images/ui/segment-builder/bulk-values-popover.png)
+![ voegt waarden in bulkpopover toe wordt getoond. Het dialoogvenster dat u kunt selecteren om een CSV- of TSV-bestand te uploaden, wordt gemarkeerd.](../images/ui/segment-builder/bulk-values-popover.png)
 
 U kunt ook handmatig door komma&#39;s gescheiden waarden toevoegen.
 
-![&#x200B; voegt waarden in bulkpopover toe wordt getoond. Zowel worden de dialoog u kunt gebruiken om waarden op te nemen als de toegevoegde waarden benadrukt.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+![ voegt waarden in bulkpopover toe wordt getoond. Zowel worden de dialoog u kunt gebruiken om waarden op te nemen als de toegevoegde waarden benadrukt.](../images/ui/segment-builder/bulk-values-comma-separated.png)
 
 Er zijn maximaal 250 waarden toegestaan. Als u deze hoeveelheid overschrijdt, moet u enkele waarden verwijderen voordat u meer waarden toevoegt.
 
-![&#x200B; een waarschuwing die toont dat u het maximumaantal waarden hebt bereikt wordt getoond.](../images/ui/segment-builder/maximum-values.png)
+![ een waarschuwing die toont dat u het maximumaantal waarden hebt bereikt wordt getoond.](../images/ui/segment-builder/maximum-values.png)
 
 ### Soorten publiek toevoegen
 
@@ -204,7 +229,7 @@ Voor [!DNL Experience Platform] publiek dat met [!DNL Segment Builder] wordt gec
 >
 >Wanneer u een publiek uit een externe bron toevoegt, wordt alleen verwezen naar het publiekslidmaatschap. U kunt het publiek niet in regels omzetten, en daarom kunnen de regels die worden gebruikt om het originele publiek tot stand te brengen niet in de nieuwe segmentdefinitie worden gewijzigd.
 
-![&#x200B; Dit beeld toont hoe te om een publieksattribuut in regels om te zetten.](../images/ui/segment-builder/add-audience-to-segment.png)
+![ Dit beeld toont hoe te om een publieksattribuut in regels om te zetten.](../images/ui/segment-builder/add-audience-to-segment.png)
 
 Als er conflicten optreden wanneer een publiek wordt omgezet in regels, probeert [!DNL Segment Builder] de bestaande opties zo goed mogelijk te behouden.
 
@@ -212,11 +237,11 @@ Als er conflicten optreden wanneer een publiek wordt omgezet in regels, probeert
 
 U kunt ook een op code gebaseerde versie weergeven van een regel die is gemaakt in de [!DNL Segment Builder] . Zodra u uw regel binnen het canvas van de regelbouwer hebt gecreeerd, kunt u selecteren **[!UICONTROL Code view]** om uw segmentdefinitie als PQL te zien.
 
-![&#x200B; de knoop van de codemening wordt benadrukt, die u toestaat om de segmentdefinitie als PQL te zien.](../images/ui/segment-builder/code-view.png)
+![ de knoop van de codemening wordt benadrukt, die u toestaat om de segmentdefinitie als PQL te zien.](../images/ui/segment-builder/code-view.png)
 
 De mening van de code verstrekt een knoop die u toestaat om de waarde van de segmentdefinitie aan gebruik in API vraag te kopiëren. Om de recentste versie van de segmentdefinitie te krijgen, zorg ervoor u uw recentste veranderingen in de segmentdefinitie hebt bewaard.
 
-![&#x200B; de knoop van de exemplaarcode wordt benadrukt, die u aan &#x200B;](../images/ui/segment-builder/copy-code.png) toestaat
+![ de knoop van de exemplaarcode wordt benadrukt, die u aan ](../images/ui/segment-builder/copy-code.png) toestaat
 
 ### Samenvoegingsfuncties
 
@@ -224,15 +249,15 @@ Een aggregatie in [!DNL Segment Builder] is een berekening op een groep XDM-kenm
 
 Als u een aggregatiefunctie wilt maken, selecteert u een gebeurtenis in de linkertrack en voegt u deze in de container van [!UICONTROL Events] in.
 
-![&#x200B; de gebeurtenissectie wordt benadrukt.](../images/ui/segment-builder/events.png)
+![ de gebeurtenissectie wordt benadrukt.](../images/ui/segment-builder/events.png)
 
 Nadat u de gebeurtenis in de container Gebeurtenissen hebt geplaatst, selecteert u het pictogram Ovalen (...), gevolgd door **[!UICONTROL Aggregate]** .
 
-![&#x200B; de gezamenlijke tekst wordt benadrukt. Als u dit selecteert, kunt u aggregatiefuncties selecteren.](../images/ui/segment-builder/add-aggregation.png)
+![ de gezamenlijke tekst wordt benadrukt. Als u dit selecteert, kunt u aggregatiefuncties selecteren.](../images/ui/segment-builder/add-aggregation.png)
 
 De samenvoeging wordt nu toegevoegd. U kunt nu de aggregatiefunctie selecteren, kiezen welk kenmerk wordt geaggregeerd, de gelijkheidsfunctie en de waarde. In het onderstaande voorbeeld zou deze segmentdefinitie elk profiel kwalificeren dat een som aangekochte waarden heeft die groter is dan $100, zelfs als elke afzonderlijke aankoop minder dan $100 is.
 
-![&#x200B; de gebeurtenisregels, die een samenvoegingsfunctie tonen.](../images/ui/segment-builder/filled-aggregation.png)
+![ de gebeurtenisregels, die een samenvoegingsfunctie tonen.](../images/ui/segment-builder/filled-aggregation.png)
 
 ### Telfuncties {#count-functions}
 
@@ -240,15 +265,15 @@ De functies van de telling in de Bouwer van het Segment worden gebruikt om gespe
 
 Als u een telfunctie wilt maken, selecteert u een gebeurtenis in de linkertrack en voegt u deze in de container van [!UICONTROL Events] in.
 
-![&#x200B; de gebeurtenisgebieden worden benadrukt.](../images/ui/segment-builder/events.png)
+![ de gebeurtenisgebieden worden benadrukt.](../images/ui/segment-builder/events.png)
 
 Nadat u de gebeurtenis in de container Gebeurtenissen hebt geplaatst, selecteert u de knop [!UICONTROL At least 1] .
 
-![&#x200B; minstens wordt benadrukt, die het gebied tonen om een volledige lijst van telfuncties te selecteren te zien.](../images/ui/segment-builder/add-count.png)
+![ minstens wordt benadrukt, die het gebied tonen om een volledige lijst van telfuncties te selecteren te zien.](../images/ui/segment-builder/add-count.png)
 
 De telfunctie wordt nu toegevoegd. U kunt nu de telfunctie en de waarde van de functie selecteren. In het onderstaande voorbeeld ziet u hoe u elke gebeurtenis met ten minste één klik opneemt.
 
-![&#x200B; een lijst van de tellingsfuncties wordt getoond en benadrukt.](../images/ui/segment-builder/select-count.png)
+![ een lijst van de tellingsfuncties wordt getoond en benadrukt.](../images/ui/segment-builder/select-count.png)
 
 ### Tijdbeperkingen {#time-constraints}
 
@@ -260,7 +285,7 @@ Met tijdbeperkingen kunt u tijdbeperkingen toepassen op op tijd gebaseerde kenme
 
 >[!NOTE]
 >
->Zowel [&#x200B; negeren de beperking van de jaartijd &#x200B;](./ignore-year.md) en [&#x200B; regel-vlakke tijdbeperkingen &#x200B;](./segment-refactoring.md) eerder refactored, met meer informatie beschikbaar in de verbonden overzichten.
+>Zowel [ negeren de beperking van de jaartijd ](./ignore-year.md) en [ regel-vlakke tijdbeperkingen ](./segment-refactoring.md) eerder refactored, met meer informatie beschikbaar in de verbonden overzichten.
 
 De lijst van beschikbare tijdbeperkingen is als volgt:
 
@@ -274,21 +299,21 @@ De lijst van beschikbare tijdbeperkingen is als volgt:
 
 | Tijdsbeperking | Beschrijving | Kan negeren jaar inschakelen | Voorbeeld |
 | --------------- | ----------- | ------------------- | ------- |
-| Vandaag | De attributen of de gebeurtenis die **worden vergeleken moeten** vandaag voorkomen. | Ja | ![&#x200B; een voorbeeld van de &quot;Vandaag&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
-| Gisteren | De attributen of de gebeurtenis die **worden vergeleken moeten** gisteren voorkomen. | Ja | ![&#x200B; een voorbeeld van de &quot;Gister&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
-| Deze maand | De attributen of de gebeurtenis die **worden vergeleken moeten** deze kalendermaand voorkomen. | Ja | ![&#x200B; een voorbeeld van de &quot;Deze maand&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
-| Dit jaar | De attributen of de gebeurtenis die **worden vergeleken moeten** dit kalenderjaar voorkomen. | Nee | ![&#x200B; een voorbeeld van de &quot;Dit jaar&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
-| Aangepaste datum | De attributen of de gebeurtenis die **worden vergeleken moeten** op de gegeven datum voorkomen. | Ja | ![&#x200B; een voorbeeld van de &quot;datum&quot;tijdbeperking die van de Douane wordt gebruikt.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
-| Laatste | De attributen of de gebeurtenis die **worden vergeleken moeten** binnen de laatste gekozen periode voorkomen. Deze periode van tijd is **inclusief** tot de evaluatietijd. | Nee | ![&#x200B; een voorbeeld van de &quot;In laatste&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
-| Van (tot) | Het attribuut of de gebeurtenis die **worden vergeleken moet** binnen de twee gekozen kalenderdata voorkomen. Deze periode van tijd is **inclusief** van beide data. | Ja, indien aangepaste datum | ![&#x200B; een voorbeeld van &quot;van aan&quot;wordt gebruikt.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| Tijdens | De attributen of de gebeurtenis die **worden vergeleken moeten** binnen de geselecteerde maand of het jaar voorkomen. Als een maand is geselecteerd, moet u zowel de maand als een jaar kiezen waarin het kenmerk of de gebeurtenis heeft plaatsgevonden.  Als een jaar is geselecteerd, hoeft u alleen het jaar te kiezen waarin het kenmerk of de gebeurtenis heeft plaatsgevonden. Als u een maand selecteert, kunt u ook het selectievakje [!UICONTROL Ignore year] inschakelen. | Ja | ![&#x200B; een voorbeeld van de &quot;Tijdens&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
-| Binnen (+/-) | De attributen of de gebeurtenis die **worden vergeleken moeten** binnen dagen, weken, maanden, of jaren van de geselecteerde datum voorkomen. Deze periode van tijd is **inclusief** van beide data. De geselecteerde datum kan vandaag, gisteren, of een andere douanedatum van uw keuze zijn. | Ja | ![&#x200B; een voorbeeld van &quot;binnen&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
-| Voor | De attributen of de gebeurtenis die **worden vergeleken moeten** vóór de geselecteerde datum voorkomen. De geselecteerde datum kan een aangepaste datum of een selectie van dagen, weken, maanden of jaren geleden zijn. | Ja | ![&#x200B; een voorbeeld van de &quot;Voor&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| Na | De attributen of de gebeurtenis die **worden vergeleken moeten** na de geselecteerde datum voorkomen. De geselecteerde datum kan een aangepaste datum of een selectie van dagen, weken, maanden of jaren geleden zijn. | Ja | ![&#x200B; een voorbeeld van de &quot;Na&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
-| Rolbereik | Het kenmerk of de gebeurtenis die wordt vergeleken, moet tussen de twee relatieve datums plaatsvinden. De datums kunnen worden weergegeven in seconden, minuten, uren, dagen, weken, maanden of jaren. | Nee | ![&#x200B; een voorbeeld van de &quot;Rolling waaier&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
-| In volgende | Het kenmerk of de gebeurtenis die wordt vergeleken, moet binnen de volgende geselecteerde periode plaatsvinden. De geselecteerde tijdsperiodes omvatten minuten, uren, dagen, weken, maanden en jaren. | Nee | ![&#x200B; een voorbeeld van &quot;In volgende&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
-| Exists | Het kenmerk bestaat. | Nee | ![&#x200B; een voorbeeld van &quot;bestaat&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
-| Is niet bestaand | Het kenmerk bestaat niet. | Nee | ![&#x200B; een voorbeeld van &quot;bestaat niet&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Vandaag | De attributen of de gebeurtenis die **worden vergeleken moeten** vandaag voorkomen. | Ja | ![ een voorbeeld van de &quot;Vandaag&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Gisteren | De attributen of de gebeurtenis die **worden vergeleken moeten** gisteren voorkomen. | Ja | ![ een voorbeeld van de &quot;Gister&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| Deze maand | De attributen of de gebeurtenis die **worden vergeleken moeten** deze kalendermaand voorkomen. | Ja | ![ een voorbeeld van de &quot;Deze maand&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| Dit jaar | De attributen of de gebeurtenis die **worden vergeleken moeten** dit kalenderjaar voorkomen. | Nee | ![ een voorbeeld van de &quot;Dit jaar&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Aangepaste datum | De attributen of de gebeurtenis die **worden vergeleken moeten** op de gegeven datum voorkomen. | Ja | ![ een voorbeeld van de &quot;datum&quot;tijdbeperking die van de Douane wordt gebruikt.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| Laatste | De attributen of de gebeurtenis die **worden vergeleken moeten** binnen de laatste gekozen periode voorkomen. Deze periode van tijd is **inclusief** tot de evaluatietijd. | Nee | ![ een voorbeeld van de &quot;In laatste&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| Van (tot) | Het attribuut of de gebeurtenis die **worden vergeleken moet** binnen de twee gekozen kalenderdata voorkomen. Deze periode van tijd is **inclusief** van beide data. | Ja, indien aangepaste datum | ![ een voorbeeld van &quot;van aan&quot;wordt gebruikt.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| Tijdens | De attributen of de gebeurtenis die **worden vergeleken moeten** binnen de geselecteerde maand of het jaar voorkomen. Als een maand is geselecteerd, moet u zowel de maand als een jaar kiezen waarin het kenmerk of de gebeurtenis heeft plaatsgevonden.  Als een jaar is geselecteerd, hoeft u alleen het jaar te kiezen waarin het kenmerk of de gebeurtenis heeft plaatsgevonden. Als u een maand selecteert, kunt u ook het selectievakje [!UICONTROL Ignore year] inschakelen. | Ja | ![ een voorbeeld van de &quot;Tijdens&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Binnen (+/-) | De attributen of de gebeurtenis die **worden vergeleken moeten** binnen dagen, weken, maanden, of jaren van de geselecteerde datum voorkomen. Deze periode van tijd is **inclusief** van beide data. De geselecteerde datum kan vandaag, gisteren, of een andere douanedatum van uw keuze zijn. | Ja | ![ een voorbeeld van &quot;binnen&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Voor | De attributen of de gebeurtenis die **worden vergeleken moeten** vóór de geselecteerde datum voorkomen. De geselecteerde datum kan een aangepaste datum of een selectie van dagen, weken, maanden of jaren geleden zijn. | Ja | ![ een voorbeeld van de &quot;Voor&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| Na | De attributen of de gebeurtenis die **worden vergeleken moeten** na de geselecteerde datum voorkomen. De geselecteerde datum kan een aangepaste datum of een selectie van dagen, weken, maanden of jaren geleden zijn. | Ja | ![ een voorbeeld van de &quot;Na&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Rolbereik | Het kenmerk of de gebeurtenis die wordt vergeleken, moet tussen de twee relatieve datums plaatsvinden. De datums kunnen worden weergegeven in seconden, minuten, uren, dagen, weken, maanden of jaren. | Nee | ![ een voorbeeld van de &quot;Rolling waaier&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| In volgende | Het kenmerk of de gebeurtenis die wordt vergeleken, moet binnen de volgende geselecteerde periode plaatsvinden. De geselecteerde tijdsperiodes omvatten minuten, uren, dagen, weken, maanden en jaren. | Nee | ![ een voorbeeld van &quot;In volgende&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Exists | Het kenmerk bestaat. | Nee | ![ een voorbeeld van &quot;bestaat&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Is niet bestaand | Het kenmerk bestaat niet. | Nee | ![ een voorbeeld van &quot;bestaat niet&quot;tijdbeperking die wordt gebruikt.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
 
 +++
 
@@ -298,7 +323,7 @@ Wanneer u een tijdbeperking toepast op een gebeurtenis, kunt u deze toepassen op
 
 Als u een tijdbeperking op canvasniveau wilt toepassen, selecteert u het klokpictogram dat boven de tijdlijn van gebeurtenissen wordt weergegeven.
 
-![&#x200B; de canvas-vlakke tijdbeperkingsselecteur wordt benadrukt.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+![ de canvas-vlakke tijdbeperkingsselecteur wordt benadrukt.](../images/ui/segment-builder/time-constraints/canvas-level.png)
 
 Wanneer u een tijdbeperking op canvas-niveau toepast, past dit de tijdbeperking op **alle** gebeurtenissen in het publiek toe.
 
@@ -306,7 +331,7 @@ Wanneer u een tijdbeperking op canvas-niveau toepast, past dit de tijdbeperking 
 
 Als u een beperking op kaartniveau wilt toepassen, selecteert u de kaart waarop u de tijdbeperking wilt toepassen, gevolgd door het pictogram met de ellips, en **[!UICONTROL Apply time rule]** . Hiermee kunt u een tijdbeperking selecteren in de container van **[!UICONTROL Event Rules]** .
 
-![&#x200B; de kaart-vlakke tijdbeperkingsselecteur wordt benadrukt.](../images/ui/segment-builder/time-constraints/card-level.png)
+![ de kaart-vlakke tijdbeperkingsselecteur wordt benadrukt.](../images/ui/segment-builder/time-constraints/card-level.png)
 
 Wanneer u een tijdbeperking op kaart-niveau toepast, past dit de tijdbeperking op de **gespecificeerde** gebeurtenis in het publiek toe.
 
@@ -314,7 +339,7 @@ Wanneer u een tijdbeperking op kaart-niveau toepast, past dit de tijdbeperking o
 
 Als u een tijdbeperking tussen gebeurtenissen wilt toepassen, selecteert u het klokpictogram tussen de twee gebeurtenissen waarop u de tijdbeperking wilt toepassen.
 
-![&#x200B; de tussen de selecteur van de gebeurtenistijdbeperking wordt benadrukt.](../images/ui/segment-builder/time-constraints/between-event.png)
+![ de tussen de selecteur van de gebeurtenistijdbeperking wordt benadrukt.](../images/ui/segment-builder/time-constraints/between-event.png)
 
 Wanneer u een tijdbeperking tussen de gebeurtenis toepast, past dit de tijdbeperking op de tijd **tussen** de gebeurtenissen toe.
 
@@ -344,13 +369,13 @@ Segmentregels worden geëvalueerd in de volgorde waarin ze worden weergegeven. D
 
 Zodra u minstens één tegel aan het canvas van de regelbouwer hebt toegevoegd, kunt u beginnen om containers toe te voegen. Als u een nieuwe container wilt maken, selecteert u de ellipsen (...) in de rechterbovenhoek van de tegel en selecteert u vervolgens **[!UICONTROL Add container]** .
 
-![&#x200B; toevoegt containerknoop wordt benadrukt, die u een container als kind van de eerste container laat toevoegen.](../images/ui/segment-builder/add-container.png)
+![ toevoegt containerknoop wordt benadrukt, die u een container als kind van de eerste container laat toevoegen.](../images/ui/segment-builder/add-container.png)
 
 Een nieuwe container wordt weergegeven als het onderliggende element van de eerste container, maar u kunt de hiërarchie aanpassen door de containers te slepen en te verplaatsen. Het standaardgedrag van een container is &quot;[!UICONTROL Include]&quot;de attributen, de gebeurtenis, of het publiek verstrekte. U kunt de regel aan &quot;[!UICONTROL Exclude]&quot;profielen plaatsen die de containercriteria door **[!UICONTROL Include]** in de linkerbovenhoek van de tegel te selecteren en &quot;[!UICONTROL Exclude]&quot;te selecteren.
 
 Een onderliggende container kan ook inline worden geëxtraheerd en toegevoegd aan de bovenliggende container door &quot;container opheffen&quot; te selecteren in de onderliggende container. Selecteer de ellipsen (...) in de hoger-juiste hoek van de kindcontainer om tot deze optie toegang te hebben.
 
-![&#x200B; de Opties die u laten opheffen of de container schrappen worden benadrukt.](../images/ui/segment-builder/include-exclude.png)
+![ de Opties die u laten opheffen of de container schrappen worden benadrukt.](../images/ui/segment-builder/include-exclude.png)
 
 Nadat u **[!UICONTROL Unwrap container]** hebt geselecteerd, wordt de onderliggende container verwijderd en worden de criteria inline weergegeven.
 
@@ -358,7 +383,7 @@ Nadat u **[!UICONTROL Unwrap container]** hebt geselecteerd, wordt de onderligge
 >
 >Wanneer het unwrapping containers, zorg ervoor dat de logica de gewenste segmentdefinitie blijft ontmoeten.
 
-![&#x200B; de container wordt getoond na wordt unwrapped.](../images/ui/segment-builder/unwrapped-container.png)
+![ de container wordt getoond na wordt unwrapped.](../images/ui/segment-builder/unwrapped-container.png)
 
 ## Beleid samenvoegen
 
@@ -369,11 +394,11 @@ Nadat u **[!UICONTROL Unwrap container]** hebt geselecteerd, wordt de onderligge
 
 Met [!DNL Experience Platform] kunt u gegevens uit meerdere bronnen samenvoegen en combineren om een volledige weergave van elk van uw individuele klanten weer te geven. Wanneer u deze gegevens samenbrengt, worden in [!DNL Experience Platform] regels gebruikt voor het samenvoegen van gegevens om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om een profiel te maken.
 
-U kunt een samenvoegbeleid selecteren dat aansluit bij uw marketingdoel voor dit publiek of het standaardsamenvoegbeleid gebruiken dat wordt geboden door [!DNL Experience Platform] . U kunt meerdere samenvoegbeleidsregels maken die uniek zijn voor uw organisatie, waaronder het maken van uw eigen standaardbeleid voor samenvoegen. Voor geleidelijke instructies bij het creëren van fusiebeleid voor uw organisatie, gelieve te beginnen door het [&#x200B; overzicht van het samenvoegingsbeleid &#x200B;](../../profile/merge-policies/overview.md) te lezen.
+U kunt een samenvoegbeleid selecteren dat aansluit bij uw marketingdoel voor dit publiek of het standaardsamenvoegbeleid gebruiken dat wordt geboden door [!DNL Experience Platform] . U kunt meerdere samenvoegbeleidsregels maken die uniek zijn voor uw organisatie, waaronder het maken van uw eigen standaardbeleid voor samenvoegen. Voor geleidelijke instructies bij het creëren van fusiebeleid voor uw organisatie, gelieve te beginnen door het [ overzicht van het samenvoegingsbeleid ](../../profile/merge-policies/overview.md) te lezen.
 
 Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u het tandwielpictogram op het tabblad **[!UICONTROL Fields]** en selecteert u het samenvoegbeleid dat u wilt gebruiken in het vervolgkeuzemenu **[!UICONTROL Merge Policy]** .
 
-![&#x200B; de selecteur van het fusiebeleid wordt benadrukt. Dit laat u kiezen welk samenvoegbeleid voor uw segmentdefinitie te selecteren.](../images/ui/segment-builder/merge-policy-selector.png)
+![ de selecteur van het fusiebeleid wordt benadrukt. Dit laat u kiezen welk samenvoegbeleid voor uw segmentdefinitie te selecteren.](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Eigenschappen van publiek {#audience-properties}
 
@@ -386,7 +411,7 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Ramingen vernieuwen"
 >abstract="U kunt de ramingen van uw segmentdefinitie verfrissen om onmiddellijk een voorproef van te zien hoeveel profielen voor de voorgestelde segmentdefinitie zouden kwalificeren. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=nl-NL#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
@@ -402,7 +427,7 @@ Wanneer het bouwen van een segmentdefinitie, **[!UICONTROL Audience properties]*
 
 **[!UICONTROL Qualified Profiles]** wijst op het **daadwerkelijke** aantal profielen die de regels van de segmentdefinitie aanpassen. Dit aantal werkt om de 24 uur bij, nadat de baan van de segmentevaluatie is gelopen.
 
-De timestamp voor gekwalificeerde profielen wijst op de meest recente **partij** baan van de segmentevaluatie en **&#x200B;**&#x200B;getoond niet &lbrace;voor gesegmenteerde definities gebruikend het stromen of randsegmentatie. Als u de segmentdefinitie uitgeeft, zal het aantal gekwalificeerde profielen het zelfde blijven tot de volgende baan van de segmentevaluatie in werking wordt gesteld.
+De timestamp voor gekwalificeerde profielen wijst op de meest recente **partij** baan van de segmentevaluatie en **** getoond niet {voor gesegmenteerde definities gebruikend het stromen of randsegmentatie. Als u de segmentdefinitie uitgeeft, zal het aantal gekwalificeerde profielen het zelfde blijven tot de volgende baan van de segmentevaluatie in werking wordt gesteld.
 
 **[!UICONTROL Estimated Profiles]** wijst op een **benaderende waaier** van profielen, die van de **steekproefbaan** worden gebaseerd. Dit betekent dat de steekproefgegevens worden geprojecteerd op de grotere profielreeks, resulterend in een geschat aantal dat van het daadwerkelijke aantal gekwalificeerde profielen kan verschillen. Het geschatte profielmonster heeft een 95% betrouwbaarheidsinterval.
 
@@ -410,13 +435,13 @@ Wanneer u wijzigingen aanbrengt in de regels van het publiek, kunt u de knop **[
 
 Als u de informatiballon selecteert, geeft u de datum en tijd waarop de laatste voorbeeldtaak is uitgevoerd.
 
-![&#x200B; Gekwalificeerde Profielen en Geschatte Profielen worden benadrukt binnen de de eigenschappen van het Publiek sectie.](../images/ui/segment-builder/audience-estimates.png)
+![ Gekwalificeerde Profielen en Geschatte Profielen worden benadrukt binnen de de eigenschappen van het Publiek sectie.](../images/ui/segment-builder/audience-estimates.png)
 
 In de sectie **[!UICONTROL Audience properties]** kunt u ook belangrijke informatie over uw doelgroep opgeven, zoals de naam, beschrijving en evaluatietype. De namen worden gebruikt om uw segmentdefinitie onder die te identificeren die door uw organisatie worden bepaald en zouden daarom beschrijvend, beknopt, en uniek moeten zijn.
 
 Terwijl u uw publiek blijft opbouwen, kunt u een gepagineerde voorvertoning van het publiek weergeven door **[!UICONTROL View Profiles]** te selecteren.
 
-![&#x200B; de sectie van publiekseigenschappen wordt benadrukt. De publiekseigenschappen omvatten, maar zijn niet beperkt tot, de naam, de beschrijving, en de evaluatiemethode.](../images/ui/segment-builder/segment-properties.png)
+![ de sectie van publiekseigenschappen wordt benadrukt. De publiekseigenschappen omvatten, maar zijn niet beperkt tot, de naam, de beschrijving, en de evaluatiemethode.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -424,21 +449,21 @@ Terwijl u uw publiek blijft opbouwen, kunt u een gepagineerde voorvertoning van 
 >
 >Bovendien is deze schatting gebaseerd op het tijdstip waarop de laatste voorbeeldtaak voor het profiel is uitgevoerd. Dit betekent dat als u een relatieve datumfunctie zoals &quot;Vandaag&quot;of &quot;Deze week&quot;gebruikt, de schatting zijn berekeningen van de laatste runtime van de profielsteekproefbaan zal baseren. Als vandaag bijvoorbeeld 24 januari is en de laatste voorbeeldtaak voor het profiel op 22 januari is uitgevoerd, wordt de relatieve datumfunctie &#39;Gisteren&#39; gebaseerd op 21 januari en niet op 23 januari.
 >
->Meer informatie over het produceren van ramingen voor segmentdefinities kan in de [&#x200B; sectie van de schatingengeneratie &#x200B;](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het de creatieleerprogramma van de segmentdefinitie worden gevonden.
+>Meer informatie over het produceren van ramingen voor segmentdefinities kan in de [ sectie van de schatingengeneratie ](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het de creatieleerprogramma van de segmentdefinitie worden gevonden.
 
-U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten welke evaluatietypen deze segmentdefinitie voor kwalificeert, kunt u het doorbladerpictogram ![&#x200B; omslagpictogram met een vergrootglas &#x200B;](/help/images/icons/folder-search.png) selecteren om een lijst van de beschikbare de evaluatiemethodes van de segmentdefinitie te zien.
+U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten welke evaluatietypen deze segmentdefinitie voor kwalificeert, kunt u het doorbladerpictogram ![ omslagpictogram met een vergrootglas ](/help/images/icons/folder-search.png) selecteren om een lijst van de beschikbare de evaluatiemethodes van de segmentdefinitie te zien.
 
-De pop-up [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, te lezen gelieve de [&#x200B; het stromen segmentatie &#x200B;](../methods/streaming-segmentation.md#query-types) of de [&#x200B; randsegmentatie &#x200B;](../methods/edge-segmentation.md#query-types) overzichten.
+De pop-up [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, te lezen gelieve de [ het stromen segmentatie ](../methods/streaming-segmentation.md#query-types) of de [ randsegmentatie ](../methods/edge-segmentation.md#query-types) overzichten.
 
-U kunt de evaluatiemethode van de segmentdefinitie ook veranderen nadat u klaar bent met het creëren van het. Als u de evaluatiemethode van Edge of het Streamen in Partij verandert, zult u **&#x200B;**&#x200B;niet het terug naar Edge of het Streamen kunnen veranderen. De verandering in de evaluatiemethode zal **slechts** van kracht worden zodra u **[!UICONTROL Save]** in popover selecteert. Het annuleren van de dialoog zal **&#x200B;**&#x200B;de originele evaluatiemethode handhaven.
+U kunt de evaluatiemethode van de segmentdefinitie ook veranderen nadat u klaar bent met het creëren van het. Als u de evaluatiemethode van Edge of het Streamen in Partij verandert, zult u **** niet het terug naar Edge of het Streamen kunnen veranderen. De verandering in de evaluatiemethode zal **slechts** van kracht worden zodra u **[!UICONTROL Save]** in popover selecteert. Het annuleren van de dialoog zal **** de originele evaluatiemethode handhaven.
 
-![&#x200B; de geschiktheid van de evaluatiemethode verschijnt pop - op. Dit toont welke methodes van evaluatie verkiesbaar en niet verkiesbaar voor de segmentdefinitie zijn.](../images/ui/segment-builder/select-evaluation-method.png)
+![ de geschiktheid van de evaluatiemethode verschijnt pop - op. Dit toont welke methodes van evaluatie verkiesbaar en niet verkiesbaar voor de segmentdefinitie zijn.](../images/ui/segment-builder/select-evaluation-method.png)
 
 Als u een ongeldige evaluatiemethode selecteert, zult u worden ertoe aangezet om of uw regels van de segmentdefinitie te veranderen of de evaluatiemethode te veranderen.
 
-![&#x200B; de evaluatiemethode pop - op. Als een niet in aanmerking komende evaluatiemethode wordt geselecteerd, verklaart pop up waarom het niet in aanmerking komt.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![ de evaluatiemethode pop - op. Als een niet in aanmerking komende evaluatiemethode wordt geselecteerd, verklaart pop up waarom het niet in aanmerking komt.](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
-Meer informatie over de verschillende de evaluatiemethodes van de segmentdefinitie kan in het [&#x200B; segmentatieoverzicht &#x200B;](../home.md#evaluate-segments) worden gevonden.
+Meer informatie over de verschillende de evaluatiemethodes van de segmentdefinitie kan in het [ segmentatieoverzicht ](../home.md#evaluate-segments) worden gevonden.
 
 ## Volgende stappen {#next-steps}
 
@@ -450,4 +475,4 @@ Segment Builder biedt een rijke workflow waarmee u verkoopbare soorten publiek k
 - Schakel alle segmentdefinities in voor geplande segmentatie.
 - Hiermee kunt u opgegeven segmentdefinities voor streaming segmentatie inschakelen.
 
-Als u meer wilt weten over [!DNL Segmentation Service] , leest u de documentatie en vult u deze aan door de verwante video&#39;s te bekijken. Om meer over de andere delen van [!DNL Segmentation Service] UI te leren, te lezen gelieve de [[!DNL Segmentation Service]  gebruikersgids &#x200B;](./overview.md).
+Als u meer wilt weten over [!DNL Segmentation Service] , leest u de documentatie en vult u deze aan door de verwante video&#39;s te bekijken. Om meer over de andere delen van [!DNL Segmentation Service] UI te leren, te lezen gelieve de [[!DNL Segmentation Service]  gebruikersgids ](./overview.md).

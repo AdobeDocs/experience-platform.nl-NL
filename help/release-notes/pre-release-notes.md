@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
+source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1389'
 ht-degree: 20%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 20%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -48,7 +48,7 @@ Met Agent Orchestrator kunt u op AI gebaseerde agents maken en implementeren die
 
 {style="table-layout:auto"}
 
-Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+Voor meer informatie, zie de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Bestemmingen {#destinations}
 
@@ -58,9 +58,9 @@ Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x20
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| Kevel-bestemmingsconnector nu beschikbaar | [[!DNL Kevel] &#x200B;](https://www.kevel.com/) verstrekt de AI-Toegelaten technologie en deskundige begeleiding die innovatieve handelsleiders helpen lanceren, schrapen, en slagen in handelsmedia. De Retail Media Cloud-bevoegdheden van [!DNL Kevel] zijn gericht op, aanpasbare en aanpasbare advertentievormen voor on-site en off-site reclame. |
+| Kevel-bestemmingsconnector nu beschikbaar | [[!DNL Kevel] ](https://www.kevel.com/) verstrekt de AI-Toegelaten technologie en deskundige begeleiding die innovatieve handelsleiders helpen lanceren, schrapen, en slagen in handelsmedia. De Retail Media Cloud-bevoegdheden van [!DNL Kevel] zijn gericht op, aanpasbare en aanpasbare advertentievormen voor on-site en off-site reclame. |
 | De bestemmingsschakelaar van de Uitwisseling van de index nu beschikbaar | [!DNL Index] is een wereldwijd advertentieplatform dat media-eigenaars helpt de waarde van hun inhoud op elk scherm te maximaliseren. Met meer dan 20 jaar toonaangevend in de branche verbindt [!DNL Index] de grootste merken ter wereld met toonaangevende ervaren makers om hoogwaardige consumentenervaringen te bieden. |
-| Regionale steun voor eindpunten voor verbindingen van het type Braze | Alle [&#x200B; gebied-specifieke eindpunten &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die door [!DNL Braze] worden gesteund zijn nu beschikbaar voor selectie tijdens de stroom van de bestemmingsconfiguratie. Vraag uw [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken. |
+| Regionale steun voor eindpunten voor verbindingen van het type Braze | Alle [ gebied-specifieke eindpunten ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die door [!DNL Braze] worden gesteund zijn nu beschikbaar voor selectie tijdens de stroom van de bestemmingsconfiguratie. Vraag uw [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken. |
 | Ondersteuning voor wekelijkse en maandelijkse planningen van Liveramp Onboarding | U kunt nu wekelijkse en maandelijkse exportschema&#39;s configureren voor de bestemming Liveramp aan boord. |
 | AES256 encryptiesteun voor Amazon S3 bestemmingen | U kunt nu AES256-codering configureren voor uw Amazon S3-export. |
 | Verbeterde activeringservaring voor de bestemmingen Trade Desk en Microsoft Bing | De handelsbureau en de bestemmingen van de Bing van Microsoft omvatten nu vooraf bepaalde verplichte afbeeldingen voor een geoptimaliseerde activeringservaring. |
@@ -70,7 +70,7 @@ Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x20
 | Functie | Beschrijving |
 | --- | --- |
 | Bijgewerkte guardraillimieten voor Adobe Target-bestemming | Het maximumaantal doelgroepen dat aan één Adobe Target-bestemming kan worden toegewezen, is verhoogd van 50 naar 250. Hierdoor wordt Adobe Target uitgelijnd op de standaardpubliekslimiet voor andere doelen, waardoor workflows voor publieksactivering flexibeler worden. U kunt nu meer soorten publiek activeren naar Adobe Target-doelen zonder dat u meerdere gegevensstromen hoeft te maken. |
-| [&#x200B; geeft bestemmingen &#x200B;](/help/destinations/ui/edit-destination.md) uit en [&#x200B; geeft marketing acties &#x200B;](/help/destinations/ui/edit-activation.md#edit-marketing-actions) algemene beschikbaarheid uit | De optie om bestemmingen en marketingacties te bewerken is nu beschikbaar voor alle gebruikers. |
+| [ geeft bestemmingen ](/help/destinations/ui/edit-destination.md) uit en [ geeft marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) algemene beschikbaarheid uit | De optie om bestemmingen en marketingacties te bewerken is nu beschikbaar voor alle gebruikers. |
 | Veldweergavenamen in-/uitschakelen in toewijzingsstap | Wanneer u schemavelden toewijst aan een doel, kunt u nu schakelen tussen het weergeven van de volledige XDM-veldnaam en het weergeven van alleen de weergavenaam. |
 
 {style="table-layout:auto"}
@@ -86,7 +86,7 @@ In real time het Profiel van de Klant laat u toe om een holistische mening van e
 | Functie | Beschrijving |
 | --- | --- |
 | Handhaving van streaming capaciteit | Experience Platform dwingt nu streamingdoorvoer af voor realtime klantprofiel en identiteitsservice. Wanneer klanten hun gecontracteerde streamingcapaciteit overschrijden, worden de gegevens in de wachtrij geplaatst en verwerkt op een first-in-first-out manier. Dit zorgt voor voorspelbare systeemprestaties en voorkomt dat capaciteitsschendingen van invloed zijn op de kwaliteit van gegevensinvoer. Belangrijke opmerkingen: streamingupserts zijn niet beschikbaar op het datumpigment wanneer de capaciteit wordt overschreden, deze handhaving geldt niet voor klanten met Adobe Journey Optimizer-licenties en gegevens in de wachtrij worden opeenvolgend verwerkt zodra de capaciteit beschikbaar is. |
-| Verouderde API-toegang voor Real-Time CDP Prime | API-toegang voor ervaringsgebeurtenissen is nu afgekeurd voor alle Real-Time CDP Prime-klanten. Deze wijziging is van invloed op de mogelijkheid om rechtstreeks via API query&#39;s uit te voeren op ervaringsgebeurtenissen. Real-Time CDP Ultimate-klanten kunnen een uitzondering aanvragen via een formeel uitzonderingsproces om toegang tot API-ervaringsgebeurtenissen mogelijk te maken als dat nodig is voor hun gebruiksscenario&#39;s. Deze veroudering helpt de systeemprestaties te optimaliseren en richt zich op de beste praktijken voor gegevenstoegangspatronen. |
+| Verouderde API-toegang voor Real-Time CDP Prime | API-toegang voor ervaringsgebeurtenissen is nu afgekeurd voor alle Real-Time CDP Prime-klanten. Deze wijziging is van invloed op de mogelijkheid om rechtstreeks via API query&#39;s uit te voeren op ervaringsgebeurtenissen. Real-Time CDP Ultimate-klanten kunnen een uitzondering aanvragen via een formeel uitzonderingsproces om toegang tot API-ervaringsgebeurtenissen mogelijk te maken als dat nodig is voor hun gebruiksscenario&#39;s. Deze afleiding helpt Real-Time CDP uit te lijnen met de licentiefunctionaliteit. |
 | Monitorgegevensstroom | U kunt de vooruitgang en de bereidheid van dataflow looppas in Profiel nu controleren. |
 
 {style="table-layout:auto"}
