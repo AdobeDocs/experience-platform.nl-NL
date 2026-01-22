@@ -41,7 +41,7 @@ Tijdens de invoer externe publiekswerkschema, moet u specificeren welke kolom in
 
 De gegevens verbonden aan deze primaire identiteitskolom zijn **slechts** gegevens die aan het profiel in bijlage zijn. Als er geen bestaande profielen zijn die overeenkomen met de gegevens in de primaire identiteitskolom, wordt een nieuw profiel gemaakt. Nochtans, is dit profiel hoofdzakelijk een weeshuis profiel aangezien **geen** attributen of ervaringsgebeurtenissen met dit profiel worden geassocieerd.
 
-Alle andere gegevens binnen het extern geproduceerde publiek worden beschouwd als **ladingsattributen**. Deze attributen kunnen **slechts** voor verpersoonlijking en verrijking tijdens activering worden gebruikt, en zijn **** niet verbonden aan een profiel. Deze kenmerken worden echter opgeslagen in het datumpigment.
+Alle andere gegevens binnen het extern geproduceerde publiek worden beschouwd als **ladingsattributen**. Deze attributen kunnen **slechts** voor verpersoonlijking en verrijking tijdens activering worden gebruikt, en zijn **&#x200B;**&#x200B;niet verbonden aan een profiel. Deze kenmerken worden echter opgeslagen in het datumpigment.
 
 Terwijl het extern geproduceerde publiek kan worden van verwijzingen voorzien wanneer het creëren van publiek gebruikend de Bouwer van het Segment, kunnen de individuele profielattributen **niet** worden gebruikt.
 
@@ -57,15 +57,15 @@ De stroomafwaartse bestemmingen controleren elk profiel toestemmingsinformatie v
 
 Wanneer een extern publiek in het Portaal van de Publiek wordt opgenomen, worden zij aangesloten bij bestaande profielen gebruikend primaire identiteitskaart zoals e-mail of ECID. Als gevolg daarvan zal het bestaande beleid inzake instemming gedurende de hele activering van kracht blijven.
 
-Gelieve te merken op u **** toestemmingsinformatie met een extern geproduceerd publiek niet zou moeten omvatten, aangezien de ladingsvariabelen **niet** in de opslag van het Profiel maar in het gegevensmeer worden opgeslagen. In plaats daarvan, moet u **** een innamekanalen van Adobe Experience Platform gebruiken waar de profielgegevens worden ingevoerd.
+Gelieve te merken op u **&#x200B;**&#x200B;toestemmingsinformatie met een extern geproduceerd publiek niet zou moeten omvatten, aangezien de ladingsvariabelen **niet** in de opslag van het Profiel maar in het gegevensmeer worden opgeslagen. In plaats daarvan, moet u **&#x200B;**&#x200B;een innamekanalen van Adobe Experience Platform gebruiken waar de profielgegevens worden ingevoerd.
 
 ### Kan ik een extern gegenereerd publiek gebruiken om andere soorten publiek op te bouwen?
 
-Ja, zal om het even welk extern geproduceerd publiek binnen de publieksinventaris verschijnen en kan worden gebruikt wanneer het bouwen van publiek binnen de [ Bouwer van het Segment ](./ui/segment-builder.md).
+Ja, zal om het even welk extern geproduceerd publiek binnen de publieksinventaris verschijnen en kan worden gebruikt wanneer het bouwen van publiek binnen de [&#x200B; Bouwer van het Segment &#x200B;](./ui/segment-builder.md).
 
 ### Hoe vaak worden extern gegenereerde doelgroepen geëvalueerd?
 
-Extern geproduceerd publiek wordt **slechts** geëvalueerd tijdens de tijd van de invoer. Aangezien de bijbehorende attributen aan deze de invoersoorten publiek niet-duurzaam zijn en **** geen deel van de opslag van het Profiel zijn, zal de enige tijd een extern geproduceerd publiek worden bijgewerkt zijn als het bestaande publiek manueel wordt bijgewerkt.
+Extern geproduceerd publiek wordt **slechts** geëvalueerd tijdens de tijd van de invoer. Aangezien de bijbehorende attributen aan deze de invoersoorten publiek niet-duurzaam zijn en **&#x200B;**&#x200B;geen deel van de opslag van het Profiel zijn, zal de enige tijd een extern geproduceerd publiek worden bijgewerkt zijn als het bestaande publiek manueel wordt bijgewerkt.
 
 ### Kan ik extern geüploade kenmerken gebruiken als onderdeel van segmentatie?
 
@@ -75,7 +75,7 @@ De extern geproduceerde contextafhankelijke gegevens van het publiek, of verrijk
 
 Wanneer u uw publiek echter toewijst aan batchbestemmingen of op bestanden gebaseerde bestemmingen, kunt u deze extern gegenereerde verrijkingskenmerken gebruiken om uw publiek en verdere downstreamactiveringen te verhogen.
 
-Om meer over dit vermogen te leren, te lezen gelieve de gids op [ activerende publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../destinations/ui/activate-batch-profile-destinations.md#mapping).
+Om meer over dit vermogen te leren, te lezen gelieve de gids op [&#x200B; activerende publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](../destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ### Bestaat er een specifiek fusiebeleid voor extern gegenereerde doelgroepen?
 
@@ -97,18 +97,18 @@ Als u per ongeluk een extern gegenereerd publiek hebt geüpload en u de gegevens
 
 De huidige gegevensvervaldatum voor extern geproduceerd publiek is **30 dagen**. Deze gegevensvervaldatum is gekozen om de hoeveelheid overtollige gegevens te verminderen die binnen uw organisatie worden opgeslagen.
 
-Na de periode van de gegevensvervalsing gaat over, zal de bijbehorende dataset nog binnen de datasetinventaris zichtbaar zijn, maar u **** zal niet het publiek kunnen activeren en de profieltelling zal als nul tonen.
+Na de periode van de gegevensvervalsing gaat over, zal de bijbehorende dataset nog binnen de datasetinventaris zichtbaar zijn, maar u **&#x200B;**&#x200B;zal niet het publiek kunnen activeren en de profieltelling zal als nul tonen.
 
 ### Is er een maximum aantal extern gegenereerde soorten publiek dat ik kan importeren?
 
-Er is geen limiet voor het aantal extern gegenereerde soorten publiek dat u kunt importeren. Nochtans, gelieve nota te nemen dat het ingevoerde publiek **** tegen de algemene publieksgrens doet tellen.
+Er is geen limiet voor het aantal extern gegenereerde soorten publiek dat u kunt importeren. Nochtans, gelieve nota te nemen dat het ingevoerde publiek **&#x200B;**&#x200B;tegen de algemene publieksgrens doet tellen.
 
 ### Hoe zal het Portaal van het Publiek en de Samenstelling van het Publiek met de versie van de Gegevens van de Partner van Real-Time CDP in wisselwerking staan?
 
 Het Portaal van het publiek en de Samenstelling van het Publiek zullen met de Gegevens van de Partner op twee manieren in wisselwerking staan:
 
-1. Als u een partner-verstrekte perspectieflijst gebruikend de klasse en het werkschema van het Profiel van het Vooruitzicht opneemt, zullen de vooruitzichten **** gescheiden van fusieklantenprofielen in de Dienst van het Profiel worden gehouden. Dientengevolge, betekent dit dat de perspectieflijsten **** niet in of het Portaal van het Publiek of de Samenstelling van het Publiek voor gebruik zullen verschijnen.
-2. Als u partner-verstrekte attributen leveraging om **bestaande** eerste-partijprofielen te verrijken, zullen die partner-gegeven-verrijkt publiek **** in zowel het Portaal van het Publiek als de Samenstelling van het Publiek voor gebruik verschijnen.
+1. Als u een partner-verstrekte perspectieflijst gebruikend de klasse en het werkschema van het Profiel van het Vooruitzicht opneemt, zullen de vooruitzichten **&#x200B;**&#x200B;gescheiden van fusieklantenprofielen in de Dienst van het Profiel worden gehouden. Dientengevolge, betekent dit dat de perspectieflijsten **&#x200B;**&#x200B;niet in of het Portaal van het Publiek of de Samenstelling van het Publiek voor gebruik zullen verschijnen.
+2. Als u partner-verstrekte attributen leveraging om **bestaande** eerste-partijprofielen te verrijken, zullen die partner-gegeven-verrijkt publiek **&#x200B;**&#x200B;in zowel het Portaal van het Publiek als de Samenstelling van het Publiek voor gebruik verschijnen.
 
 ### Hoe kan ik extra attributen met mijn publiek gebruiken?
 
@@ -152,7 +152,7 @@ Zodra een publiek wordt geschrapt, kan het **niet** worden uitgegeven.
 
 De mogelijke levenscyclus bepaalt dat een publiek kan worden verplaatst, afhankelijk van de huidige status van het publiek.
 
-![ A diagram dat de mogelijke overgangen van de levenscyclusstaat schetst die voor publiek beschikbaar zijn.](./images/faq/lifecycle-state-transition.png)
+![&#x200B; A diagram dat de mogelijke overgangen van de levenscyclusstaat schetst die voor publiek beschikbaar zijn.](./images/faq/lifecycle-state-transition.png)
 
 Als de doelgroep zich in de conceptstatus bevindt, kunt u de doelgroep publiceren of verwijderen als de doelgroep geen afhankelijke personen heeft.
 
@@ -162,7 +162,7 @@ Als uw publiek zich in de inactieve staat bevindt, kunt u het opnieuw publiceren
 
 ### Zijn er voorbehouden voor het publiek in bepaalde levenscyclusstaten?
 
-Het publiek in de gepubliceerde staat kan slechts naar een andere staat worden verplaatst als het publiek **** geen gebiedsdelen heeft. Dit betekent dat als uw publiek in een stroomafwaartse dienst wordt gebruikt, het niet kan worden gedeactiveerd of worden geschrapt.
+Het publiek in de gepubliceerde staat kan slechts naar een andere staat worden verplaatst als het publiek **&#x200B;**&#x200B;geen gebiedsdelen heeft. Dit betekent dat als uw publiek in een stroomafwaartse dienst wordt gebruikt, het niet kan worden gedeactiveerd of worden geschrapt.
 
 Als een publiek dat gebruikend partijsegmentatie wordt geëvalueerd wordt opnieuw gepubliceerd, dat is wanneer een publiek van inactief aan gepubliceerd gaat, zal het publiek **na** de dagelijkse partijbaan verfrissen. Wanneer het eerst opnieuw gepubliceerd wordt, zullen de profielen en de gegevens **het zelfde** zijn zoals toen het publiek inactief werd gemaakt.
 
@@ -208,9 +208,9 @@ U kunt een publiek in de schrappingsstaat zetten door het snelle actiemenu in de
 
 Ja, er zijn sommige bedenkingen om zich van bewust te zijn wanneer u publiek in de stroomafwaartse diensten zoals Adobe Journey Optimizer of niet-klant-gebaseerd publiek zoals op rekening-gebaseerd publiek gebruikt.
 
-Op dit ogenblik, moet u **** manueel controleren als het publiek in Adobe Journey Optimizer stroomafwaarts wordt gebruikt, aangezien deze status momenteel niet automatisch gecontroleerd is.
+Op dit ogenblik, moet u **&#x200B;**&#x200B;manueel controleren als het publiek in Adobe Journey Optimizer stroomafwaarts wordt gebruikt, aangezien deze status momenteel niet automatisch gecontroleerd is.
 
-Bovendien, moet u **** manueel controleren als het publiek als component van een op rekening-gebaseerd publiek wordt gebruikt, aangezien deze status ook niet momenteel automatisch wordt gecontroleerd.
+Bovendien, moet u **&#x200B;**&#x200B;manueel controleren als het publiek als component van een op rekening-gebaseerd publiek wordt gebruikt, aangezien deze status ook niet momenteel automatisch wordt gecontroleerd.
 
 ### Wat gebeurt er als ik een publiek kopieer? {#copy}
 
@@ -220,19 +220,19 @@ Wanneer u een publiek kopieert, bevindt het nieuwe publiek zich in de conceptsta
 
 >[!NOTE]
 >
->Een ouderpubliek is een publiek dat **** een ander publiek als gebiedsdeel voor het publiek gebruikt.
+>Een ouderpubliek is een publiek dat **&#x200B;**&#x200B;een ander publiek als gebiedsdeel voor het publiek gebruikt.
 >
 >Een kindpubliek is een publiek dat **als** een gebiedsdeel voor het publiek wordt gebruikt.
 
 Ja, het gebruik van een publiek als een onderliggend publiek beïnvloedt wel welke levenscyclusstaten het kind en het bovenliggende publiek kunnen doorvoeren.
 
-Opdat een kindpubliek aan de gepubliceerde staat moet worden verplaatst, moet elk van zijn ouderpubliek **** in de gepubliceerde staat zijn. Het bovenliggende publiek kan worden gepubliceerd voordat het onderliggende publiek wordt gepubliceerd of, als de gebruiker dit bevestigt, automatisch worden gepubliceerd wanneer het onderliggende publiek wordt gepubliceerd.
+Opdat een kindpubliek aan de gepubliceerde staat moet worden verplaatst, moet elk van zijn ouderpubliek **&#x200B;**&#x200B;in de gepubliceerde staat zijn. Het bovenliggende publiek kan worden gepubliceerd voordat het onderliggende publiek wordt gepubliceerd of, als de gebruiker dit bevestigt, automatisch worden gepubliceerd wanneer het onderliggende publiek wordt gepubliceerd.
 
-Opdat het ouderpubliek aan de inactieve of geschrapte staat moet worden verplaatst, moet elk van zijn kindpubliek **** worden gedeactiveerd of worden geschrapt.
+Opdat het ouderpubliek aan de inactieve of geschrapte staat moet worden verplaatst, moet elk van zijn kindpubliek **&#x200B;**&#x200B;worden gedeactiveerd of worden geschrapt.
 
 ### Kan ik verwijzen naar een publiek dat zich in een andere levenscyclusstaat bevindt?
 
-Ja! Als uw publiek zich momenteel in de ontwerpstaat bevindt, kunt u naar publiek in of het ontwerp of de gepubliceerde staat verwijzen. Nochtans, om dit publiek te publiceren, moet u **** het andere ouderpubliek publiceren.
+Ja! Als uw publiek zich momenteel in de ontwerpstaat bevindt, kunt u naar publiek in of het ontwerp of de gepubliceerde staat verwijzen. Nochtans, om dit publiek te publiceren, moet u **&#x200B;**&#x200B;het andere ouderpubliek publiceren.
 
 ## Overzicht van het publiek
 
@@ -240,23 +240,23 @@ De volgende sectie geeft een overzicht van vragen die betrekking hebben op de pu
 
 ### Heb ik extra toestemmingen nodig om de eigenschappen van de publieksinventaris te gebruiken?
 
-Nee, dat doe je niet. Als u over bewerkingsmachtigingen voor het publiek beschikt, kunt u uw mappen en tags maken, bijwerken en beheren in het Poortpubliek van het publiek. Voor meer informatie over het beheren van toestemmingen, te lezen gelieve [ toestemmingengids ](../access-control/ui/permissions.md) beheren.
+Nee, dat doe je niet. Als u over bewerkingsmachtigingen voor het publiek beschikt, kunt u uw mappen en tags maken, bijwerken en beheren in het Poortpubliek van het publiek. Voor meer informatie over het beheren van toestemmingen, te lezen gelieve [&#x200B; toestemmingengids &#x200B;](../access-control/ui/permissions.md) beheren.
 
 ### Is er een limiet voor het aantal mappen dat ik kan maken?
 
-Nee, er is geen limiet voor het aantal mappen dat u kunt maken. Voor meer informatie over omslagen, te lezen gelieve de [ sectie van de publieksinventaris ](./ui/audience-portal.md#folders) van het overzicht UI van de Dienst van de Segmentatie.
+Nee, er is geen limiet voor het aantal mappen dat u kunt maken. Voor meer informatie over omslagen, te lezen gelieve de [&#x200B; sectie van de publieksinventaris &#x200B;](./ui/audience-portal.md#folders) van het overzicht UI van de Dienst van de Segmentatie.
 
 ### Is er een limiet voor het aantal tags dat aan een publiek kan worden toegevoegd?
 
-Nee, er is geen limiet voor het aantal tags dat aan een publiek kan worden toegevoegd. Voor meer informatie over markeringen, te lezen gelieve de [ sectie van de publieksinventaris ](./ui/audience-portal.md#tags) van het overzicht UI van de Dienst van de Segmentatie.
+Nee, er is geen limiet voor het aantal tags dat aan een publiek kan worden toegevoegd. Voor meer informatie over markeringen, te lezen gelieve de [&#x200B; sectie van de publieksinventaris &#x200B;](./ui/audience-portal.md#tags) van het overzicht UI van de Dienst van de Segmentatie.
 
 ### Is er een limiet aan het aantal tags dat ik kan maken?
 
-Nee, er is geen limiet aan het aantal tags dat u kunt maken. Nochtans, kunt u tot een maximum van **100** categorieën leiden om voor de markeringen van toepassing te zijn. Voor meer informatie over markeringsbeheer, te lezen gelieve de [ Leidende gids van Markeringen ](../administrative-tags/ui/managing-tags.md).
+Nee, er is geen limiet aan het aantal tags dat u kunt maken. Nochtans, kunt u tot een maximum van **100** categorieën leiden om voor de markeringen van toepassing te zijn. Voor meer informatie over markeringsbeheer, te lezen gelieve de [&#x200B; Leidende gids van Markeringen &#x200B;](../administrative-tags/ui/managing-tags.md).
 
 ### Wanneer ik naar een publiek door naam of markering in een ouderomslag zoek, kan ik door de verwante kindomslagen ook zoeken?
 
-Nee, dit gedrag wordt niet ondersteund. Nochtans, kunt u de mening van de publieksinventaris veranderen om **Alle Soorten publiek** te bekijken, dan onderzoek over alle omslagen. Voor meer informatie bij het gebruiken van onderzoek in publieksinventaris, te lezen gelieve de [ onderzoekssectie ](./ui/audience-portal.md#search) van het overzicht van de Dienst UI van de Segmentatie.
+Nee, dit gedrag wordt niet ondersteund. Nochtans, kunt u de mening van de publieksinventaris veranderen om **Alle Soorten publiek** te bekijken, dan onderzoek over alle omslagen. Voor meer informatie bij het gebruiken van onderzoek in publieksinventaris, te lezen gelieve de [&#x200B; onderzoekssectie &#x200B;](./ui/audience-portal.md#search) van het overzicht van de Dienst UI van de Segmentatie.
 
 ### Kan ik een publiek automatisch toewijzen aan een map op het moment van het maken?
 
@@ -282,7 +282,7 @@ De volgende tabel illustreert het verschil tussen de twee services:
 | --------------- | -------------------- |
 | <ul><li>Eenmalige doelgroep</li><li>Creeert de basisblokken van publiek van profiel, tijdreeksen, en multi-entiteitsgegevens</li><li>Gebruikt om **één** publiek te creëren</li></ul> | <ul><li>Multi-stage publiek genereren, met gebruik van op set gebaseerde bewerkingen</li><li>Gebruikt het publiek dat door de Bouwer van de Segment wordt gecreeerd en past opties van de gegevensverrijking zoals het rangschikken van profielattributen en het verdelen in sub-publiek toe</li><li>Gebruikt om **veelvoud** publiek in één keer te creëren</li></ul> |
 
-Om meer over de Bouwer van het Segment te leren, te lezen gelieve de [ gids van de Bouwer van het Segment ](./ui/segment-builder.md). Meer over de Samenstelling van het Publiek leren, gelieve de [ gids van de Samenstelling van het Publiek ](./ui/audience-composition.md) te lezen.
+Om meer over de Bouwer van het Segment te leren, te lezen gelieve de [&#x200B; gids van de Bouwer van het Segment &#x200B;](./ui/segment-builder.md). Meer over de Samenstelling van het Publiek leren, gelieve de [&#x200B; gids van de Samenstelling van het Publiek &#x200B;](./ui/audience-composition.md) te lezen.
 
 ### Kan ik extern gegenereerd publiek gebruiken in Audience Composition?
 
@@ -296,7 +296,7 @@ Ja! U kunt publiek van de Samenstelling van het Publiek in de Campagnes van Adob
 
 >[!IMPORTANT]
 >
->Deze guardrail is slechts op samenstellingen van toepassing die met de Samenstelling van het Publiek worden gecreeerd en **** is niet op samenstellingen van toepassing die met de Federatieve Samenstelling van het Publiek worden gecreeerd.
+>Deze guardrail is slechts op samenstellingen van toepassing die met de Samenstelling van het Publiek worden gecreeerd en **&#x200B;**&#x200B;is niet op samenstellingen van toepassing die met de Federatieve Samenstelling van het Publiek worden gecreeerd.
 
 Op dit punt in tijd, kunt u **10** gepubliceerde samenstellingen per zandbak slechts hebben. Deze guardrail zal naar verwachting in een toekomstige release worden verhoogd.
 
@@ -313,14 +313,14 @@ De compositiecomponent die als volgt plaatst volgt een stijve structuur:
 Bovendien gelden de volgende beperkingen bij het gebruik van deze blokken:
 
 - Blok splitsen
-   - Dit blok steunt slechts **gegevenstypes van 0} Koord {.** Het gesplitste blok steunt **** niet het datum of booleaanse gegevenstype.
-   - Bovendien, steunt dit blok **** geen verrijkingsattributen.
+   - Dit blok steunt slechts **gegevenstypes van 0&rbrace; Koord &lbrace;.** Het gesplitste blok steunt **&#x200B;**&#x200B;niet het datum of booleaanse gegevenstype.
+   - Bovendien, steunt dit blok **&#x200B;**&#x200B;geen verrijkingsattributen.
 - Blok uitsluiten
-   - Dit blok steunt **** niet het datum of booleaanse gegevenstype.
+   - Dit blok steunt **&#x200B;**&#x200B;niet het datum of booleaanse gegevenstype.
 - Rank blok
-   - Dit blok steunt **** geen verrijkingsattributen.
+   - Dit blok steunt **&#x200B;**&#x200B;geen verrijkingsattributen.
 
-Voor meer details over het gebruiken van de Samenstelling van het Publiek, gelieve de [ gids UI van de Samenstelling van het Publiek ](./ui/audience-composition.md) te lezen.
+Voor meer details over het gebruiken van de Samenstelling van het Publiek, gelieve de [&#x200B; gids UI van de Samenstelling van het Publiek &#x200B;](./ui/audience-composition.md) te lezen.
 
 ### Wanneer wordt het publiek gecreeerd gebruikend de Samenstelling van het Publiek bewaard en geëvalueerd?
 
@@ -348,11 +348,11 @@ Bij splitsing naar kenmerk is er sprake van wederzijdse exclusiviteit tussen de 
 
 Wanneer het splitsen door percentage, worden de spleten **willekeurig** gedaan. Dit betekent dat de profielen willekeurig worden toegewezen aan elk pad.
 
-Voor meer informatie over het Gesplitste blok, te lezen gelieve de [ gids UI van de Samenstelling van het publiek ](./ui/audience-composition.md#split).
+Voor meer informatie over het Gesplitste blok, te lezen gelieve de [&#x200B; gids UI van de Samenstelling van het publiek &#x200B;](./ui/audience-composition.md#split).
 
 ### Kan ik alle segmentatietypen in het werkschema van de Samenstelling van het Publiek gebruiken?
 
-Ja, worden alle segmentatietypen ([ partijsegmentatie, het stromen segmentatie, en randsegmentatie ](./home.md#evaluate-segments)) gesteund in het werkschema van de Samenstelling van het Publiek. Aangezien composities momenteel echter maar één keer per dag worden uitgevoerd, zelfs als streaming- of Edge-publiek wordt opgenomen, wordt het resultaat gebaseerd op het lidmaatschap van het publiek op het moment dat de compositie werd uitgevoerd.
+Ja, worden alle segmentatietypen ([&#x200B; partijsegmentatie, het stromen segmentatie, en randsegmentatie &#x200B;](./home.md#evaluate-segments)) gesteund in het werkschema van de Samenstelling van het Publiek. Aangezien composities momenteel echter maar één keer per dag worden uitgevoerd, zelfs als streaming- of Edge-publiek wordt opgenomen, wordt het resultaat gebaseerd op het lidmaatschap van het publiek op het moment dat de compositie werd uitgevoerd.
 
 ## Publiek lidmaatschap
 
@@ -374,15 +374,15 @@ In de volgende sectie worden vragen over batchsegmentatie weergegeven.
 
 ### Hoe verhelpt batchsegmentatie profiellidmaatschap?
 
-De soorten publiek die worden geëvalueerd met behulp van batchsegmentatie worden dagelijks opgelost, waarbij de resultaten van het doellidmaatschap worden opgenomen in het kenmerk `segmentMembership` van het profiel. De raadplegingen van het profiel produceren een verse versie van het profiel in de tijd van de raadpleging, maar het **** verfrist niet de resultaten van de partijsegmentatie.
+De soorten publiek die worden geëvalueerd met behulp van batchsegmentatie worden dagelijks opgelost, waarbij de resultaten van het doellidmaatschap worden opgenomen in het kenmerk `segmentMembership` van het profiel. De raadplegingen van het profiel produceren een verse versie van het profiel in de tijd van de raadpleging, maar het **&#x200B;**&#x200B;verfrist niet de resultaten van de partijsegmentatie.
 
-Dientengevolge, wanneer de veranderingen in het profiel, zoals het samenvoegen van twee profielen samen worden aangebracht, zullen deze veranderingen **** in het profiel verschijnen wanneer opgezocht, maar **** niet `segmentMembership` worden weerspiegeld in het  attribuut tot de baan van de segmentevaluatie opnieuw is gelopen.
+Dientengevolge, wanneer de veranderingen in het profiel, zoals het samenvoegen van twee profielen samen worden aangebracht, zullen deze veranderingen **&#x200B;**&#x200B;in het profiel verschijnen wanneer opgezocht, maar **&#x200B;**&#x200B;niet `segmentMembership` worden weerspiegeld in het  attribuut tot de baan van de segmentevaluatie opnieuw is gelopen.
 
 Bijvoorbeeld, zeggen u twee wederzijds exclusief publiek hebt gecreeerd: Publiek A is voor mensen die in Washington wonen en Publiek B is voor mensen die **niet** in Washington wonen. Er zijn twee profielen: profiel 1 voor een persoon die in Washington woont en profiel 2 voor een persoon die in Oregon woont.
 
 Wanneer de looppas van de partijsegmenteringsevaluatie, zal profiel 1 naar Publiek A gaan, terwijl profiel 2 naar Publiek B. Later, maar alvorens de de looppas van de de partijsegmenteringsevaluatietaak van de volgende dag zal gaan, een gebeurtenis die de twee profielen aanpast Experience Platform ingaat. Hierdoor wordt één samengevoegd profiel gemaakt dat de profielen 1 en 2 bevat.
 
-Tot de volgende baan van de de segmentbeoordeling van de partij in werking wordt gesteld, zal het nieuwe samengevoegde profiel publiekslidmaatschap in **zowel** profiel 1 als profiel 2 hebben. Dientengevolge, betekent dit het een lid van **zowel** Publiek A als Publiek B zal zijn, ondanks het feit dat deze publiek tegenstrijdige definities heeft. Voor de eindgebruiker, is dit de **nauwkeurige zelfde situatie** zoals alvorens de profielen werden verbonden, aangezien er altijd enkel betrokken één persoon was, en Experience Platform **** had enkel niet genoeg informatie om de twee profielen samen te verbinden.
+Tot de volgende baan van de de segmentbeoordeling van de partij in werking wordt gesteld, zal het nieuwe samengevoegde profiel publiekslidmaatschap in **zowel** profiel 1 als profiel 2 hebben. Dientengevolge, betekent dit het een lid van **zowel** Publiek A als Publiek B zal zijn, ondanks het feit dat deze publiek tegenstrijdige definities heeft. Voor de eindgebruiker, is dit de **nauwkeurige zelfde situatie** zoals alvorens de profielen werden verbonden, aangezien er altijd enkel betrokken één persoon was, en Experience Platform **&#x200B;**&#x200B;had enkel niet genoeg informatie om de twee profielen samen te verbinden.
 
 Als u profielraadpleging gebruikt om het onlangs gecreëerde profiel terug te winnen en zijn publiekslidmaatschap te bekijken, zal het tonen dat het een lid van **zowel** Publiek A als Publiek B is, ondanks het feit dat beide van deze soorten publiek tegenstrijdige definities hebben. Zodra de dagelijkse de evaluatietaak van de partijsegmentatie loopt, zal het publiekslidmaatschap worden bijgewerkt om op deze bijgewerkte staat van profielgegevens te wijzen.
 
@@ -416,7 +416,7 @@ Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ing
 
 ### Hoe worden segmenten gedefinieerd als batch- of streaming-segmentatie?
 
-Een segmentdefinitie wordt gedefinieerd als batch, streaming of randsegmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst waarvan de segmenten als het stromen segmentdefinitie zullen worden geëvalueerd kan in de [ het stromen sectie van de segmenteringsvraagtypes ](#query-types) worden gevonden.
+Een segmentdefinitie wordt gedefinieerd als batch, streaming of randsegmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst waarvan de segmenten als het stromen segmentdefinitie zullen worden geëvalueerd kan in de [&#x200B; het stromen sectie van de segmenteringsvraagtypes &#x200B;](#query-types) worden gevonden.
 
 Gelieve te merken op dat als een segmentdefinitie **zowel** een `inSegment` uitdrukking als een directe enige-gebeurtenisketting bevat, het niet voor het stromen segmentatie kan kwalificeren. Als u deze segmentdefinitie voor het stromen segmentatie wilt kwalificeren, zou u de directe enige-gebeurtenisketen zijn eigen segment moeten maken.
 
@@ -424,9 +424,9 @@ Gelieve te merken op dat als een segmentdefinitie **zowel** een `inSegment` uitd
 
 Het aantal in totaal gekwalificeerde segmenten wordt ontleend aan de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als het stromen segmenten kwalificeert. Deze waarde wordt weergegeven voor zowel batch- als streaming segmenten.
 
-Het aantal onder de &quot;Laatste dagen van X&quot;**slechts** omvat publiek dat in het stromen segmentatie wordt gekwalificeerd, en **slechts** verhogingen als u gegevens in het systeem hebt gestroomd en het telt naar die het stromen definitie. Deze waarde is **slechts** getoond voor het stromen segmenten. Dientengevolge, kan deze waarde **** als 0 voor partijsegmenten tonen.
+Het aantal onder de &quot;Laatste dagen van X&quot;**slechts** omvat publiek dat in het stromen segmentatie wordt gekwalificeerd, en **slechts** verhogingen als u gegevens in het systeem hebt gestroomd en het telt naar die het stromen definitie. Deze waarde is **slechts** getoond voor het stromen segmenten. Dientengevolge, kan deze waarde **&#x200B;**&#x200B;als 0 voor partijsegmenten tonen.
 
-Dientengevolge, als u ziet dat het aantal onder &quot;Laatste dagen van X&quot;nul is, en de lijngrafiek ook nul meldt, hebt u **** gestroomd geen profielen in het systeem dat voor dat segment zou kwalificeren.
+Dientengevolge, als u ziet dat het aantal onder &quot;Laatste dagen van X&quot;nul is, en de lijngrafiek ook nul meldt, hebt u **&#x200B;**&#x200B;gestroomd geen profielen in het systeem dat voor dat segment zou kwalificeren.
 
 ### Hoe lang duurt het voordat een segmentdefinitie beschikbaar is?
 
