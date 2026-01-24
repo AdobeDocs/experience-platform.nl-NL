@@ -435,11 +435,11 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
 
 Lees het volgende voor voorbeelden van AI Assistant-gebruiksscenario&#39;s:
 
-* [&#x200B; Verminder onboarding tijd voor nieuwe leden van uw team &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [&#x200B; ontmoedig uw publiek en optimaliseer uw marketing verrichtingen &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [&#x200B; Controle gebiedsdelen en minimaliseer risico tijdens gegevensupdates &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
-* [&#x200B; ontdekt en stelt sneller nieuwe eigenschappen &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125) op
-* [&#x200B; Revolutioneer klantensteun met Medewerker AI &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
+* [&#x200B; Verminder onboarding tijd voor nieuwe leden van uw team &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=nl)
+* [&#x200B; ontmoedig uw publiek en optimaliseer uw marketing verrichtingen &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=nl)
+* [&#x200B; Controle gebiedsdelen en minimaliseer risico tijdens gegevensupdates &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=nl)
+* [&#x200B; ontdekt en stelt sneller nieuwe eigenschappen &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=nl) op
+* [&#x200B; Revolutioneer klantensteun met Medewerker AI &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=nl)
 
 >[!TAB  Extra videoinhoud ]
 

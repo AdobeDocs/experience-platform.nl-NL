@@ -136,7 +136,7 @@ v2.0.4
 
 * Ondersteuning voor gegevenselement toegevoegd voor verschillende velden - Ondersteuning voor gegevenselement is toegevoegd aan de volgende gebeurtenissen: &#39;Tijd op pagina&#39;, &#39;Weergave voor invoer&#39;, &#39;Aanwijzer&#39; en &#39;Afspeeltijd media&#39;. alsmede de volgende voorwaarden: &#39;Time on Site&#39; en &#39;Value Comparison&#39;
 * Hiermee voegt u ondersteuning toe voor standaardgedrag voor ctrl/cmd + klikken en middenmuisklikken bij gebruik van Vertraging koppeling
-* **Gemarkeerde verbindingsvertraging op de klikgebeurtenis als &quot;niet meer gesteund&quot;.** - meer informatie kan op het [&#x200B; Blog van de Inzameling van Gegevens &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) voor Adobe Experience Platform worden gevonden
+* **Gemarkeerde verbindingsvertraging op de klikgebeurtenis als &quot;niet meer gesteund&quot;.** - meer informatie kan op het [&#x200B; Blog van de Inzameling van Gegevens &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=nl) voor Adobe Experience Platform worden gevonden
 
 ## donderdag 6 januari 2021
 
