@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [&#x200B; Beschrijving van het Product &#x200B;](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [&#x200B; Beschrijving van het Product &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 
 Deze pagina bevat standaardgebruiks- en tarieflimieten voor activeringsgedrag. Wanneer het herzien van de volgende gidsen, wordt het verondersteld dat u correct [&#x200B; met bestemmingen &#x200B;](/help/destinations/ui/connect-destination.md) hebt verbonden.
 
@@ -196,7 +196,7 @@ Gegevens over drempelwaarden of beperkingen voor bepaalde bestemmingen. Deze sec
 Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platform Services-instructies, informatie over end-to-end latentie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [&#x200B; de diagrammen van de de latentie van begin tot eind &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
-* [&#x200B; Real-Time Customer Data Platform (B2C Edition - Prime en de Pakketten van Ultimate) &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [&#x200B; Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [&#x200B; Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [&#x200B; de diagrammen van de de latentie van begin tot eind &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=nl-NL#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
+* [&#x200B; Real-Time Customer Data Platform (B2C Edition - Prime en de Pakketten van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
