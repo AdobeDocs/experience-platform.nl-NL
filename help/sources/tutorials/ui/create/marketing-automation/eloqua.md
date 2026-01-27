@@ -22,14 +22,14 @@ Lees deze handleiding voor informatie over hoe u uw [!DNL Oracle Eloqua] -accoun
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Vereiste referenties verzamelen {#credentials}
 
-Lees het [[!DNL Eloqua]  overzicht ](../../../../connectors/marketing-automation/eloqua.md) voor informatie over authentificatie.
+Lees het [[!DNL Eloqua]  overzicht &#x200B;](../../../../connectors/marketing-automation/eloqua.md) voor informatie over authentificatie.
 
 ## Navigeren door de catalogus met bronnen {#catalog}
 
@@ -41,19 +41,19 @@ Als u verbinding wilt maken met [!DNL Eloqua] , gaat u naar de categorie *[!UICO
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ Eloqua bronkaart in de broncatalogus met de benadrukte knoop van de Opstelling.](../../../../images/tutorials/create/eloqua/catalog.png)
+![&#x200B; Eloqua bronkaart in de broncatalogus met de benadrukte knoop van de Opstelling.](../../../../images/tutorials/create/eloqua/catalog.png)
 
 ## Een bestaande account gebruiken {#existing}
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL Eloqua] -account die u wilt gebruiken.
 
-![ de Bestaande die rekeningsoptie in de interface van de rekeningsverwezenlijking wordt geselecteerd.](../../../../images/tutorials/create/eloqua/existing.png)
+![&#x200B; de Bestaande die rekeningsoptie in de interface van de rekeningsverwezenlijking wordt geselecteerd.](../../../../images/tutorials/create/eloqua/existing.png)
 
 ## Een nieuwe account maken {#new}
 
-Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en beschrijving op onder [!UICONTROL Source connection details] . Daarna, onder [!UICONTROL Account authentication], verstrek waarden voor uw **identiteitskaart van de Cliënt**, **geheim van de Cliënt**, **Gebruikersnaam**, **Wachtwoord**, en **het eindpunt van de Basis**. U kunt de [ authentificatiegids ](../../../../connectors/marketing-automation/eloqua.md) voor meer informatie over deze geloofsbrieven lezen. Selecteer **[!UICONTROL Connect to source]** als u klaar bent en wacht een paar seconden totdat de verbinding tot stand is gebracht.
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en beschrijving op onder [!UICONTROL Source connection details] . Daarna, onder [!UICONTROL Account authentication], verstrek waarden voor uw **identiteitskaart van de Cliënt**, **geheim van de Cliënt**, **Gebruikersnaam**, **Wachtwoord**, en **het eindpunt van de Basis**. U kunt de [&#x200B; authentificatiegids &#x200B;](../../../../connectors/marketing-automation/eloqua.md) voor meer informatie over deze geloofsbrieven lezen. Selecteer **[!UICONTROL Connect to source]** als u klaar bent en wacht een paar seconden totdat de verbinding tot stand is gebracht.
 
-![ de Nieuwe rekeningsinterface met gebieden voor bronverbindingsdetails en authentificatiegeloofsbrieven.](../../../../images/tutorials/create/eloqua/new.png)
+![&#x200B; de Nieuwe rekeningsinterface met gebieden voor bronverbindingsdetails en authentificatiegeloofsbrieven.](../../../../images/tutorials/create/eloqua/new.png)
 
 ## Gegevens selecteren
 
@@ -63,13 +63,13 @@ Gebruik de interface select data om de entiteit [!DNL Eloqua] te selecteren die 
 >
 >Wanneer u gegevens selecteert, ziet u dat de andere entiteiten behalve campagnes representatieve voorbeeldgegevens weergeven. Deze aanpak zorgt ervoor dat u een voorvertoning kunt weergeven van de beschikbare velden en structuur, aangezien [!DNL Eloqua] openbare API&#39;s momenteel alleen echte gegevens voor campagnes ophalen. Voor de overige entiteiten worden voorbeeldgegevens verschaft ter ondersteuning van uw configuratieworkflow.
 
-![ de interface die van de gegevensselectie beschikbare Eloqua gegevensentiteiten toont.](../../../../images/tutorials/create/eloqua/select-data.png)
+![&#x200B; de interface die van de gegevensselectie beschikbare Eloqua gegevensentiteiten toont.](../../../../images/tutorials/create/eloqua/select-data.png)
 
 ## Gegevens over gegevensset en gegevensstroom {#details}
 
 Daarna, moet u informatie over uw dataset en dataflow verstrekken. Tijdens deze stap, kunt u of een bestaande dataset gebruiken of een nieuwe dataset creëren. Bovendien, kunt u naar keuze uw dataset voor opname aan het Profiel van de Klant in real time tijdens deze stap toelaten.
 
-![ de dataset en dataflow detailinterface met opties om dataseteigenschappen te vormen.](../../../../images/tutorials/create/eloqua/details.png)
+![&#x200B; de dataset en dataflow detailinterface met opties om dataseteigenschappen te vormen.](../../../../images/tutorials/create/eloqua/details.png)
 
 ## Toewijzing {#mapping}
 
@@ -93,7 +93,7 @@ Om ervoor te zorgen dat uw externe CRM-informatie correct wordt weergegeven, geb
 
 Als u de berekende veldeditor wilt gebruiken, selecteert u het bronveld dat u wilt bijwerken.
 
-![ het Eloqua brongebied met berekende gebieden.](../../../../images/tutorials/create/eloqua/select-calculated-field.png)
+![&#x200B; het Eloqua brongebied met berekende gebieden.](../../../../images/tutorials/create/eloqua/select-calculated-field.png)
 
 >[!BEGINTABS]
 
@@ -101,19 +101,19 @@ Als u de berekende veldeditor wilt gebruiken, selecteert u het bronveld dat u wi
 
 Voor [!DNL Salesforce] -gebruikers gebruikt u de berekende veldeditor en werkt u de `{CRM_INSTANCE_ID}` bij met de juiste instantie-id.
 
-![ het berekende gebied voor Salesforce.](../../../../images/tutorials/create/eloqua/sf-field.png)
+![&#x200B; het berekende gebied voor Salesforce.](../../../../images/tutorials/create/eloqua/sf-field.png)
 
 >[!TAB  Microsoft Dynamics ]
 
 Voor [!DNL Microsoft] -gebruikers gebruikt u de berekende veldeditor en werkt u de `{CRM_INSTANCE_ID}` bij met de juiste instantie-id.
 
-![ het berekende gebied voor Dynamica.](../../../../images/tutorials/create/eloqua/dynamics-field.png)
+![&#x200B; het berekende gebied voor Dynamica.](../../../../images/tutorials/create/eloqua/dynamics-field.png)
 
 >[!ENDTABS]
 
 Als u de berekende velden hebt bijgewerkt, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ de toewijzingsinterface die gebiedsafbeeldingen voor Eloqua gegevensentiteiten toont.](../../../../images/tutorials/create/eloqua/mapping.png)
+![&#x200B; de toewijzingsinterface die gebiedsafbeeldingen voor Eloqua gegevensentiteiten toont.](../../../../images/tutorials/create/eloqua/mapping.png)
 
 ## Planning
 
@@ -131,17 +131,17 @@ Met uw afbeelding volledig, kunt u een innameprogramma voor uw gegevensstroom nu
 
 De innamefrequentie per minuut is niet beschikbaar voor de [!DNL Eloqua] bron. Het meest voorkomende schema dat u kunt kiezen, is per uur. Selecteer een schema dat aansluit bij uw behoeften aan gegevensversheid. Houd er rekening mee dat als u een frequentere planning kiest, de kosten van uw computer stijgen.
 
-![ de het plannen interface met opties om innamefrequentie en interval te vormen.](../../../../images/tutorials/create/eloqua/scheduling.png)
+![&#x200B; de het plannen interface met opties om innamefrequentie en interval te vormen.](../../../../images/tutorials/create/eloqua/scheduling.png)
 
 ## Controleren
 
 Met het gevormde ingenschema, gebruik de [!UICONTROL Review] interface om de details van uw gegevensstroom te bevestigen. Selecteer **[!UICONTROL Finish]** om de installatie te voltooien en de gegevensstroom enkele ogenblikken te laten starten.
 
-![ de overzichtsinterface die een samenvatting van de dataflow configuratie vóór voltooiing toont.](../../../../images/tutorials/create/eloqua/review.png)
+![&#x200B; de overzichtsinterface die een samenvatting van de dataflow configuratie vóór voltooiing toont.](../../../../images/tutorials/create/eloqua/review.png)
 
 ## Monitor
 
-Als de gegevensstroom is geselecteerd, worden de gegevens eenmalig teruggevuld en wordt de gegevens vervolgens stapsgewijs gesynchroniseerd volgens het opgegeven schema. De status van synchronisatie kan worden gecontroleerd door aan dataflow te navigeren. Voor meer informatie, leest de gids op [ controlemodellen dataflows in UI ](../../../../../dataflows/ui/monitor-sources.md).
+Als de gegevensstroom is geselecteerd, worden de gegevens eenmalig teruggevuld en wordt de gegevens vervolgens stapsgewijs gesynchroniseerd volgens het opgegeven schema. De status van synchronisatie kan worden gecontroleerd door aan dataflow te navigeren. Voor meer informatie, leest de gids op [&#x200B; controlemodellen dataflows in UI &#x200B;](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Volgende stappen
 

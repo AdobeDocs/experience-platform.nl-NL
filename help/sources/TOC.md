@@ -102,7 +102,7 @@ ht-degree: 7%
       - [Schopify](connectors/ecommerce/shopify.md)
       - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
-      - [ Lokale dossier uploadt schakelaar ](connectors/local-system/local-file-upload.md)
+      - [&#x200B; Lokale dossier uploadt schakelaar &#x200B;](connectors/local-system/local-file-upload.md)
    - Loyalty {#loyalty}
       - [Capillary Streaming-gebeurtenissen](connectors/loyalty/capillary.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
@@ -315,7 +315,7 @@ ht-degree: 7%
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
-         - [ Lokale dossier uploadt ](tutorials/ui/create/local-system/local-file-upload.md)
+         - [&#x200B; Lokale dossier uploadt &#x200B;](tutorials/ui/create/local-system/local-file-upload.md)
       - Loyalty {#loyalty}
          - [Capillary Streaming-gebeurtenissen](tutorials/ui/create/loyalty/capillary.md)
          - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
@@ -404,5 +404,5 @@ ht-degree: 7%
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
-- [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
