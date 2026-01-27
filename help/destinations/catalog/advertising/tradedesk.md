@@ -83,7 +83,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming met [!DNL The Trade Desk] wilt tot stand brengen en niet de [&#x200B; functionaliteit van de Synchronisatie van identiteitskaart &#x200B;](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL The Trade Desk] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
+>Als u uw eerste bestemming met [!DNL The Trade Desk] wilt tot stand brengen en niet de [&#x200B; functionaliteit van de Synchronisatie van identiteitskaart &#x200B;](https://experienceleague.adobe.com/nl/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL The Trade Desk] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -133,7 +133,7 @@ Bij het toewijzen van soorten publiek raadt Adobe u aan de Experience Platform-p
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="Vooraf geconfigureerde toewijzingssets"
->abstract="Wij hebben deze vier kaartreeksen voor u vooraf gevormd. Wanneer u gegevens activeert op de handelsbank, hoeven de profielen die voor het geactiveerde publiek worden gekwalificeerd niet noodzakelijkerwijs alle vier de identiteiten te hebben aanwezig op de profielen, aangezien deze bestemming met om het even welke doelidentiteiten zal werken die hier worden getoond. Lees meer over &lt;a href=&quot;https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings&quot;>preconfigured afbeeldingen </a>"
+>abstract="Wij hebben deze vier kaartreeksen voor u vooraf gevormd. Wanneer u gegevens activeert op de handelsbank, hoeven de profielen die voor het geactiveerde publiek worden gekwalificeerd niet noodzakelijkerwijs alle vier de identiteiten te hebben aanwezig op de profielen, aangezien deze bestemming met om het even welke doelidentiteiten zal werken die hier worden getoond. Lees meer over &lt;a href=&quot;https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings&quot;>preconfigured afbeeldingen </a>"
 
 Alle die doelidentiteiten in de [&#x200B; worden beschreven gesteunde identiteiten &#x200B;](#supported-identities) sectie moeten in de afbeeldingsstap van het werkschema van de publiekactivering worden in kaart gebracht. Dit omvat het volgende:
 
