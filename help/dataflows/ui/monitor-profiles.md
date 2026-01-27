@@ -21,10 +21,10 @@ Op het dashboard voor bewaking ziet u een visuele weergave van de activiteit van
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
-   - [ looppas Dataflow ](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
-- [ Real-Time Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [&#x200B; Dataflows &#x200B;](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+   - [&#x200B; looppas Dataflow &#x200B;](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
+- [&#x200B; Real-Time Profiel van de Klant &#x200B;](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+- [&#x200B; Sandboxen &#x200B;](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Dashboard voor controleprofielen {#profile-metrics}
 
@@ -41,13 +41,13 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 Als u het dashboard **[!UICONTROL Profiles]** wilt openen, selecteert u **[!UICONTROL Monitoring]** in de linkernavigatie. Selecteer eenmaal op de pagina **[!UICONTROL Monitoring]** de **[!UICONTROL Profiles]** -kaart.
 
-![ De kaart van Profielen. Informatie over het aantal verslagen die worden ontvangen, het aantal gemaakte en bijgewerkte profielfragmenten, en het succestarief wordt getoond.](../assets/ui/monitor-profiles/focus-card.png)
+![&#x200B; De kaart van Profielen. Informatie over het aantal verslagen die worden ontvangen, het aantal gemaakte en bijgewerkte profielfragmenten, en het succestarief wordt getoond.](../assets/ui/monitor-profiles/focus-card.png)
 
 Op het hoofddashboard van **[!UICONTROL Profiles]** geeft de **[!UICONTROL Profiles]** -kaart informatie over het totale aantal ontvangen records, het aantal gemaakte en bijgewerkte profielfragmenten en de successnelheid van gemaakte en bijgewerkte profielfragmenten.
 
 Het dashboard zelf bevat gegevens over profielverwerking. Standaard bevat het dashboard de verwerkingsgegevens van het profiel voor de bronnen van uw organisatie gedurende de laatste 24 uur.
 
-![ het dashboard van Profielen. De informatie over het aantal verslagen van het Profiel die per bron worden ontvangen wordt getoond.](../assets/ui/monitor-profiles/sources.png)
+![&#x200B; het dashboard van Profielen. De informatie over het aantal verslagen van het Profiel die per bron worden ontvangen wordt getoond.](../assets/ui/monitor-profiles/sources.png)
 
 De pagina [!UICONTROL Profile processing] bevat informatie over records die aan [!DNL Profile] worden toegevoegd, zoals het aantal gemaakte profielfragmenten, bijgewerkte profielfragmenten en het totale aantal profielfragmenten.
 
@@ -63,11 +63,11 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Total Profile fragments]** | Het totale aantal records dat in [!DNL Profile] is geschreven, inclusief alle bestaande [!DNL Profile] fragmenten die zijn bijgewerkt en nieuwe [!DNL Profile] fragmenten die zijn gemaakt. |
 | **[!UICONTROL Total failed dataflows]** | Het aantal dataflow wordt uitgevoerd dat is mislukt. |
 
-U kunt het pictogram van de filter ![ Filter ](/help/images/icons/filter.png) naast de bronnaam selecteren om de verwerkingsinformatie van het Profiel voor de dataflows van die geselecteerde bron te zien.
+U kunt het pictogram van de filter ![&#x200B; Filter &#x200B;](/help/images/icons/filter.png) naast de bronnaam selecteren om de verwerkingsinformatie van het Profiel voor de dataflows van die geselecteerde bron te zien.
 
 U kunt ook **[!UICONTROL Dataflows]** in de schakeloptie selecteren om de profielverwerkingsdetails voor de gegevensstromen van uw organisatie gedurende de laatste 24 uur te bekijken.
 
-![ het dashboard van Profielen. De informatie over het aantal verslagen van het Profiel die per dataflow worden ontvangen wordt getoond.](../assets/ui/monitor-profiles/dataflows.png)
+![&#x200B; het dashboard van Profielen. De informatie over het aantal verslagen van het Profiel die per dataflow worden ontvangen wordt getoond.](../assets/ui/monitor-profiles/dataflows.png)
 
 De volgende metriek is beschikbaar voor deze dashboardmening:
 
@@ -85,11 +85,11 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Total failed flow runs]** | Het aantal dataflow wordt uitgevoerd dat is mislukt. |
 | **[!UICONTROL Last active]** | De tijdstempel die de gegevensstroom het laatst heeft uitgevoerd. |
 
-Selecteer het filterpictogram ![ filter ](/help/images/icons/filter.png) naast de dataflow runtime begintijd om meer informatie over uw [!DNL Profile] dataflow looppas te zien.
+Selecteer het filterpictogram ![&#x200B; filter &#x200B;](/help/images/icons/filter.png) naast de dataflow runtime begintijd om meer informatie over uw [!DNL Profile] dataflow looppas te zien.
 
 Er wordt een dashboard weergegeven met alle gegevensstroombewerkingen. Dit dashboard bevat metriek over de dataflow looppas evenals grafieken die het succestarief, gemaakte profielfragmenten, en bijgewerkte profielfragmenten tonen.
 
-![ dataflow stelt dashboard in werking. De informatie over de dataflow looppas wordt getoond.](../assets/ui/monitor-profiles/dataflow-run.png)
+![&#x200B; dataflow stelt dashboard in werking. De informatie over de dataflow looppas wordt getoond.](../assets/ui/monitor-profiles/dataflow-run.png)
 
 De volgende metriek is beschikbaar voor deze dashboardmening:
 
@@ -97,7 +97,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 >
 >Wanneer de dataflow-run zich in de **[!UICONTROL Processing]** -status bevindt, kunt u informatie over de gereedheid zien door de status van het controlepunt in het innameproces te bekijken.
 >
->![ de bel van de profielopname van de bereidheid wordt getoond.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+>![&#x200B; de bel van de profielopname van de bereidheid wordt getoond.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
 
 | Metrisch | Beschrijving |
 | ------ | ----------- |
@@ -115,7 +115,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 
 Op de pagina [!UICONTROL Dataflow run details] wordt meer informatie weergegeven over de [!DNL Profile] dataflow-uitvoering, inclusief de organisatie-id en de id voor de uitvoering van de gegevensstroom. Op deze pagina worden ook de bijbehorende foutcode en het foutbericht weergegeven die door [!DNL Profile] worden geboden, als er fouten optreden in het innameproces.
 
-![ het dashboard dat van A gedetailleerde informatie over geselecteerde dataflow toont wordt getoond.](../assets/ui/monitor-profiles/dataflow-run-details.png)
+![&#x200B; het dashboard dat van A gedetailleerde informatie over geselecteerde dataflow toont wordt getoond.](../assets/ui/monitor-profiles/dataflow-run-details.png)
 
 De volgende metriek is beschikbaar voor deze dashboardmening:
 
