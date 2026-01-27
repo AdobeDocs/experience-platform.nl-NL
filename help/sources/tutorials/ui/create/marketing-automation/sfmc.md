@@ -16,14 +16,14 @@ Lees deze handleiding voor informatie over hoe u uw [!DNL Salesforce Marketing C
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Vereiste referenties verzamelen
 
-Lees het [[!DNL Salesforce Marketing Cloud]  overzicht ](../../../../connectors/marketing-automation/sfmc.md#prerequisites) voor informatie over authentificatie.
+Lees het [[!DNL Salesforce Marketing Cloud]  overzicht &#x200B;](../../../../connectors/marketing-automation/sfmc.md#prerequisites) voor informatie over authentificatie.
 
 ## Navigeren door de catalogus met bronnen
 
@@ -35,19 +35,19 @@ Als u verbinding wilt maken met [!DNL Salesforce Marketing Cloud] , gaat u naar 
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus met de geselecteerde bron van Salesforce Marketing Cloud.](../../../../images/tutorials/create/sfmc/catalog.png)
+![&#x200B; de broncatalogus met de geselecteerde bron van Salesforce Marketing Cloud.](../../../../images/tutorials/create/sfmc/catalog.png)
 
 ## Een bestaande account gebruiken {#existing}
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL Salesforce Marketing Cloud] -account die u wilt gebruiken.
 
-![ De bestaande rekeningsinterface van het bronwerkschema ](../../../../images/tutorials/create/sfmc/existing.png)
+![&#x200B; De bestaande rekeningsinterface van het bronwerkschema &#x200B;](../../../../images/tutorials/create/sfmc/existing.png)
 
 ## Een nieuwe account maken {#new}
 
-Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en beschrijving op onder [!UICONTROL Source connection details] . Daarna, onder [!UICONTROL Account authentication], verstrek waarden voor uw **identiteitskaart van de Cliënt**, **geheim van de Cliënt**, en **het eindpunt van de Basis**. U kunt de [ authentificatiegids ](../../../../connectors/marketing-automation/sfmc.md#gather-required-credentials) voor meer informatie over deze geloofsbrieven lezen. Selecteer **[!UICONTROL Connect to source]** als u klaar bent en wacht een paar seconden totdat de verbinding tot stand is gebracht.
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en beschrijving op onder [!UICONTROL Source connection details] . Daarna, onder [!UICONTROL Account authentication], verstrek waarden voor uw **identiteitskaart van de Cliënt**, **geheim van de Cliënt**, en **het eindpunt van de Basis**. U kunt de [&#x200B; authentificatiegids &#x200B;](../../../../connectors/marketing-automation/sfmc.md#gather-required-credentials) voor meer informatie over deze geloofsbrieven lezen. Selecteer **[!UICONTROL Connect to source]** als u klaar bent en wacht een paar seconden totdat de verbinding tot stand is gebracht.
 
-![ de nieuwe rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/sfmc/new.png)
+![&#x200B; de nieuwe rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/sfmc/new.png)
 
 ## Gegevens selecteren
 
@@ -55,19 +55,19 @@ De [!DNL Salesforce Marketing Cloud] -bron ondersteunt alleen gegevensinvoer van
 
 Gebruik de interface [!UICONTROL Select data] om de gegevensextensie te selecteren die u wilt toevoegen vanuit de instantie [!DNL Salesforce Marketing Cloud] . Zodra u de gegevensuitbreiding selecteert, kunt u het voorproefpaneel gebruiken om te bevestigen dat de dataset de verwachte gebieden bevat alvorens te werk te gaan.
 
-![ de uitgezochte gegevensstap van het bronwerkschema ](../../../../images/tutorials/create/sfmc/select-data.png)
+![&#x200B; de uitgezochte gegevensstap van het bronwerkschema &#x200B;](../../../../images/tutorials/create/sfmc/select-data.png)
 
 ## Gegevens over gegevensset en gegevensstroom
 
 Daarna, moet u informatie over uw dataset en dataflow verstrekken. Tijdens deze stap, kunt u of een bestaande dataset gebruiken of een nieuwe dataset creëren. Bovendien, kunt u naar keuze uw dataset voor opname aan het Profiel van de Klant in real time tijdens deze stap toelaten.
 
-![ de dataset en dataflow detailsstap van het bronwerkschema.](../../../../images/tutorials/create/sfmc/dataset-details.png)
+![&#x200B; de dataset en dataflow detailsstap van het bronwerkschema.](../../../../images/tutorials/create/sfmc/dataset-details.png)
 
 ## Toewijzing
 
 In [!DNL Salesforce Marketing Cloud] worden gegevensextensies niet beschouwd als standaardobjecten. Er zijn daarom geen vooraf gedefinieerde of vaste toewijzingsvelden voor een Experience Platform-schema. Terwijl Data Prep in Experience Platform de best-inspanningsgroepering tussen brongebieden van [!DNL Salesforce Marketing Cloud] en het schema van het Model van de Gegevens van de Doelervaring (XDM) uitvoert, kunnen er nog enkele gevallen zijn waar een handrevisie of een aanpassing wordt vereist om unmapped of onjuiste gebieden op te lossen.
 
-![ de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/sfmc/mapping.png)
+![&#x200B; de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/sfmc/mapping.png)
 
 ## Een gegevensstroom plannen
 
@@ -79,17 +79,17 @@ Met uw afbeelding volledig, kunt u een innameprogramma voor uw gegevensstroom nu
 
 U moet een delta (datum/tijd) gebied in uw dataset selecteren om stijgende synchronisatie toe te laten. Als uw dataset geen geschikt deltagebied bevat, zult u niet dataflow kunnen tot stand brengen.
 
-![ de het plannen stap van het bronwerkschema.](../../../../images/tutorials/create/sfmc/schedule.png)
+![&#x200B; de het plannen stap van het bronwerkschema.](../../../../images/tutorials/create/sfmc/schedule.png)
 
 ## Controleren
 
 Met het gevormde ingenschema, gebruik de [!UICONTROL Review] interface om de details van uw gegevensstroom te bevestigen. Selecteer **[!UICONTROL Finish]** om de installatie te voltooien en de gegevensstroom enkele ogenblikken te laten starten.
 
-![ de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/sfmc/review.png)
+![&#x200B; de overzichtsstap van het bronwerkschema.](../../../../images/tutorials/create/sfmc/review.png)
 
 ## Monitor
 
-Als de gegevensstroom is geselecteerd, worden de gegevens eenmalig teruggevuld en wordt de gegevens vervolgens stapsgewijs gesynchroniseerd volgens het opgegeven schema. De status van synchronisatie kan worden gecontroleerd door aan dataflow te navigeren. Voor meer informatie, leest de gids op [ controlemodellen dataflows in UI ](../../../../../dataflows/ui/monitor-sources.md).
+Als de gegevensstroom is geselecteerd, worden de gegevens eenmalig teruggevuld en wordt de gegevens vervolgens stapsgewijs gesynchroniseerd volgens het opgegeven schema. De status van synchronisatie kan worden gecontroleerd door aan dataflow te navigeren. Voor meer informatie, leest de gids op [&#x200B; controlemodellen dataflows in UI &#x200B;](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Volgende stappen
 
