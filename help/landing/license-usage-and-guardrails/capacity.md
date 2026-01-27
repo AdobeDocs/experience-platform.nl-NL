@@ -185,7 +185,7 @@ Bovendien kunt u naar uw gegevensstromen kijken en zien of kunt u uw gegevensstr
 
 De volgende video biedt een overzicht van Capaciteit.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475279/?captions=dut&learn=on&enablevpops)
 
 ## Veelgestelde vragen {#faq}
 
