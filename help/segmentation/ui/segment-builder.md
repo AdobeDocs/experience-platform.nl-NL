@@ -131,7 +131,7 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Extern publiek"
 >abstract="Het publiek dat via het tabblad Soorten publiek wordt geïmporteerd, wordt nu automatisch opgezocht via het Poort publiek. Dit omvat publiek dat van Audience Manager, Customer Journey Analytics, Segment Match, en andere douaneintegratie wordt opgenomen.<br/><br/> tegen eind september 2025, zal het publiek uitsluitend door Verenigd Onderzoek worden teruggewonnen, en het vorige werkschema zal niet meer gesteund. De Overeenkomst van het segment blijft beschikbaar slechts voor een klein aantal aangewezen klanten terwijl wij de dienst overgaan. De toegang voor de nieuwe klanten van de Gelijke van het Segment kan nog op verzoek worden toegelaten alvorens de dienst volledig gepensioneerd is.<br/><br/> voor aan de gang zijnde gevallen van het gebruik van gegevenssamenwerking, adviseert Adobe zich aan Collaboration te bewegen, die de op lange termijn gesteunde oplossing is."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Poort publiek"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/ui/audience-portal#list" text="Poort publiek"
 
 >[!NOTE]
 >
@@ -425,7 +425,7 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Ramingen vernieuwen"
 >abstract="U kunt de ramingen van uw segmentdefinitie verfrissen om onmiddellijk een voorproef van te zien hoeveel profielen voor de voorgestelde segmentdefinitie zouden kwalificeren. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=nl-NL#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
