@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
+source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1316'
 ht-degree: 20%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 20%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -48,7 +48,7 @@ Met Agent Orchestrator kunt u op AI gebaseerde agents maken en implementeren die
 
 {style="table-layout:auto"}
 
-Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+Voor meer informatie, zie de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Bestemmingen {#destinations}
 
@@ -58,9 +58,9 @@ Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x20
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| Kevel-bestemmingsconnector nu beschikbaar | [[!DNL Kevel] &#x200B;](https://www.kevel.com/) verstrekt de AI-Toegelaten technologie en deskundige begeleiding die innovatieve handelsleiders helpen lanceren, schrapen, en slagen in handelsmedia. De Retail Media Cloud-bevoegdheden van [!DNL Kevel] zijn gericht op, aanpasbare en aanpasbare advertentievormen voor on-site en off-site reclame. |
+| Kevel-bestemmingsconnector nu beschikbaar | [[!DNL Kevel] ](https://www.kevel.com/) verstrekt de AI-Toegelaten technologie en deskundige begeleiding die innovatieve handelsleiders helpen lanceren, schrapen, en slagen in handelsmedia. De Retail Media Cloud-bevoegdheden van [!DNL Kevel] zijn gericht op, aanpasbare en aanpasbare advertentievormen voor on-site en off-site reclame. |
 | De bestemmingsschakelaar van de Uitwisseling van de index nu beschikbaar | [!DNL Index] is een wereldwijd advertentieplatform dat media-eigenaars helpt de waarde van hun inhoud op elk scherm te maximaliseren. Met meer dan 20 jaar toonaangevend in de branche verbindt [!DNL Index] de grootste merken ter wereld met toonaangevende ervaren makers om hoogwaardige consumentenervaringen te bieden. |
-| Regionale steun voor eindpunten voor verbindingen van het type Braze | Alle [&#x200B; gebied-specifieke eindpunten &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die door [!DNL Braze] worden gesteund zijn nu beschikbaar voor selectie tijdens de stroom van de bestemmingsconfiguratie. Vraag uw [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken. |
+| Regionale steun voor eindpunten voor verbindingen van het type Braze | Alle [ gebied-specifieke eindpunten ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die door [!DNL Braze] worden gesteund zijn nu beschikbaar voor selectie tijdens de stroom van de bestemmingsconfiguratie. Vraag uw [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken. |
 | Ondersteuning voor wekelijkse en maandelijkse planningen van Liveramp Onboarding | U kunt nu wekelijkse en maandelijkse exportschema&#39;s configureren voor de bestemming Liveramp aan boord. |
 | AES256 encryptiesteun voor Amazon S3 bestemmingen | U kunt nu AES256-codering configureren voor uw Amazon S3-export. |
 | Verbeterde activeringservaring voor de bestemmingen Trade Desk en Microsoft Bing | De handelsbureau en de bestemmingen van de Bing van Microsoft omvatten nu vooraf bepaalde verplichte afbeeldingen voor een geoptimaliseerde activeringservaring. |
@@ -70,7 +70,7 @@ Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x20
 | Functie | Beschrijving |
 | --- | --- |
 | Bijgewerkte guardraillimieten voor Adobe Target-bestemming | Het maximumaantal doelgroepen dat aan één Adobe Target-bestemming kan worden toegewezen, is verhoogd van 50 naar 250. Hierdoor wordt Adobe Target uitgelijnd op de standaardpubliekslimiet voor andere doelen, waardoor workflows voor publieksactivering flexibeler worden. U kunt nu meer soorten publiek activeren naar Adobe Target-doelen zonder dat u meerdere gegevensstromen hoeft te maken. |
-| [&#x200B; geeft bestemmingen &#x200B;](/help/destinations/ui/edit-destination.md) uit en [&#x200B; geeft marketing acties &#x200B;](/help/destinations/ui/edit-activation.md#edit-marketing-actions) algemene beschikbaarheid uit | De optie om bestemmingen en marketingacties te bewerken is nu beschikbaar voor alle gebruikers. |
+| [ geeft bestemmingen ](/help/destinations/ui/edit-destination.md) uit en [ geeft marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) algemene beschikbaarheid uit | De optie om bestemmingen en marketingacties te bewerken is nu beschikbaar voor alle gebruikers. |
 | Veldweergavenamen in-/uitschakelen in toewijzingsstap | Wanneer u schemavelden toewijst aan een doel, kunt u nu schakelen tussen het weergeven van de volledige XDM-veldnaam en het weergeven van alleen de weergavenaam. |
 
 {style="table-layout:auto"}
@@ -113,7 +113,6 @@ Voor meer informatie raadpleegt u het [[!DNL Schemas] overzicht](../xdm/home.md)
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Bewaking van streaming segmentering | Controle in real time voor het stromen segmentatie verstrekt transparantie in evaluatiesnelheid, latentie, en de metriek van de gegevenskwaliteit op de zandbak, dataset, en publieksniveaus. Dit ondersteunt proactieve waarschuwingen en bruikbare inzichten om data-engineers te helpen bij het identificeren van capaciteitsschendingen en problemen met de opname. De metriek van de controle omvatten evaluatiesnelheid, P95 ingesliplatentie, evenals ontvangen, geëvalueerde, ontbroken verslagen, en overgeslagen verslagen. De mening-door-dataset en mening-door-publiek mogelijkheden verstrekken uitvoerige zicht in netto nieuwe profielen die worden gekwalificeerd en worden gedeskwalificeerd. |
 | TTL voor extern publiek vernieuwen | Externe doelgroepen (zoals CSV-uploads) ondersteunen nu een functie voor forceren vernieuwen voor instellingen voor tijd tot live (TTL). Met deze functie kunnen gebruikers de vervaldatum van de TTL handmatig vernieuwen voor externe doelgroepen, zodat ze meer controle hebben over het levenscyclusbeheer van de doelgroep. Dit is met name nuttig voor doelgroepen die na hun eerste TTL-periode moeten blijven of opnieuw moeten worden geactiveerd zonder de gegevens opnieuw te uploaden. |
 
 Voor meer informatie raadpleegt u het [[!DNL Segmentation Service] overzicht](../segmentation/home.md).
