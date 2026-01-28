@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->U kunt de vastlegging van wijzigingsgegevens nu gebruiken voor de [!DNL Amazon S3] - en [!DNL Data Landing Zone] -bronnen wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS) terwijl u verbinding hebt met een VA6-datacenter. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+>U kunt de vastlegging van wijzigingsgegevens nu gebruiken voor de [!DNL Amazon S3] - en [!DNL Data Landing Zone] -bronnen wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS) terwijl u verbinding hebt met een VA6-datacenter. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../landing/multi-cloud.md).
 
 Met de functie voor het vastleggen van wijzigingsgegevens in Adobe Experience Platform-bronnen zorgt u ervoor dat uw bron- en doelsystemen vrijwel realtime gesynchroniseerd blijven.
 
@@ -21,7 +21,7 @@ Experience Platform steunt momenteel **stijgende gegevensexemplaar**, dat period
 
 Als u daarentegen de gegevensopname wijzigt, worden de gegevens vastgelegd en worden invoegingen, updates en verwijderingen in bijna real-time toegepast. Deze uitvoerige verandering het volgen zorgt ervoor dat de datasets volledig gericht op het bronsysteem blijven en verstrekt een volledige veranderingsgeschiedenis, voorbij welke stijgende exemplaar steunt. Nochtans, schrapt verrichtingen vereisen speciale overweging aangezien zij alle toepassingen beïnvloeden die de doeldatasets gebruiken.
 
-De gegevens van de verandering vangen in Experience Platform vereist **[Data Mirror](../../../xdm/data-mirror/overview.md)** met [ relationele schema&#39;s ](../../../xdm/schema/relational.md). U kunt wijzigingsgegevens op twee manieren naar Data Mirror verzenden:
+De gegevens van de verandering vangen in Experience Platform vereist **[Data Mirror](../../../xdm/data-mirror/overview.md)** met [&#x200B; relationele schema&#39;s &#x200B;](../../../xdm/schema/relational.md). U kunt wijzigingsgegevens op twee manieren naar Data Mirror verzenden:
 
 * **[Handmatige verandering het volgen](#file-based-sources)**: Omvat a `_change_request_type` kolom in uw dataset voor bronnen die niet natically veranderingsgegevens produceren vangen verslagen
 * **[de Inheemse vangst van veranderingsgegevens voert](#database-sources)** uit: De verslagen van de vangst van veranderingsgegevens van het gebruik direct uit uw bronsysteem worden uitgevoerd
@@ -38,11 +38,11 @@ Beide benaderingen vereisen Data Mirror met relationele schema&#39;s om verhoudi
 >
 >**Geordende campagnegebruikers**: Gebruik de mogelijkheden van Data Mirror die in dit document worden beschreven om met klantengegevens te werken die referentiële integriteit handhaven. Zelfs als uw bron geen opmaak voor het vastleggen van wijzigingsgegevens gebruikt, biedt Data Mirror ondersteuning voor relationele functies, zoals primaire toetsenbordhandhaving, upserts op recordniveau en schema-relaties. Deze eigenschappen verzekeren verenigbare en betrouwbare gegevensmodellering over verbonden datasets.
 
-Data Mirror gebruikt relationele schema&#39;s om het vastleggen van wijzigingsgegevens uit te breiden en geavanceerde mogelijkheden voor databasesynchronisatie in te schakelen. Voor een overzicht van Data Mirror, zie [ overzicht van Data Mirror ](../../../xdm/data-mirror/overview.md).
+Data Mirror gebruikt relationele schema&#39;s om het vastleggen van wijzigingsgegevens uit te breiden en geavanceerde mogelijkheden voor databasesynchronisatie in te schakelen. Voor een overzicht van Data Mirror, zie [&#x200B; overzicht van Data Mirror &#x200B;](../../../xdm/data-mirror/overview.md).
 
 Relationele schema&#39;s breiden Experience Platform uit om primaire zeer belangrijke uniciteit af te dwingen, rij-vlakke veranderingen te volgen, en schema-vlakke verhoudingen te bepalen. Met veranderingsgegevens vangen, passen zij tussenvoegsels toe, updates, en schrapt direct in het gegevensmeer, die de behoefte aan Extraheren, Transformeren, Lading (ETL) of handverzoening verminderen.
 
-Zie [ Overzicht Relationele schema&#39;s ](../../../xdm/schema/relational.md) voor meer informatie.
+Zie [&#x200B; Overzicht Relationele schema&#39;s &#x200B;](../../../xdm/schema/relational.md) voor meer informatie.
 
 ### Relationele schemavereisten voor het vangen van veranderingsgegevens
 
@@ -69,7 +69,7 @@ Om veranderingsgegevens toe te laten vangen met een relationeel schema:
 2. Voeg de vereiste beschrijvingen toe:
    * [Descriptor primaire sleutel](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [Versiebeschrijving](../../../xdm/api/descriptors.md#version-descriptor)
-   * [ de beschrijver van de tijdstempel ](../../../xdm/api/descriptors.md#timestamp-descriptor) (tijd-reeksen slechts)
+   * [&#x200B; de beschrijver van de tijdstempel &#x200B;](../../../xdm/api/descriptors.md#timestamp-descriptor) (tijd-reeksen slechts)
 3. Creeer een dataset van het schema en laat veranderingsgegevens toe vangen.
 4. Alleen voor op een bestand gebaseerde invoer: voeg de kolom `_change_request_type` toe aan uw bronbestanden als u expliciet verwijderingsbewerkingen moet opgeven. CDC-exportconfiguraties verwerken dit automatisch voor databasebronnen.
 5. Voltooi de instelling van de bronverbinding om opname in te schakelen.
@@ -80,17 +80,17 @@ Om veranderingsgegevens toe te laten vangen met een relationeel schema:
 
 >[!IMPORTANT]
 >
->**de schrapping van Gegevens planning wordt vereist**. Alle toepassingen die relationele schema&#39;s gebruiken moeten schrappingsimplicaties begrijpen alvorens veranderingsgegevens uit te voeren vangen. Plan voor hoe schrappingen verwante datasets, nalevingsvereisten, en stroomafwaartse processen zullen beïnvloeden. Zie [ overwegingen van de gegevenshygiëne ](../../../hygiene/ui/record-delete.md#relational-record-delete) voor begeleiding.
+>**de schrapping van Gegevens planning wordt vereist**. Alle toepassingen die relationele schema&#39;s gebruiken moeten schrappingsimplicaties begrijpen alvorens veranderingsgegevens uit te voeren vangen. Plan voor hoe schrappingen verwante datasets, nalevingsvereisten, en stroomafwaartse processen zullen beïnvloeden. Zie [&#x200B; overwegingen van de gegevenshygiëne &#x200B;](../../../hygiene/ui/record-delete.md#relational-record-delete) voor begeleiding.
 
 ## Wijzigingsgegevens opgeven voor op bestanden gebaseerde bronnen {#file-based-sources}
 
 >[!IMPORTANT]
 >
->Voor het vastleggen van wijzigingsgegevens op basis van bestanden is Data Mirror met relationele schema&#39;s vereist. Alvorens de dossier volgende formatterende stappen hieronder te volgen, zorg ervoor u het [ de opstellingswerkschema van Data Mirror ](#workflow) eerder in dit document beschreven hebt voltooid. In de onderstaande stappen wordt beschreven hoe u uw gegevensbestanden kunt opmaken met informatie over het bijhouden van wijzigingen die door Data Mirror wordt verwerkt.
+>Voor het vastleggen van wijzigingsgegevens op basis van bestanden is Data Mirror met relationele schema&#39;s vereist. Alvorens de dossier volgende formatterende stappen hieronder te volgen, zorg ervoor u het [&#x200B; de opstellingswerkschema van Data Mirror &#x200B;](#workflow) eerder in dit document beschreven hebt voltooid. In de onderstaande stappen wordt beschreven hoe u uw gegevensbestanden kunt opmaken met informatie over het bijhouden van wijzigingen die door Data Mirror wordt verwerkt.
 
 Voor bestandsgebaseerde bronnen ([!DNL Amazon S3] , [!DNL Azure Blob] , [!DNL Google Cloud Storage] en [!DNL SFTP] ) neemt u een `_change_request_type` -kolom op in uw bestanden.
 
-Gebruik de `_change_request_type` waarden die in de [ worden bepaald kolom behandelende ](#control-column-handling) sectie hierboven.
+Gebruik de `_change_request_type` waarden die in de [&#x200B; worden bepaald kolom behandelende &#x200B;](#control-column-handling) sectie hierboven.
 
 >[!IMPORTANT]
 >
@@ -106,14 +106,14 @@ Schakel het vastleggen van wijzigingsgegevens voor bronnen voor cloudopslag als 
 
    | Bron | Basisverbindingshulplijn |
    |---|---|
-   | [!DNL Amazon S3] | [ creeer a [!DNL Amazon S3]  basisverbinding ](../api/create/cloud-storage/s3.md) |
-   | [!DNL Azure Blob] | [ creeer a [!DNL Azure Blob]  basisverbinding ](../api/create/cloud-storage/blob.md) |
-   | [!DNL Google Cloud Storage] | [ creeer a [!DNL Google Cloud Storage]  basisverbinding ](../api/create/cloud-storage/google.md) |
-   | [!DNL SFTP] | [ creeer a [!DNL SFTP]  basisverbinding ](../api/create/cloud-storage/sftp.md) |
+   | [!DNL Amazon S3] | [&#x200B; creeer a [!DNL Amazon S3]  basisverbinding &#x200B;](../api/create/cloud-storage/s3.md) |
+   | [!DNL Azure Blob] | [&#x200B; creeer a [!DNL Azure Blob]  basisverbinding &#x200B;](../api/create/cloud-storage/blob.md) |
+   | [!DNL Google Cloud Storage] | [&#x200B; creeer a [!DNL Google Cloud Storage]  basisverbinding &#x200B;](../api/create/cloud-storage/google.md) |
+   | [!DNL SFTP] | [&#x200B; creeer a [!DNL SFTP]  basisverbinding &#x200B;](../api/create/cloud-storage/sftp.md) |
 
-2. [ creeer een bronverbinding voor een wolkenopslag ](../api/collect/cloud-storage.md#create-a-source-connection).
+2. [&#x200B; creeer een bronverbinding voor een wolkenopslag &#x200B;](../api/collect/cloud-storage.md#create-a-source-connection).
 
-Alle bronnen van de wolkenopslag gebruiken het zelfde `_change_request_type` kolomformaat dat in de [ op dossier-gebaseerde bronnen ](#file-based-sources) hierboven wordt beschreven sectie.
+Alle bronnen van de wolkenopslag gebruiken het zelfde `_change_request_type` kolomformaat dat in de [&#x200B; op dossier-gebaseerde bronnen &#x200B;](#file-based-sources) hierboven wordt beschreven sectie.
 
 ## Databasebronnen {#database-sources}
 
@@ -147,12 +147,12 @@ Als u de gegevensfeed change wilt toepassen op alle nieuwe tabellen, moet u de s
 set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 ```
 
-Voor meer informatie, lees de [[!DNL Azure Databricks]  gids bij het toelaten van de voer van veranderingsgegevens ](https://docs.databricks.com/aws/en/delta/delta-change-data-feed#enable-change-data-feed).
+Voor meer informatie, lees de [[!DNL Azure Databricks]  gids bij het toelaten van de voer van veranderingsgegevens &#x200B;](https://docs.databricks.com/aws/en/delta/delta-change-data-feed#enable-change-data-feed).
 
 Lees de volgende documentatie voor stappen over het inschakelen van het vastleggen van wijzigingsgegevens voor uw [!DNL Azure Databricks] bronverbinding:
 
-* [ creeer a [!DNL Azure Databricks]  basisverbinding ](../api/create/databases/databricks.md).
-* [ creeer een bronverbinding voor een gegevensbestand ](../api/collect/database-nosql.md#create-a-source-connection).
+* [&#x200B; creeer a [!DNL Azure Databricks]  basisverbinding &#x200B;](../api/create/databases/databricks.md).
+* [&#x200B; creeer een bronverbinding voor een gegevensbestand &#x200B;](../api/collect/database-nosql.md#create-a-source-connection).
 
 ### [!DNL Data Landing Zone]
 
@@ -160,8 +160,8 @@ Om veranderingsgegevens te gebruiken vangt met [!DNL Data Landing Zone], moet u 
 
 Lees de volgende documentatie voor stappen over het inschakelen van het vastleggen van wijzigingsgegevens voor uw [!DNL Data Landing Zone] bronverbinding:
 
-* [ creeer a [!DNL Data Landing Zone]  basisverbinding ](../api/create/cloud-storage/data-landing-zone.md).
-* [ creeer een bronverbinding voor een wolkenopslag ](../api/collect/cloud-storage.md#create-a-source-connection).
+* [&#x200B; creeer a [!DNL Data Landing Zone]  basisverbinding &#x200B;](../api/create/cloud-storage/data-landing-zone.md).
+* [&#x200B; creeer een bronverbinding voor een wolkenopslag &#x200B;](../api/collect/cloud-storage.md#create-a-source-connection).
 
 ### [!DNL Google BigQuery]
 
@@ -169,12 +169,12 @@ Als u wijzigingsgegevens wilt vastleggen met [!DNL Google BigQuery] , moet u de 
 
 Als u wijzigingsgeschiedenis wilt inschakelen in uw [!DNL Google BigQuery] bronverbinding, navigeert u naar de [!DNL Google BigQuery] -pagina in de [!DNL Google Cloud] -console en stelt u `enable_change_history` in op `TRUE` . Met deze eigenschap wordt de wijzigingshistorie voor uw gegevenstabel ingeschakeld.
 
-Voor meer informatie, lees de gids over [ de taalverklaringen van de gegevensdefinitie in  [!DNL GoogleSQL] ](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
+Voor meer informatie, lees de gids over [&#x200B; de taalverklaringen van de gegevensdefinitie in  [!DNL GoogleSQL] &#x200B;](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
 Lees de volgende documentatie voor stappen over het inschakelen van het vastleggen van wijzigingsgegevens voor uw [!DNL Google BigQuery] bronverbinding:
 
-* [ creeer a [!DNL Google BigQuery]  basisverbinding ](../api/create/databases/bigquery.md).
-* [ creeer een bronverbinding voor een gegevensbestand ](../api/collect/database-nosql.md#create-a-source-connection).
+* [&#x200B; creeer a [!DNL Google BigQuery]  basisverbinding &#x200B;](../api/create/databases/bigquery.md).
+* [&#x200B; creeer een bronverbinding voor een gegevensbestand &#x200B;](../api/collect/database-nosql.md#create-a-source-connection).
 
 ### [!DNL Snowflake]
 
@@ -186,9 +186,9 @@ Schakel in [!DNL Snowflake] de optie Wijzigingen bijhouden in met de waarden `AL
 ALTER TABLE mytable SET CHANGE_TRACKING = TRUE
 ```
 
-Voor meer informatie, lees de [[!DNL Snowflake]  gids bij het gebruiken van de veranderingsclausule ](https://docs.snowflake.com/en/sql-reference/constructs/changes#usage-notes).
+Voor meer informatie, lees de [[!DNL Snowflake]  gids bij het gebruiken van de veranderingsclausule &#x200B;](https://docs.snowflake.com/en/sql-reference/constructs/changes#usage-notes).
 
 Lees de volgende documentatie voor stappen over het inschakelen van het vastleggen van wijzigingsgegevens voor uw [!DNL Snowflake] bronverbinding:
 
-* [ creeer a [!DNL Snowflake]  basisverbinding ](../api/create/databases/snowflake.md).
-* [ creeer een bronverbinding voor een gegevensbestand ](../api/collect/database-nosql.md#create-a-source-connection).
+* [&#x200B; creeer a [!DNL Snowflake]  basisverbinding &#x200B;](../api/create/databases/snowflake.md).
+* [&#x200B; creeer een bronverbinding voor een gegevensbestand &#x200B;](../api/collect/database-nosql.md#create-a-source-connection).
