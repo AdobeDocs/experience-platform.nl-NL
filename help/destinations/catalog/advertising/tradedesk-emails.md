@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Er zijn twee de Commerciële Desk - bestemmingen CRM in de [ bestemmingscatalogus ](/help/destinations/catalog/overview.md).
+>Er zijn twee de Commerciële Desk - bestemmingen CRM in de [&#x200B; bestemmingscatalogus &#x200B;](/help/destinations/catalog/overview.md).
 >
 >* Als u gegevens in de EU bront, gebruikt u de **[!DNL The Trade Desk - CRM (EU)]** bestemming.
 >* Als u gegevens in de APAC- of NAMER-gebieden bront, gebruikt u de bestemming **[!DNL The Trade Desk - CRM (NAMER & APAC)]** .
@@ -29,7 +29,7 @@ Deze schakelaar verzendt gegevens naar [!DNL The Trade Desk] voor de activering 
 
 >[!TIP]
 >
->Gebruik [!DNL The Trade Desk - CRM] -bestemming om CRM-gegevens (zoals e-mails en telefoonnummers) en andere id&#39;s voor gegevens van de eerste partij, zoals cookies en apparaat-id&#39;s, te verzenden. U kunt de [ bestemming van het Bureau van de Handel ](/help/destinations/catalog/advertising/tradedesk.md) in de catalogus van Experience Platform voor koekjes en apparatenidentiteitskaart in kaart brengen blijven gebruiken.
+>Gebruik [!DNL The Trade Desk - CRM] -bestemming om CRM-gegevens (zoals e-mails en telefoonnummers) en andere id&#39;s voor gegevens van de eerste partij, zoals cookies en apparaat-id&#39;s, te verzenden. U kunt de [&#x200B; bestemming van het Bureau van de Handel &#x200B;](/help/destinations/catalog/advertising/tradedesk.md) in de catalogus van Experience Platform voor koekjes en apparatenidentiteitskaart in kaart brengen blijven gebruiken.
 
 ## Vereisten {#prerequisites}
 
@@ -39,11 +39,11 @@ Deze schakelaar verzendt gegevens naar [!DNL The Trade Desk] voor de activering 
 
 ## Vereisten voor ID-afstemming {#id-matching-requirements}
 
-Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen. Gelieve te lezen het [ overzicht van Namespace van de Identiteit ](/help/identity-service/features/namespaces.md) voor meer informatie.
+Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen. Gelieve te lezen het [&#x200B; overzicht van Namespace van de Identiteit &#x200B;](/help/identity-service/features/namespaces.md) voor meer informatie.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL The Trade Desk] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL The Trade Desk] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 Adobe Experience Platform ondersteunt zowel e-mailadressen zonder hashing als telefoonnummers. Volg de instructies in de sectie met vereisten voor id-afstemming en gebruik de juiste naamruimten voor normale tekst en gehashte e-mailadressen.
 
@@ -70,7 +70,7 @@ Adobe Experience Platform ondersteunt zowel e-mailadressen zonder hashing als te
 
 U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen of onbewerkte e-mailadressen gebruiken.
 
-Om over het opnemen van e-mailadressen in Experience Platform te leren, lees het [ overzicht van de partijingestitie ](/help/ingestion/batch-ingestion/overview.md).
+Om over het opnemen van e-mailadressen in Experience Platform te leren, lees het [&#x200B; overzicht van de partijingestitie &#x200B;](/help/ingestion/batch-ingestion/overview.md).
 
 Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende vereisten voldoen:
 
@@ -79,8 +79,9 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 * Verwijder in het gedeelte Gebruikersnaam van het e-mailadres van `gmail.com` de volgende tekens uit het e-mailadres:
 
       * De periode (`.`) teken (ASCII-code 46). U kunt bijvoorbeeld &quot;jane.doe@gmail.com&quot; normaliseren naar &quot;janedoe@gmail.com&quot;.
-     * Het plusteken (`+&#39;) (ASCII-code 43) en alle daaropvolgende tekens. Bijvoorbeeld, normaliseer ` janedoe+home@gmail.com ` aan ` janedoe@gmail.com `.
+     * Het plusteken (`+&#39;) (ASCII-code 43) en alle daaropvolgende tekens. Bijvoorbeeld, normaliseer ` janedoe+home@gmail.com ` aan ` janedoe@gmail.com &grave;.
   
+
 ## De het aantalnormalisatie en hashing van de telefoon vereisten {#phone-hashing}
 
 Dit is wat u moet weten over het uploaden van telefoonaantallen:
@@ -128,7 +129,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail of gehashte e-mail) die worden gebruikt in de bestemming Handelsbureau. |
-| Exportfrequentie | **[!UICONTROL Daily Batch]** | Aangezien een profiel in Experience Platform wordt bijgewerkt op basis van publieksevaluatie, wordt het profiel (de identiteiten) eenmaal per dag bijgewerkt naar het doelplatform. Lees meer over [ partijuitvoer ](/help/destinations/destination-types.md#file-based). |
+| Exportfrequentie | **[!UICONTROL Daily Batch]** | Aangezien een profiel in Experience Platform wordt bijgewerkt op basis van publieksevaluatie, wordt het profiel (de identiteiten) eenmaal per dag bijgewerkt naar het doelplatform. Lees meer over [&#x200B; partijuitvoer &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -140,7 +141,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ### Bestemmingsdetails invullen {#fill-in-details}
 
-Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een verbinding met uw eigen doelplatform instellen. Terwijl [ vestiging ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) deze bestemming, u de volgende informatie moet verstrekken:
+Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een verbinding met uw eigen doelplatform instellen. Terwijl [&#x200B; vestiging &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Account Type]**: Kies de optie **[!UICONTROL Existing Account]** .
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
@@ -149,16 +150,16 @@ Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een
 
 {het schermschot van 0} Experience Platform UI die tonen hoe te om bestemmingsdetails in te vullen.![](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Wanneer u verbinding maakt met de bestemming, is het instellen van een beleid voor gegevensbeheer volledig optioneel. Gelieve te herzien Experience Platform [ overzicht van het gegevensbeheer ](/help/data-governance/policies/overview.md) voor meer details.
+Wanneer u verbinding maakt met de bestemming, is het instellen van een beleid voor gegevensbeheer volledig optioneel. Gelieve te herzien Experience Platform [&#x200B; overzicht van het gegevensbeheer &#x200B;](/help/data-governance/policies/overview.md) voor meer details.
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan een bestemming.
+Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan een bestemming.
 
 Op de pagina **[!UICONTROL Scheduling]** kunt u het schema en de bestandsnamen configureren voor elk publiek dat u exporteert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
 
@@ -207,4 +208,4 @@ Als u wilt controleren of gegevens correct vanuit Experience Platform en naar [!
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
