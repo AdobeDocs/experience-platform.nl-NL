@@ -22,15 +22,15 @@ Als markator wil ik een publiek van Adobe Experience Platform naar boordidentite
 
 ## Vereisten {#prerequisites}
 
-De [!DNL LiveRamp - Onboarding] verbinding voert dossiers uit gebruikend [ 2} opslag van SFTP van LiveRamp {.](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)
+De [!DNL LiveRamp - Onboarding] verbinding voert dossiers uit gebruikend [&#x200B; 2&rbrace; opslag van SFTP van LiveRamp &lbrace;.](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)
 
 Voordat u gegevens van Experience Platform naar [!DNL LiveRamp - Onboarding] kunt verzenden, hebt u uw [!DNL LiveRamp] -referenties nodig. Neem contact op met uw [!DNL LiveRamp] -vertegenwoordiger om uw referenties te verkrijgen, als u deze nog niet hebt.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL LiveRamp - Onboarding] steunt de activering van identiteiten zoals op PII-Gebaseerde herkenningstekens, bekende herkenningstekens, en douane IDs, die in de officiële [ documentatie LiveRamp ](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) wordt beschreven.
+[!DNL LiveRamp - Onboarding] steunt de activering van identiteiten zoals op PII-Gebaseerde herkenningstekens, bekende herkenningstekens, en douane IDs, die in de officiële [&#x200B; documentatie LiveRamp &#x200B;](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) wordt beschreven.
 
-In de [ toewijzingsstap ](#map) van het activeringswerkschema, moet u de doelafbeeldingen als douanekenmerken bepalen.
+In de [&#x200B; toewijzingsstap &#x200B;](#map) van het activeringswerkschema, moet u de doelafbeeldingen als douanekenmerken bepalen.
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -38,8 +38,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
-| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL LiveRamp - Onboarding] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Batch]** | Aangezien profielen in Experience Platform worden bijgewerkt op basis van publieksevaluatie, worden de profielen (identiteiten) bijgewerkt en kunnen stroomafwaarts worden geleverd aan het doelplatform op een dagelijkse, wekelijkse of maandelijkse frequentie. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
+| Exportfrequentie | **[!UICONTROL Batch]** | Aangezien profielen in Experience Platform worden bijgewerkt op basis van publieksevaluatie, worden de profielen (identiteiten) bijgewerkt en kunnen stroomafwaarts worden geleverd aan het doelplatform op een dagelijkse, wekelijkse of maandelijkse frequentie. Lees meer over [&#x200B; partij op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -58,9 +58,9 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -68,7 +68,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 
 **authentificatie SFTP met wachtwoord** {#sftp-password}
 
-![ het schermschot van de Steekproef die hoe te om aan de bestemming voor authentiek te verklaren gebruikend SFTP met wachtwoord ](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png) tonen
+![&#x200B; het schermschot van de Steekproef die hoe te om aan de bestemming voor authentiek te verklaren gebruikend SFTP met wachtwoord &#x200B;](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png) tonen
 
 * **[!UICONTROL Port]**: De poort die wordt gebruikt voor de opslaglocatie van [!DNL LiveRamp - Onboarding] .  Gebruik de poort die overeenkomt met uw geografische locatie, zoals hieronder wordt beschreven:
    * **[!UICONTROL NA]**: poort gebruiken `22`
@@ -76,23 +76,23 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 * **[!UICONTROL Username]**: De gebruikersnaam voor de opslaglocatie van [!DNL LiveRamp - Onboarding] .
 * **[!UICONTROL Password]**: Het wachtwoord voor de opslaglocatie van [!DNL LiveRamp - Onboarding] .
 * **[!UICONTROL PGP/GPG encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
-  ![ Beeld dat een voorbeeld van een correct geformatteerde sleutel PGP in UI toont ](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:Ifwanneer u een coderingssleutel opgeeft, moet u ook een codering opgeven **[!UICONTROL Subkey ID]**. Zie [!DNL LiveRamp] [ encryptiedocumentatie ](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) leren hoe te om subkey identiteitskaart te verkrijgen.
+  ![&#x200B; Beeld dat een voorbeeld van een correct geformatteerde sleutel PGP in UI toont &#x200B;](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL Subkey ID]**:Ifwanneer u een coderingssleutel opgeeft, moet u ook een codering opgeven **[!UICONTROL Subkey ID]**. Zie [!DNL LiveRamp] [&#x200B; encryptiedocumentatie &#x200B;](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) leren hoe te om subkey identiteitskaart te verkrijgen.
 
 **SFTP met SSH zeer belangrijke authentificatie** {#sftp-ssh}
 
-![ het schermschot van de Steekproef die hoe te om aan de bestemming voor authentiek te verklaren gebruikend sleutel SSH ](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png) tonen
+![&#x200B; het schermschot van de Steekproef die hoe te om aan de bestemming voor authentiek te verklaren gebruikend sleutel SSH &#x200B;](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png) tonen
 
 * **[!UICONTROL Port]**: De poort die wordt gebruikt voor de opslaglocatie van [!DNL LiveRamp - Onboarding] .  Gebruik de poort die overeenkomt met uw geografische locatie, zoals hieronder wordt beschreven:
    * **[!UICONTROL EU]**: poort gebruiken `4222`
 * **[!UICONTROL Username]**: De gebruikersnaam voor de opslaglocatie van [!DNL LiveRamp - Onboarding] .
 * **[!UICONTROL SSH Key]**: De persoonlijke [!DNL SSH] -sleutel die wordt gebruikt om u aan te melden bij uw [!DNL LiveRamp - Onboarding] -opslaglocatie. De persoonlijke sleutel moet zijn opgemaakt als een [!DNL Base64] -gecodeerde tekenreeks en mag niet met een wachtwoord zijn beveiligd.
 
-   * Als u de [!DNL SSH] -sleutel wilt koppelen aan de [!DNL LiveRamp - Onboarding] -server, moet u een ticket verzenden via de portal voor technische ondersteuning van [!DNL LiveRamp] en uw openbare sleutel opgeven. Zie meer informatie in de [ documentatie LiveRamp ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
+   * Als u de [!DNL SSH] -sleutel wilt koppelen aan de [!DNL LiveRamp - Onboarding] -server, moet u een ticket verzenden via de portal voor technische ondersteuning van [!DNL LiveRamp] en uw openbare sleutel opgeven. Zie meer informatie in de [&#x200B; documentatie LiveRamp &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
 * **[!UICONTROL PGP/GPG encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
-  ![ Beeld dat een voorbeeld van een correct geformatteerde sleutel PGP in UI toont ](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:Ifwanneer u een coderingssleutel opgeeft, moet u ook een codering opgeven **[!UICONTROL Subkey ID]**. Zie [!DNL LiveRamp] [ encryptiedocumentatie ](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) leren hoe te om subkey identiteitskaart te verkrijgen.
+  ![&#x200B; Beeld dat een voorbeeld van een correct geformatteerde sleutel PGP in UI toont &#x200B;](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL Subkey ID]**:Ifwanneer u een coderingssleutel opgeeft, moet u ook een codering opgeven **[!UICONTROL Subkey ID]**. Zie [!DNL LiveRamp] [&#x200B; encryptiedocumentatie &#x200B;](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) leren hoe te om subkey identiteitskaart te verkrijgen.
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -115,7 +115,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, lees de gids over [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, lees de gids over [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -123,15 +123,15 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Planning {#scheduling}
 
 Maak in de stap [!UICONTROL Scheduling] een exportschema voor elk publiek met de onderstaande instellingen.
 
-* **[!UICONTROL File export options]**: [!UICONTROL Export full files] . [ de Incrementele dossieruitvoer ](../../ui/activate-batch-profile-destinations.md#export-incremental-files) wordt momenteel niet gesteund voor de [!DNL LiveRamp] bestemming.
+* **[!UICONTROL File export options]**: [!UICONTROL Export full files] . [&#x200B; de Incrementele dossieruitvoer &#x200B;](../../ui/activate-batch-profile-destinations.md#export-incremental-files) wordt momenteel niet gesteund voor de [!DNL LiveRamp] bestemming.
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily] , [!UICONTROL Weekly] of [!UICONTROL Monthly]
 * **[!UICONTROL Date]**: selecteer de begin- en eindtijd van het exporteren naar wens.
 
@@ -155,29 +155,29 @@ In de stap **[!UICONTROL Mapping]** kunt u selecteren welke kenmerken en identit
 
 >[!IMPORTANT]
 >
->Deze bestemming ondersteunt de activering van één naamruimte van de bronidentiteit per activeringsstroom. Als u veelvoudige identiteit namespaces, als `Email` en `Phone` moet uitvoeren, moet u [ een afzonderlijke activeringsstroom ](../../ui/activate-batch-profile-destinations.md) voor elke identiteit creëren.
+>Deze bestemming ondersteunt de activering van één naamruimte van de bronidentiteit per activeringsstroom. Als u veelvoudige identiteit namespaces, als `Email` en `Phone` moet uitvoeren, moet u [&#x200B; een afzonderlijke activeringsstroom &#x200B;](../../ui/activate-batch-profile-destinations.md) voor elke identiteit creëren.
 
 In de stap **[!UICONTROL Mapping]** definieert de toewijzing **[!UICONTROL Target field]** de naam van de kolomkop in het geëxporteerde CSV-bestand. U kunt de CSV-kolomkoppen in het geëxporteerde bestand wijzigen in elke gewenste vriendelijke naam door een aangepaste naam op te geven voor de **[!UICONTROL Target field]** .
 
 >[!IMPORTANT]
 >
->Voor om het even welke veranderingen die aan de doelgebieden na uw aanvankelijke dossierlevering aan [!DNL LiveRamp] worden aangebracht, te informeren gelieve uw [!DNL LiveRamp] accountteam of [ een kaartje aan Steun LiveRamp ](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#creating-a-support-case) voorleggen om ervoor te zorgen dat de veranderingen in het automatiseringsproces worden weerspiegeld.
+>Voor om het even welke veranderingen die aan de doelgebieden na uw aanvankelijke dossierlevering aan [!DNL LiveRamp] worden aangebracht, te informeren gelieve uw [!DNL LiveRamp] accountteam of [&#x200B; een kaartje aan Steun LiveRamp &#x200B;](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#creating-a-support-case) voorleggen om ervoor te zorgen dat de veranderingen in het automatiseringsproces worden weerspiegeld.
 
 1. Selecteer **[!UICONTROL Mapping]** in de stap **[!UICONTROL Add new mapping]** . Er verschijnt een nieuwe toewijzingsrij op het scherm.
 
-   ![ de schermopname van Experience Platform UI die het scherm van de Afbeelding toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
+   ![&#x200B; de schermopname van Experience Platform UI die het scherm van de Afbeelding toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
 
 2. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk dat u wilt toewijzen, of kies de categorie **[!UICONTROL Select identity namespace]** en selecteer de identiteit die u wilt toewijzen aan uw doel.
 
-   ![ het schermschot van Experience Platform UI die het scherm van de bronToewijzing toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
+   ![&#x200B; het schermschot van Experience Platform UI die het scherm van de bronToewijzing toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
 
 3. Voer in het venster **[!UICONTROL Select target field]** de kenmerknaam in waaraan u het geselecteerde bronveld wilt toewijzen. De hier gedefinieerde kenmerknaam wordt in het geëxporteerde CSV-bestand weergegeven als kolomkop.
 
-   ![ de screeshot van Experience Platform UI die het scherm van het doelToewijzing toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
+   ![&#x200B; de screeshot van Experience Platform UI die het scherm van het doelToewijzing toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
 
    U kunt de kenmerknaam ook invoeren door deze rechtstreeks in **[!UICONTROL Target field]** te typen.
 
-   ![ de screeshot van Experience Platform UI die het scherm van het doelToewijzing toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
+   ![&#x200B; de screeshot van Experience Platform UI die het scherm van het doelToewijzing toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
 
 Nadat u alle gewenste toewijzingen hebt toegevoegd, selecteert u **[!UICONTROL Next]** en voltooit u de activeringsworkflow.
 
@@ -187,7 +187,7 @@ Uw gegevens worden als CSV-bestanden geëxporteerd naar de opslaglocatie van [!D
 
 Geëxporteerde bestanden hebben een maximale grootte van 10 miljoen rijen. Experience Platform genereert meerdere bestanden per levering als het geselecteerde publiek groter is dan 10 miljoen rijen. Als u verwacht dat u de limiet voor één bestand overschrijdt, neemt u contact op met uw [!DNL LiveRamp] -vertegenwoordiger en vraagt u deze om batch-opname voor u te configureren.
 
-Wanneer het uitvoeren van dossiers aan de [!DNL LiveRamp - Onboarding] bestemming, produceert Experience Platform één Csv- dossier voor elke [ identiteitskaart van het fusiebeleid ](../../../profile/merge-policies/overview.md).
+Wanneer het uitvoeren van dossiers aan de [!DNL LiveRamp - Onboarding] bestemming, produceert Experience Platform één Csv- dossier voor elke [&#x200B; identiteitskaart van het fusiebeleid &#x200B;](../../../profile/merge-policies/overview.md).
 
 Neem bijvoorbeeld het volgende publiek:
 
@@ -211,7 +211,7 @@ De profielen in de geëxporteerde bestanden kunnen overeenkomen met een van de v
 * `Expired`: het profiel is niet langer gekwalificeerd voor het publiek, maar is in het verleden wel gekwalificeerd.
 * `""` (lege tekenreeks): Het profiel wordt nooit in aanmerking genomen voor het publiek.
 
-Bijvoorbeeld, een uitgevoerd CSV dossier met één `email` attribuut, twee publiek uit de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md) voortkomt, en één [ ingevoerd ](../../../segmentation/ui/audience-portal.md#import-audience) extern publiek, kon als dit kijken:
+Bijvoorbeeld, een uitgevoerd CSV dossier met één `email` attribuut, twee publiek uit de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md) voortkomt, en één [&#x200B; ingevoerd &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) extern publiek, kon als dit kijken:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,29 +223,29 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-In het voorbeeld hierboven, beschrijven de `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` en `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` secties publiek dat uit de Dienst van de Segmentatie voortkomt, terwijl `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` een publiek beschrijft dat in Experience Platform als a [ wordt ingevoerd uploadt ](../../../segmentation/ui/audience-portal.md#import-audience).
+In het voorbeeld hierboven, beschrijven de `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` en `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` secties publiek dat uit de Dienst van de Segmentatie voortkomt, terwijl `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` een publiek beschrijft dat in Experience Platform als a [&#x200B; wordt ingevoerd uploadt &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience).
 
-Aangezien Experience Platform één Csv- dossier voor elke [ identiteitskaart van het fusiebeleid ](../../../profile/merge-policies/overview.md) produceert, produceert het ook een afzonderlijke dataflow looppas voor elke identiteitskaart van het fusiebeleid.
+Aangezien Experience Platform één Csv- dossier voor elke [&#x200B; identiteitskaart van het fusiebeleid &#x200B;](../../../profile/merge-policies/overview.md) produceert, produceert het ook een afzonderlijke dataflow looppas voor elke identiteitskaart van het fusiebeleid.
 
-Dit betekent dat de **[!UICONTROL Identities activated]** en **[!UICONTROL Profiles received]** metriek in de [ dataflow looppas ](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) pagina voor elke groep van publiek worden samengevoegd die het zelfde fusiebeleid gebruiken, in plaats van wordt getoond voor elk publiek.
+Dit betekent dat de **[!UICONTROL Identities activated]** en **[!UICONTROL Profiles received]** metriek in de [&#x200B; dataflow looppas &#x200B;](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) pagina voor elke groep van publiek worden samengevoegd die het zelfde fusiebeleid gebruiken, in plaats van wordt getoond voor elk publiek.
 
-Als gevolg van dataflow looppas die voor een groep van publiek wordt geproduceerd die het zelfde fusiebeleid gebruiken, worden de publieksnamen niet getoond in het [ controledashboard ](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+Als gevolg van dataflow looppas die voor een groep van publiek wordt geproduceerd die het zelfde fusiebeleid gebruiken, worden de publieksnamen niet getoond in het [&#x200B; controledashboard &#x200B;](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
-![ het schermopname van Experience Platform UI die de metrisch geactiveerde identiteiten toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
+![&#x200B; het schermopname van Experience Platform UI die de metrisch geactiveerde identiteiten toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
 
 ## Geëxporteerde gegevens uploaden naar LiveRamp {#upload-to-liveramp}
 
 Nadat uw gegevens naar de [!DNL LiveRamp - Onboarding] -opslag zijn geëxporteerd, moet u de gegevens uploaden naar het [!DNL LiveRamp] -platform.
 
-Voor meer informatie over hoe te om uw dossiers van de [!DNL LiveRamp - Onboarding] opslag aan een [!DNL LiveRamp] publiek te uploaden, zie de volgende documentatie: [ Overwegingen wanneer het Uploaden van het Eerste Dossier aan een Publiek ](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
+Voor meer informatie over hoe te om uw dossiers van de [!DNL LiveRamp - Onboarding] opslag aan een [!DNL LiveRamp] publiek te uploaden, zie de volgende documentatie: [&#x200B; Overwegingen wanneer het Uploaden van het Eerste Dossier aan een Publiek &#x200B;](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Voor meer details op hoe te om uw [!DNL LiveRamp - Onboarding] opslag te vormen, zie de [ officiële documentatie ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+Voor meer details op hoe te om uw [!DNL LiveRamp - Onboarding] opslag te vormen, zie de [&#x200B; officiële documentatie &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
 
 ## Changelog {#changelog}
 
