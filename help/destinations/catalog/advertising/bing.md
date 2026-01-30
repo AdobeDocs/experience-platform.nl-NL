@@ -65,7 +65,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Het doel [!DNL Microsoft Bing] moet als volgt zijn ingesteld om correct te werken:
 
-1. **laat de synchronisatiefunctionaliteit van identiteitskaart** toe: Als dit uw eerste vestiging [!DNL Microsoft Bing] activering is en u hebt niet de [&#x200B; functionaliteit van de de synchronisatieidentiteitskaart &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) toegelaten, contacteer Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten.
+1. **laat de synchronisatiefunctionaliteit van identiteitskaart** toe: Als dit uw eerste vestiging [!DNL Microsoft Bing] activering is en u hebt niet de [&#x200B; functionaliteit van de de synchronisatieidentiteitskaart &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=nl-NL) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) toegelaten, contacteer Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten.
    * Als u eerder [!DNL Microsoft Bing] -integraties hebt ingesteld in Audience Manager, worden de bestaande id-synchronisaties automatisch overgedragen naar Experience Platform.
 
 2. **verzekert ECID op profielen**: Alle profielen moeten een ECID hebben aanwezig om met succes te worden uitgevoerd. ECID is **verplicht** voor deze bestemming.
@@ -107,7 +107,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >id="platform_destinations_required_mappings_bing"
 >title="Vooraf geconfigureerde toewijzingssets"
 >abstract="Wij hebben deze twee kaartreeksen voor u vooraf gevormd. Wanneer u gegevens activeert naar Microsoft Bing, moeten de profielen die voor het geactiveerde publiek worden gekwalificeerd, ten minste een ECID-identiteit hebben die aan hun profiel is gekoppeld, om naar de bestemming te kunnen worden geëxporteerd."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Lees meer over de vooraf geconfigureerde toewijzingen"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Lees meer over de vooraf geconfigureerde toewijzingen"
 
 >[!IMPORTANT]
 > 

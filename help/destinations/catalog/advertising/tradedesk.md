@@ -71,7 +71,7 @@ De vereisten hangen van welke identiteitstypes af u voor publieksactivering van 
 
 **voor op cookie-gebaseerde het richten op[!DNL The Trade Desk]**, zorg ervoor dat een afbeelding tussen ECID en [!DNL Trade Desk ID] wordt gevestigd. Voer de onderstaande stappen uit om dit te doen:
 
-1. **laat de synchronisatiefunctionaliteit van identiteitskaart** toe: Als dit uw eerste vestiging [!DNL The Trade Desk ID] activering is en u hebt niet de [&#x200B; functionaliteit van de de synchronisatieidentiteitskaart &#x200B;](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) toegelaten, contacteer Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten.
+1. **laat de synchronisatiefunctionaliteit van identiteitskaart** toe: Als dit uw eerste vestiging [!DNL The Trade Desk ID] activering is en u hebt niet de [&#x200B; functionaliteit van de de synchronisatieidentiteitskaart &#x200B;](https://experienceleague.adobe.com/nl/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) toegelaten, contacteer Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten.
    * Als u eerder [!DNL The Trade Desk] -integratie hebt ingesteld in Audience Manager, worden de bestaande ID-syncs automatisch overgedragen naar Experience Platform.
 
 2. **Instrument uw Web-pagina&#39;s**: Voer code op uw Web-pagina&#39;s uit om afbeeldingen tussen [!DNL The Trade Desk ID] en Adobe ECID tot stand te brengen. Zo kan Experience Platform ID&#39;s van handelsvertegenwoordigingen koppelen aan uw klantprofielen.
@@ -125,7 +125,7 @@ Bij het toewijzen van soorten publiek raadt Adobe u aan de Experience Platform-p
 >id="platform_destinations_required_mappings_ttd"
 >title="Vooraf geconfigureerde toewijzingssets"
 >abstract="Wij hebben deze vier kaartreeksen voor u vooraf gevormd. Wanneer u gegevens activeert op de handelsbank, hoeven de profielen die voor het geactiveerde publiek worden gekwalificeerd niet noodzakelijkerwijs alle vier de identiteiten te hebben aanwezig op de profielen, aangezien deze bestemming met om het even welke doelidentiteiten zal werken die hier worden getoond. <br> Voor op cookies gebaseerde activering op basis van de handels-deskid hebt u ECID nodig die aanwezig is op het profiel en een id-synchronisatietoewijzing tussen de handelsbureau-id en ECID."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Lees meer over de vooraf geconfigureerde toewijzingen"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Lees meer over de vooraf geconfigureerde toewijzingen"
 
 De volgende identiteitstoewijzingen zijn **vooraf gevormd en automatisch bevolkt** voor u in het werkschema van de publiekactivering:
 
