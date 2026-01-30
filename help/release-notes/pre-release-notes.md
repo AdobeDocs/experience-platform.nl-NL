@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
+source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 20%
+source-wordcount: '1110'
+ht-degree: 22%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 20%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -31,8 +31,7 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
 - [Agent Orchestrator](#agent-orchestrator)
 - [Bestemmingen](#destinations)
-- [Real-Time Customer Profile](#real-time-customer-profile)
-- [Schema&#39;s](#schemas)
+- [Realtime-klantenprofiel](#real-time-customer-profile)
 - [Segmentatieservice](#segmentation-service)
 - [Bronnen](#sources)
 
@@ -48,7 +47,7 @@ Met Agent Orchestrator kunt u op AI gebaseerde agents maken en implementeren die
 
 {style="table-layout:auto"}
 
-Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+Voor meer informatie, zie de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Bestemmingen {#destinations}
 
@@ -58,9 +57,9 @@ Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x20
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| Kevel-bestemmingsconnector nu beschikbaar | [[!DNL Kevel] &#x200B;](https://www.kevel.com/) verstrekt de AI-Toegelaten technologie en deskundige begeleiding die innovatieve handelsleiders helpen lanceren, schrapen, en slagen in handelsmedia. De Retail Media Cloud-bevoegdheden van [!DNL Kevel] zijn gericht op, aanpasbare en aanpasbare advertentievormen voor on-site en off-site reclame. |
+| Kevel-bestemmingsconnector nu beschikbaar | [[!DNL Kevel] ](https://www.kevel.com/) verstrekt de AI-Toegelaten technologie en deskundige begeleiding die innovatieve handelsleiders helpen lanceren, schrapen, en slagen in handelsmedia. De Retail Media Cloud-bevoegdheden van [!DNL Kevel] zijn gericht op, aanpasbare en aanpasbare advertentievormen voor on-site en off-site reclame. |
 | De bestemmingsschakelaar van de Uitwisseling van de index nu beschikbaar | [!DNL Index] is een wereldwijd advertentieplatform dat media-eigenaars helpt de waarde van hun inhoud op elk scherm te maximaliseren. Met meer dan 20 jaar toonaangevend in de branche verbindt [!DNL Index] de grootste merken ter wereld met toonaangevende ervaren makers om hoogwaardige consumentenervaringen te bieden. |
-| Regionale steun voor eindpunten voor verbindingen van het type Braze | Alle [&#x200B; gebied-specifieke eindpunten &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die door [!DNL Braze] worden gesteund zijn nu beschikbaar voor selectie tijdens de stroom van de bestemmingsconfiguratie. Vraag uw [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken. |
+| Regionale steun voor eindpunten voor verbindingen van het type Braze | Alle [ gebied-specifieke eindpunten ](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die door [!DNL Braze] worden gesteund zijn nu beschikbaar voor selectie tijdens de stroom van de bestemmingsconfiguratie. Vraag uw [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken. |
 | Ondersteuning voor wekelijkse en maandelijkse planningen van Liveramp Onboarding | U kunt nu wekelijkse en maandelijkse exportschema&#39;s configureren voor de bestemming Liveramp aan boord. |
 | AES256 encryptiesteun voor Amazon S3 bestemmingen | U kunt nu AES256-codering configureren voor uw Amazon S3-export. |
 | Verbeterde activeringservaring voor de bestemmingen Trade Desk en Microsoft Bing | De handelsbureau en de bestemmingen van de Bing van Microsoft omvatten nu vooraf bepaalde verplichte afbeeldingen voor een geoptimaliseerde activeringservaring. |
@@ -70,7 +69,7 @@ Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x20
 | Functie | Beschrijving |
 | --- | --- |
 | Bijgewerkte guardraillimieten voor Adobe Target-bestemming | Het maximumaantal doelgroepen dat aan één Adobe Target-bestemming kan worden toegewezen, is verhoogd van 50 naar 250. Hierdoor wordt Adobe Target uitgelijnd op de standaardpubliekslimiet voor andere doelen, waardoor workflows voor publieksactivering flexibeler worden. U kunt nu meer soorten publiek activeren naar Adobe Target-doelen zonder dat u meerdere gegevensstromen hoeft te maken. |
-| [&#x200B; geeft bestemmingen &#x200B;](/help/destinations/ui/edit-destination.md) uit en [&#x200B; geeft marketing acties &#x200B;](/help/destinations/ui/edit-activation.md#edit-marketing-actions) algemene beschikbaarheid uit | De optie om bestemmingen en marketingacties te bewerken is nu beschikbaar voor alle gebruikers. |
+| [ geeft bestemmingen ](/help/destinations/ui/edit-destination.md) uit en [ geeft marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) algemene beschikbaarheid uit | De optie om bestemmingen en marketingacties te bewerken is nu beschikbaar voor alle gebruikers. |
 | Veldweergavenamen in-/uitschakelen in toewijzingsstap | Wanneer u schemavelden toewijst aan een doel, kunt u nu schakelen tussen het weergeven van de volledige XDM-veldnaam en het weergeven van alleen de weergavenaam. |
 
 {style="table-layout:auto"}
@@ -92,18 +91,6 @@ In real time het Profiel van de Klant laat u toe om een holistische mening van e
 {style="table-layout:auto"}
 
 Voor meer informatie raadpleegt u het [[!DNL Real-Time Customer Profile] overzicht](../profile/home.md).
-
-## Schema&#39;s {#schemas}
-
-Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens. Schema&#39;s bestaan uit een basisklasse en nul of meer groepen schemavelden.
-
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Modernisering van de schema-inventarisatie met zoeken, filteren, tags en mappen | Het schema doorbladert pagina is gemoderniseerd om verbeterde organisatorische en ontdekkingsmogelijkheden te verstrekken. De nieuwe eigenschappen omvatten geavanceerde onderzoek en het filtreren opties, steun voor gebruiker-geproduceerde markeringen en omslagen om schema&#39;s te organiseren, en gealigneerde acties om werkschema&#39;s te stroomlijnen. Belangrijke verbeteringen zijn: bijgewerkte kolommen (Naam, Klasse, Datasets, Identiteiten, Relaties, Inschakelen voor Profiel, Gedrag, Schemetype, Labels, Gemaakt op datum, Laatst gewijzigd), geavanceerde filters (Profielen weergeven, Schema type, Klasse, Bevat een tag, Gemaakt op, Aanmaakdatum, Gewijzigde datum, Bevat primaire identiteit, Heeft relatie, Primaire naamruimte), inline-handelingen (Bewerken, Verwijderen, Labels toepassen, Gegevensset maken voor niet-relationele schema&#39;s, codes beheren, naar map gaan, Toevoegen aan pakket, JSON-structuur kopiëren, Voorbeeldbestand downloaden) en de mogelijkheid om schema&#39;s te ordenen met tags en mappen. Deze verbeteringen bieden uitgebreide zichtbaarheid in schemabronnen en maken efficiënter schemabeheer op sandboxniveau mogelijk. |
-
-Voor meer informatie raadpleegt u het [[!DNL Schemas] overzicht](../xdm/home.md).
 
 ## Segmentatieservice {#segmentation-service}
 
