@@ -4,9 +4,9 @@ description: Leer hoe u de metagegevens voor een extern publiek maakt met de API
 hide: true
 hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: a3b82eb1efaf257723208504c90210850a44b4a4
+source-git-commit: ea7fd13675a95941be7267f1cf75056b224efcd3
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '264'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Het POST `/audiences` eindpunt kan worden gebruikt creeert de meta-gegevens voor
 >
 >De eindpunten in deze handleiding worden voorafgegaan door `/core/ais` , in tegenstelling tot `/core/ups` .
 
-om Experience Platform APIs te gebruiken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) hebben voltooid. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+om Experience Platform APIs te gebruiken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) hebben voltooid. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -33,7 +33,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie bij het werken met zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakenoverzicht &#x200B;](../../sandboxes/home.md).
+>Voor meer informatie bij het werken met zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakenoverzicht ](../../sandboxes/home.md).
 
 **API formaat**
 
@@ -61,7 +61,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
  -H 'Accept: application/vnd.adobe.external.audiences+json; version=2'
  -d '{
     "name": "Sample audience name",
-    "description" "A sample description for the audience.",
+    "description": "A sample description for the audience.",
+    "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7",
     "namespace": "agora",
     "originName": "Agora_Collaboration"
  }'
@@ -71,6 +72,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 | -------- | ---- | ----------- |
 | `name` | String | De naam voor het publiek. |
 | `description` | String | Een optionele beschrijving voor het publiek. |
+| `audienceId` | String | Een extern gegenereerde id voor het publiek. |
 | `namespace` | String | De naamruimte voor het publiek. |
 | `originName` | String | De naam van de oorsprong van het publiek. |
 
@@ -80,6 +82,7 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over het pas ge
 
 ```json
 {
+    "id": "6bb1ee15-8f64-49fd-bce3-d5c2f22f1f14",
     "name": "Sample audience name",
     "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7"
 }
@@ -87,5 +90,6 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over het pas ge
 
 | Eigenschap | Type | Beschrijving |
 | -------- | ---- | ----------- |
+| `id` | String | Het systeem produceerde identiteitskaart voor het publiek. |
 | `name` | String | De naam van het publiek dat u hebt gemaakt. |
-| `audienceId` | String | De id van het publiek dat u hebt gemaakt. |
+| `audienceId` | String | De extern opgegeven id van het publiek dat u hebt gemaakt. |
