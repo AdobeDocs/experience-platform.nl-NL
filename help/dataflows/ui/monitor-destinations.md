@@ -142,7 +142,7 @@ De publiek-vlakke controle voor het stromen bestemmingen is slechts beschikbaar 
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Gegevens gegevensstroom uitvoeren"
 >abstract="De gegevens van de bestemmingdataflow looppas bevatten informatie over de activeringsstatus van een publiek en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Raadpleeg de handleiding voor metrische definities voor meer informatie."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Dataflow wordt uitgevoerd voor streamingdoelen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=nl-NL#dataflow-runs-for-streaming-destinations" text="Dataflow wordt uitgevoerd voor streamingdoelen"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
