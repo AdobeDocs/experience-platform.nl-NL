@@ -3,9 +3,9 @@ title: Salesforce Marketing Cloud Source - Overzicht
 description: Leer hoe u Salesforce Marketing Cloud met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->De [!DNL Salesforce Marketing Cloud] -bron wordt afgekeurd in januari 2026. Later dit jaar zal een nieuwe bron worden vrijgegeven als alternatief. Zodra de nieuwe bron wordt vrijgegeven, moet u van plan zijn om aan de nieuwe bron te migreren door nieuwe rekeningsverbindingen en dataflows vóór eind Januari 2026 te creëren.
+>De [!DNL Oracle Salesforce Marketing Cloud] -bron is nu afgekeurd en is niet meer beschikbaar. Gebruik de nieuwe [[!DNL Salesforce Marketing Cloud]  (V2) bron ](sfmc.md) als nieuwe schakelaar voor uw [!DNL Salesforce Marketing Cloud] gegevens.
 
 [!DNL Salesforce Marketing Cloud] biedt u de mogelijkheid om de betrokkenheid van klanten te beheren en te automatiseren voor e-mail, mobiele apparaten, sociale media en advertenties, allemaal vanaf één platform. Met hulpmiddelen zoals E-mail Studio, de Bouwer van de Reis, en de Bouwer van het Publiek, kunt u gepersonaliseerde campagnes en klantenreizen tot stand brengen die aan uw publiek worden aangepast.
 
@@ -27,9 +27,9 @@ Alvorens u uw [!DNL Salesforce Marketing Cloud] bron aan Experience Platform kun
 * `campaign_read`
 * `list_and_subscribers_read`
 
-U kunt het bereik aanvragen door de `v2/userinfo` -bron van de [!DNL Salesforce Marketing Cloud] API aan te roepen. Zie het [[!DNL Salesforce Marketing Cloud]  document van de Scopes van de Toestemming van de Integratie API &#x200B;](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) voor begeleiding op hoe te om werkingsgebied te verzoeken en te vergelijken.
+U kunt het bereik aanvragen door de `v2/userinfo` -bron van de [!DNL Salesforce Marketing Cloud] API aan te roepen. Zie het [[!DNL Salesforce Marketing Cloud]  document van de Scopes van de Toestemming van de Integratie API ](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) voor begeleiding op hoe te om werkingsgebied te verzoeken en te vergelijken.
 
-Voor meer informatie over werkingsgebied met inbegrip van een lijst van hun verwante toestemmingen en gedrag, zie dit [[!DNL Salesforce Marketing Cloud]  REST API document &#x200B;](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
+Voor meer informatie over werkingsgebied met inbegrip van een lijst van hun verwante toestemmingen en gedrag, zie dit [[!DNL Salesforce Marketing Cloud]  REST API document ](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
 
 >[!IMPORTANT]
 >
@@ -37,7 +37,7 @@ Voor meer informatie over werkingsgebied met inbegrip van een lijst van hun verw
 
 ### IP adres lijst van gewenste personen
 
-U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [&#x200B; voegend op lijst van gewenste personen IP adressen om met Experience Platform &#x200B;](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 >[!WARNING]
 >
@@ -58,7 +58,7 @@ U moet waarden opgeven voor de volgende referenties om [!DNL Salesforce Marketin
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
 
 U moet waarden opgeven voor de volgende referenties om [!DNL Salesforce Marketing Cloud] te verbinden met Experience Platform op AWS.
 
@@ -69,7 +69,7 @@ U moet waarden opgeven voor de volgende referenties om [!DNL Salesforce Marketin
 | Clientgeheim | Een vertrouwelijke sleutel verbonden aan uw identiteitskaart van de Cliënt, die ook in het geïnstalleerde pakket wordt geproduceerd. |
 | Verbinding, specificatie-id | **verbindingsspecificatie** verstrekt de schakelaareigenschappen van een gegevensbron. Dit omvat details zoals authentificatiespecificaties en vereisten voor het creëren van zowel **basis** als **bron** verbindingen. Voor [!DNL Salesforce Marketing Cloud] is de specificatie-id van de verbinding: `ea1c2a08-b722-11eb-8529-0242ac130003` . **Nota:** Deze referentie is slechts noodzakelijk wanneer het verbinden via APIs. |
 
-Voor meer informatie, lees de [[!DNL Salesforce]  documentatie over toegangstoken voor server-aan-server integraties &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html).
+Voor meer informatie, lees de [[!DNL Salesforce]  documentatie over toegangstoken voor server-aan-server integraties ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html).
 
 ## Verbinding maken [!DNL Salesforce Marketing Cloud] met Experience Platform via API&#39;s
 
