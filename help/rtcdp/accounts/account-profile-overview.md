@@ -2,13 +2,13 @@
 keywords: rtcdp b2b;b2b;account;accountprofiel;accountprofielen rtcdp;real-time platform voor klantgegevens;
 title: Accountprofielen in Real-Time CDP B2B edition
 description: Leer hoe u met Adobe Real-time Customer Data Platform B2B Edition accountgegevens uit meerdere bronnen kunt verenigen met accountprofielen.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 769d83155ae70516a296b71baec37d797dd81f34
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 7%
+source-wordcount: '339'
+ht-degree: 6%
 
 ---
 
@@ -16,15 +16,19 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Accountprofielen zijn alleen beschikbaar voor Adobe Real-Time Customer Data Platform B2B edition-klanten. Om meer over Real-Time CDP, B2B edition met inbegrip van de eigenschappen en de functionaliteit beschikbaar te leren, gelieve te beginnen door [&#x200B; Real-Time CDP, overzicht van B2B edition &#x200B;](../b2b-overview.md) te lezen.
+>Accountprofielen zijn alleen beschikbaar voor Adobe Real-Time Customer Data Platform B2B edition-klanten. Om meer over Real-Time CDP, B2B edition met inbegrip van de eigenschappen en de functionaliteit beschikbaar te leren, gelieve te beginnen door [ Real-Time CDP, overzicht van B2B edition ](../b2b-overview.md) te lezen.
 
-Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze verenigde mening van een rekening brengt gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om de gegevens van de klantenrekening op te slaan. Om meer over te leren hoe de rekeningsprofielen als deel van het B2B- werkschema worden gecreeerd, te zien gelieve het [&#x200B; leerprogramma van begin tot eind &#x200B;](../b2b-tutorial.md).
+Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze verenigde mening van een rekening brengt gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om de gegevens van de klantenrekening op te slaan. Om meer over te leren hoe de rekeningsprofielen als deel van het B2B- werkschema worden gecreeerd, te zien gelieve het [ leerprogramma van begin tot eind ](../b2b-tutorial.md).
 
-Door accountgegevens uit verschillende bronnen te bundelen, kunt u een volledig beeld van elk van uw klantenrekeningen en zijn verwante mogelijkheden en contacten beginnen te zien. Hierdoor kan uw organisatie uw B2B-marketingcampagnes naar een nieuw niveau tillen. Meer over de macht van Real-Time CDP, B2B edition leren, leest [&#x200B; Real-Time CDP, het voorbeeldgeval van B2B edition &#x200B;](../b2b-use-case.md).
+Door accountgegevens uit verschillende bronnen te bundelen, kunt u een volledig beeld van elk van uw klantenrekeningen en zijn verwante mogelijkheden en contacten beginnen te zien. Hierdoor kan uw organisatie uw B2B-marketingcampagnes naar een nieuw niveau tillen. Meer over de macht van Real-Time CDP, B2B edition leren, leest [ Real-Time CDP, het voorbeeldgeval van B2B edition ](../b2b-use-case.md).
 
 ## Accountprofielviewer
 
-Met Real-Time CDP, B2B edition, kunt u de gebruikersinterface van Experience Platform gebruiken om rekeningsprofielen te bekijken en naar specifieke rekeningen te zoeken gebruikend een rekeningsidentiteitskaart van een verbonden ondernemingsbron of door brondetails direct in te gaan. Voor meer informatie betreffende hoe te om rekeningsprofielen binnen Experience Platform UI te bekijken, gelieve te zien de [&#x200B; gids UI van het rekeningsprofiel &#x200B;](account-profile-ui-guide.md).
+Met Real-Time CDP, B2B edition, kunt u de gebruikersinterface van Experience Platform gebruiken om rekeningsprofielen te bekijken en naar specifieke rekeningen te zoeken gebruikend een rekeningsidentiteitskaart van een verbonden ondernemingsbron of door brondetails direct in te gaan. Voor meer informatie betreffende hoe te om rekeningsprofielen binnen Experience Platform UI te bekijken, gelieve te zien de [ gids UI van het rekeningsprofiel ](account-profile-ui-guide.md).
+
+>[!IMPORTANT]
+>
+>Accountprofielen vereisen een dagelijkse batchsegmentatieevaluatie die is ingeschakeld om gegevens weer te geven. Zorg ervoor dat de batchsegmentatie is geconfigureerd en gepland om nauwkeurige informatie over het accountprofiel te behouden. Zie de [ gids van de partijsegmentatie ](../../segmentation/methods/batch-segmentation.md) voor meer details.
 
 ## Accountsoorten maken en activeren
 
