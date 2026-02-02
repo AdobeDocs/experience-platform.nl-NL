@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De originele [[!DNL Oracle Eloqua]  (V1) ](oracle-eloqua.md) bron is afgekeurd vanaf Januari 2026. Er zijn geen migraties beschikbaar voor deze vervangen bron en u moet uw gegevens opnieuw implementeren met de nieuwe bron [!DNL Oracle Eloqua] (V2).
+>De originele [[!DNL Oracle Eloqua]  (V1) &#x200B;](oracle-eloqua.md) bron is afgekeurd vanaf Januari 2026. Er zijn geen migraties beschikbaar voor deze vervangen bron en u moet uw gegevens opnieuw implementeren met de nieuwe bron [!DNL Oracle Eloqua] (V2).
 
 [!DNL Oracle Eloqua] is een krachtig platform voor marketingautomatisering op bedrijfsniveau dat organisaties helpt, vooral in de B2B-ruimte, om het complexe proces van het beheren van leads te automatiseren en aan te passen en koperstransporten te ordenen. Het fungeert als centraal knooppunt waar marketingteams geavanceerde campagnes kunnen definiëren, implementeren en meten over meerdere digitale kanalen, zodat de vooruitzichten de juiste inhoud krijgen op het moment dat ze het meest betrokken zijn. De gesteunde voorwerpen voor opname door [!DNL Eloqua] zijn **Contacten**, **Rekeningen**, **Campagnes**, en **Activiteiten**. Nadat de eerste opname is voltooid, worden alle gewijzigde gegevens geïmporteerd met een gepland incrementeel proces.
 
@@ -42,11 +42,11 @@ Volg de onderstaande stappen om te leren hoe u uw [!DNL Eloqua] -account kunt in
 
 Meld u om aan de slag te gaan bij uw [!DNL Eloqua] -instantie als beheerder (of als een gebruiker die toegang heeft om gebruikers, beveiligingsgroepen en toepassingen te maken).
 
-![ Mijn dashboard Eloqua.](../../images/tutorials/create/eloqua/admin.png)
+![&#x200B; Mijn dashboard Eloqua.](../../images/tutorials/create/eloqua/admin.png)
 
 Navigeer aan **Montages** > **Uitbreidingen van het Platform** > **de Ontwikkelaar van de Wolk van de App** > **creeer App**. Geef details voor uw app op, zoals de naam, beschrijving, het pictogram en de URL voor OAuth-callback. Selecteer **sparen** wanneer gebeëindigd.
 
-![ het paneel van de Ontwikkelaar van de App en Create App knoop in het Eloqua dashboard.](../../images/tutorials/create/eloqua/create-app.png)
+![&#x200B; het paneel van de Ontwikkelaar van de App en Create App knoop in het Eloqua dashboard.](../../images/tutorials/create/eloqua/create-app.png)
 
 | Eigenschap | Beschrijving |
 | --- | --- |
@@ -55,21 +55,21 @@ Navigeer aan **Montages** > **Uitbreidingen van het Platform** > **de Ontwikkela
 | Pictogram | De URL voor het pictogram. |
 | OAuth Callback URL | De URL waarnaar gebruikers moeten worden omgeleid nadat ze de app hebben geïnstalleerd en met [!DNL Eloqua] zijn geverifieerd. |
 
-![ creeer app venster in Eloqua.](../../images/tutorials/create/eloqua/new-app.png)
+![&#x200B; creeer app venster in Eloqua.](../../images/tutorials/create/eloqua/new-app.png)
 
 Met uw gecreeerde app, navigeer aan [!DNL Authentication to Eloqua] en wint **identiteitskaart van de Cliënt** en **geheim van de Cliënt** van pas gecreëerde app terug. Deze waarden worden later gebruikt wanneer u verbinding maakt met Experience Platform.
 
-![ Cliënt identiteitskaart en cliëntgeheim in Eloqua.](../../images/tutorials/create/eloqua/credentials.png)
+![&#x200B; Cliënt identiteitskaart en cliëntgeheim in Eloqua.](../../images/tutorials/create/eloqua/credentials.png)
 
 De groepen van de veiligheid staan beheerders toe om te controleren welke niveaus van toegangsgebruikers aan activa, eigenschappen, interfaces, etc. hebben. Om een veiligheidsgroep tot stand te brengen, navigeer aan **Montages** > **Gebruikers**. Dan, selecteer het **lusje van de Groep** op het linkerpaneel en selecteer **creeer nieuwe Groep van de Veiligheid**.
 
-![ het dashboard van het gebruikersbeheer in Eloqua.](../../images/tutorials/create/eloqua/user-management.png)
+![&#x200B; het dashboard van het gebruikersbeheer in Eloqua.](../../images/tutorials/create/eloqua/user-management.png)
 
 Gebruik het venster **[!DNL Security Group Overview]** om een naam en een acroniem voor uw veiligheidsgroep te verstrekken. Zodra gecreeerd, navigeer aan [!DNL Action Permissions] en voeg de [!DNL Consume] API toestemming van de lijst toe en selecteer **sparen**.
 
-![ het venster van het overzicht van de veiligheidsgroep in Eloqua.](../../images/tutorials/create/eloqua/security-group-overview.png)
+![&#x200B; het venster van het overzicht van de veiligheidsgroep in Eloqua.](../../images/tutorials/create/eloqua/security-group-overview.png)
 
-![ het selectievenster voor consume API ](../../images/tutorials/create/eloqua/consume-api.png)
+![&#x200B; het selectievenster voor consume API &#x200B;](../../images/tutorials/create/eloqua/consume-api.png)
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ Gebruik het venster **[!DNL Security Group Overview]** om een naam en een acroni
 
 Om campagnegegevens in te voeren, navigeer aan **uitgeeft de interface van de Gebruiker** en voeg [!DNL Guided Campaigns] aan uw geselecteerde veiligheidsgroep toe.
 
-![ de veiligheidsgroep met geleide toegevoegde campagnes.](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
+![&#x200B; de veiligheidsgroep met geleide toegevoegde campagnes.](../../images/tutorials/create/eloqua/add-guided-campaigns.png)
 
-U kunt desgewenst een extra gebruiker maken en die gebruiker toevoegen aan een beveiligingsgroep. Voor gedetailleerde stappen, lees de [!DNL Eloqua] documentatie over [ creërend een gebruiker ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) en [ toewijzend een gebruiker aan een veiligheidsgroep ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
+U kunt desgewenst een extra gebruiker maken en die gebruiker toevoegen aan een beveiligingsgroep. Voor gedetailleerde stappen, lees de [!DNL Eloqua] documentatie over [&#x200B; creërend een gebruiker &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/UserManagement/Tasks/CreatingIndividualUsers.htm) en [&#x200B; toewijzend een gebruiker aan een veiligheidsgroep &#x200B;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityGroups/Tasks/AddingUsersToSecurityGroups.htm).
 
 ### Vereiste referenties verzamelen
 
@@ -243,5 +243,5 @@ De toewijzingssjablonen gebruiken de volgende plaatsaanduidingen voor variabelen
 
 ## Verbinden [!DNL Eloqua] met Experience Platform
 
-Ga door om uw [!DNL Eloqua] bronverbinding in Experience Platform te configureren. Voor een geleidelijke gids bij vestiging de verbinding door UI, verwijs hier naar het [ leerprogramma ](../../tutorials/ui/create/marketing-automation/eloqua.md). Lees deze zelfstudie voor meer informatie over het verbinden van uw [!DNL Eloqua] -account, het selecteren van gegevens, het toewijzen van velden, het plannen van indelingen en het controleren van uw gegevensstromen.
+Ga door om uw [!DNL Eloqua] bronverbinding in Experience Platform te configureren. Voor een geleidelijke gids bij vestiging de verbinding door UI, verwijs hier naar het [&#x200B; leerprogramma &#x200B;](../../tutorials/ui/create/marketing-automation/eloqua.md). Lees deze zelfstudie voor meer informatie over het verbinden van uw [!DNL Eloqua] -account, het selecteren van gegevens, het toewijzen van velden, het plannen van indelingen en het controleren van uw gegevensstromen.
 

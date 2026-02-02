@@ -30,7 +30,7 @@ Met Experience Platform kunt u gegevens die u uit verschillende bronnen verzamel
 
 ## Door Adobe gebouwde en door partners gebouwde bronnen {#adobe-and-partner-built-sources}
 
-Sommige schakelaars in de Experience Platform broncatalogus worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd door [ Bronnen SDK ](/help/sources/sources-sdk/overview.md) te gebruiken. Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bron door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld, wordt de [ schakelaar van Amazon S3 ](/help/sources/connectors/cloud-storage/s3.md) gecreeerd door Adobe, terwijl de [ schakelaar RainFocus ](/help/sources/connectors/analytics/rainfocus.md) door het team RainFocus wordt gecreeerd en gehandhaafd.
+Sommige schakelaars in de Experience Platform broncatalogus worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd door [&#x200B; Bronnen SDK &#x200B;](/help/sources/sources-sdk/overview.md) te gebruiken. Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bron door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld, wordt de [&#x200B; schakelaar van Amazon S3 &#x200B;](/help/sources/connectors/cloud-storage/s3.md) gecreeerd door Adobe, terwijl de [&#x200B; schakelaar RainFocus &#x200B;](/help/sources/connectors/analytics/rainfocus.md) door het team RainFocus wordt gecreeerd en gehandhaafd.
 
 Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door Adobe ontworpen en onderhouden connectors contact op met uw Adobe-vertegenwoordiger of de klantenservice.
 
@@ -61,7 +61,7 @@ Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toe
 
 ### Geavanceerde bedrijfsbronnen {#advanced-enterprise-sources}
 
-De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
+De volgende bronnen zijn beschikbaar aan [&#x200B; Adobe Real-Time Customer Data Platform Ultimate &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
 
 | Bron | Categorie | Type ontsteking | Wolk |
 | --- | --- | --- | --- |
@@ -83,7 +83,7 @@ U kunt de volgende bronnen gebruiken om advertentiegegevens in te voeren naar Ex
 
 | Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
-| [ Advertentie Google ](connectors/advertising/ads.md) | Batch | Azure |
+| [&#x200B; Advertentie Google &#x200B;](connectors/advertising/ads.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 
@@ -215,7 +215,7 @@ U kunt de volgende bronnen gebruiken om gegevens van uw lokale systeem aan Exper
 
 | Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
-| [ Lokale dossier uploadt ](connectors/local-system/local-file-upload.md) | Batch | Azure |
+| [&#x200B; Lokale dossier uploadt &#x200B;](connectors/local-system/local-file-upload.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 
@@ -240,11 +240,11 @@ U kunt de volgende bronnen gebruiken om gegevens over marketingautomatisering in
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Streaming | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Batch | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Batch | Azure |
-| [[!DNL Oracle Eloqua]  (V2) ](connectors/marketing-automation/eloqua.md) | Batch | Azure |
+| [[!DNL Oracle Eloqua]  (V2) &#x200B;](connectors/marketing-automation/eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
-| [[!DNL Salesforce Marketing Cloud]  (V2) ](connectors/marketing-automation/sfmc.md) | Batch | Azure |
+| [[!DNL Salesforce Marketing Cloud]  (V2) &#x200B;](connectors/marketing-automation/sfmc.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 
@@ -292,7 +292,7 @@ De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combin
 | **[!UICONTROL Manage Sources]** Aan | Naast de functies die in **[!UICONTROL View Sources]** zijn opgenomen, verleent u toegang tot de optie **[!UICONTROL Connect Source]** in **[!UICONTROL Catalog]** en **[!UICONTROL Select Data]** in **[!UICONTROL Browse]** . Met **[!UICONTROL Manage Sources]** kunt u **[!UICONTROL DataFlows]** ook in- of uitschakelen en de schema&#39;s ervan bewerken. |
 | **[!UICONTROL View Sources]** Uit en **[!UICONTROL Manage Sources]** Uit | Alle toegang tot bronnen intrekken. |
 
-Voor meer informatie over de beschikbare toestemmingen die door de Toestemmingen van Adobe worden verleend, lees het [ overzicht van de toegangscontrole ](../access-control/home.md).
+Voor meer informatie over de beschikbare toestemmingen die door de Toestemmingen van Adobe worden verleend, lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](../access-control/home.md).
 
 ### Toegangsbeheer op basis van kenmerken
 
@@ -304,7 +304,7 @@ Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op g
 
 >[!TIP]
 >
->Op attributen-gebaseerde toegangsbeheer werkt als volgt: **rollen** worden gecreeerd om de types van gebruikers te categoriseren die met uw instantie van Experience Platform in wisselwerking staan. **de Etiketten** worden toegepast op **rollen** om de toegang van die bepaalde rol aan te wijzen. **de Etiketten** worden ook toegepast op middelen zoals schemagebieden en segmenten. Opdat een gebruiker toegang tot bepaalde schemagebieden en segmenten heeft, moeten zij aan *een rol met het zelfde etiket worden toegevoegd dat aan het gevraagde middel* wordt toegewezen. Voor meer informatie, lees de [ op attributen-gebaseerde gids van begin tot eind van de toegangscontrole ](../access-control/abac/end-to-end-guide.md).
+>Op attributen-gebaseerde toegangsbeheer werkt als volgt: **rollen** worden gecreeerd om de types van gebruikers te categoriseren die met uw instantie van Experience Platform in wisselwerking staan. **de Etiketten** worden toegepast op **rollen** om de toegang van die bepaalde rol aan te wijzen. **de Etiketten** worden ook toegepast op middelen zoals schemagebieden en segmenten. Opdat een gebruiker toegang tot bepaalde schemagebieden en segmenten heeft, moeten zij aan *een rol met het zelfde etiket worden toegevoegd dat aan het gevraagde middel* wordt toegewezen. Voor meer informatie, lees de [&#x200B; op attributen-gebaseerde gids van begin tot eind van de toegangscontrole &#x200B;](../access-control/abac/end-to-end-guide.md).
 
 - Pas etiketten op schemagebieden toe om toegang tot specifieke schemagebieden in uw organisatie te bepalen. Zodra de toegang tot specifieke schemagebieden wordt gevestigd, zullen de gebruikers slechts afbeeldingen voor de gebieden kunnen tot stand brengen die zij toegang hebben tot.
 - Gebruikers zonder de juiste rollen kunnen geen dataflows met toewijzingen maken of bijwerken die ontoegankelijke schemavelden bevatten. Bovendien kunnen onbevoegde gebruikers bestaande gegevensstromen met ontoegankelijke schemavelden niet bijwerken, verwijderen, inschakelen of uitschakelen.
@@ -312,9 +312,9 @@ Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op g
 
 >[!NOTE]
 >
->Relationele schema&#39;s hebben aanvullende vereisten, waaronder velden voor primaire sleutel en versie-id. Voor meer informatie, zie het [ relationele schemaoverzicht ](../xdm/schema/relational.md).
+>Relationele schema&#39;s hebben aanvullende vereisten, waaronder velden voor primaire sleutel en versie-id. Voor meer informatie, zie het [&#x200B; relationele schemaoverzicht &#x200B;](../xdm/schema/relational.md).
 
-Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, lees het [ op attributen-gebaseerde toegangsbeheeroverzicht ](../access-control/abac/overview.md).
+Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, lees het [&#x200B; op attributen-gebaseerde toegangsbeheeroverzicht &#x200B;](../access-control/abac/overview.md).
 
 ## Voorwaarden en bepalingen {#terms-and-conditions}
 

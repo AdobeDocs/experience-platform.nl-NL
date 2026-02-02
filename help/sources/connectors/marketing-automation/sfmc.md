@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De originele [[!DNL Salesforce Marketing Cloud]  (V1) ](salesforce-marketing-cloud.md) bron is afgekeurd vanaf Januari 2026. Er zijn geen migraties beschikbaar voor deze vervangen bron en u moet uw gegevens opnieuw implementeren met de nieuwe bron [!DNL Salesforce Marketing Cloud] (V2).
+>De originele [[!DNL Salesforce Marketing Cloud]  (V1) &#x200B;](salesforce-marketing-cloud.md) bron is afgekeurd vanaf Januari 2026. Er zijn geen migraties beschikbaar voor deze vervangen bron en u moet uw gegevens opnieuw implementeren met de nieuwe bron [!DNL Salesforce Marketing Cloud] (V2).
 
-De integratie tussen Adobe [ Real-Time CDP ](../../../rtcdp/overview.md) en [!DNL Salesforce Marketing Cloud] wordt ontworpen om de Uitbreidingen van Gegevens wegens de flexibiliteit en de controle te gebruiken zij verstrekken. In tegenstelling tot de StandaardLijsten van het Systeem (de Mening van Gegevens en de Ingebouwde Voorwerpen), die tot vooraf bepaalde gebieden beperkt zijn en hoofdzakelijk systeem-vlakke het volgen dienen, kunt u de Uitbreidingen van Gegevens gebruiken om douanevelden te bepalen, een grote verscheidenheid van zaken-specifieke gegevens te organiseren, en uw gegevensstructuren aan unieke vereisten aan te passen.
+De integratie tussen Adobe [&#x200B; Real-Time CDP &#x200B;](../../../rtcdp/overview.md) en [!DNL Salesforce Marketing Cloud] wordt ontworpen om de Uitbreidingen van Gegevens wegens de flexibiliteit en de controle te gebruiken zij verstrekken. In tegenstelling tot de StandaardLijsten van het Systeem (de Mening van Gegevens en de Ingebouwde Voorwerpen), die tot vooraf bepaalde gebieden beperkt zijn en hoofdzakelijk systeem-vlakke het volgen dienen, kunt u de Uitbreidingen van Gegevens gebruiken om douanevelden te bepalen, een grote verscheidenheid van zaken-specifieke gegevens te organiseren, en uw gegevensstructuren aan unieke vereisten aan te passen.
 
 Vanwege deze mate van aanpassing en schaalbaarheid is de integratie tussen Real-Time CDP en [!DNL Salesforce Marketing Cloud] afhankelijk van gegevensuitbreidingen en niet van standaardsysteemtabellen. Deze benadering biedt een flexibelere, scalable, en geïntegreerde stichting voor het beheren van gegevens aan, die ervoor zorgen dat het zich op uw bedrijfsdoelstellingen richt
 
@@ -51,33 +51,33 @@ Wanneer het bouwen van een integratie met [!DNL Salesforce Marketing Cloud], é�
 
 Als u een geïnstalleerd pakket wilt maken, gebruikt u de gebruikersinterface van [!DNL Salesforce Marketing Cloud] en navigeert u naar **[!DNL Setup]** > **[!DNL Apps]** > **[!DNL Installed Packages]** en selecteert u **[!DNL New]** . Gebruik de interface [!DNL New Package Details] om een naam en informatie voor het pakket op te geven. Selecteer **[!DNL Save]** als u klaar bent.
 
-![ de nieuwe pakketinterface van Salesforce Marketing Cloud UI.](../../images/tutorials/create/sfmc/new-package.png)
+![&#x200B; de nieuwe pakketinterface van Salesforce Marketing Cloud UI.](../../images/tutorials/create/sfmc/new-package.png)
 
 Wanneer het nieuwe pakket is gemaakt, selecteert u **[!DNL Add Component]** .
 
-![ Add de interface van de Component van Salesforce Marketing Cloud UI.](../../images/tutorials/create/sfmc/add-component.png)
+![&#x200B; Add de interface van de Component van Salesforce Marketing Cloud UI.](../../images/tutorials/create/sfmc/add-component.png)
 
 Selecteer **[!DNL API Integration]** als het componenttype.
 
-![ het venster van de componentenselectie met &quot;geselecteerde Integratie API.](../../images/tutorials/create/sfmc/api-integration.png)
+![&#x200B; het venster van de componentenselectie met &quot;geselecteerde Integratie API.](../../images/tutorials/create/sfmc/api-integration.png)
 
 Selecteer **[!DNL Server-to-Server]** als integratietype.
 
-![ het de selectievenster van het integratietype ](../../images/tutorials/create/sfmc/server-to-server.png)
+![&#x200B; het de selectievenster van het integratietype &#x200B;](../../images/tutorials/create/sfmc/server-to-server.png)
 
 Navigeer ten slotte naar **[!DNL Scope]** > **[!DNL Data]** . Selecteer onder **[!DNL Data Extensions]** de optie **[!DNL Read]** .
 
-![ de sectie van gegevensuitbreidingen van Toepassingsgebied in Salesforce Marketing ](../../images/tutorials/create/sfmc/data-extensions.png)
+![&#x200B; de sectie van gegevensuitbreidingen van Toepassingsgebied in Salesforce Marketing &#x200B;](../../images/tutorials/create/sfmc/data-extensions.png)
 
 Selecteer **[!DNL Save]** en kopieer en bewaar dan uw **cliëntgeheim**. Selecteer **[!DNL Finish]** wanneer deze bewerking is voltooid.
 
-![ het venster van Salesforce Marketing Cloud voor het produceren van een cliëntgeheim.](../../images/tutorials/create/sfmc/generate-secret.png)
+![&#x200B; het venster van Salesforce Marketing Cloud voor het produceren van een cliëntgeheim.](../../images/tutorials/create/sfmc/generate-secret.png)
 
 Alvorens [!DNL Salesforce Marketing Cloud] UI te verlaten, kopieer **cliëntidentiteitskaart** en **unieke prefix van basisURI** aangezien u beide waarden zult gebruiken om een verbinding aan Experience Platform tot stand te brengen. Voor de basis-URI voor verificatie moet u alles verwijderen na `.auth.marketingcloudapis.com/`
 
-![ de de componenteninterface van Salesforce Marketing Cloud waar de cliëntidentiteitskaart en unieke basis URI kunnen worden teruggewonnen.](../../images/tutorials/create/sfmc/client-id-and-uri.png)
+![&#x200B; de de componenteninterface van Salesforce Marketing Cloud waar de cliëntidentiteitskaart en unieke basis URI kunnen worden teruggewonnen.](../../images/tutorials/create/sfmc/client-id-and-uri.png)
 
-Voor gedetailleerde stappen bij het creëren van een geïnstalleerd pakket, lees de [[!DNL Salesforce]  documentatie ](https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-developer-basics/set-up-your-developer-environment).
+Voor gedetailleerde stappen bij het creëren van een geïnstalleerd pakket, lees de [[!DNL Salesforce]  documentatie &#x200B;](https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-developer-basics/set-up-your-developer-environment).
 
 ### Vereiste referenties verzamelen {#gather-required-credentials}
 
@@ -86,11 +86,11 @@ U moet waarden opgeven voor de volgende referenties om [!DNL Salesforce Marketin
 | Credentials | Beschrijving |
 | --- | --- |
 | Client-id | De openbaar gemaakte id die door [!DNL Salesforce Marketing Cloud] wordt gebruikt om uw account te identificeren bij het autoriseren naar Experience Platform. De client-id kan worden opgehaald uit het deelvenster Componenten van de gebruikersinterface van [!DNL Salesforce Marketing Cloud] . |
-| Clientgeheim | De vertrouwelijke sleutel die slechts aan de cliënttoepassing en vergunningsserver wordt bekend. U kunt uw cliëntgeheim produceren door de [ hierboven geschetste stappen van de toepassingsopstelling te volgen ](#set-up-application-for-authentication). |
+| Clientgeheim | De vertrouwelijke sleutel die slechts aan de cliënttoepassing en vergunningsserver wordt bekend. U kunt uw cliëntgeheim produceren door de [&#x200B; hierboven geschetste stappen van de toepassingsopstelling te volgen &#x200B;](#set-up-application-for-authentication). |
 | Basiseindpunt | Het voorvoegsel van de basis-URI voor verificatie voor [!DNL Salesforce Marketing Cloud] . |
 
 {style="table-layout:auto"}
 
 ## Verbinden [!DNL Salesforce Marketing Cloud] met Experience Platform
 
-Ga door om uw [!DNL Salesforce Marketing Cloud] bronverbinding in Experience Platform te configureren. Voor een geleidelijke gids bij vestiging de verbinding door UI, verwijs hier naar het [ leerprogramma ](../../tutorials/ui/create/marketing-automation/sfmc.md). Lees deze zelfstudie voor meer informatie over het verbinden van uw [!DNL Salesforce Marketing Cloud] -account, het selecteren van gegevens, het toewijzen van velden, het plannen van indelingen en het controleren van uw gegevensstromen.
+Ga door om uw [!DNL Salesforce Marketing Cloud] bronverbinding in Experience Platform te configureren. Voor een geleidelijke gids bij vestiging de verbinding door UI, verwijs hier naar het [&#x200B; leerprogramma &#x200B;](../../tutorials/ui/create/marketing-automation/sfmc.md). Lees deze zelfstudie voor meer informatie over het verbinden van uw [!DNL Salesforce Marketing Cloud] -account, het selecteren van gegevens, het toewijzen van velden, het plannen van indelingen en het controleren van uw gegevensstromen.
