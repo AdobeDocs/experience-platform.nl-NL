@@ -35,7 +35,7 @@ Momenteel worden de volgende validaties ondersteund:
 | Geneste gegevens | Optimalisatie van prestaties | Er zijn meer dan 2 niveaus van genestelde gegevensdiepte (serie of kaartgegevenstypes) binnen een publieksdefinitie. |
 | Grootte publiek | Optimalisatie van prestaties | De kwalificatiegrootte van het publiek is groter dan 30% van het totale aantal profielen in de sandbox. |
 
-### [!BADGE  Kritieke bevestiging ]{type=Negative} Logische ingewikkeldheid {#logical-complexity}
+### [!BADGE &#x200B; Kritieke bevestiging &#x200B;]{type=Negative} Logische ingewikkeldheid {#logical-complexity}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_rewritescheck"
@@ -105,7 +105,7 @@ plan.equals("trial") AND region.equals("canada")
 
 +++
 
-### [!BADGE  Kritieke bevestiging ]{type=Negative} Opeenvolgende gebeurtenisingewikkeldheid {#sequential-event-complexity}
+### [!BADGE &#x200B; Kritieke bevestiging &#x200B;]{type=Negative} Opeenvolgende gebeurtenisingewikkeldheid {#sequential-event-complexity}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_chaincountcheck"
@@ -140,7 +140,7 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 
 +++
 
-### [!BADGE  optimalisering van Prestaties ]{type=Caution} Geaggregeerde telling {#aggregated-count}
+### [!BADGE &#x200B; optimalisering van Prestaties &#x200B;]{type=Caution} Geaggregeerde telling {#aggregated-count}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_countaggregationcheck"
@@ -149,11 +149,11 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 
 De geaggregeerde tellingcontrole beperkt het aantal aggregatiegebeurtenissen dat binnen uw publiek wordt gebruikt tot drie voorwaarden.
 
-Een standaardgebeurtenis hoeft slechts één overeenkomende gebeurtenis te vinden om een gebruiker in aanmerking te laten komen. Nochtans, moet een samenvoegingsgebeurtenis de volledige geschiedenis van een gebruiker **** van gebeurtenissen lezen en analyseren alvorens het een besluit kan nemen, die tot langzamere verwerkingstijden met meer gebruikte samenvoegingsgebeurtenissen leiden.
+Een standaardgebeurtenis hoeft slechts één overeenkomende gebeurtenis te vinden om een gebruiker in aanmerking te laten komen. Nochtans, moet een samenvoegingsgebeurtenis de volledige geschiedenis van een gebruiker **&#x200B;**&#x200B;van gebeurtenissen lezen en analyseren alvorens het een besluit kan nemen, die tot langzamere verwerkingstijden met meer gebruikte samenvoegingsgebeurtenissen leiden.
 
 Als u wilt voorkomen dat deze validatie wordt geactiveerd, gebruikt u alleen specifieke tellingen wanneer dit strikt noodzakelijk is voor de publieksdefinitie. Als u alleen hoeft te weten of een gebruiker zich eenmaal heeft aangemeld, kunt u bijvoorbeeld de standaardlogica ‘Exists’ gebruiken in plaats van een gebeurtenis ‘Count > 0’ te gebruiken.
 
-### [!BADGE  optimalisering van Prestaties ]{type=Caution} Geneste gegevenscomplexiteit {#nested-data-complexity}
+### [!BADGE &#x200B; optimalisering van Prestaties &#x200B;]{type=Caution} Geneste gegevenscomplexiteit {#nested-data-complexity}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_arraydepthcheck"
@@ -166,7 +166,7 @@ Hoewel Experience Platform het gebruik van array- en kaartobjecten voor de opsla
 
 Als u vaak segmentatie op een diep genest attribuut uitvoert, kunt u uw team van de gegevenstechniek moeten contacteren om de attributen aan een hoger niveau binnen het profielschema voor gemakkelijkere toegang te kopiëren.
 
-### [!BADGE  Grootte van het publiek van de optimalisering van prestaties 0}]{type=Caution} {#audience-size}
+### [!BADGE &#x200B; Grootte van het publiek van de optimalisering van prestaties 0&rbrace;]{type=Caution} {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_profilestorecheck"
@@ -181,7 +181,7 @@ Als u een publiek moet creëren dat meer dan 30% van uw profielopslag kwalificee
 
 ## Volgende stappen
 
-Na het lezen van deze handleiding hebt u meer inzicht in hoe Experience Platform automatische validaties uitvoert om evaluatie, stabiliteit en schaalbaarheid te verbeteren. Voor meer informatie bij het creëren van publiek gebruikend UI, lees de [ documentatie van de Bouwer van het Segment ](./ui/segment-builder.md).
+Na het lezen van deze handleiding hebt u meer inzicht in hoe Experience Platform automatische validaties uitvoert om evaluatie, stabiliteit en schaalbaarheid te verbeteren. Voor meer informatie bij het creëren van publiek gebruikend UI, lees de [&#x200B; documentatie van de Bouwer van het Segment &#x200B;](./ui/segment-builder.md).
 
 ## Bijlage
 
