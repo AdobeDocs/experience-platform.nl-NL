@@ -17,7 +17,7 @@ ht-degree: 23%
 
 - [Overzicht van segmentatieservice](home.md)
 - [Segmenteringsgegevenstypen](data-types.md)
-- [&#x200B; de gidsen van de segmentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [&#x200B; de gidsen van de segmentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=nl-NL#segmentation-guardrails)
 - [Validatie van publiek](./validation.md)
 - Segmentatie-API {#api}
    - [Overzicht](api/overview.md)
@@ -84,4 +84,4 @@ ht-degree: 23%
 - [Update voor kwalificatiecriteria](./eligibility-criteria-update.md)
 - [Veelgestelde vragen](./faq.md)
 - [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [&#x200B; de versienota&#39;s van het Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [&#x200B; de versienota&#39;s van het Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
