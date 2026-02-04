@@ -34,13 +34,13 @@ Zo is de afdeling Marketing Operations van een wereldwijd merk voor financiële 
 ## Vereisten {#prerequisites}
 
 * **Bevestig Voorwaarden van Gebruik:** alvorens u een nieuwe [!DNL Acxiom Real ID Audience Connection] bestemming kunt vormen, moet u [!DNL Acxiom's] Overeenkomst van de Voorwaarden van het Gebruik lezen en ondertekenen. U ontvangt de koppeling naar de overeenkomst zodra de uitgevoerde verkooporder is voltooid.
-* **ken uw organisatie-identiteitskaart van Adobe:** Uw [!DNL Adobe] organisatie - identiteitskaart is nodig om uw Voorwaarden van de Overeenkomst van de Gebruiker te voltooien. Zie [!DNL Adobe's] *Organisaties in Experience Cloud* onderwerp voor details op hoe te [&#x200B; uw organisatie identiteitskaart &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) bekijken.
-* **verkrijg vergunning voor [!DNL Acxiom's Real ID] product:** Zodra een vergunning wordt verkregen, maak Echte identiteitskaart van Acxiom beschikbaar binnen Real-Time CDP. Zie [&#x200B; Verbetering van Gegevens van Acxiom &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) voor meer informatie.
+* **ken uw organisatie-identiteitskaart van Adobe:** Uw [!DNL Adobe] organisatie - identiteitskaart is nodig om uw Voorwaarden van de Overeenkomst van de Gebruiker te voltooien. Zie [!DNL Adobe's] *Organisaties in Experience Cloud* onderwerp voor details op hoe te [&#x200B; uw organisatie identiteitskaart &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) bekijken.
+* **verkrijg vergunning voor [!DNL Acxiom's Real ID] product:** Zodra een vergunning wordt verkregen, maak Echte identiteitskaart van Acxiom beschikbaar binnen Real-Time CDP. Zie [&#x200B; Verbetering van Gegevens van Acxiom &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) voor meer informatie.
 
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Het doel van [!DNL Acxiom's Real ID Audience Connection] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/namespaces).
+Het doel van [!DNL Acxiom's Real ID Audience Connection] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/identity/features/namespaces).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---------------|----------------|----------------|
@@ -53,8 +53,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------------|----------------|----------------|
-| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
-| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience) in Experience Platform van Csv- dossiers. |
+| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/home). |
+| Aangepaste uploads | ✓ | Het publiek [&#x200B; ingevoerde &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/ui/audience-portal#import-audience) in Experience Platform van Csv- dossiers. |
 
 
 ## Ondersteunde doelen {#supported-destinations}
@@ -95,7 +95,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 
 
-Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) voor instructies bij het activeren van publiek aan deze bestemming.
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ Als u tevreden bent met de resultaten, selecteert u **[!UICONTROL Finish]** om u
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/data-governance/home).
 
 ## Problemen oplossen {#troubleshooting}
 
