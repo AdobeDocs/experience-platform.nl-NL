@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
 role: User
-source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
+source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '212'
 ht-degree: 23%
 
 ---
@@ -17,7 +17,8 @@ ht-degree: 23%
 
 - [Overzicht van segmentatieservice](home.md)
 - [Segmenteringsgegevenstypen](data-types.md)
-- [&#x200B; de gidsen van de segmentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=nl-NL#segmentation-guardrails)
+- [ de gidsen van de segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Validatie van publiek](./validation.md)
 - Segmentatie-API {#api}
    - [Overzicht](api/overview.md)
    - [Aan de slag](api/getting-started.md)
@@ -41,7 +42,7 @@ ht-degree: 23%
    - [Update voor jaartijdbeperking negeren](ui/ignore-year.md)
    - [Tijd beperkingen refactoring](ui/segment-refactoring.md)
    - Segmentovereenkomst {#segment-match}
-      - [&#x200B; Overzicht van de Gelijke van het Segment &#x200B;](ui/segment-match/overview.md)
+      - [ Overzicht van de Gelijke van het Segment ](ui/segment-match/overview.md)
       - [Problemen oplossen](ui/segment-match/troubleshooting.md)
 - Segmenteringsmethoden {#methods}
    - [Overzicht](methods/overview.md)
@@ -82,5 +83,5 @@ ht-degree: 23%
    - [Diverse functies](pql/misc-functions.md)
 - [Update voor kwalificatiecriteria](./eligibility-criteria-update.md)
 - [Veelgestelde vragen](./faq.md)
-- [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [&#x200B; de versienota&#39;s van het Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/segmentation/)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
