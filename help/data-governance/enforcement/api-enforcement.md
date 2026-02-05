@@ -5,7 +5,7 @@ title: Beleid voor gegevensgebruik afdwingen met de API voor beleidsservice
 type: Tutorial
 description: Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u de Dienst API van het Beleid gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Beleid voor gegevensgebruik afdwingen met de API [!DNL Policy Service]
 
-Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u [[!DNL Policy Service API] gebruiken &#x200B;](https://www.adobe.io/experience-platform-apis/references/policy-service/) om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
+Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u [[!DNL Policy Service API] gebruiken ](https://www.adobe.io/experience-platform-apis/references/policy-service/) om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
 
 >[!NOTE]
 >
@@ -26,12 +26,12 @@ Dit document bevat stappen voor het gebruik van de API [!DNL Policy Service] om 
 
 Deze zelfstudie vereist een goed begrip van de volgende belangrijke concepten die betrokken zijn bij het afdwingen van beleidsregels voor gegevensgebruik:
 
-* [&#x200B; Beheer van Gegevens &#x200B;](../home.md): Het kader waardoor [!DNL Experience Platform] naleving van het gegevensgebruik afdwingt.
-   * [&#x200B; de gebruiksetiketten van Gegevens &#x200B;](../labels/overview.md): De etiketten van het gebruik van gegevens worden toegepast op datasets (en/of individuele gebieden binnen die datasets), die beperkingen specificeren voor hoe die gegevens kunnen worden gebruikt.
-   * [&#x200B; het gebruiksbeleid van Gegevens &#x200B;](../policies/overview.md): Het gebruiksbeleid van gegevens is regels die de soorten marketing acties beschrijven die voor bepaalde reeksen etiketten van het gegevensgebruik worden toegestaan of beperkt.
-* [&#x200B; Sandboxen &#x200B;](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Beheer van Gegevens ](../home.md): Het kader waardoor [!DNL Experience Platform] naleving van het gegevensgebruik afdwingt.
+   * [ de gebruiksetiketten van Gegevens ](../labels/overview.md): De etiketten van het gebruik van gegevens worden toegepast op datasets (en/of individuele gebieden binnen die datasets), die beperkingen specificeren voor hoe die gegevens kunnen worden gebruikt.
+   * [ het gebruiksbeleid van Gegevens ](../policies/overview.md): Het gebruiksbeleid van gegevens is regels die de soorten marketing acties beschrijven die voor bepaalde reeksen etiketten van het gegevensgebruik worden toegestaan of beperkt.
+* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-Alvorens dit leerprogramma te beginnen, te herzien gelieve de [&#x200B; ontwikkelaarsgids &#x200B;](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Policy Service] API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+Alvorens dit leerprogramma te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Policy Service] API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Evalueren met labels en een marketingactie
 
@@ -134,7 +134,7 @@ Een geslaagde reactie retourneert de URL voor de marketingactie, de gebruikslabe
 
 >[!WARNING]
 >
->Het `/constraints` eindpunt voor gegevensset-based evaluatie is verouderd. Om beleidsschending te evalueren of veelvoudige evaluatietaken uit te voeren, gebruik [&#x200B; bulkevaluatie API (`/bulk-eval`) &#x200B;](../api/evaluation.md#evaluate-policies-in-bulk) in plaats daarvan.
+>Het `/constraints` eindpunt voor gegevensset-based evaluatie is verouderd. Om beleidsschending te evalueren of veelvoudige evaluatietaken uit te voeren, gebruik [ bulkevaluatie API (`/bulk-eval`) ](../api/evaluation.md#bulk) in plaats daarvan.
 
 U kunt een beleid van het gegevensgebruik evalueren door een marketing actie tegen één of meerdere datasets te testen waarvan de etiketten kunnen worden verzameld. Dit wordt gedaan door een POST- verzoek aan `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` te doen en dataset IDs binnen het verzoeklichaam, zoals aangetoond in het hieronder voorbeeld te verstrekken.
 
@@ -187,7 +187,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Elk item in de payload-array moet het type entiteit aangeven dat wordt gedefinieerd. Voor dit gebruik is de waarde altijd &quot;dataSet&quot;. |
 | `entityId` | Elk punt in de ladingsserie moet unieke identiteitskaart voor een dataset verstrekken. |
-| `entityMeta.fields` | (Facultatief) een serie van [&#x200B; koorden van de Aanwijzer 0&rbrace; JSON, die specifieke gebieden in het schema van de dataset van verwijzingen voorzien. &#x200B;](../../landing/api-fundamentals.md#json-pointer) Als deze array is opgenomen, nemen alleen de velden in de array deel aan de evaluatie. Schema-velden die niet in de array zijn opgenomen, nemen niet deel aan de evaluatie.<br><br> als dit gebied niet inbegrepen is, zullen alle gebieden binnen het datasetschema in evaluatie worden omvat. |
+| `entityMeta.fields` | (Facultatief) een serie van [ koorden van de Aanwijzer 0} JSON, die specifieke gebieden in het schema van de dataset van verwijzingen voorzien. ](../../landing/api-fundamentals.md#json-pointer) Als deze array is opgenomen, nemen alleen de velden in de array deel aan de evaluatie. Schema-velden die niet in de array zijn opgenomen, nemen niet deel aan de evaluatie.<br><br> als dit gebied niet inbegrepen is, zullen alle gebieden binnen het datasetschema in evaluatie worden omvat. |
 
 **Reactie**
 
@@ -380,4 +380,4 @@ Een succesvolle reactie keert URL voor de marketing actie, de gebruiksetiketten 
 
 Door dit document te lezen, hebt u met succes gecontroleerd op beleidsschendingen wanneer het uitvoeren van een marketing actie op een dataset of een reeks etiketten van het gegevensgebruik. Met de gegevens die in API-reacties worden geretourneerd, kunt u protocollen in uw ervaringstoepassing instellen om beleidsovertredingen op de juiste wijze af te dwingen.
 
-Voor informatie over hoe Experience Platform automatisch beleidshandhaving voor geactiveerde segmenten verstrekt, zie de gids op [&#x200B; automatische handhaving &#x200B;](./auto-enforcement.md).
+Voor informatie over hoe Experience Platform automatisch beleidshandhaving voor geactiveerde segmenten verstrekt, zie de gids op [ automatische handhaving ](./auto-enforcement.md).
