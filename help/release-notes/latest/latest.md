@@ -15,9 +15,9 @@ ht-degree: 22%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
@@ -39,7 +39,7 @@ Met Agent Orchestrator kunt u op AI gebaseerde agents maken en implementeren die
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gebruiksgebonden proefversie van Adobe Experience Platform Agents | **Uitgezochte klanten hebben nu een gratis proeftoegang tot de Agenten van Adobe Experience Platform**. U kunt de proef gebruiken om met Agenten door de AI Hulp interface te onderzoeken en in wisselwerking te staan die door Adobe Experience Platform Agent Orchestrator wordt aangedreven. De proef biedt hands-on ervaring met AI Agenten die binnen de context van de bestaande producten en milieu&#39;s van Experience Cloud van klanten werken, die teams toestaan om waarde te evalueren alvorens aan een volledige aankoop te verbinden. Adobe Experience Platform Agents worden begeleid door gebruikersinvoer en -toezicht en respecteren bestaande toegangscontroles op productniveau, zodat gebruikers alleen handelingen kunnen uitvoeren of gegevens kunnen bekijken waarvoor ze zijn geautoriseerd in de onderliggende Experience Cloud-toepassingen. Lees het [&#x200B; gebruik-gebonden proefoverzicht van de Agenten van Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) voor informatie over hoe te begonnen worden. |
+| Gebruiksgebonden proefversie van Adobe Experience Platform Agents | **Uitgezochte klanten hebben nu een gratis proeftoegang tot de Agenten van Adobe Experience Platform**. U kunt de proef gebruiken om met Agenten door de AI Hulp interface te onderzoeken en in wisselwerking te staan die door Adobe Experience Platform Agent Orchestrator wordt aangedreven. De proef biedt hands-on ervaring met AI Agenten die binnen de context van de bestaande producten en milieu&#39;s van Experience Cloud van klanten werken, die teams toestaan om waarde te evalueren alvorens aan een volledige aankoop te verbinden. Adobe Experience Platform Agents worden begeleid door gebruikersinvoer en -toezicht en respecteren bestaande toegangscontroles op productniveau, zodat gebruikers alleen handelingen kunnen uitvoeren of gegevens kunnen bekijken waarvoor ze zijn geautoriseerd in de onderliggende Experience Cloud-toepassingen. Lees het [&#x200B; gebruik-gebonden proefoverzicht van de Agenten van Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) voor informatie over hoe te begonnen worden. |
 
 {style="table-layout:auto"}
 
