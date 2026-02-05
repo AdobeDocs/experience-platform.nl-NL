@@ -46,13 +46,13 @@ Als uw organisatie wettelijk gemachtigd is om AI Assistant te gebruiken en u nog
 
 Voor de toegang tot AI Assistant gelden de volgende parameters:
 
-* **toegang tot de toepassing:** u kunt tot AI Medewerker in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer, en [&#x200B; Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant) toegang hebben.
+* **toegang tot de toepassing:** u kunt tot AI Medewerker in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer, en [&#x200B; Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/ai-assistant) toegang hebben.
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
 * **Toestemmingen:** gebruik [&#x200B; Toestemmingen UI &#x200B;](../access-control/abac/ui/permissions.md) om toegang tot AI Medewerker in uw organisatie te verlenen of te herroepen. Om AI Medewerker te gebruiken, moet een bepaalde gebruiker tot een rol behoren die met **wordt voorzien toelaat AI Medewerker** en **de Operationele toestemmingen van de Mening**.
    * Als beheerder, kunt u **toevoegen toelaat AI Medewerker** aan een bepaalde rol en voegt een gebruiker aan die rol toe, om hen toe te staan om tot AI Medewerker in uw organisatie toegang te hebben. **Nota**: Deze toestemming staat de genoemde gebruiker toe om tot AI Medewerker toegang te hebben, verleent het hen geen administratieve capaciteit om anderen dan toegang tot AI Medewerker te geven.
    * Als beheerder, kunt u de **Operationele Inzichten van de Mening** aan een bepaalde rol toevoegen en een gebruiker toevoegen aan die rol, om hen toe te staan om de operationele mogelijkheden van de Inzichten van AI Medewerker te gebruiken.
 
-Gebruik de [&#x200B; toestemmingen UI &#x200B;](../access-control/abac/ui/roles.md) om toestemmingen te verlenen om AI Medewerker in Experience Platform en Journey Optimizer te gebruiken. Voor informatie over hoe u toegang kunt krijgen tot AI Assistant in Customer Journey Analytics. Lees de documentatie in [&#x200B; Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+Gebruik de [&#x200B; toestemmingen UI &#x200B;](../access-control/abac/ui/roles.md) om toestemmingen te verlenen om AI Medewerker in Experience Platform en Journey Optimizer te gebruiken. Voor informatie over hoe u toegang kunt krijgen tot AI Assistant in Customer Journey Analytics. Lees de documentatie in [&#x200B; Customer Journey Analytics &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/ai-assistant).
 
 ![&#x200B; de pagina van toestemmingen UI met Enable AI Medewerker en de Toestemmingen van de Inzicht van de Mening Operationele inbegrepen in een bepaalde rol.](./images/access/access-permissions.png)
 
