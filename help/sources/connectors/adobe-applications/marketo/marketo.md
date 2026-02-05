@@ -31,7 +31,7 @@ Dit document verstrekt een overzicht van de [!DNL Marketo Engage] bronschakelaar
 
 ## Toewijzing Adobe-organisatie instellen
 
-Voordat u toewijzingssets kunt maken voor [!DNL Marketo Engage] , moet u eerst Adobe Organisatie Mapping instellen. Voor gedetailleerde stappen op hoe te om dit te voltooien, zie de gids bij [&#x200B; vestiging de Toewijzing van de Organisatie van Adobe voor  [!DNL Marketo Engage] &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+Voordat u toewijzingssets kunt maken voor [!DNL Marketo Engage] , moet u eerst Adobe Organisatie Mapping instellen. Voor gedetailleerde stappen op hoe te om dit te voltooien, zie de gids bij [&#x200B; vestiging de Toewijzing van de Organisatie van Adobe voor  [!DNL Marketo Engage] &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=nl-NL).
 
 ## Verifieer uw [!DNL Marketo Engage] -connector
 
