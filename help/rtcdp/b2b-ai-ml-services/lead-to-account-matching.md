@@ -48,15 +48,15 @@ Dagelijkse banen gebruiken zowel deterministische als probabilistische factoren 
 
 De attributen b2b.companyName, b2b.companyWebsite en b2b.personKey.sourceKey kunnen in de b2b gebiedsgroep in het B2B persoonschema worden gevestigd.
 
-![ B2B persoonschema dat attributen ](/help/rtcdp/accounts/images/b2b-person-schema.png) toont
+![&#x200B; B2B persoonschema dat attributen &#x200B;](/help/rtcdp/accounts/images/b2b-person-schema.png) toont
 
 Het kenmerk workEmail kan worden gevonden als veldgroep op hoofdniveau in het B2B-personenschema.
 
-![ B2B persoonschema dat workEmail ](/help/rtcdp/accounts/images/b2b-person-workemail.png) toont
+![&#x200B; B2B persoonschema dat workEmail &#x200B;](/help/rtcdp/accounts/images/b2b-person-workemail.png) toont
 
 Profielen kunnen alleen het beste worden gevonden als de overeenkomende score een interne betrouwbaarheidsdrempel overschrijdt. De resultaten worden bewaard in een nieuwe systeemdataset van de bestaande relatie XDM van de rekeningspersoon.
 
-De lead to account matching service run when a new person profile snapshot which is once om de 24 uur. Zie de documentatie voor meer informatie over de [ configuratie van lood aan rekening aanpassing ](/help/rtcdp/accounts/account-profile-ui-guide.md).
+De lead to account matching service run when a new person profile snapshot which is once om de 24 uur. Zie de documentatie voor meer informatie over de [&#x200B; configuratie van lood aan rekening aanpassing &#x200B;](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Hoe kan ik leiden tot een overeenkomende uitvoer van een account {#how-to-view}
 
@@ -64,14 +64,14 @@ Nadat de baan in werking wordt gesteld, worden de resultaten bewaard in een nieu
 
 Selecteer **[!UICONTROL Preview dataset]** in de rechterbovenhoek om een voorvertoning van de gegevensset weer te geven.
 
-![ Nieuwe dataset ](/help/rtcdp/accounts/images/b2b-dataset-output.png)
+![&#x200B; Nieuwe dataset &#x200B;](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
 De dataset omvat de aangepaste rekeningsinformatie evenals de overeenkomende score voor uw gekozen dataset. In het veld **[!UICONTROL Relationship Source]** wordt aangegeven of het afkomstig is van het proces voor afstemmen van accounts.
 
-![ de vertrouwensscores en output van de dataset van de Voorproef ](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
+![&#x200B; de vertrouwensscores en output van de dataset van de Voorproef &#x200B;](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 
 ## Monitoring leidt tot het afstemmen van accounts {#monitoring-jobs}
 
 U kunt de taakstatus en de bijbehorende metriek controleren voor elke lead in taken die overeenkomen met een account via het dashboard.
 
-Zie de documentatie voor meer informatie over [ controletaken voor lood aan rekening aanpassing ](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Zie de documentatie voor meer informatie over [&#x200B; controletaken voor lood aan rekening aanpassing &#x200B;](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

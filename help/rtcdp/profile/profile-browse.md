@@ -19,7 +19,7 @@ Het profiel van de Klant in real time leidt tot een holistische mening van elk v
 
 In de gebruikersinterface van Adobe Experience Platform kunt u deze alleen-lezen profielen bekijken en belangrijke informatie over elk van uw individuele klanten bekijken, zoals hun voorkeuren, gebeurtenissen uit het verleden, interacties en het publiek waartoe het individu behoort.
 
-Adobe Real-Time Customer Data Platform is gebouwd op Adobe Experience Platform en kan daardoor gebruikmaken van de mogelijkheden voor profielweergave in de gebruikersinterface van Experience Platform. Voor een gedetailleerde gids aan het bekijken van klantenprofielen binnen het gebruikersinterface van Experience Platform, verwijs naar de [ Real-Time de gebruikersgids van het Profiel van de Klant ](../../profile/ui/user-guide.md).
+Adobe Real-Time Customer Data Platform is gebouwd op Adobe Experience Platform en kan daardoor gebruikmaken van de mogelijkheden voor profielweergave in de gebruikersinterface van Experience Platform. Voor een gedetailleerde gids aan het bekijken van klantenprofielen binnen het gebruikersinterface van Experience Platform, verwijs naar de [&#x200B; Real-Time de gebruikersgids van het Profiel van de Klant &#x200B;](../../profile/ui/user-guide.md).
 
 ## Profielverbeteringen voor Real-Time CDP, B2B edition
 
@@ -27,7 +27,7 @@ Naast de mogelijkheden voor bladeren door profielen die worden ondersteund door 
 
 Met Real-Time CDP en B2B edition kunt u ook bladeren door [!UICONTROL Accounts] , [!UICONTROL Opportunities] en [!UICONTROL Source records] vanuit verschillende bedrijfsbronnen die aan een individuele klant zijn gekoppeld.
 
-Om deze verhogingen te onderzoeken, begin door de stappen te volgen die in de [ in real time gebruikersgids van het Profiel van de Klant ](../../profile/ui/user-guide.md) worden geschetst om een profiel door fusiebeleid of identiteitsnaamruimte te doorbladeren.
+Om deze verhogingen te onderzoeken, begin door de stappen te volgen die in de [&#x200B; in real time gebruikersgids van het Profiel van de Klant &#x200B;](../../profile/ui/user-guide.md) worden geschetst om een profiel door fusiebeleid of identiteitsnaamruimte te doorbladeren.
 
 ![](images/b2b-browse-profile.png)
 
@@ -35,13 +35,13 @@ De profieldetails omvatten toegang tot de tabbladen [!UICONTROL Accounts] , [!UI
 
 ![](images/b2b-profile-detail.png)
 
-Meer over de profieldetails leren die in Experience Platform UI worden verstrekt, verwijs naar de [ detailssectie van de het dashboarddocumentatie van Profielen ](../../dashboards/guides/profiles.md#browse-profiles).
+Meer over de profieldetails leren die in Experience Platform UI worden verstrekt, verwijs naar de [&#x200B; detailssectie van de het dashboarddocumentatie van Profielen &#x200B;](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### Het tabblad Accounts
 
 Selecteer **[!UICONTROL Accounts]** om een lijst weer te geven met accounts die betrekking hebben op het profiel. Deze lijst bevat basisgegevens uit het accountprofiel, zoals de naam, website en branche van de account, en een koppeling naar het accountprofiel.
 
-Voor meer informatie bij het bekijken van en het onderzoeken van rekeningsprofielen, begin door het [ overzicht van rekeningsprofielen ](../accounts/account-profile-overview.md) te lezen.
+Voor meer informatie bij het bekijken van en het onderzoeken van rekeningsprofielen, begin door het [&#x200B; overzicht van rekeningsprofielen &#x200B;](../accounts/account-profile-overview.md) te lezen.
 
 ![](images/b2b-profile-accounts.png)
 

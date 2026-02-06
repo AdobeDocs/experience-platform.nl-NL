@@ -16,13 +16,13 @@ ht-degree: 0%
 
 Gebruik het dashboard van [!UICONTROL Profile Enrichment] om te begrijpen of de banen van de profielverrijking met succes liepen en voltooiden, en om de basismetriek te bekijken om de doeltreffendheid van de verrijking te meten.
 
-In [ Experience Platform UI ](https://platform.adobe.com), selecteer **[!UICONTROL Monitoring]** van de linkernavigatie om tot het [!UICONTROL Monitoring] dashboard toegang te hebben. In de meningsselecteur, uitgezochte **B2B Stroom** om de dashboardelementen te zien specifiek voor [ Real-Time CDP B2B ](/help/rtcdp/b2b-overview.md).  Het dashboard van [!UICONTROL Monitoring] bevat de basismetriek van de laatste succesvolle looppas, en dagelijkse baanstatus tot 90 dagen in het verleden.
+In [&#x200B; Experience Platform UI &#x200B;](https://platform.adobe.com), selecteer **[!UICONTROL Monitoring]** van de linkernavigatie om tot het [!UICONTROL Monitoring] dashboard toegang te hebben. In de meningsselecteur, uitgezochte **B2B Stroom** om de dashboardelementen te zien specifiek voor [&#x200B; Real-Time CDP B2B &#x200B;](/help/rtcdp/b2b-overview.md).  Het dashboard van [!UICONTROL Monitoring] bevat de basismetriek van de laatste succesvolle looppas, en dagelijkse baanstatus tot 90 dagen in het verleden.
 
 ## Verrijking van het accountprofiel {#related-accounts}
 
-Het [!UICONTROL Related accounts] dashboard toont basismetriek en het statuut van de dagelijkse baan specifiek voor de [ Verwante 2} profielverrijking van Rekeningen {.](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+Het [!UICONTROL Related accounts] dashboard toont basismetriek en het statuut van de dagelijkse baan specifiek voor de [&#x200B; Verwante 2&rbrace; profielverrijking van Rekeningen &lbrace;.](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 
-![ Visuele aanwijzing van hoe te om aan de de verrijking van het Profiel te krijgen banen controlerend het scherm in Experience Platform UI.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
+![&#x200B; Visuele aanwijzing van hoe te om aan de de verrijking van het Profiel te krijgen banen controlerend het scherm in Experience Platform UI.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
 De gegevens op de **[!UICONTROL Metrics]** -kaart bevatten de basisgegevens van de meest recente succesvolle uitvoering van de taak Verwante accounts.
 
@@ -41,9 +41,9 @@ De volgende cijfers zijn beschikbaar voor verrijkingstaken van het accountprofie
 
 ## Verrijking van overeenkomende profielen voor accounts leiden {#lead-to-account-matching}
 
-Het [!UICONTROL Lead to account matching] dashboard toont de basismetriek en de dagelijkse baan-in werking gestelde status specifiek voor [ Lood aan rekening passende ](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) profielverrijking.
+Het [!UICONTROL Lead to account matching] dashboard toont de basismetriek en de dagelijkse baan-in werking gestelde status specifiek voor [&#x200B; Lood aan rekening passende &#x200B;](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) profielverrijking.
 
-![ Lood aan rekening passende profielverrijking ](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
+![&#x200B; Lood aan rekening passende profielverrijking &#x200B;](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
 
 De volgende metriek is beschikbaar voor lood aan de banen van de de profielverrijking van de rekening passende:
 
@@ -59,9 +59,9 @@ De volgende metriek is beschikbaar voor lood aan de banen van de de profielverri
 
 ## Verrijking van het profiel voor lood en accountscoring {#predictive-lead-to-account-scoring}
 
-Het [!UICONTROL Predictive lead and account scoring] dashboard toont de basismetriek en de dagelijkse baan-in werking gestelde status specifiek voor de [ Predictieve lood en rekening die ](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) profielverrijking scoren.
+Het [!UICONTROL Predictive lead and account scoring] dashboard toont de basismetriek en de dagelijkse baan-in werking gestelde status specifiek voor de [&#x200B; Predictieve lood en rekening die &#x200B;](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) profielverrijking scoren.
 
-![ Predictive lood en de verbetering van het rekeningsprofiel van de rekening ](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+![&#x200B; Predictive lood en de verbetering van het rekeningsprofiel van de rekening &#x200B;](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
 
 De volgende metriek is beschikbaar voor voorspellende lood en de banen van de de profielverrijking van de rekening:
 
@@ -78,17 +78,17 @@ De volgende metriek is beschikbaar voor voorspellende lood en de banen van de de
 
 In deze sectie worden diverse gebruikersinterface-opties (UI) in de monitoringinterface beschreven waarmee u de metriek kunt filteren die op de pagina wordt weergegeven.
 
-Gebruik het pijlpictogram (![ pijlpictogram ](/help/images/icons/chevron-up.png)) om de kaart bij de bovenkant van het scherm uit te breiden of te sluiten, dat informatie van de bij-a-blik over de banen van de profielverrijking toont.
+Gebruik het pijlpictogram (![&#x200B; pijlpictogram &#x200B;](/help/images/icons/chevron-up.png)) om de kaart bij de bovenkant van het scherm uit te breiden of te sluiten, dat informatie van de bij-a-blik over de banen van de profielverrijking toont.
 
-![ opname van het Scherm die de controle van het pijlpictogram UI toont.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
+![&#x200B; opname van het Scherm die de controle van het pijlpictogram UI toont.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 
 Met de schakeloptie **[!UICONTROL Metrics and graphs]** kunt u de weergave met de meest recente meetgegevens negeren.
 
-![ opname van het Scherm die de metriek en grafieken knevel toont.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
+![&#x200B; opname van het Scherm die de metriek en grafieken knevel toont.](/help/dataflows/assets/ui/b2b/metrics-and-graphs-toggle.gif)
 
 Gebruik de schakeloptie **[!UICONTROL Show failures only]** om alleen de mislukte taken voor profielverrijking weer te geven.
 
-![ opname van het Scherm die toont tonen mislukkingen slechts knevel.](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
+![&#x200B; opname van het Scherm die toont tonen mislukkingen slechts knevel.](/help/dataflows/assets/ui/b2b/show-failures-only.gif)
 
 ## Volgende stappen {#next-steps}
 

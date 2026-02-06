@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Accountprofielinzichten
 
-[ de profielen van de Rekening ](../../rtcdp/accounts/account-profile-overview.md) worden gebruikt om rekeningsinformatie uit diverse bronnen, met inbegrip van veelvoudige marketing kanalen en organisatorische systemen te consolideren. Deze verenigde mening laat een uitvoerig inzicht in klantenrekeningen toe, die B2B marketing campagnes verbeteren. De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-Time CDP B2B-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
+[&#x200B; de profielen van de Rekening &#x200B;](../../rtcdp/accounts/account-profile-overview.md) worden gebruikt om rekeningsinformatie uit diverse bronnen, met inbegrip van veelvoudige marketing kanalen en organisatorische systemen te consolideren. Deze verenigde mening laat een uitvoerig inzicht in klantenrekeningen toe, die B2B marketing campagnes verbeteren. De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-Time CDP B2B-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
 
 Met toegang tot SQL die uw inzichten drijft, kunt u beter uw B2B gegevens begrijpen en uw eigen hoogst aangepaste herbruikbare inzichten produceren om uw informatie van de klantenrekening verder te onderzoeken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Profielen van de Rekening ](../guides/account-profiles.md) of a [ douanedashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
+De volgende inzichten zijn allen beschikbaar voor u als deel van het [&#x200B; dashboard van Profielen van de Rekening &#x200B;](../guides/account-profiles.md) of a [&#x200B; douanedashboard &#x200B;](../standard-dashboards.md) te gebruiken. Zie het [&#x200B; aanpassingsoverzicht &#x200B;](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [&#x200B; creeer en geef nieuwe widgets &#x200B;](../customize/custom-widgets.md) in de widgetbibliotheek en [&#x200B; user-defined dashboard &#x200B;](../standard-dashboards.md#create-widget) uit.
 
 ## Accountprofielen toegevoegd {#account-profiles-added}
 
@@ -506,6 +506,6 @@ ORDER BY CASE opportunity_ranges.opportunity_range
 
 ## Volgende stappen
 
-Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten van het accountprofiel produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren. Verwijs naar het [ Pro overzicht van de Wijze van de Vraag ](../sql-insights-query-pro-mode/overview.md) om te leren hoe te om douaneinzichten met SQL te produceren.
+Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten van het accountprofiel produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren. Verwijs naar het [&#x200B; Pro overzicht van de Wijze van de Vraag &#x200B;](../sql-insights-query-pro-mode/overview.md) om te leren hoe te om douaneinzichten met SQL te produceren.
 
-U kunt SQL ook lezen en begrijpen die inzichten voor de [ Profielen ](./profiles.md), [ Soorten publiek ](./audiences.md), en [ Doelen ](./destinations.md) dashboards van Doelen produceert.
+U kunt SQL ook lezen en begrijpen die inzichten voor de [&#x200B; Profielen &#x200B;](./profiles.md), [&#x200B; Soorten publiek &#x200B;](./audiences.md), en [&#x200B; Doelen &#x200B;](./destinations.md) dashboards van Doelen produceert.

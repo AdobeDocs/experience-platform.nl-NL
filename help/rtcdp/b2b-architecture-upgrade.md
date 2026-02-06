@@ -37,7 +37,7 @@ Met deze upgrade kunt u nu:
 * Schakel marketing- en operatieteams in om het lidmaatschap van het accountpubliek rechtstreeks te valideren.
 * Benader de pariteit tussen uw profiel (persoon) en de modellen van de rekeningssegmentatie van de rekening, die verenigbare ervaring over entiteiten verzekeren.
 
-Lees de documentatie over [ rekeningspubliek ](../segmentation/types/account-audiences.md) voor meer informatie.
+Lees de documentatie over [&#x200B; rekeningspubliek &#x200B;](../segmentation/types/account-audiences.md) voor meer informatie.
 
 ### Aantallen van het publiek voor soorten publiek die B2B-entiteiten omvatten
 
@@ -49,7 +49,7 @@ Met deze upgrade kunt u nu:
 * Ontwerp op betrouwbare wijze complexe B2B-doelgroepen, met kennis van nauwkeurigere publieksschattingen.
 * Verbeter een slimmere campagneplanning, nauwkeurigere gerichtheid, en betere middelentoewijzing.
 
-Lees de documentatie over [ rekeningspubliek ](../segmentation/types/account-audiences.md) voor meer informatie.
+Lees de documentatie over [&#x200B; rekeningspubliek &#x200B;](../segmentation/types/account-audiences.md) voor meer informatie.
 
 ## Verbeteringen aan bestaande functies
 
@@ -59,7 +59,7 @@ De volgende functies zijn bijgewerkt als onderdeel van de B2B-architectuurupgrad
 
 Als onderdeel van de nieuwe architectuurupgrade kunnen de filters van de Gebeurtenis van de Ervaring niet meer binnen één enkele multi-entiteitspubliek worden gebruikt dat B2B attributen omvat.
 
-Om de zelfde publiekslogica te bereiken, kunt u de segmentbouwer gebruiken om [ publiek en verwijzingspubliek ](../segmentation/ui/segment-builder.md#adding-audiences) toe te voegen
+Om de zelfde publiekslogica te bereiken, kunt u de segmentbouwer gebruiken om [&#x200B; publiek en verwijzingspubliek &#x200B;](../segmentation/ui/segment-builder.md#adding-audiences) toe te voegen
 
 Bijvoorbeeld:
 
@@ -68,7 +68,7 @@ Bijvoorbeeld:
 * Maak een publiek met meerdere entiteiten met B2B-kenmerken.
    * Van hieruit kunt u het publiek van de Gebeurtenis van de Ervaring als deel van de criteria van dit publiek van verwijzingen voorzien. Bijvoorbeeld: &quot;Mensen die a **&quot;Beslissingsmaker&quot;** van om het even welke kans zijn waar de rekening in de **&quot;Financiën&quot;** industrie en lid van het mensen publiek is die de het tarief pagina in de laatste drie dagen bezochten.
 
-Zodra de verbetering volledig is, moet om het even welk nieuw multi-entiteitpubliek met attributen B2B en de Gebeurtenissen van de Ervaring worden gecreeerd gebruikend de [ segment-van-segment ](../segmentation/methods/edge-segmentation.md#edge-segmentation-query-types) benadering.
+Zodra de verbetering volledig is, moet om het even welk nieuw multi-entiteitpubliek met attributen B2B en de Gebeurtenissen van de Ervaring worden gecreeerd gebruikend de [&#x200B; segment-van-segment &#x200B;](../segmentation/methods/edge-segmentation.md#edge-segmentation-query-types) benadering.
 
 >[!TIP]
 >
@@ -92,13 +92,13 @@ Met deze upgrade kunt u nu:
 * Gebruik de API&#39;s van [!DNL Profile Access] om de meest recente samenvoegprofielen weer te geven zodra de taken voor de dagelijkse entiteitsresolutie zijn voltooid.
 * Gebruik de verbeterde nauwkeurigheid en consistentie van uw account en opportuniteitsgegevens voor segmentatie, activering en analyse.
 
-Lees [[!DNL Profile Access]  API ](../profile/api/entities.md) voor meer informatie.
+Lees [[!DNL Profile Access]  API &#x200B;](../profile/api/entities.md) voor meer informatie.
 
 ### Ondersteuning van samenvoegingsbeleid in het B2B-publiek met meerdere entiteiten
 
 Het publiek van meerdere entiteiten met B2B-attributen steunt nu één enkel fusiebeleid - het standaardfusiebeleid dat u vormt - in plaats van veelvoudige fusiebeleid.
 
-Lees de [ handleiding van het de gebruikscase van de segmentatie voor Real-Time CDP B2B edition ](./segmentation/b2b.md) voor meer informatie.
+Lees de [&#x200B; handleiding van het de gebruikscase van de segmentatie voor Real-Time CDP B2B edition &#x200B;](./segmentation/b2b.md) voor meer informatie.
 
 ### Opzoeken en verwijderen van B2B-tekeneenheden in de API van [!DNL Profile Access]
 
@@ -122,7 +122,7 @@ Verzoeken voor de volgende B2B-entiteiten die de API [!DNL Profile Access] gebru
 * Marketinglijst
 * Leden van de marketinglijst
 
-Lees [[!DNL Profile Access]  API ](../profile/api/entities.md) voor meer informatie.
+Lees [[!DNL Profile Access]  API &#x200B;](../profile/api/entities.md) voor meer informatie.
 
 ### Verplaatsing van API voor segmenttaak
 
@@ -153,4 +153,4 @@ Met de architectuurupgrades kunt u geen publiek met meerdere entiteiten meer imp
 
 Ontwikkelingssandboxen worden opgewaardeerd naar de nieuwe architectuur. De soorten publiek die automatisch kunnen worden bijgewerkt, worden bijgewerkt; de soorten die niet kunnen worden uitgeschakeld. Uitgeschakelde doelgroepen moeten na de upgrade opnieuw worden gemaakt.
 
-Lees de [ zandbak tooling gids ](../sandboxes/ui/sandbox-tooling.md) voor meer informatie.
+Lees de [&#x200B; zandbak tooling gids &#x200B;](../sandboxes/ui/sandbox-tooling.md) voor meer informatie.

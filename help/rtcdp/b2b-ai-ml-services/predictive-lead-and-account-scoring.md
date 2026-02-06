@@ -86,7 +86,7 @@ De gegevenskwaliteitseisen zijn als volgt:
 
 De het scoren banen worden in werking gesteld dagelijks en de resultaten worden bewaard als profiel en rekeningsattributen, die dan in segmentdefinities en verpersoonlijking kunnen worden gebruikt. Inzichten van de out-of-the-box analyse zijn ook beschikbaar op het accountoverzichtdashboard.
 
-Zie de documentatie voor meer informatie over hoe te [ voorspelbare lood en rekening het sorteren ](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) dienst beheren.
+Zie de documentatie voor meer informatie over hoe te [&#x200B; voorspelbare lood en rekening het sorteren &#x200B;](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) dienst beheren.
 
 ## Voorspelende resultaten voor leads en accounts weergeven {#how-to-view}
 
@@ -106,15 +106,15 @@ Als u de voorspellende scores voor een personenprofiel wilt weergeven, selecteer
 
 Selecteer vervolgens het profiel in de lijst.
 
-![ profiel van de Klant ](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
+![&#x200B; profiel van de Klant &#x200B;](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
 De pagina **[!UICONTROL Detail]** bevat nu de voorspellende scores. Klik op het diagrampictogram naast de voorspellende score.
 
-![ het profielvoorspellende score van de Klant ](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+![&#x200B; het profielvoorspellende score van de Klant &#x200B;](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
 Een popup dialoog toont de score, de algemene scoreverdeling, de hoogste invloedrijke factoren voor deze score, en de definitie van het scoredoel.
 
-![ het profielvoorspellende score van de Klant details ](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
+![&#x200B; het profielvoorspellende score van de Klant details &#x200B;](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
 
 ## Het controleren van voorspellende lood en rekenschap het scoren banen {#monitoring-jobs}
 
@@ -124,4 +124,4 @@ U kunt de standaardmetriek en de dagelijkse baan-in werking gestelde status door
 * Volgende scoretaak (datum)
 * Volgende trainingsbaan (datum)
 
-Voor meer informatie, zie de documentatie over [ controletaken voor vooruitlopende lood en rekening het scoren ](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Voor meer informatie, zie de documentatie over [&#x200B; controletaken voor vooruitlopende lood en rekening het scoren &#x200B;](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

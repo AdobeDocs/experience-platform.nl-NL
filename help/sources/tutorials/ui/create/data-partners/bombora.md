@@ -17,13 +17,13 @@ Lees deze handleiding voor informatie over hoe u uw [!DNL Bombora Intent] -accou
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Real-Time CDP B2B edition ](../../../../../rtcdp/b2b-overview.md): Real-Time CDP B2B edition is speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen in dienst te nemen.
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Real-Time CDP B2B edition &#x200B;](../../../../../rtcdp/b2b-overview.md): Real-Time CDP B2B edition is speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen in dienst te nemen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Vereisten
 
-Lees het [[!DNL Bombora Intent]  overzicht ](../../../../connectors/data-partners/bombora.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
+Lees het [[!DNL Bombora Intent]  overzicht &#x200B;](../../../../connectors/data-partners/bombora.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
 
 ## Navigeren door de catalogus met bronnen
 
@@ -35,7 +35,7 @@ Als u [!DNL Bombora] wilt gebruiken, selecteert u de **[!UICONTROL Bombora Inten
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus met &quot;Bombora Intent&quot;geselecteerde kaart.](../../../../images/tutorials/create/bombora/catalog.png)
+![&#x200B; de broncatalogus met &quot;Bombora Intent&quot;geselecteerde kaart.](../../../../images/tutorials/create/bombora/catalog.png)
 
 ## Verificatie {#authentication}
 
@@ -45,7 +45,7 @@ Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing 
 
 Nadat u uw account hebt geselecteerd, selecteert u **[!UICONTROL Next]** om door te gaan naar de volgende stap.
 
-![ de bestaande rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/bombora/existing.png)
+![&#x200B; de bestaande rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/bombora/existing.png)
 
 ### Een nieuwe account maken {#create}
 
@@ -57,7 +57,7 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 * **Geheime toegangstoets**: Uw [!DNL Bombora] geheime toegangstoets. Dit is een tekenreeks van 40 tekens met een basiscodering van 64 tekens die vereist is om uw account bij Experience Platform te verifiëren.
 * **naam van het Emmertje**: Uw [!DNL Bombora] emmertje waarvan de gegevens zullen worden getrokken.
 
-![ de nieuwe rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/bombora/new.png)
+![&#x200B; de nieuwe rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/bombora/new.png)
 
 ## Gegevens over gegevensstroom opgeven {#provide-dataflow-details}
 
@@ -67,7 +67,7 @@ Nadat uw account is geverifieerd en verbinding heeft gemaakt, moet u nu de volge
 * **Beschrijving**: (Facultatief) een korte verklaring of extra informatie voor uw dataflow.
 * **bron van het Domein**: Het domein of websitegebied dat uw bronrekeningsverslagen tegen de rekeningen van Experience Platform aanpast. Deze waarde kan afhankelijk zijn van uw configuraties. Indien niet opgegeven, wordt voor het domein standaard accountOrganization.website gebruikt.
 
-![ de dataflow detailinterface van het bronwerkschema.](../../../../images/tutorials/create/bombora/dataflow-detail.png)
+![&#x200B; de dataflow detailinterface van het bronwerkschema.](../../../../images/tutorials/create/bombora/dataflow-detail.png)
 
 ## Dataflow plannen {#schedule-dataflow}
 
@@ -79,7 +79,7 @@ Daarna, gebruik de het plannen interface om een innameprogramma voor uw dataflow
 
 Selecteer **[!UICONTROL Next]** als u het schema voor inname van de gegevensstroom hebt geconfigureerd.
 
-![ De het plannen interface van het bronwerkschema.](../../../../images/tutorials/create/bombora/scheduling.png)
+![&#x200B; De het plannen interface van het bronwerkschema.](../../../../images/tutorials/create/bombora/scheduling.png)
 
 ## Gegevensstroom controleren {#review-dataflow}
 
@@ -90,7 +90,7 @@ De laatste stap in het proces voor het maken van een gegevensstroom is het contr
 
 Nadat u de gegevensstroom hebt gecontroleerd, selecteert u **[!UICONTROL Finish]** .
 
-![ de overzichtsinterface van het bronwerkschema.](../../../../images/tutorials/create/bombora/review.png)
+![&#x200B; de overzichtsinterface van het bronwerkschema.](../../../../images/tutorials/create/bombora/review.png)
 
 ## Volgende stappen
 
@@ -98,12 +98,12 @@ Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om intentgegev
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [ controlerekeningen en dataflows in UI ](../../../../../dataflows/ui/monitor-sources.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [&#x200B; controlerekeningen en dataflows in UI &#x200B;](../../../../../dataflows/ui/monitor-sources.md).
 
 ### Uw gegevensstroom bijwerken
 
-Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [ bijwerken brondataflows in UI ](../../update-dataflows.md).
+Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [&#x200B; bijwerken brondataflows in UI &#x200B;](../../update-dataflows.md).
 
 ### Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [ het schrappen van dataflows in UI ](../../delete.md).
+U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [&#x200B; het schrappen van dataflows in UI &#x200B;](../../delete.md).
