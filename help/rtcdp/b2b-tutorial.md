@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Aan de slag met Real-Time Customer Data Platform B2B edition
 description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: ed655be7ad274c06deea1e50001c28c58f68796e
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1158'
 ht-degree: 0%
 
 ---
@@ -36,17 +36,17 @@ Als onderdeel van de eerste installatie moet de IT-afdeling van Bodea een XDM-sc
 >
 >U moet de innamepatronen volgen, zoals beschreven in de documentatie bij relevante bronnen waarnaar u in deze zelfstudie verwijst. Andere kaartmethoden in het veld werken niet gegarandeerd.
 
-Met Adobe Experience Platform kunt u automatisch de schema&#39;s en naamruimten genereren die vereist zijn voor B2B-gegevensbronnen. Dit hulpmiddel zorgt ervoor dat de gecreeerde schema&#39;s de gegevens op een gestructureerde herbruikbare manier beschrijven. Volg [&#x200B; B2B namespaces en schema auto-generatie hulpdocumentatie &#x200B;](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) voor een volledige verwijzing naar het opstellingsproces.
+Met Adobe Experience Platform kunt u automatisch de schema&#39;s en naamruimten genereren die vereist zijn voor B2B-gegevensbronnen. Dit hulpmiddel zorgt ervoor dat de gecreeerde schema&#39;s de gegevens op een gestructureerde herbruikbare manier beschrijven. Volg [ B2B namespaces en schema auto-generatie hulpdocumentatie ](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) voor een volledige verwijzing naar het opstellingsproces.
 
 In de gebruikersinterface van Adobe Experience Platform selecteert de Bodea-markering **[!UICONTROL Schemas]** in de linkertrack, gevolgd door de tab **[!UICONTROL Browse]** . Aangezien zij het auto-generatienut gebruikten, verschijnen de nieuwe lege schema&#39;s in de lijst en allen hebben een prefix van &quot;B2B&quot;.
 
-![&#x200B; de werkruimte van het Schema doorbladert lusje &#x200B;](./assets/b2b-tutorial/empty-b2b-schemas.png)
+![ de werkruimte van het Schema doorbladert lusje ](./assets/b2b-tutorial/empty-b2b-schemas.png)
 
-Het auto-generatienut bepaalde de structuur van het gegevensmodel voor de schema&#39;s gebruikend standaard klassen XDM B2B (zoals [&#x200B; XDM BedrijfsRekening &#x200B;](../xdm/classes/b2b/business-account.md) en [&#x200B; XDM BedrijfsKans &#x200B;](../xdm/classes/b2b/business-opportunity.md)) die fundamentele B2B gegevensentiteiten vangen. Bovendien hebben de automatisch gegenereerde B2B-schema&#39;s die op deze klassen zijn gebaseerd, vooraf ingestelde relaties die geavanceerde gevallen van segmentatiegebruik mogelijk maken. Eventuele extra veldgroepen die voor de gegevensstructuur nodig zijn, kunt u hier eenvoudig via de gebruikersinterface maken. Zie de [&#x200B; gids XDM UI, die gebiedsgroepen aan een schemacgedeelte &#x200B;](../xdm/ui/resources/schemas.md#add-field-groups) voor meer informatie toevoegt.
+Het auto-generatienut bepaalde de structuur van het gegevensmodel voor de schema&#39;s gebruikend standaard klassen XDM B2B (zoals [ XDM BedrijfsRekening ](../xdm/classes/b2b/business-account.md) en [ XDM BedrijfsKans ](../xdm/classes/b2b/business-opportunity.md)) die fundamentele B2B gegevensentiteiten vangen. Bovendien hebben de automatisch gegenereerde B2B-schema&#39;s die op deze klassen zijn gebaseerd, vooraf ingestelde relaties die geavanceerde gevallen van segmentatiegebruik mogelijk maken. Eventuele extra veldgroepen die voor de gegevensstructuur nodig zijn, kunt u hier eenvoudig via de gebruikersinterface maken. Zie de [ gids XDM UI, die gebiedsgroepen aan een schemacgedeelte ](../xdm/ui/resources/schemas.md#add-field-groups) voor meer informatie toevoegt.
 
 >[!NOTE]
 > 
->Als u niet het auto-generatornut gebruikt of een nieuwe verhouding zou moeten worden gecreeerd, zie het leerprogramma op [&#x200B; creërend verhoudingen tussen schema&#39;s B2B &#x200B;](../xdm/tutorials/relationship-b2b.md).
+>Als u niet het auto-generatornut gebruikt of een nieuwe verhouding zou moeten worden gecreeerd, zie het leerprogramma op [ creërend verhoudingen tussen schema&#39;s B2B ](../xdm/tutorials/relationship-b2b.md).
 
 In realtime klantprofiel worden gegevens uit verschillende bronnen samengevoegd om geconsolideerde profielen van belangrijke B2B-entiteiten te maken. Aangezien de profielen worden geproduceerd gebaseerd op één enkele klasse, plaatst het auto-generatienut omhoog verhoudingen tussen schema&#39;s die op gemeenschappelijke bedrijfsgebruikscenario&#39;s worden gebaseerd. Dientengevolge, is het team van Bodea nu bereid om gegevens in te voeren die op hun B2B schema&#39;s worden gebaseerd.
 
@@ -54,19 +54,19 @@ In realtime klantprofiel worden gegevens uit verschillende bronnen samengevoegd 
 > 
 >Standaard identiteitsnaamruimten, primaire sleutels, en verhoudingen die voor de schema&#39;s door het auto-generatienut worden gecreeerd zijn gemakkelijk te ontdekken binnen de werkruimte van het Schema.
 >
->![&#x200B; standaardschemaidentiteit en verhoudingUI vertoning &#x200B;](./assets/b2b-tutorial/schema-identity-relationship.png)
+>![ standaardschemaidentiteit en verhoudingUI vertoning ](./assets/b2b-tutorial/schema-identity-relationship.png)
 
 ## Gegevens in Experience Platform plaatsen
 
-Daarna, gebruikt de telleraar Bodea a a [&#x200B; bronschakelaar &#x200B;](../sources/home.md) om gegevens in Experience Platform voor gebruik in stroomafwaartse diensten in te voeren. U kunt ook gegevens invoeren met een van de goedgekeurde bronnen voor Real-Time CDP B2B edition.
+Daarna, gebruikt de telleraar Bodea a a [ bronschakelaar ](../sources/home.md) om gegevens in Experience Platform voor gebruik in stroomafwaartse diensten in te voeren. U kunt ook gegevens invoeren met een van de goedgekeurde bronnen voor Real-Time CDP B2B edition.
 
 >[!NOTE]
 > 
 >Om te leren welke bronschakelaars aan uw organisatie beschikbaar zijn, kunt u de broncatalogus in Experience Platform UI bekijken. Om tot de catalogus toegang te hebben, selecteer **Bronnen** in de linkernavigatie, dan uitgezochte **Catalogus**.
 
-Als u een verbinding wilt maken tussen een bronaccount en Experience Platform, moet u verificatiegegevens verkrijgen. Voor gedetailleerde instructies bij het verkrijgen van authentificatiegeloofsbrieven voor elk type van bron, verwijs naar het [&#x200B; overzicht van bronnen &#x200B;](../sources/home.md).
+Als u een verbinding wilt maken tussen een bronaccount en Experience Platform, moet u verificatiegegevens verkrijgen. Voor gedetailleerde instructies bij het verkrijgen van authentificatiegeloofsbrieven voor elk type van bron, verwijs naar het [ overzicht van bronnen ](../sources/home.md).
 
-Na het verkrijgen van autorisatiegegevens maakt de Bodea-markeerteken een verbinding tussen de bronaccount en hun Experience Platform-organisatie. Zie de [&#x200B; brondocumentatie &#x200B;](../sources/home.md) voor meer informatie bij vestiging een bronverbinding.
+Na het verkrijgen van autorisatiegegevens maakt de Bodea-markeerteken een verbinding tussen de bronaccount en hun Experience Platform-organisatie. Zie de [ brondocumentatie ](../sources/home.md) voor meer informatie bij vestiging een bronverbinding.
 
 De bronschakelaar verstrekt een auto-toewijzingseigenschap om het proces te maken om al uw gegevensgebieden aan die van de pas gecreëerde schema&#39;s in kaart te brengen veel gemakkelijker.
 
@@ -82,11 +82,11 @@ De volgende taak is om een publiek voor de nieuwe e-mailmarketing campagne van B
 
 In dit voorbeeld vindt het publiek alle mensen die in de verkoopafdeling werken en zijn verwant aan om het even welke rekening die minstens één open kans heeft. Voor dit soort publiek is een koppeling vereist tussen de XDM-klasse Individual Profile, de XDM-klasse Business Account en de XDM-klasse Business Opportunity.
 
-![&#x200B; gevalsegment van het Gebruik &#x200B;](./assets/b2b-tutorial/use-case-segment.png)
+![ gevalsegment van het Gebruik ](./assets/b2b-tutorial/use-case-segment.png)
 
 >[!NOTE]
 > 
->Voor instructies op hoe te om publiek tot stand te brengen om uw gegevens te evalueren zie de [&#x200B; gids UI van de Bouwer van het Segment &#x200B;](../segmentation/ui/segment-builder.md). Voor specifiekere B2B het gebruiksgevallen van de segmentatie, verwijs naar het [&#x200B; segmentatieoverzicht voor Real-Time CDP B2B edition &#x200B;](./segmentation/b2b.md).
+>Voor instructies op hoe te om publiek tot stand te brengen om uw gegevens te evalueren zie de [ gids UI van de Bouwer van het Segment ](../segmentation/ui/segment-builder.md). Voor specifiekere B2B het gebruiksgevallen van de segmentatie, verwijs naar het [ segmentatieoverzicht voor Real-Time CDP B2B edition ](./segmentation/b2b.md).
 
 De Bouwer van het Segment staat u toe om een verhandelbaar publiek van de gegevens van het Profiel van de Klant in real time tot stand te brengen en ramingen van uw prospectief publiek te bekijken die op de combinatie attributen, gebeurtenissen, en bestaand publiek worden gebaseerd u bepaalde.
 
@@ -96,13 +96,13 @@ Nadat het publiek is gemaakt, wordt een samenvatting weergegeven in de sectie [!
 
 In de [!UICONTROL Segments] -werkruimte van de gebruikersinterface van Experience Platform selecteert de Bodea-markering **[!UICONTROL Activate to destination]** .
 
-![&#x200B; activeer het publiek aan een bestemming &#x200B;](./assets/b2b-tutorial/activate-to-destination.png)
+![ activeer het publiek aan een bestemming ](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->Zie het leerprogramma op [&#x200B; activerend een publiek aan een bestemming &#x200B;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=nl-NL) voor uitvoerige stappen op hoe te om dit te verwezenlijken.
+>Zie het leerprogramma op [ activerend een publiek aan een bestemming ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) voor uitvoerige stappen op hoe te om dit te verwezenlijken.
 
-De Bodea-markeerteken activeert het publiek naar een bestemming, zodat ze publieksgegevens van Experience Platform naar hun marketingautomatiseringsplatform kunnen sturen. Lees de [&#x200B; catalogus van bestemmingen &#x200B;](../destinations/catalog/overview.md) voor meer informatie over beschikbare bestemmingen.
+De Bodea-markeerteken activeert het publiek naar een bestemming, zodat ze publieksgegevens van Experience Platform naar hun marketingautomatiseringsplatform kunnen sturen. Lees de [ catalogus van bestemmingen ](../destinations/catalog/overview.md) voor meer informatie over beschikbare bestemmingen.
 
 ## Volgende stappen
 

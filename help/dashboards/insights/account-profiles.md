@@ -1,33 +1,32 @@
 ---
 title: Accountprofielgegevens
 description: Ontdek SQL die uw inzicht van het Profiel van de Rekening en gebruik deze vragen aandrijft om douaneinzichten te produceren die uw klanten en hun ervaringen van de consument verder onderzoeken.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: null
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
 # Accountprofielinzichten
 
-[&#x200B; de profielen van de Rekening &#x200B;](../../rtcdp/accounts/account-profile-overview.md) worden gebruikt om rekeningsinformatie uit diverse bronnen, met inbegrip van veelvoudige marketing kanalen en organisatorische systemen te consolideren. Deze verenigde mening laat een uitvoerig inzicht in klantenrekeningen toe, die B2B marketing campagnes verbeteren. De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-Time CDP B2B-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
+[ de profielen van de Rekening ](../../rtcdp/accounts/account-profile-overview.md) worden gebruikt om rekeningsinformatie uit diverse bronnen, met inbegrip van veelvoudige marketing kanalen en organisatorische systemen te consolideren. Deze verenigde mening laat een uitvoerig inzicht in klantenrekeningen toe, die B2B marketing campagnes verbeteren. De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adobe Real-Time CDP B2B-gegevens toegankelijker, begrijpelijker en effectiever voor de besluitvorming.
 
 Met toegang tot SQL die uw inzichten drijft, kunt u beter uw B2B gegevens begrijpen en uw eigen hoogst aangepaste herbruikbare inzichten produceren om uw informatie van de klantenrekening verder te onderzoeken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-De volgende inzichten zijn allen beschikbaar voor u als deel van het [&#x200B; dashboard van Profielen van de Rekening &#x200B;](../guides/account-profiles.md) of a [&#x200B; douanedashboard &#x200B;](../standard-dashboards.md) te gebruiken. Zie het [&#x200B; aanpassingsoverzicht &#x200B;](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [&#x200B; creeer en geef nieuwe widgets &#x200B;](../customize/custom-widgets.md) in de widgetbibliotheek en [&#x200B; user-defined dashboard &#x200B;](../standard-dashboards.md#create-widget) uit.
+De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Profielen van de Rekening ](../guides/account-profiles.md) of a [ douanedashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
 
 ## Accountprofielen toegevoegd {#account-profiles-added}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel accountprofielen zijn in een bepaalde periode toegevoegd?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH accounts_by_mm_dd AS
@@ -49,11 +48,11 @@ ORDER BY date_key limit 5000;
 
 ## Nieuwe rekeningen van de industrie {#accounts-by-industry}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat zijn de vijf belangrijkste sectoren waar de accountprofielen bij horen?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH rankedindustries AS
@@ -85,11 +84,11 @@ ORDER BY total_accounts DESC limit 5000;
 
 ## Nieuwe accounts per type {#accounts-by-type}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is het aantal rekeningen per type?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT t.account_type,
@@ -108,11 +107,11 @@ LIMIT  5000;
 
 ## Opportuniteiten toegevoegd {#opportunities-added}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel kansen zijn er in een bepaalde periode toegevoegd?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT d.date_key,
@@ -131,11 +130,11 @@ LIMIT  5000;
 
 ## Nieuwe mogelijkheden per persoonlijke rol {#opportunities-by-person-role}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de relatieve omvang en het aantal van de verschillende rollen in een kans?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT p.person_role,
@@ -153,11 +152,11 @@ LIMIT  5000;
 
 ## Nieuwe mogelijkheden door inkomsten {#opportunities-by-revenue}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat zijn de top 20 van de mogelijkheden die hun inkomsten (in USD) bieden?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH ranked_opportunities AS
@@ -193,12 +192,12 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 ## Nieuwe mogelijkheden per status en podium {#opportunities-by-status-and-stage}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
-- Welke mogelijkheden zijn er en in welk stadium bevinden zich de verkoop- of handelsketens?
-- Welke gesloten mogelijkheden zijn er en in welk stadium bevinden de verkoop- of handelsketens zich?
+- Welke open mogelijkheden zijn er en in welk stadium bevinden zich de verkoop of de verkoop van funnel?
+- Welke gesloten mogelijkheden zijn er en in welk stadium van de verkoop of marketing van funnel?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH opportunities_by_isclosed AS
@@ -226,11 +225,11 @@ FROM   opportunities_by_isclosed limit 5000;
 
 ## Nieuwe kansen gewonnen {#opportunities-won}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is het aantal kansen dat met succes is gesloten of afgerond?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH opportunities_by_iswon AS
@@ -255,11 +254,11 @@ FROM   opportunities_by_iswon limit 5000;
 
 <!-- Q) Can we change this name? -->
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel kansen zijn er in een bepaalde periode met succes afgesloten of afgerond (gewonnen)?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH opportunities_won_counts AS
@@ -287,11 +286,11 @@ ORDER BY  d.date_key limit 5000;
 >
 >Het [!UICONTROL Customers per Account Overview] -diagram bevat drie doorboor-inzichten: [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] en [!UICONTROL Opportunities per Account Detail] . Deze boor-productie verstrekt meer korrelige inzichten, die klanten en opportuniteittellingen door categorieën (zoals directe en indirecte klanten) en waaiers (zoals klant en opportuniteitentellingen) verdelen. Deze grafieken worden niet beïnvloed door globale datumfilters u kunt plaatsen.
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de verdeling van de rekeningen op basis van de vraag of zij directe of indirecte klanten hebben?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
@@ -329,13 +328,13 @@ ORDER BY ac.Account_Category;
 
 >[!NOTE]
 >
->Dit inzicht wordt niet beïnvloed door globale datumfilters.
+>Deze insight wordt niet beïnvloed door globale datumfilters.
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel rekeningen hebben verschillende waaier van directe of indirecte klanten?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH customer_ranges AS (
@@ -403,13 +402,13 @@ ORDER BY cr.customer_type,
 
 >[!NOTE]
 >
->Dit inzicht wordt niet beïnvloed door globale datumfilters.
+>Deze insight wordt niet beïnvloed door globale datumfilters.
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de verdeling van de rekeningen op basis van de vraag of zij daaraan mogelijkheden hebben?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH LatestDate AS (
@@ -453,13 +452,13 @@ ORDER BY ac.Opportunity_Category;
 
 >[!NOTE]
 >
->Dit inzicht wordt niet beïnvloed door globale datumfilters.
+>Deze insight wordt niet beïnvloed door globale datumfilters.
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel rekeningen hebben verschillende waaier van bijbehorende kansen?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 WITH opportunity_ranges AS (
@@ -507,6 +506,6 @@ ORDER BY CASE opportunity_ranges.opportunity_range
 
 ## Volgende stappen
 
-Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten van het accountprofiel produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren. Verwijs naar het [&#x200B; Pro overzicht van de Wijze van de Vraag &#x200B;](../sql-insights-query-pro-mode/overview.md) om te leren hoe te om douaneinzichten met SQL te produceren.
+Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten van het accountprofiel produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt nu de SQL bewerken en doorlopen om uw eigen inzichten te genereren. Verwijs naar het [ Pro overzicht van de Wijze van de Vraag ](../sql-insights-query-pro-mode/overview.md) om te leren hoe te om douaneinzichten met SQL te produceren.
 
-U kunt SQL ook lezen en begrijpen die inzichten voor de [&#x200B; Profielen &#x200B;](./profiles.md), [&#x200B; Soorten publiek &#x200B;](./audiences.md), en [&#x200B; Doelen &#x200B;](./destinations.md) dashboards van Doelen produceert.
+U kunt SQL ook lezen en begrijpen die inzichten voor de [ Profielen ](./profiles.md), [ Soorten publiek ](./audiences.md), en [ Doelen ](./destinations.md) dashboards van Doelen produceert.

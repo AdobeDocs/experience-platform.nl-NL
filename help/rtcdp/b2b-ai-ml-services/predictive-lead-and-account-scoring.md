@@ -3,18 +3,18 @@ title: Voorspelende lead- en accountscoring in Real-Time CDP B2B
 type: Documentation
 description: Een overzicht en meer informatie over de voorspellende lood en rekeningseigenschap in Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
 
 # Voorspelende lead- en accountscoring in Real-Time CDP B2B
 
-B2B-marketers staan voor meerdere uitdagingen boven aan de marketingtrechter. Om doeltreffend te zijn, hebben B2B-marketers een geautomatiseerde manier nodig om het grote aantal mensen te kwalificeren, zodat zij zich kunnen richten op de doelstellingen met hoge waarde. De kwalificatie moet worden afgestemd op het uiteindelijke verkoopresultaat, en niet alleen op de marketingconversie.
+B2B-marketers staan voor meerdere uitdagingen boven aan de funnel voor marketing. Om doeltreffend te zijn, hebben B2B-marketers een geautomatiseerde manier nodig om het grote aantal mensen te kwalificeren, zodat zij zich kunnen richten op de doelstellingen met hoge waarde. De kwalificatie moet worden afgestemd op het uiteindelijke verkoopresultaat, en niet alleen op de marketingconversie.
 
 Rekeningen, zijn de uiteindelijke entiteiten die B2B producten en de diensten kopen. Om effectief te kunnen verkopen en verkopen, moeten B2B-marketers niet alleen weten hoe groot de kans is dat de persoon, maar ook de account, het product kan kopen.
 
@@ -52,7 +52,7 @@ Het algoritme houdt rekening met de volgende attributen en inputgegevens:
 
 >[!NOTE]
 > 
->Het algoritme inspecteert `sourceAccountKey.sourceKey` gebied in de Person:personComponents gebiedsgroep slechts.
+>Het algoritme inspecteert slechts `sourceAccountKey.sourceKey` gebied in de Person :personComponents gebiedsgroep.
 
 * Accountprofiel
 
@@ -86,7 +86,7 @@ De gegevenskwaliteitseisen zijn als volgt:
 
 De het scoren banen worden in werking gesteld dagelijks en de resultaten worden bewaard als profiel en rekeningsattributen, die dan in segmentdefinities en verpersoonlijking kunnen worden gebruikt. Inzichten van de out-of-the-box analyse zijn ook beschikbaar op het accountoverzichtdashboard.
 
-Zie de documentatie voor meer informatie over hoe te [&#x200B; voorspelbare lood en rekening het sorteren &#x200B;](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) dienst beheren.
+Zie de documentatie voor meer informatie over hoe te [ voorspelbare lood en rekening het sorteren ](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) dienst beheren.
 
 ## Voorspelende resultaten voor leads en accounts weergeven {#how-to-view}
 
@@ -106,15 +106,15 @@ Als u de voorspellende scores voor een personenprofiel wilt weergeven, selecteer
 
 Selecteer vervolgens het profiel in de lijst.
 
-![&#x200B; profiel van de Klant &#x200B;](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
+![ profiel van de Klant ](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
 De pagina **[!UICONTROL Detail]** bevat nu de voorspellende scores. Klik op het diagrampictogram naast de voorspellende score.
 
-![&#x200B; het profielvoorspellende score van de Klant &#x200B;](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+![ het profielvoorspellende score van de Klant ](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
 Een popup dialoog toont de score, de algemene scoreverdeling, de hoogste invloedrijke factoren voor deze score, en de definitie van het scoredoel.
 
-![&#x200B; het profielvoorspellende score van de Klant details &#x200B;](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
+![ het profielvoorspellende score van de Klant details ](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
 
 ## Het controleren van voorspellende lood en rekenschap het scoren banen {#monitoring-jobs}
 
@@ -124,4 +124,4 @@ U kunt de standaardmetriek en de dagelijkse baan-in werking gestelde status door
 * Volgende scoretaak (datum)
 * Volgende trainingsbaan (datum)
 
-Voor meer informatie, zie de documentatie over [&#x200B; controletaken voor vooruitlopende lood en rekening het scoren &#x200B;](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Voor meer informatie, zie de documentatie over [ controletaken voor vooruitlopende lood en rekening het scoren ](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

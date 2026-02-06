@@ -2,12 +2,10 @@
 title: Bombora-intentie
 description: Meer informatie over de Bombora Intent-bron op Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions newtab=true"
-badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1593'
 ht-degree: 0%
 
 ---
@@ -44,11 +42,11 @@ Lees de volgende secties voor de stappen die u in de eerste plaats moet uitvoere
 
 ### IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het nalaten om uw gebied-specifieke IP adressen aan uw lijst van gewenste personen toe te voegen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#x200B; IP pagina van de lijst van gewenste personen van het adres &#x200B;](../../ip-address-allow-list.md) voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het nalaten om uw gebied-specifieke IP adressen aan uw lijst van gewenste personen toe te voegen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [ IP pagina van de lijst van gewenste personen van het adres ](../../ip-address-allow-list.md) voor meer informatie.
 
 ### Machtigingen configureren voor Experience Platform
 
-U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Bombora] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [&#x200B; gids UI van de toegangscontrole &#x200B;](../../../access-control/abac/ui/permissions.md).
+U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Bombora] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/abac/ui/permissions.md).
 
 ### Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -58,7 +56,7 @@ Met de onderstaande beperkingen moet rekening worden gehouden bij de naamgeving 
 * De folder en de dossiernamen kunnen niet met een voorwaartse schuine streep (`/`) beëindigen. Indien beschikbaar wordt deze automatisch verwijderd.
 * De volgende gereserveerde URL-tekens moeten correct worden beschermd: `! ' ( ) ; @ & = + $ , % # [ ]`
 * De volgende tekens zijn niet toegestaan: `" \ / : | < > * ?` .
-* Ongeldige URL-padtekens zijn niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [&#x200B; RFC 2616, Sectie 2.2: BasisRegels &#x200B;](https://www.ietf.org/rfc/rfc2616.txt) en [&#x200B; RFC 3987 &#x200B;](https://www.ietf.org/rfc/rfc3987.txt).
+* Ongeldige URL-padtekens zijn niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
 * De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
 ### Vereiste referenties verzamelen
@@ -71,7 +69,7 @@ Met de onderstaande beperkingen moet rekening worden gehouden bij de naamgeving 
 | Geheim toegangssleutel | De sleutel voor toegang tot het [!DNL Bombora] -geheim. Dit is een tekenreeks van 40 tekens met een basiscodering van 64 tekens die vereist is om uw account bij Experience Platform te verifiëren. |
 | Naam van emmertje | Het [!DNL Bombora] emmertje waaruit gegevens worden opgehaald. |
 
-Voor meer informatie over deze geloofsbrieven, leest de [[!DNL Google Cloud Storage]  handleiding van de sleutels HMAC &#x200B;](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Voor stappen op hoe te om uw eigen toegangssleutel te produceren, lees de [&#x200B; in de eerste plaats vereiste gids in het  [!DNL Google Cloud Storage]  bronoverzicht &#x200B;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
+Voor meer informatie over deze geloofsbrieven, leest de [[!DNL Google Cloud Storage]  handleiding van de sleutels HMAC ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Voor stappen op hoe te om uw eigen toegangssleutel te produceren, lees de [ in de eerste plaats vereiste gids in het  [!DNL Google Cloud Storage]  bronoverzicht ](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 
 ## [!DNL Bombora] schema {#schema}
 
@@ -107,7 +105,7 @@ Het [!DNL Bombora] schema wordt genoemd **B2B Bombora Intent van de Rekening**. 
 
 ## Sluit uw [!DNL Bombora] -account aan op Experience Platform in de gebruikersinterface
 
-Zodra u uw in de eerste plaats vereiste opstelling hebt voltooid, lees het leerprogramma op [&#x200B; verbindend uw  [!DNL Bombora]  rekening met Experience Platform &#x200B;](../../tutorials/ui/create/data-partners/bombora.md) om uw integratie te beginnen.
+Zodra u uw in de eerste plaats vereiste opstelling hebt voltooid, lees het leerprogramma op [ verbindend uw  [!DNL Bombora]  rekening met Experience Platform ](../../tutorials/ui/create/data-partners/bombora.md) om uw integratie te beginnen.
 
 ## Veelgestelde vragen {#faq}
 
@@ -125,7 +123,7 @@ Ja, u moet een actief contract hebben met [!DNL Bombora] om hun intentgegevens b
 
 +++Antwoord
 
-U kunt op dit moment alleen standaard [!DNL Bombora] -velden gebruiken voor inname en activering. Om de lijst van gesteunde gebieden te bekijken, lees de [[!DNL Bombora]  schemagids &#x200B;](#schema) voor de details op gebiedsbeschikbaarheid.
+U kunt op dit moment alleen standaard [!DNL Bombora] -velden gebruiken voor inname en activering. Om de lijst van gesteunde gebieden te bekijken, lees de [[!DNL Bombora]  schemagids ](#schema) voor de details op gebiedsbeschikbaarheid.
 
 +++
 
@@ -141,7 +139,7 @@ Ja, u kunt ad-hocgegevens van [!DNL Bombora] invoeren. U kunt een nieuwe gegeven
 
 +++Antwoord
 
-Om intentgegevens te bevestigen en te bepalen welke intentsignalen met specifieke rekeningen verbonden zijn, gebruik [&#x200B; de Dienst van de Vraag van Adobe Experience Platform &#x200B;](../../../query-service/home.md) door AccountID.
+Om intentgegevens te bevestigen en te bepalen welke intentsignalen met specifieke rekeningen verbonden zijn, gebruik [ de Dienst van de Vraag van Adobe Experience Platform ](../../../query-service/home.md) door AccountID.
 
 +++
 
@@ -149,7 +147,7 @@ Om intentgegevens te bevestigen en te bepalen welke intentsignalen met specifiek
 
 +++Antwoord
 
-Voer een SQL vraag in [&#x200B; Dienst van de Vraag &#x200B;](../../../query-service/home.md) uit om naar intentgegevens te zoeken gebruikend de bedrijfsnaam of AccountID. Om alle intentgegevens voor een specifiek bedrijf te bekijken, kunt u een SQL vraag in de Dienst van de Vraag in werking stellen gebruikend de bedrijfsnaam of AccountID om alle bijbehorende intentsignalen te halen.
+Voer een SQL vraag in [ Dienst van de Vraag ](../../../query-service/home.md) uit om naar intentgegevens te zoeken gebruikend de bedrijfsnaam of AccountID. Om alle intentgegevens voor een specifiek bedrijf te bekijken, kunt u een SQL vraag in de Dienst van de Vraag in werking stellen gebruikend de bedrijfsnaam of AccountID om alle bijbehorende intentsignalen te halen.
 
 +++
 
@@ -169,7 +167,7 @@ De resolutie hangt af van de specifieke kwestie:
 
 +++Antwoord
 
-U moet [&#x200B; de dataset &#x200B;](../../../catalog/datasets/user-guide.md#delete-a-dataset) schrappen om intentgegevens in Experience Platform te schrappen.
+U moet [ de dataset ](../../../catalog/datasets/user-guide.md#delete-a-dataset) schrappen om intentgegevens in Experience Platform te schrappen.
 
 +++
 
@@ -205,6 +203,6 @@ Domeinovereenkomst in Experience Platform is gebaseerd op een exacte overeenkoms
 
 +++Antwoord
 
-De intentiegegevens kunnen in [&#x200B; Soorten van de Rekening &#x200B;](../../../segmentation/types/account-audiences.md) worden gebruikt om het richten, segmentatie, en verpersoonlijking te verbeteren. Door het hefboomwerkings intentiesignalen, kunnen de ondernemingen zich identificeren en met rekeningen in dienst nemen die hoge interesse in specifieke onderwerpen tonen, optimaliserend marketing en verkoopoutreach.
+De intentiegegevens kunnen in [ Soorten van de Rekening ](../../../segmentation/types/account-audiences.md) worden gebruikt om het richten, segmentatie, en verpersoonlijking te verbeteren. Door het hefboomwerkings intentiesignalen, kunnen de ondernemingen zich identificeren en met rekeningen in dienst nemen die hoge interesse in specifieke onderwerpen tonen, optimaliserend marketing en verkoopoutreach.
 
 +++
