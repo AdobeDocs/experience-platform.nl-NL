@@ -45,9 +45,9 @@ Bij de aankoop van Real-Time CDP heeft uw bedrijf de keuze uit drie versies, zoa
 
 Meer informatie over de functionaliteit die in de Prime- en Ultimate-lagen van alle onderstaande edities is opgenomen:
 
-* [&#x200B; Real-Time Customer Data Platform (B2C Edition - Prime en de Pakketten van Ultimate) &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [&#x200B; Real-Time Customer Data Platform (B2B edition - Prime en de Pakketten van Ultimate) &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
-* [&#x200B; Real-Time Customer Data Platform (B2P Uitgave - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Real-Time Customer Data Platform (B2C Edition - Prime en de Pakketten van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Real-Time Customer Data Platform (B2B edition - Prime en de Pakketten van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Real-Time Customer Data Platform (B2P Uitgave - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 
 ### Adobe Real-Time Customer Data Platform - Business-to-Consumer (B2C) Edition {#rtcdp-b2c}
 

@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;Real-Time Customer Data Platform;real-time platform voor kla
 title: Voorbeeld van gebruik van hoofdletters/kleine letters voor Real-Time Customer Data Platform B2B edition
 description: Dit voorbeeldscenario biedt een voorbeeld voor de configuratie van uw implementatie van Adobe Real-Time Customer Data Platform B2B Edition.
 feature: Get Started, Use Cases, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions" newtab=true
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt

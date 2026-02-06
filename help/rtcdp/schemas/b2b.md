@@ -2,7 +2,7 @@
 title: Schemas in Real-Time Customer Data Platform B2B edition
 description: Een overzicht van de rol van de schema's van het Gegevensmodel van de Ervaring (XDM) in Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, Data Management, Schemas
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions" newtab=true
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ Adobe Real-Time Customer Data Platform B2B edition verstrekt verscheidene standa
 
 >[!IMPORTANT]
 >
->B2B-schema&#39;s zijn beschikbaar voor gebruik in Experience Platform-toepassingen (bijvoorbeeld in [&#x200B; Customer Journey Analytics B2B edition &#x200B;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition) ). <br/> Nochtans, moet u toegang tot Real-Time CDP B2B edition hebben opdat (profielen in) B2B- schema&#39;s aan [&#x200B; in real time het Profiel van de Klant &#x200B;](../../profile/home.md) deelnemen.
+>B2B-schema&#39;s zijn beschikbaar voor gebruik in Experience Platform-toepassingen (bijvoorbeeld in [&#x200B; Customer Journey Analytics B2B edition &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition) ). <br/> Nochtans, moet u toegang tot Real-Time CDP B2B edition hebben opdat (profielen in) B2B- schema&#39;s aan [&#x200B; in real time het Profiel van de Klant &#x200B;](../../profile/home.md) deelnemen.
 
 De volgende standaardklassen zijn beschikbaar in Real-Time CDP B2B edition:
 

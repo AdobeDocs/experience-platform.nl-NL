@@ -2,7 +2,7 @@
 keywords: rtcdp b2b;b2b;account;accountprofiel;accountprofielen rtcdp;real-time platform voor klantgegevens;
 title: Accountprofielen in Real-Time CDP B2B edition
 description: Leer hoe u met Adobe Real-time Customer Data Platform B2B Edition accountgegevens uit meerdere bronnen kunt verenigen met accountprofielen.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions" newtab=true
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: a48196d369cec9e9927d9320475e06457e575691

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Real-Time CDP Insights-gegevensmodel B2B edition
 
-Het de gegevensmodel van Inzichten van Real-Time CDP voor B2B edition stelt de gegevensmodellen en SQL bloot die de inzichten voor [&#x200B; rekeningsprofielen &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) aandrijven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw B2B marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw dashboards worden gebruikt.
+Het de gegevensmodel van Inzichten van Real-Time CDP voor B2B edition stelt de gegevensmodellen en SQL bloot die de inzichten voor [&#x200B; rekeningsprofielen &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/rtcdp/account/account-profile-overview) aandrijven. U kunt deze SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw B2B marketing en belangrijkste het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen. Deze inzichten kunnen dan als douanewidgets voor uw dashboards worden gebruikt.
 
 >[!AVAILABILITY]
 >
