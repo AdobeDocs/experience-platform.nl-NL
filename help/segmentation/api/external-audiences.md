@@ -29,7 +29,7 @@ Vanaf de release van maart worden de volgende instructies afgedwongen wanneer he
 >
 >De eindpunten in deze handleiding worden voorafgegaan door `/core/ais` , in tegenstelling tot `/core/ups` .
 
-om Experience Platform APIs te gebruiken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) hebben voltooid. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+om Experience Platform APIs te gebruiken, moet u het [&#x200B; authentificatieleerprogramma &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) hebben voltooid. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 - Autorisatie: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -41,7 +41,7 @@ Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virt
 
 >[!NOTE]
 >
->Voor meer informatie bij het werken met zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakenoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie bij het werken met zandbakken in [!DNL Experience Platform], zie de [&#x200B; documentatie van het zandbakenoverzicht &#x200B;](../../sandboxes/home.md).
 
 ## Extern publiek maken {#create-audience}
 
@@ -107,14 +107,14 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | String | De naam voor het externe publiek. |
 | `description` | String | Een optionele beschrijving voor het externe publiek. |
 | `customAudienceId` | String | Een optionele id voor uw externe publiek. |
-| `fields` | Array van objecten | De lijst met velden en hun gegevenstypen. Wanneer u de lijst met velden maakt, kunt u de volgende items toevoegen: <ul><li>`name`: **Vereiste** de naam van het gebied dat deel van de externe publieksspecificatie uitmaakt.</li><li>`type`: **Vereiste** het type van gegevens dat in het gebied gaat. Tot de ondersteunde waarden behoren `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) en `boolean` .</li><li>`identityNs`: **Vereist voor identiteitsgebied** namespace die door het identiteitsgebied wordt gebruikt. Tot de ondersteunde waarden behoren alle geldige naamruimten, zoals `ECID` of `email` .</li><li>`labels`: *Facultatieve* een serie van toegangsbeheeretiketten voor het gebied. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [ verklarende woordenlijst van de de etiketten van het gegevensgebruik ](/help/data-governance/labels/reference.md) worden gevonden. </li></ul> |
-| `sourceSpec` | Object | Een object dat de informatie bevat waar het externe publiek zich bevindt. Wanneer het gebruiken van dit voorwerp, moet u **** de volgende informatie omvatten: <ul><li>`path`: **Vereist**: De plaats van het externe publiek of de omslag die het externe publiek binnen de bron bevat. De dossierweg **kan** geen ruimten bevatten. Als het pad bijvoorbeeld `activation/sample-source/Example CSV File.csv` is, stelt u het pad in op `activation/sample-source/ExampleCSVFile.csv` . U kunt de weg aan uw bron binnen de **gegevens van Source** kolom van de dataflows sectie vinden.</li><li>`type`: **Vereist** het type van het voorwerp u uit de bron terugwint. Deze waarde kan `file` of `folder` zijn.</li><li>`sourceType`: *Facultatieve* het type van bron u van terugwint. Momenteel is de enige ondersteunde waarde `Cloud Storage` .</li><li>`cloudType`: **Vereiste** het type van wolkenopslag, die van het brontype wordt gebaseerd. Tot de ondersteunde waarden behoren `S3`, `DLZ`, `GCS`, `Azure` en `SFTP` .</li><li>`baseConnectionId`: De id van de basisverbinding en wordt geleverd door uw bronprovider. Deze waarde wordt **vereist** als het gebruiken van een `cloudType` waarde van `S3`, `GCS`, of `SFTP`. Anders, te hoeven u **niet** om deze parameter te omvatten. Voor meer informatie, te lezen gelieve het [ overzicht van bronschakelaars ](../../sources/home.md).</li></ul> |
+| `fields` | Array van objecten | De lijst met velden en hun gegevenstypen. Wanneer u de lijst met velden maakt, kunt u de volgende items toevoegen: <ul><li>`name`: **Vereiste** de naam van het gebied dat deel van de externe publieksspecificatie uitmaakt.</li><li>`type`: **Vereiste** het type van gegevens dat in het gebied gaat. Tot de ondersteunde waarden behoren `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) en `boolean` .</li><li>`identityNs`: **Vereist voor identiteitsgebied** namespace die door het identiteitsgebied wordt gebruikt. Tot de ondersteunde waarden behoren alle geldige naamruimten, zoals `ECID` of `email` .</li><li>`labels`: *Facultatieve* een serie van toegangsbeheeretiketten voor het gebied. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [&#x200B; verklarende woordenlijst van de de etiketten van het gegevensgebruik &#x200B;](/help/data-governance/labels/reference.md) worden gevonden. </li></ul> |
+| `sourceSpec` | Object | Een object dat de informatie bevat waar het externe publiek zich bevindt. Wanneer het gebruiken van dit voorwerp, moet u **&#x200B;**&#x200B;de volgende informatie omvatten: <ul><li>`path`: **Vereist**: De plaats van het externe publiek of de omslag die het externe publiek binnen de bron bevat. De dossierweg **kan** geen ruimten bevatten. Als het pad bijvoorbeeld `activation/sample-source/Example CSV File.csv` is, stelt u het pad in op `activation/sample-source/ExampleCSVFile.csv` . U kunt de weg aan uw bron binnen de **gegevens van Source** kolom van de dataflows sectie vinden.</li><li>`type`: **Vereist** het type van het voorwerp u uit de bron terugwint. Deze waarde kan `file` of `folder` zijn.</li><li>`sourceType`: *Facultatieve* het type van bron u van terugwint. Momenteel is de enige ondersteunde waarde `Cloud Storage` .</li><li>`cloudType`: **Vereiste** het type van wolkenopslag, die van het brontype wordt gebaseerd. Tot de ondersteunde waarden behoren `S3`, `DLZ`, `GCS`, `Azure` en `SFTP` .</li><li>`baseConnectionId`: De id van de basisverbinding en wordt geleverd door uw bronprovider. Deze waarde wordt **vereist** als het gebruiken van een `cloudType` waarde van `S3`, `GCS`, of `SFTP`. Anders, te hoeven u **niet** om deze parameter te omvatten. Voor meer informatie, te lezen gelieve het [&#x200B; overzicht van bronschakelaars &#x200B;](../../sources/home.md).</li></ul> |
 | `ttlInDays` | Geheel | De gegevensvervaldatum voor het externe publiek, in dagen. Deze waarde kan van 1 tot 90 worden geplaatst. De gegevensvervaldatum wordt standaard ingesteld op 30 dagen. |
 | `audienceType` | String | Het publiekstype voor het externe publiek. Momenteel wordt alleen `people` ondersteund. |
 | `originName` | String | **Vereiste** de oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. Gebruik `CUSTOM_UPLOAD` voor externe doelgroepen. |
 | `namespace` | String | De naamruimte voor het publiek. Deze waarde wordt standaard ingesteld op `CustomerAudienceUpload` . |
-| `labels` | Array van tekenreeksen | De labels van het toegangsbeheer die op het externe publiek van toepassing zijn. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [ verklarende woordenlijst van de de etiketten van het gegevensgebruik ](/help/data-governance/labels/reference.md) worden gevonden. |
-| `tags` | Array van tekenreeksen | De tags die u wilt toepassen op het externe publiek. Meer informatie over markeringen kan in [ worden gevonden het leiden de gids van markeringen ](/help/administrative-tags/ui/managing-tags.md). |
+| `labels` | Array van tekenreeksen | De labels van het toegangsbeheer die op het externe publiek van toepassing zijn. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [&#x200B; verklarende woordenlijst van de de etiketten van het gegevensgebruik &#x200B;](/help/data-governance/labels/reference.md) worden gevonden. |
+| `tags` | Array van tekenreeksen | De tags die u wilt toepassen op het externe publiek. Meer informatie over markeringen kan in [&#x200B; worden gevonden het leiden de gids van markeringen &#x200B;](/help/administrative-tags/ui/managing-tags.md). |
 
 +++
 
@@ -178,7 +178,7 @@ Een geslaagde reactie retourneert HTTP-status 202 met details van het nieuwe ext
 | `audienceType` | String | Het publiekstype voor het externe publiek. |
 | `originName` | String | **Vereiste** de oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. |
 | `namespace` | String | De naamruimte voor het publiek. |
-| `labels` | Array van tekenreeksen | De labels van het toegangsbeheer die op het externe publiek van toepassing zijn. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [ verklarende woordenlijst van de de etiketten van het gegevensgebruik ](/help/data-governance/labels/reference.md) worden gevonden. |
+| `labels` | Array van tekenreeksen | De labels van het toegangsbeheer die op het externe publiek van toepassing zijn. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [&#x200B; verklarende woordenlijst van de de etiketten van het gegevensgebruik &#x200B;](/help/data-governance/labels/reference.md) worden gevonden. |
 
 
 +++
@@ -325,8 +325,8 @@ Bovendien kunt u de volgende parameters bijwerken:
 
 | Eigenschap | Type | Beschrijving |
 | -------- | ---- | ----------- |
-| `labels` | Array | Een array met de bijgewerkte lijst met toegangslabels voor het publiek. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [ verklarende woordenlijst van de de etiketten van het gegevensgebruik ](/help/data-governance/labels/reference.md) worden gevonden. |
-| `fields` | Array van objecten | Een array met de velden en de bijbehorende labels voor het externe publiek. Alleen de velden die in het PATCH-verzoek worden vermeld, worden bijgewerkt. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [ verklarende woordenlijst van de de etiketten van het gegevensgebruik ](/help/data-governance/labels/reference.md) worden gevonden. |
+| `labels` | Array | Een array met de bijgewerkte lijst met toegangslabels voor het publiek. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [&#x200B; verklarende woordenlijst van de de etiketten van het gegevensgebruik &#x200B;](/help/data-governance/labels/reference.md) worden gevonden. |
+| `fields` | Array van objecten | Een array met de velden en de bijbehorende labels voor het externe publiek. Alleen de velden die in het PATCH-verzoek worden vermeld, worden bijgewerkt. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [&#x200B; verklarende woordenlijst van de de etiketten van het gegevensgebruik &#x200B;](/help/data-governance/labels/reference.md) worden gevonden. |
 | `ttlInDays` | Geheel | De gegevensvervaldatum voor het externe publiek, in dagen. Deze waarde kan van 1 tot 90 worden geplaatst. |
 
 +++
@@ -385,7 +385,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van het bijgewerkt
 
 >[!IMPORTANT]
 >
->U zult **** niet een nieuwe opname voor het externe publiek kunnen beginnen als een vorige publieksinname reeds lopend is.
+>U zult **&#x200B;**&#x200B;niet een nieuwe opname voor het externe publiek kunnen beginnen als een vorige publieksinname reeds lopend is.
 
 >[!NOTE]
 >
@@ -623,7 +623,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van ingestitielo
 
 | Eigenschap | Type | Beschrijving |
 | -------- | ---- | ----------- |
-| `runs` | Object | Een voorwerp dat de lijst van ingestie looppas bevat die tot het publiek behoort. Meer informatie over dit voorwerp kan in [ worden gevonden wint sectie van de inspraakstatus ](#retrieve-ingestion-status) terug. |
+| `runs` | Object | Een voorwerp dat de lijst van ingestie looppas bevat die tot het publiek behoort. Meer informatie over dit voorwerp kan in [&#x200B; worden gevonden wint sectie van de inspraakstatus &#x200B;](#retrieve-ingestion-status) terug. |
 
 +++
 
@@ -663,7 +663,7 @@ Een geslaagde reactie retourneert HTTP status 204 met een lege response body.
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u uw externe publiek kunt maken, beheren en verwijderen met de Experience Platform API&#39;s. Leren hoe te om extern publiek met Experience Platform UI te gebruiken, te lezen gelieve de [ Poortdocumentatie van het Poort van het Publiek ](../ui/audience-portal.md).
+Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u uw externe publiek kunt maken, beheren en verwijderen met de Experience Platform API&#39;s. Leren hoe te om extern publiek met Experience Platform UI te gebruiken, te lezen gelieve de [&#x200B; Poortdocumentatie van het Poort van het Publiek &#x200B;](../ui/audience-portal.md).
 
 ## Bijlage {#appendix}
 
