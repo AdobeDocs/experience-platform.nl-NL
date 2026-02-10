@@ -1,11 +1,11 @@
 ---
 title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
-exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
+exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
+source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 22%
+source-wordcount: '1052'
+ht-degree: 35%
 
 ---
 
@@ -19,20 +19,22 @@ ht-degree: 22%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
->- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
-**Datum van de Versie: Januari 2026**
+**de datum van de Versie: Februari 2026**
 
 Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
 - [Agent Orchestrator](#agent-orchestrator)
+- [Waarschuwingen](#alerts)
+- [Dataverzameling](#data-collection)
 - [Bestemmingen](#destinations)
-- [Realtime-klantenprofiel](#real-time-customer-profile)
-- [Segmentatieservice](#segmentation-service)
+- [Experience Data Model (XDM)](#xdm)
+- [Queryservice](#query-service)
 - [Bronnen](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -43,11 +45,41 @@ Met Agent Orchestrator kunt u op AI gebaseerde agents maken en implementeren die
 
 | Functie | Beschrijving |
 | --- | --- |
-| Testbeweging voor Agent Orchestrator | Agent Orchestrator biedt nu een proefversie waarmee klanten de service kunnen verkennen en testen voordat ze een volledige aankoop doen. Met deze optie voor het begin van de aankoop kunnen organisaties in hun eigen omgeving de mogelijkheden van Agent Orchestrator evalueren, inclusief vaardigheden en functies voor het organiseren van projecten. De proef verstrekt hands-on ervaring met de bouw van AI-aangedreven agenten en het begrip hoe zij in bestaande werkschema&#39;s kunnen worden geïntegreerd. |
+| Data On-boarding Agent | Gebruik de Data On-boarding Agent om bronverbindingen te vormen, gegevenskwaliteit te bevestigen, semantische verrijking toe te passen, schema&#39;s te herzien en te bevestigen, en gegevensopname in werking te stellen. Volg stap voor stap werkschema&#39;s voor zowel B2C als B2B stromen, herzie verwachte output, en los gemeenschappelijke kwesties problemen op. |
+| Data Distiller Agent | Met de Data Distiller Agent kunt u SQL-taken maken vanuit de natuurlijke taal, SQL-prestaties optimaliseren, herstellen van SQL-fouten, SQL-taken plannen en beheren en de taakstatus controleren. Lees handleidingen, vereiste machtigingen en richtlijnen voor het oplossen van problemen om aan de slag te gaan. |
+| Gegevensverzamelingsagent | Gebruik de Agent van de Inzameling van Gegevens om in-context begeleiding voor complexe configuraties van de gegevensinzameling te krijgen en lijn, gebiedsdelen, en verhoudingen over uw voorwerpen van de gegevensinzameling door conversationele inzichten te onderzoeken. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+Voor meer informatie, zie de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Waarschuwingen {#alerts}
+
+Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende Experience Platform-activiteiten. U kunt zich aanmelden voor verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van Experience Platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| [!DNL Slack] integratie voor klantgerichte waarschuwingen | U kunt nu klantgerichte waarschuwingen naar [!DNL Slack] verzenden. Volg de stapsgewijze zelfstudie om de [!DNL Slack] -integratie in te stellen en waarschuwingsberichten rechtstreeks in uw [!DNL Slack] -werkruimte te ontvangen. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie raadpleegt u het [[!DNL Observability Insights] overzicht](../observability/home.md).
+
+## Dataverzameling {#data-collection}
+
+Adobe Experience Platform Data Collection verstrekt een reeks technologieën die u toestaan om cliënt-zijgegevens van de klantenervaring te verzamelen en het te verzenden naar Adobe Experience Platform Edge Network en andere bestemmingen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Extensiebeheer Adobe Platform Tags | Met de nieuwe Extension Management-functie kunt u de extensies van uw organisatie uploaden, verpakken en vrijgeven voor ontwikkeling, privédistributie en openbare distributie. Zoek naar gedeelde privé uitbreidingen naast uw eigen uitbreidingen in de top-level bedrijfmening. Deze functie ondersteunt web-, edge- en mobiele extensies. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie, lees de [ documentatie van de Inzameling van Gegevens ](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Bestemmingen {#destinations}
 
@@ -57,52 +89,40 @@ Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x20
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| Kevel-bestemmingsconnector nu beschikbaar | [[!DNL Kevel] &#x200B;](https://www.kevel.com/) verstrekt de AI-Toegelaten technologie en deskundige begeleiding die innovatieve handelsleiders helpen lanceren, schrapen, en slagen in handelsmedia. De Retail Media Cloud-bevoegdheden van [!DNL Kevel] zijn gericht op, aanpasbare en aanpasbare advertentievormen voor on-site en off-site reclame. |
-| De bestemmingsschakelaar van de Uitwisseling van de index nu beschikbaar | [!DNL Index] is een wereldwijd advertentieplatform dat media-eigenaars helpt de waarde van hun inhoud op elk scherm te maximaliseren. Met meer dan 20 jaar toonaangevend in de branche verbindt [!DNL Index] de grootste merken ter wereld met toonaangevende ervaren makers om hoogwaardige consumentenervaringen te bieden. |
-| Regionale steun voor eindpunten voor verbindingen van het type Braze | Alle [&#x200B; gebied-specifieke eindpunten &#x200B;](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) die door [!DNL Braze] worden gesteund zijn nu beschikbaar voor selectie tijdens de stroom van de bestemmingsconfiguratie. Vraag uw [!DNL Braze] vertegenwoordiger welke eindpuntinstantie u zou moeten gebruiken. |
-| Ondersteuning voor wekelijkse en maandelijkse planningen van Liveramp Onboarding | U kunt nu wekelijkse en maandelijkse exportschema&#39;s configureren voor de bestemming Liveramp aan boord. |
-| AES256 encryptiesteun voor Amazon S3 bestemmingen | U kunt nu AES256-codering configureren voor uw Amazon S3-export. |
-| Verbeterde activeringservaring voor de bestemmingen Trade Desk en Microsoft Bing | De handelsbureau en de bestemmingen van de Bing van Microsoft omvatten nu vooraf bepaalde verplichte afbeeldingen voor een geoptimaliseerde activeringservaring. |
-
-**Nieuwe of bijgewerkte functionaliteit**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Bijgewerkte guardraillimieten voor Adobe Target-bestemming | Het maximumaantal doelgroepen dat aan één Adobe Target-bestemming kan worden toegewezen, is verhoogd van 50 naar 250. Hierdoor wordt Adobe Target uitgelijnd op de standaardpubliekslimiet voor andere doelen, waardoor workflows voor publieksactivering flexibeler worden. U kunt nu meer soorten publiek activeren naar Adobe Target-doelen zonder dat u meerdere gegevensstromen hoeft te maken. |
-| [&#x200B; geeft bestemmingen &#x200B;](/help/destinations/ui/edit-destination.md) uit en [&#x200B; geeft marketing acties &#x200B;](/help/destinations/ui/edit-activation.md#edit-marketing-actions) algemene beschikbaarheid uit | De optie om bestemmingen en marketingacties te bewerken is nu beschikbaar voor alle gebruikers. |
-| Veldweergavenamen in-/uitschakelen in toewijzingsstap | Wanneer u schemavelden toewijst aan een doel, kunt u nu schakelen tussen het weergeven van de volledige XDM-veldnaam en het weergeven van alleen de weergavenaam. |
+| [!DNL ZoomInfo] Rekeningdoel | B2B CDP-gebruikers kunnen nu gegevens op accountniveau activeren naar [!DNL ZoomInfo] via de nieuwe [!DNL ZoomInfo] Account destination connector. Stel de connector in om uw accountpubliek naar [!DNL ZoomInfo] te sturen. |
+| [!DNL Snowflake] Batch algemeen beschikbaar | De batchbestemming [!DNL Snowflake] is verplaatst naar de algemene beschikbaarheid. U kunt nu de kolom van identiteitskaart van het fusiebeleid in uw uitgevoerde gegevens naast bestaande kolommen zoals timestamp, toewijzingsattributen, en publiekslidmaatschap bekijken. |
+| AES256 encryptiesteun voor [ Amazon S3 ](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) bestemmingen | U kunt nu AES256-codering configureren voor uw Amazon S3-export. Kies uit twee opties: <ul><li>**[!UICONTROL Default]**: Experience Platform codeert gegevens in rust met het standaardversleutelingsalgoritme dat op uw emmertje is ingesteld.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform voegt de header `s3:x-amz-server-side-encryption": "AES256` toe aan het exporteren en versleutelt gegevens in rust met het algoritme AES256 wanneer het land in S3. **Deze optie neemt belangrijkheid over om het even welk standaardencryptiealgoritme u op uw S3 emmertje** vormt.</li></ul> |
 
 {style="table-layout:auto"}
 
 Voor meer informatie leest u het [overzicht van bestemmingen](../destinations/home.md).
 
-## Real-Time Customer Profile {#real-time-customer-profile}
+## Experience Data Model (XDM) {#xdm}
 
-In real time het Profiel van de Klant laat u toe om een holistische mening van elke individuele klant te zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derdegegevens te combineren. Het profiel staat u toe om uw klantengegevens in een verenigde mening te consolideren die een actionable, timestamped rekening van elke klanteninteractie aanbiedt.
-
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Handhaving van streaming capaciteit | Experience Platform dwingt nu streamingdoorvoer af voor realtime klantprofiel en identiteitsservice. Wanneer klanten hun gecontracteerde streamingcapaciteit overschrijden, worden de gegevens in de wachtrij geplaatst en verwerkt op een first-in-first-out manier. Dit zorgt voor voorspelbare systeemprestaties en voorkomt dat capaciteitsschendingen van invloed zijn op de kwaliteit van gegevensinvoer. Belangrijke opmerkingen: streamingupserts zijn niet beschikbaar op het datumpigment wanneer de capaciteit wordt overschreden, deze handhaving geldt niet voor klanten met Adobe Journey Optimizer-licenties en gegevens in de wachtrij worden opeenvolgend verwerkt zodra de capaciteit beschikbaar is. |
-| Verouderde API-toegang voor Real-Time CDP Prime | API-toegang voor ervaringsgebeurtenissen is nu afgekeurd voor alle Real-Time CDP Prime-klanten. Deze wijziging is van invloed op de mogelijkheid om rechtstreeks via API query&#39;s uit te voeren op ervaringsgebeurtenissen. Real-Time CDP Ultimate-klanten kunnen een uitzondering aanvragen via een formeel uitzonderingsproces om toegang tot API-ervaringsgebeurtenissen mogelijk te maken als dat nodig is voor hun gebruiksscenario&#39;s. Deze afleiding helpt Real-Time CDP uit te lijnen met de licentiefunctionaliteit. |
-| Monitorgegevensstroom | U kunt de vooruitgang en de bereidheid van dataflow looppas in Profiel nu controleren. |
-
-{style="table-layout:auto"}
-
-Voor meer informatie raadpleegt u het [[!DNL Real-Time Customer Profile] overzicht](../profile/home.md).
-
-## Segmentatieservice {#segmentation-service}
-
-[!DNL Segmentation Service] definieert een specifieke subset van profielen door de criteria te beschrijven die een groep personen aan wie marketing kan worden aangeboden binnen uw klantenbestand onderscheiden. Doelgroepen kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
 **Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| TTL voor extern publiek vernieuwen | Externe doelgroepen (zoals CSV-uploads) ondersteunen nu een functie voor forceren vernieuwen voor instellingen voor tijd tot live (TTL). Met deze functie kunnen gebruikers de vervaldatum van de TTL handmatig vernieuwen voor externe doelgroepen, zodat ze meer controle hebben over het levenscyclusbeheer van de doelgroep. Dit is met name nuttig voor doelgroepen die na hun eerste TTL-periode moeten blijven of opnieuw moeten worden geactiveerd zonder de gegevens opnieuw te uploaden. |
+| Organisatie en zoekfunctie voor schema-inventarisatie | De bladerpagina van het schema omvat nu verbeterde onderzoek en het filtreren, gealigneerde acties, en steun voor user-defined markeringen en omslagen. Deze updates maken het gemakkelijker om schema&#39;s over sandboxen te vinden, te organiseren en te beheren terwijl het verminderen van handmatige navigatie en onderhoud. |
 
-Voor meer informatie raadpleegt u het [[!DNL Segmentation Service] overzicht](../segmentation/home.md).
+Lees voor meer informatie het [[!DNL Schemas] overzicht] (../xdm/home.md).
+
+## Query-service {#query-service}
+
+Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake]. U kunt willekeurige datasets van [!DNL Data Lake] combineren en de queryresultaten vastleggen als nieuwe dataset voor gebruik in rapportage, de werkruimte voor datawetenschappen, of voor opname in het Real-Time Customer Profile.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Data Distiller Annual compute reset date alignment (Limited Release) | De gegevens die Distiller jaarlijks verwerkt, worden nu opnieuw ingesteld op de inschrijvingsdatum van uw Data Distiller-contract, op basis van het tijdstip waarop de licentie werd aangeschaft of vernieuwd. Hierdoor wordt het gebruik van licenties afgestemd op de contractvoorwaarden en kan het zijn dat de gebruikswaarden eenmalig worden aangepast. |
+| Distiller-sessiebeheer voor gegevens (beperkte release) | Als geautoriseerde beheerder kunt u via de gebruikersinterface de actieve Query Service- en Data Distiller-sessies binnen uw organisatie en sandbox weergeven en beheren. Gebruik sessiebeheer om inactieve sessies te identificeren en te beëindigen om capaciteit vrij te maken. De ingebouwde waarborgen verhinderen u om zittingen met actieve vragen te beëindigen. De eigenschap registreert alle uitzettingsacties voor controle en brengt betrokken gebruikers op de hoogte. U hebt **nodig beheert de Zittingen van de Vraag** toestemming om tot deze eigenschap toegang te hebben. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie, lees het [ overzicht van de Dienst van de Vraag ](../query-service/home.md).
 
 ## Bronnen {#sources}
 
@@ -112,8 +132,8 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Bron | Beschrijving |
 | --- | --- |
-| [!DNL Oracle Eloqua] V2-bron | Er is nu een nieuwe [!DNL Oracle Eloqua] bronconnector beschikbaar, die de afgekeurde connector vervangt. Deze bijgewerkte connector biedt verbeterde functionaliteit en verbeterde betrouwbaarheid voor het opnemen van gegevens van [!DNL Oracle Eloqua] in Experience Platform. Klanten die de bestaande connector gebruiken, moeten migreren naar de nieuwe implementatie, omdat bestaande verbindingen niet meer werken. De nieuwe schakelaar steunt alle opstelling en configuratiestappen nodig om met [!DNL Oracle Eloqua] te verbinden en marketingautomatiseringsgegevens in te voeren. |
-| [!DNL Salesforce Marketing Cloud] V2-bron | Er is nu een nieuwe [!DNL Salesforce Marketing Cloud] bronconnector beschikbaar, die de afgekeurde connector vervangt. Deze bijgewerkte connector biedt betere prestaties en extra mogelijkheden voor het opnemen van gegevens van [!DNL Salesforce Marketing Cloud] in Experience Platform. De klanten die de bestaande schakelaar gebruiken zouden overgang aan de nieuwe implementatie moeten. De nieuwe connector bevat uitgebreide installatie-instructies voor het maken van verbinding met [!DNL Salesforce Marketing Cloud] en het invoeren van gegevens over marketingautomatisering. |
+| Ondersteuning voor Unity Catalog in [!DNL Databricks] bronconnector | De [!DNL Databricks] bronaansluiting ondersteunt nu de catalogus Eenheid. Lees de bijgewerkte [[!DNL Databricks]](../sources/connectors/databases/databricks.md) documentatie om te leren hoe te om de Catalogus van de Eenheid te gebruiken wanneer u uw bronverbinding vormt. |
+
+{style="table-layout:auto"}
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../sources/home.md).
-
