@@ -97,7 +97,7 @@ Zie [&#x200B; de wenken van de de agentencliënt van de Gebruiker &#x200B;](/hel
 
 ### One-time Analytics-referentie {#one-time-analytics-referrer}
 
-Het trefwoord `"oneTimeAnalyticsReferrer"` verzendt alleen een verwijzingswaarde naar Adobe Analytics bij de eerste aanroep van `sendEvent` zonder beslissing naar een pagina. Het primaire gebruiksgeval voor dit contextsleutelwoord moet de [&#x200B; dimensie van de Verwijzer &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) in Adobe Analytics verhinderen door klappen worden opgeblazen die hoofdzakelijk in Analytics en de integratie van het Doel worden gebruikt.
+Het trefwoord `"oneTimeAnalyticsReferrer"` verzendt alleen een verwijzingswaarde naar Adobe Analytics bij de eerste aanroep van `sendEvent` zonder beslissing naar een pagina. Het primaire gebruiksgeval voor dit contextsleutelwoord moet de [&#x200B; dimensie van de Verwijzer &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/components/dimensions/referrer) in Adobe Analytics verhinderen door klappen worden opgeblazen die hoofdzakelijk in Analytics en de integratie van het Doel worden gebruikt.
 
 Als een bepaalde opdracht `sendEvent` een gebeurtenistype voor beslissingen gebruikt ( `decisioning.propositionFetch` , `decisioning.propositionDisplay` , `decisioning.propositionInteract` ), wordt dit genegeerd bij het berekenen van de eerste `sendEvent` op een pagina. Als de verwijzende waarde op de pagina verandert en een andere `sendEvent` wordt teweeggebracht, wordt de nieuwe verwijzende waarde omvat in de lading. Met deze voorwaarde kan de functie worden gebruikt in toepassingen van één pagina.
 
