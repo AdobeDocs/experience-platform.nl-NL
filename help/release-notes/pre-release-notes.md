@@ -1,11 +1,11 @@
 ---
 title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
-exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
-source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
+source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 35%
+source-wordcount: '1050'
+ht-degree: 36%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 35%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
@@ -51,7 +51,7 @@ Met Agent Orchestrator kunt u op AI gebaseerde agents maken en implementeren die
 
 {style="table-layout:auto"}
 
-Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+Voor meer informatie, zie de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Waarschuwingen {#alerts}
 
@@ -79,7 +79,7 @@ Adobe Experience Platform Data Collection verstrekt een reeks technologieën die
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees de [&#x200B; documentatie van de Inzameling van Gegevens &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/collection/home).
+Voor meer informatie, lees de [ documentatie van de Inzameling van Gegevens ](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Bestemmingen {#destinations}
 
@@ -91,7 +91,7 @@ Voor meer informatie, lees de [&#x200B; documentatie van de Inzameling van Gegev
 | --- | --- |
 | [!DNL ZoomInfo] Rekeningdoel | B2B CDP-gebruikers kunnen nu gegevens op accountniveau activeren naar [!DNL ZoomInfo] via de nieuwe [!DNL ZoomInfo] Account destination connector. Stel de connector in om uw accountpubliek naar [!DNL ZoomInfo] te sturen. |
 | [!DNL Snowflake] Batch algemeen beschikbaar | De batchbestemming [!DNL Snowflake] is verplaatst naar de algemene beschikbaarheid. U kunt nu de kolom van identiteitskaart van het fusiebeleid in uw uitgevoerde gegevens naast bestaande kolommen zoals timestamp, toewijzingsattributen, en publiekslidmaatschap bekijken. |
-| AES256 encryptiesteun voor [&#x200B; Amazon S3 &#x200B;](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) bestemmingen | U kunt nu AES256-codering configureren voor uw Amazon S3-export. Kies uit twee opties: <ul><li>**[!UICONTROL Default]**: Experience Platform codeert gegevens in rust met het standaardversleutelingsalgoritme dat op uw emmertje is ingesteld.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform voegt de header `s3:x-amz-server-side-encryption": "AES256` toe aan het exporteren en versleutelt gegevens in rust met het algoritme AES256 wanneer het land in S3. **Deze optie neemt belangrijkheid over om het even welk standaardencryptiealgoritme u op uw S3 emmertje** vormt.</li></ul> |
+| AES256 encryptiesteun voor [ Amazon S3 ](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) bestemmingen | U kunt nu AES256-codering configureren voor uw Amazon S3-export. Kies uit twee opties: <ul><li>**[!UICONTROL Default]**: Experience Platform codeert gegevens in rust met het standaardversleutelingsalgoritme dat op uw emmertje is ingesteld.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform voegt de header `s3:x-amz-server-side-encryption": "AES256` toe aan het exporteren en versleutelt gegevens in rust met het algoritme AES256 wanneer het land in S3. **Deze optie neemt belangrijkheid over om het even welk standaardencryptiealgoritme u op uw S3 emmertje** vormt.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 | ------- | ----------- |
 | Organisatie en zoekfunctie voor schema-inventarisatie | De bladerpagina van het schema omvat nu verbeterde onderzoek en het filtreren, gealigneerde acties, en steun voor user-defined markeringen en omslagen. Deze updates maken het gemakkelijker om schema&#39;s over sandboxen te vinden, te organiseren en te beheren terwijl het verminderen van handmatige navigatie en onderhoud. |
 
-Lees voor meer informatie het [[!DNL Schemas] overzicht] (../xdm/home.md).
+Voor meer informatie raadpleegt u het [[!DNL XDM] overzicht](../xdm/home.md).
 
 ## Query-service {#query-service}
 
@@ -122,7 +122,7 @@ Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees het [&#x200B; overzicht van de Dienst van de Vraag &#x200B;](../query-service/home.md).
+Voor meer informatie, lees het [ overzicht van de Dienst van de Vraag ](../query-service/home.md).
 
 ## Bronnen {#sources}
 
