@@ -6,10 +6,10 @@ breadcrumb-title: Dataverzameling
 user-guide-description: Leer hoe u gegevens naar Adobe Experience Platform verzendt.
 feature: Data Collection
 role: Developer
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 15%
+source-wordcount: '142'
+ht-degree: 14%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 15%
    + [Aanvullende informatie](js/release-notes.md)
    + Installatie {#install}
       + [Installatieoverzicht](js/install/overview.md)
+      + [Basiscode](js/install/base-code.md)
       + [Bibliotheek](js/install/library.md)
       + [NPM](js/install/npm.md)
       + [Aangepaste build](js/install/create-custom-build.md)
@@ -38,6 +39,7 @@ ht-degree: 15%
          + [clickCollection](js/commands/configure/clickcollection.md)
          + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
          + [context](js/commands/configure/context.md)
+         + [gesprek](js/commands/configure/conversation.md)
          + [datastreamId](js/commands/configure/datastreamid.md)
          + [debugEnabled](js/commands/configure/debugenabled.md)
          + [defaultConsent](js/commands/configure/defaultconsent.md)

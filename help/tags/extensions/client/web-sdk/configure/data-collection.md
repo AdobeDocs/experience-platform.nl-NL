@@ -1,9 +1,10 @@
 ---
 title: Instellingen voor gegevensverzameling
 description: Configureer instellingen voor gegevensverzameling in de SDK-tagextensie voor het web.
-source-git-commit: 46c8748e9ab972705b8283c174c285e571acb2ed
+exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -12,13 +13,13 @@ ht-degree: 0%
 
 Deze configuratiesectie staat u toe om te bepalen hoe de gegevens over de uitbreiding worden verzameld.
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 1. Schuif omlaag naar de sectie **[!UICONTROL Data collection]** .
 
-![&#x200B; Beeld dat de montages van de gegevensinzameling van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont.](../assets/web-sdk-ext-collection.png)
+![ Beeld dat de montages van de gegevensinzameling van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont.](../assets/web-sdk-ext-collection.png)
 
 De volgende opties zijn beschikbaar:
 
@@ -119,3 +120,4 @@ Verzamel automatisch bezoekersinformatie, die specifieke XDM gebieden voor u bev
 * **[!UICONTROL Environment]**: verzamelt informatie over de browser van de gebruiker.
 * **[!UICONTROL Place context]**: verzamelt informatie over de locatie van de gebruiker.
 * **[!UICONTROL High entropy user-agent hints]**: verzamelt meer gedetailleerde informatie over het apparaat van de gebruiker.
+* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]**: voorkom dat dubbele verwijzingsgegevens naar Adobe Analytics worden verzonden.

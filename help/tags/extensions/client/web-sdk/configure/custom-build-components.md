@@ -1,9 +1,10 @@
 ---
 title: Aangepaste build-componenten
 description: Maak een aangepaste Web SDK-build die functies uitschakelt om de buildgrootte te verlagen.
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '262'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ De bibliotheek van SDK van het Web omvat veelvoudige modules voor diverse eigens
 
 Wanneer u een component uitschakelt, kunt u de instellingen van die component niet meer bewerken. Als u veelvoudige instanties van SDK van het Web gebruikt, zijn de geselecteerde bouwstijlcomponenten op alle instanties van toepassing.
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
@@ -31,6 +32,7 @@ Adobe biedt de mogelijkheid om de volgende Web SDK-bouwstijlcomponenten uit te s
 | **[!UICONTROL Activity collector]** | Staat automatische verbindingsinzameling en het volgen van Activity Map toe. | |
 | **[!UICONTROL Advertising]** | Maakt Adobe Advertising-integratie met Customer Journey Analytics mogelijk. | |
 | **[!UICONTROL Audiences]** | Ondersteunt de integratie met Adobe Audience Manager, zoals ID-syncs. | |
+| **[!UICONTROL Brand concierge]** | Maakt integratie met Brand concierge mogelijk. |
 | **[!UICONTROL Consent]** | Hiermee kunt u toestemmingskenmerken gebruiken. | [[!UICONTROL Set consent]](../actions/set-consent.md) handeling |
 | **[!UICONTROL Event merge]** | Vervangen. | [[!UICONTROL Event merge ID]](../data-element-types.md) data element (afgekeurd) <br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) action (afgekeurd) |
 | **[!UICONTROL Media Analytics bridge]** | Ondersteunt de integratie met verouderde Media Analytics. | [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) handeling |

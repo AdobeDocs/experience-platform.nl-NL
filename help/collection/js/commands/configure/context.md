@@ -2,9 +2,9 @@
 title: context
 description: Automatisch apparaat-, omgeving- of locatiegegevens verzamelen.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: c2564f1b9ff036a49c9fa4b9e9ffbdbc598a07a8
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '998'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Het trefwoord `"placeContext"` verzamelt informatie over de locatie van de gebru
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
-| Lokale tijd | Lokale timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [&#x200B; formaat van ISO 8601 &#x200B;](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
+| Lokale tijd | Lokale timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [ formaat van ISO 8601 ](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Verschuiving lokale tijdzone | Het aantal minuten dat de gebruiker wordt verschoven ten opzichte van GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
 | Landcode | De landcode van de eindgebruiker. | `xdm.placeContext.geo.countryCode` | `US` |
 | Provincie | De provinciecode van de eindgebruiker. | `xdm.placeContext.geo.stateProvince` | `CA` |
@@ -65,7 +65,7 @@ Het trefwoord `"timestamp"` verzamelt informatie over de tijdstempel van de gebe
 
 | Dimension | Beschrijving | XDM-pad | Voorbeeldwaarde |
 | --- | --- | --- | --- |
-| Tijdstempel van de gebeurtenis | UTC timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [&#x200B; formaat van ISO 8601 &#x200B;](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
+| Tijdstempel van de gebeurtenis | UTC timestamp voor het eind - gebruiker in het vereenvoudigde uitgebreide [ formaat van ISO 8601 ](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
 
 ### Implementatiedetails
 
@@ -81,7 +81,7 @@ Het trefwoord `implementationDetails` verzamelt informatie over de SDK-versie di
 
 Het trefwoord `"highEntropyUserAgentHints"` verzamelt gedetailleerde informatie over het apparaat van de gebruiker. Deze gegevens worden opgenomen in de HTTP-header van het verzoek dat naar Adobe wordt verzonden. Nadat de gegevens naar het Edge-netwerk zijn gearriveerd, vult het XDM-object het desbetreffende XDM-pad. Als u het respectieve pad XDM in uw `sendEvent` vraag plaatst, neemt het belangrijkheid over de kopbalwaarde van HTTP.
 
-Als u apparatenraadplegingen gebruikt wanneer [&#x200B; vormend uw datastream &#x200B;](/help/datastreams/configure.md), kunnen de gegevens worden ontruimd ten gunste van de waarden van de apparatenraadpleging. Bepaalde velden voor client-hint en opzoekvelden van apparaten kunnen niet bestaan in dezelfde hit.
+Als u apparatenraadplegingen gebruikt wanneer [ vormend uw datastream ](/help/datastreams/configure.md), kunnen de gegevens worden ontruimd ten gunste van de waarden van de apparatenraadpleging. Bepaalde velden voor client-hint en opzoekvelden van apparaten kunnen niet bestaan in dezelfde hit.
 
 | Eigenschap | Beschrijving | HTTP-header | XDM-pad | Voorbeeld |
 | --- | --- | --- | --- | --- |
@@ -93,22 +93,33 @@ Als u apparatenraadplegingen gebruikt wanneer [&#x200B; vormend uw datastream &#
 | Browsernaam | De gebruikte browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Browserversie | De significante versie van de browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . Exacte browserversie wordt niet automatisch verzameld. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-Zie [&#x200B; de wenken van de de agentencliënt van de Gebruiker &#x200B;](/help/collection/use-cases/client-hints.md) voor meer informatie.
+Zie [ de wenken van de de agentencliënt van de Gebruiker ](/help/collection/use-cases/client-hints.md) voor meer informatie.
 
-Stel de array `context` van tekenreeksen in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de SDK, worden standaard alle contextgegevens behalve `"highEntropyUserAgentHints"` verzameld. Stel deze eigenschap in als u hoge entropieclientiptips wilt verzamelen of als u andere contextgegevens uit gegevensverzameling wilt weglaten. Tekenreeksen kunnen in elke willekeurige volgorde worden opgenomen.
+### One-time Analytics-referentie {#one-time-analytics-referrer}
 
->[!NOTE]
+Het trefwoord `"oneTimeAnalyticsReferrer"` verzendt alleen een verwijzingswaarde naar Adobe Analytics bij de eerste aanroep van `sendEvent` zonder beslissing naar een pagina. Het primaire gebruiksgeval voor dit contextsleutelwoord moet de [ dimensie van de Verwijzer ](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) in Adobe Analytics verhinderen door klappen worden opgeblazen die hoofdzakelijk in Analytics en de integratie van het Doel worden gebruikt.
+
+Als een bepaalde opdracht `sendEvent` een gebeurtenistype voor beslissingen gebruikt ( `decisioning.propositionFetch` , `decisioning.propositionDisplay` , `decisioning.propositionInteract` ), wordt dit genegeerd bij het berekenen van de eerste `sendEvent` op een pagina. Als de verwijzende waarde op de pagina verandert en een andere `sendEvent` wordt teweeggebracht, wordt de nieuwe verwijzende waarde omvat in de lading. Met deze voorwaarde kan de functie worden gebruikt in toepassingen van één pagina.
+
+Wanneer een dubbele verwijzingswaarde wordt ontdekt, plaatst de bibliotheek `data.__adobe.analytics.referrer` aan een leeg koord (`""`).
+Als u dit gegevensobjectveld instelt op een lege tekenreeks, wordt de waarde gewist wanneer een treffer naar Adobe Analytics aankomt, aangezien het gegevensobject een equivalent veld voor XDM-objecten overschrijft. Het heeft geen invloed op het XDM-object, zodat die gegevens naar een Experience Platform-gegevensset kunnen worden verzonden als u meerdere services in een gegevensstroom opneemt.
+
+## Implementatie
+
+Stel de array `context` van tekenreeksen in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de SDK, worden standaard alle contextgegevens verzameld, behalve `"highEntropyUserAgentHints"` en `"oneTimeAnalyticsReferrer"` . Stel deze eigenschap in als u hoge entropieclientiptips wilt verzamelen of als u andere contextgegevens uit gegevensverzameling wilt weglaten. Tekenreeksen kunnen in elke willekeurige volgorde worden opgenomen.
+
+>[!TIP]
 >
->Als u alle contextinformatie wilt verzamelen, inclusief hoge entropieclienthints, moet u elke waarde in de array-tekenreeks `context` opnemen. Bij de standaardwaarde van `context` wordt `highEntropyUserAgentHints` weggelaten en bij de instelling van de eigenschap `context` worden geen gegevens verzameld door weggelaten waarden.
+>Als u alle contextinformatie wilt verzamelen, inclusief hoge entropieclienthints, moet u elke waarde in de array-tekenreeks `context` opnemen. De standaardwaarde van `context` is `"highEntropyUserAgentHints"` en `"oneTimeAnalyticsReferrer"` weggelaten. Wanneer u de eigenschap `context` instelt, worden bij weggelaten waarden geen gegevens verzameld.
 
 ```js
 alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"]
 });
 ```
 
 ## Verzamel contextinformatie met de Web SDK-tagextensie
 
-Zie [&#x200B; montages van de Context &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md#context-settings) onder de configuratiemontages van de gegevensinzameling in de de markeringsuitbreidingsdocumentatie van SDK van het Web.
+Zie [ montages van de Context ](/help/tags/extensions/client/web-sdk/configure/data-collection.md#context-settings) onder de configuratiemontages van de gegevensinzameling in de de markeringsuitbreidingsdocumentatie van SDK van het Web.
