@@ -18,7 +18,7 @@ Er zijn bepaalde gevallen waarin u mogelijk wilt werken met twee verschillende e
 * Relaties tussen meerdere bedrijven voor het uitwisselen van gegevens
 * Klanten die nieuwe Adobe-oplossingen testen en hun bestaande implementatie niet willen verstoren
 
-SDK staat u toe om een afzonderlijke instantie voor elk bezit tot stand te brengen door een andere naam aan de serie in de [ basiscode ](../js/install/base-code.md) toe te voegen. In het volgende voorbeeld worden twee namen gegeven, `titanium` en `copper` .
+SDK staat u toe om een afzonderlijke instantie voor elk bezit tot stand te brengen door een andere naam aan de serie in de [&#x200B; basiscode &#x200B;](../js/install/base-code.md) toe te voegen. In het volgende voorbeeld worden twee namen gegeven, `titanium` en `copper` .
 
 ```html
 <!-- Base code -->
@@ -38,7 +38,7 @@ Hierdoor maakt het script twee algemene functies ( `titanium` en `copper` in het
 
 >[!TIP]
 >
->Als het gebruiken van de basiscode met markeringen, zorg ervoor dat alle instantienamen die u plaatst alle [ instantienamen van SDK ](/help/tags/extensions/client/web-sdk/configure/general.md) aanpassen wanneer het vormen van de markeringsuitbreiding.
+>Als het gebruiken van de basiscode met markeringen, zorg ervoor dat alle instantienamen die u plaatst alle [&#x200B; instantienamen van SDK &#x200B;](/help/tags/extensions/client/web-sdk/configure/general.md) aanpassen wanneer het vormen van de markeringsuitbreiding.
 
 In het volgende voorbeeld van het naampatroon `titanium` en `copper` als Web SDK-instanties kunt u onafhankelijk opdrachten uitvoeren:
 

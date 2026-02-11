@@ -36,4 +36,4 @@ alloy("configure", {
 
 ## gespreksinstellingen configureren met de webtagextensie SDK
 
-Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [ montages van Brand Concierge ](/help/tags/extensions/client/web-sdk/configure/brand-concierge.md).
+Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [&#x200B; montages van Brand Concierge &#x200B;](/help/tags/extensions/client/web-sdk/configure/brand-concierge.md).

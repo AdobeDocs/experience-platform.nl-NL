@@ -27,7 +27,7 @@ Plaats de basiscode zo hoog mogelijk in de `<head>` -tag, vóór alle scripts di
 </script>
 ```
 
-Na het toevoegen van de basiscode, laad SDK van het Web gebruikend uw gekozen methode ([ de bibliotheeklader van JavaScript ](library.md) of [ Markeringen bedden code ](/help/tags/extensions/client/web-sdk/getting-started.md) in). Voor op tag-gebaseerde implementaties, wordt de basiscode gesteund in de de markeringsuitbreiding van SDK van het Web 2.34.0 en later.
+Na het toevoegen van de basiscode, laad SDK van het Web gebruikend uw gekozen methode ([&#x200B; de bibliotheeklader van JavaScript &#x200B;](library.md) of [&#x200B; Markeringen bedden code &#x200B;](/help/tags/extensions/client/web-sdk/getting-started.md) in). Voor op tag-gebaseerde implementaties, wordt de basiscode gesteund in de de markeringsuitbreiding van SDK van het Web 2.34.0 en later.
 
 Deze basiscode wordt **niet** vereist in de volgende scenario&#39;s:
 
@@ -100,4 +100,4 @@ ingot("configure", {
 
 ## Meerdere SDK-instanties
 
-U kunt optioneel de basiscode gebruiken om meerdere SDK-instanties op een pagina te configureren. Zie [ de veelvoudige instanties van SDK van het Web van het Gebruik ](../../use-cases/multiple-instances.md) voor meer informatie.
+U kunt optioneel de basiscode gebruiken om meerdere SDK-instanties op een pagina te configureren. Zie [&#x200B; de veelvoudige instanties van SDK van het Web van het Gebruik &#x200B;](../../use-cases/multiple-instances.md) voor meer informatie.

@@ -23,7 +23,7 @@ Interne koppelingen, downloadkoppelingen en afsluitkoppelingen worden standaard 
 
 ## Logica voor automatisch bijhouden van koppelingen
 
-De Web SDK houdt bij alle klikken op `<a>` en `<area>` HTML-elementen als het geen `onClick` -kenmerk heeft. De klikken worden gevangen met a [ vangt ](https://www.w3.org/TR/uievents/#capture-phase) klik gebeurtenisluisteraar die aan het document in bijlage is. Wanneer op een geldige koppeling wordt geklikt, wordt de volgende logica in de juiste volgorde uitgevoerd:
+De Web SDK houdt bij alle klikken op `<a>` en `<area>` HTML-elementen als het geen `onClick` -kenmerk heeft. De klikken worden gevangen met a [&#x200B; vangt &#x200B;](https://www.w3.org/TR/uievents/#capture-phase) klik gebeurtenisluisteraar die aan het document in bijlage is. Wanneer op een geldige koppeling wordt geklikt, wordt de volgende logica in de juiste volgorde uitgevoerd:
 
 1. Als de koppeling overeenkomt met criteria op basis van waarden in [`downloadLinkQualifier`](downloadlinkqualifier.md) of als de koppeling een `download` HTML-kenmerk bevat, wordt `xdm.web.webInteraction.type` ingesteld op `"download"` (als `clickCollection.downloadLinkEnabled` is ingeschakeld).
 1. Als het koppelingsdoeldomein verschilt van het huidige `window.location.hostname` , wordt `xdm.web.webInteraction.type` ingesteld op `"exit"` (als `clickCollection.exitLinkEnabled` is ingeschakeld).
@@ -59,7 +59,7 @@ alloy(configure, {
 
 SDK van het Web steunt automatische klik het volgen voor verbindingen binnen **open DOM van de Schaduw** elementen.
 
-Vele moderne websites gebruiken {de Componenten van 0} Web [ om herbruikbare en ingekapselde gebruikersinterfaceelementen te bouwen. ](https://developer.mozilla.org/en-US/docs/Web/Web_Components) Deze componenten gebruiken vaak een technologie genoemd [**DOM van de Schaduw** ](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) om hun interne structuur en stijlen gescheiden van de rest van de pagina te houden.
+Vele moderne websites gebruiken {de Componenten van 0} Web [&#x200B; om herbruikbare en ingekapselde gebruikersinterfaceelementen te bouwen. &#x200B;](https://developer.mozilla.org/en-US/docs/Web/Web_Components) Deze componenten gebruiken vaak een technologie genoemd [**DOM van de Schaduw** &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) om hun interne structuur en stijlen gescheiden van de rest van de pagina te houden.
 
 Er zijn twee soorten schaduw-DOM:
 
@@ -70,4 +70,4 @@ Het Web SDK houdt automatisch kliks op `<a>` en `<area>` elementen binnen **open
 
 ## Klikverzameling voor de Web SDK-tagextensie in- of uitschakelen
 
-Zie [ de montages van de inzamelingsconfiguratie van Gegevens ](/help/tags/extensions/client/web-sdk/configure/data-collection.md) in de de uitbreidingsdocumentatie van SDK van het Web leren hoe te om deze acties uit te voeren gebruikend markeringen.
+Zie [&#x200B; de montages van de inzamelingsconfiguratie van Gegevens &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md) in de de uitbreidingsdocumentatie van SDK van het Web leren hoe te om deze acties uit te voeren gebruikend markeringen.

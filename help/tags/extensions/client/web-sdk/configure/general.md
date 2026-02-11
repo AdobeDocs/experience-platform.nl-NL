@@ -13,13 +13,13 @@ ht-degree: 1%
 
 Deze configuratiesectie regelt de Web SDK instantienaam, de IMS org waarop het van toepassing is, en de plaats waarnaar u gegevens wilt verzenden. Een instantie krijgt standaard de naam `alloy` .
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 1. Zoek de instantienaam net onder de uitgevouwen accordeon [!UICONTROL SDK instances] .
 
-![ Beeld dat de algemene montages van de de markeringsuitbreiding van SDK van het Web in de markeringen UI toont ](../assets/web-sdk-ext-general.png)
+![&#x200B; Beeld dat de algemene montages van de de markeringsuitbreiding van SDK van het Web in de markeringen UI toont &#x200B;](../assets/web-sdk-ext-general.png)
 
 De volgende opties zijn beschikbaar:
 
@@ -35,4 +35,4 @@ De id van de organisatie waarnaar u de gegevens op Adobe wilt verzenden. Meestal
 
 Het domein waarvan de extensie gegevens verzendt en ontvangt. Het veld bevat standaard `<COMPANYID>.data.adobedc.net` . Oudere implementaties kunnen de standaardwaarde `edge.adobedc.net` bevatten. Deze waarde is ook geldig.
 
-Adobe raadt in de meeste gevallen aan een domein van de eerste partij te gebruiken. Zie [ Adobe-Beheerde certificaatprogramma ](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) voor instructies op hoe te opstelling een eerste-partijdomein geschikt voor gegevensinzameling. Zie ook [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) in de documentatie van de JavaScript-bibliotheek voor hulp bij het instellen van deze waarde.
+Adobe raadt in de meeste gevallen aan een domein van de eerste partij te gebruiken. Zie [&#x200B; Adobe-Beheerde certificaatprogramma &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) voor instructies op hoe te opstelling een eerste-partijdomein geschikt voor gegevensinzameling. Zie ook [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) in de documentatie van de JavaScript-bibliotheek voor hulp bij het instellen van deze waarde.

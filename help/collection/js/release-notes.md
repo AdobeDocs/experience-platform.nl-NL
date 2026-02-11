@@ -14,7 +14,7 @@ ht-degree: 5%
 # Opmerkingen bij de release Web SDK
 
 In dit document worden de opmerkingen bij de release voor de Adobe Experience Platform Web SDK besproken.
-Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [&#x200B; nota&#39;s van de de marktextensie van SDK van het Web &#x200B;](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
 ## Versie 2.31.0 - 9 februari 2026
 
@@ -27,7 +27,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Bevestigingen en verbeteringen**
 
-- De `aria-label` en `name` attributen worden nu overwogen in [ automatische verbindingsinzameling ](commands/configure/clickcollectionenabled.md).
+- De `aria-label` en `name` attributen worden nu overwogen in [&#x200B; automatische verbindingsinzameling &#x200B;](commands/configure/clickcollectionenabled.md).
 - Probleem verholpen waarbij een mogelijk ras kon worden hersteld met integratie van identiteitskaarten.
 - Probleem verholpen waarbij tijdstempel niet was opgenomen in `streamingMedia` .
 - Probleem verholpen waarbij aangepaste code-acties slechts eenmaal werden uitgevoerd.
@@ -65,14 +65,14 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Bevestigingen en verbeteringen**
 
-- Oplossing een fout in de [ Tracker van Analytics van Media ](commands/getmediaanalyticstracker.md) waar het `length` bezit van het media voorwerp verkeerd erkende ongeldige gegevenstypes.
-- Verbeterde [ fout behandeling van het 0} identiteitsbeheer {om belofteverwervingen behoorlijk te verwerken wanneer de identiteitsraadpleging ontbreekt.](../use-cases/identity/id-overview.md)
+- Oplossing een fout in de [&#x200B; Tracker van Analytics van Media &#x200B;](commands/getmediaanalyticstracker.md) waar het `length` bezit van het media voorwerp verkeerd erkende ongeldige gegevenstypes.
+- Verbeterde [&#x200B; fout behandeling van het 0&rbrace; identiteitsbeheer &lbrace;om belofteverwervingen behoorlijk te verwerken wanneer de identiteitsraadpleging ontbreekt.](../use-cases/identity/id-overview.md)
 - Oplossing voor een probleem waarbij personalisatie-inhoud met HTML-inhoudsitems niet werd gerenderd met een fout die betrekking had op een ontbrekende `renderStatusHandler` .
-- Vaste activiteitenkaart [ inzameling URL ](commands/configure/clickcollectionenabled.md) om niet-HTTP URLs behoorlijk te behandelen.
+- Vaste activiteitenkaart [&#x200B; inzameling URL &#x200B;](commands/configure/clickcollectionenabled.md) om niet-HTTP URLs behoorlijk te behandelen.
 
 **Bekende kwesties**
 
-- Het [ douane bouwt ](/help/collection/js/install/create-custom-build.md) proces gebruikend `npx @adobe/alloy` werkt momenteel niet zoals verwacht in versie 2.28.0. Alle componenten zijn inbegrepen in de geproduceerde bouwstijl, ongeacht de geselecteerde modules. Dit probleem heeft geen invloed op het standaard JavaScript-bestand dat beschikbaar is op de CDN. Er wordt een correctie uitgevoerd.
+- Het [&#x200B; douane bouwt &#x200B;](/help/collection/js/install/create-custom-build.md) proces gebruikend `npx @adobe/alloy` werkt momenteel niet zoals verwacht in versie 2.28.0. Alle componenten zijn inbegrepen in de geproduceerde bouwstijl, ongeacht de geselecteerde modules. Dit probleem heeft geen invloed op het standaard JavaScript-bestand dat beschikbaar is op de CDN. Er wordt een correctie uitgevoerd.
 
 ## Versie 2.27.0 - woensdag 20 mei 2025
 
@@ -87,7 +87,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Nieuwe functies**
 
-- U kunt nu het Web SDK NPM-pakket gebruiken om aangepaste Web SDK-builds te maken en alleen de bibliotheekcomponenten te selecteren die u nodig hebt. Dit leidt tot een vermindering van de bibliotheekgrootte en geoptimaliseerde laadtijden. Zie de documentatie op hoe te [ tot een douaneSDK van het Web leiden gebruikend het pakket NPM ](install/create-custom-build.md).
+- U kunt nu het Web SDK NPM-pakket gebruiken om aangepaste Web SDK-builds te maken en alleen de bibliotheekcomponenten te selecteren die u nodig hebt. Dit leidt tot een vermindering van de bibliotheekgrootte en geoptimaliseerde laadtijden. Zie de documentatie op hoe te [&#x200B; tot een douaneSDK van het Web leiden gebruikend het pakket NPM &#x200B;](install/create-custom-build.md).
 - De opdracht [`getIdentity`](commands/getidentity.md) leest de ECID nu automatisch rechtstreeks vanuit het `kndctr` -identiteitscookie. Als u `getIdentity` aanroept met de naamruimte `ECID` en er al een identiteitscookie is, vraagt Web SDK de Edge Network niet langer om de identiteit op te halen. Het leest nu de identiteit uit het cookie.
 
 **Bevestigingen en verbeteringen**
@@ -111,13 +111,13 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Vaste en verbeteringen**
 
-- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [ versie 2.0.3 van de Motor van de Regels van 0} Adobe Experience Platform of later.](https://github.com/adobe/aepsdk-rulesengine-typescript/)
+- Oplossing van een gebiedsdeelkwestie met betrekking tot [&#x200B; de Motor van de Regels van Adobe Experience Platform &#x200B;](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [&#x200B; versie 2.0.3 van de Motor van de Regels van 0&rbrace; Adobe Experience Platform of later.](https://github.com/adobe/aepsdk-rulesengine-typescript/)
 
 ## Versie 2.24.0 - vrijdag 31 oktober 2024
 
 **Nieuwe functies**
 
-- [ DataStream treedt met voeten ](/help/datastreams/overrides.md) wordt nu gesteund wanneer het beginnen van media zittingen.
+- [&#x200B; DataStream treedt met voeten &#x200B;](/help/datastreams/overrides.md) wordt nu gesteund wanneer het beginnen van media zittingen.
 
 - Toegevoegde steun voor de reactietekenen van Adobe Target in de [`onContentRendering`](monitoring-hooks.md#onContentRendering) controlehaak.
 
@@ -137,7 +137,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Nieuwe functies**
 
-- Toegevoegde steun voor het verzoeken van [ identiteitskaart van de KERN ](/help/collection/use-cases/identity/id-overview.md) in het [ getIdentity ](commands/getidentity.md) bevel.
+- Toegevoegde steun voor het verzoeken van [&#x200B; identiteitskaart van de KERN &#x200B;](/help/collection/use-cases/identity/id-overview.md) in het [&#x200B; getIdentity &#x200B;](commands/getidentity.md) bevel.
 
 **Bevestigingen en verbeteringen**
 
@@ -155,7 +155,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Probleem verholpen waarbij de gegevens van de link activity map niet werden geïnitialiseerd toen de `onInstanceConfigured` monitorhaak werd aangeroepen.
 - Probleem verholpen waarbij de doelen van cookies niet waren ingesteld op het juiste pad.
 - Probleem met klant verholpen met aanroep naar has.
-- Vaste een kwestie waar een ongeldige url coderen in de `adobe_mc` parameter [ sendEvent ](commands/sendevent/overview.md) vraag veroorzaakte om te ontbreken.
+- Vaste een kwestie waar een ongeldige url coderen in de `adobe_mc` parameter [&#x200B; sendEvent &#x200B;](commands/sendevent/overview.md) vraag veroorzaakte om te ontbreken.
 
 ## Versie 2.21.1 - vrijdag 18 juli 2024
 
@@ -175,7 +175,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Nieuwe functies**
 
-- Toegevoegde steun voor [ Streaming de Inzameling van Media ](commands/configure/streamingmedia.md).
+- Toegevoegde steun voor [&#x200B; Streaming de Inzameling van Media &#x200B;](commands/configure/streamingmedia.md).
 
 **Bevestigingen en verbeteringen**
 
@@ -200,7 +200,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 **Nieuwe functies**
 
 - Extra ondersteuning voor het renderen van berichten in de app van Adobe Journey Optimizer.
-- Toegevoegde steun voor [ bovenkant en bodem van paginagebeurtenissen ](../use-cases/personalization/top-bottom-page-events.md).
+- Toegevoegde steun voor [&#x200B; bovenkant en bodem van paginagebeurtenissen &#x200B;](../use-cases/personalization/top-bottom-page-events.md).
 - Optie [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) toegevoegd aan de opdracht `sendEvent` om het opvragen van het bereik en het standaardoppervlak voor de hele pagina te besturen.
 
 **Bevestigingen en verbeteringen**
@@ -213,7 +213,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Nieuwe functies**
 
-- Toegevoegde steun voor [ per-bevel treedt van datastream identiteitskaart ](/help/datastreams/overrides.md) met voeten.
+- Toegevoegde steun voor [&#x200B; per-bevel treedt van datastream identiteitskaart &#x200B;](/help/datastreams/overrides.md) met voeten.
 
 **Bevestigingen en verbeteringen**
 
@@ -224,13 +224,13 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Bevestigingen en verbeteringen**
 
-- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
+- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [&#x200B; Data Integration Library (DIL) &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Versie 2.16.0 - 25 april 2023
 
 **Nieuwe functies**
 
-- Toegevoegde steun voor [ datastream configuratie treedt met voeten ](/help/datastreams/overrides.md).
+- Toegevoegde steun voor [&#x200B; datastream configuratie treedt met voeten &#x200B;](/help/datastreams/overrides.md).
 
 ## Versie 2.15.0 - 30 maart 2023
 
@@ -252,7 +252,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 - Probleem verholpen met aangepaste code-acties voor Adobe Target VEC waarbij de code op een andere locatie werd geïnjecteerd dan met [!DNL at.js] .
 - Probleem verholpen waarbij in sommige randgevallen de koptekst van de &quot;referentie&quot; niet correct was ingesteld bij aanvragen bij de Edge Network.
-- Vaste een kwestie waar [ de wenk van de gebruikersagent ](../use-cases/client-hints.md) eigenschappen aan een onjuist type konden worden geplaatst.
+- Vaste een kwestie waar [&#x200B; de wenk van de gebruikersagent &#x200B;](../use-cases/client-hints.md) eigenschappen aan een onjuist type konden worden geplaatst.
 - Correctie van een probleem waarbij `placeContext.localTime` niet overeenkwam met het schema.
 
 ## Versie 2.13.1 - vrijdag 13 oktober 2022
@@ -265,8 +265,8 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 **Nieuwe functies**
 
 - Extra ondersteuning voor Volledige migratie van pagina naar pagina. Het Adobe Target-profiel blijft nu behouden wanneer een bezoeker zich tussen de pagina&#39;s at.js en Web SDK verplaatst.
-- Toegevoegde configureerbare steun voor [ high entropy gebruiker-Agent de Hints van de Cliënt ](../use-cases/client-hints.md).
-- Extra ondersteuning voor de opdracht [`applyResponse`](commands/applyresponse.md) . Dit laat hybride verpersoonlijking via [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/) toe.
+- Toegevoegde configureerbare steun voor [&#x200B; high entropy gebruiker-Agent de Hints van de Cliënt &#x200B;](../use-cases/client-hints.md).
+- Extra ondersteuning voor de opdracht [`applyResponse`](commands/applyresponse.md) . Dit laat hybride verpersoonlijking via [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/) toe.
 - Koppelingen in de QA-modus werken nu op meerdere pagina&#39;s.
 
 **Bevestigingen en verbeteringen**
@@ -286,8 +286,8 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Nieuwe functies**
 
-- U kunt nu nauwkeuriger persoonlijke ervaringen bieden door gebruikers-id&#39;s te delen tussen mobiele apps en mobiele webinhoud, en tussen domeinen. Zie [ specifieke documentatie ](../use-cases/identity/id-sharing.md) om meer te leren.
-- U kunt nu een array met voorstellingen van [!DNL Adobe Target] renderen of uitvoeren in toepassingen van één pagina, zonder de analytische meetgegevens te verhogen. Dit vermindert rapportagefouten en vergroot de nauwkeurigheid van de analyse. Zie [ specifieke documentatie ](../use-cases/personalization/rendering-personalization-content.md) om meer te leren.
+- U kunt nu nauwkeuriger persoonlijke ervaringen bieden door gebruikers-id&#39;s te delen tussen mobiele apps en mobiele webinhoud, en tussen domeinen. Zie [&#x200B; specifieke documentatie &#x200B;](../use-cases/identity/id-sharing.md) om meer te leren.
+- U kunt nu een array met voorstellingen van [!DNL Adobe Target] renderen of uitvoeren in toepassingen van één pagina, zonder de analytische meetgegevens te verhogen. Dit vermindert rapportagefouten en vergroot de nauwkeurigheid van de analyse. Zie [&#x200B; specifieke documentatie &#x200B;](../use-cases/personalization/rendering-personalization-content.md) om meer te leren.
 - Extra informatie toegevoegd aan de opdracht `getLibraryInfo` , inclusief beschikbare opdrachten en de uiteindelijke configuratie voor de instantie.
 
 **Bevestigingen en verbeteringen**
@@ -354,17 +354,17 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.4.0 - maart 2021
 
-- SDK kan nu als [ NPM pakket ](install/npm.md) worden geïnstalleerd.
-- Toegevoegde steun voor een `out` optie wanneer [ vormend standaardtoestemming ](commands/configure/defaultconsent.md), die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie maakt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
+- SDK kan nu als [&#x200B; NPM pakket &#x200B;](install/npm.md) worden geïnstalleerd.
+- Toegevoegde steun voor een `out` optie wanneer [&#x200B; vormend standaardtoestemming &#x200B;](commands/configure/defaultconsent.md), die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie maakt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
 - De callback van [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md) kan nu worden gebruikt om te voorkomen dat een gebeurtenis wordt verzonden.
 - Er wordt nu een XDM-schemaveldgroep gebruikt in plaats van `meta.personalization` bij het verzenden van gebeurtenissen over gepersonaliseerde inhoud die wordt gerenderd of waarop wordt geklikt.
 - De opdracht [`getIdentity`](commands/getidentity.md) retourneert nu de id van het randgebied naast de identiteit.
 - Waarschuwingen en fouten die van de server zijn ontvangen, zijn verbeterd en worden op een geschiktere manier afgehandeld.
 - Toegevoegde ondersteuning voor de Adobe-standaard Goedkeuring 2.0 voor de opdracht [`setConsent`](commands/setconsent.md) .
 - Wanneer u de voorkeuren voor toestemming ontvangt, worden deze gehasht en lokaal opgeslagen voor een geoptimaliseerde integratie tussen CMP&#39;s, Experience Platform Web SDK en Experience Platform Edge Network. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om `setConsent` op elke paginading te roepen.
-- Twee [ controlerende haken ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
+- Twee [&#x200B; controlerende haken &#x200B;](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
 - Bug Fix: de gebeurtenissen van het de interactiebericht van Personalization zouden dubbele informatie over de zelfde activiteit bevatten wanneer een gebruiker aan een nieuwe single-page toepassingsmening, terug naar de originele mening navigeerde, en een element in aanmerking voor omzetting klikte.
-- Opgeloste problemen: als voor de eerste gebeurtenis die door de SDK wordt verzonden `documentUnloading` is ingesteld op `true` , [`sendBeacon` ](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) , wordt de gebeurtenis verzonden, wat resulteert in een fout met betrekking tot een identiteit die niet wordt vastgesteld.
+- Opgeloste problemen: als voor de eerste gebeurtenis die door de SDK wordt verzonden `documentUnloading` is ingesteld op `true` , [`sendBeacon` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) , wordt de gebeurtenis verzonden, wat resulteert in een fout met betrekking tot een identiteit die niet wordt vastgesteld.
 
 ## Versie 2.3.0 - november 2020
 
@@ -387,5 +387,5 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Ondersteuning voor IAB 2.0 Consent Standard.
 - Ondersteuning voor het doorgeven van aanvullende id&#39;s in de opdracht `setConsent` .
 - Ondersteuning voor het overschrijven van de opdracht `datasetId` in de opdracht `sendEvent` .
-- Steun die Hooks controleert ([ las meer ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+- Steun die Hooks controleert ([&#x200B; las meer &#x200B;](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 - Geef `environment: browser` door in de contextgegevens van de implementatiedetails.
