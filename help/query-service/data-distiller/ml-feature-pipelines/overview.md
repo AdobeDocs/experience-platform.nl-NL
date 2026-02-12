@@ -21,7 +21,7 @@ Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpi
 >
 >Voor deze workflow is een Data Distiller-licentie vereist. Als u dit product niet hebt, neemt u contact op met uw vertegenwoordiger van de Adobe Service.
 
-![ een infografisch die de AI-ML eigenschappijpleiding detailleert.](../../images/data-distiller/ai-ml-feature-pipeline.png)
+![&#x200B; een infografisch die de AI-ML eigenschappijpleiding detailleert.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
 - Met Data Distiller krachtige querymogelijkheden kunt u zinvolle functies ophalen uit de uitgebreide gedragsgegevens die beschikbaar zijn in de Experience Platform. U kunt de gedistilleerde eigenschapgegevens dan brengen in uw machine het leren milieu zonder de behoefte om grote volumes van gebeurtenisgegevens buiten Experience Platform te kopiëren.
 - Lees de voorbereide eigenschapdataset in uw aangewezen machine het leren hulpmiddelen en combineer met andere eigenschappen die uit ondernemingsgegevens worden afgeleid om aangepaste modellen te trainen, te experimenteren, te stemmen en op te stellen die aan uw zaken worden aangepast.
@@ -31,9 +31,9 @@ Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpi
 
 Deze workflow vereist een goed begrip van de verschillende aspecten van Adobe Experience Platform. Lees vóór het starten van deze zelfstudie de documentatie voor de volgende concepten:
 
-- Hoe te [ om Experience Platform APIs ](../../../landing/api-authentication.md) voor authentiek te verklaren en toegang te hebben.
-- Sandboxes: [ Op attributen-gebaseerde toegangsbeheertoestemmingen ](../../../access-control/abac/overview.md) en hoe te om rollen tot stand te brengen en te beheren, evenals de gewenste middeltoestemmingen voor deze rollen toe te wijzen.
-- Het Beleid van gegevens: Hoe te [ de etiketten van het gegevensgebruik op datasets en gebieden toepassen, die elk ](../../../data-governance/labels/overview.md) volgens het verwante beleid van het gegevensbeheer en toegangsbeheerbeleid categoriseren.
+- Hoe te [&#x200B; om Experience Platform APIs &#x200B;](../../../landing/api-authentication.md) voor authentiek te verklaren en toegang te hebben.
+- Sandboxes: [&#x200B; Op attributen-gebaseerde toegangsbeheertoestemmingen &#x200B;](../../../access-control/abac/overview.md) en hoe te om rollen tot stand te brengen en te beheren, evenals de gewenste middeltoestemmingen voor deze rollen toe te wijzen.
+- Het Beleid van gegevens: Hoe te [&#x200B; de etiketten van het gegevensgebruik op datasets en gebieden toepassen, die elk &#x200B;](../../../data-governance/labels/overview.md) volgens het verwante beleid van het gegevensbeheer en toegangsbeheerbeleid categoriseren.
 
 ## Volgende stappen
 
@@ -41,17 +41,17 @@ Door dit document te lezen, bent u geïntroduceerd in de belangrijke concepten a
 
 In de documenten die in deze reeks handleidingen zijn opgenomen, worden de basisstappen beschreven voor het maken van functiepijpleidingen vanuit Experience Platform voor het voeden van aangepaste modellen in uw computerleeromgeving. U kunt nu een verbinding tot stand brengen tussen Data Distiller en uw [!DNL Jupyter Notebook] .
 
-- **Opstelling**: [ verbind met Gegevens Distiller van a  [!DNL Python]  notitieboekje ](./establish-connection.md)
+- **Opstelling**: [&#x200B; verbind met Gegevens Distiller van a  [!DNL Python]  notitieboekje &#x200B;](./establish-connection.md)
 
 De onderstaande documentatie komt overeen met de stappen in de bovenstaande afbeelding.
 
-- **Stap 1**: [ onderzoek en analyseer datasets ](./exploratory-analysis.md)
-- **Stap 2**: [ eigenschappen van de Ingenieur voor machine het leren ](./feature-engineering.md)
-- **Stap 3**: [ de eigenschapdatasets van de Uitvoer ](./export-data.md)
+- **Stap 1**: [&#x200B; onderzoek en analyseer datasets &#x200B;](./exploratory-analysis.md)
+- **Stap 2**: [&#x200B; eigenschappen van de Ingenieur voor machine het leren &#x200B;](./feature-engineering.md)
+- **Stap 3**: [&#x200B; de eigenschapdatasets van de Uitvoer &#x200B;](./export-data.md)
 
 ## Aanvullende bronnen
 
-- [ epp ](https://github.com/adobe/aepp): een Adobe-geleide open-bron [!DNL Python] bibliotheek voor het doen van verzoeken aan Gegevens Distiller en andere diensten van Experience Platform van [!DNL Python] code.
+- [&#x200B; epp &#x200B;](https://github.com/adobe/aepp): een Adobe-geleide open-bron [!DNL Python] bibliotheek voor het doen van verzoeken aan Gegevens Distiller en andere diensten van Experience Platform van [!DNL Python] code.
 
 <!-- Old content below -->
 
