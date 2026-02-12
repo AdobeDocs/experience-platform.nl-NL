@@ -17,7 +17,7 @@ ht-degree: 2%
 >
 >* De [!DNL Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* De bron [!DNL Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>* De bron [!DNL Databricks] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees deze handleiding voor informatie over hoe u uw [!DNL Databricks] -account kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de gebruikersinterface.
 
@@ -25,8 +25,8 @@ Lees deze handleiding voor informatie over hoe u uw [!DNL Databricks] -account k
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Vereiste referenties verzamelen
 
@@ -51,13 +51,13 @@ Als u verbinding wilt maken met [!DNL Databricks] , gaat u naar de categorie *[!
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus van bronnen met de geselecteerde de bronkaart van Azure Databricks.](../../../../images/tutorials/create/databricks/catalog.png)
+![&#x200B; de broncatalogus van bronnen met de geselecteerde de bronkaart van Azure Databricks.](../../../../images/tutorials/create/databricks/catalog.png)
 
 ### Een bestaande account gebruiken
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL Azure Databricks] -account die u wilt gebruiken.
 
-![ de bestaande rekeningeninterface in het bronwerkschema met &quot;Bestaande geselecteerde rekening&quot;.](../../../../images/tutorials/create/databricks/existing.png)
+![&#x200B; de bestaande rekeningeninterface in het bronwerkschema met &quot;Bestaande geselecteerde rekening&quot;.](../../../../images/tutorials/create/databricks/existing.png)
 
 ### Een nieuwe account maken
 
@@ -69,12 +69,12 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 * Database
 * Catalogus
 
-![ de nieuwe rekeningsinterface in het bronwerkschema met een rekeningsnaam en facultatieve verstrekte beschrijving.](../../../../images/tutorials/create/databricks/new.png)
+![&#x200B; de nieuwe rekeningsinterface in het bronwerkschema met een rekeningsnaam en facultatieve verstrekte beschrijving.](../../../../images/tutorials/create/databricks/new.png)
 
 Daarnaast moet u de [!UICONTROL Staging SAS URI] -gegevens kopiëren en in de [!DNL Azure Databricks] -omgeving plakken. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-![ SAS URI die geloofsbrieven opvoeren.](../../../../images/tutorials/create/databricks/sas-uri.png)
+![&#x200B; SAS URI die geloofsbrieven opvoeren.](../../../../images/tutorials/create/databricks/sas-uri.png)
 
 ## Een gegevensstroom maken voor [!DNL Azure Databricks] -gegevens
 
-Nu u met succes uw [!DNL Azure Databricks] rekening hebt verbonden, kunt u [ nu tot een dataflow leiden en gegevens van uw gegevensbestand in Experience Platform ](../../dataflow/databases.md) opnemen.
+Nu u met succes uw [!DNL Azure Databricks] rekening hebt verbonden, kunt u [&#x200B; nu tot een dataflow leiden en gegevens van uw gegevensbestand in Experience Platform &#x200B;](../../dataflow/databases.md) opnemen.
