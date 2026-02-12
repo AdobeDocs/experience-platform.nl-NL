@@ -4,9 +4,9 @@ description: Leer hoe u databases met API's kunt verbinden met Experience Platfo
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '553'
 ht-degree: 1%
 
 ---
@@ -17,24 +17,24 @@ ht-degree: 1%
 >
 >* De [!DNL Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* De bron [!DNL Databricks] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>* De bron [!DNL Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Lees deze gids om te leren hoe te om uw [!DNL Databricks] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om uw [!DNL Databricks] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Lees de gids op [&#x200B; hoe te beginnen met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md) voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken.
+Lees de gids op [ hoe te beginnen met Experience Platform APIs ](../../../../../landing/api-guide.md) voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken.
 
 ### Voorwaarden configureren
 
-Lees het [[!DNL Databricks]  overzicht &#x200B;](../../../../connectors/databases/databricks.md) om over de in de eerste plaats vereiste configuraties te leren die moeten worden voltooid alvorens u uw rekening met Experience Platform kunt verbinden.
+Lees het [[!DNL Databricks]  overzicht ](../../../../connectors/databases/databricks.md) om over de in de eerste plaats vereiste configuraties te leren die moeten worden voltooid alvorens u uw rekening met Experience Platform kunt verbinden.
 
 ### Vereiste referenties verzamelen
 
@@ -46,6 +46,7 @@ Geef waarden op voor de volgende referenties om [!DNL Databricks] te verbinden m
 | `clusterId` | De id van uw cluster in [!DNL Databricks] . Deze cluster moet al een bestaande cluster zijn en moet een interactief cluster zijn. |
 | `accessToken` | Het toegangstoken dat uw [!DNL Databricks] account verifieert. U kunt uw toegangstoken produceren gebruikend de [!DNL Databricks] werkruimte. |
 | `database` | De naam van uw database in het delta-meer. |
+| `catalog` | De naam van de catalogus in het delta-meer. U hoeft geen waarde op te geven voor een standaardcatalogus. |
 | `connectionSpec.Id` | De verbindingsSPEC identiteitskaart keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Databricks] is `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b` . |
 
 Voor meer informatie raadpleegt u het [[!DNL Databricks] overzicht](../../../../connectors/databases/databricks.md).
