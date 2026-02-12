@@ -2,12 +2,12 @@
 keywords: IP adres, IP waaier, de bestemmingen van de lijst van gewenste personen, de lijst van gewenste personen, lijst van gewenste personen die bestemmingen stromen
 title: IP adres lijst van gewenste personen voor het stromen bestemmingen
 type: Documentation
-description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform veilig naar uw eindpunt van HTTP REST API, Amazon Kinesis, of de instantie van de Hubs van de Gebeurtenis te uitvoeren Azure.
+description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform veilig naar uw HTTP REST API eindpunt, of de instantie van Amazon te exporteren Kinesis.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
+source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 0%
+source-wordcount: '425'
+ht-degree: 2%
 
 ---
 
@@ -22,9 +22,14 @@ ht-degree: 0%
 
 De IP waaiers die in deze pagina worden gedocumenteerd zijn op de volgende bestemmingen van toepassing:
 
-* [&#x200B; Geavanceerde ondernemingsbestemmingen &#x200B;](../../destination-types.md#advanced-enterprise-destinations): [&#x200B; HTTP API bestemming &#x200B;](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
-* [&#x200B; het stromen publiek de uitvoerbestemmingen van de publiek &#x200B;](../../destination-types.md#streaming-destinations), zoals [&#x200B; PegCDH Realtime Publiek &#x200B;](/help/destinations/catalog/personalization/pega-v2.md), op API-Gebaseerde integratie met [&#x200B; Salesforce Marketing Cloud &#x200B;](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) en [&#x200B; Oracle Eloqua &#x200B;](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
-* Openbare of privé bestemmingen die door [&#x200B; Destination SDK &#x200B;](../../destination-sdk/getting-started.md) worden gebouwd
+* [ Geavanceerde ondernemingsbestemmingen ](../../destination-types.md#advanced-enterprise-destinations): [ HTTP API bestemming ](./http-destination.md), en [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+* [ het stromen publiek de uitvoerbestemmingen van de publiek ](../../destination-types.md#streaming-destinations), zoals [ PegCDH Realtime Publiek ](/help/destinations/catalog/personalization/pega-v2.md), op API-Gebaseerde integratie met [ Salesforce Marketing Cloud ](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) en [ Oracle Eloqua ](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* Openbare of privébestemmingen die via [Destination SDK](../../destination-sdk/getting-started.md) zijn opgebouwd
+
+>[!IMPORTANT]
+>
+>De IP waaiers die op deze pagina worden gedocumenteerd zijn *niet* gesteund voor [!DNL Azure Event Hubs] bestemmingen en het stromen op API-Gebaseerde bestemmingen die op Microsoft Azure worden ontvangen.
+
 
 Het uitgaande verkeer van Experience Platform aan deze bestemmingen gaat altijd door IPs op deze pagina wordt vermeld die.
 
@@ -36,7 +41,7 @@ U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewal
 
 Als uw organisatiebeleid u vereist om IPs voor inkomend verkeer te lijsten van gewenste personen, moet u de IP waaiers van de volgende categorieën aan uw lijst van gewenste personen toevoegen voorafgaand aan het werken met de hierboven vermelde bestemmingen op deze pagina:
 
-1. Alle [&#x200B; globale IP adressen &#x200B;](#global)
+1. Alle [ globale IP adressen ](#global)
 2. Naast de globale IP adressen, voeg de IP adressen toe die aan het gebied beantwoorden u binnen, van de lijst verder onderaan de pagina wordt voorzien. Als u er niet in slaagt om uw regiospecifieke IP-bereik aan uw lijst van gewenste personen toe te voegen, kan dit leiden tot fouten of niet-prestaties bij het gebruik van deze streamingdoelen.
 
 ## Algemene IP-adressen {#global}
@@ -77,7 +82,7 @@ Naast deze globale IP adressen, moet u de IP adressen voor het gebied lijsten va
 
 ## VA6: Amerikaanse en Amerikaanse klanten die op AWS rijden {#aws}
 
-Het onderstaande IP-bereik is van toepassing op Experience Platform-klanten die op Amazon Web Services (AWS) draaien. Zie het [&#x200B; overzicht van de Multi-Cloud van Experience Platform &#x200B;](../../../landing/multi-cloud.md) voor meer informatie.
+Het onderstaande IP-bereik is van toepassing op Experience Platform-klanten die op Amazon Web Services (AWS) draaien. Zie het [ overzicht van de Multi-Cloud van Experience Platform ](../../../landing/multi-cloud.md) voor meer informatie.
 
 * `3.209.222.108`
 * `3.211.230.204`
