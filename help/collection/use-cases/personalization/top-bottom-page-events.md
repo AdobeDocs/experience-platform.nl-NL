@@ -33,7 +33,7 @@ Door bovenkant en bodem van paginagebeurtenissen in Web SDK te gebruiken, kan he
 
 ## Boven aan pagina, gebeurtenisvoorbeeld {#top-of-page}
 
-De codesteekproef hieronder illustreert een bovenkant van de configuratie van de paginagebeurtenis die om verpersoonlijking verzoekt maar niet [ vertoningsgebeurtenissen ](../personalization/display-events.md#send-sendEvent-calls) voor automatisch teruggegeven voorstellingen verzendt. De [ vertoningsgebeurtenissen ](../personalization/display-events.md#send-sendEvent-calls) zullen als deel van de bodem-van-pagina gebeurtenis worden verzonden.
+De codesteekproef hieronder illustreert een bovenkant van de configuratie van de paginagebeurtenis die om verpersoonlijking verzoekt maar niet [&#x200B; vertoningsgebeurtenissen &#x200B;](../personalization/display-events.md#send-sendEvent-calls) voor automatisch teruggegeven voorstellingen verzendt. De [&#x200B; vertoningsgebeurtenissen &#x200B;](../personalization/display-events.md#send-sendEvent-calls) zullen als deel van de bodem-van-pagina gebeurtenis worden verzonden.
 
 >[!BEGINTABS]
 
@@ -63,7 +63,7 @@ alloy("sendEvent", {
 
 >[!TAB  Auto-teruggegeven voorstellingen ]
 
-De codesteekproef hieronder illustreert een bodem van de configuratie van de paginagebeurtenis die vertoningsgebeurtenissen voor voorstellingen verzendt die automatisch op de pagina werden teruggegeven maar waarvoor de vertoningsgebeurtenissen in [ bovenkant van pagina ](#top-of-page) gebeurtenis werden onderdrukt.
+De codesteekproef hieronder illustreert een bodem van de configuratie van de paginagebeurtenis die vertoningsgebeurtenissen voor voorstellingen verzendt die automatisch op de pagina werden teruggegeven maar waarvoor de vertoningsgebeurtenissen in [&#x200B; bovenkant van pagina &#x200B;](#top-of-page) gebeurtenis werden onderdrukt.
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | Paramter | Vereist/optioneel | Beschrijving |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Vereist | Deze sectie bepaalt manueel teruggegeven voorstellingen. U moet de voorstelling `ID` , `scope` en `scopeDetails` opnemen. Zie [ vertoningsgebeurtenissen ](display-events.md) voor meer informatie beheren. Handmatig gerenderde verpersoonlijkingsinhoud moet onder aan de paginaklok worden opgenomen. |
+| `xdm._experience.decisioning.propositions` | Vereist | Deze sectie bepaalt manueel teruggegeven voorstellingen. U moet de voorstelling `ID` , `scope` en `scopeDetails` opnemen. Zie [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) voor meer informatie beheren. Handmatig gerenderde verpersoonlijkingsinhoud moet onder aan de paginaklok worden opgenomen. |
 | `xdm._experience.decisioning.propositionEventType` | Vereist | Stel deze parameter in op `display: 1` . |
 | `xdm` | Optioneel | Gebruik deze sectie om alle gegevens op te nemen die u onder aan de paginagebeurtenis nodig hebt. |
 
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## GitHub-voorbeeld {#github-sample}
 
-De steekproef die bij [ wordt gevonden dit adres ](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) toont aan hoe te om Experience Platform en Web SDK te gebruiken om verpersoonlijking bij de bovenkant van de pagina te verzoeken, en analysemetriek bij de bodem te verzenden. U kunt het voorbeeld downloaden en lokaal uitvoeren om te begrijpen hoe boven- en onderaan pagina-gebeurtenissen werken.
+De steekproef die bij [&#x200B; wordt gevonden dit adres &#x200B;](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) toont aan hoe te om Experience Platform en Web SDK te gebruiken om verpersoonlijking bij de bovenkant van de pagina te verzoeken, en analysemetriek bij de bodem te verzenden. U kunt het voorbeeld downloaden en lokaal uitvoeren om te begrijpen hoe boven- en onderaan pagina-gebeurtenissen werken.

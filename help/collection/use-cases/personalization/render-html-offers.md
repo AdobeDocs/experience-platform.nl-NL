@@ -15,7 +15,7 @@ Gebruik dit patroon wanneer uw voorstellingen HTML-inhoud bevatten, maar u moet 
 
 ## &#x200B;1. flikkering beheren (optioneel)
 
-Als u inhoud verbergt tijdens het renderen, bent u er verantwoordelijk voor dat de inhoud wordt weergegeven nadat het renderen is voltooid. Zie [ flikkering ](manage-flicker.md) voor meer informatie beheren.
+Als u inhoud verbergt tijdens het renderen, bent u er verantwoordelijk voor dat de inhoud wordt weergegeven nadat het renderen is voltooid. Zie [&#x200B; flikkering &#x200B;](manage-flicker.md) voor meer informatie beheren.
 
 ## &#x200B;2. Vraag voorstellen aan voor het bereik dat u wilt renderen
 
@@ -99,11 +99,11 @@ alloy("sendEvent", {
 });
 ```
 
-Zie [ vertoningsgebeurtenissen ](display-events.md) voor meer informatie beheren.
+Zie [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) voor meer informatie beheren.
 
 >[!TIP]
 >
->Als u [ Hoogste en bodempaginagebeurtenissen ](top-bottom-page-events.md) gebruikt, wordt deze &quot;verslagvertoning&quot;vraag algemeen uitgevoerd in de bodem `sendEvent` vraag.
+>Als u [&#x200B; Hoogste en bodempaginagebeurtenissen &#x200B;](top-bottom-page-events.md) gebruikt, wordt deze &quot;verslagvertoning&quot;vraag algemeen uitgevoerd in de bodem `sendEvent` vraag.
 
 ## &#x200B;5. Opnieuw renderen
 
@@ -118,4 +118,4 @@ alloy("applyPropositions", {
 });
 ```
 
-Als u een vertoningsgebeurtenis voor dat moet registreren re-geef terug, zie [ vertoningsgebeurtenissen ](display-events.md) leiden.
+Als u een vertoningsgebeurtenis voor dat moet registreren re-geef terug, zie [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) leiden.

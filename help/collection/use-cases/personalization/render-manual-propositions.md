@@ -91,8 +91,8 @@ alloy("sendEvent", {
 });
 ```
 
-Zie [ vertoningsgebeurtenissen ](display-events.md) voor meer informatie beheren.
+Zie [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) voor meer informatie beheren.
 
 ## &#x200B;4. Herrendering
 
-Wanneer wijzigingen in de gebruikersinterface opnieuw moeten worden gerenderd, voert u de handmatige renderinglogica opnieuw uit tegen de propositiegegevens die u in de cache hebt opgeslagen (of haalt u indien nodig nogmaals op). Als u een vertoning voor re-rendert scenario&#39;s moet registreren, zie [ vertoningsgebeurtenissen ](display-events.md) leiden.
+Wanneer wijzigingen in de gebruikersinterface opnieuw moeten worden gerenderd, voert u de handmatige renderinglogica opnieuw uit tegen de propositiegegevens die u in de cache hebt opgeslagen (of haalt u indien nodig nogmaals op). Als u een vertoning voor re-rendert scenario&#39;s moet registreren, zie [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) leiden.

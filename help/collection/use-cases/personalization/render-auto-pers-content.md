@@ -19,7 +19,7 @@ Deze items bevatten doorgaans een kiezer en een handelingstype (bijvoorbeeld `se
 
 ## &#x200B;1. flikkering beheren (optioneel)
 
-Als u flikkering moet voorkomen terwijl gepersonaliseerde inhoud wordt toegepast, gebruikt u de aanbevolen aanpak voor flikkerbeheer voor uw implementatie. Zie [ flikkering ](manage-flicker.md) voor beschikbare opties beheren.
+Als u flikkering moet voorkomen terwijl gepersonaliseerde inhoud wordt toegepast, gebruikt u de aanbevolen aanpak voor flikkerbeheer voor uw implementatie. Zie [&#x200B; flikkering &#x200B;](manage-flicker.md) voor beschikbare opties beheren.
 
 ## &#x200B;2. Beslissingen aanvragen en weergeven voor automatische rendering
 
@@ -66,7 +66,7 @@ alloy("sendEvent", {
 });
 ```
 
-Zie [ vertoningsgebeurtenissen ](display-events.md) voor afwisselende opties beheren die aan de behoeften van uw implementatie voldoen, zoals wanneer het gebruiken van [ Hoogste en onderste paginagebeurtenissen ](top-bottom-page-events.md).
+Zie [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) voor afwisselende opties beheren die aan de behoeften van uw implementatie voldoen, zoals wanneer het gebruiken van [&#x200B; Hoogste en onderste paginagebeurtenissen &#x200B;](top-bottom-page-events.md).
 
 ## &#x200B;4. Wijzigingen in de SPA-weergave en renderen
 
@@ -109,4 +109,4 @@ Zie [`applyPropositions`](/help/collection/js/commands/applypropositions.md) voo
 
 >[!NOTE]
 >
->De opdracht `applyPropositions` verzendt niet automatisch weergavegebeurtenissen. Als u &quot;vertoning&quot;voor re-geef scenario&#39;s moet registreren, zie [ weergavegebeurtenissen ](display-events.md) beheren.
+>De opdracht `applyPropositions` verzendt niet automatisch weergavegebeurtenissen. Als u &quot;vertoning&quot;voor re-geef scenario&#39;s moet registreren, zie [&#x200B; weergavegebeurtenissen &#x200B;](display-events.md) beheren.

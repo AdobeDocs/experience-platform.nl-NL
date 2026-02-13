@@ -24,7 +24,7 @@ Deze opdracht ondersteunt de volgende velden:
 
 >[!NOTE]
 >
->De opdracht `applyPropositions` verzendt niet automatisch weergavegebeurtenissen. Als de opnamevertoningen gewenst zijn, gebruik het `sendEvent` bevel zoals die in [ wordt beschreven leidt vertoningsgebeurtenissen ](/help/collection/use-cases/personalization/display-events.md).
+>De opdracht `applyPropositions` verzendt niet automatisch weergavegebeurtenissen. Als de opnamevertoningen gewenst zijn, gebruik het `sendEvent` bevel zoals die in [&#x200B; wordt beschreven leidt vertoningsgebeurtenissen &#x200B;](/help/collection/use-cases/personalization/display-events.md).
 
 Voer het `applyPropositions` bevel in werking wanneer het roepen van uw gevormde instantie van het Web SDK. Het object met configuratieopties ondersteunt de volgende velden:
 

@@ -20,9 +20,9 @@ SDK van het Web kan verpersoonlijkingsbesluiten (die ook als _worden bekend voor
 
 Kies het patroon dat overeenkomt met de pro-positieitems die u ontvangt:
 
-1. **geeft automatisch DOM actievoorstellen** terug: Gebruik wanneer de voorstellen `dom-action` punten met selecteurs en actietypes omvatten die SDK van het Web automatisch kan toepassen. Zie [ automatisch DOM actievoorstellen ](render-auto-pers-content.md) teruggeven.
-1. **geeft de aanbiedingen van HTML zonder selecteurs terug gebruikend applyProposities**: Gebruik wanneer u de inhoud van HTML ontvangt, maar u moet verstrekken waar en hoe te om het (selecteur + actietype) via meta-gegevens toe te passen. Zie [ HTML aanbiedingen zonder selecteurs teruggeven ](render-html-offers.md).
-1. **geeft manueel voorstellingen** terug: Gebruik wanneer u volledige controle over het teruggeven logica (bijvoorbeeld, het samenstellen UI van JSON of het toepassen van douanebedrijfsregels) nodig hebt. Zie [ manueel proposities ](render-manual-propositions.md) teruggeven.
+1. **geeft automatisch DOM actievoorstellen** terug: Gebruik wanneer de voorstellen `dom-action` punten met selecteurs en actietypes omvatten die SDK van het Web automatisch kan toepassen. Zie [&#x200B; automatisch DOM actievoorstellen &#x200B;](render-auto-pers-content.md) teruggeven.
+1. **geeft de aanbiedingen van HTML zonder selecteurs terug gebruikend applyProposities**: Gebruik wanneer u de inhoud van HTML ontvangt, maar u moet verstrekken waar en hoe te om het (selecteur + actietype) via meta-gegevens toe te passen. Zie [&#x200B; HTML aanbiedingen zonder selecteurs teruggeven &#x200B;](render-html-offers.md).
+1. **geeft manueel voorstellingen** terug: Gebruik wanneer u volledige controle over het teruggeven logica (bijvoorbeeld, het samenstellen UI van JSON of het toepassen van douanebedrijfsregels) nodig hebt. Zie [&#x200B; manueel proposities &#x200B;](render-manual-propositions.md) teruggeven.
 
 >[!TIP]
 >
@@ -32,13 +32,13 @@ Kies het patroon dat overeenkomt met de pro-positieitems die u ontvangt:
 
 De meeste verpersoonlijkingsimplementaties impliceren deze gemeenschappelijke onderwerpen:
 
-* **Prevent flikkering** (facultatief): Verberg en verberg containers tijdens verpersoonlijking. Zie [ flikkering beheren ](manage-flicker.md).
-* **Spoor wat werd getoond**: De vertoningsgebeurtenissen van het verslag voor teruggegeven inhoud. Zie [ vertoningsgebeurtenissen ](display-events.md) beheren.
-* **Top-van-pagina halen/bodem-van-pagina metriek**: De besluiten van het verzoek vroeg, dan omvatten meting later. Zie [ boven en bodem van paginagebeurtenissen ](top-bottom-page-events.md) vormen.
+* **Prevent flikkering** (facultatief): Verberg en verberg containers tijdens verpersoonlijking. Zie [&#x200B; flikkering beheren &#x200B;](manage-flicker.md).
+* **Spoor wat werd getoond**: De vertoningsgebeurtenissen van het verslag voor teruggegeven inhoud. Zie [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) beheren.
+* **Top-van-pagina halen/bodem-van-pagina metriek**: De besluiten van het verzoek vroeg, dan omvatten meting later. Zie [&#x200B; boven en bodem van paginagebeurtenissen &#x200B;](top-bottom-page-events.md) vormen.
 
 ## Web SDK-voorbeelden
 
-Naast de documentpagina&#39;s in deze map houdt Adobe een opslagplaats bij van voorbeeldtoepassingen waarnaar u kunt verwijzen. Zie {de steekproeven van SDK van 0} Web [ op GitHub voor extra verpersoonlijkingsscenario&#39;s, die omvatten:](https://github.com/adobe/alloy-samples/)
+Naast de documentpagina&#39;s in deze map houdt Adobe een opslagplaats bij van voorbeeldtoepassingen waarnaar u kunt verwijzen. Zie {de steekproeven van SDK van 0} Web [&#x200B; op GitHub voor extra verpersoonlijkingsscenario&#39;s, die omvatten:](https://github.com/adobe/alloy-samples/)
 
 * Aanpassing aan clientzijde
 * Aanpassing aan server

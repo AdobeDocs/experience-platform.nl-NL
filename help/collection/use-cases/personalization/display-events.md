@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Weergavegebeurtenissen beheren in de Web SDK
 
-De gebeurtenissen van de vertoning vertellen verpersoonlijking of analysediensten dat een specifiek stuk van gepersonaliseerde inhoud aan de gebruiker werd getoond. Het verzenden van vertoningsgebeurtenissen verbetert rapporteringsnauwkeurigheid door stroomafwaartse systemen te helpen tussen inhoud onderscheiden die ** en inhoud werd gevraagd die ** eigenlijk werd getoond.
+De gebeurtenissen van de vertoning vertellen verpersoonlijking of analysediensten dat een specifiek stuk van gepersonaliseerde inhoud aan de gebruiker werd getoond. Het verzenden van vertoningsgebeurtenissen verbetert rapporteringsnauwkeurigheid door stroomafwaartse systemen te helpen tussen inhoud onderscheiden die **&#x200B; en inhoud werd gevraagd die &#x200B;** eigenlijk werd getoond.
 
 ## Weergavegebeurtenissen automatisch verzenden
 
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 ## Weergavegebeurtenissen verzenden in volgende `sendEvent` oproepen
 
-Het opnemen van weergavegebeurtenissen in een latere aanroep van `sendEvent` is handig als u extra laadgegevens voor de pagina wilt toevoegen die niet beschikbaar zijn wanneer u om personalisatie vraagt. Het wordt algemeen gebruikt wanneer het uitvoeren van [ Hoogste en bodempaginagebeurtenissen ](/help/collection/use-cases/personalization/top-bottom-page-events.md). Correct het uitvoeren van vertoningsgebeurtenissen op deze manier helpt kwesties met [ Stuiteren tarief ](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate) in Adobe Analytics vermijden.
+Het opnemen van weergavegebeurtenissen in een latere aanroep van `sendEvent` is handig als u extra laadgegevens voor de pagina wilt toevoegen die niet beschikbaar zijn wanneer u om personalisatie vraagt. Het wordt algemeen gebruikt wanneer het uitvoeren van [&#x200B; Hoogste en bodempaginagebeurtenissen &#x200B;](/help/collection/use-cases/personalization/top-bottom-page-events.md). Correct het uitvoeren van vertoningsgebeurtenissen op deze manier helpt kwesties met [&#x200B; Stuiteren tarief &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate) in Adobe Analytics vermijden.
 
 1. Vraag bij de eerste `sendEvent` -aanroep (vaak boven aan de pagina) inhoud aan en geef deze weer, maar onderdruk automatische weergavegebeurtenissen door `renderDecisions` in te stellen op `true` en `personalization.sendDisplayEvent` op `false` :
 
