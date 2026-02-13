@@ -13,14 +13,14 @@ ht-degree: 1%
 
 De Adobe Experience Platform Web SDK-tagextensie biedt verschillende opties die u kunt aanpassen. Deze configuratie-instellingen komen overeen met het gebruik van de opdracht [`configure`](/help/collection/js/commands/configure/overview.md) in de JavaScript-bibliotheek.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 
 ## Aangepaste build-componenten
 
-Als het optimaliseren van bouwstijlgrootte een prioriteit voor uw organisatie is, kunt u bepaalde eigenschappen onbruikbaar maken die u niet gebruikt om de bouwstijlgrootte van de uitbreiding te verminderen. Zie [ Aangepast bouwt componenten ](custom-build-components.md) voor meer informatie.
+Als het optimaliseren van bouwstijlgrootte een prioriteit voor uw organisatie is, kunt u bepaalde eigenschappen onbruikbaar maken die u niet gebruikt om de bouwstijlgrootte van de uitbreiding te verminderen. Zie [&#x200B; Aangepast bouwt componenten &#x200B;](custom-build-components.md) voor meer informatie.
 
 ## SDK-instanties
 

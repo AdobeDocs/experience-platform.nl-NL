@@ -18,13 +18,13 @@ ht-degree: 2%
 
 In deze configuratiesectie kunt u geavanceerde instellingen wijzigen. Adobe raadt u aan deze opties ongewijzigd te laten voor de meeste implementaties.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 1. Schuif omlaag naar de sectie **[!UICONTROL Advanced Settings]** .
 
-![ Beeld dat de geavanceerde montages toont gebruikend de de markeringsuitbreidingspagina van SDK van het Web ](../assets/advanced-settings.png)
+![&#x200B; Beeld dat de geavanceerde montages toont gebruikend de de markeringsuitbreidingspagina van SDK van het Web &#x200B;](../assets/advanced-settings.png)
 
 Er is momenteel één optie beschikbaar.
 
