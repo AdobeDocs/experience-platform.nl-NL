@@ -1,21 +1,26 @@
 ---
-title: Aangepaste build-componenten
+title: Opties voor samenstellen
 description: Maak een aangepaste Web SDK-build die functies uitschakelt om de buildgrootte te verlagen.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '277'
 ht-degree: 1%
 
 ---
 
-# Aangepaste build-componenten
+# Opties voor samenstellen {#build-options}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_buildoptions"
+>title="Opties voor samenstellen"
+>abstract="U kunt modules selectief opnemen in of uitsluiten van de JavaScript-bibliotheek, waardoor de bibliotheekgrootte afneemt en de prestaties verbeteren."
 
 De bibliotheek van SDK van het Web omvat veelvoudige modules voor diverse eigenschappen zoals verpersoonlijking, identiteit, verbinding het volgen, en meer. Afhankelijk van uw gebruiksgevallen hebt u wellicht alleen specifieke functies nodig in plaats van de volledige bibliotheek. Als u de build-componenten uitschakelt, kunt u alleen de modules gebruiken die u nodig hebt, waardoor de bibliotheekgrootte afneemt en de prestaties verbeteren.
 
 Wanneer u een component uitschakelt, kunt u de instellingen van die component niet meer bewerken. Als u veelvoudige instanties van SDK van het Web gebruikt, zijn de geselecteerde bouwstijlcomponenten op alle instanties van toepassing.
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.

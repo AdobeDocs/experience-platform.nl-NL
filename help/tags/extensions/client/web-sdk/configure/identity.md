@@ -1,24 +1,30 @@
 ---
 title: Identiteitsinstellingen
 description: Bepaal hoe bezoekers door de tagextensie worden geïdentificeerd.
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '298'
 ht-degree: 1%
 
 ---
 
-# Identiteitsinstellingen
+# Identiteitsinstellingen {#identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_identity"
+>title="Identiteit"
+>abstract="Bepaal hoe bezoekers door de tagextensie worden geïdentificeerd."
 
 Deze configuratiesectie staat u toe om het gedrag van het Web SDK te bepalen wanneer het over de behandeling van gebruikersidentificatie komt.
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 1. Schuif omlaag naar de sectie **[!UICONTROL Identity]** .
 
-![&#x200B; Beeld dat de identiteitsmontages van de de markeringsuitbreiding van SDK van het Web in de markeringen UI toont &#x200B;](../assets/web-sdk-ext-identity.png)
+![ Beeld dat de identiteitsmontages van de de markeringsuitbreiding van SDK van het Web in de markeringen UI toont ](../assets/web-sdk-ext-identity.png)
 
 De volgende opties zijn beschikbaar:
 
@@ -32,4 +38,4 @@ Als deze optie is ingeschakeld, probeert de Web SDK een gebruikers-id op te slaa
 
 >[!IMPORTANT]
 >
->De koekjes van de derde zijn niet compatibel met de [&#x200B; functionaliteit 1&rbrace; van identiteitskaart van het eerste apparaat in SDK van het Web. &#x200B;](/help/collection/use-cases/identity/first-party-device-ids.md) U kunt apparaat-id&#39;s van de eerste fabrikant gebruiken of cookies van derden gebruiken; u kunt beide functies niet gelijktijdig gebruiken.
+>De koekjes van de derde zijn niet compatibel met de [ functionaliteit 1} van identiteitskaart van het eerste apparaat in SDK van het Web. ](/help/collection/use-cases/identity/first-party-device-ids.md) U kunt apparaat-id&#39;s van de eerste fabrikant gebruiken of cookies van derden gebruiken; u kunt beide functies niet gelijktijdig gebruiken.

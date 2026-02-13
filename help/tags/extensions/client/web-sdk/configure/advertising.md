@@ -1,22 +1,28 @@
 ---
 title: Adobe Advertising-configuratie-instellingen
 description: De functionaliteit van het platform aan de vraagzijde in- of uitschakelen.
-source-git-commit: 526cb473a6288f367db9cb00c0277cce7543cd57
+exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '209'
 ht-degree: 1%
 
 ---
 
-# Adobe Advertising-configuratie-instellingen
+# Adobe Advertising-configuratie-instellingen {#advertising}
 
 >[!AVAILABILITY]
 >
 >Adobe Advertising voor het Web SDK is momenteel in **bèta**. De functionaliteit en documentatie kunnen worden gewijzigd.
 
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_advertising"
+>title="Adobe Advertising"
+>abstract="Configureer instellingen voor Adobe Advertising-integratie. Er is geen advertentieconfiguratie nodig om doorklikmeting in te schakelen. Zoek-, sociale en Commerce-clients hebben geen verdere actie vereist. Gebruikers van het Demand-Side Platform (DSP) moeten echter in deze sectie adverteerders configureren om doorkijkconversies te meten."
+
 In de sectie **[!UICONTROL Adobe Advertising]** kunt u de functionaliteit van het platform aan de vraagzijde (DSP) in- of uitschakelen als deze wordt gebruikt in uw implementatie. U hoeft dit veld alleen in te stellen als uw implementatie een DSP gebruikt.
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.

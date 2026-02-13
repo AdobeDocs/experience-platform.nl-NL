@@ -1,24 +1,30 @@
 ---
 title: Personalization-configuratie-instellingen
 description: Vorm verpersoonlijkingsmontages in de de markeringsuitbreiding van SDK van het Web.
-source-git-commit: 9a617b6e97aec22a6726266f2628bd2c2a05da19
+exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
-# Personalization-configuratie-instellingen
+# Personalization-configuratie-instellingen {#personalization}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_personalization"
+>title="Personalisatie"
+>abstract="Hiermee bepaalt u hoe de bestandsextensie van de tag persoonlijke inhoud behandelt."
 
 In deze configuratiesectie kunt u bepalen hoe u bepaalde delen van de pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen. Wanneer correct gevormd, zorgen deze montages ervoor dat uw bezoekers de juiste gepersonaliseerde inhoud zien.
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 1. Schuif omlaag naar de sectie **[!UICONTROL Personalization]** .
 
-![&#x200B; Beeld dat de verpersoonlijkingsmontages van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont &#x200B;](../assets/web-sdk-ext-personalization.png)
+![ Beeld dat de verpersoonlijkingsmontages van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont ](../assets/web-sdk-ext-personalization.png)
 
 De volgende opties zijn beschikbaar:
 
@@ -26,7 +32,7 @@ De volgende opties zijn beschikbaar:
 
 Met deze optie stelt u de Web SDK in staat de verouderde `mbox` - en `mboxEdgeCluster` -cookies te lezen en te schrijven die door de `at.js` 1.x- of 2.x-bibliotheken worden gebruikt. Deze instelling helpt bezoekersprofielen intact te houden terwijl er wordt geschakeld tussen pagina&#39;s met de Web SDK of `at.js` op dezelfde website. Als u `at.js` niet ergens op uw site hebt geïmplementeerd, hoeft u dit selectievakje niet in te schakelen. Het JavaScript-bibliotheekequivalent aan dit selectievakje is [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md) .
 
-Wanneer u deze optie inschakelt, moet u ook [`overrideMboxEdgeServer` &#x200B;](https://experienceleague.adobe.com/nl/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` inschakelen.
+Wanneer u deze optie inschakelt, moet u ook [`overrideMboxEdgeServer` ](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) in `targetGlobalSettings()` inschakelen.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 

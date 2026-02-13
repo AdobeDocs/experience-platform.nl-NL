@@ -2,24 +2,29 @@
 title: Instellingen voor gegevensverzameling
 description: Configureer instellingen voor gegevensverzameling in de SDK-tagextensie voor het web.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
 
-# Instellingen voor gegevensverzameling
+# Instellingen voor gegevensverzameling {#data-collection}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datacollection"
+>title="Dataverzameling"
+>abstract="Bepaal welke gegevens moeten worden verzameld en hoe die gegevens worden verzameld over de tagextensie."
 
 Deze configuratiesectie staat u toe om te bepalen hoe de gegevens over de uitbreiding worden verzameld.
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 1. Schuif omlaag naar de sectie **[!UICONTROL Data collection]** .
 
-![&#x200B; Beeld dat de montages van de gegevensinzameling van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont.](../assets/web-sdk-ext-collection.png)
+![ Beeld dat de montages van de gegevensinzameling van de de markeringsuitbreiding van SDK van het Web in de Markeringen UI toont.](../assets/web-sdk-ext-collection.png)
 
 De volgende opties zijn beschikbaar:
 
