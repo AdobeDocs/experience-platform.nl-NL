@@ -230,7 +230,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Bevestigingen en verbeteringen**
 
-- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [&#x200B; Data Integration Library (DIL) &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
+- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [&#x200B; Data Integration Library (DIL) &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL).
 
 ## Versie 2.16.0 - 25 april 2023
 

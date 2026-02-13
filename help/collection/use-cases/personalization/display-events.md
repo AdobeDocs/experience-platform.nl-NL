@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 ## Weergavegebeurtenissen verzenden in volgende `sendEvent` oproepen
 
-Het opnemen van weergavegebeurtenissen in een latere aanroep van `sendEvent` is handig als u extra laadgegevens voor de pagina wilt toevoegen die niet beschikbaar zijn wanneer u om personalisatie vraagt. Het wordt algemeen gebruikt wanneer het uitvoeren van [&#x200B; Hoogste en bodempaginagebeurtenissen &#x200B;](/help/collection/use-cases/personalization/top-bottom-page-events.md). Correct het uitvoeren van vertoningsgebeurtenissen op deze manier helpt kwesties met [&#x200B; Stuiteren tarief &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate) in Adobe Analytics vermijden.
+Het opnemen van weergavegebeurtenissen in een latere aanroep van `sendEvent` is handig als u extra laadgegevens voor de pagina wilt toevoegen die niet beschikbaar zijn wanneer u om personalisatie vraagt. Het wordt algemeen gebruikt wanneer het uitvoeren van [&#x200B; Hoogste en bodempaginagebeurtenissen &#x200B;](/help/collection/use-cases/personalization/top-bottom-page-events.md). Correct het uitvoeren van vertoningsgebeurtenissen op deze manier helpt kwesties met [&#x200B; Stuiteren tarief &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/components/metrics/bounce-rate) in Adobe Analytics vermijden.
 
 1. Vraag bij de eerste `sendEvent` -aanroep (vaak boven aan de pagina) inhoud aan en geef deze weer, maar onderdruk automatische weergavegebeurtenissen door `renderDecisions` in te stellen op `true` en `personalization.sendDisplayEvent` op `false` :
 
