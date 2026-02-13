@@ -6,9 +6,9 @@ breadcrumb-title: Dataverzameling
 user-guide-description: Leer hoe u gegevens naar Adobe Experience Platform verzendt.
 feature: Data Collection
 role: Developer
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '149'
 ht-degree: 14%
 
 ---
@@ -106,7 +106,9 @@ ht-degree: 14%
    + [Meerdere SDK-instanties](use-cases/multiple-instances.md)
    + Personalisatie {#personalization}
       + [Overzicht](use-cases/personalization/pers-overview.md)
-      + [Gebeurtenissen weergeven](use-cases/personalization/display-events.md)
+      + [DOM-handelingen automatisch renderen](use-cases/personalization/render-auto-pers-content.md)
+      + [HTML-voorstellen renderen](use-cases/personalization/render-html-offers.md)
+      + [Proposities handmatig renderen](use-cases/personalization/render-manual-propositions.md)
       + [flikkering beheren](use-cases/personalization/manage-flicker.md)
-      + [Aangepaste inhoud renderen](use-cases/personalization/rendering-personalization-content.md)
+      + [Gebeurtenissen weergeven](use-cases/personalization/display-events.md)
       + [Gebeurtenissen van de bovenste en onderste pagina](use-cases/personalization/top-bottom-page-events.md)

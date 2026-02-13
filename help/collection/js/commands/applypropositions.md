@@ -2,9 +2,9 @@
 title: applyProposities
 description: Rendervoorstellingen die al met sendEvent zijn gerenderd.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Deze opdracht ondersteunt de volgende velden:
    * Bereik
    * Kiezer
    * Type handeling
+
+>[!NOTE]
+>
+>De opdracht `applyPropositions` verzendt niet automatisch weergavegebeurtenissen. Als de opnamevertoningen gewenst zijn, gebruik het `sendEvent` bevel zoals die in [ wordt beschreven leidt vertoningsgebeurtenissen ](/help/collection/use-cases/personalization/display-events.md).
 
 Voer het `applyPropositions` bevel in werking wanneer het roepen van uw gevormde instantie van het Web SDK. Het object met configuratieopties ondersteunt de volgende velden:
 
