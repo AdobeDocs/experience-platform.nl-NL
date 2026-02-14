@@ -22,7 +22,7 @@ De SQL-voorbeelden in dit document zijn query&#39;s die veel worden gebruikt met
 * [&#x200B; het overzicht van Attribution IQ &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=nl-NL)
 * [&#x200B; de het paneelgids van de Attributie van Adobe Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=nl-NL).
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](../sql/adobe-defined-functions.md#window-functions) worden gevonden. De [&#x200B; Adobe Marketing en de Verklarende woordenlijst van de Term van Commerce &#x200B;](https://business.adobe.com/glossary/index.html) kunnen ook van nut zijn.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](../sql/adobe-defined-functions.md#window-functions) worden gevonden. De [&#x200B; Adobe Marketing en de Verklarende woordenlijst van de Term van Commerce &#x200B;](https://business.adobe.com/nl/glossary/index.html) kunnen ook van nut zijn.
 
 Voor elk van de volgende gebruiksgevallen wordt een geparametriseerd SQL vraagvoorbeeld verstrekt als malplaatje voor u aan te passen. Geef parameters op waar `{ }` wordt weergegeven in de SQL-voorbeelden die u wilt evalueren.
 
