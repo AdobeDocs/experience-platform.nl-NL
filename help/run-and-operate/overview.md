@@ -1,10 +1,10 @@
 ---
 title: Overzicht uitvoeren en gebruiken
-description: Inspecteer, los problemen op, en optimaliseer uw implementaties van Adobe Experience Platform met de Looppas en werkende hulpmiddelen. Verbeter zicht in geplande partijactiviteiten, identificeer configuratiekwesties, en verbeter systeembetrouwbaarheid.
+description: Inspecteer, los problemen op, en optimaliseer uw implementaties van Experience Platform met de Looppas en werkende hulpmiddelen. Verbeter zicht in geplande partijactiviteiten, identificeer configuratiekwesties, en verbeter systeembetrouwbaarheid.
 hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Met [!UICONTROL Run and Operate] -gereedschappen kunt u:
 
 ## Vereisten {#prerequisites}
 
-Om tot Looppas toegang te hebben en hulpmiddelen in werking te stellen, hebt u **[!UICONTROL View Job Schedules]** en **[!UICONTROL View Profile Management]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig.
+Om tot Looppas toegang te hebben en hulpmiddelen in werking te stellen, hebt u **[!UICONTROL View Job Schedules]** en **[!UICONTROL View Profile Management]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig.
 De pagina [!UICONTROL Job Schedules] biedt een overzicht van al uw geplande batchverwerkingstaken.
 Neem contact op met de systeembeheerder om ervoor te zorgen dat u over de juiste machtigingen beschikt.
 
@@ -47,9 +47,9 @@ U kunt als volgt de gereedschappen Uitvoeren en Bewerken openen via de gebruiker
 
    >[!NOTE]
    >
-   >Momenteel, is het enige beschikbare vermogen [&#x200B; Programma&#39;s van de Baan &#x200B;](job-schedules.md).
+   >Momenteel, is het enige beschikbare vermogen [ Programma&#39;s van de Baan ](job-schedules.md).
 
-![&#x200B; Experience Platform UI die de Looppas toont en linkernav in werking stelt.](assets/overview/run-and-operate.png)
+![ Experience Platform UI die de Looppas toont en linkernav in werking stelt.](assets/overview/run-and-operate.png)
 
 ## Beschikbare gereedschappen {#available-tools}
 
@@ -66,9 +66,9 @@ Met de volgende gereedschappen kunt u uw gegevensbewerkingen controleren en opti
 > * Batchsegmentatie
 > * Batchdoelactivering.
 
-Met [&#x200B; Programma&#39;s van de Baan &#x200B;](job-schedules.md), kunt u alle geplande partijverrichtingen over uw organisatie, per zandbak, met inbegrip van de opname van het gegevenspeer, profielopname, segmentatie, en bestemmingsactivering inspecteren. De status van de baanuitvoering van de mening, prestatiesmetriek, en uitvoeringsgeschiedenis om patronen te identificeren en configuratiekwesties te diagnostiseren die betrouwbaarheid beïnvloeden.
+Met [ Programma&#39;s van de Baan ](job-schedules.md), kunt u alle geplande partijverrichtingen over uw organisatie, per zandbak, met inbegrip van de opname van het gegevenspeer, profielopname, segmentatie, en bestemmingsactivering inspecteren. De status van de baanuitvoering van de mening, prestatiesmetriek, en uitvoeringsgeschiedenis om patronen te identificeren en configuratiekwesties te diagnostiseren die betrouwbaarheid beïnvloeden.
 
-![&#x200B; UI die van Experience Platform het scherm van de Planningen van de Baan toont.](assets/overview/job-schedules-interface.png)
+![ UI die van Experience Platform het scherm van de Planningen van de Baan toont.](assets/overview/job-schedules-interface.png)
 
 De dienstprogramma&#39;s verstrekken drie niveaus van onderzoek:
 
@@ -82,8 +82,8 @@ U kunt ook de afhankelijkheden tussen gegevensverwerkingsfasen begrijpen, zodat 
 
 Nu u het doel en de mogelijkheden van [!UICONTROL Run and Operate] -gereedschappen begrijpt, verkent u de volgende bronnen om uw kennis te verdiepen:
 
-* Leer over [&#x200B; partij ingestie &#x200B;](../ingestion/batch-ingestion/overview.md) om te begrijpen hoe het gegeven in Experience Platform wordt opgenomen
-* Leer hoe te om [&#x200B; baanprogramma&#39;s &#x200B;](job-schedules.md) voor uw partijopname en activeringen te inspecteren
-* Begrijp hoe te [&#x200B; geplande activeringen &#x200B;](../destinations/ui/activate-batch-profile-destinations.md) voor partijbestemmingen vormen
-* Onderzoek [&#x200B; dataflow controle &#x200B;](../dataflows/ui/monitor-destinations.md) voor bestemmingen
+* Leer over [ partij ingestie ](../ingestion/batch-ingestion/overview.md) om te begrijpen hoe het gegeven in Experience Platform wordt opgenomen
+* Leer hoe te om [ baanprogramma&#39;s ](job-schedules.md) voor uw partijopname en activeringen te inspecteren
+* Begrijp hoe te [ geplande activeringen ](../destinations/ui/activate-batch-profile-destinations.md) voor partijbestemmingen vormen
+* Onderzoek [ dataflow controle ](../dataflows/ui/monitor-destinations.md) voor bestemmingen
 
