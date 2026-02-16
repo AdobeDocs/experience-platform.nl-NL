@@ -24,7 +24,7 @@ ht-degree: 0%
 > * Batchsegmentatie
 > * Batchdoelactivering.
 
-Wanneer het oplossen van problemenbaanmislukkingen of het onderzoeken van prestatieskwesties, hebt u gedetailleerde informatie over specifieke datasets en hun baanlooppas nodig. De [ interface van de Programma&#39;s van de Baan ](job-schedules.md) staat u toe om neer van de chronologiemening in individuele datasets en banen te boren om uitvoeringsgeschiedenis, timing, en status te begrijpen.
+Wanneer het oplossen van problemenbaanmislukkingen of het onderzoeken van prestatieskwesties, hebt u gedetailleerde informatie over specifieke datasets en hun baanlooppas nodig. De [&#x200B; interface van de Programma&#39;s van de Baan &#x200B;](job-schedules.md) staat u toe om neer van de chronologiemening in individuele datasets en banen te boren om uitvoeringsgeschiedenis, timing, en status te begrijpen.
 
 Met deze gedetailleerde weergave kunt u:
 
@@ -38,9 +38,9 @@ Met deze gedetailleerde weergave kunt u:
 
 Voordat u de taakdetails weergeeft, moet u:
 
-* Heb toegang tot [!UICONTROL Job Schedules] met **[!UICONTROL View Job Schedules]** en **[!UICONTROL View Profile Management]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions).
-* Ben vertrouwd met de [ interface van Programma&#39;s van de Baan ](job-schedules.md#understanding-interface) en chronologiemening.
-* Begrijp de verschillende [ baantypes ](job-schedules.md#job-schedules-details) (meeropname, profielopname, segmentatie, activering).
+* Heb toegang tot [!UICONTROL Job Schedules] met **[!UICONTROL View Job Schedules]** en **[!UICONTROL View Profile Management]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions).
+* Ben vertrouwd met de [&#x200B; interface van Programma&#39;s van de Baan &#x200B;](job-schedules.md#understanding-interface) en chronologiemening.
+* Begrijp de verschillende [&#x200B; baantypes &#x200B;](job-schedules.md#job-schedules-details) (meeropname, profielopname, segmentatie, activering).
 
 ## Werken met de detailhiërarchie {#details-hierarchy}
 
@@ -48,7 +48,7 @@ De dienstprogramma&#39;s verstrekken drie niveaus van detail, die u toestaan om 
 
 | Weergaveniveau | Wat het laat zien | Wanneer gebruikt u het |
 |------------|---------------|----------------|
-| **mening van de Chronologie** | Alle datasets en hun geplande banen over de geselecteerde tijdspanne | Het identificeren van patronen, het spotting [ anti-patronen ](job-schedules-anti-patterns.md), en het krijgen van een overzicht van uw volledige pijpleiding |
+| **mening van de Chronologie** | Alle datasets en hun geplande banen over de geselecteerde tijdspanne | Het identificeren van patronen, het spotting [&#x200B; anti-patronen &#x200B;](job-schedules-anti-patterns.md), en het krijgen van een overzicht van uw volledige pijpleiding |
 | **de details van de Dataset** | Samengevoegde metriek en uitvoeringsgeschiedenis voor één enkele dataset | Het volgen van algemene prestaties van één dataset, het begrip van gegevensvolumes, en het herzien baanfrequentie |
 | **de looppas van de Baan details** | Specifieke uitvoeringsinformatie voor een individuele uitgevoerde taak | Controleren waarom een bepaalde taak is mislukt, exacte timing controleren en verwerkte records controleren |
 
@@ -70,15 +70,15 @@ Deze lay-out staat u toe om timingsverhoudingen tussen uw banen van de gegevensp
 
 | Ik moet... | Deze weergave gebruiken |
 |--------------|---------------|
-| Bekijk al mijn profiel-toegelaten datasets en hun programma&#39;s in één keer | [ mening van de Chronologie ](job-schedules.md) |
-| Conflicten of antipatronen tijdens het plannen vaststellen | [ mening van de Chronologie ](job-schedules.md) |
-| De algemene prestaties van het spoor van één dataset | [ de details van de Dataset ](#view-dataset-details) |
-| Zie hoeveel totale verslagen een dataset heeft verwerkt | [ de details van de Dataset ](#view-dataset-details) |
-| De baanprestaties voor één dataset in tijd vergelijken | [ de details van de Dataset ](#view-dataset-details) |
-| Onderzoek waarom een specifieke baan ontbrak | [ de looppas van de Baan details ](#view-job-details) |
-| De exacte timing van een bepaalde taak controleren | [ de looppas van de Baan details ](#view-job-details) |
-| Gegevens verifiëren die in één enkele run zijn verwerkt | [ de looppas van de Baan details ](#view-job-details) |
-| Gedetailleerde foutberichten openen | [ de looppas van de Baan details ](#view-job-details) → Selecteer dataflow looppas identiteitskaart |
+| Bekijk al mijn profiel-toegelaten datasets en hun programma&#39;s in één keer | [&#x200B; mening van de Chronologie &#x200B;](job-schedules.md) |
+| Conflicten of antipatronen tijdens het plannen vaststellen | [&#x200B; mening van de Chronologie &#x200B;](job-schedules.md) |
+| De algemene prestaties van het spoor van één dataset | [&#x200B; de details van de Dataset &#x200B;](#view-dataset-details) |
+| Zie hoeveel totale verslagen een dataset heeft verwerkt | [&#x200B; de details van de Dataset &#x200B;](#view-dataset-details) |
+| De baanprestaties voor één dataset in tijd vergelijken | [&#x200B; de details van de Dataset &#x200B;](#view-dataset-details) |
+| Onderzoek waarom een specifieke baan ontbrak | [&#x200B; de looppas van de Baan details &#x200B;](#view-job-details) |
+| De exacte timing van een bepaalde taak controleren | [&#x200B; de looppas van de Baan details &#x200B;](#view-job-details) |
+| Gegevens verifiëren die in één enkele run zijn verwerkt | [&#x200B; de looppas van de Baan details &#x200B;](#view-job-details) |
+| Gedetailleerde foutberichten openen | [&#x200B; de looppas van de Baan details &#x200B;](#view-job-details) → Selecteer dataflow looppas identiteitskaart |
 
 ## Gegevens gegevensset weergeven {#view-dataset-details}
 
@@ -89,7 +89,7 @@ Om details voor een specifieke dataset te bekijken:
 
 De mening van de datasetdetails opent in een juist paneel, dat informatie over alle banen toont verbonden aan deze dataset.
 
-![ het paneel van de gegevenssetdetails die de bijeengevoegde meer en profielingestitie metriek voor een geselecteerde dataset tonen.](assets/job-schedules/view-dataset-details.png)
+![&#x200B; het paneel van de gegevenssetdetails die de bijeengevoegde meer en profielingestitie metriek voor een geselecteerde dataset tonen.](assets/job-schedules/view-dataset-details.png)
 
 In het deelvenster Gegevens van de gegevensset worden de naam, de id en taakspecifieke metriek van de gegevensset weergegeven, ingedeeld op taaktype. Bovenaan in het deelvenster wordt de id van de gegevensset weergegeven als een klikbare koppeling. Selecteer deze id om naar de volledige pagina met gegevens over de gegevensset te navigeren.
 
@@ -129,7 +129,7 @@ Voor datasets met de banen van de profielopname, toont het paneel de volgende me
 
 Wanneer u vele datasets met geplande banen hebt, kunt u zich op specifieke datasets eerder willen concentreren dan het bekijken van allen tegelijkertijd. Met het gegevenssetfilter kunt u selecteren welke gegevenssets in de tijdlijnweergave worden weergegeven.
 
-![ het paneel van de datasetfilter dat u toestaat om te selecteren welke datasets in de chronologiemening verschijnen.](assets/job-schedules/view-datasets.gif)
+![&#x200B; het paneel van de datasetfilter dat u toestaat om te selecteren welke datasets in de chronologiemening verschijnen.](assets/job-schedules/view-datasets.gif)
 
 De datasets filteren die in de tijdlijn worden weergegeven:
 
@@ -144,7 +144,7 @@ Filteren gebruiken voor:
 * **nadruk op specifieke gegevensbronnen**: Wanneer het oplossen van problemen een bepaalde gegevenspijpleiding, filter om slechts de relevante datasets te tonen.
 * **Verminder visuele rommel**: Als u vele datasets hebt, helpt het filtreren u patronen duidelijker voor een ondergroep van gegevens zien.
 * **vergelijk verwante datasets**: Selecteer slechts datasets die verwant zijn om hun het plannen verhouding te begrijpen.
-* **onderzoekt anti-patronen**: Wanneer u een potentiële [ configuratiekwestie ](job-schedules-anti-patterns.md) identificeert, filter aan de beïnvloede datasets om hen nauwkeuriger te onderzoeken.
+* **onderzoekt anti-patronen**: Wanneer u een potentiële [&#x200B; configuratiekwestie &#x200B;](job-schedules-anti-patterns.md) identificeert, filter aan de beïnvloede datasets om hen nauwkeuriger te onderzoeken.
 
 Het filter blijft tijdens uw zitting voortbestaan, zodat kunt u tussen tijdperiodes (vandaag, gisteren, afgelopen 7 dagen) navigeren terwijl het handhaven van uw datasetselectie.
 
@@ -161,7 +161,7 @@ Details weergeven voor een specifieke uitgevoerde taak:
 
 Het deelvenster **[!UICONTROL Dataflow run details]** wordt geopend en bevat informatie over de uitvoering van die specifieke taak.
 
-![ het dataflow looppas detailpaneel die uitvoeringsinformatie voor een specifieke baan tonen in werking wordt gesteld.](assets/job-schedules/job-details.png)
+![&#x200B; het dataflow looppas detailpaneel die uitvoeringsinformatie voor een specifieke baan tonen in werking wordt gesteld.](assets/job-schedules/job-details.png)
 
 ### Gegevens gegevensstroom uitvoeren {#dataflow-run-details}
 
@@ -210,19 +210,19 @@ Wanneer u een specifieke job run bekijkt, kunt u de relatie zien tussen meeropna
 
 Gebruik taakdetails om problemen te onderzoeken en de volgende stappen te bepalen:
 
-**Ontbroken banen**: Selecteer dataflow looppas identiteitskaart aan meningsfoutendetails in het controledashboard. Controle [ datasetdetails ](#view-dataset-details) voor terugkomende patronen, herzie de [ chronologie ](job-schedules.md) voor middelgeschil, en identificeer [ anti-patronen ](job-schedules-anti-patterns.md) in uw configuratie.
+**Ontbroken banen**: Selecteer dataflow looppas identiteitskaart aan meningsfoutendetails in het controledashboard. Controle [&#x200B; datasetdetails &#x200B;](#view-dataset-details) voor terugkomende patronen, herzie de [&#x200B; chronologie &#x200B;](job-schedules.md) voor middelgeschil, en identificeer [&#x200B; anti-patronen &#x200B;](job-schedules-anti-patterns.md) in uw configuratie.
 
-**Trage banen**: Vergelijk duur met historische gemiddelden in [ datasetmetriek ](#view-dataset-details). De gemeenschappelijke oorzaken omvatten [ overlapping van het programma ](job-schedules-anti-patterns.md#schedule-overlap-pattern), [ dichte partij het stapelen ](job-schedules-anti-patterns.md#scheduled-density), of verhoogd gegevensvolume.
+**Trage banen**: Vergelijk duur met historische gemiddelden in [&#x200B; datasetmetriek &#x200B;](#view-dataset-details). De gemeenschappelijke oorzaken omvatten [&#x200B; overlapping van het programma &#x200B;](job-schedules-anti-patterns.md#schedule-overlap-pattern), [&#x200B; dichte partij het stapelen &#x200B;](job-schedules-anti-patterns.md#scheduled-density), of verhoogd gegevensvolume.
 
 **de wanverhoudingen van het Verslag**: Vergelijk de verslagen van de meeropname tegen de verslagen van de profielopname in de details van de baanlooppas. Het opnemen van het profiel toont typisch minder verslagen toe te schrijven aan identiteitsvereisten en de regels van de gegevenskwaliteit.
 
-Voor gedetailleerde dataflow statusinformatie, zie [ de gegevens van de Monitor meer ingang ](../dataflows/ui/monitor-sources.md), [ dataflows van de Monitor voor profielen ](../dataflows/ui/monitor-profiles.md), [ dataflows voor publiek ](../dataflows/ui/monitor-audiences.md), en [ dataflows voor bestemmingen ](../dataflows/ui/monitor-destinations.md).
+Voor gedetailleerde dataflow statusinformatie, zie [&#x200B; de gegevens van de Monitor meer ingang &#x200B;](../dataflows/ui/monitor-sources.md), [&#x200B; dataflows van de Monitor voor profielen &#x200B;](../dataflows/ui/monitor-profiles.md), [&#x200B; dataflows voor publiek &#x200B;](../dataflows/ui/monitor-audiences.md), en [&#x200B; dataflows voor bestemmingen &#x200B;](../dataflows/ui/monitor-destinations.md).
 
 ## Volgende stappen {#next-steps}
 
 Na het leren hoe u taakdetails kunt weergeven:
 
-* Herzie het [ overzicht van de Planningen van de Baan ](job-schedules.md) om de chronologiemening en de interface te begrijpen.
-* Leer over [ anti-patronen ](job-schedules-anti-patterns.md) om gemeenschappelijke configuratiekwesties te verhinderen.
-* Begrijp [ partijingestie ](../ingestion/batch-ingestion/overview.md) om uw gegevens te optimaliseren ladende programma&#39;s.
-* Onderzoek [ controlerende bestemmingsdataflows ](../dataflows/ui/monitor-destinations.md) voor pijpleidingszicht van begin tot eind.
+* Herzie het [&#x200B; overzicht van de Planningen van de Baan &#x200B;](job-schedules.md) om de chronologiemening en de interface te begrijpen.
+* Leer over [&#x200B; anti-patronen &#x200B;](job-schedules-anti-patterns.md) om gemeenschappelijke configuratiekwesties te verhinderen.
+* Begrijp [&#x200B; partijingestie &#x200B;](../ingestion/batch-ingestion/overview.md) om uw gegevens te optimaliseren ladende programma&#39;s.
+* Onderzoek [&#x200B; controlerende bestemmingsdataflows &#x200B;](../dataflows/ui/monitor-destinations.md) voor pijpleidingszicht van begin tot eind.
