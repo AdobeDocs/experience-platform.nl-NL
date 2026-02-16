@@ -23,23 +23,23 @@ ht-degree: 0%
 > * Batchsegmentatie
 > * Batchdoelactivering.
 
-De [ planningen van de Baan ](job-schedules.md) chronologiemening helpt u gemeenschappelijke configuratiekwesties identificeren die uw prestaties en betrouwbaarheid van de gegevenspijpleiding negatief kunnen beïnvloeden. Deze anti-patronen leiden vaak tot banenmislukkingen, gegevensinconsistenties, of verminderde systeemprestaties. Door deze patronen vroegtijdig te ontdekken, kunt u uw banen aanpassen om problemen te vermijden alvorens zij uw bedrijfsverrichtingen beïnvloeden.
+De [&#x200B; planningen van de Baan &#x200B;](job-schedules.md) chronologiemening helpt u gemeenschappelijke configuratiekwesties identificeren die uw prestaties en betrouwbaarheid van de gegevenspijpleiding negatief kunnen beïnvloeden. Deze anti-patronen leiden vaak tot banenmislukkingen, gegevensinconsistenties, of verminderde systeemprestaties. Door deze patronen vroegtijdig te ontdekken, kunt u uw banen aanpassen om problemen te vermijden alvorens zij uw bedrijfsverrichtingen beïnvloeden.
 
 ## Vereisten {#prerequisites}
 
 Voordat u anti-patronen kunt identificeren, moet u:
 
-* Heb toegang tot [!UICONTROL Job Schedules] met **[!UICONTROL View Job Schedules]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions).
-* Ben vertrouwd met de [ interface van Programma&#39;s van de Baan ](job-schedules.md#understanding-interface) en hoe te om de chronologiemening te lezen.
-* Begrijp fundamentele [ partij ingestie ](../ingestion/batch-ingestion/overview.md), [ segmentatie ](../segmentation/home.md), en [ de concepten van de profielverwerking ](../profile/home.md).
+* Heb toegang tot [!UICONTROL Job Schedules] met **[!UICONTROL View Job Schedules]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions).
+* Ben vertrouwd met de [&#x200B; interface van Programma&#39;s van de Baan &#x200B;](job-schedules.md#understanding-interface) en hoe te om de chronologiemening te lezen.
+* Begrijp fundamentele [&#x200B; partij ingestie &#x200B;](../ingestion/batch-ingestion/overview.md), [&#x200B; segmentatie &#x200B;](../segmentation/home.md), en [&#x200B; de concepten van de profielverwerking &#x200B;](../profile/home.md).
 
 ## Snelle verwijzing {#anti-pattern-quick-reference}
 
 | Anti-patroon | Wat u op de tijdlijn ziet | Primair effect | Ernst |
 |--------------|----------------------------------|----------------|----------|
-| [ overlap van het Programma ](#schedule-overlap-pattern) | Meerdere taken tegelijk uitvoeren | Bronconflict en mislukte taken | Hoog |
-| [ Geplande baandichtheid ](#scheduled-density) | Vele datasets met partijen die in zelfde uur gegroepeerd zijn | Pijpknelpunten en onvolledige segmentering | Hoog |
-| [ Excessieve partijen per dataset ](#excessive-batches-per-dataset) | Eén dataset met tientallen dagelijkse batches | Inefficiënte verwerking en operationele complexiteit | Medium |
+| [&#x200B; overlap van het Programma &#x200B;](#schedule-overlap-pattern) | Meerdere taken tegelijk uitvoeren | Bronconflict en mislukte taken | Hoog |
+| [&#x200B; Geplande baandichtheid &#x200B;](#scheduled-density) | Vele datasets met partijen die in zelfde uur gegroepeerd zijn | Pijpknelpunten en onvolledige segmentering | Hoog |
+| [&#x200B; Excessieve partijen per dataset &#x200B;](#excessive-batches-per-dataset) | Eén dataset met tientallen dagelijkse batches | Inefficiënte verwerking en operationele complexiteit | Medium |
 
 ## Planningsoverlapping {#schedule-overlap-pattern}
 
@@ -117,8 +117,8 @@ In dit patroon, zult u één datasetrij met vele individuele batch ingestion ban
 
 Na het identificeren van anti-patronen in uw taakprogramma&#39;s:
 
-* Bekijk [ baandetails ](job-schedules-details.md) om specifieke datasets en baanlooppas te onderzoeken die kwesties kunnen veroorzaken.
-* Herzie het [ overzicht van de Programma&#39;s van de Baan ](job-schedules.md) om de interface en inspectiemogelijkheden te begrijpen.
-* Leer over [ partij ingestie ](../ingestion/batch-ingestion/overview.md) om uw gegevens te optimaliseren ladende programma&#39;s.
-* Begrijp [ segmenteringsprogramma&#39;s ](../segmentation/home.md) om juiste timing van publieksevaluaties te verzekeren.
-* Onderzoek [ controlerende bestemmingsdataflows ](../dataflows/ui/monitor-destinations.md) voor pijpleidingszicht van begin tot eind.
+* Bekijk [&#x200B; baandetails &#x200B;](job-schedules-details.md) om specifieke datasets en baanlooppas te onderzoeken die kwesties kunnen veroorzaken.
+* Herzie het [&#x200B; overzicht van de Programma&#39;s van de Baan &#x200B;](job-schedules.md) om de interface en inspectiemogelijkheden te begrijpen.
+* Leer over [&#x200B; partij ingestie &#x200B;](../ingestion/batch-ingestion/overview.md) om uw gegevens te optimaliseren ladende programma&#39;s.
+* Begrijp [&#x200B; segmenteringsprogramma&#39;s &#x200B;](../segmentation/home.md) om juiste timing van publieksevaluaties te verzekeren.
+* Onderzoek [&#x200B; controlerende bestemmingsdataflows &#x200B;](../dataflows/ui/monitor-destinations.md) voor pijpleidingszicht van begin tot eind.
