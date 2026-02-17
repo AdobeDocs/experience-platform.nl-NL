@@ -26,4 +26,4 @@ ht-degree: 57%
    * [Abonneren op I/O-gebeurtenismeldingen](./alerts/subscribe.md)
    * [Slack-integratie](./alerts/slack-integration.md)
 * [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
