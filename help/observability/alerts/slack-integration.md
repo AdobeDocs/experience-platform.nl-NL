@@ -10,30 +10,30 @@ ht-degree: 0%
 
 # Slack-integratie voor waarschuwingen voor klanten
 
-Adobe Experience Platform staat u toe om een webshvolmacht op [ Adobe App Builder ](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) te gebruiken om [ Adobe I/O Events ](https://developer.adobe.com/events/docs/guides/) in [!DNL Slack] te ontvangen. De proxy handelt de verificatiehandshake van Adobe af en zet de gebeurtenislading om in [!DNL Slack] -berichten, zodat u klantgerichte waarschuwingen kunt ontvangen die aan uw werkruimte worden geleverd.
+Adobe Experience Platform staat u toe om een webshvolmacht op [&#x200B; Adobe App Builder &#x200B;](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) te gebruiken om [&#x200B; Adobe I/O Events &#x200B;](https://developer.adobe.com/events/docs/guides/) in [!DNL Slack] te ontvangen. De proxy handelt de verificatiehandshake van Adobe af en zet de gebeurtenislading om in [!DNL Slack] -berichten, zodat u klantgerichte waarschuwingen kunt ontvangen die aan uw werkruimte worden geleverd.
 
 ## Vereisten {#prerequisites}
 
 Zorg ervoor dat u het volgende hebt voordat u begint:
 
 * **toegang van Adobe Developer Console**: Een rol van Admin of van de Ontwikkelaar van het Systeem in een organisatie met toegelaten App Builder.
-* **Node.js en npm**: Node.js (Aanbevolen LTS), die npm voor het installeren van Adobe CLI en projectgebiedsdelen omvat. Voor meer informatie, zie [ Download Node.js ](https://nodejs.org/) en [ npm Begonnen gids ](https://docs.npmjs.com/getting-started).
+* **Node.js en npm**: Node.js (Aanbevolen LTS), die npm voor het installeren van Adobe CLI en projectgebiedsdelen omvat. Voor meer informatie, zie [&#x200B; Download Node.js &#x200B;](https://nodejs.org/) en [&#x200B; npm Begonnen gids &#x200B;](https://docs.npmjs.com/getting-started).
 * **Adobe I/O CLI**: Installeer Adobe I/O CLI van uw terminal: `npm install -g @adobe/aio-cli`.
-* **app van Slack met Binnenkomende WebHaak**: Een toepassing van Slack in uw werkruimte met **toegelaten Binnenkomende Webhaak**. Zie [ een Slack app ](https://api.slack.com/apps) en [ Slack Inkomende gids Webhooks ](https://api.slack.com/messaging/webhooks) creëren om app tot stand te brengen en Web-haak URL (formaat: `https://hooks.slack.com/...`) te verkrijgen.
+* **app van Slack met Binnenkomende WebHaak**: Een toepassing van Slack in uw werkruimte met **toegelaten Binnenkomende Webhaak**. Zie [&#x200B; een Slack app &#x200B;](https://api.slack.com/apps) en [&#x200B; Slack Inkomende gids Webhooks &#x200B;](https://api.slack.com/messaging/webhooks) creëren om app tot stand te brengen en Web-haak URL (formaat: `https://hooks.slack.com/...`) te verkrijgen.
 
 ## Een sjabloonproject instellen {#templated-project}
 
 Als u een sjabloonproject wilt instellen, meldt u zich aan bij de Adobe Developer Console en selecteert u **[!UICONTROL Create project from template]** op het tabblad **[!UICONTROL Home]** .
 
-![ Developer Console die het lusje van het Huis benadrukt en project van malplaatje leidt.](../images/alerts/slack-integration/developer-console-home.png)
+![&#x200B; Developer Console die het lusje van het Huis benadrukt en project van malplaatje leidt.](../images/alerts/slack-integration/developer-console-home.png)
 
 Selecteer de sjabloon **[!UICONTROL App Builder]** , voer een **[!UICONTROL Project Title]** in en selecteer **[!UICONTROL Add workspace]** . Selecteer ten slotte **[!UICONTROL Save]** .
 
-![ Developer Console die de Titel van het Project benadrukt, voegt Workspace toe, en sparen.](../images/alerts/slack-integration/developer-console-save.png)
+![&#x200B; Developer Console die de Titel van het Project benadrukt, voegt Workspace toe, en sparen.](../images/alerts/slack-integration/developer-console-save.png)
 
 U ontvangt een bevestiging dat uw project is gemaakt en naar het tabblad **[!UICONTROL Project overview]** wordt doorgestuurd. Hier kunt u een **[!UICONTROL Project description]** toevoegen.
 
-![ het overzicht van het Project lusje dat projectdetails toont.](../images/alerts/slack-integration/developer-console-project.png)
+![&#x200B; het overzicht van het Project lusje dat projectdetails toont.](../images/alerts/slack-integration/developer-console-project.png)
 
 ## Project initialiseren {#initialize-project}
 
@@ -53,19 +53,19 @@ Nadat u de proefprojectinstelling hebt ingesteld, initialiseert u het project.
 
 1. Selecteer uw `Organization` met de pijltoetsen en selecteer vervolgens de `Project` die u eerder in de Developer Console hebt gemaakt. Selecteer `Only Templates Supported By My Org` voor de sjablonen die u wilt zoeken. Daarna, druk **binnengaan** om malplaatjes over te slaan en een standalone toepassing te installeren.
 
-   ![ Eind die organisatie en de selectie van het Project tonen en slechts Malplaatjes door Mijn Org worden gesteund.](../images/alerts/slack-integration/terminal-organization-project.png)
+   ![&#x200B; Eind die organisatie en de selectie van het Project tonen en slechts Malplaatjes door Mijn Org worden gesteund.](../images/alerts/slack-integration/terminal-organization-project.png)
 
 1. Geef de Adobe I/O App-functies op die u voor dit project wilt inschakelen. Gebruik de pijltoetsen om te schuiven en `Actions: Deploy Runtime actions` te selecteren.
 
-   ![ Eind die de eigenschappen van de Toepassing met Acties tonen: Stel geselecteerde acties Runtime op.](../images/alerts/slack-integration/terminal-app-features.png)
+   ![&#x200B; Eind die de eigenschappen van de Toepassing met Acties tonen: Stel geselecteerde acties Runtime op.](../images/alerts/slack-integration/terminal-app-features.png)
 
 1. Gebruik de pijltoetsen om te schuiven en selecteer `Adobe Experience Platform: Realtime Customer Profile` voor het type voorbeeldacties dat u wilt maken.
 
-   ![ Terminal die steekproefactietype met Adobe Experience Platform toont: Geselecteerd Profiel van de Klant Realtime.](../images/alerts/slack-integration/terminal-sample-actions.png)
+   ![&#x200B; Terminal die steekproefactietype met Adobe Experience Platform toont: Geselecteerd Profiel van de Klant Realtime.](../images/alerts/slack-integration/terminal-sample-actions.png)
 
 1. Schuif en selecteer `Pure HTML/JS` voor de gebruikersinterface die u aan de sjabloon wilt toevoegen. De pers **gaat** binnen om de steekproefacties als gebrek te verlaten, dan **gaat** opnieuw in om de naam als gebrek te verlaten.
 
-   ![ Eind die UI selectie tonen met Zuivere geselecteerde HTML/JS.](../images/alerts/slack-integration/terminal-ui-template.png)
+   ![&#x200B; Eind die UI selectie tonen met Zuivere geselecteerde HTML/JS.](../images/alerts/slack-integration/terminal-ui-template.png)
 
    U ontvangt een bevestiging dat de initialisatie van de app is voltooid.
 
@@ -83,17 +83,17 @@ Nadat u de proefprojectinstelling hebt ingesteld, initialiseert u het project.
 
 1. Selecteer `Only Action Templates Supported By My Org`. Er wordt een lijst met sjablonen weergegeven.
 
-   ![ Terminal die de lijst van actiesjablonen toont.](../images/alerts/slack-integration/terminal-action-templates.png)
+   ![&#x200B; Terminal die de lijst van actiesjablonen toont.](../images/alerts/slack-integration/terminal-action-templates.png)
 
 1. Selecteer het malplaatje door spacebar te drukken, dan aan `@adobe/generator-add-publish-events` te navigeren gebruikend uw **Omhoog** en **onderaan** pijlen. Tot slot selecteer het malplaatje door **Spacebar** te drukken en **te drukken gaat** binnen.
 
-   ![ Terminal die het malplaatje toont.](../images/alerts/slack-integration/terminal-action-select-template.png)
+   ![&#x200B; Terminal die het malplaatje toont.](../images/alerts/slack-integration/terminal-action-select-template.png)
 
    Er wordt een bevestiging weergegeven dat `npm package @adobe/generator-add-publish-events` is geïnstalleerd.
 
 1. Geef de handeling een naam `webhook-proxy` .
 
-   ![ Terminal die de actie genoemd webhaak-volmacht toont.](../images/alerts/slack-integration/terminal-add-action-name.png)
+   ![&#x200B; Terminal die de actie genoemd webhaak-volmacht toont.](../images/alerts/slack-integration/terminal-add-action-name.png)
 
    Er wordt een bevestiging weergegeven dat de sjabloon is geïnstalleerd.
 
@@ -288,28 +288,28 @@ Open in de Developer Console uw App Builder-project en selecteer vervolgens uw *
 
 Selecteer **[!UICONTROL Add service]** en **[!UICONTROL Event]** op de overzichtspagina van Workspace.
 
-![ de overzichtspagina die van Workspace de dienst en Gebeurtenis benadrukt.](../images/alerts/slack-integration/workspace-service-event.png)
+![&#x200B; de overzichtspagina die van Workspace de dienst en Gebeurtenis benadrukt.](../images/alerts/slack-integration/workspace-service-event.png)
 
 Selecteer op de pagina Gebeurtenissen toevoegen **[!UICONTROL Experience Platform]** en **[!UICONTROL Platform notifications]** en selecteer vervolgens **[!UICONTROL Next]** .
 
-![ Add gebeurtenispagina die de berichten van Experience Platform en van het Platform selecteerde.](../images/alerts/slack-integration/add-events.png)
+![&#x200B; Add gebeurtenispagina die de berichten van Experience Platform en van het Platform selecteerde.](../images/alerts/slack-integration/add-events.png)
 
 Selecteer de gebeurtenissen waarvoor u meldingen wilt ontvangen en selecteer vervolgens **[!UICONTROL Next]** .
 
-![ Add gebeurtenispagina die de lijst van gebeurtenissen tonen om aan in te tekenen.](../images/alerts/slack-integration/select-events.png)
+![&#x200B; Add gebeurtenispagina die de lijst van gebeurtenissen tonen om aan in te tekenen.](../images/alerts/slack-integration/select-events.png)
 
 Selecteer de verificatiereferentie server-naar-server en selecteer vervolgens **[!UICONTROL Next]** .
 
-![ Add gebeurtenispagina die server-aan-server de credentieselectie van de authentificatie tonen.](../images/alerts/slack-integration/add-events-credentials.png)
+![&#x200B; Add gebeurtenispagina die server-aan-server de credentieselectie van de authentificatie tonen.](../images/alerts/slack-integration/add-events-credentials.png)
 
 Voer een **[!UICONTROL Event registration name]** en een spatie **[!UICONTROL Event registration description]** in voor de registratie en selecteer vervolgens **[!UICONTROL Next]** .
 
-![ voegt gebeurtenispagina toe die de registratienaam van de Gebeurtenis en de beschrijvingsgebieden van de Gebeurtenis tonen.](../images/alerts/slack-integration/add-events-registration.png)
+![&#x200B; voegt gebeurtenispagina toe die de registratienaam van de Gebeurtenis en de beschrijvingsgebieden van de Gebeurtenis tonen.](../images/alerts/slack-integration/add-events-registration.png)
 
 Selecteer **[!UICONTROL Runtime Action]** als de leveringsmethode en de `slack-webhook-proxy/runtime-proxy` actie die u hebt gemaakt en selecteer vervolgens **[!UICONTROL Save configured events]** .
 
-![ voegt gebeurtenispagina toe die de leveringsmethode van de Actie Runtime tonen en sparen gevormde gebeurtenissen.](../images/alerts/slack-integration/add-events-runtime.png)
+![&#x200B; voegt gebeurtenispagina toe die de leveringsmethode van de Actie Runtime tonen en sparen gevormde gebeurtenissen.](../images/alerts/slack-integration/add-events-runtime.png)
 
 Uw webhaakproxy is nu geconfigureerd. U bent teruggekeerd aan de WebHaakvolmachtspagina. U kunt de volledige stroom van begin tot eind testen door het **[!UICONTROL Send sample event]** pictogram naast om het even welke gevormde gebeurtenis te selecteren.
 
-![ de WebHaakvolmachtspagina die gevormde gebeurtenissen en het Send pictogram van de steekproefgebeurtenis tonen.](../images/alerts/slack-integration/send-sample.png)
+![&#x200B; de WebHaakvolmachtspagina die gevormde gebeurtenissen en het Send pictogram van de steekproefgebeurtenis tonen.](../images/alerts/slack-integration/send-sample.png)
