@@ -24,9 +24,9 @@ Deze configuratiesectie staat u toe om een openbare sleutel van VAPID voor de au
 
 >[!NOTE]
 >
->Deze eigenschap moet eerst worden toegelaten gebruikend [ Douane bouwt componenten ](custom-build-components.md); het wordt onbruikbaar gemaakt door gebrek.
+>Deze eigenschap moet eerst worden toegelaten gebruikend [&#x200B; Douane bouwt componenten &#x200B;](custom-build-components.md); het wordt onbruikbaar gemaakt door gebrek.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
@@ -34,7 +34,7 @@ Deze configuratiesectie staat u toe om een openbare sleutel van VAPID voor de au
 1. Blader onder [!UICONTROL SDK instances] omlaag om de sectie [!UICONTROL Push Notifications] te zoeken.
 1. Voer in het veld **[!UICONTROL VAPID Public Key]** de openbare sleutel voor VAPID in.
 
-![ Beeld dat duw berichten montages toont gebruikend de de markeringsuitbreiding van SDK van het Web ](../assets/push-notifications.png)
+![&#x200B; Beeld dat duw berichten montages toont gebruikend de de markeringsuitbreiding van SDK van het Web &#x200B;](../assets/push-notifications.png)
 
 De volgende velden zijn beschikbaar:
 

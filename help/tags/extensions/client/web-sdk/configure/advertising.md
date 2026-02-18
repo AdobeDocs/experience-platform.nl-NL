@@ -22,7 +22,7 @@ ht-degree: 1%
 
 In de sectie **[!UICONTROL Adobe Advertising]** kunt u de functionaliteit van het platform aan de vraagzijde (DSP) in- of uitschakelen als deze wordt gebruikt in uw implementatie. U hoeft dit veld alleen in te stellen als uw implementatie een DSP gebruikt.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
