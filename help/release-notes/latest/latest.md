@@ -37,7 +37,7 @@ Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarsch
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Slack] integratie voor klantgerichte waarschuwingen | U kunt nu klantgerichte waarschuwingen naar [!DNL Slack] verzenden. Volg het [ geleidelijke leerprogramma ](../../observability/alerts/slack-integration.md) aan opstelling de [!DNL Slack] integratie en ontvang direct waakzame berichten in uw [!DNL Slack] werkruimte. |
+| [!DNL Slack] integratie voor klantgerichte waarschuwingen | U kunt nu klantgerichte waarschuwingen naar [!DNL Slack] verzenden. Volg het [&#x200B; geleidelijke leerprogramma &#x200B;](../../observability/alerts/slack-integration.md) aan opstelling de [!DNL Slack] integratie en ontvang direct waakzame berichten in uw [!DNL Slack] werkruimte. |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ Voor meer informatie raadpleegt u het [[!DNL Observability Insights] overzicht](
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [[!DNL Snowflake]  Partij ](../../destinations/catalog/warehouses/snowflake-batch.md) algemeen beschikbaar | De [!DNL Snowflake] Batch-bestemming is nu over het algemeen beschikbaar. Real-Time CDP-klanten overal ter wereld kunnen deze connector nu gebruiken om gegevens in hun Snowflake-accounts te activeren zonder dat ze de gegevens fysiek hoeven te kopiëren. Alle beperkingen van de beperkte release zijn opgeheven (beschikbaarheid voor klanten in de VS, ondersteuning voor publiek dat alleen tot het standaardsamenvoegbeleid behoort). |
+| [[!DNL Snowflake]  Partij &#x200B;](../../destinations/catalog/warehouses/snowflake-batch.md) algemeen beschikbaar | De [!DNL Snowflake] Batch-bestemming is nu over het algemeen beschikbaar. Real-Time CDP-klanten overal ter wereld kunnen deze connector nu gebruiken om gegevens in hun Snowflake-accounts te activeren zonder dat ze de gegevens fysiek hoeven te kopiëren. Alle beperkingen van de beperkte release zijn opgeheven (beschikbaarheid voor klanten in de VS, ondersteuning voor publiek dat alleen tot het standaardsamenvoegbeleid behoort). |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ Voor meer informatie raadpleegt u het [[!DNL Observability Insights] overzicht](
 
 | Repareren | Beschrijving |
 | --- | --- |
-| Activeringsfrequentie overschreden waarschuwing | Het mislukte Tarief van de Activering Te boven ging bestemmingsalarm gebruikt nu correct de drempel u wanneer het evalueren van en het verzenden van het alarm vormt. Eerder, teweeggebracht de alarm bij een 1% mislukkingstarief ongeacht het percentage u vormde. Zie [ standaard waakzame regels ](../../observability/alerts/rules.md#destinations) voor meer details over dit alarm. |
+| Activeringsfrequentie overschreden waarschuwing | Het mislukte Tarief van de Activering Te boven ging bestemmingsalarm gebruikt nu correct de drempel u wanneer het evalueren van en het verzenden van het alarm vormt. Eerder, teweeggebracht de alarm bij een 1% mislukkingstarief ongeacht het percentage u vormde. Zie [&#x200B; standaard waakzame regels &#x200B;](../../observability/alerts/rules.md#destinations) voor meer details over dit alarm. |
 | Rapportering van uitgesloten identiteiten volgens Google Customer Match | Probleem verholpen in de logica voor het tellen van overgeslagen records die ertoe leidde dat het aantal opgepompte uitgesloten profielen werd weergegeven voor Google Customer Match-bestemmingen. De activering en het exportgedrag werden niet beïnvloed; alleen de gerapporteerde nummers waren onjuist. |
 
 {style="table-layout:auto"}
