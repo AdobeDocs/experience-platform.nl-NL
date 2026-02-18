@@ -50,16 +50,16 @@ Gebruik de onderstaande tabel om te begrijpen welke gegevenstypen u kunt exporte
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de UI van Experience Platform na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Verbinding van Gegevens van Analytics, en Audience Manager worden gecreeerd.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> systeem-geproduceerde dataset van de Momentopname van het Profiel </a>.</li></td>
+    <td><ul><li>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de UI van Experience Platform na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Verbinding van Gegevens van Analytics, en Audience Manager worden gecreeerd.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=nl-NL#profile-attribute-datasets"> systeem-geproduceerde dataset van de Momentopname van het Profiel </a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
+    <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=nl-NL#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
+    <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=nl-NL#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -307,7 +307,7 @@ Om datasets uit een bestaande gegevensstroom te verwijderen, volg de stappen hie
 
 ## Uitvoerrechten gegevensset {#licensing-entitlement}
 
-Raadpleeg de productbeschrijvingsdocumenten om te begrijpen hoeveel gegevens u per jaar voor elke Experience Platform-toepassing mag exporteren. Bijvoorbeeld, kunt u de Beschrijving van het Product van Real-Time CDP [&#x200B; hier &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) bekijken.
+Raadpleeg de productbeschrijvingsdocumenten om te begrijpen hoeveel gegevens u per jaar voor elke Experience Platform-toepassing mag exporteren. Bijvoorbeeld, kunt u de Beschrijving van het Product van Real-Time CDP [&#x200B; hier &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) bekijken.
 
 De gegevensuitvoerrechten voor verschillende aanvragen zijn niet additief. Dit betekent bijvoorbeeld dat als u Real-Time CDP Ultimate en Adobe Journey Optimizer Ultimate koopt, de uitvoerrechten voor profielen de hoogste van de twee rechten zijn, zoals beschreven in de productbeschrijvingen. Uw volumeregelingen worden berekend door het totale aantal gelicentieerde profielen te nemen en te vermenigvuldigen met 500 kB voor Real-Time CDP Prime of 700 kB voor Real-Time CDP Ultimate om te bepalen hoeveel hoeveelheid gegevens u hebt.
 
