@@ -78,7 +78,7 @@ Gebruik de onderstaande tabel om te begrijpen welke gegevenstypen u kunt exporte
 
 Bekijk de onderstaande video voor een end-to-end uitleg van de workflow die op deze pagina wordt beschreven, de voordelen van het gebruik van de functie voor het exporteren van gegevenssets en enkele gebruiksscenario&#39;s.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+>[!VIDEO](https://video.tv.adobe.com/v/3448824?captions=dut)
 
 ## Ondersteunde doelen {#supported-destinations}
 
