@@ -61,7 +61,7 @@ De nieuwe rol is gemaakt en u wordt omgeleid naar de **[!UICONTROL Roles]** -pag
 
 <!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3475979/?captions=dut&learn=on) -->
 
 ## Een rol dupliceren
 
