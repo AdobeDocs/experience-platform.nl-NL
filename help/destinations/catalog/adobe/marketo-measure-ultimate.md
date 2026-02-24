@@ -3,10 +3,10 @@ title: Marketo Measure Ultimate-bestemming
 description: Leer hoe u verbinding maakt met en gegevens activeert voor de Marketo Measure Ultimate-bestemming.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 0%
+source-wordcount: '794'
+ht-degree: 1%
 
 ---
 
@@ -34,14 +34,39 @@ Houd rekening met de volgende voorwaarden voor de Marketo Measure-bestemming:
 * Alleen gegevenssets van B2B XDM-klassen kunnen worden geëxporteerd (zie bijvoorbeeld de klassen XDM Business Account en XDM Business Opportunity). U kunt niet in veelvoudige datasets van de zelfde B2B klasse XDM voor een bepaalde gegevensbron brengen.
 * Elke dataset kan slechts in één dataflow aan de bestemming van Marketo Measure worden omvat.
 
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
+
+| Oorsprong publiek | Ondersteund | Beschrijving |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Ondersteund publiek per type publieksgegevens:
+
+| Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario’s |
+|--------------------|-----------|-------------|-----------|
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Nee | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Ja | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+
+{style="table-layout:auto"}
+
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 |---------|----------|---------|
-| Exporttype | **[!UICONTROL Dataset export]** | U exporteert onbewerkte gegevenssets, die niet zijn gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. Lees meer over [&#x200B; de uitvoer van de dataset &#x200B;](/help/destinations/destination-types.md#dataset-export-destinations). |
-| Exportfrequentie | **[!UICONTROL Batch]** | Deze batchbestemming exporteert bestanden om de twee uur naar het Marketo Measure-platform. Lees meer over [&#x200B; plannend dataset de uitvoer &#x200B;](/help/destinations/ui/export-datasets.md#scheduling). |
+| Exporttype | **[!UICONTROL Dataset export]** | U exporteert onbewerkte gegevenssets, die niet zijn gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. Lees meer over [ de uitvoer van de dataset ](/help/destinations/destination-types.md#dataset-export-destinations). |
+| Exportfrequentie | **[!UICONTROL Batch]** | Deze batchbestemming exporteert bestanden om de twee uur naar het Marketo Measure-platform. Lees meer over [ plannend dataset de uitvoer ](/help/destinations/ui/export-datasets.md#scheduling). |
 
 {style="table-layout:auto"}
 
@@ -49,9 +74,9 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. Vul de velden in de onderstaande sectie in de workflow voor het configureren van de bestemming in.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. Vul de velden in de onderstaande sectie in de workflow voor het configureren van de bestemming in.
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -60,11 +85,11 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 
-![&#x200B; verbindt met bestemmingswerkschema voor de bestemming van Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+![ verbindt met bestemmingswerkschema voor de bestemming van Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -72,14 +97,14 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->Om gegevens te activeren, hebt u de **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om gegevens te activeren, hebt u de **[!UICONTROL View Destinations]** en **[!UICONTROL Manage and Activate Dataset Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Lees de [&#x200B; datasets van de Uitvoer &#x200B;](/help/destinations/ui/export-datasets.md) leerprogramma voor uitgebreide instructies bij het uitvoeren van datasets aan deze bestemming.
+Lees de [ datasets van de Uitvoer ](/help/destinations/ui/export-datasets.md) leerprogramma voor uitgebreide instructies bij het uitvoeren van datasets aan deze bestemming.
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Om een succesvolle datasetuitvoer te bevestigen, kunt u controleren dat uw dataset het aan uw [&#x200B; het gegevenspakhuis van Snowflake &#x200B;](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=nl-NL) met succes heeft gemaakt.
+Om een succesvolle datasetuitvoer te bevestigen, kunt u controleren dat uw dataset het aan uw [ het gegevenspakhuis van Snowflake ](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html) met succes heeft gemaakt.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).

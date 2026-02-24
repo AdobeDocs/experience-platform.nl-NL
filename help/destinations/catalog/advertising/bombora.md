@@ -2,10 +2,10 @@
 title: Bombora-verbinding
 description: Activeer profielen voor uw Bombora-campagnes voor doelgroepen, personalisatie en onderdrukking, op basis van accountpubliek.
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 0%
+source-wordcount: '969'
+ht-degree: 1%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De functionaliteit om rekeningspubliek aan de bestemming van Bombora te activeren is beschikbaar voor bedrijven die [&#x200B; zaken-aan-Zaken &#x200B;](/help/rtcdp/overview.md#rtcdp-b2b) en [&#x200B; zaken-aan-Persoon &#x200B;](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-Time Customer Data Platform kopen.
+>De functionaliteit om rekeningspubliek aan de bestemming van Bombora te activeren is beschikbaar voor bedrijven die [ zaken-aan-Zaken ](/help/rtcdp/overview.md#rtcdp-b2b) en [ zaken-aan-Persoon ](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-Time Customer Data Platform kopen.
 
-Activeer profielen voor uw campagnes Bombora voor publiek gericht, verpersoonlijking, en onderdrukking, die op [&#x200B; worden gebaseerd rekeningspubliek &#x200B;](/help/segmentation/types/account-audiences.md).
+Activeer profielen voor uw campagnes Bombora voor publiek gericht, verpersoonlijking, en onderdrukking, die op [ worden gebaseerd rekeningspubliek ](/help/segmentation/types/account-audiences.md).
 
 ## Gebruiksscenario’s {#use-case}
 
@@ -47,14 +47,28 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
-| Aangepaste uploads | X | Het publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
+
+
+Ondersteund publiek per type publieksgegevens:
+
+| Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario’s |
+|--------------------|-----------|-------------|-----------|
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+
+{style="table-layout:auto"}
+
+
 ## Ondersteunde identiteiten {#supported-identities}
 
-Voor Bombora moet de doelidentiteit worden toegewezen die in de onderstaande tabel wordt beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
+Voor Bombora moet de doelidentiteit worden toegewezen die in de onderstaande tabel wordt beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving |
 |---|---|
@@ -69,7 +83,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL Bombora] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -84,15 +98,15 @@ Als u accountpubliek wilt exporteren naar Bombora, hebt u de volgende informatie
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-![&#x200B; voeg dragertoken &#x200B;](../../assets/catalog/advertising/bombora/add-bearer-token.png) toe
+![ voeg dragertoken ](../../assets/catalog/advertising/bombora/add-bearer-token.png) toe
 
 * **[!UICONTROL Client ID]**: voer uw [!DNL Bombora] client-id in.
 * **[!UICONTROL Client secret]**: voer het [!DNL Bombora] -clientgeheim in.
@@ -101,7 +115,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![&#x200B; voegt informatie over de bestemmingsverbinding &#x200B;](../..//assets/catalog/advertising/bombora/name-and-description.png) toe
+![ voegt informatie over de bestemmingsverbinding ](../..//assets/catalog/advertising/bombora/name-and-description.png) toe
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -112,10 +126,10 @@ Nu ben je klaar om je publiek in Bombora te activeren.
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [&#x200B; activeer rekeningspubliek &#x200B;](/help/destinations/ui/activate-account-audiences.md) voor instructies bij het activeren van rekeningspubliek aan deze bestemming.
+Lees [ activeer rekeningspubliek ](/help/destinations/ui/activate-account-audiences.md) voor instructies bij het activeren van rekeningspubliek aan deze bestemming.
 
 ### Verplichte toewijzingen {#mapping}
 
@@ -128,7 +142,7 @@ De bestemming Bombora vereist u om de volgende afbeeldingen voor succesvolle geg
 | Willekeurige waarde | `Identity: primaryId` | Deze koppeling is verplicht voor Experience Platform om een verbinding met Bombora tot stand te brengen. Deze waarde wordt niet geëxporteerd naar Bombora, maar is vereist voor de doelconfiguratie. U kunt elk kenmerk voor het bronveld selecteren. |
 | `xdm: accountOrganization.domain` | `xdm: companyWebsiteDomain` | Bombora gebruikt website- of domeinadressen om een accountlijst te maken. |
 
-![&#x200B; voeg verplichte afbeeldingen &#x200B;](../..//assets/catalog/advertising/bombora/mappings.png) toe
+![ voeg verplichte afbeeldingen ](../..//assets/catalog/advertising/bombora/mappings.png) toe
 
 
 ## Aanvullende opmerkingen en belangrijke bijschriften {#additional-notes}

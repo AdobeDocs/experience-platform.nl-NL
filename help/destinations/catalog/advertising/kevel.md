@@ -2,25 +2,25 @@
 title: Kevel-verbinding
 description: Gebruik het Kevel-streamingdoel om het publiek rechtstreeks in de API's van UserDB en Segmentbeheer van Kevel te activeren en realtime gericht op de beslissingstijd te ondersteunen.
 last-substantial-update: 2026-01-27T00:00:00Z
-source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
+exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1172'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Kevel]-verbinding {#kevel}
 
 ## Overzicht {#overview}
 
-[[!DNL Kevel] &#x200B;](https://www.kevel.com/) verstrekt de AI-Toegelaten technologie en deskundige begeleiding die innovatieve handelsleiders helpen lanceren, schrapen, en slagen in handelsmedia. De Retail Media Cloud-bevoegdheden van [!DNL Kevel] zijn gericht op, aanpasbare en aanpasbare advertentievormen voor on-site en off-site reclame.
+[[!DNL Kevel] ](https://www.kevel.com/) verstrekt de AI-Toegelaten technologie en deskundige begeleiding die innovatieve handelsleiders helpen lanceren, schrapen, en slagen in handelsmedia. De Retail Media Cloud-bevoegdheden van [!DNL Kevel] zijn gericht op, aanpasbare en aanpasbare advertentievormen voor on-site en off-site reclame.
 
 Met de [!DNL Kevel] streamingbestemming voor Adobe Experience Platform kunnen klanten Adobe-doelgroepen rechtstreeks activeren in de gebruikersdatabase- en segmentbeheerAPI&#39;s van [!DNL Kevel] voor ondersteuning van realtime doelwitten tijdens de besluitvorming.
 
 >[!IMPORTANT]
 > 
->Als u vragen hebt of een update betreffende de [!DNL Kevel] bestemming of zijn documentatie zou willen verzoeken, gelieve het [!DNL Kevel] team in [&#x200B; support@kevel.com &#x200B;](mailto:support@kevel.com) te e-mailen.
+>Als u vragen hebt of een update betreffende de [!DNL Kevel] bestemming of zijn documentatie zou willen verzoeken, gelieve het [!DNL Kevel] team in [ support@kevel.com ](mailto:support@kevel.com) te e-mailen.
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -66,16 +66,30 @@ Dit betekent:
 - Voor elk geactiveerd profiel, [!DNL Kevel] ontvangt **één verslag UserDB per geval van elke in kaart gebrachte identiteit**.
 - Klanten dienen alleen identiteiten toe te wijzen die ze daadwerkelijk verzenden en aanvragen naar [!DNL Kevel] om onnodige opslag van de UserDB te voorkomen.
 
-![&#x200B; het Voorbeeld van de Afbeelding voor KevelBestemming &#x200B;](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png)
+![ het Voorbeeld van de Afbeelding voor KevelBestemming ](/help/destinations/assets/catalog/advertising/kevel-destination-mappings.png)
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |-----------------------|-----------|---------------------------------------------------------- |
 | Segmentatieservice | Ja | Adobe Profile publiek dat door de segmenteringsmotor wordt geëvalueerd. |
-| Aangepaste uploads | Nee | Momenteel niet ondersteund. |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Ondersteund publiek per type publieksgegevens:
+
+| Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario’s |
+|--------------------|-----------|-------------|-----------|
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+
+{style="table-layout:auto"}
+
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -88,7 +102,7 @@ Dit betekent:
 
 ## Verbinden met de bestemming {#connect}
 
-Volg standaardExperience Platform [&#x200B; verbinden een bestemmings &#x200B;](../../ui/connect-destination.md) werkschema.
+Volg standaardExperience Platform [ verbinden een bestemmings ](../../ui/connect-destination.md) werkschema.
 
 >[!IMPORTANT]
 > 
@@ -100,7 +114,7 @@ Geef het volgende veld op wanneer u verbinding maakt met [!DNL Kevel] :
 
 - **het teken van de Drager** - Uw [!DNL Kevel] API sleutel.
 
-![&#x200B; de opties van de Authentificatie voor KevelBestemming &#x200B;](/help/destinations/assets/catalog/advertising/kevel-destination-authentication.png)
+![ de opties van de Authentificatie voor KevelBestemming ](/help/destinations/assets/catalog/advertising/kevel-destination-authentication.png)
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -110,12 +124,12 @@ Na verificatie configureren:
 - **Beschrijving** — Facultatieve tekst om deze bestemmingsinstantie te beschrijven.
 - **[!DNL Kevel]Netwerk-id** — Uw [!DNL Kevel] netwerk-id.
 
-![&#x200B; de details van de Bestemming voor KevelBestemming &#x200B;](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
+![ de details van de Bestemming voor KevelBestemming ](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
 
 ## Segmenten naar dit doel activeren {#activate}
 
 Als u een publiek naar [!DNL Kevel] wilt sturen, volgt u de workflow in\
-[&#x200B; activeer profielen en segmenten aan het stromen segment de uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md).
+[ activeer profielen en segmenten aan het stromen segment de uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Deactivering van het publiek {#deactivate}
 
@@ -212,9 +226,9 @@ Hierdoor kan dezelfde persoon op het tijdstip van de beslissing worden erkend me
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-- [[!DNL Kevel]  Referentie UserDB &#x200B;](https://dev.kevel.com/reference/userdb)
-- [[!DNL Kevel]  Doelgericht Gebruikerssegment &#x200B;](https://dev.kevel.com/docs/segment-targeting)
+- [[!DNL Kevel]  Referentie UserDB ](https://dev.kevel.com/reference/userdb)
+- [[!DNL Kevel]  Doelgericht Gebruikerssegment ](https://dev.kevel.com/docs/segment-targeting)

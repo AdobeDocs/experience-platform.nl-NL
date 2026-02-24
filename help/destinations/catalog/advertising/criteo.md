@@ -3,10 +3,10 @@ keywords: reclame; criteria;
 title: Criteverbinding
 description: Criteo maakt betrouwbare en effectieve reclame mogelijk om elke consument op het open internet een rijkere ervaring te bieden. Met 's werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk contactpunt tijdens het winkeltraject gepersonaliseerd is om klanten op het juiste moment met de juiste advertentie te bereiken.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 10%
+source-wordcount: '1170'
+ht-degree: 9%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en door Criteo gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve direct contactCiteo [&#128279;](mailto:criteoTechnicalPartnerships@criteo.com).
+>Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en door Criteo gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve direct contactCiteo [ ](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo maakt betrouwbare en effectieve reclame mogelijk om elke consument op het open internet een rijkere ervaring te bieden. Met &#39;s werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk contactpunt tijdens het winkeltraject gepersonaliseerd is om klanten op het juiste moment met de juiste advertentie te bereiken.
 
 ## Vereisten {#prerequisites}
 
-* U moet een beheerdergebruikersrekening op [&#x200B; Centrum van het Beheer van de Nota &#x200B;](https://marketing.criteo.com) hebben.
+* U moet een beheerdergebruikersrekening op [ Centrum van het Beheer van de Nota ](https://marketing.criteo.com) hebben.
 * U hebt uw advertentie-id voor de website nodig (vraag uw contactpersoon voor de website als u deze id niet hebt).
 * U moet [!DNL GUM caller ID] opgeven voor het geval u [!DNL GUM ID] als id wilt gebruiken.
 
@@ -35,12 +35,37 @@ Criteo maakt betrouwbare en effectieve reclame mogelijk om elke consument op het
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Criteo ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl-NL#getting-started).
+Criteo ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 | --- | --- | --- |
 | `email_sha256` | E-mailadressen die met het algoritme SHA-256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA-256-gehashte e-mailadressen. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie [!UICONTROL Apply transformation] in om ervoor te zorgen dat Experience Platform de gegevens automatisch hasht bij activering. |
 | `gum_id` | Criteo [!DNL GUM] cookie-id | [!DNL GUM IDs] staat cliënten toe om een correspondentie tussen hun systeem van de gebruikersidentificatie en de gebruikersidentificatie van het Comité te handhaven ([!DNL UID]). Als het id-type `gum_id` is, moet ook een extra parameter, de [!DNL GUM Caller ID] , worden opgenomen. Neem indien nodig contact op met het accountteam van uw website voor de juiste [!DNL GUM Caller ID] of voor meer informatie over deze [!DNL GUM ID] -synchronisatie. |
+
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
+
+| Oorsprong publiek | Ondersteund | Beschrijving |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Ondersteund publiek per type publieksgegevens:
+
+| Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario’s |
+|--------------------|-----------|-------------|-----------|
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+
+{style="table-layout:auto"}
+
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -49,7 +74,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 | --- | --- | --- |
 | Exporttype | Publiek exporteren | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL Criteo] -bestemming worden gebruikt. |
-| Exportfrequentie | Streaming | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](../../destination-types.md#streaming-destinations). |
+| Exportfrequentie | Streaming | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](../../destination-types.md#streaming-destinations). |
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -67,9 +92,9 @@ Wanneer bezoekers uw website verlaten, herinner hen wat zij met het herrichten v
 
 >[!IMPORTANT]
 > 
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven.
 
 ### Verifiëren voor commissie
 
@@ -77,22 +102,22 @@ De stappen om te verbinden zijn als volgt:
 
 1. Meld u aan bij Adobe Experience Platform en maak verbinding met het doel Computer.
 
-   ![&#x200B; Login &#x200B;](../../assets/catalog/advertising/criteo/connect-destination.png)
+   ![ Login ](../../assets/catalog/advertising/criteo/connect-destination.png)
 
 1. U wordt omgeleid naar de website om de verbinding te autoriseren. Mogelijk moet u zich eerst aanmelden met uw verificatiegegevens:
 
-   ![&#x200B; login van de citaat &#x200B;](../../assets/catalog/advertising/criteo/log-in-1.png)
+   ![ login van de citaat ](../../assets/catalog/advertising/criteo/log-in-1.png)
 
-   ![&#x200B; login van de citaat &#x200B;](../../assets/catalog/advertising/criteo/log-in-2.png)
+   ![ login van de citaat ](../../assets/catalog/advertising/criteo/log-in-2.png)
 
-   ![&#x200B; login van de citaat &#x200B;](../../assets/catalog/advertising/criteo/log-in-3.png)
+   ![ login van de citaat ](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
 ### Verbindingsparameters {#connection-parameters}
 
 Vul de volgende verbindingsparameters in nadat u de bestemming hebt geverifieerd.
 
-![&#x200B; de parameters van de Verbinding &#x200B;](../../assets/catalog/advertising/criteo/connection-parameters.png)
+![ de parameters van de Verbinding ](../../assets/catalog/advertising/criteo/connection-parameters.png)
 
 | Veld | Beschrijving | Vereist |
 | --- | --- | --- |
@@ -103,7 +128,7 @@ Vul de volgende verbindingsparameters in nadat u de bestemming hebt geverifieerd
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -111,14 +136,14 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 > 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-U kunt het uitgevoerde publiek in het [&#x200B; centrum van het Beheer van de Nota zien &#x200B;](https://marketing.criteo.com/audience-manager/dashboard).
+U kunt het uitgevoerde publiek in het [ centrum van het Beheer van de Nota zien ](https://marketing.criteo.com/audience-manager/dashboard).
 
 De aanvraagtekst voor het toevoegen van een gebruikersprofiel dat door de [!DNL Criteo] -verbinding wordt ontvangen, ziet er ongeveer als volgt uit:
 
@@ -178,9 +203,9 @@ De aanvraagtekst voor het verwijderen van gebruikersprofielen die door de [!DNL 
 
 ## Gegevensgebruik en -beheer {#data-usage}
 
-Alle Adobe Experience Platform-doelen zijn bij het verwerken van uw gegevens compatibel met het beleid voor gegevensgebruik. Voor gedetailleerde informatie over hoe Adobe Experience Platform gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
+Alle Adobe Experience Platform-doelen zijn bij het verwerken van uw gegevens compatibel met het beleid voor gegevensgebruik. Voor gedetailleerde informatie over hoe Adobe Experience Platform gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Aanvullende bronnen
 
-* [&#x200B; het Centrum van de Hulp van de Nota &#x200B;](https://help.criteo.com/kb/en)
-* [&#x200B; Portaal van de Ontwikkelaar van de Nota van de Nota van de Nota &#x200B;](https://developers.criteo.com)
+* [ het Centrum van de Hulp van de Nota ](https://help.criteo.com/kb/en)
+* [ Portaal van de Ontwikkelaar van de Nota van de Nota van de Nota ](https://developers.criteo.com)
