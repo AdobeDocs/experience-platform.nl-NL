@@ -28,16 +28,16 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van Adform zou moe
 
 Gebruik deze bestemming om Adobe Real-Time CDP-publiek naar Adobe te sturen voor activering op basis van de Experience Cloud-id (ECID) en de Adobe-id voor Fusion. De Adobe ID Fusion is de service voor het oplossen van id&#39;s van Adobe waarmee u het eerste publiek kunt activeren op basis van de Experience Cloud-id (ECID).
 
-Een veelvoorkomend geval is het opnieuw toewijzen van uw websitebezoekers aan uw website of app op basis van de Experience Cloud-id (ECID). Alles u moet doen moet identiteitskaart van Experience Cloud (ECID) naar Adform via gemakkelijk beschikbare [&#x200B; Gebeurtenis verzenden die &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) stroomt of [&#x200B; cliënt-kant &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) uitbreidingen Adform. Daarna kunt u een publiek delen met Adobe via de bestemming Adform voor activering - uitsluitend op basis van de Experience Cloud-id (ECID).
+Een veelvoorkomend geval is het opnieuw toewijzen van uw websitebezoekers aan uw website of app op basis van de Experience Cloud-id (ECID). Alles u moet doen moet identiteitskaart van Experience Cloud (ECID) naar Adform via gemakkelijk beschikbare [&#x200B; Gebeurtenis verzenden die &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) stroomt of [&#x200B; cliënt-kant &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/analytics/adform) uitbreidingen Adform. Daarna kunt u een publiek delen met Adobe via de bestemming Adform voor activering - uitsluitend op basis van de Experience Cloud-id (ECID).
 
 ## Vereisten {#prerequisites}
 
 * U moet een bestaande klant van Adobe zijn om deze bestemming te gebruiken.
 * U moet over uw geloofsbrieven van de Verbinding van de Gegevens van de Gegevens van de Audience van de Audience hebben.
    * Neem contact op met uw vertegenwoordiger van Adobe als u geen gegevens voor Adform Audience Base-gegevensverbinding hebt.
-* Voor juiste synchronisatie moet u of een [&#x200B; Gebeurtenis hebben die &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) stroomt of [&#x200B; cliënt-kant &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) verbinding van uw entiteiten aan het Volgen van de Plaats Adform.
+* Voor juiste synchronisatie moet u of een [&#x200B; Gebeurtenis hebben die &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) stroomt of [&#x200B; cliënt-kant &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/analytics/adform) verbinding van uw entiteiten aan het Volgen van de Plaats Adform.
    * Neem contact op met uw vertegenwoordiger van Adobe als u geen Streaming van gebeurtenissen of client-side verbinding van uw entiteiten hebt met Adform Site Tracking.
-   * Adform verstrekt de uitbreidingen van Adobe Experience Cloud voor zowel [&#x200B; Gebeurtenis het Streamen &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) als [&#x200B; cliënt-kant &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
+   * Adform verstrekt de uitbreidingen van Adobe Experience Cloud voor zowel [&#x200B; Gebeurtenis het Streamen &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) als [&#x200B; cliënt-kant &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Ondersteunde identiteiten {#supported-identities}
