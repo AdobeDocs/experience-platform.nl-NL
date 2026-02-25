@@ -17,15 +17,15 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [&#x200B; Beschrijving van het Product &#x200B;](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 
-Deze pagina bevat standaardgebruiks- en tarieflimieten voor activeringsgedrag. Wanneer het herzien van de volgende gidsen, wordt het verondersteld dat u correct [ met bestemmingen ](/help/destinations/ui/connect-destination.md) hebt verbonden.
+Deze pagina bevat standaardgebruiks- en tarieflimieten voor activeringsgedrag. Wanneer het herzien van de volgende gidsen, wordt het verondersteld dat u correct [&#x200B; met bestemmingen &#x200B;](/help/destinations/ui/connect-destination.md) hebt verbonden.
 
 >[!NOTE]
 >
 >* De meeste klanten overschrijden deze standaardgrenzen niet. Neem contact op met uw medewerker van de klantenservice als u meer wilt weten over aangepaste limieten.
 >* De limieten die in dit document worden uiteengezet, worden voortdurend verbeterd. Controleer regelmatig of er updates zijn.
->* Afhankelijk van individuele downstreambeperkingen, kunnen sommige doelen strengere instructies hebben dan de doelen die op deze pagina worden beschreven. Zorg ervoor om de [ catalogus ](/help/destinations/catalog/overview.md) pagina van de bestemming ook te controleren u verbindt en gegevens activeert aan.
+>* Afhankelijk van individuele downstreambeperkingen, kunnen sommige doelen strengere instructies hebben dan de doelen die op deze pagina worden beschreven. Zorg ervoor om de [&#x200B; catalogus &#x200B;](/help/destinations/catalog/overview.md) pagina van de bestemming ook te controleren u verbindt en gegevens activeert aan.
 
 ## Typen guardrail {#limit-types}
 
@@ -45,44 +45,44 @@ De volgende gidsen verstrekken geadviseerde grenzen wanneer het activeren van ge
 
 ### Algemene activeringsinstructies {#general-activation-guardrails}
 
-De hieronder gidsen zijn over het algemeen van toepassing op activering door [ alle bestemmingstypes ](/help/destinations/destination-types.md#destination-types).
+De hieronder gidsen zijn over het algemeen van toepassing op activering door [&#x200B; alle bestemmingstypes &#x200B;](/help/destinations/destination-types.md#destination-types).
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Maximumaantal doelgroepen | 250 | Prestatiegerichting | De aanbeveling is om maximaal 250 soorten publiek toe te wijzen aan één enkele bestemmingsinstantie. <br><br> Als u meer dan 250 soorten publiek naar een doel moet activeren, kunt u: <ul><li> Ontkaart publiek dat u niet meer wilt activeren, of</li><li>[ creeer een nieuwe bestemmingsinstantie ](ui/connect-destination.md) en kaart publiek aan het.</li></ul> <br> Houd er rekening mee dat in het geval van bepaalde doelen, het aantal doelgroepen kan worden beperkt tot minder dan 250. Deze bestemmingen worden hieronder op de pagina in hun respectieve secties vermeld. |
+| Maximumaantal doelgroepen | 250 | Prestatiegerichting | De aanbeveling is om maximaal 250 soorten publiek toe te wijzen aan één enkele bestemmingsinstantie. <br><br> Als u meer dan 250 soorten publiek naar een doel moet activeren, kunt u: <ul><li> Ontkaart publiek dat u niet meer wilt activeren, of</li><li>[&#x200B; creeer een nieuwe bestemmingsinstantie &#x200B;](ui/connect-destination.md) en kaart publiek aan het.</li></ul> <br> Houd er rekening mee dat in het geval van bepaalde doelen, het aantal doelgroepen kan worden beperkt tot minder dan 250. Deze bestemmingen worden hieronder op de pagina in hun respectieve secties vermeld. |
 | Maximumaantal kenmerken dat aan een doel is toegewezen | 50 | Prestatiegerichting | In het geval van verschillende bestemmingen en bestemmingstypen kunt u profielkenmerken en identiteiten selecteren die u wilt toewijzen voor export. Voor optimale prestaties moeten maximaal 50 kenmerken worden toegewezen aan een doelinstantie. |
-| Maximum aantal bestemmingen | 100 | Door het systeem afgedwongen geleiding | U kunt een maximum van 100 bestemmingen tot stand brengen dat u gegevens kunt verbinden en activeren aan, *per zandbak*. [ de verpersoonlijkingsbestemmingen van Edge (de verpersoonlijking van de Douane) ](#edge-destinations-activation) kan omhoog een maximum van 10 van de 100 geadviseerde bestemmingen maken. |
+| Maximum aantal bestemmingen | 100 | Door het systeem afgedwongen geleiding | U kunt een maximum van 100 bestemmingen tot stand brengen dat u gegevens kunt verbinden en activeren aan, *per zandbak*. [&#x200B; de verpersoonlijkingsbestemmingen van Edge (de verpersoonlijking van de Douane) &#x200B;](#edge-destinations-activation) kan omhoog een maximum van 10 van de 100 geadviseerde bestemmingen maken. |
 | Type gegevens die op bestemmingen worden geactiveerd | Profielgegevens, inclusief identiteiten en identiteitskaarten | Door het systeem afgedwongen geleiding | Momenteel, is het slechts mogelijk om *attributen van het profielverslag* naar bestemmingen uit te voeren. XDM-kenmerken die gebeurtenisgegevens beschrijven, worden momenteel niet ondersteund voor exporteren. |
-| Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Gedeeltelijk beschikbaar | Door het systeem afgedwongen geleiding | U kunt serieattributen naar [ op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based) uitvoeren. [Lees meer](/help/destinations/ui/export-arrays-maps-objects.md) over de nieuwe functionaliteit. |
+| Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Gedeeltelijk beschikbaar | Door het systeem afgedwongen geleiding | U kunt serieattributen naar [&#x200B; op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based) uitvoeren. [Lees meer](/help/destinations/ui/export-arrays-maps-objects.md) over de nieuwe functionaliteit. |
 
 {style="table-layout:auto"}
 
 ### Streaming activering {#streaming-activation}
 
-De hieronder gidsen zijn op activering door [ het stromen bestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) van toepassing.
+De hieronder gidsen zijn op activering door [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) van toepassing.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Aantal activeringen (HTTP-berichten met profielexport) per seconde | N.v.t. | - | Er is momenteel geen limiet voor het aantal berichten per seconde dat van Experience Platform naar API eindpunten van partnerbestemmingen wordt verzonden. <br> Om het even welke grenzen of latentie worden gedicteerd door het eindpunt waar Experience Platform gegevens verzendt. Zorg ervoor om de [ catalogus ](/help/destinations/catalog/overview.md) pagina van de bestemming ook te controleren u verbindt en gegevens activeert aan. |
+| Aantal activeringen (HTTP-berichten met profielexport) per seconde | N.v.t. | - | Er is momenteel geen limiet voor het aantal berichten per seconde dat van Experience Platform naar API eindpunten van partnerbestemmingen wordt verzonden. <br> Om het even welke grenzen of latentie worden gedicteerd door het eindpunt waar Experience Platform gegevens verzendt. Zorg ervoor om de [&#x200B; catalogus &#x200B;](/help/destinations/catalog/overview.md) pagina van de bestemming ook te controleren u verbindt en gegevens activeert aan. |
 
 {style="table-layout:auto"}
 
 ### Batch (op bestand gebaseerd) activeren {#batch-file-based-activation}
 
-De hieronder gidsen zijn op activering door [ partij (op dossier-gebaseerde) bestemmingen ](/help/destinations/ui/activate-batch-profile-destinations.md) van toepassing.
+De hieronder gidsen zijn op activering door [&#x200B; partij (op dossier-gebaseerde) bestemmingen &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) van toepassing.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Activeringsfrequentie | Eén dagelijkse volledige export of frequentere incrementele export om de 3, 6, 8 of 12 uur. | Door het systeem afgedwongen geleiding | Lees de [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentatiesecties voor meer informatie over de frequentieverhogingen voor partijuitvoer. |
+| Activeringsfrequentie | Eén dagelijkse volledige export of frequentere incrementele export om de 3, 6, 8 of 12 uur. | Door het systeem afgedwongen geleiding | Lees de [&#x200B; uitvoer volledige dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [&#x200B; uitvoer stijgende dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentatiesecties voor meer informatie over de frequentieverhogingen voor partijuitvoer. |
 | Maximumaantal soorten publiek dat in een bepaald uur kan worden geëxporteerd | 100 | Prestatiegerichting | De aanbeveling moet een maximum van 100 publiek aan partijbestemmingsinstanties toevoegen. |
-| Maximumaantal rijen (records) per bestand dat moet worden geactiveerd | 5 miljoen | Door het systeem afgedwongen geleiding | Adobe Experience Platform splitst de geëxporteerde bestanden automatisch op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel. Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking: `filename.csv` , `filename_2.csv` , `filename_3.csv` . Voor meer informatie, leest de [ plannende sectie ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) van het activerende partijbestemmingsleerprogramma. |
-| Maximum aantal externe doelgroepen (bijvoorbeeld FAC, aangepaste upload, Audience Composition) dat in een doelinstantie kan worden geactiveerd | 10 | Door het systeem afgedwongen geleiding | Wanneer het activeren van extern publiek (b.v. [ Federated Audience Composition ](/help/segmentation/ui/audience-portal.md#fac), [ douane uploadt ](/help/segmentation/ui/audience-portal.md#import-audience), [ de Samenstelling van het Publiek ](/help/segmentation/ui/audience-portal.md#audience-composition)) aan op dossier-gebaseerde bestemmingen batch, is er een grens van 10 zulk publiek dat u in een bestemmingsinstantie kunt activeren. Zie {de types van publiek 0} en aanpassing [ voor meer op deze publiekstypes. ](/help/segmentation/ui/audience-portal.md#customize) Lees meer over het werkschema om [ externe publiek aan batch op dossier-gebaseerde bestemmingen ](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences) te activeren. |
+| Maximumaantal rijen (records) per bestand dat moet worden geactiveerd | 5 miljoen | Door het systeem afgedwongen geleiding | Adobe Experience Platform splitst de geëxporteerde bestanden automatisch op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel. Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking: `filename.csv` , `filename_2.csv` , `filename_3.csv` . Voor meer informatie, leest de [&#x200B; plannende sectie &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) van het activerende partijbestemmingsleerprogramma. |
+| Maximum aantal externe doelgroepen (bijvoorbeeld FAC, aangepaste upload, Audience Composition) dat in een doelinstantie kan worden geactiveerd | 10 | Door het systeem afgedwongen geleiding | Wanneer het activeren van extern publiek (b.v. [&#x200B; Federated Audience Composition &#x200B;](/help/segmentation/ui/audience-portal.md#fac), [&#x200B; douane uploadt &#x200B;](/help/segmentation/ui/audience-portal.md#import-audience), [&#x200B; de Samenstelling van het Publiek &#x200B;](/help/segmentation/ui/audience-portal.md#audience-composition)) aan op dossier-gebaseerde bestemmingen batch, is er een grens van 10 zulk publiek dat u in een bestemmingsinstantie kunt activeren. Zie {de types van publiek 0} en aanpassing [&#x200B; voor meer op deze publiekstypes. &#x200B;](/help/segmentation/ui/audience-portal.md#customize) Lees meer over het werkschema om [&#x200B; externe publiek aan batch op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences) te activeren. |
 
 {style="table-layout:auto"}
 
 ### Ad-hocactivering {#ad-hoc-activation}
 
-De hieronder gidsen zijn op de [ ad-hoc activering ](/help/destinations/api/ad-hoc-activation-api.md) methode van toepassing.
+De hieronder gidsen zijn op de [&#x200B; ad-hoc activering &#x200B;](/help/destinations/api/ad-hoc-activation-api.md) methode van toepassing.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
@@ -93,18 +93,18 @@ De hieronder gidsen zijn op de [ ad-hoc activering ](/help/destinations/api/ad-h
 
 ### Activering van Edge-personalisatiedoelen {#edge-destinations-activation}
 
-De hieronder begeleiding is van toepassing op activering door [ de bestemmingen van de randverpersoonlijking ](/help/destinations/destination-types.md#advanced-enterprise-destinations).
+De hieronder begeleiding is van toepassing op activering door [&#x200B; de bestemmingen van de randverpersoonlijking &#x200B;](/help/destinations/destination-types.md#advanced-enterprise-destinations).
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Maximum aantal [ Aangepaste verpersoonlijking ](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen | 10 | Prestatiegerichting | U kunt maximaal 10 aangepaste bestemmingsinstanties per sandbox instellen. |
+| Maximum aantal [&#x200B; Aangepaste verpersoonlijking &#x200B;](/help/destinations/catalog/personalization/custom-personalization.md) bestemmingen | 10 | Prestatiegerichting | U kunt maximaal 10 aangepaste bestemmingsinstanties per sandbox instellen. |
 | Maximumaantal kenmerken dat per sandbox aan een verpersoonlijkingsdoel is toegewezen | 30 | Prestatiegerichting | Per sandbox kunnen maximaal 30 kenmerken worden toegewezen aan een bestemmingsinstantie voor personalisatie. |
 
 {style="table-layout:auto"}
 
 ### Dataset exporteren {#dataset-exports}
 
-De uitvoer van de gegevensset wordt momenteel gesteund in a **[!UICONTROL First Full and then Incremental]** [ patroon ](/help/destinations/ui/export-datasets.md#scheduling). De gidsen die in deze sectie *worden beschreven zijn op de eerste volledige uitvoer* van toepassing die voorkomen nadat een werkschema van de datasetuitvoer opstelling is.
+De uitvoer van de gegevensset wordt momenteel gesteund in a **[!UICONTROL First Full and then Incremental]** [&#x200B; patroon &#x200B;](/help/destinations/ui/export-datasets.md#scheduling). De gidsen die in deze sectie *worden beschreven zijn op de eerste volledige uitvoer* van toepassing die voorkomen nadat een werkschema van de datasetuitvoer opstelling is.
 
 <!--
 
@@ -171,13 +171,13 @@ Lees meer over [het exporteren van datasets](/help/destinations/ui/export-datase
 
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 
-[ Destination SDK ](/help/destinations/destination-sdk/overview.md) is een reeks van configuratie APIs die u toestaan om de patronen van de bestemmingsintegratie voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De onderstaande instructies zijn van toepassing op de doelen die u met Destination SDK configureert.
+[&#x200B; Destination SDK &#x200B;](/help/destinations/destination-sdk/overview.md) is een reeks van configuratie APIs die u toestaan om de patronen van de bestemmingsintegratie voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De onderstaande instructies zijn van toepassing op de doelen die u met Destination SDK configureert.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Maximum aantal [ privé douanebestemmingen ](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Prestatiegerichting | Met Destination SDK kunt u maximaal vijf eigen streaming- of batchbestemmingen maken. Neem contact op met een aangepaste zorgvertegenwoordiger als u meer dan vijf van dergelijke doelen moet maken. |
-| Profielexportbeleid voor Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimaal 301 en maximaal 3600)</li><li>`maxNumEventsInBatch` (minimaal 1.000 en maximaal 10.000)</li></ul> | Door het systeem afgedwongen geleiding | Wanneer het gebruiken van de [ configureerbare samenvoeging ](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) optie voor uw bestemming, houd rekening met de minimum en maximumwaarden die bepalen hoe vaak de berichten van HTTP naar uw op API-Gebaseerde bestemming worden verzonden en hoeveel profielen de berichten zouden moeten omvatten. |
-| OAuth 2 tokenleven voor Destination SDK | Minimaal 24 uur aanbevolen | Prestatiegerichting | Voor bestemmingen die [ OAuth 2 vergunning ](/help/destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md) gebruiken, adviseert Adobe plaatsend de waarden van het toegangstoken leven aan een minimum van 24 uren. Verbindingen met tokens met een levensduur van minder dan 1 uur leiden tot het wegvallen van profielen tijdens activering. |
+| Maximum aantal [&#x200B; privé douanebestemmingen &#x200B;](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Prestatiegerichting | Met Destination SDK kunt u maximaal vijf eigen streaming- of batchbestemmingen maken. Neem contact op met een aangepaste zorgvertegenwoordiger als u meer dan vijf van dergelijke doelen moet maken. |
+| Profielexportbeleid voor Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimaal 301 en maximaal 3600)</li><li>`maxNumEventsInBatch` (minimaal 1.000 en maximaal 10.000)</li></ul> | Door het systeem afgedwongen geleiding | Wanneer het gebruiken van de [&#x200B; configureerbare samenvoeging &#x200B;](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) optie voor uw bestemming, houd rekening met de minimum en maximumwaarden die bepalen hoe vaak de berichten van HTTP naar uw op API-Gebaseerde bestemming worden verzonden en hoeveel profielen de berichten zouden moeten omvatten. |
+| OAuth 2 tokenleven voor Destination SDK | Minimaal 24 uur aanbevolen | Prestatiegerichting | Voor bestemmingen die [&#x200B; OAuth 2 vergunning &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md) gebruiken, adviseert Adobe plaatsend de waarden van het toegangstoken leven aan een minimum van 24 uren. Verbindingen met tokens met een levensduur van minder dan 1 uur leiden tot het wegvallen van profielen tijdens activering. |
 
 {style="table-layout:auto"}
 
@@ -196,7 +196,7 @@ Gegevens over drempelwaarden of beperkingen voor bepaalde bestemmingen. Deze sec
 Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platform Services-instructies, informatie over end-to-end latentie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [ de diagrammen van de de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
-* [ Real-Time Customer Data Platform (B2C Edition - Prime en de Pakketten van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [ Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [ Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [&#x200B; de diagrammen van de de latentie van begin tot eind &#x200B;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
+* [&#x200B; Real-Time Customer Data Platform (B2C Edition - Prime en de Pakketten van Ultimate) &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [&#x200B; Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
