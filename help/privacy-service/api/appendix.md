@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: Bijlage Privacy Service API-handleiding
-description: Dit document bevat aanvullende informatie voor het werken met de Privacy Service-API.
+description: Dit document bevat aanvullende informatie voor het werken met de Privacy Service API.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 644e85fe5c9b1a37f69c75755713e929736c2e89
+source-git-commit: 9b3fb0d545408369d96a3fc7c5c6e9c098af9933
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 4%
+source-wordcount: '552'
+ht-degree: 3%
 
 ---
 
-# Handleiding Privacy Service-API
+# Handleiding Privacy Service API
 
 De volgende secties bevatten aanvullende informatie voor het werken met de Adobe Experience Platform Privacy Service API.
 
 ## Standaardnaamruimten {#standard-namespaces}
 
-Alle identiteiten die naar [!DNL Privacy Service] worden verzonden, moeten onder een specifieke naamruimte worden opgegeven. Identiteitsnaamruimten zijn een component van [&#x200B; Dienst van de Identiteit van Adobe Experience Platform &#x200B;](../../identity-service/home.md) die op de context wijzen waarop een identiteit betrekking heeft.
+Alle identiteiten die naar [!DNL Privacy Service] worden verzonden, moeten onder een specifieke naamruimte worden opgegeven. Identiteitsnaamruimten zijn een component van [ Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md) die op de context wijzen waarop een identiteit betrekking heeft.
 
 De volgende tabel bevat een overzicht van diverse veelgebruikte, vooraf gedefinieerde identiteitstypen die door [!DNL Experience Platform] beschikbaar worden gesteld, samen met de bijbehorende `namespace` -waarden:
 
@@ -26,7 +26,7 @@ De volgende tabel bevat een overzicht van diverse veelgebruikte, vooraf gedefini
 | --- | --- | --- |
 | Email | `Email` | `6` |
 | Telefoon | `Phone` | `7` |
-| Adobe Advertising Cloud-id | `AdCloud` | `411` |
+| Adobe Advertising Cloud ID | `AdCloud` | `411` |
 | Adobe Audience Manager UUID | `CORE` | `0` |
 | Adobe Experience Cloud-id | `ECID` | `4` |
 | Adobe Target-id | `TNTID` | `9` |
@@ -38,11 +38,11 @@ De volgende tabel bevat een overzicht van diverse veelgebruikte, vooraf gedefini
 
 >[!NOTE]
 >
->Elk identiteitstype heeft ook een `namespaceId` geheel-getalwaarde, die kan worden gebruikt in plaats van de `namespace` -tekenreeks wanneer de eigenschap `type` van de identiteit wordt ingesteld op &quot;namespaceId&quot;. Zie de sectie op [&#x200B; namespace kwalificfiers &#x200B;](#namespace-qualifiers) voor meer informatie.
+>Elk identiteitstype heeft ook een `namespaceId` geheel-getalwaarde, die kan worden gebruikt in plaats van de `namespace` -tekenreeks wanneer de eigenschap `type` van de identiteit wordt ingesteld op &quot;namespaceId&quot;. Zie de sectie op [ namespace kwalificfiers ](#namespace-qualifiers) voor meer informatie.
 
-U kunt een lijst ophalen met naamruimten die door uw organisatie worden gebruikt door een GET-aanvraag in te dienen bij het eindpunt `idnamespace/identities` in de [!DNL Identity Service] API. Zie de [&#x200B; de ontwikkelaarsgids van de Dienst van de Identiteit &#x200B;](../../identity-service/api/getting-started.md) voor meer informatie.
+U kunt een lijst ophalen met naamruimten die door uw organisatie worden gebruikt door een GET-aanvraag in te dienen bij het eindpunt `idnamespace/identities` in de [!DNL Identity Service] API. Zie de [ de ontwikkelaarsgids van de Dienst van de Identiteit ](../../identity-service/api/getting-started.md) voor meer informatie.
 
-## Naamruimtetekens
+## Naamruimtetekens {#namespace-qualifiers}
 
 Wanneer het specificeren van a `namespace` waarde in [!DNL Privacy Service] API, a **namespace kwalificfier** moet in een overeenkomstige `type` parameter worden omvat. In de volgende tabel worden de verschillende geaccepteerde naamruimtetekens weergegeven.
 
@@ -58,28 +58,31 @@ Wanneer het specificeren van a `namespace` waarde in [!DNL Privacy Service] API,
 
 {style="table-layout:auto"}
 
-## Geaccepteerde productwaarden
+## Geaccepteerde productwaarden {#accepted-product-values}
 
-In de volgende tabel worden de geaccepteerde waarden voor het opgeven van een Adobe-product in het kenmerk `include` van een aanvraag voor het maken van een taak weergegeven.
+In deze sectie worden de waarden van de product-id weergegeven die in het kenmerk `include` worden geaccepteerd bij het maken van Privacy Service-taken (API of UI). Gebruik deze waarden in de `include` -array van uw taakaanvraag.
+
+De volgende lijst maakt een lijst van de gesteunde producten, hun UI vertoningsnamen, en hun overeenkomstige codewaarden.
 
 >[!NOTE]
 >
->De waarden voor de lijst met producten zijn niet hoofdlettergevoelig. Camel-case wordt aanbevolen, maar niet afgedwongen.
+>- Productwaarden zijn niet hoofdlettergevoelig. Voor de consistentie wordt een kamelentaal aanbevolen.
+>- Alleen de hierboven vermelde producten worden ondersteund in de gebruikersinterface en de API. Als een product niet is voorzien voor uw organisatie, kan het worden genegeerd of een bevestigingsfout-verwijs naar uw contract van Adobe of leveringsdocumentatie om recht te bevestigen veroorzaken.
 
-| Product | Waarde voor gebruik in het attribuut `include` |
-| --- | --- |
-| Adobe Advertising Cloud | `adCloud` |
-| Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `audienceManager` |
-| Adobe Campaign | `campaign` |
-| Adobe Experience Platform (data Lake) | `aepDataLake` |
-| Adobe Experience Platform (Real-Time Klantprofiel) | `profileService` |
-| Adobe Pass-verificatie | `primetimeAuthentication` |
-| Adobe Target | `target` |
-| Klantkenmerken (CRS) | `CRS` |
-| Reisbeheer van klanten | `cjm` |
-| Identiteitsservice | `identity` |
-| Marketo Engage | `marketo` |
-| Marketo Measure | `marketomeasure` |
+| Benoemde productnaam | Weergavenaam gebruikersinterface | `include` value |
+| ------------------------------------------------------ | -------------------------- | ---------------------------------------- |
+| Adobe Analytics | [!UICONTROL Analytics] | `analytics` |
+| Adobe Audience Manager | [!UICONTROL Audience Manager] | `audienceManager` |
+| Adobe Advertising | [!UICONTROL Ad Cloud] | `adCloud` |
+| Adobe Experience Platform (Profile Store) | [!UICONTROL Profile] | `profileService` |
+| Adobe Experience Platform (data Lake) | [!UICONTROL AEP Data Lake] | `aepDataLake` |
+| Adobe Campaign | [!UICONTROL Campaign] | `campaign` |
+| Adobe Target | [!UICONTROL Target] | `target` |
+| Klantkenmerken | [!UICONTROL Customer Attributes (CRS)] | `CRS` |
+| Adobe Journey Optimizer | [!UICONTROL Adobe Journey Optimizer] | `cjm` |
+| Marketo Engage | [!UICONTROL Marketo Engage / AJO B2B] | `marketo` |
+| Identiteitsservice | [!UICONTROL Identity] | `identity` |
+| Marketo Measure | [!UICONTROL Marketo Measure] | `marketomeasure` |
+| Adobe Commerce | [!UICONTROL Commerce (Personalization)] | `commerceMarketingData` |
 
 {style="table-layout:auto"}
