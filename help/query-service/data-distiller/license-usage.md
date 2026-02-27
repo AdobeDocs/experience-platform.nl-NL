@@ -2,27 +2,27 @@
 title: Gebruik van batch-query's controleren
 description: De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van de Data Distiller-licentie van uw organisatie.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dce631923bd38f3237da3e1928e2203dc1a266ca
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
 # Gebruik van batch-query&#39;s controleren {#monitor-license-usage}
 
-Het licentiegebruiksdashboard biedt gedetailleerde rapporten over het gebruik van de Query Service-licentie en gebruiksmaatstaven van uw organisatie voor elk aangeschaft product. Om meer over de beschikbare metriek te leren die in het dashboard wordt getoond, bezoek de [&#x200B; gids van het gebruiksdashboard van de vergunning &#x200B;](../../dashboards/guides/license-usage.md#available-metrics).
+Het licentiegebruiksdashboard biedt gedetailleerde rapporten over het gebruik van de Query Service-licentie en gebruiksmaatstaven van uw organisatie voor elk aangeschaft product. Om meer over de beschikbare metriek te leren die in het dashboard wordt getoond, bezoek de [ gids van het gebruiksdashboard van de vergunning ](../../dashboards/guides/license-usage.md#available-metrics).
 
-Het dashboard biedt gebruiksmaatstaven voor elk aangeschaft product, het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruiksmaatstaven van een specifieke sandbox. De hier weergegeven informatie wordt vastgelegd tijdens een dagelijkse momentopname van uw Experience Platform-exemplaar.
+Het dashboard biedt gebruiksmaatstaven voor elk aangeschaft product, het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruiksmaatstaven van een specifieke sandbox. De hier weergegeven informatie wordt vastgelegd tijdens een dagelijkse momentopname van uw Experience Platform-exemplaar. Beheerders kunnen sessies van de idle Query Service controleren en beëindigen om capaciteit vrij te maken wanneer er geen extra sessies beschikbaar zijn en gebruikers worden geblokkeerd vanwege inactieve (niet-actieve) sessies. Zie [ de zittingen van de Dienst van de Vraag beheren ](../ui/session-management.md) voor details.
 
 >[!NOTE]
 >
->Het dashboard voor licentiegebruik is niet standaard ingeschakeld. Gebruikers moeten de machtiging &#39;Dashboard voor licentiegebruik weergeven&#39; hebben om het dashboard te kunnen weergeven. Voor stappen bij het verlenen van toegangstoestemmingen voor het bekijken van het dashboard van het vergunningsgebruik, verwijs naar de [&#x200B; gids van de toestemmingen van het dashboard &#x200B;](../../dashboards/permissions.md).
+>Het dashboard voor licentiegebruik is niet standaard ingeschakeld. Gebruikers moeten de machtiging &#39;Dashboard voor licentiegebruik weergeven&#39; hebben om het dashboard te kunnen weergeven. Voor stappen bij het verlenen van toegangstoestemmingen voor het bekijken van het dashboard van het vergunningsgebruik, verwijs naar de [ gids van de toestemmingen van het dashboard ](../../dashboards/permissions.md).
 
 ## Rekenuren {#compute-hours}
 
 [!UICONTROL Compute hours] metrisch is slechts van toepassing op klanten met de vergunning van Gegevens Distiller voor partijvragen. [!UICONTROL Compute hours] is de maatregel van tijd die door de motoren van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevenspeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd.
 
-![&#x200B; het dashboard van het vergunningsgebruik met metrische benadrukt gegevens verwerkt uren.](../images/data-distiller/compute-hours.png)
+![ het dashboard van het vergunningsgebruik met metrische benadrukt gegevens verwerkt uren.](../images/data-distiller/compute-hours.png)
 
-Om meer informatie over de metriek beschikbaar te vinden beschikbaar voor uw organisatie die op de gekochte vergunning van uw organisatie wordt gebaseerd, zie de [&#x200B; handleiding van het dashboard van het vergunningsgebruik &#x200B;](../../dashboards/guides/license-usage.md).
+Om meer informatie over de metriek beschikbaar te vinden beschikbaar voor uw organisatie die op de gekochte vergunning van uw organisatie wordt gebaseerd, zie de [ handleiding van het dashboard van het vergunningsgebruik ](../../dashboards/guides/license-usage.md).
