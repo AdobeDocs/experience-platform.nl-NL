@@ -97,7 +97,7 @@ Lees de onderstaande secties door om alle stappen in de bovenstaande overzichten
 
 Bronnen van het Experience Data Model (XDM) worden beheerd in de [!UICONTROL Schemas] -werkruimte in [!DNL Adobe Experience Platform] . U kunt de belangrijkste bronnen van [!DNL Adobe] (bijvoorbeeld veldgroepen) weergeven en verkennen en aangepaste bronnen en schema&#39;s voor uw organisatie maken.
 
-Voor meer informatie over het creëren van [&#x200B; schema&#39;s &#x200B;](/help/xdm/home.md), zie [&#x200B; schema tot leerprogramma leiden.](/help/xdm/tutorials/create-schema-ui.md) en [&#x200B; ModelUw Gegevens van de Ervaring van de Klant met XDM &#x200B;](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
+Voor meer informatie over het creëren van [&#x200B; schema&#39;s &#x200B;](/help/xdm/home.md), zie [&#x200B; schema tot leerprogramma leiden.](/help/xdm/tutorials/create-schema-ui.md) en [&#x200B; ModelUw Gegevens van de Ervaring van de Klant met XDM &#x200B;](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html?lang=nl-NL).
 
 Er zijn vier schemaontwerpen die voor het re-engagement gebruikscase worden gebruikt. Voor elk schema moeten specifieke velden worden ingesteld. U moet toelaten dat het schema in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van het schema voor gebruik in het Profiel van de Klant in real time, leest [&#x200B; een schema voor het Profiel van de Klant in real time &#x200B;](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile) toe.
 
