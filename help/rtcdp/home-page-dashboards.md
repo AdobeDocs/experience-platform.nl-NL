@@ -38,7 +38,7 @@ De widget [!UICONTROL Getting started with Real-Time Customer Profile] bestaat u
 >id="platform_home_metrics_totalProfiles"
 >title="Totaal aantal profielen"
 >abstract="Het totale aantal profielen dat uw organisatie heeft binnen Experience Platform. Dit aantal is gebaseerd op het samenvoegbeleid van uw organisatie en omvat geen profielfragmenten. Het aantal profielen wordt eenmaal per 24 uur bijgewerkt."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=nl-NL#profile-count" text="Meer informatie in documentatie"
 
 Op het dashboard Metrics wordt actuele informatie over uw Experience Platform-gegevens weergegeven. Het dashboard bestaat uit twee gedeelten:
 
