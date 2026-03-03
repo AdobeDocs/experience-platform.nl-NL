@@ -3,13 +3,13 @@ title: Verbeteringen in compositie publiek
 description: Meer informatie over de verbeteringen die zijn aangebracht in Audience Composition met de verrijking van het publiek en snellere activering.
 hide: true
 hidefromtoc: true
-source-git-commit: 42e639b403edbaf666d8bc21eb35b2b75530d6b0
+exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
+source-git-commit: 2d16cc990ea15c1596aae92d8768cddc77a30efd
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
-
 
 # Verbeteringen voor compositie publiek
 
@@ -24,21 +24,21 @@ Met de verrijking van het publiek kunt u de reeks waarden uitvoeren waarmee uw p
 
 Als u publieksverbeteringen aan uw compositie wilt toevoegen, selecteert u het bovenste **[!UICONTROL Audience]** -blok binnen het canvas. Nadat u het publiek een naam hebt gegeven, selecteert u **[!UICONTROL Build rule]** om het canvas voor regelbuilders te openen.
 
-![&#x200B; het blok van het Publiek wordt benadrukt, evenals de de regelknoop van de Bouwstijl.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
+![ het blok van het Publiek wordt benadrukt, evenals de de regelknoop van de Bouwstijl.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-Het canvas voor het opbouwen van regels wordt weergegeven. U kunt nu filtercriteria voor de verrijking van uw publiek maken. Deze filtercriteria **moeten** een attribuut omvatten dat binnen een serie is. Het kenmerk dat een array is, is afhankelijk van de schemastructuur van uw organisatie. Nadat u de filtercriteria hebt gemaakt, selecteert u **[!UICONTROL Delivery]** in het rechterdeelvenster.
+Het canvas voor het opbouwen van regels wordt weergegeven. U kunt nu filtercriteria voor de verrijking van uw publiek maken. Deze filtercriteria **moeten** een attribuut omvatten dat binnen een serie is. Het kenmerk dat een array is, is afhankelijk van de schemastructuur van uw organisatie. Nadat u de filtercriteria hebt gemaakt, selecteert u **[!UICONTROL View enrichment]** in het rechterdeelvenster.
 
-![&#x200B; het canvas van de regelbouwer toont een voorbeeld van een publiek dat verbeteringen kan hebben. De knoop van de Levering wordt ook benadrukt.](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![ het canvas van de regelbouwer toont een voorbeeld van een publiek dat verbeteringen kan hebben. De knoop van de Levering wordt ook benadrukt.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-Kies in de lijst in het linkerdeelvenster de objectarray die u wilt gebruiken voor verrijking. Als het profiel slechts één array bevat, wordt de array automatisch voor u geselecteerd. Selecteer **[!UICONTROL Save]** om terug te keren naar de publiekscompositie.
+Kies de objectarray en de velden die u wilt gebruiken in de verrijking in de lijst in het linkerdeelvenster. Als het profiel slechts één array bevat, wordt de array automatisch voor u geselecteerd. Selecteer **[!UICONTROL Save]** om terug te keren naar de publiekscompositie.
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![&#x200B; de schemaboom voor de verrijkingsboom wordt getoond.](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![ de schemaboom voor de verrijkingsboom wordt getoond.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
 Binnen publiekscompositie, is uw [!UICONTROL Audience] blok nu een &quot;[!UICONTROL Rule builder with enhancement]&quot;type. Selecteer **[!UICONTROL Publish]** om uw publiek te activeren met de volgende batch per dag.
 
-![&#x200B; het blok van het Publiek wordt benadrukt, tonend dat een publiek met verrijking wordt toegevoegd.](/help/segmentation/images/ui/composition-enhancements/rule-builder-with-enrichment.png)
+![ het blok van het Publiek wordt benadrukt, tonend dat een publiek met verrijking wordt toegevoegd.](/help/segmentation/images/ui/composition-enhancements/rule-builder-with-enrichment.png)
 
 ### Gedragdetails en -instructies
 
@@ -64,4 +64,4 @@ Houd rekening met de volgende details en instructies wanneer u de verrijking van
 
 Met snellere activering kunt u uw publiek direct na de evaluatie van de compositie naar een lagere bestemming activeren. Dientengevolge, als uw bestemming wordt geplaatst om na segmentevaluatie te activeren, te hoeven u niet meer op 24 uren op de evaluatietaak te wachten om te beëindigen.
 
-Voor meer informatie, leest [&#x200B; publiek aan de gids van de partijprofielbestemmingen &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) activeren.
+Voor meer informatie, leest [ publiek aan de gids van de partijprofielbestemmingen ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) activeren.
