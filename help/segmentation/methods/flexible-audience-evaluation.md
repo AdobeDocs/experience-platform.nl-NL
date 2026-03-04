@@ -326,7 +326,7 @@ Nadat u hebt bevestigd dat het juiste publiek wordt vermeld, kunt u doorgaan met
 
 In de volgende video ziet u hoe u een flexibele publieksevaluatie in Experience Platform kunt openen en gebruiken.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640?)
+>[!VIDEO](https://video.tv.adobe.com/v/3453646?captions=dut&)
 
 ## Veelgestelde vragen {#faq}
 
