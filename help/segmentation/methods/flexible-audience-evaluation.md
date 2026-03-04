@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De flexibele publieksevaluatie is **slechts** beschikbaar op instanties van Experience Platform die op [!DNL Microsoft Azure] lopen. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../landing/multi-cloud.md).
+>De flexibele publieksevaluatie is **slechts** beschikbaar op instanties van Experience Platform die op [!DNL Microsoft Azure] lopen. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../landing/multi-cloud.md).
 >
 >Bovendien, is de flexibele publieksevaluatie **slechts** beschikbaar voor gebruik met Real-Time CDP B2C Edition.
 
@@ -47,7 +47,7 @@ Om flexibele publieksevaluatie te gebruiken, moet u de volgende toestemming hebb
 
 - **[!UICONTROL Evaluate Segment to an Audience]** onder de **[!DNL Profile Management]** -sectie.
 
-Voor meer informatie over op rol-gebaseerd toegangsbeheer, te lezen gelieve het [ overzicht van de toegangscontrole ](../../access-control/home.md).
+Voor meer informatie over op rol-gebaseerd toegangsbeheer, te lezen gelieve het [&#x200B; overzicht van de toegangscontrole &#x200B;](../../access-control/home.md).
 
 ## Flexibele publieksevaluatie uitvoeren
 
@@ -302,23 +302,23 @@ Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie 
 
 Selecteer **[!UICONTROL Audiences]** in de sectie **[!UICONTROL Customers]** als u een flexibele publieksevaluatie wilt uitvoeren in de gebruikersinterface van Experience Platform.
 
-![ de knoop van het publiek binnen de sectie van Klanten wordt benadrukt. Het Portaal van de Publiek voor klantenprofielen wordt getoond.](../images/methods/fae/audience-portal.png)
+![&#x200B; de knoop van het publiek binnen de sectie van Klanten wordt benadrukt. Het Portaal van de Publiek voor klantenprofielen wordt getoond.](../images/methods/fae/audience-portal.png)
 
 Het Portaal van het Publiek wordt getoond, tonend een lijst van alle mensen publiek voor de organisatie. In het Portaal van de Publiek, kunt u de soorten publiek kiezen u evalueerde en selecteren **[!UICONTROL Evaluate audience]**.
 
-![ het publiek dat u flexibele publieksevaluatie wilt gebruiken wordt geselecteerd.](../images/methods/fae/evaluate-audiences.png)
+![&#x200B; het publiek dat u flexibele publieksevaluatie wilt gebruiken wordt geselecteerd.](../images/methods/fae/evaluate-audiences.png)
 
 Het pop-upmenu **[!UICONTROL Evaluate audiences on demand]** wordt weergegeven met de lijst met soorten publiek die worden geëvalueerd met de segmenttaak op aanvraag. Als een publiek niet in aanmerking komt om op verzoek te worden beoordeeld, zal het automatisch uit de evaluatietaak worden verwijderd. Bevestig dat het vermelde publiek het publiek is dat u wilt evalueren.
 
-![ het publiek dat kan worden geëvalueerd gebruikend de flexibele publieksevaluatie wordt getoond.](../images/methods/fae/evaluate-audiences-modal.png)
+![&#x200B; het publiek dat kan worden geëvalueerd gebruikend de flexibele publieksevaluatie wordt getoond.](../images/methods/fae/evaluate-audiences-modal.png)
 
-Nadat u hebt bevestigd dat het juiste publiek wordt vermeld, kunt u doorgaan met het verzoek en begint de flexibele publieksevaluatie. U kunt het statuut van deze publieksevaluatie in de [ controle van de evaluatietaak ](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) bekijken.
+Nadat u hebt bevestigd dat het juiste publiek wordt vermeld, kunt u doorgaan met het verzoek en begint de flexibele publieksevaluatie. U kunt het statuut van deze publieksevaluatie in de [&#x200B; controle van de evaluatietaak &#x200B;](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) bekijken.
 
 >[!NOTE]
 >
 >De status van de segmenttaak kan worden gerapporteerd als in de status &quot;In wachtrij&quot; in het dashboard voor bewaking. U kunt de meest bijgewerkte status van de segmentbaan bekijken door een GET- verzoek aan het `/segment/jobs` eindpunt te doen, die identiteitskaart van de segmentbaan in de verzoekweg verstrekken. Meer informatie over het gebruik van dit eindpunt vindt u op het tabblad API.
 >
->Als u een flexibele publieksevaluatie uitvoert en de evaluatie het publiek naar een bestemming wilt activeren, moet u ervoor zorgen dat de frequentie is ingesteld op **[!UICONTROL After segment evaluation]** . Het in werking stellen van flexibele publieksevaluatie op publiek die reeds om [ na segmentevaluatie ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) worden geactiveerd, zal publiek activeren zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken beëindigt.
+>Als u een flexibele publieksevaluatie uitvoert en de evaluatie het publiek naar een bestemming wilt activeren, moet u ervoor zorgen dat de frequentie is ingesteld op **[!UICONTROL After segment evaluation]** . Het in werking stellen van flexibele publieksevaluatie op publiek die reeds om [&#x200B; na segmentevaluatie &#x200B;](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) worden geactiveerd, zal publiek activeren zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken beëindigt.
 
 >[!ENDTABS]
 
