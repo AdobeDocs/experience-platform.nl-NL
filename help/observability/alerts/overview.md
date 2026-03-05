@@ -99,7 +99,7 @@ U kunt een WebHaakvolmacht op [&#x200B; Adobe App Builder &#x200B;](https://deve
 
 >[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
 
-Voor meer informatie over hoe te om de berichten van Experience Platform in [!DNL Slack] te ontvangen door met een webhaakvolmacht van Adobe te integreren App Builder, zie {de gebeurtenissen van Experience Platform van de 1} monitor in [&#x200B;  [!DNL Slack].](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack)
+Voor meer informatie over hoe te om de berichten van Experience Platform in [!DNL Slack] te ontvangen door met een webhaakvolmacht van Adobe te integreren App Builder, zie {de gebeurtenissen van Experience Platform van de 1} monitor in [&#x200B;  [!DNL Slack].](https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack)
 
 ## Volgende stappen
 
