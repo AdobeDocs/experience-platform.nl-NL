@@ -97,7 +97,7 @@ Bovendien staat het [!UICONTROL Alerts] lusje in UI individuele gebruikers toe o
 
 U kunt een WebHaakvolmacht op [&#x200B; Adobe App Builder &#x200B;](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) gebruiken om [&#x200B; Adobe I/O Events &#x200B;](https://developer.adobe.com/events/docs/guides/) van Experience Platform aan uw [!DNL Slack] te ontvangen. De proxy handelt de verificatiehandshake van Adobe af en zet de gebeurtenislading om in [!DNL Slack] -berichten, zodat u klantgerichte waarschuwingen rechtstreeks naar uw werkruimte kunt ontvangen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3480201?captions=dut&learn=on)
 
 Voor meer informatie over hoe te om de berichten van Experience Platform in [!DNL Slack] te ontvangen door met een webhaakvolmacht van Adobe te integreren App Builder, zie {de gebeurtenissen van Experience Platform van de 1} monitor in [&#x200B;  [!DNL Slack].](https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack)
 
