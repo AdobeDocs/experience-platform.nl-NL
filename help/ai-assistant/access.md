@@ -76,7 +76,7 @@ Als u beschikt over de benodigde machtigingen, hebt u toegang tot AI Assistant (
 
 Bekijk de volgende video om te leren hoe u toegang tot AI Assistant (verouderd) voor uw organisaties en gebruikers kunt configureren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475925/?captions=dut&learn=on)
 
 ## Volgende stappen
 
