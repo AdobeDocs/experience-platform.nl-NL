@@ -1,38 +1,38 @@
 ---
-title: Vraag voor AI-assistent
-description: Lees dit document om voorbeeldvragen te leren die u kunt gebruiken wanneer het vragen van AI Medewerker.
+title: Vraag voor AI Assistant (verouderd)
+description: Lees dit document om voorbeeldvragen te leren die u kunt gebruiken wanneer het vragen van AI Medewerker (Verouderd).
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
+source-git-commit: 077c42f2190316a00168bbeca685c08677c2b13a
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2086'
 ht-degree: 1%
 
 ---
 
-# Vraag voor AI-assistent
+# Vraag voor AI Assistant (verouderd)
 
-Lees dit document voor een set voorbeeldvragen die u kunt gebruiken bij het opvragen van AI Assistant.
+Lees dit document voor een set voorbeeldvragen die u kunt gebruiken bij het opvragen van AI Assistant (Legacy).
 
-U kunt dit document ook gebruiken om uiteinden op [&#x200B; te leren hoe te om uw vragen &#x200B;](#phrasing-your-questions) te formuleren om optimale reacties van AI Medewerker te krijgen.
+U kunt dit document ook gebruiken om uiteinden op [ te leren hoe te om uw vragen ](#phrasing-your-questions) te formuleren om optimale reacties van AI Medewerker (Verouderd) te krijgen.
 
 ## Op doelstellingen gebaseerde vragen {#objectives-questions}
 
-De volgende voorbeeldvragen worden gegroepeerd op doelstellingen die u kunt verwezenlijken wanneer het gebruiken van AI Medewerker:
+De volgende voorbeeldvragen worden gegroepeerd op doelstellingen die u kunt verwezenlijken wanneer het gebruiken van AI Medewerker (Verouderd):
 
 | Doelstelling | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| Leerconcepten en doorlopende workflows | <ul><li>Als beginnende gebruiker, kunt u AI Medewerker gebruiken om de concepten van Real-Time CDP en van Adobe Journey Optimizer te leren en aan boord aan producten en eigenschappen te zijn die u niet vertrouwd met bent.</li><li>Als ervaren gebruiker, kunt u AI Medewerker gebruiken om een randgeval op te lossen dat uw werkschema kan blokkeren. | <ul><li>Hoe kan ik een dashboard instellen in Journey Analytics?</li><li>Vertel me wat gebruiksgevallen voor Real-Time CDP.</li></ul> |
-| Problemen oplossen | Met AI Assistant leert u hoe u fouten in de basisbeginselen die u in uw workflow tegenkomt, kunt opsporen. | <ul><li>Wat betekent deze fout {ERROR_MESSAGE}?</li><li>Waarom kan ik het publiek met de naam &quot;Luma: Email Audience&quot; niet verwijderen?</li></ul> |
-| Zandbakhygiëne | Met AI Assistant kunt u eventuele duplicaten of ongebruikte objecten identificeren, zodat u de sandbox op efficiënte wijze kunt onderhouden. | <ul><li>Kan je me een publiek laten zien dat vergelijkbaar is?</li><li>Zijn er regelingen die geen bijbehorende dataset hebben?</li></ul> |
-| Waardeanalyse | Met AI Assistant kunt u de meest gebruikte gegevensobjecten identificeren en prestatie-indicatoren beoordelen of de meest waardevolle gegevensobjecten vinden. | <ul><li>Hoeveel profielen bevinden zich in de segmentdefinitie &quot;Luma: Email Audience&quot;?</li><li>Wanneer is het publiek geactiveerd naar de bestemming Experience Cloud Audiences?</li></ul> |
-| Zoeken | De Medewerker van AI van het gebruik om gesteunde voorwerpen van Experience Platform zoals publiek, datasets, bestemmingen, schema&#39;s, en bronnen te vinden. | <ul><li>Maak een lijst van de soorten publiek die &quot;Luma&quot;in de naam bevatten die in het laatste kwartaal werden gecreeerd.</li><li>Welke kenmerken bevinden zich in het XDM-schema &quot;Luma: Custom Actions&quot;?</li></ul> |
-| Effectanalyse | Met AI Assistant kunt u gegevensobjecten identificeren die in bepaalde workflows zijn gebruikt, zodat u het effect van wijzigingen kunt beoordelen. | <ul><li>Welk publiek gebruikt `homeAddress.city` in het schema &quot;Luma: PersonProfiles&quot;?</li><li>In welke gegevenssets wordt het profielkenmerk `consents.marketing.push.val` opgeslagen?</li></ul> |
+| Leerconcepten en doorlopende workflows | <ul><li>Als beginnende gebruiker, kunt u de Medewerker van AI (Verouderd) gebruiken om de concepten van Real-Time CDP en van Adobe Journey Optimizer te leren en aan boord aan producten en eigenschappen te zijn die u niet kent.</li><li>Als ervaren gebruiker kunt u de AI Assistant (Verouderd) gebruiken om een randprobleem op te lossen dat de workflow kan blokkeren. | <ul><li>Hoe kan ik een dashboard instellen in Journey Analytics?</li><li>Vertel me wat gebruiksgevallen voor Real-Time CDP.</li></ul> |
+| Problemen oplossen | Met AI Assistant (verouderd) leert u hoe u fouten in de basisbeginselen die u in uw workflow tegenkomt, kunt opsporen. | <ul><li>Wat betekent deze fout {ERROR_MESSAGE}?</li><li>Waarom kan ik het publiek met de naam &quot;Luma: Email Audience&quot; niet verwijderen?</li></ul> |
+| Zandbakhygiëne | Met AI Assistant (verouderd) kunt u eventuele duplicaten of ongebruikte objecten identificeren, zodat u de sandbox efficiënt kunt onderhouden. | <ul><li>Kan je me een publiek laten zien dat vergelijkbaar is?</li><li>Zijn er regelingen die geen bijbehorende dataset hebben?</li></ul> |
+| Waardeanalyse | Met AI Assistant (verouderd) kunt u de meest gebruikte gegevensobjecten identificeren en prestatie-indicatoren beoordelen of de meest waardevolle gegevensobjecten vinden. | <ul><li>Hoeveel profielen bevinden zich in de segmentdefinitie &quot;Luma: Email Audience&quot;?</li><li>Wanneer is het publiek geactiveerd naar de bestemming Experience Cloud Audiences?</li></ul> |
+| Zoeken | De Medewerker van AI van het gebruik (Verouderd) om gesteunde voorwerpen van Experience Platform zoals publiek, datasets, bestemmingen, schema&#39;s, en bronnen te vinden. | <ul><li>Maak een lijst van de soorten publiek die &quot;Luma&quot;in de naam bevatten die in het laatste kwartaal werden gecreeerd.</li><li>Welke kenmerken bevinden zich in het XDM-schema &quot;Luma: Custom Actions&quot;?</li></ul> |
+| Effectanalyse | Met AI Assistant (verouderd) kunt u gegevensobjecten identificeren die in bepaalde workflows zijn gebruikt, zodat u de gevolgen van eventuele wijzigingen kunt beoordelen. | <ul><li>Welk publiek gebruikt `homeAddress.city` in het schema &quot;Luma: PersonProfiles&quot;?</li><li>In welke gegevenssets wordt het profielkenmerk `consents.marketing.push.val` opgeslagen?</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Operationele inzichten per entiteit en productkennisvragen{#objects-questions}
 
-De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [&#x200B; operationele inzichten &#x200B;](./home.md#operational-insights) of [&#x200B; productkennis &#x200B;](./home.md#product-knowledge) geclassificeerd.
+De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [ operationele inzichten ](./home.md#operational-insights) of [ productkennis ](./home.md#product-knowledge) geclassificeerd.
 
 ![](./images/prompt.png)
 
@@ -81,26 +81,26 @@ De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [&#x200B
    * Wanneer moet ik een gegevenstype versus een veldgroep gebruiken?
    * Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?
 * **het Oplossen van problemen - de kennis van het Product (Real-Time CDP en Journey Optimizer)**
-   * Waarmee kan AI Assistant helpen?
+   * Wat kan AI Assistant (Legacy) helpen?
    * Kan ik een schema verwijderen dat voor een profiel is ingeschakeld nadat gegevens zijn opgenomen?
    * Waarom kan ik geen publiek verwijderen?
    * Hoe lang duurt het voordat het publiek wordt geëvalueerd en de resultaten beschikbaar zijn om doelgericht te zijn?
 
 ## Uw vragen formuleren {#phrasing-your-questions}
 
-U moet uw vragen duidelijk en in de context tot AI Assistant richten om zo accuraat mogelijk te kunnen antwoorden. Raadpleeg de volgende tips voor het stellen van een duidelijke vraag met betrekking tot de context:
+U moet uw vragen duidelijk en in een context stellen aan AI Assistant (Legacy) om zo accuraat mogelijk te kunnen antwoorden. Raadpleeg de volgende tips voor het stellen van een duidelijke vraag met betrekking tot de context:
 
 * Geef uw taak en/of vraag beknopt weer.
 * Vermijd dubbelzinnige taal of te complexe syntaxis om het begrip te vergemakkelijken.
-* Een relevante context bieden met betrekking tot uw taak en/of vraag als context kan AI Assistant helpen meer relevante reacties te genereren.
+* Verstrek relevante context betreffende uw taak en/of vraag aangezien de context AI Medewerker (Verouderd) kan helpen relevantere reacties produceren.
 
-Lees de onderstaande tabellen voor meer informatie over aanbevolen procedures bij het stellen van vragen aan AI Assistant.
+Lees de onderstaande tabellen voor meer informatie over aanbevolen procedures bij het stellen van vragen aan AI Assistant (Legacy).
 
-In de volgende tabellen worden de aanbevolen werkwijzen beschreven die u kunt volgen bij het gebruik van AI Assistant:
+In de volgende tabellen worden de aanbevolen werkwijzen beschreven die u kunt volgen bij het gebruik van AI Assistant (verouderd):
 
 | Do | Voorbeeld |
 | --- | --- |
-| <ul><li>Wees specifiek voor het object of de informatie die u wilt ophalen of analyseren.</li><li>Plaats uw gegevensobjectnamen tussen aanhalingstekens. Als u slechts een deel van de objecten naam kent, kunt u dat ook specificeren in de vraag.</li><li>Het voorwerp van het gebruik [&#x200B; auto-complete &#x200B;](./ui-guide.md#use-auto-complete) om AI Medewerker te helpen beter de context van uw vraag begrijpen.</li></ul> | <ul><li>Welke datasets gebruiken het &quot;Luma - Loyalty&quot;schema?</li><li>Toon me de geactiveerde segmenten die &quot;Luma&quot;in hun naam hebben. Rang ze op het aantal profielen.</li></ul> |
+| <ul><li>Wees specifiek voor het object of de informatie die u wilt ophalen of analyseren.</li><li>Plaats uw gegevensobjectnamen tussen aanhalingstekens. Als u slechts een deel van de objecten naam kent, kunt u dat ook specificeren in de vraag.</li><li>Het voorwerp van het gebruik [ auto-complete ](./ui-guide.md#use-auto-complete) om AI Medewerker (Verouderd) beter te helpen de context van uw vraag begrijpen.</li></ul> | <ul><li>Welke datasets gebruiken het &quot;Luma - Loyalty&quot;schema?</li><li>Toon me de geactiveerde segmenten die &quot;Luma&quot;in hun naam hebben. Rang ze op het aantal profielen.</li></ul> |
 | <ul><li>Vermijd dubbelzinnigheid en gebruik duidelijke taal</li><li>Gebruik nauwkeurige terminologie om betere duidelijkheid in uw vraag te verzekeren.</li><li>Probeer bij het stellen van vragen over Adobe Experience Platform de terminologie die specifiek voor Experience Platform geldt, te gebruiken om de relevantie van antwoorden te verbeteren.</li></ul> | <ul><li>Hoeveel profielen heb ik in &quot;ACME Audience&quot;.</li><li>Toon me de hoogste 5 attributen XDM die in geactiveerd publiek worden gebruikt.</li></ul> |
 | <ul><li>Geef context op of geef criteria op om de resultaten te filteren.</li><li>Gebruik filtercriteria in de vragen om het volume van gegevens in de reactie te beperken.</li></ul> | <ul><li>Toon me publiek dat niet geactiveerd is en meer dan zes maanden geleden is gecreëerd en nooit gewijzigd is.</li><li>Toon me publiek geactiveerd aan &quot;Doel ACME&quot;en heeft meer dan 10000 profielen.</li></ul> |
 
@@ -118,7 +118,7 @@ In de volgende tabellen worden de aanbevolen werkwijzen beschreven die u kunt vo
 
 ## Waarneming gegevensset {#dataset-observability}
 
-De Medewerker van AI kan vragen over specifieke datasetmetriek zoals opslaggrootte en rijtelling nu beantwoorden.
+De Medewerker van AI (Verouderd) kan vragen over specifieke datasetmetriek zoals opslaggrootte en rijtelling nu beantwoorden.
 
 * Wat zijn mijn grootste datasets door grootte?
 * Wat zijn mijn grootste dataset door rijen?
@@ -187,7 +187,7 @@ U kunt uw vragen van de gegevenswaarneembaarheid met een kwalificatie ook verfij
 
 ## Voorbeelden van niet-ondersteunde vragen {#unsupported-questions}
 
-Hieronder volgt een lijst met voorbeelden van vragen die momenteel niet worden ondersteund door AI Assistant.
+Hieronder volgt een lijst met voorbeelden van vragen die momenteel niet worden ondersteund door AI Assistant (Legacy).
 
 +++Selecteren om voorbeelden weer te geven van niet-ondersteunde vragen
 
@@ -230,4 +230,4 @@ Hieronder volgt een lijst met voorbeelden van vragen die momenteel niet worden o
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu inzicht in hoe u uw vragen kunt optimaliseren voor AI Assistant. Voor informatie over hoe te om de eigenschap tijdens uw werkschema&#39;s te gebruiken, lees de [&#x200B; AI Hulp UI gids &#x200B;](ui-guide.md).
+Door dit document te lezen, hebt u nu inzicht in hoe u uw vragen kunt optimaliseren voor AI Assistant (Verouderd). Voor informatie over hoe te om de eigenschap tijdens uw werkschema&#39;s te gebruiken, lees de [ AI Medewerker (Verouderd) UI gids ](ui-guide.md).

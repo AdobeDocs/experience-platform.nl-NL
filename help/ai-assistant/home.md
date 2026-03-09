@@ -1,41 +1,55 @@
 ---
-title: Overzicht van AI Assistant
-description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-Time Customer Data Platform te versnellen.
+title: AI Assistant (verouderd) in Adobe Experience Platform - Overzicht
+description: Leer meer over AI Assistant (verouderd), de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-Time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
+source-git-commit: 68c55e370cab58ce5c93359520bf4ce671282a1b
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 9%
+source-wordcount: '1201'
+ht-degree: 2%
 
 ---
 
-# AI Assistant in Adobe Experience Platform
+# AI Assistant (verouderd) in Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>Dit document is van toepassing op AI Assistant (verouderd). Voor informatie over AI Medewerker (volgende-Gen), lees de [ AI HulpUI gids ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) in [ AI in Experience Cloud ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/home) documentatie.
+
+Raadpleeg de volgende tabel voor een vergelijking van AI Assistant (Legacy) en AI Assistant (Next-Gen):
+
+| Functiegebied | AI Assistant (verouderd) | AI-assistent (Next-Gen) |
+| --- | --- | --- |
+| Gebruikerservaring | AI Assistant (verouderd) is alleen beschikbaar in een panel voor rechtse spoorwegsystemen. | AI Assistant (Next-Gen) is zowel beschikbaar in het rechterdeelvenster als in een indrukwekkende ervaring op volledig scherm. |
+| Toepassingsgebied van de mogelijkheden | U kunt AI Assistant (Verouderd) gebruiken voor zowel productkennis als operationele inzichten. | U kunt de Medewerker van AI (Next-Gen) voor productkennis, operationele inzichten, evenals geavanceerde agentische vaardigheden en multi-step taakuitvoering gebruiken. |
+| Platformarchitectuur | AI Assistant (Verouderd) is niet op de Agent Orchestrator-stapel gebaseerd. | De Medewerker van AI (Volgende-Gen) wordt aangedreven door [ Adobe Experience Platform Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), toelatend rekbaarheid en geavanceerde coördinatie over mogelijkheden. |
+| Toepassingsdekking | AI Assistant (Legacy) is een toepassingsspecifieke implementatie. | U kunt AI Assistant (Next-Gen) gebruiken voor een uniforme AI Assistant-ervaring in alle Adobe Experience Cloud-toepassingen. |
+| Toegangsmodel en machtigingsmodel | Toepassingsbereik toegangsmodel uitgelijnd op individuele productgrenzen. | Alle gebruikers krijgen toegang tot AI Assistant (Next-Gen) en bijbehorende Experience Platform-agents. **Nota**: <ul><li>**Adobe Experience Manager**: Uw beheerder moet u de toestemming verlenen om tot Medewerker (Volgende-Gen) door [ Adobe Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html) toegang te hebben.</li><li>**Customer Journey Analytics**: Uw beheerder moet u de toestemming verlenen om tot AI Medewerker door [ het Toegangsbeheer van Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en) toegang te hebben. Hierdoor kunt u vragen stellen over productkennis en gegevensinzichten. |
 
 De volgende video is bedoeld als ondersteuning voor uw begrip van AI Assistant.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
-Lees dit document voor meer informatie over AI Assistant in Adobe Experience Platform.
+Lees dit document voor meer informatie over AI Assistant (Legacy) in Adobe Experience Platform.
 
-AI-assistent in Adobe Experience Platform is een gesprekservaring waarmee u uw workflows in Adobe-applicaties kunt versnellen. Met AI-assistent krijgt u meer inzicht in productkennis, kunt u problemen oplossen of informatie doorzoeken en operationele inzichten verkrijgen. AI-assistent biedt ondersteuning voor Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
+AI Assistant (verouderd) in Adobe Experience Platform is een belevenis die u kunt gebruiken om uw workflows in Adobe-toepassingen te versnellen. U kunt de Medewerker van AI (Verouderd) gebruiken om productkennis beter te begrijpen, problemen op te lossen, of door informatie te zoeken en operationele inzichten te vinden. AI Assistant (verouderd) ondersteunt Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
 
-![&#x200B; de AI Hulp interface met de eerste getriggerde gebruikerservaring.](./images/ai-assistant-full.png)
+![ de AI Hulp interface met de eerste getriggerde gebruikerservaring.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->U moet met a [&#x200B; gebruikersovereenkomst &#x200B;](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) akkoord gaan alvorens u AI Medewerker kunt gebruiken. De gebruikersovereenkomst bevat ook de openbare bètaovereenkomst. Dit is zodat u extra eigenschappen van AI Medewerker kunt gebruiken aangezien zij in een bètacapaciteit uitrollen.
+>U moet met a [ gebruikersovereenkomst ](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) akkoord gaan alvorens u AI Medewerker (Verouderd) kunt gebruiken. De gebruikersovereenkomst bevat ook de openbare bètaovereenkomst. Op deze manier kunt u extra AI Assistant-functies (verouderd) gebruiken wanneer deze in bètacapaciteit worden geïmplementeerd.
 
 +++Selecteren om interface voor gebruikersovereenkomst weer te geven
 
-![&#x200B; de eerste pagina van de gebruikersovereenkomst.](./images/user-agreement-1.png)
+![ de eerste pagina van de gebruikersovereenkomst.](./images/user-agreement-1.png)
 
-![&#x200B; De laatste pagina van de gebruikersovereenkomst.](./images/user-agreement-2.png)
+![ De laatste pagina van de gebruikersovereenkomst.](./images/user-agreement-2.png)
 
 +++
 
 ## AI-assistent begrijpen {#understanding-ai-assistant}
 
-De Medewerker van AI antwoordt op uw voorgelegde vragen door een gegevensbestand te vragen en dan gegevens van het gegevensbestand in een leesbaar antwoord te vertalen.
+De Medewerker van AI (Verouderd) antwoordt aan uw voorgelegde vragen door een gegevensbestand te vragen en dan gegevens van het gegevensbestand in een leesbaar antwoord te vertalen.
 
 Deze interne representatie van onderliggende gegevens wordt ook wel **[!DNL Knowledge Graph]** genoemd. Dit is een uitgebreid web van concepten, gegevens en metagegevens voor een bepaald antwoord.
 
@@ -45,7 +59,7 @@ De [!DNL Knowledge Graph] bestaat uit subgrafieken waarnaar wordt verwezen wanne
 * Operationele inzichten van de klant in verschillende meta-winkels.
 * Experience League-documentatie.
 
-Er zijn twee klassen vragen om te overwegen alvorens AI Medewerker te vragen:
+Er zijn twee klassen vragen om te overwegen alvorens AI Medewerker (Verouderd) te vragen:
 
 ### Productkennis {#product-knowledge}
 
@@ -59,19 +73,19 @@ Productkennis verwijst naar concepten en onderwerpen die zijn gebaseerd op Exper
 
 {style="table-layout:auto"}
 
-Bekijk de volgende video voor aanvullende informatie over productkennis van AI Assistant:
+Bekijk de volgende video voor aanvullende informatie over productkennis van AI Assistant (Legacy):
 
->[!VIDEO](https://video.tv.adobe.com/v/3475936/?captions=dut&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Operationele inzichten {#operational-insights}
 
-De operationele inzichten verwijzen naar antwoorden AI Medewerker produceert over uw voorwerpen van meta- gegevens (attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen), met inbegrip van tellingen, raadplegingen, en lijneffect. Er worden geen gegevens in de sandbox weergegeven.
+De operationele inzichten verwijzen naar antwoorden AI Medewerker (Verouderd) produceert over uw meta- gegevensvoorwerpen (attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen), met inbegrip van tellingen, raadplegingen, en lijneffect. Er worden geen gegevens in de sandbox weergegeven.
 
 * Hoeveel datasets heb ik?
 * Hoeveel schemakenmerken zijn nooit gebruikt?
 * Welk publiek is geactiveerd?
 
-U kunt AI Assistant-vragen stellen over uw operationele inzichten in de volgende domeinen:
+U kunt AI Assistant (verouderd) vragen stellen over uw operationele inzichten op de volgende domeinen:
 
 | Domein | Ondersteunde metagegevens | Niet-ondersteunde metagegevens |
 | --- | --- | --- |
@@ -88,23 +102,23 @@ U kunt AI Assistant-vragen stellen over uw operationele inzichten in de volgende
 
 Voor vragen over operationele inzichten weerspiegelen de antwoorden mogelijk niet de huidige status van de gebruikersinterface. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. U moet zich aanmelden bij een sandbox voor informatie over specifieke gegevens die betrekking hebben op objecten.
 
-Bekijk de volgende video voor aanvullende informatie over operationele inzichten van AI Assistant:
+Bekijk de volgende video voor aanvullende informatie over operationele inzichten van AI Assistant (Legacy):
 
->[!VIDEO](https://video.tv.adobe.com/v/3444038?captions=dut&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Functiebereik {#feature-scope}
 
-Momenteel is het bereik van AI Assistant als volgt:
+Momenteel is het bereik van AI Assistant (Legacy) als volgt:
 
-* [&#x200B; de kennis van het Product &#x200B;](./home.md#product-knowledge): De Medewerker van AI kan de vragen van de productkennis voor Experience Platform, Real-Time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook onderwerpen over productkennis voor Customer Journey Analytics bespreken, maar alleen via de interface van Customer Journey Analytics.
-* [&#x200B; Operationele inzichten &#x200B;](./home.md#operational-insights): U kunt AI Medewerker met vragen over operationele inzichten op de volgende gegevensvoorwerpen vragen: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen.
+* [ de kennis van het Product ](./home.md#product-knowledge): De Medewerker van AI (Verouderd) kan de vragen van de productkennis voor Experience Platform, Real-Time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook onderwerpen over productkennis voor Customer Journey Analytics bespreken, maar alleen via de interface van Customer Journey Analytics.
+* [ Operationele inzichten ](./home.md#operational-insights): U kunt AI Medewerker (Verouderd) met vragen over operationele inzichten op de volgende gegevensvoorwerpen vragen: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen.
 
 ## Volgende stappen
 
-Nu u een algemeen begrip van AI Medewerker hebt, kunt u nu te werk gaan en AI Medewerker tijdens uw werkschema&#39;s gebruiken. Raadpleeg de volgende documentatie voor meer informatie:
+Nu u een algemeen begrip van AI Medewerker (Verouderd) hebt, kunt u nu verdergaan en AI Medewerker (Verouderd) tijdens uw werkschema&#39;s gebruiken. Raadpleeg de volgende documentatie voor meer informatie:
 
-* [Handleiding voor AI Assistant-gebruikersinterface](./ui-guide.md)
+* [Handleiding voor de gebruikersinterface van AI Assistant (verouderd)](./ui-guide.md)
 * [Toegang tot functies](./access.md)
 * [Vraag](./questions.md)
-* [Privacy, beveiliging en bestuur in AI Assistant](./privacy.md)
+* [Privacy, beveiliging en bestuur in AI Assistant (verouderd)](./privacy.md)
 * [Veelgestelde vragen](./faq.md)
