@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Lees dit document voor een set voorbeeldvragen die u kunt gebruiken bij het opvragen van AI Assistant (Legacy).
 
-U kunt dit document ook gebruiken om uiteinden op [ te leren hoe te om uw vragen ](#phrasing-your-questions) te formuleren om optimale reacties van AI Medewerker (Verouderd) te krijgen.
+U kunt dit document ook gebruiken om uiteinden op [&#x200B; te leren hoe te om uw vragen &#x200B;](#phrasing-your-questions) te formuleren om optimale reacties van AI Medewerker (Verouderd) te krijgen.
 
 ## Op doelstellingen gebaseerde vragen {#objectives-questions}
 
@@ -32,7 +32,7 @@ De volgende voorbeeldvragen worden gegroepeerd op doelstellingen die u kunt verw
 
 ## Operationele inzichten per entiteit en productkennisvragen{#objects-questions}
 
-De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [ operationele inzichten ](./home.md#operational-insights) of [ productkennis ](./home.md#product-knowledge) geclassificeerd.
+De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [&#x200B; operationele inzichten &#x200B;](./home.md#operational-insights) of [&#x200B; productkennis &#x200B;](./home.md#product-knowledge) geclassificeerd.
 
 ![](./images/prompt.png)
 
@@ -100,7 +100,7 @@ In de volgende tabellen worden de aanbevolen werkwijzen beschreven die u kunt vo
 
 | Do | Voorbeeld |
 | --- | --- |
-| <ul><li>Wees specifiek voor het object of de informatie die u wilt ophalen of analyseren.</li><li>Plaats uw gegevensobjectnamen tussen aanhalingstekens. Als u slechts een deel van de objecten naam kent, kunt u dat ook specificeren in de vraag.</li><li>Het voorwerp van het gebruik [ auto-complete ](./ui-guide.md#use-auto-complete) om AI Medewerker (Verouderd) beter te helpen de context van uw vraag begrijpen.</li></ul> | <ul><li>Welke datasets gebruiken het &quot;Luma - Loyalty&quot;schema?</li><li>Toon me de geactiveerde segmenten die &quot;Luma&quot;in hun naam hebben. Rang ze op het aantal profielen.</li></ul> |
+| <ul><li>Wees specifiek voor het object of de informatie die u wilt ophalen of analyseren.</li><li>Plaats uw gegevensobjectnamen tussen aanhalingstekens. Als u slechts een deel van de objecten naam kent, kunt u dat ook specificeren in de vraag.</li><li>Het voorwerp van het gebruik [&#x200B; auto-complete &#x200B;](./ui-guide.md#use-auto-complete) om AI Medewerker (Verouderd) beter te helpen de context van uw vraag begrijpen.</li></ul> | <ul><li>Welke datasets gebruiken het &quot;Luma - Loyalty&quot;schema?</li><li>Toon me de geactiveerde segmenten die &quot;Luma&quot;in hun naam hebben. Rang ze op het aantal profielen.</li></ul> |
 | <ul><li>Vermijd dubbelzinnigheid en gebruik duidelijke taal</li><li>Gebruik nauwkeurige terminologie om betere duidelijkheid in uw vraag te verzekeren.</li><li>Probeer bij het stellen van vragen over Adobe Experience Platform de terminologie die specifiek voor Experience Platform geldt, te gebruiken om de relevantie van antwoorden te verbeteren.</li></ul> | <ul><li>Hoeveel profielen heb ik in &quot;ACME Audience&quot;.</li><li>Toon me de hoogste 5 attributen XDM die in geactiveerd publiek worden gebruikt.</li></ul> |
 | <ul><li>Geef context op of geef criteria op om de resultaten te filteren.</li><li>Gebruik filtercriteria in de vragen om het volume van gegevens in de reactie te beperken.</li></ul> | <ul><li>Toon me publiek dat niet geactiveerd is en meer dan zes maanden geleden is gecreëerd en nooit gewijzigd is.</li><li>Toon me publiek geactiveerd aan &quot;Doel ACME&quot;en heeft meer dan 10000 profielen.</li></ul> |
 
@@ -230,4 +230,4 @@ Hieronder volgt een lijst met voorbeelden van vragen die momenteel niet worden o
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu inzicht in hoe u uw vragen kunt optimaliseren voor AI Assistant (Verouderd). Voor informatie over hoe te om de eigenschap tijdens uw werkschema&#39;s te gebruiken, lees de [ AI Medewerker (Verouderd) UI gids ](ui-guide.md).
+Door dit document te lezen, hebt u nu inzicht in hoe u uw vragen kunt optimaliseren voor AI Assistant (Verouderd). Voor informatie over hoe te om de eigenschap tijdens uw werkschema&#39;s te gebruiken, lees de [&#x200B; AI Medewerker (Verouderd) UI gids &#x200B;](ui-guide.md).

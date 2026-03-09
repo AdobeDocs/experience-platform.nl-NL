@@ -17,7 +17,7 @@ Lees dit document voor meer informatie over de vertrouwensgerichte mogelijkheden
 
 * De AI Assistant (Legacy) gebruikt momenteel geen persoonsgegevens, zelfs niet voor opleidingsdoeleinden.
 * AI Assistant (Legacy) is niet op de hoogte van consumentengegevens.
-* Al bestaand [ toegangsbeheer ](../access-control/home.md) beleid zal door AI Medewerker (Verouderd) worden geëerd.
+* Al bestaand [&#x200B; toegangsbeheer &#x200B;](../access-control/home.md) beleid zal door AI Medewerker (Verouderd) worden geëerd.
    * Om het even welk nieuw op attribuut-gebaseerd toegangsbeheerbeleid wordt weerspiegeld in AI Medewerker (Verouderd) na een maximum van 24 uren*
 * AI Assistant (verouderd) is een functie die geschikt is voor HIPAA in combinatie met het Adobe Experience Platform Healthcare Shield.
 * U kunt een logboek van uw vorige interactie met AI Medewerker (Verouderd) met een beleid van het 30 dagbehoud bekijken.
