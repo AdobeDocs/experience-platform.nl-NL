@@ -3,9 +3,9 @@ keywords: analytische bestemmingen;analytische bestemming
 title: Overzicht van analysedoelen
 description: De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats in wisselwerking staan en verzamelen gegevens om het gedrag van uw publiek te begrijpen. Deze platforms bieden unieke inzichten in de betrokkenheid en conversie van uw meest waardevolle bezoekers.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
+source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,6 @@ Momenteel ondersteunt Adobe Experience Platform de hieronder vermelde analytisch
 * [Nielsen BSDK-extensie](nielsen-bsdk.md)
 * [Nielsen IMA Handler extension](nielsen-ima.md)
 * [Nielsen VideoJS Player Handler extension](nielsen-videojs.md)
-* [Parse.ly Analytics-extensie](parsely.md)
 * [Quantum Metric extension](quantum-metric.md)
 * [SessionCam-extensie](sessioncam.md)
 * [TMMData-extensie](tmmdata.md)
