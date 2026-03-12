@@ -16,11 +16,11 @@ Gebruik het `/workorder` eindpunt in de API voor gegevenshygiëne om werkorders 
 
 >[!IMPORTANT]
 >
->De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
+>De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [&#x200B; Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
 
 ## Aan de slag
 
-Alvorens u begint, zie het [ overzicht ](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
+Alvorens u begint, zie het [&#x200B; overzicht &#x200B;](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
 
 ## Quoten en verwerkingstijdlijnen {#quotas}
 
@@ -60,7 +60,7 @@ Als uw organisatie hogere limieten nodig heeft, neemt u contact op met uw Adobe-
 
 >[!TIP]
 >
->Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [ gids van de de verwijzingsverwijzing van de Quota ](../api/quota.md).
+>Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [&#x200B; gids van de de verwijzingsverwijzing van de Quota &#x200B;](../api/quota.md).
 
 ## Werkorders voor het verwijderen van records weergeven {#list}
 
@@ -213,7 +213,7 @@ Het verzoeklichaam moet **precies één** van het volgende omvatten.
 | Indeling | Eigenschap | Vorm | Wanneer gebruiken |
 |--------|----------|-------|-------------|
 | **geadviseerd** | `namespacesIdentities` | Array van objecten met `namespace` (bijvoorbeeld `{ "code": "email" }` ) en `ids` (array van identiteitstekenreeksen). | Gebruik voor alle ladingen, of manueel geconstrueerd of code-geproduceerd. Dit is vooral efficiënt om ladingsgrootte te verminderen wanneer vele identiteiten de zelfde namespace delen. |
-| **ook toegelaten** | `identities` | Array van objecten met `namespace` (bijvoorbeeld `{ "code": "email" }` ) en één `id` (tekenreeks). | Wordt geaccepteerd voor achterwaartse compatibiliteit. Dit is het formaat dat door [ csv-aan-gegeven-hygiëne omzettingsmanuscripten ](#convert-id-lists-to-json-for-record-delete-requests) wordt geproduceerd. De dienst normaliseert intern dit formaat, zodat is het resulterende gedrag identiek. |
+| **ook toegelaten** | `identities` | Array van objecten met `namespace` (bijvoorbeeld `{ "code": "email" }` ) en één `id` (tekenreeks). | Wordt geaccepteerd voor achterwaartse compatibiliteit. Dit is het formaat dat door [&#x200B; csv-aan-gegeven-hygiëne omzettingsmanuscripten &#x200B;](#convert-id-lists-to-json-for-record-delete-requests) wordt geproduceerd. De dienst normaliseert intern dit formaat, zodat is het resulterende gedrag identiek. |
 
 Als u **zowel eigenschappen** verzendt, **geen bezit**, of **een lege serie** voor het bezit verstrekt u omvat, keert API **HTTP 400 (Slecht Verzoek)** met één van deze berichten terug:
 
@@ -261,8 +261,8 @@ In de volgende tabel worden de eigenschappen beschreven voor het maken van een w
 | `action` | De gevraagde actie voor het verslag schrapt werkorde. Gebruik `delete_identity` om records te verwijderen die aan een bepaalde identiteit zijn gekoppeld. |
 | `datasetId` | De unieke identificatie voor de gegevensset(s). De waarde moet precies een van de volgende waarden hebben: de letterlijke waarde `ALL` , één id voor de gegevensset of een door komma&#39;s gescheiden lijst met twee of meer id&#39;s voor gegevenssets (bijvoorbeeld `"id1,id2,id3"` ). U kunt `ALL` niet combineren met specifieke id&#39;s. Verzoeken met één gegevensset werken zoals voorheen, aanvragen met meerdere gegevenssets verwijderen de identiteiten uit elke vermelde gegevensset en `ALL` richt elke gegevensset. Datasets moeten een primaire identiteit of een identiteitskaart hebben. Als er een identiteitskaart bestaat, is deze aanwezig als een veld op hoofdniveau met de naam `identityMap` .<br>**Nota**: Een datasetrij kan vele identiteiten in zijn identiteitskaart hebben, maar slechts één kan als primair worden gemerkt. `"primary": true` moet worden opgenomen om ervoor te zorgen dat de `id` overeenkomt met een primaire identiteit.<br> Wanneer u `targetServices` gebruikt voor alleen-profielverwijdering, moet `datasetId` `ALL` zijn. |
 | `targetServices` | Optioneel. Specificeert welke diensten de schrapping zouden moeten verwerken. De standaardwaarde is afhankelijk van de rechten van uw organisatie. Organisaties met Real-Time CDP of Adobe Journey Optimizer ontvangen standaard de volledige set ondersteunde services (`["datalake", "identity", "profile", "ajo"]`). Organisaties met Customer Journey Analytics maar zonder de bevoegdheid van het Profiel van de Klant in real time kan [ &quot;datalake&quot;slechts gebruiken ]. Als u de verwijdering wilt beperken tot gegevens die alleen betrekking hebben op het profiel en als u het gegevenspeer ongewijzigd wilt laten, stelt u deze in op `["identity", "profile", "ajo"]` (in willekeurige volgorde). Voor deze alleen-profielmodus is een Real-Time CDP- of Adobe Journey Optimizer-machtiging vereist en `datasetId` moet `ALL` zijn. |
-| `identities` | **Gebruik precies één van `identities` of `namespacesIdentities`.** Array met objecten, elk met `namespace` (object met `code` , bijvoorbeeld `"email"` ) en `id` (enkele identiteitstekenreeks). Wordt geaccepteerd voor achterwaartse compatibiliteit en wordt geproduceerd door de conversiescripts. De dienst normaliseert intern dit formaat; het gedrag is identiek. Zie [ formaat van de nuttige lading van de Identiteit ](#identity-payload-format-identities-or-namespacesidentities) hierboven. |
-| `namespacesIdentities` | **Gebruik precies één van `identities` of `namespacesIdentities`.** Array van objecten, elk met `namespace` (object met `code` , bijvoorbeeld `"email"` ) en `ids` (array van identiteitstekenreeksen). Aanbevolen voor alle ladingen. De eigenschap `namespacesIdentities` is compacter wanneer veel identiteiten één naamruimte delen. Zie [ formaat van de nuttige lading van de Identiteit ](#identity-payload-format-identities-or-namespacesidentities) hierboven. Identiteitsnaamruimten: [ documentatie van identiteitsnaamruimte ](../../identity-service/features/namespaces.md), [ Dienst API van de Identiteit ](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | **Gebruik precies één van `identities` of `namespacesIdentities`.** Array met objecten, elk met `namespace` (object met `code` , bijvoorbeeld `"email"` ) en `id` (enkele identiteitstekenreeks). Wordt geaccepteerd voor achterwaartse compatibiliteit en wordt geproduceerd door de conversiescripts. De dienst normaliseert intern dit formaat; het gedrag is identiek. Zie [&#x200B; formaat van de nuttige lading van de Identiteit &#x200B;](#identity-payload-format-identities-or-namespacesidentities) hierboven. |
+| `namespacesIdentities` | **Gebruik precies één van `identities` of `namespacesIdentities`.** Array van objecten, elk met `namespace` (object met `code` , bijvoorbeeld `"email"` ) en `ids` (array van identiteitstekenreeksen). Aanbevolen voor alle ladingen. De eigenschap `namespacesIdentities` is compacter wanneer veel identiteiten één naamruimte delen. Zie [&#x200B; formaat van de nuttige lading van de Identiteit &#x200B;](#identity-payload-format-identities-or-namespacesidentities) hierboven. Identiteitsnaamruimten: [&#x200B; documentatie van identiteitsnaamruimte &#x200B;](../../identity-service/features/namespaces.md), [&#x200B; Dienst API van de Identiteit &#x200B;](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Reactie**
 
@@ -374,9 +374,9 @@ Succesvolle reacties voor verzoeken met meerdere gegevenssets of alleen met prof
 
 ## ID-lijsten converteren naar JSON voor aanvragen voor recordverwijdering (#convert-id-lists-to-json-for-record-delete-Requests)
 
-Gebruik conversiescripts om de vereiste JSON-nuttige ladingen voor het `/workorder` -eindpunt te produceren wanneer uw id&#39;s zich in CSV-, TSV- of TXT-bestanden bevinden. Deze aanpak is vooral handig wanneer u met bestaande gegevensbestanden werkt. Voor gebruiksklare manuscripten en instructies, zie de [ csv-aan-gegeven-hygiëne bewaarplaats GitHub ](https://github.com/perlmonger42/csv-to-data-hygiene).
+Gebruik conversiescripts om de vereiste JSON-nuttige ladingen voor het `/workorder` -eindpunt te produceren wanneer uw id&#39;s zich in CSV-, TSV- of TXT-bestanden bevinden. Deze aanpak is vooral handig wanneer u met bestaande gegevensbestanden werkt. Voor gebruiksklare manuscripten en instructies, zie de [&#x200B; csv-aan-gegeven-hygiëne bewaarplaats GitHub &#x200B;](https://github.com/perlmonger42/csv-to-data-hygiene).
 
-De scripts voeren de **`identities`** -indeling uit: één `id` per object met een `namespace` . De API accepteert deze indeling ongewijzigd. U kunt de gegenereerde JSON rechtstreeks in de POST-hoofdtekst naar `/workorder` sturen zonder conversie. Het geadviseerde formaat is **`namespacesIdentities`**; zie [ een verslag creëren schrap het werkorde ](#create) en [ het ladingsformaat van de Identiteit ](#identity-payload-format-identities-or-namespacesidentities).
+De scripts voeren de **`identities`** -indeling uit: één `id` per object met een `namespace` . De API accepteert deze indeling ongewijzigd. U kunt de gegenereerde JSON rechtstreeks in de POST-hoofdtekst naar `/workorder` sturen zonder conversie. Het geadviseerde formaat is **`namespacesIdentities`**; zie [&#x200B; een verslag creëren schrap het werkorde &#x200B;](#create) en [&#x200B; het ladingsformaat van de Identiteit &#x200B;](#identity-payload-format-identities-or-namespacesidentities).
 
 ### JSON-payloads genereren
 
@@ -403,7 +403,7 @@ for NAME in UTF8 CSV TSV TXT XYZ big; do
 done
 ```
 
->[!TAB  Voorbeeld om Ruby manuscript ] in werking te stellen
+>[!TAB Voorbeeld om Ruby manuscript  in werking te stellen]
 
 ```bash
 #!/usr/bin/env bash
@@ -476,7 +476,7 @@ In de volgende tabel worden de eigenschappen in de JSON-payload beschreven.
 
 ### Verzend de gegenereerde JSON-gegevens naar het eindpunt van `/workorder`
 
-De scriptuitvoer gebruikt de `identities` -indeling, die de API &#39;as-is&#39; accepteert. Gebruik de omgezette JSON-payload als de aanvraaginstantie (`-d`) wanneer u uw `curl` POST-aanvraag naar het `/workorder` -eindpunt verzendt. Voor volledige verzoekopties en bevestigingsregels, zie [ een verslag creëren schrapt het werkorde ](#create).
+De scriptuitvoer gebruikt de `identities` -indeling, die de API &#39;as-is&#39; accepteert. Gebruik de omgezette JSON-payload als de aanvraaginstantie (`-d`) wanneer u uw `curl` POST-aanvraag naar het `/workorder` -eindpunt verzendt. Voor volledige verzoekopties en bevestigingsregels, zie [&#x200B; een verslag creëren schrapt het werkorde &#x200B;](#create).
 
 ## Gegevens ophalen voor een specifieke werkorder voor het verwijderen van records {#lookup}
 
