@@ -3,9 +3,9 @@ title: Werkorders verwijderen opnemen
 description: Leer hoe te om het /workorder eindpunt in de Hygiene API van Gegevens te gebruiken om het werkorden van het verslag te beheren schrapt in Adobe Experience Platform. Deze handleiding heeft betrekking op quota, verwerkingstijdlijnen en API-gebruik.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
+source-git-commit: 5ca3e4feae3096e41689610ac3afac7e93047149
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '3316'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ Gebruik het `/workorder` eindpunt in de API voor gegevenshygiëne om werkorders 
 
 >[!IMPORTANT]
 >
->De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [&#x200B; Adobe Experience Platform Privacy Service &#x200B;](../../privacy-service/home.md).
+>De opdracht Werkorders voor het verwijderen van records is bedoeld voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. **gebruik geen het werkorden van het verslag schrappingswerk voor de verzoeken van de gegevenssubject rechten onder privacyverordeningen zoals GDPR.** voor de gevallen van het nalevingsgebruik, gebruik [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md).
 
 ## Aan de slag
 
-Alvorens u begint, zie het [&#x200B; overzicht &#x200B;](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
+Alvorens u begint, zie het [ overzicht ](./overview.md) om over vereiste kopballen te leren, hoe te steekproefAPI vraag lezen, en waar te om verwante documentatie te vinden.
 
 ## Quoten en verwerkingstijdlijnen {#quotas}
 
@@ -32,27 +32,20 @@ Voor het opnemen van verwijderwerkorders gelden dagelijkse en maandelijkse indie
 
 ### Maandelijkse indieningstoeslagrechten per product {#quota-limits}
 
-In de volgende tabel staan de indieningslimieten voor id&#39;s per product en machtigingsniveau. Voor elk product is de maandelijkse limiet de laagste van twee waarden: een vast identificatieplafond of een op percentage gebaseerde drempel die is gekoppeld aan uw gelicentieerde gegevensvolume.
+In de volgende tabel staan de indieningslimieten voor id&#39;s per product en machtigingsniveau. Voor elk product is de maandelijkse limiet de laagste van twee waarden: een vast identificatieplafond of een op percentage gebaseerde drempel die is gekoppeld aan uw gelicentieerde gegevensvolume. In de praktijk hebben de meeste organisaties lagere maandelijkse limieten op basis van hun werkelijke adresseerbare publiek of Adobe Customer Journey Analytics rijrechten.
 
 | Product | Beschrijving van rechten | Maandelijkse limiet (Welke lager is) |
 |----------|-------------------------|---------------------------------|
 | Real-Time CDP of Adobe Journey Optimizer | Zonder &#39;Privacy and Security Shield&#39; of &#39;Healthcare Shield Add-on&#39; | 2.000.000 ID&#39;s of 5% van het adresseerbare publiek |
 | Real-Time CDP of Adobe Journey Optimizer | Met privacy- en beveiligingsschild of de invoegtoepassing Gezondheidsschild | 15.000.000 id&#39;s of 10% van het adresseerbare publiek |
-| Customer Journey Analytics | Zonder &#39;Privacy and Security Shield&#39; of &#39;Healthcare Shield Add-on&#39; | 2.000.000 ID&#39;s of 100 ID&#39;s per miljoen CJA rijen met rechten |
-| Customer Journey Analytics | Met privacy- en beveiligingsschild of de invoegtoepassing Gezondheidsschild | 15.000.000 ID&#39;s of 200 ID&#39;s per miljoen CJA rijen met rechten |
+| Customer Journey Analytics | Zonder &#39;Privacy and Security Shield&#39; of &#39;Healthcare Shield Add-on&#39; | 2.000.000 ID&#39;s of 100 ID&#39;s per miljoen Customer Journey Analytics rijen met rechten |
+| Customer Journey Analytics | Met privacy- en beveiligingsschild of de invoegtoepassing Gezondheidsschild | 15.000.000 ID&#39;s of 200 ID&#39;s per miljoen Customer Journey Analytics rijen met rechten |
 
 >[!NOTE]
 >
->De meeste organisaties zullen lagere maandelijkse grenzen hebben die op hun werkelijk adresseerbare publiek of de rijaanspraken van CJA worden gebaseerd.
-
->[!NOTE]
->
->De quota zijn opnieuw ingesteld op de eerste dag van elke kalendermaand. Ongebruikte quota **niet** draagt over.
-
->[!NOTE]
->
->Het gebruik van de quota is gebaseerd op de vergunning gegeven maandelijkse bevoegdheid van uw organisatie voor **voorgelegde herkenningstekens**. De quota&#39;s worden niet door systeemgaranties afgedwongen, maar kunnen worden gecontroleerd en herzien.\
->Het verslag schrapt de capaciteit van de het werkorde is a **gedeelde dienst**. Uw maandelijkse limiet weerspiegelt de hoogste rechten voor Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics en alle toepasselijke add-ons voor schild.
+>- De quota zijn opnieuw ingesteld op de eerste dag van elke kalendermaand. Ongebruikte quota **niet** draagt over.
+>- Het gebruik van de quota is gebaseerd op de vergunning gegeven maandelijkse bevoegdheid van uw organisatie voor **voorgelegde herkenningstekens**. De quota&#39;s worden niet door systeemgaranties afgedwongen, maar kunnen worden gecontroleerd en herzien.
+>- Het verslag schrapt de capaciteit van de het werkorde is a **gedeelde dienst**. Uw maandelijkse limiet weerspiegelt de hoogste rechten voor Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics en alle toepasselijke add-ons voor schild.
 
 ### Tijdlijnen verwerken voor id-verzending {#sla-processing-timelines}
 
@@ -67,7 +60,7 @@ Als uw organisatie hogere limieten nodig heeft, neemt u contact op met uw Adobe-
 
 >[!TIP]
 >
->Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [&#x200B; gids van de de verwijzingsverwijzing van de Quota &#x200B;](../api/quota.md).
+>Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [ gids van de de verwijzingsverwijzing van de Quota ](../api/quota.md).
 
 ## Werkorders voor het verwijderen van records weergeven {#list}
 
@@ -131,7 +124,8 @@ Een succesvolle reactie keert een gepagineerde lijst van verslag terug schrapt w
       "targetServices": [
         "profile",
         "datalake",
-        "identity"
+        "identity",
+        "ajo"
       ],
       "status": "received",
       "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
@@ -168,10 +162,10 @@ In de volgende tabel worden de eigenschappen in het antwoord beschreven.
 | `createdAt` | De tijdstempel op het moment dat de werkorder werd gemaakt. |
 | `updatedAt` | De tijdstempel op het moment dat de werkorder voor het laatst is bijgewerkt. |
 | `operationCount` | Het aantal bewerkingen dat is opgenomen in de werkorder. |
-| `targetServices` | Lijst met doelservices voor de werkorder. |
+| `targetServices` | De reeks doeldiensten die de schrapping verwerkte. De standaardwaarde is afhankelijk van de rechten van uw organisatie. Voor organisaties met Real-Time CDP of Adobe Journey Optimizer, is het gebrek de volledige reeks gesteunde diensten (`["datalake", "identity", "profile", "ajo"]`). Voor Customer Journey Analytics-enige organisaties (zonder een Echte bevoegdheid van het Profiel van de Klant), is de enige geldige waarde [ &quot;datalake&quot;]. |
 | `status` | Huidige status van de werkorder. Mogelijke waarden zijn: `received`, `validated`, `submitted`, `ingested`, `completed` en `failed` . |
 | `createdBy` | De e-mail en id van de gebruiker die de werkorder heeft gemaakt. |
-| `datasetId` | De unieke identificatie voor de dataset verbonden aan de het werkorde. Als het verzoek op alle datasets van toepassing is, zal dit gebied aan ALLE worden geplaatst. |
+| `datasetId` | De gegevensset(s) waarop de werkorder zich richt: één gegevensset-id, een door komma&#39;s gescheiden lijst met id&#39;s van gegevenssets (meerdere gegevenssets) of de letterlijke gegevensset `ALL`. Wanneer in de aanvraag de alleen-profielmodus wordt gebruikt, is deze waarde `ALL` . |
 | `datasetName` | De naam van de dataset verbonden aan de het werkorde. |
 | `displayName` | Een door de mens leesbaar label voor de werkorder. |
 | `description` | Een beschrijving van het doel van de werkorder. |
@@ -185,9 +179,9 @@ In de volgende tabel worden de eigenschappen in het antwoord beschreven.
 
 ## Een werkorder voor het verwijderen van records maken {#create}
 
-Om verslagen te schrappen verbonden aan één of meerdere identiteiten van één enkele dataset of alle datasets, doe een POST- verzoek aan het `/workorder` eindpunt.
+Om verslagen te schrappen verbonden aan één of meerdere identiteiten van één enkele dataset, veelvoudige datasets, of alle datasets, doe een POST- verzoek aan het `/workorder` eindpunt.
 
-Werkorders worden asynchroon verwerkt en verschijnen na verzending in de lijst met werkorders.
+Werkorders worden asynchroon verwerkt en verschijnen na verzending in de lijst met werkorders. Opties met meerdere gegevenssets en alleen profielen (gerichte services) zijn over het algemeen beschikbaar voor alle klanten vanaf de Experience Platform-release van maart 2026.
 
 >[!TIP]
 >
@@ -199,25 +193,36 @@ Werkorders worden asynchroon verwerkt en verschijnen na verzending in de lijst m
 POST /workorder
 ```
 
->[!NOTE]
->
->U kunt verslagen van datasets slechts schrappen de waarvan bijbehorend schema XDM een primaire identiteit of identiteitskaart bepaalt.
-
 >[!IMPORTANT]
 >
 >Het verslag schrapt werkorden handelt exclusief op het **primaire identiteitsgebied**. De volgende beperkingen zijn van toepassing:
 >
+>- **het datasetschema moet een primaire identiteit of identiteitskaart bepalen.** U kunt records alleen verwijderen uit gegevenssets waarvan het bijbehorende XDM-schema een primaire identiteit of identiteitskaart definieert.
 >- **secundaire identiteiten worden niet gescand.** Als een dataset veelvoudige identiteitsgebieden bevat, slechts wordt de primaire identiteit gebruikt voor aanpassing. Records kunnen niet worden aangeroepen of verwijderd op basis van niet-primaire identiteiten.
 >- **Verslagen zonder een bevolkte primaire identiteit worden overgeslagen.** Als een record geen metagegevens van de primaire identiteit heeft ingevuld, kan het niet worden verwijderd.
 >- **Gegevens die vóór identiteitsconfiguratie worden opgenomen zijn niet verkiesbaar.** Als het primaire identiteitsveld na gegevensinvoer aan een schema is toegevoegd, kunnen eerder opgenomen records niet worden verwijderd via werkorders voor het verwijderen van records.
 
 >[!NOTE]
 >
->Als u probeert om een verslag tot stand te brengen schrap het werkorde voor een dataset die reeds een actieve afloop heeft, keert het verzoek HTTP 400 (Onjuist Verzoek) terug.Een actieve vervaldatum is om het even welke geplande schrapping die nog niet heeft voltooid.
+>Als u probeert om een verslag tot stand te brengen schrap het werkorde voor een dataset die reeds een actieve afloop heeft, keert het verzoek HTTP 400 (Onjuiste Verzoek) terug. Een actieve vervaldatum is om het even welke geplande schrapping die nog niet heeft voltooid.
+
+### Indelingen voor identiteitslading (`namespacesIdentities` of `identities`)
+
+Het verzoeklichaam moet **precies één** van het volgende omvatten.
+
+| Indeling | Eigenschap | Vorm | Wanneer gebruiken |
+|--------|----------|-------|-------------|
+| **geadviseerd** | `namespacesIdentities` | Array van objecten met `namespace` (bijvoorbeeld `{ "code": "email" }` ) en `ids` (array van identiteitstekenreeksen). | Gebruik voor alle ladingen, of manueel geconstrueerd of code-geproduceerd. Dit is vooral efficiënt om ladingsgrootte te verminderen wanneer vele identiteiten de zelfde namespace delen. |
+| **ook toegelaten** | `identities` | Array van objecten met `namespace` (bijvoorbeeld `{ "code": "email" }` ) en één `id` (tekenreeks). | Wordt geaccepteerd voor achterwaartse compatibiliteit. Dit is het formaat dat door [ csv-aan-gegeven-hygiëne omzettingsmanuscripten ](#convert-id-lists-to-json-for-record-delete-requests) wordt geproduceerd. De dienst normaliseert intern dit formaat, zodat is het resulterende gedrag identiek. |
+
+Als u **zowel eigenschappen** verzendt, **geen bezit**, of **een lege serie** voor het bezit verstrekt u omvat, keert API **HTTP 400 (Slecht Verzoek)** met één van deze berichten terug:
+
+- **allebei verstrekte eigenschappen:** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **Geen verstrekte of lege lijst:** `"Identities are Empty for Delete Identity request."`
 
 **Verzoek**
 
-Het volgende verzoek schrapt alle verslagen verbonden aan gespecificeerde e-mailadressen van een bepaalde dataset.
+Het volgende verzoek schrapt alle verslagen verbonden aan gespecificeerde e-mailadressen van een bepaalde dataset. Hierbij wordt de aanbevolen `namespacesIdentities` -indeling gebruikt.
 
 ```shell
 curl -X POST \
@@ -237,7 +242,7 @@ curl -X POST \
             "namespace": {
               "code": "email"
             },
-            "IDs": [
+            "ids": [
               "alice.smith@acmecorp.com",
               "bob.jones@acmecorp.com",
               "charlie.brown@acmecorp.com"
@@ -254,8 +259,10 @@ In de volgende tabel worden de eigenschappen beschreven voor het maken van een w
 | `displayName` | Een leesbaar label voor deze record waarmee de werkvolgorde wordt verwijderd. |
 | `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
 | `action` | De gevraagde actie voor het verslag schrapt werkorde. Gebruik `delete_identity` om records te verwijderen die aan een bepaalde identiteit zijn gekoppeld. |
-| `datasetId` | De unieke id voor de gegevensset. Gebruik dataset ID voor een specifieke dataset, of `ALL` om alle datasets te richten. Datasets moeten een primaire identiteit of een identiteitskaart hebben. Als er een identiteitskaart bestaat, is deze aanwezig als een veld op hoofdniveau met de naam `identityMap` .<br> Merk op dat een datasetrij vele identiteiten in zijn identiteitskaart kan hebben, maar slechts één kan als primair worden gemerkt. `"primary": true` moet worden opgenomen om ervoor te zorgen dat de `id` overeenkomt met een primaire identiteit. |
-| `namespacesIdentities` | Een serie van voorwerpen, elk die:<br> bevatten<ul><li> `namespace`: Een object met een eigenschap `code` die de naamruimte voor identiteit opgeeft (bijvoorbeeld &quot;email&quot;).</li><li> `IDs`: een array met identiteitswaarden die voor deze naamruimte moeten worden verwijderd.</li></ul>Naamruimten bieden context voor identiteitsgegevens. U kunt de standaardnaamruimten van Experience Platform gebruiken of zelf naamruimten maken. Meer leren, zie de [&#x200B; documentatie van identiteitsnamespace &#x200B;](../../identity-service/features/namespaces.md) en de [&#x200B; Dienst API specificatie van de Identiteit &#x200B;](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `datasetId` | De unieke identificatie voor de gegevensset(s). De waarde moet precies een van de volgende waarden hebben: de letterlijke waarde `ALL` , één id voor de gegevensset of een door komma&#39;s gescheiden lijst met twee of meer id&#39;s voor gegevenssets (bijvoorbeeld `"id1,id2,id3"` ). U kunt `ALL` niet combineren met specifieke id&#39;s. Verzoeken met één gegevensset werken zoals voorheen, aanvragen met meerdere gegevenssets verwijderen de identiteiten uit elke vermelde gegevensset en `ALL` richt elke gegevensset. Datasets moeten een primaire identiteit of een identiteitskaart hebben. Als er een identiteitskaart bestaat, is deze aanwezig als een veld op hoofdniveau met de naam `identityMap` .<br>**Nota**: Een datasetrij kan vele identiteiten in zijn identiteitskaart hebben, maar slechts één kan als primair worden gemerkt. `"primary": true` moet worden opgenomen om ervoor te zorgen dat de `id` overeenkomt met een primaire identiteit.<br> Wanneer u `targetServices` gebruikt voor alleen-profielverwijdering, moet `datasetId` `ALL` zijn. |
+| `targetServices` | Optioneel. Specificeert welke diensten de schrapping zouden moeten verwerken. De standaardwaarde is afhankelijk van de rechten van uw organisatie. Organisaties met Real-Time CDP of Adobe Journey Optimizer ontvangen standaard de volledige set ondersteunde services (`["datalake", "identity", "profile", "ajo"]`). Organisaties met Customer Journey Analytics maar zonder de bevoegdheid van het Profiel van de Klant in real time kan [ &quot;datalake&quot;slechts gebruiken ]. Als u de verwijdering wilt beperken tot gegevens die alleen betrekking hebben op het profiel en als u het gegevenspeer ongewijzigd wilt laten, stelt u deze in op `["identity", "profile", "ajo"]` (in willekeurige volgorde). Voor deze alleen-profielmodus is een Real-Time CDP- of Adobe Journey Optimizer-machtiging vereist en `datasetId` moet `ALL` zijn. |
+| `identities` | **Gebruik precies één van `identities` of `namespacesIdentities`.** Array met objecten, elk met `namespace` (object met `code` , bijvoorbeeld `"email"` ) en `id` (enkele identiteitstekenreeks). Wordt geaccepteerd voor achterwaartse compatibiliteit en wordt geproduceerd door de conversiescripts. De dienst normaliseert intern dit formaat; het gedrag is identiek. Zie [ formaat van de nuttige lading van de Identiteit ](#identity-payload-format-identities-or-namespacesidentities) hierboven. |
+| `namespacesIdentities` | **Gebruik precies één van `identities` of `namespacesIdentities`.** Array van objecten, elk met `namespace` (object met `code` , bijvoorbeeld `"email"` ) en `ids` (array van identiteitstekenreeksen). Aanbevolen voor alle ladingen. De eigenschap `namespacesIdentities` is compacter wanneer veel identiteiten één naamruimte delen. Zie [ formaat van de nuttige lading van de Identiteit ](#identity-payload-format-identities-or-namespacesidentities) hierboven. Identiteitsnaamruimten: [ documentatie van identiteitsnaamruimte ](../../identity-service/features/namespaces.md), [ Dienst API van de Identiteit ](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Reactie**
 
@@ -273,7 +280,8 @@ Een succesvolle reactie keert de details van het nieuwe verslag terug schrapt we
   "targetServices": [
     "profile",
     "datalake",
-    "identity"
+    "identity",
+    "ajo"
   ],
   "status": "received",
   "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
@@ -298,20 +306,77 @@ In de volgende tabel worden de eigenschappen in het antwoord beschreven.
 | `targetServices` | Een lijst met doelservices voor het verwijderen van records. |
 | `status` | Huidige status van de record: werkorder verwijderen. |
 | `createdBy` | De e-mail en id van de gebruiker die de recordwerkorder heeft gemaakt, worden verwijderd. |
-| `datasetId` | De unieke id voor de gegevensset. Als het verzoek voor alle datasets is, zal de waarde aan `ALL` worden geplaatst. |
+| `datasetId` | De unieke identificatie voor de gegevensset(s). Als het verzoek voor alle datasets is, zal de waarde aan `ALL` worden geplaatst. Voor verzoeken met meerdere gegevenssets geeft de waarde de door komma&#39;s gescheiden lijst of één id weer. |
 | `datasetName` | De naam van de dataset voor dit verslag schrapt werkorde. |
 | `displayName` | Een door mensen leesbaar label voor de werkvolgorde voor het verwijderen van records. |
 | `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
 
 {style="table-layout:auto"}
 
+De responswaarde `targetServices` komt overeen met uw verzoek of toont de volledige standaardset wanneer deze wordt weggelaten (zie de tabel met reacties hierboven).
+
+### Multi-dataset en profiel-slechts (API) {#multi-dataset-profile-only}
+
+De volgende opties zijn alleen beschikbaar via de API en worden niet ondersteund in de interface voor gegevenshygiëne. Zij controleren welke datasets en welke diensten de schrapping verwerken, toelatend multi-dataset indieningen en profiel-slechts gerichte de dienstverzoeken.
+
+De volgende tabel geeft een overzicht van de manier waarop de hoofdtekst van de aanvraag en het gedrag voor elke optie worden gewijzigd.
+
+| Optie | Wijziging van hoofdtekst aanvragen | Gedrag |
+|--------|---------------------|----------|
+| **multi-dataset** | Gebruik een door komma&#39;s gescheiden lijst in `datasetId` (bijvoorbeeld `"id1,id2,id3"` ). Eén id of `ALL` ongewijzigd. | De identiteiten worden geschrapt uit de vermelde datasets (of uit één dataset, of uit alle datasets wanneer `ALL`). |
+| **profiel-slechts (de gerichte diensten)** | Voeg `targetServices` toe met exact `["identity", "profile", "ajo"]` (elke willekeurige volgorde). Vereist `datasetId`: `"ALL"` . | Alleen bij Identiteit, Profiel en Adobe Journey Optimizer wordt de verwijdering verwerkt. Het gegevenspeer wordt niet gewijzigd. |
+
+#### Verzoeken met meerdere gegevenssets
+
+Het veld `datasetId` wordt met komma&#39;s gesplitst: gebruik één id (hetzelfde gedrag als voorheen), een lijst met door komma&#39;s gescheiden id&#39;s of het letterlijke teken `ALL` . Als u identiteiten wilt verwijderen uit meerdere specifieke gegevenssets in één werkvolgorde, voert u een door komma&#39;s gescheiden lijst in:
+
+```json
+"datasetId": "6707eb36eef4d42ab86d9fbe,6643f00c16ddf51767fcf780"
+```
+
+De identiteiten worden dan geschrapt uit elk van de vermelde datasets. Verzoeken met één gegevensset werken zoals altijd. Gebruik `ALL` om elke gegevensset als doel in te stellen. De waarde moet precies een van de volgende waarden hebben: `ALL` , één id voor de gegevensset of twee of meer id&#39;s voor de gegevensset, gescheiden door komma&#39;s (geen combinatie van `ALL` met specifieke id&#39;s).
+
+#### Alleen profiel (gerichte services)
+
+Als u alleen identiteitsgegevens en profielgegevens wilt verwijderen terwijl het gegevenspeer ongewijzigd blijft, neemt u `targetServices` op met exact deze drie waarden in willekeurige volgorde: `identity` , `profile` en `ajo` . Identiteit, Profiel en AJO zijn expliciet opgenomen. Het datumpeer is uitgesloten. In deze modus moet `datasetId` `ALL` zijn (het gebruiksgeval is het volledig verwijderen van profielen en niet het verwijderen van fragmenten per gegevensset).
+
+In het volgende voorbeeld wordt een werkvolgorde gemaakt waarin alleen een record met profiel wordt verwijderd:
+
+```shell
+curl -X POST \
+  "https://platform.adobe.io/data/core/hygiene/workorder" \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+    "action": "delete_identity",
+    "datasetId": "ALL",
+    "displayName": "Profile-only delete for specified identity",
+    "description": "Delete identity, profile, and AJO data only; datalake unchanged.",
+    "targetServices": ["identity", "profile", "ajo"],
+    "namespacesIdentities": [
+      {
+        "namespace": { "code": "email" },
+        "ids": ["user@example.com"]
+      }
+    ]
+  }'
+```
+
+Succesvolle reacties voor verzoeken met meerdere gegevenssets of alleen met profielen hebben dezelfde vorm als andere werkorderantwoorden. De geretourneerde waarden `datasetId` en `targetServices` weerspiegelen de waarden in de aanvraag (of de volledige standaardlijst als `targetServices` wordt weggelaten), zodat u kunt bevestigen wat er is verzonden.
+
 >[!NOTE]
 >
 >De handelingseigenschap voor recordverwijderwerkorders is momenteel `identity-delete` in API-reacties. Als de API verandert om een andere waarde te gebruiken (zoals `delete_identity`), wordt deze documentatie dienovereenkomstig bijgewerkt.
 
-## ID-lijsten converteren naar JSON voor aanvragen voor het verwijderen van records
+## ID-lijsten converteren naar JSON voor aanvragen voor recordverwijdering (#convert-id-lists-to-json-for-record-delete-Requests)
 
-Als u een werkvolgorde voor het verwijderen van records wilt maken vanuit CSV-, TSV- of TXT-bestanden met id&#39;s, kunt u conversiescripts gebruiken om de vereiste JSON-nuttige ladingen voor het `/workorder` -eindpunt te maken. Deze aanpak is vooral handig wanneer u met bestaande gegevensbestanden werkt. Voor gebruiksklare manuscripten en uitvoerige instructies, bezoek de [&#x200B; csv-aan-gegeven-hygiëne bewaarplaats GitHub &#x200B;](https://github.com/perlmonger42/csv-to-data-hygiene).
+Gebruik conversiescripts om de vereiste JSON-nuttige ladingen voor het `/workorder` -eindpunt te produceren wanneer uw id&#39;s zich in CSV-, TSV- of TXT-bestanden bevinden. Deze aanpak is vooral handig wanneer u met bestaande gegevensbestanden werkt. Voor gebruiksklare manuscripten en instructies, zie de [ csv-aan-gegeven-hygiëne bewaarplaats GitHub ](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+De scripts voeren de **`identities`** -indeling uit: één `id` per object met een `namespace` . De API accepteert deze indeling ongewijzigd. U kunt de gegenereerde JSON rechtstreeks in de POST-hoofdtekst naar `/workorder` sturen zonder conversie. Het geadviseerde formaat is **`namespacesIdentities`**; zie [ een verslag creëren schrap het werkorde ](#create) en [ het ladingsformaat van de Identiteit ](#identity-payload-format-identities-or-namespacesidentities).
 
 ### JSON-payloads genereren
 
@@ -338,7 +403,7 @@ for NAME in UTF8 CSV TSV TXT XYZ big; do
 done
 ```
 
->[!TAB Voorbeeld om Ruby manuscript  in werking te stellen]
+>[!TAB  Voorbeeld om Ruby manuscript ] in werking te stellen
 
 ```bash
 #!/usr/bin/env bash
@@ -365,8 +430,8 @@ In de onderstaande tabel worden de parameters in de basscripts beschreven.
 | ---           | ---     |
 | `verbose` | Brede uitvoer inschakelen. |
 | `column` | De index (op 1 gebaseerd) of koptekstnaam van de kolom die de identiteitswaarden bevat die moeten worden verwijderd. Wordt standaard ingesteld op de eerste kolom als deze niet is opgegeven. |
-| `namespace` | Een object met een eigenschap `code` die de naamruimte van de identiteit opgeeft (bijvoorbeeld &#39;email&#39;). |
-| `dataset-id` | De unieke identificatie voor de dataset verbonden aan de het werkorde. Als het verzoek op alle datasets van toepassing is, zal dit gebied aan `ALL` worden geplaatst. |
+| `namespace` | De naamruimtecode die aan het script wordt doorgegeven (bijvoorbeeld `email` ). De gegenereerde JSON gebruikt dit in de eigenschap `namespace.code` van elk object. |
+| `dataset-id` | De unieke id voor de gegevensset(s): één id, door komma&#39;s gescheiden id&#39;s voor meerdere gegevenssets of `ALL` voor alle gegevenssets. |
 | `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
 | `output-dir` | De map voor het schrijven van de JSON-uitvoerlading. |
 
@@ -402,7 +467,7 @@ In de volgende tabel worden de eigenschappen in de JSON-payload beschreven.
 | Eigenschap | Beschrijving |
 | ---          | ---     |
 | `action` | De gevraagde actie voor het verslag schrapt werkorde. Automatisch ingesteld op `delete_identity` door het conversiescript. |
-| `datasetId` | De unieke id voor de gegevensset. |
+| `datasetId` | De unieke id voor de gegevensset(s): één id, door komma&#39;s gescheiden id&#39;s of `ALL` . |
 | `displayName` | Een leesbaar label voor deze record waarmee de werkvolgorde wordt verwijderd. |
 | `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
 | `identities` | Een serie van voorwerpen, elk die:<br> bevatten<ul><li> `namespace`: Een object met een eigenschap `code` die de naamruimte voor identiteit opgeeft (bijvoorbeeld &#39;email&#39;).</li><li> `id`: De identiteitswaarde die voor deze naamruimte moet worden verwijderd.</li></ul> |
@@ -411,7 +476,7 @@ In de volgende tabel worden de eigenschappen in de JSON-payload beschreven.
 
 ### Verzend de gegenereerde JSON-gegevens naar het eindpunt van `/workorder`
 
-Om een verzoek voor te leggen, volg de instructies in [&#x200B; creeer een verslag schrapt werkorde &#x200B;](#create) sectie. Zorg ervoor dat u de omgezette JSON-payload als de aanvraaginstantie (`-d`) gebruikt wanneer u uw `curl` POST-aanvraag naar het API-eindpunt `/workorder` verzendt.
+De scriptuitvoer gebruikt de `identities` -indeling, die de API &#39;as-is&#39; accepteert. Gebruik de omgezette JSON-payload als de aanvraaginstantie (`-d`) wanneer u uw `curl` POST-aanvraag naar het `/workorder` -eindpunt verzendt. Voor volledige verzoekopties en bevestigingsregels, zie [ een verslag creëren schrapt het werkorde ](#create).
 
 ## Gegevens ophalen voor een specifieke werkorder voor het verwijderen van records {#lookup}
 
@@ -482,12 +547,12 @@ In de volgende tabel worden de eigenschappen in het antwoord beschreven.
 | `targetServices` | Een lijst van doeldiensten die door dit verslag worden beïnvloed schrapt werkorde. |
 | `status` | De huidige status van de record verwijdert de werkvolgorde. |
 | `createdBy` | De e-mail en id van de gebruiker die de recordwerkorder heeft gemaakt, worden verwijderd. |
-| `datasetId` | De unieke identificatie voor de dataset verbonden aan de het werkorde. |
+| `datasetId` | De unieke id voor de gegevensset(s) die is (zijn) gekoppeld aan de werkorder (één id, door komma&#39;s gescheiden id&#39;s of `ALL`). |
 | `datasetName` | De naam van de dataset verbonden aan de het werkorde. |
 | `displayName` | Een door mensen leesbaar label voor de werkvolgorde voor het verwijderen van records. |
 | `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
 
-## De werkvolgorde voor het verwijderen van records bijwerken
+## De werkvolgorde voor het verwijderen van records bijwerken {#update}
 
 Werk de `name` en `description` voor een recordverwijderwerkorder bij door een PUT-aanvraag in te dienen bij het `/workorder/{WORKORDER_ID}` -eindpunt.
 
@@ -590,7 +655,7 @@ Een geslaagde reactie retourneert de bijgewerkte aanvraag voor de werkorder.
 | `targetServices` | Een lijst van doeldiensten die door dit verslag worden beïnvloed schrapt werkorde. |
 | `status` | De huidige status van de record verwijdert de werkvolgorde. Mogelijke waarden zijn: `received`, `validated`, `submitted`, `ingested`, `completed` en `failed` . |
 | `createdBy` | De e-mail en id van de gebruiker die de recordwerkorder heeft gemaakt, worden verwijderd. |
-| `datasetId` | De unieke id voor de gegevensset die is gekoppeld aan de werkvolgorde voor het verwijderen van records. |
+| `datasetId` | De unieke id voor de gegevensset(s) die is (zijn) gekoppeld aan de werkvolgorde voor het verwijderen van records (enkele id, door komma&#39;s gescheiden id&#39;s of `ALL`). |
 | `datasetName` | De naam van de dataset verbonden aan het verslag schrapt werkorde. |
 | `displayName` | Een door mensen leesbaar label voor de werkvolgorde voor het verwijderen van records. |
 | `description` | Een beschrijving van de werkvolgorde voor het verwijderen van records. |
