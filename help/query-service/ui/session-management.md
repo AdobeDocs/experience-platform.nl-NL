@@ -32,7 +32,7 @@ Als u sessies wilt weergeven en beëindigen, moet u behoren tot een organisatie 
 
 Beheerders kunnen alle actieve Query Service-sessies weergeven in verschillende sandboxen in uw organisatie. Selecteer in Experience Platform **[!UICONTROL Queries]** in de linkernavigatie om de werkruimte van Query Service te openen en selecteer vervolgens het tabblad **[!UICONTROL Admin]** voor toegang tot sessiebeheer.
 
-![ de werkruimte van de Dienst van de Vraag met het geselecteerde lusje Admin. De lijst van het Beheer van de Zitting wordt getoond en maakt een lijst van actieve en inactieve zittingen over veelvoudige zandbakken in uw organisatie.](../images/ui/session-management/session-management-admin-tab.png)
+![&#x200B; de werkruimte van de Dienst van de Vraag met het geselecteerde lusje Admin. De lijst van het Beheer van de Zitting wordt getoond en maakt een lijst van actieve en inactieve zittingen over veelvoudige zandbakken in uw organisatie.](../images/ui/session-management/session-management-admin-tab.png)
 
 De lijst van het zittingsbeheer werkt automatisch in echt - tijd bij en maakt een lijst van alle zittingen die momenteel de gezamenlijke zittingscapaciteit van de Dienst van de Vraag gebruiken die aan uw organisatie wordt toegewezen. Elke rij vertegenwoordigt één enkele zitting die in de Redacteur van de Vraag wordt geopend.
 
@@ -63,11 +63,11 @@ U kunt inactieve sessies beëindigen om de capaciteit van gelijktijdige sessies 
 
 Selecteer in de tabel voor sessiebeheer de optie **[!UICONTROL End session]** om de inactieve sessie te kiezen die u wilt beëindigen.
 
-![ lijst van het Beheer van de Zitting die een inactieve zitting met benadrukte zitting van het Eind toont.](../images/ui/session-management/end-session.png)
+![&#x200B; lijst van het Beheer van de Zitting die een inactieve zitting met benadrukte zitting van het Eind toont.](../images/ui/session-management/end-session.png)
 
 Er verschijnt een bevestigingsvenster om te voorkomen dat het programma per ongeluk wordt afgesloten. Selecteer **[!UICONTROL End session]** in het dialoogvenster om de handeling te bevestigen.
 
-![ de dialoog van de de zittingsbevestiging van het Eind die een waarschuwingsbericht en benadrukte zitting van het Eind toont.](../images/ui/session-management/end-session-confirmation-dialog.png)
+![&#x200B; de dialoog van de de zittingsbevestiging van het Eind die een waarschuwingsbericht en benadrukte zitting van het Eind toont.](../images/ui/session-management/end-session-confirmation-dialog.png)
 
 Nadat de zitting beëindigt, wordt de zitting verwijderd uit de lijst, wordt de capaciteit onmiddellijk beschikbaar, en de actie wordt geregistreerd voor controle.
 
@@ -87,7 +87,7 @@ Het systeem registreert sessiebeheeracties om zichtbaarheid en verantwoording te
 
 De controlelogboeken van het gebruik om de geschiedenis van de zittingsbeëindiging te herzien en onverwachte losmakingen te onderzoeken.
 
-Voor meer informatie over het bekijken van controlelogboeken, zie de [ gids van het de controlelogboek van de Dienst van de Vraag ](../data-governance/audit-log-guide.md).
+Voor meer informatie over het bekijken van controlelogboeken, zie de [&#x200B; gids van het de controlelogboek van de Dienst van de Vraag &#x200B;](../data-governance/audit-log-guide.md).
 
 ## Volgende stappen {#next-steps}
 
