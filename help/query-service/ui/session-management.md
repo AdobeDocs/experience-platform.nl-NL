@@ -3,22 +3,24 @@ title: Query Service-sessies beheren in Adobe Experience Platform
 description: Leer hoe beheerders actieve Query Service-sessies kunnen weergeven, controleren en beëindigen om capaciteit bij inactiviteit vrij te maken en betrouwbare Data Distiller-workflows te behouden.
 keywords: Experience Platform;Query Service;sessies;sessiebeheer;Data Distiller;admin
 solution: Experience Platform
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+badgeLimitedAvailability: label="Beperkte beschikbaarheid" type="Informative"
+exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
+source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
 
 # Query Service-sessies beheren
 
+>[!AVAILABILITY]
+>
+>Het beheer van de zitting voor de Dienst van de Vraag is momenteel in beperkte beschikbaarheid en is slechts beschikbaar aan organisaties met **Gegevens Distiller** rechten. Neem contact op met uw Adobe-accountteam als u toegang wilt aanvragen.
+
 Gebruik deze handleiding om actieve Query Service-sessies vanuit de Adobe Experience Platform-gebruikersinterface te beheren. Met sessiebeheer kunnen beheerders gelijktijdige Query-editorsessies in sandboxen controleren en de capaciteit vrijmaken wanneer gebruikers sessies geopend laten.
 
 ## Machtigingen vereist voor sessiebeheer {#permissions}
-
->[!AVAILABILITY]
->
->Sessiebeheer is alleen beschikbaar voor organisaties met Data Distiller-rechten.
 
 >[!IMPORTANT]
 >
@@ -30,7 +32,7 @@ Als u sessies wilt weergeven en beëindigen, moet u behoren tot een organisatie 
 
 Beheerders kunnen alle actieve Query Service-sessies weergeven in verschillende sandboxen in uw organisatie. Selecteer in Experience Platform **[!UICONTROL Queries]** in de linkernavigatie om de werkruimte van Query Service te openen en selecteer vervolgens het tabblad **[!UICONTROL Admin]** voor toegang tot sessiebeheer.
 
-![&#x200B; de werkruimte van de Dienst van de Vraag met het geselecteerde lusje Admin. De lijst van het Beheer van de Zitting wordt getoond en maakt een lijst van actieve en inactieve zittingen over veelvoudige zandbakken in uw organisatie.](../images/ui/session-management/session-management-admin-tab.png)
+![ de werkruimte van de Dienst van de Vraag met het geselecteerde lusje Admin. De lijst van het Beheer van de Zitting wordt getoond en maakt een lijst van actieve en inactieve zittingen over veelvoudige zandbakken in uw organisatie.](../images/ui/session-management/session-management-admin-tab.png)
 
 De lijst van het zittingsbeheer werkt automatisch in echt - tijd bij en maakt een lijst van alle zittingen die momenteel de gezamenlijke zittingscapaciteit van de Dienst van de Vraag gebruiken die aan uw organisatie wordt toegewezen. Elke rij vertegenwoordigt één enkele zitting die in de Redacteur van de Vraag wordt geopend.
 
@@ -61,11 +63,11 @@ U kunt inactieve sessies beëindigen om de capaciteit van gelijktijdige sessies 
 
 Selecteer in de tabel voor sessiebeheer de optie **[!UICONTROL End session]** om de inactieve sessie te kiezen die u wilt beëindigen.
 
-![&#x200B; lijst van het Beheer van de Zitting die een inactieve zitting met benadrukte zitting van het Eind toont.](../images/ui/session-management/end-session.png)
+![ lijst van het Beheer van de Zitting die een inactieve zitting met benadrukte zitting van het Eind toont.](../images/ui/session-management/end-session.png)
 
 Er verschijnt een bevestigingsvenster om te voorkomen dat het programma per ongeluk wordt afgesloten. Selecteer **[!UICONTROL End session]** in het dialoogvenster om de handeling te bevestigen.
 
-![&#x200B; de dialoog van de de zittingsbevestiging van het Eind die een waarschuwingsbericht en benadrukte zitting van het Eind toont.](../images/ui/session-management/end-session-confirmation-dialog.png)
+![ de dialoog van de de zittingsbevestiging van het Eind die een waarschuwingsbericht en benadrukte zitting van het Eind toont.](../images/ui/session-management/end-session-confirmation-dialog.png)
 
 Nadat de zitting beëindigt, wordt de zitting verwijderd uit de lijst, wordt de capaciteit onmiddellijk beschikbaar, en de actie wordt geregistreerd voor controle.
 
@@ -85,7 +87,7 @@ Het systeem registreert sessiebeheeracties om zichtbaarheid en verantwoording te
 
 De controlelogboeken van het gebruik om de geschiedenis van de zittingsbeëindiging te herzien en onverwachte losmakingen te onderzoeken.
 
-Voor meer informatie over het bekijken van controlelogboeken, zie de [&#x200B; gids van het de controlelogboek van de Dienst van de Vraag &#x200B;](../data-governance/audit-log-guide.md).
+Voor meer informatie over het bekijken van controlelogboeken, zie de [ gids van het de controlelogboek van de Dienst van de Vraag ](../data-governance/audit-log-guide.md).
 
 ## Volgende stappen {#next-steps}
 
@@ -93,4 +95,3 @@ Overweeg de volgende bronnen om uw gebruik van Query Service en Data Distiller u
 
 * [Leer hoe de gebruikers vragen in de gebruikersgids van de Redacteur van de Vraag creëren en in werking stellen](user-guide.md)
 * [De geplande werklasten controleren gebruikend de geplande vragen controledocumentatie](monitor-queries.md)
-
