@@ -4,9 +4,9 @@ description: Leer hoe u een bronverbinding en gegevensstroom kunt maken om strea
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4c7b23592a1784a5f2daa5518b512fa458a2c3ad
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL Shopify Streaming] is in bèta. Gelieve te lezen het [&#x200B; overzicht van bronnen &#x200B;](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bron [!DNL Shopify Streaming] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Adobe Experience Platform biedt ondersteuning voor het opnemen van gegevens uit streaming toepassingen. Tot de ondersteuning voor streamingproviders behoren [!DNL Shopify] .
 
@@ -23,11 +23,11 @@ Adobe Experience Platform biedt ondersteuning voor het opnemen van gegevens uit 
 
 In de volgende sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd voordat de [!DNL Shopify Streaming] -bron wordt gebruikt.
 
-U moet een geldige [!DNL Shopify] partneraccount hebben om verbinding te kunnen maken met de [!DNL Shopify] API&#39;s. Als u nog geen partnerrekening hebt, gelieve te registreren gebruikend het [[!DNL Shopify]  partners dashboard &#x200B;](https://www.shopify.com/partners).
+U moet een geldige [!DNL Shopify] partneraccount hebben om verbinding te kunnen maken met de [!DNL Shopify] API&#39;s. Als u nog geen partnerrekening hebt, gelieve te registreren gebruikend het [[!DNL Shopify]  partners dashboard ](https://www.shopify.com/partners).
 
 ### Uw toepassing maken
 
-Met een geldig [!DNL Shopify] partneraccount kunt u nu doorgaan en uw app maken via het partnerdashboard. Voor uitvoerige stappen op hoe te om uw app in [!DNL Shopify] tot stand te brengen, lees de [[!DNL Shopify]  gids op begonnen worden &#x200B;](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
+Met een geldig [!DNL Shopify] partneraccount kunt u nu doorgaan en uw app maken via het partnerdashboard. Voor uitvoerige stappen op hoe te om uw app in [!DNL Shopify] tot stand te brengen, lees de [[!DNL Shopify]  gids op begonnen worden ](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
 
 Zodra uw app wordt gecreeerd, wint uw **cliëntidentiteitskaart** en **cliëntgeheim** van het **cliëntgeloofsbrieven** lusje van het [!DNL Shopify] partnerdashboard terug. De cliënt ID en het cliëntgeheim zullen in de volgende stappen worden gebruikt om uw vergunningscode en toegangstoken terug te winnen.
 
@@ -66,7 +66,7 @@ https://www.acme.com/?code=k6j2palgrbljja228ou8c20fmn7w41gz&hmac=68c9163f772eecb
 
 ### Uw toegangstoken ophalen
 
-Nu u uw cliënt identiteitskaart, cliëntgeheim, en vergunningscode hebt, kunt u uw toegangstoken terugwinnen. Als u uw toegangstoken wilt ophalen, vraagt u een POST aan naar de URL van uw domein `myshopify.com` terwijl u deze URL toevoegt met het [!DNL Shopify's] API-eindpunt: `/admin/oauth/access_token` .
+Nu u uw cliënt identiteitskaart, cliëntgeheim, en vergunningscode hebt, kunt u uw toegangstoken terugwinnen. Als u uw toegangstoken wilt ophalen, vraagt u een POST-aanvraag naar de URL van uw domein `myshopify.com` terwijl u deze URL toevoegt met het [!DNL Shopify's] API-eindpunt: `/admin/oauth/access_token` .
 
 **API formaat**
 
@@ -117,7 +117,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
   "webhook": {
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "format": "json"
   }
@@ -126,8 +126,8 @@ curl -X POST \
 
 | Parameter | Beschrijving |
 | --- | --- | 
-| `webhook.address` | Het eindpunt van http waar het stromen berichten worden verzonden. |
-| `webhook.topic` | Het onderwerp van uw webshabonnement. Voor meer informatie, leest de [[!DNL Shopify]  gids van de webshgebeurtenis onderwerpen &#x200B;](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
+| `webhook.address` | Het eindpunt van http waar het stromen berichten worden verzonden. De sjabloon voor de webhaak is: `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
+| `webhook.topic` | Het onderwerp van uw webshabonnement. Voor meer informatie, leest de [[!DNL Shopify]  gids van de webshgebeurtenis onderwerpen ](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | De indeling van de gegevens. |
 
 **Reactie**
@@ -138,7 +138,7 @@ Een geslaagde reactie retourneert informatie over de webhaak, inclusief de bijbe
 {
   "webhook": {
     "id": 1091138715786,
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "created_at": "2022-07-20T07:15:23-04:00",
     "updated_at": "2022-07-20T07:15:23-04:00",
@@ -161,7 +161,7 @@ Hieronder volgt een lijst met bekende beperkingen die u kunt tegenkomen bij het 
 
 ## Volgende stappen
 
-De volgende zelfstudies bieden stappen voor het aansluiten van de [!DNL Shopify Streaming] -bron op een Experience Platform met behulp van de API en de UI:
+De volgende zelfstudies bieden stappen voor het verbinden van uw [!DNL Shopify Streaming] -bron met Experience Platform via de API en de gebruikersinterface:
 
 * [Een Shopify Streaming-bronverbinding en -gegevensstroom maken met de Flow Service API](../../tutorials/api/create/ecommerce/shopify-streaming.md)
 * [Een Shopify-bronverbinding en -gegevensstroom maken in de gebruikersinterface](../../tutorials/ui/create/ecommerce/shopify-streaming.md)
