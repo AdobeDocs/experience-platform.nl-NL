@@ -3,7 +3,8 @@ title: De Deltashare Source-connector gebruiken in de gebruikersinterface
 description: Leer hoe u de Deltashare-bronconnector in de Experience Platform-gebruikersinterface kunt gebruiken.
 hide: true
 hidefromtoc: true
-source-git-commit: cb50e7b4175a34acd1cbf1ebe04fdfd1ab4694aa
+exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
+source-git-commit: 1533e35032d6a0508588652b0e1ca4c6717d4acb
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 1%
@@ -22,4 +23,3 @@ Lees deze handleiding voor meer informatie over het gebruik van de [!DNL Deltash
 **Nota:** Zodra u **daarna** selecteert, zult u niet de geselecteerde schemastructuur kunnen veranderen.
 
 Als u reeds **daarna** hebt geselecteerd en voorbij de stap van de schemaselectie bewogen, kunt u niet meer uw geselecteerd schema bijwerken als u op een vorige stap terugkeert. Om uw schema te wijzigen, moet u het dataflow configuratieproces opnieuw beginnen en van de aanvankelijke stap beginnen.
-
