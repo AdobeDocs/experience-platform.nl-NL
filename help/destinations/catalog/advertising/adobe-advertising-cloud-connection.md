@@ -58,9 +58,9 @@ Adverteerders kunnen ervoor kiezen om segmenten te delen met geverifieerde id&#3
 
 * De Experience Cloud-organisatie-id voor de Experience Platform-account. Je kunt je gebruikersnaam vinden op je Adobe Real-Time Customer Data Platform (Real-Time CDP)-gebruikersprofielpagina.
 
-* A [&#x200B; bron van Real-Time CDP in DSP &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) om publiek voor campagneactivering te ontvangen. Uw Adobe-accountteam maakt de bron met uw Experience Cloud-organisatie-id.
+* A [&#x200B; bron van Real-Time CDP in DSP &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) om publiek voor campagneactivering te ontvangen. Uw Adobe-accountteam maakt de bron met uw Experience Cloud-organisatie-id.
 
-* De bronsleutel voor de [!DNL DSP] rekening of adverteerder, die wordt geproduceerd wanneer de bron van a [&#x200B; Real-Time CDP in  [!DNL DSP] &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) wordt gecreeerd. Uw accountteam van [!DNL DSP] deelt deze sleutel met u. U gebruikt deze in Experience Platform om een doelverbinding te maken met de DSP-bestemming voor Advertising Cloud, zoals hieronder wordt uitgelegd.
+* De bronsleutel voor de [!DNL DSP] rekening of adverteerder, die wordt geproduceerd wanneer de bron van a [&#x200B; Real-Time CDP in  [!DNL DSP] &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) wordt gecreeerd. Uw accountteam van [!DNL DSP] deelt deze sleutel met u. U gebruikt deze in Experience Platform om een doelverbinding te maken met de DSP-bestemming voor Advertising Cloud, zoals hieronder wordt uitgelegd.
 
 ### Synchronisatie van id&#39;s instellen om cookies te delen {#cookie-sync}
 
@@ -133,7 +133,7 @@ Om met de bestemming te verbinden, volg de instructies om [&#x200B; een bestemmi
 
 Als u verbinding wilt maken met het doel, geeft u de volgende parameter op in de sectie [!UICONTROL Connection type] en selecteert u **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Account or Advertiser Key]**: Dit [!UICONTROL Source Key] wordt geproduceerd wanneer de bron van a [&#x200B; Real-Time CDP in het gebruikersinterface van DSP &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) wordt gecreeerd. Uw Adobe-accountteam deelt deze sleutel met u nadat de bron is gemaakt.
+* **[!UICONTROL Account or Advertiser Key]**: Dit [!UICONTROL Source Key] wordt geproduceerd wanneer de bron van a [&#x200B; Real-Time CDP in het gebruikersinterface van DSP &#x200B;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) wordt gecreeerd. Uw Adobe-accountteam deelt deze sleutel met u nadat de bron is gemaakt.
 
 ![&#x200B; Schermafbeelding van het type van Verbinding die het Sleutelgebied van de Rekening of Advertiser toont.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
