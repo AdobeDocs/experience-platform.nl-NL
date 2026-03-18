@@ -3,10 +3,10 @@ keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Overzicht Advertising-bestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
+source-git-commit: 8d0cd63b6262170689ca5a6eb76350c4fc024566
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 0%
+source-wordcount: '288'
+ht-degree: 1%
 
 ---
 
@@ -22,13 +22,14 @@ Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als
 
 Momenteel ondersteunt Experience Platform de hieronder vermelde reclamebestemmingen.
 
-Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B; Verbindingen &#x200B;](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbindingen ](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
-### Verbindingen
+### Connecties
 
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real-ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Cloud-verbinding voor Adobe Advertising](adobe-advertising-cloud-connection.md)
+* [Oudere Adobe Advertising Cloud-verbinding](adobe-advertising-cloud-connection-legacy.md)
 * [Amazon Ads-verbinding](amazon-ads.md)
 * [Bombora-verbinding](bombora.md)
 * [Criteverbinding](criteo.md)
@@ -66,4 +67,4 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B;
 
 ## Verbinding maken met een nieuwe advertentiebestemming {#connect-destination}
 
-Experience Platform moet eerst verbinding maken met het doel om een publiek naar advertentiebestemmingen voor uw campagnes te sturen. Zie het [&#x200B; leerprogramma van de bestemmingsverwezenlijking &#x200B;](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
+Experience Platform moet eerst verbinding maken met het doel om een publiek naar advertentiebestemmingen voor uw campagnes te sturen. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
