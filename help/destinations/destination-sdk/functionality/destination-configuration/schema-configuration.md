@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Configuratie partnerschema
 
-Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven. Wanneer gegevens in Experience Platform worden opgenomen, worden ze gestructureerd volgens een XDM-schema. Voor meer informatie over het model van de schemacompositie, met inbegrip van ontwerpprincipes en beste praktijken, zie de [ grondbeginselen van schemacompositie ](../../../../xdm/schema/composition.md).
+Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven. Wanneer gegevens in Experience Platform worden opgenomen, worden ze gestructureerd volgens een XDM-schema. Voor meer informatie over het model van de schemacompositie, met inbegrip van ontwerpprincipes en beste praktijken, zie de [&#x200B; grondbeginselen van schemacompositie &#x200B;](../../../../xdm/schema/composition.md).
 
 Wanneer het bouwen van een bestemming met Destination SDK, kunt u uw eigen partnerschema bepalen dat door uw bestemmingsplatform moet worden gebruikt. Hiermee kunnen gebruikers profielkenmerken van Experience Platform toewijzen aan specifieke velden die uw doelplatform herkent, allemaal in de interface van Experience Platform.
 
@@ -21,7 +21,7 @@ Wanneer het vormen van het partnerschema voor uw bestemming, kunt u de gebiedsto
 * Creeer dynamische partnerschema&#39;s die Experience Platform dynamisch kan roepen om een lijst van alle gesteunde attributen binnen uw bestemming terug te winnen.
 * Geef verplichte veldtoewijzingen op die uw doelplatform nodig heeft.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [&#x200B; configuratieopties &#x200B;](../configuration-options.md) documentatie of zie de gids op hoe te [&#x200B; Destination SDK gebruiken om een op dossier-gebaseerde bestemming &#x200B;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
 
 U kunt uw schemamontages via het `/authoring/destinations` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -47,8 +47,8 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 
 Destination SDK ondersteunt meerdere schemeconfiguraties:
 
-* Statische schema&#39;s worden gedefinieerd via de array `profileFields` in de sectie `schemaConfig` . In een statisch schema definieert u elk doelkenmerk dat in de Experience Platform-gebruikersinterface in de `profileFields` -array moet worden weergegeven. Als u uw schema moet bijwerken, moet u [ de bestemmingsconfiguratie ](../../authoring-api/destination-configuration/update-destination-configuration.md) bijwerken.
-* De dynamische schema&#39;s gebruiken een extra type van bestemmingsserver, genoemd a [ dynamische schemaserver ](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), om de gesteunde doelattributen dynamisch terug te winnen en schema&#39;s te produceren die op uw eigen API worden gebaseerd. Dynamische schema&#39;s maken geen gebruik van de array `profileFields` . Als u uw schema moet bijwerken, is er geen behoefte om [ de bestemmingsconfiguratie ](../../authoring-api/destination-configuration/update-destination-configuration.md) bij te werken. In plaats daarvan haalt de dynamische schemaserver het bijgewerkte schema van uw API terug.
+* Statische schema&#39;s worden gedefinieerd via de array `profileFields` in de sectie `schemaConfig` . In een statisch schema definieert u elk doelkenmerk dat in de Experience Platform-gebruikersinterface in de `profileFields` -array moet worden weergegeven. Als u uw schema moet bijwerken, moet u [&#x200B; de bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/update-destination-configuration.md) bijwerken.
+* De dynamische schema&#39;s gebruiken een extra type van bestemmingsserver, genoemd a [&#x200B; dynamische schemaserver &#x200B;](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), om de gesteunde doelattributen dynamisch terug te winnen en schema&#39;s te produceren die op uw eigen API worden gebaseerd. Dynamische schema&#39;s maken geen gebruik van de array `profileFields` . Als u uw schema moet bijwerken, is er geen behoefte om [&#x200B; de bestemmingsconfiguratie &#x200B;](../../authoring-api/destination-configuration/update-destination-configuration.md) bij te werken. In plaats daarvan haalt de dynamische schemaserver het bijgewerkte schema van uw API terug.
 * Binnen de schemaconfiguratie, hebt u de optie om vereiste (of vooraf bepaalde) afbeeldingen toe te voegen. Dit zijn toewijzingen die gebruikers kunnen weergeven in de gebruikersinterface van Experience Platform, maar ze kunnen deze niet wijzigen wanneer ze een verbinding met uw doel instellen. U kunt bijvoorbeeld afdwingen dat het veld E-mailadres altijd naar de bestemming wordt verzonden.
 
 De sectie `schemaConfig` gebruikt veelvoudige configuratieparameters, afhankelijk van het type van schema dat u nodig hebt, zoals aangetoond in de hieronder secties.
@@ -104,8 +104,8 @@ Als u een statisch schema met profielkenmerken wilt maken, definieert u de doelk
 | `useCustomerSchemaForAttributeMapping` | Boolean | Optioneel | Schakelt de toewijzing van kenmerken van het klantschema naar de kenmerken die u in de array `profileFields` definieert in of uit. <ul><li>Indien ingesteld op `true` , zien gebruikers alleen de bronkolom in het toewijzingsveld. `profileFields` is in dit geval niet van toepassing.</li><li>Als de waarde `false` is, kunnen gebruikers bronkenmerken vanuit hun schema toewijzen aan de kenmerken die u in de `profileFields` -array hebt gedefinieerd.</li></ul> De standaardwaarde is `false` . |
 | `profileRequired` | Boolean | Optioneel | Gebruik `true` als gebruikers in staat moeten zijn om profielkenmerken van Experience Platform toe te wijzen aan aangepaste kenmerken op uw doelplatform. |
 | `segmentRequired` | Boolean | Vereist | Deze parameter wordt vereist door Destination SDK en moet altijd worden ingesteld op `true` . |
-| `identityRequired` | Boolean | Vereist | Reeks aan `true` als de gebruikers [ identiteitstypes ](identity-namespace-configuration.md) van Experience Platform aan de attributen zouden moeten kunnen in kaart brengen u in de `profileFields` serie bepaalde. |
-| `segmentNamespaceAllowList` | Array | Optioneel | Staat gebruikers toe om slechts publiek van de publieksnamespaces in kaart te brengen die in de serie aan de bestemming worden bepaald. <br><br> Het gebruik van deze parameter wordt in de meeste gevallen afgeraden. Gebruik in plaats daarvan `"segmentNamespaceDenyList":[]` om alle soorten publiek naar uw doel te laten exporteren. <br><br> als zowel `segmentNamespaceAllowList` als `segmentNamespaceDenyList` van uw configuratie ontbreken, zullen de gebruikers slechts publiek uit de [ Dienst van de Segmentatie ](../../../../segmentation/home.md) kunnen uitvoeren. <br><br>`segmentNamespaceAllowList` en `segmentNamespaceDenyList` sluiten elkaar uit. |
+| `identityRequired` | Boolean | Vereist | Reeks aan `true` als de gebruikers [&#x200B; identiteitstypes &#x200B;](identity-namespace-configuration.md) van Experience Platform aan de attributen zouden moeten kunnen in kaart brengen u in de `profileFields` serie bepaalde. |
+| `segmentNamespaceAllowList` | Array | Optioneel | Staat gebruikers toe om slechts publiek van de publieksnamespaces in kaart te brengen die in de serie aan de bestemming worden bepaald. <br><br> Het gebruik van deze parameter wordt in de meeste gevallen afgeraden. Gebruik in plaats daarvan `"segmentNamespaceDenyList":[]` om alle soorten publiek naar uw doel te laten exporteren. <br><br> als zowel `segmentNamespaceAllowList` als `segmentNamespaceDenyList` van uw configuratie ontbreken, zullen de gebruikers slechts publiek uit de [&#x200B; Dienst van de Segmentatie &#x200B;](../../../../segmentation/home.md) kunnen uitvoeren. <br><br>`segmentNamespaceAllowList` en `segmentNamespaceDenyList` sluiten elkaar uit. |
 | `segmentNamespaceDenyList` | Array | Optioneel | Beperkt gebruikers van het in kaart brengen van publiek van de publiek namespaces die in de serie aan de bestemming worden bepaald. <br><br> Adobe adviseert om de uitvoer van alle publiek, ongeacht de oorsprong, toe te staan door `"segmentNamespaceDenyList":[]` te plaatsen. <br><br>**Belangrijk:** als u `segmentNamespaceDenyList` in uw `schemaConfig` niet specificeert en u gebruikt `segmentNamespaceAllowList` niet, plaatst het systeem automatisch `segmentNamespaceDenyList` aan `[]`. Zo voorkomt u dat het aangepaste publiek in de toekomst verloren gaat. Voor de veiligheid raadt Adobe aan `"segmentNamespaceDenyList":[]` expliciet in te stellen in uw configuratie. <br><br>`segmentNamespaceAllowList` en `segmentNamespaceDenyList` sluiten elkaar uit. |
 
 {style="table-layout:auto"}
@@ -114,11 +114,11 @@ De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onde
 
 Wanneer gebruikers de doeltoewijzing selecteren, kunnen ze de velden zien die in de array `profileFields` zijn gedefinieerd.
 
-![ beeld UI die het scherm van doelattributen toont.](../../assets/functionality/destination-configuration/select-attributes.png)
+![&#x200B; beeld UI die het scherm van doelattributen toont.](../../assets/functionality/destination-configuration/select-attributes.png)
 
 Na het selecteren van de attributen, kunnen zij hen in de kolom van het doelgebied zien.
 
-![ beeld UI die een statisch doelschema met attributen toont ](../../assets/functionality/destination-configuration/static-schema-attributes.png)
+![&#x200B; beeld UI die een statisch doelschema met attributen toont &#x200B;](../../assets/functionality/destination-configuration/static-schema-attributes.png)
 
 ## Een dynamisch schema maken {#dynamic-schema-configuration}
 
@@ -126,7 +126,7 @@ Destination SDK steunt de verwezenlijking van dynamische partnerschema&#39;s. In
 
 >[!IMPORTANT]
 >
->Alvorens u een dynamisch schema creeert, moet u [ tot een dynamische schemaserver ](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers) leiden.
+>Alvorens u een dynamisch schema creeert, moet u [&#x200B; tot een dynamische schemaserver &#x200B;](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers) leiden.
 
 In een dynamische schemaconfiguratie, wordt de `profileFields` serie vervangen door de `dynamicSchemaConfig` sectie, zoals hieronder getoond.
 
@@ -148,13 +148,13 @@ In een dynamische schemaconfiguratie, wordt de `profileFields` serie vervangen d
 
 | Parameter | Type | Vereist/optioneel | Beschrijving |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | String | Vereist | Geeft aan hoe [!DNL Experience Platform] -klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION` , `PLATFORM_AUTHENTICATION` , `NONE` . <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als de klanten van Experience Platform zich in uw systeem via om het even welke beschreven authentificatiemethodes [ hier ](customer-authentication.md) registreren. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de klant van [!DNL Experience Platform] geen verificatiereferenties hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u [ een geloofsbrieven tot voorwerp ](../../credentials-api/create-credential-configuration.md) leiden gebruikend Credentials API en ga identiteitskaart van het referentie voorwerp in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) over. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
+| `dynamicEnum.authenticationRule` | String | Vereist | Geeft aan hoe [!DNL Experience Platform] -klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION` , `PLATFORM_AUTHENTICATION` , `NONE` . <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als de klanten van Experience Platform zich in uw systeem via om het even welke beschreven authentificatiemethodes [&#x200B; hier &#x200B;](customer-authentication.md) registreren. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de klant van [!DNL Experience Platform] geen verificatiereferenties hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u [&#x200B; een geloofsbrieven tot voorwerp &#x200B;](../../credentials-api/create-credential-configuration.md) leiden gebruikend Credentials API en ga identiteitskaart van het referentie voorwerp in de `authenticationId` parameter in de [&#x200B; configuratie van de bestemmingslevering &#x200B;](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) over. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
 | `dynamicEnum.destinationServerId` | String | Vereist | De `instanceId` van uw dynamische schemaserver. Deze bestemmingsserver omvat het API eindpunt dat Experience Platform zal roepen om het dynamische schema terug te winnen. |
 | `dynamicEnum.value` | String | Vereist | De naam van het dynamische schema, zoals die in de dynamische configuratie van de schemaserver wordt bepaald. |
 | `dynamicEnum.responseFormat` | String | Vereist | Altijd ingesteld op `SCHEMA` bij het definiëren van een dynamisch schema. |
 | `profileRequired` | Boolean | Optioneel | Gebruik `true` als gebruikers in staat moeten zijn om profielkenmerken van Experience Platform toe te wijzen aan aangepaste kenmerken op uw doelplatform. |
 | `segmentRequired` | Boolean | Vereist | Deze parameter wordt vereist door Destination SDK en moet altijd worden ingesteld op `true` . |
-| `identityRequired` | Boolean | Vereist | Reeks aan `true` als de gebruikers [ identiteitstypes ](identity-namespace-configuration.md) van Experience Platform aan de attributen zouden moeten kunnen in kaart brengen u in de `profileFields` serie bepaalde. |
+| `identityRequired` | Boolean | Vereist | Reeks aan `true` als de gebruikers [&#x200B; identiteitstypes &#x200B;](identity-namespace-configuration.md) van Experience Platform aan de attributen zouden moeten kunnen in kaart brengen u in de `profileFields` serie bepaalde. |
 
 {style="table-layout:auto"}
 
@@ -173,7 +173,7 @@ U kunt bijvoorbeeld afdwingen dat het veld E-mailadres altijd naar de bestemming
 >
 > Het vormen van een vereist brongebied slechts wordt momenteel *niet* gesteund.
 
-Zie onder twee voorbeelden van een schemaconfiguratie met vereiste afbeeldingen en wat deze in de afbeeldingsstap van [ kijken activeert gegevens aan batch bestemmingen werkschema ](../../../ui/activate-batch-profile-destinations.md).
+Zie onder twee voorbeelden van een schemaconfiguratie met vereiste afbeeldingen en wat deze in de afbeeldingsstap van [&#x200B; kijken activeert gegevens aan batch bestemmingen werkschema &#x200B;](../../../ui/activate-batch-profile-destinations.md).
 
 
 >[!BEGINTABS]
@@ -206,7 +206,7 @@ In het onderstaande voorbeeld ziet u zowel de vereiste bron- als doeltoewijzinge
 
 Hierdoor worden zowel de secties **[!UICONTROL Source field]** als **[!UICONTROL Target field]** in de gebruikersinterface van Experience Platform grijs weergegeven.
 
-![ Beeld van de vereiste afbeeldingen in de UI activeringsstroom.](../../assets/functionality/destination-configuration/required-mappings-2.png)
+![&#x200B; Beeld van de vereiste afbeeldingen in de UI activeringsstroom.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
 >[!TAB  Vereiste bestemmingstoewijzing ]
 
@@ -229,20 +229,20 @@ In het onderstaande voorbeeld ziet u een vereiste doeltoewijzing. Als alleen het
 |---|---|---|---|
 | `requiredMappingsOnly` | Boolean | Optioneel | Wanneer deze waarde is ingesteld op true, kunnen gebruikers geen andere kenmerken en identiteiten in de activeringsstroom toewijzen, behalve de vereiste toewijzingen die u in de array `requiredMappings` definieert. |
 | `requiredMappings.destination` | String | Vereist | Hiermee wordt de waarde van het doelveld aangegeven. Wanneer alleen het doelveld wordt opgegeven, kunnen gebruikers een bronveld selecteren om toe te wijzen aan het doel. |
-| `mandatoryRequired` | Boolean | Optioneel | Wijst erop of de afbeelding als a [ verplichte attributen ](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes) zou moeten worden gemerkt. |
-| `primaryKeyRequired` | Boolean | Optioneel | Wijst erop of de afbeelding als sleutel van a [ deduplicatie ](../../../ui/activate-batch-profile-destinations.md#deduplication-keys) zou moeten worden gemerkt. |
+| `mandatoryRequired` | Boolean | Optioneel | Wijst erop of de afbeelding als a [&#x200B; verplichte attributen &#x200B;](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes) zou moeten worden gemerkt. |
+| `primaryKeyRequired` | Boolean | Optioneel | Wijst erop of de afbeelding als sleutel van a [&#x200B; deduplicatie &#x200B;](../../../ui/activate-batch-profile-destinations.md#deduplication-keys) zou moeten worden gemerkt. |
 
 {style="table-layout:auto"}
 
 Hierdoor wordt de sectie **[!UICONTROL Target field]** in de gebruikersinterface van Experience Platform grijs weergegeven, terwijl de sectie **[!UICONTROL Source field]** actief is en gebruikers ermee kunnen werken. De opties **[!UICONTROL Mandatory key]** en **[!UICONTROL Deduplication key]** zijn actief en gebruikers kunnen deze niet wijzigen.
 
-![ Beeld van de vereiste afbeeldingen in de UI activeringsstroom.](../../assets/functionality/destination-configuration/required-mappings-1.png)
+![&#x200B; Beeld van de vereiste afbeeldingen in de UI activeringsstroom.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
 >[!ENDTABS]
 
 ## Ondersteuning voor extern publiek configureren {#external-audiences}
 
-Om uw bestemming te vormen om de activering van [ extern geproduceerd publiek ](../../../../segmentation/ui/audience-portal.md#import-audience) te steunen, omvat het hieronder fragment in de `schemaConfig` sectie.
+Om uw bestemming te vormen om de activering van [&#x200B; extern geproduceerd publiek &#x200B;](../../../../segmentation/ui/audience-portal.md#import-audience) te steunen, omvat het hieronder fragment in de `schemaConfig` sectie.
 
 ```json
 "schemaConfig": {
@@ -251,7 +251,7 @@ Om uw bestemming te vormen om de activering van [ extern geproduceerd publiek ](
 }
 ```
 
-Zie de bezitsbeschrijvingen in de [ lijst ](#attributes-schema) verder hierboven op deze pagina om meer over de `segmentNamespaceDenyList` functionaliteit te leren.
+Zie de bezitsbeschrijvingen in de [&#x200B; lijst &#x200B;](#attributes-schema) verder hierboven op deze pagina om meer over de `segmentNamespaceDenyList` functionaliteit te leren.
 
 ## Volgende stappen {#next-steps}
 
