@@ -172,7 +172,7 @@ Als u de **[!UICONTROL Deprecated Identity Namespace]** -kaart selecteert, wordt
 
 ![&#x200B; Vervangen het detailpaneel dat van Namespace van de Identiteit beschrijving toont, effect, en beïnvloede namespaces lijst &#x200B;](assets/health-checks/deprecated-namespace-detail.png)
 
-Voor meer informatie, zie het [&#x200B; de kennisbasisartikel van Experience Cloud op verouderde namespaces &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Voor meer informatie, zie het [&#x200B; de kennisbasisartikel van Experience Cloud op verouderde namespaces &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Volgende stappen {#next-steps}
 
