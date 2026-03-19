@@ -3,7 +3,7 @@ title: Bestanden op aanvraag exporteren naar batchbestemmingen met de gebruikers
 type: Tutorial
 description: Leer hoe u bestanden op aanvraag exporteert naar batchbestemmingen met de gebruikersinterface van Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
@@ -14,23 +14,23 @@ ht-degree: 0%
 # Bestanden op aanvraag exporteren naar batchbestemmingen met de gebruikersinterface van Experience Platform
 
 >[!IMPORTANT]
-> 
->Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>
+>Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-## **[!UICONTROL Export file now]**-overzicht {#overview}
+## [!UICONTROL Export file now]-overzicht {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
 >title="Bestand nu exporteren"
 >abstract="Selecteer deze controle om een volledige dossieruitvoer naast om het even welke eerder geplande uitvoer te leveren. Het exporteren van het bestand wordt direct geactiveerd en de meest recente resultaten worden opgehaald uit Experience Platform-segmentatiebewerkingen."
 
-Dit artikel verklaart hoe te om Experience Platform UI te gebruiken om dossiers op bestelling naar partijbestemmingen zoals [&#x200B; wolkenopslag &#x200B;](/help/destinations/catalog/cloud-storage/overview.md) en [&#x200B; e-mailmarketing &#x200B;](/help/destinations/catalog/email-marketing/overview.md) bestemmingen uit te voeren.
+Dit artikel verklaart hoe te om Experience Platform UI te gebruiken om dossiers op bestelling naar partijbestemmingen zoals [ wolkenopslag ](/help/destinations/catalog/cloud-storage/overview.md) en [ e-mailmarketing ](/help/destinations/catalog/email-marketing/overview.md) bestemmingen uit te voeren.
 
 Met het besturingselement **[!UICONTROL Export file now]** kunt u een volledig bestand exporteren zonder het huidige exportschema van een eerder gepland publiek te onderbreken. Deze exportbewerking wordt uitgevoerd naast de eerder geplande exportbewerkingen en heeft geen invloed op de exportfrequentie van het publiek.
 
 Het dossier wordt de uitvoer teweeggebracht onmiddellijk en gebruikt gegevens van de meest recente momentopname van de publieksevaluatie slechts. Het bevat geen profiel- of identiteitswijzigingen die optreden na het maken van de momentopname. In tegenstelling, omvatten de geplande uitvoer zowel momentopnamegegevens als stijgende veranderingen die tussen momentopname en de uitvoertijd voorkomen.
 
-U kunt hiervoor ook de Experience Platform API&#39;s gebruiken. Lees hoe te [&#x200B; publiek op bestelling aan partijbestemmingen via ad-hoc activering API &#x200B;](/help/destinations/api/ad-hoc-activation-api.md) activeren.
+U kunt hiervoor ook de Experience Platform API&#39;s gebruiken. Lees hoe te [ publiek op bestelling aan partijbestemmingen via ad-hoc activering API ](/help/destinations/api/ad-hoc-activation-api.md) activeren.
 
 ## Geplande uitvoer versus uitvoer op aanvraag {#scheduled-vs-ondemand}
 
@@ -45,33 +45,33 @@ Bij uitvoer op aanvraag en bij geplande uitvoer worden verschillende gegevensbro
 >
 >De geplande uitvoer kan verschillende profielaantallen of attributenwaarden dan op bestelling uitvoeren tonen omdat zij profielupdates omvatten die na de publieksevaluatie voorkomen.
 
-Voor meer informatie, zie [&#x200B; Begrip gepland uitvoergedrag &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior).
+Voor meer informatie, zie [ Begrip gepland uitvoergedrag ](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior).
 
 ## Vereisten {#prerequisites}
 
-Om dossiers op bestelling naar partijbestemmingen uit te voeren, moet u met succes [&#x200B; verbonden aan een bestemming &#x200B;](./connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [&#x200B; bestemmingscatalogus &#x200B;](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
+Om dossiers op bestelling naar partijbestemmingen uit te voeren, moet u met succes [ verbonden aan een bestemming ](./connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
 
 ## Bestanden op aanvraag exporteren {#how-to-export-files-on-demand}
 
 1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteer de tab **[!UICONTROL Browse]** en het filtersymbool om bestaande verbindingen met de gewenste batchbestemmingen weer te geven.
 
-   ![&#x200B; Beeld die hoe te om aan doorbladeren lusje en filter bestaande dataflows te krijgen benadrukt.](../assets/ui/activate-on-demand/browse-tab.png)
+   ![ Beeld die hoe te om aan doorbladeren lusje en filter bestaande dataflows te krijgen benadrukt.](../assets/ui/activate-on-demand/browse-tab.png)
 
 2. Selecteer de gewenste doelverbinding om de bestaande gegevensstroom naar de bestemming te inspecteren.
 
-   ![&#x200B; Beeld die een gefilterde dataflow benadrukt.](../assets/ui/activate-on-demand/filtered-dataflow.png)
+   ![ Beeld die een gefilterde dataflow benadrukt.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
 3. Selecteer het tabblad **[!UICONTROL Activation data]** en selecteer het publiek waarvoor u bestanden op aanvraag wilt exporteren en selecteer het besturingselement **[!UICONTROL Export file now]** om een eenmalige export te activeren waarmee een bestand voor elk geselecteerd publiek naar uw batchdoel wordt geleverd.
 
-   ![&#x200B; Beeld dat het dossier van de Uitvoer benadrukt nu knoop.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
+   ![ Beeld dat het dossier van de Uitvoer benadrukt nu knoop.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. Selecteer **[!UICONTROL Yes]** om het exporteren van het bestand te bevestigen en te activeren.
 
-   ![&#x200B; Beeld die het dossier van de Uitvoer tonen bevestigt nu dialoog.](../assets/ui/activate-on-demand/confirm-activation.png)
+   ![ Beeld die het dossier van de Uitvoer tonen bevestigt nu dialoog.](../assets/ui/activate-on-demand/confirm-activation.png)
 
 5. Er wordt een bevestigingsbericht weergegeven met de mededeling dat het exporteren van het bestand is gestart.
 
-   ![&#x200B; Beeld die bevestiging van succesvolle ad hoc activering tonen.](../assets/ui/activate-on-demand/ad-hoc-success.png)
+   ![ Beeld die bevestiging van succesvolle ad hoc activering tonen.](../assets/ui/activate-on-demand/ad-hoc-success.png)
 
 6. U kunt ook naar het tabblad **[!UICONTROL Dataflow runs]** gaan om te bevestigen dat het exporteren van het bestand is uitgeschakeld.
 
