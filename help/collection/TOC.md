@@ -6,10 +6,10 @@ breadcrumb-title: Dataverzameling
 user-guide-description: Leer hoe u gegevens naar Adobe Experience Platform verzendt.
 feature: Data Collection
 role: Developer
-source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
+source-git-commit: c848f821ea911c82531c6784a17df0116572cd86
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 14%
+source-wordcount: '152'
+ht-degree: 13%
 
 ---
 
@@ -91,7 +91,7 @@ ht-degree: 14%
    + [setDebug](tags/setdebug.md)
    + [setVar](tags/setvar.md)
    + [track](tags/track.md)
-+ Gebruiksscenario’s {#use-cases}
++ Gebruiksscenario&#39;s {#use-cases}
    + [Overzicht](use-cases/overview.md)
    + [Clienttips](use-cases/client-hints.md)
    + [Status client](use-cases/client-state.md)
@@ -103,6 +103,8 @@ ht-degree: 14%
       + [Overzicht](use-cases/identity/id-overview.md)
       + [Apparaat-id&#39;s van eerste partij](use-cases/identity/first-party-device-ids.md)
       + [ID delen](use-cases/identity/id-sharing.md)
+   + MCP {#mcp}
+      + [ChatGPT-apps](use-cases/mcp/chatgpt.md)
    + [Meerdere SDK-instanties](use-cases/multiple-instances.md)
    + Personalisatie {#personalization}
       + [Overzicht](use-cases/personalization/pers-overview.md)
