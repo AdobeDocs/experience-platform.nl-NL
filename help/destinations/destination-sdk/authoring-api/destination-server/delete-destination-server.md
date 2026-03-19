@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestaande configuratie van de bestemmingsserver door Adobe Experience Platform Destination SDK te schrappen.
 title: Een doelserverconfiguratie verwijderen
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
@@ -26,17 +26,17 @@ Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkh
 
 ## Aan de slag met API-bewerkingen voor doelserver {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een doelserverconfiguratie verwijderen {#delete}
 
-U kunt een [&#x200B; bestaande &#x200B;](create-destination-server.md) configuratie van de bestemmingsserver schrappen door a `DELETE` verzoek aan het `/authoring/destination-servers` eindpunt met `{INSTANCE_ID}` van de configuratie van de bestemmingsserver te maken die u wilt schrappen.
+U kunt een [ bestaande ](create-destination-server.md) configuratie van de bestemmingsserver schrappen door a `DELETE` verzoek aan het `/authoring/destination-servers` eindpunt met `{INSTANCE_ID}` van de configuratie van de bestemmingsserver te maken die u wilt schrappen.
 
 >[!TIP]
 >
 >**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [&#x200B; het terugwinnen van een configuratie van de bestemmingsserver &#x200B;](retrieve-destination-server.md).
+Om een bestaande configuratie van de bestemmingsserver en zijn overeenkomstige `{INSTANCE_ID}` te verkrijgen, zie het artikel over [ het terugwinnen van een configuratie van de bestemmingsserver ](retrieve-destination-server.md).
 
 **API formaat**
 
@@ -48,7 +48,9 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | De `ID` van de configuratie van de bestemmingsserver u wilt schrappen. |
 
-+++verzoek
+{style="table-layout:auto"}
+
++++Verzoek
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -58,13 +60,13 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Response
++++Antwoord
 
 Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respons.
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 

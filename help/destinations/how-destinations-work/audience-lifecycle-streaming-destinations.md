@@ -1,13 +1,13 @@
 ---
 title: Levenscyclus van het publiek in Experience Platform en streamingbestemmingen
 description: Leer hoe publieksnamen en toewijzingen van Experience Platform worden weerspiegeld in streaming doelplatforms.
-source-git-commit: 6b4dfa714e078fb5b97900811aade081ffef0d78
+exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 1%
 
 ---
-
 
 # Levenscyclus van het publiek in het stromen bestemmingen
 
@@ -86,6 +86,6 @@ De volgende streamingdoelen ondersteunen automatische publieksverwijdering wanne
 * [Aangepast publiek Twitter](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### Doelen die het verwijderen van het publiek niet ondersteunen
+### Doelen die het verwijderen van het publiek niet ondersteunen {#no-removal-support}
 
 Voor bestemmingen die hierboven niet worden vermeld, wanneer u een publiek van de bestemming losmaakt, verwijdert Experience Platform slechts de afbeelding. Het publiek in het bestemmingsplatform blijft actief tot u het in het partnerplatform manueel schrapt.

@@ -3,24 +3,24 @@ keywords: beemray,beemray-extensie
 title: Beemray-extensie
 description: De extensie Beemray is een personalisatiebestemming in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 5bb639f5-42b5-48ae-a3e9-7585595ab925
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
 
-# [!DNL Beemray] extension {#beemray-extension}
+# [!DNL Beemray] extensie {#beemray-extension}
 
 ## Overzicht {#overview}
 
 Met [!DNL Beemray] kunt u uw product versnellen in een context van situaties. U kunt inzichten opdoen, nieuwe ervaringen opdoen, interacties stimuleren en zich bezighouden met momenten die echt van belang zijn. Beemray automatiseert contextafhankelijke intelligentie met behulp van machinaal leren. Beemray maakt verbinding met de Adobe Experience Cloud en de rest van uw technologiepartners. Alles gebeurt in real-time. Deze extensie installeert [!DNL Beemray] SDK op uw site.
 
-Beemray is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [&#x200B; Adobe Exchange &#x200B;](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Beemray is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [ Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [&#x200B; overzicht van markeringsuitbreidingen &#x200B;](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
-![&#x200B; uitbreiding Beemray &#x200B;](../../assets/catalog/personalization/beemray/catalog.png)
+![ uitbreiding Beemray ](../../assets/catalog/personalization/beemray/catalog.png)
 
 ## Vereisten {#prerequisites}
 
@@ -32,23 +32,23 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De extensie [!DNL Beemray] installeren:
 
-In de [&#x200B; interface van Experience Platform &#x200B;](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
-Klik op de bestemming om deze te markeren en selecteer vervolgens **[!UICONTROL Configure]** in de rechtertrack. Als het besturingselement **[!UICONTROL Configure]** grijs wordt weergegeven, ontbreekt de machtiging **[!UICONTROL manage_properties]** . Zie [&#x200B; Eerste vereisten &#x200B;](#prerequisites).
+Selecteer het doel en selecteer vervolgens **[!UICONTROL Configure]** in de rechterrails. Als het besturingselement **[!UICONTROL Configure]** grijs wordt weergegeven, ontbreekt de machtiging **[!UICONTROL manage_properties]** . Zie [ Eerste vereisten ](#prerequisites).
 
-Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Leer over eigenschappen in de [&#x200B; tagdocumentatie &#x200B;](../../../tags/ui/administration/companies-and-properties.md).
+Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Leer over eigenschappen in de [ tagdocumentatie ](../../../tags/ui/administration/companies-and-properties.md).
 
 De werkstroom neemt u aan de UI van de Inzameling van Gegevens om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie de [&#x200B; pagina van de Beemray op Adobe Exchange &#x200B;](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie de [ pagina van de Beemray op Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
-U kunt de uitbreiding direct in [&#x200B; de Inzameling UI van Gegevens &#x200B;](https://experience.adobe.com/#/data-collection/) ook installeren. Zie de gids op [&#x200B; toevoegend een nieuwe uitbreiding &#x200B;](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
+U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Zie de gids op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
 
 ## De extensie gebruiken {#how-to-use}
 
-Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen. In de UI van de Inzameling van Gegevens, kunt u opstellingsregels voor uw geïnstalleerde uitbreidingen om gebeurtenisgegevens naar de uitbreidingsbestemming slechts in bepaalde situaties te verzenden. Voor meer informatie over vestiging regels voor uw uitbreidingen, zie het overzicht op [&#x200B; regels &#x200B;](../../../tags/ui/managing-resources/rules.md) in de markeringsdocumentatie.
+Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen. In de UI van de Inzameling van Gegevens, kunt u opstellingsregels voor uw geïnstalleerde uitbreidingen om gebeurtenisgegevens naar de uitbreidingsbestemming slechts in bepaalde situaties te verzenden. Voor meer informatie over vestiging regels voor uw uitbreidingen, zie het overzicht op [ regels ](../../../tags/ui/managing-resources/rules.md) in de markeringsdocumentatie.
 
 ## Uitbreiding configureren, bijwerken en verwijderen {#configure-upgrade-delete}
 
@@ -56,6 +56,6 @@ U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface
 
 >[!TIP]
 >
->Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface nog steeds **[!UICONTROL Install]** voor de extensie weergegeven. Kik van het installatiewerkschema zoals die in [&#x200B; wordt beschreven installeer uitbreiding &#x200B;](#install-extension) om uw uitbreiding te vormen of te schrappen.
+>Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface nog steeds **[!UICONTROL Install]** voor de extensie weergegeven. Kik van het installatiewerkschema zoals die in [ wordt beschreven installeer uitbreiding ](#install-extension) om uw uitbreiding te vormen of te schrappen.
 
-Om uw uitbreiding te bevorderen, zie de gids op het [&#x200B; proces van de uitbreidingsverbetering &#x200B;](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.
+Om uw uitbreiding te bevorderen, zie de gids op het [ proces van de uitbreidingsverbetering ](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.

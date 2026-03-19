@@ -2,9 +2,9 @@
 description: Leer hoe u een API-aanroep kunt opmaken om een doelpublicatieaanvraag via Adobe Experience Platform Destination SDK te verzenden.
 title: Een doelpublicatieverzoek maken
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Nadat u de bestemming hebt geconfigureerd en getest, kunt u deze naar Adobe verzenden voor revisie en publicatie. Lees [&#x200B; voorlegt voor overzicht een bestemming die in Destination SDK &#x200B;](../guides/submit-destination.md) voor alle andere stappen wordt geschreven u als deel van het proces van de bestemmingsvoorlegging moet doen.
+Nadat u de bestemming hebt geconfigureerd en getest, kunt u deze naar Adobe verzenden voor revisie en publicatie. Lees [ voorlegt voor overzicht een bestemming die in Destination SDK ](../guides/submit-destination.md) voor alle andere stappen wordt geschreven u als deel van het proces van de bestemmingsvoorlegging moet doen.
 
 Gebruik het API-eindpunt voor publicatiedoelen om een publicatieverzoek in te dienen wanneer:
 
@@ -32,7 +32,7 @@ Gebruik het API-eindpunt voor publicatiedoelen om een publicatieverzoek in te di
 
 ## Aan de slag met API-bewerkingen voor doelpublicatie {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een doelconfiguratie verzenden voor publicatie {#create}
 
@@ -44,7 +44,7 @@ U kunt een bestemmingsconfiguratie voor het publiceren voorleggen door een POST-
 POST /authoring/destinations/publish
 ```
 
-+++verzoek
++++Verzoek
 
 Het volgende verzoek legt een bestemming voor publicatie voor, over de organisaties die door de parameters worden gevormd die in de lading worden verstrekt. De onderstaande lading bevat alle parameters die door het `/authoring/destinations/publish` -eindpunt worden geaccepteerd.
 
@@ -64,23 +64,23 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `destinationId` | String | De bestemmingsidentiteitskaart van de bestemmingsconfiguratie die u voor het publiceren voorlegt. Krijg bestemmingsidentiteitskaart van een bestemmingsconfiguratie door [&#x200B; te gebruiken wint een vraag van de bestemmingsconfiguratie &#x200B;](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API terug. |
+| `destinationId` | String | De bestemmingsidentiteitskaart van de bestemmingsconfiguratie die u voor het publiceren voorlegt. Krijg bestemmingsidentiteitskaart van een bestemmingsconfiguratie door [ te gebruiken wint een vraag van de bestemmingsconfiguratie ](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API terug. |
 | `destinationAccess` | String | Gebruik `ALL` voor uw doel om in de catalogus voor alle Experience Platform-klanten te verschijnen. |
 
 {style="table-layout:auto"}
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert status 201 van HTTP met details van uw bestemmings terug publicatieverzoek.
 
 +++
 
-## API-foutafhandeling
+## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 Nadat u dit document hebt gelezen, weet u nu hoe u een publicatieverzoek voor uw doel kunt indienen. Het Adobe Experience Platform-team zal uw publicatieverzoek beoordelen en met vijf werkdagen teruggaan naar u.

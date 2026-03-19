@@ -4,9 +4,9 @@ title: API-migratiegids voor cloudopslagdoelen
 description: Meer informatie over de wijzigingen in de workflow om cloudopslagbestemmingen te activeren als onderdeel van de migratie naar de nieuwe doelkaarten voor cloudopslag met extra functionaliteit.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* De functionaliteit die op deze pagina wordt beschreven, is beschikbaar voor klanten die de Real-Time CDP Premiere en Ultimate-pakketten hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
+>* De op deze pagina beschreven functionaliteit is beschikbaar voor klanten die de pakketten Real-Time CDP Prime en Ultimate hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
 ## Migratiecontext {#migration-context}
 
-Beginnend [&#x200B; Oktober 2022 &#x200B;](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), kunt u de nieuwe mogelijkheden van de dossieruitvoer gebruiken om tot verbeterde aanpassingsfunctionaliteit toegang te hebben wanneer het uitvoeren van dossiers uit Experience Platform:
+Beginnend [ Oktober 2022 ](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), kunt u de nieuwe mogelijkheden van de dossieruitvoer gebruiken om tot verbeterde aanpassingsfunctionaliteit toegang te hebben wanneer het uitvoeren van dossiers uit Experience Platform:
 
-* Aanvullende [&#x200B; dossier noemende opties &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* Mogelijkheid om de kopballen van het douanedossier in uw uitgevoerde dossiers via de [&#x200B; nieuwe toewijzingsstap &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) te plaatsen.
-* Mogelijkheid om het [&#x200B; dossiertype &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) van het uitgevoerde dossier te selecteren.
-* Mogelijkheid om [&#x200B; het formatteren van uitgevoerde CSV gegevensdossiers &#x200B;](/help/destinations/ui/batch-destinations-file-formatting-options.md) aan te passen.
+* Aanvullende [ dossier noemende opties ](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* Mogelijkheid om de kopballen van het douanedossier in uw uitgevoerde dossiers via de [ nieuwe toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) te plaatsen.
+* Mogelijkheid om het [ dossiertype ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) van het uitgevoerde dossier te selecteren.
+* Mogelijkheid om [ het formatteren van uitgevoerde CSV gegevensdossiers ](/help/destinations/ui/batch-destinations-file-formatting-options.md) aan te passen.
 
 Deze functionaliteit wordt ondersteund door de onderstaande bètaboudopslagkaarten:
 
@@ -42,17 +42,17 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Merk op dat momenteel in het Experience Platform UI, u twee zij aan zij bestemmingskaarten van de drie bestemmingen kunt zien. Hieronder ziet u de verouderde en nieuwe doelen van [!DNL Amazon S3] . In alle gevallen, zijn de kaarten duidelijk met **Beta** de nieuwe bestemmingskaarten.
+Merk op dat momenteel in Experience Platform UI, u twee zij aan zij bestemmingskaarten van de drie bestemmingen kunt zien. Hieronder ziet u de verouderde en nieuwe doelen van [!DNL Amazon S3] . In alle gevallen, zijn de kaarten duidelijk met **Beta** de nieuwe bestemmingskaarten.
 
-![&#x200B; Beeld van de twee Amazon S3 bestemmingskaarten in een zij-aan-zij mening.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![ Beeld van de twee Amazon S3 bestemmingskaarten in een zij-aan-zij mening.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-Terwijl deze bestemmingen met verbeterde functionaliteit aanvankelijk als bèta werden aangeboden, *verplaatst de Adobe nu alle klanten van Real-Time CDP naar de nieuwe bestemmingen van de wolkenopslag*. Voor klanten die al [!DNL Amazon S3], [!DNL Azure Blob] of SFTP gebruikten, betekent dit dat bestaande gegevensstromen naar de nieuwe kaarten worden gemigreerd. Lees verder voor meer informatie over de specifieke wijzigingen als onderdeel van de migratie.
+Terwijl deze bestemmingen met verbeterde functionaliteit aanvankelijk als bèta werden aangeboden, *Adobe nu beweegt alle klanten van Real-Time CDP naar de nieuwe bestemmingen van de wolkenopslag*. Voor klanten die al [!DNL Amazon S3], [!DNL Azure Blob] of SFTP gebruikten, betekent dit dat bestaande gegevensstromen naar de nieuwe kaarten worden gemigreerd. Lees verder voor meer informatie over de specifieke wijzigingen als onderdeel van de migratie.
 
 ## Wie deze pagina van toepassing is op {#who-this-applies-to}
 
-Als u reeds de [&#x200B; Dienst API van de Stroom &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/) gebruikt om profielen naar Amazon S3, Azure Blob, of de bestemmingen van de de wolkenopslag van SFTP uit te voeren, dan is deze API migratiegids op u van toepassing.
+Als u reeds de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) gebruikt om profielen naar Amazon S3, Azure Blob, of de bestemmingen van de de wolkenopslag van SFTP uit te voeren, dan is deze API migratiegids op u van toepassing.
 
-Als er scripts worden uitgevoerd in uw [!DNL Amazon S3] -, [!DNL Azure Blob] - of SFTP-cloudopslaglocaties boven op de geëxporteerde bestanden vanuit het Experience Platform, dient u er rekening mee te houden dat er bepaalde parameters veranderen met betrekking tot de verbinding- en stroomspecificaties van de nieuwe kaarten en met betrekking tot de toewijzingsstap.
+Als er scripts worden uitgevoerd in uw [!DNL Amazon S3] -, [!DNL Azure Blob] - of SFTP-cloudopslaglocaties boven op de geëxporteerde bestanden uit Experience Platform, dient u er rekening mee te houden dat sommige parameters veranderen wat betreft de verbinding en de stroomspecificaties van de nieuwe kaarten, en wat betreft de toewijzingsstap.
 
 Als u bijvoorbeeld een script hebt gebruikt om doelgegevens naar de [!DNL Amazon S3] -bestemming te filteren op basis van de verbindingsspecificaties van de [!DNL Amazon S3] -bestemming, moet u er rekening mee houden dat de verbindingsspecificatie wordt gewijzigd, zodat u de filters moet bijwerken.
 
@@ -68,13 +68,13 @@ TBD if we keep this link but will likely remove it
 
 -->
 * [API-zelfstudie voor het exporteren van soorten publiek naar cloudopslagdoelen](/help/destinations/api/activate-segments-file-based-destinations.md)
-* [&#x200B; de verwijzingsdocumentatie van de Dienst API van de Stroom van Doelen &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/)
+* [ de verwijzingsdocumentatie van de Dienst API van de Stroom van Doelen ](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## Samenvatting van achterwaarts incompatibele wijzigingen {#summary-backwards-incompatible-changes}
 
-Met de migratie naar de nieuwe bestemmingen, al uw bestaande dataflows aan [!DNL Amazon S3], [!DNL Azure Blob], en bestemmingen SFTP zullen nu nieuwe doelverbindingen en basisverbindingen worden toegewezen. De stap voor profieltoewijzing verandert ook. Achteruit incompatibele wijzigingen worden samengevat in de onderstaande secties voor elke bestemming. Bekijk ook de [&#x200B; verklarende woordenlijst van bestemmingen &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) voor meer informatie over de termijnen in het hieronder diagram.
+Met de migratie naar de nieuwe bestemmingen, al uw bestaande dataflows aan [!DNL Amazon S3], [!DNL Azure Blob], en bestemmingen SFTP zullen nu nieuwe doelverbindingen en basisverbindingen worden toegewezen. De stap voor profieltoewijzing verandert ook. Achteruit incompatibele wijzigingen worden samengevat in de onderstaande secties voor elke bestemming. Bekijk ook de [ verklarende woordenlijst van bestemmingen ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) voor meer informatie over de termijnen in het hieronder diagram.
 
-![&#x200B; het overzichtsbeeld van de gids van de Migratie &#x200B;](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
+![ het overzichtsbeeld van de gids van de Migratie ](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
 ### Met de achtergrond incompatibele wijzigingen in de [!DNL Amazon S3] -bestemming {#changes-amazon-s3-destination}
 
@@ -93,7 +93,7 @@ Op dezelfde manier zijn er geen achterwaarts-onverenigbare veranderingen in de p
 
 >[!TAB  Verouderde basisverbinding en doelverbinding ]
 
-+++Verouderde weergave [!DNL base connection] voor [!DNL Amazon S3]
++++Verouderde [!DNL base connection] tonen voor [!DNL Amazon S3]
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -126,7 +126,7 @@ Op dezelfde manier zijn er geen achterwaarts-onverenigbare veranderingen in de p
 
 +++
 
-+++Verouderde weergave [!DNL target connection] voor [!DNL Amazon S3]
++++Verouderde [!DNL target connection] tonen voor [!DNL Amazon S3]
 
 ```json {line-numbers="true" start-line="1" highlight="12"}
 {
@@ -257,7 +257,7 @@ De achterwaarts incompatibele wijzigingen voor de API-gebruikers zijn een bijgew
 | Stroomspecificatie | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | Verbindingsspecificatie | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
-In de onderstaande tabbladen ziet u de volledige verouderde en nieuwe basisverbinding en voorbeelden van doelverbindingen voor [!DNL Azure Blob] . De parameters die worden vereist om basisverbindingen voor de bestemmingen van Azure Blob tot stand te brengen veranderen niet.
+In de onderstaande tabbladen ziet u de volledige verouderde en nieuwe basisverbinding en voorbeelden van doelverbindingen voor [!DNL Azure Blob] . De parameters die nodig zijn om basisverbindingen voor Azure Blob-doelen te maken, veranderen niet.
 
 Op dezelfde manier zijn er geen achterwaarts-onverenigbare veranderingen in de parameters die worden vereist om doelverbindingen tot stand te brengen.
 
@@ -265,7 +265,7 @@ Op dezelfde manier zijn er geen achterwaarts-onverenigbare veranderingen in de p
 
 >[!TAB  Verouderde basisverbinding en doelverbinding ]
 
-+++Verouderde weergave [!DNL base connection] voor [!DNL Azure Blob]
++++Verouderde [!DNL base connection] tonen voor [!DNL Azure Blob]
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -297,7 +297,7 @@ Op dezelfde manier zijn er geen achterwaarts-onverenigbare veranderingen in de p
 
 +++
 
-+++Verouderde weergave [!DNL target connection] voor [!DNL Azure Blob]
++++Verouderde [!DNL target connection] tonen voor [!DNL Azure Blob]
 
 ```json {line-numbers="true" start-line="1" highlight="13"}
 {
@@ -439,7 +439,7 @@ Bekijk de volledige erfenis en nieuwe basisverbinding en de voorbeelden van de d
 
 >[!TAB  Verouderde basisverbinding en doelverbinding ]
 
-+++Verouderde weergave [!DNL base connection] voor SFTP - wachtwoordverificatie
++++Verouderde versie van SFTP weergeven [!DNL base connection] - wachtwoordverificatie
 
 ```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
@@ -473,7 +473,7 @@ Bekijk de volledige erfenis en nieuwe basisverbinding en de voorbeelden van de d
 
 +++
 
-+++Verouderde weergave [!DNL base connection] voor [!DNL SFTP - SSH key] verificatie
++++Verouderde [!DNL base connection] tonen voor [!DNL SFTP - SSH key] verificatie
 
 ```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
@@ -508,7 +508,7 @@ Bekijk de volledige erfenis en nieuwe basisverbinding en de voorbeelden van de d
 
 +++
 
-+++Verouderde weergave [!DNL target connection] voor SFTP
++++Verouderde versie weergeven [!DNL target connection] voor SFTP
 
 ```json {line-numbers="true" start-line="1" highlight="13"}
 {
@@ -583,7 +583,7 @@ Bekijk de volledige erfenis en nieuwe basisverbinding en de voorbeelden van de d
 
 +++
 
-+++Nieuwe weergave [!DNL base connection] voor [!DNL SFTP - SSH key] verificatie
++++Nieuwe [!DNL base connection] weergeven voor [!DNL SFTP - SSH key] verificatie
 
 ```json {line-numbers="true" start-line="1" highlight="5,12"}
 {
@@ -670,11 +670,11 @@ Bekijk de volledige erfenis en nieuwe basisverbinding en de voorbeelden van de d
 
 De stap van de profielkiezer in alle drie de bestemmingen wordt vervangen door een toewijzingsstap die u toestaat om de kolomkopballen in uw uitgevoerde dossiers anders te noemen, indien gewenst. Zie de afbeelding naast elkaar met de oude kenmerkenkiezer links en de nieuwe toewijzingsstap rechts.
 
-![&#x200B; het overzichtsbeeld van de gids van de Migratie &#x200B;](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
+![ het overzichtsbeeld van de gids van de Migratie ](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
 U ziet hoe het `profileSelectors` -object in de oudere voorbeelden wordt vervangen door het nieuwe `profileMapping` -object.
 
-Vind volledige informatie over vestiging het `profileMapping` voorwerp in het [&#x200B; API leerprogramma om gegevens naar de bestemmingen van de wolkenopslag uit te voeren &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+Vind volledige informatie over vestiging het `profileMapping` voorwerp in het [ API leerprogramma om gegevens naar de bestemmingen van de wolkenopslag uit te voeren ](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 >[!BEGINTABS]
 
@@ -746,7 +746,7 @@ Vind volledige informatie over vestiging het `profileMapping` voorwerp in het [&
 
 >[!TAB  Nieuwe transformatieparameters ]
 
-+++Bekijk een voorbeeld van transformatieparameters na de migratie
++++Een voorbeeld van transformatieparameters na de migratie weergeven
 
 In het onderstaande configuratievoorbeeld ziet u hoe `profileSelectors` -velden zijn vervangen door een `profileMapping` -object.
 
@@ -791,9 +791,9 @@ U ontvangt herinneringse-mails van Adobe wanneer de migratiedatum nadert. Lees t
 Ter voorbereiding op de migratie van de [!DNL Amazon S3] -, [!DNL Azure Blob] - en SFTP-cloudopslagdoelen naar de nieuwe kaarten, dient u uw scripts en geautomatiseerde API-aanroepen bij te werken zoals hieronder wordt voorgesteld.
 
 1. Werk alle scripts of geautomatiseerde API-aanroepen voor bestaande [!DNL Amazon S3]-, [!DNL Azure Blob] - of SFTP-cloudopslagdoelen uiterlijk 26 juli 2023 bij. Alle geautomatiseerde API-aanroepen of scripts die gebruikmaken van de verouderde verbindingsspecificaties of flowspecificaties, moeten worden bijgewerkt naar de nieuwe verbindingsspecificaties of stroomspecificaties.
-2. Neem contact op met de accountvertegenwoordiger van de Adobe wanneer uw scripts vóór 26 juli zijn bijgewerkt.
+2. Neem contact op met uw Adobe-accountvertegenwoordiger wanneer uw scripts vóór 26 juli zijn bijgewerkt.
 3. De `targetConnectionSpecId` kan bijvoorbeeld worden gebruikt als een vlag om te bepalen of de gegevensstroom is gemigreerd naar de nieuwe doelkaart. U kunt uw scripts bijwerken met een voorwaarde van `if` om de verouderde en bijgewerkte specificaties voor doelverbindingen in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` te bekijken en te bepalen of uw gegevensstroom is gemigreerd. U kunt de verouderde en nieuwe verbindingsspecificaties-id&#39;s zien in de specifieke secties op deze pagina voor elke bestemming.
-4. Het accountteam van uw Adobe bereikt meer informatie over wanneer uw gegevensstromen worden gemigreerd.
+4. Uw Adobe-accountteam zal u meer informatie geven over wanneer uw gegevensstromen worden gemigreerd.
 5. Na 26 juli worden alle gegevensstromen gemigreerd. Al uw bestaande gegevensstromen zullen nu nieuwe stroomentiteiten (verbindingsspecificaties, stroom specs, basisverbindingen, en doelverbindingen) hebben. Om het even welke manuscripten of API vraag aan uw kant die de erfenisstroomentiteiten gebruiken zal ophouden werkend.
 
 ## Andere migratieoverwegingen {#other-considerations}
@@ -802,4 +802,4 @@ Houd er rekening mee dat er geen invloed is op uw bestaande exportschema tijdens
 
 ## Volgende stappen {#next-steps}
 
-Door deze pagina te lezen, weet u nu of u actie moet ondernemen ter voorbereiding op de migratie van de bestemmingen van de cloudopslag. U weet ook welke documentatiepagina&#39;s u wilt raadplegen wanneer u API-workflows instelt om bestanden vanuit het Experience Platform te exporteren naar de voorkeursopslaglocaties van de cloud. Daarna, kunt u de API leerprogramma bekijken aan [&#x200B; de uitvoergegevens aan de bestemmingen van de wolkenopslag &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md).
+Door deze pagina te lezen, weet u nu of u actie moet ondernemen ter voorbereiding op de migratie van de bestemmingen van de cloudopslag. U weet ook welke documentatiepagina&#39;s u moet raadplegen wanneer u API-workflows instelt om bestanden vanuit Experience Platform te exporteren naar de voorkeursopslaglocaties voor de cloud. Daarna, kunt u de API leerprogramma bekijken aan [ de uitvoergegevens aan de bestemmingen van de wolkenopslag ](/help/destinations/api/activate-segments-file-based-destinations.md).

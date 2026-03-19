@@ -3,9 +3,9 @@ title: Merkury Enterprise Connections-bestemming
 description: Leer hoe u een Merkury Enterprise Connections-doelverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1498'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Merkury] . Neem voor alle vragen of verzoeken om updates contact op met uw [!DNL Merkury] -accountvertegenwoordiger.
+>De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Merkury] . Neem voor vragen of verzoeken om updates contact op met uw [!DNL Merkury] -accountvertegenwoordiger.
 
-## Overzicht
+## Overzicht {#overview}
 
 Gebruik de bestemming [!DNL Merkury Enterprise Connections] om doelgroepen veilig naar [!DNL Merkury] te sturen. Met [!DNL Merkury] kunnen marketers eenvoudig persoonlijke doelgroepen afstemmen op en leveren op de 80+ premiumgerelateerde tv/CTV-, uitgever- en advertentietechnische verbindingen van [!DNL Merkury] . [!DNL Merkury] wordt aangestuurd door een uitgebreide Amerikaanse identiteitsgrafiek van meer dan 268 miljoen volwassen consumenten.
 
-![&#x200B; een diagram dat van A de interconnectie tussen Merkury en Experience Platform toont, met inbegrip van opname en activering &#x200B;](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
+![ een diagram dat van A de interconnectie tussen Merkury en Experience Platform toont, met inbegrip van opname en activering ](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
 Voer de stappen in deze documentatiepagina uit om een [!DNL Merkury Connections] doelverbinding te maken en een publiek te activeren via de Adobe Experience Platform-gebruikersinterface.
 
@@ -28,19 +28,19 @@ Voer de stappen in deze documentatiepagina uit om een [!DNL Merkury Connections]
 >
 >Als u het publiek wilt activeren naar mediadoelen met uw [!DNL Merkury Connect] -account, gebruikt u in plaats daarvan het doel van [!DNL Merkury Connections] .
 
-![&#x200B; de de bestemmingskaart van de Verbindingen van de Onderneming van de Verduistering die in de de bestemmingscatalogus van Experience Platform wordt benadrukt.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
+![ de de bestemmingskaart van de Verbindingen van de Onderneming van de Verduistering die in de de bestemmingscatalogus van Experience Platform wordt benadrukt.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
-## Gebruiksscenario’s
+## Gebruiksscenario’s {#use-cases}
 
 * **Digitale Activatie van Media**: Gemakkelijke aanpassing en levering van uw publieksprofielen aan [!DNL Merkury] 50+ premieadresseerbare uitgevers en ad-tech verbindingen.
 * **verbetert Efficiënties**: Verbeter uw koekjesloos, adresseerbare media bereik, verbeter het richten efficiency en Terugkeer op de Uitgaven van Advertising (ROAS).
 
-## Vereisten
+## Vereisten {#prerequisites}
 
 >[!IMPORTANT]
 >
->* Om met de bestemming te verbinden, hebt u de **Doelen van de Mening** nodig en **leidt Doelen**, **Doelen**, **Profielen van de Mening**, en **Segmenten van de Mening** [&#x200B; [toegangsbeheertoestemmingen] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/home#permissions). Lees [&#x200B; [toegangsbeheeroverzicht] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/ui/overview) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **Grafiek van de Identiteit van de Mening** [&#x200B; [toegangsbeheertoestemming] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/home#permissions) nodig.\![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* Om met de bestemming te verbinden, hebt u de **Doelen van de Mening** nodig en **leidt Doelen**, **Doelen**, **Profielen van de Mening**, en **Segmenten van de Mening** [ [toegangsbeheertoestemmingen] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lees [ [toegangsbeheeroverzicht] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **Grafiek van de Identiteit van de Mening** [ [toegangsbeheertoestemming] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) nodig.\![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -48,21 +48,21 @@ Voer de stappen in deze documentatiepagina uit om een [!DNL Merkury Connections]
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
-| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [&#x200B; ECID &#x200B;](/help/identity-service/features/ecid.md) voor meer informatie. |
+| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ ECID ](/help/identity-service/features/ecid.md) voor meer informatie. |
 | phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
 
 {style="table-layout:auto"}
 
-## Ondersteunde doelgroepen
+## Ondersteunde doelgroepen {#supported-audiences}
 
 In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,36 +70,36 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 Ondersteund publiek per type publieksgegevens:
 
-| Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario’s |
+| Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
 
-## Type en frequentie exporteren
+## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | **Punt** | **Type** | **Nota&#39;s** |
 |---|---|---|  
-| Exporttype | **op profiel-Gebaseerde** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken van het geselecteerde profiel van de [&#x200B; [workflow voor doelactivering] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes) . |
-| Frequentie | **Partij** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [&#x200B; [partij op dossier-gebaseerde frequentiebestemmingen] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/destination-types#file-based). |
+| Exporttype | **op profiel-Gebaseerde** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken van het geselecteerde profiel van de [ [workflow voor doelactivering] ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes) . |
+| Frequentie | **Partij** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ [partij op dossier-gebaseerde frequentiebestemmingen] ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based). |
 
 {style="table-layout:auto"}
 
-## Verbinden met de bestemming
+## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u de **Doelen van de Mening** nodig en **leidt en activeert de Doelen van de Dataset** [&#x200B; [toegangsbeheertoestemmingen] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/home#permissions). Lees [&#x200B; [toegangsbeheeroverzicht] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/ui/overview) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u de **Doelen van de Mening** nodig en **leidt en activeert de Doelen van de Dataset** [ [toegangsbeheertoestemmingen] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lees [ [toegangsbeheeroverzicht] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in [&#x200B; worden beschreven [de zelfstudie van de bestemmingsconfiguratie] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/connect-destination). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in [ worden beschreven [de zelfstudie van de bestemmingsconfiguratie] ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
-### Verifiëren voor bestemming
+### Verifiëren voor bestemming {#authenticate}
 
 Om aan de bestemming voor authentiek te verklaren, vul de vereiste gebieden in en selecteer **verbinden met bestemming**.
 
@@ -114,13 +114,13 @@ Als u toegang wilt tot uw emmertje op Experience Platform, moet u geldige waarde
 
 {style="table-layout:auto"}
 
-![&#x200B; het nieuwe scherm van de bestemmingsverwezenlijking &#x200B;](../../assets/catalog/data-partners/merkury-connections/media/image4.png)
+![ het nieuwe scherm van de bestemmingsverwezenlijking ](../../assets/catalog/data-partners/merkury-connections/media/image4.png)
 
-### Doelgegevens invullen
+### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![&#x200B; het schermschot van bestemmingsdetails &#x200B;](../../assets/catalog/data-partners/merkury-connections/media/image6.png)
+![ het schermschot van bestemmingsdetails ](../../assets/catalog/data-partners/merkury-connections/media/image6.png)
 
 * **Naam (Vereist)** - de naam de bestemming onder zal worden bewaard
 * **Beschrijving** - Korte verklaring van het doel van de bestemming
@@ -132,21 +132,21 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 >
 >Als u de optie CSV, Scheidingsteken, Citaat, Escape-teken, Lege waarde, Null-waarde, Compressie-indeling en Inclusief manifestbestandsopties selecteert, neemt u contact op met uw Merkury-team voor de juiste instellingen voor uw account.
 
-![&#x200B; beeld van csv opties &#x200B;](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
+![ beeld van csv opties ](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
 
-### Bestaande account
+### Bestaande account {#existing-account}
 
 Accounts die al zijn gedefinieerd met de Merkury Enterprise Connections-bestemming, worden weergegeven in een pop-up lijst. Als u deze optie selecteert, kunt u details van de account bekijken in de rechtertrack. Bekijk het voorbeeld van UI, wanneer u aan **Doelen** navigeert > **Rekeningen**:
 
-![&#x200B; het screenshot van A van bestemmingsrekening in de pagina van bestemmingsrekeningen.](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
+![ het screenshot van A van bestemmingsrekening in de pagina van bestemmingsrekeningen.](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
 
-## Waarschuwingen inschakelen
+## Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/alerts).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
 
 Wanneer u klaar bent met het verstrekken van details voor uw bestemmingsverbinding, selecteer **daarna**.
 
-## Soorten publiek naar dit doel activeren
+## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 >
@@ -154,9 +154,9 @@ Wanneer u klaar bent met het verstrekken van details voor uw bestemmingsverbindi
 >* Om identiteiten uit te voeren, hebt u de **toestemming van de de toegangscontrole van de Grafiek van de Identiteit van de Mening** nodig.
 
 
-Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) voor instructies bij het activeren van publiek aan deze bestemming.
 
-## Toewijzingssuggesties
+## Toewijzingssuggesties {#mapping-suggestions}
 
 Voor een correcte verwerking van bestanden aan de zijde van [!DNL Merkury] zijn naam- en adreselementen vereist. Hoewel niet alle elementen vereist zijn, zal het zo veel mogelijk helpen om tot een succesvolle overeenkomst te komen.
 
@@ -177,14 +177,14 @@ Toewijzingssuggesties worden gegeven in de onderstaande tabel met de kenmerken a
 
 {style="table-layout:auto"}
 
-## Gegevens exporteren valideren
+## Gegevens exporteren valideren {#validate-data-export}
 
 Om te controleren of gegevens zijn geëxporteerd, controleert u het Amazon S3 Storage bucket en controleert u of de geëxporteerde bestanden de verwachte profielpopulaties bevatten.
 
-## Gegevensgebruik en -beheer
+## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle Adobe Experience Platform-doelen zijn bij het verwerken van uw gegevens compatibel met het beleid voor gegevensgebruik. Voor gedetailleerde informatie over hoe Adobe Experience Platform gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/data-governance/home).
+Alle Adobe Experience Platform-doelen zijn bij het verwerken van uw gegevens compatibel met het beleid voor gegevensgebruik. Voor gedetailleerde informatie over hoe Adobe Experience Platform gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
-## Volgende stappen
+## Volgende stappen {#next-steps}
 
 Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om profielgegevens van Experience Platform naar uw [!DNL Merkury] beheerde S3-locatie te exporteren. Vervolgens moet u contact opnemen met uw [!DNL Merkury] -vertegenwoordiger met de naam van de account, de bestandsnamen en het emmerpad, zodat de verwerking kan worden ingesteld.
