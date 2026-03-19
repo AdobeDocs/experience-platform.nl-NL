@@ -55,7 +55,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Segmentatieservice | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Segmentatieservice | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/home). |
 | Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
@@ -91,7 +91,7 @@ Als uw bedrijf toegang tot veelvoudige organisaties heeft, zorg ervoor dat u de 
 
 >[!IMPORTANT]
 >
->De gebruiker die opstelling de bestemming moet [&#x200B; toestemming van de Persoon &#x200B;](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) hebben uitgeven in de instantie en de verdeling van Marketo.
+>De gebruiker die opstelling de bestemming moet [&#x200B; toestemming van de Persoon &#x200B;](https://experienceleague.adobe.com/nl/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) hebben uitgeven in de instantie en de verdeling van Marketo.
 
 ![&#x200B; verbind met Bestemming &#x200B;](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,7 +102,7 @@ Als uw bedrijf toegang tot veelvoudige organisaties heeft, zorg ervoor dat u de 
 * **[!UICONTROL First searchable field]**: veld dat moet worden gededupliceerd. Het veld moet aanwezig zijn in elke eerstvolgende record van de invoer. Standaard e-mailadres
 * **[!UICONTROL First searchable field]**: Een secundair veld dat moet worden gededupliceerd. Het veld moet aanwezig zijn in elke eerstvolgende record van de invoer. Optioneel
 
-Nadat u de instantie hebt geselecteerd, moet u ook de partitie Lead selecteren waarmee u de configuratie wilt integreren. A [&#x200B; de Verdeling van de Lood &#x200B;](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) is een concept in Marketo Engage dat wordt gebruikt om loodverslagen door bedrijfszorg, zoals een merk of een verkoopgebied te scheiden. Als uw Marketo-abonnement niet over de functie Werkruimten en Partities beschikt of als uw abonnement geen extra partities bevat, is alleen de standaardpartitie beschikbaar. Één enkele configuratie kan slechts loodverslagen bijwerken die in zijn gevormde verdeling bestaan.
+Nadat u de instantie hebt geselecteerd, moet u ook de partitie Lead selecteren waarmee u de configuratie wilt integreren. A [&#x200B; de Verdeling van de Lood &#x200B;](https://experienceleague.adobe.com/nl/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) is een concept in Marketo Engage dat wordt gebruikt om loodverslagen door bedrijfszorg, zoals een merk of een verkoopgebied te scheiden. Als uw Marketo-abonnement niet over de functie Werkruimten en Partities beschikt of als uw abonnement geen extra partities bevat, is alleen de standaardpartitie beschikbaar. Één enkele configuratie kan slechts loodverslagen bijwerken die in zijn gevormde verdeling bestaan.
 
 >[!IMPORTANT]
 >

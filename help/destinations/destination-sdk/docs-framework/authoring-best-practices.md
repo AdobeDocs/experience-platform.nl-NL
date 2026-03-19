@@ -17,23 +17,23 @@ Deze pagina beschrijft regels die u zou moeten volgen wanneer [&#x200B; creëren
 
 ## Algemene richtsnoeren {#general-guidance}
 
-* Wanneer het invullen van het [&#x200B; malplaatje &#x200B;](./self-service-template.md) voor uw bestemmingsdocumentatie, verwijs naar de de bijdragegids van Adobe voor informatie over [&#x200B; het verbinden &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html), [&#x200B; lijsten &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#tables), de [&#x200B; gesteunde prijsdalingssyntaxis &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html), [&#x200B; het schrijven van begeleiding &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html), en meer.
+* Wanneer het invullen van het [&#x200B; malplaatje &#x200B;](./self-service-template.md) voor uw bestemmingsdocumentatie, verwijs naar de de bijdragegids van Adobe voor informatie over [&#x200B; het verbinden &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=nl-NL), [&#x200B; lijsten &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL#tables), de [&#x200B; gesteunde prijsdalingssyntaxis &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL), [&#x200B; het schrijven van begeleiding &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=nl-NL), en meer.
 * Plaats geen opmerkingen en schattingen in de productdocumentatie.
 * In de documentatie van Experience Platform, gebruiken de schrijvers van Adobe **gewaagde het formatteren** om naar gebruikersinterfacecontroles, als dit te verwijzen:
-   * Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer de tab **[!UICONTROL Catalog]** . Bekijk een voorbeeld van hoe de controles van het gebruikersinterface in a [&#x200B; bestemmingsleerprogramma &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-destination) worden gedocumenteerd.
+   * Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer de tab **[!UICONTROL Catalog]** . Bekijk een voorbeeld van hoe de controles van het gebruikersinterface in a [&#x200B; bestemmingsleerprogramma &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=nl-NL#select-destination) worden gedocumenteerd.
 
 ## Schrijfstijl {#writing-style}
 
 >[!IMPORTANT]
 >
->Lees [&#x200B; het Schrijven begeleiding voor de Documentatie van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) alvorens u begint de pagina van de bestemmingsdocumentatie te ontwerpen.
+>Lees [&#x200B; het Schrijven begeleiding voor de Documentatie van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=nl-NL) alvorens u begint de pagina van de bestemmingsdocumentatie te ontwerpen.
 
 * Houd je zinnen kort en kom snel op. Als uw zin langer is dan 20 woorden of meerdere komma&#39;s gebruikt, kunt u het opsplitsen in aparte zinnen. Zinnen van meer dan 20 woorden kunnen vooral lastig zijn voor lezers.
 * Wees niet al te beleefd. Vermijd het gebruik van &quot;alstublieft&quot; of &quot;vriendelijk ...&quot; in technische documentatie.
 
 ## Koppelen {#linking}
 
-Volg de meegeleverde documentatiesjabloon en bewerk de bestaande koppelingen in de sjabloon niet. Wanneer het omvatten van nieuwe verbindingen, lees [&#x200B; gebruikend verbindingen in documentatie &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html) in de bijdragegids.
+Volg de meegeleverde documentatiesjabloon en bewerk de bestaande koppelingen in de sjabloon niet. Wanneer het omvatten van nieuwe verbindingen, lees [&#x200B; gebruikend verbindingen in documentatie &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=nl-NL) in de bijdragegids.
 
 ## Richtlijnen voor branding {#branding}
 
@@ -43,7 +43,7 @@ Volg de meegeleverde documentatiesjabloon en bewerk de bestaande koppelingen in 
 
 ## Afbeeldingen en screenshots {#images-and-screenshots}
 
-* Voor informatie over [&#x200B; hoe te om aan beelden &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images) te verbinden, verwijs naar de bijdragegids.
+* Voor informatie over [&#x200B; hoe te om aan beelden &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL#images) te verbinden, verwijs naar de bijdragegids.
 * Wanneer u schermafbeeldingen gebruikt, moet u ervoor zorgen dat uw schermafbeelding het volledige scherm van de gebruikersinterface van Experience Platform vastlegt.
 * Wanneer u afbeeldingen markeert om een bepaald besturingselement of label op de pagina te markeren, probeert u de markeringsstijl te volgen die wordt gebruikt door het Experience Platform-documentatieteam. Bericht hoe op profiel-gebaseerd in [&#x200B; dit schermafbeelding &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency) wordt benadrukt.
 * Gebruik afbeeldingen in de `png` -indeling.
