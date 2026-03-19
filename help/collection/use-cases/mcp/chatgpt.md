@@ -19,7 +19,7 @@ In deze gebruiksaanwijzing ziet u hoe u een ChatGPT-toepassing (modelcontextprot
 
 Dit gebruiksgeval verkiest een hybride benadering, die zowel een server-zijimplementatie voor het verzamelen van gegevens als een cliënt-zijimplementatie voor het teruggeven van gepersonaliseerde inhoud gebruikt. Deze benadering is ideaal, aangezien het MCP hulpmiddel aanroeping het meest betrouwbare moment is om analyses te verzamelen. De widget wordt uitgevoerd in een browsercontext en is de juiste plaats om identiteit (in een cookie) op te slaan en beslissingen over personalisatie toe te passen.
 
-Dit gebruiksgeval heeft een begeleidend volledig operationeel codevoorbeeld. Zie [ ChatGPT App + Adobe Experience Platform Edge ](https://github.com/adobe/alloy-samples/tree/main/chatgpt-app) in de `alloy-samples` bewaarplaats op GitHub voor steekproefcode en implementatieinstructies.
+Dit gebruiksgeval heeft een begeleidend volledig operationeel codevoorbeeld. Zie [&#x200B; ChatGPT App + Adobe Experience Platform Edge &#x200B;](https://github.com/adobe/alloy-samples/tree/main/chatgpt-app) in de `alloy-samples` bewaarplaats op GitHub voor steekproefcode en implementatieinstructies.
 
 >[!IMPORTANT]
 >
@@ -42,7 +42,7 @@ Op een hoog niveau zijn er vijf bewegende delen:
 1. **De achtergrond MCP server** gebruikt de Inzameling APIs van Gegevens (`interact` eindpunt) om een ervaringsgebeurtenis naar **Edge Network** voor de inzameling van de Analytics en facultatieve verpersoonlijking te verzenden.
 1. **Edge Network** keert reactiehandvatten, met inbegrip van staatsupdates en verpersoonlijkingsbesluiten, aan het **achterste MCP hulpmiddel** terug.
 1. **het Achterste MCP hulpmiddel** keert een hulpmiddelresultaat terug dat bedrijfsgegevens in `structuredContent` bevat en de meta-gegevens van Adobe in `_meta` aan **ChatGPT**.
-1. **ChatGPT** levert het hulpmiddelresultaat aan **vooraf ingestelde widget**, die de bedrijfsgegevens teruggeeft en de meta-gegevens van Adobe gebruikend het 4} bevel van JavaScript van het Web van SDK toepast bibliotheek. `applyResponse` Dit bevel drijft cliënt-zijstaat en geeft in aanmerking komende verpersoonlijkingsbesluiten in UI terug.
+1. **ChatGPT** levert het hulpmiddelresultaat aan **vooraf ingestelde widget**, die de bedrijfsgegevens teruggeeft en de meta-gegevens van Adobe gebruikend het 4&rbrace; bevel van JavaScript van het Web van SDK toepast bibliotheek. `applyResponse` Dit bevel drijft cliënt-zijstaat en geeft in aanmerking komende verpersoonlijkingsbesluiten in UI terug.
 
 In de volgende secties wordt gedetailleerd ingegaan op elke stap.
 
@@ -54,7 +54,7 @@ Deze stap is het ingangspunt voor de workflow. De gebruiker geeft de intentie vo
 "Use the Adobe Office Information Tool to show me details about which office that is the most pet-friendly."
 ```
 
-Zie [ bouwen uw server MCP ](https://developers.openai.com/apps-sdk/build/mcp-server/) in de documentatie van Ontwikkelaars OpenAI voor meer informatie.
+Zie [&#x200B; bouwen uw server MCP &#x200B;](https://developers.openai.com/apps-sdk/build/mcp-server/) in de documentatie van Ontwikkelaars OpenAI voor meer informatie.
 
 ## Stap 2: ChatGPT interpreteert intent en roept een MCP hulpmiddel aan
 
@@ -81,11 +81,11 @@ Gebaseerd op de meta-gegevens van uw server MCP, interpreteert ChatGPT intent en
 }
 ```
 
-Zie [ bepalen hulpmiddelen ](https://developers.openai.com/apps-sdk/plan/tools/) in de documentatie van Ontwikkelaars OpenAI voor meer informatie over hoe te om ChatGPT te vertellen wat elk hulpmiddel MCP doet.
+Zie [&#x200B; bepalen hulpmiddelen &#x200B;](https://developers.openai.com/apps-sdk/plan/tools/) in de documentatie van Ontwikkelaars OpenAI voor meer informatie over hoe te om ChatGPT te vertellen wat elk hulpmiddel MCP doet.
 
 ## Stap 3: Uw MCP-server verzendt een ervaringsgebeurtenis naar de Edge Network
 
-Wanneer uw server MCP een verzoek ontvangt, brengt het een vraag aan Adobe Experience Platform Edge Network in werking om analysegegevens te registreren en naar keuze om besluit/personalisatie te verzoeken. Aangezien dit verzoek server-aan-server is, gebruik het voor authentiek verklaarde [`interact` ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) eindpunt als deel van [ de Inzameling APIs van Gegevens ](https://developer.adobe.com/data-collection-apis/docs/). Adobe adviseert het gebruiken van a [ douanenamespace ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/initial-configuration/configure-identities) om langs het unieke herkenningsteken over te gaan OpenAI. Zorg ervoor dat namespace u in de Identiteiten UI en identiteitsnamespace creeert die u in uw vraaggelijke (case-sensitive) bepaalt.
+Wanneer uw server MCP een verzoek ontvangt, brengt het een vraag aan Adobe Experience Platform Edge Network in werking om analysegegevens te registreren en naar keuze om besluit/personalisatie te verzoeken. Aangezien dit verzoek server-aan-server is, gebruik het voor authentiek verklaarde [`interact` &#x200B;](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) eindpunt als deel van [&#x200B; de Inzameling APIs van Gegevens &#x200B;](https://developer.adobe.com/data-collection-apis/docs/). Adobe adviseert het gebruiken van a [&#x200B; douanenamespace &#x200B;](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/initial-configuration/configure-identities) om langs het unieke herkenningsteken over te gaan OpenAI. Zorg ervoor dat namespace u in de Identiteiten UI en identiteitsnamespace creeert die u in uw vraaggelijke (case-sensitive) bepaalt.
 
 ```sh
 curl -X POST "https://server.adobedc.net/ee/v2/interact?datastreamId={DATASTREAM_ID}"
@@ -205,7 +205,7 @@ Uw MCP hulpmiddelreactie omvat zowel de gestructureerde hulpmiddeloutput als ver
 }
 ```
 
-Zie [ Resultaten van het Hulpmiddel ](https://developers.openai.com/apps-sdk/reference/#tool-results) in de verwijzing van de Ontwikkelaar OpenAI voor meer informatie.
+Zie [&#x200B; Resultaten van het Hulpmiddel &#x200B;](https://developers.openai.com/apps-sdk/reference/#tool-results) in de verwijzing van de Ontwikkelaar OpenAI voor meer informatie.
 
 ## Stap 6: Widget geeft het resultaat weer en past `_adobe.handles` toe met `applyResponse`
 
