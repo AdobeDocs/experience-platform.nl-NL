@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: efa50881315d986940f7cb3afcbfcc30ef67c3a7
+source-git-commit: 5cbf63cc0a149d54de63e3e1797cae4098498fe8
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 27%
+source-wordcount: '1322'
+ht-degree: 29%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 27%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
@@ -46,7 +46,7 @@ Experience Platform biedt een reeks mogelijkheden voor Gegevensgezondheid waarme
 
 | Functie | Beschrijving |
 | --- | --- |
-| Meerdere gegevenssets en alleen-profielrecord verwijderen (alleen API) | U kunt één gegevensset-id, een door komma&#39;s gescheiden lijst met id&#39;s van gegevenssets of het letterlijke teken `ALL` in `datasetId` verzenden om id&#39;s te verwijderen uit een, veel of alle gegevenssets. U kunt het verwijderen ook beperken tot profielservices door `targetServices` in te stellen op `["identity","profile","ajo"]` , waardoor de gegevens ongewijzigd blijven. Zie de [&#x200B; gids van de Orden van het Werk van de Schrapping van het Verslag &#x200B;](../hygiene/api/workorder.md) voor meer details. |
+| Meerdere gegevenssets en alleen-profielrecord verwijderen (alleen API) | U kunt één gegevensset-id, een door komma&#39;s gescheiden lijst met id&#39;s van gegevenssets of het letterlijke teken `ALL` in `datasetId` verzenden om id&#39;s te verwijderen uit een, veel of alle gegevenssets. U kunt het verwijderen ook beperken tot profielservices door `targetServices` in te stellen op `["identity","profile","ajo"]` , waardoor de gegevens ongewijzigd blijven. Zie de [ gids van de Orden van het Werk van de Schrapping van het Verslag ](../hygiene/api/workorder.md) voor meer details. |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Met Agent Orchestrator kunt u op AI gebaseerde agents maken en implementeren die
 
 {style="table-layout:auto"}
 
-Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+Voor meer informatie, zie de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Bestemmingen {#destinations}
 
@@ -74,14 +74,12 @@ Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x20
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [&#x200B; Snowflake die &#x200B;](../destinations/catalog/warehouses/snowflake.md) multiregion steun stroomt | De Snowflake Streaming-connector is nu beschikbaar voor klanten buiten de Amerikaanse VA7-regio. Gebruik de regionale vervolgkeuzelijst om aan te geven in welk Snowflake-gebied uw account zich bevindt. De documentatie is bijgewerkt met de verwachte gegevensstructuur voor Snowflake-streamingtabellen. |
-| [&#x200B; Snowflake die &#x200B;](../destinations/catalog/warehouses/snowflake.md) stromen en [&#x200B; de Gebiedselector van de Partij van Snowflake &#x200B;](../destinations/catalog/warehouses/snowflake-batch.md) | U kunt uw regio nu gemakkelijker vinden met het nieuwe doorzoekbare vervolgkeuzemenu, waarin zoek en vervolgkeuzelijst in één besturingselement worden gecombineerd. |
-| De meta-gegevens van het publiek van de uitvoer aan [&#x200B; Partij van Snowflake &#x200B;](../destinations/catalog/warehouses/snowflake-batch.md) bestemmingen | De bestanden die naar dit doel worden geëxporteerd, bevatten nu metagegevens voor het publiek. De nieuwe tabelstructuur is van toepassing op alle nieuwe doelverbindingen die zijn ingesteld om voorwaarts te gaan. De oude tabelstructuur wordt nog drie maanden bewaard voordat deze wordt vervangen. |
+| [ de Gebied van de Partij van Snowflake ](../destinations/catalog/warehouses/snowflake-batch.md) selecteur | U kunt uw regio nu gemakkelijker vinden met het nieuwe doorzoekbare vervolgkeuzemenu, waarin zoek en vervolgkeuzelijst in één besturingselement worden gecombineerd. |
+| De meta-gegevens van het publiek van de uitvoer aan [ Partij van Snowflake ](../destinations/catalog/warehouses/snowflake-batch.md) bestemmingen | De bestanden die naar dit doel worden geëxporteerd, bevatten nu metagegevens voor het publiek. De nieuwe tabelstructuur is van toepassing op alle nieuwe doelverbindingen die zijn ingesteld om voorwaarts te gaan. De oude tabelstructuur wordt nog drie maanden bewaard voordat deze wordt vervangen. |
 | [!DNL Adobe Advertising Cloud DSP]-verbinding | De nieuwe Adobe Advertising DSP-verbinding biedt dezelfde functionaliteit als de oude verbinding plus ondersteuning voor extra identiteiten. |
-| De externe publiekssteun voor [&#x200B; Commerciële Desk CRM &#x200B;](../destinations/catalog/advertising/tradedesk-emails.md), [&#x200B; Criteo &#x200B;](../destinations/catalog/advertising/criteo.md) en [&#x200B; Pinterest &#x200B;](../destinations/catalog/advertising/pinterest.md) | U kunt publiek voorbij de segmenten van de Dienst van de Segmentatie aan The Trade Desk CRM, Criteo, en Pinterest nu activeren, met inbegrip van douane uploadt publiek (ingevoerd uit CSV), blik-alike publiek, federated publiek, en publiek dat in andere Experience Platform apps zoals Adobe Journey Optimizer wordt gecreeerd. Zie [&#x200B; gesteunde publiek &#x200B;](../destinations/catalog/advertising/criteo.md#supported-audiences) sectie op de cataloguspagina van elke bestemming voor details. |
-| Filteren van publiek in activeringswerkstroom | U kunt nu soorten publiek zoeken en filteren in de stap **[!UICONTROL Select audiences]** met dezelfde ervaring als de pagina Soorten publiek. U kunt bijvoorbeeld filteren op de oorsprong van het publiek om gemakkelijk het publiek te vinden dat u zoekt. |
+| De externe publiekssteun voor [ Commerciële Desk CRM ](../destinations/catalog/advertising/tradedesk-emails.md), [ Criteo ](../destinations/catalog/advertising/criteo.md) en [ Pinterest ](../destinations/catalog/advertising/pinterest.md) | U kunt publiek voorbij de segmenten van de Dienst van de Segmentatie aan The Trade Desk CRM, Criteo, en Pinterest nu activeren, met inbegrip van douane uploadt publiek (ingevoerd uit CSV), blik-alike publiek, federated publiek, en publiek dat in andere Experience Platform apps zoals Adobe Journey Optimizer wordt gecreeerd. Zie [ gesteunde publiek ](../destinations/catalog/advertising/criteo.md#supported-audiences) sectie op de cataloguspagina van elke bestemming voor details. |
 | Hogere limiet voor aangepast uploadbereik | U kunt nu maximaal 20 aangepaste uploadsoorten per doelinstantie activeren. Eerder was deze limiet 10. |
-| [&#x200B; dossier van de Uitvoer nu &#x200B;](../destinations/ui/export-file-now.md) en [&#x200B; ad-hoc activering API &#x200B;](../destinations/api/ad-hoc-activation-api.md) steun voor extern publiek | U kunt nu de API voor activering van het bestand nu exporteren (UI) en de API voor ad-hocactivering gebruiken met een extern publiek (zoals aangepaste upload, look-alike, federated en publiek van andere Experience Platform-apps) wanneer u activeert naar batchbestemmingen op basis van bestanden. |
+| [ dossier van de Uitvoer nu ](../destinations/ui/export-file-now.md) en [ ad-hoc activering API ](../destinations/api/ad-hoc-activation-api.md) steun voor extern publiek | U kunt nu de API voor activering van het bestand nu exporteren (UI) en de API voor ad-hocactivering gebruiken met een extern publiek (zoals aangepaste upload, look-alike, federated en publiek van andere Experience Platform-apps) wanneer u activeert naar batchbestemmingen op basis van bestanden. |
 | HTTP API-doelen met OAuth 2 en mTLS | U kunt de bestemmingen van HTTP nu tot stand brengen en voor authentiek verklaren API die OAuth 2 gebruiken wanneer het authentificatieeindpunt wederzijdse TLS (mTLS) vereist; symbolische herwinning tijdens bestemmingsopstelling steunt nu mTLS. |
 | Doel ZoomInfo-account | U kunt nu accountpubliek naar ZoomInfo vanuit Real-Time Customer Data Platform (B2B) sturen. |
 
@@ -91,8 +89,8 @@ Voor meer informatie, zie de [&#x200B; documentatie van Agent Orchestrator &#x20
 
 | Repareren | Beschrijving |
 | --- | --- |
-| [&#x200B; Snowflake die &#x200B;](../destinations/catalog/warehouses/snowflake.md) de bevestiging van identiteitskaart van de rekening stromen | Er is een validator voor reguliere expressies toegevoegd aan de stap Account ID. Wanneer u uw id invoert, wordt deze nu gevalideerd om te zorgen dat de organisatie-id en de account-id de juiste indeling hebben (gescheiden door een punt). |
-| [&#x200B; TikTok &#x200B;](../destinations/catalog/social/tiktok.md) hashing van het schakelaartelefoonaantal | Probleem verholpen waarbij een onjuiste configuratie van de doelkaart betekende dat identiteiten die van telefoonnummers werden afgehaald, niet werden geactiveerd voor TikTok. |
+| [ Snowflake die ](../destinations/catalog/warehouses/snowflake.md) de bevestiging van identiteitskaart van de rekening stromen | Er is een validator voor reguliere expressies toegevoegd aan de stap Account ID. Wanneer u uw id invoert, wordt deze nu gevalideerd om te zorgen dat de organisatie-id en de account-id de juiste indeling hebben (gescheiden door een punt). |
+| [ TikTok ](../destinations/catalog/social/tiktok.md) hashing van het schakelaartelefoonaantal | Probleem verholpen waarbij een onjuiste configuratie van de doelkaart betekende dat identiteiten die van telefoonnummers werden afgehaald, niet werden geactiveerd voor TikTok. |
 
 {style="table-layout:auto"}
 
@@ -124,7 +122,7 @@ Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees het [&#x200B; overzicht van de Dienst van de Vraag &#x200B;](../query-service/home.md).
+Voor meer informatie, lees het [ overzicht van de Dienst van de Vraag ](../query-service/home.md).
 
 ## Uitvoeren en werken {#run-and-operate}
 
@@ -134,12 +132,12 @@ Inspecteer, los problemen op, en optimaliseer uw implementaties van Experience P
 
 | Functie | Beschrijving |
 | --- | --- |
-| [&#x200B; Planningen van de Baan &#x200B;](../run-and-operate/job-schedules.md) algemene beschikbaarheid | [!DNL Job Schedules] verstrekt een verenigde mening van alle geplande banen van de partijverwerking over uw gegevenspijpleiding, van opname door bestemmingsactivering. Inspecteer uitvoeringsstatus, identificeer het plannen conflicten, en diagnoseer configuratiekwesties alvorens zij uw bedrijfsverrichtingen beïnvloeden. |
+| [ Planningen van de Baan ](../run-and-operate/job-schedules.md) algemene beschikbaarheid | [!DNL Job Schedules] verstrekt een verenigde mening van alle geplande banen van de partijverwerking over uw gegevenspijpleiding, van opname door bestemmingsactivering. Inspecteer uitvoeringsstatus, identificeer het plannen conflicten, en diagnoseer configuratiekwesties alvorens zij uw bedrijfsverrichtingen beïnvloeden. |
 | Gezondheidscontroles algemene beschikbaarheid | Het slechte schema en de identiteitsconfiguraties leiden tot significante stroomafwaartse kwesties, met inbegrip van onjuiste profielverwezenlijking, ontbroken segmentkwalificatie, en onnauwkeurige activering. <br> de controles van de Gezondheid verschuiven uw benadering van het reactieve oplossen van problemen aan pro-actief, preventief onderhoud. De controles van de gezondheid zijn altijd-op scans van uw schema&#39;s en identiteiten die in uw zandbak worden gebruikt en verstrekken een overzicht van kwesties die u kunt gebruiken om te onderzoeken en problemen op te lossen. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees de [&#x200B; Looppas en geef overzicht &#x200B;](../run-and-operate/overview.md) in werking, [&#x200B; inspecteer baanprogramma&#39;s &#x200B;](../run-and-operate/job-schedules.md), en de [&#x200B; gids UI van het Platform &#x200B;](../landing/ui-guide.md).
+Voor meer informatie, lees de [ Looppas en geef overzicht ](../run-and-operate/overview.md) in werking, [ inspecteer baanprogramma&#39;s ](../run-and-operate/job-schedules.md), en de [ gids UI van het Platform ](../landing/ui-guide.md).
 
 ## Segmentatieservice {#segmentation}
 
@@ -154,7 +152,7 @@ Met Experience Platform kunt u publiekssegmenten maken op basis van uw klantgege
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees het [&#x200B; overzicht van het publiek &#x200B;](../segmentation/home.md).
+Voor meer informatie, lees het [ overzicht van het publiek ](../segmentation/home.md).
 
 ## Bronnen {#sources}
 
@@ -181,5 +179,8 @@ Voor meer informatie raadpleegt u het [overzicht van bronnen](../sources/home.md
 <!--
 
 | Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
+
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
+| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
 
 -->
