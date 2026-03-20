@@ -4,9 +4,10 @@ description: Meer informatie over Talon.One-bronnen op Adobe Experience Platform
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
+source-git-commit: 5ceef18d479854aa4b633e7e5e393a6698a05b2e
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '439'
 ht-degree: 1%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->De bronnen van [!DNL Talon.One] zijn in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bronnen van [!DNL Talon.One] zijn in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Met [!DNL Talon.One] kunt u eenvoudig op maat gemaakte marketingcampagnes maken, beheren en optimaliseren die zijn afgestemd op uw klanten. Gebruik dit krachtige platform om kortingen uit te voeren, coupons te verdelen, verwijzingsprogramma&#39;s te lanceren, loyaliteitsprogramma&#39;s op te zetten, en gamified stimuli aan te bieden - allen van één scalable systeem dat wordt ontworpen om u te helpen uw publiek in dienst nemen en belonen.
 
@@ -40,6 +41,28 @@ Geef waarden op voor de volgende referenties om de [!DNL Talon.One Batch Source 
 ## Toewijzing {#mapping}
 
 Om u te helpen elk effectobject toe te wijzen op basis van de unieke `effectType` -waarde, kunt u de functie data prep `array_to_map` gebruiken. Zo kunt u een ongeordende array van effecten eenvoudig omzetten in sleutelwaardeparen die aan uw vereisten voldoen. Zie het onderstaande voorbeeld voor hulp.
+
+U kunt de gestandaardiseerde loyaliteitsgebiedgroepen ook gebruiken die Adobe verstrekt om uw loyaliteit-programma concepten op een verenigbare manier te modelleren.
+
+>[!BEGINTABS]
+
+>[!TAB  Details van de Loyalty ]
+
+Dit is een standaard XDM gebiedsgroep voor Individueel Profiel XDM, dat wordt gebruikt om de status van het loyaliteitslidmaatschap van een persoon te beschrijven door hun verslagattributen, eerder dan gebeurtenisgegevens te vangen. Gebruik deze veldgroep in uw profielschema&#39;s om vast te leggen:
+
+* **Who** het lid is in het programma (`loyaltyID`, `program`, `status`, `tier`)
+* Hun **huidige &amp; levensaldi** (`points`, `lifetimePoints`, `expiredPoints`, etc.)
+* Zeer belangrijke **lidmaatschapsdata** (`joinDate`, `upgradeDate`, `tierExpiryDate`)
+
+>[!TAB  de Details van de Gebeurtenis van de Loyalty ]
+
+De het gebiedsgroep van de Details van de Gebeurtenis van de Loyalty wordt ontworpen om loyaliteitsactiviteit op het gebeurtenisniveau, zoals punten te vangen die in een specifieke transactie worden verdiend of worden afgelost. Deze veldgroep bevat velden zoals `xdm:points` , `xdm:pointsRedeemed` , `xdm:pointsAsOfDate` en `xdm:program` . Gebruik deze veldgroep op gebeurtenisniveau in uw schema&#39;s van de Gebeurtenis van de Ervaring om te vangen:
+
+* **per-gebeurtenisbewegingen** in punten (gewonnen, ingewisseld, verlopen)
+* **Kortingen** die door loyaliteitscoupons of verwijzingen werden gedreven
+* **IDs van het Programma** en transactie IDs voor verzoening met de loyaliteitsleverancier.
+
+>[!ENDTABS]
 
 | Bron | Bestemming |
 | ---- | --- |
