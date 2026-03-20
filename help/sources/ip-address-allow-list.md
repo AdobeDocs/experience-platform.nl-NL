@@ -2,9 +2,9 @@
 description: Leer over de IP adressen die u aan uw lijst van gewenste personen moet toevoegen om de bronnen van Adobe Experience Platform met succes te gebruiken.
 title: IP de Lijst van gewenste personen van het Adres voor Bronnen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
+source-git-commit: b3c06717aac922bbb8591afe283c6066a78bf033
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -87,6 +87,21 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 - `52.228.81.0/26`
 - `52.228.86.144/29`
 - `52.246.155.224/28`
+
+>[!TAB  GBR9: Verenigd Koninkrijk ]
+
+#### GBR9: Verenigd Koninkrijk
+
+- `20.90.129.128/25`
+- `20.90.130.0/24`
+- `20.117.193.184/29`
+- `51.104.9.32/28`
+- `51.104.24.128/25`
+- `51.104.25.0/26`
+- `51.104.29.216/29`
+- `51.105.67.240/28`
+- `51.105.75.240/28`
+- `85.210.193.192/27`
 
 >[!TAB  IND2: India ]
 
