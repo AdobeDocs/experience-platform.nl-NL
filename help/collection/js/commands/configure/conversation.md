@@ -1,9 +1,10 @@
 ---
 title: gesprek
 description: Chatinstellingen voor Brand Concierge configureren.
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+exl-id: 0f64c7f1-2c28-4c67-af05-dc9ee688fdc0
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '127'
 ht-degree: 2%
 
 ---
@@ -20,6 +21,7 @@ Het `conversation` -object bevat configuratieopties voor Brand Concierge-chatses
 
 | Eigenschap | Type | Beschrijving |
 | --- | --- | --- |
+| **`collectSources`** | `boolean` | Determines if the Web SDK reads the `adobe_brand_concierge_source` query string parameter and include it in `xdm.channel.referringSource` . Wordt standaard ingesteld op `false` . |
 | **`stickyConversationSession`** | `boolean` | Hiermee wordt bepaald of de Web SDK een sessiecookie instelt om Brand Concierge-chatsessies te behouden bij het laden van pagina&#39;s. Wordt standaard ingesteld op `false` . Als u deze waarde weglaat of instelt op `false` , wordt bij elke laadpagina een nieuwe sessie gestart tijdens een chat met Brand Concierge. |
 
 ## Voorbeeld
@@ -29,6 +31,7 @@ alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   conversation: {
+    collectSources: true
     stickyConversationSession: true
   }
 });
@@ -36,4 +39,4 @@ alloy("configure", {
 
 ## gespreksinstellingen configureren met de webtagextensie SDK
 
-Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [&#x200B; montages van Brand Concierge &#x200B;](/help/tags/extensions/client/web-sdk/configure/brand-concierge.md).
+Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [ montages van Brand Concierge ](/help/tags/extensions/client/web-sdk/configure/brand-concierge.md).

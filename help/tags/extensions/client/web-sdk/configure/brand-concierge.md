@@ -2,9 +2,9 @@
 title: Brand Concierge-configuratie-instellingen
 description: Configureer sessieresistentie en streaming time-outs voor Brand Concierge-chat.
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '190'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 Met de sectie **[!UICONTROL Brand Concierge]** kunt u bepalen hoe Brand Concierge-chatsessies zich gedragen in de webextensie voor SDK-tags.
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
@@ -37,3 +37,7 @@ Een selectievakje waarmee Brand Concierge-sessies op de pagina worden voortgezet
 ## [!UICONTROL Stream timeout (seconds)]
 
 De maximumhoeveelheid tijd, in seconden, om op de brokken van de gespreksstroom te wachten alvorens een onderbrekingsfout te teweegbrengen. De standaardwaarde is `10` seconden.
+
+## [!UICONTROL Collect sources]
+
+Een checkbox die bronnen verzamelt als een gebruiker aan de pagina van een verbinding binnen een gesprek van Brand Concierge navigeerde. Standaard uitgeschakeld. Indien ingeschakeld, controleert de bibliotheek op de parameter van de querytekenreeks `adobe_brand_concierge_source` en wordt de waarde ervan ingevuld in `xdm.channel.referringSource` .

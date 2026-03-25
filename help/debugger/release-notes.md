@@ -4,24 +4,24 @@ description: De nieuwste aanvullende informatie voor Adobe Experience Platform D
 keywords: foutopsporing;Experience Platform Debugger-extensie;Chrome;extensie;aanvullende informatie
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 92%
+source-wordcount: '846'
+ht-degree: 90%
 
 ---
 
 # Aanvullende informatie over Adobe Experience Platform Debugger
 
-## Versie 1.6.4 - woensdag 6 mei 2025
+## Versie 1.6.5 - 24 maart 2026
 
-### Oplossingen en verbeteringen
+* Probleem verholpen waardoor gebeurtenissen van AppMeasurement niet konden worden verzonden tijdens actieve Assurance-sessies.
+
+## Versie 1.6.4 - woensdag 6 mei 2025
 
 * Probleem opgelost waarbij aanmelden niet beschikbaar was.
 
 ## Versie 1.6.3 - 30 april 2025
-
-### Oplossingen en verbeteringen
 
 * Probleem verholpen waarbij Foutopsporing DTM- en Tags-functies verhindert te werken.
 * Probleem verholpen waarbij Analytics Post-Processors Hits niet in logs zou worden weergegeven.
@@ -29,24 +29,15 @@ ht-degree: 92%
 
 ## Versie 1.6.2 - woensdag 1 oktober 2024
 
-### Oplossingen en verbeteringen
-
 * Foutopsporing was te gevoelig voor alle CSP-fouten. Dit probleem is nu opgelost.
 
 ## Versie 1.6.1 - 25 juli 2024
-
-### Oplossingen en verbeteringen
 
 * Er is een probleem opgelost waarbij gebruikers geen nieuwe Tags-insluitcodes konden toevoegen op pagina&#39;s zonder deze codes.
 
 ## Versie 1.6.0 - 11 juli 2024
 
-### Nieuwe functies
-
 * Gebruikers hebben de mogelijkheid om zich aan of af te melden voor het delen van technische en persoonlijke gegevens.
-
-### Oplossingen en verbeteringen
-
 * Firefox-scriptinjectie en koppeling naar privacybeleid opgelost.
 * Er zijn ontbrekende aanvragen van Analytics vastgelegd.
 * Vastlopen op pagina&#39;s met veel complexe consoleberichten is opgelost.
@@ -54,19 +45,12 @@ ht-degree: 92%
 
 ## Versie 1.5.4 - 19 december 2023
 
-### Oplossingen en verbeteringen
-
 * Er is een probleem opgelost waarbij instellingen niet werden behouden.
 * Er is een probleem opgelost waarbij de Debugger vastliep tijdens het bekijken van verwerkte resultaten van Analytics.
 
 ## Versie 1.5.3 - 6 december 2023
 
-### Nieuwe functies
-
 * De instelling Actief tabblad vergrendelen bij het openen van de Debugger is toegevoegd.
-
-### Oplossingen en verbeteringen
-
 * Er is een probleem opgelost waarbij verzoeken van Analytics ontbraken op privédomeinen.
 * Er is een probleem opgelost waarbij Activity Map-gegevens ontbraken in de verzoekentabel van Analytics.
 * Er is een probleem opgelost waarbij het weergeven van de Target Trace ertoe zou leiden dat het programma vastloopt.
@@ -76,13 +60,9 @@ ht-degree: 92%
 
 (alleen Firefox)
 
-### Oplossingen en verbeteringen
-
 * De ordening van bestanden is bijgewerkt.
 
 ## Versie 1.5.1 - 2 november 2023
-
-### Oplossingen en verbeteringen
 
 * Er zijn problemen opgelost waarbij Analytics-gebeurtenissen werden genegeerd of gedupliceerd.
 * Er is een probleem opgelost waarbij waarbij de maximale opslaggroottestatus werd overschreden.
@@ -90,12 +70,7 @@ ht-degree: 92%
 
 ## Versie 1.5.0 - 19 oktober 2023
 
-### Nieuwe functies
-
 * Koppelingen naar eigenschappen, omgeving en regels worden weergeven in het overzicht en logbestand van Tags.
-
-### Oplossingen en verbeteringen
-
 * Er is een probleem opgelost waarbij de samenvattingsgegevens van Tags niet werden verzonden.
 * Er is een probleem opgelost waarbij Assurance-sessies een CORS-fout konden opleveren
 * Er is een probleem opgelost waardoor Target Trace niet kon worden weergegeven.
