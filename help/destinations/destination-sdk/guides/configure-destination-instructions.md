@@ -284,7 +284,7 @@ Na vestiging kunt uw bestemming die de configuratieeindpunten in de vorige stapp
 Als onderdeel van het proces om uw bestemming te testen, moet u Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van soorten publiek in Experience Platform:
 
 * [Een pagina met publieksdocumentatie maken](/help/segmentation/ui/audience-portal.md#create-audience)
-* [&#x200B; creeer een analyse van de publieksvideo &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [&#x200B; creeer een analyse van de publieksvideo &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL)
 
 ## Stap 7: Uw doel publiceren {#publish-destination}
 

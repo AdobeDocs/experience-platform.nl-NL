@@ -229,7 +229,7 @@ De definities van het publiek worden binnen een uur doorgegeven aan de Edge Netw
 ### Waar kan ik de geactiveerde kenmerken in [!DNL Adobe Target] zien? {#target-activated-attributes-location}
 
 +++Antwoord
-De attributen zullen beschikbaar in Doel in [&#x200B; JSON &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [&#x200B; HTML &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) aanbiedingen zijn te gebruiken.
+De attributen zullen beschikbaar in Doel in [&#x200B; JSON &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=nl-NL) en [&#x200B; HTML &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=nl-NL) aanbiedingen zijn te gebruiken.
 +++
 
 ### Kan ik een bestemming zonder een gegevensstroom tot stand brengen en dan een gegevensstroom aan de zelfde bestemming op een recentere punt toevoegen? {#destination-without-datastream}

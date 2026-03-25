@@ -16,7 +16,7 @@ ht-degree: 0%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Berekende velden toevoegen"
 >abstract="<p>Gebruik **voegt berekende gebied** controle toe om diverse gegevenstransformaties op gegevens uit te voeren die naar de bestemmingen van de wolkenopslag worden uitgevoerd. U kunt bijvoorbeeld hashing toepassen op gegevens, arrays samenvoegen tot tekenreeksen, enzovoort."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Voorbeelden"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=nl-NL#examples" text="Voorbeelden"
 
 >[!AVAILABILITY]
 >
