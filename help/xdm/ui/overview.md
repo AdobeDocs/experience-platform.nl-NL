@@ -17,19 +17,19 @@ In de [!UICONTROL Schemas] -werkruimte in de Adobe Experience Platform-gebruiker
 
 Als u toegang wilt tot de werkruimte in de gebruikersinterface van Experience Platform, selecteert u **[!UICONTROL Schemas]** in de linkertrack.
 
-![ de werkruimte van Schema&#39;s met Schemas die in Experience Platform wordt benadrukt UI verlaten navigatie.](../images/ui/overview/schemas-tab.png)
+![&#x200B; de werkruimte van Schema&#39;s met Schemas die in Experience Platform wordt benadrukt UI verlaten navigatie.](../images/ui/overview/schemas-tab.png)
 
 ## Aan de slag
 
-Als u de werkruimte voor het eerst gebruikt, begin met de gids bij [ het onderzoeken van bestaande middelen in UI ](./explore.md) om zich met de verschillende lusjes en het schemacanvas vertrouwd te maken.
+Als u de werkruimte voor het eerst gebruikt, begin met de gids bij [&#x200B; het onderzoeken van bestaande middelen in UI &#x200B;](./explore.md) om zich met de verschillende lusjes en het schemacanvas vertrouwd te maken.
 
-Het wordt ook geadviseerd dat u de [ zelfstudie van de schemaverwezenlijking ](../tutorials/create-schema-ui.md) volgt om een voorbeeldschema tot stand te brengen en een volledige tour van de mogelijkheden van [!DNL Schema Editor] in het proces te krijgen.
+Het wordt ook geadviseerd dat u de [&#x200B; zelfstudie van de schemaverwezenlijking &#x200B;](../tutorials/create-schema-ui.md) volgt om een voorbeeldschema tot stand te brengen en een volledige tour van de mogelijkheden van [!DNL Schema Editor] in het proces te krijgen.
 
 ## XDM-bronnen maken en beheren
 
 >[!NOTE]
 >
->De acties XDM zijn beschikbaar bij de inventarislijst en de mening van het middeldetail (**[!UICONTROL More]**). De volledige acties zijn slechts op douane (huurder-bepaalde) middelen van toepassing; de standaardmiddelen hebben beperkte opties. Zie [ schema&#39;s, klassen, gebiedsgroepen, en gegevenstypes beheren: acties en schrapping ](./explore.md#xdm-resource-actions).
+>De acties XDM zijn beschikbaar bij de inventarislijst en de mening van het middeldetail (**[!UICONTROL More]**). De volledige acties zijn slechts op douane (huurder-bepaalde) middelen van toepassing; de standaardmiddelen hebben beperkte opties. Zie [&#x200B; schema&#39;s, klassen, gebiedsgroepen, en gegevenstypes beheren: acties en schrapping &#x200B;](./explore.md#xdm-resource-actions).
 
 De werkruimte van [!UICONTROL Schemas] biedt krachtige gereedschappen voor het maken en aanpassen van de XDM-bronnen van uw organisatie. Verwijs naar de volgende documentatie om te leren om elk middeltype in UI tot stand te brengen en uit te geven:
 
@@ -40,7 +40,7 @@ De werkruimte van [!UICONTROL Schemas] biedt krachtige gereedschappen voor het m
 
 ## XDM-velden definiëren
 
-Klassen, veldgroepen en gegevenstypen dragen allemaal velden bij aan een schema. U kunt uit een lijst van standaardgebiedstypes kiezen wanneer het toevoegen van gebieden aan deze middelen, en kunt gespecialiseerde gebieden voor bepaalde gebruiksgevallen ook bepalen. Verwijs naar de gids op [ bepalend XDM gebieden in UI ](./fields/overview.md) voor meer informatie.
+Klassen, veldgroepen en gegevenstypen dragen allemaal velden bij aan een schema. U kunt uit een lijst van standaardgebiedstypes kiezen wanneer het toevoegen van gebieden aan deze middelen, en kunt gespecialiseerde gebieden voor bepaalde gebruiksgevallen ook bepalen. Verwijs naar de gids op [&#x200B; bepalend XDM gebieden in UI &#x200B;](./fields/overview.md) voor meer informatie.
 
 ## Volgende stappen
 
