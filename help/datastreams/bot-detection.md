@@ -33,7 +33,7 @@ Deze beide het scoren helpt de oplossingen die het verzoek ontvangen beide verke
 >
 >Boot detection slaat beide aanvragen niet neer. Het werkt slechts het schema XDM met beide het scoren bij, en door:sturen de gebeurtenis aan de [&#x200B; datastream dienst &#x200B;](configure.md) die u vormde.
 >
->Adobe-oplossingen kunnen beide scoren op verschillende manieren verwerken. Bijvoorbeeld, gebruikt Adobe Analytics zijn eigen [&#x200B; bot filtrerende dienst &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) en gebruikt niet de score die door Edge Network wordt geplaatst. De twee diensten gebruiken de zelfde [&#x200B; IAB beide lijst &#x200B;](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), zodat is het beide het scoren identiek.
+>Adobe-oplossingen kunnen beide scoren op verschillende manieren verwerken. Bijvoorbeeld, gebruikt Adobe Analytics zijn eigen [&#x200B; bot filtrerende dienst &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=nl-NL) en gebruikt niet de score die door Edge Network wordt geplaatst. De twee diensten gebruiken de zelfde [&#x200B; IAB beide lijst &#x200B;](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), zodat is het beide het scoren identiek.
 
 ## Technische overwegingen {#technical-considerations}
 
