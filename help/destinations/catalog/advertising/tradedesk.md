@@ -3,9 +3,9 @@ keywords: reclame, bureau voor de handel, reclamebureau
 title: De verbinding van de handelsbureau
 description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Gebruik deze doelconnector om profielgegevens naar [!DNL The Trade Desk] te verzenden. Deze schakelaar verzendt gegevens naar het [!DNL The Trade Desk] eerste partijeindpunt. De integratie tussen Adobe Experience Platform en [!DNL The Trade Desk] biedt geen ondersteuning voor het exporteren van gegevens naar het eindpunt van derden voor [!DNL The Trade Desk] .
+Gebruik deze doelconnector om profielgegevens naar [!DNL The Trade Desk] te verzenden. Deze schakelaar verzendt gegevens naar het [!DNL The Trade Desk] eerste partijeindpunt. De integratie tussen [!DNL Adobe Experience Platform] en [!DNL The Trade Desk] ondersteunt het exporteren van gegevens naar het [!DNL The Trade Desk] -eindpunt niet.
 
 [!DNL The Trade Desk] is een zelfbedieningsplatform dat kopers van advertenties in staat stelt doelgerichte digitale campagnes uit te voeren voor alle weergave-, video- en mobiele-inventarisbronnen.
 
@@ -26,9 +26,9 @@ Als markator, wil ik publiek kunnen gebruiken dat van [!DNL Trade Desk IDs] of a
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL The Trade Desk] ondersteunt de activering van soorten publiek op basis van de identiteiten in de onderstaande tabel. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
+[!DNL The Trade Desk] ondersteunt de activering van soorten publiek op basis van de identiteiten in de onderstaande tabel. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
-Hieronder ziet u de identiteiten die worden ondersteund door het doel van [!DNL The Trade Desk] . Deze identiteiten kunnen worden gebruikt om het publiek te activeren naar [!DNL The Trade Desk] .
+Hieronder ziet u de identiteiten die worden ondersteund door het doel van [!DNL The Trade Desk] . Gebruik deze identiteiten om het publiek te activeren naar [!DNL The Trade Desk] .
 
 Alle identiteiten in de onderstaande tabel zijn vooraf geconfigureerd en automatisch toegewezen tijdens de activering. U hoeft deze toewijzingen niet handmatig te configureren in de activeringsworkflow.
 
@@ -36,7 +36,7 @@ Alle identiteiten in de onderstaande tabel zijn vooraf geconfigureerd en automat
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Wordt geactiveerd wanneer het profiel een GAID bevat. |
 | IDFA | Apple-id voor adverteerders | Wordt geactiveerd wanneer een IDFA aanwezig is in het profiel. |
-| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Lees het volgende document op [&#x200B; ECID &#x200B;](/help/identity-service/features/ecid.md) voor meer informatie. |
+| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze namespace kan ook door de volgende aliassen worden bedoeld: &quot;identiteitskaart van Adobe Marketing Cloud&quot;, &quot;[!DNL Adobe Experience Cloud] identiteitskaart&quot;, &quot;[!DNL Adobe Experience Platform] identiteitskaart&quot;. Lees het volgende document op [ ECID ](/help/identity-service/features/ecid.md) voor meer informatie. |
 | [!DNL Tradedesk] | [!DNL TDID] in het [!DNL The Trade Desk] -platform | Wordt geactiveerd wanneer een profiel een ECID heeft en er in Experience Platform een ECID-koppeling bestaat tussen de handels-ID. |
 
 {style="table-layout:auto"}
@@ -47,8 +47,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -58,10 +58,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek naar de bestemming. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ De vereisten hangen van welke identiteitstypes af u voor publieksactivering van 
 
 **voor op cookie-gebaseerde het richten op[!DNL The Trade Desk]**, zorg ervoor dat een afbeelding tussen ECID en [!DNL Trade Desk ID] wordt gevestigd. Voer de onderstaande stappen uit om dit te doen:
 
-1. **laat de synchronisatiefunctionaliteit van identiteitskaart** toe: Als dit uw eerste vestiging [!DNL The Trade Desk ID] activering is en u hebt niet de [&#x200B; functionaliteit van de de synchronisatieidentiteitskaart &#x200B;](https://experienceleague.adobe.com/nl/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) toegelaten, contacteer Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten.
+1. **laat de synchronisatiefunctionaliteit van identiteitskaart** toe: Als dit uw eerste vestiging [!DNL The Trade Desk ID] activering is en u hebt niet de [ functionaliteit van de de synchronisatieidentiteitskaart ](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) toegelaten, contacteer Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten.
    * Als u eerder [!DNL The Trade Desk] -integratie hebt ingesteld in Audience Manager, worden de bestaande ID-syncs automatisch overgedragen naar Experience Platform.
 
 2. **Instrument uw Web-pagina&#39;s**: Voer code op uw Web-pagina&#39;s uit om afbeeldingen tussen [!DNL The Trade Desk ID] en Adobe ECID tot stand te brengen. Zo kan Experience Platform ID&#39;s van handelsvertegenwoordigingen koppelen aan uw klantprofielen.
@@ -94,13 +94,13 @@ De vereisten hangen van welke identiteitstypes af u voor publieksactivering van 
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven.
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [&#x200B; vestiging &#x200B;](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -116,7 +116,7 @@ Terwijl [&#x200B; vestiging &#x200B;](../../ui/connect-destination.md) deze best
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -124,12 +124,12 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [&#x200B; publieksgegevens aan het stromen publiek de uitvoerbestemmingen &#x200B;](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
-In het [&#x200B; programma van het Publiek &#x200B;](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u uw publiek aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in het bestemmingsplatform manueel in kaart brengen.
+In het [ programma van het Publiek ](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u uw publiek aan hun overeenkomstige identiteitskaart of vriendschappelijke naam in het bestemmingsplatform manueel in kaart brengen.
 
 Bij het toewijzen van soorten publiek raadt Adobe u aan de Experience Platform-publieksnaam of een kortere vorm ervan te gebruiken, zodat u deze eenvoudig kunt gebruiken. De gebruikers-id of naam in uw bestemming hoeft echter niet overeen te komen met de naam in uw Experience Platform-account. Elke waarde die u in het toewijzingsveld invoegt, wordt weerspiegeld door het doel.
 
@@ -139,7 +139,7 @@ Bij het toewijzen van soorten publiek raadt Adobe u aan de Experience Platform-p
 >id="platform_destinations_required_mappings_ttd"
 >title="Vooraf geconfigureerde toewijzingssets"
 >abstract="Wij hebben deze vier kaartreeksen voor u vooraf gevormd. Wanneer u gegevens activeert op de handelsbank, hoeven de profielen die voor het geactiveerde publiek worden gekwalificeerd niet noodzakelijkerwijs alle vier de identiteiten te hebben aanwezig op de profielen, aangezien deze bestemming met om het even welke doelidentiteiten zal werken die hier worden getoond. <br> Voor op cookies gebaseerde activering op basis van de handels-deskid hebt u ECID nodig die aanwezig is op het profiel en een id-synchronisatietoewijzing tussen de handelsbureau-id en ECID."
->additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Lees meer over de vooraf geconfigureerde toewijzingen"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Lees meer over de vooraf geconfigureerde toewijzingen"
 
 De volgende identiteitstoewijzingen zijn **vooraf gevormd en automatisch bevolkt** voor u in het werkschema van de publiekactivering:
 
@@ -148,7 +148,7 @@ De volgende identiteitstoewijzingen zijn **vooraf gevormd en automatisch bevolkt
 * ECID (Experience Cloud-ID)
 * [!DNL The Trade Desk ID]
 
-![&#x200B; Schermschot die de verplichte afbeeldingen &#x200B;](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png) tonen
+![ Schermschot die de verplichte afbeeldingen ](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png) tonen
 
 Deze toewijzingen worden grijs en alleen-lezen weergegeven. U hoeft niets in deze stap te configureren. Selecteer **[!UICONTROL Next]** om door te gaan.
 
@@ -161,7 +161,7 @@ Experience Platform controleert automatisch elk profiel dat tot in de activering
 **Cookie-Gebaseerd die ([!DNL Trade Desk ID]) richt:** vereist allebei:
 
 * ECID aanwezig op profiel
-* Een synchronisatie van identiteitskaart afbeelding tussen [!DNL Trade Desk ID] en ECID (zoals die in de [&#x200B; wordt beschreven eerste vereisten &#x200B;](#prerequisites) sectie)
+* Een synchronisatie van identiteitskaart afbeelding tussen [!DNL Trade Desk ID] en ECID (zoals die in de [ wordt beschreven eerste vereisten ](#prerequisites) sectie)
 
 **Veelvoudig IDs gedrag:** als een profiel veelvoudige gesteunde identiteiten bevat, zal elke identiteit afzonderlijk aan [!DNL The Trade Desk] worden geactiveerd. Dit zorgt voor maximaal bereik en flexibiliteit bij de activering van uw publiek.
 

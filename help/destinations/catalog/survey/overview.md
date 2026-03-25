@@ -3,10 +3,10 @@ keywords: Onderzoeksbestemmingen;enquête;voorspelling;inmoment;web-onderscheppi
 title: Overzicht van de enquêtedoelen
 description: De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klantenterugkoppelen in echt - tijd door gegevenselementen, en delen gegevens met Adobe Experience Platform.
 exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 0%
+source-wordcount: '98'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klantenterugkoppelen in echt - tijd door gegevenselementen, en delen gegevens met Adobe Experience Platform.
+De platforms van enquêtes ontdekken onderzoeksgebeurtenissen, vangen klant terugkoppelt in echt - tijd door gegevenselementen, en delen gegevens met [!DNL Adobe Experience Platform].
 
 ## Ondersteunde enquêtebestemmingen {#supported-destinations}
 

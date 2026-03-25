@@ -3,9 +3,9 @@ keywords: analytische bestemmingen;analytische bestemming
 title: Overzicht van analysedoelen
 description: De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats in wisselwerking staan en verzamelen gegevens om het gedrag van uw publiek te begrijpen. Deze platforms bieden unieke inzichten in de betrokkenheid en conversie van uw meest waardevolle bezoekers.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ De analytische bestemmingen volgen hoe de bezoekers met inhoud op uw plaats in w
 
 ## Ondersteunde analysedoelen {#supported-destinations}
 
-Momenteel ondersteunt Adobe Experience Platform de hieronder vermelde analytische doelen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
+Momenteel ondersteunt [!DNL Adobe Experience Platform] de onderstaande analytische doelen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 * [De extensie Adform Website Tracking](adform.md)
 * [Adobe Analytics-extensie](adobe-analytics.md)

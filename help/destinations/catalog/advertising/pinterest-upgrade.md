@@ -4,9 +4,9 @@ description: Pinterest is bezig de API voor v4-adverteerders die momenteel door 
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Wat gebeurt er? {#what-is-happening}
 
-Pinterest heeft v4 adverteerder API verouderd die door de [&#x200B; bestemming van Pinterest &#x200B;](/help/destinations/catalog/advertising/pinterest.md) in Real-Time CDP werd gebruikt. Adobe werkte de bestemming bij om [&#x200B; v5 adverteerder API &#x200B;](https://developers.pinterest.com/docs/getting-started/migration/) te gebruiken. Lees deze pagina voor meer informatie over uw handelingstitems voor een naadloze overgang naar de nieuwe API zonder de Pinterest-campagnes te onderbreken.
+Pinterest heeft v4 adverteerder API verouderd die door de [ bestemming van Pinterest ](/help/destinations/catalog/advertising/pinterest.md) in [!DNL Real-Time CDP] werd gebruikt. Adobe werkte de bestemming bij om [ v5 adverteerder API ](https://developers.pinterest.com/docs/getting-started/migration/) te gebruiken. Lees deze pagina voor meer informatie over uw handelingstitems voor een naadloze overgang naar de nieuwe API zonder de Pinterest-campagnes te onderbreken.
 
 ## Waarom word ik op de hoogte gesteld? {#why-notified}
 
@@ -31,16 +31,16 @@ Adobe heeft een nieuwe Pinterest-doelkaart uitgebracht die gebruikmaakt van de P
 
 ## Moet ik iets doen om mijn actieve publiek te laten functioneren? {#action-required}
 
-Ja, voor 18 januari 2024 moet u zich verifiëren bij de nieuwe Pinterest-bestemming met uw Pinterest-advertentieaccount in Real-Time CDP. Zie de gedetailleerde instructies hieronder.
+Ja, voor 18 januari 2024 moet u zich verifiëren bij de nieuwe Pinterest-bestemming met uw Pinterest-advertentieaccount in [!DNL Real-Time CDP] . Zie de gedetailleerde instructies hieronder.
 
 ### Opnieuw verifiëren bij Pinterest {#reauthenticate}
 
 1. Ga naar **[!UICONTROL Destinations > Accounts]** en gebruik het filter op het scherm om alleen de Pinterest-bestemming te filteren.
-   ![&#x200B; slechts de rekeningen van Pinterest van de Filter &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
+   ![ slechts de rekeningen van Pinterest van de Filter ](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
 2. Voor de **bestemming van Pinterest**, selecteer het drie puntensymbool... en selecteer **[!UICONTROL Edit details]**.
-   ![&#x200B; uitgezocht geef details &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png) uit
+   ![ uitgezocht geef details ](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png) uit
 3. Selecteer **[!UICONTROL Reconnect OAuth]** en meld u aan bij uw Pinterest-account.
-   ![&#x200B; Uitgezocht opnieuw verbind OAuth &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
+   ![ Uitgezocht opnieuw verbind OAuth ](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. Ga naar het actiepunt in de onderstaande sectie
 
 ### Stroom naar nieuwe bestemming inschakelen {#disable-old-enable-new-flows}
@@ -48,9 +48,9 @@ Ja, voor 18 januari 2024 moet u zich verifiëren bij de nieuwe Pinterest-bestemm
 Vervolgens moet u de gegevensstromen naar de nieuwe **[!UICONTROL Pinterest]** -kaart inschakelen.
 
 1. Ga naar **[!UICONTROL Destinations > Browse]** en gebruik het filter op het scherm om alleen het **[!UICONTROL Pinterest]** -doel te filteren.
-   ![&#x200B; dataflows van Pinterest van de Filter slechts in het Browse lusje &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Selecteer de hyperlinked verbindingsnaam (de campagne van de Loyalty in het het schermschot hierboven) aan de **[!UICONTROL Pinterest]** bestemming en schakelaar **[!UICONTROL Enable]** knevel aan **&#x200B;**.
-   ![&#x200B; knevel aan voor nieuwe verbindingen en weg voor oude verbindingen &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+   ![ dataflows van Pinterest van de Filter slechts in het Browse lusje ](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
+2. Selecteer de hyperlinked verbindingsnaam (de campagne van de Loyalty in het het schermschot hierboven) aan de **[!UICONTROL Pinterest]** bestemming en schakelaar **[!UICONTROL Enable]** knevel aan ****.
+   ![ knevel aan voor nieuwe verbindingen en weg voor oude verbindingen ](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
 
@@ -64,7 +64,7 @@ Ja, zie hieronder:
 
 **tegen 16 november, 2023**: De nieuwe bestemming is klaar, en u zou twee kaarten van Pinterest naast elkaar in de catalogus moeten zien tot Pinterest ophoudt ondersteunend oude v4 API. Alle bestaande gegevens worden naar de huidige Pinterest-kaart gekopieerd.
 
-![&#x200B; Oude en nieuwe bestemming van Pinterest zij aan zij &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
+![ Oude en nieuwe bestemming van Pinterest zij aan zij ](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
 <!--
 
@@ -75,9 +75,9 @@ Ja, zie hieronder:
 
 -->
 
-**tegen 15 December, 2023**: <span class="preview"> actie van de Klant 1 </span>. U dient opnieuw te worden geverifieerd op Pinterest, zodat de nieuwe kaart is aangesloten op Pinterest. Volledige instructies van de mening in [&#x200B; deze sectie &#x200B;](#reauthenticate).
+**tegen 15 December, 2023**: <span class="preview"> actie van de Klant 1 </span>. U dient opnieuw te worden geverifieerd op Pinterest, zodat de nieuwe kaart is aangesloten op Pinterest. Volledige instructies van de mening in [ deze sectie ](#reauthenticate).
 
-<span class="preview"> actie 2 van de Klant </span>.Dan, moet u de dataflows in de nieuwe kaart toelaten. Volledige instructies van de mening in [&#x200B; deze sectie &#x200B;](#disable-old-enable-new-flows).
+<span class="preview"> actie 2 van de Klant </span>.Dan, moet u de dataflows in de nieuwe kaart toelaten. Volledige instructies van de mening in [ deze sectie ](#disable-old-enable-new-flows).
 
 <!--
 
@@ -87,7 +87,7 @@ Ja, zie hieronder:
 
 -->
 
-**na 18 Januari, 2024**: <span class="preview"> Pinterest heeft toegang tot V4 adverteerder API uitgezet. Om het even welke klanten van Real-Time CDP die niet aan de nieuwe bestemming hebben bevorderd zullen nu hun gegevensstromen aan de bestemming van Pinterest ontbreken. [&#x200B; opnieuw voor authentiek verklaren aan Pinterest &#x200B;](#reauthenticate) en [&#x200B; laat de dataflows &#x200B;](#disable-old-enable-new-flows) aan de promotiebestemming toe om uw campagnes aan Pinterest te hervatten.</span>
+**na 18 Januari, 2024**: <span class="preview"> Pinterest heeft toegang tot V4 adverteerder API uitgezet. Om het even welke [!DNL Real-Time CDP] klanten die niet aan de nieuwe bestemming hebben bevorderd zullen nu hun gegevensstromen aan de bestemming van Pinterest ontbreken. [ opnieuw voor authentiek verklaren aan Pinterest ](#reauthenticate) en [ laat de dataflows ](#disable-old-enable-new-flows) aan de promotiebestemming toe om uw campagnes aan Pinterest te hervatten.</span>
 
 <!--
 

@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 description: Leer hoe te om de einddatum voor dataset de uitvoerdataflows met een huidige einddatum van 1 Mei, 2025 bij te werken.
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 ## Wat gebeurt er? {#what-is-happening}
 
-[&#x200B; September 2024 versie van Experience Platform &#x200B;](/help/release-notes/latest/latest.md#destinations) introduceerde de optie om een `endTime` datum voor de gegevensstroom van de uitvoerdataset te plaatsen. Adobe heeft ook een standaardeinddatum van 1 Mei, 2025, voor alle gegevens van de datasetuitvoer gecreeerd *vóór de versie van september 2024* geïntroduceerd. Deze gegevensstromen tonen momenteel een bericht gelijkend op hieronder getoond.
+[ September 2024 versie van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceerde de optie om een `endTime` datum voor de gegevensstroom van de uitvoerdataset te plaatsen. Adobe heeft ook een standaardeinddatum van 1 Mei, 2025, voor alle gegevens van de datasetuitvoer gecreeerd *vóór de versie van september 2024* geïntroduceerd. Deze gegevensstromen tonen momenteel een bericht gelijkend op hieronder getoond.
 
-![&#x200B; bericht UI over de behoefte om de einddatum van de dataflow van de uitvoerdataset bij te werken.](/help/destinations/assets/ui/export-datasets/update-end-date.png)
+![ bericht UI over de behoefte om de einddatum van de dataflow van de uitvoerdataset bij te werken.](/help/destinations/assets/ui/export-datasets/update-end-date.png)
 
 **het punt van de Actie**: Voor om het even welk van deze dataflows, moet u de einddatum manueel bijwerken alvorens het verloopt; anders, zal uw uitvoer ophouden. Gebruik de gebruikersinterface van Experience Platform om te bepalen welke gegevensstromen op 1 mei 2025 worden geplaatst te stoppen.
 
@@ -38,21 +38,21 @@ Gebruik de gebruikersinterface van Experience Platform om gegevensstromen met ee
 
 Navigeer aan **Doelen > doorbladeren** en zoek het gegevenstype **Datasets** in de **kolom van het Type van Gegevens**, zoals hieronder getoond. Selecteer de gewenste gegevensstromen om hen te inspecteren.
 
-![&#x200B; de uitvoerdataflows van de Dataset die in het Browse lusje worden benadrukt.](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
+![ de uitvoerdataflows van de Dataset die in het Browse lusje worden benadrukt.](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
 
 ### De einddatum van de gegevensstromen bijwerken {#update-end-date}
 
 De einddatum van gegevensstromen bijwerken:
 
 1. In de dataflows die u voor inspectie in de vorige stap hebt geselecteerd, uitgezochte **datasets van de Uitvoer**.
-   ![&#x200B; de controle van de datasets van de Uitvoer die in Browse tabel wordt benadrukt.](/help/destinations/assets/ui/export-datasets/export-datasets-control-highlighted.png)
+   ![ de controle van de datasets van de Uitvoer die in Browse tabel wordt benadrukt.](/help/destinations/assets/ui/export-datasets/export-datasets-control-highlighted.png)
 2. In het werkschema, ga aan de **Plannende** stap te werk en selecteer **uitgeef programma**.
-   ![&#x200B; geeft programmacontrole uit die in de Plannende stap wordt benadrukt.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlighted.png)
+   ![ geeft programmacontrole uit die in de Plannende stap wordt benadrukt.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlighted.png)
 3. Kies een gewenste einddatum na 1 Mei, 2025 en selecteer **sparen**.
-   ![&#x200B; Uitgezochte controle van de einddatum die in de Plannende stap wordt benadrukt.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
+   ![ Uitgezochte controle van de einddatum die in de Plannende stap wordt benadrukt.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. Ga naar het einde van de workflow en sla uw updates op.
 
-Voor uitgebreide informatie over de het plannen stap, lees het [&#x200B; leerprogramma van de de uitvoerdatasets UI &#x200B;](/help/destinations/api/export-datasets.md#scheduling).
+Voor uitgebreide informatie over de het plannen stap, lees het [ leerprogramma van de de uitvoerdatasets UI ](/help/destinations/api/export-datasets.md#export-datasets-by-using-the).
 
 ## De API gebruiken om de einddatum bij te werken {#use-api}
 

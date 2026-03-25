@@ -3,9 +3,9 @@ title: Accountpubliek naar doelen activeren
 type: Tutorial
 description: Leer hoe u het publiek van een account activeert voor doelen
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De functionaliteit om rekeningspubliek aan bestemmingen te activeren is beschikbaar voor bedrijven die [&#x200B; zaken-aan-Zaken &#x200B;](/help/rtcdp/overview.md#rtcdp-b2b) en [&#x200B; zaken-aan-Persoon &#x200B;](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-Time Customer Data Platform kopen.
+>De functionaliteit om rekeningspubliek aan bestemmingen te activeren is beschikbaar voor bedrijven die [ zaken-aan-Zaken ](/help/rtcdp/overview.md#rtcdp-b2b) en [ zaken-aan-Persoonlijke ](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van [!DNL Real-Time Customer Data Platform] kopen.
 
-Dit artikel verklaart het werkschema wordt vereist om [&#x200B; rekeningspubliek &#x200B;](/help/segmentation/types/account-audiences.md) van Adobe Experience Platform naar uw aangewezen bestemming uit te voeren dat.
+Dit artikel verklaart het werkschema wordt vereist om [ rekeningspubliek ](/help/segmentation/types/account-audiences.md) van [!DNL Adobe Experience Platform] naar uw aangewezen bestemming uit te voeren dat.
 
 ## Ondersteunde doelen {#supported-destinations}
 
-Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer de tab **[!UICONTROL Catalog]** . Gebruik het filter **[!UICONTROL Data types]** en selecteer **[!UICONTROL Accounts]** om de doelen weer te geven die activering van accountsoorten ondersteunen. Momenteel, is het uitvoeren van rekeningspubliek beschikbaar slechts aan bepaalde wolkenopslagbestemmingen ([&#x200B; Amazon S3 &#x200B;](/help/destinations/catalog/cloud-storage/amazon-s3.md), [&#x200B; ADLS Gen 2 &#x200B;](/help/destinations/catalog/cloud-storage/adls-gen2.md), [&#x200B; Opslag van de Blob van Azure &#x200B;](/help/destinations/catalog/cloud-storage/azure-blob.md), [&#x200B; Gegevens Landing Zone &#x200B;](/help/destinations/catalog/cloud-storage/data-landing-zone.md), en [&#x200B; SFTP &#x200B;](/help/destinations/catalog/cloud-storage/sftp.md)) en [&#x200B; Bombora &#x200B;](/help/destinations/catalog/advertising/bombora.md), [&#x200B; Demandbase &#x200B;](/help/destinations/catalog/advertising/demandbase.md) en [&#x200B; (Bedrijven) LinkedIn Gelijke Doelstellingen &#x200B;](/help/destinations/catalog/social/linkedin-b2b.md) streamingdoelen.
+Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer de tab **[!UICONTROL Catalog]** . Gebruik het filter **[!UICONTROL Data types]** en selecteer **[!UICONTROL Accounts]** om de doelen weer te geven die activering van accountsoorten ondersteunen. Momenteel, is het uitvoeren van rekeningspubliek beschikbaar slechts aan bepaalde wolkenopslagbestemmingen ([ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ ADLS Gen 2 ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ Opslag van de Blob van Azure ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ Gegevens Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), en [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md)) en [ Bombora ](/help/destinations/catalog/advertising/bombora.md), [ Demandbase ](/help/destinations/catalog/advertising/demandbase.md) en [ (Bedrijven) LinkedIn Gelijke Doelstellingen ](/help/destinations/catalog/social/linkedin-b2b.md) streamingdoelen.
 
-![&#x200B; Doelen die rekeningspubliek steunen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+![ Doelen die rekeningspubliek steunen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
 ## Video-overzicht {#video-overview}
 
@@ -32,12 +32,12 @@ Bekijk de onderstaande video voor een overzicht van het maken en activeren van a
 
 ## Vereisten {#prerequisites}
 
-* U moet eerst [&#x200B; rekeningsprofielen &#x200B;](/help/rtcdp/accounts/account-profile-overview.md) opnemen en [&#x200B; rekeningspubliek &#x200B;](/help/segmentation/types/account-audiences.md) creëren alvorens u hen aan stroomafwaartse bestemmingen kunt activeren.
-* Als u het publiek van een account naar bestemmingen wilt activeren, moet u verbinding hebben met een doel. Als u dit niet reeds hebt gedaan, ga naar de [&#x200B; bestemmingscatalogus &#x200B;](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken. Lees het leerprogramma UI op [&#x200B; verbindend met bestemmingen &#x200B;](./connect-destination.md) voor meer informatie.
+* U moet eerst [ rekeningsprofielen ](/help/rtcdp/accounts/account-profile-overview.md) opnemen en [ rekeningspubliek ](/help/segmentation/types/account-audiences.md) creëren alvorens u hen aan stroomafwaartse bestemmingen kunt activeren.
+* Als u het publiek van een account naar bestemmingen wilt activeren, moet u verbinding hebben met een doel. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken. Lees het leerprogramma UI op [ verbindend met bestemmingen ](./connect-destination.md) voor meer informatie.
 
 ### Vereiste machtigingen {#permissions}
 
-Om rekeningspubliek te activeren, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Activate Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+Om rekeningspubliek te activeren, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Activate Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
 Blader in de doelcatalogus om ervoor te zorgen dat u over de benodigde machtigingen beschikt om het accountpubliek te activeren. Als een bestemming een **[!UICONTROL Activate]** controle heeft, dan hebt u de aangewezen toestemmingen.
 
@@ -47,25 +47,25 @@ Volg de instructies om een bestemming te selecteren waar u uw datasets kunt uitv
 
 1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteer de tab **[!UICONTROL Catalog]** .
 
-   ![&#x200B; de cataloguslusje van de Bestemming met benadrukte controle van de Catalogus.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
+   ![ de cataloguslusje van de Bestemming met benadrukte controle van de Catalogus.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
 1. Selecteer **[!UICONTROL Activate]** op de kaart die overeenkomt met het doel waarnaar u gegevenssets wilt exporteren.
 
 >[!TIP]
 >
->De bestemmingen die rekeningspubliek kunnen uitvoeren worden vermeld met een pictogram in de hogere juiste hoek van de kaart, gelijkend op de hieronder benadrukte bestemming, of u kunt de filter van het gegevenstype aan slechts vertoningsbestemmingen gebruiken die rekeningspubliek kunnen uitvoeren, zoals [&#x200B; getoond hoger op de pagina &#x200B;](#supported-destinations).
+>De bestemmingen die rekeningspubliek kunnen uitvoeren worden vermeld met een pictogram in de hogere juiste hoek van de kaart, gelijkend op de hieronder benadrukte bestemming, of u kunt de filter van het gegevenstype aan slechts vertoningsbestemmingen gebruiken die rekeningspubliek kunnen uitvoeren, zoals [ getoond hoger op de pagina ](#supported-destinations).
 
-![&#x200B; de bestemmingspagina van de Vereis die benadrukte profielpubliek kan uitvoeren.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
+![ de bestemmingspagina van de Vereis die benadrukte profielpubliek kan uitvoeren.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. Selecteer **[!UICONTROL Data type Accounts]**, gevolgd door de doelverbinding waarnaar u gegevenssets wilt exporteren en selecteer vervolgens **[!UICONTROL Next]** .
 
 >[!TIP]
 > 
->Als u opstelling een nieuwe bestemming wilt om rekeningspubliek te activeren, selecteer **[!UICONTROL Configure new destination]** om [&#x200B; te teweegbrengen verbind met bestemmings &#x200B;](/help/destinations/ui/connect-destination.md) werkschema en [&#x200B; uitgezochte rekeningen als gegevenstype &#x200B;](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
+>Als u opstelling een nieuwe bestemming wilt om rekeningspubliek te activeren, selecteer **[!UICONTROL Configure new destination]** om [ te teweegbrengen verbind met bestemmings ](/help/destinations/ui/connect-destination.md) werkschema en [ uitgezochte rekeningen als gegevenstype ](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
 
-![&#x200B; benadrukte het activeringswerkschema van de Bestemming met rekeningscontrole.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
+![ benadrukte het activeringswerkschema van de Bestemming met rekeningscontrole.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
 
-1. Ga aan de volgende sectie te werk aan [&#x200B; selecteer uw rekeningspubliek &#x200B;](#select-profile-audiences) voor de uitvoer.
+1. Ga aan de volgende sectie te werk aan [ selecteer uw rekeningspubliek ](#select-profile-audiences) voor de uitvoer.
 
 ## Uw accountpubliek selecteren {#select-account-audiences}
 
@@ -75,15 +75,15 @@ Gebruik de selectievakjes links van de namen van accountgebruikers om het publie
 >
 >Slechts worden de *rekeningspubliek* getoond in deze mening, en geen andere publiekstypes getoond.
 
-![&#x200B; de uitvoerwerkschema tonen van de Dataset die de Uitgezochte publieksstap tonen waar u kunt selecteren welk accountpubliek om uit te voeren.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
+![ de uitvoerwerkschema tonen van de Dataset die de Uitgezochte publieksstap tonen waar u kunt selecteren welk accountpubliek om uit te voeren.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
 ## Planning en volgende stappen {#scheduling-and-next-steps}
 
-Lees de zelfstudie over het activeren van gegevens naar bestandsbestemmingen voor de rest van de activeringsworkflow voor het exporteren van accountsoorten. Ga van de [&#x200B; stap van de de uitvoeruitvoer van het programmapubliek &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) verder. Als u het publiek van de account activeert naar het doel van **[!UICONTROL (Companies) LinkedIn Matched Audiences]** , leest u de zelfstudie over het activeren van streaming doelen. Ga van de [&#x200B; toewijzingsstap &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) verder.
+Lees de zelfstudie over het activeren van gegevens naar bestandsbestemmingen voor de rest van de activeringsworkflow voor het exporteren van accountsoorten. Ga van de [ stap van de de uitvoeruitvoer van het programmapubliek ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) verder. Als u het publiek van de account activeert naar het doel van **[!UICONTROL (Companies) LinkedIn Matched Audiences]** , leest u de zelfstudie over het activeren van streaming doelen. Ga van de [ toewijzingsstap ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) verder.
 
 >[!NOTE]
 >
->In de het plannen stap wanneer het uitvoeren van rekeningspubliek naar de bestemmingen van de wolkenopslag, staat het werkschema om rekeningspubliek slechts te activeren u toe om [&#x200B; volledige dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [&#x200B; stijgende dossiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _op een dagelijks programma_ uit te voeren. Uuruitvoer wordt niet ondersteund. **[!UICONTROL After audience evaluation]** is het enige ondersteunde evaluatietype.
+>In de het plannen stap wanneer het uitvoeren van rekeningspubliek naar de bestemmingen van de wolkenopslag, laat het werkschema om rekeningspubliek te activeren slechts u [ volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _op een dagelijks programma_ uitvoeren. Uuruitvoer wordt niet ondersteund. **[!UICONTROL After audience evaluation]** is het enige ondersteunde evaluatietype.
 
 ## Belangrijke callouts en bekende beperkingen {#important-callouts-known-limitations}
 
@@ -93,19 +93,19 @@ Let op de volgende belangrijke callouts en bekende beperkingen voor de algemene 
 
 Houd er bij het activeren van het accountpubliek naar het **[!UICONTROL (Companies) LinkedIn Matched Audiences]** -doel rekening mee dat de volgende twee toewijzingsparen verplicht zijn om gegevens te exporteren:
 
-![&#x200B; LinkedIn afbeelding vereiste gebieden.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
+![ LinkedIn afbeelding vereiste gebieden.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
 | Source-veld | Doelveld |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (selecteer dit veld in de **[!UICONTROL Select Identity namespace]** -weergave wanneer u de **[!UICONTROL Target Field]** selecteert). <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om rekeningspubliek aan bestemmingen te activeren.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om rekeningspubliek aan bestemmingen te activeren."){width="100" zoomable="yes"} |
+| `accountKey.sourceKey` | `primaryId` (selecteer dit veld in de **[!UICONTROL Select Identity namespace]** -weergave wanneer u de **[!UICONTROL Target Field]** selecteert). <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om rekeningspubliek aan bestemmingen te activeren.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om rekeningspubliek aan bestemmingen te activeren."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
 ### Handhaving van gegevensbeheer {#data-governance-enforcement}
 
-De toestemming wordt afgedwongen op de persoon of het profielniveau voor *klant en vooruitgangspubliek*. Daarom [&#x200B; wordt de evaluatie van het toestemmingsbeleid &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) momenteel niet gesteund wanneer het activeren van rekeningspubliek aan bestemmingen. In de revisiestap van de activeringsworkflow ziet u een grijs besturingselement voor **[!UICONTROL View applicable consent policies]** .
+De toestemming wordt afgedwongen op de persoon of het profielniveau voor *klant en vooruitgangspubliek*. Daarom [ wordt de evaluatie van het toestemmingsbeleid ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) momenteel niet gesteund wanneer het activeren van rekeningspubliek aan bestemmingen. In de revisiestap van de activeringsworkflow ziet u een grijs besturingselement voor **[!UICONTROL View applicable consent policies]** .
 
-![&#x200B; stap van het Overzicht van de activeer het werkschema van het rekeningspubliek met de controle van de toestemmingshandhaving grayed uit.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
+![ stap van het Overzicht van de activeer het werkschema van het rekeningspubliek met de controle van de toestemmingshandhaving grayed uit.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-Andere mechanismen van het gegevensbeheer in Real-Time CDP zoals [&#x200B; de controles van het het beleid van het gegevensgebruik &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) en [&#x200B; op attribuut-gebaseerde toegangsbeheer &#x200B;](/help/destinations/home.md#attribute-based-access) worden gesteund.
+Andere mechanismen van het gegevensbeheer in [!DNL Real-Time CDP] zoals [ de controles van het het beleid van het gegevensgebruik ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) en [ op attribuut-gebaseerde toegangsbeheer ](/help/destinations/home.md#attribute-based-access) worden gesteund.

@@ -3,52 +3,52 @@ keywords: doelextensie;target
 title: Adobe Target-extensie
 description: De Adobe Target-extensie is een personalisatiebestemming in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 62f8c641-7942-41d5-bd86-681c2c5efa6c
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
-# Adobe Target-extensie
+# [!DNL Adobe Target] extensie
 
 ## Overzicht {#overview}
 
-Adobe Target is de Adobe Experience Cloud-oplossing die alles biedt wat u nodig hebt om de ervaring van uw klanten op maat te maken en aan te passen en zo uw omzet op uw website en mobiele sites, apps, sociale media en andere digitale kanalen te maximaliseren.
+[!DNL Adobe Target] is de [!DNL Adobe Experience Cloud] -oplossing die alles biedt wat u nodig hebt om de ervaring van uw klanten op maat te maken en aan te passen om uw omzet op uw website en mobiele sites, apps, sociale media en andere digitale kanalen te maximaliseren.
 
-Adobe Target is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [&#x200B; Adobe Exchange &#x200B;](https://exchange.adobe.com/experiencecloud.details.100162.html).
+[!DNL Adobe Target] is een personalisatie-uitbreiding in [!DNL Adobe Experience Platform] . Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [ Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.100162.html).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [&#x200B; overzicht van markeringsuitbreidingen &#x200B;](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
-![&#x200B; de uitbreiding van Adobe Target &#x200B;](../../assets/catalog/personalization/adobe-target/catalog.png)
+![ de uitbreiding van Adobe Target ](../../assets/catalog/personalization/adobe-target/catalog.png)
 
 ## Vereisten {#prerequisites}
 
 Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags nodig in [!DNL Adobe Experience Platform] . Tags worden aan [!DNL Adobe Experience Cloud] klanten aangeboden als een opgenomen functie voor het toevoegen van waarden. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 
-De Adobe Target-extensie installeren:
+De extensie [!DNL Adobe Target] installeren:
 
-In de [&#x200B; interface van Experience Platform &#x200B;](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
-Selecteer het doel en selecteer vervolgens **[!UICONTROL Configure]** in de rechterrails. Als het besturingselement **[!UICONTROL Configure]** grijs wordt weergegeven, ontbreekt de machtiging **[!UICONTROL manage_properties]** . Zie [&#x200B; Eerste vereisten &#x200B;](#prerequisites).
+Selecteer het doel en selecteer vervolgens **[!UICONTROL Configure]** in de rechterrails. Als het besturingselement **[!UICONTROL Configure]** grijs wordt weergegeven, ontbreekt de machtiging **[!UICONTROL manage_properties]** . Zie [ Eerste vereisten ](#prerequisites).
 
-Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Leer over eigenschappen in de [&#x200B; tagdocumentatie &#x200B;](../../../tags/ui/administration/companies-and-properties.md).
+Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook een nieuwe eigenschap maken. Een bezit is een inzameling van regels, gegevenselementen, gevormde uitbreidingen, milieu&#39;s, en bibliotheken. Leer over eigenschappen in de [ tagdocumentatie ](../../../tags/ui/administration/companies-and-properties.md).
 
 De werkstroom neemt u aan de UI van de Inzameling van Gegevens om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [&#x200B; de uitbreidingspagina van Adobe Target &#x200B;](../../../tags/extensions/client/target/overview.md) in de markeringsdocumentatie.
+Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [ de uitbreidingspagina van Adobe Target ](../../../tags/extensions/client/target/overview.md) in de markeringsdocumentatie.
 
-U kunt de uitbreiding direct in [&#x200B; de Inzameling UI van Gegevens &#x200B;](https://experience.adobe.com/#/data-collection/) ook installeren. Zie de gids op [&#x200B; toevoegend een nieuwe uitbreiding &#x200B;](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
+U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Zie de gids op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
 
 ## De extensie gebruiken {#how-to-use}
 
-Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen. In de UI van de Inzameling van Gegevens, kunt u opstellingsregels voor uw geïnstalleerde uitbreidingen om gebeurtenisgegevens naar de uitbreidingsbestemming slechts in bepaalde situaties te verzenden. Voor meer informatie over vestiging regels voor uw uitbreidingen, zie het overzicht op [&#x200B; regels &#x200B;](../../../tags/ui/managing-resources/rules.md) in de markeringsdocumentatie.
+Nadat u de extensie hebt geïnstalleerd, kunt u regels instellen. In de UI van de Inzameling van Gegevens, kunt u opstellingsregels voor uw geïnstalleerde uitbreidingen om gebeurtenisgegevens naar de uitbreidingsbestemming slechts in bepaalde situaties te verzenden. Voor meer informatie over vestiging regels voor uw uitbreidingen, zie het overzicht op [ regels ](../../../tags/ui/managing-resources/rules.md) in de markeringsdocumentatie.
 
 ## Uitbreiding configureren, bijwerken en verwijderen {#configure-upgrade-delete}
 
@@ -56,6 +56,6 @@ U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface
 
 >[!TIP]
 >
->Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface nog steeds **[!UICONTROL Install]** voor de extensie weergegeven. Kik van het installatiewerkschema zoals die in [&#x200B; wordt beschreven installeer uitbreiding &#x200B;](#install-extension) om uw uitbreiding te vormen of te schrappen.
+>Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface nog steeds **[!UICONTROL Install]** voor de extensie weergegeven. Kik van het installatiewerkschema zoals die in [ wordt beschreven installeer uitbreiding ](#install-extension) om uw uitbreiding te vormen of te schrappen.
 
-Om uw uitbreiding te bevorderen, zie de gids op het [&#x200B; proces van de uitbreidingsverbetering &#x200B;](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.
+Om uw uitbreiding te bevorderen, zie de gids op het [ proces van de uitbreidingsverbetering ](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.

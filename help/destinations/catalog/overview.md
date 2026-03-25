@@ -3,9 +3,9 @@ keywords: Catalogus;catalogus
 title: Overzicht van de doelcatalogus
 description: De catalogus van Doelen verstrekt een lijst van beschikbare bestemmingen die klaar zijn om gegevens te ontvangen. Deze bestemmingen omvatten de oplossingen van Adobe, reclameplatforms, onderzoeksplatforms, e-mailmarketing platforms, en meer.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Blader in de catalogus om te bepalen welke doelplatforms het beste zijn voor uw 
 
 ## Doelcategorieën {#destination-categories}
 
-Je kunt je gegevens activeren naar verschillende doelcategorieën in Adobe Experience Platform. De onderstaande koppelingen bevatten meer informatie over elke doelcategorie:
+U kunt uw gegevens activeren naar verschillende doelcategorieën in [!DNL Adobe Experience Platform] . De onderstaande koppelingen bevatten meer informatie over elke doelcategorie:
 
 - [Overzicht van Adobe [!UICONTROL destinations]](adobe/overview.md)
 - [[!UICONTROL Advertising] [!UICONTROL destinations] overzicht](advertising/overview.md)
