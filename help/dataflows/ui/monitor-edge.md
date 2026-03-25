@@ -17,19 +17,19 @@ U kunt het controledashboard in Adobe Experience Platform UI gebruiken om contro
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Gegevensstromen ](../../datastreams/overview.md): De stromen van gegevensstromen laten u Experience Platform Edge Network met uw dataset verbinden.
-* [ Capaciteiten ](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform, laten de capaciteiten u weten als uw organisatie om het even welk van uw gidsen heeft overschreden en geeft u informatie over hoe te om deze kwesties te bevestigen.
-* [ de segmentatie van Edge ](../../segmentation/methods/edge-segmentation.md): De segmentatie van Edge is de capaciteit om segmentdefinities in Adobe Experience Platform onmiddellijk [ op de rand ](../../landing/edge-and-hub-comparison.md) te evalueren, toelatend de zelfde pagina en volgende het gebruikscase van de paginaletterdheid.
+* [&#x200B; Gegevensstromen &#x200B;](../../datastreams/overview.md): De stromen van gegevensstromen laten u Experience Platform Edge Network met uw dataset verbinden.
+* [&#x200B; Capaciteiten &#x200B;](../../landing/license-usage-and-guardrails/capacity.md): In Experience Platform, laten de capaciteiten u weten als uw organisatie om het even welk van uw gidsen heeft overschreden en geeft u informatie over hoe te om deze kwesties te bevestigen.
+* [&#x200B; de segmentatie van Edge &#x200B;](../../segmentation/methods/edge-segmentation.md): De segmentatie van Edge is de capaciteit om segmentdefinities in Adobe Experience Platform onmiddellijk [&#x200B; op de rand &#x200B;](../../landing/edge-and-hub-comparison.md) te evalueren, toelatend de zelfde pagina en volgende het gebruikscase van de paginaletterdheid.
 
 ## Toegang {#access}
 
 Selecteer **[!UICONTROL Monitoring]** in de sectie **[!UICONTROL Data management]** , gevolgd door **[!UICONTROL Edge]** om het dashboard voor segmentatie van randen te openen.
 
-![ de methode om tot het dashboard van de segmentatie van de monitorrand toegang te hebben wordt benadrukt.](/help/dataflows/assets/ui/monitor-edge/access.png)
+![&#x200B; de methode om tot het dashboard van de segmentatie van de monitorrand toegang te hebben wordt benadrukt.](/help/dataflows/assets/ui/monitor-edge/access.png)
 
 Het dashboard voor bewaking wordt weergegeven. Dit toont controlemetriek voor de productie van het randstromen, een grafiek die het tarief van de rand het stromen productie, en een gegevensstroommening toont. Deze metriek kan door de dienst, door rand, en door datum worden gefiltreerd.
 
-![ de het filtreren opties binnen het controledashboard worden benadrukt.](/help/dataflows/assets/ui/monitor-edge/filtering.png)
+![&#x200B; de het filtreren opties binnen het controledashboard worden benadrukt.](/help/dataflows/assets/ui/monitor-edge/filtering.png)
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ De metrieklijst verstrekt informatie specifiek voor de geselecteerde de randprod
 
 In de monitoringgrafiek worden de records per seconde weergegeven die de geselecteerde randen binnen de toegewezen tijdlijn hebben ontvangen, in vergelijking met de maximaal toegestane capaciteit.
 
-![ de grafiek van de randsegmentatieproductie wordt getoond.](/help/dataflows/assets/ui/monitor-edge/edge-segmentation-throughput.png)
+![&#x200B; de grafiek van de randsegmentatieproductie wordt getoond.](/help/dataflows/assets/ui/monitor-edge/edge-segmentation-throughput.png)
 
 ## DataStream-weergave
 
@@ -66,7 +66,7 @@ In de monitoringgrafiek worden de records per seconde weergegeven die de geselec
 
 In de sectie voor de gegevensstroomweergave wordt een lijst weergegeven met de meest recente gegevensstromen die door de randen van de sandbox zijn doorgegeven.
 
-![ de gegevensstroommening wordt getoond, tonend informatie over de vermelde gegevensstromen.](/help/dataflows/assets/ui/monitor-edge/datastream-view.png)
+![&#x200B; de gegevensstroommening wordt getoond, tonend informatie over de vermelde gegevensstromen.](/help/dataflows/assets/ui/monitor-edge/datastream-view.png)
 
 | Veld | Beschrijving |
 | ----- | ----------- |

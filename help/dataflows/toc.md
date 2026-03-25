@@ -30,4 +30,4 @@ ht-degree: 18%
    - [Gegevensstromen bewaken in Edge](./ui/monitor-edge.md)
    - B2B-bewaking {#b2b}
       - [Verbeteringstaken voor profielen controleren](./ui/b2b/monitor-profile-enrichment.md)
-- [ de Dienst API van de Stroom ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [&#x200B; de Dienst API van de Stroom &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)
