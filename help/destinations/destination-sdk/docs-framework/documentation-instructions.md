@@ -24,8 +24,8 @@ Deze sectie van documentatie omvat:
 
 * Stapsgewijze instructies voor u om een documentatiepagina voor uw nieuwe bestemming tot stand te brengen;
 * Een sjabloon dat u moet invullen voor uw doel.
-* [&#x200B; Algemene instructies bij het gebruiken van Markering &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [&#x200B; Specifieke instructies voor de aroma van de Prijsverhoging van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (de smaak van de Prijsverlaging van Adobe is zeer gelijkaardig aan regelmatige Prijsverlaging).
+* [&#x200B; Algemene instructies bij het gebruiken van Markering &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL);
+* [&#x200B; Specifieke instructies voor de aroma van de Prijsverhoging van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL#custom-markdown-extensions) (de smaak van de Prijsverlaging van Adobe is zeer gelijkaardig aan regelmatige Prijsverlaging).
 * A [&#x200B; beste praktijken pagina &#x200B;](./authoring-best-practices.md) om u te helpen een documentatiepagina voor uw bestemmingspagina ontwerpen, die aan de normen van de documentatiekwaliteit van Experience Platform voldoet.
 
 ## Vereisten {#prerequisites}
@@ -38,12 +38,12 @@ Om documentatie voor uw bestemming volgens de instructies in dit artikel tot sta
 
 ## Instructies op hoog niveau om documentatie voor uw doel te maken in [!DNL Adobe Experience Platform] {#high-level-instructions}
 
-Op een hoog niveau, om documentatie voor uw bestemming tot stand te brengen, moet u [&#x200B; een vork &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) van de [!DNL Adobe Experience Platform] documentatiebewaarplaats creëren en [&#x200B; verstrekken documentatiemalplaatje &#x200B;](./self-service-template.md) in een nieuwe tak uitgeven. Gebruik de door Adobe verschafte sjabloon om een nieuwe doelpagina te maken. Open een trekkingsverzoek (PR) wanneer u klaar bent. De instructies om dit te doen zijn verder hieronder, in [&#x200B; Stappen om uw nieuwe bestemmingspagina &#x200B;](./documentation-instructions.md#steps-to-create-docs-page) tot stand te brengen.
+Op een hoog niveau, om documentatie voor uw bestemming tot stand te brengen, moet u [&#x200B; een vork &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL#fork-the-repository) van de [!DNL Adobe Experience Platform] documentatiebewaarplaats creëren en [&#x200B; verstrekken documentatiemalplaatje &#x200B;](./self-service-template.md) in een nieuwe tak uitgeven. Gebruik de door Adobe verschafte sjabloon om een nieuwe doelpagina te maken. Open een trekkingsverzoek (PR) wanneer u klaar bent. De instructies om dit te doen zijn verder hieronder, in [&#x200B; Stappen om uw nieuwe bestemmingspagina &#x200B;](./documentation-instructions.md#steps-to-create-docs-page) tot stand te brengen.
 
 <!--
 
 * In the table of contents (TOC.md) `/help/rtcdp/TOC.md`, add a link to your new destination page. Place it within the category where your destination resides in the Adobe Experience Platform user interface (for example: mobile, social, advertising). 
-* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
+* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/nl-NL/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
 
 -->
 
@@ -64,4 +64,4 @@ U kunt de GitHub Webinterface of uw lokale milieu gebruiken om documentatie voor
 
 ## Best practices {#best-practices}
 
-Herzie [&#x200B; auteursbeste praktijken &#x200B;](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) vóór en terwijl u de pagina van de bestemmingsdocumentatie creeert. Zorg ervoor om [&#x200B; ook te lezen die begeleiding voor de Documentatie van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) voor sommige meer het schrijven uiteinden schrijven die het de documentatieteam van Adobe wanneer het ontwerpen van documentatie gebruikt.
+Herzie [&#x200B; auteursbeste praktijken &#x200B;](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) vóór en terwijl u de pagina van de bestemmingsdocumentatie creeert. Zorg ervoor om [&#x200B; ook te lezen die begeleiding voor de Documentatie van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=nl-NL) voor sommige meer het schrijven uiteinden schrijven die het de documentatieteam van Adobe wanneer het ontwerpen van documentatie gebruikt.
