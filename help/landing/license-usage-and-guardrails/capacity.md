@@ -234,7 +234,7 @@ U kunt de schendingen van de Edge-segmentatiedoorvoer verhelpen door een van de 
 
 De volgende video biedt een overzicht van Capaciteit.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475279/?captions=dut&learn=on&enablevpops)
 
 ## Veelgestelde vragen {#faq}
 
