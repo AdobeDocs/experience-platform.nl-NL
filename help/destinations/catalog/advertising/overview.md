@@ -3,9 +3,9 @@ keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Overzicht Advertising-bestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (bijvoorbeeld DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '287'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Verbind Adobe Experience Platform met reclameplatforms zoals vraag-zijplatforms (DSP), levering-zijplatforms (SSP), en netwerken om bekende en pseudoniem publiek aan deze platforms te delen.
+Verbind [!DNL Adobe Experience Platform] met reclameplatforms zoals vraag-zijplatforms (DSP), levering-zijplatforms (SSP), en netwerken om bekende en pseudoniem publiek aan deze platforms te delen.
 
 Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als IDs naar het bestemmingsplatform, waar zij aan een identiteitskaart in kaart worden gebracht die door het bestemmingsplatform wordt gekend.
 
@@ -22,14 +22,14 @@ Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als
 
 Momenteel ondersteunt Experience Platform de hieronder vermelde reclamebestemmingen.
 
-Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B; Verbindingen &#x200B;](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbindingen ](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
 ### Connecties {#connections}
 
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real-ID Audience Connection](acxiom-real-id-audience-connection.md)
-* [Cloud-verbinding voor Adobe Advertising](adobe-advertising-cloud-connection.md)
-* [Oudere Adobe Advertising Cloud-verbinding](adobe-advertising-cloud-connection-legacy.md)
+* [Adobe Advertising DSP-verbinding](adobe-advertising-dsp-connection.md)
+* [Verouderde DSP-verbinding voor Adobe Advertising Cloud](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads-verbinding](amazon-ads.md)
 * [Bombora-verbinding](bombora.md)
 * [Criteverbinding](criteo.md)
@@ -67,4 +67,4 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B;
 
 ## Verbinding maken met een nieuwe advertentiebestemming {#connect-destination}
 
-Experience Platform moet eerst verbinding maken met het doel om een publiek naar advertentiebestemmingen voor uw campagnes te sturen. Zie het [&#x200B; leerprogramma van de bestemmingsverwezenlijking &#x200B;](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
+Experience Platform moet eerst verbinding maken met het doel om een publiek naar advertentiebestemmingen voor uw campagnes te sturen. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
