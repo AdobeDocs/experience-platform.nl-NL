@@ -15,9 +15,9 @@ ht-degree: 32%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
@@ -54,7 +54,7 @@ Met Agent Orchestrator kunt u op AI gebaseerde agents maken en implementeren die
 
 | Functie | Beschrijving |
 | --- | --- |
-| [&#x200B; Adobe Marketing Agent voor  [!DNL Microsoft 365 Copilot] &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | De Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] is uw ingesloten agent die Adobe-marketinginformatie rechtstreeks in alledaagse programma&#39;s zoals [!DNL Teams] , [!DNL Word] , [!DNL PowerPoint] en andere [!DNL Microsoft 365] -apps plaatst. U kunt deze agent gebruiken om vertrouwde campagneinzichten van Adobe-toepassingen te gebruiken terwijl u campagnes plant, publiek controleert, met collega&#39;s samenwerkt om klantvragen te beantwoorden en om met gegevens geïnformeerde beslissingen te nemen zonder uw [!DNL Microsoft 365] -workflow te verlaten. |
+| [&#x200B; Adobe Marketing Agent voor  [!DNL Microsoft 365 Copilot] &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | De Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] is uw ingesloten agent die Adobe-marketinginformatie rechtstreeks in alledaagse programma&#39;s zoals [!DNL Teams] , [!DNL Word] , [!DNL PowerPoint] en andere [!DNL Microsoft 365] -apps plaatst. U kunt deze agent gebruiken om vertrouwde campagneinzichten van Adobe-toepassingen te gebruiken terwijl u campagnes plant, publiek controleert, met collega&#39;s samenwerkt om klantvragen te beantwoorden en om met gegevens geïnformeerde beslissingen te nemen zonder uw [!DNL Microsoft 365] -workflow te verlaten. |
 
 {style="table-layout:auto"}
 
