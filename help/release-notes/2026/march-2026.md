@@ -1,7 +1,6 @@
 ---
 title: Aanvullende informatie van maart 2026 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2026 voor Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
 source-wordcount: '1161'
