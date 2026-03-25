@@ -18,4 +18,4 @@ Gebruik [!UICONTROL Destinations] om uw gegevens te activeren van [!DNL Adobe Ex
 
 Gegevensstromen zijn een weergave van gegevenstaken die gegevens over [!DNL Experience Platform] verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door [!DNL Identity Service] en [!DNL Real-Time Customer Profile] wordt gebruikt alvorens uiteindelijk aan bestemmingen wordt geactiveerd.
 
-Meer over het controleren van dataflows voor bestemmingen leren, lees de [ dataflows van de Monitor voor bestemmingen in het UI ](../../dataflows/ui/monitor-destinations.md) leerprogramma.
+Meer over het controleren van dataflows voor bestemmingen leren, lees de [&#x200B; dataflows van de Monitor voor bestemmingen in het UI &#x200B;](../../dataflows/ui/monitor-destinations.md) leerprogramma.

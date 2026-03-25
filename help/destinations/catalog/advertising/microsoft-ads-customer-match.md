@@ -37,7 +37,7 @@ Een technologiebedrijf lanceerde een nieuw product. Om dit nieuwe product te pro
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Microsoft Ads Customer Match] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL Microsoft Ads Customer Match] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -51,8 +51,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -60,10 +60,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -74,13 +74,13 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mailadressen) die worden gebruikt in het doel van [!DNL Microsoft Ads Customer Match] . |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Vereisten {#prerequisites}
 
-Als u publieksgegevens naar [!DNL Microsoft Ads] wilt verzenden, hebt u een actieve [!DNL Microsoft Advertising] -account nodig. Voor details bij het creëren van een rekening, bezoek de [ documentatie van Microsoft Advertising ](https://help.ads.microsoft.com/#apex/ads/en/53090/0).
+Als u publieksgegevens naar [!DNL Microsoft Ads] wilt verzenden, hebt u een actieve [!DNL Microsoft Advertising] -account nodig. Voor details bij het creëren van een rekening, bezoek de [&#x200B; documentatie van Microsoft Advertising &#x200B;](https://help.ads.microsoft.com/#apex/ads/en/53090/0).
 
 ### Bepalingen en voorwaarden voor klantovereenkomst accepteren {#accept-customer-match-terms}
 
@@ -90,16 +90,16 @@ Voordat u het publiek activeert via deze bestemming, moet u eerst handmatig een 
 
 Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
-* [!UICONTROL Customer ID]: uw [!DNL Microsoft Ads] Klant-id (CID), in gehele notatie. Zie de [ documentatie van Advertising van Microsoft ](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) voor instructies op hoe te om uw identiteitskaart van de Klant te vinden.
-* [!UICONTROL Customer Account ID]: uw [!DNL Microsoft Ads] ID van uw klantenaccount. Zie de [ documentatie van Microsoft Advertising ](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) voor instructies op hoe te om uw identiteitskaart van de Rekening van de Klant te vinden.
+* [!UICONTROL Customer ID]: uw [!DNL Microsoft Ads] Klant-id (CID), in gehele notatie. Zie de [&#x200B; documentatie van Advertising van Microsoft &#x200B;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) voor instructies op hoe te om uw identiteitskaart van de Klant te vinden.
+* [!UICONTROL Customer Account ID]: uw [!DNL Microsoft Ads] ID van uw klantenaccount. Zie de [&#x200B; documentatie van Microsoft Advertising &#x200B;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) voor instructies op hoe te om uw identiteitskaart van de Rekening van de Klant te vinden.
 
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven.
 
 ### Doelgegevens invullen {#parameters}
 
@@ -126,20 +126,20 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 >abstract="Selecteer of de lijst met overeenkomsten voor klanten beschikbaar is voor één advertentieaccount of voor alle accounts in het beheerdersaccount. Selecteer Klant-id om de lijst beschikbaar te maken voor alle adverteerderaccounts onder uw Klant-id. Selecteer Customer Account ID om de lijst te beperken tot de specifieke Customer Account ID."
 >additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="Meer informatie over het delen van publiekslijsten in Microsoft Advertising"
 
-Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+Terwijl [&#x200B; vestiging &#x200B;](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Customer ID]**: Uw [!DNL Microsoft Ads] klant-id (CID). Zie de [ documentatie van Advertising van Microsoft ](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) voor instructies op hoe te om uw identiteitskaart van de Klant te vinden.
-* **[!UICONTROL Customer Account ID]**: Uw [!DNL Microsoft Ads] id van uw klantenaccount. Zie de [ documentatie van Microsoft Advertising ](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) voor instructies op hoe te om uw identiteitskaart van de Rekening van de Klant te vinden.
+* **[!UICONTROL Customer ID]**: Uw [!DNL Microsoft Ads] klant-id (CID). Zie de [&#x200B; documentatie van Advertising van Microsoft &#x200B;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) voor instructies op hoe te om uw identiteitskaart van de Klant te vinden.
+* **[!UICONTROL Customer Account ID]**: Uw [!DNL Microsoft Ads] id van uw klantenaccount. Zie de [&#x200B; documentatie van Microsoft Advertising &#x200B;](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) voor instructies op hoe te om uw identiteitskaart van de Rekening van de Klant te vinden.
 * **[!UICONTROL Membership Duration]**: Het aantal dagen dat een gebruiker in de lijst van de klantengelijke blijft. De toegestane waarden liggen tussen 1 en 390 dagen.
-* **[!UICONTROL Customer Match List Availability]**: selecteer de beschikbaarheid van de lijst van de klantengelijke. In [!DNL Microsoft Advertising] kan een klant-id meerdere Customer Account-id&#39;s (adverteerderaccounts) bevatten. Selecteer **[!UICONTROL Customer ID (all advertising accounts)]** om de lijst beschikbaar te maken voor alle adverteerderaccounts onder uw klant-id of **[!UICONTROL Customer Account ID (single advertising account)]** om de lijst te beperken tot de specifieke Customer Account ID die u hierboven hebt opgegeven. Zie de [ documentatie van Advertising van Microsoft ](https://help.ads.microsoft.com/apex/index/3/en/56727) voor meer details.
+* **[!UICONTROL Customer Match List Availability]**: selecteer de beschikbaarheid van de lijst van de klantengelijke. In [!DNL Microsoft Advertising] kan een klant-id meerdere Customer Account-id&#39;s (adverteerderaccounts) bevatten. Selecteer **[!UICONTROL Customer ID (all advertising accounts)]** om de lijst beschikbaar te maken voor alle adverteerderaccounts onder uw klant-id of **[!UICONTROL Customer Account ID (single advertising account)]** om de lijst te beperken tot de specifieke Customer Account ID die u hierboven hebt opgegeven. Zie de [&#x200B; documentatie van Advertising van Microsoft &#x200B;](https://help.ads.microsoft.com/apex/index/3/en/56727) voor meer details.
 
-![ beeld UI van het Platform dat de gebieden van bestemmingsdetails voor de bestemming van de Gelijke van de Klant van Microsoft Ads toont.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+![&#x200B; beeld UI van het Platform dat de gebieden van bestemmingsdetails voor de bestemming van de Gelijke van de Klant van Microsoft Ads toont.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -147,10 +147,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* naar bestemmingen uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* naar bestemmingen uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [&#x200B; publieksgegevens aan het stromen publiek de uitvoerbestemmingen &#x200B;](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ### Toewijzing {#mapping}
 
@@ -163,7 +163,7 @@ In de stap **[!UICONTROL Mapping]** moet u de e-mailidentiteit vanuit uw bronpro
 >
 >U moet bronvelden zonder hashing (normale tekst) gebruiken. Gebruik geen vooraf gehashte bronidentiteiten, zoals `Emails (SHA256, lowercased)` . Experience Platform hasht de e-mailadressen bij het exporteren automatisch om aan de Microsoft-vereisten te voldoen.
 
-![ beeld UI die de afbeeldingsstap met E-mail Identiteitskaart toont die aan E-mail van de Identiteit wordt toegewezen.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
+![&#x200B; beeld UI die de afbeeldingsstap met E-mail Identiteitskaart toont die aan E-mail van de Identiteit wordt toegewezen.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -171,4 +171,4 @@ Controleer uw [!DNL Microsoft Ads Customer Match] -account om te controleren of 
 
 ## Aanvullende bronnen {#additional-resources}
 
-Zie het [ Microsoft Advertising Help Center ](https://help.ads.microsoft.com/) voor extra informatie.
+Zie het [&#x200B; Microsoft Advertising Help Center &#x200B;](https://help.ads.microsoft.com/) voor extra informatie.
