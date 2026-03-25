@@ -4,8 +4,8 @@ description: Leer hoe te om gezondheidscontroles in Adobe Experience Platform te
 solution: Experience Platform
 type: Documentation
 role: Admin, User
-hide: true
-source-git-commit: ab2420b898dc38d19187cee627b5c44e7fb44a6c
+exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gezondheidscontroles
 
-Met health checks worden uw schema&#39;s en identiteiten die in uw sandbox worden gebruikt, gescand en krijgt u een overzicht van de problemen die u kunt gebruiken om te verkennen en problemen op te lossen met [!UICONTROL AI Assistant] . In de toekomst kunnen meer objecten worden gescand voor een uitgebreider rapport.
+Met health checks worden uw schema&#39;s en identiteiten gescand die in uw sandbox worden gebruikt en wordt een overzicht gegeven van problemen die u kunt gebruiken om te verkennen en problemen op te lossen met AI Assistant. In de toekomst kunnen meer objecten worden gescand voor een uitgebreider rapport.
 
 Het slechte schema en de identiteitsconfiguraties leiden tot significante stroomafwaartse kwesties, met inbegrip van onjuiste profielverwezenlijking, ontbroken segmentkwalificatie, en onnauwkeurige activering. Deze problemen zijn moeilijk op te sporen en vereisen vaak gespecialiseerde expertise om een diagnose te stellen. Met health checks wordt uw aanpak verschoven van reactieve probleemoplossing naar proactief, preventief onderhoud.
 
@@ -22,11 +22,11 @@ Met gezondheidscontroles kunt u:
 
 * **ontdekt configuratiekwesties vroeg**: Identificeer ontbrekende beste praktijken, misconfiguraties, en patronen die tot inefficiënties in verpersoonlijking, activering, en meer leiden.
 * **ontvangt geleide sanering**: Krijg duidelijke begeleiding op wat elke kwestie is en wat om aan het te doen.
-* **Ononderbroken Monitor**: Op dit ogenblik, stellen de gezondheidscontroles dagelijkse automatische scans in werking zodat u problemen kunt vangen alvorens zij kritieke mislukkingen worden. Het programma kan in toekomstige versies veranderen.
+* **Ononderbroken Monitor**: Momenteel, stellen de gezondheidscontroles dagelijkse automatische scans in werking zodat u problemen kunt vangen alvorens zij kritieke mislukkingen worden. Het programma kan in toekomstige versies veranderen.
 
 ## Vereisten {#prerequisites}
 
-Om tot gezondheidscontroles toegang te hebben, hebt u de **[!UICONTROL View Health Checks]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. Neem contact op met de systeembeheerder om ervoor te zorgen dat u over de juiste machtigingen beschikt.
+Om tot gezondheidscontroles toegang te hebben, hebt u de **[!UICONTROL View Health Checks]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Neem contact op met de systeembeheerder om ervoor te zorgen dat u over de juiste machtigingen beschikt.
 
 ## Toegang tot gezondheidscontroles {#access-health-checks}
 
@@ -37,7 +37,7 @@ Toegang krijgen tot health checks via de gebruikersinterface van [!UICONTROL Exp
 
 Op het dashboard voor gezondheidscontroles wordt een overzicht van de meest recente scanresultaten weergegeven.
 
-![&#x200B; het dashboard van de Controles van de Gezondheid die voorwerpen toont evalueerde, aftastenresultaten, en geïdentificeerde kwesties &#x200B;](assets/health-checks/dashboard.png)
+![ het dashboard van de Controles van de Gezondheid die voorwerpen toont evalueerde, aftastenresultaten, en geïdentificeerde kwesties ](assets/health-checks/dashboard.png)
 
 ## Het dashboard begrijpen {#understanding-dashboard}
 
@@ -72,20 +72,20 @@ Scans om identiteitsgebieden te verzekeren hebben minimum en maximumlengtebeperk
 | Detail | Beschrijving |
 | --- | --- |
 | **Uitgave** | Velden die als identiteiten zijn gemarkeerd, hebben geen minimale/maximale lengte- of patroonvalidatie. |
-| **Gevolgen** | Zonder validatie kunnen opschoningswaarden [!UICONTROL Identity Service] invoeren. Waarden zoals &quot;0&quot;, &quot;Gast&quot; of niet-overeenkomende behuizing (bijvoorbeeld &quot;xyz123&quot; versus &quot;XYZ123&quot;) brengen de integriteit in gevaar van het profiel dat tijdens segmentatie en activering wordt samengesteld. |
+| **Gevolgen** | Zonder validatie kunnen opschoningswaarden [!DNL Identity Service] invoeren. Waarden zoals &quot;0&quot;, &quot;Gast&quot; of niet-overeenkomende behuizing (bijvoorbeeld &quot;xyz123&quot; versus &quot;XYZ123&quot;) brengen de integriteit in gevaar van het profiel dat tijdens segmentatie en activering wordt samengesteld. |
 | **Vergoeding** | Stel minimum-/maximumlengte- en patroonbeperkingen in voor aangepaste velden die zijn gemarkeerd als identiteiten. Gebruik reguliere expressies om regels zoals alleen cijfers, hoofdletters of kleine letters of specifieke tekencombinaties af te dwingen. |
 
 Als u de **[!UICONTROL Identity Field Validation]** -kaart selecteert, wordt rechts een detailvenster geopend. Het deelvenster toont:
 
 * **[!UICONTROL Description]**: Scans om ervoor te zorgen dat identiteitsvelden een minimale/maximale lengte en een regex-patroonregel voor gegevensintegriteit hebben. Hiermee geeft u de desbetreffende schema&#39;s en velden weer.
 * **[!UICONTROL Impact]**: Als voor identiteitsvelden in schema&#39;s geen minimale/maximale lengte en patroonvalidatie is ingesteld, kan dit leiden tot inconsistente gegevens, wat nadelig kan zijn voor de integriteit en kwaliteit van de gegevens.
-* **[!UICONTROL General areas of impact]**: id&#39;s van lage kwaliteit in [!UICONTROL Identity Service]; onbetrouwbare stitching.
+* **[!UICONTROL General areas of impact]**: id&#39;s van lage kwaliteit in [!DNL Identity Service]; onbetrouwbare stitching.
 * **[!UICONTROL Experience League Documentation]**: een koppeling naar aanbevolen procedures voor gegevensmodellering.
 * **[!UICONTROL Affected Schemas]**: Een lijst met betrokken schema&#39;s, elk met een uitbreiding om meer details en een verbinding te bekijken om het schema te openen.
 
-![&#x200B; het detailpaneel dat van de Bevestiging van het Gebied van de Identiteit beschrijving, effect, en beïnvloede schema&#39;s toont &#x200B;](assets/health-checks/identity-field-validation-detail.png)
+![ het detailpaneel dat van de Bevestiging van het Gebied van de Identiteit beschrijving, effect, en beïnvloede schema&#39;s toont ](assets/health-checks/identity-field-validation-detail.png)
 
-Voor meer informatie, zie de [&#x200B; uiteinden van de gegevensintegriteit &#x200B;](/help/xdm/schema/best-practices.md#data-integrity-tips) in de documentatie van schema beste praktijken.
+Voor meer informatie, zie de [ uiteinden van de gegevensintegriteit ](/help/xdm/schema/best-practices.md#data-integrity-tips) in de documentatie van schema beste praktijken.
 
 ### Koppelingsregels voor identiteitsgrafiek {#identity-graph-linking-rules}
 
@@ -105,9 +105,9 @@ Als u de **[!UICONTROL Identity Graph Linking Rules]** -kaart selecteert, wordt 
 * **[!UICONTROL Experience League Documentation]**: Een koppeling naar het overzicht van de regels voor identiteitsgrafiek voor meer informatie.
 * **[!UICONTROL Configure linking rules]**: Wanneer de controle ontbreekt, verschijnt een knoop zodat kunt u verbindingsregels direct van het paneel vormen.
 
-![&#x200B; Grafiek van de Identiteit het Linking het detailpaneel van Regels die beschrijving tonen, effect, en verbindende knoop van regels vormen &#x200B;](assets/health-checks/identity-graph-linking-detail.png)
+![ Grafiek van de Identiteit het Linking het detailpaneel van Regels die beschrijving tonen, effect, en verbindende knoop van regels vormen ](assets/health-checks/identity-graph-linking-detail.png)
 
-Voor meer informatie, zie de [&#x200B; identiteitsgrafiek die regels verbindt overzicht &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) en de [&#x200B; implementatiegids &#x200B;](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
+Voor meer informatie, zie de [ identiteitsgrafiek die regels verbindt overzicht ](/help/identity-service/identity-graph-linking-rules/overview.md) en de [ implementatiegids ](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
 
 ### Identiteitsconfiguratie van personen en niet-personen {#people-non-people-identity}
 
@@ -117,18 +117,18 @@ Bevestigt het correcte gebruik van mensen en niet-mensen identiteitstypes over s
 | --- | --- |
 | **Uitgave** | Niet-persoonlijke id&#39;s worden gebruikt op schema&#39;s van de klasse Individual Profile of Experience Event, of personen-id&#39;s worden gebruikt op opzoekschema&#39;s. |
 | **Gevolgen** | Id&#39;s van andere personen op profielschema&#39;s nemen niet deel aan de identiteitsgrafiek, wat leidt tot een onvolledige identiteitsresolutie. De herkenningstekens van mensen op raadplegingsschema&#39;s lichten de profieltelling op en maken de gegevens niet verkiesbaar voor de gevallen van het raadplegingsgebruik. In beide gevallen bestaat het risico dat toekomstige productverbeteringen uw implementatie doorbreken. |
-| **Vergoeding** | Controleer de gemarkeerde schema&#39;s en corrigeer de toewijzingen van het type identiteit. Verwijder indien mogelijk niet-persoonlijke id&#39;s uit de afzonderlijke profielschema&#39;s. Voor schema&#39;s reeds in gebruik door datasets, verwijs naar de [&#x200B; regels van de schemaevolutie &#x200B;](/help/xdm/schema/composition.md#evolution). |
+| **Vergoeding** | Controleer de gemarkeerde schema&#39;s en corrigeer de toewijzingen van het type identiteit. Verwijder indien mogelijk niet-personele id&#39;s uit de individuele profielschema&#39;s. Voor schema&#39;s reeds in gebruik door datasets, verwijs naar de [ regels van de schemaevolutie ](/help/xdm/schema/composition.md#evolution). |
 
 Als u de **[!UICONTROL People & Non-People Identity Config]** -kaart selecteert, wordt rechts een detailvenster geopend. Het deelvenster toont:
 
 * **[!UICONTROL Description]**: hiermee wordt het juiste gebruik van identiteitstypen in alle schemaklassen gevalideerd. Vermeldt onjuist geconfigureerde schema&#39;s en markeert onjuiste toewijzingen.
-* **[!UICONTROL Impact]**: Als aan een niet-persoonlijke entiteit de identiteit van een persoon wordt gegeven, wordt het aantal profielen hierdoor verhoogd en worden deze gegevens niet in aanmerking genomen als een zoekopdracht. Als aan een personenentiteit een identiteit van een niet-persoon wordt gegeven, zijn de gegevens niet beschikbaar voor het stromen of randsegmentatie.
+* **[!UICONTROL Impact]**: Als aan een niet-persoonlijke entiteit een persoonlijke identiteit wordt gegeven, wordt het aantal profielen hierdoor verhoogd en worden deze gegevens niet in aanmerking genomen als een zoekopdracht. Als aan een personenentiteit een identiteit van derden wordt gegeven, zijn de gegevens niet beschikbaar voor het stromen of randsegmentatie.
 * **[!UICONTROL General areas of impact]**: onvolledige identiteitsgrafieken; opgepompte profielaantallen; opzoekfout.
 * **[!UICONTROL Affected Schemas]**: Een lijst met schema&#39;s met problemen. Breid een schemarij uit om de weg, de identiteitsnaam, en het schematype voor elke misconfiguration te zien. Open het schema met het koppelingspictogram.
 
-![&#x200B; Mensen &amp; niet-Mensen het detailpaneel dat van de Identiteit Config beschrijving, effect, en beïnvloede schema&#39;s met uitbreidbare rijen toont &#x200B;](assets/health-checks/people-non-people-identity-detail.png)
+![ Mensen &amp; niet-Mensen het detailpaneel dat van de Identiteit Config beschrijving, effect, en beïnvloede schema&#39;s met uitbreidbare rijen toont ](assets/health-checks/people-non-people-identity-detail.png)
 
-Voor meer informatie, zie de [&#x200B; documentatie van het identiteitstype &#x200B;](/help/identity-service/features/namespaces.md#identity-type) en [&#x200B; schema beste praktijken &#x200B;](/help/xdm/schema/best-practices.md).
+Voor meer informatie, zie de [ documentatie van het identiteitstype ](/help/identity-service/features/namespaces.md#identity-type) en [ schema beste praktijken ](/help/xdm/schema/best-practices.md).
 
 ### Beschrijving van aangepaste naamruimte {#namespace-missing-description}
 
@@ -148,9 +148,9 @@ Als u de **[!UICONTROL Custom Identity Namespace Description]** -kaart selecteer
 * **[!UICONTROL Experience League Documentation]**: Een koppeling naar Aangepaste naamruimten maken voor meer informatie.
 * **[!UICONTROL Affected namespaces]**: Een lijst met aangepaste naamruimten waarin beschrijvingen ontbreken. Gebruik het koppelingspictogram naast elke naamruimte om deze weer te geven of te bewerken.
 
-![&#x200B; het detailpaneel dat van de Beschrijving van Namespace van de Identiteit van de Douane beschrijving toont, effect, en beïnvloede namespaces lijst &#x200B;](assets/health-checks/custom-namespace-description-detail.png)
+![ het detailpaneel dat van de Beschrijving van Namespace van de Identiteit van de Douane beschrijving toont, effect, en beïnvloede namespaces lijst ](assets/health-checks/custom-namespace-description-detail.png)
 
-Voor meer informatie, zie de documentatie bij [&#x200B; het creëren van douane namespaces &#x200B;](/help/identity-service/features/namespaces.md#create-namespaces).
+Voor meer informatie, zie de documentatie bij [ het creëren van douane namespaces ](/help/identity-service/features/namespaces.md#create-namespaces).
 
 ### Vervangen naamruimte voor identiteit {#deprecated-namespace}
 
@@ -170,15 +170,15 @@ Als u de **[!UICONTROL Deprecated Identity Namespace]** -kaart selecteert, wordt
 * **[!UICONTROL Experience League Documentation]**: Een koppeling naar Verouderde naamruimten voor meer documentatie.
 * **[!UICONTROL Affected namespaces]**: Een lijst met verouderde of ongebruikte naamruimten. Gebruik het koppelingspictogram naast elke naamruimte om deze weer te geven of te beheren.
 
-![&#x200B; Vervangen het detailpaneel dat van Namespace van de Identiteit beschrijving toont, effect, en beïnvloede namespaces lijst &#x200B;](assets/health-checks/deprecated-namespace-detail.png)
+![ Vervangen het detailpaneel dat van Namespace van de Identiteit beschrijving toont, effect, en beïnvloede namespaces lijst ](assets/health-checks/deprecated-namespace-detail.png)
 
-Voor meer informatie, zie het [&#x200B; de kennisbasisartikel van Experience Cloud op verouderde namespaces &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Voor meer informatie, zie het [ de kennisbasisartikel van Experience Cloud op verouderde namespaces ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Volgende stappen {#next-steps}
 
 Nadat u de resultaten van uw health check hebt bekeken, verkent u de volgende bronnen om uw inzicht te verdiepen:
 
-* Leer over [&#x200B; schema beste praktijken &#x200B;](/help/xdm/schema/best-practices.md) voor het ontwerpen van betrouwbare gegevensmodellen.
-* Begrijp [&#x200B; identiteitsgrafiek die regels &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) verbindt om profielineenstorting te verhinderen.
-* Herzie [&#x200B; documentatie van identiteitsnamespace &#x200B;](/help/identity-service/features/namespaces.md) voor namespace beheer beste praktijken.
-* Onderzoek andere [&#x200B; looppas en voer hulpmiddelen &#x200B;](/help/run-and-operate/overview.md) met inbegrip van [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) voor het zicht van de partijverrichting in werking.
+* Leer over [ schema beste praktijken ](/help/xdm/schema/best-practices.md) voor het ontwerpen van betrouwbare gegevensmodellen.
+* Begrijp [ identiteitsgrafiek die regels ](/help/identity-service/identity-graph-linking-rules/overview.md) verbindt om profielineenstorting te verhinderen.
+* Herzie [ documentatie van identiteitsnamespace ](/help/identity-service/features/namespaces.md) voor namespace beheer beste praktijken.
+* Onderzoek andere [ looppas en voer hulpmiddelen ](/help/run-and-operate/overview.md) met inbegrip van [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) voor het zicht van de partijverrichting in werking.

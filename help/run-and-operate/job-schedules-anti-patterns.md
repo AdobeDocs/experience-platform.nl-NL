@@ -3,51 +3,50 @@ description: Leer hoe u antipatronen voor algemene taakplanningconfiguratie in A
 solution: Experience Platform
 title: Anti-patronen voor taakplanning identificeren
 type: Tutorial
-hide: true
-source-git-commit: 9d170fec9b80f0f2e17fc39e8f573cbad515f823
+exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
 
-
 # Anti-patronen voor taakplanning identificeren
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] zijn momenteel alleen beschikbaar als een beperkte release en voor de volgende Real-Time CDP-taken:
+>[!UICONTROL Job schedules] is momenteel alleen beschikbaar voor de volgende Real-Time CDP-taken:
 >
 > * Batchgegevens
 > * Inname van batchprofiel
 > * Batchsegmentatie
-> * Batchdoelactivering.
+> * Batchdoelactivering
 
-De [&#x200B; planningen van de Baan &#x200B;](job-schedules.md) chronologiemening helpt u gemeenschappelijke configuratiekwesties identificeren die uw prestaties en betrouwbaarheid van de gegevenspijpleiding negatief kunnen beïnvloeden. Deze anti-patronen leiden vaak tot banenmislukkingen, gegevensinconsistenties, of verminderde systeemprestaties. Door deze patronen vroegtijdig te ontdekken, kunt u uw banen aanpassen om problemen te vermijden alvorens zij uw bedrijfsverrichtingen beïnvloeden.
+De [ planningen van de Baan ](job-schedules.md) chronologiemening helpt u gemeenschappelijke configuratiekwesties identificeren die uw prestaties en betrouwbaarheid van de gegevenspijpleiding negatief kunnen beïnvloeden. Deze anti-patronen leiden vaak tot banenmislukkingen, gegevensinconsistenties, of verminderde systeemprestaties. Door deze patronen vroegtijdig te ontdekken, kunt u uw banen aanpassen om problemen te vermijden alvorens zij uw bedrijfsverrichtingen beïnvloeden.
 
 ## Vereisten {#prerequisites}
 
 Voordat u anti-patronen kunt identificeren, moet u:
 
-* Heb toegang tot [!UICONTROL Job Schedules] met **[!UICONTROL View Job Schedules]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions).
-* Ben vertrouwd met de [&#x200B; interface van Programma&#39;s van de Baan &#x200B;](job-schedules.md#understanding-interface) en hoe te om de chronologiemening te lezen.
-* Begrijp fundamentele [&#x200B; partij ingestie &#x200B;](../ingestion/batch-ingestion/overview.md), [&#x200B; segmentatie &#x200B;](../segmentation/home.md), en [&#x200B; de concepten van de profielverwerking &#x200B;](../profile/home.md).
+* Heb toegang tot [!UICONTROL Job Schedules] met **[!UICONTROL View Job Schedules]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions).
+* Ben vertrouwd met de [ interface van Programma&#39;s van de Baan ](job-schedules.md#understanding-interface) en hoe te om de chronologiemening te lezen.
+* Begrijp fundamentele [ partij ingestie ](../ingestion/batch-ingestion/overview.md), [ segmentatie ](../segmentation/home.md), en [ de concepten van de profielverwerking ](../profile/home.md).
 
 ## Snelle verwijzing {#anti-pattern-quick-reference}
 
 | Anti-patroon | Wat u op de tijdlijn ziet | Primair effect | Ernst |
 |--------------|----------------------------------|----------------|----------|
-| [&#x200B; overlap van het Programma &#x200B;](#schedule-overlap-pattern) | Meerdere taken tegelijk uitvoeren | Bronconflict en mislukte taken | Hoog |
-| [&#x200B; Geplande baandichtheid &#x200B;](#scheduled-density) | Vele datasets met partijen die in zelfde uur gegroepeerd zijn | Pijpknelpunten en onvolledige segmentering | Hoog |
-| [&#x200B; Excessieve partijen per dataset &#x200B;](#excessive-batches-per-dataset) | Eén dataset met tientallen dagelijkse batches | Inefficiënte verwerking en operationele complexiteit | Medium |
+| [ overlap van het Programma ](#schedule-overlap-pattern) | Meerdere taken tegelijk uitvoeren | Bronconflict en mislukte taken | Hoog |
+| [ Geplande baandichtheid ](#scheduled-density) | Vele datasets met partijen die in zelfde uur gegroepeerd zijn | Pijpknelpunten en onvolledige segmentering | Hoog |
+| [ Excessieve partijen per dataset ](#excessive-batches-per-dataset) | Eén dataset met tientallen dagelijkse batches | Inefficiënte verwerking en operationele complexiteit | Medium |
 
 ## Planningsoverlapping {#schedule-overlap-pattern}
 
-**strengheid van het Effect**: Hoog | **Primaire kwestie**: De geschil van het Middel
+**Ernst van het Effect**: Hoog | **Primaire kwestie**: De geschil van het Middel
 
 **wat te zoeken**: De veelvoudige banen die worden gepland om tezelfdertijd of in dichte opeenvolging te lopen, in het bijzonder wanneer middel-intensieve banen overlappen.
 
-In dit voorbeeld kunt u batch-opname-taken zien die tegelijkertijd met een geplande segmentatietaak worden uitgevoerd. Dit leidt tot middelgeschil omdat beide verrichtingen significante verwerkingscapaciteit en geheugen vereisen.
+Een veelvoorkomend voorbeeld is batch-opname-taken die tegelijkertijd met een geplande segmentatietaak worden uitgevoerd. Dit leidt tot middelgeschil omdat beide verrichtingen significante verwerkingscapaciteit en geheugen vereisen.
 
 **waarom dit problematisch is**:
 
@@ -64,11 +63,11 @@ In dit voorbeeld kunt u batch-opname-taken zien die tegelijkertijd met een gepla
 
 ## Geplande taakdichtheid {#scheduled-density}
 
-**strengheid van het Effect**: Hoog | **Primaire kwestie**: De knelpunten van de pijpleiding
+**Ernst van het Effect**: Hoog | **Primaire kwestie**: De knelpunten van de pijpleiding
 
 **wat om** te zoeken: Te veel datasets met veelvoudige partijen die binnen het zelfde uur worden gepland, met name wanneer deze partijen dicht bij elkaar worden gestapeld en dichtbij kritieke verwerkingsvensters zoals segmentatiebegintijden worden gepland.
 
-In dit patroon ziet u:
+Dit patroon bevat meestal:
 
 * Meerdere gegevenssets die elk meerdere batches per dag uitvoeren
 * ETL-taken (opname van data Lake en opname van profielen) geclusterd binnen hetzelfde uur
@@ -80,22 +79,22 @@ In dit patroon ziet u:
 * **Vertraagde profielbeschikbaarheid**: De banen van de opname van het profiel die te dicht bij de tijden van het segmentatiebegin lopen kunnen niet in tijd voltooien, resulterend in onvolledige of stapelpublieksevaluaties.
 * **Onvoorspelbare segmentatie**: Als de stroomopwaartse innametaken nog lopen wanneer de segmentatie begint, riskeert u evaluerend publiek tegen onvolledige gegevens, die tot onjuist publiekslidmaatschap leiden.
 * **Cascading mislukkingen**: Één enkele vertraagde partij in een dicht gestapeld programma kan een domino-effect veroorzaken, vertragend alle verdere partijen en stroomafwaartse processen.
-* **het stromen van het Middel**: Het systeem kan worstelen om voldoende middelen toe te wijzen wanneer het verwerken van teveel gezamenlijke inslidingbanen, die tot langzamere verwerkingstijden of mislukkingen leiden.
+* **stam van het Middel**: Het systeem kan worstelen om voldoende middelen toe te wijzen wanneer het verwerken van teveel gezamenlijke innametaken, die tot langzamere verwerkingstijden of mislukkingen leiden.
 
 **hoe te om het** te bevestigen:
 
 * **consolideert partijen**: Verminder partijfrequentie door veelvoudige kleine partijen in minder, grotere partijen per dataset te combineren.
 * **verdeel gelijkmatig**: De banen van de spreadopname door de dag eerder dan het groeperen van hen in specifieke uren.
 * **voeg buffertijd** toe: verzeker een minimum 1-2 uurbuffer tussen de voltooiing van de profielopname en segmentatiebegin.
-* **vereisten van het Overzicht**: Bepaal of alle datasets echt veelvoudige dagelijkse partijen-vele gebruiksgevallen met minder frequente updates nodig hebben.
+* **vereisten van het Overzicht**: Bepaal of alle datasets echt veelvoudige dagelijkse partijen nodig hebben. Vele gebruiksgevallen werken met minder frequente updates.
 
 ## Te veel batches per gegevensset {#excessive-batches-per-dataset}
 
-**strengheid van het Effect**: Medium | **Primaire kwestie**: Inefficiënte verwerking
+**Ernst van het Effect**: Medium | **Primaire kwestie**: Inefficiënte verwerking
 
 **wat te zoeken**: Één enkele dataset met een bovenmatig aantal individuele partijbanen die door de dag worden gepland, die tot een lange verticale stapel banen op de chronologie leiden.
 
-In dit patroon, zult u één datasetrij met vele individuele batch ingestion banen zien die met regelmatige intervallen-soms tientallen partijen per dag voor één enkele dataset worden gepland.
+Dit patroon omvat één dataset met vele individuele batch-opname taken die met regelmatige intervallen, soms tientallen batches per dag worden gepland.
 
 **waarom dit problematisch is**:
 
@@ -117,8 +116,8 @@ In dit patroon, zult u één datasetrij met vele individuele batch ingestion ban
 
 Na het identificeren van anti-patronen in uw taakprogramma&#39;s:
 
-* Bekijk [&#x200B; baandetails &#x200B;](job-schedules-details.md) om specifieke datasets en baanlooppas te onderzoeken die kwesties kunnen veroorzaken.
-* Herzie het [&#x200B; overzicht van de Programma&#39;s van de Baan &#x200B;](job-schedules.md) om de interface en inspectiemogelijkheden te begrijpen.
-* Leer over [&#x200B; partij ingestie &#x200B;](../ingestion/batch-ingestion/overview.md) om uw gegevens te optimaliseren ladende programma&#39;s.
-* Begrijp [&#x200B; segmenteringsprogramma&#39;s &#x200B;](../segmentation/home.md) om juiste timing van publieksevaluaties te verzekeren.
-* Onderzoek [&#x200B; controlerende bestemmingsdataflows &#x200B;](../dataflows/ui/monitor-destinations.md) voor pijpleidingszicht van begin tot eind.
+* Bekijk [ baandetails ](job-schedules-details.md) om specifieke datasets en baanlooppas te onderzoeken die kwesties kunnen veroorzaken.
+* Herzie het [ overzicht van de Programma&#39;s van de Baan ](job-schedules.md) om de interface en inspectiemogelijkheden te begrijpen.
+* Leer over [ partij ingestie ](../ingestion/batch-ingestion/overview.md) om uw gegevens te optimaliseren ladende programma&#39;s.
+* Begrijp [ segmenteringsprogramma&#39;s ](../segmentation/home.md) om juiste timing van publieksevaluaties te verzekeren.
+* Onderzoek [ controlerende bestemmingsdataflows ](../dataflows/ui/monitor-destinations.md) voor pijpleidingszicht van begin tot eind.
