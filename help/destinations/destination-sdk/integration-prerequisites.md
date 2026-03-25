@@ -25,9 +25,9 @@ Om Destination SDK te gebruiken, zorg ervoor dat u aan de technische en partners
 ## Technische vereisten voor batchbestemmingen {#batch-prerequisites}
 
 1. U hebt een doellocatie die wordt gehost op [!DNL Amazon S3] , [!DNL Azure Blob] , [!DNL Azure Data Lake Storage] , [!DNL SFTP] , [!DNL Google Cloud] of een private [!DNL Data Landing Zone] , waar u bestanden kunt ontvangen die uit Experience Platform zijn geëxporteerd.
-2. Uw bestemmingsplatform kan dossiers in het formaat opnemen dat via de [ wordt gevormd dossier het formatteren opties ](functionality/destination-server/file-formatting.md) in Destination SDK voor partijbestemmingen.
+2. Uw bestemmingsplatform kan dossiers in het formaat opnemen dat via de [&#x200B; wordt gevormd dossier het formatteren opties &#x200B;](functionality/destination-server/file-formatting.md) in Destination SDK voor partijbestemmingen.
 3. (Optioneel) U hebt een publiek dat API- of API- of API-eindpunt ([!DNL CRUD]) voor programmatisch metagegevensbeheer maakt, ophaalt, bijwerkt of verwijdert.
 
 ## Partnerschapvoorwaarden {#partnership-prerequisites}
 
-Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) bent die Destination SDK probeert te gebruiken, lees de partnerschapsvereisten voor ISVs en SIs in [ die toegangssectie ](overview.md#get-access) krijgen.
+Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) bent die Destination SDK probeert te gebruiken, lees de partnerschapsvereisten voor ISVs en SIs in [&#x200B; die toegangssectie &#x200B;](overview.md#get-access) krijgen.

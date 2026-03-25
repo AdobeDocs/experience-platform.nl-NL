@@ -24,21 +24,21 @@ Deze sectie van documentatie omvat:
 
 * Stapsgewijze instructies voor u om een documentatiepagina voor uw nieuwe bestemming tot stand te brengen;
 * Een sjabloon dat u moet invullen voor uw doel.
-* [ Algemene instructies bij het gebruiken van Markering ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [ Specifieke instructies voor de aroma van de Prijsverhoging van Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (de smaak van de Prijsverlaging van Adobe is zeer gelijkaardig aan regelmatige Prijsverlaging).
-* A [ beste praktijken pagina ](./authoring-best-practices.md) om u te helpen een documentatiepagina voor uw bestemmingspagina ontwerpen, die aan de normen van de documentatiekwaliteit van Experience Platform voldoet.
+* [&#x200B; Algemene instructies bij het gebruiken van Markering &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [&#x200B; Specifieke instructies voor de aroma van de Prijsverhoging van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (de smaak van de Prijsverlaging van Adobe is zeer gelijkaardig aan regelmatige Prijsverlaging).
+* A [&#x200B; beste praktijken pagina &#x200B;](./authoring-best-practices.md) om u te helpen een documentatiepagina voor uw bestemmingspagina ontwerpen, die aan de normen van de documentatiekwaliteit van Experience Platform voldoet.
 
 ## Vereisten {#prerequisites}
 
 Om documentatie voor uw bestemming volgens de instructies in dit artikel tot stand te brengen, zijn de volgende punten noodzakelijk:
 
-* **de rekening van GitHub van A**. Teken omhoog voor [ GitHub ](https://github.com/) als u nog geen rekening hebt.
-* **Desktop GitHub**. Als u selecteert om [ de documentatie in uw lokaal milieu ](./work-in-local-environment.md) tot stand te brengen, moet u [ Desktop GitHub ](https://desktop.github.com/) gebruiken.
+* **de rekening van GitHub van A**. Teken omhoog voor [&#x200B; GitHub &#x200B;](https://github.com/) als u nog geen rekening hebt.
+* **Desktop GitHub**. Als u selecteert om [&#x200B; de documentatie in uw lokaal milieu &#x200B;](./work-in-local-environment.md) tot stand te brengen, moet u [&#x200B; Desktop GitHub &#x200B;](https://desktop.github.com/) gebruiken.
 * Uw integratie met Adobe moet zich in een testfase bevinden en uw bestemming moet worden geïmplementeerd in een testomgeving in [!DNL Adobe Experience Platform] .
 
 ## Instructies op hoog niveau om documentatie voor uw doel te maken in [!DNL Adobe Experience Platform] {#high-level-instructions}
 
-Op een hoog niveau, om documentatie voor uw bestemming tot stand te brengen, moet u [ een vork ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) van de [!DNL Adobe Experience Platform] documentatiebewaarplaats creëren en [ verstrekken documentatiemalplaatje ](./self-service-template.md) in een nieuwe tak uitgeven. Gebruik de door Adobe verschafte sjabloon om een nieuwe doelpagina te maken. Open een trekkingsverzoek (PR) wanneer u klaar bent. De instructies om dit te doen zijn verder hieronder, in [ Stappen om uw nieuwe bestemmingspagina ](./documentation-instructions.md#steps-to-create-docs-page) tot stand te brengen.
+Op een hoog niveau, om documentatie voor uw bestemming tot stand te brengen, moet u [&#x200B; een vork &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) van de [!DNL Adobe Experience Platform] documentatiebewaarplaats creëren en [&#x200B; verstrekken documentatiemalplaatje &#x200B;](./self-service-template.md) in een nieuwe tak uitgeven. Gebruik de door Adobe verschafte sjabloon om een nieuwe doelpagina te maken. Open een trekkingsverzoek (PR) wanneer u klaar bent. De instructies om dit te doen zijn verder hieronder, in [&#x200B; Stappen om uw nieuwe bestemmingspagina &#x200B;](./documentation-instructions.md#steps-to-create-docs-page) tot stand te brengen.
 
 <!--
 
@@ -49,9 +49,9 @@ Op een hoog niveau, om documentatie voor uw bestemming tot stand te brengen, moe
 
 ## Documentatiesjabloon {#documentation-template}
 
-Om u bij het creëren van uw documentatiepagina bij te staan, heeft Adobe a [ documentatiemalplaatje ](./self-service-template.md) voor u vooraf ingevuld. Hieronder vindt u instructies voor het bewerken van de sjabloon en het openen van een pull-verzoek. Het Adobe-documentatieteam zal de documentatie voor uw nieuwe bestemming controleren en publiceren.
+Om u bij het creëren van uw documentatiepagina bij te staan, heeft Adobe a [&#x200B; documentatiemalplaatje &#x200B;](./self-service-template.md) voor u vooraf ingevuld. Hieronder vindt u instructies voor het bewerken van de sjabloon en het openen van een pull-verzoek. Het Adobe-documentatieteam zal de documentatie voor uw nieuwe bestemming controleren en publiceren.
 
-[ Download hier het malplaatje ](../assets/docs-framework/yourdestination-template.zip) en unzip het dossier om het `yourdestination.md` dossier te halen.
+[&#x200B; Download hier het malplaatje &#x200B;](../assets/docs-framework/yourdestination-template.zip) en unzip het dossier om het `yourdestination.md` dossier te halen.
 
 Hieronder vindt u instructies over het gebruik van de sjabloon voor het maken van de documentatiepagina.
 
@@ -64,4 +64,4 @@ U kunt de GitHub Webinterface of uw lokale milieu gebruiken om documentatie voor
 
 ## Best practices {#best-practices}
 
-Herzie [ auteursbeste praktijken ](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) vóór en terwijl u de pagina van de bestemmingsdocumentatie creeert. Zorg ervoor om [ ook te lezen die begeleiding voor de Documentatie van Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) voor sommige meer het schrijven uiteinden schrijven die het de documentatieteam van Adobe wanneer het ontwerpen van documentatie gebruikt.
+Herzie [&#x200B; auteursbeste praktijken &#x200B;](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) vóór en terwijl u de pagina van de bestemmingsdocumentatie creeert. Zorg ervoor om [&#x200B; ook te lezen die begeleiding voor de Documentatie van Adobe &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) voor sommige meer het schrijven uiteinden schrijven die het de documentatieteam van Adobe wanneer het ontwerpen van documentatie gebruikt.

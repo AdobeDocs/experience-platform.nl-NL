@@ -27,4 +27,4 @@ Met sociale doelen kunt u profielen voor uw campagnes activeren voor doelgroepen
 
 ## Verbinding maken met een nieuwe sociale bestemming {#connect-destination}
 
-Experience Platform moet eerst verbinding maken met het doel om een publiek naar sociale bestemmingen voor uw campagnes te sturen. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
+Experience Platform moet eerst verbinding maken met het doel om een publiek naar sociale bestemmingen voor uw campagnes te sturen. Zie het [&#x200B; leerprogramma van de bestemmingsverwezenlijking &#x200B;](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.

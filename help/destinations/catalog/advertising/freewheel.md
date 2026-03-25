@@ -32,7 +32,7 @@ Controleer de volgende vereisten voordat u het publiek naar [!DNL FreeWheel] kun
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL FreeWheel] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Naast deze identiteiten kunt u elke beschikbare identiteit in uw [!DNL FreeWheel] account gebruiken. Zie [ attributen en identiteiten van de Kaart ](#map) voor instructies op hoe te om een identiteit in kaart te brengen die niet in de lijst hieronder is. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL FreeWheel] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Naast deze identiteiten kunt u elke beschikbare identiteit in uw [!DNL FreeWheel] account gebruiken. Zie [&#x200B; attributen en identiteiten van de Kaart &#x200B;](#map) voor instructies op hoe te om een identiteit in kaart te brengen die niet in de lijst hieronder is. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -50,8 +50,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li>de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li>gelijksoortige doelgroepen,</li><li>federaal publiek,</li><li>publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] ,</li><li>en meer.</li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li>de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li>gelijksoortige doelgroepen,</li><li>federaal publiek,</li><li>publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] ,</li><li>en meer.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -59,10 +59,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Heroriëntering van tv, onderdrukking van bereik |
-| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Heroriëntering van tv, onderdrukking van bereik |
+| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -72,8 +72,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 |---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een publiek, samen met de gewenste identiteitsgebieden zoals gekozen in de afbeeldingsstap van het [ werkschema van de bestemmingsactivering ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Batch]** | De eerste exportbewerking is een volledige momentopname van alle profielen die zijn gekwalificeerd voor het actieve publiek. De volgende uitvoer is dagelijkse stijgende updates die nieuwe publiekskwalificaties (toevoegt) en publieksuitgang omvatten (verwijdert). Een configureerbaar volledig publiek verfrist interval (4, 8, of 12 weken) is ook beschikbaar, die periodieke volledige uitvoer naast de dagelijkse verhogingen teweegbrengen. Volledig exporteren bevat alleen profielen die momenteel zijn gekwalificeerd. De uitgangen van het publiek worden niet inbegrepen en worden geleverd uitsluitend door de dagelijkse stijgende updates. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een publiek, samen met de gewenste identiteitsgebieden zoals gekozen in de afbeeldingsstap van het [&#x200B; werkschema van de bestemmingsactivering &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De eerste exportbewerking is een volledige momentopname van alle profielen die zijn gekwalificeerd voor het actieve publiek. De volgende uitvoer is dagelijkse stijgende updates die nieuwe publiekskwalificaties (toevoegt) en publieksuitgang omvatten (verwijdert). Een configureerbaar volledig publiek verfrist interval (4, 8, of 12 weken) is ook beschikbaar, die periodieke volledige uitvoer naast de dagelijkse verhogingen teweegbrengen. Volledig exporteren bevat alleen profielen die momenteel zijn gekwalificeerd. De uitgangen van het publiek worden niet inbegrepen en worden geleverd uitsluitend door de dagelijkse stijgende updates. Lees meer over [&#x200B; partij op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -81,15 +81,15 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Verificatie naar het doel van [!DNL FreeWheel] wordt automatisch door Adobe afgehandeld. Tijdens de verificatie zijn geen referenties of API-sleutels van u vereist. Adobe beheert namens u de beveiligde verbinding met [!DNL FreeWheel] .
 
-![ Schermafbeelding van de authentificatiestap voor de bestemming FreeWheel.](../../assets/catalog/advertising/freewheel/connect-destination.png)
+![&#x200B; Schermafbeelding van de authentificatiestap voor de bestemming FreeWheel.](../../assets/catalog/advertising/freewheel/connect-destination.png)
 
 Selecteer **[!UICONTROL Connect to destination]** om door te gaan naar de stap met de doeldetails.
 
@@ -102,7 +102,7 @@ Selecteer **[!UICONTROL Connect to destination]** om door te gaan naar de stap m
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![ het schermschot van de Steekproef die hoe te om details voor de bestemming in te vullen FreeWheel.](../../assets/catalog/advertising/freewheel/destination-details.png)
+![&#x200B; het schermschot van de Steekproef die hoe te om details voor de bestemming in te vullen FreeWheel.](../../assets/catalog/advertising/freewheel/destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -115,7 +115,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -123,14 +123,14 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Uitvoer van publiek plannen {#schedule}
 
-![ Schermafbeelding van de Plannende stap in het FreeWheel activeringswerkschema.](../../assets/catalog/advertising/freewheel/scheduling.png)
+![&#x200B; Schermafbeelding van de Plannende stap in het FreeWheel activeringswerkschema.](../../assets/catalog/advertising/freewheel/scheduling.png)
 
 In de **[!UICONTROL Scheduling]** stap, vorm het uitvoerprogramma voor elk publiek. [!DNL FreeWheel] gebruikt een hybride exportmodel: de eerste exportmethode voor elk geactiveerd publiek is een volledige momentopname, gevolgd door dagelijkse incrementele updates.
 
@@ -153,9 +153,9 @@ Selecteer in de toewijzingsstap de bronvelden in uw Experience Platform-profiele
 >
 >De [!DNL FreeWheel] - gesteunde identiteitstypes worden voorgesteld als **doelattributen** in de afbeelding UI, niet als identiteit namespaces.
 
-Als uw [!DNL FreeWheel] rekening identiteitstypes steunt die niet in de [ gesteunde identiteiten ](#supported-identities) lijst vermeld zijn, kunt u aan hen in kaart brengen door de identiteitsnaam op het doelgebied manueel in te gaan in plaats van uit de vooraf bepaalde lijst te selecteren.
+Als uw [!DNL FreeWheel] rekening identiteitstypes steunt die niet in de [&#x200B; gesteunde identiteiten &#x200B;](#supported-identities) lijst vermeld zijn, kunt u aan hen in kaart brengen door de identiteitsnaam op het doelgebied manueel in te gaan in plaats van uit de vooraf bepaalde lijst te selecteren.
 
-![ Schermafbeelding die een naam van de douanetidentity tonen die direct in het doelgebied in de afbeeldingsstap wordt getypt.](../../assets/catalog/advertising/freewheel/custom-identity.png)
+![&#x200B; Schermafbeelding die een naam van de douanetidentity tonen die direct in het doelgebied in de afbeeldingsstap wordt getypt.](../../assets/catalog/advertising/freewheel/custom-identity.png)
 
 Hieronder vindt u voorbeeldtoewijzingen. De werkelijke toewijzingen zijn afhankelijk van uw profielschema en de identiteitstypen die uw [!DNL FreeWheel] -account ondersteunt.
 
@@ -198,8 +198,8 @@ segment_3,my_third_segment,30
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Voor extra informatie over [!DNL FreeWheel] en zijn platform van de advertentietechnologie, zie de [ website FreeWheel ](https://www.freewheel.com){target="_blank"}.
+Voor extra informatie over [!DNL FreeWheel] en zijn platform van de advertentietechnologie, zie de [&#x200B; website FreeWheel &#x200B;](https://www.freewheel.com){target="_blank"}.
