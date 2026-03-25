@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestemmingsconfiguratie door Adobe Experience Platform Destination SDK terug te winnen.
 title: Een doelconfiguratie ophalen
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Deze pagina illustreert de API aanvraag en lading die u kunt gebruiken om inform
 
 ## Aan de slag met API-bewerkingen voor doelconfiguratie {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een doelconfiguratie ophalen {#retrieve}
 
-U kunt een [&#x200B; bestaande &#x200B;](create-destination-configuration.md) bestemmingsconfiguratie terugwinnen door een `GET` verzoek aan het `/authoring/destination` eindpunt te doen.
+U kunt een [ bestaande ](create-destination-configuration.md) bestemmingsconfiguratie terugwinnen door een `GET` verzoek aan het `/authoring/destination` eindpunt te doen.
 
 >[!TIP]
 >
@@ -50,7 +50,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB wint alle bestemmingsconfiguraties  terug]
+>[!TAB  wint alle bestemmingsconfiguraties ] terug
 
 +++Verzoek
 
@@ -174,7 +174,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met een lijst van doelconfigu
 
 +++
 
->[!TAB wint een specifieke bestemmingsconfiguratie  terug]
+>[!TAB  wint een specifieke bestemmingsconfiguratie ] terug
 
 +++Verzoek
 
@@ -308,7 +308,7 @@ Een succesvolle reactie keert status 200 van HTTP met de details van de bestemmi
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Zie [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 

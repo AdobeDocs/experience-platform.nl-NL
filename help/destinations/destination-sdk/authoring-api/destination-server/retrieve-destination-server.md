@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een configuratie van de bestemmingsserver door Adobe Experience Platform Destination SDK terug te winnen.
 title: De configuratie van een doelserver ophalen
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkh
 
 ## Aan de slag met API-bewerkingen voor doelserver {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## De configuratie van een doelserver ophalen {#retrieve}
 
@@ -56,7 +56,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading en de reacties weer te
 
 >[!BEGINTABS]
 
->[!TAB wint alle configuraties van de bestemmingsserver  terug]
+>[!TAB  wint alle configuraties van de bestemmingsserver ] terug
 
 Met de volgende aanvraag wordt de lijst opgehaald met doelserverconfiguraties waartoe u toegang hebt, op basis van [!DNL IMS Org ID] en sandboxconfiguratie.
 
@@ -151,7 +151,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met een lijst van doelserverc
 
 +++
 
->[!TAB wint een specifieke configuratie van de bestemmingsserver  terug]
+>[!TAB  wint een specifieke configuratie van de bestemmingsserver ] terug
 
 Het volgende verzoek zal een specifieke configuraties van de bestemmingsserver terugwinnen die door de `{INSTANCE_ID}` parameter worden bepaald.
 
@@ -223,7 +223,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met de configuratie van de doe
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Zie [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 

@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een publiekssjabloon door Adobe Experience Platform Destination SDK tot stand te brengen.
 title: Een publiekssjabloon maken
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Voor sommige bestemmingen die met Destination SDK worden gecreeerd, moet u een configuratie van publieksmeta-gegevens creëren programmatically om, publieksmeta-gegevens in de bestemming te creëren bij te werken of te schrappen. Op deze pagina ziet u hoe u het API-eindpunt `/authoring/audience-templates` gebruikt om de configuratie te maken.
 
-Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [&#x200B; beheer van publieksmeta-gegevens &#x200B;](../functionality/audience-metadata-management.md).
+Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [ beheer van publieksmeta-gegevens ](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
@@ -25,7 +25,7 @@ Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpun
 
 ## Aan de slag met API-bewerkingen voor publiekssjablonen {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een publiekssjabloon maken {#create}
 
@@ -261,10 +261,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `httpMethod` | String | De methode die op uw eindpunt wordt gebruikt programmatically tot stand te brengen, bij te werken, te schrappen, of het publiek in uw bestemming te bevestigen. Bijvoorbeeld: `POST`, `PUT`, `DELETE` |
 | `headers.header` | String | Geeft alle HTTP-headers op die moeten worden toegevoegd aan de aanroep van de API. Bijvoorbeeld: `"Content-Type"` |
 | `headers.value` | String | Geeft de waarde aan van HTTP-headers die moeten worden toegevoegd aan de aanroep van de API. Bijvoorbeeld: `"application/x-www-form-urlencoded"` |
-| `requestBody` | String | Hier geeft u de inhoud op van de berichttekst die naar de API moet worden verzonden. Welke parameters aan het `requestBody` -object moeten worden toegevoegd, is afhankelijk van de velden die de API accepteert. Verwijs naar de [&#x200B; gesteunde documentatie van macro&#39;s &#x200B;](../functionality/audience-metadata-management.md#macros) om te leren wat u in het berichtlichaam kunt omvatten. |
-| `responseFields.name` | String | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Bijvoorbeeld, verwijs naar de [&#x200B; malplaatjevoorbeelden &#x200B;](../functionality/audience-metadata-management.md#examples) in het document van de de meta-gegevensfunctionaliteit van het publiek. |
+| `requestBody` | String | Hier geeft u de inhoud op van de berichttekst die naar de API moet worden verzonden. Welke parameters aan het `requestBody` -object moeten worden toegevoegd, is afhankelijk van de velden die de API accepteert. Zie de [ gesteunde documentatie van macro&#39;s ](../functionality/audience-metadata-management.md#macros) om te leren wat u in het berichtlichaam kunt omvatten. |
+| `responseFields.name` | String | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Voor een voorbeeld, zie de [ malplaatjevoorbeelden ](../functionality/audience-metadata-management.md#configuration-examples) in het document van de de meta-gegevensfunctionaliteit van het Publiek. |
 | `responseFields.value` | String | Geef de waarde op van de reactievelden die de API retourneert wanneer deze wordt aangeroepen. |
-| `responseErrorFields.name` | String | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Bijvoorbeeld, verwijs naar de [&#x200B; malplaatjevoorbeelden &#x200B;](../functionality/audience-metadata-management.md#examples) in het document van de de meta-gegevensfunctionaliteit van het publiek. |
+| `responseErrorFields.name` | String | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Voor een voorbeeld, zie de [ malplaatjevoorbeelden ](../functionality/audience-metadata-management.md#configuration-examples) in het document van de de meta-gegevensfunctionaliteit van het Publiek. |
 | `responseErrorFields.value` | String | Parseert om het even welke foutenmeldingen die op API vraagreacties van uw bestemming zijn teruggekeerd. Deze foutberichten worden weergegeven in de gebruikersinterface van Experience Platform. |
 | `validations.field` | String | Geeft aan of validaties voor velden moeten worden uitgevoerd voordat API-aanroepen naar uw doel worden uitgevoerd. U kunt bijvoorbeeld `{{validations.accountId}}` gebruiken om de account-id van de gebruiker te valideren. |
 | `validations.regex` | String | Hiermee geeft u aan hoe het veld moet worden gestructureerd voordat de validatie wordt doorgegeven. |
@@ -281,8 +281,8 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gec
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Zie [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu wanneer u publiekssjablonen wilt gebruiken en hoe u een publiekssjabloon kunt configureren met het API-eindpunt van `/authoring/audience-templates` . Lees [&#x200B; hoe te om Destination SDK te gebruiken om uw bestemming &#x200B;](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu wanneer u publiekssjablonen wilt gebruiken en hoe u een publiekssjabloon kunt configureren met het API-eindpunt van `/authoring/audience-templates` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

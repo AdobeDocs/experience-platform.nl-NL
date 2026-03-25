@@ -3,9 +3,9 @@ title: Adform
 description: Adform is een toonaangevende leverancier van software voor het kopen en verkopen van media. Als u Adobe verbindt met de Adobe Experience Platform, kunt u uw publiek van de eerste partij activeren via Adform op basis van de Experience Cloud-id (ECID).
 last-substantial-update: 2025-10-23T00:00:00Z
 exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1075'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Adform is een toonaangevende leverancier van software voor het kopen en verkopen van media. Als u Adobe verbindt met de Adobe Experience Platform, kunt u uw eerste publiek activeren via Adform op basis van de Experience Cloud-id (ECID).
+Adform is een toonaangevende leverancier van software voor het kopen en verkopen van media. Als u Adform verbindt met de [!DNL Adobe Experience Platform] , kunt u het eerste publiek activeren via Adform op basis van de Experience Cloud-id (ECID).
 
 >[!IMPORTANT]
 >
@@ -22,31 +22,31 @@ Adform is een toonaangevende leverancier van software voor het kopen en verkopen
 
 ## Gebruiksscenario&#39;s {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u de bestemming van Adform zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die de klanten van Adobe Experience Platform door deze bestemming kunnen oplossen.
+Om u beter te helpen begrijpen hoe en wanneer u de bestemming van Adform zou moeten gebruiken, zijn hier voorbeelden van gebruiksgevallen die [!DNL Adobe Experience Platform] klanten door deze bestemming kunnen oplossen.
 
-### Adobe Real-Time CDP-publieksactivering {#use-case-1}
+### Adobe [!DNL Real-Time CDP] publieksactivering {#use-case-1}
 
-Gebruik deze bestemming om Adobe Real-Time CDP-publiek naar Adobe te sturen voor activering op basis van de Experience Cloud-id (ECID) en de Adobe-id voor Fusion. De Adobe ID Fusion is de service voor het oplossen van id&#39;s van Adobe waarmee u het eerste publiek kunt activeren op basis van de Experience Cloud-id (ECID).
+Gebruik deze bestemming om Adobe [!DNL Real-Time CDP]-publiek naar Adobe te sturen voor activering op basis van de Experience Cloud-id (ECID) en de Adobe-id voor Fusion. De ID Fusion van Adobe is de service voor het oplossen van id&#39;s van Adform waarmee u het eerste publiek op basis van de Experience Cloud-id (ECID) kunt activeren.
 
-Een veelvoorkomend geval is het opnieuw toewijzen van uw websitebezoekers aan uw website of app op basis van de Experience Cloud-id (ECID). Alles u moet doen moet identiteitskaart van Experience Cloud (ECID) naar Adform via gemakkelijk beschikbare [&#x200B; Gebeurtenis verzenden die &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) stroomt of [&#x200B; cliënt-kant &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/analytics/adform) uitbreidingen Adform. Daarna kunt u een publiek delen met Adobe via de bestemming Adform voor activering - uitsluitend op basis van de Experience Cloud-id (ECID).
+Een veelvoorkomend geval is het opnieuw toewijzen van uw websitebezoekers aan uw website of app op basis van de Experience Cloud-id (ECID). Alles u moet doen moet identiteitskaart van Experience Cloud (ECID) naar Adform via gemakkelijk beschikbare [ Gebeurtenis verzenden die ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) stroomt of [ cliënt-kant ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) uitbreidingen Adform. Daarna kunt u een publiek delen met Adobe via de bestemming Adform voor activering - uitsluitend op basis van de Experience Cloud-id (ECID).
 
 ## Vereisten {#prerequisites}
 
 * U moet een bestaande klant van Adobe zijn om deze bestemming te gebruiken.
 * U moet over uw geloofsbrieven van de Verbinding van de Gegevens van de Gegevens van de Audience van de Audience hebben.
    * Neem contact op met uw vertegenwoordiger van Adobe als u geen gegevens voor de Adform Audience Base-gegevensverbinding hebt.
-* Voor juiste synchronisatie moet u of een [&#x200B; Gebeurtenis hebben die &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) stroomt of [&#x200B; cliënt-kant &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/analytics/adform) verbinding van uw entiteiten aan het Volgen van de Plaats Adform.
+* Voor juiste synchronisatie moet u of een [ Gebeurtenis hebben die ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) stroomt of [ cliënt-kant ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) verbinding van uw entiteiten aan het Volgen van de Plaats Adform.
    * Neem contact op met uw vertegenwoordiger van Adobe als u geen Streaming van gebeurtenissen of een client-side verbinding van uw entiteiten hebt met Adform Site Tracking.
-   * Adform verstrekt de uitbreidingen van Adobe Experience Cloud voor zowel [&#x200B; Gebeurtenis het Streamen &#x200B;](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) als [&#x200B; cliënt-kant &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/analytics/adform).
+   * Adform verstrekt [!DNL Adobe Experience Cloud] uitbreidingen voor zowel [ Gebeurtenis het Streamen ](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) als [ cliënt-kant ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Adform ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
+Adform ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [&#x200B; ECID &#x200B;](/help/identity-service/features/ecid.md) voor meer informatie. |
+| ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze namespace kan ook door de volgende aliassen worden bedoeld: &quot;identiteitskaart van Adobe Marketing Cloud&quot;, &quot;[!DNL Adobe Experience Cloud] identiteitskaart&quot;, &quot;[!DNL Adobe Experience Platform] identiteitskaart&quot;. Zie het volgende document op [ ECID ](/help/identity-service/features/ecid.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -56,8 +56,8 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -67,10 +67,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -82,7 +82,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Segment export]** | U voert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, of anderen) uit die in *worden gebruikt UwDoel* bestemming. |
-| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [&#x200B; partij op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -90,15 +90,15 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-![&#x200B; verifieer aan de bestemming &#x200B;](../../assets/catalog/advertising/adform/authenticate-destination.png)
+![ verifieer aan de bestemming ](../../assets/catalog/advertising/adform/authenticate-destination.png)
 
 * **[!UICONTROL Account name]**: voer een accountnaam in waarmee u deze doelverbinding in de toekomst kunt identificeren.
 * **[!UICONTROL S3 Access Key ID]**: vul de S3 Toegangssleutel in die door Adform wordt verstrekt.
@@ -108,7 +108,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![&#x200B; Vul in de bestemmingsdetails &#x200B;](../../assets/catalog/advertising/adform/configure-destination-details.png)
+![ Vul in de bestemmingsdetails ](../../assets/catalog/advertising/adform/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -116,7 +116,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -124,10 +124,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -141,8 +141,8 @@ De bestemmingsschakelaar voert slechts de identiteit ECID naar de bestemming uit
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Voor extra informatie over de Adform Basis van het Publiek, zie de [&#x200B; Adform documentatie van de Basis van het Publiek &#x200B;](https://www.adformhelp.com/hc/en-us/categories/9738365991697-Data-Management-Platform).
+Voor extra informatie over de Adform Basis van het Publiek, zie de [ Adform documentatie van de Basis van het Publiek ](https://www.adformhelp.com/hc/en-us/categories/9738365991697-Data-Management-Platform).

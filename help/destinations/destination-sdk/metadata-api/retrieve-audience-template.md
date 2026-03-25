@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een publiekssjabloon door Adobe Experience Platform Destination SDK terug te winnen.
 title: Een publiekssjabloon ophalen
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een sjabloon voor publieksmetagegevens op te halen met het API-eindpunt `/authoring/audience-templates` .
 
-Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [&#x200B; beheer van publieksmeta-gegevens &#x200B;](../functionality/audience-metadata-management.md).
+Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [ beheer van publieksmeta-gegevens ](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
@@ -25,7 +25,7 @@ Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpun
 
 ## Aan de slag met API-bewerkingen voor publiekssjablonen {#get-started}
 
-Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../getting-started.md) voor belangrijke informatie die u moet weten om vraag aan API met succes te maken, met inbegrip van hoe te om de vereiste toestemming van de bestemmings authoring en vereiste kopballen te verkrijgen.
 
 ## Een publiekssjabloon ophalen {#retrieve}
 
@@ -51,7 +51,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB wint alle publieksmalplaatjes  terug]
+>[!TAB  wint alle publieksmalplaatjes ] terug
 
 Met de volgende aanvraag wordt de lijst met publiekssjablonen opgehaald die u kunt gebruiken op basis van de configuratie van [!DNL IMS Org ID] en de sandbox.
 
@@ -180,7 +180,7 @@ Een geslaagde reactie geeft HTTP-status 200 weer met een lijst van publiekssjabl
 
 +++
 
->[!TAB wint een specifiek publiekssjabloon  terug]
+>[!TAB  wint een specifiek publiekssjabloon ] terug
 
 Met de volgende aanvraag wordt de lijst met publiekssjablonen opgehaald die u kunt gebruiken op basis van de configuratie van [!DNL IMS Org ID] en de sandbox.
 
@@ -319,8 +319,8 @@ Een succesvolle reactie keert status 200 van HTTP met de details van het publiek
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [&#x200B; API statuscodes &#x200B;](../../../landing/troubleshooting.md#api-status-codes) en [&#x200B; de fouten van de verzoekkopbal &#x200B;](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Zie [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u details over de configuratie van de doelserver kunt ophalen met behulp van het API-eindpunt van `/authoring/destination-servers` . Lees [&#x200B; hoe te om Destination SDK te gebruiken om uw bestemming &#x200B;](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.
+Nadat u dit document hebt gelezen, weet u nu hoe u details over de configuratie van de doelserver kunt ophalen met behulp van het API-eindpunt van `/authoring/destination-servers` . Lees [ hoe te om Destination SDK te gebruiken om uw bestemming ](../guides/configure-destination-instructions.md) te vormen om te begrijpen waar deze stap in het proces past om uw bestemming te vormen.

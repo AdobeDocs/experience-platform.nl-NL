@@ -2,9 +2,9 @@
 description: Leer hoe u invoervelden maakt in de gebruikersinterface van Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
 title: Gegevensvelden van de klant
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Wanneer u verbinding maakt met uw doel in de gebruikersinterface van Experience Platform, hebt u mogelijk uw gebruikers nodig om specifieke configuratiegegevens op te geven of specifieke opties te selecteren die u hun ter beschikking stelt. In Destination SDK worden deze opties gegevensvelden voor klanten genoemd.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [&#x200B; documentatie van configuratieopties &#x200B;](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ documentatie van configuratieopties ](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
 * [Destination SDK gebruiken om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
@@ -62,7 +62,7 @@ Wanneer u uw eigen gegevensvelden voor klanten maakt, kunt u de parameters in de
 | `enum` | String | Optioneel | Hiermee geeft u het aangepaste veld weer als een vervolgkeuzemenu en geeft u de opties weer die beschikbaar zijn voor de gebruiker. |
 | `default` | String | Optioneel | Definieert de standaardwaarde in de lijst `enum` . |
 | `hidden` | Boolean | Optioneel | Geeft aan of het gegevensveld van de klant al dan niet in de gebruikersinterface wordt weergegeven. |
-| `unique` | Boolean | Optioneel | Gebruik deze parameter wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. Bijvoorbeeld, moet het **[!UICONTROL Integration alias]** gebied in de [&#x200B; Personalization van de Douane &#x200B;](../../../catalog/personalization/custom-personalization.md) bestemming uniek zijn, betekenend dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
+| `unique` | Boolean | Optioneel | Gebruik deze parameter wanneer u een gebied van klantengegevens moet creëren de waarvan waarde over alle bestemmingsdataflows opstelling door de organisatie van een gebruiker uniek moet zijn. Bijvoorbeeld, moet het **[!UICONTROL Integration alias]** gebied in de [ Personalization van de Douane ](../../../catalog/personalization/custom-personalization.md) bestemming uniek zijn, betekenend dat twee afzonderlijke dataflows aan deze bestemming niet de zelfde waarde voor dit gebied kunnen hebben. |
 | `readOnly` | Boolean | Optioneel | Geeft aan of de klant de waarde van het veld kan wijzigen of niet. |
 
 {style="table-layout:auto"}
@@ -99,7 +99,7 @@ In het onderstaande voorbeeld definieert de sectie `customerDataFields` twee vel
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-![&#x200B; beeld van Ui dat een voorbeeld van de gebieden van klantengegevens toont.](../../assets/functionality/destination-configuration/customer-data-fields-example.png)
+![ beeld van Ui dat een voorbeeld van de gebieden van klantengegevens toont.](../../assets/functionality/destination-configuration/customer-data-fields-example.png)
 
 ## Namen en beschrijvingen van doelverbindingen {#names-description}
 
@@ -169,7 +169,7 @@ De onderstaande configuratie wordt bijvoorbeeld dienovereenkomstig weergegeven i
 ]
 ```
 
-![&#x200B; Beeld dat de orde van dossier het formatteren opties in Experience Platform UI toont.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
+![ Beeld dat de orde van dossier het formatteren opties in Experience Platform UI toont.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
 
 ## Gegevensvelden van klanten groeperen {#grouping}
 
@@ -210,7 +210,7 @@ Hiertoe maakt u met `"type": "object"` de groep en verzamelt u de gewenste gegev
 ]
 ```
 
-![&#x200B; Beeld die de gebieden van klantengegevens groeperen in UI tonen.](../../assets/functionality/destination-configuration/group-customer-data-fields.png)
+![ Beeld die de gebieden van klantengegevens groeperen in UI tonen.](../../assets/functionality/destination-configuration/group-customer-data-fields.png)
 
 ## Drupdown-kiezers maken voor gegevensvelden van klanten {#dropdown-selectors}
 
@@ -251,17 +251,17 @@ Hiervoor gebruikt u het `namedEnum` -object zoals hieronder wordt weergegeven en
 ]
 ```
 
-![&#x200B; het registreren van het Scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+![ het registreren van het Scherm die een voorbeeld van dropdown selecteurs tonen die met de hierboven getoonde configuratie worden gecreeerd.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
 
 ## Dynamische vervolgkeuzekiezers maken voor gegevensvelden van klanten {#dynamic-dropdown-selectors}
 
 In situaties waarin u een API dynamisch wilt aanroepen en de reactie wilt gebruiken om de opties in een vervolgkeuzemenu dynamisch te vullen, kunt u een dynamische vervolgkeuzekiezer gebruiken.
 
-De dynamische dropdown selecteurs kijken identiek aan de [&#x200B; regelmatige dropdown selecteurs &#x200B;](#dropdown-selectors) in UI. Het enige verschil is dat de waarden dynamisch worden opgehaald van een API.
+De dynamische dropdown selecteurs kijken identiek aan de [ regelmatige dropdown selecteurs ](#dropdown-selectors) in UI. Het enige verschil is dat de waarden dynamisch worden opgehaald van een API.
 
 Als u een dynamische vervolgkeuzekiezer wilt maken, moet u twee componenten configureren:
 
-**Stap 1.** [&#x200B; creeer een bestemmingsserver &#x200B;](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) met een `responseFields` malplaatje voor de dynamische API vraag, zoals hieronder getoond.
+**Stap 1.** [ creeer een bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) met een `responseFields` malplaatje voor de dynamische API vraag, zoals hieronder getoond.
 
 ```json
 {
@@ -338,11 +338,11 @@ Als u een dynamische vervolgkeuzekiezer wilt maken, moet u twee componenten conf
 ]
 ```
 
-Stel de parameter `destinationServerId` in op de id van de doelserver die u bij stap 1 hebt gemaakt. U kunt de identiteitskaart van de bestemmingsserver in de reactie van [&#x200B; zien wint een configuratie van de bestemmingsserver &#x200B;](../../authoring-api/destination-server/retrieve-destination-server.md) API vraag terug.
+Stel de parameter `destinationServerId` in op de id van de doelserver die u bij stap 1 hebt gemaakt. U kunt de identiteitskaart van de bestemmingsserver in de reactie van [ zien wint een configuratie van de bestemmingsserver ](../../authoring-api/destination-server/retrieve-destination-server.md) API vraag terug.
 
 ## Geneste gegevensvelden voor klanten maken {#nested-fields}
 
-U kunt geneste gegevensvelden voor klanten maken voor complexe integratiepatronen. Hierdoor kunt u een reeks selecties voor de klant koppelen.
+U kunt geneste gegevensvelden voor klanten maken voor complexe integratiepatronen. Gebruik deze om een reeks selecties voor de klant te koppelen.
 
 U kunt bijvoorbeeld geneste gegevensvelden voor klanten toevoegen, zodat klanten een integratietype met uw bestemming moeten selecteren, gevolgd door onmiddellijk een andere selectie. De tweede selectie is een genest veld binnen het integratietype.
 
@@ -350,7 +350,7 @@ Als u een genest veld wilt toevoegen, gebruikt u de parameter `properties` (zie 
 
 >[!TIP]
 >
->Vanaf de release van april 2024 kunt u een parameter `isRequired` instellen voor geneste velden. In het onderstaande configuratiefragment worden bijvoorbeeld de eerste twee geneste velden gemarkeerd als verplicht (gemarkeerde regel xxx) en kunnen klanten alleen verdergaan als ze een waarde voor het veld selecteren. Lees meer over vereiste gebieden in de [&#x200B; gesteunde parameters &#x200B;](#supported-parameters) sectie.
+>Vanaf de release van april 2024 kunt u een parameter `isRequired` instellen voor geneste velden. In het onderstaande configuratiefragment worden bijvoorbeeld de eerste twee geneste velden gemarkeerd als verplicht (gemarkeerde regel xxx) en kunnen klanten alleen verdergaan als ze een waarde voor het veld selecteren. Lees meer over vereiste gebieden in de [ gesteunde parameters ](#supported-parameters) sectie.
 
 ```json {line-numbers="true" highlight="11,20"}
     {
@@ -555,7 +555,7 @@ In een bredere context ziet u het veld `conditional` dat wordt gebruikt in de do
 
 Hieronder ziet u het resulterende UI-scherm op basis van de bovenstaande configuratie. Wanneer de gebruiker het bestandstype CSV selecteert, worden aanvullende opties voor bestandsindeling die verwijzen naar het CSV-bestandstype weergegeven in de gebruikersinterface.
 
-![&#x200B; het registreren van het scherm die de voorwaardelijke dossier het formatteren optie voor Csv- dossiers tonen.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
+![ het registreren van het scherm die de voorwaardelijke dossier het formatteren optie voor Csv- dossiers tonen.](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
 
 ## Toegang tot getemplatificeerde gegevensvelden van klanten {#accessing-templatized-fields}
 
@@ -609,7 +609,7 @@ Experience Platform kan alleen correct verbinding maken met [!DNL Amazon S3] als
 
 De sjabloonwaarden `{{customerData.bucketName}}` en `{{customerData.path}}` lezen de door de gebruiker opgegeven waarden zodat Experience Platform verbinding kan maken met het doelplatform.
 
-Voor meer informatie over hoe te om uw bestemmingsserver te vormen om gematigde gebieden te lezen, zie de documentatie op [&#x200B; hard-gecodeerd tegenover templatized gebieden &#x200B;](../destination-server/server-specs.md#templatized-fields).
+Voor meer informatie over hoe te om uw bestemmingsserver te vormen om gematigde gebieden te lezen, zie de documentatie op [ hard-gecodeerd tegenover templatized gebieden ](../destination-server/server-specs.md#templatized-fields).
 
 ## Volgende stappen {#next-steps}
 

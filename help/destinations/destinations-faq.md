@@ -3,9 +3,9 @@ keywords: bestemmingen; vragen; veelgestelde vragen; vk; bestemmingen vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1632'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-In dit document worden antwoorden gegeven op veelgestelde vragen over Adobe Experience Platform-doelen. Voor vragen en het oplossen van problemen met betrekking tot andere [!DNL Experience Platform] diensten, met inbegrip van die over alle [!DNL Experience Platform] APIs worden ontmoet, verwijs naar de [&#x200B; het oplossen van problemengids van Experience Platform &#x200B;](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over [!DNL Adobe Experience Platform] doelen. Voor vragen en het oplossen van problemen met betrekking tot andere [!DNL Experience Platform] diensten, met inbegrip van die over alle [!DNL Experience Platform] APIs worden ontmoet, zie de [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md).
 
 ## Algemene vragen over bestemmingen {#general}
 
@@ -27,7 +27,7 @@ Streaming segmentatie werkt het aantal profielen voor streaming publiek gedurend
 
 Wanneer het schema voor het exporteren van publiek afwijkt van het segmentatieschema, telt het profiel tussen de gebruikersinterface en het geëxporteerde [!DNL CSV] -bestand anders, vooral wanneer het gaat om streaming publiek.
 
-Zie de [&#x200B; documentatie van de Dienst van de Segmentatie &#x200B;](../segmentation/home.md) voor meer details.
+Zie de [ documentatie van de Dienst van de Segmentatie ](../segmentation/home.md) voor meer details.
 +++
 
 ### Waarom zie ik lage gelijke tarieven na het deactiveren en het opnieuw activeren van een bijgewerkt publiek aan de zelfde bestemming? {#low-match-rates-reactivation}
@@ -69,7 +69,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 
 ||Experience Cloud Audiences|Adobe Target|
 |---|---|---|
-| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, [!DNL Adobe Target], [!DNL Adobe Analytics], Advertising Cloud, Marketo, [!DNL Adobe Campaign] | Supports audience activation only to [!DNL Adobe Target] |
 | **Supports audience activation** | ✓ | ✓ |
 | **Supports attribute activation** | X | ✓ |
 | **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
@@ -93,11 +93,11 @@ See the table below for a feature comparison between the Experience Cloud Audien
 Voordat u uw publiek naar [!DNL Facebook] kunt sturen, moet u controleren of aan de volgende vereisten is voldaan:
 
 * Voor uw [!DNL Facebook] -gebruikersaccount moet de **[!DNL Manage campaigns]** -machtiging zijn ingeschakeld voor de advertentieaccount die u wilt gebruiken.
-* De **Adobe Experience Cloud** bedrijfsrekening moet als advertentiepartner in uw [!DNL Facebook Ad Account] worden toegevoegd. Gebruik `business ID=206617933627973` . Zie [&#x200B; Partners aan Uw BedrijfsManager &#x200B;](https://www.facebook.com/business/help/1717412048538897) in de documentatie Facebook voor details toevoegen.
+* Het **[!DNL Adobe Experience Cloud]** -bedrijfsaccount moet als een advertentiepartner in uw [!DNL Facebook Ad Account] worden toegevoegd. Gebruik `business ID=206617933627973` . Zie [ Partners aan Uw BedrijfsManager ](https://www.facebook.com/business/help/1717412048538897) in de documentatie Facebook voor details toevoegen.
 
   >[!IMPORTANT]
   >
-  > Wanneer het vormen van de toestemmingen voor Adobe Experience Cloud, moet u **toelaten leidt campagnes** toestemming. Dit is vereist voor de [!DNL Adobe Experience Platform] -integratie.
+  > Wanneer het vormen van de toestemmingen voor [!DNL Adobe Experience Cloud], moet u **toelaten leidt campagnes** toestemming. Dit is vereist voor de [!DNL Adobe Experience Platform] -integratie.
 * Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga hiertoe naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` , waar `accountID` uw [!DNL Facebook Ad Account ID] is.
 +++
 
@@ -107,7 +107,7 @@ Voordat u uw publiek naar [!DNL Facebook] kunt sturen, moet u controleren of aan
 Nee. Aangezien dit geen op pixels gebaseerde integratie is, is het niet nodig om pixels toe te voegen aan uw adverteerderaccount.
 +++
 
-### Hoe lang duurt het voordat Facebook informatie uit Adobe Experience Platform verwerkt? {#facebook-processing-time}
+### Hoe lang duurt het voordat Facebook gegevens van [!DNL Adobe Experience Platform] verwerkt? {#facebook-processing-time}
 
 +++Antwoord
 Vanaf maart 2021 heeft [!DNL Facebook Custom Audiences] een uur nodig om de gegevens te verwerken die zijn ontvangen van [!DNL Experience Platform] .
@@ -122,12 +122,12 @@ U kunt de bestemming [!DNL Facebook Custom Audiences] gebruiken voor doelgroepen
 ### Wat is het verschil tussen de extensie [!DNL Facebook Custom Audiences] en [!DNL Facebook Pixel] ? {#facebook-custom-audiences-vs-pixel}
 
 +++Antwoord
-De [!DNL Facebook Custom Audiences] verbinding gebruikt [!DNL Experience Platform] identiteiten wanneer het verzenden van publiek naar [!DNL Facebook], terwijl de [[!DNL Facebook Pixel]  verbinding &#x200B;](../destinations/catalog/advertising/facebook-pixel.md) [!DNL Facebook] pixel gebruikt die in een website wordt geïntegreerd.
+De [!DNL Facebook Custom Audiences] verbinding gebruikt [!DNL Experience Platform] identiteiten wanneer het verzenden van publiek naar [!DNL Facebook], terwijl de [[!DNL Facebook Pixel]  verbinding ](../destinations/catalog/advertising/facebook-pixel.md) [!DNL Facebook] pixel gebruikt die in een website wordt geïntegreerd.
 
 Deze twee integraties zijn complementair; u kunt beide gebruiken om betere publieksdekking te verzekeren. U kunt bijvoorbeeld de extensie [!DNL Facebook Pixel] gebruiken voor het zoeken naar websitebezoekers die geen account hebben gemaakt, terwijl [!DNL Facebook Custom Audiences] u kan helpen bestaande klanten als doel in te stellen op basis van [!DNL Experience Platform] -identiteiten.
 +++
 
-### Biedt de integratie van Adobe Experience Platform met [!DNL Facebook Custom Audiences] ondersteuning voor het uitschakelen van gebruikers die niet langer in aanmerking komen voor deze toepassing? {#facebook-disqualify-users}
+### Biedt de [!DNL Adobe Experience Platform] integratie met [!DNL Facebook Custom Audiences] ondersteuning voor het uitschakelen van gebruikers die niet langer in aanmerking komen voor deze integratie? {#facebook-disqualify-users}
 
 +++Antwoord
 Ja, de integratie ondersteunt het verwijderen van gebruikers uit [!DNL Facebook Custom Audiences] wanneer ze niet langer in aanmerking komen.
@@ -138,7 +138,7 @@ Ja, de integratie ondersteunt het verwijderen van gebruikers uit [!DNL Facebook 
 +++Antwoord
 [!DNL Facebook] vereist dat er geen PII&#39;s (Personal Identified Information) worden verzonden. Daarom kan het publiek dat aan [!DNL Facebook] wordt geactiveerd van *gehakt* herkenningstekens, zoals e-mailadressen of telefoonaantallen worden afgevinkt.
 
-Voor gedetailleerde verklaringen over identiteitskaart passende vereisten, zie [&#x200B; identiteitskaart passende vereisten &#x200B;](catalog/social/facebook.md#id-matching-requirements).
+Voor gedetailleerde verklaringen over identiteitskaart passende vereisten, zie [ identiteitskaart passende vereisten ](catalog/social/facebook.md#id-matching-requirements).
 +++
 
 ### Welk type identiteiten kan ik activeren in [!DNL Facebook Custom Audiences]? {#facebook-identities}
@@ -150,7 +150,7 @@ Voor gedetailleerde verklaringen over identiteitskaart passende vereisten, zie [
 ### Kan ik meerdere Facebook-doelen maken in de gebruikersinterface van Experience Platform voor afzonderlijke Facebook-accounts? {#facebook-multiple-destinations}
 
 +++Antwoord
-Ja. Een Facebook-bestemming in Experience Platform is 1 :1 voor een advertentieaccount op Facebook. U kunt een aparte Facebook-bestemming maken voor elk Facebook-advertentieaccount in uw bedrijf. Volg het [&#x200B; leerprogramma van de bestemmingsverbinding &#x200B;](/help/destinations/ui/connect-destination.md) en verbind met een afzonderlijke rekening Facebook voor elke nieuwe bestemming Facebook in Experience Platform UI. Er is geen limiet voor het aantal Facebook-advertentieaccounts waarmee u verbinding kunt maken.
+Ja. Een Facebook-bestemming in Experience Platform is 1 :1 voor een advertentieaccount op Facebook. U kunt een aparte Facebook-bestemming maken voor elk Facebook-advertentieaccount in uw bedrijf. Volg het [ leerprogramma van de bestemmingsverbinding ](/help/destinations/ui/connect-destination.md) en verbind met een afzonderlijke rekening Facebook voor elke nieuwe bestemming Facebook in Experience Platform UI. Er is geen limiet voor het aantal Facebook-advertentieaccounts waarmee u verbinding kunt maken.
 +++
 
 ## Google Customer Match {#google-customer-match}
@@ -158,7 +158,7 @@ Ja. Een Facebook-bestemming in Experience Platform is 1 :1 voor een advertentiea
 ### Waarom zie ik extra nummers toevoegen aan het einde van de publieksnamen in de Google-interface wanneer ik publiek exporteer naar Google Customer Match? {#google-customer-match-audience-name-numbers}
 
 +++Antwoord
-Google vereist dat publieksnamen uniek zijn. De aantallen die u ziet zijn [&#x200B; tijdstempels van UNIX &#x200B;](https://www.unixtimestamp.com/) en zij worden toegevoegd om de publieksnamen uniek te houden, als u het zelfde publiek aan veelvoudige bestemmingen van Google in kaart bracht.
+Google vereist dat publieksnamen uniek zijn. De aantallen die u ziet zijn [ tijdstempels van UNIX ](https://www.unixtimestamp.com/) en zij worden toegevoegd om de publieksnamen uniek te houden, als u het zelfde publiek aan veelvoudige bestemmingen van Google in kaart bracht.
 +++
 
 ## Gekoppeld publiek gekoppeld aan {#linkedin}
@@ -174,7 +174,7 @@ Nee. Aangezien dit geen op pixels gebaseerde integratie is, is het niet nodig om
 +++Antwoord
 Voordat u het doel van [!UICONTROL LinkedIn Matched Audience] kunt gebruiken, moet u ervoor zorgen dat uw [!DNL LinkedIn Campaign Manager] -account het machtigingsniveau [!DNL Creative Manager] of hoger heeft.
 
-Leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [&#x200B; toevoegen, uitgeven, en verwijderen de Toestemmingen van de Gebruiker op de Rekeningen van Advertising &#x200B;](https://www.linkedin.com/help/lms/answer/5753) in de documentatie LinkedIn.
+Leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [ toevoegen, uitgeven, en verwijderen de Toestemmingen van de Gebruiker op de Rekeningen van Advertising ](https://www.linkedin.com/help/lms/answer/5753) in de documentatie LinkedIn.
 +++
 
 ### Hoe moet ik de publieksgegevens hashen voordat ik deze naar [!DNL LinkedIn] verstuurt? {#linkedin-hashing}
@@ -182,7 +182,7 @@ Leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit 
 +++Antwoord
 [!DNL LinkedIn] vereist dat er geen PII&#39;s (Personal Identified Information) worden verzonden. Daarom kan het publiek dat aan [!DNL LinkedIn] wordt geactiveerd van *gehakt* herkenningstekens, zoals e-mailadressen of telefoonaantallen worden afgevinkt.
 
-Voor gedetailleerde verklaringen over identiteitskaart passende vereisten, zie [&#x200B; identiteitskaart passende vereisten &#x200B;](catalog/social/linkedin.md#id-matching-requirements).
+Voor gedetailleerde verklaringen over identiteitskaart passende vereisten, zie [ identiteitskaart passende vereisten ](catalog/social/linkedin.md#id-matching-requirements).
 +++
 
 ### Welk type identiteiten kan ik activeren in [!DNL LinkedIn]? {#linkedin-identities}
@@ -192,22 +192,22 @@ Voor gedetailleerde verklaringen over identiteitskaart passende vereisten, zie [
 
 +++
 
-## Zelfde pagina en volgende pagina personalisatie door de bestemmingen van Adobe Target en van de Douane Personalization {#same-next-page-personalization}
+## Zelfde pagina en volgende pagina personalisatie door de bestemmingen van [!DNL Adobe Target] en van de Douane Personalization {#same-next-page-personalization}
 
-### Moet ik Experience Platform Web SDK gebruiken om publiek en attributen naar Adobe Target te verzenden? {#target-web-sdk}
+### Moet ik Experience Platform Web SDK gebruiken om publiek en kenmerken naar [!DNL Adobe Target] te verzenden? {#target-web-sdk}
 
 +++Antwoord
-Nr, SDK van het Web wordt niet vereist om publiek aan [&#x200B; Adobe Target &#x200B;](catalog/personalization/adobe-target-connection.md) te activeren.
+Nee, de Web SDK is niet verplicht om het publiek te activeren naar [[!DNL Adobe Target]](catalog/personalization/adobe-target-connection.md) .
 
-Nochtans, als [[!DNL at.js] &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) in plaats van Web SDK wordt gebruikt, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
+Nochtans, als [[!DNL at.js] ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) in plaats van Web SDK wordt gebruikt, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
 
-Voor [&#x200B; zelfde-pagina en volgende-pagina verpersoonlijking &#x200B;](ui/activate-edge-personalization-destinations.md) gebruiksgevallen, moet u of SDK van het Web of [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/) gebruiken. Zie de documentatie bij [&#x200B; activerend publiek aan randbestemmingen &#x200B;](ui/activate-edge-personalization-destinations.md) voor meer implementatiedetails.
+Voor [ zelfde-pagina en volgende-pagina verpersoonlijking ](ui/activate-edge-personalization-destinations.md) gebruiksgevallen, moet u of SDK van het Web of [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/) gebruiken. Zie de documentatie bij [ activerend publiek aan randbestemmingen ](ui/activate-edge-personalization-destinations.md) voor meer implementatiedetails.
 +++
 
-### Is er een grens op het aantal attributen die ik van het Platform van de Gegevens van de Klant in real time naar Adobe Target of een bestemming van de Douane Personalization kan verzenden? {#target-attributes-limit}
+### Is er een grens op het aantal attributen die ik van het Platform van de Gegevens van de Klant in real time naar [!DNL Adobe Target] of een bestemming van de Personalization van de Douane kan verzenden? {#target-attributes-limit}
 
 +++Antwoord
-Ja, de gebruiksgevallen van dezelfde pagina en van de volgende pagina personalisatie ondersteunen maximaal 30 kenmerken per sandbox bij het activeren van het publiek naar Adobe Target- of Custom Personalization-doelen. Zie meer informatie over activeringsbegeleiding in de [&#x200B; begeleidende documentatie &#x200B;](guardrails.md#edge-destinations-activation).
+Ja, de gebruiksgevallen van dezelfde pagina en van de volgende pagina personalisatie ondersteunen maximaal 30 kenmerken per sandbox wanneer een publiek wordt geactiveerd voor [!DNL Adobe Target] - of Aangepaste Personalization-doelen. Zie meer informatie over activeringsbegeleiding in de [ begeleidende documentatie ](guardrails.md#edge-destinations-activation).
 +++
 
 ### Welke typen kenmerken worden ondersteund voor activering (bijvoorbeeld arrays, kaarten, enz.)? {#target-supported-attribute-types}
@@ -226,10 +226,10 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 De definities van het publiek worden binnen een uur doorgegeven aan de Edge Network. Als een publiek echter binnen dit eerste uur wordt geactiveerd, kunnen sommige bezoekers die voor het publiek in aanmerking zouden zijn gekomen, worden overgeslagen.
 +++
 
-### Waar zie ik de geactiveerde kenmerken in Adobe Target? {#target-activated-attributes-location}
+### Waar kan ik de geactiveerde kenmerken in [!DNL Adobe Target] zien? {#target-activated-attributes-location}
 
 +++Antwoord
-De attributen zullen beschikbaar in Doel in [&#x200B; JSON &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=nl-NL) en [&#x200B; HTML &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=nl-NL) aanbiedingen zijn te gebruiken.
+De attributen zullen beschikbaar in Doel in [ JSON ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [ HTML ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) aanbiedingen zijn te gebruiken.
 +++
 
 ### Kan ik een bestemming zonder een gegevensstroom tot stand brengen en dan een gegevensstroom aan de zelfde bestemming op een recentere punt toevoegen? {#destination-without-datastream}
@@ -238,40 +238,40 @@ De attributen zullen beschikbaar in Doel in [&#x200B; JSON &#x200B;](https://exp
 Dit wordt momenteel niet gesteund door de Doelen UI. Neem contact op met uw Adobe-vertegenwoordiger als u in dit geval hulp nodig hebt.
 +++
 
-### Wat gebeurt er als ik een Adobe Target-bestemming verwijder? {#delete-target-destination}
+### Wat gebeurt er als ik een [!DNL Adobe Target] -doel verwijder? {#delete-target-destination}
 
 +++Antwoord
-Wanneer u een doel verwijdert, worden alle soorten publiek en kenmerken die onder het doel zijn toegewezen, uit Adobe Target verwijderd en uit de Edge Network verwijderd.
+Wanneer u een doel verwijdert, worden alle soorten publiek en kenmerken die onder het doel zijn toegewezen, verwijderd uit [!DNL Adobe Target] en ook uit de Edge Network verwijderd.
 +++
 
 ### Werkt de integratie met de Edge Network API? {#edge-network-api-integration}
 
 +++Antwoord
-Ja, de Edge Network API werkt met de Custom Personalization-bestemming. Aangezien profielkenmerken gevoelige gegevens kunnen bevatten, vereist de aangepaste Personalization-bestemming dat u de Edge Network API voor gegevensverzameling gebruikt. Voorts moeten alle API vraag in een [&#x200B; voor authentiek verklaarde context &#x200B;](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) worden gemaakt.
+Ja, de Edge Network API werkt met de Custom Personalization-bestemming. Aangezien profielkenmerken gevoelige gegevens kunnen bevatten, vereist de aangepaste Personalization-bestemming dat u de Edge Network API voor gegevensverzameling gebruikt. Voorts moeten alle API vraag in een [ voor authentiek verklaarde context ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) worden gemaakt.
 +++
 
-### Ik kan slechts één samenvoegbeleid hebben dat actief-op-rand is. Kan ik een publiek opbouwen dat een ander samenvoegbeleid gebruikt en ze nog steeds naar Adobe Target sturen als streaming publiek? {#edge-merge-policy}
+### Ik kan slechts één samenvoegbeleid hebben dat actief-op-rand is. Kan ik een publiek opbouwen dat een ander samenvoegbeleid gebruikt en ze toch naar [!DNL Adobe Target] sturen als streaming publiek? {#edge-merge-policy}
 
 +++Antwoord
-Nee. Al publiek dat u aan Adobe Target wilt activeren moet een actief-op-rand [&#x200B; samenvoegbeleid &#x200B;](../profile/merge-policies/ui-guide.md) gebruiken.
+Nee. Al publiek dat u aan [!DNL Adobe Target] wilt activeren moet een actief-op-rand [ fusiebeleid ](../profile/merge-policies/ui-guide.md) gebruiken.
 +++
 
 ### Worden de Etikettering en de Handhaving van het Gebruik van Gegevens (DULE) en het Beleid van de Toestemming afgedwongen? {#dule-consent-enforcement}
 
 +++Antwoord
-Ja. Het [&#x200B; Beheers en Toestemmingsbeleid van Gegevens &#x200B;](../data-governance/home.md) creeerde en verbonden aan de geselecteerde marketing acties zullen de activering van de geselecteerde attributen bepalen.
+Ja. Het [ Beheers en Toestemmingsbeleid van Gegevens ](../data-governance/home.md) creeerde en verbonden aan de geselecteerde marketing acties zullen de activering van de geselecteerde attributen bepalen.
 +++
 
 ### Zijn de [!DNL Adobe Target] en [!DNL Custom Personalization] bestemmingen [!DNL HIPAA] compatibel? {#hipaa-compliance}
 
 +++Antwoord
-[!DNL Adobe Target] is niet [!DNL HIPPA] - volgzaam met [[!DNL Adobe Healthcare Shield] &#x200B;](https://business.adobe.com/solutions/industries/healthcare.html). Klanten dienen met hun eigen juridische teams na te gaan of [!DNL HIPPA] gereed is voor aangepaste optimalisatiekanalen voordat ze de randaanpassing via [!DNL Adobe Target] of de [!DNL Custom Personalization] -doelen gebruiken.
+[!DNL Adobe Target] is niet [!DNL HIPPA] - volgzaam met [[!DNL Adobe Healthcare Shield] ](https://business.adobe.com/solutions/industries/healthcare.html). Klanten dienen met hun eigen juridische teams na te gaan of [!DNL HIPPA] gereed is voor aangepaste optimalisatiekanalen voordat ze de randaanpassing via [!DNL Adobe Target] of de [!DNL Custom Personalization] -doelen gebruiken.
 
 Wanneer het beheer van het toestemmingsbeleid op schaal moet worden toegepast, moeten klanten [!DNL Adobe Privacy & Security Shield] kopen. [!DNL Adobe Privacy & Security Shield] -functies worden verkocht als een geavanceerde suite van mogelijkheden en worden mogelijk niet afzonderlijk aangeschaft.
 
 Deze dienst omvat klant-beheerde sleutels en verhoogde drempels om de levenscyclus van klantengegevens te beheren.
 
-De [!DNL Adobe Target] en [!DNL Custom Personalization] bestemmingen zijn geïntegreerd met de [&#x200B; Etiketten van het Gebruik van de Gegevens van Experience Platform &#x200B;](../data-governance/labels/overview.md) en de [&#x200B; Dienst van de Handhaving van het Beleid van de Toestemming &#x200B;](../data-governance/enforcement/overview.md). Deze functies zijn beschikbaar voor alle klanten.
+De [!DNL Adobe Target] en [!DNL Custom Personalization] bestemmingen zijn geïntegreerd met de [ Etiketten van het Gebruik van de Gegevens van Experience Platform ](../data-governance/labels/overview.md) en de [ Dienst van de Handhaving van het Beleid van de Toestemming ](../data-governance/enforcement/overview.md). Deze functies zijn beschikbaar voor alle klanten.
 
 
 

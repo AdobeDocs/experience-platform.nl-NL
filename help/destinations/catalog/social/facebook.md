@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2733'
 ht-degree: 1%
 
 ---
@@ -18,44 +18,44 @@ Activeer profielen voor uw [!DNL Facebook] -campagnes voor doelgroepen, personal
 
 U kunt deze bestemming gebruiken voor doelgroepen in [!DNL Facebook's] -apps die worden ondersteund door [!DNL Custom Audiences] , inclusief [!DNL Facebook] , [!DNL Instagram] , [!DNL Audience Network] en [!DNL Messenger] . De selectie van de app waarop u de campagne wilt uitvoeren, wordt aangegeven op het plaatsingsniveau in [!DNL Facebook Ads Manager] .
 
-![&#x200B; bestemming Facebook in Adobe Experience Platform UI.](../../assets/catalog/social/facebook/catalog.png)
+![ bestemming Facebook in Adobe Experience Platform UI.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Gebruiksscenario&#39;s {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer om de [!DNL Facebook] bestemming te gebruiken, zijn er twee voorbeelden van gebruiksgevallen die klanten van Adobe Experience Platform door deze eigenschap kunnen oplossen.
+Voor een beter begrip van het gebruik van de [!DNL Facebook] -bestemming zijn er twee voorbeelden van gebruiksproblemen die [!DNL Adobe Experience Platform] -klanten met deze functie kunnen oplossen.
 
 ### Hoofdletters gebruiken #1 {#use-case-1}
 
-Een online retailer wil bestaande klanten bereiken via sociale platforms en hun persoonlijke aanbiedingen laten zien op basis van hun eerdere bestellingen. De online retailer kan e-mailadressen ophalen van haar eigen CRM-adres naar Adobe Experience Platform, publiek maken van hun eigen offline gegevens en deze soorten publiek naar het [!DNL Facebook] sociale platform sturen, zodat hun advertentie-uitgaven worden geoptimaliseerd.
+Een online retailer wil bestaande klanten bereiken via sociale platforms en hun persoonlijke aanbiedingen laten zien op basis van hun eerdere bestellingen. De online retailer kan e-mailadressen ophalen van hun eigen CRM-adres naar [!DNL Adobe Experience Platform] , een publiek opbouwen op basis van hun eigen offlinegegevens en dit publiek naar het [!DNL Facebook] sociale platform sturen, zodat hun advertentie-uitgaven worden geoptimaliseerd.
 
 ### Hoofdletters gebruiken #2 {#use-case-2}
 
 Een luchtvaartmaatschappij heeft verschillende klantniveaus (Bronze, Silver en Gold) en wil elk niveau via sociale platforms voorzien van persoonlijke aanbiedingen. Niet alle klanten gebruiken echter de mobiele app van de luchtvaartmaatschappij en sommige van hen hebben zich niet aangemeld bij de website van het bedrijf. De enige id&#39;s die het bedrijf over deze klanten heeft, zijn id&#39;s voor lidmaatschap en e-mailadressen.
 
-Om hen over sociale media te richten, kunnen zij de klantengegevens van hun CRM aan boord nemen in Adobe Experience Platform, gebruikend de e-mailadressen als herkenningstekens.
+Als ze zich op sociale media willen richten, kunnen ze de klantgegevens van hun CRM opnemen in [!DNL Adobe Experience Platform] en de e-mailadressen gebruiken als id&#39;s.
 
 Vervolgens kunnen ze hun offlinegegevens gebruiken, inclusief de bijbehorende id&#39;s voor het lidmaatschap en de niveaus van de klant, om nieuwe doelgroepen te maken die ze via de [!DNL Facebook] -bestemming kunnen gebruiken.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Facebook Custom Audiences] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
+[!DNL Facebook Custom Audiences] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
 | `GAID` | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | `IDFA` | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
-| `phone_sha256` | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Volg de instructies in de [&#x200B; passende vereisten van identiteitskaart &#x200B;](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
-| `email_lc_sha256` | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [&#x200B; passende vereisten van identiteitskaart &#x200B;](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| `phone_sha256` | Telefoonnummers die zijn hashed met het SHA256-algoritme | Onbewerkte tekst en via SHA256 gehashte telefoonnummers worden ondersteund door [!DNL Adobe Experience Platform] . Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| `email_lc_sha256` | E-mailadressen die met het algoritme SHA256 worden gehasht | Zowel platte tekst als gehashte e-mailadressen van SHA256 worden ondersteund door [!DNL Adobe Experience Platform]. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | `extern_id` | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
-| `gender` | Geslacht | Geaccepteerde waarden: <ul><li>`m` voor man</li><li>`f` voor vrouwelijk</li></ul> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **&#x200B;**&#x200B;geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
-| `date_of_birth` | Geboortedatum | Geaccepteerde indeling: `yyyy-MM-DD`. <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **&#x200B;**&#x200B;geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
-| `last_name` | Achternaam | Geaccepteerde indeling: Alleen kleine letters, `a-z` tekens en geen leestekens. Gebruik UTF-8-codering voor speciale tekens.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **&#x200B;**&#x200B;geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
-| `first_name` | Voornaam | Geaccepteerde indeling: Alleen kleine letters, `a-z` tekens, geen leestekens, geen spaties. Gebruik UTF-8-codering voor speciale tekens.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **&#x200B;**&#x200B;geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
-| `first_name_initial` | Voornaam oorspronkelijk | Geaccepteerde indeling: alleen kleine letters, `a-z` tekens. Gebruik UTF-8-codering voor speciale tekens.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **&#x200B;**&#x200B;geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
-| `state` | Staat | Gebruik [&#x200B; 2 karakter ANSI afkortingen code &#x200B;](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code) in kleine letters. Voor staten buiten de VS gebruikt u kleine letters, geen leestekens, geen speciale karakters, en geen ruimten.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **&#x200B;**&#x200B;geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
-| `city` | Plaats | Geaccepteerde indeling: Alleen kleine letters, `a-z` tekens, geen leestekens, geen speciale tekens, geen spaties.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **&#x200B;**&#x200B;geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
-| `zip` | Postcode | Geaccepteerde indeling: Kleine letters, geen spaties. Gebruik voor Amerikaanse postcodes alleen de eerste 5 cijfers. Voor het Verenigd Koninkrijk gebruikt u de `Area/District/Sector` -indeling.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **&#x200B;**&#x200B;geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
-| `country` | Land | Geaccepteerd formaat: Kleine letters, 2-brief landcodes in [&#x200B; ISO 3166-1 alpha-2 &#x200B;](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formaat.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **&#x200B;**&#x200B;geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `gender` | Geslacht | Geaccepteerde waarden: <ul><li>`m` voor man</li><li>`f` voor vrouwelijk</li></ul> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `date_of_birth` | Geboortedatum | Geaccepteerde indeling: `yyyy-MM-DD`. <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `last_name` | Achternaam | Geaccepteerde indeling: Alleen kleine letters, `a-z` tekens en geen leestekens. Gebruik UTF-8-codering voor speciale tekens.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `first_name` | Voornaam | Geaccepteerde indeling: Alleen kleine letters, `a-z` tekens, geen leestekens, geen spaties. Gebruik UTF-8-codering voor speciale tekens.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `first_name_initial` | Voornaam oorspronkelijk | Geaccepteerde indeling: alleen kleine letters, `a-z` tekens. Gebruik UTF-8-codering voor speciale tekens.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `state` | Staat | Gebruik [ 2 karakter ANSI afkortingen code ](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code) in kleine letters. Voor staten buiten de VS gebruikt u kleine letters, geen leestekens, geen speciale karakters, en geen ruimten.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `city` | Plaats | Geaccepteerde indeling: Alleen kleine letters, `a-z` tekens, geen leestekens, geen speciale tekens, geen spaties.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `zip` | Postcode | Geaccepteerde indeling: Kleine letters, geen spaties. Gebruik voor Amerikaanse postcodes alleen de eerste 5 cijfers. Voor het Verenigd Koninkrijk gebruikt u de `Area/District/Sector` -indeling.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `country` | Land | Geaccepteerd formaat: Kleine letters, 2-brief landcodes in [ ISO 3166-1 alpha-2 ](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formaat.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -63,8 +63,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -74,10 +74,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de Facebook-bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -99,11 +99,11 @@ Voordat u uw publiek naar [!DNL Facebook] kunt sturen, moet u controleren of aan
 
 * Uw [!DNL Facebook] -gebruikersaccount moet volledige toegang hebben tot [!DNL Facebook Business Account] , dat eigenaar is van het Advertentieverkeer dat u gebruikt.
 * Voor uw [!DNL Facebook] -gebruikersaccount moet de **[!DNL Manage campaigns]** -machtiging zijn ingeschakeld voor de advertentieaccount die u wilt gebruiken.
-* De **Adobe Experience Cloud** bedrijfsrekening moet als advertentiepartner in uw [!DNL Facebook Ad Account] worden toegevoegd. Gebruik `business ID=206617933627973` . Zie [&#x200B; Partners aan Uw BedrijfsManager &#x200B;](https://www.facebook.com/business/help/1717412048538897) in de documentatie Facebook voor details toevoegen.
+* Het **[!DNL Adobe Experience Cloud]** -bedrijfsaccount moet als een advertentiepartner in uw [!DNL Facebook Ad Account] worden toegevoegd. Gebruik `business ID=206617933627973` . Zie [ Partners aan Uw BedrijfsManager ](https://www.facebook.com/business/help/1717412048538897) in de documentatie Facebook voor details toevoegen.
 
   >[!IMPORTANT]
   >
-  > Wanneer het vormen van de toestemmingen voor Adobe Experience Cloud, moet u **toelaten leidt campagnes** toestemming. De machtiging is vereist voor de [!DNL Adobe Experience Platform] -integratie.
+  > Wanneer het vormen van de toestemmingen voor [!DNL Adobe Experience Cloud], moet u **toelaten leidt campagnes** toestemming. De machtiging is vereist voor de [!DNL Adobe Experience Platform] -integratie.
 
 * Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga hiertoe naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973` , waar `accountID` uw [!DNL Facebook Ad Account ID] is. Zorg ervoor dat de sectie `business_id=206617933627973` aanwezig is in de URL wanneer u de Servicevoorwaarden ondertekent.
 
@@ -115,7 +115,7 @@ Voordat u uw publiek naar [!DNL Facebook] kunt sturen, moet u controleren of aan
 
 [!DNL Facebook] vereist dat er geen PII&#39;s (Personal Identified Information) worden verzonden. Daarom kan het publiek dat aan [!DNL Facebook] wordt geactiveerd van *gehakt* herkenningstekens, zoals e-mailadressen of telefoonaantallen worden afgevinkt.
 
-Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen.
+Afhankelijk van het type id&#39;s waarin u [!DNL Adobe Experience Platform] invoert, moet u aan de desbetreffende vereisten voldoen.
 
 ## Pakketten voor publiek maximaliseren {#match-rates}
 
@@ -136,9 +136,9 @@ Er zijn twee methoden om telefoonnummers te activeren in [!DNL Facebook] :
 
 ## E-mailhashingvereisten {#email-hashing-requirements}
 
-U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en [!DNL Experience Platform] hen hebben geknoeid op activering.
+U kunt e-mailadressen hashen alvorens hen in [!DNL Adobe Experience Platform] op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en [!DNL Experience Platform] hebben hen op activering hakt.
 
-Om over het opnemen van e-mailadressen in Experience Platform te leren, zie het [&#x200B; overzicht van de partijopname &#x200B;](/help/ingestion/batch-ingestion/overview.md) en [&#x200B; het stromen ingestitieoverzicht &#x200B;](/help/ingestion/streaming-ingestion/overview.md).
+Om over het opnemen van e-mailadressen in Experience Platform te leren, zie het [ overzicht van de partijopname ](/help/ingestion/batch-ingestion/overview.md) en [ het stromen ingestitieoverzicht ](/help/ingestion/streaming-ingestion/overview.md).
 
 Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende vereisten voldoen:
 
@@ -155,33 +155,33 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 > Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] .
 > De optie **[!UICONTROL Apply transformation]** wordt alleen weergegeven wanneer u kenmerken als bronvelden selecteert. Deze wordt niet weergegeven wanneer u naamruimten kiest.
 
-![&#x200B; pas transformatiecontrole toe die in de afbeeldingsstap wordt benadrukt.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![ pas transformatiecontrole toe die in de afbeeldingsstap wordt benadrukt.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Aangepaste naamruimten gebruiken {#custom-namespaces}
 
-Voordat u de naamruimte `Extern_ID` kunt gebruiken om gegevens naar [!DNL Facebook] te verzenden, moet u eerst uw eigen id&#39;s synchroniseren met [!DNL Facebook Pixel] . Zie de [&#x200B; officiële documentatie van Facebook &#x200B;](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) voor gedetailleerde informatie.
+Voordat u de naamruimte `Extern_ID` kunt gebruiken om gegevens naar [!DNL Facebook] te verzenden, moet u eerst uw eigen id&#39;s synchroniseren met [!DNL Facebook Pixel] . Zie de [ officiële documentatie van Facebook ](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) voor gedetailleerde informatie.
 
 ## Verbinden met de bestemming {#connect}
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL Facebook] -bestemming en het activeren van het publiek.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475119/?quality=12&learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, verwijs naar het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md).
+>De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, zie het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md).
 
 ### Verifiëren voor bestemming {#authenticate}
 
 1. Zoek het Facebook-doel in de doelcatalogus en selecteer **[!UICONTROL Set Up]** .
 2. Selecteer **[!UICONTROL Connect to destination]**.
-   ![&#x200B; verifieer aan de stap van Facebook die in het activeringswerkschema wordt getoond.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![ verifieer aan de stap van Facebook die in het activeringswerkschema wordt getoond.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Ga uw geloofsbrieven van Facebook in en selecteer **Login**.
 
 ### Verificatiegegevens vernieuwen {#refresh-authentication-credentials}
@@ -190,19 +190,19 @@ Facebook-verificatietokens verlopen elke 60 dagen. Zodra het teken is verlopen, 
 
 U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** .
 
-![&#x200B; de kolom van het de rekeningsteken van Facebook vervaldatum in het Browse lusje &#x200B;](../../assets/catalog/social/facebook/account-expiration-browse.png)
+![ de kolom van het de rekeningsteken van Facebook vervaldatum in het Browse lusje ](../../assets/catalog/social/facebook/account-expiration-browse.png)
 
-![&#x200B; de kolom van de de rekeningssymbolische vervaldatum van Facebook in het lusje van Rekeningen &#x200B;](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+![ de kolom van de de rekeningssymbolische vervaldatum van Facebook in het lusje van Rekeningen ](../../assets/catalog/social/facebook/account-expiration-accounts.png)
 
 Als u wilt voorkomen dat het verlopen van een token onderbrekingen veroorzaakt in de activeringsgegevensstroom, verifieert u dit opnieuw door de volgende stappen uit te voeren:
 
 1. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optioneel) Gebruik de beschikbare filters op de pagina om alleen Facebook-accounts weer te geven.
-   ![&#x200B; Filter om slechts de rekeningen van Facebook te tonen &#x200B;](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
+   ![ Filter om slechts de rekeningen van Facebook te tonen ](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. Selecteer de account die u wilt vernieuwen, selecteer de ellips en selecteer **[!UICONTROL Edit details]** .
-   ![&#x200B; uitgezocht geef detailcontrole &#x200B;](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png) uit
+   ![ uitgezocht geef detailcontrole ](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png) uit
 4. Selecteer **[!UICONTROL Reconnect OAuth]** in het modaal venster en verifieer het opnieuw met uw Facebook-referenties.
-   ![&#x200B; Modal venster met Opnieuw verbinden optie OAuth &#x200B;](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+   ![ Modal venster met Opnieuw verbinden optie OAuth ](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 >
@@ -223,7 +223,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -251,14 +251,14 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Zie [&#x200B; publieksgegevens aan het stromen publiek de uitvoerbestemmingen &#x200B;](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui/activate-segment-streaming-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 In de stap **[!UICONTROL Segment schedule]** moet u de instructie [!UICONTROL Origin of audience] opgeven wanneer u een publiek verzendt naar [!DNL Facebook Custom Audiences] .
 
-![&#x200B; Oorsprong van Publiek dropdown die in de Facebook activeringsstap wordt getoond.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![ Oorsprong van Publiek dropdown die in de Facebook activeringsstap wordt getoond.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Voorbeeld van toewijzing: publieksgegevens activeren in [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -267,9 +267,9 @@ Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het active
 Bronvelden selecteren:
 
 * Selecteer de naamruimte `Email` als bronidentiteit als de e-mailadressen die u gebruikt geen hashing zijn.
-* Selecteer `Email_LC_SHA256` namespace als bronidentiteit als u klant e-mailadressen op gegevensinvoer in [!DNL Experience Platform], volgens [!DNL Facebook] [&#x200B; e-mailhashing vereisten &#x200B;](#email-hashing-requirements) hashing.
+* Selecteer `Email_LC_SHA256` namespace als bronidentiteit als u klant e-mailadressen op gegevensinvoer in [!DNL Experience Platform], volgens [!DNL Facebook] [ e-mailhashing vereisten ](#email-hashing-requirements) hashing.
 * Selecteer de naamruimte `PHONE_E.164` als bronidentiteit als uw gegevens uit niet-gehashte telefoonnummers bestaan. [!DNL Experience Platform] hasht de telefoonnummers om te voldoen aan [!DNL Facebook] -vereisten.
-* Selecteer `Phone_SHA256` namespace als bronidentiteit als u telefoonaantallen op gegevensinvoer in [!DNL Experience Platform] hashing, volgens [!DNL Facebook] [&#x200B; de hashing vereisten van het telefoonaantal &#x200B;](#phone-number-hashing-requirements).
+* Selecteer `Phone_SHA256` namespace als bronidentiteit als u telefoonaantallen op gegevensinvoer in [!DNL Experience Platform] hashing, volgens [!DNL Facebook] [ de hashing vereisten van het telefoonaantal ](#phone-number-hashing-requirements).
 * Selecteer de naamruimte `IDFA` als bronidentiteit als uw gegevens uit [!DNL Apple] apparaat-id&#39;s bestaan.
 * Selecteer de naamruimte `GAID` als bronidentiteit als uw gegevens uit [!DNL Android] apparaat-id&#39;s bestaan.
 * Selecteer de naamruimte `Custom` als bronidentiteit als uw gegevens uit andere id&#39;s bestaan.
@@ -287,15 +287,15 @@ Doelvelden selecteren:
 > 
 >Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] .
 
-![&#x200B; pas transformatiecontrole toe die in de afbeeldingsstap wordt benadrukt.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![ pas transformatiecontrole toe die in de afbeeldingsstap wordt benadrukt.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Facebook], betekent een succesvolle activering dat een [!DNL Facebook] douanepubliek programmatically in [[!DNL Facebook Ads Manager] &#x200B;](https://www.facebook.com/adsmanager/manage/) zou worden gecreeerd. Het lidmaatschap van het publiek wordt toegevoegd en verwijderd omdat gebruikers gekwalificeerd zijn voor of gediskwalificeerd zijn voor het actieve publiek.
+Voor [!DNL Facebook], betekent een succesvolle activering dat een [!DNL Facebook] douanepubliek programmatically in [[!DNL Facebook Ads Manager] ](https://www.facebook.com/adsmanager/manage/) zou worden gecreeerd. Het lidmaatschap van het publiek wordt toegevoegd en verwijderd omdat gebruikers gekwalificeerd zijn voor of gediskwalificeerd zijn voor het actieve publiek.
 
 >[!TIP]
 >
->De integratie tussen Adobe Experience Platform en [!DNL Facebook] ondersteunt historische publieksbackfills. Alle historische publiekskwalificaties worden naar [!DNL Facebook] verzonden wanneer u het publiek activeert naar het doel.
+>De integratie tussen [!DNL Adobe Experience Platform] en [!DNL Facebook] steunt historische publieksbackfills. Alle historische publiekskwalificaties worden naar [!DNL Facebook] verzonden wanneer u het publiek activeert naar het doel.
 
 ## Problemen oplossen {#troubleshooting}
 
@@ -309,8 +309,8 @@ Deze fout treedt op wanneer klanten nieuwe accounts gebruiken en de machtigingen
 
 >[!IMPORTANT]
 >
->Zorg ervoor u [!DNL Facebook Custom Audience Terms of Service] onder `business ID 206617933627973` goedkeurt, zoals aangetoond in het malplaatje URL in de [&#x200B; sectie van de rekeningseerste vereisten &#x200B;](#facebook-account-prerequisites).
+>Zorg ervoor u [!DNL Facebook Custom Audience Terms of Service] onder `business ID 206617933627973` goedkeurt, zoals aangetoond in het malplaatje URL in de [ sectie van de rekeningseerste vereisten ](#facebook-account-prerequisites).
 
-Als u het `400 Bad Request` foutenbericht na het volgen van de stappen in [&#x200B; de rekeningseerste vereisten van Facebook &#x200B;](#facebook-account-prerequisites) ontvangt, sta een paar dagen voor de [!DNL Facebook] toestemmingen toe om van kracht te worden.
+Als u het `400 Bad Request` foutenbericht na het volgen van de stappen in [ de rekeningseerste vereisten van Facebook ](#facebook-account-prerequisites) ontvangt, sta een paar dagen voor de [!DNL Facebook] toestemmingen toe om van kracht te worden.
 
 
