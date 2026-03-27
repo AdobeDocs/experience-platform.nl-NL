@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Deze bestemming is beschikbaar slechts aan [&#x200B; Adobe Real-Time Customer Data Platform Ultimate &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze bestemming is beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 De HTTP API-bestemming is een Experience Platform-streamingbestemming waarmee u profielgegevens naar HTTP-eindpunten van derden kunt verzenden.
 
-Om profielgegevens naar eindpunten van HTTP te verzenden, moet u eerst [&#x200B; met de bestemming &#x200B;](#connect-destination) in Experience Platform verbinden.
+Om profielgegevens naar eindpunten van HTTP te verzenden, moet u eerst [ met de bestemming ](#connect-destination) in Experience Platform verbinden.
 
 ## Gebruiksscenario&#39;s {#use-cases}
 
@@ -35,8 +35,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -44,10 +44,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantprofielen. Gebruik deze om specifieke groepen mensen te kiezen voor marketingcampagnes. | Frequente kopers, winkeliers |
-| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantprofielen. Gebruik deze om specifieke groepen mensen te kiezen voor marketingcampagnes. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -58,8 +58,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 | ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een publiek, samen met de gewenste schemagebieden (bijvoorbeeld: e-mailadres, telefoonaantal, achternaam), zoals gekozen in het kaartscherm van het [&#x200B; werkschema van de bestemmingsactivering &#x200B;](../../ui/activate-segment-streaming-destinations.md#mapping). |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een publiek, samen met de gewenste schemagebieden (bijvoorbeeld: e-mailadres, telefoonaantal, achternaam), zoals gekozen in het kaartscherm van het [ werkschema van de bestemmingsactivering ](../../ui/activate-segment-streaming-destinations.md#mapping). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -68,14 +68,14 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 Als u de HTTP API-bestemming wilt gebruiken om gegevens uit Experience Platform te exporteren, moet u aan de volgende voorwaarden voldoen:
 
 * U moet een eindpunt van HTTP hebben dat REST API steunt.
-* Het HTTP-eindpunt moet het Experience Platform-profielschema ondersteunen. Transformatie naar een extern payload-schema wordt niet ondersteund in de HTTP API-bestemming. Verwijs naar de [&#x200B; uitgevoerde gegevens &#x200B;](#exported-data) sectie voor een voorbeeld van het de outputschema van Experience Platform.
+* Het HTTP-eindpunt moet het Experience Platform-profielschema ondersteunen. Transformatie naar een extern payload-schema wordt niet ondersteund in de HTTP API-bestemming. Verwijs naar de [ uitgevoerde gegevens ](#exported-data) sectie voor een voorbeeld van het de outputschema van Experience Platform.
 * Uw eindpunt van HTTP moet kopballen steunen.
 * Uw eindpunt van HTTP moet binnen 2 seconden antwoorden om juiste gegevensverwerking te verzekeren en onderbrekingsfouten te vermijden.
 * Als u mTLS wilt gebruiken: voor uw gegevens die eindpunt ontvangen, moet TLS zijn uitgeschakeld en alleen mTLS zijn ingeschakeld.
 
 >[!TIP]
 >
-> U kunt [&#x200B; Adobe Experience Platform Destination SDK &#x200B;](/help/destinations/destination-sdk/overview.md) aan opstelling ook gebruiken en Experience Platform profielgegevens verzenden naar een eindpunt van HTTP.
+> U kunt [ Adobe Experience Platform Destination SDK ](/help/destinations/destination-sdk/overview.md) aan opstelling ook gebruiken en Experience Platform profielgegevens verzenden naar een eindpunt van HTTP.
 
 ## mTLS-protocolondersteuning en -certificaat {#mtls-protocol-support}
 
@@ -85,21 +85,21 @@ mTLS is een wederzijds authentificatieprotocol dat ervoor zorgt dat beide partij
 
 ### mTLS-overwegingen {#mtls-considerations}
 
-De steun mTLS voor HTTP API bestemmingen past **slechts op de gegevens toe die eindpunt** ontvangen waar de profieluitvoer wordt verzonden (het **[!UICONTROL HTTP Endpoint]** gebied in [&#x200B; bestemmingsdetails &#x200B;](#destination-details)).
+De steun mTLS voor HTTP API bestemmingen past **slechts op de gegevens toe die eindpunt** ontvangen waar de profieluitvoer wordt verzonden (het **[!UICONTROL HTTP Endpoint]** gebied in [ bestemmingsdetails ](#destination-details)).
 
 ### mTLS configureren voor gegevensexport {#configuring-mtls}
 
-Om mTLS met HTTP API bestemmingen te gebruiken, **[!UICONTROL HTTP Endpoint]** (gegevens die eindpunt ontvangen) u in de [&#x200B; bestemmingdetails &#x200B;](#destination-details) pagina vormt moet de protocollen van TLS gehandicapt hebben en slechts mTLS toegelaten. Als het TLS 1.2 protocol nog op het eindpunt wordt toegelaten, wordt geen certificaat verzonden voor de cliëntauthentificatie. Dit betekent dat om mTLS met uw bestemming van HTTP API te gebruiken, uw gegevens die servereindpunt ontvangen een mTLS-slechts toegelaten verbindingspunt moeten zijn.
+Om mTLS met HTTP API bestemmingen te gebruiken, **[!UICONTROL HTTP Endpoint]** (gegevens die eindpunt ontvangen) u in de [ bestemmingdetails ](#destination-details) pagina vormt moet de protocollen van TLS gehandicapt hebben en slechts mTLS toegelaten. Als het TLS 1.2 protocol nog op het eindpunt wordt toegelaten, wordt geen certificaat verzonden voor de cliëntauthentificatie. Dit betekent dat om mTLS met uw bestemming van HTTP API te gebruiken, uw gegevens die servereindpunt ontvangen een mTLS-slechts toegelaten verbindingspunt moeten zijn.
 
 ### Certificaatdetails ophalen en inspecteren {#certificate}
 
 Als u certificaatdetails zoals de Gemeenschappelijke Naam (CN) en de Alternatieve Namen van het Onderwerp (San) voor extra derdebevestiging wilt inspecteren, gebruik API om het certificaat terug te winnen en die gebieden uit de reactie te halen.
 
-Zie de [&#x200B; openbare documentatie van het certificaateindpunt &#x200B;](../../../data-governance/mtls-api/public-certificate-endpoint.md) voor meer informatie.
+Zie de [ openbare documentatie van het certificaateindpunt ](../../../data-governance/mtls-api/public-certificate-endpoint.md) voor meer informatie.
 
 ## IP adres lijst van gewenste personen {#ip-address-allowlist}
 
-Experience Platform biedt een lijst met statische IP&#39;s die u voor de HTTP API-bestemming kunt lijsten van gewenste personen om aan de beveiligings- en compatibiliteitseisen van klanten te voldoen. Zie {de lijst van gewenste personen van het 0} IP adres voor het stromen bestemmingen [&#x200B; voor de volledige lijst van IPs aan lijst van gewenste personen.](/help/destinations/catalog/streaming/ip-address-allow-list.md)
+Experience Platform biedt een lijst met statische IP&#39;s die u voor de HTTP API-bestemming kunt lijsten van gewenste personen om aan de beveiligings- en compatibiliteitseisen van klanten te voldoen. Zie {de lijst van gewenste personen van het 0} IP adres voor het stromen bestemmingen [ voor de volledige lijst van IPs aan lijst van gewenste personen.](/help/destinations/catalog/streaming/ip-address-allow-list.md)
 
 ## Ondersteunde verificatietypen {#supported-authentication-types}
 
@@ -107,7 +107,7 @@ De HTTP API bestemming steunt verscheidene authentificatietypen aan uw eindpunt 
 
 * HTTP-eindpunt zonder verificatie;
 * Toekenning aan toonder;
-* [&#x200B; OAuth 2.0 cliëntgeloofsbrieven &#x200B;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentificatie met de lichaamvorm, met [!DNL client ID], [!DNL client secret], en [!DNL grant type] in het lichaam van het HTTP- verzoek, zoals aangetoond in het voorbeeld hieronder.
+* [ OAuth 2.0 cliëntgeloofsbrieven ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentificatie met de lichaamvorm, met [!DNL client ID], [!DNL client secret], en [!DNL grant type] in het lichaam van het HTTP- verzoek, zoals aangetoond in het voorbeeld hieronder.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -117,7 +117,7 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* [&#x200B; OAuth 2.0 cliëntgeloofsbrieven &#x200B;](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) met basisvergunning, met een vergunningskopbal die URL-Gecodeerde [!DNL client ID] en [!DNL client secret] bevat.
+* [ OAuth 2.0 cliëntgeloofsbrieven ](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) met basisvergunning, met een vergunningskopbal die URL-Gecodeerde [!DNL client ID] en [!DNL client secret] bevat.
 
 ```shell
 curl --location --request POST 'https://some-api.com/token' \
@@ -126,15 +126,15 @@ curl --location --request POST 'https://some-api.com/token' \
 --data-urlencode 'grant_type=client_credentials'
 ```
 
-* [&#x200B; OAuth 2.0 wachtwoordsubsidie &#x200B;](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
+* [ OAuth 2.0 wachtwoordsubsidie ](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
 ## Verbinden met de bestemming {#connect-destination}
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. Wanneer u verbinding maakt met dit doel, moet u de volgende informatie opgeven:
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. Wanneer u verbinding maakt met dit doel, moet u de volgende informatie opgeven:
 
 ### Verificatiegegevens {#authentication-information}
 
@@ -147,7 +147,7 @@ Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerpr
 
 Als u het verificatietype **[!UICONTROL Bearer token]** selecteert om verbinding te maken met het HTTP-eindpunt, voert u hieronder de informatie in en selecteert u **[!UICONTROL Connect to destination]** :
 
-![&#x200B; het de authentificatiescherm van HTTP API met het [!UICONTROL Bearer token] gebied.](../../assets/catalog/http/http-api-authentication-bearer.png)
+![ het de authentificatiescherm van HTTP API met het [!UICONTROL Bearer token] gebied.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Bearer token]**: voer het token voor toonder in om op uw HTTP-locatie te verifiëren.
 
@@ -155,7 +155,7 @@ Als u het verificatietype **[!UICONTROL Bearer token]** selecteert om verbinding
 
 Als u het verificatietype **[!UICONTROL None]** selecteert om verbinding te maken met het HTTP-eindpunt:
 
-![&#x200B; het de authentificatiescherm van HTTP API met het [!UICONTROL None] geselecteerde authentificatietype.](../../assets/catalog/http/http-api-authentication-none.png)
+![ het de authentificatiescherm van HTTP API met het [!UICONTROL None] geselecteerde authentificatietype.](../../assets/catalog/http/http-api-authentication-none.png)
 
 Wanneer u deze verificatieoptie selecteert, hoeft u alleen **[!UICONTROL Connect to destination]** te selecteren en de verbinding met het eindpunt tot stand te brengen.
 
@@ -163,7 +163,7 @@ Wanneer u deze verificatieoptie selecteert, hoeft u alleen **[!UICONTROL Connect
 
 Als u het verificatietype **[!UICONTROL OAuth 2 Password]** selecteert om verbinding te maken met het HTTP-eindpunt, voert u hieronder de informatie in en selecteert u **[!UICONTROL Connect to destination]** :
 
-![&#x200B; het de authentificatiescherm van HTTP API met [!UICONTROL OAuth 2 Password] gebieden.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![ het de authentificatiescherm van HTTP API met [!UICONTROL OAuth 2 Password] gebieden.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL Access Token URL]**: De URL aan uw zijde die toegangstokens uitgeeft en, naar keuze, tokens vernieuwt.
 * **[!UICONTROL Client ID]**: De `client ID` die uw systeem toewijst aan Adobe Experience Platform.
@@ -175,7 +175,7 @@ Als u het verificatietype **[!UICONTROL OAuth 2 Password]** selecteert om verbin
 
 Als u het verificatietype **[!UICONTROL OAuth 2 Client Credentials]** selecteert om verbinding te maken met het HTTP-eindpunt, voert u hieronder de informatie in en selecteert u **[!UICONTROL Connect to destination]** :
 
-![&#x200B; het de authentificatiescherm van HTTP API met [!UICONTROL OAuth 2 Client Credentials] gebieden.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![ het de authentificatiescherm van HTTP API met [!UICONTROL OAuth 2 Client Credentials] gebieden.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
 >
@@ -185,8 +185,8 @@ Als u het verificatietype **[!UICONTROL OAuth 2 Client Credentials]** selecteert
 * **[!UICONTROL Client ID]**: De `client ID` die uw systeem toewijst aan Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: De `client secret` die uw systeem toewijst aan Adobe Experience Platform.
 * **[!UICONTROL Client Credentials Type]**: Selecteer het type OAuth 2 Client Credentials gift die door uw eindpunt wordt gesteund:
-   * **[!UICONTROL Body Form Encoded]**: In dit geval, zijn `client ID` en `client secret` inbegrepen *in het lichaam van het verzoek* dat naar uw bestemming wordt verzonden. Bij een voorbeeld, zie de [&#x200B; Ondersteunde authentificatietypen &#x200B;](#supported-authentication-types) sectie.
-   * **[!UICONTROL Basic Authorization]**: In dit geval, zijn `client ID` en `client secret` inbegrepen *in een `Authorization` kopbal* na het worden base64 gecodeerd en verzonden naar uw bestemming. Bij een voorbeeld, zie de [&#x200B; Ondersteunde authentificatietypen &#x200B;](#supported-authentication-types) sectie.
+   * **[!UICONTROL Body Form Encoded]**: In dit geval, zijn `client ID` en `client secret` inbegrepen *in het lichaam van het verzoek* dat naar uw bestemming wordt verzonden. Bij een voorbeeld, zie de [ Ondersteunde authentificatietypen ](#supported-authentication-types) sectie.
+   * **[!UICONTROL Basic Authorization]**: In dit geval, zijn `client ID` en `client secret` inbegrepen *in een `Authorization` kopbal* na het worden base64 gecodeerd en verzonden naar uw bestemming. Bij een voorbeeld, zie de [ Ondersteunde authentificatietypen ](#supported-authentication-types) sectie.
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -217,19 +217,19 @@ Als u het verificatietype **[!UICONTROL OAuth 2 Client Credentials]** selecteert
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![&#x200B; het scherm van HTTP API bestemmingsdetails met voltooide gebieden.](../../assets/catalog/http/http-api-destination-details.png)
+![ het scherm van HTTP API bestemmingsdetails met voltooide gebieden.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Name]**: voer een naam in waarmee u dit doel in de toekomst wilt herkennen.
 * **[!UICONTROL Description]**: voer een beschrijving in die u helpt deze bestemming in de toekomst te identificeren.
 * **[!UICONTROL Headers]**: ga om het even welke douanekopballen in die u in de bestemmingsvraag wilt worden omvat, die dit formaat volgen: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP Endpoint]**: De URL van het HTTP-eindpunt waarnaar u de profielgegevens wilt verzenden. Dit zijn uw gegevens die eindpunt ontvangen. Als u mTLS gebruikt, moet voor dit eindpunt TLS zijn uitgeschakeld en moet alleen mTLS zijn ingeschakeld.
 * **[!UICONTROL Query parameters]**: U kunt optioneel queryparameters toevoegen aan de URL van het HTTP-eindpunt. Maak de queryparameters die u op deze manier gebruikt op: `parameter1=value&parameter2=value` .
-* **[!UICONTROL Include Segment Names]**: in-/uitschakelen als u wilt dat bij het exporteren van de gegevens de namen worden opgenomen van het publiek dat u exporteert. **Nota**: De namen van het publiek zijn slechts inbegrepen voor publiek dat aan de bestemming in kaart wordt gebracht. Het veld `name` wordt niet opgenomen in toegewezen doelgroepen die worden weergegeven in het exportbestand. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [&#x200B; Uitgevoerde gegevens &#x200B;](#exported-data) sectie verder hieronder.
-* **[!UICONTROL Include Segment Timestamps]**: Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de UNIX-tijdstempel wordt gebruikt wanneer het publiek is gemaakt en bijgewerkt, en ook de UNIX-tijdstempel wanneer het publiek voor activering is toegewezen aan het doel. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [&#x200B; Uitgevoerde gegevens &#x200B;](#exported-data) sectie verder hieronder.
+* **[!UICONTROL Include Segment Names]**: in-/uitschakelen als u wilt dat bij het exporteren van de gegevens de namen worden opgenomen van het publiek dat u exporteert. **Nota**: De namen van het publiek zijn slechts inbegrepen voor publiek dat aan de bestemming in kaart wordt gebracht. Het veld `name` wordt niet opgenomen in toegewezen doelgroepen die worden weergegeven in het exportbestand. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [ Uitgevoerde gegevens ](#exported-data) sectie verder hieronder.
+* **[!UICONTROL Include Segment Timestamps]**: Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de UNIX-tijdstempel wordt gebruikt wanneer het publiek is gemaakt en bijgewerkt, en ook de UNIX-tijdstempel wanneer het publiek voor activering is toegewezen aan het doel. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [ Uitgevoerde gegevens ](#exported-data) sectie verder hieronder.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -237,21 +237,21 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* [&#x200B; de beleidsevaluatie van de Goedkeuring &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wordt momenteel niet gesteund in de uitvoer naar de bestemming van HTTP API. [Meer informatie](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* [ de beleidsevaluatie van de Goedkeuring ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wordt momenteel niet gesteund in de uitvoer naar de bestemming van HTTP API. [Meer informatie](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Zie [&#x200B; publieksgegevens aan het stromen van profieluitvoer bestemmingen &#x200B;](../../ui/activate-streaming-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
+Zie [ publieksgegevens aan het stromen van profieluitvoer bestemmingen ](../../ui/activate-streaming-profile-destinations.md) voor instructies op het activeren van publiek aan deze bestemming activeren.
 
 ### Doelkenmerken {#attributes}
 
-In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, adviseert Adobe dat u een uniek herkenningsteken van uw [&#x200B; verenigingsschema &#x200B;](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
+In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, adviseert Adobe dat u een uniek herkenningsteken van uw [ verenigingsschema ](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
 
 ## Exportgedrag profiel {#profile-export-behavior}
 
 Experience Platform optimaliseert het gedrag voor het exporteren van profielen naar uw HTTP API-bestemming, zodat alleen gegevens naar uw API-eindpunt worden geëxporteerd wanneer relevante updates naar een profiel zijn opgetreden na de kwalificatie van het publiek of andere belangrijke gebeurtenissen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
 
 * De profielupdate werd bepaald door een wijziging in het publiekslidmaatschap voor ten minste een van de doelgroepen. Het profiel is bijvoorbeeld gekwalificeerd voor een van de soorten publiek die aan de bestemming zijn toegewezen of heeft een van de soorten publiek afgesloten die aan de bestemming zijn toegewezen.
-* De profielupdate werd bepaald door een verandering in de [&#x200B; identiteitskaart &#x200B;](/help/xdm/field-groups/profile/identitymap.md). Een profiel dat bijvoorbeeld al was gekwalificeerd voor een van de soorten publiek dat aan de bestemming is toegewezen, heeft een nieuwe identiteit toegevoegd aan het kenmerk Naamplaatje.
+* De profielupdate werd bepaald door een verandering in de [ identiteitskaart ](/help/xdm/field-groups/profile/identitymap.md). Een profiel dat bijvoorbeeld al was gekwalificeerd voor een van de soorten publiek dat aan de bestemming is toegewezen, heeft een nieuwe identiteit toegevoegd aan het kenmerk Naamplaatje.
 * De profielupdate is bepaald door een wijziging in kenmerken voor ten minste een van de kenmerken die aan de bestemming zijn toegewezen. Een van de kenmerken die in de toewijzingsstap aan het doel is toegewezen, wordt bijvoorbeeld aan een profiel toegevoegd.
 
 In alle hierboven beschreven gevallen worden alleen de profielen waarin relevante updates zijn opgetreden, naar uw bestemming geëxporteerd. Als een publiek dat is toegewezen aan de doelstroom bijvoorbeeld honderd leden heeft en vijf nieuwe profielen in aanmerking komen voor het publiek, wordt het exporteren naar uw bestemming stapsgewijs uitgevoerd en worden alleen de vijf nieuwe profielen opgenomen.
@@ -266,15 +266,15 @@ Met betrekking tot het gegeven dat voor een bepaald profiel wordt uitgevoerd, is
 
 | Wat bepaalt de doelexport | Wat is inbegrepen in de doelexport |
 |---------|----------|
-| <ul><li>Toegewezen kenmerken en doelgroepen fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als de `segmentMembership` -status van een profiel verandert in `realized` of `exiting` of als toegewezen kenmerken worden bijgewerkt, een doelexport wordt uitgeschakeld.</li><li>Omdat identiteiten momenteel niet aan de bestemmingen van HTTP kunnen worden in kaart gebracht API, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>Het `segmentMembership` -object bevat het publiek dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een afsluitgebeurtenis voor kwalificatie of publiek. Merk op dat andere niet in kaart gebrachte publiek waarvoor het profiel gekwalificeerd deel van de bestemmingsuitvoer kan zijn, als deze doelgroepen tot het zelfde [&#x200B; fusiebeleid &#x200B;](/help/profile/merge-policies/overview.md) behoren zoals het publiek in kaart gebracht in activeringsdataflow. <br> **Belangrijk**: Wanneer de **[!UICONTROL Include Segment Names]** optie wordt toegelaten, zijn de segmentnamen slechts inbegrepen voor publiek dat aan de bestemming in kaart wordt gebracht. Niet-toegewezen doelgroepen die worden weergegeven in het exportbestand, bevatten het veld `name` niet, zelfs niet als de optie is ingeschakeld. </li><li>Alle identiteiten in het `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de HTTP API-bestemming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
+| <ul><li>Toegewezen kenmerken en doelgroepen fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als de `segmentMembership` -status van een profiel verandert in `realized` of `exiting` of als toegewezen kenmerken worden bijgewerkt, een doelexport wordt uitgeschakeld.</li><li>Omdat identiteiten momenteel niet aan de bestemmingen van HTTP kunnen worden in kaart gebracht API, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>Het `segmentMembership` -object bevat het publiek dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een afsluitgebeurtenis voor kwalificatie of publiek. Merk op dat andere niet in kaart gebrachte publiek waarvoor het profiel gekwalificeerd deel van de bestemmingsuitvoer kan zijn, als deze doelgroepen tot het zelfde [ fusiebeleid ](/help/profile/merge-policies/overview.md) behoren zoals het publiek in kaart gebracht in activeringsdataflow. <br> **Belangrijk**: Wanneer de **[!UICONTROL Include Segment Names]** optie wordt toegelaten, zijn de segmentnamen slechts inbegrepen voor publiek dat aan de bestemming in kaart wordt gebracht. Niet-toegewezen doelgroepen die worden weergegeven in het exportbestand, bevatten het veld `name` niet, zelfs niet als de optie is ingeschakeld. </li><li>Alle identiteiten in het `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de HTTP API-bestemming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
 
 {style="table-layout:fixed"}
 
 Bijvoorbeeld, overweeg dit dataflow aan een bestemming van HTTP waar drie publiek in dataflow wordt geselecteerd, en vier attributen worden in kaart gebracht aan de bestemming.
 
-![&#x200B; een voorbeeld van een HTTP API bestemmingsdataflow.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![ een voorbeeld van een HTTP API bestemmingsdataflow.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Een profieluitvoer naar de bestemming wordt teweeggebracht wanneer een profiel voor kwalificeert of één van *drie in kaart gebrachte publiek* weggaat. In de gegevensuitvoer, kan het `segmentMembership` voorwerp (zie [&#x200B; Geëxporteerde Gegevens &#x200B;](#exported-data) hieronder) ook unmapped publiek omvatten, als dat profiel een lid van hen is en zij het zelfde fusiebeleid delen zoals het publiek dat de uitvoer teweegbracht. Bijvoorbeeld, als een profiel voor de **Klant met het 1&rbrace; publiek van de Auto&#39;s DeLorean kwalificeert &lbrace;maar ook een lid van de** Gecontroleerde &quot;Terug naar de Toekomstige&quot;**film en** de fictiefondsen van de Wetenschap **publiek is, verschijnen die twee publiek ook in** voorwerp-op voorwaarde zij het zelfde fusiebeleid met de `segmentMembership` Klant met de Cars van DeLorean &lbrace;8 delen **publiek.**
+Een profieluitvoer naar de bestemming wordt teweeggebracht wanneer een profiel voor kwalificeert of één van *drie in kaart gebrachte publiek* weggaat. In de gegevensuitvoer, kan het `segmentMembership` voorwerp (zie [ Geëxporteerde Gegevens ](#exported-data) hieronder) ook unmapped publiek omvatten, als dat profiel een lid van hen is en zij het zelfde fusiebeleid delen zoals het publiek dat de uitvoer teweegbracht. Bijvoorbeeld, als een profiel voor de **Klant met het 1} publiek van de Auto&#39;s DeLorean kwalificeert {maar ook een lid van de** Gecontroleerde &quot;Terug naar de Toekomstige&quot;**film en** de fictiefondsen van de Wetenschap **publiek is, verschijnen die twee publiek ook in** voorwerp-op voorwaarde zij het zelfde fusiebeleid met de `segmentMembership` Klant met de Cars van DeLorean {8 delen **publiek.**
 
 Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaande kenmerken de doelexport en zijn alle vier toegewezen kenmerken in het profiel aanwezig in de gegevensexport.
 
@@ -396,4 +396,4 @@ Wanneer aanvragen naar de HTTP API-bestemming mislukken, worden deze twee keer o
 
 ## Problemen oplossen {#troubleshooting}
 
-Om betrouwbare gegevenslevering te verzekeren en onderbreking kwesties te vermijden, zorg ervoor dat uw eindpunt van HTTP binnen 2 seconden aan Experience Platform verzoeken, zoals gespecificeerd in de [&#x200B; eerste vereisten &#x200B;](#prerequisites) sectie antwoordt. Reacties die langer duren, resulteren in time-outfouten.
+Om betrouwbare gegevenslevering te verzekeren en onderbreking kwesties te vermijden, zorg ervoor dat uw eindpunt van HTTP binnen 2 seconden aan Experience Platform verzoeken, zoals gespecificeerd in de [ eerste vereisten ](#prerequisites) sectie antwoordt. Reacties die langer duren, resulteren in time-outfouten.
