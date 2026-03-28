@@ -199,7 +199,7 @@ Voor gedetailleerde verklaringen over identiteitskaart passende vereisten, zie [
 +++Antwoord
 Nee, de Web SDK is niet verplicht om het publiek te activeren naar [[!DNL Adobe Target]](catalog/personalization/adobe-target-connection.md) .
 
-Nochtans, als [[!DNL at.js] &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) in plaats van Web SDK wordt gebruikt, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
+Nochtans, als [[!DNL at.js] &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=nl-NL) in plaats van Web SDK wordt gebruikt, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
 
 Voor [&#x200B; zelfde-pagina en volgende-pagina verpersoonlijking &#x200B;](ui/activate-edge-personalization-destinations.md) gebruiksgevallen, moet u of SDK van het Web of [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/) gebruiken. Zie de documentatie bij [&#x200B; activerend publiek aan randbestemmingen &#x200B;](ui/activate-edge-personalization-destinations.md) voor meer implementatiedetails.
 +++
