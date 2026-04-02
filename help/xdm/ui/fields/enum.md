@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Enum Fields en voorgestelde waarden in UI bepalen
 description: Leer hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden definieert in de Experience Platform-gebruikersinterface.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 0%
@@ -22,11 +22,11 @@ In het Model van Gegevens van de Ervaring (XDM), kan een koordgebied een vooraf 
 
 **[!UICONTROL Enums]** beperkt de waarden die voor een tekenreeksveld kunnen worden ingevoerd tot een vooraf gedefinieerde set. Als u probeert gegevens in te voeren in een opsommingsveld en de waarde niet overeenkomt met een van de gedefinieerde waarden in de configuratie, wordt invoer geweigerd.
 
-In tegenstelling tot opsommingen, staat de **[!UICONTROL Suggested values]** optie toe om een reeks geadviseerde waarden voor een koordgebied te wijzen dat niet de waarden beperkt die het kan opnemen. In plaats daarvan, beïnvloeden de voorgestelde waarden welke vooraf bepaalde waarden in [&#x200B; Segmentatie UI &#x200B;](../../../segmentation/ui/overview.md) beschikbaar zijn wanneer het omvatten van het koordgebied als attribuut.
+In tegenstelling tot opsommingen, staat de **[!UICONTROL Suggested values]** optie toe om een reeks geadviseerde waarden voor een koordgebied te wijzen dat niet de waarden beperkt die het kan opnemen. In plaats daarvan, beïnvloeden de voorgestelde waarden welke vooraf bepaalde waarden in [ Segmentatie UI ](../../../segmentation/ui/overview.md) beschikbaar zijn wanneer het omvatten van het koordgebied als attribuut.
 
-Wanneer [&#x200B; het bepalen van een nieuw gebied &#x200B;](./overview.md#define) in het gebruikersinterface van Adobe Experience Platform en het plaatsen van het type aan [!UICONTROL String], wordt u gegeven de optie om een [&#x200B; enum &#x200B;](#enum) of [&#x200B; gesuggereerde waarden &#x200B;](#suggested-values) voor dat gebied te bepalen.
+Wanneer [ het bepalen van een nieuw gebied ](./overview.md#define) in het gebruikersinterface van Adobe Experience Platform en het plaatsen van het type aan [!UICONTROL String], wordt u gegeven de optie om een [ enum ](#enum) of [ gesuggereerde waarden ](#suggested-values) voor dat gebied te bepalen.
 
-![&#x200B; Beeld dat Enum &amp; de Voorgestelde optie van Waarden toont die voor een koordgebied in UI wordt toegelaten &#x200B;](../../images/ui/fields/enum/enum-options-selected.png)
+![ Beeld dat Enum &amp; de Voorgestelde optie van Waarden toont die voor een koordgebied in UI wordt toegelaten ](../../images/ui/fields/enum/enum-options-selected.png)
 
 In dit document wordt beschreven hoe u opsommingen en voorgestelde waarden definieert in de gebruikersinterface van [!UICONTROL Schemas] . Bekijk de volgende video voor een snel overzicht van opsommingen en voorgestelde waarden, inclusief hoe u deze kunt configureren in de gebruikersinterface en de bijbehorende downstreameffecten:
 
@@ -36,13 +36,13 @@ In dit document wordt beschreven hoe u opsommingen en voorgestelde waarden defin
 
 Selecteer **[!UICONTROL Enums and Suggested Values]** en selecteer vervolgens **[!UICONTROL Enums]** . Er worden extra besturingselementen weergegeven, zodat u de waardebeperkingen voor de opsomming kunt opgeven. Selecteer **[!UICONTROL Add row]** als u een restrictie wilt toevoegen.
 
-![&#x200B; Beeld dat de optie van Enums toont die in UI wordt geselecteerd &#x200B;](../../images/ui/fields/enum/enum-add-row.png)
+![ Beeld dat de optie van Enums toont die in UI wordt geselecteerd ](../../images/ui/fields/enum/enum-add-row.png)
 
 Onder de kolom **[!UICONTROL Value]** moet u de exacte waarde opgeven waarnaar u het veld wilt beperken. U kunt optioneel ook een gebruiksvriendelijke **[!UICONTROL Display Name]** versie van de beperking opgeven, die bepaalt hoe de waarde in de segmentatie wordt weergegeven.
 
-Ga verder om **[!UICONTROL Add row]** te gebruiken om de gewenste beperkingen en facultatieve etiketten aan de opsomming toe te voegen, of het schrappingspictogram (![&#x200B; Beeld van het schrappingspictogram &#x200B;](/help/images/icons/remove-circle.png)) naast een eerder toegevoegde rij te selecteren om het te verwijderen. Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
+Ga verder om **[!UICONTROL Add row]** te gebruiken om de gewenste beperkingen en facultatieve etiketten aan de opsomming toe te voegen, of het schrappingspictogram (![ Beeld van het schrappingspictogram ](/help/images/icons/remove-circle.png)) naast een eerder toegevoegde rij te selecteren om het te verwijderen. Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
-![&#x200B; Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld &#x200B;](../../images/ui/fields/enum/enum-confirm.png)
+![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/enum-confirm.png)
 
 Het canvas wordt bijgewerkt met de wijzigingen. Wanneer u dit schema in de toekomst verkent, kunt u de beperkingen voor het enum gebied binnen het juiste spoor bekijken en uitgeven.
 
@@ -50,13 +50,13 @@ Het canvas wordt bijgewerkt met de wijzigingen. Wanneer u dit schema in de toeko
 
 Selecteer **[!UICONTROL Enums and Suggested Values]** en selecteer vervolgens **[!UICONTROL Suggested Values]** om extra besturingselementen weer te geven. Selecteer van hieruit **[!UICONTROL Add row]** om voorgestelde waarden toe te voegen.
 
-![&#x200B; Beeld dat de Voorgestelde optie van Waarden toont die in UI wordt geselecteerd &#x200B;](../../images/ui/fields/enum/suggested-add-row.png)
+![ Beeld dat de Voorgestelde optie van Waarden toont die in UI wordt geselecteerd ](../../images/ui/fields/enum/suggested-add-row.png)
 
-Geef onder de kolom **[!UICONTROL Display Name]** een mensvriendelijke naam voor de waarde op zoals u deze wilt weergeven in de segmenteringsinterface. Als u meer gesuggereerde waarden wilt toevoegen, selecteert u **[!UICONTROL Add row]** nogmaals en herhaalt u zo nodig het proces. Om een eerder toegevoegde rij te verwijderen, selecteer ![&#x200B; het schrappingspictogram &#x200B;](/help/images/icons/remove-circle.png) naast de rij in kwestie.
+Geef onder de kolom **[!UICONTROL Display Name]** een mensvriendelijke naam voor de waarde op zoals u deze wilt weergeven in de segmenteringsinterface. Als u meer gesuggereerde waarden wilt toevoegen, selecteert u **[!UICONTROL Add row]** nogmaals en herhaalt u zo nodig het proces. Om een eerder toegevoegde rij te verwijderen, selecteer ![ het schrappingspictogram ](/help/images/icons/remove-circle.png) naast de rij in kwestie.
 
 Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te passen op het schema.
 
-![&#x200B; Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld &#x200B;](../../images/ui/fields/enum/suggested-confirm.png)
+![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/suggested-confirm.png)
 
 >[!NOTE]
 >
@@ -64,15 +64,16 @@ Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijzigingen toe te p
 
 ### Voorgestelde waarden voor standaardvelden beheren
 
-Sommige gebieden van standaardXDM componenten bevatten hun eigen gesuggereerde waarden, zoals `eventType` van de [[!UICONTROL XDM ExperienceEvent] klasse &#x200B;](../../classes/experienceevent.md). Hoewel u aanvullende voorgestelde waarden voor een standaardveld kunt maken, kunt u voorgestelde waarden die niet door uw organisatie zijn gedefinieerd, niet wijzigen of verwijderen. Als u een standaardveld in de gebruikersinterface weergeeft, worden de voorgestelde waarden weergegeven, maar alleen-lezen.
+Sommige gebieden van standaardXDM componenten bevatten hun eigen gesuggereerde waarden, zoals `eventType` van de [[!UICONTROL XDM ExperienceEvent] klasse ](../../classes/experienceevent.md). Hoewel u aanvullende voorgestelde waarden voor een standaardveld kunt maken, kunt u voorgestelde waarden die niet door uw organisatie zijn gedefinieerd, niet wijzigen of verwijderen. Als u een standaardveld in de gebruikersinterface weergeeft, worden de voorgestelde waarden weergegeven, maar alleen-lezen.
 
-![&#x200B; Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld &#x200B;](../../images/ui/fields/enum/suggested-standard.png)
+![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/suggested-standard.png)
 
-Selecteer **[!UICONTROL Add row]** als u nieuwe voorgestelde waarden voor een standaardveld wilt toevoegen. Om een gesuggereerde waarde te verwijderen die eerder door uw organisatie werd toegevoegd, selecteer ![&#x200B; het schrappingspictogram &#x200B;](/help/images/icons/remove-circle.png) naast de rij in kwestie.
+Selecteer **[!UICONTROL Add row]** als u nieuwe voorgestelde waarden voor een standaardveld wilt toevoegen. Om een gesuggereerde waarde te verwijderen die eerder door uw organisatie werd toegevoegd, selecteer ![ het schrappingspictogram ](/help/images/icons/remove-circle.png) naast de rij in kwestie.
 
-![&#x200B; Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld &#x200B;](../../images/ui/fields/enum/suggested-standard-add.png)
+![ Beeld dat de opsommingswaarden en vertoningsnamen toont die voor het koordgebied in UI worden gevuld ](../../images/ui/fields/enum/suggested-standard-add.png)
 
-<!-- ### Removing suggested values for standard fields
+<!-- 
+### Removing suggested values for standard fields
 
 Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
@@ -82,7 +83,8 @@ For example, consider a profile schema where the a suggested value for the stand
 
 In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. 
+-->
 
 ## Evolutieregels voor opsommingen en voorgestelde waarden {#evolution}
 
@@ -117,11 +119,11 @@ Als in verschillende veldgroepen wordt verwezen naar hetzelfde aangepaste veldpa
 
 Vanwege de huidige systeembeperkingen zijn er twee gevallen waarin een enum niet door het systeem wordt gevalideerd tijdens inname:
 
-1. Het enum wordt bepaald op een [&#x200B; seriegebied &#x200B;](./array.md).
+1. Het enum wordt bepaald op een [ seriegebied ](./array.md).
 1. De opsomming wordt meer dan één niveau diep gedefinieerd in de schemahiërarchie.
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden in de gebruikersinterface definieert. Voor informatie over hoe te om lijsten en voorgestelde waarden te beheren gebruikend de Registratie API van het Schema, verwijs naar het volgende [&#x200B; leerprogramma &#x200B;](../../tutorials/suggested-values.md).
+In deze handleiding wordt beschreven hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden in de gebruikersinterface definieert. Voor informatie over hoe te om lijsten en voorgestelde waarden te beheren gebruikend de Registratie API van het Schema, verwijs naar het volgende [ leerprogramma ](../../tutorials/suggested-values.md).
 
-Leren hoe te om andere XDM gebiedstypes in [!DNL Schema Editor] te bepalen, zie het overzicht op [&#x200B; bepalend gebieden in UI &#x200B;](./overview.md#special).
+Leren hoe te om andere XDM gebiedstypes in [!DNL Schema Editor] te bepalen, zie het overzicht op [ bepalend gebieden in UI ](./overview.md#special).
