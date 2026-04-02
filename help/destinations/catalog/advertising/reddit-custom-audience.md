@@ -36,11 +36,11 @@ Alvorens deze bestemming te vormen, zorg ervoor u aan de volgende eerste vereist
 
 * Een [!DNL Reddit Ads] -account die aangepaste soorten publiek en lijsten van klanten mag gebruiken.
 * Machtiging voor verbinding. Dit moet een gebruiker zijn die zich kan aanmelden bij [!DNL Reddit] en toegang voor [!DNL Experience Platform] kan goedkeuren om het publiek namens de advertentieaccount te beheren.
-* Uw [!DNL Reddit] id van de Advertentierekening: het herkenningsteken voor de advertentierekening waar het publiek wordt gecreeerd. U kunt uw identiteitskaart van de advertentierekening in [ Rekeningen ](https://ads.reddit.com/accounts) vinden. Bijvoorbeeld: `a2_1b2c34d` .
+* Uw [!DNL Reddit] id van de Advertentierekening: het herkenningsteken voor de advertentierekening waar het publiek wordt gecreeerd. U kunt uw identiteitskaart van de advertentierekening in [&#x200B; Rekeningen &#x200B;](https://ads.reddit.com/accounts) vinden. Bijvoorbeeld: `a2_1b2c34d` .
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Reddit Custom Audience] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL Reddit Custom Audience] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 | --- | --- | --- |
@@ -55,8 +55,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 | --- | --- | --- |
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de [!DNL Experience Platform] [ Dienst van de Segmentatie ](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle publieksoorsprong buiten publiek dat door de Dienst van de Segmentatie wordt geproduceerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de [!DNL Experience Platform] [&#x200B; Dienst van de Segmentatie &#x200B;](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle publieksoorsprong buiten publiek dat door de Dienst van de Segmentatie wordt geproduceerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). |
 
 {style="table-layout:auto"}
 
@@ -64,10 +64,10 @@ Ondersteund publiek op gegevenstype:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 | --- | --- | --- | --- |
-| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 | --- | --- | --- |
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL Reddit Custom Audience] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -86,25 +86,25 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-![ het Reddit het bestemmingsauthentificatiescherm van het publiek van de Douane die gebieden tonen die worden vereist om te verbinden.](../../assets/catalog/advertising/redditcustomaudience/configure_new_destination_fields.png)
+![&#x200B; het Reddit het bestemmingsauthentificatiescherm van het publiek van de Douane die gebieden tonen die worden vereist om te verbinden.](../../assets/catalog/advertising/redditcustomaudience/configure_new_destination_fields.png)
 
 U wordt omgeleid om u aan te melden met [!DNL Reddit]. Nadat u de aangevraagde machtigingen hebt gecontroleerd, selecteert u **[!UICONTROL Allow]** , zodat [!DNL Experience Platform] een publiek kan maken en het lidmaatschap namens uw advertentieaccount kan bijwerken.
 
-![ reddit het toestemmingsscherm van OAuth.](../../assets/catalog/advertising/redditcustomaudience/reddit_oauth.png)
+![&#x200B; reddit het toestemmingsscherm van OAuth.](../../assets/catalog/advertising/redditcustomaudience/reddit_oauth.png)
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![ het Reddit de bestemmingsdetailscherm van het Audience van de Douane.](../../assets/catalog/advertising/redditcustomaudience/reddit_account_details.png)
+![&#x200B; het Reddit de bestemmingsdetailscherm van het Audience van de Douane.](../../assets/catalog/advertising/redditcustomaudience/reddit_account_details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel herkent.
 * **[!UICONTROL Description]**: Een beschrijving waarmee u dit doel kunt identificeren.
@@ -112,7 +112,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -120,10 +120,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -136,15 +136,15 @@ De volgende naamruimten voor de doelidentiteit moeten worden toegewezen, afhanke
 
 U moet ten minste een van de identiteiten toewijzen.
 
-![ het scherm van de identiteitstoewijzing die bron en doelgebieden tonen voor Reddit de Audience van de Douane worden gevormd.](../../assets/catalog/advertising/redditcustomaudience/mapping.png)
+![&#x200B; het scherm van de identiteitstoewijzing die bron en doelgebieden tonen voor Reddit de Audience van de Douane worden gevormd.](../../assets/catalog/advertising/redditcustomaudience/mapping.png)
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
 Nadat u het publiek hebt geactiveerd, kunt u deze weergeven in uw account van [!DNL Reddit] Advertentiebeheer.
 
-Soorten publiek die nieuw zijn gemaakt in [!DNL Reddit] , worden in behandeling weergegeven. Nadat de gegevensstroom is uitgevoerd en de profielen zijn geëxporteerd, stemt [!DNL Reddit] overeen met de profielen ten opzichte van [!DNL Reddit] -gebruikers. Nadat de gegevens zijn verwerkt, verandert de status van het publiek in **[!UICONTROL Valid]** . De grootte van het publiek moet [ 1.000 gebruikers of meer ](https://ads-api.reddit.com/docs/v3/manage-customer-lists) bereiken om als geldig te worden beschouwd. Soorten publiek dat niet de vereiste grootte heeft, worden weergegeven als **[!UICONTROL Invalid]** .
+Soorten publiek die nieuw zijn gemaakt in [!DNL Reddit] , worden in behandeling weergegeven. Nadat de gegevensstroom is uitgevoerd en de profielen zijn geëxporteerd, stemt [!DNL Reddit] overeen met de profielen ten opzichte van [!DNL Reddit] -gebruikers. Nadat de gegevens zijn verwerkt, verandert de status van het publiek in **[!UICONTROL Valid]** . De grootte van het publiek moet [&#x200B; 1.000 gebruikers of meer &#x200B;](https://ads-api.reddit.com/docs/v3/manage-customer-lists) bereiken om als geldig te worden beschouwd. Soorten publiek dat niet de vereiste grootte heeft, worden weergegeven als **[!UICONTROL Invalid]** .
 
-![ de Reddit Manager van Advertenties die een uitgevoerd publiek en zijn status tonen.](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png)
+![&#x200B; de Reddit Manager van Advertenties die een uitgevoerd publiek en zijn status tonen.](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png)
 
 Hieronder ziet u een voorbeeld van de lading die naar [!DNL Reddit] wordt verzonden:
 
@@ -166,12 +166,12 @@ Hieronder ziet u een voorbeeld van de lading die naar [!DNL Reddit] wordt verzon
 }
 ```
 
-Zie [ API documentatie ](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) voor extra details opnieuw uitgeven.
+Zie [&#x200B; API documentatie &#x200B;](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) voor extra details opnieuw uitgeven.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-Zie [ API documentatie ](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) voor details over hoe de functies van het douanepuntpunt van het publiek opnieuw uitgeven.
+Zie [&#x200B; API documentatie &#x200B;](https://ads-api.reddit.com/docs/v3/operations/Update%20Custom%20Audience%20Users) voor details over hoe de functies van het douanepuntpunt van het publiek opnieuw uitgeven.
