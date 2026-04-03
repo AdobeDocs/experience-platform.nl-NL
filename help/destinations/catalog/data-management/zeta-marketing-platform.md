@@ -4,7 +4,7 @@ description: Het Zeta Marketing Platform (ZMP) is een cloudgebaseerd systeem dat
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1434'
 ht-degree: 0%
@@ -15,37 +15,37 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Het Zeta Marketing Platform (ZMP) is een cloudgebaseerd systeem dat u helpt klanten op efficiëntere wijze aan te schaffen, uit te breiden en te behouden, aangedreven door intelligentie (bedrijfseigen gegevens en AI). Voor meer details, zie [&#x200B; Globale Zeta &#x200B;](https://zetaglobal.com/).
+Het Zeta Marketing Platform (ZMP) is een cloudgebaseerd systeem dat u helpt klanten op efficiëntere wijze aan te schaffen, uit te breiden en te behouden, aangedreven door intelligentie (bedrijfseigen gegevens en AI). Voor meer details, zie [ Globale Zeta ](https://zetaglobal.com/).
 
 Met de Zeta Marketing Platform-aansluiting beschikbaar in [!DNL Adobe Experience Platform] kunt u uw publiek naadloos synchroniseren van Experience Platform naar het ZMP.
 
 >[!IMPORTANT]
 >
->De bestemmingsschakelaar en documentatiepagina worden gecreeerd en door het *Globale* team van Zeta gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, contacteer het team bij [&#x200B; Contact ons &#x200B;](https://zetaglobal.com/about/contact-us/).
+>De bestemmingsschakelaar en documentatiepagina worden gecreeerd en door het *Globale* team van Zeta gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, contacteer het team bij [ Contact ons ](https://zetaglobal.com/about/contact-us/).
 
 ## Gebruiksscenario&#39;s {#use-cases}
 
 ### publiekssegmenten samenstellen {#use-case-build-audiences}
 
-Een markeerder wil unieke publieksprofielen bouwen, hun meest waardevolle segmenten identificeren, en hen over om het even welke digitale kanalen gebruiken die het Platform van de Marketing Zeta steunt. Ze willen een echte 360-weergave van een consumentenprofiel maken, een zinvol publiek opbouwen en activeren. Meer details over welke kanalen de steunen van het Platform van de Marketing van Zeta [&#x200B; hier &#x200B;](https://zetaglobal.com/platform/integrations/) kunnen worden gevonden.
+Een markeerder wil unieke publieksprofielen bouwen, hun meest waardevolle segmenten identificeren, en hen over om het even welke digitale kanalen gebruiken die het Platform van de Marketing Zeta steunt. Ze willen een echte 360-weergave van een consumentenprofiel maken, een zinvol publiek opbouwen en activeren. Meer details over welke kanalen de steunen van het Platform van de Marketing van Zeta [ hier ](https://zetaglobal.com/platform/integrations/) kunnen worden gevonden.
 
 ### Doelgebruikers met advertenties {#use-case-target-users}
 
-Een adverteerder richt zich op gebruikers binnen een specifiek publiek via de Zeta Demand Side Platform (DSP), aangezien deze gebruikers met hun merken communiceren. Voor meer informatie over Zeta DSP, klik [&#x200B; hier &#x200B;](https://knowledgebase.zetaglobal.com/pug/).
+Een adverteerder richt zich op gebruikers binnen een specifiek publiek via de Zeta Demand Side Platform (DSP), aangezien deze gebruikers met hun merken communiceren. Voor meer informatie over Zeta DSP, klik [ hier ](https://knowledgebase.zetaglobal.com/pug/).
 
 ## Vereisten {#prerequisites}
 
 ### Voorwaarden voor het Zeta-marketingplatform {#zmp-prerequisites}
 
-* Voordat u een nieuwe verbinding instelt met de bestemming van het Zeta-marketingplatform, moet u een lege lijst met klanten maken in uw account van het Zeta-marketingplatform. U moet één van deze klantenlijsten als aangewezen doel kiezen om het [!DNL Adobe Experience Platform] publiek te ontvangen dat u van plan bent te verzenden. U kunt een lege klantenlijst in ZMP tot stand brengen door de instructies [&#x200B; hier &#x200B;](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) te volgen.
-* Hoewel in [!DNL Adobe Experience Platform] meerdere soorten publiek kunnen worden geactiveerd voor een bepaalde ZMP-doelinstantie, is het verplicht dat elke ZMP-doelinstantie slechts één Experience Platform-publiek ontvangt. Als u meerdere soorten publiek van de Experience Platform wilt afhandelen, maakt u aanvullende ZMP-doelinstanties voor elk publiek en selecteert u een andere lijst met klanten in het vervolgkeuzemenu. Deze benadering zorgt ervoor dat het doelZMP publiek niet wordt beschreven. Zie [&#x200B; in bestemmingsdetails &#x200B;](#destination-details) voor meer details invullen.
+* Voordat u een nieuwe verbinding instelt met de bestemming van het Zeta-marketingplatform, moet u een lege lijst met klanten maken in uw account van het Zeta-marketingplatform. U moet één van deze klantenlijsten als aangewezen doel kiezen om het [!DNL Adobe Experience Platform] publiek te ontvangen dat u van plan bent te verzenden. U kunt een lege klantenlijst in ZMP tot stand brengen door de instructies [ hier ](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) te volgen.
+* Hoewel in [!DNL Adobe Experience Platform] meerdere soorten publiek kunnen worden geactiveerd voor een bepaalde ZMP-doelinstantie, is het verplicht dat elke ZMP-doelinstantie slechts één Experience Platform-publiek ontvangt. Als u meerdere soorten publiek van de Experience Platform wilt afhandelen, maakt u aanvullende ZMP-doelinstanties voor elk publiek en selecteert u een andere lijst met klanten in het vervolgkeuzemenu. Deze benadering zorgt ervoor dat het doelZMP publiek niet wordt beschreven. Zie [ in bestemmingsdetails ](#destination-details) voor meer details invullen.
 * Gebruik de volgende geloofsbrieven om de bestemming te vormen:
    * Gebruikersnaam: **api**
-   * Wachtwoord: uw ZMP REST API-sleutel. U kunt uw REST API Sleutel vinden door aan uw rekening van ZMP het programma te openen en aan **te navigeren Montages** > **Integraties** > **Sleutels &amp; Apps** sectie. Zie de [&#x200B; documentatie van ZMP &#x200B;](https://knowledgebase.zetaglobal.com/kb/integrations) voor meer details.
+   * Wachtwoord: uw ZMP REST API-sleutel. U kunt uw REST API Sleutel vinden door aan uw rekening van ZMP het programma te openen en aan **te navigeren Montages** > **Integraties** > **Sleutels &amp; Apps** sectie. Zie de [ documentatie van ZMP ](https://knowledgebase.zetaglobal.com/kb/integrations) voor meer details.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Zeta Marketing Platform] ondersteunt de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Voor meer details, zie [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
+[!DNL Zeta Marketing Platform] ondersteunt de activering van aangepaste gebruikers-id&#39;s die in de onderstaande tabel worden beschreven. Voor meer details, zie [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 >[!IMPORTANT]
 >
@@ -64,8 +64,8 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -79,7 +79,7 @@ Zie de tabel hieronder voor informatie over het exporttype en de exportfrequenti
 
 | Item | Type | Notities |
 |---------|----------|---------|
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -89,10 +89,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -101,31 +101,31 @@ Ondersteund publiek per type publieksgegevens:
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u de **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u de **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
 * **[!UICONTROL Username]**: `api`
-* **[!UICONTROL Password]**: Uw ZMP REST API-sleutel. U kunt uw REST API Sleutel vinden door aan uw rekening van ZMP het programma te openen en aan **te navigeren Montages** > **Integraties** > **Sleutels &amp; Apps** sectie. Zie de [&#x200B; documentatie van ZMP &#x200B;](https://knowledgebase.zetaglobal.com/kb/integrations) voor meer details.
+* **[!UICONTROL Password]**: Uw ZMP REST API-sleutel. U kunt uw REST API Sleutel vinden door aan uw rekening van ZMP het programma te openen en aan **te navigeren Montages** > **Integraties** > **Sleutels &amp; Apps** sectie. Zie de [ documentatie van ZMP ](https://knowledgebase.zetaglobal.com/kb/integrations) voor meer details.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![&#x200B; Beeld dat de configuratie van ZMP toont &#x200B;](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
+![ Beeld dat de configuratie van ZMP toont ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL ZMP Account Site Id]**: Uw Identiteitskaart van de Plaats van ZMP **&#x200B;**&#x200B;waar u uw publiek naar wilt verzenden. U kunt uw identiteitskaart van de Plaats bekijken door aan **Montages** te navigeren > **Integraties** > **Sleutels &amp; Apps** sectie. Meer informatie kan [&#x200B; hier &#x200B;](https://knowledgebase.zetaglobal.com/kb/integrations) worden gevonden.
+* **[!UICONTROL ZMP Account Site Id]**: Uw Identiteitskaart van de Plaats van ZMP **** waar u uw publiek naar wilt verzenden. U kunt uw identiteitskaart van de Plaats bekijken door aan **Montages** te navigeren > **Integraties** > **Sleutels &amp; Apps** sectie. Meer informatie kan [ hier ](https://knowledgebase.zetaglobal.com/kb/integrations) worden gevonden.
 * **[!UICONTROL ZMP Segment]**: Het segment met de lijst met klanten in uw ZMP Site Id-account dat u wilt bijwerken met het Experience Platform-publiek.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -133,10 +133,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [&#x200B; actief publiek aan het stromen bestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [ actief publiek aan het stromen bestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -153,22 +153,22 @@ Doelvelden selecteren:
 * (Optioneel) Selecteer `email_md5_id` als de doelidentiteit waaraan u de naamruimte voor de bronidentiteit hebt toegewezen die de md5-waarden voor e-mail vertegenwoordigt. Het is van essentieel belang dat e-mailadressen in de Experience Platform al in de MD5-indeling staan, omdat de Experience Platform normale tekst niet naar MD5 converteert
 * Selecteer zo nodig aanvullende doeltoewijzingen.
 
-![&#x200B; de afbeelding van de Identiteit &#x200B;](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)
+![ de afbeelding van de Identiteit ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
 Een geslaagde activering van het publiek van Experience Platform naar het Zeta Marketing Platform werkt de lijst met doelklanten in het ZMP bij. De telling en de steekproefprofielen in de lijst van de doelklant zullen gelijk zijn aan het aantal identiteiten die met succes werden geactiveerd.
 
-![&#x200B; Lijst van de Klant in ZMP &#x200B;](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
+![ Lijst van de Klant in ZMP ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
 
 Elk publiekslid dat van Experience Platform werd geactiveerd zal ook onder **Soorten publiek** > **Mensen** in ZMP zichtbaar zijn. U zult ook het **segment van de Lijst van de Klant** kunnen bekijken een profiel tot in de Enige mening van de Klant behoort zoals hieronder getoond.
 
-![&#x200B; SingleCustomerViewInZMP &#x200B;](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-single-customer-view-in-zmp.png)
+![ SingleCustomerViewInZMP ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-single-customer-view-in-zmp.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
-* [&#x200B; de Kennisbank van Zeta &#x200B;](https://knowledgebase.zetaglobal.com/kb/)
+* [ de Kennisbank van Zeta ](https://knowledgebase.zetaglobal.com/kb/)
