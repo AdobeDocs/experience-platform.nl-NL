@@ -5,9 +5,9 @@ type: Documentation
 description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het realtime-klantprofiel te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2021'
 ht-degree: 0%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De volgende eindpunten kunnen verschillen tussen implementaties van Adobe Experience Platform die worden uitgevoerd op Microsoft Azure en Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/multi-cloud).
+>De volgende eindpunten kunnen verschillen tussen implementaties van Adobe Experience Platform die worden uitgevoerd op Microsoft Azure en Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens die in [!DNL Experience Platform] worden ingevoerd, worden opgeslagen in [!DNL Data Lake] en als de gegevenssets zijn ingeschakeld voor Profiel, worden die gegevens ook opgeslagen in de [!DNL Real-Time Customer Profile] -gegevensopslag. Soms kan het nodig zijn om profielgegevens die zijn gekoppeld aan een gegevensset te verwijderen uit de profielenopslag om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de API van [!DNL Real-Time Customer Profile] gebruiken om een [!DNL Profile] -systeemtaak te maken, of &quot;aanvraag verwijderen&quot;.
 
 >[!NOTE]
 >
->Als u probeert om datasets of partijen van [!DNL Data Lake] te schrappen, gelieve het [&#x200B; overzicht van de Dienst van de Catalogus &#x200B;](../../catalog/home.md) voor meer informatie te bezoeken.
+>Als u probeert om datasets of partijen van [!DNL Data Lake] te schrappen, gelieve het [ overzicht van de Dienst van de Catalogus ](../../catalog/home.md) voor meer informatie te bezoeken.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] &#x200B;](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] ](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Verzoeken om verwijderen weergeven {#view}
 
@@ -58,7 +58,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!IMPORTANT]
 >
->Het volgende verzoek verschilt tussen de Azure- en AWS-instanties.
+>Het volgende verzoek verschilt per Azure en AWS.
 
 >[!BEGINTABS]
 
@@ -100,7 +100,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 
 >[!IMPORTANT]
 >
->De volgende reactie verschilt tussen de Azure- en AWS-instanties.
+>De volgende reactie verschilt per Azure en AWS.
 
 >[!BEGINTABS]
 
@@ -144,7 +144,7 @@ Een geslaagde reactie bevat een array &#39;children&#39; met een object voor elk
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `_page.count` | Het totale aantal aanvragen. Deze reactie is afgebroken voor de ruimte. |
-| `_page.next` | Als een extra pagina van resultaten bestaat, bekijk de volgende pagina van resultaten door de waarde van identiteitskaart in a [&#x200B; raadplegingsverzoek &#x200B;](#view-a-specific-delete-request) met de `"next"` verstrekte waarde te vervangen. |
+| `_page.next` | Als een extra pagina van resultaten bestaat, bekijk de volgende pagina van resultaten door de waarde van identiteitskaart in a [ raadplegingsverzoek ](#view-a-specific-delete-request) met de `"next"` verstrekte waarde te vervangen. |
 | `jobType` | Het type taak dat wordt gemaakt. In dit geval wordt altijd `"DELETE"` geretourneerd. |
 | `status` | De status van de verwijderaanvraag. Mogelijke waarden zijn `"NEW"` , `"PROCESSING"` , `"COMPLETED"` en `"ERROR"` . |
 | `metrics` | Een voorwerp dat het aantal verslagen omvat die zijn verwerkt (`"recordsProcessed"`) en de tijd in seconden dat het verzoek is verwerkt, of hoe lang het verzoek om (`"timeTakenInSec"`) nam te voltooien. |
@@ -224,7 +224,7 @@ POST /system/jobs
 
 >[!IMPORTANT]
 >
->Het volgende verzoek verschilt tussen de Azure- en AWS-instanties.
+>Het volgende verzoek verschilt per Azure en AWS.
 
 >[!BEGINTABS]
 
@@ -284,7 +284,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->De volgende reactie verschilt tussen de Azure- en AWS-instanties.
+>De volgende reactie verschilt per Azure en AWS.
 
 >[!BEGINTABS]
 
@@ -357,7 +357,7 @@ Om een partij te kunnen verwijderen, moet de partij-ID worden opgenomen in de ho
 >
 > De reden u niet batches voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd is omdat de reeksen van de recordtype dataset vorige verslagen beschrijven en daarom niet &quot;undone&quot;of geschrapt kunnen zijn. De enige manier om het effect van onjuiste partijen voor datasets te verwijderen die op verslagschema&#39;s worden gebaseerd is de partij met de correcte gegevens opnieuw op te nemen om de onjuiste verslagen te beschrijven.
 
-Voor meer informatie over verslag en tijdreeksgedrag, te herzien gelieve de [&#x200B; sectie over XDM gegevensgedrag &#x200B;](../../xdm/home.md#data-behaviors) in het [!DNL XDM System] overzicht.
+Voor meer informatie over verslag en tijdreeksgedrag, te herzien gelieve de [ sectie over XDM gegevensgedrag ](../../xdm/home.md#data-behaviors) in het [!DNL XDM System] overzicht.
 
 **API formaat**
 
@@ -369,7 +369,7 @@ POST /system/jobs
 
 >[!IMPORTANT]
 >
->Het volgende verzoek verschilt tussen de Azure- en AWS-instanties.
+>Het volgende verzoek verschilt per Azure en AWS.
 
 >[!BEGINTABS]
 
@@ -433,7 +433,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->De volgende reactie verschilt tussen de Azure- en AWS-instanties.
+>De volgende reactie verschilt per Azure en AWS.
 
 >[!BEGINTABS]
 
@@ -538,7 +538,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!IMPORTANT]
 >
->Het volgende verzoek verschilt tussen de Azure- en AWS-instanties.
+>Het volgende verzoek verschilt per Azure en AWS.
 
 >[!BEGINTABS]
 
@@ -581,7 +581,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 
 >[!IMPORTANT]
 >
->De volgende reactie verschilt tussen de Azure- en AWS-instanties.
+>De volgende reactie verschilt per Azure en AWS.
 
 >[!BEGINTABS]
 
@@ -648,13 +648,13 @@ Een succesvolle reactie keert de details van het gespecificeerde systeemverzoek 
 
 >[!ENDTABS]
 
-Als de status van de verwijderaanvraag is ingesteld op `"COMPLETED"` , kunt u bevestigen dat de gegevens zijn verwijderd door via de API voor gegevenstoegang toegang te krijgen tot de verwijderde gegevens. Voor instructies op hoe te om de Toegang API van Gegevens te gebruiken om tot datasets en partijen toegang te hebben, te herzien gelieve de [&#x200B; documentatie van de Toegang van Gegevens &#x200B;](../../data-access/home.md).
+Als de status van de verwijderaanvraag is ingesteld op `"COMPLETED"` , kunt u bevestigen dat de gegevens zijn verwijderd door via de API voor gegevenstoegang toegang te krijgen tot de verwijderde gegevens. Voor instructies op hoe te om de Toegang API van Gegevens te gebruiken om tot datasets en partijen toegang te hebben, te herzien gelieve de [ documentatie van de Toegang van Gegevens ](../../data-access/home.md).
 
 ## Een verwijderingsaanvraag verwijderen
 
 >[!AVAILABILITY]
 >
->Dit eindpunt wordt **slechts** gesteund in de Azure instantie van Adobe Experience Platform, en wordt **niet** gesteund op de instantie van AWS.
+>Dit eindpunt wordt **slechts** gesteund in de instantie van Azure van Adobe Experience Platform, en wordt **niet** gesteund op de instantie van AWS.
 
 Met [!DNL Experience Platform] kunt u een eerdere aanvraag verwijderen. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de verwijdertaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een verwijderaanvraag wilt verwijderen, kunt u een DELETE-aanvraag naar het `/system/jobs` -eindpunt uitvoeren en de id van de verwijderaanvraag opnemen die u naar het aanvraagpad wilt verwijderen.
 
