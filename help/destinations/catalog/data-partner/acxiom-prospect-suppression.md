@@ -4,7 +4,7 @@ description: Exporteer uw first-party doelgroepen naar de Acxiom-bestemming, zod
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: label="Beta" type="Informative"
 exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1531'
 ht-degree: 1%
@@ -21,13 +21,13 @@ ht-degree: 1%
 
 Gebruik [!DNL Acxiom Prospect-Suppression] om een zo productief mogelijk publiek te bieden. Deze connector exporteert gegevens van de eerste partij veilig vanuit [!DNL Real-Time Customer Data Platform] en voert deze uit via een bekroonde hygiëne- en identiteitsresolutie die een gegevensbestand produceert dat als een suppressielijst moet worden gebruikt. Dit wordt vergeleken met de [!DNL Acxiom Global] -database, die het mogelijk maakt lijsten met mogelijke perspectieven op maat te maken voor importeren. Gebruik vervolgens de [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) bronconnector om lijsten met perspectieven van Acxiom weer in [!DNL Real-Time CDP] te openen, waarbij uw bekende of geconverteerde klanten zijn verwijderd.
 
-![&#x200B; op de markt brengend diagram om eerste-partijgegevens naar Acxiom uit te voeren, dan de gegevens van het invoerperspectief terug in Real-Time CDP &#x200B;](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
+![ op de markt brengend diagram om eerste-partijgegevens naar Acxiom uit te voeren, dan de gegevens van het invoerperspectief terug in Real-Time CDP ](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
 
 Acxiom biedt het best presterende publiek in de branche met de grootste catalogus van meer dan 12.000 wereldwijde gegevenskenmerken die specifiek gericht zijn op het bieden van persoonlijke ervaringen. Tik in oneindige combinaties van gegevens van hoge kwaliteit om een publiek te maken en te verspreiden dat voldoet aan specifieke campagnebehoeften.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Acxiom Prospect-Suppression] doelverbinding en gegevensstroom via de gebruikersinterface van [!DNL Adobe Experience Platform] . Deze schakelaar levert gegevens aan de dienst van het Vooruitzicht van Acxiom gebruikend Amazon S3 als dalingspunt. Neem contact op met uw accountvertegenwoordiger van Acxiom wanneer u bestanden gaat exporteren naar het Amazon S3-droppunt.
 
-![&#x200B; de bestemmingscatalogus met de geselecteerde bestemming van Acxiom.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
+![ de bestemmingscatalogus met de geselecteerde bestemming van Acxiom.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
 
 ## Gebruiksscenario&#39;s {#use-cases}
 
@@ -49,8 +49,8 @@ De dienst van Acxiom zou naar het dossier zoeken, het terugwinnen en het naast e
 
 >[!IMPORTANT]
 >
->* Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** nodig, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions). Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** nodig, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions). Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -58,8 +58,8 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Nee | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,10 +70,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -84,8 +84,8 @@ Zie de tabel hieronder voor informatie over het exporttype en de exportfrequenti
 
 | Item | Type | Notities |
 |------------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [&#x200B; werkschema van de bestemmingsactivering &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [&#x200B; partij op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based). |
+| Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals gekozen in het scherm van de uitgezochte profielkenmerken van het [ werkschema van de bestemmingsactivering ](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -93,9 +93,9 @@ Zie de tabel hieronder voor informatie over het exporttype en de exportfrequenti
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -113,19 +113,19 @@ Als u toegang wilt tot uw emmertje op Experience Platform, moet u geldige waarde
 
 Een nieuwe door Acxiom beheerde S3-locatie definiëren:
 
-![&#x200B; Nieuwe Rekening &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
+![ Nieuwe Rekening ](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
 ### Bestaande account {#existing-account}
 
 Accounts die al zijn gedefinieerd met het doel [!DNL Acxiom Prospect Suppression] , worden weergegeven in een pop-uplijst. Als u deze optie selecteert, kunt u details van de account bekijken in de rechtertrack. Bekijk het voorbeeld in de gebruikersinterface wanneer u naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** navigeert:
 
-![&#x200B; Bestaande Rekening &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
+![ Bestaande Rekening ](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![&#x200B; Detail van de Bestemming &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
+![ Detail van de Bestemming ](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
 
 * **Naam (Vereist)** - de naam de bestemming onder zal worden bewaard
 * **Beschrijving** - Korte verklaring van het doel van de bestemming
@@ -135,13 +135,13 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 >[!IMPORTANT]
 >
->Wanneer het selecteren van de optie CSV, *Scheidingsteken*, *het Karakter van het Citaat*, *Escape Karakter*, *Lege Waarde*, *Null Waarde*, *het formaat van de Compressie*, en *omvat duidelijke dossier* opties zullen worden voorgesteld, verklaart het volgende document meer in deze montages. detail [&#x200B; vormt de het formatteren opties &#x200B;](../../ui/batch-destinations-file-formatting-options.md).
+>Wanneer het selecteren van de optie CSV, *Scheidingsteken*, *het Karakter van het Citaat*, *Escape Karakter*, *Lege Waarde*, *Null Waarde*, *het formaat van de Compressie*, en *omvat duidelijke dossier* opties zullen worden voorgesteld, verklaart het volgende document meer in deze montages. detail [ vormt de het formatteren opties ](../../ui/batch-destinations-file-formatting-options.md).
 
-![&#x200B; CSV Opties &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
+![ CSV Opties ](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -149,10 +149,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Toewijzingssuggesties {#mapping-suggestions}
 
@@ -179,7 +179,7 @@ De verwerking vereist naam en adreselementen, terwijl niet alle elementen worden
 
 Gebruik de overzichtspagina voor een overzicht van uw gegevensstroom voorafgaand aan verzending
 
-![&#x200B; Overzicht &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
+![ Overzicht ](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
 
 ## Gegevens exporteren valideren {#exported-data}
 
@@ -191,7 +191,7 @@ U hebt een gegevensstroom gemaakt om batchgegevens van Experience Platform naar 
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
