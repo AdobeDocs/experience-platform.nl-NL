@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;verenigde markeringen;markeringen;
+keywords: Experience Platform;home;populaire onderwerpen;uniforme tags;tags;
 title: Overzicht van Unified Tags
 description: Dit document bevat informatie over uniforme tags in Adobe Experience Platform
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
-source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 1%
@@ -23,14 +23,14 @@ Bij labelen worden de volgende onderdelen gebruikt:
 | Terminologie | Definitie |
 | --- | --- |
 | Gearchiveerd | Een status voor een tag die de huidige koppelingen met objecten behoudt, maar die de tag beperkt van toepassing op andere objecten.  Gearchiveerde tags worden verborgen in de tagkiezer. |
-| Object | An Experience Cloud item that can have a tag applied.  Voorbeelden: Segment, Reis, Dataset. |
+| Object | Een Experience Cloud-item waarop een tag kan worden toegepast.  Voorbeelden: Segment, Reis, Dataset. |
 | Tag | Tags zijn metagegevens en kunnen worden beschouwd als trefwoorden die kunnen worden gekoppeld aan een segment, gegevensset, reis of andere objecten, zodat zoekopdrachten naar dat object en verwante objecten kunnen worden uitgevoerd. |
 | Tagcategorie | Tags voor categorieën groeperen in betekenisvolle sets voor een betere context of een beschrijving van het doel van de tag.  Beheerders beheren tagcategorieën en -tags binnen categorieën. |
 | Niet-gecategoriseerde tag | Een nieuwe tag die wordt gemaakt in de regel waar tags worden toegepast. Deze tags kunnen door elke gebruiker worden gemaakt en toegepast, maar zijn niet aan een categorie gebonden.  Beheerders kunnen deze tags naar een categorie verplaatsen om deze uit te lijnen met andere, vergelijkbare tags. |
 
 ## Tags inventariseren
 
-Tagcategorie en tagbeheer met behulp van de taginventaris is beschikbaar in de navigatie in het Experience Platform en Journey Optimizer. Wijzigingen in codes in de inventaris worden doorgevoerd in alle objecten die tags ondersteunen. Alle gebruikers kunnen de taginventaris openen en doorbladeren, maar het tagbeheer is beperkt tot systeem- en productbeheerders.
+Tagcategorie en tagbeheer met behulp van de taginventaris is beschikbaar in de navigatie in Experience Platform en Journey Optimizer. Wijzigingen in codes in de inventaris worden doorgevoerd in alle objecten die tags ondersteunen. Alle gebruikers kunnen de taginventaris openen en doorbladeren, maar het tagbeheer is beperkt tot systeem- en productbeheerders.
 
 De inventarisatie van tags heeft drie hiërarchische niveaus, waarmee gebruikers tagcategorieën, tags binnen een categorie en afzonderlijke tags kunnen beheren. Wanneer gebruikers een individuele tag beheren, kunnen ze naar elk object navigeren waarop die tag momenteel is toegepast.
 
@@ -48,7 +48,7 @@ De volgende acties zijn mogelijk bij het gebruik van tagcategorieën:
 
 >[!NOTE]
 >
->Voor het beheren van tags voor Experience Cloud moet u een systeembeheerder of productbeheerder voor Adobe Experience Platform voor uw organisatie zijn, die een abonnement op Experience Cloud heeft.
+>Voor het beheer van labels voor Experience Cloud moet u een systeembeheerder of productbeheerder voor Adobe Experience Platform voor uw organisatie zijn, die een abonnement op Experience Cloud heeft.
 
 Binnen een categorie (of de standaardgroep &#39;Niet gecategoriseerd&#39;) kunt u tags maken en beheren. De volgende acties zijn mogelijk bij het beheren van tags:
 
