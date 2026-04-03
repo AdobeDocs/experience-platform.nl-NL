@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;api gids;de dienst van de vraag;de rekeningen van de vraagdienst;rekeningen van de rekeningen van de;vraag;
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;api-gids;Query-service;query-serviceaccounts;accounts;
 solution: Experience Platform
 title: Accounts-API-eindpunt
 description: U kunt een account voor Query Service maken voor een blijvende verbinding.
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 1%
@@ -18,11 +18,11 @@ In de Dienst van de Vraag van Adobe Experience Platform, worden de rekeningen ge
 
 ## Aan de slag
 
-De eindpunten die in deze gids worden gebruikt maken deel uit van de Dienst API van de Vraag. Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze gids worden gebruikt maken deel uit van de Dienst API van de Vraag. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een account maken
 
-U kunt een de integratierekening van de Dienst van de Vraag tot stand brengen door een verzoek van de POST aan het `/accounts` eindpunt te richten.
+U kunt een de integratierekening van de Dienst van de Vraag tot stand brengen door een POST- verzoek aan het `/accounts` eindpunt te doen.
 
 **API formaat**
 
@@ -77,7 +77,7 @@ Een succesvolle reactie keert status 200 van HTTP, met details van uw onlangs ge
 
 ## Een account bijwerken
 
-U kunt uw de integratierekening van de Dienst van de Vraag bijwerken door een verzoek van de PUT aan het `/accounts` eindpunt te doen.
+U kunt uw de integratierekening van de Dienst van de Vraag bijwerken door een PUT verzoek aan het `/accounts` eindpunt te doen.
 
 **API formaat**
 
@@ -135,7 +135,7 @@ Een succesvolle reactie keert HTTP status 200 met informatie over uw onlangs bij
 
 ## Alle accounts weergeven
 
-U kunt een lijst van alle de integratierekeningen van de Dienst van de Vraag terugwinnen door een verzoek van de GET aan het `/accounts` eindpunt te doen.
+U kunt een lijst van alle de integratierekeningen van de Dienst van de Vraag terugwinnen door een GET verzoek aan het `/accounts` eindpunt te doen.
 
 **API formaat**
 
@@ -206,7 +206,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van alle de inte
 
 ## Een account verwijderen
 
-U kunt uw de integratierekening van de Dienst van de Vraag schrappen door een verzoek van DELETE aan het `/accounts` eindpunt te doen.
+U kunt uw de integratierekening van de Dienst van de Vraag schrappen door een DELETE verzoek aan het `/accounts` eindpunt te doen.
 
 **API formaat**
 
