@@ -2,8 +2,8 @@
 title: Aanvullende informatie van augustus 2024 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2024 voor Adobe Experience Platform.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: ht
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 100%
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 >[!TIP]
 >
->Bekijk een [overzicht van documentatie met voorbeelden van gebruiksscenario&#39;s](https://experienceleague.adobe.com/nl/docs/experience-platform/rtcdp/use-cases/overview) en ontdek welke verschillende gebruiksscenario&#39;s uw organisatie met Real-Time CDP kan bereiken, zoals prospectie, acquisitie en meer.
+>Bekijk een [overzicht van documentatie met voorbeelden van gebruiksscenario&#39;s](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) en ontdek welke verschillende gebruiksscenario&#39;s uw organisatie met Real-Time CDP kan bereiken, zoals prospectie, acquisitie en meer.
 
 Updates van bestaande functies en documentatie in Experience Platform:
 
