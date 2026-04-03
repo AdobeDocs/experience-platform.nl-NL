@@ -3,7 +3,7 @@ title: AI Assistant (verouderd) in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant (verouderd) in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 40f60e690d1aa653caf05ab18c2c3884fc0add16
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 0%
@@ -31,14 +31,14 @@ Begin met het lezen van het materiaal in de koppelingen hieronder om uzelf vertr
     <div><strong> verbeter uw het leren </strong><br/> ontdekt, problemen oplost, en versterkt uw begrip van productkennis zonder uw werkschema's te onderbreken.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/nl/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong> Bezoek de AI Hulp videoplaylist </strong><br/> Leer over de vele verschillende uitdagingen en gebruiksgevallen die u met AI Medewerker kunt richten.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="https://experienceleague.adobe.com/nl/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -93,12 +93,13 @@ U kunt de Agent van de Steun van het Product in AI Medewerker (Verouderd) gebrui
 
 >[!ENDTABS]
 
-<!-- ## Security features of AI Assistant {#security}
+<!-- 
+## Security features of AI Assistant {#security}
 
 
 Watch the following video for more information on the security features of AI Assistant:
 
->[!VIDEO](https://video.tv.adobe.com/v/3441086/?captions=dut&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 >[!BEGINSHADEBOX]
 
@@ -106,7 +107,8 @@ Watch the following video for more information on the security features of AI As
 
 For more information about AI Assistant, read the [security fact sheet for AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
 
->[!ENDSHADEBOX] -->
+>[!ENDSHADEBOX] 
+-->
 
 ## Basisbegrippen
 
@@ -146,8 +148,8 @@ Bekijk de volgende video&#39;s voor meer informatie over enkele fundamentele asp
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441086/?captions=dut&learn=on" title="AI Assistant-beveiligingsoverzicht" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441086/?captions=dut&format=jpeg&nocache=1732633205785" alt="AI Assistant-beveiligingsoverzicht"
+                    <a href="https://video.tv.adobe.com/v/3441066/?learn=on" title="AI Assistant-beveiligingsoverzicht" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="AI Assistant-beveiligingsoverzicht"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -155,12 +157,12 @@ Bekijk de volgende video&#39;s voor meer informatie over enkele fundamentele asp
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441086/?captions=dut&learn=on" target="_blank" rel="referrer" title="AI Assistant-beveiligingsoverzicht"> AI Hulp veiligheidsoverzicht </a>
+                        <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" title="AI Assistant-beveiligingsoverzicht"> AI Hulp veiligheidsoverzicht </a>
                     </p>
                     <p class="is-size-6">Bekijk deze video voor een uitgebreid overzicht van de beveiligingsfuncties en -processen van AI Assistant. Daarnaast kunt u het informatieblad over de beveiliging van AI Assistant lezen voor meer informatie over de beveiligingsarchitectuur van AI Assistant.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441086/?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441066/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                   </a>
                   <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -176,8 +178,8 @@ Bekijk de volgende video&#39;s voor meer informatie over enkele fundamentele asp
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441030?captions=dut&learn=on" title="AI Assistant-productkennis" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441030/?captions=dut&format=jpeg&nocache=1732633205780" alt="AI Assistant-productkennis"
+                    <a href="https://video.tv.adobe.com/v/3441024?learn=on" title="AI Assistant-productkennis" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441024/?format=jpeg&nocache=1732633205780" alt="AI Assistant-productkennis"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,12 +187,12 @@ Bekijk de volgende video&#39;s voor meer informatie over enkele fundamentele asp
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441030?captions=dut&learn=on" target="_blank" rel="referrer" title="AI Assistant-productkennis"> AI Hulp productkennis </a>
+                        <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" title="AI Assistant-productkennis"> AI Hulp productkennis </a>
                     </p>
                     <p class="is-size-6">In AI Assistant verwijst productkennis naar concepten en onderwerpen die zijn gebaseerd op Experience League-documentatie. Bekijk deze video voor informatie over hoe u de productkennis van AI Assistant kunt gebruiken om uw taken te begeleiden zonder uw workflows te verlaten. </p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441030?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441024?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                   </a>
                     <a href="home.md#product-knowledge" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -204,8 +206,8 @@ Bekijk de volgende video&#39;s voor meer informatie over enkele fundamentele asp
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3444038?captions=dut&learn=on&enablevpops" title="Operationele inzichten van AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444038/?captions=dut&format=jpeg&nocache=1732633205785" alt="Operationele inzichten van AI Assistant"
+                    <a href="https://video.tv.adobe.com/v/3444031?learn=on&enablevpops" title="Operationele inzichten van AI Assistant" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444031/?format=jpeg&nocache=1732633205785" alt="Operationele inzichten van AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -213,12 +215,12 @@ Bekijk de volgende video&#39;s voor meer informatie over enkele fundamentele asp
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3444038/?captions=dut&learn=on" target="_blank" rel="referrer" title="Operationele inzichten van AI Assistant"> AI Hulp operationele inzichten </a>
+                        <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" title="Operationele inzichten van AI Assistant"> AI Hulp operationele inzichten </a>
                     </p>
                     <p class="is-size-6">Operationele inzichten hebben betrekking op de antwoorden die door AI Assistant worden gegenereerd wanneer deze worden opgevraagd over de metagegevens van uw objecten. Bekijk deze video om te leren hoe u operationele inzichten kunt gebruiken om gebruik, lijn, en hygiënische inzichten op de gegevensvoorwerpen in uw organisatie te ontdekken.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3444038/?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3444031/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                   </a>
                   <a href="./ui-guide.md#operational-insights" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -234,8 +236,8 @@ Bekijk de volgende video&#39;s voor meer informatie over enkele fundamentele asp
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3475925/?captions=dut&learn=on" title="Toegang tot AI Assistant verkrijgen" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475925/?captions=dut&format=jpeg&nocache=1732633204686" alt="Toegang tot AI Assistant verkrijgen"
+                    <a href="https://video.tv.adobe.com/v/3436470/?learn=on" title="Toegang tot AI Assistant verkrijgen" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3436470/?format=jpeg&nocache=1732633204686" alt="Toegang tot AI Assistant verkrijgen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -243,12 +245,12 @@ Bekijk de volgende video&#39;s voor meer informatie over enkele fundamentele asp
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3475925/?captions=dut&learn=on" target="_blank" rel="referrer" title="Toegang tot AI Assistant verkrijgen"> krijgt toegang tot AI Medewerker </a>
+                        <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" title="Toegang tot AI Assistant verkrijgen"> krijgt toegang tot AI Medewerker </a>
                     </p>
                     <p class="is-size-6">Bekijk deze video om te leren hoe u de interface [!DNL Permissions] kunt gebruiken om toegang te krijgen tot AI Assistant.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3475925/?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                   </a>
                   <a href="./access.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -271,8 +273,8 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3475936/?captions=dut&learn=on" title="Verminder de instaptijd" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475936/?captions=dut&format=jpeg&nocache=1732633205780" alt="Verminder de instaptijd"
+                    <a href="https://video.tv.adobe.com/v/3438032/?learn=on" title="Verminder de instaptijd" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3438032/?format=jpeg&nocache=1732633205780" alt="Verminder de instaptijd"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -280,11 +282,11 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3475936/?captions=dut&learn=on" target="_blank" rel="referrer" title="Verminder de instaptijd"> Verminder onboarding tijd </a>
+                        <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" title="Verminder de instaptijd"> Verminder onboarding tijd </a>
                     </p>
                     <p class="is-size-6">Bekijk deze video om te leren hoe u de productkennis van AI Assistant kunt gebruiken om de instaptijd te verkorten.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3475936/?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                 </a>
             </div>
@@ -294,8 +296,8 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441993?captions=dut&learn=on" title="Uw publiek ontgoochelen" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441993/?captions=dut&format=jpeg&nocache=1732633205785" alt="Uw publiek ontgoochelen"
+                    <a href="https://video.tv.adobe.com/v/3435532?learn=on" title="Uw publiek ontgoochelen" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435532/?format=jpeg&nocache=1732633205785" alt="Uw publiek ontgoochelen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -303,11 +305,11 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441993?captions=dut&learn=on" target="_blank" rel="referrer" title="Uw publiek ontgoochelen"> de-onoverzichtelijk uw publiek </a>
+                        <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" title="Uw publiek ontgoochelen"> de-onoverzichtelijk uw publiek </a>
                     </p>
                     <p class="is-size-6">Bekijk deze video om te leren hoe u met de AI Assistant uw doelgroep kunt dedupliceren en uw marketingbewerkingen kunt optimaliseren.</p>
                 </div>
-                  <a href="https://video.tv.adobe.com/v/3441993?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3435532?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                   </a>  
             </div>
@@ -319,8 +321,8 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3440968/?captions=dut&learn=on" title="Aan de slag met het deelvenster voor ontdekkingsmogelijkheden" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440968/?captions=dut&format=jpeg&nocache=1732633205780" alt="Aan de slag met het deelvenster voor ontdekkingsmogelijkheden"
+                    <a href="https://video.tv.adobe.com/v/3440962/?learn=on" title="Aan de slag met het deelvenster voor ontdekkingsmogelijkheden" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440962/?format=jpeg&nocache=1732633205780" alt="Aan de slag met het deelvenster voor ontdekkingsmogelijkheden"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -328,12 +330,12 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3440968/?captions=dut&learn=on" target="_blank" rel="referrer" title="Aan de slag met het deelvenster voor ontdekkingsmogelijkheden"> Gebruik het ontdekkingsbaarheidspaneel om begonnen te worden </a>
+                        <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" title="Aan de slag met het deelvenster voor ontdekkingsmogelijkheden"> Gebruik het ontdekkingsbaarheidspaneel om begonnen te worden </a>
                     </p>
                     <p class="is-size-6">Bekijk deze video om meer te leren over het deelvenster voor ontdekkingsmogelijkheden in AI Assistant en over hoe u dit kunt gebruiken om aan de slag te gaan met AI Assistant.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3440968/?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3440962/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                   </a>
                   <a href="./ui-guide.md#use-discoverability" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -347,8 +349,8 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441745/?captions=dut&learn=on" title="AI-reacties verifiëren en valideren" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441745/?captions=dut&format=jpeg&nocache=1732633205785" alt="AI-reacties verifiëren en valideren"
+                    <a href="https://video.tv.adobe.com/v/3441738/?learn=on" title="AI-reacties verifiëren en valideren" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441738/?format=jpeg&nocache=1732633205785" alt="AI-reacties verifiëren en valideren"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -356,12 +358,12 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441745/?captions=dut&learn=on" target="_blank" rel="referrer" title="AI-reacties verifiëren en valideren"> verifieer en bevestig de reacties van AI </a>
+                        <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" title="AI-reacties verifiëren en valideren"> verifieer en bevestig de reacties van AI </a>
                     </p>
                     <p class="is-size-6">Bekijk deze video om te leren hoe u de reacties kunt verifiëren en valideren met AI Assistant.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3441745/?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3441738/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                   </a>
                   <a href="./ui-guide.md#verify-operational-insights-responses" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -377,8 +379,8 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3441686/?captions=dut&learn=on" title="Efficiëntere lineafstemming en impactanalyse uitvoeren" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441686/?captions=dut&format=jpeg&nocache=1732633205780" alt="Efficiëntere lineafstemming en impactanalyse uitvoeren"
+                    <a href="https://video.tv.adobe.com/v/3441680/?learn=on" title="Efficiëntere lineafstemming en impactanalyse uitvoeren" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441680/?format=jpeg&nocache=1732633205780" alt="Efficiëntere lineafstemming en impactanalyse uitvoeren"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -386,11 +388,11 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3441686/?captions=dut&learn=on" target="_blank" rel="referrer" title="Efficiëntere lineafstemming en impactanalyse uitvoeren"> voert efficiëntere lineage en impactanalyse uit </a>
+                        <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" title="Efficiëntere lineafstemming en impactanalyse uitvoeren"> voert efficiëntere lineage en impactanalyse uit </a>
                     </p>
                     <p class="is-size-6">Bekijk deze video om te leren hoe u AI Assistant kunt gebruiken om een effectievere effectbeoordeling uit te voeren voordat er wijzigingen in uw gegevensobjecten worden aangebracht.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3441686/?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://video.tv.adobe.com/v/3441680/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                 </a>
             </div>
@@ -400,8 +402,8 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3443189?captions=dut&learn=on" title="Product Support Agent gebruiken in AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443189/?captions=dut&format=jpeg&nocache=1732633205785" alt="Product Support Agent gebruiken in AI Assistant"
+                    <a href="https://video.tv.adobe.com/v/3443183?learn=on" title="Product Support Agent gebruiken in AI Assistant" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443183/?format=jpeg&nocache=1732633205785" alt="Product Support Agent gebruiken in AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -409,12 +411,12 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3443189?captions=dut&learn=on" target="_blank" rel="referrer" title="Product Support Agent gebruiken in AI Assistant"> Agent van de Steun van het Product van het gebruik in AI Medewerker </a>
+                        <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" title="Product Support Agent gebruiken in AI Assistant"> Agent van de Steun van het Product van het gebruik in AI Medewerker </a>
                     </p>
                     <p class="is-size-6">Bekijk deze video om te leren hoe u de Agent van de Steun van het Product kunt gebruiken om probleemloos problemen op te lossen zonder uw werkschema te verlaten.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3443189?captions=dut&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3443183?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                   </a>
                   <a href="./new-features/customer-support.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -435,19 +437,19 @@ Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assi
 
 Lees het volgende voor voorbeelden van AIR Assistant (Legacy)-gebruiksscenario&#39;s:
 
-* [&#x200B; Verminder onboarding tijd voor nieuwe leden van uw team &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=nl)
-* [&#x200B; ontmoedig uw publiek en optimaliseer uw marketing verrichtingen &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=nl)
-* [&#x200B; Controle gebiedsdelen en minimaliseer risico tijdens gegevensupdates &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=nl)
-* [&#x200B; ontdekt en stelt sneller nieuwe eigenschappen &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=nl) op
-* [&#x200B; Revolutioneer klantensteun met Medewerker AI &#x200B;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=nl)
+* [ Verminder onboarding tijd voor nieuwe leden van uw team ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
+* [ ontmoedig uw publiek en optimaliseer uw marketing verrichtingen ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
+* [ Controle gebiedsdelen en minimaliseer risico tijdens gegevensupdates ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [ ontdekt en stelt sneller nieuwe eigenschappen ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125) op
+* [ Revolutioneer klantensteun met Medewerker AI ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
 >[!TAB  Extra videoinhoud ]
 
 Bekijk de volgende video&#39;s voor extra voorbeelden van het gebruiksgeval van AI Assistant (Legacy):
 
-* [&#x200B; ontgrendel de macht van AI Medewerker &#x200B;](https://www.youtube.com/watch?v=J48CNmcV7wc)
-* [&#x200B; krijg om AI Medewerker voor Soorten van publiek te kennen &#x200B;](https://www.youtube.com/live/DYsyii7ldck)
-* [&#x200B; ontgrendel operationele inzichten met Medewerker AI &#x200B;](https://www.youtube.com/watch?v=fGgFwAOZle8)
+* [ ontgrendel de macht van AI Medewerker ](https://www.youtube.com/watch?v=J48CNmcV7wc)
+* [ krijg om AI Medewerker voor Soorten van publiek te kennen ](https://www.youtube.com/live/DYsyii7ldck)
+* [ ontgrendel operationele inzichten met Medewerker AI ](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
 
@@ -460,9 +462,9 @@ Blader hieronder naar de koppelingen voor meer inzicht in AIR Assistant (Legacy)
 <a href="./home.md" target="_blank"> Documentatie </a> - <a href="./ui-guide.md" target="_blank"> gids UI </a> - <a href="./access.md" target="_blank"> de Medewerker van de Toegang AI </a> - <a href="./privacy.md" target="_blank"> Privacy, veiligheid, en bestuur </a> - <a href="./faq.md" target="_blank"> Veelgestelde vragen </a>
 </td>
 <td><strong> Adobe Journey Optimizer </strong><br/>
-<a href="https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentatie </a>
+<a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentatie </a>
 </td>
 <td><strong> Customer Journey Analytics </strong><br/>
-<a href="https://experienceleague.adobe.com/nl/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentatie </a>
+<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentatie </a>
 </td>
 </tr></table>
