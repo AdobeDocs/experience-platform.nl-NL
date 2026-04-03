@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Logische PQL-kwantoren
 description: Logische kwantoren kunnen worden gebruikt om omstandigheden met arrays in Profile Query Language (PQL) te bevestigen.
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Logische kwantor-functies
 
-Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in [!DNL Profile Query Language] (PQL) te bevestigen. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht &#x200B;](./overview.md) worden gevonden.
+Logische kwantoren kunnen worden gebruikt om voorwaarden met arrays in [!DNL Profile Query Language] (PQL) te bevestigen. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
 ## Exists
 
@@ -66,4 +66,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Volgende stappen
 
-Nu u over logische kwantoren hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [&#x200B; overzicht van Profile Query Language &#x200B;](./overview.md).
+Nu u over logische kwantoren hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).
