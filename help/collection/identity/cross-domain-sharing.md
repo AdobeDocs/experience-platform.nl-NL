@@ -12,15 +12,15 @@ ht-degree: 0%
 
 Wanneer bezoekers schakelen tussen domeinen die eigendom zijn van uw organisatie, behoudt elk domein standaard zijn eigen bezoekersidentiteit. Zonder expliciete overdracht wordt een bezoeker die van één van uw domeinen aan een andere klikt behandeld als nieuwe, onbekende persoon op de bestemmingsplaats. Dit type implementatiefragmenten rapporteert en start personalisatie opnieuw.
 
-Met het delen van domeinidentiteit lost u dit probleem op door een parameter `adobe_mc` voor query-tekenreeksen aan de doel-URL toe te voegen wanneer een bezoeker op een koppeling klikt of opnieuw wordt omgeleid. Deze parameter draagt identiteitskaart van Experience Cloud van de bezoeker [ (ECID) ](./overview.md), uw organisatie identiteitskaart, en timestamp. Wanneer de bestemmingspagina met een geldige `adobe_mc` parameter laadt, leest het Web SDK automatisch het en past de uitgaande identiteit op zijn eerste Edge Network- verzoek toe, zodat delen beide domeinen de zelfde bezoeker. De parameter `adobe_mc` verloopt na vijf minuten, zodat moet de bestemmingspagina onmiddellijk na omleiding laden.
+Met het delen van domeinidentiteit lost u dit probleem op door een parameter `adobe_mc` voor query-tekenreeksen aan de doel-URL toe te voegen wanneer een bezoeker op een koppeling klikt of opnieuw wordt omgeleid. Deze parameter draagt identiteitskaart van Experience Cloud van de bezoeker [&#x200B; (ECID) &#x200B;](./overview.md), uw organisatie identiteitskaart, en timestamp. Wanneer de bestemmingspagina met een geldige `adobe_mc` parameter laadt, leest het Web SDK automatisch het en past de uitgaande identiteit op zijn eerste Edge Network- verzoek toe, zodat delen beide domeinen de zelfde bezoeker. De parameter `adobe_mc` verloopt na vijf minuten, zodat moet de bestemmingspagina onmiddellijk na omleiding laden.
 
-In dit geval wordt het delen van identiteiten tussen websites op verschillende domeinen besproken. Als u identiteit van een mobiele toepassing in een WebView of mobiele Web-pagina wilt overgaan, gebruik [ mobiel-aan-Web identiteit het delen ](./mobile-to-web.md) in plaats daarvan.
+In dit geval wordt het delen van identiteiten tussen websites op verschillende domeinen besproken. Als u identiteit van een mobiele toepassing in een WebView of mobiele Web-pagina wilt overgaan, gebruik [&#x200B; mobiel-aan-Web identiteit het delen &#x200B;](./mobile-to-web.md) in plaats daarvan.
 
 ## Vereisten
 
 Voordat u begint, moet u ervoor zorgen dat uw implementatie aan de volgende vereisten voldoet:
 
-* **SDK van het Web**: [ SDK van het Web ](/help/collection/js/js-overview.md) versie **2.11.0 of later**, of de de markeringsuitbreiding van SDK van het Web, wordt geïnstalleerd op zowel de bron als bestemmingsdomeinen.
+* **SDK van het Web**: [&#x200B; SDK van het Web &#x200B;](/help/collection/js/js-overview.md) versie **2.11.0 of later**, of de de markeringsuitbreiding van SDK van het Web, wordt geïnstalleerd op zowel de bron als bestemmingsdomeinen.
 * **het Aanpassen configuratie**: Alle deelnemende domeinen gebruiken het zelfde [`orgId`](../js/commands/configure/orgid.md) wanneer het vormen van het Web SDK.
 * **controle URL**: Uw code controleert de verbindingen of richt tussen domeinen opnieuw zodat u vraag-koord parameters aan de bestemming URL kunt toevoegen.
 

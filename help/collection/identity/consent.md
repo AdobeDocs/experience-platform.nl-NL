@@ -12,7 +12,7 @@ ht-degree: 0%
 
 De toestemming en de identiteit worden nauw verbonden in de implementaties van SDK van het Web. De manier waarop en wanneer u toestemming verzamelt, beïnvloedt rechtstreeks wanneer en of de Web SDK een ECID genereert, identiteitscookies instelt en gegevens naar de Edge Network verzendt. Wanneer de toestemming niet zorgvuldig wordt behandeld, is het resultaat vaak onverwachte bezoekersinflatie, hiaten in identiteitscontinuïteit, of allebei.
 
-Deze pagina verklaart hoe de toestemmingskeuzen met identiteitsgedrag in wisselwerking staan en verstrekt raad voor het vormen van uw implementatie om gemeenschappelijke valkuilen te vermijden. Voor achtergrond op hoe het Web SDK ECIDs, FPIDs, en andere identiteitssignalen behandelt, zie [ Identiteit in de Inzameling van Gegevens ](./overview.md).
+Deze pagina verklaart hoe de toestemmingskeuzen met identiteitsgedrag in wisselwerking staan en verstrekt raad voor het vormen van uw implementatie om gemeenschappelijke valkuilen te vermijden. Voor achtergrond op hoe het Web SDK ECIDs, FPIDs, en andere identiteitssignalen behandelt, zie [&#x200B; Identiteit in de Inzameling van Gegevens &#x200B;](./overview.md).
 
 ## Hoe invloed de toestemming heeft op de identiteit {#how-consent-affects-identity}
 
@@ -34,7 +34,7 @@ In de volgende tabel ziet u het gecombineerde effect van `defaultConsent` en `se
 
 >[!NOTE]
 >
->Identiteitscookies en toestemmingscookies worden ingesteld, zelfs als een bezoeker de functie uitschakelt. Deze cookies zijn nodig om de voorkeuren voor gegevensverzameling van de bezoeker te respecteren. Zie {de koekjes van SDK van 0} Web [ voor een volledige lijst van koekjes die SDK van het Web plaatst.](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)
+>Identiteitscookies en toestemmingscookies worden ingesteld, zelfs als een bezoeker de functie uitschakelt. Deze cookies zijn nodig om de voorkeuren voor gegevensverzameling van de bezoeker te respecteren. Zie {de koekjes van SDK van 0} Web [&#x200B; voor een volledige lijst van koekjes die SDK van het Web plaatst.](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)
 
 Wanneer een bezoeker toestemming opnieuw verleent nadat deze eerder is ingetrokken (door `setConsent` met `"general": "in"` after `"general": "out"` aan te roepen), hervat Web SDK het verzenden van gebeurtenissen en gebruikt de bestaande ECID van het cookie als deze nog niet is verlopen. De identiteit van de bezoeker blijft behouden.
 
@@ -100,7 +100,7 @@ Met dit patroon:
 
 ## Goedkeuring met apparaat-id&#39;s van de eerste partij {#consent-with-fpids}
 
-Als uw implementatie [ eerste-partijapparaat IDs (FPIDs) ](./fpid.md) gebruikt, wordt het FPID- koekje geplaatst door uw server onafhankelijk van de de toestemmingsstaat van SDK van het Web. Het FPID-cookie is een id die u beheert op uw eigen infrastructuur. De FPID wordt echter alleen naar de Edge Network verzonden wanneer de Web SDK een aanvraag indient (die met instemming wordt ingediend):
+Als uw implementatie [&#x200B; eerste-partijapparaat IDs (FPIDs) &#x200B;](./fpid.md) gebruikt, wordt het FPID- koekje geplaatst door uw server onafhankelijk van de de toestemmingsstaat van SDK van het Web. Het FPID-cookie is een id die u beheert op uw eigen infrastructuur. De FPID wordt echter alleen naar de Edge Network verzonden wanneer de Web SDK een aanvraag indient (die met instemming wordt ingediend):
 
 * Met `defaultConsent: "pending"` bestaat de FPID in de browser, maar wordt deze niet gebruikt voor het verzenden van een ECID totdat toestemming is verleend.
 * Met `defaultConsent: "in"` wordt de FPID gebruikt op het eerste verzoek en wordt de ECID onmiddellijk zacht.

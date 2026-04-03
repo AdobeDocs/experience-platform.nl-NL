@@ -10,12 +10,12 @@ ht-degree: 0%
 
 # Identiteitskaart gebruiken in Gegevensverzameling
 
-Het `identityMap` voorwerp van de nuttige lading is hoe u Edge Network vertelt die een bezoeker voorbij hun apparaat-niveau [ ECID ](./overview.md) is. Wanneer een bezoeker zich aanmeldt, een aankoop voltooit of anderszins bekend wordt, kunt u id&#39;s op persoonlijke niveau (CRM-id, gehashte e-mail, loyalty-id, enz.) naast de ECID verzenden. Deze personen-vlakke herkenningstekens verstrekken waardevolle informatie aan stroomafwaartse diensten zodat zij kunnen:
+Het `identityMap` voorwerp van de nuttige lading is hoe u Edge Network vertelt die een bezoeker voorbij hun apparaat-niveau [&#x200B; ECID &#x200B;](./overview.md) is. Wanneer een bezoeker zich aanmeldt, een aankoop voltooit of anderszins bekend wordt, kunt u id&#39;s op persoonlijke niveau (CRM-id, gehashte e-mail, loyalty-id, enz.) naast de ECID verzenden. Deze personen-vlakke herkenningstekens verstrekken waardevolle informatie aan stroomafwaartse diensten zodat zij kunnen:
 
-* **de activiteit van de Sitch aan een persoon over apparaten en kanalen.** [ de Dienst van de Identiteit ](/help/identity-service/home.md) verbindt de identiteiten u in een [ identiteitsgrafiek ](/help/identity-service/features/identity-graph-viewer.md) verzendt, verbindend anoniem apparaat-vlakke gedrag met een bekende persoon.
-* **bouwt verenigde klantenprofielen.** [ Real-Time het Profiel van de Klant ](/help/profile/home.md) gebruikt de primaire identiteit die u plaatste om gebeurtenissen en attributen aan één enkel profiel te verankeren, toelatend persoon-vlakke segmentatie en publieksbouw.
-* **activeer publiek op stroomafwaartse bestemmingen.** Vele [ Doelen ](/help/destinations/home.md) vereisen opgehelderde persoon-vlakke identiteiten (gehakte e-mail, telefoonaantallen, enz.) om uw publiek aan hun gebruikersbases aan te passen.
-* **Orchestrate dwars-kanaalreizen.** [ Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) gebruikt opgeloste identiteiten om reizen over e-mail, duw, en in-app kanalen teweeg te brengen en te personaliseren die op voor authentiek verklaard gedrag van een bezoeker worden gebaseerd.
+* **de activiteit van de Sitch aan een persoon over apparaten en kanalen.** [&#x200B; de Dienst van de Identiteit &#x200B;](/help/identity-service/home.md) verbindt de identiteiten u in een [&#x200B; identiteitsgrafiek &#x200B;](/help/identity-service/features/identity-graph-viewer.md) verzendt, verbindend anoniem apparaat-vlakke gedrag met een bekende persoon.
+* **bouwt verenigde klantenprofielen.** [&#x200B; Real-Time het Profiel van de Klant &#x200B;](/help/profile/home.md) gebruikt de primaire identiteit die u plaatste om gebeurtenissen en attributen aan één enkel profiel te verankeren, toelatend persoon-vlakke segmentatie en publieksbouw.
+* **activeer publiek op stroomafwaartse bestemmingen.** Vele [&#x200B; Doelen &#x200B;](/help/destinations/home.md) vereisen opgehelderde persoon-vlakke identiteiten (gehakte e-mail, telefoonaantallen, enz.) om uw publiek aan hun gebruikersbases aan te passen.
+* **Orchestrate dwars-kanaalreizen.** [&#x200B; Journey Optimizer &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) gebruikt opgeloste identiteiten om reizen over e-mail, duw, en in-app kanalen teweeg te brengen en te personaliseren die op voor authentiek verklaard gedrag van een bezoeker worden gebaseerd.
 
 Op deze pagina wordt uitgelegd hoe u `identityMap` -ladingen kunt samenstellen, de juiste instellingen voor elke identiteit kunt kiezen en algemene implementatiescenario&#39;s kunt afhandelen.
 
@@ -47,13 +47,13 @@ In de onderstaande secties wordt elk deel van de lading in detail beschreven.
 
 ### Naamruimtesleutels {#namespace-keys}
 
-Elke top-level sleutel in `identityMap` is een [ identiteit namespace ](/help/identity-service/features/namespaces.md) — een koord dat het type van herkenningsteken (bijvoorbeeld, `CRMID`, `Email`, `Phone`, of `LoyaltyId`) classificeert. Naamruimten moeten aanwezig zijn in Identiteitsservice voordat u ernaar verwijst in een payload. U kunt meerdere naamruimtetoetsen in dezelfde gebeurtenis opnemen wanneer u meerdere id&#39;s voor de bezoeker hebt.
+Elke top-level sleutel in `identityMap` is een [&#x200B; identiteit namespace &#x200B;](/help/identity-service/features/namespaces.md) — een koord dat het type van herkenningsteken (bijvoorbeeld, `CRMID`, `Email`, `Phone`, of `LoyaltyId`) classificeert. Naamruimten moeten aanwezig zijn in Identiteitsservice voordat u ernaar verwijst in een payload. U kunt meerdere naamruimtetoetsen in dezelfde gebeurtenis opnemen wanneer u meerdere id&#39;s voor de bezoeker hebt.
 
 U hoeft de ECID niet op te nemen als naamruimtesleutel. De Edge Network voegt de ECID automatisch toe aan de identiteitslading. Als u de ECID expliciet opneemt, moet u deze niet markeren als `primary` wanneer er ook een identiteit op persoonniveau aanwezig is.
 
 ### `id` {#id}
 
-Het veld `id` is de id-tekenreeks zelf — de waarde die Experience Platform opgeeft welke specifieke persoon of welk apparaat deze identiteit vertegenwoordigt. Elk [ identiteit namespace ](/help/identity-service/features/namespaces.md) verwacht een specifiek waardeformaat, en het verzenden van een waarde in het verkeerde formaat leidt tot een afzonderlijke identiteit die niet met de correct geformatteerde versie kan worden samengevoegd, resulterend in gefragmenteerde profielen.
+Het veld `id` is de id-tekenreeks zelf — de waarde die Experience Platform opgeeft welke specifieke persoon of welk apparaat deze identiteit vertegenwoordigt. Elk [&#x200B; identiteit namespace &#x200B;](/help/identity-service/features/namespaces.md) verwacht een specifiek waardeformaat, en het verzenden van een waarde in het verkeerde formaat leidt tot een afzonderlijke identiteit die niet met de correct geformatteerde versie kan worden samengevoegd, resulterend in gefragmenteerde profielen.
 
 Voordat u een waarde opneemt in `identityMap` , moet u deze voorbereiden volgens de indeling die uw doelnaamruimte verwacht:
 
@@ -62,10 +62,10 @@ Voordat u een waarde opneemt in `identityMap` , moet u deze voorbereiden volgens
 | **CRM / interne identiteitskaart** | Gebruik de exacte id die uw systeem van recordtoewijzingen toewijst. Houd de indeling consistent voor alle gebeurtenissen (casings, voorvoegsels van nullen en voorvoegsels). | `ABC-12345`, `00098765` |
 | **E-mail (onbewerkt)** | Het volledige e-mailadres in kleine letters weergeven en regelafstand en navolgende witruimte bijsnijden. | `user@example.com` |
 | **E-mail (gehakt)** | Het e-mailadres wordt eerst in kleine letters bijgesneden en vervolgens bijgesneden met SHA-256. Verzend de resulterende hexadecimale tekenreeks van 64 tekens. Voeg geen salt toe, tenzij uw naamruimtedefinitie dit vereist. | `a1b2c3d4e5f6a7b8c9...` |
-| **Telefoon (E.164)** | Formaat het aantal in [ E.164 ](https://en.wikipedia.org/wiki/E.164): een belangrijke `+`, de landcode, en het abonneeaantal zonder ruimten of punctuatie. | `+15551234567` |
-| **FPID** | Produceer a [ UUIDv4 ](https://datatracker.ietf.org/doc/html/rfc4122) koord. Zie [ eerste-partij apparaat IDs ](./fpid.md) voor generatievereisten. | `123e4567-e89b-42d3-9456-426614174000` |
+| **Telefoon (E.164)** | Formaat het aantal in [&#x200B; E.164 &#x200B;](https://en.wikipedia.org/wiki/E.164): een belangrijke `+`, de landcode, en het abonneeaantal zonder ruimten of punctuatie. | `+15551234567` |
+| **FPID** | Produceer a [&#x200B; UUIDv4 &#x200B;](https://datatracker.ietf.org/doc/html/rfc4122) koord. Zie [&#x200B; eerste-partij apparaat IDs &#x200B;](./fpid.md) voor generatievereisten. | `123e4567-e89b-42d3-9456-426614174000` |
 
-Voor de volledige lijst van standaard namespaces en hun definities, zie [ Overzicht van identiteitskaart namespace ](/help/identity-service/features/namespaces.md#standard).
+Voor de volledige lijst van standaard namespaces en hun definities, zie [&#x200B; Overzicht van identiteitskaart namespace &#x200B;](/help/identity-service/features/namespaces.md#standard).
 
 >[!TIP]
 >
@@ -77,7 +77,7 @@ De vereiste id is zelden rechtstreeks beschikbaar op de pagina. De gemeenschappe
 
 * **de laag van Gegevens**: Lees het herkenningsteken van de de gegevenslaag van uw plaats nadat de bezoeker binnen ondertekent. Deze locatie is de meest betrouwbare benadering, omdat de gegevenslaag wordt gevuld door de achterkant van de toepassing en de geverifieerde sessiestatus weerspiegelt.
 * **het teken van de Auth of zittingskoekje**: Decode of kijk omhoog het herkenningsteken van een JWT of zittingskoekje dat uw authentificatiesysteem plaatst. Controleer of het token nog steeds actief is voordat u de waarde gebruikt.
-* **server-zijverrijking**: De Prep van Gegevens van het gebruik [ voor de Inzameling van Gegevens ](/help/datastreams/data-prep.md) of een [ gebeurtenis die regel ](/help/tags/ui/event-forwarding/overview.md) door:sturen om het herkenningsteken bij Edge in kaart te brengen of om te zetten alvorens het stroomafwaartse diensten bereikt. Deze locatie is handig wanneer de client alleen een ondoorzichtig sessietoken heeft dat aan een interne id op de server is toegewezen.
+* **server-zijverrijking**: De Prep van Gegevens van het gebruik [&#x200B; voor de Inzameling van Gegevens &#x200B;](/help/datastreams/data-prep.md) of een [&#x200B; gebeurtenis die regel &#x200B;](/help/tags/ui/event-forwarding/overview.md) door:sturen om het herkenningsteken bij Edge in kaart te brengen of om te zetten alvorens het stroomafwaartse diensten bereikt. Deze locatie is handig wanneer de client alleen een ondoorzichtig sessietoken heeft dat aan een interne id op de server is toegewezen.
 
 >[!TIP]
 >
@@ -154,7 +154,7 @@ alloy("sendEvent", {
 
 >[!TAB  de markeringsuitbreiding van SDK van het Web ]
 
-Gebruik het [ type van het de kaart van de Identiteit ](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) gegevenselement om uw identiteitslading in de Markeringen UI te bouwen:
+Gebruik het [&#x200B; type van het de kaart van de Identiteit &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) gegevenselement om uw identiteitslading in de Markeringen UI te bouwen:
 
 1. Maak een gegevenselement met de extensie **[!UICONTROL Adobe Experience Platform Web SDK]** en het gegevenstype **[!UICONTROL Identity map]** data-element.
 2. Voeg identiteiten toe door namespace, het gegevenselement of de waarde te specificeren die aan het herkenningsteken, en de voor authentiek verklaarde staat wordt opgelost.
@@ -251,13 +251,13 @@ U kunt meerdere naamruimten verzenden in dezelfde gebeurtenis. Dit scenario is g
 
 +++**Anonieme bezoekers**
 
-Voor anonieme bezoekers hoeft u gewoonlijk helemaal geen `identityMap` te verzenden. De Edge Network wijst automatisch een ECID toe en gebruikt deze als primaire identiteit. Als u [ eerste-partij apparaat IDs ](./fpid.md) gebruikt, is FPID de enige identiteit u voor anonieme bezoekers moet omvatten.
+Voor anonieme bezoekers hoeft u gewoonlijk helemaal geen `identityMap` te verzenden. De Edge Network wijst automatisch een ECID toe en gebruikt deze als primaire identiteit. Als u [&#x200B; eerste-partij apparaat IDs &#x200B;](./fpid.md) gebruikt, is FPID de enige identiteit u voor anonieme bezoekers moet omvatten.
 
 +++
 
 ## Hoe identityMap van invloed is op de identiteitsgrafiek {#identity-graph}
 
-Elke `identityMap` nuttige lading die Experience Platform bereikt wordt verwerkt door [ Dienst van de Identiteit ](/help/identity-service/home.md), die de identiteiten verbindt u in een [ identiteitsgrafiek ](/help/identity-service/features/identity-graph-viewer.md) verzendt. Welke naamruimten u opneemt, hoe u `authenticatedState` instelt en welke identiteit u markeert als `primary` , geeft rechtstreeks de vorm hoe Identity Service deze grafieken bouwt en samenvoegt.
+Elke `identityMap` nuttige lading die Experience Platform bereikt wordt verwerkt door [&#x200B; Dienst van de Identiteit &#x200B;](/help/identity-service/home.md), die de identiteiten verbindt u in een [&#x200B; identiteitsgrafiek &#x200B;](/help/identity-service/features/identity-graph-viewer.md) verzendt. Welke naamruimten u opneemt, hoe u `authenticatedState` instelt en welke identiteit u markeert als `primary` , geeft rechtstreeks de vorm hoe Identity Service deze grafieken bouwt en samenvoegt.
 
 Belangrijk gedrag om bewust te zijn van:
 
@@ -265,8 +265,8 @@ Belangrijk gedrag om bewust te zijn van:
 * **de `primary` identiteit verankert de gebeurtenis in het Profiel van de Klant in real time.** Profiel gebruikt de primaire identiteit om te bepalen tot welk profiel de gebeurtenis behoort. Als u de verkeerde identiteit als primair markeert (bijvoorbeeld als u ECID als primair instelt wanneer een id op persoonniveau beschikbaar is), kunnen gebeurtenissen worden opgeslagen op apparaatprofielen in plaats van op persoonniveau.
 * **`authenticatedState` beïnvloedt grafiekvertrouwen.** Als u `authenticated` verzendt voor een identiteit die niet echt is geverifieerd, kunnen er onjuiste koppelingen naar andere apparaten ontstaan die moeilijk ongedaan kunnen worden gemaakt. Gebruik `authenticated` alleen als de bezoeker tijdens de huidige sessie actief zijn identiteit heeft bewezen.
 
-Als uw implementatie [ identiteitsgrafiek gebruikt die regels ](/help/identity-service/identity-graph-linking-rules/overview.md) verbindt (zoals namespaceprioriteit of het algoritme van de identiteitsoptimalisering), herzie de [ implementatiegids ](/help/identity-service/identity-graph-linking-rules/implementation-guide.md) om te begrijpen hoe die regels met de identiteiten in wisselwerking staan u door `identityMap` verzendt.
+Als uw implementatie [&#x200B; identiteitsgrafiek gebruikt die regels &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) verbindt (zoals namespaceprioriteit of het algoritme van de identiteitsoptimalisering), herzie de [&#x200B; implementatiegids &#x200B;](/help/identity-service/identity-graph-linking-rules/implementation-guide.md) om te begrijpen hoe die regels met de identiteiten in wisselwerking staan u door `identityMap` verzendt.
 
 >[!NOTE]
 >
->`identityMap` wordt alleen verzonden wanneer de Web SDK een aanvraag indient bij de Edge Network, die wordt geblokkeerd door de toestemming van de bezoeker. Als in uw implementatie `defaultConsent: "pending"` wordt gebruikt, worden identiteiten pas verzonden nadat toestemming is verleend. Zie [ Toestemming en identiteit ](./consent.md) voor details.
+>`identityMap` wordt alleen verzonden wanneer de Web SDK een aanvraag indient bij de Edge Network, die wordt geblokkeerd door de toestemming van de bezoeker. Als in uw implementatie `defaultConsent: "pending"` wordt gebruikt, worden identiteiten pas verzonden nadat toestemming is verleend. Zie [&#x200B; Toestemming en identiteit &#x200B;](./consent.md) voor details.

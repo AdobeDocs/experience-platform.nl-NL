@@ -18,13 +18,13 @@ ht-degree: 1%
 
 Deze configuratiesectie staat u toe om het gedrag van het Web SDK te bepalen wanneer het over de behandeling van gebruikersidentificatie komt.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
 1. Schuif omlaag naar de sectie **[!UICONTROL Identity]** .
 
-![ Beeld dat de identiteitsmontages van de de markeringsuitbreiding van SDK van het Web in de markeringen UI toont ](../assets/web-sdk-ext-identity.png)
+![&#x200B; Beeld dat de identiteitsmontages van de de markeringsuitbreiding van SDK van het Web in de markeringen UI toont &#x200B;](../assets/web-sdk-ext-identity.png)
 
 De volgende opties zijn beschikbaar:
 

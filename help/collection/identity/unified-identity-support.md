@@ -17,7 +17,7 @@ ht-degree: 2%
 >
 >Deze functie is momenteel in bèta. De beschikbaarheid, het gedrag en de documentatie kunnen veranderen.
 
-Met Unified Identity Support kan de Edge Network zowel in de context van de identiteit van de eerste partij als van derden werken. Het combineert een duurzame identificatie van de eerste partij op uw bezittingen met de werkschema&#39;s van de derde activering in browsers die derdekoekjes steunen. Voor achtergrond op hoe het Web SDK ECIDs, FPIDs, en andere identiteitssignalen behandelt, zie [ Identiteit in de Inzameling van Gegevens ](./overview.md).
+Met Unified Identity Support kan de Edge Network zowel in de context van de identiteit van de eerste partij als van derden werken. Het combineert een duurzame identificatie van de eerste partij op uw bezittingen met de werkschema&#39;s van de derde activering in browsers die derdekoekjes steunen. Voor achtergrond op hoe het Web SDK ECIDs, FPIDs, en andere identiteitssignalen behandelt, zie [&#x200B; Identiteit in de Inzameling van Gegevens &#x200B;](./overview.md).
 
 Met de verenigde identiteitssteun, kunt u:
 
@@ -60,15 +60,15 @@ De verenigde identiteitssteun vereist elk van het volgende:
 * Uw implementatie gebruikt FPID&#39;s of een andere persistentiestrategie van een eerste partij als basis.
 * Cookies van andere leveranciers worden ingeschakeld in uw Web SDK-configuratie.
 * Identiteitssynchronisatie van derden is ingeschakeld voor de gegevensstroom.
-* De bezoeker gebruikt browser die derdekoekjes toestaat (zie [ hieronder Browserverenigbaarheid 0}).](#browser-compatibility)
+* De bezoeker gebruikt browser die derdekoekjes toestaat (zie [&#x200B; hieronder Browserverenigbaarheid 0&rbrace;).](#browser-compatibility)
 
 ## Configuratie
 
-1. **laat derdekoekjes in SDK van het Web** toe: Laat **de derdekoekjes van het Gebruik** plaatsen in uw implementatie van SDK van het Web toe. Als het gebruiken van de markeringsuitbreiding, laat **[!UICONTROL Use third-party cookies]** in [ de configuratiemontages van de Identiteit ](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies) toe. Als u de JavaScript-bibliotheek gebruikt, stelt u [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md) in op `true` .
+1. **laat derdekoekjes in SDK van het Web** toe: Laat **de derdekoekjes van het Gebruik** plaatsen in uw implementatie van SDK van het Web toe. Als het gebruiken van de markeringsuitbreiding, laat **[!UICONTROL Use third-party cookies]** in [&#x200B; de configuratiemontages van de Identiteit &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies) toe. Als u de JavaScript-bibliotheek gebruikt, stelt u [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md) in op `true` .
 
-1. **laat de synchronisatie van derdeidentiteitskaart in de datastream** toe: laat de **[!UICONTROL Third-Party ID Sync]** optie in de geavanceerde montages van uw gegevensstroom toe. Zie [ gegevensstromen ](/help/datastreams/configure.md#advanced-options) creëren en vormen.
+1. **laat de synchronisatie van derdeidentiteitskaart in de datastream** toe: laat de **[!UICONTROL Third-Party ID Sync]** optie in de geavanceerde montages van uw gegevensstroom toe. Zie [&#x200B; gegevensstromen &#x200B;](/help/datastreams/configure.md#advanced-options) creëren en vormen.
 
-1. **zorg ervoor dat de persistentie van de eerste partij op zijn plaats** is: bevestig dat uw strategie van de eerste-partijpersistentie (zoals FPIDs) reeds op uw bezeten domein wordt opgesteld. Zie [ Eerste partij apparaat IDs in de Inzameling van Gegevens ](fpid.md).
+1. **zorg ervoor dat de persistentie van de eerste partij op zijn plaats** is: bevestig dat uw strategie van de eerste-partijpersistentie (zoals FPIDs) reeds op uw bezeten domein wordt opgesteld. Zie [&#x200B; Eerste partij apparaat IDs in de Inzameling van Gegevens &#x200B;](fpid.md).
 
 ## Validatie
 

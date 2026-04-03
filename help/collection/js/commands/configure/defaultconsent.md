@@ -40,7 +40,7 @@ alloy("configure", {
 
 ## `defaultConsent` gebruiken in combinatie met `setConsent` {#using-consent}
 
-Wanneer `defaultConsent` en `setConsent` samen worden gebruikt, produceren verschillende gegevensverzameling, cookie-instelling en identiteitsresultaten, afhankelijk van de geconfigureerde waarden. Zie [ Toestemming en identiteit in de Inzameling van Gegevens ](/help/collection/identity/consent.md#how-consent-affects-identity) voor een volledige interactietabel.
+Wanneer `defaultConsent` en `setConsent` samen worden gebruikt, produceren verschillende gegevensverzameling, cookie-instelling en identiteitsresultaten, afhankelijk van de geconfigureerde waarden. Zie [&#x200B; Toestemming en identiteit in de Inzameling van Gegevens &#x200B;](/help/collection/identity/consent.md#how-consent-affects-identity) voor een volledige interactietabel.
 
 ## Standaardtoestemming instellen op basis van `gdprApplies`
 
@@ -60,4 +60,4 @@ In het bovenstaande codeblok wordt de opdracht `configure` aangeroepen nadat `tc
 
 ## Standaardtoestemming met de Web SDK-tagextensie
 
-Zie [ de montages van de Toestemming ](/help/tags/extensions/client/web-sdk/configure/consent.md) in de de markeringsuitbreidingsdocumentatie van SDK van het Web leren hoe te om deze acties uit te voeren gebruikend markeringen.
+Zie [&#x200B; de montages van de Toestemming &#x200B;](/help/tags/extensions/client/web-sdk/configure/consent.md) in de de markeringsuitbreidingsdocumentatie van SDK van het Web leren hoe te om deze acties uit te voeren gebruikend markeringen.

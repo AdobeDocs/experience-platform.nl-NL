@@ -15,7 +15,7 @@ Wanneer u de opdracht [`sendEvent`](sendevent/overview.md) uitvoert, verkrijgt d
 
 >[!IMPORTANT]
 >
->Gebruik `getIdentity` wanneer u identiteitsgegevens op de client nodig hebt. Als u slechts ECID in XDM in kaart moet brengen, gebruik [ Prep van Gegevens voor de Inzameling van Gegevens ](/help/datastreams/data-prep.md) of [ markeringen ECID toegangsbegeleiding ](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md) in plaats daarvan.
+>Gebruik `getIdentity` wanneer u identiteitsgegevens op de client nodig hebt. Als u slechts ECID in XDM in kaart moet brengen, gebruik [&#x200B; Prep van Gegevens voor de Inzameling van Gegevens &#x200B;](/help/datastreams/data-prep.md) of [&#x200B; markeringen ECID toegangsbegeleiding &#x200B;](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md) in plaats daarvan.
 
 De opdracht `getIdentity` doorloopt de volgende stroom om de `ECID` op te halen.
 
@@ -36,7 +36,7 @@ Voer het `getIdentity` bevel in werking wanneer het roepen van uw gevormde insta
 
   U kunt `"ECID"` en `"CORE ID"` tegelijkertijd aanvragen. Voorbeeld: `"namespaces": ["ECID","CORE"]` .
 
-* **`edgeConfigOverrides`**: A [ datastream configuratieopheffingsvoorwerp ](configure/edgeconfigoverrides.md).
+* **`edgeConfigOverrides`**: A [&#x200B; datastream configuratieopheffingsvoorwerp &#x200B;](configure/edgeconfigoverrides.md).
 
 ```js
 alloy("getIdentity",{
@@ -47,7 +47,7 @@ alloy("getIdentity",{
 
 ## Object Response
 
-Als u besluit om [ reacties ](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
+Als u besluit om [&#x200B; reacties &#x200B;](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
 
 * **`identity.ECID`**: Een tekenreeks die de ECID van de bezoeker bevat.
 * **`identity.CORE`**: Een tekenreeks met de CORE-id van de bezoeker.

@@ -47,7 +47,7 @@ Als richtlijn kunt u wachten tot de maximale levensduur van het AMCV-cookie is v
 
 ## Audience Manager trait updates
 
-Wanneer gegevens met XDM-indeling tijdens de migratie naar Audience Manager worden verzonden, moeten die gegevens in signalen worden omgezet. Uw kenmerken moeten worden bijgewerkt om de nieuwe sleutels te weerspiegelen die door XDM worden verstrekt. Dit proces wordt gemakkelijker gemaakt door het [ hulpmiddel BAAAM ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) te gebruiken.
+Wanneer gegevens met XDM-indeling tijdens de migratie naar Audience Manager worden verzonden, moeten die gegevens in signalen worden omgezet. Uw kenmerken moeten worden bijgewerkt om de nieuwe sleutels te weerspiegelen die door XDM worden verstrekt. Dit proces wordt gemakkelijker gemaakt door het [&#x200B; hulpmiddel BAAAM &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) te gebruiken.
 
 ## Migratie van id&#39;s van derden {#third-party-id}
 
@@ -85,4 +85,4 @@ alloy("configure", {
 
 ## Migratie van bezoekersidentiteitskaart inschakelen met de Web SDK-tagextensie
 
-Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [ de configuratiemontages van de Identiteit ](/help/tags/extensions/client/web-sdk/configure/identity.md).
+Deze montages kunnen in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [&#x200B; de configuratiemontages van de Identiteit &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md).
