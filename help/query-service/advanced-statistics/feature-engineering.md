@@ -3,7 +3,7 @@ title: SQL-extensie met functies Engineering
 description: Meer informatie over de Distiller-functie voor gegevens vindt u in SQL-extensie voor het vooraf verwerken van gegevens voor geavanceerde statistische modellering. Het behandelt de beschikbare eigenschappen extractie, transformatie, en selectietechnieken.
 role: Developer
 exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
-source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '735'
 ht-degree: 0%
@@ -70,7 +70,8 @@ Gebruik deze transformatoren om categoriale gegevens om te zetten en te coderen 
 
 Selecteer vervolgens een subset met de belangrijkste functies uit de oorspronkelijke set. Dit proces helpt de afmeting van uw gegevens te verminderen, waardoor het voor uw modellen gemakkelijker wordt om te verwerken en algemene modelprestaties te verbeteren.
 
-<!-- Commented out as it 
+<!-- 
+Commented out as it 
 ## Supported machine learning algorithms {#supported-ml-algorithms}
 
 Once you have preprocessed your data, use the feature engineering SQL extension to prepare your data for the following machine learning algorithms:
@@ -86,12 +87,13 @@ Use logical regression to predict categorical outcomes and linear regression to 
 
 Use a clustering algorithm to group data points into distinct clusters based on their similarities.
 
-- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. -->
+- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. 
+-->
 
-## De OPTIONS-clausule implementeren {#options-clause}
+## Implementeren van de OPTIONS-clausule {#options-clause}
 
 Wanneer u uw model definieert, gebruikt u de component `OPTIONS` om het algoritme en de bijbehorende parameters op te geven. Stel eerst de parameter `type` in om het algoritme aan te geven dat u gebruikt, zoals `K-Means` . Vervolgens definieert u de relevante parameters in de `OPTIONS` -component als sleutel-waardeparen om uw model te perfectioneren. Als u ervoor kiest om bepaalde parameters niet aan te passen, past het systeem standaardinstellingen toe. Raadpleeg de relevante documentatie voor een beter begrip van de functie en standaardwaarden van elke parameter.
 
 ### Volgende stappen
 
-Na het leren van de technieken van de eigenschaptechniek die in dit document worden geschetst, vooruitgang op het [&#x200B; Modellen &#x200B;](./models.md) document. Het begeleidt u door het proces van het creëren, de opleiding, en het beheren van vertrouwde modellen gebruikend de eigenschappen u hebt ontworpen. Zodra uw modellen worden gebouwd, ga aan [&#x200B; te werk voert geavanceerde statistische modellendocument uit.](./implement-models/implement-models.md). Dit document fungeert als een overzicht, dat is gekoppeld aan diepgaande hulplijnen voor verschillende modelleringstechnieken, waaronder clustering, classificatie en regressie. Door deze documenten te volgen, leert u om diverse vertrouwde modellen binnen uw SQL werkschema&#39;s te vormen en uit te voeren en uw modellen voor geavanceerde gegevensanalyse te optimaliseren.
+Na het leren van de technieken van de eigenschaptechniek die in dit document worden geschetst, vooruitgang op het [ Modellen ](./models.md) document. Het begeleidt u door het proces van het creëren, de opleiding, en het beheren van vertrouwde modellen gebruikend de eigenschappen u hebt ontworpen. Zodra uw modellen worden gebouwd, ga aan [ te werk voert geavanceerde statistische modellendocument uit.](./implement-models/implement-models.md). Dit document fungeert als een overzicht, dat is gekoppeld aan diepgaande hulplijnen voor verschillende modelleringstechnieken, waaronder clustering, classificatie en regressie. Door deze documenten te volgen, leert u om diverse vertrouwde modellen binnen uw SQL werkschema&#39;s te vormen en uit te voeren en uw modellen voor geavanceerde gegevensanalyse te optimaliseren.
