@@ -3,7 +3,7 @@ title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 0%
@@ -16,7 +16,7 @@ Een publiek is een verzameling personen die vergelijkbare gedragingen en/of kenm
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met soorten publiek ophalen {#list}
 
@@ -33,7 +33,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->Als u dit eindpunt zonder enige vraagparameters gebruikt, zal het inactieve publiek **niet** zijn teruggekeerd. Nochtans, als u dit eindpunt samen met de `property=audienceId` vraagparameter gebruikt, zal het inactieve publiek **&#x200B;**&#x200B;zijn teruggekeerd.
+>Als u dit eindpunt zonder enige vraagparameters gebruikt, zal het inactieve publiek **niet** zijn teruggekeerd. Nochtans, als u dit eindpunt samen met de `property=audienceId` vraagparameter gebruikt, zal het inactieve publiek **** zijn teruggekeerd.
 
 De volgende vraagparameters kunnen worden gebruikt wanneer het terugwinnen van een lijst van publiek:
 
@@ -43,8 +43,8 @@ De volgende vraagparameters kunnen worden gebruikt wanneer het terugwinnen van e
 | `limit` | Hiermee geeft u het maximale aantal bezoekers per pagina op. | `limit=10` |
 | `sort` | Hiermee geeft u de volgorde op waarin de resultaten moeten worden gesorteerd. Dit wordt geschreven in de indeling `attributeName:[desc/asc]` . | `sort=updateTime:desc` |
 | `property` | Een filter dat u toestaat om publiek te specificeren dat **precies** de waarde van een attribuut aanpast. Dit wordt geschreven in de indeling `property=` | `property=audienceId==test-audience-id` |
-| `name` | Een filter dat u toestaat om publiek te specificeren de waarvan namen **&#x200B;**&#x200B;bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `name=Sample` |
-| `description` | Een filter dat u toestaat om publiek te specificeren de waarvan beschrijvingen **&#x200B;**&#x200B;bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `description=Test Description` |
+| `name` | Een filter dat u toestaat om publiek te specificeren de waarvan namen **** bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `name=Sample` |
+| `description` | Een filter dat u toestaat om publiek te specificeren de waarvan beschrijvingen **** bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `description=Test Description` |
 | `entityType` | Een filter waarmee u het type publiek kunt opgeven dat u zoekt. | `entityType=_xdm.context.account` |
 
 **Verzoek**
@@ -183,17 +183,17 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van soorten publ
 ```
 
 | Eigenschap | Type publiek | Beschrijving |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | Beide | Een door het systeem gegenereerde alleen-lezen id voor het publiek. |
 | `audienceId` | Beide | Als het publiek een publiek is dat via een platform wordt gegenereerd, heeft dit dezelfde waarde als de `id` . Als het publiek extern wordt gegenereerd, wordt deze waarde door de client opgegeven. |
 | `schema` | Beide | Het schema van de Gegevens van de Ervaring Model (XDM) van het publiek. |
 | `imsOrgId` | Beide | De id van de organisatie waartoe het publiek behoort. |
-| `sandbox` | Beide | Informatie over de sandbox waartoe het publiek behoort. Meer informatie over zandbakken kan in het [&#x200B; overzicht van zandbakken &#x200B;](../../sandboxes/home.md) worden gevonden. |
+| `sandbox` | Beide | Informatie over de sandbox waartoe het publiek behoort. Meer informatie over zandbakken kan in het [ overzicht van zandbakken ](../../sandboxes/home.md) worden gevonden. |
 | `name` | Beide | De naam van het publiek. |
 | `description` | Beide | Een beschrijving van het publiek. |
-| `expression` | Door het platform gegenereerd | De Profile Query Language (PQL)-expressie van het publiek. Meer informatie over de uitdrukkingen van PQL kan in de [&#x200B; uitdrukkingengids van PQL &#x200B;](../pql/overview.md) worden gevonden. |
-| `mergePolicyId` | Door het platform gegenereerd | De id van het samenvoegbeleid waaraan het publiek is gekoppeld. Meer informatie over fusiebeleid kan in de [&#x200B; gids van het samenvoegingsbeleid &#x200B;](../../profile/api/merge-policies.md) worden gevonden. |
-| `evaluationInfo` | Door het platform gegenereerd | Toont hoe het publiek zal worden geëvalueerd. Mogelijke evaluatiemethoden zijn batch, synchronous (streaming) of continue (edge). Meer informatie over de evaluatiemethodes kan in het [&#x200B; segmentatieoverzicht &#x200B;](../home.md) worden gevonden |
+| `expression` | Door het platform gegenereerd | De Profile Query Language (PQL)-expressie van het publiek. Meer informatie over de uitdrukkingen van PQL kan in de [ uitdrukkingengids van PQL ](../pql/overview.md) worden gevonden. |
+| `mergePolicyId` | Door het platform gegenereerd | De id van het samenvoegbeleid waaraan het publiek is gekoppeld. Meer informatie over fusiebeleid kan in de [ gids van het samenvoegingsbeleid ](../../profile/api/merge-policies.md) worden gevonden. |
+| `evaluationInfo` | Door het platform gegenereerd | Toont hoe het publiek zal worden geëvalueerd. Mogelijke evaluatiemethoden zijn batch, synchronous (streaming) of continue (edge). Meer informatie over de evaluatiemethodes kan in het [ segmentatieoverzicht ](../home.md) worden gevonden |
 | `dependents` | Beide | Een array met gebruikers-id&#39;s die afhankelijk zijn van het huidige publiek. Dit zou worden gebruikt als u een publiek creeert dat een segment van een segment is. |
 | `dependencies` | Beide | Een array met publiek-id&#39;s waarvan het publiek afhankelijk is. Dit zou worden gebruikt als u een publiek creeert dat een segment van een segment is. |
 | `type` | Beide | Een door het systeem gegenereerd veld dat weergeeft of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment` . Een `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Platform. |
@@ -246,11 +246,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | Eigenschap | Beschrijving |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | De naam van het publiek. |
 | `description` | Een beschrijving van het publiek. |
 | `type` | Een veld waarin wordt weergegeven of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment` . Een `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Platform. |
-| `expression` | De Profile Query Language (PQL)-expressie van het publiek. Meer informatie over de uitdrukkingen van PQL kan in de [&#x200B; uitdrukkingengids van PQL &#x200B;](../pql/overview.md) worden gevonden. |
+| `expression` | De Profile Query Language (PQL)-expressie van het publiek. Meer informatie over de uitdrukkingen van PQL kan in de [ uitdrukkingengids van PQL ](../pql/overview.md) worden gevonden. |
 | `schema` | Het schema van de Gegevens van de Ervaring Model (XDM) van het publiek. |
 | `labels` | Gegevensgebruik op objectniveau en op kenmerk gebaseerde toegangsbeheerlabels die relevant zijn voor het publiek. |
 
@@ -339,7 +339,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | Parameter | Beschrijving |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | De id van het publiek dat u probeert op te halen. Gelieve te merken op dat dit het `id` gebied is, en **niet** het `audienceId` gebied is. |
 
 **Verzoek**
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | Eigenschap | Beschrijving |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | De id van het publiek. Voor extern gegenereerde soorten publiek kan deze waarde door de gebruiker worden opgegeven. |
 | `name` | De naam van het publiek. |
 | `namespace` | De naamruimte voor het publiek. |
@@ -767,4 +767,4 @@ Een succesvolle reactie retourneert HTTP-status 207 met informatie voor het gevr
 
 ## Volgende stappen
 
-Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u publiek kunt maken, beheren en verwijderen met de Adobe Experience Platform API. Voor meer informatie over publieksbeheer die UI gebruiken, te lezen gelieve de [&#x200B; gids van de segmentatie UI &#x200B;](../ui/overview.md).
+Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u publiek kunt maken, beheren en verwijderen met de Adobe Experience Platform API. Voor meer informatie over publieksbeheer die UI gebruiken, te lezen gelieve de [ gids van de segmentatie UI ](../ui/overview.md).
