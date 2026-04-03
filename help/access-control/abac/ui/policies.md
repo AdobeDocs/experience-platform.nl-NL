@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen;toegangsbeheer;op attri
 title: Beleid voor toegangsbeheer beheren
 description: Het toegangsbeheerbeleid beheren via de interface voor machtigingen in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: b0094920720c54990953f79de32ab95c2a5c7e1c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 0%
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Beleid voor toegangsbeheer beheren
 
-Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen om toelaatbare en ontoelaatbare acties te vestigen. Adobe verstrekt een standaardbeleid dat onmiddellijk kan worden geactiveerd of wanneer uw organisatie klaar is om toegang tot specifieke die voorwerpen te beginnen te controleren op [&#x200B; worden gebaseerd etiketten &#x200B;](./labels.md){target="_blank"}. Het standaardbeleid, **[!UICONTROL Default-Label-Based-Access-Control-Policy]**, leverages labels die op middelen worden toegepast om toegang te ontkennen tenzij de gebruikers in een rol met een passend etiket zijn.
+Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen om toelaatbare en ontoelaatbare acties te vestigen. Adobe verstrekt een standaardbeleid dat onmiddellijk kan worden geactiveerd of wanneer uw organisatie klaar is om toegang tot specifieke die voorwerpen te beginnen te controleren op [ worden gebaseerd etiketten ](./labels.md){target="_blank"}. Het standaardbeleid, **[!UICONTROL Default-Label-Based-Access-Control-Policy]**, leverages labels die op middelen worden toegepast om toegang te ontkennen tenzij de gebruikers in een rol met een passend etiket zijn.
 
 >[!IMPORTANT]
 >
->Het beleid van de toegangscontrole zou niet met het beleid van het gegevensgebruik moeten worden verward, dat controleert hoe de gegevens in Adobe Experience Platform worden gebruikt. Zie de gids bij het creëren van [&#x200B; beleid van het gegevensgebruik &#x200B;](../../../data-governance/policies/create.md){target="_blank"} voor meer informatie.
+>Het beleid van de toegangscontrole zou niet met het beleid van het gegevensgebruik moeten worden verward, dat controleert hoe de gegevens in Adobe Experience Platform worden gebruikt. Zie de gids bij het creëren van [ beleid van het gegevensgebruik ](../../../data-governance/policies/create.md){target="_blank"} voor meer informatie.
 
 ## Beleid voor een sandbox configureren {#configure-policy}
 
@@ -24,13 +24,13 @@ Het beleid van de toegangscontrole is verklaringen die attributen samenbrengen o
 >
 >Het **[!UICONTROL Default-Label-Based-Access-Control-Policy]** -beleid is momenteel het enige beleid dat beschikbaar is voor configuratie.
 
-Beginnen vormend een beleid, navigeer aan **[!UICONTROL Permissions]** in [&#x200B; Adobe Experience Cloud &#x200B;](https://experience.adobe.com/){target="_blank"}. Selecteer **[!UICONTROL Policies]** in het linkerdeelvenster. Selecteer de **[!UICONTROL Default-Label-Based-Access-Control-Policy]** in de lijst.
+Beginnen vormend een beleid, navigeer aan **[!UICONTROL Permissions]** in [ Adobe Experience Cloud ](https://experience.adobe.com/){target="_blank"}. Selecteer **[!UICONTROL Policies]** in het linkerdeelvenster. Selecteer de **[!UICONTROL Default-Label-Based-Access-Control-Policy]** in de lijst.
 
-![&#x200B; de beleidswerkruimte die een lijst van bestaand beleid tonen.](../../images/ui/policies/policies-home.png){zoomable="yes"}
+![ de beleidswerkruimte die een lijst van bestaand beleid tonen.](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
 De werkruimte Details van het beleid wordt weergegeven. Selecteer het **[!UICONTROL Sandboxes]**. Er wordt een lijst weergegeven met sandboxen die aan het beleid zijn gekoppeld.
 
-![&#x200B; de zandbakwerkruimte van het beleid die een lijst van bijbehorende zandbakken tonen.](../../images/ui/policies/policy-sandbox.png){zoomable="yes"}
+![ de zandbakwerkruimte van het beleid die een lijst van bijbehorende zandbakken tonen.](../../images/ui/policies/policy-sandbox.png){zoomable="yes"}
 
 ### Beleid toevoegen aan alle sandboxen {#add-policy-to-all}
 
@@ -40,7 +40,7 @@ De werkruimte Details van het beleid wordt weergegeven. Selecteer het **[!UICONT
 
 Schakel de functie **[!UICONTROL Auto-include]** uit om te voorkomen dat toekomstige sandboxen automatisch aan het beleid worden toegevoegd. Het in- en uitschakelen van de functie **verwijdert** geen sandboxen uit het beleid.
 
-![&#x200B; het zandbaklusje van het beleid met auto-omvat knevel benadrukt en in de &quot;off&quot;staat.](../../images/ui/policies/policy-auto-include.png){zoomable="yes"}
+![ het zandbaklusje van het beleid met auto-omvat knevel benadrukt en in de &quot;off&quot;staat.](../../images/ui/policies/policy-auto-include.png){zoomable="yes"}
 
 Als **[!UICONTROL Auto-include]** niet actief is in een beleid, kunt u de schakeloptie gebruiken om deze weer in te schakelen. In het dialoogvenster **[!UICONTROL Enable Auto-include]** wordt u gevraagd uw selectie te bevestigen. Selecteer **[!UICONTROL Enable]** om de configuratie-instelling te voltooien.
 
@@ -48,21 +48,21 @@ Als **[!UICONTROL Auto-include]** niet actief is in een beleid, kunt u de schake
 >
 >De sandboxen die u uit het beleid hebt verwijderd terwijl **[!UICONTROL Auto-include]** was uitgeschakeld, worden opnieuw toegevoegd.
 
-![&#x200B; laat auto-omvat dialoog met toelaat benadrukte optie toe.](../../images/ui/policies/policy-enable-auto-include.png){zoomable="yes"}
+![ laat auto-omvat dialoog met toelaat benadrukte optie toe.](../../images/ui/policies/policy-enable-auto-include.png){zoomable="yes"}
 
 ### Sandboxen handmatig selecteren voor een beleid {#manually-select-sandboxes}
 
-Om zandbakken aan een beleid manueel toe te voegen of te verwijderen, moet **[!UICONTROL Auto-include]** knevel **&#x200B;**&#x200B;weg zijn.
+Om zandbakken aan een beleid manueel toe te voegen of te verwijderen, moet **[!UICONTROL Auto-include]** knevel **** weg zijn.
 
 #### Sandboxen toevoegen
 
 Selecteer **[!UICONTROL Add Sandboxes]** als u sandboxen aan een beleid wilt toevoegen.
 
-![&#x200B; de werkruimte van het beleid met de Add benadrukte optie van Sandboxen.](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
+![ de werkruimte van het beleid met de Add benadrukte optie van Sandboxen.](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
 
 Het dialoogvenster **[!UICONTROL Add Sandboxes]** wordt weergegeven. Selecteer de sandbox(s) die u aan het beleid wilt toevoegen en selecteer vervolgens **[!UICONTROL Save]** .
 
-![&#x200B; voegt de Add dialoog van Sandboxen met geselecteerde zandbak en sparen benadrukte optie toe.](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
+![ voegt de Add dialoog van Sandboxen met geselecteerde zandbak en sparen benadrukte optie toe.](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -72,11 +72,11 @@ Het dialoogvenster **[!UICONTROL Add Sandboxes]** wordt weergegeven. Selecteer d
 
 Om zandbakken uit een beleid te verwijderen, vind zandbak u wenst om uit de lijst te verwijderen en dan het **X** pictogram te selecteren.
 
-![&#x200B; de zandbaklijst van het beleid met &quot;x&quot;benadrukte om een zandbak te verwijderen.](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
+![ de zandbaklijst van het beleid met &quot;x&quot;benadrukte om een zandbak te verwijderen.](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
 
 Er wordt een bevestigingsvenster weergegeven. Selecteer **[!UICONTROL Confirm]** om het verwijderen van de sandbox uit het beleid te voltooien.
 
-![&#x200B; de bevestigingsdialoog van een zandbak met de bevestig benadrukte optie.](../../images/ui/policies/policy-remove-sandbox-confirmation.png){zoomable="yes"}
+![ de bevestigingsdialoog van een zandbak met de bevestig benadrukte optie.](../../images/ui/policies/policy-remove-sandbox-confirmation.png){zoomable="yes"}
 
 ## Een beleid activeren {#activate-policy}
 
@@ -84,25 +84,26 @@ Er wordt een bevestigingsvenster weergegeven. Selecteer **[!UICONTROL Confirm]**
 >id="platform_permissions_policies_about"
 >title="Wat is het beleid?"
 >abstract="Het beleid is verklaringen die attributen samenbrengen om toegelaten en ontoelaatbare acties te vestigen. Elke organisatie wordt geleverd met een standaardbeleid dat u moet activeren om toegang tot specifieke die voorwerpen te controleren op etiketten worden gebaseerd. De etiketten die op middelen worden toegepast ontkennen toegang tenzij de gebruikers aan een rol met een passend etiket worden toegewezen. Het beleid kan niet worden uitgegeven of worden geschrapt, maar zij kunnen worden geactiveerd of worden gedeactiveerd."
->additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Labels beheren"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Labels beheren"
 
 Als u een bestaand beleid wilt activeren, selecteert u het beleid op de tab **[!UICONTROL Policies]** in **[!UICONTROL Permissions]** . De activeringsstatus van het beleid is zichtbaar onder de sectie **[!UICONTROL Status]** .
 
-![&#x200B; de beleidswerkruimte met de benadrukte status van een beleid.](../../images/ui/policies/policy-status.png){zoomable="yes"}
+![ de beleidswerkruimte met de benadrukte status van een beleid.](../../images/ui/policies/policy-status.png){zoomable="yes"}
 
 De werkruimte Details van het beleid wordt weergegeven. Selecteer **[!UICONTROL Activate]**.
 
-![&#x200B; de het detailwerkruimte van het beleid met de Actieve benadrukte optie.](../../images/ui/policies/policy-activate.png){zoomable="yes"}
+![ de het detailwerkruimte van het beleid met de Actieve benadrukte optie.](../../images/ui/policies/policy-activate.png){zoomable="yes"}
 
 Het dialoogvenster **[!UICONTROL Activate Policy]** wordt weergegeven. Selecteer **[!UICONTROL Confirm]** om de activering van het beleid te voltooien.
 
-![&#x200B; activeer de dialoog van het Beleid met de Bevestiging benadrukte optie.](../../images/ui/policies/policy-activate-confirm.png){zoomable="yes"}
+![ activeer de dialoog van het Beleid met de Bevestiging benadrukte optie.](../../images/ui/policies/policy-activate-confirm.png){zoomable="yes"}
 
 ## Volgende stappen
 
-Met een geactiveerd beleid, kunt u aan de volgende stap te werk gaan [&#x200B; toestemmingen voor een rol &#x200B;](permissions.md) beheren.
+Met een geactiveerd beleid, kunt u aan de volgende stap te werk gaan [ toestemmingen voor een rol ](permissions.md) beheren.
 
-<!--Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When **[!UICONTROL Auto-include]** is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
+<!--
+Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When **[!UICONTROL Auto-include]** is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
 
 To begin configuring a policy's sandboxes, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Policies]** from the left panel, then select the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** from the list.
 
