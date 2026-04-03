@@ -3,7 +3,7 @@ title: Eindpunt van API voor segmentzoekopdracht
 description: In de API van de Dienst van de Segmentatie van Adobe Experience Platform, wordt het Onderzoek van het Segment gebruikt om gebieden te zoeken die zich over diverse gegevensbronnen bevinden en hen in bijna real time terug te keren. Deze gids verstrekt informatie om u te helpen het Onderzoek van het Segment beter begrijpen en omvat steekproefAPI vraag voor het uitvoeren van basisacties gebruikend API.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Deze gids verstrekt informatie om u te helpen het Onderzoek van het Segment bete
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 Naast de vereiste kopballen die in de begonnen sectie worden geschetst, vereisen alle verzoeken aan het eindpunt van het Onderzoek van het Segment de volgende extra kopbal:
 
@@ -36,9 +36,9 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 ```
 
 | Parameters | Beschrijving |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Vereist)** Where {SCHEMA} vertegenwoordigt de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
-| `s={SEARCH_TERM}` | *(Facultatief)* waar {SEARCH_TERM} een vraag vertegenwoordigt die aan de implementatie van Microsoft van [&#x200B; het onderzoekssyntaxis van Lucene &#x200B;](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) in overeenstemming is. Als er geen zoekterm is opgegeven, worden alle records geretourneerd die aan `schema.name` zijn gekoppeld. Een meer gedetailleerde verklaring kan in [&#x200B; bijlage &#x200B;](#appendix) van dit document worden gevonden. |
+| `s={SEARCH_TERM}` | *(Facultatief)* waar {SEARCH_TERM} een vraag vertegenwoordigt die aan de implementatie van Microsoft van [ het onderzoekssyntaxis van Lucene ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) in overeenstemming is. Als er geen zoekterm is opgegeven, worden alle records geretourneerd die aan `schema.name` zijn gekoppeld. Een meer gedetailleerde verklaring kan in [ bijlage ](#appendix) van dit document worden gevonden. |
 
 **Verzoek**
 
@@ -96,10 +96,10 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 ```
 
 | Parameters | Beschrijving |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Vereist)** Where {SCHEMA} bevat de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
 | `namespace={NAMESPACE}` | **(Vereist)** Where {NAMESPACE} bevat de naamruimte waarin u wilt zoeken. |
-| `s={SEARCH_TERM}` | *(Facultatief)* waar {SEARCH_TERM} een vraag bevat die aan de implementatie van Microsoft van [&#x200B; het onderzoekssyntaxis van Lucene &#x200B;](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) in overeenstemming is. Als er geen zoekterm is opgegeven, worden alle records geretourneerd die aan `schema.name` zijn gekoppeld. Een meer gedetailleerde verklaring kan in [&#x200B; bijlage &#x200B;](#appendix) van dit document worden gevonden. |
+| `s={SEARCH_TERM}` | *(Facultatief)* waar {SEARCH_TERM} een vraag bevat die aan de implementatie van Microsoft van [ het onderzoekssyntaxis van Lucene ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) in overeenstemming is. Als er geen zoekterm is opgegeven, worden alle records geretourneerd die aan `schema.name` zijn gekoppeld. Een meer gedetailleerde verklaring kan in [ bijlage ](#appendix) van dit document worden gevonden. |
 | `entityId={ENTITY_ID}` | *(Facultatief)* beperkt uw onderzoek tot binnen de aangewezen omslag, die met {ENTITY_ID} wordt gespecificeerd. |
 | `limit={LIMIT}` | *(Optioneel)* Waar {LIMIT} staat voor het aantal zoekresultaten dat moet worden geretourneerd. De standaardwaarde is 50. |
 | `page={PAGE}` | *(Optioneel)* Where {PAGE} staat voor het paginanummer dat wordt gebruikt voor pagineringsresultaten van de doorzochte query. Gelieve te merken op dat het paginaaantal bij **0** begint. |
@@ -167,7 +167,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 ```
 
 | Parameters | Beschrijving |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Vereist)** Where {SCHEMA} bevat de schemaklasse die aan de onderzoeksvoorwerpen wordt geassocieerd. Momenteel wordt alleen `_xdm.context.segmentdefinition` ondersteund. |
 | `namespace={NAMESPACE}` | **(Vereist)** Where {NAMESPACE} bevat de naamruimte waarin u wilt zoeken. |
 | `entityId={ENTITY_ID}` | **(Vereist)** identiteitskaart van het onderzoeksvoorwerp u de structurele informatie over wilt krijgen, die met {ENTITY_ID} wordt gespecificeerd. |
@@ -264,4 +264,4 @@ De volgende lijst maakt een lijst een lijst van specifieke van hoe de onderzoeks
 | &quot;hotel Airport&quot;\~5 | Een nabijheidszoekopdracht. Dit type zoekopdracht wordt gebruikt om termen te zoeken die in een document dicht bij elkaar liggen. Met de uitdrukking `"hotel airport"~5` vindt u bijvoorbeeld de termen &quot;hotel&quot; en &quot;luchthaven&quot; binnen 5 woorden van elkaar in een document. |
 | `/a[0-9]+b$/` | Een zoekopdracht met een reguliere expressie. Dit type van onderzoek vindt een gelijke die op de inhoud tussen voorwaartse schuine strepen &quot;/&quot;wordt gebaseerd, zoals die in de klasse RegExp wordt gedocumenteerd. Als u bijvoorbeeld documenten met &quot;motel&quot; of &quot;hotel&quot; wilt zoeken, geeft u `/[mh]otel/` op. Zoekopdrachten met reguliere expressies worden vergeleken met afzonderlijke woorden. |
 
-Voor meer gedetailleerde documentatie over de vraagsyntaxis, te lezen gelieve de [&#x200B; documentatie van de de vraagsyntaxis van Lucene &#x200B;](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
+Voor meer gedetailleerde documentatie over de vraagsyntaxis, te lezen gelieve de [ documentatie van de de vraagsyntaxis van Lucene ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
