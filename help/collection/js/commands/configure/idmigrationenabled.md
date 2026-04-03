@@ -47,7 +47,7 @@ Als richtlijn kunt u wachten tot de maximale levensduur van het AMCV-cookie is v
 
 ## Audience Manager trait updates
 
-Wanneer gegevens met XDM-indeling tijdens de migratie naar Audience Manager worden verzonden, moeten die gegevens in signalen worden omgezet. Uw kenmerken moeten worden bijgewerkt om de nieuwe sleutels te weerspiegelen die door XDM worden verstrekt. Dit proces wordt gemakkelijker gemaakt door het [&#x200B; hulpmiddel BAAAM &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) te gebruiken.
+Wanneer gegevens met XDM-indeling tijdens de migratie naar Audience Manager worden verzonden, moeten die gegevens in signalen worden omgezet. Uw kenmerken moeten worden bijgewerkt om de nieuwe sleutels te weerspiegelen die door XDM worden verstrekt. Dit proces wordt gemakkelijker gemaakt door het [&#x200B; hulpmiddel BAAAM &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=nl-NL#getting-started-with-bulk-management) te gebruiken.
 
 ## Migratie van id&#39;s van derden {#third-party-id}
 

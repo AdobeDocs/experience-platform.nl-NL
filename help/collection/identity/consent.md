@@ -34,7 +34,7 @@ In de volgende tabel ziet u het gecombineerde effect van `defaultConsent` en `se
 
 >[!NOTE]
 >
->Identiteitscookies en toestemmingscookies worden ingesteld, zelfs als een bezoeker de functie uitschakelt. Deze cookies zijn nodig om de voorkeuren voor gegevensverzameling van de bezoeker te respecteren. Zie {de koekjes van SDK van 0} Web [&#x200B; voor een volledige lijst van koekjes die SDK van het Web plaatst.](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)
+>Identiteitscookies en toestemmingscookies worden ingesteld, zelfs als een bezoeker de functie uitschakelt. Deze cookies zijn nodig om de voorkeuren voor gegevensverzameling van de bezoeker te respecteren. Zie {de koekjes van SDK van 0} Web [&#x200B; voor een volledige lijst van koekjes die SDK van het Web plaatst.](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/cookies/web-sdk)
 
 Wanneer een bezoeker toestemming opnieuw verleent nadat deze eerder is ingetrokken (door `setConsent` met `"general": "in"` after `"general": "out"` aan te roepen), hervat Web SDK het verzenden van gebeurtenissen en gebruikt de bestaande ECID van het cookie als deze nog niet is verlopen. De identiteit van de bezoeker blijft behouden.
 
