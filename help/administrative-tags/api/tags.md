@@ -3,7 +3,7 @@ title: Eindpunt van Unified Tags
 description: Leer hoe u tagcategorieën en -tags kunt maken, bijwerken, beheren en verwijderen met de Adobe Experience Platform API's.
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Deze handleiding bevat informatie die u helpt meer inzicht te krijgen in tags en
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de Adobe Experience Platform API&#39;s. Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de Adobe Experience Platform API&#39;s. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen
 
 ### Woordenlijst
 
@@ -34,7 +34,7 @@ De volgende verklarende woordenlijst benadrukt het verschil tussen a **markering
 
 ## Een lijst met tagcategorieën ophalen {#get-tag-categories}
 
-U kunt een lijst ophalen met tagcategorieën die tot uw organisatie behoren door een aanvraag voor een GET in te dienen bij het eindpunt van `/tagCategory` .
+U kunt een lijst ophalen met tagcategorieën die tot uw organisatie behoren door een GET-aanvraag in te dienen bij het eindpunt van `/tagCategory` .
 
 **API formaat**
 
@@ -71,7 +71,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
 
 Een geslaagde reactie retourneert HTTP-status 200 met een lijst van alle tagcategorieën voor uw organisatie.
 
-+++A voorbeeldreactie die een lijst van alle markeringscategorieën in uw organisatie bevat.
++++Een voorbeeldreactie die een lijst bevat met alle tagcategorieën in uw organisatie.
 
 ```json
 {
@@ -104,7 +104,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van alle tagcate
 >
 >Alleen de systeembeheerder en de productbeheerder kunnen deze API-aanroep gebruiken.
 
-U kunt een nieuwe tagcategorie maken door een aanvraag voor een POST in te dienen bij het eindpunt van `/tagCategory` .
+U kunt een nieuwe tagcategorie maken door een POST-aanvraag in te dienen bij het eindpunt van `/tagCategory` .
 
 **API formaat**
 
@@ -139,7 +139,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 Een voorbeeldreactie retourneert HTTP-status 200 met details van de nieuwe tagcategorie.
 
-+++Een voorbeeldreactie met details van de zojuist gemaakte tagcategorie.
++++Een voorbeeldreactie met details over de nieuwe tagcategorie.
 
 ```json
 {
@@ -159,7 +159,7 @@ Een voorbeeldreactie retourneert HTTP-status 200 met details van de nieuwe tagca
 
 ## Een specifieke tagcategorie ophalen {#get-tag-category}
 
-U kunt een specifieke tagcategorie ophalen die tot uw organisatie behoort door een GET-aanvraag in te dienen bij het eindpunt van `/tagCategory` en de id van de tagcategorie op te geven.
+U kunt een specifieke tagcategorie ophalen die tot uw organisatie behoort door een GET-aanvraag in te dienen bij het `/tagCategory` -eindpunt en de id van de tagcategorie op te geven.
 
 **API formaat**
 
@@ -189,7 +189,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-44
 
 Een geslaagde reactie retourneert HTTP-status 200 met details van de opgegeven tagcategorie.
 
-+++A voorbeeldreactie die details van de gespecificeerde markeringscategorie bevat.
++++Een voorbeeldreactie die details van de opgegeven tagcategorie bevat.
 
 ```json
 {
@@ -224,7 +224,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de opgegeven t
 >
 >Alleen de systeembeheerder en de productbeheerder kunnen deze API-aanroep gebruiken.
 
-U kunt details van een specifieke markeringscategorie bijwerken die tot uw organisatie behoort door een verzoek van de PATCH aan het `/tagCategory` eindpunt en het specificeren van identiteitskaart van de markeringscategorie te richten.
+U kunt details van een specifieke tagcategorie die tot uw organisatie behoort bijwerken door een PATCH-aanvraag in te dienen bij het `/tagCategory` -eindpunt en de id van de tagcategorie op te geven.
 
 **API formaat**
 
@@ -267,7 +267,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 Een geslaagde reactie HTTP status 200 met informatie over uw onlangs bijgewerkte markeringscategorie.
 
-+++A voorbeeldreactie met details van uw onlangs bijgewerkte tagcategorie.
++++Een voorbeeldreactie met details van de zojuist bijgewerkte tagcategorie.
 
 ```json
 {
@@ -323,7 +323,7 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege reactie.
 
 ## Een lijst met tags ophalen {#get-tags}
 
-U kunt een lijst ophalen met tags die bij uw organisatie horen door een aanvraag voor een GET in te dienen bij het `/tags` -eindpunt en de id van de tagcategorie.
+U kunt een lijst ophalen met tags die bij uw organisatie horen door een GET-aanvraag in te dienen bij het eindpunt van `/tags` en de id van de tagcategorie.
 
 **API formaat**
 
@@ -345,7 +345,7 @@ De volgende optionele queryparameters kunnen worden gebruikt bij het ophalen van
 
 **Verzoek**
 
-+++Een voorbeeldverzoek om alle tags op te halen die tot een bepaalde tagcategorie behoren
++++Een voorbeeldverzoek om alle tags op te halen die tot een specifieke tagcategorie behoren
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tags?property=tagCategoryId=e2b7c656-067b-4413-a366-adde0401df50
@@ -506,9 +506,9 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de tags die to
 >
 >Alleen de systeembeheerder en de productbeheerder kunnen deze API-aanroep gebruiken om een nieuwe tag te maken in een opgegeven tagcategorie.
 >
->Als u een niet-gecategoriseerde markering creeert, hebt u **&#x200B;**&#x200B;geen beheerdertoestemmingen nodig.
+>Als u een niet-gecategoriseerde markering creeert, hebt u **** geen beheerdertoestemmingen nodig.
 
-U kunt een nieuwe tag maken door een POST aan te vragen bij het eindpunt van `/tags` .
+U kunt een nieuwe tag maken door een POST-aanvraag in te dienen bij het eindpunt van `/tags` .
 
 **API formaat**
 
@@ -542,7 +542,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 Een geslaagde reactie retourneert HTTP-status 201 met details van de nieuwe tag.
 
-+++Een voorbeeldreactie met details van de nieuwe tag.
++++Een voorbeeldreactie met details over de nieuwe tag.
 
 ```json
 {
@@ -575,7 +575,7 @@ Een geslaagde reactie retourneert HTTP-status 201 met details van de nieuwe tag.
 
 ## Een specifieke tag ophalen {#get-tag}
 
-U kunt een specifieke tag ophalen die tot uw organisatie behoort door een aanvraag voor een GET in te dienen bij het `/tags` -eindpunt en de id op te geven van de tag die u wilt ophalen.
+U kunt een specifieke tag ophalen die tot uw organisatie behoort door een GET-aanvraag in te dienen bij het `/tags` -eindpunt en de id op te geven van de tag die u wilt ophalen.
 
 **API formaat**
 
@@ -605,7 +605,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 Een geslaagde reactie retourneert HTTP-status 200 met details van de opgegeven tag.
 
-+++A monsterreactie die details van de gespecificeerde markering bevat.
++++Een voorbeeldreactie die details van de opgegeven tag bevat. 
 
 ```json
 {
@@ -639,7 +639,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de opgegeven t
 
 ## Tags valideren {#validate-tags}
 
-U kunt controleren of er tags bestaan door een aanvraag voor een POST in te dienen bij het eindpunt van `/tags/validate` .
+U kunt controleren of er tags bestaan door een POST-aanvraag in te dienen bij het eindpunt van `/tags/validate` .
 
 **API formaat**
 
@@ -676,7 +676,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 
 Een geslaagde reactie retourneert HTTP-status 200 met informatie over welke tags geldig en ongeldig zijn.
 
-+++A voorbeeldreactie met geldige en ongeldige codes.
++++Een voorbeeldreactie waarin wordt aangegeven welke tags geldig en ongeldig zijn.
 
 ```json
 {
@@ -748,7 +748,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 Een geslaagde reactie retourneert HTTP status 200 met details van de zojuist bijgewerkte tag.
 
-+++A voorbeeldreactie die details van de bijgewerkte markering bevat.
++++Een voorbeeldreactie die details van de bijgewerkte tag bevat.
 
 ```json
 {
@@ -773,9 +773,9 @@ Een geslaagde reactie retourneert HTTP status 200 met details van de zojuist bij
 >
 >Alleen de systeembeheerder en de productbeheerder kunnen deze API-aanroep gebruiken.
 >
->Bovendien, kan de markering **niet** met om het even welke bedrijfsvoorwerpen worden geassocieerd en **moet** worden gearchiveerd alvorens u de markering kunt schrappen. U kunt de markering archiveren door het [&#x200B; eindpunt van de updatemarkering &#x200B;](#update-tag) te gebruiken.
+>Bovendien, kan de markering **niet** met om het even welke bedrijfsvoorwerpen worden geassocieerd en **moet** worden gearchiveerd alvorens u de markering kunt schrappen. U kunt de markering archiveren door het [ eindpunt van de updatemarkering ](#update-tag) te gebruiken.
 
-U kunt een specifieke tag verwijderen door een DELETE-tag op te geven aan het eindpunt van `/tags` en de id op te geven van het label dat u wilt verwijderen.
+U kunt een specifieke tag verwijderen door een DELETE-tag te maken voor het `/tags` -eindpunt en de id op te geven van het label dat u wilt verwijderen.
 
 **API formaat**
 
@@ -807,4 +807,4 @@ Een geslaagde reactie retourneert HTTP-status 200 samen met een lege reactie.
 
 ## Volgende stappen
 
-Nadat u deze handleiding hebt gelezen, hebt u meer inzicht in het maken, beheren en verwijderen van tags en tagcategorieën met behulp van de Adobe Experience Platform API&#39;s. Voor meer informatie bij het beheren van markeringen die UI gebruiken, te lezen gelieve [&#x200B; het leiden de gids van markeringen &#x200B;](../ui/managing-tags.md). Voor meer informatie bij het beheren van markeringscategorieën die UI gebruiken, te lezen gelieve de [&#x200B; gids van de markeringscategorieën &#x200B;](../ui/tags-categories.md).
+Nadat u deze handleiding hebt gelezen, hebt u meer inzicht in het maken, beheren en verwijderen van tags en tagcategorieën met behulp van de Adobe Experience Platform API&#39;s. Voor meer informatie bij het beheren van markeringen die UI gebruiken, te lezen gelieve [ het leiden de gids van markeringen ](../ui/managing-tags.md). Voor meer informatie bij het beheren van markeringscategorieën die UI gebruiken, te lezen gelieve de [ gids van de markeringscategorieën ](../ui/tags-categories.md).
