@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui guide;mapper;mapping;data prep;data voorbereiden;voorbereiden van gegevens;
+keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;data prep;gegevens voorbereiden;gegevens voorbereiden;
 solution: Experience Platform
 title: Gegevensindelingen verwerken met Data Prep
 description: Dit document geeft een overzicht van hoe de verschillende gegevenstypen in de Prep van Gegevens worden behandeld.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '624'
 ht-degree: 3%
 
 ---
@@ -40,7 +40,7 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{DATE}` | Vereist. De tekenreeks die de datum vertegenwoordigt. |
-| `{FORMAT}` | Optioneel. De tekenreeks die staat voor de indeling van de brondatum. Meer informatie over koord het formatteren kan in de [&#x200B; de sectie van het datum/tijdformaat koord &#x200B;](#format) worden gevonden. |
+| `{FORMAT}` | Optioneel. De tekenreeks die staat voor de indeling van de brondatum. Meer informatie over koord het formatteren kan in de [ de sectie van het datum/tijdformaat koord ](#format) worden gevonden. |
 | `{DEFAULT_DATE}` | Optioneel. De standaarddatum die moet worden geretourneerd als de opgegeven datum null is. |
 
 Met de expressie `date(orderDate, "yyyy-MM-dd")` wordt bijvoorbeeld de `orderDate` waarde &quot;31 december 2020&quot; omgezet in de datetime-waarde &quot;2020-12-31&quot;.
@@ -103,9 +103,9 @@ In de volgende tabel wordt aangegeven welke patroonletters zijn gedefinieerd voo
 | m | Minuut in uur | Getal | 38 |
 | s | Seconde in de minuut | Getal | 44 |
 | S | Milliseconde | Getal | 245 |
-| z | Tijdzone | Algemene tijdzone | Pacific Standard Time; PST; GMT-08:00 |
+| z | Tijdzone | Algemene tijdzone | Pacific Standard Time; PST; GMT-08 :00 |
 | Z | Tijdzone | RFC 822 — Tijdzone | -0800 |
-| X | Tijdzone | Tijdzone ISO 8601 | -08; -0800; -08:00 |
+| X | Tijdzone | Tijdzone ISO 8601 | -08; -0800; -08 :00 |
 | V | Tijdzone-id | Tekst | America/Los_Angeles |
 | O | Verschuiving tijdzone | Tekst | GMT+8 |
 | Q/q | Kwartaal van het jaar | Getal/tekst | 3; 03; Q3; 3de kwartaal |
