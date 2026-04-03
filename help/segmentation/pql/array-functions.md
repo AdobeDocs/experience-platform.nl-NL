@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Array-, List- en PQL-functies instellen
 description: Profile Query Language (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Array, list en set-functies
 
-[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht &#x200B;](./overview.md) worden gevonden.
+[!DNL Profile Query Language] (PQL) biedt functies om interactie met arrays, lijsten en tekenreeksen eenvoudiger te maken. Meer informatie over andere functies van PQL kan in het [[!DNL Profile Query Language]  overzicht ](./overview.md) worden gevonden.
 
 ## In
 
@@ -261,7 +261,7 @@ De functie `bottomN` wordt gebruikt om de laatste `N` -items in een array te ret
 ```
 
 | Argument | Beschrijving |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{ARRAY}` | De array of lijst die moet worden gesorteerd. |
 | `{VALUE}` | De eigenschap waarin de array of de lijst moet worden gesorteerd. |
 | `{AMOUNT}` | Het aantal objecten dat moet worden geretourneerd. |
@@ -286,7 +286,7 @@ De functie `head` wordt gebruikt om het eerste item in de array of lijst als een
 
 **Voorbeeld**
 
-De volgende PQL-query retourneert de eerste van de bovenste vijf bestellingen met de hoogste prijs. Meer informatie over de `topN` functie kan in [&#x200B; eerst `n` in serie &#x200B;](#first-n) sectie worden gevonden.
+De volgende PQL-query retourneert de eerste van de bovenste vijf bestellingen met de hoogste prijs. Meer informatie over de `topN` functie kan in [ eerst `n` in serie ](#first-n) sectie worden gevonden.
 
 ```sql
 orders.topN(price, 5).head()
@@ -294,4 +294,4 @@ orders.topN(price, 5).head()
 
 ## Volgende stappen
 
-Nu u over serie, lijst, en vastgestelde functies hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [&#x200B; overzicht van Profile Query Language &#x200B;](./overview.md).
+Nu u over serie, lijst, en vastgestelde functies hebt geleerd, kunt u hen binnen uw vragen van PQL gebruiken. Voor meer informatie over andere functies van PQL, te lezen gelieve het [ overzicht van Profile Query Language ](./overview.md).
