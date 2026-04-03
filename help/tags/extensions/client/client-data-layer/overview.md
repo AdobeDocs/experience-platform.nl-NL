@@ -2,7 +2,7 @@
 title: Adobe Client Data Layer Extension
 description: Meer informatie over de tagextensie Adobe Client Data Layer in Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -13,21 +13,25 @@ ht-degree: 0%
 
 Deze documentatie verstrekt voorbeelden en beste praktijken op hoe te om de uitbreiding van de Laag van Gegevens van de Cliënt van Adobe te gebruiken.
 
-<!-- (Missing document?)
-If you would like to have more details on development consideration, [please reach this page](./dev.md). -->
+<!-- 
+(Missing document?)
+If you would like to have more details on development consideration, [please reach this page](./dev.md). 
+-->
 
 ## Installatie
 
 Als u de extensie wilt installeren, navigeert u naar de extensiecatalogus in de gebruikersinterface van Experience Platform of de gebruikersinterface voor gegevensverzameling en selecteert u Adobe Client Data Layer.
 
-![&#x200B; ACDL de mening van de Uitbreiding in Catalogus &#x200B;](./images/catalog.png)
+![ ACDL de mening van de Uitbreiding in Catalogus ](./images/catalog.png)
 
-<!-- (GitHub link?)
+<!-- 
+(GitHub link?)
 There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.
 This installation will not be supported on our end.<br>
 >[!NOTE]
 >
-> _Consider renaming the extension name in the extension.json file_ -->
+> _Consider renaming the extension name in the extension.json file_ 
+-->
 
 ## Extensieweergave
 
