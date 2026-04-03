@@ -1,8 +1,8 @@
 ---
 title: Ondersteuning voor privé-koppelingen voor bronnen in de gebruikersinterface
-description: Leer hoe u Azure Private Links voor Bronnen gebruikt in de gebruikersinterface van Experience Platform.
+description: In de gebruikersinterface van Experience Platform leert u hoe u Azure Private Links voor bronnen gebruikt.
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 0%
@@ -41,26 +41,26 @@ De machtigingsgegevens voor het gebruik van licenties voor ondersteuning van per
 
 Als u aan de slag wilt met persoonlijke koppelingen, navigeert u naar de catalogus *[!UICONTROL Sources]* van de gebruikersinterface van Experience Platform en selecteert u **[!UICONTROL Private endpoints]** in het menu met tabbladen in de werkruimte Bronnen.
 
-![&#x200B; de broncatalogus met &quot;Privé eindpunten&quot;.](../../images/tutorials/private-links/catalog.png)
+![ de broncatalogus met &quot;Privé eindpunten&quot;.](../../images/tutorials/private-links/catalog.png)
 
 Gebruik de interface om informatie over bestaande privé eindpunten, zoals hun identiteitskaart, bijbehorende bron, en huidige status te bekijken. Selecteer **[!UICONTROL Create private endpoint]** als u een nieuw privé-eindpunt wilt maken.
 
-![&#x200B; de Privé eindpunten interface met &quot;creeer privé eindpunt&quot;geselecteerd.](../../images/tutorials/private-links/private-endpoints.png)
+![ de Privé eindpunten interface met &quot;creeer privé eindpunt&quot;geselecteerd.](../../images/tutorials/private-links/private-endpoints.png)
 
 Kies vervolgens de gewenste bron en voer waarden in voor de volgende eigenschappen:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De naam van uw privé eindpunt. |
-| `subscriptionId` | De id die is gekoppeld aan uw [!DNL Azure] -abonnement. Voor meer informatie, lees de [!DNL Azure] gids op [&#x200B; het terugwinnen van uw abonnement en huurder IDs van  [!DNL Azure Portal] &#x200B;](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
-| `resourceGroupName` | De naam van de bronnengroep op [!DNL Azure] . Een resourcegroep bevat gerelateerde bronnen voor een [!DNL Azure] -oplossing. Voor meer informatie, lees de [!DNL Azure] gids over [&#x200B; het leiden middelgroepen &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
-| `resourceGroup` | De naam van uw bron. In [!DNL Azure] verwijst een bron naar instanties zoals virtuele machines, webapps en databases. Voor meer informatie, lees de [!DNL Azure] gids op [&#x200B; die de  [!DNL Azure]  middelmanager &#x200B;](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) begrijpt. |
+| `subscriptionId` | De id die is gekoppeld aan uw [!DNL Azure] -abonnement. Voor meer informatie, lees de [!DNL Azure] gids op [ het terugwinnen van uw abonnement en huurder IDs van  [!DNL Azure Portal] ](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
+| `resourceGroupName` | De naam van de bronnengroep op [!DNL Azure] . Een resourcegroep bevat gerelateerde bronnen voor een [!DNL Azure] -oplossing. Voor meer informatie, lees de [!DNL Azure] gids over [ het leiden middelgroepen ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
+| `resourceGroup` | De naam van uw bron. In [!DNL Azure] verwijst een bron naar instanties zoals virtuele machines, webapps en databases. Voor meer informatie, lees de [!DNL Azure] gids op [ die de  [!DNL Azure]  middelmanager ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) begrijpt. |
 
 {style="table-layout:auto"}
 
 Selecteer **[!UICONTROL Submit]** als u klaar bent.
 
-![&#x200B; het authentificatievenster voor het creëren van een nieuw privé eindpunt in de bronUI werkruimte.](../../images/tutorials/private-links/create-private-endpoint.png)
+![ het authentificatievenster voor het creëren van een nieuw privé eindpunt in de bronUI werkruimte.](../../images/tutorials/private-links/create-private-endpoint.png)
 
 ### Een privé-eindpunt goedkeuren
 
@@ -68,7 +68,7 @@ Een nieuw gecreeerd eindpunt blijft in een hangende staat tot het door een behee
 
 Als u een aanvraag voor een privéeindpunt voor de bronnen [!DNL Azure Blob] en [!DNL Azure Data Lake Gen2] wilt goedkeuren, meldt u zich aan bij de map [!DNL Azure Portal] . Selecteer in de linkernavigatie **[!DNL Data storage]** , ga naar de tab **[!DNL Security + networking]** en kies **[!DNL Networking]** . Selecteer vervolgens **[!DNL Private endpoints]** om een lijst weer te geven met persoonlijke eindpunten die zijn gekoppeld aan uw account en de huidige verbindingsstatussen. Als u een aanvraag in behandeling wilt goedkeuren, selecteert u het gewenste eindpunt en klikt u op **[!DNL Approve]** .
 
-![&#x200B; het Azure portaal met een lijst van hangende privé eindpunten.](../../images/tutorials/private-links/azure.png)
+![ het portaal van Azure met een lijst van hangende privé eindpunten.](../../images/tutorials/private-links/azure.png)
 
 ## Een account met een privé-eindpunt maken
 
@@ -78,17 +78,17 @@ Navigeer naar de broncatalogus en selecteer een bron die persoonlijke eindpunten
 >
 >Als de optie [!UICONTROL Private endpoint] is ingeschakeld, controleert Experience Platform of er een goedgekeurd privé-eindpunt bestaat voor de geselecteerde bron. Als geen goedgekeurd eindpunt wordt gevonden, zult u geen verbinding kunnen vestigen.
 
-![&#x200B; de nieuwe stap van de rekeningsauthentificatie met privé toegelaten eindpunten.](../../images/tutorials/private-links/new-account.png)
+![ de nieuwe stap van de rekeningsauthentificatie met privé toegelaten eindpunten.](../../images/tutorials/private-links/new-account.png)
 
-Navigeer vervolgens naar de interface [!UICONTROL Existing account] van de bron. Gebruik deze interface om een lijst weer te geven van uw bestaande accounts en de bijbehorende status. U kunt het filterpictogram ![&#x200B; filterpictogram &#x200B;](../../../images/icons/filter.png) selecteren om slechts de rekeningen te tonen die om met een privé eindpunt zijn toegelaten te verbinden.
+Navigeer vervolgens naar de interface [!UICONTROL Existing account] van de bron. Gebruik deze interface om een lijst weer te geven van uw bestaande accounts en de bijbehorende status. U kunt het filterpictogram ![ filterpictogram ](../../../images/icons/filter.png) selecteren om slechts de rekeningen te tonen die om met een privé eindpunt zijn toegelaten te verbinden.
 
-![&#x200B; de bestaande rekeningsinterface in het bronwerkschema toont slechts de gefiltreerde rekeningen die voor privé eindpuntverbindingen worden toegelaten.](../../images/tutorials/private-links/existing-private-endpoints.png)
+![ de bestaande rekeningsinterface in het bronwerkschema toont slechts de gefiltreerde rekeningen die voor privé eindpuntverbindingen worden toegelaten.](../../images/tutorials/private-links/existing-private-endpoints.png)
 
 Selecteer de account die u wilt gebruiken en schakel **[!UICONTROL Interactive Authoring]** in. Met deze schakeloptie activeert u [!UICONTROL Interactive Authoring] , een [!DNL Azure] -functie waarmee u verbindingen kunt testen, kunt bladeren in mappen en gegevens kunt voorvertonen. U moet [!UICONTROL Interactive Authoring] inschakelen voor verbindingen met privéeindpunten. U kunt deze schakeloptie niet handmatig uitschakelen, maar automatisch na 60 minuten.
 
 [!UICONTROL Interactive Authoring] duurt een paar minuten om in te schakelen. Als de instelling is ingeschakeld, selecteert u **[!UICONTROL Next]** om door te gaan naar de volgende stap en de gegevens te selecteren die u wilt invoeren.
 
-![&#x200B; een bestaande rekening wordt geselecteerd en het interactieve schrijven wordt toegelaten.](../../images/tutorials/private-links/interactive-authoring.png)
+![ een bestaande rekening wordt geselecteerd en het interactieve schrijven wordt toegelaten.](../../images/tutorials/private-links/interactive-authoring.png)
 
 ## Volgende stappen
 
