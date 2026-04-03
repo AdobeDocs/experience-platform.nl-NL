@@ -2,9 +2,9 @@
 title: getIdentity
 description: Verkrijg de identiteit van een bezoeker zonder gebeurtenisgegevens te verzenden.
 exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
-source-git-commit: aea46e3804d315c1237fc853540771f1b5c2b767
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # `getIdentity`
 
 Wanneer u de opdracht [`sendEvent`](sendevent/overview.md) uitvoert, verkrijgt de Web SDK automatisch de identiteit van de bezoeker als deze nog niet aanwezig is. Met de opdracht `getIdentity` kunt u een bezoeker-id verkrijgen zonder gebeurtenisgegevens te verzenden. Als u afzonderlijke vraag vereist om een bezoekersidentiteitskaart te produceren en gegevens te verzenden, kunt u dit bevel gebruiken.
+
+>[!IMPORTANT]
+>
+>Gebruik `getIdentity` wanneer u identiteitsgegevens op de client nodig hebt. Als u slechts ECID in XDM in kaart moet brengen, gebruik [ Prep van Gegevens voor de Inzameling van Gegevens ](/help/datastreams/data-prep.md) of [ markeringen ECID toegangsbegeleiding ](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md) in plaats daarvan.
 
 De opdracht `getIdentity` doorloopt de volgende stroom om de `ECID` op te halen.
 
@@ -32,7 +36,7 @@ Voer het `getIdentity` bevel in werking wanneer het roepen van uw gevormde insta
 
   U kunt `"ECID"` en `"CORE ID"` tegelijkertijd aanvragen. Voorbeeld: `"namespaces": ["ECID","CORE"]` .
 
-* **`edgeConfigOverrides`**: A [&#x200B; datastream configuratieopheffingsvoorwerp &#x200B;](configure/edgeconfigoverrides.md).
+* **`edgeConfigOverrides`**: A [ datastream configuratieopheffingsvoorwerp ](configure/edgeconfigoverrides.md).
 
 ```js
 alloy("getIdentity",{
@@ -43,7 +47,7 @@ alloy("getIdentity",{
 
 ## Object Response
 
-Als u besluit om [&#x200B; reacties &#x200B;](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
+Als u besluit om [ reacties ](command-responses.md) met dit bevel te behandelen, zijn de volgende eigenschappen beschikbaar in het reactievoorwerp:
 
 * **`identity.ECID`**: Een tekenreeks die de ECID van de bezoeker bevat.
 * **`identity.CORE`**: Een tekenreeks met de CORE-id van de bezoeker.

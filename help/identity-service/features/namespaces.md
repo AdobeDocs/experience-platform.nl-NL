@@ -2,9 +2,9 @@
 title: Overzicht van id-naamruimte
 description: Meer informatie over naamruimten in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 384a67ac62eb56c4a0f8ac38593399afcc8b742e
+source-git-commit: 482991f0a7efdf4eae5a600ba0bd2a49baca7c37
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1925'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Een naamruimte bestaat uit de volgende componenten:
 * Of een identiteitsgrafiek zal worden geproduceerd:
    * Identiteitsgrafieken worden niet gegenereerd voor de volgende identiteitstypen: niet-persoonlijke id&#39;s en partner-id.
    * Identiteitsgrafieken worden gegenereerd voor alle andere identiteitstypen.
-* Welke identiteiten worden verwijderd uit de identiteitsgrafiek wanneer de systeemgrenzen worden bereikt. Voor meer informatie, lees de [&#x200B; gidsen voor identiteitsgegevens &#x200B;](../guardrails.md).
+* Welke identiteiten worden verwijderd uit de identiteitsgrafiek wanneer de systeemgrenzen worden bereikt. Voor meer informatie, lees de [ gidsen voor identiteitsgegevens ](../guardrails.md).
 
 De volgende identiteitstypen zijn beschikbaar in Experience Platform:
 
@@ -99,20 +99,20 @@ De volgende standaardnaamruimten kunnen door alle organisaties in Experience Pla
 | Weergavenaam | Identiteitssymbool (code) | Identiteitstype | Beschrijving |
 | ------------ | ---------------------- | ------------- | ----------- |
 | AdCloud | AdCloud | Cookie-id | Een naamruimte die staat voor Adobe AdCloud. |
-| Adobe Analytics (verouderd ID) | STEUN | Cookie-id | Een naamruimte die Adobe Analytics vertegenwoordigt. Zie het volgende document op [&#x200B; Adobe Analytics namespaces &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=nl-NL#namespaces) voor meer informatie. |
-| Apple IDFA (ID voor adverteerders) | IDFA | Apparaat-id | Een naamruimte die Apple-id voor adverteerders vertegenwoordigt. Zie het volgende document op [&#x200B; op rente-gebaseerde advertenties &#x200B;](https://support.apple.com/en-us/HT202074) voor meer informatie. |
-| Apple Push Notification-service | APNS | Apparaat-id | Een naamruimte die identiteiten vertegenwoordigt die zijn verzameld met de Apple Push Notification-service. Zie het volgende document op [&#x200B; de dienst van het Bericht van de Duw van Apple &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) voor meer informatie. |
-| ECID | ECID | Cookie-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [&#x200B; ECID &#x200B;](./ecid.md) voor meer informatie. |
+| Adobe Analytics (verouderd ID) | STEUN | Cookie-id | Een naamruimte die Adobe Analytics vertegenwoordigt. Zie het volgende document op [ Adobe Analytics namespaces ](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) voor meer informatie. |
+| Apple IDFA (ID voor adverteerders) | IDFA | Apparaat-id | Een naamruimte die Apple-id voor adverteerders vertegenwoordigt. Zie het volgende document op [ op rente-gebaseerde advertenties ](https://support.apple.com/en-us/HT202074) voor meer informatie. |
+| Apple Push Notification-service | APNS | Apparaat-id | Een naamruimte die identiteiten vertegenwoordigt die zijn verzameld met de Apple Push Notification-service. Zie het volgende document op [ de dienst van het Bericht van de Duw van Apple ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) voor meer informatie. |
+| ECID | ECID | Cookie-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ ECID ](./ecid.md) voor meer informatie. |
 | Email | Email | Email | Een naamruimte die een e-mailadres vertegenwoordigt. Dit type naamruimte is vaak gekoppeld aan één persoon en kan daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. |
-| E-mails (SHA256, verlaagd) | Email_LC_SHA256 | Email | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Zie het volgende document op [&#x200B; SHA256 het hakken steun &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=nl-NL#hashing-support) voor meer informatie. |
-| Firebase Cloud Messaging | FCM | Apparaat-id | Een naamruimte die identiteiten vertegenwoordigt die zijn verzameld met Google Firebase Cloud Messaging voor pushberichten. Zie het volgende document op [&#x200B; het Overseinen van de Wolk van de Wolk van Google Firebase &#x200B;](https://firebase.google.com/docs/cloud-messaging) voor meer informatie. |
-| Google-advertentie-ID (GAID) | GAID | Apparaat-id | Een naamruimte die een Google Advertising-id vertegenwoordigt. Zie het volgende document op [&#x200B; identiteitskaart van Google Advertising &#x200B;](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) voor meer informatie. |
+| E-mails (SHA256, verlaagd) | Email_LC_SHA256 | Email | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Zie het volgende document op [ SHA256 het hakken steun ](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) voor meer informatie. |
+| Firebase Cloud Messaging | FCM | Apparaat-id | Een naamruimte die identiteiten vertegenwoordigt die zijn verzameld met Google Firebase Cloud Messaging voor pushberichten. Zie het volgende document op [ het Overseinen van de Wolk van de Wolk van Google Firebase ](https://firebase.google.com/docs/cloud-messaging) voor meer informatie. |
+| Google-advertentie-ID (GAID) | GAID | Apparaat-id | Een naamruimte die een Google Advertising-id vertegenwoordigt. Zie het volgende document op [ identiteitskaart van Google Advertising ](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) voor meer informatie. |
 | Telefoon | Telefoon | Telefoonnummer | Een naamruimte die een telefoonnummer vertegenwoordigt. Dit type naamruimte is vaak gekoppeld aan één persoon en kan daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. |
 | Telefoon (E.164) | Telefoon_E.164 | Telefoonnummer | A namespace that represents raw phone numbers that need to be hashed in E.164 format. De indeling E.164 omvat een plusteken (`+`), een internationale aanroepende code van het land, een lokale gebiedscode, en een telefoonaantal. Bijvoorbeeld: `(+)(country code)(area code)(phone number)` . |
 | Telefoon (SHA256) | Phone_SHA256 | Telefoonnummer | Een naamruimte die telefoonnummers vertegenwoordigt die moeten worden gehasht met behulp van SHA256. U moet symbolen, letters en voorloopnullen verwijderen. U moet ook het land toevoegen dat code als prefix roept. |
 | Telefoon (SHA256_E.164) | Phone_SHA256_E.164 | Telefoonnummer | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
-| TNTID | TNTID | Cookie-id | Een naamruimte die Adobe Target vertegenwoordigt. Zie het volgende document op [&#x200B; Doel &#x200B;](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=nl-NL) voor meer informatie. |
-| Windows-ID | WAID | Apparaat-id | Een naamruimte die een Windows Advertising-id vertegenwoordigt. Zie het volgende document op [&#x200B; identiteitskaart van Advertising van Vensters 1&rbrace; voor meer informatie.](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) |
+| TNTID | TNTID | Cookie-id | Een naamruimte die Adobe Target vertegenwoordigt. Zie het volgende document op [ Doel ](https://experienceleague.adobe.com/docs/target/using/target-home.html) voor meer informatie. |
+| Windows-ID | WAID | Apparaat-id | Een naamruimte die een Windows Advertising-id vertegenwoordigt. Zie het volgende document op [ identiteitskaart van Advertising van Vensters 1} voor meer informatie.](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) |
 
 {style="table-layout:auto"}
 
@@ -127,7 +127,7 @@ Als u naamruimten in de gebruikersinterface wilt weergeven, selecteert u **[!UIC
 
 Er wordt een map met naamruimten in uw organisatie weergegeven met informatie over de namen, identiteitssymbolen, laatst bijgewerkte datums, overeenkomende identiteitstypen en beschrijving.
 
-![&#x200B; een folder van douane identiteitsnamespaces in uw organisatie.](../images/namespace/browse.png)
+![ een folder van douane identiteitsnamespaces in uw organisatie.](../images/namespace/browse.png)
 
 ## Aangepaste naamruimten maken {#create-namespaces}
 
@@ -139,15 +139,15 @@ Selecteer **[!UICONTROL Create identity namespace]** als u een aangepaste naamru
 >
 >Integratie-id&#39;s zijn naamruimten die worden gebruikt om verbinding te maken met andere systemen. Ze worden niet gebruikt in identiteitsresolutie en worden ook niet gebruikt om identiteiten aan te hechten. Selecteer **[!UICONTROL View integration identities]** om de lijst bij te werken en integratie-id&#39;s op te nemen. Integratie-id&#39;s zijn echter standaard verborgen omdat ze alleen-weergeven zijn en u ze niet hoeft te configureren.
 
-![&#x200B; creeer identiteit namespace knoop in de identiteitswerkruimte.](../images/namespace/create-identity-namespace.png)
+![ creeer identiteit namespace knoop in de identiteitswerkruimte.](../images/namespace/create-identity-namespace.png)
 
 Het venster [!UICONTROL Create identity namespace] wordt weergegeven. Eerst moet u een weergavenaam en een identiteitssymbool opgeven voor de aangepaste naamruimte die u wilt maken. U kunt desgewenst ook een beschrijving opgeven om meer context toe te voegen aan de aangepaste naamruimte die u maakt.
 
-![&#x200B; pop-up venster van A waar u informatie betreffende uw douanetechnische naamruimte kunt invoeren.](../images/namespace/name-and-symbol.png)
+![ pop-up venster van A waar u informatie betreffende uw douanetechnische naamruimte kunt invoeren.](../images/namespace/name-and-symbol.png)
 
 Selecteer vervolgens het identiteitstype dat u wilt toewijzen aan de aangepaste naamruimte. Selecteer **[!UICONTROL Create]** als u klaar bent.
 
-![&#x200B; een selectie van identiteitstypes die u van kunt kiezen en aan uw douaneidentiteit namespace toewijst.](../images/namespace/select-identity-type.png)
+![ een selectie van identiteitstypes die u van kunt kiezen en aan uw douaneidentiteit namespace toewijst.](../images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
@@ -159,8 +159,8 @@ Selecteer vervolgens het identiteitstype dat u wilt toewijzen aan de aangepaste 
 
 ## Naamruimten in identiteitsgegevens
 
-Het leveren van de naamruimte voor een identiteit is afhankelijk van de methode die u gebruikt voor het opgeven van identiteitsgegevens. Voor details bij het verstrekken van gegevens van de gegevensidentiteit, gelieve de [[!DNL Identity Service]  implementatiegids &#x200B;](../implementation.md) te lezen.
+Het leveren van de naamruimte voor een identiteit is afhankelijk van de methode die u gebruikt voor het opgeven van identiteitsgegevens. Voor details bij het verstrekken van gegevens van de gegevensidentiteit, gelieve de [[!DNL Identity Service]  implementatiegids ](../implementation.md) te lezen. Als u identiteiten door het Web SDK `identityMap` verzendt, zie [ Gebruikend identityMap in de Inzameling van Gegevens ](/help/collection/identity/identity-map.md) voor begeleiding op hoe te om identiteitswaarden voor te bereiden en te formatteren alvorens hen te verzenden.
 
 ## Volgende stappen
 
-Nu u de belangrijkste concepten identiteitsnamespaces begrijpt, kunt u beginnen te leren hoe te met uw identiteitsgrafiek te werken gebruikend de [&#x200B; kijker van de identiteitsgrafiek &#x200B;](../features/identity-graph-viewer.md).
+Nu u de belangrijkste concepten identiteitsnamespaces begrijpt, kunt u beginnen te leren hoe te met uw identiteitsgrafiek te werken gebruikend de [ kijker van de identiteitsgrafiek ](../features/identity-graph-viewer.md).

@@ -6,9 +6,9 @@ breadcrumb-title: Dataverzameling
 user-guide-description: Leer hoe u gegevens naar Adobe Experience Platform verzendt.
 feature: Data Collection
 role: Developer
-source-git-commit: c848f821ea911c82531c6784a17df0116572cd86
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '167'
 ht-degree: 13%
 
 ---
@@ -18,6 +18,15 @@ ht-degree: 13%
 
 + [Overzicht](home.md)
 + [Machtigingen](permissions.md)
++ Identiteit {#identity}
+   + [Overzicht](identity/overview.md)
+   + [Identiteitskaart gebruiken](identity/identity-map.md)
+   + [Apparaat-id&#39;s van eerste partij](identity/fpid.md)
+   + [Delen tussen domeinen](identity/cross-domain-sharing.md)
+   + [Mobiele apps voor mobiele websites/webweergaven](identity/mobile-to-web.md)
+   + [Geïntegreerde identiteitsondersteuning](identity/unified-identity-support.md)
+   + [Toestemming en identiteit](identity/consent.md)
+   + [Problemen oplossen](identity/troubleshooting.md)
 + BrightScript {#brightscript}
    + [Overzicht van BrightScript](brightscript/brs-overview.md)
 + JavaScript {#js}
@@ -99,10 +108,6 @@ ht-degree: 13%
    + [Een CSP configureren](use-cases/configuring-a-csp.md)
    + [Foutopsporing](use-cases/debugging.md)
    + [Gebeurtenisdeduplicatie](use-cases/event-duplication.md)
-   + Identiteit {#identity}
-      + [Overzicht](use-cases/identity/id-overview.md)
-      + [Apparaat-id&#39;s van eerste partij](use-cases/identity/first-party-device-ids.md)
-      + [ID delen](use-cases/identity/id-sharing.md)
    + MCP {#mcp}
       + [ChatGPT-apps](use-cases/mcp/chatgpt.md)
    + [Meerdere SDK-instanties](use-cases/multiple-instances.md)

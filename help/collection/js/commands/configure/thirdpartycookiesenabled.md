@@ -2,7 +2,7 @@
 title: thirdPartyCookiesEnabled
 description: Het gebruik van cookies van derden toestaan om bezoekers te identificeren.
 exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
-source-git-commit: c6a2b9700f0a688f65fec9febf5622c6c7b6aafa
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 De eigenschap `thirdPartyCookiesEnabled` is een Booleaanse waarde die bepaalt of de Web SDK cookies instelt in een context van derden. Het inschakelen van deze optie is handig als u bezoekers wilt identificeren tussen subdomeinen of domeinen die eigendom zijn van uw organisatie. Veel moderne browsers beperken echter de instelling en vervaldatum van cookies van derden. Als de browser van een bezoeker geen cookies van derden ondersteunt, doet deze eigenschap niets.
 
-De eigenschap `thirdPartyCookiesEnabled` bepaalt ook of een [`CORE ID`](/help/collection/use-cases/identity/id-overview.md#tracking-coreid-web-sdk) kan worden opgevraagd voor [`getIdentity`](../getidentity.md) -aanroepen.
+De eigenschap `thirdPartyCookiesEnabled` bepaalt ook of een [`CORE ID`](/help/collection/identity/overview.md#core-id-and-third-party-identity) kan worden opgevraagd voor [`getIdentity`](../getidentity.md) -aanroepen.
 
-Als deze optie is ingeschakeld, gebruikt de Web SDK Adobe Audience Manager om een bezoeker te identificeren. Wanneer deze optie is uitgeschakeld, wordt de aanroep naar Audience Manager uitgeschakeld. Zie [&#x200B; Begrip vraag aan het domein van de Index &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=nl-NL) in de gebruikersgids van Audience Manager voor meer informatie.
+Als deze optie is ingeschakeld, gebruikt de Web SDK Adobe Audience Manager om een bezoeker te identificeren. Wanneer deze optie is uitgeschakeld, wordt de aanroep naar Audience Manager uitgeschakeld. Zie [ Begrip vraag aan het domein van de Index ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) in de gebruikersgids van Audience Manager voor meer informatie.
 
 Stel de Booleaanse waarde `thirdPartyCookiesEnabled` in wanneer u de opdracht `configure` uitvoert. Als u deze eigenschap weglaat bij het configureren van de Web SDK, wordt standaard `true` gebruikt. Stel deze waarde in op `false` als u niet wilt dat de Web SDK Audience Manager gebruikt om bezoekers te identificeren.
 
@@ -29,4 +29,4 @@ alloy("configure", {
 
 ## Cookies van derden inschakelen met de extensie Web SDK
 
-Dit plaatsen kan in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [&#x200B; de configuratiemontages van de Identiteit &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies).
+Dit plaatsen kan in de de markeringsuitbreiding van SDK van het Web worden gevormd gebruikend [ de configuratiemontages van de Identiteit ](/help/tags/extensions/client/web-sdk/configure/identity.md#use-third-party-cookies).

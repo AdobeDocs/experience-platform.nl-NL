@@ -2,9 +2,9 @@
 title: defaultConsent
 description: Stel de standaardmethode voor het verzamelen van toestemmingen in voor uw webeigenschap.
 exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
-source-git-commit: 1e272eb18fac2f59f9737756d48947a25573d772
+source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Stel de tekenreekseigenschap `defaultConsent` in op het gewenste toestemmingsniv
 
 >[!IMPORTANT]
 >
->De waarde `defaultConsent` blijft niet behouden tussen het laden van pagina&#39;s. Controleer of u telkens wanneer u de opdracht `configure` aanroept de gewenste standaardtoestemming hebt ingesteld.
+>De waarde `defaultConsent` blijft niet behouden tussen het laden van pagina&#39;s. Controleer of u telkens wanneer u de opdracht `configure` aanroept de gewenste standaardtoestemming hebt ingesteld. De doorgevoerde toestemming van een bezoeker (ingesteld via [`setConsent`](../setconsent.md)) wordt daarentegen in een cookie voortgezet en automatisch toegepast bij volgende geladen pagina.
 
 ```js
 alloy("configure", {
@@ -40,32 +40,7 @@ alloy("configure", {
 
 ## `defaultConsent` gebruiken in combinatie met `setConsent` {#using-consent}
 
-De Web SDK biedt twee aanvullende toestemmingsopties:
-
-* `defaultConsent` (deze pagina): hiermee bepaalt u de voorkeuren voor de standaardtoestemming.
-* [`setConsent`](../setconsent.md): leg de voorkeuren voor toestemming van bezoekers vast.
-
-Wanneer deze instellingen samen worden gebruikt, kunnen ze leiden tot verschillende resultaten voor gegevensverzameling en cookie-instellingen, afhankelijk van de geconfigureerde waarden.
-
-Zie de onderstaande tabel om te begrijpen wanneer gegevensverzameling plaatsvindt en wanneer cookies worden ingesteld, op basis van toestemmingsinstellingen.
-
-| `defaultConsent` | `setConsent` | Gegevensverzameling vindt plaats | Web SDK stelt browsercookies in |
-|---------|----------|---------|---------|
-| `in` | `in` | Ja | Ja |
-| `in` | `out` | Nee | Ja |
-| `in` | Niet ingesteld | Ja | Ja |
-| `pending` | `in` | Ja | Ja |
-| `pending` | `out` | Nee | Ja |
-| `pending` | Niet ingesteld | Nee | Nee |
-| `out` | `in` | Ja | Ja |
-| `out` | `out` | Nee | Ja |
-| `out` | Niet ingesteld | Nee | Nee |
-
-Zie [&#x200B; de koekjes van SDK van het Web van Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/cookies/web-sdk) voor een lijst van koekjes die de bibliotheekreeksen.
-
->[!NOTE]
->
->Identiteitscookies en toestemmingscookies worden ingesteld, zelfs als een bezoeker de cookies niet bijhoudt. Deze cookies zijn nodig om de voorkeuren voor gegevensverzameling te respecteren.
+Wanneer `defaultConsent` en `setConsent` samen worden gebruikt, produceren verschillende gegevensverzameling, cookie-instelling en identiteitsresultaten, afhankelijk van de geconfigureerde waarden. Zie [ Toestemming en identiteit in de Inzameling van Gegevens ](/help/collection/identity/consent.md#how-consent-affects-identity) voor een volledige interactietabel.
 
 ## Standaardtoestemming instellen op basis van `gdprApplies`
 
@@ -85,4 +60,4 @@ In het bovenstaande codeblok wordt de opdracht `configure` aangeroepen nadat `tc
 
 ## Standaardtoestemming met de Web SDK-tagextensie
 
-Zie [&#x200B; de montages van de Toestemming &#x200B;](/help/tags/extensions/client/web-sdk/configure/consent.md) in de de markeringsuitbreidingsdocumentatie van SDK van het Web leren hoe te om deze acties uit te voeren gebruikend markeringen.
+Zie [ de montages van de Toestemming ](/help/tags/extensions/client/web-sdk/configure/consent.md) in de de markeringsuitbreidingsdocumentatie van SDK van het Web leren hoe te om deze acties uit te voeren gebruikend markeringen.
