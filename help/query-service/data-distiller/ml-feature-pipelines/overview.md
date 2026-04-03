@@ -2,7 +2,7 @@
 title: Pijpleidingen met I/ML-functies
 description: Leer hoe u Data Distiller kunt gebruiken om uw computerleerleidingen te verrijken met functies die zijn afgeleid van Adobe Experience Platform-gegevens. Transformeer onbewerkte gegevens in functies en lever de functiegegevens om een model op te leiden of te scoren dat uw marketinggebruik ondersteunt.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 0%
@@ -11,9 +11,11 @@ ht-degree: 0%
 
 # Pijpleidingen met I/ML-functies
 
-<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+<!-- 
+This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
-This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
+This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. 
+-->
 
 Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpijpleidingen te verrijken met hoogwaardige gegevens over klantervaring die in Adobe Experience Platform zijn verzameld en gekromd. Vanuit een [!DNL Python] -laptop in elke omgeving kunt u op interactieve wijze klantgegevens in de Experience Platform verkennen, functies van de gegevens definiëren en berekenen en de computerfuncties in uw computerleeromgeving lezen voor modellering.
 
@@ -21,7 +23,7 @@ Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpi
 >
 >Voor deze workflow is een Data Distiller-licentie vereist. Als u dit product niet hebt, neemt u contact op met uw vertegenwoordiger van de Adobe Service.
 
-![&#x200B; een infografisch die de AI-ML eigenschappijpleiding detailleert.](../../images/data-distiller/ai-ml-feature-pipeline.png)
+![ een infografisch die de AI-ML eigenschappijpleiding detailleert.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
 - Met Data Distiller krachtige querymogelijkheden kunt u zinvolle functies ophalen uit de uitgebreide gedragsgegevens die beschikbaar zijn in de Experience Platform. U kunt de gedistilleerde eigenschapgegevens dan brengen in uw machine het leren milieu zonder de behoefte om grote volumes van gebeurtenisgegevens buiten Experience Platform te kopiëren.
 - Lees de voorbereide eigenschapdataset in uw aangewezen machine het leren hulpmiddelen en combineer met andere eigenschappen die uit ondernemingsgegevens worden afgeleid om aangepaste modellen te trainen, te experimenteren, te stemmen en op te stellen die aan uw zaken worden aangepast.
@@ -31,9 +33,9 @@ Data Distiller stelt wetenschappers en engineers in staat om hun machines leerpi
 
 Deze workflow vereist een goed begrip van de verschillende aspecten van Adobe Experience Platform. Lees vóór het starten van deze zelfstudie de documentatie voor de volgende concepten:
 
-- Hoe te [&#x200B; om Experience Platform APIs &#x200B;](../../../landing/api-authentication.md) voor authentiek te verklaren en toegang te hebben.
-- Sandboxes: [&#x200B; Op attributen-gebaseerde toegangsbeheertoestemmingen &#x200B;](../../../access-control/abac/overview.md) en hoe te om rollen tot stand te brengen en te beheren, evenals de gewenste middeltoestemmingen voor deze rollen toe te wijzen.
-- Het Beleid van gegevens: Hoe te [&#x200B; de etiketten van het gegevensgebruik op datasets en gebieden toepassen, die elk &#x200B;](../../../data-governance/labels/overview.md) volgens het verwante beleid van het gegevensbeheer en toegangsbeheerbeleid categoriseren.
+- Hoe te [ om Experience Platform APIs ](../../../landing/api-authentication.md) voor authentiek te verklaren en toegang te hebben.
+- Sandboxes: [ Op attributen-gebaseerde toegangsbeheertoestemmingen ](../../../access-control/abac/overview.md) en hoe te om rollen tot stand te brengen en te beheren, evenals de gewenste middeltoestemmingen voor deze rollen toe te wijzen.
+- Het Beleid van gegevens: Hoe te [ de etiketten van het gegevensgebruik op datasets en gebieden toepassen, die elk ](../../../data-governance/labels/overview.md) volgens het verwante beleid van het gegevensbeheer en toegangsbeheerbeleid categoriseren.
 
 ## Volgende stappen
 
@@ -41,21 +43,22 @@ Door dit document te lezen, bent u geïntroduceerd in de belangrijke concepten a
 
 In de documenten die in deze reeks handleidingen zijn opgenomen, worden de basisstappen beschreven voor het maken van functiepijpleidingen vanuit Experience Platform voor het voeden van aangepaste modellen in uw computerleeromgeving. U kunt nu een verbinding tot stand brengen tussen Data Distiller en uw [!DNL Jupyter Notebook] .
 
-- **Opstelling**: [&#x200B; verbind met Gegevens Distiller van a  [!DNL Python]  notitieboekje &#x200B;](./establish-connection.md)
+- **Opstelling**: [ verbind met Gegevens Distiller van a  [!DNL Python]  notitieboekje ](./establish-connection.md)
 
 De onderstaande documentatie komt overeen met de stappen in de bovenstaande afbeelding.
 
-- **Stap 1**: [&#x200B; onderzoek en analyseer datasets &#x200B;](./exploratory-analysis.md)
-- **Stap 2**: [&#x200B; eigenschappen van de Ingenieur voor machine het leren &#x200B;](./feature-engineering.md)
-- **Stap 3**: [&#x200B; de eigenschapdatasets van de Uitvoer &#x200B;](./export-data.md)
+- **Stap 1**: [ onderzoek en analyseer datasets ](./exploratory-analysis.md)
+- **Stap 2**: [ eigenschappen van de Ingenieur voor machine het leren ](./feature-engineering.md)
+- **Stap 3**: [ de eigenschapdatasets van de Uitvoer ](./export-data.md)
 
 ## Aanvullende bronnen
 
-- [&#x200B; epp &#x200B;](https://github.com/adobe/aepp): een Adobe-geleide open-bron [!DNL Python] bibliotheek voor het doen van verzoeken aan Gegevens Distiller en andere diensten van Experience Platform van [!DNL Python] code.
+- [ epp ](https://github.com/adobe/aepp): een Adobe-geleide open-bron [!DNL Python] bibliotheek voor het doen van verzoeken aan Gegevens Distiller en andere diensten van Experience Platform van [!DNL Python] code.
 
 <!-- Old content below -->
 
-<!-- ## Train and score a propensity model to predict subscription conversions from Experience Platform data {#train-and-score-a-propensity-model}
+<!-- 
+## Train and score a propensity model to predict subscription conversions from Experience Platform data {#train-and-score-a-propensity-model}
 
 The linked repositories provide sample notebooks that demonstrate the AI/ML feature pipeline end-to-end workflow. The workflow uses customer data from Experience Platform with cloud-based machine learning tools to train and score a propensity model that predict subscription conversions. Use the notebooks as a template to help data science teams take advantage of your organization's Experience Platform data and services. Experience Platform data and services can then be used within your modeling workflow to develop custom models that support your organization's marketing and experience activities.
 
@@ -80,30 +83,36 @@ The sample notebooks are intended to be used in one of two ways:
 
 >[!WARNING]
 >
-> The workflow illustrated in these notebooks involves exporting datasets from Experience Platform to a cloud storage destination, where it can be read and processed using external machine learning tools. As such, there is some risk of sensitive personal data leaving the Experience Platform and being used inappropriately outside of the platform.<br><br>Experience Platform provides data governance tools for you to manage your data usage obligations and help minimize this risk. You are responsible ensuring that data in the Experience Platform is properly labeled before querying or exporting that data. This includes manually re-applying labels to derived datasets created from query output. Derived datasets from queries do not support the processing of sensitive personal data. You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform and the destination platform, which may have its own rules and obligations for incoming and outgoing data. Learn more about [data governance tools](../../../data-governance/home.md) in Experience Platform. -->
+> The workflow illustrated in these notebooks involves exporting datasets from Experience Platform to a cloud storage destination, where it can be read and processed using external machine learning tools. As such, there is some risk of sensitive personal data leaving the Experience Platform and being used inappropriately outside of the platform.<br><br>Experience Platform provides data governance tools for you to manage your data usage obligations and help minimize this risk. You are responsible ensuring that data in the Experience Platform is properly labeled before querying or exporting that data. This includes manually re-applying labels to derived datasets created from query output. Derived datasets from queries do not support the processing of sensitive personal data. You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform and the destination platform, which may have its own rules and obligations for incoming and outgoing data. Learn more about [data governance tools](../../../data-governance/home.md) in Experience Platform. 
+-->
 
 
 
-<!-- ## Getting started {#getting-started}
+<!-- 
+## Getting started {#getting-started}
 
 There are several steps necessary to get started with the CMLE notebooks. The CMLE notebooks make use of the [aepp](https://github.com/adobe/aepp/tree/main) package, which provides functions for making requests to [Experience Platform APIs](https://developer.adobe.com/experience-platform-apis/). 
 
-The following steps are required to set up access to Experience Platform APIs through `aepp`. If you wish to code requests to Experience Platform APIs yourself rather than use `aepp`, you will still need to complete these steps to get a credential with the necessary permissions and store it safely. -->
+The following steps are required to set up access to Experience Platform APIs through `aepp`. If you wish to code requests to Experience Platform APIs yourself rather than use `aepp`, you will still need to complete these steps to get a credential with the necessary permissions and store it safely. 
+-->
 
-<!-- ### Step 1: Create an API credential in the Adobe Developer Console {#create-api-credential}
+<!-- 
+### Step 1: Create an API credential in the Adobe Developer Console {#create-api-credential}
 
 API credentials can be created by anyone with Developer access to Experience Platform in your organization. If you are a data scientist without Developer access, ask your manager or Adobe Admin to [create a credential](../../../landing/api-authentication.md#generate-credentials) for you in the [Adobe Developer Console](https://developer.adobe.com/console/home). Alternatively, they can [grant you Developer access](../../../landing/api-authentication.md#add-developers-to-product-profile) to create one yourself.
 
-You are recommended to create an [!DNL Oauth2] API credential specifically for Cloud ML workflows with appropriate permissions and labels. -->
+You are recommended to create an [!DNL Oauth2] API credential specifically for Cloud ML workflows with appropriate permissions and labels. 
+-->
 
 <!-- 
 Is this the correct doc to link to about creating an Oauth2 API credential?:
 ../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md
- -->
+-->
 
 <!-- See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) detailed instructions instructions on creating an API credential. -->
 
-<!-- ### Step 2: Get the necessary attribute-based access control permissions for your credential {#get-permissions}
+<!-- 
+### Step 2: Get the necessary attribute-based access control permissions for your credential {#get-permissions}
 
 An API credential will not be able to access Experience Platform APIs without explicit permissions granted by your organization's Adobe System Admin for specific Experience Platform services and data. A System Admin can [assign the API credential to a role](../../../landing/api-authentication.md#assign-api-to-a-role) and manage permissions for role in the [!UICONTROL Permissions] UI in Experience Platform. 
 
@@ -116,17 +125,21 @@ The minimum permissions required to execute these notebooks include:
 - Data management: [!UICONTROL Manage Datasets]
 - Data ingestion: [!UICONTROL View Sources]
 - Destinations: [!UICONTROL Manage and Activate Dataset Destinations]
-- Query Service: [!UICONTROL Manage Queries] -->
+- Query Service: [!UICONTROL Manage Queries] 
+-->
 
 <!-- #### Label access {#label-access} -->
 
 <!-- Edited up to here -->
 
-<!-- By default, a role (and the API credentials assigned to that role) is blocked from accessing any labeled data. Given the organization's data governance policies, a System Admin may grant the role access to certain labeled data that is deemed appropriate for data science usage. 
+<!-- 
+By default, a role (and the API credentials assigned to that role) is blocked from accessing any labeled data. Given the organization's data governance policies, a System Admin may grant the role access to certain labeled data that is deemed appropriate for data science usage. 
 
-We recommend that any API credential used for CMLE workflows does **NOT** have access to data labeled `C9` (No Data Science), `PSPD` (Permitted Sensitive Personal Data), or `RHD` (PHI/Regulated Health Data). Experience Platform customers are responsible to manage label access and policies appropriately in order to comply with relevant regulations and organizational policies. -->
+We recommend that any API credential used for CMLE workflows does **NOT** have access to data labeled `C9` (No Data Science), `PSPD` (Permitted Sensitive Personal Data), or `RHD` (PHI/Regulated Health Data). Experience Platform customers are responsible to manage label access and policies appropriately in order to comply with relevant regulations and organizational policies. 
+-->
 
-<!-- ### Step 3: Update the config.ini file with credential and environment information
+<!-- 
+### Step 3: Update the config.ini file with credential and environment information
 
 Once you have an API credential with the required permissions, you will need to add the credential and environment values to the config.ini file.
 
@@ -173,9 +186,11 @@ The `[Synthetic]` section stores ID references to the schema and dataset objects
 
 The `[Cloud]` section is pre-populated for the example use case illustrated in the notebooks and can be left as is, or modified as needed if you are adapting the notebooks for your own project.
 
-If you are using git with your copy of the CMLE directory, be sure to add the config.ini file to `.gitignore` to avoid accidentally publishing your credential information to a remote repository. -->
+If you are using git with your copy of the CMLE directory, be sure to add the config.ini file to `.gitignore` to avoid accidentally publishing your credential information to a remote repository. 
+-->
 
-<!-- ### Step 4: Configure `aepp` to authenticate with Experience Platform APIs
+<!-- 
+### Step 4: Configure `aepp` to authenticate with Experience Platform APIs
 
 To use the `aepp` package in your code you will need to read the config.ini file using the standard `configparser` package and configure the connection to the Experience Platform APIs. The following cell from the [Synthetic data generation](../notebooks/SyntheticData.ipynb) notebook provides an example:
 
@@ -218,13 +233,16 @@ from aepp import schema
 schema.Schema().getTenantId()
 ```
 
-If successful, your organization's Platform tenant ID will be displayed in the cell output. -->
+If successful, your organization's Platform tenant ID will be displayed in the cell output. 
+-->
 
-<!-- ## Troubleshooting {#troubleshooting}
+<!-- 
+## Troubleshooting {#troubleshooting}
 
 If the connection test above is unsuccessful, you will likely get `KeyError: 'tenantId'`. This usually means that the API credential you are using to connect to Platform does not have the required permissions (the "Data modeling: Manage Schemas" permission in this case). Try the following to resolve the error:
 
 - Confirm with your Adobe System Admin that your API credential has been added to a Role that has the permissions specified above.
 - Check your `config.ini` file and make sure that your environment and credential information is correct.
 
-If your configuration is correct and you are able to successfully make calls to `aepp` methods, you may sometimes get an unsuccessful response from the Platform server. This may happen if you try to create an object in Platform that already exists, or get an object that does not exist, or attempt to send a malformed payload with a request. Most `aepp` methods make a request to an Experience Platform API endpoint and return the response from the server. Print the response and review it to get error message from the API. This will usually give you enough information to understand the problem with the request and fix it. -->
+If your configuration is correct and you are able to successfully make calls to `aepp` methods, you may sometimes get an unsuccessful response from the Platform server. This may happen if you try to create an object in Platform that already exists, or get an object that does not exist, or attempt to send a malformed payload with a request. Most `aepp` methods make a request to an Experience Platform API endpoint and return the response from the server. Print the response and review it to get error message from the API. This will usually give you enough information to understand the problem with the request and fix it. 
+-->
