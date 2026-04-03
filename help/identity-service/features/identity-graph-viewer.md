@@ -2,7 +2,7 @@
 title: Identity Graph Viewer
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 0%
@@ -28,7 +28,7 @@ De volgende video is bedoeld als ondersteuning voor uw begrip van de viewer voor
 Als u met de viewer voor identiteitsgrafieken werkt, moet u de verschillende betrokken Adobe Experience Platform-services begrijpen. Voordat u begint te werken met de identiteitsgrafiekviewer, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Identity Service]](../home.md): verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-- [&#x200B; Real-Time Profiel van de Klant &#x200B;](../../profile/home.md): De grafieken van de Identiteit worden leveraged door het Profiel van de Klant in real time om een uitvoerige en enige mening van uw klantenattributen en gedrag tot stand te brengen.
+- [ Real-Time Profiel van de Klant ](../../profile/home.md): De grafieken van de Identiteit worden leveraged door het Profiel van de Klant in real time om een uitvoerige en enige mening van uw klantenattributen en gedrag tot stand te brengen.
 
 ### Terminologie
 
@@ -40,70 +40,70 @@ Als u met de viewer voor identiteitsgrafieken werkt, moet u de verschillende bet
 
 Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Identity Graph]** in de lijst met tabbladen in de koptekst.
 
-![&#x200B; de werkruimte van Identiteiten in Experience Platform UI, met het geselecteerde lusje van de Grafiek van de Identiteit.](../images/graph-viewer/identity-graph.png)
+![ de werkruimte van Identiteiten in Experience Platform UI, met het geselecteerde lusje van de Grafiek van de Identiteit.](../images/graph-viewer/identity-graph.png)
 
 Als u een identiteitsgrafiek wilt weergeven, geeft u een naamruimte en de bijbehorende waarde op en selecteert u **[!UICONTROL View]** .
 
 >[!TIP]
 >
->Selecteer het lijstpictogram ![&#x200B; lijstpictogram &#x200B;](/help/images/icons/table.png) om een paneel met een lijst van alle identiteit te zien namespaces beschikbaar in uw organisatie. U kunt alle naamruimten gebruiken zolang er een geldige identiteitswaarde aan is gekoppeld. Voor meer informatie, lees de [&#x200B; gids van de identiteitsnaamruimte &#x200B;](./namespaces.md).
+>Selecteer het lijstpictogram ![ lijstpictogram ](/help/images/icons/table.png) om een paneel met een lijst van alle identiteit te zien namespaces beschikbaar in uw organisatie. U kunt alle naamruimten gebruiken zolang er een geldige identiteitswaarde aan is gekoppeld. Voor meer informatie, lees de [ gids van de identiteitsnaamruimte ](./namespaces.md).
 
-![&#x200B; een identiteit namespace en zijn overeenkomstige waarde, die in het de raadplegingsscherm van de Grafiek van de Identiteit wordt verstrekt.](../images/graph-viewer/namespace-and-value.png)
+![ een identiteit namespace en zijn overeenkomstige waarde, die in het de raadplegingsscherm van de Grafiek van de Identiteit wordt verstrekt.](../images/graph-viewer/namespace-and-value.png)
 
 ## De interface van de identiteitsgrafiekviewer
 
 De interface van de identiteitsgrafiekviewer bestaat uit verschillende elementen die u kunt gebruiken om te communiceren met en uw identiteitsgegevens beter te begrijpen.
 
-![&#x200B; de interface van de kijker van de identiteitsgrafiek.](../images/graph-viewer/identity-graph-viewer-main.png)
+![ de interface van de kijker van de identiteitsgrafiek.](../images/graph-viewer/identity-graph-viewer-main.png)
 
 In de identiteitsgrafiek worden alle identiteiten weergegeven die zijn gekoppeld aan de naamruimte en de waardecombinatie die u hebt ingevoerd. Elk knooppunt bestaat uit een naamruimte van een identiteit en de bijbehorende waarde. U kunt elk knooppunt selecteren, vasthouden en slepen om te communiceren met de grafiek. Alternatief, kunt u over een knoop bewegen om informatie over zijn overeenkomstige identiteitswaarde te zien. Selecteer **[!UICONTROL View graph]** om de grafiek te verbergen of weer te geven.
 
 >[!IMPORTANT]
 >
->Voor een identiteitsgrafiek moeten minimaal twee gekoppelde identiteiten worden gegenereerd en moet een geldige naamruimte en waardecombinatie worden gegenereerd. Het maximumaantal identiteiten dat de grafiekviewer kan weergeven, is 50. Zie de [&#x200B; bijlage &#x200B;](#appendix) sectie hieronder voor meer informatie.
+>Voor een identiteitsgrafiek moeten minimaal twee gekoppelde identiteiten worden gegenereerd en moet een geldige naamruimte en waardecombinatie worden gegenereerd. Het maximumaantal identiteiten dat de grafiekviewer kan weergeven, is 50. Zie de [ bijlage ](#appendix) sectie hieronder voor meer informatie.
 
-![&#x200B; de kijker van de identiteitsgrafiek met vijf verbonden identiteiten.](../images/graph-viewer/graph.png)
+![ de kijker van de identiteitsgrafiek met vijf verbonden identiteiten.](../images/graph-viewer/graph.png)
 
 Selecteer een koppeling in de grafiek om de gegevensset en batch-id weer te geven die bijdragen aan die koppeling. Als u een koppeling selecteert, wordt ook het rechterspoor bijgewerkt en krijgt u meer informatie over de gegevensbrondetails en over eigenschappen zoals de eerste vastgestelde en laatst bijgewerkte tijdstempels.
 
-![&#x200B; het identiteitsverband tussen de e-mail en geselecteerde knopen GAID.](../images/graph-viewer/identity-link.png)
+![ het identiteitsverband tussen de e-mail en geselecteerde knopen GAID.](../images/graph-viewer/identity-link.png)
 
 De tabel [!UICONTROL Identities] biedt een andere weergave van uw identiteitsgegevens, waarin de naamruimte en de combinatie van identiteitswaarden in een tabelindeling worden weergegeven. Als u een knooppunt in de grafiek selecteert, wordt het gemarkeerde regelitem in de tabel [!UICONTROL Identities] bijgewerkt.
 
-![&#x200B; de lijst van Identiteiten met de lijst van identiteiten verbonden binnen de grafiek.](../images/graph-viewer/identities-table.png)
+![ de lijst van Identiteiten met de lijst van identiteiten verbonden binnen de grafiek.](../images/graph-viewer/identities-table.png)
 
 Gebruik het vervolgkeuzemenu om de grafiekgegevens te sorteren en informatie over een specifieke naamruimte te markeren. Selecteer bijvoorbeeld **[!UICONTROL Email]** in het menu om gegevens weer te geven die specifiek zijn voor de naamruimte van de e-mailidentiteit.
 
-![&#x200B; de lijst van Identiteiten die aan slechts vertoningse-mailgegevens wordt gesorteerd.](../images/graph-viewer/sort-email.png)
+![ de lijst van Identiteiten die aan slechts vertoningse-mailgegevens wordt gesorteerd.](../images/graph-viewer/sort-email.png)
 
 In de rechtertrack wordt informatie over een geselecteerde identiteit weergegeven, inclusief de laatste bijgewerkte tijdstempel. De juiste spoorstaaf toont ook informatie over de gegevensbron die met de geselecteerde identiteit, met inbegrip van zijn partij ID, datasetnaam, dataset identiteitskaart, en schemanaam beantwoordt.
 
 De volgende tabel bevat aanvullende informatie over de eigenschappen van de gegevensbron die in de rechterspoorstaaf worden weergegeven:
 
 | Gegevensbron | Beschrijving |
-| --- | --- | 
+| --- | --- |
 | Batch-id | De automatisch gegenereerde id die overeenkomt met uw batchgegevens. |
 | Dataset-id | De automatisch gegenereerde id die overeenkomt met uw gegevensset. |
 | Naam gegevensset | De naam van de dataset die uw partijgegevens bevat. |
 | Schemanaam | De naam van het schema. Het schema biedt een set regels die de structuur en indeling van gegevens vertegenwoordigen en valideren. |
 
-![&#x200B; Rechterspoor, dat identiteitsgegevens, evenals informatiegegevensbron toont.](../images/graph-viewer/right-rail.png)
+![ Rechterspoor, dat identiteitsgegevens, evenals informatiegegevensbron toont.](../images/graph-viewer/right-rail.png)
 
 U kunt de *[!UICONTROL Data source]* ook gebruiken om een lijst met gegevensbronnen weer te geven die een bijdrage leveren aan uw identiteiten. Selecteer [!UICONTROL Data source] voor een tabelweergave van uw gegevenssets en batch-id&#39;s.
 
-![&#x200B; het geselecteerde gegevensbronlusje.](../images/graph-viewer/data-source-table.png)
+![ het geselecteerde gegevensbronlusje.](../images/graph-viewer/data-source-table.png)
 
 Gebruik de schuifregelaar om grafiekgegevens te filteren op het tijdstip waarop de identiteiten voor het eerst zijn vastgesteld. Standaard worden in de viewer voor identiteitsgrafieken alle identiteiten weergegeven die in de grafiek zijn gekoppeld. Houd de schuifregelaar ingedrukt en sleep deze om de tijd aan te passen aan de laatste tijdstempel waarbij een nieuwe identiteit aan de grafiek is gekoppeld. In het onderstaande voorbeeld wordt in de grafiek weergegeven dat de meest recente identiteitskoppeling (GAID) is ingesteld op **[!UICONTROL 08/19/2020, 4:29:29 PM]** .
 
-![&#x200B; de geselecteerde schuif van de tijdstempel van de grafiekkijker.](../images/graph-viewer/slider-one.png)
+![ de geselecteerde schuif van de tijdstempel van de grafiekkijker.](../images/graph-viewer/slider-one.png)
 
 Pas de schuifregelaar aan om te zien of er een andere identiteitskoppeling (e-mail) is gemaakt op **[!UICONTROL 08/19/2020, 4:25:30 PM]** .
 
-![&#x200B; de schuif van de tijdstempel van de grafiekkijker die aan de laatste gevestigde nieuwe verbinding wordt aangepast.](../images/graph-viewer/slider-two.png)
+![ de schuif van de tijdstempel van de grafiekkijker die aan de laatste gevestigde nieuwe verbinding wordt aangepast.](../images/graph-viewer/slider-two.png)
 
 U kunt de schuifregelaar ook aanpassen om de oudste herhaling van de grafiek te zien. In het onderstaande voorbeeld wordt in de viewer voor identiteitsgrafieken weergegeven dat de grafiek voor het eerst is gemaakt op **[!UICONTROL 08/19/2020, 4:11:49 PM]** . De eerste koppelingen zijn ECID, Email en Phone.
 
-![&#x200B; de schuif van de tijdstempel van de grafiekkijker die aan de eerste gevestigde nieuwe verbinding wordt aangepast.](../images/graph-viewer/slider-three.png)
+![ de schuif van de tijdstempel van de grafiekkijker die aan de eerste gevestigde nieuwe verbinding wordt aangepast.](../images/graph-viewer/slider-three.png)
 
 ## Bijlage
 
@@ -117,13 +117,13 @@ Er kunnen fouten optreden wanneer u de viewer voor identiteitsgrafieken opent. H
 - Voor het genereren van de identiteitsgrafiekviewer zijn minimaal twee gekoppelde identiteiten vereist. Het is mogelijk dat er slechts één identiteitswaarde en geen verbonden identiteiten zijn, en in dit geval, zou de waarde slechts in [!DNL Profile] kijker bestaan.
 - De viewer voor identiteitsgrafieken kan het maximum van 50 identiteiten niet overschrijden.
 
-![&#x200B; fout-scherm &#x200B;](../images/graph-viewer/error-screen.png)
+![ fout-scherm ](../images/graph-viewer/error-screen.png)
 
 ### Toegang tot de kijker van de identiteitsgrafiek van datasets
 
 U kunt tot de kijker van de identiteitsgrafiek ook toegang hebben gebruikend de datasetinterface. Selecteer op de pagina datasets [!UICONTROL Browse] een dataset waarmee u wilt communiceren en selecteer vervolgens **[!UICONTROL Preview dataset]**
 
-![&#x200B; voorproef-dataset &#x200B;](../images/identity-graph-viewer/preview-dataset.png)
+![ voorproef-dataset ](../images/identity-graph-viewer/preview-dataset.png)
 
 Selecteer in het voorvertoningsvenster een vingerafdrukpictogram om de identiteiten weer te geven die door de viewer voor identiteitsgrafieken worden weergegeven.
 
@@ -131,11 +131,11 @@ Selecteer in het voorvertoningsvenster een vingerafdrukpictogram om de identitei
 >
 >Het vingerafdrukpictogram wordt alleen weergegeven als de gegevensset twee of meer identiteiten heeft.
 
-![&#x200B; vingerprint &#x200B;](../images/identity-graph-viewer/fingerprint.png)
+![ vingerprint ](../images/identity-graph-viewer/fingerprint.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten kunt verkennen in de gebruikersinterface van Experience Platform. Voor meer informatie over identiteiten in Experience Platform, gelieve te verwijzen naar het [&#x200B; overzicht van de Dienst van de Identiteit &#x200B;](../home.md)
+Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten kunt verkennen in de gebruikersinterface van Experience Platform. Voor meer informatie over identiteiten in Experience Platform, gelieve te verwijzen naar het [ overzicht van de Dienst van de Identiteit ](../home.md)
 
 ## Changelog
 
