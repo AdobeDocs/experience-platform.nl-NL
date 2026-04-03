@@ -4,7 +4,7 @@ title: Aan de slag met Real-Time Customer Data Platform
 description: Gebruik dit voorbeeldscenario bij het instellen van uw implementatie van Adobe Real-Time Customer Data Platform.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 1%
@@ -50,15 +50,15 @@ Met Real-Time CDP, aangedreven door Adobe Experience Platform, kan de marketingo
 
 Deze zelfstudie bevat de volgende stappen:
 
-1. Bouw het [&#x200B; klantenprofiel &#x200B;](#customer-profile).
-1. [&#x200B; personaliseer &#x200B;](#personalizing-the-user-experience) de gebruikerservaring.
-1. Gebruik [&#x200B; veelvoudige gegevensbronnen &#x200B;](#using-multiple-data-sources).
-1. [&#x200B; vorm een gegevensbron &#x200B;](#configuring-a-data-source).
-1. [&#x200B; verzamel de gegevens &#x200B;](#bringing-the-data-together-for-a-specific-customer) voor een specifieke klant.
-1. Opstelling [&#x200B; publiek &#x200B;](#audiences).
-1. Opstelling [&#x200B; bestemmingen &#x200B;](#destinations).
-1. [&#x200B; Tik het profiel over apparaten &#x200B;](#cross-device-identity-stitching).
-1. [&#x200B; analyseer het profiel &#x200B;](#analyzing-the-profile).
+1. Bouw het [ klantenprofiel ](#customer-profile).
+1. [ personaliseer ](#personalizing-the-user-experience) de gebruikerservaring.
+1. Gebruik [ veelvoudige gegevensbronnen ](#using-multiple-data-sources).
+1. [ vorm een gegevensbron ](#configuring-a-data-source).
+1. [ verzamel de gegevens ](#bringing-the-data-together-for-a-specific-customer) voor een specifieke klant.
+1. Opstelling [ publiek ](#audiences).
+1. Opstelling [ bestemmingen ](#destinations).
+1. [ Tik het profiel over apparaten ](#cross-device-identity-stitching).
+1. [ analyseer het profiel ](#analyzing-the-profile).
 
 ## Klantprofiel
 
