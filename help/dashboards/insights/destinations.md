@@ -2,7 +2,7 @@
 title: Invoer doelen
 description: Ontdek SQL die uw bestemmingsinzichten en gebruik deze vragen aandrijft om douaneinzichten te produceren om de activering van gegevens van Adobe Experience Platform verder te onderzoeken.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 0%
@@ -15,18 +15,18 @@ De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adob
 
 Begrijp uw bestemmingsinzicht door tot SQL toegang te hebben die hen macht, dan uw eigen inzichten produceert om de activering van gegevens van Adobe Experience Platform aan uw bestemmingsplatforms verder te onderzoeken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
-Zie de [&#x200B; documentatie van de Mening SQL &#x200B;](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
+Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-De volgende inzichten zijn allen beschikbaar voor u als deel van het [&#x200B; dashboard van Doelen &#x200B;](../guides/destinations.md) of een douane [&#x200B; user-defined dashboard &#x200B;](../standard-dashboards.md) te gebruiken. Zie het [&#x200B; aanpassingsoverzicht &#x200B;](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [&#x200B; creeer en geef nieuwe widgets &#x200B;](../customize/custom-widgets.md) in de widgetbibliotheek en [&#x200B; user-defined dashboard &#x200B;](../standard-dashboards.md#create-widget) uit.
+De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Doelen ](../guides/destinations.md) of een douane [ user-defined dashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
 
 ## Geactiveerd publiek {#activated-audiences}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is het totale aantal actieve doelgroepen dat door een bepaalde bestemming wordt gefilterd?
 - Wat is de geactiveerde publiekstelling door elke bestemming?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT
@@ -48,16 +48,16 @@ WHERE
 
 +++
 
-Zie de [&#x200B; Geactiveerde documentatie van publiek widget &#x200B;](../guides/destinations.md#activated-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ Geactiveerde documentatie van publiek widget ](../guides/destinations.md#activated-audiences) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Geactiveerd publiek voor alle bestemmingen {#activated-audiences-across-all-destinations}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel soorten publiek worden op alle bestemmingen geactiveerd?
 - Wat is het totale aantal actieve doelgroepen?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT count(segment_id) AS Activated_Audiences_Count
@@ -71,17 +71,17 @@ WHERE
 
 +++
 
-Zie het [&#x200B; Geactiveerde publiek over alle documentatie van bestemmingen widget &#x200B;](../guides/destinations.md#activated-audiences-across-all-destinations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie het [ Geactiveerde publiek over alle documentatie van bestemmingen widget ](../guides/destinations.md#activated-audiences-across-all-destinations) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Actieve bestemmingen door bestemmingsplatform {#active-destinations-by-destination-platform}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel bestemmingen zijn actief?
 - Wat is de uitsplitsing van actieve bestemmingen per bestemmingsplatform?
 - Wat is de telling van actieve bestemmingen die door elk bestemmingsplatform worden verdeeld?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT destination_platform_name AS Destination_Platform_Name,
@@ -96,17 +96,17 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Zie de [&#x200B; Actieve bestemmingen door de documentatie van de widget van het bestemmingsplatform &#x200B;](../guides/destinations.md#active-destinations-by-destination-platform) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ Actieve bestemmingen door de documentatie van widget van het bestemmingsplatform ](../guides/destinations.md#active-destinations-by-destination-platform) voor informatie over de verschijning en de functionaliteit van deze insight.
 
 ## Ontwikkeling van de omvang van het publiek {#audience-size-trend}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoe is de publieksgrootte veranderd in tijd, met inbegrip van anomalieën voor een publiek dat aan een bestemming in kaart wordt gebracht?
 - Hoe vind ik de algemene trend in publieksgrootte, door bestemming, over de gespecificeerde periodes van 30 dagen, 90 dagen, en 12 maanden?
 - Wat zijn de belangrijkste kenmerken van het publiek dat tot de grootte bijdraagt, bijvoorbeeld, spikes betreffende om het even welke e-mailmarketing campagnes?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT d.destination_name,
@@ -142,17 +142,17 @@ SELECT d.destination_name,
 
 +++
 
-Zie de [&#x200B; documentatie van de de groottewidget van de Grootte van het Publiek &#x200B;](../guides/destinations.md#audience-size-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de de groottewidget van de Grootte van de Publiek ](../guides/destinations.md#audience-size-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Algemeen publiek {#common-audiences}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Welk publiek zijn de verschillende bestemmingen gemeenschappelijk?
 - Hoeveel profielen hebben elk van de gemeenschappelijke doelgroepen tussen twee verschillende bestemmingen?
 - Welk is het grootste publiek waaraan twee bestemmingen in kaart worden gebracht?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT k.destination_name1,
@@ -214,17 +214,17 @@ SELECT k.destination_name1,
 
 +++
 
-Zie de [&#x200B; Gemeenschappelijke documentatie van publiek widget &#x200B;](../guides/destinations.md#common-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ Gemeenschappelijke documentatie van publiek widget ](../guides/destinations.md#common-audiences) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Status van bestemming {#destination-status}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is het totale aantal bestemmingen toegelaten voor gebruik?
 - Wat is het totale aantal gehandicapte bestemmingen?
 - Wat is het percentage verdeeld tussen toegelaten en gehandicapte bestemmingen?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT COUNT(CASE
@@ -238,16 +238,16 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Zie de [&#x200B; documentatie van de statuswidget van de Bestemming &#x200B;](../guides/destinations.md#destination-status) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de statuswidget van de Bestemming ](../guides/destinations.md#destination-status) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Aantal doelen {#destinations-count}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel bestemmingen zijn momenteel gevormd?
 - Hoe is het totale aantal bestemmingen in de loop der tijd veranderd?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT count(destination_id) AS total_number_of_destinations
@@ -256,17 +256,17 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Zie de [&#x200B; documentatie van de de tellingswidget van Doelen &#x200B;](../guides/destinations.md#destinations-count) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de de tellingtelling van Doelen ](../guides/destinations.md#destinations-count) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Gewijzigde volksgezondheid {#mapped-audience-health}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Welk publiek dat aan een bestemming in kaart wordt gebracht heeft significante variaties in de laatste 30 dagen?
 - Wat is de laatste grootte van een in kaart gebracht publiek en of het de afgelopen maand is veranderd?
 - Hoe maak ik een lijst van alle publiek dat aan een bestemming wordt toegewezen die op de strengheid van hun grootteveranderingen in de afgelopen maand wordt gebaseerd?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT destination_name,
@@ -325,17 +325,17 @@ SELECT destination_name,
 
 +++
 
-Zie de [&#x200B; In kaart gebrachte documentatie van de publieksgezondheid widget &#x200B;](../guides/destinations.md#mapped-audience-health) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ In kaart gebrachte documentatie van de publieksgezondheid widget ](../guides/destinations.md#mapped-audience-health) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Toegewezen publiek {#mapped-audiences}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel publiek wordt toegewezen aan een bepaalde bestemming?
 - Hoe is het aantal toegewezen doelgroepen in de loop der tijd veranderd?
 - Waar kan ik twee bestemmingen vergelijken om het publiek te zien overlappen in kaart gebracht aan elke bestemming?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT COUNT(segment_id) AS mapped_audiences_count
@@ -345,9 +345,10 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Zie de [&#x200B; In kaart gebrachte documentatie van publiek widget &#x200B;](../guides/destinations.md#mapped-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ In kaart gebrachte documentatie van publiek widget ](../guides/destinations.md#mapped-audiences) voor informatie over de verschijning en de functionaliteit van dit insight.
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -368,13 +369,13 @@ See the [Mapped audiences by identity widget documentation](../guides/destinatio
 
 ## Meest gebruikte bestemmingen {#most-used-destinations}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat zijn de meest gebruikte bestemmingen?
 - Hoeveel publiek worden in kaart gebracht aan elke bestemming, die door het meest aan het minst wordt gesorteerd?
 - Hoe verandert het in kaart brengen van publiek aan bestemmingen van één momentopname in een andere?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -393,17 +394,17 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Zie de [&#x200B; Meest gebruikte documentatie van bestemmingen widget &#x200B;](../guides/destinations.md#most-used-destinations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ Meest gebruikte documentatie van bestemmingen widget ](../guides/destinations.md#most-used-destinations) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Onlangs geactiveerd publiek {#recently-activated-audiences}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Aan welk doel is een publiek geactiveerd dat het laatst is geactiveerd?
 - Hoe vind ik een lijst van alle bestemmingen die door de laatste bijgewerkte datum worden gesorteerd?
 - Hoe kan ik twee bestemmingen vergelijken die op de meest recente activeringen worden gebaseerd?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT
@@ -424,17 +425,17 @@ LIMIT
 
 +++
 
-Zie de [&#x200B; onlangs geactiveerde documentatie van publiek widget &#x200B;](../guides/destinations.md#recently-activated-audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ onlangs geactiveerde documentatie van publiek widget ](../guides/destinations.md#recently-activated-audiences) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Onlangs geactiveerd publiek naar bestemming {#recently-activated-audiences-by-destination}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat wordt het publiek geactiveerd voor een bepaalde bestemming?
 - Hoe vind ik een lijst van publiek geactiveerd door een bepaald publiek van het meest tot het minst recent?
 - Hoe vind ik een lijst van publiek tegen de datum het voor een specifieke bestemming werd geactiveerd?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT c.destination_name,
@@ -455,17 +456,17 @@ SELECT c.destination_name,
 
 +++
 
-Zie het [&#x200B; onlangs geactiveerde publiek door de documentatie van bestemmingswidget &#x200B;](../guides/destinations.md#recently-activated-audiences-by-destination) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie het [ onlangs geactiveerde publiek door de documentatie van bestemmingswidget ](../guides/destinations.md#recently-activated-audiences-by-destination) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Onlangs gemaakte doelen {#recently-created-destinations}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Welke zijn de onlangs gecreeerde bestemmingen?
 - Hoe vind ik een lijst van bestemmingen met de datum zij werden gecreeerd?
 - Welke nieuwe bestemming werd onlangs gecreeerd?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert weer te geven
 
 ```sql
 SELECT DISTINCT
@@ -484,9 +485,10 @@ LIMIT
 
 +++
 
-Zie de [&#x200B; onlangs gecreeerde documentatie van de bestemmingswidget &#x200B;](../guides/destinations.md#recently-created-destinations) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ onlangs gecreeerde documentatie van de bestemmingswidget ](../guides/destinations.md#recently-created-destinations) voor informatie over de verschijning en de functionaliteit van dit insight.
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 
@@ -511,6 +513,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten produceert en welke gemeenschappelijke vragen deze analyse oplost. U kunt deze SQL-query&#39;s nu bewerken en doorlopen om uw eigen inzichten te genereren.
 
-Zie de [&#x200B; documentatie van de Mening SQL &#x200B;](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
+Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-U kunt SQL ook lezen en begrijpen die inzichten voor [&#x200B; Profielen &#x200B;](./profiles.md), [&#x200B; Profielen van de Rekening &#x200B;](./account-profiles.md) en [&#x200B; Publiek &#x200B;](./audiences.md) dashboards produceert.
+U kunt SQL ook lezen en begrijpen die inzichten voor [ Profielen ](./profiles.md), [ Profielen van de Rekening ](./account-profiles.md) en [ Publiek ](./audiences.md) dashboards produceert.
