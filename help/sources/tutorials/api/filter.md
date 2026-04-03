@@ -2,7 +2,7 @@
 title: Gegevens op rijniveau voor een Source filteren met behulp van de Flow Service API
 description: Deze zelfstudie behandelt de stappen voor het filteren van gegevens op bronniveau met behulp van de Flow Service API
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fe7025b7e48634232d823f8380610c6409b2d4b1
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 2%
@@ -17,23 +17,23 @@ ht-degree: 2%
 >
 >* [[!DNL Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
->* [[!DNL Marketo Engage]  standaardactiviteiten &#x200B;](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Marketo Engage]  standaardactiviteiten ](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Lees deze gids voor stappen op hoe te om rij-vlakke gegevens voor een bron te filtreren gebruikend [[!DNL Flow Service]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze gids voor stappen op hoe te om rij-vlakke gegevens voor een bron te filtreren gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [&#x200B; Bronnen &#x200B;](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [&#x200B; Sandboxen &#x200B;](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
 
 ## Brongegevens filteren {#filter-source-data}
 
@@ -55,7 +55,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 | --- | --- |
 | `{QUERY_PARAMS}` | De optionele queryparameters waarmee u resultaten wilt filteren. U kunt de verbindingsspecificatie [!DNL Google BigQuery] ophalen door de eigenschap `name` toe te passen en `"google-big-query"` op te geven in de zoekopdracht. |
 
-+++verzoek
++++Verzoek
 
 Met de volgende aanvraag worden de verbindingsspecificaties voor [!DNL Google BigQuery] opgehaald.
 
@@ -70,7 +70,7 @@ curl -X GET \
 
 +++
 
-+++Response
++++Antwoord
 
 Een geslaagde reactie retourneert de statuscode 200 en de verbindingsspecificaties voor [!DNL Google BigQuery] , inclusief informatie over de ondersteunde querytaal en logische operatoren.
 
@@ -170,7 +170,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | `{TABLE_PATH}` | De eigenschap path van de tabel die u wilt inspecteren. |
 | `{FILTERS}` | Uw PQL-filtervoorwaarden zijn gecodeerd in [!DNL Base64] . |
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X GET \
@@ -183,7 +183,7 @@ curl -X GET \
 
 +++
 
-+++Response
++++Antwoord
 
 Een geslaagde reactie retourneert de inhoud en structuur van de gegevens.
 
@@ -343,7 +343,7 @@ Om een bronverbinding tot stand te brengen en gefilterde gegevens in te voeren, 
 POST /sourceConnections
 ```
 
-+++verzoek
++++Verzoek
 
 Met de volgende aanvraag wordt een bronverbinding gemaakt voor het invoeren van gegevens van `test1.fasTestTable` waarbij `city` = `DDN` .
 
@@ -392,7 +392,7 @@ curl -X POST \
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecreëerde bronverbinding terug.
 
@@ -407,7 +407,7 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 ## Activiteitenentiteiten filteren voor [!DNL Marketo Engage] {#filter-for-marketo}
 
-U kunt rij-niveau het filtreren gebruiken om voor activiteitenentiteiten te filtreren wanneer het gebruiken van de [[!DNL Marketo Engage]  bronschakelaar &#x200B;](../../connectors/adobe-applications/marketo/marketo.md). Momenteel kunt u alleen filteren op activiteitentiteiten en standaardtypen. De activiteiten van de douane blijven onder [[!DNL Marketo]  gebiedsafbeeldingen &#x200B;](../../connectors/adobe-applications/mapping/marketo.md) worden geregeerd.
+U kunt rij-niveau het filtreren gebruiken om voor activiteitenentiteiten te filtreren wanneer het gebruiken van de [[!DNL Marketo Engage]  bronschakelaar ](../../connectors/adobe-applications/marketo/marketo.md). Momenteel kunt u alleen filteren op activiteitentiteiten en standaardtypen. De activiteiten van de douane blijven onder [[!DNL Marketo]  gebiedsafbeeldingen ](../../connectors/adobe-applications/mapping/marketo.md) worden geregeerd.
 
 ### [!DNL Marketo] standaardactiviteitstypen {#marketo-standard-activity-types}
 
@@ -448,7 +448,7 @@ Voer de onderstaande stappen uit om de entiteiten met de standaardactiviteit te 
 
 ### Concepten van gegevensstroom maken
 
-Eerst, creeer a [[!DNL Marketo]  dataflow &#x200B;](../ui/create/adobe-applications/marketo.md) en bewaar het als ontwerp. Raadpleeg de volgende documentatie voor gedetailleerde stappen voor het maken van een concept-gegevensstroom:
+Eerst, creeer a [[!DNL Marketo]  dataflow ](../ui/create/adobe-applications/marketo.md) en bewaar het als ontwerp. Raadpleeg de volgende documentatie voor gedetailleerde stappen voor het maken van een concept-gegevensstroom:
 
 * [Een gegevensstroom opslaan als concept met de gebruikersinterface](../ui/draft.md)
 * [Een gegevensstroom opslaan als concept met de API](../api/draft.md)
@@ -473,7 +473,7 @@ GET /flows/{FLOW_ID}
 | --- | --- |
 | `{FLOW_ID}` | De id van de gegevensstroom die u wilt ophalen. |
 
-+++verzoek
++++Verzoek
 
 Met de volgende aanvraag wordt informatie over de gegevensstroom-id opgehaald: `a7e88a01-40f9-4ebf-80b2-0fc838ff82ef` .
 
@@ -488,7 +488,7 @@ curl -X GET \
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert uw gegevens van de gegevensstroom, met inbegrip van informatie over zijn overeenkomstige bron en doelverbindingen terug. U moet nota nemen van uw bron en doel verbindings IDs, aangezien deze waarden later worden vereist, om uw gegevensstroom te publiceren.
 
@@ -604,7 +604,7 @@ GET /sourceConnections/{SOURCE_CONNECTION_ID}
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | De id van de bronverbinding die u wilt ophalen. |
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X GET \
@@ -617,7 +617,7 @@ curl -X GET \
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert de details van uw bronverbinding terug. Noteer de versie omdat u deze waarde in de volgende stap nodig hebt om uw bronverbinding bij te werken.
 
@@ -695,7 +695,7 @@ PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | De id van de bronverbinding die u wilt bijwerken |
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X PATCH \
@@ -735,7 +735,7 @@ curl -X PATCH \
 
 +++
 
-+++Response
++++Antwoord
 
 Een geslaagde reactie retourneert uw bron-verbindings-id en -tag (versie).
 
@@ -763,7 +763,7 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 | `{SOURCE_CONNECTION_ID}` | De id van de bronverbinding die u wilt publiceren. |
 | `op` | Een handelingsverrichting die de staat van de gevraagde bronverbinding bijwerkt. Als u een conceptbronverbinding wilt publiceren, stelt u `op` in op `publish` . |
 
-+++verzoek
++++Verzoek
 
 Het volgende verzoek publiceert een opgestelde bronverbinding.
 
@@ -779,7 +779,7 @@ curl -X POST \
 
 +++
 
-+++Response
++++Antwoord
 
 Een geslaagde reactie retourneert uw bron-verbindings-id en -tag (versie).
 
@@ -807,7 +807,7 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 | `{TARGET_CONNECTION_ID}` | De id van de doelverbinding die u wilt publiceren. |
 | `op` | Een handelingsverrichting die de staat van de gevraagde doelverbinding bijwerkt. Als u een conceptdoelverbinding wilt publiceren, stelt u `op` in op `publish` . |
 
-+++verzoek
++++Verzoek
 
 In het volgende verzoek wordt de doelverbinding met de id gepubliceerd: `7e53e6e8-b432-4134-bb29-21fc6e8532e5` .
 
@@ -823,7 +823,7 @@ curl -X POST \
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voor uw gepubliceerde doelverbinding terug.
 
@@ -852,7 +852,7 @@ POST /flows/{FLOW_ID}/action?op=publish
 | `{FLOW_ID}` | De id van de gegevensstroom die u wilt publiceren. |
 | `op` | Een handelingsverrichting die de staat van de gevraagde dataflow bijwerkt. Als u een conceptgegevensstroom wilt publiceren, stelt u `op` in op `publish` . |
 
-+++verzoek
++++Verzoek
 
 Met het volgende verzoek wordt uw conceptgegevensstroom gepubliceerd.
 
@@ -868,7 +868,7 @@ curl -X POST \
 
 +++
 
-+++Response
++++Antwoord
 
 Een geslaagde reactie retourneert de id en de bijbehorende `etag` gegevensstroom.
 
