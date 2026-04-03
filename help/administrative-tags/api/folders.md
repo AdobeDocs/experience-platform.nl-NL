@@ -3,7 +3,7 @@ title: Eindpunt van mappen
 description: Leer hoe u mappen maakt, bijwerkt, beheert en verwijdert met de Adobe Experience Platform API's.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 1%
@@ -22,11 +22,11 @@ Deze handleiding bevat informatie die u helpt meer inzicht te krijgen in mappen 
 
 ## Aan de slag
 
-Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met mappen ophalen {#list}
 
-U kunt een lijst van omslagen terugwinnen die tot uw organisatie behoren door een verzoek van de GET tot het `/folder` eindpunt te richten en het omslagtype en ouderomslag identiteitskaart te specificeren.
+U kunt een lijst met mappen ophalen die bij uw organisatie horen door een GET-aanvraag in te dienen bij het `/folder` -eindpunt en het maptype en de bovenliggende map-id op te geven.
 
 **API formaat**
 
@@ -41,7 +41,7 @@ GET /folders/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 **Verzoek**
 
-+++A steekproefverzoek om van alle top-level datasetomslagen een lijst te maken
++++Een steekproefverzoek om van alle top-level datasetomslagen een lijst te maken
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subfolders
@@ -58,7 +58,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subf
 
 Een succesvolle reactie keert status 200 van HTTP met een lijst van alle top-level omslagen voor dataset in uw organisatie terug.
 
-+++A steekproefreactie die een lijst van alle top-level omslagen voor dataset in uw organisatie bevat.
++++Een steekproefreactie die een lijst van alle top-level omslagen voor dataset in uw organisatie bevat.
 
 ```json
 {
@@ -113,7 +113,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van alle top-lev
 
 ## Nieuwe map maken {#create}
 
-U kunt een nieuwe omslag tot stand brengen door een verzoek van de POST aan het `/folder` eindpunt te richten en het omslagtype te specificeren.
+U kunt een nieuwe map maken door een POST-aanvraag in te dienen bij het `/folder` -eindpunt en het maptype op te geven.
 
 **API formaat**
 
@@ -153,7 +153,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
 
 Een succesvol antwoord retourneert HTTP-status 200 met details van de nieuwe map.
 
-+++Een voorbeeldreactie die details van uw onlangs gecreeerde omslag bevat.
++++Een voorbeeldreactie met gegevens over de nieuwe map.
 
 ```json
 {
@@ -185,7 +185,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met details van de nieuwe map
 
 ## Een specifieke map ophalen {#get}
 
-U kunt een specifieke omslag terugwinnen die tot uw organisatie behoort door een verzoek van de GET tot het `/folder` eindpunt te richten en het omslagtype en identiteitskaart van de omslag te specificeren.
+U kunt een specifieke map ophalen die tot uw organisatie behoort door een GET-aanvraag in te dienen bij het `/folder` -eindpunt en het maptype en de id van de map op te geven.
 
 **API formaat**
 
@@ -217,7 +217,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 Een geslaagde reactie retourneert HTTP-status 200 met details van de gevraagde map.
 
-+++A voorbeeldreactie die details van de gevraagde omslag bevat.
++++Een voorbeeldreactie die details van de gevraagde map bevat.
 
 ```json
 {
@@ -256,7 +256,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de gevraagde m
 
 ## Een opgegeven map valideren {#validate}
 
-U kunt valideren of een map objecten kan bevatten door een GET-aanvraag in te dienen bij het `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` -eindpunt en zowel het maptype als de id op te geven.
+U kunt controleren of een map objecten kan bevatten door een GET-aanvraag in te dienen bij het eindpunt van `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` en zowel het maptype als de id op te geven.
 
 **API formaat**
 
@@ -271,7 +271,7 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 **Verzoek**
 
-+++A voorbeeldverzoek om een specifieke map te valideren
++++Een voorbeeldverzoek om een specifieke map te valideren
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
@@ -288,7 +288,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 Een geslaagde status retourneert HTTP status 200 met details over de map die u valideert.
 
-+++A voorbeeldreactie bevat details van de gevalideerde map
++++Een voorbeeldreactie bevat details van de gevalideerde map
 
 ```json
 {
@@ -316,7 +316,7 @@ Een geslaagde status retourneert HTTP status 200 met details over de map die u v
 
 ## Een specifieke map bijwerken {#update}
 
-U kunt de details van een specifieke omslag bijwerken die tot uw organisatie behoort door een verzoek van de PATCH aan het `/folder` eindpunt te richten en het omslagtype en identiteitskaart van de omslag te specificeren.
+U kunt de details van een specifieke omslag bijwerken die tot uw organisatie behoort door een PATCH- verzoek aan het `/folder` eindpunt te doen en het omslagtype en identiteitskaart van de omslag te specificeren.
 
 **API formaat**
 
@@ -378,7 +378,7 @@ Een succesvolle reactie retourneert HTTP-status 200 met informatie over de nieuw
 
 ## Een specifieke map verwijderen {#delete}
 
-U kunt een specifieke map die tot uw organisatie behoort, verwijderen door een DELETE-aanvraag in te dienen bij de `/folder` en het maptype en de map-id op te geven.
+U kunt een specifieke map die bij uw organisatie hoort, verwijderen door een DELETE-aanvraag in te dienen bij de `/folder` en het maptype en de map-id op te geven.
 
 ***API formaat**
 
