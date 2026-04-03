@@ -5,7 +5,7 @@ title: API-eindpunt voor sandboxbeheer
 description: Met het eindpunt /sandboxen in de sandbox-API kunt u sandboxen in Adobe Experience Platform programmatisch beheren.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Sandboxen in Adobe Experience Platform bieden geïsoleerde ontwikkelomgevingen w
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Sandbox]  API &#x200B;](https://www.adobe.io/experience-platform-apis/references/sandbox). Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Sandbox]  API ](https://www.adobe.io/experience-platform-apis/references/sandbox). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Een lijst met sandboxen ophalen {#list}
 
@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [&#x200B; vraagparameters &#x200B;](./appendix.md#query) voor meer informatie. |
+| `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie de sectie over [ vraagparameters ](./appendix.md#query) voor meer informatie. |
 
 **Verzoek**
 
@@ -193,7 +193,7 @@ Een succesvol antwoord retourneert de details van de sandbox, inclusief `name` ,
 
 >[!NOTE]
 >
->Wanneer een nieuwe zandbak wordt gecreeerd, moet u die nieuwe zandbak aan uw productprofiel in [&#x200B; Adobe Admin Console &#x200B;](https://adminconsole.adobe.com/) eerst toevoegen alvorens u kunt beginnen de nieuwe zandbak te gebruiken. Zie de documentatie over [&#x200B; het leiden toestemmingen voor een productprofiel &#x200B;](../../access-control/ui/permissions.md) voor informatie over hoe te om een zandbak aan een productprofiel te verstrekken.
+>Wanneer een nieuwe zandbak wordt gecreeerd, moet u die nieuwe zandbak aan uw productprofiel in [ Adobe Admin Console ](https://adminconsole.adobe.com/) eerst toevoegen alvorens u kunt beginnen de nieuwe zandbak te gebruiken. Zie de documentatie over [ het leiden toestemmingen voor een productprofiel ](../../access-control/ui/permissions.md) voor informatie over hoe te om een zandbak aan een productprofiel te verstrekken.
 
 U kunt een nieuwe ontwikkelings- of productiesandbox maken door een POST-aanvraag in te dienen bij het `/sandboxes` -eindpunt.
 
@@ -404,7 +404,7 @@ Wanneer de reactie met succes is uitgevoerd, worden de details van de bijgewerkt
 }
 ```
 
-De standaardproductiezandbak en om het even welke gebruiker-gecreeerde productiesandboxes kunnen niet worden teruggesteld als de identiteitsgrafiek binnen het ook door Adobe Analytics voor de [&#x200B; Analyse van het Apparaat van het Kruis (CDA) wordt ontvangen &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) eigenschap, of als de identiteitsgrafiek binnen het ook door Adobe Audience Manager voor de [&#x200B; Mensen Gebaseerde Doelen (PBD) &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) wordt gebruikt eigenschap.
+De standaardproductiezandbak en om het even welke gebruiker-gecreeerde productiesandboxes kunnen niet worden teruggesteld als de identiteitsgrafiek binnen het ook door Adobe Analytics voor de [ Analyse van het Apparaat van het Kruis (CDA) wordt ontvangen ](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=nl) eigenschap, of als de identiteitsgrafiek binnen het ook door Adobe Audience Manager voor de [ Mensen Gebaseerde Doelen (PBD) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=nl) wordt gebruikt eigenschap.
 
 Hieronder volgt een lijst met mogelijke uitzonderingen die kunnen voorkomen dat een sandbox opnieuw wordt ingesteld:
 
