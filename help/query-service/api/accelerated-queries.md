@@ -3,7 +3,7 @@ title: Eindpunt van versnelde query's
 description: Leer hoe te om tot vraag versnelde opslag op een stateless manier toegang te hebben om resultaten snel terug te keren die op bijeengevoegde gegevens worden gebaseerd. Dit document verstrekt een verzoek en een antwoord van steekproefHTTP voor het versnelde-vragen van de Dienst van de Vraag eindpunt.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -12,19 +12,19 @@ ht-degree: 0%
 
 # Versnelde vragen eindpunt
 
-Als deel van Gegevens Distiller SKU, staat de [&#x200B; Dienst API van de Vraag &#x200B;](https://developer.adobe.com/experience-platform-apis/references/query-service/) u toe om stateless vragen aan de versnelde opslag te maken. De geretourneerde resultaten zijn gebaseerd op geaggregeerde gegevens. Door de afgenomen latentie van de resultaten is een meer interactieve uitwisseling van informatie mogelijk. Versnelde vragen APIs wordt ook gebruikt aan macht [&#x200B; user-defined dashboards &#x200B;](../../dashboards/standard-dashboards.md).
+Als deel van Gegevens Distiller SKU, staat de [ Dienst API van de Vraag ](https://developer.adobe.com/experience-platform-apis/references/query-service/) u toe om stateless vragen aan de versnelde opslag te maken. De geretourneerde resultaten zijn gebaseerd op geaggregeerde gegevens. Door de afgenomen latentie van de resultaten is een meer interactieve uitwisseling van informatie mogelijk. Versnelde vragen APIs wordt ook gebruikt aan macht [ user-defined dashboards ](../../dashboards/standard-dashboards.md).
 
-Alvorens met deze gids verder te gaan, zorg ervoor dat u de [&#x200B; gids van de Dienst API van de Vraag &#x200B;](./getting-started.md) gelezen en begrepen hebt om de Dienst API van de Vraag met succes te gebruiken.
+Alvorens met deze gids verder te gaan, zorg ervoor dat u de [ gids van de Dienst API van de Vraag ](./getting-started.md) gelezen en begrepen hebt om de Dienst API van de Vraag met succes te gebruiken.
 
 ## Aan de slag
 
-De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Gelieve te zien het [&#x200B; verpakken &#x200B;](../packaging.md) en [&#x200B; guardrails &#x200B;](../guardrails.md#query-accelerated-store), en [&#x200B; verlenen van vergunningen &#x200B;](../data-distiller/license-usage.md) documentatie die op het SKU van Gegevens Distiller betrekking heeft. Als u geen gegevens hebt Distiller SKU gelieve uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie te contacteren.
+De gegevens Distiller SKU wordt vereist om de vraag versnelde opslag te gebruiken. Gelieve te zien het [ verpakken ](../packaging.md) en [ guardrails ](../guardrails.md#query-accelerated-store), en [ verlenen van vergunningen ](../data-distiller/license-usage.md) documentatie die op het SKU van Gegevens Distiller betrekking heeft. Als u geen gegevens hebt, neemt u contact op met uw Adobe-medewerker van de klantenservice voor meer informatie.
 
 In de volgende secties worden de API-aanroepen beschreven die nodig zijn om de versnelde opslag zonder status te openen via de API voor Query-service. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
 ## Een versnelde query uitvoeren {#run-accelerated-query}
 
-Maak een verzoek van de POST aan het `/accelerated-queries` eindpunt om een versnelde vraag in werking te stellen. De vraag is of bevat direct in de verzoeklading of van verwijzingen voorzien met een malplaatjeidentiteitskaart
+Maak een POST- verzoek aan het `/accelerated-queries` eindpunt om een versnelde vraag in werking te stellen. De vraag is of bevat direct in de verzoeklading of van verwijzingen voorzien met een malplaatjeidentiteitskaart
 
 **API formaat**
 
@@ -82,7 +82,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 |---|---|
 | `dbName` | De naam van de database waarnaar u een versnelde query uitvoert. De waarde voor `dbName` moet de notatie `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}` hebben. De opgegeven database moet aanwezig zijn in de versnelde opslag, anders leidt de aanvraag tot een fout. U moet er ook voor zorgen dat de naam van de `x-sandbox-name` -header en -sandbox in `dbName` naar dezelfde sandbox verwijst. |
 | `sql` | Een SQL-instructiereeks. De maximale toegestane grootte is 1000000 tekens. |
-| `templateId` | De unieke id van een query die is gemaakt en opgeslagen als een sjabloon wanneer een aanvraag voor een POST wordt ingediend bij het `/templates` -eindpunt. |
+| `templateId` | De unieke id van een query die is gemaakt en opgeslagen als een sjabloon wanneer een POST-aanvraag wordt ingediend bij het `/templates` -eindpunt. |
 | `name` | Een optionele, beschrijvende naam voor de versnelde query. |
 | `description` | Een optionele opmerking over de intentie van de query om andere gebruikers te helpen bij het begrijpen van het doel ervan. De maximale toegestane grootte is 1000 bytes. |
 
@@ -209,6 +209,6 @@ Een geslaagde reactie retourneert HTTP-status 200 met het ad-hocschema dat door 
 | `resultsMeta` | Dit object bevat de metagegevens voor elke kolom die in de resultaten wordt geretourneerd, zodat gebruikers de naam en het type van elke kolom weten. |
 | `resultsMeta._adhoc` | Een ad-hoc schema van de Gegevens van de Ervaring Model (XDM) met gebieden die namespaced voor gebruik slechts door één enkele dataset zijn. |
 | `resultsMeta._adhoc.type` | Het gegevenstype van het ad-hocschema. |
-| `resultsMeta._adhoc.meta:xdmType` | Dit is een systeemgegenereerde waarde voor het XDM-veldtype. Voor meer informatie over de beschikbare types zie de documentatie over [&#x200B; beschikbare types XDM &#x200B;](../../xdm/tutorials/custom-fields-api.md). |
+| `resultsMeta._adhoc.meta:xdmType` | Dit is een systeemgegenereerde waarde voor het XDM-veldtype. Voor meer informatie over de beschikbare types zie de documentatie over [ beschikbare types XDM ](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Dit zijn de kolomnamen van de gevraagde dataset. |
 | `resultsMeta._adhoc.results` | Dit zijn de rijnamen van de gevraagde dataset. Ze weerspiegelen elk van de geretourneerde kolommen. |
