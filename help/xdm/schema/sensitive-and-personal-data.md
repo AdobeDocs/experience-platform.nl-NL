@@ -2,7 +2,7 @@
 title: Gevoelige en Persoonlijke Informatie in XDM
 description: Leer over zeer belangrijke overwegingen betreffende gevoelige persoonlijke informatie (SPI) en persoonlijk identificeerbare informatie (PII) in het Model van de Gegevens van de Ervaring (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
@@ -40,7 +40,8 @@ Met Experience Platform kunt u uw eigen aangepaste veldgroepen en gegevenstypen 
 * [Een aangepaste veldgroep maken](../ui/resources/field-groups.md#create)
 * [Een aangepast gegevenstype maken](../ui/resources/data-types.md#create)
 
-<!-- (To include once features are available)
+<!-- 
+(To include once features are available)
 * Marking fields as sensitive
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion
@@ -48,10 +49,10 @@ Met Experience Platform kunt u uw eigen aangepaste veldgroepen en gegevenstypen 
 
 >[!IMPORTANT]
 >
->SPI en PII zouden slechts in de [&#x200B; individuele Profiel XDM &#x200B;](../classes/individual-profile.md) en [&#x200B; XDM ExperienceEvent &#x200B;](../classes/experienceevent.md) klassen moeten worden bewaard. Sla SPI en PII niet op in een andere aangepaste of standaard XDM-klasse, zoals aanbevolen procedures voor het verwijderen van gegevens en voor privacy- en beheerdoeleinden.
+>SPI en PII zouden slechts in de [ individuele Profiel XDM ](../classes/individual-profile.md) en [ XDM ExperienceEvent ](../classes/experienceevent.md) klassen moeten worden bewaard. Sla SPI en PII niet op in een andere aangepaste of standaard XDM-klasse, zoals aanbevolen procedures voor het verwijderen van gegevens en voor privacy- en beheerdoeleinden.
 
 ## Volgende stappen
 
-Dit document behandelde zeer belangrijke overwegingen betreffende gevoelige en persoonlijke gegevens in XDM. Voor meer informatie over hoe te om uw schema&#39;s te modelleren om uw zaken van het bedrijfsgebruik het best te ontmoeten, verwijs naar de gids op [&#x200B; beste praktijken voor gegevens modellering &#x200B;](./best-practices.md).
+Dit document behandelde zeer belangrijke overwegingen betreffende gevoelige en persoonlijke gegevens in XDM. Voor meer informatie over hoe te om uw schema&#39;s te modelleren om uw zaken van het bedrijfsgebruik het best te ontmoeten, verwijs naar de gids op [ beste praktijken voor gegevens modellering ](./best-practices.md).
 
-Voor meer informatiegegevensbeheer en privacymogelijkheden in Experience Platform, zie het overzicht over [&#x200B; bestuur, privacy, en veiligheid &#x200B;](../../landing/governance-privacy-security/overview.md).
+Voor meer informatiegegevensbeheer en privacymogelijkheden in Experience Platform, zie het overzicht over [ bestuur, privacy, en veiligheid ](../../landing/governance-privacy-security/overview.md).
