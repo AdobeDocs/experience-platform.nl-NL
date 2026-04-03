@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;vraagmalplaatjes;api gids;malplaatjes;de dienst van de Vraag;
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;querysjablonen;api-handleiding;sjablonen;Query-service
 solution: Experience Platform
 title: API-eindpunt voor querysjablonen
 description: Deze gids specificeert de diverse vraag API van het vraagmalplaatje u het gebruiken van de Dienst API van de Vraag kunt maken.
 role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 0%
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 In de volgende secties worden de verschillende API-aanroepen beschreven die u met de API [!DNL Query Service] kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
 
-Zie de [&#x200B; documentatie van de vraagmalplaatjes UI &#x200B;](../ui/query-templates.md) voor informatie bij het creëren van malplaatjes door Experience Platform UI.
+Zie de [ documentatie van de vraagmalplaatjes UI ](../ui/query-templates.md) voor informatie bij het creëren van malplaatjes door Experience Platform UI.
 
 ### Een lijst met querysjablonen ophalen
 
-U kunt een lijst van alle vraagmalplaatjes voor uw organisatie terugwinnen door een verzoek van de GET tot het `/query-templates` eindpunt te richten.
+U kunt een lijst van alle vraagmalplaatjes voor uw organisatie terugwinnen door een GET- verzoek aan het `/query-templates` eindpunt te doen.
 
 **API formaat**
 
@@ -109,11 +109,11 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van vraagmalplaa
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw vraagmalplaatje &#x200B;](#delete-a-specified-query-template) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
 
 ### Een querysjabloon maken
 
-U kunt een vraagmalplaatje tot stand brengen door een verzoek van de POST aan het `/query-templates` eindpunt te doen.
+U kunt een vraagmalplaatje tot stand brengen door een POST- verzoek aan het `/query-templates` eindpunt te doen.
 
 **API formaat**
 
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$` voorafgaan. Bijvoorbeeld `$key` en geef de parameters die in de SQL als JSON-sleutelwaardeparen worden gebruikt, op in het `queryParameters` -veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt met voeten treden, moet u hen in het verzoek van de POST met voeten treden. |
+| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$` voorafgaan. Bijvoorbeeld `$key` en geef de parameters die in de SQL als JSON-sleutelwaardeparen worden gebruikt, op in het `queryParameters` -veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt overschrijven, moet u ze in de POST-aanvraag overschrijven. |
 | `name` | De naam van de querysjabloon. |
 | `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Het wordt slechts vereist **als** u parametervervangingen binnen SQL gebruikt u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
 
@@ -176,11 +176,11 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met details van
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw vraagmalplaatje &#x200B;](#delete-a-specified-query-template) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
 
 ### Een opgegeven querysjabloon ophalen
 
-U kunt een specifiek vraagmalplaatje terugwinnen door een verzoek van de GET aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifieke vraagmalplaatje terugwinnen door een GET- verzoek aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
 **API formaat**
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 ```
 
 | Eigenschap | Beschrijving |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{TEMPLATE_ID}` | De `id` waarde van het vraagmalplaatje u wilt terugwinnen. |
 
 **Verzoek**
@@ -234,11 +234,11 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw gespecifice
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw vraagmalplaatje &#x200B;](#delete-a-specified-query-template) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
 
 ### Een opgegeven querysjabloon bijwerken
 
-U kunt een specifieke vraagmalplaatje bijwerken door een verzoek van de PUT aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifieke vraagmalplaatje bijwerken door een PUT- verzoek aan het `/query-templates/{TEMPLATE_ID}` eindpunt te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
 **API formaat**
 
@@ -254,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->Het verzoek van de PUT vereist zowel sql als naamgebied om worden gevuld, en zal **&#x200B;**&#x200B;de huidige inhoud van dat vraagmalplaatje beschrijven.
+>Het verzoek van PUT vereist zowel het sql als naamgebied dat moet worden gevuld, en zal **** de huidige inhoud van dat vraagmalplaatje beschrijven.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -273,7 +273,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$` voorafgaan. Bijvoorbeeld `$key` en geef de parameters die in de SQL als JSON-sleutelwaardeparen worden gebruikt, op in het `queryParameters` -veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt met voeten treden, moet u hen in het verzoek van de POST met voeten treden. |
+| `sql` | De SQL-query die u wilt maken. U kunt standaard-SQL of parametervervanging gebruiken. Als u een parametervervanging in SQL wilt gebruiken, moet u de parametersleutel met een `$` voorafgaan. Bijvoorbeeld `$key` en geef de parameters die in de SQL als JSON-sleutelwaardeparen worden gebruikt, op in het `queryParameters` -veld. De waarden die hier worden doorgegeven, zijn de standaardparameters die in de sjabloon worden gebruikt. Als u deze parameters wilt overschrijven, moet u ze in de POST-aanvraag overschrijven. |
 | `name` | De naam van de querysjabloon. |
 | `queryParameters` | Een sleutelwaarde die wordt geparseerd om het even welke parameters bepaalde waarden in de SQL verklaring te vervangen. Het wordt slechts vereist **als** u parametervervangingen binnen SQL gebruikt u verstrekt. Op deze sleutelwaardeparen wordt het waardetype niet gecontroleerd. |
 
@@ -310,11 +310,11 @@ Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd) met de bijgewer
 
 >[!NOTE]
 >
->U kunt de waarde van `_links.delete` gebruiken om [&#x200B; uw vraagmalplaatje &#x200B;](#delete-a-specified-query-template) te schrappen.
+>U kunt de waarde van `_links.delete` gebruiken om [ uw vraagmalplaatje ](#delete-a-specified-query-template) te schrappen.
 
 ### Een opgegeven querysjabloon verwijderen
 
-U kunt een specifieke vraagmalplaatje schrappen door een DELETE verzoek aan `/query-templates/{TEMPLATE_ID}` te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
+U kunt een specifieke vraagmalplaatje schrappen door een DELETE- verzoek aan `/query-templates/{TEMPLATE_ID}` te doen en identiteitskaart van het vraagmalplaatje in de verzoekweg te verstrekken.
 
 **API formaat**
 
