@@ -1,7 +1,8 @@
 ---
 title: Details externe Source System Audit
 description: Meer informatie over de XDM-veldgroep (External Source System Audit Details Experience Data Model).
-source-git-commit: 656070cf69e3713c7889f53d51937e0e70085d96
+exl-id: 6aa154f3-620f-4a2e-9e33-a0757d0491c1
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL External Source System Audit Details] is een standaardveldgroep van het Gegevensmodel van de Ervaring (XDM) die het gegevenstype &quot;Externe Attributen van de Controle van het Systeem van Source&quot;uitbreidt door naar zijn eigenschappen te verwijzen en contextafhankelijke meta-gegevens toe te voegen. Dit maakt gedetailleerde controle en flexibele gegevensintegratie van externe bronnen mogelijk.
 
-![&#x200B; het schemadiagram van A van de Externe het gebiedsgroep van de Details van de Controle van het Systeem van Source.](../../images/field-groups/shared/external-source-system-audit-details.png)
+![ het schemadiagram van A van de Externe het gebiedsgroep van de Details van de Controle van het Systeem van Source.](../../images/field-groups/shared/external-source-system-audit-details.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Beschrijving |
 | -------------------------------------------------| ---------------------------------------- | --------- | --- |
@@ -22,4 +23,4 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over het gegevenstype:
 
-* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.json)
