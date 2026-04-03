@@ -3,7 +3,7 @@ title: Een Google PubSub Source Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 0%
@@ -16,20 +16,20 @@ ht-degree: 0%
 >
 >De [!DNL Google PubSub] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Dit leerprogramma begeleidt u door de stappen om [!DNL Google PubSub] (verder die als &quot; [!DNL PubSub]&quot;worden bedoeld) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service]  API &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Dit leerprogramma begeleidt u door de stappen om [!DNL Google PubSub] (verder die als &quot; [!DNL PubSub]&quot;worden bedoeld) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
-* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u [!DNL PubSub] met de API van [!DNL Flow Service] kunt verbinden met Experience Platform.
 
 ### Vereiste referenties verzamelen
 
-U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden beschreven om uw [!DNL PubSub] -account aan te sluiten op [!DNL Flow Service] . Voor meer informatie over authentificatie en eerste vereiste opstelling, lees het [[!DNL PubSub source]  overzicht &#x200B;](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden beschreven om uw [!DNL PubSub] -account aan te sluiten op [!DNL Flow Service] . Voor meer informatie over authentificatie en eerste vereiste opstelling, lees het [[!DNL PubSub source]  overzicht ](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden bes
 
 >[!ENDTABS]
 
-Voor meer informatie over deze waarden, lees dit [[!DNL PubSub]  authentificatie &#x200B;](https://cloud.google.com/pubsub/docs/authentication) document. Om de dienst op rekening-gebaseerde authentificatie te gebruiken, leest deze [[!DNL PubSub]  gids bij het creëren van de dienstrekeningen &#x200B;](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
+Voor meer informatie over deze waarden, lees dit [[!DNL PubSub]  authentificatie ](https://cloud.google.com/pubsub/docs/authentication) document. Om de dienst op rekening-gebaseerde authentificatie te gebruiken, leest deze [[!DNL PubSub]  gids bij het creëren van de dienstrekeningen ](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
 
 >[!TIP]
 >
@@ -60,7 +60,7 @@ Voor meer informatie over deze waarden, lees dit [[!DNL PubSub]  authentificatie
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -76,7 +76,7 @@ Met de bron [!DNL PubSub] kunt u het type toegang opgeven dat u wilt toestaan ti
 
 >[!NOTE]
 >
->Hoofd (rollen) die aan een [!DNL PubSub] project worden toegewezen worden geërft in alle onderwerpen en abonnementen die binnen een [!DNL PubSub] project worden gecreeerd. Als u een hoofd (rol) toegang tot een specifiek onderwerp wilt hebben, dan moet dat hoofd (rol) ook aan het overeenkomstige abonnement van het onderwerp worden toegevoegd. Voor meer informatie, lees de [[!DNL PubSub]  documentatie over toegangsbeheer &#x200B;](<https://cloud.google.com/pubsub/docs/access-control>).
+>Hoofd (rollen) die aan een [!DNL PubSub] project worden toegewezen worden geërft in alle onderwerpen en abonnementen die binnen een [!DNL PubSub] project worden gecreeerd. Als u een hoofd (rol) toegang tot een specifiek onderwerp wilt hebben, dan moet dat hoofd (rol) ook aan het overeenkomstige abonnement van het onderwerp worden toegevoegd. Voor meer informatie, lees de [[!DNL PubSub]  documentatie over toegangsbeheer ](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **API formaat**
 
@@ -90,7 +90,7 @@ POST /connections
 
 Als u een basisverbinding wilt maken met verificatie op basis van een project, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de instructies `projectId` en `credentials` op in de aanvraagtekst.
 
-+++verzoek
++++ Verzoek
 
 ```shell
 curl -X POST \
@@ -123,9 +123,9 @@ curl -X POST \
 | `auth.params.credentials` | De referentie of sleutel die is vereist voor verificatie [!DNL PubSub]. |
 | `connectionSpec.id` | De [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c` . |
 
-++++
++++
 
-+++Response
++++ Antwoord
 
 Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze basis verbindings identiteitskaart wordt vereist in de volgende stap om een bronverbinding tot stand te brengen.
 
@@ -136,13 +136,13 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 }
 ```
 
-++++
++++
 
 >[!TAB  Onderwerp en op abonnement-Gebaseerde authentificatie ]
 
 Als u een basisverbinding met een onderwerp en verificatie op basis van een abonnement wilt maken, dient u een POST-aanvraag in bij het eindpunt van `/connections` en geeft u `credentials` , `topicName` en `subscriptionName` op in de aanvraagtekst.
 
-+++verzoek
++++ Verzoek
 
 ```shell
 curl -X POST \
@@ -179,7 +179,7 @@ curl -X POST \
 
 +++
 
-+++Response
++++ Antwoord
 
 Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze basis verbindings identiteitskaart wordt vereist in de volgende stap om een bronverbinding tot stand te brengen.
 
@@ -190,7 +190,7 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 }
 ```
 
-++++
++++
 
 >[!ENDTABS]
 
@@ -264,4 +264,4 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL PubSub] -bronverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze bron verbindingsidentiteitskaart in het volgende leerprogramma gebruiken om [&#x200B; een het stromen dataflow tot stand te brengen gebruikend  [!DNL Flow Service]  API &#x200B;](../../collect/streaming.md).
+Aan de hand van deze zelfstudie hebt u een [!DNL PubSub] -bronverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze bron verbindingsidentiteitskaart in het volgende leerprogramma gebruiken om [ een het stromen dataflow tot stand te brengen gebruikend  [!DNL Flow Service]  API ](../../collect/streaming.md).
