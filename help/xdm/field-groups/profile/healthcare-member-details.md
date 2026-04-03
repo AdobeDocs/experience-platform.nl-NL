@@ -2,7 +2,7 @@
 title: Gezondheidszorg Lid Details Schema Veldgroep
 description: Meer informatie over de veldgroep Details schema van het lid in de gezondheidszorg.
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # [!UICONTROL Healthcare Member Details] schemaveldgroep
 
-[!UICONTROL Healthcare Member Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse &#x200B;](../../classes/individual-profile.md) die details van een persoon vangt die medische dienst of zorg, zoals contactinformatie, primaire zorgarts, en planinformatie heeft of zal ontvangen.
+[!UICONTROL Healthcare Member Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md) die details van een persoon vangt die medische dienst of zorg, zoals contactinformatie, primaire zorgarts, en planinformatie heeft of zal ontvangen.
 
-![&#x200B; de groepsstructuur van het Gebied &#x200B;](../../images/field-groups/healthcare-member-details/structure.png)
+![ de groepsstructuur van het Gebied ](../../images/field-groups/healthcare-member-details/structure.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ ht-degree: 0%
 | `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Het thuisadres van de persoon. |
 | `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het telefoonnummer van de persoon thuis. |
 | `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Het postadres van de persoon. |
-| `memberDetails` | Object | Een object dat gedetailleerde informatie bevat over de aan gezondheidszorg gerelateerde kenmerken en relaties van de persoon. Zie de [&#x200B; onderafdeling hieronder &#x200B;](#memberDetails) voor meer informatie over de structuur van de objecten. |
+| `memberDetails` | Object | Een object dat gedetailleerde informatie bevat over de aan gezondheidszorg gerelateerde kenmerken en relaties van de persoon. Zie de [ onderafdeling hieronder ](#memberDetails) voor meer informatie over de structuur van de objecten. |
 | `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Het mobiele telefoonnummer van de persoon. |
 | `person` | [[!UICONTROL Person]](../../data-types/person.md) | Een individuele actor, contactpersoon of eigenaar in verband met het lidmaatschap van de gezondheidszorg van de persoon. |
 | `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Het persoonlijke e-mailadres van de persoon. |
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 `memberDetails` is een object dat gedetailleerde informatie bevat over de kenmerken en relaties van de persoon in de gezondheidszorg. De structuur van `memberDetails` wordt hieronder beschreven.
 
-![&#x200B; memberDetails structuur &#x200B;](../../images/field-groups/healthcare-member-details/memberDetails.png)
+![ memberDetails structuur ](../../images/field-groups/healthcare-member-details/memberDetails.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
@@ -50,7 +50,7 @@ ht-degree: 0%
 | `deceasedDate` | DateTime | De datum waarop de persoon overleden is. |
 | `isDeceased` | Boolean | Geeft aan of de persoon overleden is. |
 | `isDependent` | Boolean | Geeft aan of de persoon afhankelijk is. |
-| `nationality` | String | De juridische relatie tussen de persoon en zijn staat, vertegenwoordigd door middel van de ISO 3166-1 Alpha-2 code. |
+| `nationality` | String | De juridische relatie tussen de persoon en zijn staat, vertegenwoordigd door middel van de ISO 3166-1 Alpha-2-code. |
 | `preferredAvailability` | String | De voorkeursdag en -tijd van de persoon voor een afspraak. |
 | `primaryMemberID` | String | Een unieke id van de primaire abonnee als de persoon afhankelijk is. |
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 
-* [&#x200B; Bevolkt voorbeeld &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
-* [&#x200B; Volledig schema &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
+* [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
+* [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
-Verwijs naar de documentatie van het industrieschema voor meer informatie over hoe deze gebiedsgroep kan worden gebruikt om gemeenschappelijke [&#x200B; het gebruiksgevallen van de gezondheidszorgindustrie te dienen &#x200B;](../../schema/industries/healthcare.md).
+Verwijs naar de documentatie van het industrieschema voor meer informatie over hoe deze gebiedsgroep kan worden gebruikt om gemeenschappelijke [ het gebruiksgevallen van de gezondheidszorgindustrie te dienen ](../../schema/industries/healthcare.md).
