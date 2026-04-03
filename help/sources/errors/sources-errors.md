@@ -2,7 +2,7 @@
 title: Bronfoutberichten
 description: Leer over de foutenmeldingen die u wanneer het gebruiken van de Dienst van de Stroom voor bronnen kunt ontmoeten.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 0%
@@ -114,7 +114,7 @@ Dit document bevat een catalogus met foutberichten, beschrijvingen en voorgestel
 | `1350-400` | Ongeldig verzoek | Er is geen operator opgegeven voor filter aan de bron. Geef een geldige filteraanvraag op met de juiste operator en probeer het opnieuw. |
 | `1351-400` | Ongeldig verzoek | De opgegeven operator {operator} wordt niet ondersteund voor filter aan de bron voor deze connector. Geef een geldige operator op en probeer het opnieuw. |
 | `1352-400` | Ongeldig verzoek | De opgegeven operator {operator} kan niet worden toegewezen aan een ondersteunde native operator voor {ql} . Geef een geldige operator op en probeer het opnieuw. |
-| `1353-400` | Ongeldig verzoek | Het filter aan de bron wordt nog niet ondersteund voor {connectorType} -connector. Raadpleeg de ondersteunde connectors in de documentatie: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=nl-NL. |
+| `1353-400` | Ongeldig verzoek | Het filter aan de bron wordt nog niet ondersteund voor {connectorType} -connector. Raadpleeg de ondersteunde connectors in de documentatie: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
 | `1354-400` | Ongeldig verzoek | De querytaal {ql} wordt nog niet ondersteund voor filter aan de bron. Geef een geldige querytaal op en probeer het opnieuw. |
 | `1355-400` | Ongeldig verzoek | Het opgegeven filtertype is ongeldig. Het ondersteunde filtertype is: PQL. Geef een geldig filtertype op en probeer het opnieuw. |
 | `1356-400` | Ongeldig verzoek | De opgegeven filterindeling is ongeldig. De ondersteunde filterindeling is: pql/json. Geef een geldige filterindeling op en probeer het opnieuw. |
