@@ -2,7 +2,7 @@
 title: Distiller-overzicht van gegevens
 description: Een overzicht van de Distiller-gebruikslimieten voor gegevens van Query Service met betrekking tot uw licentierechten.
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -13,7 +13,8 @@ ht-degree: 0%
 
 Data Distiller is een pakket dat een subset van de functies van Adobe Experience Platform bevat. Met Data Distiller kunt u gegevensvoorbereiding na inname (zoals reinigen, vormen en manipulatie) uitvoeren voor realtime klantprofiel of analytische gebruiksgevallen door batchquery&#39;s uit te voeren in Query Service. Het gebruik van Data Distiller is afhankelijk van uw machtiging voor Experience Platform-toepassingen.
 
-<!-- Commented out references to licence usage dashboard. It is temporarily hidden:
+<!-- 
+Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
 
 
@@ -22,7 +23,8 @@ The [Data Distiller license usage dashboard](./license-usage.md) is available o
 The Data Distiller license usage dashboard is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours.
 -->
 
-<!-- Update these descriptions post 23.3 release
+<!-- 
+Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
 
 Scoping parameters are usage limits that relate to the scoping of your required set up, and are defined by your license capacity. Without add-ons, Data Distiller's scoping parameters are as follows: 
@@ -33,11 +35,12 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 * **Query Service Users**: The number of Query Service users detailed in your then-current license to Adobe Real-Time Customer Data Platform, Customer Journey Analytics, and/or Adobe Journey Optimizer may also be used with Data Distiller. Query Service Users is a shared feature. 
 -->
 
-## Guardrails
+## Beveiligingsmechanismen
 
-Zie het [&#128279;](../guardrails.md) document van de Dienst van de Vraag 1&rbrace; betreffende standaardgebruiksgrenzen voor de gegevens van de Dienst van de Vraag met betrekking tot uw verlenen van vergunningen.
+Zie het [ document van de Dienst van de Vraag 1} betreffende standaardgebruiksgrenzen voor de gegevens van de Dienst van de Vraag met betrekking tot uw verlenen van vergunningen.](../guardrails.md)
 
-<!-- Update these descriptions post 23.3 release
+<!-- 
+Update these descriptions post 23.3 release
 ## Static limits
 
 A static limit is the usage limit that relates to the functional boundaries of Adobe Experience Platform Activation. [More information on Adobe Experience Platform Activation](https://helpx.adobe.com/ca/legal/product-descriptions/adobe-experience-platform0.html) can be found in the Adobe help documents. A summary of Data Distiller static limits are listed below, for more complete information please refer to the Query Service guardrail document.  
