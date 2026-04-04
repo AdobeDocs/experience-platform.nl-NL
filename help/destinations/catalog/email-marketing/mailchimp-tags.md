@@ -34,7 +34,7 @@ Raadpleeg de onderstaande secties voor alle voorwaarden die u in Experience Plat
 
 ### Vereisten in Experience Platform {#prerequisites-in-experience-platform}
 
-Alvorens gegevens aan de [!DNL Mailchimp Tags] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en) hebben, en [ publiek ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dat in [!DNL Experience Platform] wordt gecreeerd.
+Alvorens gegevens aan de [!DNL Mailchimp Tags] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) hebben, en [ publiek ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=nl-NL) dat in [!DNL Experience Platform] wordt gecreeerd.
 
 ### Vereisten voor het doel [!DNL Mailchimp Tags] {#prerequisites-destination}
 
