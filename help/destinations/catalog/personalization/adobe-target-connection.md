@@ -33,7 +33,7 @@ ht-degree: 0%
 
 Bekijk de onderstaande video voor een kort overzicht van het configureren van de [!DNL Adobe Target] -verbinding in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449799/?captions=dut&quality=12&learn=on)
 
 ## Ondersteunde gebruiksgevallen op basis van implementatietype {#supported-use-cases}
 

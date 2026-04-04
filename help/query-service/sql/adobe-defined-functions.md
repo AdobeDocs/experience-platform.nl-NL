@@ -487,4 +487,4 @@ Met de hier beschreven functies kunt u query&#39;s schrijven voor toegang tot uw
 
 In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. Bovendien gebruikt de video ook voorbeelden met afzonderlijke eigenschappen in een XDM-object, waarbij gebruik wordt gemaakt van door Adobe gedefinieerde functies en waarbij gebruik wordt gemaakt van CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3470201?captions=dut&quality=12&learn=on)
