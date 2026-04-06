@@ -3,100 +3,14 @@ solution: Experience Platform
 title: Handleiding voor streaming segmentatie
 description: Leer over het stromen segmentatie met inbegrip van wat het is, hoe te om een publiek tot stand te brengen dat gebruikend het stromen segmentatie wordt geëvalueerd, en hoe te om uw publiek te bekijken die gebruikend het stromen segmentatie wordt gecreeerd.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2117'
 ht-degree: 0%
 
 ---
 
 # Hulplijn voor stroomsegmentatie
-
->[!BEGINSHADEBOX]
-
->[!NOTE]
->
->De subsidiabiliteitscriteria voor streamingsegmentatie zijn bijgewerkt op 20 mei 2025.
-
-+++Geschiktheidsupdates
-
->[!IMPORTANT]
->
->Alle bestaande segmentdefinities die momenteel worden geëvalueerd met behulp van streaming of randsegmentatie, blijven werken zoals ze zijn, tenzij ze worden bewerkt of bijgewerkt.
-
-## Regelset {#ruleset}
-
-Om het even welke **nieuwe of uitgegeven** segmentdefinities die de volgende heersers aanpassen zullen **niet meer** worden geëvalueerd gebruikend het stromen of randsegmentatie. In plaats daarvan worden ze geëvalueerd met behulp van batchsegmentatie.
-
-- Eén gebeurtenis met een tijdvenster van meer dan 24 uur
-   - Activeer een publiek met alle profielen die een webpagina in de afgelopen 3 dagen hebben bekeken.
-- Eén gebeurtenis zonder tijdvenster
-   - Activeer een publiek met alle profielen die een webpagina hebben weergegeven.
-
-## Tijdvenster {#time-window}
-
-Om een publiek met het stromen segmentatie te evalueren, moet het **&#x200B;**&#x200B;binnen een 24 uurstijdvenster worden beperkt.
-
-## Batchgegevens opnemen in streaming publiek {#include-batch-data}
-
->[!NOTE]
->
->Om het stromen segmentatie nauwkeurig te houden wanneer het gebruiken van partijgegevens, zorg ervoor dat het partijgegeven **&#x200B;**&#x200B;slechts binnen het partijpubliek wordt gehouden en binnen het het stromen publiek van verwijzingen wordt voorzien.
-
-Voorafgaand aan deze update kunt u een definitie voor streaming publiek maken die zowel batch- als streaming gegevensbronnen combineert. Met de nieuwste update wordt het maken van een publiek met zowel batch- als streaming-gegevensbronnen echter geëvalueerd aan de hand van batchsegmentatie.
-
-Als u een segmentdefinitie moet evalueren met behulp van streaming of randsegmentatie die overeenkomt met de bijgewerkte linialen, moet u expliciet een batch- en streaming liniaal maken en deze combineren met behulp van segmentsegmenten. Deze partijheersers **moeten** op een profielschema worden gebaseerd.
-
-Bijvoorbeeld, laten wij zeggen u twee publiek hebt, met één publiek die het schemagegevens van het profiel en de andere gegevens van het de gebeurtenisschema van de huisvestingservaring huisvesten:
-
-| Doelgroep | Schema | Source-type | Query-definitie | Id van publiek |
-| -------- | ------ | ----------- | ---------------- | ----------- |
-| Inwoners uit Californië | Profiel | Batch | Het adres van het huis is in de staat van Californië | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Recente controles | Experience Event | Streaming | Heeft in de laatste 24 uur ten minste één afhandeling | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
-
-Als u de partijcomponent in uw het stromen publiek wilt gebruiken, zult u een verwijzing naar het partijpubliek moeten maken gebruikend segment van segmenten.
-
-Een voorbeeldregel die de twee soorten publiek samenvoegt, ziet er als volgt uit:
-
-```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
-CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
-WHEN(<= 24 hours before now)])
-```
-
-Het resulterende publiek *zal* worden geëvalueerd gebruikend het stromen segmentatie, aangezien het hefboomwerkingen het lidmaatschap van het partijpubliek door naar de component van het partijpubliek te verwijzen.
-
-Nochtans, als u twee publiek met gebeurtenisgegevens wilt combineren, kunt u **niet** enkel de twee gebeurtenissen combineren. U moet beide soorten publiek maken en vervolgens een ander publiek maken dat `inSegment` gebruikt om naar beide soorten publiek te verwijzen.
-
-Bijvoorbeeld, laten wij zeggen u twee publiek hebt, met beide publiek woonachtig gebeurtenisschemagegevens:
-
-| Doelgroep | Schema | Source-type | Query-definitie | Id van publiek |
-| -------- | ------ | ----------- | ---------------- | ----------- |
-| Recente verlaten | Gebeurtenis Experience | Batch | Heeft ten minste één gebeurtenis voor verlaten in de afgelopen 24 uur | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Recente controles | Experience Event | Streaming | Heeft in de laatste 24 uur ten minste één afhandeling | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
-
-In deze situatie, zou u een derde publiek als volgt moeten creëren:
-
-```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
-```
-
->[!IMPORTANT]
->
->Alle bestaande segmentdefinities die overeenkomen met de regels, blijven geëvalueerd met streaming of randsegmentatie totdat ze worden bewerkt.
->
->Bovendien, zullen alle bestaande segmentdefinities die momenteel aan de andere het stromen of de evaluatiecriteria van de randsegmentatie voldoen geëvalueerd met het stromen of randsegmentatie blijven.
-
-## Samenvoegbeleid {#merge-policy}
-
-Om het even welke **nieuwe of uitgegeven** segmentdefinities die voor het stromen of randsegmentatie **kwalificeren moeten** op &quot;Actief op Edge&quot;fusiebeleid zijn.
-
-Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid [&#x200B; moeten vormen en het plaatsen om op rand actief te zijn.](../../profile/merge-policies/ui-guide.md#configure)
-
-
-+++
-
->[!ENDSHADEBOX]
 
 Streaming segmentering is de mogelijkheid om het publiek in Adobe Experience Platform in bijna realtime te evalueren en tegelijk de nadruk te leggen op gegevensrijkdom.
 
@@ -106,20 +20,20 @@ Met streamingsegmentatie gebeurt de kwalificatie van het publiek nu terwijl stre
 
 >[!IMPORTANT]
 >
->Om het stromen segmentatie te gebruiken, moet u **&#x200B;**&#x200B;een fusiebeleid gebruiken dat &quot;Actief op Edge&quot;is. Voor meer informatie over fusiebeleid, te lezen gelieve het [&#x200B; overzicht van het samenvoegbeleid &#x200B;](../../profile/merge-policies/overview.md).
+>Om het stromen segmentatie te gebruiken, moet u **** een fusiebeleid gebruiken dat &quot;Actief op Edge&quot;is. Voor meer informatie over fusiebeleid, te lezen gelieve het [ overzicht van het samenvoegbeleid ](../../profile/merge-policies/overview.md).
 
 Een liniaal komt in aanmerking voor streamingsegmentatie als het voldoet aan een van de criteria die in de volgende tabel worden beschreven.
 
 >[!NOTE]
 >
->Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Voor details bij het toelaten van geplande segmentatie, gelieve te verwijzen naar [&#x200B; het Poortoverzicht van het Poort van het Publiek &#x200B;](../ui/audience-portal.md#scheduled-segmentation).
+>Opdat het stromen segmentatie aan het werk is, zult u geplande segmentatie voor de organisatie moeten toelaten. Voor details bij het toelaten van geplande segmentatie, gelieve te verwijzen naar [ het Poortoverzicht van het Poort van het Publiek ](../ui/audience-portal.md#scheduled-segmentation).
 
 | Type query | Details | Query | Voorbeeld |
 | ---------- | ------- | ----- | ------- |
-| Eén gebeurtenis binnen een tijdsvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen een tijdvenster van minder dan 24 uur. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![&#x200B; een voorbeeld van één enkele gebeurtenis binnen een relatief tijdvenster wordt getoond.](../images/methods/streaming/single-event.png) |
-| Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. | `homeAddress.country.equals("Canada", false)` | ![&#x200B; een voorbeeld van een getoonde profielattributen.](../images/methods/streaming/profile-attribute.png) |
-| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. | `workAddress.country.equals("Canada", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![&#x200B; een voorbeeld van één enkele gebeurtenis met een profielattribuut binnen een relatief tijdvenster wordt getoond.](../images/methods/streaming/single-event-with-profile-attribute.png) |
-| Meerdere gebeurtenissen binnen een relatief tijdvenster van 24 uur | Om het even welke segmentdefinitie die naar veelvoudige gebeurtenissen **binnen de laatste 24 uren** verwijst en (naar keuze) heeft één of meerdere profielattributen. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![&#x200B; een voorbeeld van veelvoudige gebeurtenissen met een profielattribuut wordt getoond.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
+| Eén gebeurtenis binnen een tijdsvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen een tijdvenster van minder dan 24 uur. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van één enkele gebeurtenis binnen een relatief tijdvenster wordt getoond.](../images/methods/streaming/single-event.png) |
+| Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. | `homeAddress.country.equals("Canada", false)` | ![ een voorbeeld van een getoonde profielattributen.](../images/methods/streaming/profile-attribute.png) |
+| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. | `workAddress.country.equals("Canada", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van één enkele gebeurtenis met een profielattribuut binnen een relatief tijdvenster wordt getoond.](../images/methods/streaming/single-event-with-profile-attribute.png) |
+| Meerdere gebeurtenissen binnen een relatief tijdvenster van 24 uur | Om het even welke segmentdefinitie die naar veelvoudige gebeurtenissen **binnen de laatste 24 uren** verwijst en (naar keuze) heeft één of meerdere profielattributen. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van veelvoudige gebeurtenissen met een profielattribuut wordt getoond.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 Een segmentdefinitie zal **niet** voor het stromen segmentatie in de volgende scenario&#39;s in aanmerking komen:
 
@@ -128,6 +42,11 @@ Een segmentdefinitie zal **niet** voor het stromen segmentatie in de volgende sc
 - De segmentdefinitie bevat een combinatie van één gebeurtenis en een `inSegment` -gebeurtenis.
    - Bijvoorbeeld, die het volgende in één enkele heersers in een ketting leggen: `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`.
 - In de segmentdefinitie wordt &quot;Jaar negeren&quot; gebruikt als onderdeel van de tijdbeperkingen.
+- De segmentdefinitie komt overeen met de volgende regels:
+   - Eén gebeurtenis met een tijdvenster van meer dan 24 uur
+      - Bijvoorbeeld &quot;Activeer een publiek met alle profielen die een webpagina in de afgelopen 3 dagen hebben bekeken&quot;.
+   - Eén gebeurtenis zonder tijdvenster
+      - Bijvoorbeeld &quot;Activeer een publiek met alle profielen die een webpagina hebben bekeken&quot;.
 
 Houd rekening met de volgende richtlijnen die van toepassing zijn op streamingsegmenteringsvragen:
 
@@ -186,7 +105,7 @@ inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-43
 
 U kunt een publiek tot stand brengen dat gebruikend het stromen segmentatie gebruikend of de Dienst API van de Segmentatie of door het Portaal van de Publiek in UI wordt geëvalueerd.
 
-Een segmentdefinitie kan stromen-toegelaten zijn als het één van de [&#x200B; in aanmerking komende heersers &#x200B;](#eligible-rulesets) aanpast.
+Een segmentdefinitie kan stromen-toegelaten zijn als het één van de [ in aanmerking komende heersers ](#eligible-rulesets) aanpast.
 
 >[!BEGINTABS]
 
@@ -285,23 +204,23 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 +++
 
-Meer informatie over het gebruiken van dit eindpunt kan in de [&#x200B; gids van het het eindpunt van de segmentdefinitie &#x200B;](../api/segment-definitions.md) worden gevonden.
+Meer informatie over het gebruiken van dit eindpunt kan in de [ gids van het het eindpunt van de segmentdefinitie ](../api/segment-definitions.md) worden gevonden.
 
 >[!TAB Audience Portal]
 
 Selecteer **[!UICONTROL Create audience]** in Audience Portal.
 
-![&#x200B; Create publieksknoop wordt benadrukt in het Portaal van het Publiek.](../images/methods/streaming/select-create-audience.png)
+![ Create publieksknoop wordt benadrukt in het Portaal van het Publiek.](../images/methods/streaming/select-create-audience.png)
 
 Er verschijnt een pop-up. Selecteer **[!UICONTROL Build rules]** om Segment Builder in te voeren.
 
-![&#x200B; de knoop van de Regels van de Bouwstijl wordt benadrukt in creeer publiek popover.](../images/methods/streaming/select-build-rules.png)
+![ de knoop van de Regels van de Bouwstijl wordt benadrukt in creeer publiek popover.](../images/methods/streaming/select-build-rules.png)
 
-Binnen de Bouwer van het Segment, creeer een segmentdefinitie die één van de [&#x200B; in aanmerking komende heersers &#x200B;](#eligible-rulesets) aanpast. Als de segmentdefinitie voor het stromen segmentatie kwalificeert, zult u **[!UICONTROL Streaming]** als **[!UICONTROL Evaluation method]** kunnen selecteren.
+Binnen de Bouwer van het Segment, creeer een segmentdefinitie die één van de [ in aanmerking komende heersers ](#eligible-rulesets) aanpast. Als de segmentdefinitie voor het stromen segmentatie kwalificeert, zult u **[!UICONTROL Streaming]** als **[!UICONTROL Evaluation method]** kunnen selecteren.
 
-![&#x200B; de segmentdefinitie wordt getoond. Het evaluatietype wordt benadrukt, die de segmentdefinitie tonen kan worden geëvalueerd gebruikend het stromen segmentatie.](../images/methods/streaming/streaming-evaluation-method.png)
+![ de segmentdefinitie wordt getoond. Het evaluatietype wordt benadrukt, die de segmentdefinitie tonen kan worden geëvalueerd gebruikend het stromen segmentatie.](../images/methods/streaming/streaming-evaluation-method.png)
 
-Om meer over het creëren van segmentdefinities te leren, te lezen gelieve de [&#x200B; gids van de Bouwer van het Segment &#x200B;](../ui/segment-builder.md)
+Om meer over het creëren van segmentdefinities te leren, te lezen gelieve de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md)
 
 >[!ENDTABS]
 
@@ -429,21 +348,21 @@ Een succesvolle reactie keert status 200 van HTTP met een serie van segmentdefin
 }
 ```
 
-De meer gedetailleerde informatie over de gesegmenteerde teruggekeerde definitie kan in de [&#x200B; gids van het de segmentdefinitiedetectietype &#x200B;](../api/segment-definitions.md) worden gevonden.
+De meer gedetailleerde informatie over de gesegmenteerde teruggekeerde definitie kan in de [ gids van het de segmentdefinitiedetectietype ](../api/segment-definitions.md) worden gevonden.
 
 +++
 
 >[!TAB Audience Portal]
 
-U kunt al publiek terugwinnen dat voor het stromen segmentatie binnen uw organisatie door filters in het Portaal van de Publiek wordt toegelaten te gebruiken. Selecteer het ![&#x200B; pictogram van de filterfilter &#x200B;](../../images/icons/filter.png) pictogram om de lijst van filters te tonen.
+U kunt al publiek terugwinnen dat voor het stromen segmentatie binnen uw organisatie door filters in het Portaal van de Publiek wordt toegelaten te gebruiken. Selecteer het ![ pictogram van de filterfilter ](../../images/icons/filter.png) pictogram om de lijst van filters te tonen.
 
-![&#x200B; het filterpictogram wordt benadrukt in het Portaal van het Publiek.](../images/methods/filter-audiences.png)
+![ het filterpictogram wordt benadrukt in het Portaal van het Publiek.](../images/methods/filter-audiences.png)
 
 Ga binnen de beschikbare filters naar **[!UICONTROL Update frequency]** en selecteer &quot;[!UICONTROL Streaming]&quot;. Met dit filter geeft u alle soorten publiek in uw organisatie weer die zijn geëvalueerd met behulp van streaming segmentatie.
 
-![&#x200B; de het stromen updatefrequentie wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend het stromen segmentatie worden geëvalueerd.](../images/methods/streaming/filter-streaming.png)
+![ de het stromen updatefrequentie wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend het stromen segmentatie worden geëvalueerd.](../images/methods/streaming/filter-streaming.png)
 
-Meer over het bekijken van publiek in Experience Platform leren, gelieve de [&#x200B; gids van het Portaal van het Publiek &#x200B;](../ui/audience-portal.md) te lezen.
+Meer over het bekijken van publiek in Experience Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
 
 >[!ENDTABS]
 
@@ -453,7 +372,7 @@ U kunt details van een specifiek publiek bekijken die gebruikend het stromen seg
 
 Na het selecteren van een publiek op de Portaal van de Publiek, verschijnt de pagina van publieksdetails. Dit toont informatie over het publiek, met inbegrip van een samenvatting van de publieksdetails, de hoeveelheid gekwalificeerde profielen in tijd, evenals de bestemmingen het publiek aan geactiveerd is.
 
-![&#x200B; de pagina van publieksdetails wordt getoond voor een publiek dat gebruikend het stromen segmentatie wordt geëvalueerd.](../images/methods/streaming/audience-details.png)
+![ de pagina van publieksdetails wordt getoond voor een publiek dat gebruikend het stromen segmentatie wordt geëvalueerd.](../images/methods/streaming/audience-details.png)
 
 Voor streaming-toegelaten publiek, wordt de **[!UICONTROL Profiles over time]** kaart getoond, die het totaal kwalificeerde en nieuwe publiek bijgewerkte metriek toont.
 
@@ -461,14 +380,101 @@ Voor streaming-toegelaten publiek, wordt de **[!UICONTROL Profiles over time]** 
 
 **[!UICONTROL New audience updated]** metrisch wordt vertegenwoordigd door een lijngrafiek die de verandering in publieksgrootte door het stromen segmentatie toont. U kunt het vervolgkeuzemenu aanpassen en de laatste 24 uur, vorige week of 30 dagen weergeven.
 
-![&#x200B; De Profielen over tijdkaart wordt benadrukt.](../images/methods/streaming/profiles-over-time.png)
+![ De Profielen over tijdkaart wordt benadrukt.](../images/methods/streaming/profiles-over-time.png)
 
-Voor meer details op publieksdetails, te lezen gelieve het [&#x200B; Poortoverzicht van het Poort van het Publiek &#x200B;](../ui/audience-portal.md#audience-details).
+Voor meer details op publieksdetails, te lezen gelieve het [ Poortoverzicht van het Poort van het Publiek ](../ui/audience-portal.md#audience-details).
 
 ## Volgende stappen
 
 Deze gids verklaart hoe het stromen-toegelaten segmentdefinities op Adobe Experience Platform werken en hoe te om het stromen-toegelaten segmentdefinities te controleren.
 
-Om meer over het gebruiken van het gebruikersinterface van Adobe Experience Platform te leren, te lezen gelieve de [&#x200B; gebruikersgids van de Segmentatie &#x200B;](./overview.md).
+Om meer over het gebruiken van het gebruikersinterface van Adobe Experience Platform te leren, te lezen gelieve de [ gebruikersgids van de Segmentatie ](./overview.md).
 
-Voor vaak gestelde vragen over het stromen segmentatie, te lezen gelieve de [&#x200B; het stromen segmenteringssectie van FAQ &#x200B;](../faq.md#streaming-segmentation).
+Voor vaak gestelde vragen over het stromen segmentatie, te lezen gelieve de [ het stromen segmenteringssectie van FAQ ](../faq.md#streaming-segmentation).
+
+## Bijlage
+
+Deze sectie verstrekt aanvullende informatie over het stromen segmentatie.
+
+### 20 mei 2025, update betreffende de geschiktheid {#may-20-eligibility-update}
+
+In de volgende sectie worden, voor de posteriteit, de volledige details beschreven van de geschiktheidsupdate voor streamingsegmentatie die plaatsvond tijdens de release van Experience Platform van mei 2025.
+
++++Geschiktheidsupdates
+
+>[!IMPORTANT]
+>
+>Alle bestaande segmentdefinities die momenteel worden geëvalueerd met behulp van streaming of randsegmentatie, blijven werken zoals ze zijn, tenzij ze worden bewerkt of bijgewerkt.
+
+## Regelset {#ruleset}
+
+Om het even welke **nieuwe of uitgegeven** segmentdefinities die de volgende heersers aanpassen zullen **niet meer** worden geëvalueerd gebruikend het stromen of randsegmentatie. In plaats daarvan worden ze geëvalueerd met behulp van batchsegmentatie.
+
+- Eén gebeurtenis met een tijdvenster van meer dan 24 uur
+   - Activeer een publiek met alle profielen die een webpagina in de afgelopen 3 dagen hebben bekeken.
+- Eén gebeurtenis zonder tijdvenster
+   - Activeer een publiek met alle profielen die een webpagina hebben weergegeven.
+
+## Tijdvenster {#time-window}
+
+Om een publiek met het stromen segmentatie te evalueren, moet het **** binnen een 24 uurstijdvenster worden beperkt.
+
+## Batchgegevens opnemen in streaming publiek {#include-batch-data}
+
+>[!NOTE]
+>
+>Om het stromen segmentatie nauwkeurig te houden wanneer het gebruiken van partijgegevens, zorg ervoor dat het partijgegeven **** slechts binnen het partijpubliek wordt gehouden en binnen het het stromen publiek van verwijzingen wordt voorzien.
+
+Voorafgaand aan deze update kunt u een definitie voor streaming publiek maken die zowel batch- als streaming gegevensbronnen combineert. Met de nieuwste update wordt het maken van een publiek met zowel batch- als streaming-gegevensbronnen echter geëvalueerd aan de hand van batchsegmentatie.
+
+Als u een segmentdefinitie moet evalueren met behulp van streaming of randsegmentatie die overeenkomt met de bijgewerkte linialen, moet u expliciet een batch- en streaming liniaal maken en deze combineren met behulp van segmentsegmenten. Deze partijheersers **moeten** op een profielschema worden gebaseerd.
+
+Bijvoorbeeld, laten wij zeggen u twee publiek hebt, met één publiek die het schemagegevens van het profiel en de andere gegevens van het de gebeurtenisschema van de huisvestingservaring huisvesten:
+
+| Doelgroep | Schema | Source-type | Query-definitie | Id van publiek |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Inwoners uit Californië | Profiel | Batch | Het adres van het huis is in de staat van Californië | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Recente controles | Experience Event | Streaming | Heeft in de laatste 24 uur ten minste één afhandeling | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Als u de partijcomponent in uw het stromen publiek wilt gebruiken, zult u een verwijzing naar het partijpubliek moeten maken gebruikend segment van segmenten.
+
+Een voorbeeldregel die de twee soorten publiek samenvoegt, ziet er als volgt uit:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+Het resulterende publiek *zal* worden geëvalueerd gebruikend het stromen segmentatie, aangezien het hefboomwerkingen het lidmaatschap van het partijpubliek door naar de component van het partijpubliek te verwijzen.
+
+Nochtans, als u twee publiek met gebeurtenisgegevens wilt combineren, kunt u **niet** enkel de twee gebeurtenissen combineren. U moet beide soorten publiek maken en vervolgens een ander publiek maken dat `inSegment` gebruikt om naar beide soorten publiek te verwijzen.
+
+Bijvoorbeeld, laten wij zeggen u twee publiek hebt, met beide publiek woonachtig gebeurtenisschemagegevens:
+
+| Doelgroep | Schema | Source-type | Query-definitie | Id van publiek |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Recente verlaten | Gebeurtenis Experience | Batch | Heeft ten minste één gebeurtenis voor verlaten in de afgelopen 24 uur | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Recente controles | Experience Event | Streaming | Heeft in de laatste 24 uur ten minste één afhandeling | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+In deze situatie, zou u een derde publiek als volgt moeten creëren:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
+
+>[!IMPORTANT]
+>
+>Alle bestaande segmentdefinities die overeenkomen met de regels, blijven geëvalueerd met streaming of randsegmentatie totdat ze worden bewerkt.
+>
+>Bovendien, zullen alle bestaande segmentdefinities die momenteel aan de andere het stromen of de evaluatiecriteria van de randsegmentatie voldoen geëvalueerd met het stromen of randsegmentatie blijven.
+
+## Samenvoegbeleid {#merge-policy}
+
+Om het even welke **nieuwe of uitgegeven** segmentdefinities die voor het stromen of randsegmentatie **kwalificeren moeten** op &quot;Actief op Edge&quot;fusiebeleid zijn.
+
+Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid [ moeten vormen en het plaatsen om op rand actief te zijn.](../../profile/merge-policies/ui-guide.md#configure)
+
++++
+
+>[!ENDSHADEBOX]
