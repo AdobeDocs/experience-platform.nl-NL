@@ -2,10 +2,9 @@
 title: Talon.One Source - Overzicht
 description: Meer informatie over Talon.One-bronnen op Adobe Experience Platform
 badge: Beta
-hide: true
-hidefromtoc: true
+last-substantial-update: 2026-04-06T00:00:00Z
 exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
-source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
+source-git-commit: f3026e0a717c07d95f12e3aeaf380ddc1b87c712
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 1%
@@ -16,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->De bronnen van [!DNL Talon.One] zijn in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De bronnen van [!DNL Talon.One] zijn in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Met [!DNL Talon.One] kunt u eenvoudig op maat gemaakte marketingcampagnes maken, beheren en optimaliseren die zijn afgestemd op uw klanten. Gebruik dit krachtige platform om kortingen uit te voeren, coupons te verdelen, verwijzingsprogramma&#39;s te lanceren, loyaliteitsprogramma&#39;s op te zetten, en gamified stimuli aan te bieden - allen van één scalable systeem dat wordt ontworpen om u te helpen uw publiek in dienst nemen en belonen.
 
