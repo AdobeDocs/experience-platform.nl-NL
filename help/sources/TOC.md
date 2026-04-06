@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
+source-git-commit: d284a2a833bca1770d6680987888368fe22736e8
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1094'
 ht-degree: 7%
 
 ---
@@ -104,9 +104,10 @@ ht-degree: 7%
       - [Schopify](connectors/ecommerce/shopify.md)
       - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
-      - [&#x200B; Lokale dossier uploadt schakelaar &#x200B;](connectors/local-system/local-file-upload.md)
+      - [ Lokale dossier uploadt schakelaar ](connectors/local-system/local-file-upload.md)
    - Loyalty {#loyalty}
       - [Capillary Streaming-gebeurtenissen](connectors/loyalty/capillary.md)
+      - [Kobie](connectors/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Marketing automatiseren {#marketing-automation}
       - [Braze huidige](connectors/marketing-automation/braze.md)
@@ -166,7 +167,7 @@ ht-degree: 7%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive op Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
+         - [Azure-databases](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
@@ -289,7 +290,7 @@ ht-degree: 7%
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive op Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
+         - [Azure-databases](tutorials/ui/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
@@ -319,9 +320,11 @@ ht-degree: 7%
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
-         - [&#x200B; Lokale dossier uploadt &#x200B;](tutorials/ui/create/local-system/local-file-upload.md)
+         - [ Lokale dossier uploadt ](tutorials/ui/create/local-system/local-file-upload.md)
       - Loyalty {#loyalty}
          - [Capillary Streaming-gebeurtenissen](tutorials/ui/create/loyalty/capillary.md)
+         - [Kobie (batch)](tutorials/ui/create/loyalty/kobie-batch.md)
+         - [Kobie (streaming)](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Marketing automatiseren {#marketing-automation}
@@ -408,5 +411,5 @@ ht-degree: 7%
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
-- [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
