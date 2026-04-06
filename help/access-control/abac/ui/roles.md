@@ -24,8 +24,8 @@ Beginnen met het beheren van rollen, navigeer aan **[!UICONTROL Permissions]** i
 >id="platform_permissions_roles_about_create"
 >title="Nieuwe rol maken"
 >abstract="Maak nieuwe rollen om gebruikers die met uw Experience Platform-instantie werken beter te categoriseren. U kunt bijvoorbeeld een rol maken voor een intern marketingteam en het label Gereglementeerde gezondheidsgegevens (RHD) op die rol toepassen, zodat uw interne marketingteam toegang krijgt tot de beschermde gezondheidsinformatie (PHI). Alternatief, kunt u een rol voor een extern agentschap ook tot stand brengen en die roltoegang tot PHI gegevens ontkennen door het etiket RHD op die rol niet toe te passen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Rollen beheren"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Labels op een rol toepassen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=nl-NL" text="Rollen beheren"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Labels op een rol toepassen"
 
 Als u een nieuwe rol wilt maken, selecteert u **[!UICONTROL Create role]** .
 

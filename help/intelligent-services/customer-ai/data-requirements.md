@@ -26,7 +26,7 @@ Hier volgen de stappen voor het samenstellen van nevenmodellen en het identifice
 
 2. Prioriteit geven aan gebruiksgevallen: welke zijn de hoogste prioriteiten voor het bedrijf?
 
-3. Bouw modellen in Klant AI: bekijk dit [&#x200B; snelle leerprogramma &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html) en verwijs naar onze [&#x200B; gids UI &#x200B;](../customer-ai/user-guide/configure.md) voor een geleidelijke proces om een model te bouwen.
+3. Bouw modellen in Klant AI: bekijk dit [&#x200B; snelle leerprogramma &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=nl-NL) en verwijs naar onze [&#x200B; gids UI &#x200B;](../customer-ai/user-guide/configure.md) voor een geleidelijke proces om een model te bouwen.
 
 4. [&#x200B; bouwt segmenten &#x200B;](../customer-ai/user-guide/create-segment.md) gebruikend modelresultaten.
 
@@ -49,8 +49,8 @@ De AI van de klant werkt door de volgende datasets te analyseren om te voorspell
 
 - De gegevens van Adobe Analytics die de [&#x200B; bron van Analytics schakelaar &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
 - Adobe Audience Manager gegevens die de [&#x200B; bronVerbinding van Audience Manager gebruiken &#x200B;](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [&#x200B; dataset van de Gebeurtenis van de Ervaring &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- [&#x200B; de dataset van de Gebeurtenis van de Ervaring van de consument &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
+- [&#x200B; dataset van de Gebeurtenis van de Ervaring &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=nl-NL)
+- [&#x200B; de dataset van de Gebeurtenis van de Ervaring van de consument &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=nl-NL#cee-schema)
 
 U kunt veelvoudige datasets van verschillende bronnen toevoegen als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Voor meer informatie bij het toevoegen van veelvoudige datasets, bezoek de [&#x200B; AI gebruikersgids van de Klant &#x200B;](../customer-ai/user-guide/configure.md).
 

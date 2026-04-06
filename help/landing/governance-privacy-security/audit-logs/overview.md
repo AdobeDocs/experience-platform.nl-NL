@@ -83,7 +83,7 @@ Als u controlelogboeken wilt weergeven en exporteren, moet u de toegangsbeheerma
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="Instructies"
->abstract="<ul><li>Selecteer <b> Controles </b> in de linkernavigatie. De werkruimte Audits toont een lijst van geregistreerde logboeken, door gebrek dat van meest recente aan minst recente wordt gesorteerd.</li>   <li> OPMERKING: auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Daarom kun je slechts 365 dagen teruggaan. Als u terug op gegevens moet kijken ouder dan 365 dagen, zou u logboeken bij een regelmatige kring moeten uitvoeren om aan uw interne beleidsvereisten te voldoen. </li><li>Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven. </li><li>Selecteer het funnel-pictogram om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken. Alleen de laatste 1000 records worden weergegeven, ongeacht de geselecteerde filters. </li><li>Om de huidige lijst van controlelogboeken uit te voeren, selecteer **logboek van de Download**.</li><li>Voor meer hulp met deze eigenschap, zie het <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html"> overzicht van controlelogboeken </a> op Experience League.</li></ul>"
+>abstract="<ul><li>Selecteer <b> Controles </b> in de linkernavigatie. De werkruimte Audits toont een lijst van geregistreerde logboeken, door gebrek dat van meest recente aan minst recente wordt gesorteerd.</li>   <li> OPMERKING: auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Daarom kun je slechts 365 dagen teruggaan. Als u terug op gegevens moet kijken ouder dan 365 dagen, zou u logboeken bij een regelmatige kring moeten uitvoeren om aan uw interne beleidsvereisten te voldoen. </li><li>Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven. </li><li>Selecteer het funnel-pictogram om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken. Alleen de laatste 1000 records worden weergegeven, ongeacht de geselecteerde filters. </li><li>Om de huidige lijst van controlelogboeken uit te voeren, selecteer **logboek van de Download**.</li><li>Voor meer hulp met deze eigenschap, zie het <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=nl-NL"> overzicht van controlelogboeken </a> op Experience League.</li></ul>"
 
 U kunt controlelogboeken voor verschillende Experience Platform-functies weergeven in de **[!UICONTROL Audits]** -werkruimte in de Experience Platform-gebruikersinterface. De werkruimte bevat een lijst met opgenomen logbestanden, die standaard van de meest recente naar de minst recente logbestanden worden gesorteerd.
 
@@ -169,7 +169,7 @@ Alle acties die u in UI kunt uitvoeren kunnen ook worden gedaan gebruikend API v
 
 ## Controlelogbestanden voor Adobe Admin Console beheren
 
-Leren hoe te om controlelogboeken voor activiteiten in Adobe Admin Console te beheren, verwijs naar het volgende [&#x200B; document &#x200B;](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+Leren hoe te om controlelogboeken voor activiteiten in Adobe Admin Console te beheren, verwijs naar het volgende [&#x200B; document &#x200B;](https://helpx.adobe.com/nl/enterprise/using/audit-logs.html).
 
 ## Volgende stappen en extra bronnen
 

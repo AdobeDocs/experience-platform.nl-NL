@@ -15,7 +15,7 @@ ht-degree: 100%
 
 >[!TIP]
 >
->Bekijk een [overzicht van documentatie met voorbeelden van gebruiksscenario&#39;s](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) en ontdek welke verschillende gebruiksscenario&#39;s uw organisatie met Real-Time CDP kan bereiken, zoals prospectie, acquisitie en meer.
+>Bekijk een [overzicht van documentatie met voorbeelden van gebruiksscenario&#39;s](https://experienceleague.adobe.com/nl/docs/experience-platform/rtcdp/use-cases/overview) en ontdek welke verschillende gebruiksscenario&#39;s uw organisatie met Real-Time CDP kan bereiken, zoals prospectie, acquisitie en meer.
 
 Updates van bestaande functies en documentatie in Experience Platform:
 

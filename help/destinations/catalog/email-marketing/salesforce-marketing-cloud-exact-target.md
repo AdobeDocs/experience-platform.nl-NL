@@ -37,7 +37,7 @@ De verkoopafdeling van een platform van de huishuur wil een marketing e-mail aan
 
 ### Vereisten in Experience Platform {#prerequisites-in-experience-platform}
 
-Alvorens gegevens aan de [!DNL (API) Salesforce Marketing Cloud] bestemming te activeren, moet u a [&#x200B; schema &#x200B;](/help/xdm/schema/composition.md), a [&#x200B; dataset &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [&#x200B; segmenten &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) die in [!DNL Experience Platform] worden gecreeerd.
+Alvorens gegevens aan de [!DNL (API) Salesforce Marketing Cloud] bestemming te activeren, moet u a [&#x200B; schema &#x200B;](/help/xdm/schema/composition.md), a [&#x200B; dataset &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) hebben, en [&#x200B; segmenten &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL) die in [!DNL Experience Platform] worden gecreeerd.
 
 ### Vereisten in [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
