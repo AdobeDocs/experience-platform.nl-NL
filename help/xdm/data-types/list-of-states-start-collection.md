@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Het gegevenstype [!UICONTROL List of States Start] is een XDM-gegevenstype (Experience Data Model) dat is ontworpen voor het weergeven van informatie die betrekking heeft op de begintoestand van verschillende spelerkenmerken. Deze bevat de eigenschappen [!UICONTROL Player State Name] die de specifieke kenmerkstatus aangeven (bijvoorbeeld &quot;fullscreen&quot;, &quot;mute&quot;, &quot;closedCaptioning&quot;). Dit gegevenstype wordt gebruikt om de beginvoorwaarden van de verschillende spelerstatussen vast te leggen en te beschrijven.
 
-![ een diagram van [!UICONTROL List of States Start] gegevenstype.](../images/data-types/list-of-states-start-collection.png)
+![&#x200B; een diagram van [!UICONTROL List of States Start] gegevenstype.](../images/data-types/list-of-states-start-collection.png)
 
 | Weergavenaam | Eigenschap | Gegevenstype | Vereist | Beschrijving |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|

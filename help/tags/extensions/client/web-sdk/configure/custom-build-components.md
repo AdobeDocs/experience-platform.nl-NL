@@ -20,7 +20,7 @@ De bibliotheek van SDK van het Web omvat veelvoudige modules voor diverse eigens
 
 Wanneer u een component uitschakelt, kunt u de instellingen van die component niet meer bewerken. Als u veelvoudige instanties van SDK van het Web gebruikt, zijn de geselecteerde bouwstijlcomponenten op alle instanties van toepassing.
 
-1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Ga naar **[!UICONTROL Extensions]** en selecteer vervolgens **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.

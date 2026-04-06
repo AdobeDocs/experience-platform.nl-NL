@@ -27,19 +27,19 @@ De volgende video is ontworpen om u te helpen bij het begrijpen van streaming op
 
 Met streaming opname kunnen gebruikers profielrecords streamen en [!DNL ExperienceEvents] in seconden naar Experience Platform om de realtime personalisatie te bevorderen. Alle gegevens die naar streaming opname-API&#39;s worden verzonden, blijven automatisch behouden in het datumpomeer.
 
-Gelieve te lezen [ creeer een het stromen verbindingsgids ](../tutorials/create-streaming-connection.md) voor meer informatie.
+Gelieve te lezen [&#x200B; creeer een het stromen verbindingsgids &#x200B;](../tutorials/create-streaming-connection.md) voor meer informatie.
 
 ### Stream naar gegevenssets
 
 Zodra u zeker bent dat uw gegevens schoon zijn, kunt u uw datasets voor het Profiel van de Klant in real time en [!DNL Identity Service] toelaten.
 
-Voor meer informatie bij het toelaten van een dataset voor Profiel en [!DNL Identity Service], te lezen gelieve [ een datasetgids ](/help/profile/tutorials/dataset-configuration.md) vormen.
+Voor meer informatie bij het toelaten van een dataset voor Profiel en [!DNL Identity Service], te lezen gelieve [&#x200B; een datasetgids &#x200B;](/help/profile/tutorials/dataset-configuration.md) vormen.
 
 ## Wat is de verwachte latentie voor het stromen opname op Experience Platform?
 
 >[!IMPORTANT]
 >
->Guardrails voor het streamen van inname zijn gebonden aan de totale gebruiksrechten voor licenties die overeenkomen met de volledige organisatie. Daarnaast is het gebruik van gegevens in ontwikkelingssandboxen beperkt tot 10% van uw totale profielen. Voor meer informatie over de gebruiksrechten van de vergunning, lees de [ gids van de beste praktijken van het gegevensbeheer ](/help/landing/license-usage-and-guardrails/data-management-best-practices.md). Leren hoe te om grenzen aan uw het stromen productie te plaatsen, lees het [ overzicht van de Capaciteit ](../../landing/license-usage-and-guardrails/capacity.md).
+>Guardrails voor het streamen van inname zijn gebonden aan de totale gebruiksrechten voor licenties die overeenkomen met de volledige organisatie. Daarnaast is het gebruik van gegevens in ontwikkelingssandboxen beperkt tot 10% van uw totale profielen. Voor meer informatie over de gebruiksrechten van de vergunning, lees de [&#x200B; gids van de beste praktijken van het gegevensbeheer &#x200B;](/help/landing/license-usage-and-guardrails/data-management-best-practices.md). Leren hoe te om grenzen aan uw het stromen productie te plaatsen, lees het [&#x200B; overzicht van de Capaciteit &#x200B;](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Bestemming | Verwachte vertraging |
 | --------- | ---------------- |
@@ -61,4 +61,4 @@ In de onderstaande tabel vindt u een overzicht van de aanvraag per seconden voor
 
 ## Adobe Experience Platform-extensie
 
-Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De extensie [!DNL Experience Platform] biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor realtime invoer naar [!DNL Experience Platform] . Bezoek de [ documentatie van de Uitbreiding van 0} Experience Platform {voor meer informatie.](/help/tags/extensions/client/web-sdk/overview.md)
+Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De extensie [!DNL Experience Platform] biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor realtime invoer naar [!DNL Experience Platform] . Bezoek de [&#x200B; documentatie van de Uitbreiding van 0&rbrace; Experience Platform &lbrace;voor meer informatie.](/help/tags/extensions/client/web-sdk/overview.md)

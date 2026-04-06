@@ -37,7 +37,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Beveiligingsmechanismen
 
-Zie het [ document van de Dienst van de Vraag 1} betreffende standaardgebruiksgrenzen voor de gegevens van de Dienst van de Vraag met betrekking tot uw verlenen van vergunningen.](../guardrails.md)
+Zie het [&#x200B; document van de Dienst van de Vraag 1&rbrace; betreffende standaardgebruiksgrenzen voor de gegevens van de Dienst van de Vraag met betrekking tot uw verlenen van vergunningen.](../guardrails.md)
 
 <!-- 
 Update these descriptions post 23.3 release

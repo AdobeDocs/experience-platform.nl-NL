@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Berekening van gegevenssetstatistieken
 
-U kunt nu statistieken op kolomniveau over gegevenssets van [!DNL Azure Data Lake Storage] (ADLS) berekenen met de SQL-opdracht `COMPUTE STATISTICS` . De SQL-opdrachten die gegevenssetstatistieken berekenen, vormen een uitbreiding van de opdracht `ANALYZE TABLE` . De volledige details op het `ANALYZE TABLE` bevel kunnen in de [ SQL verwijzingsdocumentatie ](../sql/syntax.md#analyze-table) worden gevonden.
+U kunt nu statistieken op kolomniveau over gegevenssets van [!DNL Azure Data Lake Storage] (ADLS) berekenen met de SQL-opdracht `COMPUTE STATISTICS` . De SQL-opdrachten die gegevenssetstatistieken berekenen, vormen een uitbreiding van de opdracht `ANALYZE TABLE` . De volledige details op het `ANALYZE TABLE` bevel kunnen in de [&#x200B; SQL verwijzingsdocumentatie &#x200B;](../sql/syntax.md#analyze-table) worden gevonden.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ Om de statistieken te zien die met het `ANALYZE TABLE COMPUTE STATISTICS` bevel 
 
 >[!IMPORTANT]
 >
->De opdrachten `COMPUTE STATISTICS`, `FILTERCONTEXT` en `FOR COLUMNS` worden niet ondersteund in versnelde winkeltabellen. Deze extensies voor de opdracht `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen. Voor meer informatie, zie [ ANALYSEREN de sectie van DE LIJST ](../sql/syntax.md#analyze-table) van de SQL syntaxisgids.
+>De opdrachten `COMPUTE STATISTICS`, `FILTERCONTEXT` en `FOR COLUMNS` worden niet ondersteund in versnelde winkeltabellen. Deze extensies voor de opdracht `ANALYZE TABLE` worden momenteel alleen ondersteund voor ADLS-tabellen. Voor meer informatie, zie [&#x200B; ANALYSEREN de sectie van DE LIJST &#x200B;](../sql/syntax.md#analyze-table) van de SQL syntaxisgids.
 
 Deze gids helpt u uw vragen structureren zodat u de kolomstatistieken van een dataset van ADLS kunt gegevens verwerken. Gebruikend deze bevelen, kunt u de statistieken zien in uw zitting door een cliënt PSQL gebruikend een SQL vraag worden geproduceerd.
 
@@ -31,7 +31,7 @@ De extra constructies zijn toegevoegd aan het `ANALYZE TABLE` bevel dat u toesta
 
 >[!IMPORTANT]
 >
->Het standaardgedrag verwerkt statistieken voor de **volledige dataset** en voor **alle kolommen**. Om statistieken over alle kolommen te berekenen, zou u het vraagformaat `ANALYZE TABLE COMPUTE STATISTICS` gebruiken. U wordt **niet** geadviseerd om het `COMPUTE STATISTICS` bevel zonder filters op een dataset van ADLS te gebruiken, aangezien de grootte van de dataset zeer groot (potentieel petabytes van gegevens) kan zijn. In plaats daarvan moet u altijd overwegen de opdracht Analyseren uit te voeren met `FILTERCONTEXT` en een opgegeven lijst met kolommen. Zie de secties op [ beperkende geanalyseerde kolommen ](#limit-included-columns) en [ toevoegend een filtervoorwaarde ](#filter-condition) voor meer details.
+>Het standaardgedrag verwerkt statistieken voor de **volledige dataset** en voor **alle kolommen**. Om statistieken over alle kolommen te berekenen, zou u het vraagformaat `ANALYZE TABLE COMPUTE STATISTICS` gebruiken. U wordt **niet** geadviseerd om het `COMPUTE STATISTICS` bevel zonder filters op een dataset van ADLS te gebruiken, aangezien de grootte van de dataset zeer groot (potentieel petabytes van gegevens) kan zijn. In plaats daarvan moet u altijd overwegen de opdracht Analyseren uit te voeren met `FILTERCONTEXT` en een opgegeven lijst met kolommen. Zie de secties op [&#x200B; beperkende geanalyseerde kolommen &#x200B;](#limit-included-columns) en [&#x200B; toevoegend een filtervoorwaarde &#x200B;](#filter-condition) voor meer details.
 
 Het voorbeeld hieronder wordt gezien verwerkt statistieken voor de `adc_geometric` dataset en voor **alle** kolommen in de dataset.
 
@@ -114,11 +114,11 @@ Hieronder vindt u een beschrijving van de kolomnamen voor metagegevens.
 |---|---|
 | `statsId` | Deze id verwijst naar de tijdelijke statistiekentabel die is gegenereerd door de opdracht `COMPUTE STATISTICS` . |
 | `tableName` | De oorspronkelijke tabel die voor analyse is gebruikt. |
-| `columnSet` | Een lijst van kolommen die specifiek voor analyse zijn gekozen. Een lege waarde geeft aan dat alle kolommen zijn geanalyseerd. Zie de sectie op [ beperkende kolommen ](#limit-included-columns) voor meer informatie. |
+| `columnSet` | Een lijst van kolommen die specifiek voor analyse zijn gekozen. Een lege waarde geeft aan dat alle kolommen zijn geanalyseerd. Zie de sectie op [&#x200B; beperkende kolommen &#x200B;](#limit-included-columns) voor meer informatie. |
 | `filterContext` | Een lijst met filters die op de analyse zijn toegepast. |
-| `timestamp` | Eventuele chronologische filters die op de gegevensanalyse worden toegepast om zich op een bepaalde periode te concentreren. Zie de [ sectie van de tijdstempelfiltervoorwaarde ](#filter-condition) voor meer details. |
+| `timestamp` | Eventuele chronologische filters die op de gegevensanalyse worden toegepast om zich op een bepaalde periode te concentreren. Zie de [&#x200B; sectie van de tijdstempelfiltervoorwaarde &#x200B;](#filter-condition) voor meer details. |
 
-U kunt de statistiek-id of aliasnaam gebruiken om de berekende statistieken op elk gewenst moment binnen die sessie op te zoeken met een SELECT-instructie. De statistieken-id en de gegenereerde statistieken zijn alleen geldig voor deze specifieke sessie en kunnen niet worden geopend voor verschillende PSQL-sessies. De berekende statistieken zijn momenteel niet blijvend. Zie de sectie op hoe te [ de output van uw gegevens verwerkte statistieken ](#view-output-of-computed-statistics) voor meer details bekijken.
+U kunt de statistiek-id of aliasnaam gebruiken om de berekende statistieken op elk gewenst moment binnen die sessie op te zoeken met een SELECT-instructie. De statistieken-id en de gegenereerde statistieken zijn alleen geldig voor deze specifieke sessie en kunnen niet worden geopend voor verschillende PSQL-sessies. De berekende statistieken zijn momenteel niet blijvend. Zie de sectie op hoe te [&#x200B; de output van uw gegevens verwerkte statistieken &#x200B;](#view-output-of-computed-statistics) voor meer details bekijken.
 
 ## De opgenomen kolommen beperken {#limit-included-columns}
 
@@ -152,4 +152,4 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 ## Volgende stappen {#next-steps}
 
-Door dit document te lezen, hebt u nu een beter inzicht in hoe te om kolom-vlakke statistieken van een dataset van ADLS te produceren gebruikend een SQL vraag. U wordt geadviseerd om de [ SQl syntaxisgids ](../sql/syntax.md) te lezen om meer eigenschappen van de Dienst van de Vraag van Adobe Experience Platform te ontdekken.
+Door dit document te lezen, hebt u nu een beter inzicht in hoe te om kolom-vlakke statistieken van een dataset van ADLS te produceren gebruikend een SQL vraag. U wordt geadviseerd om de [&#x200B; SQl syntaxisgids &#x200B;](../sql/syntax.md) te lezen om meer eigenschappen van de Dienst van de Vraag van Adobe Experience Platform te ontdekken.

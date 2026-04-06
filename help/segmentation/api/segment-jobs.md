@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Eindpunt segmenttaken
 
-Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijzingen a [ segmentdefinitie ](./segment-definitions.md), evenals om het even welk [ samenvoegbeleid ](../../profile/api/merge-policies.md) controlerend hoe [!DNL Real-Time Customer Profile] overlappende attributen over uw profielfragmenten samenvoegt. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
+Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijzingen a [&#x200B; segmentdefinitie &#x200B;](./segment-definitions.md), evenals om het even welk [&#x200B; samenvoegbeleid &#x200B;](../../profile/api/merge-policies.md) controlerend hoe [!DNL Real-Time Customer Profile] overlappende attributen over uw profielfragmenten samenvoegt. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over het segment, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen.
 
 Deze handleiding bevat informatie die u helpt segmenttaken beter te begrijpen en voorbeelden van API-aanroepen voor het uitvoeren van basishandelingen met de API.
 
 ## Aan de slag
 
-De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API van [!DNL Adobe Experience Platform Segmentation Service] . Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een lijst met segmenttaken ophalen {#retrieve-list}
 
@@ -222,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segmentId` | De id van de segmentdefinitie die u wilt evalueren. Deze segmentdefinities kunnen tot verschillende samenvoegbeleidsregels behoren. Meer informatie over segmentdefinities kan in de [ gids van het eindpunt van de segmentdefinitie ](./segment-definitions.md) worden gevonden. |
+| `segmentId` | De id van de segmentdefinitie die u wilt evalueren. Deze segmentdefinities kunnen tot verschillende samenvoegbeleidsregels behoren. Meer informatie over segmentdefinities kan in de [&#x200B; gids van het eindpunt van de segmentdefinitie &#x200B;](./segment-definitions.md) worden gevonden. |
 
 +++
 

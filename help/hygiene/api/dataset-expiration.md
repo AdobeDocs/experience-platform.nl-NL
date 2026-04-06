@@ -28,7 +28,7 @@ Nadat het verwijderen is gestart, wordt de vervaltaak gemarkeerd als `executing`
 >
 >Als een dataset wordt geplaatst om te verlopen, moet u om het even welke gegevensstromen manueel veranderen die gegevens in die dataset kunnen opnemen zodat uw stroomafwaartse werkschema&#39;s niet negatief worden beïnvloed.
 
-Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het eindpunt van de gegevenssetvervalsing en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via het [ werkordeeindpunt ](./workorder.md). U kunt [ datasetvervalingen ](../ui/dataset-expiration.md) en [ verslagschrappingen ](../ui/record-delete.md) door Experience Platform UI ook beheren. Raadpleeg de gekoppelde documentatie voor meer informatie.
+Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het eindpunt van de gegevenssetvervalsing en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via het [&#x200B; werkordeeindpunt &#x200B;](./workorder.md). U kunt [&#x200B; datasetvervalingen &#x200B;](../ui/dataset-expiration.md) en [&#x200B; verslagschrappingen &#x200B;](../ui/record-delete.md) door Experience Platform UI ook beheren. Raadpleeg de gekoppelde documentatie voor meer informatie.
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappin
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data Hygiene API. Alvorens verder te gaan, te herzien gelieve de [ API gids ](./overview.md) voor informatie over vereiste kopballen voor verrichtingen CRUD, foutenmeldingen, de inzamelingen van Postman, en hoe te om steekproefAPI vraag te lezen.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data Hygiene API. Alvorens verder te gaan, te herzien gelieve de [&#x200B; API gids &#x200B;](./overview.md) voor informatie over vereiste kopballen voor verrichtingen CRUD, foutenmeldingen, de inzamelingen van Postman, en hoe te om steekproefAPI vraag te lezen.
 
 >[!IMPORTANT]
 >
@@ -56,7 +56,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | Een lijst met optionele queryparameters, met meerdere parameters gescheiden door `&` tekens. Algemene parameters zijn `limit` en `page` voor pagineringsdoeleinden. Voor een volledige lijst van gesteunde vraagparameters, verwijs naar de [ bijlage sectie ](#query-params) een volledige lijst van gesteunde vraagparameters. De meest gebruikte parameters zijn hieronder en in het aanhangsel opgenomen. |
+| `{QUERY_PARAMETERS}` | Een lijst met optionele queryparameters, met meerdere parameters gescheiden door `&` tekens. Algemene parameters zijn `limit` en `page` voor pagineringsdoeleinden. Voor een volledige lijst van gesteunde vraagparameters, verwijs naar de [&#x200B; bijlage sectie &#x200B;](#query-params) een volledige lijst van gesteunde vraagparameters. De meest gebruikte parameters zijn hieronder en in het aanhangsel opgenomen. |
 | `author` | Filter op de gebruiker die de gegevenssetvervaldatum het laatst heeft bijgewerkt of gemaakt. Biedt ondersteuning voor SQL-achtige patronen (bijvoorbeeld `LIKE %john%` ). |
 | `datasetId` | Filtervervaltijden met een specifieke dataset-id. |
 | `datasetName` | Een hoofdlettergevoelig filter voor overeenkomende gegevenssetnamen. |
@@ -204,7 +204,7 @@ Een succesvolle reactie keert de details van de datasetvervaldatum terug.
 
 ### Vervaltags voor catalogi
 
-Wanneer het gebruiken van de [ Catalogus API ](../../catalog/api/getting-started.md) om datasetdetails op te zoeken, als de dataset een actieve afloop heeft zal het onder `tags.adobe/hygiene/ttl` worden vermeld.
+Wanneer het gebruiken van de [&#x200B; Catalogus API &#x200B;](../../catalog/api/getting-started.md) om datasetdetails op te zoeken, als de dataset een actieve afloop heeft zal het onder `tags.adobe/hygiene/ttl` worden vermeld.
 
 In de volgende JSON wordt een ingekorte API-reactie van de catalogus weergegeven voor een dataset met de vervalwaarde `32503680000000` . De tag codeert de vervaldatum als het aantal milliseconden dat is verstreken sinds het Unix-tijdperk.
 
@@ -496,7 +496,7 @@ Er treedt een fout van 400 op wanneer u probeert een gegevensset te annuleren di
 
 ### Geaccepteerde queryparameters {#query-params}
 
-De volgende lijst schetst de beschikbare vraagparameters wanneer [ van de lijst dataset vervalst ](#list):
+De volgende lijst schetst de beschikbare vraagparameters wanneer [&#x200B; van de lijst dataset vervalst &#x200B;](#list):
 
 >[!NOTE]
 >

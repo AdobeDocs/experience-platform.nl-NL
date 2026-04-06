@@ -17,7 +17,7 @@ ht-degree: 0%
 
 De AI van de klant toont fouten wanneer de modelopleiding, het scoren, en de configuratie ontbreken. In de sectie **[!UICONTROL Service instances]** geeft een kolom voor **[!UICONTROL LAST RUN STATUS]** een van de volgende berichten weer: **[!UICONTROL Success]** , **[!UICONTROL Training issue]** en **[!UICONTROL Failed]** .
 
-![ laatste looppasstatus die succes, opleidingskwestie, of ontbroken tonen.](./images/errors/last-run-status.png)
+![&#x200B; laatste looppasstatus die succes, opleidingskwestie, of ontbroken tonen.](./images/errors/last-run-status.png)
 
 Als **[!UICONTROL Failed]** of **[!UICONTROL Training issue]** wordt weergegeven, kunt u de uitvoerstatus selecteren om een zijpaneel te openen. Het zijpaneel bevat de **[!UICONTROL Last run status]** en **[!UICONTROL Last run details]** . **[!UICONTROL Last run details]** bevat informatie over de reden waarom de uitvoering is mislukt. Als de AI van de Klant geen details over uw fout kan verstrekken, contacteer steun met de foutencode die verstrekt wordt.
 
@@ -27,13 +27,13 @@ Als **[!UICONTROL Failed]** of **[!UICONTROL Training issue]** wordt weergegeven
 
 Er treden laadfouten op in de incognitomodus Google Chrome vanwege updates in de beveiligingsinstellingen van de incognitomodus Google Chrome. Dit probleem wordt momenteel actief besproken met Chrome om experience.adobe.com tot een vertrouwd domein te maken.
 
-![ beeld dat van de Fout een voorbeeld van een AI van de Klant foutbericht toont.](./images/errors/error.PNG){width=500}
+![&#x200B; beeld dat van de Fout een voorbeeld van een AI van de Klant foutbericht toont.](./images/errors/error.PNG){width=500}
 
 ### Aanbevolen correctie
 
 Als u dit probleem wilt oplossen, moet u experience.adobe.com toevoegen als een site die cookies altijd kan gebruiken. Begin door aan **chrome://settings/cookies** te navigeren. Daarna, scrol neer aan de **Aangepaste gedrags** sectie die door **wordt gevolgd te selecteren voegt** knoop naast &quot;plaatsen toe die koekjes&quot;altijd kunnen gebruiken. In popover die verschijnt, kopieer en plak `[*.]experience.adobe.com` dan **Including derdekoekjes** op deze plaats checkbox. Zodra volledig, uitgezochte **voeg** toe en herlaad Klant AI in incognito.
 
-![ Animatie die de stappen toont om experience.adobe.com als plaats toe te voegen die koekjes in de montages van Chrome altijd kan gebruiken.](./images/errors/cookies2.gif)
+![&#x200B; Animatie die de stappen toont om experience.adobe.com als plaats toe te voegen die koekjes in de montages van Chrome altijd kan gebruiken.](./images/errors/cookies2.gif)
 
 ## Modelkwaliteit is slecht
 
@@ -48,7 +48,7 @@ Als u de fout &quot;[!UICONTROL Model Quality is poor. We recommend creating a n
 Begin door de nauwkeurigheid van uw gegevens te controleren. Het is belangrijk dat uw gegevens de velden bevatten die nodig zijn voor uw voorspelbare resultaat.
 
 - Controleer of uw dataset de recentste data heeft. De AI van de Klant veronderstelt altijd dat de gegevens bijgewerkt zijn wanneer het model wordt teweeggebracht.
-- Controleer of er gegevens ontbreken in het gedefinieerde voorspellings- en geschiktheidsvenster. Uw gegevens moeten volledig zijn zonder tussenruimten. Ook zorg ervoor uw dataset aan de [ historische gegevensvereisten van de Klant AI ](./data-requirements.md#data-requirements) voldoet.
+- Controleer of er gegevens ontbreken in het gedefinieerde voorspellings- en geschiktheidsvenster. Uw gegevens moeten volledig zijn zonder tussenruimten. Ook zorg ervoor uw dataset aan de [&#x200B; historische gegevensvereisten van de Klant AI &#x200B;](./data-requirements.md#data-requirements) voldoet.
 - Controle voor ontbrekende gegevens in handel, toepassing, Web, en onderzoek, binnen uw eigenschappen van het schemagebied.
 
 Als uw gegevens niet het probleem lijken te zijn, probeert u de toelatingsvoorwaarde voor de populatie te wijzigen om het model te beperken tot bepaalde profielen (`_experience.analytics.customDimensions.eVars.eVar142` bestaat bijvoorbeeld in de afgelopen 56 dagen). Dit beperkt de populatie en de grootte van de gegevens die in het trainingsvenster worden gebruikt.

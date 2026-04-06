@@ -34,7 +34,7 @@ Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarsch
 
 {style="table-layout:auto"}
 
-Voor meer informatie over waarschuwing leest u het [[!DNL Observability Insights] overzicht ](/help/observability/home.md).
+Voor meer informatie over waarschuwing leest u het [[!DNL Observability Insights] overzicht &#x200B;](/help/observability/home.md).
 
 ## Dataverzameling {#data-collection}
 

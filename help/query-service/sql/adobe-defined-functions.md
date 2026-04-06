@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Adobe-gedefinieerde SQL-functies in Query Service
 
-Adobe-gedefinieerde functies, hierna ADF&#39;s genoemd, zijn vooraf gebouwde functies in de Adobe Experience Platform Query Service die u helpen bij het uitvoeren van veelvoorkomende zakelijke taken op [!DNL Experience Event] -gegevens. Deze omvatten functies voor [ Sessionisatie ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) en [ Attributie ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) als die gevonden in Adobe Analytics.
+Adobe-gedefinieerde functies, hierna ADF&#39;s genoemd, zijn vooraf gebouwde functies in de Adobe Experience Platform Query Service die u helpen bij het uitvoeren van veelvoorkomende zakelijke taken op [!DNL Experience Event] -gegevens. Deze omvatten functies voor [&#x200B; Sessionisatie &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) en [&#x200B; Attributie &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) als die gevonden in Adobe Analytics.
 
 Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service] .
 
@@ -47,7 +47,7 @@ Wanneer u werkt met [!DNL Experience Event] -gegevens die afkomstig zijn van een
 
 Deze groepering, of zitting van gegevens, helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
 
-Voor meer informatie over zittingssessie in Adobe Analytics, zie de documentatie over [ context-bewuste zittingen ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Voor meer informatie over zittingssessie in Adobe Analytics, zie de documentatie over [&#x200B; context-bewuste zittingen &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **syntaxis van de Vraag**
 
@@ -60,7 +60,7 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
 | `{EXPIRATION_IN_SECONDS}` | Het aantal seconden dat nodig is tussen gebeurtenissen om het einde van de huidige sessie en het begin van een nieuwe sessie te kwalificeren. |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -124,7 +124,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
 | `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld `application.launches > 0` . |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -189,7 +189,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Het tijdstempelveld in de gegevensset. |
 | `{TEST_EXPRESSION}` | Een expressie waarmee u de velden van de gegevens wilt controleren. Bijvoorbeeld `application.launches > 0` . |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -262,7 +262,7 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | (Optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
 | `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of `{KEY}` -waarden moeten worden genegeerd. De standaardwaarde is `false` . |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -313,7 +313,7 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | (Optioneel) Het aantal gebeurtenissen dat zich niet bij de huidige gebeurtenis bevindt. De standaardwaarde is 1. |
 | `{IGNORE_NULLS}` | (Optioneel) Een Booleaanse waarde die aangeeft of `{KEY}` -waarden moeten worden genegeerd. De standaardwaarde is `false` . |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -371,7 +371,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | De expressie die de vorige gebeurtenis moet kwalificeren. |
 | `{TIME_UNIT}` | De eenheid van output. Mogelijke waarden zijn dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -433,7 +433,7 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | `{EVENT_DEFINITION}` | De expressie waarmee de volgende gebeurtenis wordt gekwalificeerd. |
 | `{TIME_UNIT}` | (Optioneel) De uitvoereenheid. Mogelijke waarden zijn dagen, uren, minuten en seconden. De standaardwaarde is seconden. |
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](#window-functions) worden gevonden.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](#window-functions) worden gevonden.
 
 **vraag van het Voorbeeld**
 
@@ -481,7 +481,7 @@ Voor de voorbeeldquery die wordt gegeven, worden de resultaten gegeven in de kol
 
 ## Volgende stappen
 
-Met de hier beschreven functies kunt u query&#39;s schrijven voor toegang tot uw eigen [!DNL Experience Event] datasets met [!DNL Query Service] . Voor meer informatie over auteursvragen in [!DNL Query Service], zie de documentatie bij [ het creëren van vragen ](../best-practices/writing-queries.md).
+Met de hier beschreven functies kunt u query&#39;s schrijven voor toegang tot uw eigen [!DNL Experience Event] datasets met [!DNL Query Service] . Voor meer informatie over auteursvragen in [!DNL Query Service], zie de documentatie bij [&#x200B; het creëren van vragen &#x200B;](../best-practices/writing-queries.md).
 
 ## Aanvullende bronnen
 

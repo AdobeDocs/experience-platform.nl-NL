@@ -13,19 +13,19 @@ ht-degree: 0%
 
 # Gegevensgebruikslabels voor gegevenssets beheren met behulp van API&#39;s
 
-Met [[!DNL Dataset Service API] ](https://www.adobe.io/experience-platform-apis/references/dataset-service/) kunt u gebruikslabels voor gegevenssets toepassen en bewerken. De klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API van [!DNL Catalog Service] die metagegevens van gegevenssets beheert.
+Met [[!DNL Dataset Service API] &#x200B;](https://www.adobe.io/experience-platform-apis/references/dataset-service/) kunt u gebruikslabels voor gegevenssets toepassen en bewerken. De klasse maakt deel uit van de mogelijkheden van de Adobe Experience Platform-gegevenscatalogus, maar staat los van de API van [!DNL Catalog Service] die metagegevens van gegevenssets beheert.
 
 >[!IMPORTANT]
 >
->Het toepassen van labels op gegevenssetniveau wordt alleen ondersteund voor gevallen waarin gegevens worden beheerd. Als u probeert om toegangsbeleid voor de gegevens tot stand te brengen, moet u [ etiketten op het schema ](../../xdm/tutorials/labels.md) toepassen dat de dataset op gebaseerd is. Zie het overzicht op [ op attributen-gebaseerde toegangsbeheer ](../../access-control/abac/overview.md) voor meer informatie.
+>Het toepassen van labels op gegevenssetniveau wordt alleen ondersteund voor gevallen waarin gegevens worden beheerd. Als u probeert om toegangsbeleid voor de gegevens tot stand te brengen, moet u [&#x200B; etiketten op het schema &#x200B;](../../xdm/tutorials/labels.md) toepassen dat de dataset op gebaseerd is. Zie het overzicht op [&#x200B; op attributen-gebaseerde toegangsbeheer &#x200B;](../../access-control/abac/overview.md) voor meer informatie.
 
-In dit document wordt beschreven hoe u labels voor gegevenssets en velden kunt beheren met de [!DNL Dataset Service API] . Voor stappen op hoe te om de etiketten van het gegevensgebruik zelf te beheren die API vraag gebruiken, zie de [ gids van het etiketteneindpunt ](../api/labels.md) voor [!DNL Policy Service API].
+In dit document wordt beschreven hoe u labels voor gegevenssets en velden kunt beheren met de [!DNL Dataset Service API] . Voor stappen op hoe te om de etiketten van het gegevensgebruik zelf te beheren die API vraag gebruiken, zie de [&#x200B; gids van het etiketteneindpunt &#x200B;](../api/labels.md) voor [!DNL Policy Service API].
 
 ## Aan de slag
 
-Alvorens u deze gids leest, volg de stappen die in [ worden geschetst begonnen sectie ](../../catalog/api/getting-started.md) in de de ontwikkelaarsgids van de Catalogus worden geschetst om de vereiste geloofsbrieven te verzamelen om vraag aan [!DNL Experience Platform] APIs te maken.
+Alvorens u deze gids leest, volg de stappen die in [&#x200B; worden geschetst begonnen sectie &#x200B;](../../catalog/api/getting-started.md) in de de ontwikkelaarsgids van de Catalogus worden geschetst om de vereiste geloofsbrieven te verzamelen om vraag aan [!DNL Experience Platform] APIs te maken.
 
-Als u aanroepen wilt uitvoeren naar de eindpunten die in dit document worden beschreven, moet u de unieke `id` -waarde voor een specifieke gegevensset hebben. Als u deze waarde niet hebt, zie de gids op [ het van lijstCatalogusvoorwerpen ](../../catalog/api/list-objects.md) om IDs van uw bestaande datasets te vinden.
+Als u aanroepen wilt uitvoeren naar de eindpunten die in dit document worden beschreven, moet u de unieke `id` -waarde voor een specifieke gegevensset hebben. Als u deze waarde niet hebt, zie de gids op [&#x200B; het van lijstCatalogusvoorwerpen &#x200B;](../../catalog/api/list-objects.md) om IDs van uw bestaande datasets te vinden.
 
 ## De etiketten van de raadpleging voor een dataset {#look-up}
 
@@ -105,7 +105,7 @@ Wanneer het maken van API vraag die de bestaande etiketten van een dataset (PUT)
 >
 >Als er momenteel labels voor de desbetreffende gegevensset bestaan, kunnen nieuwe labels alleen worden toegevoegd via een PUT-aanvraag waarvoor een `If-Match` header is vereist. Zodra de etiketten aan een dataset zijn toegevoegd, wordt de meest recente `etag` waarde vereist om de etiketten in een recentere tijd <br> bij te werken of te verwijderen alvorens de methode van PUT uit te voeren, moet u een verzoek van GET op de datasetetiketten uitvoeren. Zorg ervoor dat u alleen de specifieke velden bijwerkt die zijn bedoeld voor wijziging in de aanvraag, en laat de rest ongewijzigd. Bovendien, zorg ervoor dat de vraag van PUT de zelfde ouderentiteiten zoals de vraag van GET handhaaft. Elke discrepantie zou resulteren in een fout voor de klant.
 
-Om de meest recente versie van de dataset-etiket entiteit terug te winnen, doe a [ GET verzoek ](#look-up) aan het `/datasets/{DATASET_ID}/labels` eindpunt. De huidige waarde wordt geretourneerd in de reactie onder een `etag` -header. Wanneer u bestaande gegevenssetlabels bijwerkt, kunt u het beste eerst een opzoekverzoek voor de gegevensset uitvoeren om de laatste `etag` -waarde op te halen voordat u die waarde in de `If-Match` -koptekst van uw volgende PUT-verzoek gebruikt.
+Om de meest recente versie van de dataset-etiket entiteit terug te winnen, doe a [&#x200B; GET verzoek &#x200B;](#look-up) aan het `/datasets/{DATASET_ID}/labels` eindpunt. De huidige waarde wordt geretourneerd in de reactie onder een `etag` -header. Wanneer u bestaande gegevenssetlabels bijwerkt, kunt u het beste eerst een opzoekverzoek voor de gegevensset uitvoeren om de laatste `etag` -waarde op te halen voordat u die waarde in de `If-Match` -koptekst van uw volgende PUT-verzoek gebruikt.
 
 ```shell
 curl -X POST \
@@ -143,7 +143,7 @@ Een succesvolle reactie keert de bijgewerkte reeks etiketten voor de dataset ter
 
 >[!IMPORTANT]
 >
->De eigenschap `optionalLabels` is vervangen voor gebruik met POST-aanvragen. Het is niet meer mogelijk om gegevensetiketten aan datasetgebieden toe te voegen. Een POST-bewerking genereert een fout als er een `optionalLabel` -waarde aanwezig is. U kunt labels echter uit afzonderlijke velden verwijderen met een PUT-aanvraag en de eigenschap `optionalLabels` . Voor meer informatie zie de sectie op [ verwijderend etiketten uit een dataset ](#remove).
+>De eigenschap `optionalLabels` is vervangen voor gebruik met POST-aanvragen. Het is niet meer mogelijk om gegevensetiketten aan datasetgebieden toe te voegen. Een POST-bewerking genereert een fout als er een `optionalLabel` -waarde aanwezig is. U kunt labels echter uit afzonderlijke velden verwijderen met een PUT-aanvraag en de eigenschap `optionalLabels` . Voor meer informatie zie de sectie op [&#x200B; verwijderend etiketten uit een dataset &#x200B;](#remove).
 
 ```json
 {
@@ -266,6 +266,6 @@ Een succesvolle reactie keert de bijgewerkte reeks etiketten voor de dataset ter
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe u labels voor gegevensgebruik voor gegevenssets en velden kunt beheren met de API [!DNL Dataset Service] . U kunt [ beleid van het gegevensgebruik ](../policies/overview.md) en [ toegangsbeheerbeleid ](../../access-control/abac/ui/policies.md) nu bepalen dat op de etiketten wordt gebaseerd u hebt toegepast.
+Door dit document te lezen, hebt u geleerd hoe u labels voor gegevensgebruik voor gegevenssets en velden kunt beheren met de API [!DNL Dataset Service] . U kunt [&#x200B; beleid van het gegevensgebruik &#x200B;](../policies/overview.md) en [&#x200B; toegangsbeheerbeleid &#x200B;](../../access-control/abac/ui/policies.md) nu bepalen dat op de etiketten wordt gebaseerd u hebt toegepast.
 
-Voor meer informatie bij het beheren van datasets in [!DNL Experience Platform], zie het [ overzicht van datasets ](../../catalog/datasets/overview.md).
+Voor meer informatie bij het beheren van datasets in [!DNL Experience Platform], zie het [&#x200B; overzicht van datasets &#x200B;](../../catalog/datasets/overview.md).

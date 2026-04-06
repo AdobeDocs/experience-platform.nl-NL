@@ -13,7 +13,7 @@ ht-degree: 1%
 
 De Adobe Experience Platform Web SDK bevat controleluks die u kunt gebruiken om verschillende systeemgebeurtenissen te controleren. Deze hulpmiddelen zijn nuttig om uw eigen het zuiveren hulpmiddelen te ontwikkelen en de logboeken van SDK van het Web te vangen.
 
-Het Web SDK brengt de controlerende functies teweeg ongeacht of u [ het zuiveren ](commands/configure/debugenabled.md) hebt toegelaten.
+Het Web SDK brengt de controlerende functies teweeg ongeacht of u [&#x200B; het zuiveren &#x200B;](commands/configure/debugenabled.md) hebt toegelaten.
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
@@ -236,7 +236,7 @@ onContentHiding(data) {
 
 ## Hoe te om controlehaken te specificeren wanneer het gebruiken van het pakket NPM {#specify-monitoring-npm}
 
-Als u het Web SDK door het [ NPM pakket ](install/npm.md) gebruikt, kunt u controlehaken in de `createInstance` functie specificeren, zoals hieronder getoond.
+Als u het Web SDK door het [&#x200B; NPM pakket &#x200B;](install/npm.md) gebruikt, kunt u controlehaken in de `createInstance` functie specificeren, zoals hieronder getoond.
 
 ```js
 var monitor = {

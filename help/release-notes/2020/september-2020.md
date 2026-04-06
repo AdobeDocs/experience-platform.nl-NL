@@ -36,19 +36,19 @@ Adobe Experience Platform-datagovernance is een reeks strategieën en technologi
 | ------- | ----------- |
 | Verbeteringen in de gebruikersinterface voor de labels van gegevenssets | Verschillende nieuwe besturingselementen voor sorteren en filteren zijn toegevoegd aan de interface van de gegevenssetlabels om het werken met grote schema&#39;s eenvoudiger te maken: <ul><li>U kunt velden sorteren op alfabetische volgorde op basis van het volledige schema.</li><li>Gedeeltelijke zoekopdrachten uitvoeren op padnamen van velden.</li><li>Velden filteren zonder labels, met een geselecteerd label of met een labelcategorie.</li></ul> |
 
-Zie het [ overzicht van het Beleid van Gegevens ](../../data-governance/home.md) voor meer informatie over de dienst.
+Zie het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](../../data-governance/home.md) voor meer informatie over de dienst.
 
 ## Bestemmingen {#destinations}
 
-In [ Real-Time Customer Data Platform ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [&#x200B; Real-Time Customer Data Platform &#x200B;](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| UX-verbeteringen | Gebruikers kunnen inline tabelhandelingen gebruiken om gemakkelijker toegang te krijgen tot primaire handelingen, zoals het toevoegen van gegevens, het bewerken van planningen en het toevoegen van segmenten. Zie het [ document van de bestemmingswerkruimte ](../../destinations/ui/destinations-workspace.md) voor meer informatie. |
+| UX-verbeteringen | Gebruikers kunnen inline tabelhandelingen gebruiken om gemakkelijker toegang te krijgen tot primaire handelingen, zoals het toevoegen van gegevens, het bewerken van planningen en het toevoegen van segmenten. Zie het [&#x200B; document van de bestemmingswerkruimte &#x200B;](../../destinations/ui/destinations-workspace.md) voor meer informatie. |
 
-Meer leren, bezoek het [ overzicht van bestemmingen ](../../destinations/home.md)
+Meer leren, bezoek het [&#x200B; overzicht van bestemmingen &#x200B;](../../destinations/home.md)
 
 ## [!DNL Observability Insights] {#observability}
 
@@ -60,7 +60,7 @@ Met [!DNL Observability Insights] kunt u de activiteiten op Adobe Experience Pla
 | --- | --- |
 | Adobe I/O-gebeurtenismeldingen | [!DNL Observability Insights] gebruikt Adobe I/O Events om gebeurtenismeldingen te maken voor verschillende Experience Platform-services. De lading van het bericht wordt verzonden naar een gevormde webhaak die u kunt dan gebruiken om verdere stroomafwaartse processen te automatiseren. |
 
-Zie het [[!DNL Observability Insights]  overzicht ](../../observability/home.md) voor meer informatie over de dienst.
+Zie het [[!DNL Observability Insights]  overzicht &#x200B;](../../observability/home.md) voor meer informatie over de dienst.
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -82,7 +82,7 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 | ------- | ----------- |
 | Profile Viewer | De profielviewer is in de gebruikersinterface van Experience Platform bijgewerkt tot een dashboard met volledige aanpassing. De gebruiker kan nu de volgende taken uitvoeren: <ul><li>Werk de geselecteerde standaard- en aangepaste kenmerken bij in de basisinformatiewidget.</li><li>Aangepaste widgets maken, bewerken en verwijderen</li><li>Widgets vergroten of verkleinen en opnieuw rangschikken</li></ul> |
 
-Voor meer informatie over [!DNL Real-Time Customer Profile], met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, te lezen gelieve het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md).
+Voor meer informatie over [!DNL Real-Time Customer Profile], met inbegrip van leerprogramma&#39;s en beste praktijken voor het werken met [!DNL Profile] gegevens, te lezen gelieve het [&#x200B; overzicht van het Profiel van de Klant in real time &#x200B;](../../profile/home.md).
 
 ## Segmentatieservice {#segmentation}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform Segmentation Service biedt een gebruikersinterface en 
 | Exporttaken | Er is een vlag toegevoegd waarmee segmenten kunnen worden geëvalueerd als onderdeel van een exporttaak. Hierdoor kunnen gebruikers zowel segmentatie als export in één taak uitvoeren. |
 | Beleid samenvoegen | Het veelvoudige samenvoegbeleid kan in één enkele baan van de partijsegmentatie worden omvat. |
 
-Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [ overzicht van de Segmentatie ](../../segmentation/home.md)
+Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [&#x200B; overzicht van de Segmentatie &#x200B;](../../segmentation/home.md)
 
 ## Bronnen {#sources}
 
@@ -110,6 +110,6 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Automatisch toewijzen | [!DNL Experience Platform] biedt intelligente aanbevelingen voor automatische toewijzing tijdens de workflow voor gegevensinvoer, op basis van een door de gebruiker geselecteerd doelschema of gegevensset. U kunt flexibele regels voor automatische toewijzingen handmatig aanpassen aan uw gebruiksgevallen. |
-| UX-verbeteringen | Gebruikers kunnen inline tabelhandelingen gebruiken om gemakkelijker toegang te krijgen tot primaire handelingen, zoals het toevoegen van gegevens, het bewerken van planningen en het toevoegen van segmenten. Zie [ controledatablows ](../../sources/tutorials/ui/monitor.md) document voor meer informatie. |
+| UX-verbeteringen | Gebruikers kunnen inline tabelhandelingen gebruiken om gemakkelijker toegang te krijgen tot primaire handelingen, zoals het toevoegen van gegevens, het bewerken van planningen en het toevoegen van segmenten. Zie [&#x200B; controledatablows &#x200B;](../../sources/tutorials/ui/monitor.md) document voor meer informatie. |
 
-Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
+Meer over bronnen leren, zie het [&#x200B; overzicht van bronnen &#x200B;](../../sources/home.md).

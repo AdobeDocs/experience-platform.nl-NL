@@ -13,15 +13,15 @@ ht-degree: 1%
 
 # Handleiding voor het ontwikkelen van batterijen
 
-Dit document verstrekt een uitvoerige gids aan het gebruiken van [ partij ingestie API eindpunten ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. Voor een overzicht van partij ingestie APIs, met inbegrip van eerste vereisten en beste praktijken, gelieve te beginnen door het [ partij ingestition API overzicht ](overview.md) te lezen.
+Dit document verstrekt een uitvoerige gids aan het gebruiken van [&#x200B; partij ingestie API eindpunten &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. Voor een overzicht van partij ingestie APIs, met inbegrip van eerste vereisten en beste praktijken, gelieve te beginnen door het [&#x200B; partij ingestition API overzicht &#x200B;](overview.md) te lezen.
 
-Het bijlage aan dit document verstrekt informatie voor [ het formatteren gegevens die voor opname ](#data-transformation-for-batch-ingestion), met inbegrip van steekproefCSV en JSON gegevensdossiers moeten worden gebruikt.
+Het bijlage aan dit document verstrekt informatie voor [&#x200B; het formatteren gegevens die voor opname &#x200B;](#data-transformation-for-batch-ingestion), met inbegrip van steekproefCSV en JSON gegevensdossiers moeten worden gebruikt.
 
 ## Aan de slag
 
-De API eindpunten die in deze gids worden gebruikt maken deel uit van [ de Ingestie API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). De opname van de partij wordt verstrekt door RESTful API waar u basisbewerkingen van CRUD tegen de gesteunde objecten types kunt uitvoeren.
+De API eindpunten die in deze gids worden gebruikt maken deel uit van [&#x200B; de Ingestie API van de Partij &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). De opname van de partij wordt verstrekt door RESTful API waar u basisbewerkingen van CRUD tegen de gesteunde objecten types kunt uitvoeren.
 
-Alvorens verder te gaan, te herzien gelieve het [ partij ingestie API overzicht ](overview.md) en [ begonnen gids ](getting-started.md) worden.
+Alvorens verder te gaan, te herzien gelieve het [&#x200B; partij ingestie API overzicht &#x200B;](overview.md) en [&#x200B; begonnen gids &#x200B;](getting-started.md) worden.
 
 ## Ingest JSON-bestanden
 
@@ -37,7 +37,7 @@ Ten eerste moet u een batch maken, met JSON als invoerindeling. Wanneer het cre�
 
 >[!NOTE]
 >
->De voorbeelden hieronder zijn voor single-line JSON. Als u JSON met meerdere regels wilt gebruiken, moet de markering `isMultiLineJson` worden ingesteld. Voor meer informatie, te lezen gelieve de [ gids van het oplossen van problemenoplossing van de partij ](./troubleshooting.md).
+>De voorbeelden hieronder zijn voor single-line JSON. Als u JSON met meerdere regels wilt gebruiken, moet de markering `isMultiLineJson` worden ingesteld. Voor meer informatie, te lezen gelieve de [&#x200B; gids van het oplossen van problemenoplossing van de partij &#x200B;](./troubleshooting.md).
 
 **API formaat**
 
@@ -99,7 +99,7 @@ Nu u een batch hebt gemaakt, kunt u de batch-id uit het antwoord op het aanmaken
 
 >[!NOTE]
 >
->Zie de appendix sectie voor een [ voorbeeld van een behoorlijk-geformatteerd JSON- gegevensdossier ](#data-transformation-for-batch-ingestion).
+>Zie de appendix sectie voor een [&#x200B; voorbeeld van een behoorlijk-geformatteerd JSON- gegevensdossier &#x200B;](#data-transformation-for-batch-ingestion).
 
 **API formaat**
 
@@ -515,7 +515,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## CSV-bestanden samenvoegen
 
-om CSV- dossiers in te voeren, zult u een klasse, een schema, en een dataset moeten tot stand brengen die CSV steunt. Voor gedetailleerde informatie over hoe te om de noodzakelijke klasse en het schema tot stand te brengen, volg de instructies die in het [ worden verstrekt ad hoc zelfstudie van de schemaverwezenlijking ](../../xdm/api/ad-hoc.md).
+om CSV- dossiers in te voeren, zult u een klasse, een schema, en een dataset moeten tot stand brengen die CSV steunt. Voor gedetailleerde informatie over hoe te om de noodzakelijke klasse en het schema tot stand te brengen, volg de instructies die in het [&#x200B; worden verstrekt ad hoc zelfstudie van de schemaverwezenlijking &#x200B;](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -623,7 +623,7 @@ Nu u een batch hebt gemaakt, kunt u de instructie `batchId` from before gebruike
 
 >[!NOTE]
 >
->Zie de appendix sectie voor een [ voorbeeld van een behoorlijk-geformatteerd Csv- gegevensdossier ](#data-transformation-for-batch-ingestion).
+>Zie de appendix sectie voor een [&#x200B; voorbeeld van een behoorlijk-geformatteerd Csv- gegevensdossier &#x200B;](#data-transformation-for-batch-ingestion).
 
 **API formaat**
 
@@ -760,10 +760,10 @@ Soms kan het nodig zijn gegevens bij te werken in het profielarchief van uw orga
 
 Het volgende is vereist om een batch te kunnen repareren:
 
-- **dataset van A die voor de updates van het Profiel en van attributen wordt toegelaten.** Dit gebeurt via gegevenssetcodes en er moet een specifieke `isUpsert:true` -tag worden toegevoegd aan de `unifiedProfile` -array. Voor detailstappen die tonen hoe te om een dataset tot stand te brengen of een bestaande dataset voor upsert te vormen, volg het leerprogramma voor [ toelatend een dataset voor de updates van het Profiel ](../../catalog/datasets/enable-upsert.md).
+- **dataset van A die voor de updates van het Profiel en van attributen wordt toegelaten.** Dit gebeurt via gegevenssetcodes en er moet een specifieke `isUpsert:true` -tag worden toegevoegd aan de `unifiedProfile` -array. Voor detailstappen die tonen hoe te om een dataset tot stand te brengen of een bestaande dataset voor upsert te vormen, volg het leerprogramma voor [&#x200B; toelatend een dataset voor de updates van het Profiel &#x200B;](../../catalog/datasets/enable-upsert.md).
 - **het Dossier van het Pakket van A die de gebieden bevat die moeten worden gerepareerd en identiteitsgebieden voor het Profiel.** De gegevensindeling voor het patcheren van een batch is vergelijkbaar met het normale proces voor het inslikken van batch. De vereiste invoer is een Parquet-bestand. Naast de velden die moeten worden bijgewerkt, moeten de geüploade gegevens de identiteitsvelden bevatten om overeen te komen met de gegevens in het Profile Store.
 
-Zodra u een dataset hebt die voor Profiel en upsert wordt toegelaten, en een dossier van het Pakket dat de gebieden bevat u wenst om evenals de noodzakelijke identiteitsgebieden te repareren, kunt u de stappen voor [ volgen die de dossiers van het Pakket ](#ingest-parquet-files) opnemen om het flard via partijopname te voltooien.
+Zodra u een dataset hebt die voor Profiel en upsert wordt toegelaten, en een dossier van het Pakket dat de gebieden bevat u wenst om evenals de noodzakelijke identiteitsgebieden te repareren, kunt u de stappen voor [&#x200B; volgen die de dossiers van het Pakket &#x200B;](#ingest-parquet-files) opnemen om het flard via partijopname te voltooien.
 
 ## Een batch opnieuw afspelen
 
@@ -921,9 +921,9 @@ De volgende sectie bevat aanvullende informatie voor het innemen van gegevens in
 
 ### Gegevenstransformatie voor batch-opname
 
-Om een gegevensdossier in [!DNL Experience Platform] in te nemen, moet de hiërarchische structuur van het dossier met het [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md) schema voldoen verbonden aan de dataset die wordt geupload aan.
+Om een gegevensdossier in [!DNL Experience Platform] in te nemen, moet de hiërarchische structuur van het dossier met het [&#x200B; Model van de Gegevens van de Ervaring (XDM) &#x200B;](../../xdm/home.md) schema voldoen verbonden aan de dataset die wordt geupload aan.
 
-De informatie over hoe te om een Csv- dossier in kaart te brengen om aan een XDM- schema te voldoen kan in het [ steekproeftransformaties ](../../etl/transformations.md) document, samen met een voorbeeld van een behoorlijk geformatteerd JSON- gegevensdossier worden gevonden. Hier vindt u voorbeeldbestanden in het document:
+De informatie over hoe te om een Csv- dossier in kaart te brengen om aan een XDM- schema te voldoen kan in het [&#x200B; steekproeftransformaties &#x200B;](../../etl/transformations.md) document, samen met een voorbeeld van een behoorlijk geformatteerd JSON- gegevensdossier worden gevonden. Hier vindt u voorbeeldbestanden in het document:
 
-- [ CRM_profiles.csv ](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [ CRM_profiles.json ](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [&#x200B; CRM_profiles.csv &#x200B;](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [&#x200B; CRM_profiles.json &#x200B;](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

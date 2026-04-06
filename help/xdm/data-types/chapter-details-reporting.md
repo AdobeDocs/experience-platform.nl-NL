@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Chapter Details] Rapportering is een standaard XDM-gegevenstype (Experience Data Model) waarmee verschillende kenmerken worden beschreven die betrekking hebben op hoofdstukken of segmenten binnen media-inhoud. Gebruik het gegevenstype [!UICONTROL Chapter Details] Rapporteert om details vast te leggen, zoals de hoofdstuknaam, de duur, de positie, de id, de afspeelstatus (gestart/voltooid) en de tijd die aan elk hoofdstuk is besteed. Media-rapportvelden worden door Adobe-services gebruikt voor het analyseren van de velden Media Collection die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd.
 
-![ A diagram van de Details van het Hoofdstuk die gegevenstype melden.](../images/data-types/chapter-details-reporting.png)
+![&#x200B; A diagram van de Details van het Hoofdstuk die gegevenstype melden.](../images/data-types/chapter-details-reporting.png)
 
 >[!NOTE]
 >

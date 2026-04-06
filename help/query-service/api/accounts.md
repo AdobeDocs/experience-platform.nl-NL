@@ -18,7 +18,7 @@ In de Dienst van de Vraag van Adobe Experience Platform, worden de rekeningen ge
 
 ## Aan de slag
 
-De eindpunten die in deze gids worden gebruikt maken deel uit van de Dienst API van de Vraag. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+De eindpunten die in deze gids worden gebruikt maken deel uit van de Dienst API van de Vraag. Alvorens verder te gaan, te herzien gelieve [&#x200B; begonnen gids &#x200B;](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
 ## Een account maken
 

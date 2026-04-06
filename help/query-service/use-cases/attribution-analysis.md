@@ -17,12 +17,12 @@ Attributie is een analytisch concept dat helpt om de marketing tactiek zoals kan
 
 De SQL-voorbeelden in dit document zijn query&#39;s die veel worden gebruikt met Adobe Analytics-gegevens. Deze zelfstudie vereist een goed begrip van de volgende componenten:
 
-* [ de bron van Adobe Analytics schakelaar voor rapport-reeks gegevensoverzicht ](../../sources/connectors/adobe-applications/mapping/analytics.md).
-* [ de documentatie van het het gebiedstoewijzingen van Analytics ](../../sources/connectors/adobe-applications/mapping/analytics.md) verstrekt meer informatie bij het opnemen van en het in kaart brengen van analysegegevens voor gebruik met de Dienst van de Vraag.
-* [ het overzicht van Attribution IQ ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
-* [ de het paneelgids van de Attributie van Adobe Analytics ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
+* [&#x200B; de bron van Adobe Analytics schakelaar voor rapport-reeks gegevensoverzicht &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md).
+* [&#x200B; de documentatie van het het gebiedstoewijzingen van Analytics &#x200B;](../../sources/connectors/adobe-applications/mapping/analytics.md) verstrekt meer informatie bij het opnemen van en het in kaart brengen van analysegegevens voor gebruik met de Dienst van de Vraag.
+* [&#x200B; het overzicht van Attribution IQ &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [&#x200B; de het paneelgids van de Attributie van Adobe Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
-Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](../sql/adobe-defined-functions.md#window-functions) worden gevonden. De [ Adobe Marketing en de Verklarende woordenlijst van de Term van Commerce ](https://business.adobe.com/glossary/index.html) kunnen ook van nut zijn.
+Een verklaring van de parameters binnen de `OVER()` functie kan in de [&#x200B; sectie van vensterfuncties &#x200B;](../sql/adobe-defined-functions.md#window-functions) worden gevonden. De [&#x200B; Adobe Marketing en de Verklarende woordenlijst van de Term van Commerce &#x200B;](https://business.adobe.com/glossary/index.html) kunnen ook van nut zijn.
 
 Voor elk van de volgende gebruiksgevallen wordt een geparametriseerd SQL vraagvoorbeeld verstrekt als malplaatje voor u aan te passen. Geef parameters op waar `{ }` wordt weergegeven in de SQL-voorbeelden die u wilt evalueren.
 
@@ -80,7 +80,7 @@ De query hieronder retourneert de eerste aanraakattributiewaarde en details van 
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [ sectie van de parameterparameters van de attributievraag ](#attribution-query-parameters).
+Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [&#x200B; sectie van de parameterparameters van de attributievraag &#x200B;](#attribution-query-parameters).
 
 **vraag van het Voorbeeld**
 
@@ -116,7 +116,7 @@ In de onderstaande resultaten wordt de eerste trackingcode `em:946426` ontleend 
 (10 rows)
 ```
 
-Voor een verdeling van de resultaten die in de `first_touch` kolom worden getoond, zie de [ sectie van kolomcomponenten ](#query-result-column-components).
+Voor een verdeling van de resultaten die in de `first_touch` kolom worden getoond, zie de [&#x200B; sectie van kolomcomponenten &#x200B;](#query-result-column-components).
 
 ### Laatste aanraakkenmerk {#second-touch}
 
@@ -163,7 +163,7 @@ In de hieronder weergegeven resultaten is de trackingcode in het geretourneerde 
 (10 rows)
 ```
 
-Voor een verdeling van de resultaten die in de `last_touch` kolom worden getoond, zie de [ sectie van kolomcomponenten ](#query-result-column-components).
+Voor een verdeling van de resultaten die in de `last_touch` kolom worden getoond, zie de [&#x200B; sectie van kolomcomponenten &#x200B;](#query-result-column-components).
 
 ### Eerste aanraakkenmerk met vervalvoorwaarde {#first-touch-attribution-with-expiration-condition}
 
@@ -179,7 +179,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [ sectie van de parameterparameters van de attributievraag ](#attribution-query-parameters).
+Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [&#x200B; sectie van de parameterparameters van de attributievraag &#x200B;](#attribution-query-parameters).
 
 **vraag van het Voorbeeld**
 
@@ -214,7 +214,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Voor een verdeling van de resultaten die in de `first_touch` kolom worden getoond, zie de [ sectie van kolomcomponenten ](#query-result-column-components).
+Voor een verdeling van de resultaten die in de `first_touch` kolom worden getoond, zie de [&#x200B; sectie van kolomcomponenten &#x200B;](#query-result-column-components).
 
 ### Eerste aanraakkenmerk met vervaltijd {#first-touch-attribution-with-expiration-timeout}
 
@@ -230,7 +230,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [ sectie van de parameterparameters van de attributievraag ](#attribution-query-parameters).
+Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [&#x200B; sectie van de parameterparameters van de attributievraag &#x200B;](#attribution-query-parameters).
 
 **vraag van het Voorbeeld**
 
@@ -265,7 +265,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Voor een verdeling van de resultaten die in de `first_touch` kolom worden getoond, zie de [ sectie van kolomcomponenten ](#query-result-column-components).
+Voor een verdeling van de resultaten die in de `first_touch` kolom worden getoond, zie de [&#x200B; sectie van kolomcomponenten &#x200B;](#query-result-column-components).
 
 ### Laatste aanraakkenmerk met vervalvoorwaarde {#last-touch-attribution-with-expiration-condition}
 
@@ -281,7 +281,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [ sectie van de parameterparameters van de attributievraag ](#attribution-query-parameters).
+Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [&#x200B; sectie van de parameterparameters van de attributievraag &#x200B;](#attribution-query-parameters).
 
 **vraag van het Voorbeeld**
 
@@ -316,7 +316,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Voor een verdeling van de resultaten die in de `last_touch` kolom worden getoond, zie de [ sectie van kolomcomponenten ](#query-result-column-components).
+Voor een verdeling van de resultaten die in de `last_touch` kolom worden getoond, zie de [&#x200B; sectie van kolomcomponenten &#x200B;](#query-result-column-components).
 
 ### Laatste aanraakkenmerk met eindtime-out {#last-touch-attribution-with-expiration-timeout}
 
@@ -330,7 +330,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [ sectie van de parameterparameters van de attributievraag ](#attribution-query-parameters).
+Voor een volledige lijst van potentieel vereiste parameters en hun beschrijvingen, zie de [&#x200B; sectie van de parameterparameters van de attributievraag &#x200B;](#attribution-query-parameters).
 
 **vraag van het Voorbeeld**
 
@@ -365,4 +365,4 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Voor een verdeling van de resultaten die in de `last_touch` kolom worden getoond, zie de [ sectie van kolomcomponenten ](#query-result-column-components).
+Voor een verdeling van de resultaten die in de `last_touch` kolom worden getoond, zie de [&#x200B; sectie van kolomcomponenten &#x200B;](#query-result-column-components).

@@ -19,8 +19,8 @@ Een toewijzingsset is een set toewijzingen waarmee gegevens van het ene schema n
 
 Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-- [ Prep van Gegevens ](./home.md): De Prep van Gegevens staat gegevensingenieurs toe om, gegevens in kaart te brengen om te transformeren en te bevestigen aan en van het Model van Gegevens van de Ervaring (XDM).
-- [ Dataflows ](../dataflows/home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+- [&#x200B; Prep van Gegevens &#x200B;](./home.md): De Prep van Gegevens staat gegevensingenieurs toe om, gegevens in kaart te brengen om te transformeren en te bevestigen aan en van het Model van Gegevens van de Ervaring (XDM).
+- [&#x200B; Dataflows &#x200B;](../dataflows/home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
 - [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): de methoden waarmee gegevens naar [!DNL Experience Platform] kunnen worden verzonden.
 - [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
@@ -73,9 +73,9 @@ De volgende JSON is een voorbeeld van een typische toewijzingenset:
 | `inputSchema` | Het XDM-schema voor de binnenkomende gegevens. |
 | `outputSchema` | Het XDM-schema waaraan de invoergegevens moeten voldoen, wordt getransformeerd. |
 | `mappings` | Een serie van gebied aan gebied afbeeldingen van het bronschema aan het bestemmingsschema. |
-| `sourceType` | Voor elke vermelde afbeelding geeft het kenmerk `sourceType` het type bron aan dat moet worden toegewezen. Kan een van `ATTRIBUTE` , `STATIC` of `EXPRESSION` zijn: <ul><li> `ATTRIBUTE` wordt gebruikt voor alle waarden die in het bronpad worden gevonden. </li><li>`STATIC` wordt gebruikt voor waarden die in het doelpad worden geïnjecteerd. Deze waarde blijft constant en wordt niet beïnvloed door het bronschema.</li><li> `EXPRESSION` wordt gebruikt voor een expressie die tijdens runtime wordt opgelost. Een lijst van beschikbare uitdrukkingen kan in de [ handleiding van toewijzingsfuncties ](./functions.md) worden gevonden.</li> </ul> |
-| `source` | Voor elke vermelde afbeelding geeft het kenmerk `source` het veld aan dat u wilt toewijzen. Meer informatie over hoe te om uw bron te vormen kan in het [ overzicht van bronnen ](../sources/home.md) worden gevonden. |
-| `destination` | Voor elke vermelde toewijzing geeft het kenmerk `destination` het veld aan of het pad naar het veld, waar de waarde die uit het veld `source` is geëxtraheerd, wordt geplaatst. Meer informatie over hoe te om uw bestemmingen te vormen kan in het [ bestemmingsoverzicht ](../destinations/home.md) worden gevonden. |
+| `sourceType` | Voor elke vermelde afbeelding geeft het kenmerk `sourceType` het type bron aan dat moet worden toegewezen. Kan een van `ATTRIBUTE` , `STATIC` of `EXPRESSION` zijn: <ul><li> `ATTRIBUTE` wordt gebruikt voor alle waarden die in het bronpad worden gevonden. </li><li>`STATIC` wordt gebruikt voor waarden die in het doelpad worden geïnjecteerd. Deze waarde blijft constant en wordt niet beïnvloed door het bronschema.</li><li> `EXPRESSION` wordt gebruikt voor een expressie die tijdens runtime wordt opgelost. Een lijst van beschikbare uitdrukkingen kan in de [&#x200B; handleiding van toewijzingsfuncties &#x200B;](./functions.md) worden gevonden.</li> </ul> |
+| `source` | Voor elke vermelde afbeelding geeft het kenmerk `source` het veld aan dat u wilt toewijzen. Meer informatie over hoe te om uw bron te vormen kan in het [&#x200B; overzicht van bronnen &#x200B;](../sources/home.md) worden gevonden. |
+| `destination` | Voor elke vermelde toewijzing geeft het kenmerk `destination` het veld aan of het pad naar het veld, waar de waarde die uit het veld `source` is geëxtraheerd, wordt geplaatst. Meer informatie over hoe te om uw bestemmingen te vormen kan in het [&#x200B; bestemmingsoverzicht &#x200B;](../destinations/home.md) worden gevonden. |
 | `mappings.name` | (*Facultatieve*) een naam voor de afbeelding. |
 | `mappings.description` | (*Facultatieve*) een beschrijving van de afbeelding. |
 
@@ -333,7 +333,7 @@ Als u een constante of een statische waarde wilt toewijzen, gebruikt u het bront
 
 ### Expressies
 
-Als u een expressie wilt toewijzen, gebruikt u het brontype `EXPRESSION` . Een lijst van toegelaten functies kan in de [ handleiding van toewijzingsfuncties ](./functions.md) worden gevonden. Wanneer u het brontype `EXPRESSION` gebruikt, vertegenwoordigt `source` de functie die u wilt omzetten. Hieronder vindt u een voorbeeld van deze toewijzing:
+Als u een expressie wilt toewijzen, gebruikt u het brontype `EXPRESSION` . Een lijst van toegelaten functies kan in de [&#x200B; handleiding van toewijzingsfuncties &#x200B;](./functions.md) worden gevonden. Wanneer u het brontype `EXPRESSION` gebruikt, vertegenwoordigt `source` de functie die u wilt omzetten. Hieronder vindt u een voorbeeld van deze toewijzing:
 
 **Steekproef JSON- dossier**
 
@@ -520,4 +520,4 @@ Wanneer u door series wilt herhalen en de waarden aan het doel in kaart brengen,
 
 ## Volgende stappen
 
-Door dit document te lezen, zou u nu moeten begrijpen hoe de kaartreeksen worden geconstrueerd, met inbegrip van hoe te om individuele afbeeldingen binnen een mappenset te vormen. Voor meer informatie over andere eigenschappen van de Prep van Gegevens, te lezen gelieve het [ overzicht van de Prep van Gegevens ](./home.md). Leren hoe te om kaartreeksen binnen de Prep API van Gegevens te gebruiken, gelieve de [ ontwikkelaarsgids van de Prep van Gegevens ](./api/overview.md) te lezen.
+Door dit document te lezen, zou u nu moeten begrijpen hoe de kaartreeksen worden geconstrueerd, met inbegrip van hoe te om individuele afbeeldingen binnen een mappenset te vormen. Voor meer informatie over andere eigenschappen van de Prep van Gegevens, te lezen gelieve het [&#x200B; overzicht van de Prep van Gegevens &#x200B;](./home.md). Leren hoe te om kaartreeksen binnen de Prep API van Gegevens te gebruiken, gelieve de [&#x200B; ontwikkelaarsgids van de Prep van Gegevens &#x200B;](./api/overview.md) te lezen.

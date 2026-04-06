@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Deze uitbreiding is afgekeurd ten gunste van [ Adobe Experience Platform Web SDK ](../web-sdk/overview.md).
+>Deze uitbreiding is afgekeurd ten gunste van [&#x200B; Adobe Experience Platform Web SDK &#x200B;](../web-sdk/overview.md).
 
 De functies van deze extensie worden overgebracht naar een nieuwe extensie. Hier volgt een snelle vergelijking van de huidige functies.
 

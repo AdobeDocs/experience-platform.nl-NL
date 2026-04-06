@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Chapter Details] Verzameling is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat diverse attributen met betrekking tot hoofdstukken of segmenten binnen media inhoud beschrijft. Met het gegevenstype [!UICONTROL Chapter Details] Verzameling kunt u gegevens vastleggen, zoals de hoofdstuknaam, verschuiving, duur en hoofdstukindex. In velden voor het verzamelen van media worden gegevens vastgelegd en naar andere Adobe-services verzonden voor verdere verwerking.
 
-![ A diagram van het gegevenstype van de Inzameling van de Details van het Hoofdstuk.](../images/data-types/chapter-details-collection.png)
+![&#x200B; A diagram van het gegevenstype van de Inzameling van de Details van het Hoofdstuk.](../images/data-types/chapter-details-collection.png)
 
 >[!NOTE]
 >

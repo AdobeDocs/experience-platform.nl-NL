@@ -25,11 +25,11 @@ Als u het type aanvraag wilt selecteren dat door het eindpunt wordt vereist, sel
 
 | Methode | Beschrijving |
 |---|---|
-| [ GET ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) | Vraagt om een vertegenwoordiging van de gespecificeerde bron. Aanvragen met GET mogen alleen gegevens ophalen. |
-| [ POST ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) | Verzendt een entiteit naar de opgegeven bron, die vaak een wijziging in status of bijwerkingen op de server veroorzaakt. |
-| [ PUT ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT) | Vervangt alle huidige vertegenwoordiging van het doelmiddel met de verzoeklading. |
-| [ PATCH ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH) | Past gedeeltelijke wijzigingen op een middel toe. |
-| [ DELETE ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE) | Verwijdert de opgegeven bron. |
+| [&#x200B; GET &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) | Vraagt om een vertegenwoordiging van de gespecificeerde bron. Aanvragen met GET mogen alleen gegevens ophalen. |
+| [&#x200B; POST &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) | Verzendt een entiteit naar de opgegeven bron, die vaak een wijziging in status of bijwerkingen op de server veroorzaakt. |
+| [&#x200B; PUT &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT) | Vervangt alle huidige vertegenwoordiging van het doelmiddel met de verzoeklading. |
+| [&#x200B; PATCH &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH) | Past gedeeltelijke wijzigingen op een middel toe. |
+| [&#x200B; DELETE &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE) | Verwijdert de opgegeven bron. |
 
 ### URL van eindpunt
 
@@ -55,46 +55,46 @@ In de volgende tabel staan de vooraf gedefinieerde koppen. U bent niet beperkt t
 
 >[!NOTE]
 >
->Voor meer gedetailleerde informatie over deze kopballen, bezoek [ https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
+>Voor meer gedetailleerde informatie over deze kopballen, bezoek [&#x200B; https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 | Koptekst | Beschrijving |
 |---|---|
-| [ A-IM ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | |
-| [ keurt ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) goed | |
-| [ Accepteren-Charset ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset) | |
-| [ goedkeuren-Coderen ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) | |
-| [ aanvaarden-Taal ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) | |
-| [ Accepteren-Datetime ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | Verzonden door een gebruikersagent om erop te wijzen wil het tot een verleden staat van een originele middel toegang hebben. Daartoe wordt de header `Accept-Datetime` overgebracht in een HTTP-aanvraag die wordt uitgegeven tegen een TimeGate voor een oorspronkelijke bron, en geeft de waarde ervan de datetime aan van de gewenste laatste status van de oorspronkelijke bron. |
-| Access-Control-request-headers | Gebruikt door browsers wanneer het uitgeven van a [ Preflight verzoek ](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), om de server te laten weten welke [ kopballen van HTTP ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) de cliënt zou kunnen verzenden wanneer het daadwerkelijke verzoek wordt gemaakt. |
-| Access-Control-request-method | Gebruikt door browsers wanneer het uitgeven van a [ Preflight verzoek ](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), om de server te laten weten welke [ methode van HTTP ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) zal worden gebruikt wanneer het daadwerkelijke verzoek wordt gemaakt. Deze kopbal is noodzakelijk omdat het Preflight verzoek altijd een [ OPTIE ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) is en gebruikt niet de zelfde methode zoals het daadwerkelijke verzoek. |
+| [&#x200B; A-IM &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | |
+| [&#x200B; keurt &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) goed | |
+| [&#x200B; Accepteren-Charset &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset) | |
+| [&#x200B; goedkeuren-Coderen &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) | |
+| [&#x200B; aanvaarden-Taal &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) | |
+| [&#x200B; Accepteren-Datetime &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | Verzonden door een gebruikersagent om erop te wijzen wil het tot een verleden staat van een originele middel toegang hebben. Daartoe wordt de header `Accept-Datetime` overgebracht in een HTTP-aanvraag die wordt uitgegeven tegen een TimeGate voor een oorspronkelijke bron, en geeft de waarde ervan de datetime aan van de gewenste laatste status van de oorspronkelijke bron. |
+| Access-Control-request-headers | Gebruikt door browsers wanneer het uitgeven van a [&#x200B; Preflight verzoek &#x200B;](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), om de server te laten weten welke [&#x200B; kopballen van HTTP &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) de cliënt zou kunnen verzenden wanneer het daadwerkelijke verzoek wordt gemaakt. |
+| Access-Control-request-method | Gebruikt door browsers wanneer het uitgeven van a [&#x200B; Preflight verzoek &#x200B;](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request), om de server te laten weten welke [&#x200B; methode van HTTP &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) zal worden gebruikt wanneer het daadwerkelijke verzoek wordt gemaakt. Deze kopbal is noodzakelijk omdat het Preflight verzoek altijd een [&#x200B; OPTIE &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) is en gebruikt niet de zelfde methode zoals het daadwerkelijke verzoek. |
 | Toestemming | Bevat de geloofsbrieven om een gebruiker-agent met een server voor authentiek te verklaren. |
-| [ geheime voorgeheugen-controle ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) | Richtlijnen voor caching-mechanismen in zowel verzoeken als antwoorden. |
-| [ Verbinding ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection) | Bepaalt of de netwerkverbinding open blijft nadat de huidige transactie is voltooid. |
-| [ inhoud-Lengte ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length) | De grootte van de bron, in decimaal aantal bytes. |
-| [ inhoud-Type ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) | Geeft het mediatype van de bron aan. |
-| Cookie | Bevat opgeslagen [ koekjes van HTTP ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) die eerder door de server met de [`Set-Cookie` ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) kopbal worden verzonden. |
+| [&#x200B; geheime voorgeheugen-controle &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) | Richtlijnen voor caching-mechanismen in zowel verzoeken als antwoorden. |
+| [&#x200B; Verbinding &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection) | Bepaalt of de netwerkverbinding open blijft nadat de huidige transactie is voltooid. |
+| [&#x200B; inhoud-Lengte &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length) | De grootte van de bron, in decimaal aantal bytes. |
+| [&#x200B; inhoud-Type &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) | Geeft het mediatype van de bron aan. |
+| Cookie | Bevat opgeslagen [&#x200B; koekjes van HTTP &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) die eerder door de server met de [`Set-Cookie` &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie) kopbal worden verzonden. |
 | Datum | De algemene HTTP-header bevat de datum en tijd waarop het bericht is gestart. |
-| [ DNT ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT) | Drukt de voorkeur van de gebruiker het volgen uit. |
+| [&#x200B; DNT &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT) | Drukt de voorkeur van de gebruiker het volgen uit. |
 | Verwacht | Geeft aan dat de server aan de verwachtingen moet voldoen om de aanvraag correct af te handelen. |
-| Doorgestuurd | Bevat informatie van de [ reverse volmachtsservers ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) die wordt veranderd of verloren wanneer een volmacht in de weg van het verzoek wordt betrokken. |
+| Doorgestuurd | Bevat informatie van de [&#x200B; reverse volmachtsservers &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) die wordt veranderd of verloren wanneer een volmacht in de weg van het verzoek wordt betrokken. |
 | Van | Bevat een e-mailadres van Internet voor een menselijke gebruiker die de het vragen gebruikersagent controleert. |
 | Host | Geeft het host- en poortnummer op van de server waarnaar de aanvraag wordt verzonden. |
 | If-Match | |
 | If-Modified-Since | |
-| [ if-niets-gelijke ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) | |
-| [ if-Waaier ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) | |
-| [ als-ongewijzigd-sinds ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
-| [ max-Forwards ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
-| [ Oorsprong ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) | |
-| [ Pragma ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Implementation-specific kopbal die diverse gevolgen overal langs verzoek-reactie keten kan hebben. Wordt gebruikt voor achterwaartse compatibiliteit met HTTP/1.0-caches waarbij de header Cache-Control nog niet aanwezig is. |
-| [ volmacht-Vergunning ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |  |
-| [ Waaier ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Geeft het deel van een document aan dat de server moet retourneren. |
-| [ Referer ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) | Het adres van de vorige webpagina vanwaar een koppeling naar de momenteel aangevraagde pagina werd gevolgd. |
+| [&#x200B; if-niets-gelijke &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) | |
+| [&#x200B; if-Waaier &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) | |
+| [&#x200B; als-ongewijzigd-sinds &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [&#x200B; max-Forwards &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [&#x200B; Oorsprong &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) | |
+| [&#x200B; Pragma &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Implementation-specific kopbal die diverse gevolgen overal langs verzoek-reactie keten kan hebben. Wordt gebruikt voor achterwaartse compatibiliteit met HTTP/1.0-caches waarbij de header Cache-Control nog niet aanwezig is. |
+| [&#x200B; volmacht-Vergunning &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |  |
+| [&#x200B; Waaier &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Geeft het deel van een document aan dat de server moet retourneren. |
+| [&#x200B; Referer &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) | Het adres van de vorige webpagina vanwaar een koppeling naar de momenteel aangevraagde pagina werd gevolgd. |
 | TE | Specificeert de overdrachtcoderingen de gebruikersagent bereid is te aanvaarden. (U kunt het informeel `Accept-Transfer-Encoding` noemen, wat intuïtiever zou zijn). |
-| Upgrade | Het relevante RFC-document voor het [`Upgrade` headerveld is RFC 7230, sectie 6.7 ](https://tools.ietf.org/html/rfc7230#section-6.7) . De norm bepaalt regels voor bevordering of het veranderen in een verschillend protocol over de huidige cliënt, de server, de verbinding van het vervoerprotocol. Met deze headerstandaard kan een client bijvoorbeeld van HTTP 1.1 naar HTTP 2.0 gaan, ervan uitgaande dat de server besluit het headerveld `Upgrade` te erkennen en te implementeren. Geen van beide partijen is verplicht de voorwaarden te accepteren die in het headerveld `Upgrade` zijn opgegeven. Het kan in zowel cliënt als serverkopballen worden gebruikt. Als het headerveld `Upgrade` is opgegeven, MOET de afzender ook het headerveld `Connection` met de opgegeven optie `upgrade` verzenden. |
-| [ gebruiker-Agent ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Bevat een kenmerkende tekenreeks waarmee de gelijken van het netwerkprotocol het toepassingstype, het besturingssysteem, de softwareleverancier of de softwareversie van de verzoekende softwaregebruiker kunnen identificeren. |
-| [ Via ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Toegevoegd door volmachten, zowel voorwaartse als omgekeerde volmachten, en kan in de verzoekkopballen en de antwoordkopballen verschijnen. |
-| [ Waarschuwing ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | Algemene waarschuwingsinformatie over mogelijke problemen. |
+| Upgrade | Het relevante RFC-document voor het [`Upgrade` headerveld is RFC 7230, sectie 6.7 &#x200B;](https://tools.ietf.org/html/rfc7230#section-6.7) . De norm bepaalt regels voor bevordering of het veranderen in een verschillend protocol over de huidige cliënt, de server, de verbinding van het vervoerprotocol. Met deze headerstandaard kan een client bijvoorbeeld van HTTP 1.1 naar HTTP 2.0 gaan, ervan uitgaande dat de server besluit het headerveld `Upgrade` te erkennen en te implementeren. Geen van beide partijen is verplicht de voorwaarden te accepteren die in het headerveld `Upgrade` zijn opgegeven. Het kan in zowel cliënt als serverkopballen worden gebruikt. Als het headerveld `Upgrade` is opgegeven, MOET de afzender ook het headerveld `Connection` met de opgegeven optie `upgrade` verzenden. |
+| [&#x200B; gebruiker-Agent &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Bevat een kenmerkende tekenreeks waarmee de gelijken van het netwerkprotocol het toepassingstype, het besturingssysteem, de softwareleverancier of de softwareversie van de verzoekende softwaregebruiker kunnen identificeren. |
+| [&#x200B; Via &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Toegevoegd door volmachten, zowel voorwaartse als omgekeerde volmachten, en kan in de verzoekkopballen en de antwoordkopballen verschijnen. |
+| [&#x200B; Waarschuwing &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | Algemene waarschuwingsinformatie over mogelijke problemen. |
 | X-CSRF-token | |
 | x-requested-with | |
 
@@ -128,11 +128,11 @@ Het [!DNL mTLS] -certificaat is een digitale referentie die de identiteit van ee
 
 ### De extensie Adobe Cloud Connector installeren {#install}
 
-Om de uitbreiding te installeren, [ creeer een gebeurtenis door:sturen bezit ](../../../ui/event-forwarding/overview.md#properties) of selecteer een bestaand bezit in plaats daarvan uit te geven.
+Om de uitbreiding te installeren, [&#x200B; creeer een gebeurtenis door:sturen bezit &#x200B;](../../../ui/event-forwarding/overview.md#properties) of selecteer een bestaand bezit in plaats daarvan uit te geven.
 
 Selecteer **[!UICONTROL Extensions]** in het linkerdeelvenster. Selecteer op het tabblad **[!UICONTROL Catalog]** de **[!UICONTROL Adobe Cloud Connector]** -kaart en selecteer vervolgens **[!UICONTROL Install]** .
 
-![ de uitbreidingscatalogus die [!DNL Adobe Cloud Connector] uitbreidingskaart tonen die installeert benadrukt.](../../../images/extensions/server/cloud-connector/install-extension.png)
+![&#x200B; de uitbreidingscatalogus die [!DNL Adobe Cloud Connector] uitbreidingskaart tonen die installeert benadrukt.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
 ### Vorm een gebeurtenis door:sturen regel {#rule}
 
@@ -142,20 +142,20 @@ Selecteer **[!UICONTROL Extensions]** in het linkerdeelvenster. Selecteer op het
 
 Nadat u de extensie hebt geïnstalleerd, kunt u een regel voor het doorsturen van gebeurtenissen maken die [!DNL mTLS] gebruikt en deze regel toevoegen aan uw bibliotheek.
 
-Creeer een nieuwe gebeurtenis door:sturen [ regel ](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Geef uw regel een naam, en voeg vervolgens onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Adobe Cloud Connector]** . Selecteer vervolgens **[!UICONTROL Make Fetch Call]** voor **[!UICONTROL Action Type]** .
+Creeer een nieuwe gebeurtenis door:sturen [&#x200B; regel &#x200B;](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Geef uw regel een naam, en voeg vervolgens onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Adobe Cloud Connector]** . Selecteer vervolgens **[!UICONTROL Make Fetch Call]** voor **[!UICONTROL Action Type]** .
 
-![ de Gebeurtenis die de mening van de Regels van het Bezit door:sturen, met de gebieden die worden vereist om een gebeurtenis toe te voegen die de benadrukte configuratie van de regelactie door:sturen.](../../../images/extensions/server/cloud-connector/event-action.png)
+![&#x200B; de Gebeurtenis die de mening van de Regels van het Bezit door:sturen, met de gebieden die worden vereist om een gebeurtenis toe te voegen die de benadrukte configuratie van de regelactie door:sturen.](../../../images/extensions/server/cloud-connector/event-action.png)
 
 Nadat u de selectie hebt gemaakt, worden aanvullende besturingselementen weergegeven om de methode en de bestemming voor de [!DNL mTLS] -aanvraag te configureren. Als u het gebruik van actieve certificaten in de omgevingen wilt inschakelen, selecteert u **[!UICONTROL Enable in [!DNL mTLS]]** en selecteert u **[!UICONTROL Keep Changes]** om de regel op te slaan.
 
-![ de Gebeurtenis die de mening van de Regels van het Bezit door:sturen, met de extra controlegebieden en houdt benadrukte veranderingen.](../../../images/extensions/server/cloud-connector/save-rule.png)
+![&#x200B; de Gebeurtenis die de mening van de Regels van het Bezit door:sturen, met de extra controlegebieden en houdt benadrukte veranderingen.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
 Uw nieuwe regel is nu klaar. Selecteer **[!UICONTROL Save to Library]** en selecteer vervolgens **[!UICONTROL Build]** om het te implementeren. De aanvraag [!DNL mTLS] is nu actief en beschikbaar in uw bibliotheek.
 
-![ de Gebeurtenis die regel met sparen door:sturen aan bibliotheek en benadrukt bouwt.](../../../images/extensions/server/cloud-connector/save-build.png)
+![&#x200B; de Gebeurtenis die regel met sparen door:sturen aan bibliotheek en benadrukt bouwt.](../../../images/extensions/server/cloud-connector/save-build.png)
 
 ## Volgende stappen
 
-Deze gids besprak hoe te opstellings mTLS regels in gebeurtenis het door:sturen. Voor meer details bij vestiging mTLS voor een milieu, verwijs naar de [ Wederzijdse Veiligheid van de Laag van het Vervoer ([!DNL mTLS]) gids ](../cloud-connector/mtls.md).
+Deze gids besprak hoe te opstellings mTLS regels in gebeurtenis het door:sturen. Voor meer details bij vestiging mTLS voor een milieu, verwijs naar de [&#x200B; Wederzijdse Veiligheid van de Laag van het Vervoer ([!DNL mTLS]) gids &#x200B;](../cloud-connector/mtls.md).
 
-Voor meer informatie over gebeurtenis die mogelijkheden in Experience Platform door:sturen, verwijs naar de [ gebeurtenis die overzicht ](../../../ui/event-forwarding/overview.md) door:sturen.
+Voor meer informatie over gebeurtenis die mogelijkheden in Experience Platform door:sturen, verwijs naar de [&#x200B; gebeurtenis die overzicht &#x200B;](../../../ui/event-forwarding/overview.md) door:sturen.

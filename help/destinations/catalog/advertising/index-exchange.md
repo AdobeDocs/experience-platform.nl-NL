@@ -22,7 +22,7 @@ Zodra uitgevoerd, richten deze publiekssegmenten doelovereenkomsten door media e
 
 >[!IMPORTANT]
 >
->De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Index] . Voor vragen of updateverzoeken, contacteer hen direct in [ technical_am_marketplace@indexexchange.com ](mailto:technical_am_marketplace@indexexchange.com).
+>De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Index] . Voor vragen of updateverzoeken, contacteer hen direct in [&#x200B; technical_am_marketplace@indexexchange.com &#x200B;](mailto:technical_am_marketplace@indexexchange.com).
 
 ## Gebruiksscenario&#39;s {#use-cases}
 
@@ -42,11 +42,11 @@ De segmenten van het publiek moeten met [!DNL Index] worden geregistreerd gebrui
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Index] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL Index] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
->[!DNL Index Exchange] -doelen ondersteunen slechts één identiteitstype per upload. U moet het aangewezen herkenningstype specificeren wanneer het vormen van de bestemmingsdetails (zie [ &quot;Vul bestemmingsdetails&quot;](#destination-details) hieronder).
+>[!DNL Index Exchange] -doelen ondersteunen slechts één identiteitstype per upload. U moet het aangewezen herkenningstype specificeren wanneer het vormen van de bestemmingsdetails (zie [&#x200B; &quot;Vul bestemmingsdetails&quot;](#destination-details) hieronder).
 
 Als u meerdere identiteitstypen wilt uploaden, maakt u afzonderlijke instanties van het doel [!DNL Index Exchange] voor elk type identiteit.
 
@@ -65,8 +65,8 @@ Deze sectie verklaart welke publiekstypes u naar deze bestemming kunt uitvoeren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 | --------- | ---------- | ---------- |
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](../../../segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -76,10 +76,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -91,7 +91,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 | --------- | ---------- | --------- |
 | Exporttype | **[!UICONTROL Segment export]** | Exporteert alle leden van een segment (publiek) met de id&#39;s (IDFA, GAID of andere id&#39;s) die in de [!DNL Index Exchange] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Batch]** | Hiermee exporteert u bestanden naar downstreamplatforms met intervallen van 3, 6, 8, 12 of 24 uur. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
+| Exportfrequentie | **[!UICONTROL Batch]** | Hiermee exporteert u bestanden naar downstreamplatforms met intervallen van 3, 6, 8, 12 of 24 uur. Lees meer over [&#x200B; partij op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -99,15 +99,15 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](../../ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Doelgegevens invullen {#destination-details}
 
 Vul de onderstaande velden in om details voor de bestemming te configureren. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![ de details van de Bestemming ](../../assets/catalog/advertising/index-exchange/destination-details.png)
+![&#x200B; de details van de Bestemming &#x200B;](../../assets/catalog/advertising/index-exchange/destination-details.png)
 
 * [!UICONTROL Name]: voer een naam in om u te helpen deze bestemming later te herkennen.
 * [!UICONTROL Description]: voer een beschrijving in om u te helpen deze bestemming later te identificeren.
@@ -130,17 +130,17 @@ Vul de onderstaande velden in om details voor de bestemming te configureren. Een
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom naar deze bestemming. Selecteer een of meer waarschuwingen in de lijst om u te abonneren op statusmeldingen voor uw gegevensstroom. Voor meer informatie, zie de gids op [ het intekenen aan bestemmingsalarm gebruikend UI ](../../ui/alerts.md).
+U kunt waarschuwingen inschakelen om meldingen te ontvangen over de status van uw gegevensstroom naar deze bestemming. Selecteer een of meer waarschuwingen in de lijst om u te abonneren op statusmeldingen voor uw gegevensstroom. Voor meer informatie, zie de gids op [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](../../ui/alerts.md).
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
+Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiekssegmenten aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -152,7 +152,7 @@ Doelvelden selecteren:
 
 * Namen van doelvelden worden genegeerd en zijn niet belangrijk. De bestemming geeft slechts om het type van herkenningsteken dat wordt verzonden, dat door het Geselecteerde Type van Herkenningsteken wanneer het vormen van de bestemming wordt bepaald.
 
-![ de attributen en de identiteiten van de Kaart ](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
+![&#x200B; de attributen en de identiteiten van de Kaart &#x200B;](../../assets/catalog/advertising/index-exchange/identity-mapping.png)
 
 ### Segmenten registreren met [!DNL Index] {#register-segments}
 
@@ -164,4 +164,4 @@ Zodra de registratie is voltooid, kunnen de segmenten zich richten op uw [!DNL I
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle Experience Platform-doelen zijn bij het verwerken van uw gegevens compatibel met het beleid voor gegevensgebruik. Voor gedetailleerde informatie over hoe Experience Platform gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle Experience Platform-doelen zijn bij het verwerken van uw gegevens compatibel met het beleid voor gegevensgebruik. Voor gedetailleerde informatie over hoe Experience Platform gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).

@@ -36,7 +36,7 @@ Wanneer een gebruiker een actie uitvoert, worden twee soorten controlegebeurteni
 
 >[!NOTE]
 >
-> De meta-gegevens voor de acties **voegen gebruiker** toe en **verwijderen gebruiker** binnen het **5} middel van de Rol zal niet e-mailidentiteitskaart van de gebruiker bevatten die de actie uitvoerde.** In plaats daarvan worden in de logboeken de door het systeem gegenereerde e-mailadressen-id (system@adobe.com) weergegeven.
+> De meta-gegevens voor de acties **voegen gebruiker** toe en **verwijderen gebruiker** binnen het **5&rbrace; middel van de Rol zal niet e-mailidentiteitskaart van de gebruiker bevatten die de actie uitvoerde.** In plaats daarvan worden in de logboeken de door het systeem gegenereerde e-mailadressen-id (system@adobe.com) weergegeven.
 
 Dit document behandelt controlelogboeken in Experience Platform, met inbegrip van hoe te om hen in UI of API te bekijken en te beheren.
 
@@ -46,37 +46,37 @@ In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlog
 
 | Bron | Acties |
 | --- | --- |
-| [ het controlebeleid van de Toegang (attribuut gebaseerd toegangsbeheer) ](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ Rekening (Adobe) ](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ instantie van AI van de Attributie ](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li></ul> |
-| [ Logboeken van de Controle ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exporteren</li></ul> |
-| [ Klasse ](../../../xdm/schema/composition.md#class) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [&#x200B; het controlebeleid van de Toegang (attribuut gebaseerd toegangsbeheer) &#x200B;](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [&#x200B; Rekening (Adobe) &#x200B;](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [&#x200B; instantie van AI van de Attributie &#x200B;](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li></ul> |
+| [&#x200B; Logboeken van de Controle &#x200B;](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exporteren</li></ul> |
+| [&#x200B; Klasse &#x200B;](../../../xdm/schema/composition.md#class) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | Berekend kenmerk | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ de instantie van AI van de Klant ](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li></ul> |
-| [ Dataset ](../../../catalog/datasets/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Laat voor [ in real time het Profiel van de Klant ](../../../profile/home.md) toe</li><li>Uitschakelen voor profiel</li><li>Gegevens toevoegen</li><li>Batch verwijderen</li></ul> |
-| [ DataStream ](../../../datastreams/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li><li>[ geef Toewijzing ](../../../datastreams/data-prep.md) uit</li></ul> |
+| [&#x200B; de instantie van AI van de Klant &#x200B;](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li></ul> |
+| [&#x200B; Dataset &#x200B;](../../../catalog/datasets/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Laat voor [&#x200B; in real time het Profiel van de Klant &#x200B;](../../../profile/home.md) toe</li><li>Uitschakelen voor profiel</li><li>Gegevens toevoegen</li><li>Batch verwijderen</li></ul> |
+| [&#x200B; DataStream &#x200B;](../../../datastreams/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li><li>[&#x200B; geef Toewijzing &#x200B;](../../../datastreams/data-prep.md) uit</li></ul> |
 | [Datatypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ Doel ](../../../destinations/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li><li>Gegevensset activeren</li><li>Gegevensset verwijderen</li><li>Profiel activeren</li><li>Profiel verwijderen</li></ul> |
-| [ de groep van het Gebied ](../../../xdm/schema/composition.md#field-group) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ grafiek van de Identiteit ](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>Weergave</li></ul> |
-| [ Identiteitsnaamruimte ](../../../identity-service/features/namespaces.md) | <ul><li>Maken</li><li>Bijwerken</li></ul> |
-| [ beleid van de Fusie ](../../../profile/merge-policies/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ profiel van het Product ](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [&#x200B; Doel &#x200B;](../../../destinations/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li><li>Gegevensset activeren</li><li>Gegevensset verwijderen</li><li>Profiel activeren</li><li>Profiel verwijderen</li></ul> |
+| [&#x200B; de groep van het Gebied &#x200B;](../../../xdm/schema/composition.md#field-group) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [&#x200B; grafiek van de Identiteit &#x200B;](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>Weergave</li></ul> |
+| [&#x200B; Identiteitsnaamruimte &#x200B;](../../../identity-service/features/namespaces.md) | <ul><li>Maken</li><li>Bijwerken</li></ul> |
+| [&#x200B; beleid van de Fusie &#x200B;](../../../profile/merge-policies/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [&#x200B; profiel van het Product &#x200B;](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [Query](../../../query-service/ui/overview.md) | <ul><li>Uitvoeren</li></ul> |
-| [ malplaatje van de Vraag ](../../../query-service/ui/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ Rol (attribuut gebaseerd toegangsbeheer) ](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Gebruiker toevoegen</li><li>Gebruiker verwijderen</li></ul> |
-| [ Sandbox ](../../../sandboxes/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Herstellen</li><li>Verwijderen</li></ul> |
-| [ Geplande vraag ](../../../query-service/ui/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ Schema ](../../../xdm/schema/composition.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen voor profiel</li></ul> |
-| [ Segment ](../../../segmentation/home.md) | <ul><li>Maken</li><li>Verwijderen</li><li>Segment activeren</li><li>Segment verwijderen</li></ul> |
-| [ de gegevensstroom van Source ](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li><li>Dataset activeren</li><li>Gegevensset verwijderen</li><li>Profiel activeren</li><li>Profiel verwijderen</li></ul> |
-| [ orde van het Werk ](../../../hygiene/home.md) | <ul><li>Maken</li></ul> |
+| [&#x200B; malplaatje van de Vraag &#x200B;](../../../query-service/ui/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [&#x200B; Rol (attribuut gebaseerd toegangsbeheer) &#x200B;](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Gebruiker toevoegen</li><li>Gebruiker verwijderen</li></ul> |
+| [&#x200B; Sandbox &#x200B;](../../../sandboxes/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Herstellen</li><li>Verwijderen</li></ul> |
+| [&#x200B; Geplande vraag &#x200B;](../../../query-service/ui/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
+| [&#x200B; Schema &#x200B;](../../../xdm/schema/composition.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen voor profiel</li></ul> |
+| [&#x200B; Segment &#x200B;](../../../segmentation/home.md) | <ul><li>Maken</li><li>Verwijderen</li><li>Segment activeren</li><li>Segment verwijderen</li></ul> |
+| [&#x200B; de gegevensstroom van Source &#x200B;](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li><li>Dataset activeren</li><li>Gegevensset verwijderen</li><li>Profiel activeren</li><li>Profiel verwijderen</li></ul> |
+| [&#x200B; orde van het Werk &#x200B;](../../../hygiene/home.md) | <ul><li>Maken</li></ul> |
 
 ## Toegang tot auditlogboeken
 
 Wanneer de eigenschap voor uw organisatie wordt toegelaten, worden de controlelogboeken automatisch verzameld aangezien de activiteit voorkomt. U te hoeven niet om logboekinzameling manueel toe te laten.
 
-Als u controlelogboeken wilt weergeven en exporteren, moet u de toegangsbeheermachtiging van **[!UICONTROL View User Activity Log]** hebben (deze kunt u vinden onder de categorie [!UICONTROL Data Governance] ). Leren hoe te om individuele toestemmingen voor de eigenschappen van Experience Platform te beheren, gelieve te verwijzen naar de [ documentatie van de toegangscontrole ](../../../access-control/home.md).
+Als u controlelogboeken wilt weergeven en exporteren, moet u de toegangsbeheermachtiging van **[!UICONTROL View User Activity Log]** hebben (deze kunt u vinden onder de categorie [!UICONTROL Data Governance] ). Leren hoe te om individuele toestemmingen voor de eigenschappen van Experience Platform te beheren, gelieve te verwijzen naar de [&#x200B; documentatie van de toegangscontrole &#x200B;](../../../access-control/home.md).
 
 ## Het beheren van controlelogboeken in UI {#managing-audit-logs-in-the-ui}
 
@@ -87,39 +87,39 @@ Als u controlelogboeken wilt weergeven en exporteren, moet u de toegangsbeheerma
 
 U kunt controlelogboeken voor verschillende Experience Platform-functies weergeven in de **[!UICONTROL Audits]** -werkruimte in de Experience Platform-gebruikersinterface. De werkruimte bevat een lijst met opgenomen logbestanden, die standaard van de meest recente naar de minst recente logbestanden worden gesorteerd.
 
-![ het dashboard van Audits die Audits in het linkermenu benadrukken.](../../images/audit-logs/audits.png)
+![&#x200B; het dashboard van Audits die Audits in het linkermenu benadrukken.](../../images/audit-logs/audits.png)
 
 Auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Als u gegevens van meer dan 365 dagen vereist, zou u logboeken bij een regelmatige kast moeten uitvoeren om aan uw interne beleidsvereisten te voldoen.
 
-Uw methode om controlelogboeken te verzoeken verandert de toegestane tijdspanne en het aantal verslagen u toegang tot zult hebben. [ het Uitvoeren logboeken ](#export-audit-logs) staat u toe om terug 365 dagen (in 90 dagintervallen) naar een maximum van 10.000 controlelogboeken (of kern of verbeterd) te gaan, waar aangezien [ activiteitenlogboek UI ](#filter-audit-logs) in Experience Platform de afgelopen 90 dagen aan een maximum van 1000 kerngebeurtenissen toont, elk van hen met de overeenkomstige verbeterde gebeurtenissen.
+Uw methode om controlelogboeken te verzoeken verandert de toegestane tijdspanne en het aantal verslagen u toegang tot zult hebben. [&#x200B; het Uitvoeren logboeken &#x200B;](#export-audit-logs) staat u toe om terug 365 dagen (in 90 dagintervallen) naar een maximum van 10.000 controlelogboeken (of kern of verbeterd) te gaan, waar aangezien [&#x200B; activiteitenlogboek UI &#x200B;](#filter-audit-logs) in Experience Platform de afgelopen 90 dagen aan een maximum van 1000 kerngebeurtenissen toont, elk van hen met de overeenkomstige verbeterde gebeurtenissen.
 
 Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven.
 
-![ het logboeklusje van de Activiteit van het dashboard van Audits met het benadrukte paneel van gebeurtenisdetails.](../../images/audit-logs/select-event.png)
+![&#x200B; het logboeklusje van de Activiteit van het dashboard van Audits met het benadrukte paneel van gebeurtenisdetails.](../../images/audit-logs/select-event.png)
 
 ### Controllerlogboeken filteren
 
-Selecteer het pictogram van funnel (![ pictogram van de Filter ](/help/images/icons/filter.png)) om een lijst van filtercontroles te tonen om smalle resultaten te helpen.
+Selecteer het pictogram van funnel (![&#x200B; pictogram van de Filter &#x200B;](/help/images/icons/filter.png)) om een lijst van filtercontroles te tonen om smalle resultaten te helpen.
 
 >[!NOTE]
 >
->In de gebruikersinterface van Experience Platform worden alleen de afgelopen 90 dagen maximaal 1000 kerngebeurtenissen weergegeven, elk met de bijbehorende verbeterde gebeurtenissen, ongeacht de toegepaste filters. Als u logboeken voorbij nodig hebt dat (tot een maximum van 365 dagen), zult u uw controlelogboeken [ moeten uitvoeren ](#export-audit-logs).
+>In de gebruikersinterface van Experience Platform worden alleen de afgelopen 90 dagen maximaal 1000 kerngebeurtenissen weergegeven, elk met de bijbehorende verbeterde gebeurtenissen, ongeacht de toegepaste filters. Als u logboeken voorbij nodig hebt dat (tot een maximum van 365 dagen), zult u uw controlelogboeken [&#x200B; moeten uitvoeren &#x200B;](#export-audit-logs).
 
-![ het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../../images/audit-logs/filters.png)
+![&#x200B; het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../../images/audit-logs/filters.png)
 
 De volgende filters zijn beschikbaar voor controlegebeurtenissen in UI:
 
 | Filter | Beschrijving |
 | --- | --- |
-| [!UICONTROL Category] | Gebruik dropdown menu aan filter getoonde resultaten door [ categorie ](#category). |
+| [!UICONTROL Category] | Gebruik dropdown menu aan filter getoonde resultaten door [&#x200B; categorie &#x200B;](#category). |
 | [!UICONTROL Action] | Filteren op handeling. De acties beschikbaar voor elke dienst kunnen in de middellijst hierboven worden gezien. |
 | [!UICONTROL User] | Voer de volledige gebruikersnaam in (bijvoorbeeld `johndoe@acme.com` ) om te filteren op gebruiker. |
-| [!UICONTROL Status] | De controlegebeurtenissen van de filter door resultaat: succesvol, ontbroken, toegestaan of ontkend toe te schrijven aan gebrek aan [ toegangsbeheer ](../../../access-control/home.md) toestemmingen. Voor een uitgevoerde actie, tonen de kerngebeurtenissen [!UICONTROL Allow] of [!UICONTROL Deny]. Wanneer de kerngebeurtenis [!UICONTROL Allow] is, heeft deze mogelijk een of meer verbeterde gebeurtenissen met **[!UICONTROL Success]** of **[!UICONTROL Failure]** gekoppeld. Een geslaagde actie toont bijvoorbeeld [!UICONTROL Allow] op de kerngebeurtenis en [!UICONTROL Success] op de bijgevoegde verbeterde gebeurtenis. |
+| [!UICONTROL Status] | De controlegebeurtenissen van de filter door resultaat: succesvol, ontbroken, toegestaan of ontkend toe te schrijven aan gebrek aan [&#x200B; toegangsbeheer &#x200B;](../../../access-control/home.md) toestemmingen. Voor een uitgevoerde actie, tonen de kerngebeurtenissen [!UICONTROL Allow] of [!UICONTROL Deny]. Wanneer de kerngebeurtenis [!UICONTROL Allow] is, heeft deze mogelijk een of meer verbeterde gebeurtenissen met **[!UICONTROL Success]** of **[!UICONTROL Failure]** gekoppeld. Een geslaagde actie toont bijvoorbeeld [!UICONTROL Allow] op de kerngebeurtenis en [!UICONTROL Success] op de bijgevoegde verbeterde gebeurtenis. |
 | [!UICONTROL Date] | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. De gegevens kunnen met een raadplegingsperiode van 90 dagen worden uitgevoerd (bijvoorbeeld, 2021-12-15 aan 2022-03-15). Dit kan per gebeurtenistype verschillen. |
 
 Als u een filter wilt verwijderen, selecteert u de &quot;X&quot; op het vulpictogram voor het desbetreffende filter of selecteert u **[!UICONTROL Clear all]** om alle filters te verwijderen.
 
-![ het dashboard van Audits met duidelijke benadrukte filter.](../../images/audit-logs/clear-filters.png)
+![&#x200B; het dashboard van Audits met duidelijke benadrukte filter.](../../images/audit-logs/clear-filters.png)
 
 De teruggekeerde gegevens van het controlelogboek bevatten de volgende informatie over alle vragen die aan uw gekozen filtercriteria voldoen.
 
@@ -131,7 +131,7 @@ De teruggekeerde gegevens van het controlelogboek bevatten de volgende informati
 | [!UICONTROL Action] | Welke acties beschikbaar zijn, is afhankelijk van de categorie die u als filter hebt gekozen. |
 | [!UICONTROL User] | Dit veld bevat de gebruikersnaam die de query heeft uitgevoerd. |
 
-![ het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../../images/audit-logs/filtered.png)
+![&#x200B; het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../../images/audit-logs/filtered.png)
 
 ### Controleverslagen exporteren {#export-audit-logs}
 
@@ -141,11 +141,11 @@ Selecteer **[!UICONTROL Download log]** als u de huidige lijst met auditlogs wil
 >
 >Logbestanden kunnen in het verleden worden aangevraagd met tussenpozen van 90 dagen tot 365 dagen. Nochtans, is de maximumhoeveelheid logboeken die tijdens één enkele uitvoer kan zijn teruggekeerd 10.000 controlegebeurtenissen (of kern of verbeterd).
 
-![ het dashboard van Audits met [!UICONTROL Download log] benadrukte.](../../images/audit-logs/download.png)
+![&#x200B; het dashboard van Audits met [!UICONTROL Download log] benadrukte.](../../images/audit-logs/download.png)
 
 Selecteer in het dialoogvenster dat wordt weergegeven de gewenste indeling (**[!UICONTROL CSV]** of **[!UICONTROL JSON]** ) en selecteer vervolgens **[!UICONTROL Download]** . De browser downloadt het gegenereerde bestand en slaat het op uw computer op.
 
-![ de dialoog van de dossierformaatselectie met [!UICONTROL Download] benadrukt.](../../images/audit-logs/select-download-format.png)
+![&#x200B; de dialoog van de dossierformaatselectie met [!UICONTROL Download] benadrukt.](../../images/audit-logs/select-download-format.png)
 
 ## Waarschuwingen inschakelen {#enable-alerts}
 
@@ -161,19 +161,19 @@ U kunt controlealarm toelaten om berichten voor de volgende regels te ontvangen:
 * Schema bijwerken
 * Schema verwijderen
 
-Selecteer in de lijst de gewenste waarschuwing om u te abonneren op de ontvangst van berichten. Voor meer informatie over alarm, zie de gids op [ het intekenen aan alarm gebruikend UI ](../../../observability/alerts/ui.md).
+Selecteer in de lijst de gewenste waarschuwing om u te abonneren op de ontvangst van berichten. Voor meer informatie over alarm, zie de gids op [&#x200B; het intekenen aan alarm gebruikend UI &#x200B;](../../../observability/alerts/ui.md).
 
 ## Controlelogbestanden beheren in de API
 
-Alle acties die u in UI kunt uitvoeren kunnen ook worden gedaan gebruikend API vraag. Zie het [ API verwijzingsdocument ](https://www.adobe.io/experience-platform-apis/references/audit-query/) voor meer informatie.
+Alle acties die u in UI kunt uitvoeren kunnen ook worden gedaan gebruikend API vraag. Zie het [&#x200B; API verwijzingsdocument &#x200B;](https://www.adobe.io/experience-platform-apis/references/audit-query/) voor meer informatie.
 
 ## Controlelogbestanden voor Adobe Admin Console beheren
 
-Leren hoe te om controlelogboeken voor activiteiten in Adobe Admin Console te beheren, verwijs naar het volgende [ document ](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+Leren hoe te om controlelogboeken voor activiteiten in Adobe Admin Console te beheren, verwijs naar het volgende [&#x200B; document &#x200B;](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Volgende stappen en extra bronnen
 
-In deze handleiding wordt beschreven hoe u de auditlogs in Experience Platform kunt beheren. Voor meer informatie over hoe te om de activiteiten van Experience Platform te controleren, zie de documentatie over [ de Inzichten van de Waarneming ](../../../observability/home.md) en [ controle gegevensopname ](../../../ingestion/quality/monitor-data-ingestion.md).
+In deze handleiding wordt beschreven hoe u de auditlogs in Experience Platform kunt beheren. Voor meer informatie over hoe te om de activiteiten van Experience Platform te controleren, zie de documentatie over [&#x200B; de Inzichten van de Waarneming &#x200B;](../../../observability/home.md) en [&#x200B; controle gegevensopname &#x200B;](../../../ingestion/quality/monitor-data-ingestion.md).
 
 Bekijk de volgende video om meer inzicht te krijgen in auditlogs in Experience Platform:
 
