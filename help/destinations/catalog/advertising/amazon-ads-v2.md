@@ -17,7 +17,7 @@ Met [!DNL Amazon Ads v2] kunnen adverteerders op efficiënte wijze publieksgegev
 
 >[!IMPORTANT]
 >
->[!DNL Amazon Ads v2] is het huidige doel voor alle nieuwe [!DNL Amazon Ads] verbindingen. Als u een bestaande [ (Verouderd)  [!DNL Amazon Ads]](./amazon-ads.md) verbinding hebt, blijft het functioneren zonder enige vereiste veranderingen. [!DNL Amazon Ads v2] verbindt met [!DNL Ads Data Manager], die steun voor uitgebreide identiteitstypes, adres-verwante gebieden, en gegeven-delend over [!DNL Amazon Ads] producten verleent, verbeterend het richten en publiek past tarieven in vergelijking met [ (Verouderd)  [!DNL Amazon Ads]](./amazon-ads.md) aan.
+>[!DNL Amazon Ads v2] is het huidige doel voor alle nieuwe [!DNL Amazon Ads] verbindingen. Als u een bestaande [&#x200B; (Verouderd)  [!DNL Amazon Ads]](./amazon-ads.md) verbinding hebt, blijft het functioneren zonder enige vereiste veranderingen. [!DNL Amazon Ads v2] verbindt met [!DNL Ads Data Manager], die steun voor uitgebreide identiteitstypes, adres-verwante gebieden, en gegeven-delend over [!DNL Amazon Ads] producten verleent, verbeterend het richten en publiek past tarieven in vergelijking met [&#x200B; (Verouderd)  [!DNL Amazon Ads]](./amazon-ads.md) aan.
 >
 >Na eind april 2026 wordt de naam van [!DNL Amazon Ads v2] gewijzigd in [!DNL Amazon Ads] en wordt de verouderde kaart verborgen, zodat er één doelkaart in de catalogus overblijft. Bestaande oudere gegevensstromen blijven werken en u kunt deze na die datum beheren op het tabblad **[!UICONTROL Browse]** .
 
@@ -25,9 +25,9 @@ De [!DNL Amazon Ads v2] integratie met [!DNL Adobe Experience Platform] biedt ee
 
 Zie voor meer informatie over [!DNL Ads Data Manager] :
 
-* [ Adds de Manager van Gegevens - het Overzicht van de Console ](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
-* [ Gebruikend de Console van de Manager van Gegevens van Adds ](https://advertising.amazon.com/API/docs/en-us/adm/2_ads-data-manager-console)
-* [ de opstelling van de Rekening in de Manager van Gegevens van Advertentie ](https://advertising.amazon.com/API/docs/en-us/adm/2a_ads-data-manager_account_setup)
+* [&#x200B; Adds de Manager van Gegevens - het Overzicht van de Console &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
+* [&#x200B; Gebruikend de Console van de Manager van Gegevens van Adds &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/2_ads-data-manager-console)
+* [&#x200B; de opstelling van de Rekening in de Manager van Gegevens van Advertentie &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/2a_ads-data-manager_account_setup)
 
 >[!IMPORTANT]
 >
@@ -39,11 +39,11 @@ Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Amazon Ads v2] bestemmi
 
 ### Inname en activering door het publiek {#activation-and-targeting}
 
-Een atletisch merkje wil zijn bestaande klanten bereiken met relevante advertenties in [!DNL Amazon Ads] . Het merk kan e-mailadressen van klanten van zijn CRM in [!DNL Adobe Experience Platform] opnemen, publiek bouwen gebruikend zijn eerste-partij off-line gegevens, en deze publiek aan [!DNL Amazon Ads] door de [!DNL Amazon Ads v2] bestemming activeren. Na activering kunt u dit publiek gebruiken om advertenties aan die klanten over [!DNL Amazon Ads] voorraad te richten, die het merk helpen bekende klanten opnieuw aan de slag te gaan en herhaalde aankopen te drijven. Meer leren, zie [ gegevens ](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data) leiden.
+Een atletisch merkje wil zijn bestaande klanten bereiken met relevante advertenties in [!DNL Amazon Ads] . Het merk kan e-mailadressen van klanten van zijn CRM in [!DNL Adobe Experience Platform] opnemen, publiek bouwen gebruikend zijn eerste-partij off-line gegevens, en deze publiek aan [!DNL Amazon Ads] door de [!DNL Amazon Ads v2] bestemming activeren. Na activering kunt u dit publiek gebruiken om advertenties aan die klanten over [!DNL Amazon Ads] voorraad te richten, die het merk helpen bekende klanten opnieuw aan de slag te gaan en herhaalde aankopen te drijven. Meer leren, zie [&#x200B; gegevens &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data) leiden.
 
 ## Vereisten {#prerequisites}
 
-Om de [!DNL Amazon Ads v2] verbinding met [!DNL Adobe Experience Platform] te gebruiken, moet u toegang tot **[!DNL Amazon Ads Data Manager]** hebben gebruikend de Rekening van de Manager van de a [ ](https://advertising.amazon.com/help/G69CDSR9MNSWJH95). Zie [ begonnen worden met de Manager van Gegevens van Amazon Ads ](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview) voor details.
+Om de [!DNL Amazon Ads v2] verbinding met [!DNL Adobe Experience Platform] te gebruiken, moet u toegang tot **[!DNL Amazon Ads Data Manager]** hebben gebruikend de Rekening van de Manager van de a [&#x200B; &#x200B;](https://advertising.amazon.com/help/G69CDSR9MNSWJH95). Zie [&#x200B; begonnen worden met de Manager van Gegevens van Amazon Ads &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview) voor details.
 
 ### Algemene voorwaarden voor Amazon Ads Data Manager accepteren {#accept-terms}
 
@@ -51,7 +51,7 @@ Voordat u de bestemming [!DNL Amazon Ads v2] configureert, meldt u zich aan bij 
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Het doel van [!DNL Amazon Ads v2] ondersteunt de activering van de volgende identiteiten. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+Het doel van [!DNL Amazon Ads v2] ondersteunt de activering van de volgende identiteiten. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -81,8 +81,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de [!DNL Experience Platform] [ Dienst van de Segmentatie ](/help/segmentation/home.md). |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](/help/segmentation/ui/audience-portal.md#import-audience) in [!DNL Experience Platform] van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere [!DNL Experience Platform] -toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de [!DNL Experience Platform] [&#x200B; Dienst van de Segmentatie &#x200B;](/help/segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](/help/segmentation/ui/audience-portal.md#import-audience) in [!DNL Experience Platform] van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere [!DNL Experience Platform] -toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -90,10 +90,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -112,9 +112,9 @@ In de onderstaande tabel staan het exporttype en de exportfrequentie van de best
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](/help/destinations/ui/connect-destination.md) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](/help/destinations/ui/connect-destination.md) worden beschreven. Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -123,11 +123,11 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 * **[!UICONTROL Account name]**: voer een naam in waarmee u dit doelaccount kunt identificeren. Dit is vooral handig als u meerdere verbindingen met hetzelfde doel hebt.
 * **[!UICONTROL Description]** (optioneel): voeg details toe die u of uw team helpen onderscheid te maken tussen accounts, zoals het doel van de verbinding of de relevante zakelijke context.
 
-![ verbind met bestemmingsdialoog in Experience Platform voor de Advertenties van Amazon ](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png)
+![&#x200B; verbind met bestemmingsdialoog in Experience Platform voor de Advertenties van Amazon &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-connect-to-destination.png)
 
 U wordt omgeleid naar de interface [!DNL Amazon Ads v2] . Selecteer **[!UICONTROL Allow]** om u aan te melden bij uw Amazon-account.
 
-![ Amazon Ads OAuth vergunningsherinnering vragend de gebruiker om ](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-allow.png) toe te staan
+![&#x200B; Amazon Ads OAuth vergunningsherinnering vragend de gebruiker om &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-allow.png) toe te staan
 
 Na de verificatie wordt u weer omgeleid naar [!DNL Adobe Experience Platform] met de nieuwe verbinding.
 
@@ -135,17 +135,17 @@ Na de verificatie wordt u weer omgeleid naar [!DNL Adobe Experience Platform] me
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![ Amazon Ads v2 de gebieden van de bestemmingsconfiguratie in Experience Platform ](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png)
+![&#x200B; Amazon Ads v2 de gebieden van de bestemmingsconfiguratie in Experience Platform &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-configure-destination.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel herkent.
 * **[!UICONTROL Description]**: Een beschrijving waarmee u dit doel kunt identificeren.
 * **[!UICONTROL Manager Account]**: De account-id van de doelbeheeraccount in het vervolgkeuzemenu.
 * **[!UICONTROL All audience members sent to Amazon are consented for use for Advertising]**: geef toestemming voor gegevensgebruik op (`GRANTED` of `DENIED`).
-* **[!UICONTROL Ads data manager Terms & Conditions]**: ga akkoord met de voorwaarden en bepalingen van [!DNL Amazon Ads] Data Manager. Lees [ goedkeurt termen ](#accept-terms) sectie voor details.
+* **[!UICONTROL Ads data manager Terms & Conditions]**: ga akkoord met de voorwaarden en bepalingen van [!DNL Amazon Ads] Data Manager. Lees [&#x200B; goedkeurt termen &#x200B;](#accept-terms) sectie voor details.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, lees de gids over [ het intekenen aan bestemmingsalarm gebruikend UI ](/help/destinations/ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, lees de gids over [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](/help/destinations/ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -153,10 +153,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u de **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om identiteiten uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u de **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om identiteiten uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Verplichte toewijzingen {#map}
 
@@ -167,7 +167,7 @@ Voor het doel van [!DNL Amazon Ads v2] moet u de volgende toewijzingen configure
 | `IdentityMap: Email_LC_SHA256` of `IdentityMap: Email` | `Identity: email` | Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens bij activering automatisch door [!DNL Experience Platform] te laten hashen. |
 | `xdm: homeAddress.countryCode` | `Identity: countryCode` | Land van de gebruiker (ISO-code van 2 tekens) |
 
-![ de kaartconfiguratie van het gebied van de Identiteit voor de bestemming van Amazon Ads v2 ](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png)
+![&#x200B; de kaartconfiguratie van het gebied van de Identiteit voor de bestemming van Amazon Ads v2 &#x200B;](../../assets/catalog/advertising/amazon-ads/amazon-ads-v2-mapping.png)
 
 ### Aanbevolen werkwijzen toewijzen {#mapping-best-practices}
 
@@ -190,14 +190,14 @@ Deze herkenningstekens worden typisch verstrekt door de respectieve partners als
 
 Na activering, bevestig uw publieksopname in de **[!DNL Ads Data Manager]Console**.
 
-Navigeer naar **[!UICONTROL Audiences]** → **[!UICONTROL Uploaded Sources]** . Controleer de status, grootte en eventuele foutlogbestanden van de gebruikersinvoer. [ beheert Gegevens ](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data) en [ Doelen ](https://advertising.amazon.com/API/docs/en-us/adm/7_adm-destinations) pagina&#39;s in de [!DNL Amazon Ads] documentatie verstrekken verdere bevestigingsbegeleiding.
+Navigeer naar **[!UICONTROL Audiences]** → **[!UICONTROL Uploaded Sources]** . Controleer de status, grootte en eventuele foutlogbestanden van de gebruikersinvoer. [&#x200B; beheert Gegevens &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/6_adm-manage-data) en [&#x200B; Doelen &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/7_adm-destinations) pagina&#39;s in de [!DNL Amazon Ads] documentatie verstrekken verdere bevestigingsbegeleiding.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 
 Zie de volgende bron voor meer informatie over [!DNL Amazon Ads Data Manager] :
 
-* [ het Overzicht van de Manager van Gegevens van Amazon Adds ](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
+* [&#x200B; het Overzicht van de Manager van Gegevens van Amazon Adds &#x200B;](https://advertising.amazon.com/API/docs/en-us/adm/1_ads-data-manager-console-overview)
