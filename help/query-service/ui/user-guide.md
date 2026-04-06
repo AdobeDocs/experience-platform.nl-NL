@@ -314,7 +314,7 @@ In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Pl
 >
 >De interface die in de video wordt weergegeven, is verouderd, maar de logica die in de workflow wordt gebruikt, blijft ongewijzigd.
 
->[!VIDEO](https://video.tv.adobe.com/v/3470201?captions=dut&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Gelijktijdige sessies bewaken en beheren {#monitor-manage-sessions}
 

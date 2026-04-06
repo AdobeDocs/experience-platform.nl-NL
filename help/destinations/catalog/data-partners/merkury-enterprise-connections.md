@@ -39,8 +39,8 @@ Voer de stappen in deze documentatiepagina uit om een [!DNL Merkury Connections]
 
 >[!IMPORTANT]
 >
->* Om met de bestemming te verbinden, hebt u de **Doelen van de Mening** nodig en **leidt Doelen**, **Doelen**, **Profielen van de Mening**, en **Segmenten van de Mening** [ [toegangsbeheertoestemmingen] ](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/home#permissions). Lees [ [toegangsbeheeroverzicht] ](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/ui/overview) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **Grafiek van de Identiteit van de Mening** [ [toegangsbeheertoestemming] ](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/home#permissions) nodig.\![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* Om met de bestemming te verbinden, hebt u de **Doelen van de Mening** nodig en **leidt Doelen**, **Doelen**, **Profielen van de Mening**, en **Segmenten van de Mening** [ [toegangsbeheertoestemmingen] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lees [ [toegangsbeheeroverzicht] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **Grafiek van de Identiteit van de Mening** [ [toegangsbeheertoestemming] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) nodig.\![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -86,8 +86,8 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | **Punt** | **Type** | **Nota&#39;s** |
 |---|---|---|
-| Exporttype | **op profiel-Gebaseerde** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken van het geselecteerde profiel van de [ [workflow voor doelactivering] ](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes) . |
-| Frequentie | **Partij** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ [partij op dossier-gebaseerde frequentiebestemmingen] ](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/destination-types#file-based). |
+| Exporttype | **op profiel-Gebaseerde** | U exporteert alle leden van een segment samen met de gewenste schemavelden (bijvoorbeeld: e-mailadres, telefoonnummer, achternaam), zoals u hebt gekozen in het scherm met de kenmerken van het geselecteerde profiel van de [ [workflow voor doelactivering] ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes) . |
+| Frequentie | **Partij** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ [partij op dossier-gebaseerde frequentiebestemmingen] ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based). |
 
 {style="table-layout:auto"}
 
@@ -95,9 +95,9 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u de **Doelen van de Mening** nodig en **leidt en activeert de Doelen van de Dataset** [ [toegangsbeheertoestemmingen] ](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/home#permissions). Lees [ [toegangsbeheeroverzicht] ](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/ui/overview) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u de **Doelen van de Mening** nodig en **leidt en activeert de Doelen van de Dataset** [ [toegangsbeheertoestemmingen] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lees [ [toegangsbeheeroverzicht] ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in [ worden beschreven [de zelfstudie van de bestemmingsconfiguratie] ](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/connect-destination). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in [ worden beschreven [de zelfstudie van de bestemmingsconfiguratie] ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). Vul in de workflow voor doelconfiguratie de velden in die in de twee onderstaande secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -142,7 +142,7 @@ Accounts die al zijn gedefinieerd met de Merkury Enterprise Connections-bestemmi
 
 ## Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/alerts).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
 
 Wanneer u klaar bent met het verstrekken van details voor uw bestemmingsverbinding, selecteer **daarna**.
 
@@ -154,7 +154,7 @@ Wanneer u klaar bent met het verstrekken van details voor uw bestemmingsverbindi
 >* Om identiteiten uit te voeren, hebt u de **toestemming van de de toegangscontrole van de Grafiek van de Identiteit van de Mening** nodig.
 
 
-Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ## Toewijzingssuggesties {#mapping-suggestions}
 
@@ -183,7 +183,7 @@ Om te controleren of gegevens zijn geëxporteerd, controleert u het Amazon S3 St
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/nl/docs/experience-platform/data-governance/home).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Volgende stappen {#next-steps}
 

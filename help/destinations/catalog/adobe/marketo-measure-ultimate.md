@@ -103,7 +103,7 @@ Lees de [ datasets van de Uitvoer ](/help/destinations/ui/export-datasets.md) le
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Om een succesvolle datasetuitvoer te bevestigen, kunt u controleren dat uw dataset het aan uw [ het gegevenspakhuis van Snowflake ](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=nl-NL) met succes heeft gemaakt.
+Om een succesvolle datasetuitvoer te bevestigen, kunt u controleren dat uw dataset het aan uw [ het gegevenspakhuis van Snowflake ](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html) met succes heeft gemaakt.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

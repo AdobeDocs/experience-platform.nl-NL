@@ -58,9 +58,9 @@ Adverteerders kunnen ervoor kiezen om segmenten te delen met geverifieerde id&#3
 
 * De Experience Cloud-organisatie-id voor de Experience Platform-account. Je kunt je gebruikersnaam vinden op je Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP] )-gebruikersprofielpagina.
 
-* A [[!DNL Real-Time CDP]  bron in DSP ](https://experienceleague.adobe.com/nl/docs/advertising/dsp/audiences/sources/source-manage) om publiek voor campagneactivering te ontvangen. Uw Adobe-accountteam maakt de bron met uw Experience Cloud-organisatie-id.
+* A [[!DNL Real-Time CDP]  bron in DSP ](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) om publiek voor campagneactivering te ontvangen. Uw Adobe-accountteam maakt de bron met uw Experience Cloud-organisatie-id.
 
-* De bronsleutel voor de [!DNL DSP] rekening of adverteerder, die wordt geproduceerd wanneer a [[!DNL Real-Time CDP]  bron in  [!DNL DSP] ](https://experienceleague.adobe.com/nl/docs/advertising/dsp/audiences/sources/source-manage) wordt gecreeerd. Uw accountteam van [!DNL DSP] deelt deze sleutel met u. U gebruikt deze in Experience Platform om een doelverbinding met de Advertising DSP-bestemming te maken, zoals hieronder wordt uitgelegd.
+* De bronsleutel voor de [!DNL DSP] rekening of adverteerder, die wordt geproduceerd wanneer a [[!DNL Real-Time CDP]  bron in  [!DNL DSP] ](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) wordt gecreeerd. Uw accountteam van [!DNL DSP] deelt deze sleutel met u. U gebruikt deze in Experience Platform om een doelverbinding met de Advertising DSP-bestemming te maken, zoals hieronder wordt uitgelegd.
 
 ### Synchronisatie van id&#39;s instellen om cookies te delen {#cookie-sync}
 
@@ -133,7 +133,7 @@ Om met de bestemming te verbinden, volg de instructies om [ een bestemmingsverbi
 
 Als u verbinding wilt maken met het doel, geeft u de volgende parameter op in de sectie [!UICONTROL Connection type] en selecteert u **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Account or Advertiser Key]**: Dit [!UICONTROL Source Key] wordt geproduceerd wanneer a [[!DNL Real-Time CDP]  bron in het gebruikersinterface van DSP ](https://experienceleague.adobe.com/nl/docs/advertising/dsp/audiences/sources/source-manage) wordt gecreeerd. Uw Adobe-accountteam deelt deze sleutel met u nadat de bron is gemaakt.
+* **[!UICONTROL Account or Advertiser Key]**: Dit [!UICONTROL Source Key] wordt geproduceerd wanneer a [[!DNL Real-Time CDP]  bron in het gebruikersinterface van DSP ](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) wordt gecreeerd. Uw Adobe-accountteam deelt deze sleutel met u nadat de bron is gemaakt.
 
 ![ Schermafbeelding van het type van Verbinding die het Sleutelgebied van de Rekening of Advertiser toont.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -158,7 +158,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="Vooraf geconfigureerde toewijzingssets"
 >abstract="Deze twee sets met toewijzingen zijn vooraf geconfigureerd: ECID en [!DNL adcloud] cookie. Wanneer u gegevens naar Adobe Advertising DSP activeert, moeten de profielen die voor het geactiveerde publiek zijn gekwalificeerd, ten minste een ECID-identiteit hebben die aan het profiel is gekoppeld, om naar de bestemming te kunnen worden geëxporteerd."
->additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Lees meer over de vooraf geconfigureerde toewijzingen"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Lees meer over de vooraf geconfigureerde toewijzingen"
 
 >[!IMPORTANT]
 >

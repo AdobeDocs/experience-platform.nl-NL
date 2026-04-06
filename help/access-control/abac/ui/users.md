@@ -16,7 +16,7 @@ ht-degree: 0%
 >id="platform_permissions_users_about"
 >title="Wat zijn gebruikers?"
 >abstract="Gebruikers zijn de personen die toegang hebben tot Experience Platform. De toegang van een individuele gebruiker tot de middelen van een organisatie wordt beheerd door rollen."
->additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Rollen beheren"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Rollen beheren"
 
 Gebruikers zijn de personen die toegang hebben tot Adobe Experience Platform. De toegang van een individuele gebruiker tot de middelen van een organisatie wordt beheerd door [ rollen ](./roles.md){target="_blank"}. Een organisatie kan [ gebruikersgroepen ](#user-groups) ook creëren om naadloze toegang tot veelvoudige gebruiker tezelfdertijd te geven. Gebruikers worden beheerd in de Admin Console en gebruikers die zijn gekoppeld aan de Adobe Experience Platform-productkaart worden weergegeven als onderdeel van de gebruikerslijst in Experience Platform.
 
@@ -173,5 +173,5 @@ U weet nu hoe u de details en rollen voor een gebruiker, gebruikersgroep en API-
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446404/?captions=dut&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 -->

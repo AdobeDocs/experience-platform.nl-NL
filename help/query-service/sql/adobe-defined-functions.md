@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Adobe-gedefinieerde SQL-functies in Query Service
 
-Adobe-gedefinieerde functies, hierna ADF&#39;s genoemd, zijn vooraf gebouwde functies in de Adobe Experience Platform Query Service die u helpen bij het uitvoeren van veelvoorkomende zakelijke taken op [!DNL Experience Event] -gegevens. Deze omvatten functies voor [ Sessionisatie ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=nl-NL) en [ Attributie ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=nl-NL) als die gevonden in Adobe Analytics.
+Adobe-gedefinieerde functies, hierna ADF&#39;s genoemd, zijn vooraf gebouwde functies in de Adobe Experience Platform Query Service die u helpen bij het uitvoeren van veelvoorkomende zakelijke taken op [!DNL Experience Event] -gegevens. Deze omvatten functies voor [ Sessionisatie ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) en [ Attributie ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) als die gevonden in Adobe Analytics.
 
 Dit document bevat informatie over door Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service] .
 
@@ -47,7 +47,7 @@ Wanneer u werkt met [!DNL Experience Event] -gegevens die afkomstig zijn van een
 
 Deze groepering, of zitting van gegevens, helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
 
-Voor meer informatie over zittingssessie in Adobe Analytics, zie de documentatie over [ context-bewuste zittingen ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=nl-NL).
+Voor meer informatie over zittingssessie in Adobe Analytics, zie de documentatie over [ context-bewuste zittingen ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **syntaxis van de Vraag**
 
@@ -487,4 +487,4 @@ Met de hier beschreven functies kunt u query&#39;s schrijven voor toegang tot uw
 
 In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. Bovendien gebruikt de video ook voorbeelden met afzonderlijke eigenschappen in een XDM-object, waarbij gebruik wordt gemaakt van door Adobe gedefinieerde functies en waarbij gebruik wordt gemaakt van CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/3470201?captions=dut&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
