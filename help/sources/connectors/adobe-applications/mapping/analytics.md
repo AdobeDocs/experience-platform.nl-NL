@@ -2,7 +2,7 @@
 title: Toewijzingsvelden voor de Adobe Analytics Source Connector
 description: Wijs Adobe Analytics-velden toe aan XDM-velden met behulp van de Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: e735d9e68ca5a49f8a4e1cbf3ea4264796117a78
 workflow-type: tm+mt
 source-wordcount: '3832'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u Adobe Analytics-gegevens invoeren via de bron Analytics. Sommige gegevens die via ADC worden ingevoerd, kunnen rechtstreeks van de gebieden van Analytics aan de gebieden van het Gegevensmodel van de Ervaring worden in kaart gebracht (XDM), terwijl andere gegevens transformaties en specifieke functies vereisen om met succes worden in kaart gebracht.
 
-![&#x200B; een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
+![ een illustratie van de gegevenstransport van Adobe Analytics van Analytics aan Experience Platform.](../images/analytics-data-experience-platform.png)
 
 ## Streaming media-parameters
 
@@ -291,76 +291,76 @@ Deze gebieden hebben één enkele bron, maar kaart aan **veelvoudige** plaatsen 
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) die gegevens bevatten nadat Adobe de waarden ervan heeft aangepast met de verwerkingsregels, de VISTA-regels en de opzoektabellen. De meeste postwaarden hebben een vooraf verwerkte tegenhanger.
 
-De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
-Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [&#x200B; Adobe-bepaalde functies &#x200B;](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
 +++Selecteren om een lijst met afgekeurde geavanceerde toewijzingsvelden weer te geven
 
-| Gegevensinvoer | XDM-veld | XDM-type | Beschrijving |
-| — | — | — | — | |
-| `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Custom Analytics Vars. Elke organisatie kan eVars anders gebruiken. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Custom Analytics props. Elke organisatie kan eigen principes anders gebruiken. |
-| `post_browser_height` | `environment.browserDetails.viewportHeight` | integer | The height of the browser, in pixels. |
+| Gegevensfeed | XDM-veld | XDM-type | Beschrijving |
+| --- | --- | --- | --- |
+| `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | string | Aangepaste analytische variabelen. Elke organisatie kan eVars anders gebruiken. |
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | string | Aangepaste analytische voorkeuren. Elke organisatie kan eigen principes anders gebruiken. |
+| `post_browser_height` | `environment.browserDetails.viewportHeight` | integer | De hoogte van de browser, in pixels. |
 | `post_browser_width` | `environment.browserDetails.viewportWidth` | integer | De breedte van de browser, in pixels. |
-| `post_campaign` | `marketing.trackingCode` | string | The variable used in the Tracking Code afmetingen. |
+| `post_campaign` | `marketing.trackingCode` | string | De variabele die wordt gebruikt in de dimensie Code bijhouden. |
 | `post_channel` | `web.webPageDetails.siteSection` | string | De variabele die wordt gebruikt in de dimensie Site-secties. |
 | `post_cust_visid` | `endUserIDs._experience.aacustomid.id` | string | De aangepaste bezoeker-id, indien ingesteld. |
 | `post_first_hit_page_url` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.URL` | string | De URL van de eerste pagina die de bezoeker bereikt. |
-| `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | string | A variable used in the Entry Page Original afmetingen. De paginanaam van de ingangspagina van de bezoeker. |
-| `post_keywords` | `search.keywords` | string | De trefwoorden die zijn verzameld voor de hit. |
-| `post_page_url` | `web.webPageDetails.URL` | string | De URL van de page hit. |
-| `post_pagename` | `web.webPageDetails.pageViews.value` | string | is gelijk aan 1 voor hits met een paginanaam. Dit lijkt op de metrische weergave van Adobe Analytics-paginaweergaven. |
+| `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | string | Een variabele die wordt gebruikt in de oorspronkelijke dimensie van de Pagina van de Ingang. De paginanaam van de ingangspagina van de bezoeker. |
+| `post_keywords` | `search.keywords` | string | De trefwoorden die voor de hit zijn verzameld. |
+| `post_page_url` | `web.webPageDetails.URL` | string | De URL van de paginaklok. |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | string | Gelijk aan 1 op treffers die een paginanaam hebben. Dit lijkt op de metrische weergave van Adobe Analytics-paginaweergaven. |
 | `post_purchaseid` | `commerce.order.purchaseID` | string | Variabele die wordt gebruikt om aankopen uniek te identificeren. |
 | `post_referrer` | `web.webReferrer.URL` | string | De URL van de vorige pagina. |
-| `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | string | State variable. |
-| `post_user_server` | `web.webPageDetails.server` | string | Een variabele die wordt gebruikt in de dimensie Server. |
-| `post_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | string | Een variabele die wordt gebruikt om de dimensie Zip Code te vullen. |
+| `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | string | Staatvariabele. |
+| `post_user_server` | `web.webPageDetails.server` | string | Een variabele die in de dimensie van de Server wordt gebruikt. |
+| `post_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | string | Een variabele die wordt gebruikt om de dimensie van de Code van het PIT te bevolken. |
 | `browser` | `_experience.analytics.environment.`<br/>`browserID` | integer | De numerieke id van de browser. |
-| `domain` | `environment.domain` | string | The variable used in the Domain afmetingen. Het is gebaseerd op Internet Service Provider (ISP) van de gebruiker. |
+| `domain` | `environment.domain` | string | De variabele die wordt gebruikt in de dimensie Domein. Het is gebaseerd op Internet Service Provider (ISP) van de gebruiker. |
 | `first_hit_referrer` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.URL` | string | De eerste verwijzende URL voor de bezoeker. |
-| `geo_city` | `placeContext.geo.city` | string | The name of the city of the hit. Dit is gebaseerd op het IP van de klap adres. |
+| `geo_city` | `placeContext.geo.city` | string | De naam van de stad van de hit. Dit is gebaseerd op het IP van de klap adres. |
 | `geo_dma` | `placeContext.geo.dmaID` | integer | De numerieke id van het demografische gebied voor de hit. Dit is gebaseerd op het IP van de klap adres. |
-| `geo_region` | `placeContext.geo.stateProvince` | string | The name of the state or region of the hit. Dit is gebaseerd op het IP van de klap adres. |
-| `geo_zip` | `placeContext.geo.postalCode` | string | The ZIP code of the hit. Dit is gebaseerd op het IP van de klap adres. |
+| `geo_region` | `placeContext.geo.stateProvince` | string | De naam van de staat of regio van de treffer. Dit is gebaseerd op het IP van de klap adres. |
+| `geo_zip` | `placeContext.geo.postalCode` | string | De postcode van de hit. Dit is gebaseerd op het IP van de klap adres. |
 | `os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | integer | De numerieke id die het besturingssysteem van de bezoeker vertegenwoordigt. Dit is gebaseerd op de user_agent kolom. |
-| `search_page_num` | `search.pageDepth` | integer | Deze variabele wordt gebruikt door de Al dimensie van de Rang van de Pagina van het Onderzoek, en wijst op welke pagina van onderzoeksresultaten uw plaats | verscheen alvorens de gebruiker door aan uw plaats klikte. |
-| `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` | string | Een variabele die wordt gebruikt in de dimensie Zoektrefwoorden. |
+| `search_page_num` | `search.pageDepth` | integer | Deze variabele wordt gebruikt door de Al dimensie van de Rang van de Pagina van het Onderzoek en wijst op welke pagina van onderzoeksresultaten uw plaats | is weergegeven voordat de gebruiker op uw site heeft geklikt. |
+| `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` | string | Een variabele die wordt gebruikt in de dimensie Trefwoorden zoeken. |
 | `visit_num` | `_experience.analytics.session.`<br/>`num` | integer | Een variabele die wordt gebruikt in de dimensie Visit Number. Dit begint bij 1, en stijgt telkens als een nieuw bezoek (per gebruiker) begint. |
-| `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | integer | A variable used in the Hit Depth afmetingen. Deze waarde neemt toe met 1 voor elke hit die de gebruiker genereert en herstelt na elk bezoek. |
-| `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` | string | The first reference of the visit. |
-| `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` | integer | The first Page Name of the visit. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics-profielen, geconfigureerd als list-props. Het bevat een lijst met gescheiden waarden. |
-| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Gebruikt door hiërarchische variabelen en bevat een lijst met gescheiden waarden. | {values (array), delimiter (string)} |
-| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | A list of variable values. Bevat een lijst met gescheiden waarden, afhankelijk van de implementatie. | {value (string), key (string)} |
-| `post_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | Variabele die wordt gebruikt in de dimensie Cookie Support. |
-| `post_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Voorwerp | Standaard handelgebeurtenissen teweeggebracht op de slag. | {id (string), value (number)} |
-| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Aangepaste gebeurtenissen geactiveerd op de hit.| {id (Object), value (Object)} |
+| `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | integer | Een variabele die wordt gebruikt in de dimensie van de Diepte van het Actief. Deze waarde neemt toe met 1 voor elke hit die de gebruiker genereert en herstelt na elk bezoek. |
+| `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` | string | De eerste referentie van het bezoek. |
+| `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` | integer | De naam van de eerste pagina van het bezoek. |
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Props voor aangepaste analyse, geconfigureerd als lijsteigenschappen. Het bevat een lijst met gescheiden waarden. |
+| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Wordt gebruikt door hiërarchievariabelen en bevat een lijst met waarden die zijn gescheiden door scheidingstekens. | {values (array), delimiter (tekenreeks)} |
+| `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Een lijst met variabelewaarden. Bevat een lijst met gescheiden waarden, afhankelijk van de implementatie. | {value (string), key (string)} |
+| `post_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | Variabele die in de dimensie van de Steun van het Koekje wordt gebruikt. |
+| `post_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Object | De standaard handelgebeurtenissen teweegbrachten op de slag. | {id (string), value (number)} |
+| `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Aangepaste gebeurtenissen die worden geactiveerd tijdens de hit. | {id (Object), value (Object)} |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | Een vlag die aangeeft of Java™ is ingeschakeld. |
-| `post_latitude` | `placeContext.geo._schema.latitude` | number |   |
-| `post_longitude` | `placeContext.geo._schema.longitude` | number |   |
-| `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | number | is gelijk aan 1 als de hit een klik op een koppeling is. Dit is vergelijkbaar met de metrische waarde voor Pagina-gebeurtenissen in Adobe Analytics. |
-| `post_page_event_var1` | `web.webInteraction.URL` | string | Deze variabele wordt alleen gebruikt in link tracking image request. Dit is de URL van de downloadkoppeling, de afsluitkoppeling of de aangepaste koppeling waarop is geklikt. |
-| `post_page_event_var2` | `web.webInteraction.name` | string | Deze variabele wordt alleen gebruikt in link tracking image request. Dit is de aangepaste naam van de koppeling. |
-| `post_page_type` | `web.webPageDetails.isErrorPage` | boolean | This is used to populate the Pages not Found dimensi. Deze variabele moet leeg zijn of &quot;ErrorPage&quot; bevatten |
-| `post_pagename_no_url` | `web.webPageDetails.name` | number | The name of the page (if set). Als er geen pagina is opgegeven, blijft deze waarde leeg. |
-| `post_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. | {SKU (tekenreeks), aantal (geheel getal), prijsTotaal (getal)} |
-| `post_search_engine` | `search.searchEngine` | string | De numerieke id die de zoekmachine vertegenwoordigt die de bezoeker naar uw site verwees. |
+| `post_latitude` | `placeContext.geo._schema.latitude` | getal |   |
+| `post_longitude` | `placeContext.geo._schema.longitude` | getal |   |
+| `post_page_event` | `web.webInteraction.type` | string | Het type hit dat wordt verzonden in de afbeeldingsaanvraag (klik op Standaard, Koppeling downloaden, Koppeling afsluiten of Aangepaste koppeling). |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | getal | Komt overeen met 1 als de hit een klik op de koppeling is. Dit is vergelijkbaar met de metrische waarde voor Pagina-gebeurtenissen in Adobe Analytics. |
+| `post_page_event_var1` | `web.webInteraction.URL` | string | Deze variabele wordt alleen gebruikt in aanvragen voor het bijhouden van koppelingen. Dit is de URL van de downloadkoppeling, de afsluitkoppeling of de aangepaste koppeling waarop is geklikt. |
+| `post_page_event_var2` | `web.webInteraction.name` | string | Deze variabele wordt alleen gebruikt in aanvragen voor het bijhouden van koppelingen. Dit is de aangepaste naam van de koppeling. |
+| `post_page_type` | `web.webPageDetails.isErrorPage` | boolean | Dit wordt gebruikt om de pagina&#39;s te vullen die niet zijn gevonden. Deze variabele moet leeg zijn of &quot;ErrorPage&quot; bevatten |
+| `post_pagename_no_url` | `web.webPageDetails.name` | getal | De naam van de pagina (indien ingesteld). Als er geen pagina is opgegeven, blijft deze waarde leeg. |
+| `post_product_list` | `productListItems[].items` | array | De productlijst, zoals die door de productvariabele wordt overgegaan. | {SKU (tekenreeks), quantity (geheel getal), priceTotal (getal)} |
+| `post_search_engine` | `search.searchEngine` | string | De numerieke id die staat voor het zoekprogramma waarmee de bezoeker naar uw site is doorverwezen. |
 | `mvvar1_instances` | `.list.items[]` | Object | Lijst met variabelewaarden. Bevat een lijst met gescheiden waarden, afhankelijk van de implementatie. |
 | `mvvar2_instances` | `.list.items[]` | Object | Lijst met variabelewaarden. Bevat een lijst met gescheiden waarden, afhankelijk van de implementatie. |
 | `mvvar3_instances` | `.list.items[]` | Object | Lijst met variabelewaarden. Bevat een lijst met gescheiden waarden, afhankelijk van de implementatie. |
-| `color` | `device.colorDepth` | integer | Color depth ID, based on the value of the c_color column. |
-| `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | string | The numeric ID, representing the reference type of the first reference of the bezoekor. |
+| `color` | `device.colorDepth` | integer | Kleurdiepte-id, gebaseerd op de waarde van de kolom c_color. |
+| `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | string | De numerieke id die het referentietype van de eerste referentie van de bezoeker vertegenwoordigt. |
 | `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | integer | Tijdstempel van de eerste hit van de bezoeker in UNIX®-tijd. |
-| `geo_country` | `placeContext.geo.countryCode` | string | Afkorting van het land waar de hit vandaan kwam, gebaseerd op IP. |
-| `geo_latitude` | `placeContext.geo._schema.latitude` | number | |
-| `geo_longitude` | `placeContext.geo._schema.longitude` | number | |
-| `paid_search` | `search.isPaid` | boolean | Een vlag die wordt ingesteld als de treffer overeenkomt met de detectie van betaalde zoekopdrachten. |
-| `ref_type` | `web.webReferrer.type` | string | A numeric ID representing the type referral for the hit. |
-| `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | boolean | A-markering (1=betaald, 0=niet betaald) die aangeeft of de eerste hit van het bezoek het gevolg was van een hit bij een betaalde zoekopdracht. |
-| `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` | string | Numeric ID representing the reference type of the first reference of the visit. |
-| `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | string | Numerieke id van de eerste zoekmachine van het bezoek. |
+| `geo_country` | `placeContext.geo.countryCode` | string | Afkorting van het land waar de treffer vandaan kwam, op basis van IP. |
+| `geo_latitude` | `placeContext.geo._schema.latitude` | getal |  |
+| `geo_longitude` | `placeContext.geo._schema.longitude` | getal |  |
+| `paid_search` | `search.isPaid` | boolean | Een vlag die wordt geplaatst als de treffer betaalde onderzoeksopsporing aanpast. |
+| `ref_type` | `web.webReferrer.type` | string | Een numerieke id die het verwijzingstype voor de treffer vertegenwoordigt. |
+| `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | boolean | Een vlag (1=betaald, 0=niet betaald) die erop wijst of de eerste klap van het bezoek van een betaalde onderzoekshit was. |
+| `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` | string | Numerieke id die het referentietype van de eerste referentie van het bezoek vertegenwoordigt. |
+| `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | string | Numerieke id van de eerste zoekfunctie van het bezoek. |
 | `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | integer | Tijdstempel van de eerste hit van het bezoek in UNIX®-tijd. |
 
 +++
