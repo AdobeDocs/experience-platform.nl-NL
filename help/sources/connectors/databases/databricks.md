@@ -2,12 +2,11 @@
 title: Databricks
 description: Leer over de noodzakelijke stappen nodig om Gegevensbestanden aan Experience Platform te verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-06-17T00:00:00Z
+last-substantial-update: 2026-03-14T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -16,9 +15,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* De [!DNL Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
->
->* De bron [!DNL Databricks] is in bèta. Lees de [&#x200B; termijnen en voorwaarden &#x200B;](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>De [!DNL Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 
 [!DNL Databricks] is een op de cloud gebaseerd platform dat is ontworpen voor gegevensanalyse, leren van machines en AI. U kunt [!DNL Databricks] gebruiken om een holistische omgeving te integreren en te verstrekken voor het bouwen, implementeren en beheren van gegevensoplossingen op schaal.
 
@@ -159,7 +156,7 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Opslagaccount | De naam van uw opslagaccount. U kunt deze waarde verkrijgen door uw [!DNL Azure Blob Storage] -gegevens op te halen. |
 | SAS-token | Het token voor gedeelde toegangshandtekeningen voor uw [!DNL Azure Blob Storage] . U kunt deze waarde verkrijgen door uw [!DNL Azure Blob Storage] -gegevens op te halen. |
 
-![&#x200B; de Databases UI op Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+![ de Gegevensbestanden UI op Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
 Als deze niet is opgegeven, mislukt de kopieeractiviteit in de flowuitvoering en wordt de volgende fout geretourneerd:
 
