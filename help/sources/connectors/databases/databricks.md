@@ -156,7 +156,7 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Opslagaccount | De naam van uw opslagaccount. U kunt deze waarde verkrijgen door uw [!DNL Azure Blob Storage] -gegevens op te halen. |
 | SAS-token | Het token voor gedeelde toegangshandtekeningen voor uw [!DNL Azure Blob Storage] . U kunt deze waarde verkrijgen door uw [!DNL Azure Blob Storage] -gegevens op te halen. |
 
-![ de Gegevensbestanden UI op Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+![&#x200B; de Gegevensbestanden UI op Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
 Als deze niet is opgegeven, mislukt de kopieeractiviteit in de flowuitvoering en wordt de volgende fout geretourneerd:
 
