@@ -1,19 +1,15 @@
 ---
 title: sendPushSubscription
 description: Abonnementen voor pushberichten registreren bij Adobe Experience Platform.
-source-git-commit: 3abe25a9c538bf4d1b439d48f624d8cad109a99e
+exl-id: 7cb13834-46f4-481c-bd9d-600083eb6cfb
+source-git-commit: 76ba5719bd922c4ff9bff6fda4a359b18f549c5e
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 0%
+source-wordcount: '398'
+ht-degree: 1%
 
 ---
 
-
 # `sendPushSubscription` {#send-push-subscription}
-
->[!AVAILABILITY]
->
->De pushberichten voor het Web SDK zijn momenteel in **bèta**. De functionaliteit en documentatie kunnen worden gewijzigd.
 
 Met de opdracht `sendPushSubscription` worden pushberichtabonnementen geregistreerd bij Adobe Experience Platform. Dit bevel behandelt de terugwinning van de details van het dupabonnement van browser en verzendt hen naar uw gevormde datastream. Deze is beschikbaar in SDK 2.29.0 of hoger op het web.
 
@@ -113,6 +109,6 @@ De Web SDK-tagextensie die equivalent is aan dit veld, gebruikt de handeling [[!
 
 >[!MORELIKETHIS]
 >
->* [&#x200B; vorm dupberichten &#x200B;](configure/pushnotifications.md)
->* [&#x200B; Push API specificatie van het Web &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
->* [&#x200B; de Arbeider API van de Dienst &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+>* [ vorm dupberichten ](configure/pushnotifications.md)
+>* [ Push API specificatie van het Web ](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
+>* [ de Arbeider API van de Dienst ](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
