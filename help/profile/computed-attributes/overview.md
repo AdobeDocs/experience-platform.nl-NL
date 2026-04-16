@@ -50,8 +50,8 @@ Met berekende kenmerken kunt u gebeurtenisaggregaten zelf definiëren door voora
 
 | Functie | Beschrijving | Ondersteunde gegevenstypen | Voorbeeldgebruik |
 | -------- | ----------- | -------------------- | ------------- |
-| SUM | Een functie die **** omhoog de gespecificeerde waarde voor gekwalificeerde gebeurtenissen sommen. | Gehele getallen, getallen en nummers | Totaal van alle aankopen in de afgelopen 7 dagen |
-| TELLEN | Een functie die **** telt het aantal gebeurtenissen die voor de bepaalde regel zijn voorgekomen. | N.v.t. | Aantal aankopen in de laatste drie maanden |
+| SUM | Een functie die **&#x200B;**&#x200B;omhoog de gespecificeerde waarde voor gekwalificeerde gebeurtenissen sommen. | Gehele getallen, getallen en nummers | Totaal van alle aankopen in de afgelopen 7 dagen |
+| TELLEN | Een functie die **&#x200B;**&#x200B;telt het aantal gebeurtenissen die voor de bepaalde regel zijn voorgekomen. | N.v.t. | Aantal aankopen in de laatste drie maanden |
 | MIN | Een functie die de **minimum** waarde voor de gekwalificeerde gebeurtenissen vindt. | Gehele getallen, getallen, nummers, tijdstempels | Eerste aankoopgegevens in de laatste 7 dagen <br/> Minimumorderbedrag in de laatste 4 weken |
 | MAX | Een functie die de **maximum** waarde voor de gekwalificeerde gebeurtenissen vindt. | Gehele getallen, getallen, nummers, tijdstempels | Laatste aankoopgegevens in de laatste 7 dagen <br/> Maximumorderbedrag in de laatste 4 weken |
 | MOST_RECENT | Een functie die de opgegeven kenmerkwaarde van de meest recente gekwalificeerde gebeurtenis vindt. Deze functie geeft **zowel** de waarde evenals timestamp van de attributen. | Alle primitieve waarden, arrays met primitieve waarden | Laatste product bekeken in de afgelopen 7 dagen |
@@ -93,4 +93,4 @@ Met Snel vernieuwen kunt u uw kenmerken up-to-date houden. Als u deze optie insc
 
 ## Volgende stappen
 
-Om meer over het creëren van en het beheren van gegevens verwerkte attributen te leren, te lezen gelieve de [ gegevens verwerkte handleiding van attributen API ](./api.md) of [ gegevens verwerkte attributen UI gids ](./ui.md).
+Om meer over het creëren van en het beheren van gegevens verwerkte attributen te leren, te lezen gelieve de [&#x200B; gegevens verwerkte handleiding van attributen API &#x200B;](./api.md) of [&#x200B; gegevens verwerkte attributen UI gids &#x200B;](./ui.md).
