@@ -36,10 +36,10 @@ In de onderstaande tabel wordt elke toepassing weergegeven. Het geeft een korte 
 
 | Toepassing | Wat het is | Hoofddoel |
 |---------------|------------|----------------|
-| [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home) | Toepassing van klantgegevens en publiek | Breng uw eigen klantgegevens bij elkaar. Bouw publiek dat vaak bijwerkt. Send publiek en kenmerken naar advertenties, e-mail, mobiele apps en andere gereedschappen. De gegevensregels worden toegepast. Dezelfde productfamilie ondersteunt consumentenbedrijven, zakelijke klanten en gemengde modellen. Raadpleeg de Help bij het product voor versies. |
-| [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/en/docs/journey-optimizer) | Aanvraag voor reizen en berichten | Plan en voer persoonlijke reizen uit (bijvoorbeeld welkomstpaden, behoud of follow-up na service). Verzend berichten via kanalen met behulp van livegebeurtenissen en profielgegevens. |
-| [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/en/docs/customer-journey-analytics) | Toepassing van de analyse over kanalen | Meet en bestudeer hoe klanten door reizen en hoe marketing presteert. Hiermee gebruikt u gegevens die zijn voorbereid in [!DNL Adobe Experience Platform] . |
-| [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/en/docs/mix-modeler) | Aanvraag voor marketingmeting en -planning | Breng de metingen samen (inclusief modellering van marketingmix). Plan uitgavenscenario&#39;s voor marketing. Gebruikt gegevens die via [!DNL Adobe Experience Platform] zijn verbonden, zodat teams kunnen zien wat de resultaten en planningsbudgetten beïnvloedt. |
+| [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/nl/docs/experience-platform/rtcdp/home) | Toepassing van klantgegevens en publiek | Breng uw eigen klantgegevens bij elkaar. Bouw publiek dat vaak bijwerkt. Send publiek en kenmerken naar advertenties, e-mail, mobiele apps en andere gereedschappen. De gegevensregels worden toegepast. Dezelfde productfamilie ondersteunt consumentenbedrijven, zakelijke klanten en gemengde modellen. Raadpleeg de Help bij het product voor versies. |
+| [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/nl/docs/journey-optimizer) | Aanvraag voor reizen en berichten | Plan en voer persoonlijke reizen uit (bijvoorbeeld welkomstpaden, behoud of follow-up na service). Verzend berichten via kanalen met behulp van livegebeurtenissen en profielgegevens. |
+| [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/nl/docs/customer-journey-analytics) | Toepassing van de analyse over kanalen | Meet en bestudeer hoe klanten door reizen en hoe marketing presteert. Hiermee gebruikt u gegevens die zijn voorbereid in [!DNL Adobe Experience Platform] . |
+| [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/nl/docs/mix-modeler) | Aanvraag voor marketingmeting en -planning | Breng de metingen samen (inclusief modellering van marketingmix). Plan uitgavenscenario&#39;s voor marketing. Gebruikt gegevens die via [!DNL Adobe Experience Platform] zijn verbonden, zodat teams kunnen zien wat de resultaten en planningsbudgetten beïnvloedt. |
 
 >[!NOTE]
 >
@@ -104,10 +104,10 @@ Toepassingen zijn gebruikerservaring en workflows op het platform. Elk onderdeel
 
 | Toepassing | Wat zij zelfstandig doet (hoofdbaan) | Welk doel het helpt u bereiken |
 |-------------|-------------------------------------|------------------------------|
-| [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/home) | Beheer publiek en activering: maak segmenten, werk vaak lidmaatschap bij, verzend publiek en attributen naar bestemmingen. Biedt ondersteuning voor consumenten, bedrijven en gevallen van gemengd gebruik, afhankelijk van uw licentie. | Bereik de juiste mensen en sluit de verkeerde op betaalde, bezeten, en partnerkanalen uit gebruikend uw eigen verenigde klantengegevens. |
-| [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/en/docs/journey-optimizer) | De reizen van het ontwerp en verzenden berichten: reactie op gebeurtenissen, takwegen, en verzend over kanalen van één reiswerkruimte. | Voer gepersonaliseerde reeksen uit (bijvoorbeeld op instapniveau, behoud of service follow-up) die reageren op wat de klant zojuist heeft gedaan. |
-| [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/en/docs/customer-journey-analytics) | Reizen en campagneresultaten rapporteren en analyseren met behulp van één gegevensbasis. | Bekijk wat er gebeurd is en waarom er langs verschillende kanalen heen is, zodat u uw uitgaven en ervaring kunt verbeteren. |
-| [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/en/docs/mix-modeler) | Combineer platform-verbonden gegevens met modellen om kanalen te meten en planningsscenario&#39;s in werking te stellen. | Plan en pas marketing uitgaven met een gestage mening van hoe kanalen en andere factoren resultaten beïnvloeden aan. |
+| [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/nl/docs/experience-platform/rtcdp/home) | Beheer publiek en activering: maak segmenten, werk vaak lidmaatschap bij, verzend publiek en attributen naar bestemmingen. Biedt ondersteuning voor consumenten, bedrijven en gevallen van gemengd gebruik, afhankelijk van uw licentie. | Bereik de juiste mensen en sluit de verkeerde op betaalde, bezeten, en partnerkanalen uit gebruikend uw eigen verenigde klantengegevens. |
+| [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/nl/docs/journey-optimizer) | De reizen van het ontwerp en verzenden berichten: reactie op gebeurtenissen, takwegen, en verzend over kanalen van één reiswerkruimte. | Voer gepersonaliseerde reeksen uit (bijvoorbeeld op instapniveau, behoud of service follow-up) die reageren op wat de klant zojuist heeft gedaan. |
+| [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/nl/docs/customer-journey-analytics) | Reizen en campagneresultaten rapporteren en analyseren met behulp van één gegevensbasis. | Bekijk wat er gebeurd is en waarom er langs verschillende kanalen heen is, zodat u uw uitgaven en ervaring kunt verbeteren. |
+| [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/nl/docs/mix-modeler) | Combineer platform-verbonden gegevens met modellen om kanalen te meten en planningsscenario&#39;s in werking te stellen. | Plan en pas marketing uitgaven met een gestage mening van hoe kanalen en andere factoren resultaten beïnvloeden aan. |
 
 Kortom, toepassingen zijn de manier waarop teams hun dagelijkse werk doen (activering, reizen, analyse, marketing meting). Het platform is wat de klantengegevens en de regels houdt die elk van die teams vertrouwen. Het platform biedt ook vragen en geavanceerde modellering door de diensten hierboven aan.
 
@@ -212,9 +212,9 @@ In uw contract, productbeschrijving en verkooporder kunnen contractuele limieten
 
 ### Meer informatie {#where-to-read-guardrails}
 
-&#x200B;* [&#x200B; Experience Platform en toepassingsgidsen &#x200B;](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-diagrams/architecture-overview/guardrails) - Overzicht van hoe de gidsen over het platform en de toepassingen werken.
-&#x200B;* [&#x200B; Guardrails voor gegevensopname &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/guardrails) — De productie van de Opname en verwante grenzen.
-&#x200B;* [&#x200B; de guardrails van Real-Time CDP &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/guardrails/overview) — Segmenten, activering, en gebruik van Real-Time CDP.
+&#x200B;* [&#x200B; Experience Platform en toepassingsgidsen &#x200B;](https://experienceleague.adobe.com/nl/docs/blueprints-learn/architecture/architecture-diagrams/architecture-overview/guardrails) - Overzicht van hoe de gidsen over het platform en de toepassingen werken.
+&#x200B;* [&#x200B; Guardrails voor gegevensopname &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/ingestion/guardrails) — De productie van de Opname en verwante grenzen.
+&#x200B;* [&#x200B; de guardrails van Real-Time CDP &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/rtcdp/guardrails/overview) — Segmenten, activering, en gebruik van Real-Time CDP.
 &#x200B;* [&#x200B; gebruik van de Vergunning &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/data-management-best-practices) — Het beheer van gegevens en de praktijken van het vergunningsgebruik op Experience Platform (waar van toepassing op uw org).
 
 Als uw workflow veel leunt op [!DNL Customer Journey Analytics] , [!DNL Adobe Journey Optimizer] , [!DNL Adobe Mix Modeler] of [!DNL Query Service] , leest u ook de hulplijnonderwerpen voor die producten in de Help bij het product.
@@ -247,12 +247,12 @@ In deze tabel kunt u zien wat u wilt, wat het platform biedt en welke toepassing
 &#x200B;* [!DNL Adobe Experience Platform] — Gedeelde services en functies: gegevens invoegen, gegevensmodellen, [!DNL Identity Service] , [!DNL Real-Time Customer Profile] , segmentatie, doelen, gegevensbeheer, privacy en functies zoals [!DNL Data Science Workspace] en [!DNL Query Service] .
 &#x200B;* Toepassingen — Gelicentieerde producten op het platform (bijvoorbeeld [!DNL Real-Time CDP] , [!DNL Adobe Journey Optimizer] , [!DNL Customer Journey Analytics] , [!DNL Adobe Mix Modeler] ) die workflows verpakken voor specifieke taken. Ze zijn niet hetzelfde als platformservices zoals [!DNL Query Service] en [!DNL Data Science Workspace] .
 
-Dit past de manier aan het [&#x200B; de documentatieoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) groepeert inhoud.
+Dit past de manier aan het [&#x200B; de documentatieoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/documentation/overview) groepeert inhoud.
 
 ## Aanvullende bronnen {#additional-resources}
 
-&#x200B;* [&#x200B; overzicht van Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) — Belangrijkste ingangspunten voor hulp.
-&#x200B;* [&#x200B; de documentatieoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) — Hoe de hulponderwerpen worden georganiseerd.
+&#x200B;* [&#x200B; overzicht van Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/home) — Belangrijkste ingangspunten voor hulp.
+&#x200B;* [&#x200B; de documentatieoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/documentation/overview) — Hoe de hulponderwerpen worden georganiseerd.
 &#x200B;* [&#x200B; Digitale ervaringsblauwdrukken &#x200B;](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview/experience-cloud) — De ontwerpen van het voorbeeld door geval en industrie te gebruiken.
 
 Zie voor praktijkgericht leren zelfstudies en cursussen in [!DNL Experience League] over [!DNL Experience Platform Web SDK] , XDM en schema&#39;s, identiteit, segmentatie en doelen.
