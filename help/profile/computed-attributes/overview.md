@@ -2,9 +2,9 @@
 title: Overzicht van berekende kenmerken
 description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2eb87601d7090bf6bda8098458f9e01690a02b6c
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,9 @@ Met behulp van berekende kenmerken kunnen gedragsgegevens van profielen snel wor
 - Standaardisering van geaggregeerde profielgedragsgegevens voor gebruik op verschillende platforms en toepassingen
 - Beter gegevensbeheer met consolidatie van gegevens van gebeurtenissen met een oud profiel in betekenisvolle gedragsinzichten
 
-Deze aggregaten worden berekend op basis van de gegevenssets voor gebeurtenissen met profiel die in Adobe Experience Platform worden ingevoerd. Elk gegevens verwerkt attribuut is een profielattribuut dat op uw schema van de profielunie wordt gecreeerd, en is gegroepeerd onder de &quot;SystemComputedAttribute&quot;gebiedsgroep in uw unieschema.
+Deze aggregaten worden berekend op basis van door de gebruiker gemaakte Profile-enabled datasets van de Gebeurtenis van de Ervaring die in Adobe Experience Platform worden opgenomen. Dit betekent dat de systeem-geproduceerde datasets die via de diensttokens door SDK, zoals het systeemdatasets van Adobe Journey Optimizer **worden gecreeerd niet** kunnen worden gebruikt.
+
+Elk gegevens verwerkt attribuut is een profielattribuut dat op uw schema van de profielunie wordt gecreeerd, en is gegroepeerd onder de &quot;SystemComputedAttribute&quot;gebiedsgroep in uw unieschema.
 
 Voorbeelden van gebruiksgevallen zijn:
 
@@ -48,8 +50,8 @@ Met berekende kenmerken kunt u gebeurtenisaggregaten zelf definiëren door voora
 
 | Functie | Beschrijving | Ondersteunde gegevenstypen | Voorbeeldgebruik |
 | -------- | ----------- | -------------------- | ------------- |
-| SUM | Een functie die **&#x200B;**&#x200B;omhoog de gespecificeerde waarde voor gekwalificeerde gebeurtenissen sommen. | Gehele getallen, getallen en nummers | Totaal van alle aankopen in de afgelopen 7 dagen |
-| TELLEN | Een functie die **&#x200B;**&#x200B;telt het aantal gebeurtenissen die voor de bepaalde regel zijn voorgekomen. | N.v.t. | Aantal aankopen in de laatste drie maanden |
+| SUM | Een functie die **** omhoog de gespecificeerde waarde voor gekwalificeerde gebeurtenissen sommen. | Gehele getallen, getallen en nummers | Totaal van alle aankopen in de afgelopen 7 dagen |
+| TELLEN | Een functie die **** telt het aantal gebeurtenissen die voor de bepaalde regel zijn voorgekomen. | N.v.t. | Aantal aankopen in de laatste drie maanden |
 | MIN | Een functie die de **minimum** waarde voor de gekwalificeerde gebeurtenissen vindt. | Gehele getallen, getallen, nummers, tijdstempels | Eerste aankoopgegevens in de laatste 7 dagen <br/> Minimumorderbedrag in de laatste 4 weken |
 | MAX | Een functie die de **maximum** waarde voor de gekwalificeerde gebeurtenissen vindt. | Gehele getallen, getallen, nummers, tijdstempels | Laatste aankoopgegevens in de laatste 7 dagen <br/> Maximumorderbedrag in de laatste 4 weken |
 | MOST_RECENT | Een functie die de opgegeven kenmerkwaarde van de meest recente gekwalificeerde gebeurtenis vindt. Deze functie geeft **zowel** de waarde evenals timestamp van de attributen. | Alle primitieve waarden, arrays met primitieve waarden | Laatste product bekeken in de afgelopen 7 dagen |
@@ -91,4 +93,4 @@ Met Snel vernieuwen kunt u uw kenmerken up-to-date houden. Als u deze optie insc
 
 ## Volgende stappen
 
-Om meer over het creëren van en het beheren van gegevens verwerkte attributen te leren, te lezen gelieve de [&#x200B; gegevens verwerkte handleiding van attributen API &#x200B;](./api.md) of [&#x200B; gegevens verwerkte attributen UI gids &#x200B;](./ui.md).
+Om meer over het creëren van en het beheren van gegevens verwerkte attributen te leren, te lezen gelieve de [ gegevens verwerkte handleiding van attributen API ](./api.md) of [ gegevens verwerkte attributen UI gids ](./ui.md).
