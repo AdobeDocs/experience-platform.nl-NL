@@ -26,7 +26,7 @@ Deel dit onderwerp met marketers, producteigenaars, en mensen die de oplossing b
 
 >[!NOTE]
 >
->Dit onderwerp is een overzicht. Voor hoe te stappen, gebruikersinterfaceacties, en API details, zie de verbindingen in [ Aanvullende middelen ](#additional-resources).
+>Dit onderwerp is een overzicht. Voor hoe te stappen, gebruikersinterfaceacties, en API details, zie de verbindingen in [&#x200B; Aanvullende middelen &#x200B;](#additional-resources).
 
 ## Wat zijn de toepassingen en wat is het belangrijkste doel van elk {#applications-at-a-glance}
 
@@ -98,7 +98,7 @@ Deze gebieden ondersteunen een eenvoudige stroom: verzamelen → verenigen → b
 
 ## Hoe toepassingen zelfstandig werken {#applications-alone}
 
-Een korte lijst van elke toepassing en zijn belangrijkste doel is in [ wat de toepassingen zijn, en het belangrijkste doel van elk ](#applications-at-a-glance). In de onderstaande tabel vindt u meer informatie. Hierin wordt aangegeven wat elke toepassing afzonderlijk doet en welk doel de toepassing ondersteunt.
+Een korte lijst van elke toepassing en zijn belangrijkste doel is in [&#x200B; wat de toepassingen zijn, en het belangrijkste doel van elk &#x200B;](#applications-at-a-glance). In de onderstaande tabel vindt u meer informatie. Hierin wordt aangegeven wat elke toepassing afzonderlijk doet en welk doel de toepassing ondersteunt.
 
 Toepassingen zijn gebruikerservaring en workflows op het platform. Elk onderdeel helpt uw teams een hoofdtype werk te doen. Allemaal tekenen ze uit hetzelfde profiel en dezelfde gegevensregels. Teams hoeven niet de volledige gegevensstapel voor elk gereedschap te kopiëren.
 
@@ -212,10 +212,10 @@ In uw contract, productbeschrijving en verkooporder kunnen contractuele limieten
 
 ### Meer informatie {#where-to-read-guardrails}
 
-* [ Experience Platform en toepassingsgidsen ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-diagrams/architecture-overview/guardrails) - Overzicht van hoe de gidsen over het platform en de toepassingen werken.
-* [ Guardrails voor gegevensopname ](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/guardrails) — De productie van de Opname en verwante grenzen.
-* [ de guardrails van Real-Time CDP ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/guardrails/overview) — Segmenten, activering, en gebruik van Real-Time CDP.
-* [ gebruik van de Vergunning ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/data-management-best-practices) — Het beheer van gegevens en de praktijken van het vergunningsgebruik op Experience Platform (waar van toepassing op uw org).
+&#x200B;* [&#x200B; Experience Platform en toepassingsgidsen &#x200B;](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-diagrams/architecture-overview/guardrails) - Overzicht van hoe de gidsen over het platform en de toepassingen werken.
+&#x200B;* [&#x200B; Guardrails voor gegevensopname &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/guardrails) — De productie van de Opname en verwante grenzen.
+&#x200B;* [&#x200B; de guardrails van Real-Time CDP &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/guardrails/overview) — Segmenten, activering, en gebruik van Real-Time CDP.
+&#x200B;* [&#x200B; gebruik van de Vergunning &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/data-management-best-practices) — Het beheer van gegevens en de praktijken van het vergunningsgebruik op Experience Platform (waar van toepassing op uw org).
 
 Als uw workflow veel leunt op [!DNL Customer Journey Analytics] , [!DNL Adobe Journey Optimizer] , [!DNL Adobe Mix Modeler] of [!DNL Query Service] , leest u ook de hulplijnonderwerpen voor die producten in de Help bij het product.
 
@@ -244,16 +244,16 @@ In deze tabel kunt u zien wat u wilt, wat het platform biedt en welke toepassing
 
 ## Terminologie {#terminology}
 
-* [!DNL Adobe Experience Platform] — Gedeelde services en functies: gegevens invoegen, gegevensmodellen, [!DNL Identity Service] , [!DNL Real-Time Customer Profile] , segmentatie, doelen, gegevensbeheer, privacy en functies zoals [!DNL Data Science Workspace] en [!DNL Query Service] .
-* Toepassingen — Gelicentieerde producten op het platform (bijvoorbeeld [!DNL Real-Time CDP] , [!DNL Adobe Journey Optimizer] , [!DNL Customer Journey Analytics] , [!DNL Adobe Mix Modeler] ) die workflows verpakken voor specifieke taken. Ze zijn niet hetzelfde als platformservices zoals [!DNL Query Service] en [!DNL Data Science Workspace] .
+&#x200B;* [!DNL Adobe Experience Platform] — Gedeelde services en functies: gegevens invoegen, gegevensmodellen, [!DNL Identity Service] , [!DNL Real-Time Customer Profile] , segmentatie, doelen, gegevensbeheer, privacy en functies zoals [!DNL Data Science Workspace] en [!DNL Query Service] .
+&#x200B;* Toepassingen — Gelicentieerde producten op het platform (bijvoorbeeld [!DNL Real-Time CDP] , [!DNL Adobe Journey Optimizer] , [!DNL Customer Journey Analytics] , [!DNL Adobe Mix Modeler] ) die workflows verpakken voor specifieke taken. Ze zijn niet hetzelfde als platformservices zoals [!DNL Query Service] en [!DNL Data Science Workspace] .
 
-Dit past de manier aan het [ de documentatieoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) groepeert inhoud.
+Dit past de manier aan het [&#x200B; de documentatieoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) groepeert inhoud.
 
 ## Aanvullende bronnen {#additional-resources}
 
-* [ overzicht van Adobe Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) — Belangrijkste ingangspunten voor hulp.
-* [ de documentatieoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) — Hoe de hulponderwerpen worden georganiseerd.
-* [ Digitale ervaringsblauwdrukken ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview/experience-cloud) — De ontwerpen van het voorbeeld door geval en industrie te gebruiken.
+&#x200B;* [&#x200B; overzicht van Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) — Belangrijkste ingangspunten voor hulp.
+&#x200B;* [&#x200B; de documentatieoverzicht van Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) — Hoe de hulponderwerpen worden georganiseerd.
+&#x200B;* [&#x200B; Digitale ervaringsblauwdrukken &#x200B;](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview/experience-cloud) — De ontwerpen van het voorbeeld door geval en industrie te gebruiken.
 
 Zie voor praktijkgericht leren zelfstudies en cursussen in [!DNL Experience League] over [!DNL Experience Platform Web SDK] , XDM en schema&#39;s, identiteit, segmentatie en doelen.
 
