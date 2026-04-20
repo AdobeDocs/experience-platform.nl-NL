@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere bronnen van bedrijven bij elkaar om klantprofielen te maken, doelgroepsegmenten van die profielen te maken, en die segmenten voor externe doelen te activeren.
 role: Admin
-source-git-commit: 74a73b568c850f8e749afea039afd2821858bd69
+source-git-commit: 70dcebedd06c342e02ee2307042d4a5267b364d9
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '320'
 ht-degree: 16%
 
 ---
@@ -45,14 +45,14 @@ ht-degree: 16%
 * Bestemmingen {#destinations}
    * [Overzicht van doelen](destinations/overview.md)
    * [Doelen in Real-Time CDP B2B edition](destinations/b2b.md)
-* Guardrails {#guardrails}
+* Beveiligingsmechanismen {#guardrails}
    * [Overzicht van Real-Time CDP-instructies](guardrails/overview.md)
-   * [&#x200B; Guardrails voor gegevensopname](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=nl-NL){target="_blank"}
-   * [&#x200B; Guardrails voor  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
-   * [&#x200B; Guardrails voor  [!DNL Real-Time Customer Profile]  gegevens en segmentatie](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=nl-NL){target="_blank"}
-   * [&#x200B; Guardrails voor  [!DNL Identity Service]  gegevens](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=nl-NL){target="_blank"}
-   * [&#x200B; Guardrails voor  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=nl-NL){target="_blank"}
-   * [&#x200B; Grafieken voor gegevensactivering door bestemmingen](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=nl-NL){target="_blank"}
+   * [ Guardrails voor gegevensopname ](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [ Guardrails voor  [!DNL Edge Network API] ](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
+   * [ Guardrails voor  [!DNL Real-Time Customer Profile]  gegevens en segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
+   * [ Guardrails voor  [!DNL Identity Service]  gegevens ](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [ Guardrails voor  [!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [ Grafieken voor gegevensactivering door bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identiteiten {#identity}
    * [Identiteiten en naamruimten](profile/identities-overview.md)
 * Beleid samenvoegen {#merge-policies}
@@ -75,10 +75,11 @@ ht-degree: 16%
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
    * [Bronnen in Real-Time CDP B2B edition](sources/b2b.md)
-* Gebruiksscenario’s {#use-cases}
+* Gebruiksscenario&#39;s {#use-cases}
    * [Overzicht van voorbeelden](/help/rtcdp/use-case-guides/overview.md)
+   * [Gebruiksscenario&#39;s van de gebruikservaring van de klant om bedrijfsdoelstellingen te drijven](/help/rtcdp/use-case-guides/business-use-case-framework.md)
    * Klantenovername {#customer-acquisition}
-      * [&#x200B; neemt en verwerft nieuwe klanten zonder gebiedsdeel op derdekoekjes  aan](/help/rtcdp/partner-data/prospecting.md)
+      * [ neemt en verwerft nieuwe klanten zonder gebiedsdeel op derdekoekjes ](/help/rtcdp/partner-data/prospecting.md) aan
       * [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite herbestemming van niet-geverifieerde gebruikers](./partner-data/offsite-retargeting.md)
       * [Niet-geverifieerde herbestemming op de server](./partner-data/unauthenticated-retargeting.md)
@@ -88,5 +89,5 @@ ht-degree: 16%
       * [Evolueer eenmalig klantenwaarde aan levenwaarde](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
-* [&#x200B; de Nota&#39;s van de Versie van Experience Platform &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
-* [&#x200B; Verklarende woordenlijst van Experience Platform &#x200B;](https://www.adobe.com/go/platform-glossary-en)
+* [ de Nota&#39;s van de Versie van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ Verklarende woordenlijst van Experience Platform ](https://www.adobe.com/go/platform-glossary-en)
