@@ -1,11 +1,9 @@
 ---
 title: Gebruiksscenario's om zakelijke doelen te behalen
 description: Gebruik een praktisch, voor de workshop gereed raamwerk voor het definiëren, prioriteren en activeren van gebruiksgevallen voor de klantervaring die zijn gekoppeld aan meetbare bedrijfsresultaten. Pas eenvoudig toe Waarom → Who/What/Where → Hoe model om teams te richten, uitvoering te begeleiden, en effect te leveren.
-hide: true
-hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
+source-git-commit: 1c856af1e192ac26a530fb69b1a8629c8ee72e1f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,5 +47,5 @@ U hoeft niet te beginnen bij &quot;run&quot; om waarde te leveren, u moet focuss
 
 ## Aan de slag
 
-Download [&#x200B; het kadermalplaatje en het steunen middelen &#x200B;](../assets/S651-use-case-framework-template.pdf) om een gestructureerde workshop in werking te stellen en een voorrang gegeven, meetbare roadmap klaar voor activering te produceren.
+Download [ het kadermalplaatje en het steunen middelen ](../assets/S651-use-case-framework-template.pdf) om een gestructureerde workshop in werking te stellen en een voorrang gegeven, meetbare roadmap klaar voor activering te produceren.
 
