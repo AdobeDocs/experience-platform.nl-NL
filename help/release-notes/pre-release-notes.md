@@ -45,9 +45,9 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [!BADGE  Beta ]{type=Informative} [ Microsoft voegt de Gelijke van de Klant ](../destinations/catalog/advertising/microsoft-ads-customer-match.md) toe | Klanten afstemmen op e-mailadres en met hen communiceren over de [!DNL Microsoft Advertising Network] , waaronder advertentie voor zoeken en publiek. Koppel uw [!DNL Microsoft Advertising] -account aan Real-Time CDP om het maken en beheren van lijsten door klanten rechtstreeks vanuit Experience Platform te automatiseren. |
-| [!BADGE  Beta ]{type=Informative} [ reddit de Audience van de Douane ](../destinations/catalog/advertising/reddit-custom-audience.md) | Verzend het publiek van Experience Platform naar [!DNL Reddit Ads] . Sluit uw [!DNL Reddit] -account aan, wijs identiteiten toe en activeer het publiek om mensen te bereiken die actief hun interesses verkennen op [!DNL Reddit] . |
-| [ Amazon Ads v2 ](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] is het huidige doel voor alle nieuwe [!DNL Amazon Ads] verbindingen. Als u een bestaande [ (Verouderd)  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) verbinding hebt, blijft het functioneren zonder enige vereiste veranderingen. [!DNL Amazon Ads v2] verbindt met [!DNL Ads Data Manager], die steun voor uitgebreide identiteitstypes, adres-verwante gebieden, en gegeven-delend over [!DNL Amazon Ads] producten verleent, verbeterend het richten en publiek past tarieven in vergelijking met [ (Verouderd)  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) aan. |
+| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} [&#x200B; Microsoft voegt de Gelijke van de Klant &#x200B;](../destinations/catalog/advertising/microsoft-ads-customer-match.md) toe | Klanten afstemmen op e-mailadres en met hen communiceren over de [!DNL Microsoft Advertising Network] , waaronder advertentie voor zoeken en publiek. Koppel uw [!DNL Microsoft Advertising] -account aan Real-Time CDP om het maken en beheren van lijsten door klanten rechtstreeks vanuit Experience Platform te automatiseren. |
+| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} [&#x200B; reddit de Audience van de Douane &#x200B;](../destinations/catalog/advertising/reddit-custom-audience.md) | Verzend het publiek van Experience Platform naar [!DNL Reddit Ads] . Sluit uw [!DNL Reddit] -account aan, wijs identiteiten toe en activeer het publiek om mensen te bereiken die actief hun interesses verkennen op [!DNL Reddit] . |
+| [&#x200B; Amazon Ads v2 &#x200B;](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] is het huidige doel voor alle nieuwe [!DNL Amazon Ads] verbindingen. Als u een bestaande [&#x200B; (Verouderd)  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) verbinding hebt, blijft het functioneren zonder enige vereiste veranderingen. [!DNL Amazon Ads v2] verbindt met [!DNL Ads Data Manager], die steun voor uitgebreide identiteitstypes, adres-verwante gebieden, en gegeven-delend over [!DNL Amazon Ads] producten verleent, verbeterend het richten en publiek past tarieven in vergelijking met [&#x200B; (Verouderd)  [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) aan. |
 | [!DNL Rokt] | Met [!DNL Rokt] kunt u Experience Platform-doelgroepen verbinden met door AI gestuurde realtime beslissingen, waardoor de campagneprestaties worden verbeterd dankzij een nauwkeurigere gerichtheid, onderdrukking en personalisatie. |
 
 {style="table-layout:auto"}
@@ -74,7 +74,7 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees het [ XDM overzicht van het Systeem ](../xdm/home.md).
+Voor meer informatie, lees het [&#x200B; XDM overzicht van het Systeem &#x200B;](../xdm/home.md).
 
 ## Queryservice {#query-service}
 
@@ -88,7 +88,7 @@ Gebruik Query Service om query&#39;s uit te voeren in Adobe Experience Platform 
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees het [ overzicht van de Dienst van de Vraag ](../query-service/home.md).
+Voor meer informatie, lees het [&#x200B; overzicht van de Dienst van de Vraag &#x200B;](../query-service/home.md).
 
 ## Real-Time CDP {#rtcdp}
 
@@ -102,7 +102,7 @@ Voor meer informatie, lees het [ overzicht van de Dienst van de Vraag ](../query
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees het [ overzicht van Real-Time CDP ](../rtcdp/home.md).
+Voor meer informatie, lees het [&#x200B; overzicht van Real-Time CDP &#x200B;](../rtcdp/home.md).
 
 ## Sandboxes {#sandboxes}
 
@@ -112,11 +112,11 @@ Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldw
 
 | Functie | Beschrijving |
 | --- | --- |
-| Expressie | Het Uitdrukkelijke Exemplaar van het gebruik om voorwerpen aan een doelzandbak in één enkele actie van [ te kopiëren Sandbox het Tooling UI ](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Afhankelijke objecten worden automatisch gedetecteerd en worden gemaakt in de doelsandbox of worden opnieuw gebruikt wanneer ze al bestaan. |
+| Expressie | Het Uitdrukkelijke Exemplaar van het gebruik om voorwerpen aan een doelzandbak in één enkele actie van [&#x200B; te kopiëren Sandbox het Tooling UI &#x200B;](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Afhankelijke objecten worden automatisch gedetecteerd en worden gemaakt in de doelsandbox of worden opnieuw gebruikt wanneer ze al bestaan. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees het [ zandbakenoverzicht ](../sandboxes/home.md).
+Voor meer informatie, lees het [&#x200B; zandbakenoverzicht &#x200B;](../sandboxes/home.md).
 
 ## Segmentatieservice {#segmentation-service}
 
@@ -130,7 +130,7 @@ Gebruik Segmentatieservice om publiek te maken van uw klantgegevens en hun volle
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees het [ overzicht van het publiek ](../segmentation/home.md).
+Voor meer informatie, lees het [&#x200B; overzicht van het publiek &#x200B;](../segmentation/home.md).
 
 ## Bronnen {#sources}
 
