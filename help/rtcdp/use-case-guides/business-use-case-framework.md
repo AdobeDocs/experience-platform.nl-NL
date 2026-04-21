@@ -47,5 +47,5 @@ U hoeft niet te beginnen bij &quot;run&quot; om waarde te leveren, u moet focuss
 
 ## Aan de slag
 
-Download [ het kadermalplaatje en het steunen middelen ](../assets/S651-use-case-framework-template.pdf) om een gestructureerde workshop in werking te stellen en een voorrang gegeven, meetbare roadmap klaar voor activering te produceren.
+Download [&#x200B; het kadermalplaatje en het steunen middelen &#x200B;](../assets/S651-use-case-framework-template.pdf) om een gestructureerde workshop in werking te stellen en een voorrang gegeven, meetbare roadmap klaar voor activering te produceren.
 
