@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: eb69e67847305c4b02d377e032aad3490b0b84e0
+source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,4 +49,5 @@ U hoeft niet te beginnen bij &quot;run&quot; om waarde te leveren, u moet focuss
 
 ## Aan de slag
 
-Download het kadermalplaatje en ondersteunende middelen om een gestructureerde workshop in werking te stellen en een prioritaire, meetbare roadmap te produceren klaar voor activering.
+Download [ het kadermalplaatje en het steunen middelen ](../assets/S651-use-case-framework-template.pdf) om een gestructureerde workshop in werking te stellen en een voorrang gegeven, meetbare roadmap klaar voor activering te produceren.
+
