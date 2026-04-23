@@ -49,4 +49,4 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B;
 
 Gebruik de Experience Platform-mogelijkheden voor publieksdeling om uw Experience Platform-publiek te delen met andere Adobe-doelen. Raadpleeg de onderstaande pagina voor meer informatie (wordt geopend in het Audience Manager-documentatieportaal):
 
-* [&#x200B; Experience Platform publiek dat met Adobe Audience Manager, Adobe Advertising, en Adobe Target door de integratie van de Diensten van de Kern deelt &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [&#x200B; Experience Platform publiek dat met Adobe Audience Manager, Adobe Advertising, en Adobe Target door de integratie van de Diensten van de Kern deelt &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL)

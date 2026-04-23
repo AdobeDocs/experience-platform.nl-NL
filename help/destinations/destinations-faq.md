@@ -199,7 +199,7 @@ Voor gedetailleerde verklaringen over identiteitskaart passende vereisten, zie [
 +++Antwoord
 Nee, de Web SDK is niet verplicht om het publiek te activeren naar [[!DNL Adobe Target]](catalog/personalization/adobe-target-connection.md) .
 
-Nochtans, als [[!DNL at.js] &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) in plaats van Web SDK wordt gebruikt, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
+Nochtans, als [[!DNL at.js] &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=nl-NL) in plaats van Web SDK wordt gebruikt, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
 
 Voor [&#x200B; zelfde-pagina en volgende-pagina verpersoonlijking &#x200B;](ui/activate-edge-personalization-destinations.md) gebruiksgevallen, moet u of SDK van het Web of [&#x200B; Edge Network API &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/) gebruiken. Zie de documentatie bij [&#x200B; activerend publiek aan randbestemmingen &#x200B;](ui/activate-edge-personalization-destinations.md) voor meer implementatiedetails.
 +++
@@ -231,7 +231,7 @@ De definities van het publiek worden binnen een uur doorgegeven aan de Edge Netw
 ### Waar kan ik de geactiveerde kenmerken in [!DNL Adobe Target] zien? {#target-activated-attributes-location}
 
 +++Antwoord
-De attributen zullen beschikbaar in Doel in [&#x200B; JSON &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [&#x200B; HTML &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) aanbiedingen zijn te gebruiken.
+De attributen zullen beschikbaar in Doel in [&#x200B; JSON &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=nl-NL) en [&#x200B; HTML &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=nl-NL) aanbiedingen zijn te gebruiken.
 +++
 
 ### Kan ik een bestemming zonder een gegevensstroom tot stand brengen en dan een gegevensstroom aan de zelfde bestemming op een recentere punt toevoegen? {#destination-without-datastream}
