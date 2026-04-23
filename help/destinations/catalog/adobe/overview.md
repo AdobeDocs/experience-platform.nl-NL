@@ -20,7 +20,7 @@ Beheer uw klantervaring door uw gegevens in [!DNL Adobe Experience Platform] aan
 
 Experience Platform biedt momenteel ondersteuning voor de onderstaande Adobe-doelen.
 
-Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbindingen ](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B; Verbindingen &#x200B;](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
 ### Connecties {#connections}
 
@@ -30,7 +30,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbind
 * [(Beta) Experience Cloud-publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage-verbinding](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate-verbinding](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
-* [ Federated de verbinding van de Samenstelling van het publiek ](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
+* [&#x200B; Federated de verbinding van de Samenstelling van het publiek &#x200B;](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
 ### Extensies {#extensions}
 
@@ -49,4 +49,4 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbind
 
 Gebruik de Experience Platform-mogelijkheden voor publieksdeling om uw Experience Platform-publiek te delen met andere Adobe-doelen. Raadpleeg de onderstaande pagina voor meer informatie (wordt geopend in het Audience Manager-documentatieportaal):
 
-* [ Experience Platform publiek dat met Adobe Audience Manager, Adobe Advertising, en Adobe Target door de integratie van de Diensten van de Kern deelt ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [&#x200B; Experience Platform publiek dat met Adobe Audience Manager, Adobe Advertising, en Adobe Target door de integratie van de Diensten van de Kern deelt &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

@@ -19,7 +19,7 @@ Deze functie gebruiken:
 1. Selecteer **[!UICONTROL Auditor]** in de linkernavigatie.
 1. Selecteer **[!UICONTROL Run Auditor Tests]**. Zodra de tests zijn voltooid, worden de resultaten ervan hieronder weergegeven.
 
-![ Schermafbeelding van testresultaten op het lusje van de Auditor ](../images/auditor-results.png)
+![&#x200B; Schermafbeelding van testresultaten op het lusje van de Auditor &#x200B;](../images/auditor-results.png)
 
 In de resultatenlijst worden de test en het resultaat weergegeven en staan suggesties om eventuele problemen op te lossen.
 
