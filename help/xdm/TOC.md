@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '710'
 ht-degree: 10%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 10%
          * [Organisatie](./schema/healthcare/field-groups/organization.md)
          * [Patiënt](./schema/healthcare/field-groups/patient.md)
          * [Praktijkster](./schema/healthcare/field-groups/practioner.md)
-         * [&#x200B; Programma &#x200B;](./schema/healthcare/field-groups/schedule.md)
+         * [ Programma ](./schema/healthcare/field-groups/schedule.md)
       * Gegevenstypen {#data-types}
          * [Adres](./schema/healthcare/data-types/address.md)
          * [Aantekening](./schema/healthcare/data-types/annotation.md)
@@ -116,7 +116,7 @@ ht-degree: 10%
       * [Details partnerperspectief (voorbeeld)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
-      * [Volledige extensie Adobe Advertising Cloud](./field-groups/event/advertising-full-extension.md)
+      * [Adobe Advertising Full Extension](./field-groups/event/advertising-full-extension.md)
       * [Advertising-gegevens](./field-groups/event/advertising-details.md)
       * [Toepassingsdetails](./field-groups/event/application-details.md)
       * [Balansoverdrachten](./field-groups/event/balance-transfers.md)
@@ -288,5 +288,5 @@ ht-degree: 10%
    * [De labels voor gegevensgebruik voor een schema beheren](tutorials/labels.md)
    * [Een ad-hocschema maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

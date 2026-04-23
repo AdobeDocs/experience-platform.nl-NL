@@ -5,9 +5,9 @@ title: Bijlage Privacy Service API-handleiding
 description: Dit document bevat aanvullende informatie voor het werken met de Privacy Service API.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 9b3fb0d545408369d96a3fc7c5c6e9c098af9933
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '551'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ De volgende secties bevatten aanvullende informatie voor het werken met de Adobe
 
 ## Standaardnaamruimten {#standard-namespaces}
 
-Alle identiteiten die naar [!DNL Privacy Service] worden verzonden, moeten onder een specifieke naamruimte worden opgegeven. Identiteitsnaamruimten zijn een component van [&#x200B; Dienst van de Identiteit van Adobe Experience Platform &#x200B;](../../identity-service/home.md) die op de context wijzen waarop een identiteit betrekking heeft.
+Alle identiteiten die naar [!DNL Privacy Service] worden verzonden, moeten onder een specifieke naamruimte worden opgegeven. Identiteitsnaamruimten zijn een component van [ Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md) die op de context wijzen waarop een identiteit betrekking heeft.
 
 De volgende tabel bevat een overzicht van diverse veelgebruikte, vooraf gedefinieerde identiteitstypen die door [!DNL Experience Platform] beschikbaar worden gesteld, samen met de bijbehorende `namespace` -waarden:
 
@@ -26,7 +26,7 @@ De volgende tabel bevat een overzicht van diverse veelgebruikte, vooraf gedefini
 | --- | --- | --- |
 | Email | `Email` | `6` |
 | Telefoon | `Phone` | `7` |
-| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| Adobe Advertising-id | `AdCloud` | `411` |
 | Adobe Audience Manager UUID | `CORE` | `0` |
 | Adobe Experience Cloud-id | `ECID` | `4` |
 | Adobe Target-id | `TNTID` | `9` |
@@ -38,9 +38,9 @@ De volgende tabel bevat een overzicht van diverse veelgebruikte, vooraf gedefini
 
 >[!NOTE]
 >
->Elk identiteitstype heeft ook een `namespaceId` geheel-getalwaarde, die kan worden gebruikt in plaats van de `namespace` -tekenreeks wanneer de eigenschap `type` van de identiteit wordt ingesteld op &quot;namespaceId&quot;. Zie de sectie op [&#x200B; namespace kwalificfiers &#x200B;](#namespace-qualifiers) voor meer informatie.
+>Elk identiteitstype heeft ook een `namespaceId` geheel-getalwaarde, die kan worden gebruikt in plaats van de `namespace` -tekenreeks wanneer de eigenschap `type` van de identiteit wordt ingesteld op &quot;namespaceId&quot;. Zie de sectie op [ namespace kwalificfiers ](#namespace-qualifiers) voor meer informatie.
 
-U kunt een lijst ophalen met naamruimten die door uw organisatie worden gebruikt door een GET-aanvraag in te dienen bij het eindpunt `idnamespace/identities` in de [!DNL Identity Service] API. Zie de [&#x200B; de ontwikkelaarsgids van de Dienst van de Identiteit &#x200B;](../../identity-service/api/getting-started.md) voor meer informatie.
+U kunt een lijst ophalen met naamruimten die door uw organisatie worden gebruikt door een GET-aanvraag in te dienen bij het eindpunt `idnamespace/identities` in de [!DNL Identity Service] API. Zie de [ de ontwikkelaarsgids van de Dienst van de Identiteit ](../../identity-service/api/getting-started.md) voor meer informatie.
 
 ## Naamruimtetekens {#namespace-qualifiers}
 

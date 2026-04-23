@@ -1,11 +1,11 @@
 ---
-keywords: bestemmingen;ervaring cloudoplossingen; doel;doelbestemming; en wolk; reclame wolk; publieksmanager; doelbestemming adobe; doel; bestemming van de publieksmanager;
+keywords: bestemmingen;ervaring cloudoplossingen; doel;doel bestemming; en wolk; reclame; publieksmanager; adobe target; doel; doel van de publieksmanager bestemming;
 title: Overzicht Adobe-bestemmingen
 description: Beheer uw klantervaring door uw gegevens in Experience Platform te verbinden met andere Adobe Experience Cloud-oplossingen voor doelgerichte toepassingen, personalisatie, automatisering van marketing en meer
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '221'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Beheer uw klantervaring door uw gegevens in [!DNL Adobe Experience Platform] aan
 
 Experience Platform biedt momenteel ondersteuning voor de onderstaande Adobe-doelen.
 
-Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B; Verbindingen &#x200B;](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbindingen ](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
 ### Connecties {#connections}
 
@@ -30,11 +30,11 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B;
 * [(Beta) Experience Cloud-publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage-verbinding](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate-verbinding](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
-* [&#x200B; Federated de verbinding van de Samenstelling van het publiek &#x200B;](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
+* [ Federated de verbinding van de Samenstelling van het publiek ](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
 ### Extensies {#extensions}
 
-* [Adobe Advertising Cloud Extension](../advertising/adobe-advertising-cloud.md)
+* [Adobe Advertising-extensie](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics-extensie](../analytics/adobe-analytics.md)
 * [Adobe Media Analytics voor audio- en video-extensie](../analytics/adobe-video-analytics.md)
 * [Adobe Target-extensie](../personalization/adobe-target.md)
@@ -49,4 +49,4 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B;
 
 Gebruik de Experience Platform-mogelijkheden voor publieksdeling om uw Experience Platform-publiek te delen met andere Adobe-doelen. Raadpleeg de onderstaande pagina voor meer informatie (wordt geopend in het Audience Manager-documentatieportaal):
 
-* [&#x200B; het publiek dat van Experience Platform met Adobe Audience Manager, de Wolk van Adobe Advertising, en Adobe Target door de integratie van de Diensten van de Kern deelt &#x200B;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL)
+* [ Experience Platform publiek dat met Adobe Audience Manager, Adobe Advertising, en Adobe Target door de integratie van de Diensten van de Kern deelt ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

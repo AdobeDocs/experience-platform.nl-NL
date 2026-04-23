@@ -1,18 +1,15 @@
 ---
 title: pushNotifications
 description: Vorm dupberichten voor het Web SDK om browser-gebaseerd dupoverseinen toe te laten.
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+exl-id: a5cf4817-a4c2-4cf1-8f3a-7e92b807de8f
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '414'
 ht-degree: 1%
 
 ---
 
 # `pushNotifications` {#push-notifications}
-
->[!AVAILABILITY]
->
->De pushberichten voor het Web SDK zijn momenteel in **bèta**. De functionaliteit en documentatie kunnen worden gewijzigd.
 
 Met de eigenschap `pushNotifications` kunt u pushmeldingen voor webtoepassingen configureren. Met deze functie kan uw webtoepassing berichten van een server ontvangen, zelfs als de website momenteel niet in de browser is geladen.
 
@@ -88,4 +85,4 @@ De Web SDK-tagextensie die equivalent is aan deze eigenschap, is de [[!UICONTROL
 
 ## Volgende stappen {#next-steps}
 
-Na het vormen van duw berichten, gebruik het [&#x200B; sendPushSubscription &#x200B;](../sendpushsubscription.md) bevel om dupabonnementen met Adobe Experience Platform te registreren.
+Na het vormen van duw berichten, gebruik het [ sendPushSubscription ](../sendpushsubscription.md) bevel om dupabonnementen met Adobe Experience Platform te registreren.

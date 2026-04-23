@@ -2,9 +2,9 @@
 title: Instellingen voor pushmeldingen
 description: Configureer instellingen voor pushmeldingen voor de Web SDK-tagextensie.
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '178'
 ht-degree: 2%
 
 ---
@@ -16,17 +16,13 @@ ht-degree: 2%
 >title="Pushmeldingen"
 >abstract="Hiermee stelt u een openbare VAPID-sleutel in voor verificatie van pushberichten."
 
->[!AVAILABILITY]
->
->De pushberichten voor het Web SDK zijn momenteel in **bèta**. De functionaliteit en documentatie kunnen worden gewijzigd.
-
 Deze configuratiesectie staat u toe om een openbare sleutel van VAPID voor de authentificatie van de dupmelding te plaatsen.
 
 >[!NOTE]
 >
->Deze eigenschap moet eerst worden toegelaten gebruikend [&#x200B; Douane bouwt componenten &#x200B;](custom-build-components.md); het wordt onbruikbaar gemaakt door gebrek.
+>Deze eigenschap moet eerst worden toegelaten gebruikend [ Douane bouwt componenten ](custom-build-components.md); het wordt onbruikbaar gemaakt door gebrek.
 
-1. Login aan [&#x200B; experience.adobe.com &#x200B;](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
+1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw geloofsbrieven van Adobe ID.
 1. Ga naar **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Selecteer de gewenste eigenschap tag.
 1. Navigeer naar **[!UICONTROL Extensions]** en klik vervolgens op **[!UICONTROL Configure]** op de [!UICONTROL Adobe Experience Platform Web SDK] -kaart.
@@ -34,7 +30,7 @@ Deze configuratiesectie staat u toe om een openbare sleutel van VAPID voor de au
 1. Blader onder [!UICONTROL SDK instances] omlaag om de sectie [!UICONTROL Push Notifications] te zoeken.
 1. Voer in het veld **[!UICONTROL VAPID Public Key]** de openbare sleutel voor VAPID in.
 
-![&#x200B; Beeld dat duw berichten montages toont gebruikend de de markeringsuitbreiding van SDK van het Web &#x200B;](../assets/push-notifications.png)
+![ Beeld dat duw berichten montages toont gebruikend de de markeringsuitbreiding van SDK van het Web ](../assets/push-notifications.png)
 
 De volgende velden zijn beschikbaar:
 

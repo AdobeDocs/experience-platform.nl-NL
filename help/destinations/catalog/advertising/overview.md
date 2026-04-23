@@ -3,9 +3,9 @@ keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Overzicht Advertising-bestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (bijvoorbeeld DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2084f45ca89e78f980a8d2a53a08966e0588fcdd
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '289'
 ht-degree: 1%
 
 ---
@@ -22,14 +22,14 @@ Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als
 
 Momenteel ondersteunt Experience Platform de hieronder vermelde reclamebestemmingen.
 
-Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B; Verbindingen &#x200B;](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbindingen ](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
 ### Connecties {#connections}
 
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real-ID Audience Connection](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSP-verbinding](adobe-advertising-dsp-connection.md)
-* [Verouderde DSP-verbinding voor Adobe Advertising Cloud](adobe-advertising-cloud-dsp-connection-legacy.md)
+* [Verouderde Adobe Advertising DSP-verbinding](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads-verbinding](amazon-ads.md)
 * [Amazon Ads v2-verbinding](amazon-ads-v2.md)
 * [Bombora-verbinding](bombora.md)
@@ -53,7 +53,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B;
 
 ### Extensies {#extensions}
 
-* [Adobe Advertising Cloud Extension](adobe-advertising-cloud.md)
+* [Adobe Advertising-extensie](adobe-advertising-cloud.md)
 * [Awin Advertising Conversion-tagextensie](awin-conversiontag.md)
 * [Awin Advertising Mastertag-extensie](awin-mastertag.md)
 * [Bing Ads Universal Event Tracking extension](bing-ads.md)
@@ -68,4 +68,4 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B;
 
 ## Verbinding maken met een nieuwe advertentiebestemming {#connect-destination}
 
-Experience Platform moet eerst verbinding maken met het doel om een publiek naar advertentiebestemmingen voor uw campagnes te sturen. Zie het [&#x200B; leerprogramma van de bestemmingsverwezenlijking &#x200B;](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
+Experience Platform moet eerst verbinding maken met het doel om een publiek naar advertentiebestemmingen voor uw campagnes te sturen. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.

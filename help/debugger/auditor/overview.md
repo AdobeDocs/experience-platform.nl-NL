@@ -3,23 +3,23 @@ title: Tabblad Auditor
 description: Leer hoe u het tabblad Audit in Adobe Experience Platform Debugger kunt gebruiken om uw Adobe Experience Cloud-implementaties te testen.
 keywords: foutopsporing;ervaring met platformfoutopsporingsextensie;chroom;extensie;auditor;dtm;target
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '361'
 ht-degree: 10%
 
 ---
 
 # Tabblad Auditor
 
-In Adobe Experience Platform Debugger, kunt u het **[!UICONTROL Auditor]** lusje gebruiken om een reeks controletests op uw pagina in werking te stellen.
+In Adobe Experience Platform Debugger kunt u het tabblad **[!UICONTROL Auditor]** gebruiken om een reeks controletests op uw pagina uit te voeren.
 
 Deze functie gebruiken:
 
 1. Selecteer **[!UICONTROL Auditor]** in de linkernavigatie.
 1. Selecteer **[!UICONTROL Run Auditor Tests]**. Zodra de tests zijn voltooid, worden de resultaten ervan hieronder weergegeven.
 
-![&#x200B; Schermafbeelding van testresultaten op het lusje van de Auditor &#x200B;](../images/auditor-results.png)
+![ Schermafbeelding van testresultaten op het lusje van de Auditor ](../images/auditor-results.png)
 
 In de resultatenlijst worden de test en het resultaat weergegeven en staan suggesties om eventuele problemen op te lossen.
 
@@ -36,18 +36,18 @@ Elke test is gewogen en uw testscore is gelijk aan het toegewezen gewicht. Als u
 | 4 | Als dit mislukt, worden mogelijk onbetrouwbare gegevens verzameld. |
 | 5 | Als dit mislukt, ziet u mogelijk gegevensverlies. |
 
-Alle tests slagen of mislukken. Zij testen of aan de testvoorwaarden wordt voldaan of niet aan de testvoorwaarden wordt voldaan, zodat er geen gedeeltelijke scores voor gedeeltelijke naleving zijn. Bijvoorbeeld, als de test op de recentste versie van een oplossing van de Adobe controleert en u slechts één versie achter bent, krijgt u de zelfde score alsof u vijf versies terug bent. De meest recente versies bevatten prestatieverbeteringen en foutoplossingen. Daarom wordt aangeraden de meest recente versie te gebruiken.
+Alle tests slagen of mislukken. Zij testen of aan de testvoorwaarden wordt voldaan of niet aan de testvoorwaarden wordt voldaan, zodat er geen gedeeltelijke scores voor gedeeltelijke naleving zijn. Bijvoorbeeld, als de test op de recentste versie van een oplossing van Adobe controleert en u slechts één versie achter bent, krijgt u de zelfde score alsof u vijf versies terug bent. De meest recente versies bevatten prestatieverbeteringen en foutoplossingen. Daarom wordt aangeraden de meest recente versie te gebruiken.
 
 Het wordt **ten zeerste aanbevolen** om resultaten van niveau 4 of 5 te corrigeren.
 
 Het wordt **aanbevolen** om resultaten van niveau 1 tot 3 te corrigeren.
 
-## Ondersteunde technologieën voor Adobe
+## Ondersteunde Adobe-technologieën
 
-De controleeigenschap kan de volgende technologieën van de Adobe beoordelen:
+De controlefunctie kan de volgende Adobe-technologieën beoordelen:
 
-* Adobe Advertising Cloud DSP
-* Adobe Advertising Cloud Search
+* Adobe Advertising DSP
+* Adobe Advertising Search
 * Adobe Analytics
 * Adobe Experience Cloud Identity Service
 * Adobe Target
