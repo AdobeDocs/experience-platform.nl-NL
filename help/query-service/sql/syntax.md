@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door de Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '4686'
+source-wordcount: '4737'
 ht-degree: 1%
 
 ---
@@ -198,7 +198,7 @@ SELECT statement 2
 
 Gebruik de opdracht `CREATE TABLE AS SELECT` (CTAS) om de resultaten van een `SELECT` -query in een nieuwe tabel te plaatsen. Dit is nuttig voor het creëren van getransformeerde datasets, het uitvoeren van samenvoegingen, of het voorvertonen van eigenschap-gebouwde gegevens alvorens het in een model te gebruiken.
 
-Als u bereid bent om een model te trainen gebruikend getransformeerde eigenschappen, zie de [&#x200B; documentatie van Modellen &#x200B;](../advanced-statistics/models.md) voor begeleiding bij het gebruiken van `CREATE MODEL` met de `TRANSFORM` clausule.
+Als u bereid bent om een model te trainen gebruikend getransformeerde eigenschappen, zie de [ documentatie van Modellen ](../advanced-statistics/models.md) voor begeleiding bij het gebruiken van `CREATE MODEL` met de `TRANSFORM` clausule.
 
 U kunt desgewenst een `TRANSFORM` -component opnemen om een of meer functies voor functietechniek rechtstreeks in de CTAS-instructie toe te passen. Gebruik `TRANSFORM` om de resultaten van uw transformatielogica te inspecteren voordat u een modeltraining volgt.
 
@@ -223,8 +223,8 @@ AS (select_query)
 | `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om de nieuwe lijst met een bestaand schema te associëren XDM. |
 | `rowvalidation` | (Optioneel) Hiermee schakelt u validatie op rijniveau in voor elke batch die in de gegevensset wordt opgenomen. De standaardwaarde is true. |
 | `label` | (Optioneel) Gebruik de waarde `PROFILE` om de gegevensset een label te geven dat geschikt is voor het opnemen van profielen. |
-| `transform` | (Optioneel) Past functietechnologietransformaties toe (zoals tekenreeksindexering, one-hot codering of TF-IDF) voordat de gegevensset wordt geconcretiseerd. Deze component wordt gebruikt voor het voorvertonen van getransformeerde functies. Zie [`TRANSFORM` componentendocumentatie &#x200B;](#transform) voor meer details. |
-| `select_query` | Een standaardinstructie `SELECT` die de gegevensset definieert. Zie [`SELECT` vragen sectie &#x200B;](#select-queries) voor meer details. |
+| `transform` | (Optioneel) Past functietechnologietransformaties toe (zoals tekenreeksindexering, one-hot codering of TF-IDF) voordat de gegevensset wordt geconcretiseerd. Deze component wordt gebruikt voor het voorvertonen van getransformeerde functies. Zie [`TRANSFORM` componentendocumentatie ](#transform) voor meer details. |
+| `select_query` | Een standaardinstructie `SELECT` die de gegevensset definieert. Zie [`SELECT` vragen sectie ](#select-queries) voor meer details. |
 
 >[!NOTE]
 >
@@ -289,7 +289,7 @@ Houd rekening met de volgende beperkingen wanneer u de component `TRANSFORM` geb
 
 >[!NOTE]
 >
->Voor meer details over beschikbare transformatiefuncties en hun outputtypes, zie {de gegevenstypen van de transformatieoutput van 0} Eigenschap [.](../advanced-statistics/feature-transformation.md#available-transformations)
+>Voor meer details over beschikbare transformatiefuncties en hun outputtypes, zie {de gegevenstypen van de transformatieoutput van 0} Eigenschap ](../advanced-statistics/feature-transformation.md#available-transformations).[
 
 
 ### TRANSFORM, component {#transform}
@@ -302,9 +302,9 @@ De component `TRANSFORM` kan in de volgende instructies worden gebruikt:
 - `CREATE TABLE`
 - `CREATE TEMP TABLE`
 
-Zie de [&#x200B; documentatie van Modellen &#x200B;](../advanced-statistics/models.md) voor gedetailleerde instructies bij het gebruiken CREATE MODEL, met inbegrip van hoe te om transformaties te bepalen, modelopties te plaatsen, en opleidingsgegevens te vormen.
+Zie de [ documentatie van Modellen ](../advanced-statistics/models.md) voor gedetailleerde instructies bij het gebruiken CREATE MODEL, met inbegrip van hoe te om transformaties te bepalen, modelopties te plaatsen, en opleidingsgegevens te vormen.
 
-Voor gebruik met `CREATE TABLE`, zie [&#x200B; LIJST ALS UITGEZOCHTE sectie &#x200B;](#create-table-as-select) CREËREN.
+Voor gebruik met `CREATE TABLE`, zie [ LIJST ALS UITGEZOCHTE sectie ](#create-table-as-select) CREËREN.
 
 #### CREATE MODEL, voorbeeld
 
@@ -347,7 +347,7 @@ INSERT INTO table_name select_query
 | Parameters | Beschrijving |
 | ----- | ----- |
 | `table_name` | De naam van de tabel waarin u de query wilt invoegen. |
-| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [&#x200B; UITGEZOCHTE vraagsectie &#x200B;](#select-queries) worden gevonden. |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -426,7 +426,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `IF EXISTS` | Als deze parameter wordt gespecificeerd en het schema **niet** bestaat, wordt geen uitzondering geworpen. |
-| `RESTRICT` | De standaardwaarde voor de modus. Indien gespecificeerd, daalt het schema slechts als het **&#x200B;**&#x200B;geen lijsten bevat. |
+| `RESTRICT` | De standaardwaarde voor de modus. Indien gespecificeerd, daalt het schema slechts als het **** geen lijsten bevat. |
 | `CASCADE` | Indien opgegeven, wordt het schema neergezet samen met alle tabellen in het schema. |
 
 ## WEERGAVE MAKEN {#create-view}
@@ -442,7 +442,7 @@ CREATE VIEW view_name AS select_query
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `view_name` | De naam van de weergave die moet worden gemaakt. |
-| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [&#x200B; UITGEZOCHTE vraagsectie &#x200B;](#select-queries) worden gevonden. |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -466,7 +466,7 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 | `db_name` | De naam van de database. |
 | `schema_name` | De naam van het schema. |
 | `view_name` | De naam van de weergave die moet worden gemaakt. |
-| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [&#x200B; UITGEZOCHTE vraagsectie &#x200B;](#select-queries) worden gevonden. |
+| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
 
 **Voorbeeld**
 
@@ -525,7 +525,7 @@ $$BEGIN
 $$END
 
 exceptionHandler:
-      WHEN OTHER
+      WHEN OTHERS
       THEN statementList
 
 statementList:
@@ -543,7 +543,7 @@ $$BEGIN
      AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
@@ -647,7 +647,7 @@ $$BEGIN
     ELSE    
        SELECT 'DEFAULT';
     END IF;  
-EXCEPTION WHEN OTHER THEN 
+EXCEPTION WHEN OTHERS THEN 
   SELECT 'THERE WAS AN ERROR';    
  END$$;
 ```
@@ -724,7 +724,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
@@ -746,11 +746,11 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Zie de [&#x200B; logische organisatie van gegevensactiva &#x200B;](../best-practices/organize-data-assets.md) gids voor een meer gedetailleerde verklaring over de beste praktijken van de Dienst van de Vraag.
+Zie de [ logische organisatie van gegevensactiva ](../best-practices/organize-data-assets.md) gids voor een meer gedetailleerde verklaring over de beste praktijken van de Dienst van de Vraag.
 
 ## Tabel bestaat
 
-De SQL-opdracht `table_exists` wordt gebruikt om te bevestigen of een tabel momenteel in het systeem bestaat. Het bevel keert een booleaanse waarde terug: `true` als de lijst **&#x200B;**&#x200B;bestaat, en `false` als de lijst **niet** bestaat.
+De SQL-opdracht `table_exists` wordt gebruikt om te bevestigen of een tabel momenteel in het systeem bestaat. Het bevel keert een booleaanse waarde terug: `true` als de lijst **** bestaat, en `false` als de lijst **niet** bestaat.
 
 Door te controleren of een tabel bestaat voordat de instructies worden uitgevoerd, vereenvoudigt de functie `table_exists` het schrijven van een anoniem blok, zodat zowel de gebruiksgevallen `CREATE` als `INSERT INTO` worden behandeld.
 
@@ -775,7 +775,7 @@ CREATE TABLE IF NOT EXISTS target_table_name AS
                      WHERE  @mytableexist = 'true' limit 20
               ) ;
 EXCEPTION
-WHEN other THEN SELECT 'ERROR';
+WHEN OTHERS THEN SELECT 'ERROR';
 
 END $$; 
 ```
@@ -807,7 +807,7 @@ In het voorbeeld wordt het volgende geretourneerd:
 
 In dit tweede voorbeeld wordt verder het concept en de toepassing van de functie `inline` getoond. Het gegevensmodel voor het voorbeeld wordt in de onderstaande afbeelding weergegeven.
 
-![&#x200B; het schemadiagram van A voor productListItems.](../images/sql/productListItems.png)
+![ het schemadiagram van A voor productListItems.](../images/sql/productListItems.png)
 
 **Voorbeeld**
 
@@ -819,7 +819,7 @@ De waarden die uit `source_dataset` zijn opgehaald, worden gebruikt om de doelta
 
 | SKU | _experience | hoeveelheid | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
-| product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pas,B,NULL)&quot;)&quot;)&quot;) | 5 | 10,5 |
+| product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pas,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 |
 | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B, NULL)&quot;)&quot;) |          |              |
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(&quot;(BM, pass, NA, NULL)&quot;)&quot;)&quot;) | 3 | 12 |
@@ -845,7 +845,7 @@ De subsecties hieronder behandelen de [!DNL PostgreSQL] bevelen die door de Dien
 
 ### TABEL ANALYSEREN {#analyze-table}
 
-De opdracht `ANALYZE TABLE` voert een distributieanalyse en statistische berekeningen uit voor de benoemde tabel of tabellen. Het gebruik van `ANALYZE TABLE` varieert afhankelijk van of de datasets op de [&#x200B; versnelde opslag &#x200B;](#compute-statistics-accelerated-store) of het [&#x200B; gegevens meer &#x200B;](#compute-statistics-data-lake) worden opgeslagen. Zie de desbetreffende secties voor meer informatie over het gebruik ervan.
+De opdracht `ANALYZE TABLE` voert een distributieanalyse en statistische berekeningen uit voor de benoemde tabel of tabellen. Het gebruik van `ANALYZE TABLE` varieert afhankelijk van of de datasets op de [ versnelde opslag ](#compute-statistics-accelerated-store) of het [ gegevens meer ](#compute-statistics-data-lake) worden opgeslagen. Zie de desbetreffende secties voor meer informatie over het gebruik ervan.
 
 #### COMPUTE STATISTIEKEN OP DE versnelde opslag {#compute-statistics-accelerated-store}
 
@@ -887,7 +887,7 @@ De opdracht `FILTER CONTEXT` berekent statistieken over een subset van de gegeve
 
 >[!NOTE]
 >
->De `Statistics ID` en de gegenereerde statistieken zijn alleen geldig voor elke sessie en kunnen niet worden geopend voor verschillende PSQL-sessies.<br><br> Beperkingen:<ul><li>Het genereren van statistieken wordt niet ondersteund voor array- of kaartgegevenstypen</li><li>De gegevens verwerkte statistieken zijn **niet** voortgeduurd over zittingen.</li></ul><br><br> Opties:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br> door gebrek, wordt de vlag geplaatst aan waar. Als daarom statistieken worden aangevraagd voor een gegevenstype dat niet wordt ondersteund, wordt er geen foutmelding weergegeven, maar worden velden zonder toezicht overgeslagen met de niet-ondersteunde datatypen.<br> om berichten over fouten toe te laten wanneer de statistieken over niet gestaafd datatype worden gevraagd, gebruik: `SET skip_stats_for_complex_datatypes = false`.
+>`Statistics ID` en de geproduceerde statistieken zijn slechts geldig voor elke zitting en kunnen niet over verschillende zittingen worden betreden PSQL.<br><br> Beperkingen:<ul><li>Het genereren van statistieken wordt niet ondersteund voor array- of kaartgegevenstypen</li><li>De gegevens verwerkte statistieken zijn **niet** voortgeduurd over zittingen.</li></ul><br><br> Opties:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br> door gebrek, wordt de vlag geplaatst aan waar. Als daarom statistieken worden aangevraagd voor een gegevenstype dat niet wordt ondersteund, wordt er geen foutmelding weergegeven, maar worden velden zonder toezicht overgeslagen met de niet-ondersteunde datatypen.<br> om berichten over fouten toe te laten wanneer de statistieken over niet gestaafd datatype worden gevraagd, gebruik: `SET skip_stats_for_complex_datatypes = false`.
 
 De uitvoer van de console wordt weergegeven zoals hieronder wordt weergegeven.
 
@@ -898,7 +898,7 @@ De uitvoer van de console wordt weergegeven zoals hieronder wordt weergegeven.
 (1 row)
 ```
 
-Vervolgens kunt u de berekende statistieken rechtstreeks opvragen door naar de `Statistics ID` te verwijzen. Gebruik de naam `Statistics ID` of de naam van de alias, zoals hieronder in de voorbeeldinstructie wordt getoond, om de uitvoer volledig weer te geven. Meer over deze eigenschap leren, zie de [&#x200B; documentatie van de aliasnaam &#x200B;](../key-concepts/dataset-statistics.md#alias-name).
+Vervolgens kunt u de berekende statistieken rechtstreeks opvragen door naar de `Statistics ID` te verwijzen. Gebruik de naam `Statistics ID` of de naam van de alias, zoals hieronder in de voorbeeldinstructie wordt getoond, om de uitvoer volledig weer te geven. Meer over deze eigenschap leren, zie de [ documentatie van de aliasnaam ](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -921,7 +921,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Zie de [&#x200B; documentatie van de datasetstatistieken &#x200B;](../key-concepts/dataset-statistics.md) voor meer informatie.
+Zie de [ documentatie van de datasetstatistieken ](../key-concepts/dataset-statistics.md) voor meer informatie.
 
 #### TABLESAMPLE {#tablesample}
 
@@ -940,7 +940,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Zie de [&#x200B; documentatie van de datasetsteekproeven &#x200B;](../key-concepts/dataset-samples.md) voor meer informatie.
+Zie de [ documentatie van de datasetsteekproeven ](../key-concepts/dataset-samples.md) voor meer informatie.
 
 ### BEGINNEN
 
@@ -965,7 +965,7 @@ Als `CLOSE name` wordt gebruikt, vertegenwoordigt `name` de naam van een open cu
 
 ### VERWIJDEREN
 
-Als u een eerder voorbereide SQL-instructie wilt zoeken, gebruikt u de opdracht `DEALLOCATE` . Als u niet expliciet een voorbereide instructie hebt gedistribueerd, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd. Meer informatie over voorbereide verklaringen kan in de [&#x200B; bevelPREPARE &#x200B;](#prepare) sectie worden gevonden.
+Als u een eerder voorbereide SQL-instructie wilt zoeken, gebruikt u de opdracht `DEALLOCATE` . Als u niet expliciet een voorbereide instructie hebt gedistribueerd, wordt de toewijzing ongedaan gemaakt wanneer de sessie wordt beëindigd. Meer informatie over voorbereide verklaringen kan in de [ bevelPREPARE ](#prepare) sectie worden gevonden.
 
 ```sql
 DEALLOCATE name
@@ -989,7 +989,7 @@ DECLARE name CURSOR FOR query
 
 ### UITVOEREN
 
-De opdracht `EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Aangezien voorbereide instructies alleen tijdens een sessie bestaan, moet de voorbereide instructie zijn gemaakt met een instructie `PREPARE` die eerder in de huidige sessie is uitgevoerd. Meer informatie over het gebruik van voorbereide instructies vindt u in de sectie [`PREPARE` command &#x200B;](#prepare) .
+De opdracht `EXECUTE` wordt gebruikt om een eerder voorbereide instructie uit te voeren. Aangezien voorbereide instructies alleen tijdens een sessie bestaan, moet de voorbereide instructie zijn gemaakt met een instructie `PREPARE` die eerder in de huidige sessie is uitgevoerd. Meer informatie over het gebruik van voorbereide instructies vindt u in de sectie [`PREPARE` command ](#prepare) .
 
 Als de instructie `PREPARE` die de instructie heeft gemaakt enkele parameters heeft opgegeven, moet een compatibele set parameters worden doorgegeven aan de instructie `EXECUTE` . Als deze parameters niet worden doorgegeven, treedt een fout op.
 
@@ -1101,12 +1101,12 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-Meer informatie over de standaard UITGEZOCHTE vraagparameters kan in de [&#x200B; UITGEZOCHTE vraagsectie &#x200B;](#select-queries) worden gevonden. Deze sectie bevat alleen parameters die exclusief zijn voor de opdracht `SELECT INTO` .
+Meer informatie over de standaard UITGEZOCHTE vraagparameters kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. Deze sectie bevat alleen parameters die exclusief zijn voor de opdracht `SELECT INTO` .
 
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `TEMPORARY` of `TEMP` | Een optionele parameter. Als de parameter wordt gespecificeerd, is de gecreeerde lijst een tijdelijke lijst. |
-| `UNLOGGED` | Een optionele parameter. Als de parameter wordt gespecificeerd, is de gecreeerde lijst een niet geregistreerde lijst. Meer informatie over niet-geregistreerde lijsten kan in de [[!DNL PostgreSQL]  documentatie &#x200B;](https://www.postgresql.org/docs/current/sql-createtable.html) worden gevonden. |
+| `UNLOGGED` | Een optionele parameter. Als de parameter wordt gespecificeerd, is de gecreeerde lijst een niet geregistreerde lijst. Meer informatie over niet-geregistreerde lijsten kan in de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/current/sql-createtable.html) worden gevonden. |
 | `new_table` | De naam van de tabel die moet worden gemaakt. |
 
 **Voorbeeld**
@@ -1128,7 +1128,7 @@ SHOW ALL
 
 | Parameters | Beschrijving |
 | ------ | ------ |
-| `name` | De naam van de runtimeparameter waarover u informatie wilt. Mogelijke waarden voor de runtime parameter omvatten de volgende waarden:<br>`SERVER_VERSION`: Deze parameter toont het de versieaantal van de server.<br>`SERVER_ENCODING`: deze parameter toont de codering van de tekenset aan de serverzijde.<br>`LC_COLLATE`: deze parameter toont de landinstelling van de database voor sortering (tekstvolgorde).<br>`LC_CTYPE`: deze parameter toont de landinstelling van de database voor tekenclassificatie.<br>`IS_SUPERUSER`: Deze parameter laat zien of de huidige rol supergebruikersrechten heeft. |
+| `name` | De naam van de runtimeparameter waarover u informatie wilt. Mogelijke waarden voor de runtime parameter omvatten de volgende waarden:<br>`SERVER_VERSION`: Deze parameter toont het versieaantal van de server.<br>`SERVER_ENCODING`: Deze parameter toont de server-zijreeks het coderen van het karakter.<br>`LC_COLLATE`: Deze parameter toont de scène die van het gegevensbestand voor collatie (tekst het opdracht geven) plaatst.<br>`LC_CTYPE`: Deze parameter toont de scène van het gegevensbestand voor karakterclassificatie plaatst.<br>`IS_SUPERUSER`: Deze parameter toont als de huidige rol supergebruikervoorrechten heeft. |
 | `ALL` | Toon de waarden van alle configuratieparameters met beschrijvingen. |
 
 **Voorbeeld**
@@ -1242,7 +1242,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Voor meer gedetailleerde informatie, zie het document over [&#x200B; plaatsende identiteiten in een ad hoc datasets &#x200B;](../data-governance/ad-hoc-schema-identities.md).
+Voor meer gedetailleerde informatie, zie het document over [ plaatsende identiteiten in een ad hoc datasets ](../data-governance/ad-hoc-schema-identities.md).
 
 #### KOLOM TOEVOEGEN
 
@@ -1258,7 +1258,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 In de volgende tabel worden de geaccepteerde gegevenstypen weergegeven voor het toevoegen van kolommen aan een tabel met [!DNL Postgres SQL] , XDM en [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
 
-| — | PSQL-client | XDM | ADR | Beschrijving |
+| --- | PSQL-client | XDM | ADR | Beschrijving |
 |---|---|---|---|---|
 | 1 | `bigint` | `int8` | `bigint` | Een numeriek gegevenstype dat wordt gebruikt voor de opslag van grote gehele getallen tussen -9.223.372.036.854.775.807 en 9.223.372.036.854.775.807 in 8 bytes. |
 | 2 | `integer` | `int4` | `integer` | Een numeriek gegevenstype dat wordt gebruikt om gehele getallen op te slaan, van -2.147.483.648 tot 2.147.483.647 in 4 bytes. |
@@ -1266,7 +1266,7 @@ In de volgende tabel worden de geaccepteerde gegevenstypen weergegeven voor het 
 | 4 | `tinyint` | `int1` | `tinyint` | Een numeriek gegevenstype dat wordt gebruikt om gehele getallen tussen 0 en 255 op te slaan in 1 byte. |
 | 5 | `varchar(len)` | `string` | `varchar(len)` | Een gegevenstype van een teken dat een variabele grootte heeft. `varchar` kan het best worden gebruikt wanneer de grootte van de ingevoerde kolomgegevens aanzienlijk kan variëren. |
 | 6 | `double` | `float8` | `double precision` | `FLOAT8` en `FLOAT` zijn geldige synoniemen voor `DOUBLE PRECISION` . `double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
-| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` is een geldige synoniem voor `double precision` .`double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` is een geldig synoniem voor `double precision`.`double precision` is een gegevenstype met drijvende komma. Zwevende-kommawaarden worden opgeslagen in 8 bytes. |
 | 8 | `date` | `date` | `date` | De gegevenstypen van `date` zijn 4-byte opgeslagen kalenderdatumwaarden zonder tijdstempelinformatie. De geldige datumnotatie loopt van 01-01-0001 tot en met 12-31-9999. |
 | 9 | `datetime` | `datetime` | `datetime` | Een gegevenstype dat wordt gebruikt om een instant in de tijd op te slaan, uitgedrukt als een kalenderdatum en tijd van dag. `datetime` bevat de kwalificatietekens: jaar, maand, dag, uur, seconde en fractie. Een declaratie `datetime` kan elke subset van deze tijdseenheden bevatten die in die reeks zijn samengevoegd, of bestaat zelfs uit slechts één tijdseenheid. |
 | 10 | `char(len)` | `string` | `char(len)` | Het trefwoord `char(len)` wordt gebruikt om aan te geven dat het item een teken met een vaste lengte heeft. |

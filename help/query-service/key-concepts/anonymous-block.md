@@ -2,9 +2,9 @@
 title: Anoniem blok in Query-service
 description: Het anonieme blok is een SQL syntaxis die door de Dienst van de Vraag van Adobe Experience Platform wordt gesteund, die u toestaat om een opeenvolging van vragen efficiënt uit te voeren
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -30,21 +30,21 @@ Er moet op worden gewezen dat een blok een uitvoerbare verklaring is en daarom b
 
 ## Voorbeeld van anonieme vragen over blokken
 
-De volgende query toont een voorbeeld van het koppelen van SQL-instructies. Zie de [&#x200B; SQL syntaxis in het document van de Dienst van de Vraag &#x200B;](../sql/syntax.md) voor meer informatie over om het even welke SQL gebruikte syntaxis.
+De volgende query toont een voorbeeld van het koppelen van SQL-instructies. Zie de [ SQL syntaxis in het document van de Dienst van de Vraag ](../sql/syntax.md) voor meer informatie over om het even welke SQL gebruikte syntaxis.
 
 ```SQL
 $$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
     CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
-    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+    EXCEPTION WHEN OTHERS THEN SET @ret = SELECT 'ERROR';
 END
 $$;
 ```
 
 In het onderstaande voorbeeld blijft `SET` het resultaat van een `SELECT` -query in de opgegeven lokale variabele behouden. De variabele is scoped aan het anonieme blok.
 
-De momentopname-id wordt opgeslagen als een lokale variabele (`@current_sid`). Het wordt dan gebruikt in de volgende vraag om resultaten terug te keren die op SNAPSHOT van de zelfde dataset/de lijst worden gebaseerd. Voor meer [&#x200B; informatie over de momentopnameclausule &#x200B;](../sql/syntax.md#SNAPSHOT-clause) zie de SQL syntaxisdocumentatie.
+De momentopname-id wordt opgeslagen als een lokale variabele (`@current_sid`). Het wordt dan gebruikt in de volgende vraag om resultaten terug te keren die op SNAPSHOT van de zelfde dataset/de lijst worden gebaseerd. Voor meer [ informatie over de momentopnameclausule ](../sql/syntax.md#SNAPSHOT-clause) zie de SQL syntaxisdocumentatie.
 
 ```SQL
 $$ BEGIN                                             
@@ -66,16 +66,16 @@ $$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
     CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+    EXCEPTION WHEN OTHERS THEN SET @ret = SELECT 'ERROR';
 END
 $$;
 /
 ```
 
-Voor DbVisualizer in het bijzonder, is er ook een optie in UI aan &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Zie de [&#x200B; documentatie DbVisualizer &#x200B;](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) voor meer informatie.
+Voor DbVisualizer in het bijzonder, is er ook een optie in UI aan &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Zie de [ documentatie DbVisualizer ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) voor meer informatie.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu een duidelijk inzicht in anonieme blokken en hoe ze gestructureerd zijn. Gelieve te lezen de [&#x200B; gids van de vraaguitvoering &#x200B;](../best-practices/writing-queries.md) voor meer informatie bij het schrijven van vragen.
+Door dit document te lezen, hebt u nu een duidelijk inzicht in anonieme blokken en hoe ze gestructureerd zijn. Gelieve te lezen de [ gids van de vraaguitvoering ](../best-practices/writing-queries.md) voor meer informatie bij het schrijven van vragen.
 
-U zou ook over [&#x200B; moeten lezen hoe de anonieme blokken met het stijgende patroon van het ladingsontwerp &#x200B;](./incremental-load.md) worden gebruikt om vraagefficiency te verhogen.
+U zou ook over [ moeten lezen hoe de anonieme blokken met het stijgende patroon van het ladingsontwerp ](./incremental-load.md) worden gebruikt om vraagefficiency te verhogen.
