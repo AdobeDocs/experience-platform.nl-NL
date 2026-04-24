@@ -30,7 +30,7 @@ Er moet op worden gewezen dat een blok een uitvoerbare verklaring is en daarom b
 
 ## Voorbeeld van anonieme vragen over blokken
 
-De volgende query toont een voorbeeld van het koppelen van SQL-instructies. Zie de [ SQL syntaxis in het document van de Dienst van de Vraag ](../sql/syntax.md) voor meer informatie over om het even welke SQL gebruikte syntaxis.
+De volgende query toont een voorbeeld van het koppelen van SQL-instructies. Zie de [&#x200B; SQL syntaxis in het document van de Dienst van de Vraag &#x200B;](../sql/syntax.md) voor meer informatie over om het even welke SQL gebruikte syntaxis.
 
 ```SQL
 $$ BEGIN
@@ -44,7 +44,7 @@ $$;
 
 In het onderstaande voorbeeld blijft `SET` het resultaat van een `SELECT` -query in de opgegeven lokale variabele behouden. De variabele is scoped aan het anonieme blok.
 
-De momentopname-id wordt opgeslagen als een lokale variabele (`@current_sid`). Het wordt dan gebruikt in de volgende vraag om resultaten terug te keren die op SNAPSHOT van de zelfde dataset/de lijst worden gebaseerd. Voor meer [ informatie over de momentopnameclausule ](../sql/syntax.md#SNAPSHOT-clause) zie de SQL syntaxisdocumentatie.
+De momentopname-id wordt opgeslagen als een lokale variabele (`@current_sid`). Het wordt dan gebruikt in de volgende vraag om resultaten terug te keren die op SNAPSHOT van de zelfde dataset/de lijst worden gebaseerd. Voor meer [&#x200B; informatie over de momentopnameclausule &#x200B;](../sql/syntax.md#SNAPSHOT-clause) zie de SQL syntaxisdocumentatie.
 
 ```SQL
 $$ BEGIN                                             
@@ -72,10 +72,10 @@ $$;
 /
 ```
 
-Voor DbVisualizer in het bijzonder, is er ook een optie in UI aan &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Zie de [ documentatie DbVisualizer ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) voor meer informatie.
+Voor DbVisualizer in het bijzonder, is er ook een optie in UI aan &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Zie de [&#x200B; documentatie DbVisualizer &#x200B;](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) voor meer informatie.
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu een duidelijk inzicht in anonieme blokken en hoe ze gestructureerd zijn. Gelieve te lezen de [ gids van de vraaguitvoering ](../best-practices/writing-queries.md) voor meer informatie bij het schrijven van vragen.
+Door dit document te lezen, hebt u nu een duidelijk inzicht in anonieme blokken en hoe ze gestructureerd zijn. Gelieve te lezen de [&#x200B; gids van de vraaguitvoering &#x200B;](../best-practices/writing-queries.md) voor meer informatie bij het schrijven van vragen.
 
-U zou ook over [ moeten lezen hoe de anonieme blokken met het stijgende patroon van het ladingsontwerp ](./incremental-load.md) worden gebruikt om vraagefficiency te verhogen.
+U zou ook over [&#x200B; moeten lezen hoe de anonieme blokken met het stijgende patroon van het ladingsontwerp &#x200B;](./incremental-load.md) worden gebruikt om vraagefficiency te verhogen.

@@ -71,8 +71,8 @@ Aantal klassen: 50000
 Met een aangewezen vraag kunt u de gebeurtenissen in de dataset in zinvolle, numerieke eigenschappen verzamelen die kunnen worden gebruikt om een aandrijvingsmodel te trainen. Voorbeelden van gebeurtenissen worden hieronder weergegeven:
 
 - **Aantal e-mails** die voor marketing doeleinden werden verzonden en door de gebruiker werden ontvangen.
-- Gedeelte van deze e-mails die **** werden geopend.
-- Het gedeelte van deze e-mails waar de gebruiker **** de verbinding selecteerde.
+- Gedeelte van deze e-mails die **&#x200B;**&#x200B;werden geopend.
+- Het gedeelte van deze e-mails waar de gebruiker **&#x200B;**&#x200B;de verbinding selecteerde.
 - **Aantal producten** die werden bekeken.
 - Aantal **voorstellingen die met** werden in wisselwerking gestaan.
 - Aantal **voorstellen die** werden verworpen.
@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## Volgende stappen:
 
-Door dit document te lezen hebt u geleerd hoe u gegevens in Adobe Experience Platform kunt transformeren in functies, of variabelen, die door een model voor machinaal leren kunnen worden verbruikt. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren is [ eigenschapdatasets van de uitvoer ](./export-data.md).
+Door dit document te lezen hebt u geleerd hoe u gegevens in Adobe Experience Platform kunt transformeren in functies, of variabelen, die door een model voor machinaal leren kunnen worden verbruikt. De volgende stap in het creëren van eigenschappijpleidingen van Experience Platform om douanemodellen in uw machine het leren milieu te voeren is [&#x200B; eigenschapdatasets van de uitvoer &#x200B;](./export-data.md).

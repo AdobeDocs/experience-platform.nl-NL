@@ -19,9 +19,9 @@ Dit document bevat een aantal instructies voor het maken van een ontwerppatroon 
 
 ## Aan de slag
 
-De SQL-voorbeelden in dit document vereisen dat u een goed inzicht hebt in de anonieme mogelijkheden voor blokken en momentopnamen. Het wordt geadviseerd dat u de [ steekproef anonieme blokvragen ](./anonymous-block.md) documentatie en ook de [ momentopnameclausule ](../sql/syntax.md#snapshot-clause) documentatie leest.
+De SQL-voorbeelden in dit document vereisen dat u een goed inzicht hebt in de anonieme mogelijkheden voor blokken en momentopnamen. Het wordt geadviseerd dat u de [&#x200B; steekproef anonieme blokvragen &#x200B;](./anonymous-block.md) documentatie en ook de [&#x200B; momentopnameclausule &#x200B;](../sql/syntax.md#snapshot-clause) documentatie leest.
 
-Voor begeleiding op om het even welke die terminologie binnen deze gids wordt gebruikt, verwijs naar de [ SQL syntaxisgids ](../sql/syntax.md).
+Voor begeleiding op om het even welke die terminologie binnen deze gids wordt gebruikt, verwijs naar de [&#x200B; SQL syntaxisgids &#x200B;](../sql/syntax.md).
 
 ## Gegevens stapsgewijs laden
 
@@ -162,4 +162,4 @@ $$;
 
 ## Volgende stappen
 
-Door dit document te lezen, zou u een beter inzicht in moeten hebben hoe te om anonieme blok en momentopnamefuncties te gebruiken om stijgende ladingen uit te voeren en kan deze logica op uw eigen specifieke vragen toepassen. Voor algemene begeleiding bij vraaguitvoering, te lezen gelieve de [ gids op vraaguitvoering in de Dienst van de Vraag ](../best-practices/writing-queries.md).
+Door dit document te lezen, zou u een beter inzicht in moeten hebben hoe te om anonieme blok en momentopnamefuncties te gebruiken om stijgende ladingen uit te voeren en kan deze logica op uw eigen specifieke vragen toepassen. Voor algemene begeleiding bij vraaguitvoering, te lezen gelieve de [&#x200B; gids op vraaguitvoering in de Dienst van de Vraag &#x200B;](../best-practices/writing-queries.md).
