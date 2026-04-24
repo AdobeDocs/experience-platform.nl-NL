@@ -25,7 +25,7 @@ U kunt boven- en onderzijde van paginagebeurtenissen op twee manieren configurer
 
 ## De gebeurtenis Boven aan pagina {#top-of-page}
 
-Het voorbeeld hieronder vormt een bovenkant van paginagebeurtenis die om verpersoonlijking verzoekt maar [ vertoningsgebeurtenissen ](display-events.md) voor automatisch teruggegeven voorstellingen onderdrukt. Deze weergavegebeurtenissen worden verzonden met de onderzijde van de paginagebeurtenis.
+Het voorbeeld hieronder vormt een bovenkant van paginagebeurtenis die om verpersoonlijking verzoekt maar [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) voor automatisch teruggegeven voorstellingen onderdrukt. Deze weergavegebeurtenissen worden verzonden met de onderzijde van de paginagebeurtenis.
 
 >[!BEGINTABS]
 
@@ -43,7 +43,7 @@ alloy("sendEvent", {
 
 | Parameter | Vereist/optioneel | Beschrijving |
 | --- | --- | --- |
-| `type` | Vereist | Stel deze parameter in op `decisioning.propositionFetch` . Dit speciale gebeurtenistype instrueert Adobe Analytics deze gebeurtenis te laten vallen. Wanneer u Customer Journey Analytics gebruikt, kunt u ook een filter instellen om deze gebeurtenissen te neerzetten. Zie [ de gebeurtenistypen van Edge Network in Adobe Analytics ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types) voor meer informatie. |
+| `type` | Vereist | Stel deze parameter in op `decisioning.propositionFetch` . Dit speciale gebeurtenistype instrueert Adobe Analytics deze gebeurtenis te laten vallen. Wanneer u Customer Journey Analytics gebruikt, kunt u ook een filter instellen om deze gebeurtenissen te neerzetten. Zie [&#x200B; de gebeurtenistypen van Edge Network in Adobe Analytics &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types) voor meer informatie. |
 | `renderDecisions` | Vereist | Stel deze parameter in op `true` . Deze parameter vertelt Web SDK om besluiten terug te geven die door Edge Network zijn teruggekeerd. |
 | `personalization.sendDisplayEvent` | Vereist | Stel deze parameter in op `false` . Met deze parameter wordt gestopt met het verzenden van weergavegebeurtenissen. |
 
@@ -59,7 +59,7 @@ Als u deze velden handmatig wilt instellen, laat u **[!UICONTROL Use guided even
 
 ### Automatisch gerenderde voorstellingen {#bottom-auto-rendered}
 
-Het voorbeeld hieronder vormt een bodem van paginagebeurtenis die vertoningsgebeurtenissen voor voorstellen verzendt die automatisch op de pagina werden teruggegeven maar in de [ bovenkant van pagina ](#top-of-page) gebeurtenis onderdrukt.
+Het voorbeeld hieronder vormt een bodem van paginagebeurtenis die vertoningsgebeurtenissen voor voorstellen verzendt die automatisch op de pagina werden teruggegeven maar in de [&#x200B; bovenkant van pagina &#x200B;](#top-of-page) gebeurtenis onderdrukt.
 
 >[!BEGINTABS]
 
@@ -83,7 +83,7 @@ alloy("sendEvent", {
 
 Configureer een [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) -actie in de regel die onder aan de pagina wordt geactiveerd. Schakel **[!UICONTROL Use guided events]** in en selecteer vervolgens **[!UICONTROL Collect analytics]** . Deze optie sluit &#39;[!UICONTROL Include rendered propositions]&#39; aan toegelaten.
 
-Als u dit veld handmatig wilt instellen, laat u **[!UICONTROL Use guided events]** uitgeschakeld en schakelt u **[!UICONTROL Include rendered propositions]** rechtstreeks in. Naar keuze, bevolk het **[!UICONTROL XDM]** gebied met een [ XDM voorwerp ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) gegevenselement dat uw paginagegevens draagt.
+Als u dit veld handmatig wilt instellen, laat u **[!UICONTROL Use guided events]** uitgeschakeld en schakelt u **[!UICONTROL Include rendered propositions]** rechtstreeks in. Naar keuze, bevolk het **[!UICONTROL XDM]** gebied met een [&#x200B; XDM voorwerp &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) gegevenselement dat uw paginagegevens draagt.
 
 >[!ENDTABS]
 
@@ -123,7 +123,7 @@ alloy("sendEvent", {
 
 | Parameter | Vereist/optioneel | Beschrijving |
 | --- | --- | --- |
-| `xdm._experience.decisioning.propositions` | Vereist | Deze sectie bepaalt manueel teruggegeven voorstellingen. U moet de voorstelling `id` , `scope` en `scopeDetails` opnemen. Zie [ vertoningsgebeurtenissen ](display-events.md) voor meer informatie beheren. Handmatig gerenderde verpersoonlijkingsinhoud moet onder aan de paginagebeurtenis worden opgenomen. |
+| `xdm._experience.decisioning.propositions` | Vereist | Deze sectie bepaalt manueel teruggegeven voorstellingen. U moet de voorstelling `id` , `scope` en `scopeDetails` opnemen. Zie [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) voor meer informatie beheren. Handmatig gerenderde verpersoonlijkingsinhoud moet onder aan de paginagebeurtenis worden opgenomen. |
 | `xdm._experience.decisioning.propositionEventType` | Vereist | Stel deze parameter in op `display: 1` . |
 | `xdm` | Optioneel | Gebruik dit object om alle gegevens op te nemen die u onder aan de paginagebeurtenis wilt weergeven. |
 
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 De optie &#39;[!UICONTROL Use guided events]&#39; behandelt dit scenario niet, zodat vormt manueel de actie:
 
-1. Creeer een [ voorwerp XDM ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) (of [ Variabele ](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)) gegevenselement dat `_experience.decisioning.propositions` met elk teruggegeven voorstel `id` bevolkt, `scope`, en `scopeDetails`, en plaatst `_experience.decisioning.propositionEventType.display` aan `1`. Zie [ vertoningsgebeurtenissen ](display-events.md) voor meer informatie beheren.
+1. Creeer een [&#x200B; voorwerp XDM &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) (of [&#x200B; Variabele &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)) gegevenselement dat `_experience.decisioning.propositions` met elk teruggegeven voorstel `id` bevolkt, `scope`, en `scopeDetails`, en plaatst `_experience.decisioning.propositionEventType.display` aan `1`. Zie [&#x200B; vertoningsgebeurtenissen &#x200B;](display-events.md) voor meer informatie beheren.
 1. Laat in de handeling [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) voor de onderzijde van de paginalijn **[!UICONTROL Use guided events]** uitgeschakeld en verwijs naar het gegevenselement in het veld **[!UICONTROL XDM]** .
 
 >[!ENDTABS]
@@ -185,7 +185,7 @@ alloy("sendEvent", {
 
 >[!TAB  de markeringsuitbreiding van SDK van het Web ]
 
-1. Creeer een [ XDM voorwerp ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) gegevenselement dat `web.webPageDetails.viewName` aan de naam van de mening (bijvoorbeeld, `home`) plaatst.
+1. Creeer een [&#x200B; XDM voorwerp &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) gegevenselement dat `web.webPageDetails.viewName` aan de naam van de mening (bijvoorbeeld, `home`) plaatst.
 1. Vorm een bovenkant van pagina [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) actie: laat **[!UICONTROL Use guided events]** toe, selecteer **[!UICONTROL Request personalization]**, en verwijs het gegevenselement in het **[!UICONTROL XDM]** gebied.
 1. Vorm een bodem van pagina **[!UICONTROL Send event]** actie: laat **[!UICONTROL Use guided events]** toe, selecteer **[!UICONTROL Collect analytics]**, en verwijs het zelfde gegevenselement in het **[!UICONTROL XDM]** gebied zodat `viewName` in beide gebeurtenissen aanpast.
 
@@ -215,7 +215,7 @@ alloy("sendEvent", {
 
 >[!TAB  de markeringsuitbreiding van SDK van het Web ]
 
-1. Creeer een [ XDM voorwerp ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) gegevenselement dat `web.webPageDetails.viewName` aan de naam van de nieuwe mening (bijvoorbeeld, `cart`) plaatst.
+1. Creeer een [&#x200B; XDM voorwerp &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) gegevenselement dat `web.webPageDetails.viewName` aan de naam van de nieuwe mening (bijvoorbeeld, `cart`) plaatst.
 1. Configureer bij de wijziging van de weergave één [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) -actie: laat **[!UICONTROL Use guided events]** uitgeschakeld, schakel **[!UICONTROL Render visual personalization decisions]** in en verwijs naar het gegevenselement in het **[!UICONTROL XDM]** -veld.
 
 >[!ENDTABS]
@@ -259,7 +259,7 @@ alloy("sendEvent", {
 
 >[!TAB  de markeringsuitbreiding van SDK van het Web ]
 
-1. Creeer een [ XDM voorwerp ](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) gegevenselement dat `web.webPageDetails.viewName` aan de naam van de nieuwe mening (bijvoorbeeld, `cart`) plaatst.
+1. Creeer een [&#x200B; XDM voorwerp &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) gegevenselement dat `web.webPageDetails.viewName` aan de naam van de nieuwe mening (bijvoorbeeld, `cart`) plaatst.
 1. Voor de bovenkant van de paginagebeurtenis configureert u een [[!UICONTROL Apply propositions]](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) -actie en stelt u het **[!UICONTROL View name]** -veld in op de naam van de weergave (bijvoorbeeld `cart` ). Met deze handeling worden de al opgehaalde voorstellen weergegeven zonder contact op te nemen met de Edge Network.
 1. Voor de onderzijde van de paginagebeurtenis configureert u een [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) -actie: enable **[!UICONTROL Use guided events]** , select **[!UICONTROL Collect analytics]** en reference the data element in the **[!UICONTROL XDM]** field.
 
@@ -267,4 +267,4 @@ alloy("sendEvent", {
 
 ## GitHub-voorbeeld {#github-sample}
 
-Het [ top-en-ondersteekproef in de legy-samples bewaarplaats ](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) toont aan hoe te om verpersoonlijking bij de bovenkant van de pagina te verzoeken en analysegegevens bij de bodem te verzenden. Download het voorbeeld en voer het lokaal uit om te zien hoe de boven- en onderkant van paginagebeurtenissen werken. Het voorbeeld gebruikt rechtstreeks de JavaScript-bibliotheek; dezelfde patronen worden toegepast wanneer u equivalente regels configureert in de Web SDK-tagextensie.
+Het [&#x200B; top-en-ondersteekproef in de legy-samples bewaarplaats &#x200B;](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) toont aan hoe te om verpersoonlijking bij de bovenkant van de pagina te verzoeken en analysegegevens bij de bodem te verzenden. Download het voorbeeld en voer het lokaal uit om te zien hoe de boven- en onderkant van paginagebeurtenissen werken. Het voorbeeld gebruikt rechtstreeks de JavaScript-bibliotheek; dezelfde patronen worden toegepast wanneer u equivalente regels configureert in de Web SDK-tagextensie.
