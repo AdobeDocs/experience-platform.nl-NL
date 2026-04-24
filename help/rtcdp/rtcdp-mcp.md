@@ -10,9 +10,10 @@ role: User, Developer
 level: Beginner, Intermediate
 hide: true
 hidefromtoc: true
-source-git-commit: 4805570178a923206565c4ee1b55ab6532579d66
+exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
+source-git-commit: b340d118051e2c38e1098b601e9944a7029129dc
 workflow-type: tm+mt
-source-wordcount: '2376'
+source-wordcount: '2379'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ U kunt de integratie van Adobe Real-Time CDP MCP gebruiken om publiek, bestemmin
 
 >[!AVAILABILITY]
 >
->De server van Real-Time CDP MCP wordt gedistribueerd als a **verre het vervoerserver van HTTP** die de gebruikers installeren en in gesteunde cliënten MCP en app platforms (bijvoorbeeld, Claude, ChatGPT, de Code van Claude, Codex, Cursor, of de Code van VS) vormen. De authentificatie wordt behandeld door a **op browser-gebaseerde login stroom** — wanneer uw cliënt eerst met de server verbindt, opent het uw standaardbrowser zodat kunt u binnen met uw geloofsbrieven van Adobe ondertekenen en toegang machtigen.
+>De server van Real-Time CDP MCP wordt gedistribueerd als a **verre het vervoerserver van HTTP** die de gebruikers installeren en in gesteunde cliënten MCP en app platforms (bijvoorbeeld, Claude, ChatGPT, de Code van Claude, Codex, Cursor, of de Code van VS) vormen. De authentificatie wordt behandeld door a **op browser-gebaseerde login stroom** — wanneer uw cliënt eerst met de server verbindt, opent het uw standaardbrowser zodat kunt u binnen met uw geloofsbrieven van Adobe ondertekenen en toegang machtigen. Neem contact op met uw Adobe-vertegenwoordiger voor toegang tot dit Beta-programma.
 
 ## Beta, beveiliging en juridische kennisgevingen {#mcp-notices}
 
@@ -57,18 +58,7 @@ De server van Real-Time CDP MCP laat u, publiek en bestemmingen direct van uw AI
 
 ## Beschikbare gereedschappen {#mcp-tools}
 
-De volgende hulpmiddelen worden blootgesteld door de server van Real-Time CDP MCP:
-
-| Tool | Beschrijving |
-| --- | --- |
-| **Onderzoek Bestaand publiek** | Geef een publiek weer met optionele filters (naam, type entiteit, levenscyclusstatus, naamruimte, oorsprong) of haal een specifiek publiek op id. |
-| **het Lidmaatschap van het publiek van de Voorproef** | Schatting de grootte van een segmentvraag (PQL for profile publiek, SDD voor relationeel publiek/accountpubliek) met inbegrip van betrouwbaarheidsintervalmetagegevens. |
-| **de Types van Bestemming van de Lijst** | Geef de catalogus weer met doelconnectortypen die beschikbaar zijn in de sandbox. |
-| **Lijst gevormde Rekeningen** | Blader gevormde bestemmingsrekeningen (basisverbindingen) en hun authentificatiedetails. |
-| **Lijst gevormde Doelen** | Blader door doelgegevensstromen, filterbaar op naam, staat, stroomspecificatie, of bron/doelverbinding. |
-| **van de Lijst Source Verbindingen** | Inspecteer bronverbindingen die de informatie van de datasetafbeelding voor een bestemmingsdataflow houden. |
-| **Verbindingen van het Doel van de Lijst** | Inspecteer doelverbindingen die het gegevensformaat en de wegconfiguratie voor een bestemming houden. |
-| **de Runs van de Activering van de Inspectie** | De uitvoergeschiedenis van de doeldataflow van het overzicht, filterbaar door stroom ID, status (succes, ontbroken, inProgress), en de waaier van de voltooiingstijd. |
+De beschikbaarheid van gereedschappen verandert snel naarmate nieuwe gereedschappen worden ingeschakeld. Neem contact op met uw Adobe-vertegenwoordiger voor een lijst met de nieuwste beschikbare tools.
 
 >[!NOTE]
 >
@@ -111,7 +101,7 @@ Controleer het volgende voordat u de Real-Time CDP MCP-server aansluit op uw MCP
 
 Voordat u begint, moet u het volgende doen:
 
-* Het MCP servereindpunt URL: `https://rtcdp-mcp.adobe.io/mcp`.
+* Het MCP servereindpunt URL: `Available to Beta customers through your Adobe representative`.
 * Bevestiging dat uw Adobe-gebruiker toegang heeft tot de Experience Platform-doelorganisatie en -sandbox.
 
 De server van Real-Time CDP MCP is a **verre server MCP van HTTP**. Voor elke client geldt hetzelfde patroon:
@@ -125,15 +115,19 @@ De server van Real-Time CDP MCP is a **verre server MCP van HTTP**. Voor elke cl
 
 #### Claude
 
-Voor `claude.ai` en Desktop van Claude, voeg de server van Real-Time CDP MCP als a **douaneschakelaar** toe gebruikend `https://rtcdp-mcp.adobe.io/mcp`. In individuele Claude plannen, voeg het onder **toe Aanpassen > Schakelaars**. In de plannen van het Team en van de Onderneming, kan een eigenaar het eerst onder **montages van de Organisatie > Schakelaars** moeten toevoegen, waarna elke gebruiker het in hun eigen Claude montages verbindt. Zodra gevormd, laat de schakelaar in een gesprek toe en voltooi browser Adobe login bij eerste gebruik.
+Voor `claude.ai` en de Desktop van Claude, voeg de server van Real-Time CDP MCP als a **douaneschakelaar** toe gebruikend het eindpunt dat door uw vertegenwoordiger van Adobe wordt verstrekt. In individuele Claude plannen, voeg het onder **toe Aanpassen > Schakelaars**. In de plannen van het Team en van de Onderneming, kan een eigenaar het eerst onder **montages van de Organisatie > Schakelaars** moeten toevoegen, waarna elke gebruiker het in hun eigen Claude montages verbindt. Zodra gevormd, laat de schakelaar in een gesprek toe en voltooi browser Adobe login bij eerste gebruik.
 
 #### ChatGPT
 
-In ChatGPT, voeg de server van Real-Time CDP MCP als a **douane app/schakelaar** toe gebruikend `https://rtcdp-mcp.adobe.io/mcp`. Afhankelijk van uw plan ChatGPT, kan dit **wijze van de Ontwikkelaar** en werkruimte vereisen admin goedkeuring. Nadat app/de schakelaar wordt gecreeerd of toegelaten, verbind het van **Montages > Apps** of **Montages > Apps &amp; Connectors**, dan verifieer door browser van Adobe login wanneer ertoe aangezet.
+In ChatGPT, voeg de server van Real-Time CDP MCP als a **douane app/schakelaar** toe gebruikend het eindpunt dat door uw vertegenwoordiger van Adobe wordt verstrekt. Afhankelijk van uw plan ChatGPT, kan dit **wijze van de Ontwikkelaar** en werkruimte vereisen admin goedkeuring. Nadat app/de schakelaar wordt gecreeerd of toegelaten, verbind het van **Montages > Apps** of **Montages > Apps &amp; Connectors**, dan verifieer door browser van Adobe login wanneer ertoe aangezet.
+
+#### Cursor
+
+Voeg in Cursor de Real-Time CDP MCP-server toe als een externe MCP-server met behulp van het eindpunt dat door uw Adobe-vertegenwoordiger is opgegeven. Open **Montages > MCP**, voeg een nieuwe server toe, en kleef het eindpunt URL. Zodra toegevoegd, laat de server voor uw werkruimte toe door **te selecteren verbind** om via browser voor authentiek te verklaren.
 
 #### Andere op UI gebaseerde cliënten
 
-Voor cliënten zoals Cursor, de Code van VS, of andere Desktop en Webtoepassingen met verre steun MCP, voeg de server van Real-Time CDP MCP als a **verre server van HTTP** en gebruik `https://rtcdp-mcp.adobe.io/mcp` toe. Als de client optionele kopteksten of tokens voor toonder ondersteunt, laat u deze leeg, tenzij Adobe anders opgeeft. De verificatie wordt bij het eerste gebruik afgehandeld via de Adobe-aanmeldstroom op basis van de browser.
+Voor cliënten zoals de Code van VS of andere Desktop en Webtoepassingen met verre steun MCP, voeg de server van Real-Time CDP MCP als a **verre server van HTTP** toe gebruikend het eindpunt dat door uw vertegenwoordiger van Adobe wordt verstrekt. Als de client optionele kopteksten of tokens voor toonder ondersteunt, laat u deze leeg, tenzij Adobe anders opgeeft. De verificatie wordt bij het eerste gebruik afgehandeld via de Adobe-aanmeldstroom op basis van de browser.
 
 ### Installeren in technische clients {#mcp-connect-technical}
 
@@ -142,7 +136,7 @@ Voor cliënten zoals Cursor, de Code van VS, of andere Desktop en Webtoepassinge
 Voeg de server van de terminal toe:
 
 ```bash
-claude mcp add --transport http rtcdp https://rtcdp-mcp.adobe.io/mcp
+claude mcp add --transport http rtcdp <endpoint provided by your Adobe representative>
 ```
 
 Start vervolgens Claude Code en voer de volgende stappen uit:
@@ -158,7 +152,7 @@ Selecteer de `rtcdp` -server en voltooi de Adobe-aanmeldstroom in uw browser. Al
 Voeg de server van de terminal toe:
 
 ```bash
-codex mcp add rtcdp --url https://rtcdp-mcp.adobe.io/mcp
+codex mcp add rtcdp --url <endpoint provided by your Adobe representative>
 ```
 
 Verifieer de server:
@@ -177,7 +171,7 @@ U kunt de server ook rechtstreeks toevoegen aan `~/.codex/config.toml` :
 
 ```toml
 [mcp_servers.rtcdp]
-url = "https://rtcdp-mcp.adobe.io/mcp"
+url = "<endpoint provided by your Adobe representative>"
 ```
 
 ### Vereiste parameters voor aanvragen {#mcp-connect-params}
@@ -209,7 +203,7 @@ De Real-Time CDP MCP-server werkt met ondersteunde clients die verbinding kunnen
 
 +++Hoe werkt verificatie?
 
-De authentificatie wordt behandeld door op browser-gebaseerde login van a **&#x200B;**. Wanneer uw MCP cliënt eerst een hulpmiddel aanhaalt, opent het uw standaardbrowser aan Adobe login pagina. Nadat u de client hebt geverifieerd en geautoriseerd, wordt de sessie tot stand gebracht en worden de volgende gereedschapsaanroepen opnieuw gebruikt. Geen API sleutels of lange-levende geloofsbrieven moeten in uw cliëntconfiguratie worden opgeslagen.
+De authentificatie wordt behandeld door op browser-gebaseerde login van a ****. Wanneer uw MCP cliënt eerst een hulpmiddel aanhaalt, opent het uw standaardbrowser aan Adobe login pagina. Nadat u de client hebt geverifieerd en geautoriseerd, wordt de sessie tot stand gebracht en worden de volgende gereedschapsaanroepen opnieuw gebruikt. Geen API sleutels of lange-levende geloofsbrieven moeten in uw cliëntconfiguratie worden opgeslagen.
 +++
 
 +++Welke voorwerpen van Real-Time CDP kan ik via MCP toegang hebben?
