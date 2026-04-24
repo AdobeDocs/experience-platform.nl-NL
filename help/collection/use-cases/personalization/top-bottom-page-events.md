@@ -43,7 +43,7 @@ alloy("sendEvent", {
 
 | Parameter | Vereist/optioneel | Beschrijving |
 | --- | --- | --- |
-| `type` | Vereist | Stel deze parameter in op `decisioning.propositionFetch` . Dit speciale gebeurtenistype instrueert Adobe Analytics deze gebeurtenis te laten vallen. Wanneer u Customer Journey Analytics gebruikt, kunt u ook een filter instellen om deze gebeurtenissen te neerzetten. Zie [&#x200B; de gebeurtenistypen van Edge Network in Adobe Analytics &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types) voor meer informatie. |
+| `type` | Vereist | Stel deze parameter in op `decisioning.propositionFetch` . Dit speciale gebeurtenistype instrueert Adobe Analytics deze gebeurtenis te laten vallen. Wanneer u Customer Journey Analytics gebruikt, kunt u ook een filter instellen om deze gebeurtenissen te neerzetten. Zie [&#x200B; de gebeurtenistypen van Edge Network in Adobe Analytics &#x200B;](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/hit-types) voor meer informatie. |
 | `renderDecisions` | Vereist | Stel deze parameter in op `true` . Deze parameter vertelt Web SDK om besluiten terug te geven die door Edge Network zijn teruggekeerd. |
 | `personalization.sendDisplayEvent` | Vereist | Stel deze parameter in op `false` . Met deze parameter wordt gestopt met het verzenden van weergavegebeurtenissen. |
 

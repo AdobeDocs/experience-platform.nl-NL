@@ -167,5 +167,5 @@ Voor details op hoe te om uw implementatie te zuiveren gebruikend het Debugger v
 
 - [[!DNL Algolia]  Inzichten API Documentatie &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia]  Documentatie van Gebeurtenissen &#x200B;](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform]  Gebeurtenis door:sturen Documentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
+- [[!DNL Adobe Experience Platform]  Gebeurtenis door:sturen Documentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=nl-NL)
 - [[!DNL Algolia]  AI het Overzicht van Eigenschappen &#x200B;](https://www.algolia.com/products/ai-search/)

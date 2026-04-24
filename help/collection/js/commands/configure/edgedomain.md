@@ -15,9 +15,9 @@ Met de eigenschap `edgeDomain` kunt u het domein wijzigen waar de Web SDK gegeve
 
 >[!NOTE]
 >
->Deze eigenschap wijzigt niet waar cookies worden ingesteld. SDK van het Web plaatst altijd [&#x200B; eerste-partijkoekjes &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html), ongeacht waar het uiteindelijk gegevens verzendt.
+>Deze eigenschap wijzigt niet waar cookies worden ingesteld. SDK van het Web plaatst altijd [&#x200B; eerste-partijkoekjes &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=nl-NL), ongeacht waar het uiteindelijk gegevens verzendt.
 
-De waarde die u voor `edgeDomain` gebruikt hangt van uw participatie in het [&#x200B; Adobe-Beheerde certificaatprogramma &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) af:
+De waarde die u voor `edgeDomain` gebruikt hangt van uw participatie in het [&#x200B; Adobe-Beheerde certificaatprogramma &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/data-collection/adobe-managed-cert) af:
 
 **als uw organisatie aan het Adobe-Beheerde certificaatprogramma** deelneemt, plaats de waarde aan het eerste partijdomein dat toen vestiging het certificaat werd geselecteerd. Deze waarde is doorgaans een subdomein dat eigendom is van uw organisatie. Bijvoorbeeld `data.example.com` . CNAME-records in uw organisatie sturen die gegevens door naar Adobe.
 
