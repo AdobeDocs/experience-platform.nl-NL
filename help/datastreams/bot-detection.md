@@ -2,9 +2,9 @@
 title: Beide detectie configureren voor gegevensstromen
 description: Leer hoe te om botopsporing voor gegevensstromen te vormen, om menselijk en onmenselijk verkeer te onderscheiden.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 0787876d80e308c1687304ace7538a51d9a754ff
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1485'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 0%
 
 Het onmenselijke verkeer van geautomatiseerde programma&#39;s, Webschrapers, spinnen, en scripted scanners kan het moeilijk maken om gebeurtenissen van menselijke bezoekers te identificeren. Dit type van verkeer kan belangrijke bedrijfsmetriek negatief beïnvloeden, die tot onjuist verkeer leiden meldend.
 
-Beide opsporing staat u toe om gebeurtenissen te identificeren die door [&#x200B; SDK van het Web &#x200B;](/help/collection/js/js-overview.md), [&#x200B; Mobiele SDK &#x200B;](https://developer.adobe.com/client-sdks/home/) en [[!DNL Edge Network API] &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/) worden geproduceerd als door bekende spinnen en bots.
+Beide opsporing staat u toe om gebeurtenissen te identificeren die door [ SDK van het Web ](/help/collection/js/js-overview.md), [ Mobiele SDK ](https://developer.adobe.com/client-sdks/home/) en [[!DNL Edge Network API] ](https://developer.adobe.com/data-collection-apis/docs/api/) worden geproduceerd als door bekende spinnen en bots.
+
+>[!NOTE]
+>
+>Gebruik [!DNL Bot Detection Service] om niet-menselijk (bot) verkeer van uw gegevens te identificeren en te filtreren. Dit vermindert ruis in de verzamelde datasets en helpt ervoor te zorgen dat uw analyses en rapportering echte gebruikersinteractie weerspiegelen.
 
 Door beide opsporing voor uw gegevensstromen te vormen, kunt u specifieke IP adressen, IP waaiers, en verzoekkopballen identificeren om als beide gebeurtenissen te classificeren. Zo kunt u de gebruikersactiviteit op uw site of mobiele toepassing nauwkeuriger meten.
 
@@ -31,57 +35,57 @@ Deze beide het scoren helpt de oplossingen die het verzoek ontvangen beide verke
 
 >[!IMPORTANT]
 >
->Boot detection slaat beide aanvragen niet neer. Het werkt slechts het schema XDM met beide het scoren bij, en door:sturen de gebeurtenis aan de [&#x200B; datastream dienst &#x200B;](configure.md) die u vormde.
+>Boot detection slaat beide aanvragen niet neer. Het werkt slechts het schema XDM met beide het scoren bij, en door:sturen de gebeurtenis aan de [ datastream dienst ](configure.md) die u vormde.
 >
->Adobe-oplossingen kunnen beide scoren op verschillende manieren verwerken. Bijvoorbeeld, gebruikt Adobe Analytics zijn eigen [&#x200B; bot filtrerende dienst &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=nl-NL) en gebruikt niet de score die door Edge Network wordt geplaatst. De twee diensten gebruiken de zelfde [&#x200B; IAB beide lijst &#x200B;](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), zodat is het beide het scoren identiek.
+>Adobe-oplossingen kunnen beide scoren op verschillende manieren verwerken. Bijvoorbeeld, gebruikt Adobe Analytics zijn eigen [ bot filtrerende dienst ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) en gebruikt niet de score die door Edge Network wordt geplaatst. De twee diensten gebruiken de zelfde [ IAB beide lijst ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), zodat is het beide het scoren identiek.
 
 ## Technische overwegingen {#technical-considerations}
 
-Voordat u beide detectie in uw gegevensstromen inschakelt, moet u rekening houden met een aantal belangrijke punten voor een correcte en vloeiende implementatie:
+Before enabling bot detection on your datastreams, here are a few key points to keep in mind to ensure accurate results and a smooth implementation:
 
-* Bot-detectie is alleen van toepassing op niet-geverifieerde aanvragen die naar `edge.adobedc.net` worden verzonden.
-* De voor authentiek verklaarde verzoeken die aan `server.adobedc.net` worden verzonden worden niet geëvalueerd voor beide verkeer, aangezien het voor authentiek verklaarde verkeer als betrouwbaar wordt beschouwd.
-* Bot-detectieregels kunnen tot 15 minuten duren voordat ze door de Edge Network worden verspreid.
+* Bot detection applies only to unauthenticated requests sent to `edge.adobedc.net`.
+* Authenticated requests sent to `server.adobedc.net` are not evaluated for bot traffic, as authenticated traffic is considered trustworthy.
+* Bot detection rules can take up to 15 minutes to propagate across the Edge Network after being created.
 
 ## Vereisten {#prerequisites}
 
-Om beide detectie uit te voeren, moet u de veldgroep **[!UICONTROL Bot Detection Information]** aan uw schema toevoegen. Zie de [&#x200B; XDM schema &#x200B;](../xdm/ui/resources/schemas.md#add-field-groups) documentatie leren hoe te om gebiedsgroepen aan een schema toe te voegen.
+For bot detection to work on your datastream, you must add the **[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)** field group to your schema. See the [XDM schema](../xdm/ui/resources/schemas.md#add-field-groups) documentation to learn how to add field groups to a schema.
 
 ## Beide detectie configureren voor gegevensstromen {#configure}
 
-U kunt beide detectie configureren na het maken van een gegevensstroomconfiguratie. Zie de documentatie op hoe te [&#x200B; tot stand brengen en een datastream &#x200B;](configure.md) vormen, dan volg de instructies hieronder om beide opsporingsmogelijkheden aan uw gegevensstroom toe te voegen.
+You can configure bot detection after creating a datastream configuration. See the documentation on how to [create and configure a datastream](configure.md), then follow the instructions below to add bot detection capabilities to your datastream.
 
-Ga naar de lijst van gegevensstromen en selecteer de gegevensstroom waaraan u beide opsporing wilt toevoegen.
+Go to the datastreams list and select the datastream to which you want to add bot detection.
 
-![&#x200B; Gebruikersinterface die van Gegevensstromen de lijst van gegevensstromen toont.](assets/bot-detection/datastream-list.png)
+![Datastreams user interface showing the list of datastreams.](assets/bot-detection/datastream-list.png)
 
-Selecteer op de pagina met gegevensstroomdetails de optie **[!UICONTROL Bot Detection]** op de rechterrails.
+In the datastream details page, select the **[!UICONTROL Bot Detection]** option on the right rail.
 
-![&#x200B; Bot ontdekkingsoptie die in het gebruikersinterface van gegevensstromen wordt benadrukt.](assets/bot-detection/bot-detection.png)
+![Bot detection option highlighted in the datastreams user interface.](assets/bot-detection/bot-detection.png)
 
-De pagina **[!UICONTROL Bot Detection Rules]** wordt weergegeven.
+The **[!UICONTROL Bot Detection Rules]** page is shown.
 
-![&#x200B; Bot opsporing montages in de datastream montages pagina.](assets/bot-detection/bot-detection-page.png)
+![Bot detection settings in the datastream settings page.](assets/bot-detection/bot-detection-page.png)
 
-Op de pagina Bot Detection Rules kunt u beide detectie configureren met de volgende functies:
+From the Bot Detection Rules page, you can configure bot detection by using the following functionalities:
 
-* Gebruikend de [&#x200B; IAB/ABC Internationale Spinnen en Lijst van Boten &#x200B;](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
-* Uw eigen regels voor botdetectie maken.
+* Using the [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Creating your own bot detection rules.
 
-### De IAB/ABC International Spiders and Bots List gebruiken {#iab-list}
+### Use the IAB/ABC International Spiders and Bots List {#iab-list}
 
-De [&#x200B; IAB/ABC Internationale Spinnen en Bots Lijst &#x200B;](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) is een derde, industrie-standaardlijst van internetspinnen en bots. Deze lijst helpt u geautomatiseerd verkeer zoals onderzoekmachine kruipende, controlehulpmiddelen, en ander onmenselijk verkeer identificeren dat u niet in uw analytische tellingen kunt willen omvatten.
+The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) is a third-party, industry-standard list of internet spiders and bots. This list helps you identify automated traffic such as search engine crawlers, monitoring tools, and other nonhuman traffic that you may not want to include in your analytics counts.
 
-Om uw gegevensstroom te vormen om IAB/ABC Internationale Spinnen en Lijst van Bots te gebruiken:
+To configure your datastream to use the IAB/ABC International Spiders and Bots List:
 
-1. Schakel de optie **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]** in.
-2. Selecteer **[!UICONTROL Save]** om de instellingen voor beide detectie toe te passen op uw gegevensstroom.
+1. Toggle the **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]** option.
+2. Select **[!UICONTROL Save]** to apply the bot detection settings to your datastream.
 
-![&#x200B; IAB spinnen en allebei toegelaten lijst.](assets/bot-detection/bot-detection-list.png)
+![IAB spiders and bot list enabled.](assets/bot-detection/bot-detection-list.png)
 
 ### Baandetectieregels maken {#rules}
 
-Naast het gebruiken van de [&#x200B; IAB/ABC Internationale Spinnen en Bots Lijst &#x200B;](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), kunt u uw eigen regels van de botopsporing voor elke gegevensstroom bepalen.
+Naast het gebruiken van de [ IAB/ABC Internationale Spinnen en Bots Lijst ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), kunt u uw eigen regels van de botopsporing voor elke gegevensstroom bepalen.
 
 U kunt beide opsporingsregels tot stand brengen die op **IP adressen** en **IP adreswaaiers** worden gebaseerd.
 
@@ -103,19 +107,19 @@ Als u meer regels voor korrelige botdetectie nodig hebt, kunt u de IP-voorwaarde
 
 Volg onderstaande stappen om een regel voor botdetectie te maken:
 
-1. Selecteer **[!UICONTROL Add New Rule]**.
+1. Selecteer **[!UICONTROL Add New Rule]** .
 
-   ![&#x200B; de montages van de Bot opsporing met Add Nieuwe benadrukte knoop van de Regel.](assets/bot-detection/bot-detection-new-rule.png)
+   ![ de montages van de Bot opsporing met Add Nieuwe benadrukte knoop van de Regel.](assets/bot-detection/bot-detection-new-rule.png)
 
 2. Typ een naam voor de regel in het veld **[!UICONTROL Rule Name]** .
 
-   ![&#x200B; Bot ontdekkingsregelscherm met de benadrukte regelnaam.](assets/bot-detection/rule-name.png)
+   ![ Bot ontdekkingsregelscherm met de benadrukte regelnaam.](assets/bot-detection/rule-name.png)
 
 3. Selecteer **[!UICONTROL Add new IP condition]** om een nieuwe op IP gebaseerde regel toe te voegen. U kunt de regel door IP adres of door IP adreswaaier bepalen.
 
-   ![&#x200B; Bot ontdekkingsregel scherm met het IP benadrukte adresgebied.](assets/bot-detection/ip-address-rule.png)
+   ![ Bot ontdekkingsregel scherm met het IP benadrukte adresgebied.](assets/bot-detection/ip-address-rule.png)
 
-   ![&#x200B; Bot ontdekkingsregel scherm met het IP benadrukte waaiergebied.](assets/bot-detection/ip-range-rule.png)
+   ![ Bot ontdekkingsregel scherm met het IP benadrukte waaiergebied.](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
@@ -123,15 +127,15 @@ Volg onderstaande stappen om een regel voor botdetectie te maken:
 
 4. Als u kopbalvoorwaarden aan uw regel wilt toevoegen, selecteert u **[!UICONTROL Add header conditions group]**, en selecteert u vervolgens de kopballen die u de regel wilt gebruiken.
 
-   ![&#x200B; Bot ontdekkingsregel scherm met de benadrukt kopbalvoorwaarden.](assets/bot-detection/header-conditions.png)
+   ![ Bot ontdekkingsregel scherm met de benadrukt kopbalvoorwaarden.](assets/bot-detection/header-conditions.png)
 
    Voeg vervolgens de voorwaarden toe die voor de geselecteerde koptekst moeten worden gebruikt.
 
-   ![&#x200B; Bot ontdekkingsregel scherm met de benadrukt kopbalvoorwaarden.](assets/bot-detection/header-condition-rule.png)
+   ![ Bot ontdekkingsregel scherm met de benadrukt kopbalvoorwaarden.](assets/bot-detection/header-condition-rule.png)
 
 5. Nadat u de gewenste regels voor beide detectie hebt geconfigureerd, selecteert u **[!UICONTROL Save]** om de regels toe te passen op uw gegevensstroom.
 
-   ![&#x200B; Bot ontdekkingsregel scherm met de benadrukt kopbalvoorwaarden.](assets/bot-detection/bot-detection-save.png)
+   ![ Bot ontdekkingsregel scherm met de benadrukt kopbalvoorwaarden.](assets/bot-detection/bot-detection-save.png)
 
 
 ## Voorbeelden van binddetectieregel {#examples}
@@ -142,19 +146,19 @@ Om u te helpen aan de slag te gaan met beide detectie, kunt u de onderstaande vo
 
 Om alle verzoeken te merken die uit een specifiek IP adres als allebei verkeer voortkomen, creeer een nieuwe beide opsporingsregel die één enkel IP adres evalueert, zoals aangetoond in het hieronder beeld.
 
-![&#x200B; Bot ontdekkingsregel die op één IP adres wordt gebaseerd.](assets/bot-detection/bot-detection-one-ip.png)
+![ Bot ontdekkingsregel die op één IP adres wordt gebaseerd.](assets/bot-detection/bot-detection-one-ip.png)
 
 ### Bot-detectie op basis van twee IP-adressen {#two-ip}
 
 Om alle verzoeken te merken die uit één van beiden van twee specifieke IP adressen als allebei verkeer voortkomen, creeer een nieuwe regel van de botopsporing die twee IP adressen evalueert, zoals aangetoond in het hieronder beeld.
 
-![&#x200B; Bot ontdekkingsregel die op twee IP adressen wordt gebaseerd.](assets/bot-detection/bot-detection-two-ips.png)
+![ Bot ontdekkingsregel die op twee IP adressen wordt gebaseerd.](assets/bot-detection/bot-detection-two-ips.png)
 
 ### Bot-detectie op basis van een reeks IP-adressen {#range}
 
 Om alle verzoeken te merken die uit om het even welk IP adres in een specifieke waaier als beide verkeer voortkomen, creeer een nieuwe de detectieregel van de bot die een volledige IP adreswaaier evalueert, zoals aangetoond in het hieronder beeld.
 
-![&#x200B; Bot ontdekkingsregel die op IP waaier wordt gebaseerd.](assets/bot-detection/bot-detection-range.png)
+![ Bot ontdekkingsregel die op IP waaier wordt gebaseerd.](assets/bot-detection/bot-detection-range.png)
 
 ### Bot-detectie op basis van een IP-adres en een aanvraagheader {#ip-header}
 
@@ -162,7 +166,7 @@ Om alle verzoeken te merken die uit een specifiek IP adres voortkomen en een spe
 
 Deze regel controleert of de aanvraag afkomstig is van een specifiek IP-adres en of de aanvraagheader `referer` begint met `www.adobe.com` .
 
-![&#x200B; Bot ontdekkingsregel die op IP adres en verzoekkopbal wordt gebaseerd.](assets/bot-detection/bot-detection-header-ip.png)
+![ Bot ontdekkingsregel die op IP adres en verzoekkopbal wordt gebaseerd.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### Bot-detectie op basis van meerdere omstandigheden {#multiple-conditions}
 
@@ -175,4 +179,4 @@ De regel in onderstaande afbeelding geeft een verzoek aan dat van oorsprong is a
 
 De aanvraag is afkomstig van een van de twee IP-adressen, de `referer` header begint met `www.adobe.com` en de `sec-ch-ua-mobile` header geeft aan dat de aanvraag afkomstig is van een desktopbrowser.
 
-![&#x200B; Bot ontdekkingsregel die op veelvoudige voorwaarden wordt gebaseerd.](assets/bot-detection/bot-detection-multiple.png)
+![ Bot ontdekkingsregel die op veelvoudige voorwaarden wordt gebaseerd.](assets/bot-detection/bot-detection-multiple.png)
