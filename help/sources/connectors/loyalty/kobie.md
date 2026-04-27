@@ -19,6 +19,6 @@ ht-degree: 0%
 >
 >**vorm toestemmingen op Experience Platform**
 >
->U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Kobie Streaming Events] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/abac/ui/permissions.md).
+>U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Kobie Streaming Events] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [&#x200B; gids UI van de toegangscontrole &#x200B;](../../../access-control/abac/ui/permissions.md).
 
-Gebruik de [[!DNL Kobie Streaming Events]  bron ](../../tutorials/ui/create/loyalty/kobie-streaming.md) in de broncatalogus aan stroom loyaliteitsgegevens van uw [!DNL Kobie] rekening aan Adobe Experience Platform.
+Gebruik de [[!DNL Kobie Streaming Events]  bron &#x200B;](../../tutorials/ui/create/loyalty/kobie-streaming.md) in de broncatalogus aan stroom loyaliteitsgegevens van uw [!DNL Kobie] rekening aan Adobe Experience Platform.

@@ -202,7 +202,7 @@ De Real-Time CDP MCP-server werkt met ondersteunde clients die verbinding kunnen
 
 +++Hoe werkt verificatie?
 
-De authentificatie wordt behandeld door op browser-gebaseerde login van a ****. Wanneer uw MCP cliënt eerst een hulpmiddel aanhaalt, opent het uw standaardbrowser aan Adobe login pagina. Nadat u de client hebt geverifieerd en geautoriseerd, wordt de sessie tot stand gebracht en worden de volgende gereedschapsaanroepen opnieuw gebruikt. Geen API sleutels of lange-levende geloofsbrieven moeten in uw cliëntconfiguratie worden opgeslagen.
+De authentificatie wordt behandeld door op browser-gebaseerde login van a **&#x200B;**. Wanneer uw MCP cliënt eerst een hulpmiddel aanhaalt, opent het uw standaardbrowser aan Adobe login pagina. Nadat u de client hebt geverifieerd en geautoriseerd, wordt de sessie tot stand gebracht en worden de volgende gereedschapsaanroepen opnieuw gebruikt. Geen API sleutels of lange-levende geloofsbrieven moeten in uw cliëntconfiguratie worden opgeslagen.
 +++
 
 +++Welke voorwerpen van Real-Time CDP kan ik via MCP toegang hebben?
