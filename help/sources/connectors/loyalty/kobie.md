@@ -3,31 +3,22 @@ title: Overzicht van Kobie Source
 description: Leer hoe u uw Kobie-account aan Adobe Experience Platform koppelt.
 hide: true
 hidefromtoc: true
-source-git-commit: c9f35b85f6c71ceff42a724a189098ed26ba1354
+exl-id: e0a263f1-2803-45c2-be88-21a1975d3286
+source-git-commit: 4feff9b123aa7bf73f5f936c290cba15815c3f3a
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 1%
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
 # [!DNL Kobie]
 
-[!DNL Kobie] biedt een composable SaaS-platform dat u kunt gebruiken om de volledige levenscyclus van een loyaliteitsprogramma te beheren. Typisch gebruikt door marketing teams, gegevenswetenschappers, en de managers van de klantenervaring, omvat het [!DNL Kobie] platform een no-code interface die u kunt gebruiken om complexe loyaliteitsregels te ordenen.
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)] is een hoogst configureerbaar, veilig, en scalable platform MACH dat zich aan uw loyaliteitsstrategie aanpast - het versnellen van tijd aan waarde, het verbeteren van efficiency, en het beschermen van uw merk met onderneming-rang bestuur. Dankzij naadloze integratie tussen CDP&#39;s, CRM&#39;s, CMS en meer biedt [!DNL KALC] marketers de mogelijkheid om realtime personalisatie te leveren voor elk kanaal en tegelijk de flexibiliteit en traceerbaarheid te bieden die nodig zijn om te evolueren naarmate uw merkloyaliteit groeit.
 
-U kunt de [!DNL Kobie] -bronnen in de Adobe Experience Platform-broncatalogus gebruiken om loyaliteitsgegevens voor batches en streaming in te voeren vanuit uw [!DNL Kobie] -account.
+>[!NOTE]
+>
+>**vorm toestemmingen op Experience Platform**
+>
+>U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Kobie Streaming Events] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/abac/ui/permissions.md).
 
-- [[!DNL Kobie] batch](../../tutorials/ui/create/loyalty/kobie-batch.md)
-- [[!DNL Kobie] streaming](../../tutorials/ui/create/loyalty/kobie-streaming.md)
-
-## Vereisten
-
-Geef waarden op voor de volgende referenties om de [!DNL Kobie Batch Source Connector] te verifiëren en te verbinden.
-
-| Credentials | Beschrijving | Voorbeeld |
-| --- | --- | --- |
-
-## Toewijzing {#mapping}
-
-<!-- Mapping info here -->
-
-## Volgende stappen
+Gebruik de [[!DNL Kobie Streaming Events]  bron ](../../tutorials/ui/create/loyalty/kobie-streaming.md) in de broncatalogus aan stroom loyaliteitsgegevens van uw [!DNL Kobie] rekening aan Adobe Experience Platform.

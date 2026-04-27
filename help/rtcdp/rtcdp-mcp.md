@@ -1,6 +1,5 @@
 ---
 solution: Real-Time Customer Data Platform
-product: real-time customer data platform
 title: Werken met MCP-clients (Beta)
 description: Leer hoe u Adobe Real-Time CDP met MCP-clients verbindt via de MCP-server
 feature: Integrations
@@ -11,7 +10,7 @@ level: Beginner, Intermediate
 hide: true
 hidefromtoc: true
 exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
-source-git-commit: b340d118051e2c38e1098b601e9944a7029129dc
+source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
 workflow-type: tm+mt
 source-wordcount: '2379'
 ht-degree: 0%
@@ -203,7 +202,7 @@ De Real-Time CDP MCP-server werkt met ondersteunde clients die verbinding kunnen
 
 +++Hoe werkt verificatie?
 
-De authentificatie wordt behandeld door op browser-gebaseerde login van a **&#x200B;**. Wanneer uw MCP cliënt eerst een hulpmiddel aanhaalt, opent het uw standaardbrowser aan Adobe login pagina. Nadat u de client hebt geverifieerd en geautoriseerd, wordt de sessie tot stand gebracht en worden de volgende gereedschapsaanroepen opnieuw gebruikt. Geen API sleutels of lange-levende geloofsbrieven moeten in uw cliëntconfiguratie worden opgeslagen.
+De authentificatie wordt behandeld door op browser-gebaseerde login van a ****. Wanneer uw MCP cliënt eerst een hulpmiddel aanhaalt, opent het uw standaardbrowser aan Adobe login pagina. Nadat u de client hebt geverifieerd en geautoriseerd, wordt de sessie tot stand gebracht en worden de volgende gereedschapsaanroepen opnieuw gebruikt. Geen API sleutels of lange-levende geloofsbrieven moeten in uw cliëntconfiguratie worden opgeslagen.
 +++
 
 +++Welke voorwerpen van Real-Time CDP kan ik via MCP toegang hebben?

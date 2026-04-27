@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Overzicht Source Connectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f3026e0a717c07d95f12e3aeaf380ddc1b87c712
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 1%
+source-wordcount: '1764'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +30,7 @@ Met Experience Platform kunt u gegevens die u uit verschillende bronnen verzamel
 
 ## Door Adobe gebouwde en door partners gebouwde bronnen {#adobe-and-partner-built-sources}
 
-Sommige schakelaars in de Experience Platform broncatalogus worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd door [&#x200B; Bronnen SDK &#x200B;](/help/sources/sources-sdk/overview.md) te gebruiken. Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bron door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld, wordt de [&#x200B; schakelaar van Amazon S3 &#x200B;](/help/sources/connectors/cloud-storage/s3.md) gecreeerd door Adobe, terwijl de [&#x200B; schakelaar RainFocus &#x200B;](/help/sources/connectors/analytics/rainfocus.md) door het team RainFocus wordt gecreeerd en gehandhaafd.
+Sommige schakelaars in de Experience Platform broncatalogus worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd door [ Bronnen SDK ](/help/sources/sources-sdk/overview.md) te gebruiken. Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bron door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld, wordt de [ schakelaar van Amazon S3 ](/help/sources/connectors/cloud-storage/s3.md) gecreeerd door Adobe, terwijl de [ schakelaar RainFocus ](/help/sources/connectors/analytics/rainfocus.md) door het team RainFocus wordt gecreeerd en gehandhaafd.
 
 Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door Adobe ontworpen en onderhouden connectors contact op met uw Adobe-vertegenwoordiger of de klantenservice.
 
@@ -40,7 +40,7 @@ Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties m
 
 >[!NOTE]
 >
->Source-gegevensstromen die 30 dagen lang ononderbroken mislukken, worden automatisch uitgeschakeld. Het gebruik [&#x200B; Dashboard van de Controle &#x200B;](/help/dataflows/ui/monitor-sources.md) om uw dataflow te herzien, identificeert waarom het (bijvoorbeeld, geloofsbrieven, toestemmingen, of schema of kaartveranderingen) ontbrak, past de noodzakelijke updates toe, en re-toelaat dataflow zodra opgelost.
+>Source-gegevensstromen die 30 dagen lang ononderbroken mislukken, worden automatisch uitgeschakeld. Het gebruik [ Dashboard van de Controle ](/help/dataflows/ui/monitor-sources.md) om uw dataflow te herzien, identificeert waarom het (bijvoorbeeld, geloofsbrieven, toestemmingen, of schema of kaartveranderingen) ontbrak, past de noodzakelijke updates toe, en re-toelaat dataflow zodra opgelost.
 
 Lees de volgende secties voor een lijst van alle bronnen beschikbaar in de broncatalogus.
 
@@ -65,9 +65,9 @@ Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toe
 
 ### Geavanceerde bedrijfsbronnen {#advanced-enterprise-sources}
 
-De volgende bronnen zijn slechts beschikbaar aan [&#x200B; Adobe Real-Time Customer Data Platform Ultimate &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) of klanten die de standalone Geavanceerde Onderneming Source Connectors SKU in licentie hebben gegeven.
+De volgende bronnen zijn slechts beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) of klanten die de standalone Geavanceerde Onderneming Source Connectors SKU in licentie hebben gegeven.
 
-| Bron | Categorie | Type ontsteking | Wolk |
+| Source | Categorie | Type ontsteking | Wolk |
 | --- | --- | --- | --- |
 | [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | Cloud-opslag | Streaming | Azure, AWS |
 | [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | Database | Batch | Azure, AWS |
@@ -85,17 +85,17 @@ De volgende bronnen zijn slechts beschikbaar aan [&#x200B; Adobe Real-Time Custo
 
 U kunt de volgende bronnen gebruiken om advertentiegegevens in te voeren naar Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
-| [&#x200B; Advertentie Google &#x200B;](connectors/advertising/ads.md) | Batch | Azure |
+| [ Advertentie Google ](connectors/advertising/ads.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 
-### Analytics {#analytics}
+### Analyse {#analytics}
 
 U kunt de volgende bronnen gebruiken om analysegegevens in te voeren naar Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | Batch | Azure |
 | [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | Streaming | Azure |
@@ -109,7 +109,7 @@ Opslagbronnen in de cloud kunnen uw eigen gegevens naar Experience Platform bren
 
 U kunt de volgende bronnen gebruiken om gegevens over cloudopslag in Experience Platform op te nemen.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Batch | Azure |
 | [[!DNL Azure Blob Storage]](connectors/cloud-storage/blob.md) | Batch | Azure |
@@ -128,7 +128,7 @@ U kunt de volgende bronnen gebruiken om gegevens over cloudopslag in Experience 
 
 U kunt de volgende bronnen gebruiken om toestemmings- en voorkeursgegevens in te voeren voor Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Didomi]](../sources/connectors/consent-and-preferences/didomi.md) | Streaming | Azure |
 | [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Batch | Azure |
@@ -141,7 +141,7 @@ De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen b
 
 U kunt de volgende bronnen gebruiken om CRM-gegevens in te voeren naar Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | Batch | Azure |
 | [[!DNL Salesforce]](connectors/crm/salesforce.md) | Batch | Azure, AWS |
@@ -154,7 +154,7 @@ U kunt de volgende bronnen gebruiken om CRM-gegevens in te voeren naar Experienc
 
 U kunt de volgende bronnen gebruiken om succesgegevens van klanten aan Experience Platform toe te voegen.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | Batch | Azure |
 | [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | Batch | Azure |
@@ -168,7 +168,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een da
 
 U kunt de volgende bronnen gebruiken om gegevens van uw database in te voeren naar Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | Batch | Azure |
 | [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | Batch | Azure |
@@ -190,7 +190,7 @@ U kunt de volgende bronnen gebruiken om gegevens van uw database in te voeren na
 
 U kunt de volgende bronnen gebruiken om gegevens en identiteitspartnergegevens in te voeren aan Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | Batch | Azure |
 | [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | Batch | Azure |
@@ -205,7 +205,7 @@ U kunt de volgende bronnen gebruiken om gegevens en identiteitspartnergegevens i
 
 U kunt de volgende bronnen gebruiken om e-commercegegevens in te voeren naar Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | Batch | Azure |
 | [[!DNL Shopify]](connectors/ecommerce/shopify.md) | Batch | Azure |
@@ -217,17 +217,17 @@ U kunt de volgende bronnen gebruiken om e-commercegegevens in te voeren naar Exp
 
 U kunt de volgende bronnen gebruiken om gegevens van uw lokale systeem aan Experience Platform in te voeren.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
-| [&#x200B; Lokale dossier uploadt &#x200B;](connectors/local-system/local-file-upload.md) | Batch | Azure |
+| [ Lokale dossier uploadt ](connectors/local-system/local-file-upload.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 
 ### Loyalty {#loyalty}
 
-U kunt de volgende bronnen gebruiken om gegevensloyaliteit aan Experience Platform in te voeren.
+U kunt de volgende bronnen gebruiken om loyaliteitsgegevens aan Experience Platform in te voeren.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
 | [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | Batch, streaming | Azure |
@@ -238,18 +238,18 @@ U kunt de volgende bronnen gebruiken om gegevensloyaliteit aan Experience Platfo
 
 U kunt de volgende bronnen gebruiken om gegevens over marketingautomatisering in te voeren naar Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Braze]](connectors/marketing-automation/braze.md) | Streaming | Azure |
 | [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | Streaming | Azure |
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Streaming | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Batch | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Batch | Azure |
-| [[!DNL Oracle Eloqua]  (V2) &#x200B;](connectors/marketing-automation/eloqua.md) | Batch | Azure |
+| [[!DNL Oracle Eloqua]  (V2) ](connectors/marketing-automation/eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
-| [[!DNL Salesforce Marketing Cloud]  (V2) &#x200B;](connectors/marketing-automation/sfmc.md) | Batch | Azure |
+| [[!DNL Salesforce Marketing Cloud]  (V2) ](connectors/marketing-automation/sfmc.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 
@@ -257,7 +257,7 @@ U kunt de volgende bronnen gebruiken om gegevens over marketingautomatisering in
 
 U kunt de volgende bronnen gebruiken om betalingsgegevens in te voeren naar Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Square]](connectors/payments/square.md) | Batch | Azure |
 | [[!DNL Stripe]](connectors/payments/stripe.md) | Batch | Azure |
@@ -268,7 +268,7 @@ U kunt de volgende bronnen gebruiken om betalingsgegevens in te voeren naar Expe
 
 U kunt de volgende bronnen gebruiken om gegevens te streamen naar Experience Platform.
 
-| Bron | Type ontsteking | Ondersteuning voor cloud |
+| Source | Type ontsteking | Ondersteuning voor cloud |
 | --- | --- | --- |
 | [[!DNL HTTP API]](connectors/streaming/http.md) | Streaming | Azure, AWS |
 
@@ -278,7 +278,7 @@ U kunt de volgende bronnen gebruiken om gegevens te streamen naar Experience Pla
 
 U kunt de volgende bronnen gebruiken om protocolgegevens in te voeren naar Experience Platform.
 
-| Bron | Type ontsteking | Ondersteuning voor cloud |
+| Source | Type ontsteking | Ondersteuning voor cloud |
 | --- | --- | --- |
 | [[!DNL Generic OData]](connectors/protocols/odata.md) | Batch | Azure |
 | [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | Batch | Azure |
@@ -287,7 +287,7 @@ U kunt de volgende bronnen gebruiken om protocolgegevens in te voeren naar Exper
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 
-Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad **[!UICONTROL Permissions]** in een bepaald productprofiel. Via het menu-item **[!UICONTROL Edit Permissions]** hebt u via het deelvenster **[!UICONTROL data ingestion]** toegang tot de machtigingen voor bronnen. De machtiging **[!UICONTROL View Sources]** verleent alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en voor authentiek verklaarde bronnen op het tabblad **[!UICONTROL Browse]** , terwijl met de machtiging **[!UICONTROL Manage Sources]** volledige toegang wordt verleend tot het lezen, maken, bewerken en uitschakelen van bronnen.
+Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad **[!UICONTROL Permissions]** in een bepaald productprofiel. Via het menu-item **[!UICONTROL data ingestion]** hebt u via het deelvenster **[!UICONTROL Edit Permissions]** toegang tot de machtigingen voor bronnen. De machtiging **[!UICONTROL View Sources]** verleent alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en voor authentiek verklaarde bronnen op het tabblad **[!UICONTROL Browse]** , terwijl met de machtiging **[!UICONTROL Manage Sources]** volledige toegang wordt verleend tot het lezen, maken, bewerken en uitschakelen van bronnen.
 
 De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combinaties van deze toestemmingen:
 
@@ -297,7 +297,7 @@ De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combin
 | **[!UICONTROL Manage Sources]** Aan | Naast de functies die in **[!UICONTROL View Sources]** zijn opgenomen, verleent u toegang tot de optie **[!UICONTROL Connect Source]** in **[!UICONTROL Catalog]** en **[!UICONTROL Select Data]** in **[!UICONTROL Browse]** . Met **[!UICONTROL Manage Sources]** kunt u **[!UICONTROL DataFlows]** ook in- of uitschakelen en de schema&#39;s ervan bewerken. |
 | **[!UICONTROL View Sources]** Uit en **[!UICONTROL Manage Sources]** Uit | Alle toegang tot bronnen intrekken. |
 
-Voor meer informatie over de beschikbare toestemmingen die door de Toestemmingen van Adobe worden verleend, lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](../access-control/home.md).
+Voor meer informatie over de beschikbare toestemmingen die door de Toestemmingen van Adobe worden verleend, lees het [ overzicht van de toegangscontrole ](../access-control/home.md).
 
 ### Toegangsbeheer op basis van kenmerken
 
@@ -305,11 +305,11 @@ Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen be
 
 Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op gebieden toepassen die u toestemmingen hebt. Bovendien kunt u geen gegevens aan een dataset opnemen als u geen toegang tot alle gebieden in de dataset hebt.
 
-#### Ondersteuning voor op kenmerken gebaseerde toegangscontrole in bronnen
+#### Ondersteuning voor op kenmerken gebaseerd toegangsbeheer in bronnen
 
 >[!TIP]
 >
->Op attributen-gebaseerde toegangsbeheer werkt als volgt: **rollen** worden gecreeerd om de types van gebruikers te categoriseren die met uw instantie van Experience Platform in wisselwerking staan. **de Etiketten** worden toegepast op **rollen** om de toegang van die bepaalde rol aan te wijzen. **de Etiketten** worden ook toegepast op middelen zoals schemagebieden en segmenten. Opdat een gebruiker toegang tot bepaalde schemagebieden en segmenten heeft, moeten zij aan *een rol met het zelfde etiket worden toegevoegd dat aan het gevraagde middel* wordt toegewezen. Voor meer informatie, lees de [&#x200B; op attributen-gebaseerde gids van begin tot eind van de toegangscontrole &#x200B;](../access-control/abac/end-to-end-guide.md).
+>Op attributen-gebaseerde toegangsbeheer werkt als volgt: **rollen** worden gecreeerd om de types van gebruikers te categoriseren die met uw instantie van Experience Platform in wisselwerking staan. **de Etiketten** worden toegepast op **rollen** om de toegang van die bepaalde rol aan te wijzen. **de Etiketten** worden ook toegepast op middelen zoals schemagebieden en segmenten. Opdat een gebruiker toegang tot bepaalde schemagebieden en segmenten heeft, moeten zij aan *een rol met het zelfde etiket worden toegevoegd dat aan het gevraagde middel* wordt toegewezen. Voor meer informatie, lees de [ op attributen-gebaseerde gids van begin tot eind van de toegangscontrole ](../access-control/abac/end-to-end-guide.md).
 
 - Pas etiketten op schemagebieden toe om toegang tot specifieke schemagebieden in uw organisatie te bepalen. Zodra de toegang tot specifieke schemagebieden wordt gevestigd, zullen de gebruikers slechts afbeeldingen voor de gebieden kunnen tot stand brengen die zij toegang hebben tot.
 - Gebruikers zonder de juiste rollen kunnen geen dataflows met toewijzingen maken of bijwerken die ontoegankelijke schemavelden bevatten. Bovendien kunnen onbevoegde gebruikers bestaande gegevensstromen met ontoegankelijke schemavelden niet bijwerken, verwijderen, inschakelen of uitschakelen.
@@ -317,9 +317,9 @@ Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op g
 
 >[!NOTE]
 >
->Relationele schema&#39;s hebben aanvullende vereisten, waaronder velden voor primaire sleutel en versie-id. Voor meer informatie, zie het [&#x200B; relationele schemaoverzicht &#x200B;](../xdm/schema/relational.md).
+>Relationele schema&#39;s hebben aanvullende vereisten, waaronder velden voor primaire sleutel en versie-id. Voor meer informatie, zie het [ relationele schemaoverzicht ](../xdm/schema/relational.md).
 
-Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, lees het [&#x200B; op attributen-gebaseerde toegangsbeheeroverzicht &#x200B;](../access-control/abac/overview.md).
+Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, lees het [ op attributen-gebaseerde toegangsbeheeroverzicht ](../access-control/abac/overview.md).
 
 ## Voorwaarden en bepalingen {#terms-and-conditions}
 

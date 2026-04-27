@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Source Connectors Help
-breadcrumb-title: Gids voor Source Connectors
-user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
+user-guide-title: Help bij Adobe Experience Platform Source Connectors
+breadcrumb-title: Handleiding Source-connectors
+user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
+source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 7%
+source-wordcount: '1113'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 7%
    - Advertising {#advertising}
       - [Google Ads-connector](connectors/advertising/ads.md)
       - [Pinterest Adds](connectors/advertising/pinterest-ads.md)
-   - Analytics {#analytics}
+   - Analyse {#analytics}
       - [Mixpanel-aansluiting](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
       - [RainFocus](connectors/analytics/rainfocus.md)
@@ -104,10 +104,10 @@ ht-degree: 7%
       - [Schopify](connectors/ecommerce/shopify.md)
       - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
-      - [&#x200B; Lokale dossier uploadt schakelaar &#x200B;](connectors/local-system/local-file-upload.md)
+      - [ Lokale dossier uploadt schakelaar ](connectors/local-system/local-file-upload.md)
    - Loyalty {#loyalty}
       - [Capillary Streaming-gebeurtenissen](connectors/loyalty/capillary.md)
-      - [Kobie](connectors/loyalty/kobie.md)
+      - [Kobie](tutorials/ui/create/loyalty/kobie-streaming.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Marketing automatiseren {#marketing-automation}
       - [Braze huidige](connectors/marketing-automation/braze.md)
@@ -134,7 +134,7 @@ ht-degree: 7%
       - Advertising {#advertising}
          - [Google Adds](tutorials/api/create/advertising/ads.md)
          - [Pinterest Adds](tutorials/api/create/advertising/pinterest-ads.md)
-      - Analytics {#analytics}
+      - Analyse {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
       - Cloud-opslag {#cloud-storage}
@@ -254,7 +254,7 @@ ht-degree: 7%
       - Advertising {#advertising}
          - [Google Adds](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Adds](tutorials/ui/create/advertising/pinterest-ads.md)
-      - Analytics {#analytics}
+      - Analyse {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
          - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
@@ -320,11 +320,9 @@ ht-degree: 7%
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
-         - [&#x200B; Lokale dossier uploadt &#x200B;](tutorials/ui/create/local-system/local-file-upload.md)
+         - [ Lokale dossier uploadt ](tutorials/ui/create/local-system/local-file-upload.md)
       - Loyalty {#loyalty}
          - [Capillary Streaming-gebeurtenissen](tutorials/ui/create/loyalty/capillary.md)
-         - [Kobie (batch)](tutorials/ui/create/loyalty/kobie-batch.md)
-         - [Kobie (streaming)](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Marketing automatiseren {#marketing-automation}
@@ -411,5 +409,5 @@ ht-degree: 7%
 - [Meldingen voor stroomuitvoering](notifications.md)
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
-- [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [API-referentie](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [Opmerkingen bij de release van Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
