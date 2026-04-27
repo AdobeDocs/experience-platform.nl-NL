@@ -410,4 +410,4 @@ ht-degree: 1%
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Opmerkingen bij de release van Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Opmerkingen bij de release van Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
