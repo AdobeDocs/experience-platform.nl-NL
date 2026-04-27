@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding Source-connectors
 user-guide-description: Gegevens uit diverse bronnen verzamelen. Leer hoe u reeds opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 79527635a61a43e2995f08d8c5981cd2030c5840
+source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1115'
 ht-degree: 1%
 
 ---
@@ -104,10 +104,9 @@ ht-degree: 1%
       - [Schopify](connectors/ecommerce/shopify.md)
       - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
-      - [&#x200B; Lokale dossier uploadt schakelaar &#x200B;](connectors/local-system/local-file-upload.md)
+      - [ Lokale dossier uploadt schakelaar ](connectors/local-system/local-file-upload.md)
    - Loyalty {#loyalty}
       - [Capillary Streaming-gebeurtenissen](connectors/loyalty/capillary.md)
-      - [Kobie](tutorials/ui/create/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Marketing automatiseren {#marketing-automation}
       - [Braze huidige](connectors/marketing-automation/braze.md)
@@ -320,9 +319,10 @@ ht-degree: 1%
          - [Schopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
-         - [&#x200B; Lokale dossier uploadt &#x200B;](tutorials/ui/create/local-system/local-file-upload.md)
+         - [ Lokale dossier uploadt ](tutorials/ui/create/local-system/local-file-upload.md)
       - Loyalty {#loyalty}
          - [Capillary Streaming-gebeurtenissen](tutorials/ui/create/loyalty/capillary.md)
+         - [Kobie Streaming Events](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Talon.One Streaming Events](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Marketing automatiseren {#marketing-automation}
@@ -410,4 +410,4 @@ ht-degree: 1%
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
 - [API-referentie](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Opmerkingen bij de release van Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [Opmerkingen bij de release van Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
