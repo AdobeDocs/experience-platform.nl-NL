@@ -72,7 +72,7 @@ Als u de niet-geminiaterde code wilt zien, verwijdert u .min uit de bestandsnaam
 
 Als een extensieontwikkelaar geminificeerde code met de extensie levert, biedt Experience Platform geen niet-geminiateerde code in de niet-geminiateerde build. Op dezelfde manier als een gebruiker van Experience Platform geminificeerde code in een doos van de douanecode zet, wordt die code nog geminiatuurd in niet-geminiateerde bouwstijlen. Experience Platform maakt niets uit.
 
-Voor meer informatie over minificatie, zie [ dit stapelpadartikel ](https://blog.stackpath.com/glossary/minification/).
+Voor meer informatie over minificatie, zie [&#x200B; dit stapelpadartikel &#x200B;](https://blog.stackpath.com/glossary/minification/).
 
 Wanneer het uitvoeren van een bouwstijl zal het eerst de niet-geminiateerde bibliotheek construeren, dan de volledige bibliotheek in één keer minieme.
 
@@ -88,7 +88,7 @@ Bouwt en bouwt details kan van a **bibliotheek** of een **milieu** worden betred
 
 Open in de eigenschap tags de **[!UICONTROL Publishing Flow]** en selecteer een bibliotheek.
 
-![ het Publiceren stroom in de Inzamelingen UI die van Gegevens een bibliotheek benadrukken.](../publishing/images/builds/library.png)
+![&#x200B; het Publiceren stroom in de Inzamelingen UI die van Gegevens een bibliotheek benadrukken.](../publishing/images/builds/library.png)
 
 In het deelvenster Details kunt u het volgende controleren:
 
@@ -99,7 +99,7 @@ In het deelvenster Details kunt u het volgende controleren:
    * **[!UICONTROL Environment]** - De omgeving waarin de build is geïmplementeerd.
    * **[!UICONTROL User]** - Gebruiker die de build heeft gemaakt.
 
-![ details van de Bibliotheek die in het juiste detailspaneel ](../publishing/images/builds/library-details.png) worden getoond
+![&#x200B; details van de Bibliotheek die in het juiste detailspaneel &#x200B;](../publishing/images/builds/library-details.png) worden getoond
 
 ### Builds weergeven vanuit een omgeving
 
@@ -107,11 +107,11 @@ Een build is gekoppeld aan een omgeving en de bibliotheek die aan die omgeving i
 
 Selecteer de **[!UICONTROL Environment]** in het deelvenster Details. In het deelvenster Omgevingsdetails wordt een lijst weergegeven met recente builds, de huidige live build en verwante bibliotheken.
 
-![ het detailspaneel van het Milieu die huidige bouwt benadrukken.](../publishing/images/builds/environment.png)
+![&#x200B; het detailspaneel van het Milieu die huidige bouwt benadrukken.](../publishing/images/builds/environment.png)
 
 Selecteer vervolgens een build om de details ervan te openen. Het bouwstijldetail toont de **Uitbreidingen**, **Elementen van Gegevens**, en **Regels** inbegrepen in die bouwstijl.
 
-![ bouwt details die uitbreidingen, gegevenselementen, en regels benadrukken.](../publishing/images/builds/build.png)
+![&#x200B; bouwt details die uitbreidingen, gegevenselementen, en regels benadrukken.](../publishing/images/builds/build.png)
 
 >[!NOTE]
 >
