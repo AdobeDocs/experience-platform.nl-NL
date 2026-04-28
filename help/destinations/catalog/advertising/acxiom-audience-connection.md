@@ -11,11 +11,11 @@ ht-degree: 2%
 
 # [!DNL Acxiom Audience Connection] doel
 
-Gebruik de [!DNL Acxiom Audience Connection] bestemming om publiek met [!DNL Acxiom] [ Echte ID™ ](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren. Vervolgens activeert u deze soorten publiek op verschillende platformen, zoals [!DNL Altice] , [!DNL Ampersand] , [!DNL Comcast] en meer.
+Gebruik de [!DNL Acxiom Audience Connection] bestemming om publiek met [!DNL Acxiom] [&#x200B; Echte ID™ &#x200B;](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren. Vervolgens activeert u deze soorten publiek op verschillende platformen, zoals [!DNL Altice] , [!DNL Ampersand] , [!DNL Comcast] en meer.
 
 >[!NOTE]
 >
->Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Acxiom] . Voor om het even welke onderzoeken of updateverzoeken, contact [!DNL Acxiom] direct in [ acxiom-adobe-help@acxiom.com ](mailto:acxiom-adobe-help@acxiom.com).
+>Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Acxiom] . Voor om het even welke onderzoeken of updateverzoeken, contact [!DNL Acxiom] direct in [&#x200B; acxiom-adobe-help@acxiom.com &#x200B;](mailto:acxiom-adobe-help@acxiom.com).
 
 Voer de volgende stappen uit om een [!DNL Acxiom Audience Connection] doelconnector te maken met behulp van de gebruikersinterface van [!DNL Adobe Experience Platform] . Gebruik deze schakelaar om publiek aan geselecteerde bestemmingen te bouwen en te verspreiden.
 
@@ -34,7 +34,7 @@ Zo is de afdeling Marketing Operations van een wereldwijd merk voor financiële 
 Voordat u het doel van [!DNL Acxiom Audience Connection] configureert, moet u aan de volgende voorwaarden voldoen.
 
 * **Bevestig termijnen van gebruik:** lees en onderteken [!DNL Acxiom] de Overeenkomst van het Gebruik van de Voorwaarden. U ontvangt de koppeling naar de overeenkomst zodra de uitgevoerde verkooporder is voltooid. Totdat u de overeenkomst ondertekent, wordt de [!DNL Acxiom Audience Connection] -doelkaart niet weergegeven in de [!DNL Experience Platform] -doelcatalogus. Nadat u de overeenkomst hebt geaccepteerd en ondertekend, voltooit [!DNL Adobe] de installatie en wordt de [!DNL Acxiom Audience Connection] -doelkaart zichtbaar.
-* **weet uw [!DNL Adobe] organisatie identiteitskaart:** Uw [!DNL Adobe] organisatie identiteitskaart is nodig om uw Overeenkomst van het Gebruik te voltooien. Zie *Organisaties van 0} {in Experience Cloud* onderwerp voor details op hoe te [ uw organisatie identiteitskaart ](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) bekijken.[!DNL Adobe]
+* **weet uw [!DNL Adobe] organisatie identiteitskaart:** Uw [!DNL Adobe] organisatie identiteitskaart is nodig om uw Overeenkomst van het Gebruik te voltooien. Zie *Organisaties van 0&rbrace; &lbrace;in Experience Cloud* onderwerp voor details op hoe te [&#x200B; uw organisatie identiteitskaart &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) bekijken.[!DNL Adobe]
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -42,8 +42,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 | --------- | ---------- | ---------- |
-| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de [!DNL Experience Platform] [ Dienst van de Segmentatie ](/help/segmentation/home.md). |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li>de douane uploadt publiek [ ingevoerde ](/help/segmentation/ui/audience-portal.md#import-audience) in [!DNL Experience Platform] van Csv- dossiers,</li><li>gelijksoortige doelgroepen,</li><li>federaal publiek,</li><li>publiek dat wordt gegenereerd in andere [!DNL Experience Platform] -toepassingen, zoals [!DNL Adobe Journey Optimizer] ,</li><li>en meer.</li></ul> |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de [!DNL Experience Platform] [&#x200B; Dienst van de Segmentatie &#x200B;](/help/segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li>de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](/help/segmentation/ui/audience-portal.md#import-audience) in [!DNL Experience Platform] van Csv- dossiers,</li><li>gelijksoortige doelgroepen,</li><li>federaal publiek,</li><li>publiek dat wordt gegenereerd in andere [!DNL Experience Platform] -toepassingen, zoals [!DNL Adobe Journey Optimizer] ,</li><li>en meer.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -53,10 +53,10 @@ In de volgende tabel wordt beschreven welke soorten publieksgegevens u naar dit 
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 | -------------------- | ----------- | ------------- | ----------- |
-| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantprofielen. Gebruik deze om specifieke groepen mensen te kiezen voor marketingcampagnes. | Frequente kopers, winkeliers |
-| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantprofielen. Gebruik deze om specifieke groepen mensen te kiezen voor marketingcampagnes. | Frequente kopers, winkeliers |
+| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ In de volgende tabel staan het exporttype en de exportfrequentie van de bestemmi
 | Item | Type | Notities |
 | ---- | ---- | ----- |
 | Exporttype | **[!UICONTROL Audience export]** | Exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL Acxiom Audience Connection] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [&#x200B; partij op dossier-gebaseerde bestemmingen &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ Activeer het publiek naar de volgende platformen via de bestemming [!DNL Acxiom 
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
 ## Doelspecifieke instellingen {#destination-settings}
 
@@ -105,7 +105,7 @@ Om details voor de bestemming te vormen, voltooi de volgende gebieden.
 
 * **[!UICONTROL Publisher Account ID]** : Voer de uitgevers-account-id in die aan dit doel is gekoppeld.
 
-  ![ Schermafbeelding van het [!DNL Amazon] paneel van bestemmingsdetails die het gebied van identiteitskaart van de Rekening van de Uitgever tonen.](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png){zoomable="yes"}
+  ![&#x200B; Schermafbeelding van het [!DNL Amazon] paneel van bestemmingsdetails die het gebied van identiteitskaart van de Rekening van de Uitgever tonen.](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png){zoomable="yes"}
 
 ### [!DNL Facebook] {#facebook}
 
@@ -113,7 +113,7 @@ Om details voor de bestemming te vormen, voltooi de volgende gebieden.
 
 * **[!UICONTROL Destination Account ID]** : Voer de id van de doelaccount voor deze bestemming in.
 
-  ![ Schermafbeelding van het [!DNL Facebook] paneel dat van bestemmingsdetails het gebied van identiteitskaart van de Rekening van de Bestemming toont.](../../assets/catalog/advertising/acxiom-audience-distribution/facebook_destination_details.png){zoomable="yes"}
+  ![&#x200B; Schermafbeelding van het [!DNL Facebook] paneel dat van bestemmingsdetails het gebied van identiteitskaart van de Rekening van de Bestemming toont.](../../assets/catalog/advertising/acxiom-audience-distribution/facebook_destination_details.png){zoomable="yes"}
 
 ### [!DNL LG Ads] {#lg-ads}
 
@@ -121,7 +121,7 @@ Om details voor de bestemming te vormen, voltooi de volgende gebieden.
 
 * **[!UICONTROL Segment Category]** : De doelcategorie of -verticaal waar uw segment in valt. Voorbeeld: financiële diensten, auto&#39;s of gezondheid.
 
-  ![ Schermafbeelding van het [!DNL LG Ads] paneel dat van bestemmingsdetails het gebied van de Categorie van het Segment toont.](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png){zoomable="yes"}
+  ![&#x200B; Schermafbeelding van het [!DNL LG Ads] paneel dat van bestemmingsdetails het gebied van de Categorie van het Segment toont.](../../assets/catalog/advertising/acxiom-audience-distribution/lg_ads_destination_details.png){zoomable="yes"}
 
 ### [!DNL Pinterest] {#pinterest}
 
@@ -129,7 +129,7 @@ Om details voor de bestemming te vormen, voltooi de volgende gebieden.
 
 * **[!UICONTROL Destination Account ID]** : Voer de id van de doelaccount voor deze bestemming in.
 
-  ![ Schermafbeelding van het [!DNL Pinterest] paneel dat van bestemmingsdetails het gebied van identiteitskaart van de Rekening van de Bestemming toont.](../../assets/catalog/advertising/acxiom-audience-distribution/pinterest_destination_details.png){zoomable="yes"}
+  ![&#x200B; Schermafbeelding van het [!DNL Pinterest] paneel dat van bestemmingsdetails het gebied van identiteitskaart van de Rekening van de Bestemming toont.](../../assets/catalog/advertising/acxiom-audience-distribution/pinterest_destination_details.png){zoomable="yes"}
 
 ### [!DNL Vizio] {#vizio}
 
@@ -137,16 +137,16 @@ Om details voor de bestemming te vormen, voltooi de volgende gebieden.
 
 * **[!UICONTROL Advertiser Name]** : Voer de naam van de adverteerder voor dit doel in.
 
-  ![ Schermafbeelding van het [!DNL Vizio] paneel dat van bestemmingsdetails het Advertiser gebied van de Naam toont.](../../assets/catalog/advertising/acxiom-audience-distribution/vizio_destination_details.png){zoomable="yes"}
+  ![&#x200B; Schermafbeelding van het [!DNL Vizio] paneel dat van bestemmingsdetails het Advertiser gebied van de Naam toont.](../../assets/catalog/advertising/acxiom-audience-distribution/vizio_destination_details.png){zoomable="yes"}
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
-Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png){width="100" zoomable="yes"}
 
 >[!NOTE]
 >
@@ -180,11 +180,11 @@ De volgende doelvelden worden automatisch vooraf ingevuld in de volgorde die [!D
 
 Voer in de kolom **[!UICONTROL Source Field]** de naam in van elk bronkenmerk dat u wilt toewijzen aan het corresponderende doelveld. Of selecteer **[!UICONTROL Select source field]** om door beschikbare bronvelden te bladeren.
 
-![ het scherm dat van de afbeelding bron en doelgebiedkolommen toont met [!DNL Acxiom] vereiste gebieden die voor de [!DNL Acxiom Audience Connection] bestemming worden voorbevolkt.](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png){zoomable="yes"}
+![&#x200B; het scherm dat van de afbeelding bron en doelgebiedkolommen toont met [!DNL Acxiom] vereiste gebieden die voor de [!DNL Acxiom Audience Connection] bestemming worden voorbevolkt.](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png){zoomable="yes"}
 
 Selecteer **[!UICONTROL Next]** nadat u alle velden hebt toegewezen.
 
-Om een niet-standaardschema te gebruiken, zie de [ gids UI van de Dienst van de Vraag ](/help/query-service/ui/overview.md) om uw gebiedsnamen aan het [!DNL Adobe] standaardschema in kaart te brengen.
+Om een niet-standaardschema te gebruiken, zie de [&#x200B; gids UI van de Dienst van de Vraag &#x200B;](/help/query-service/ui/overview.md) om uw gebiedsnamen aan het [!DNL Adobe] standaardschema in kaart te brengen.
 
 ### Uw bestemming bekijken {#review}
 
@@ -192,7 +192,7 @@ Nadat u alle stappen hebt uitgevoerd, controleert u de status van de doelverbind
 
 Als u tevreden bent met het resultaat, selecteert u **[!UICONTROL Finish]** om uw doel te activeren.
 
-![ herzie uw publieksscherm die de status van de bestemmingsverbinding en geselecteerde publiek tonen.](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png){zoomable="yes"}
+![&#x200B; herzie uw publieksscherm die de status van de bestemmingsverbinding en geselecteerde publiek tonen.](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png){zoomable="yes"}
 
 ## Problemen oplossen {#troubleshooting}
 
@@ -211,4 +211,4 @@ U hebt een publiek geactiveerd voor het geselecteerde doelplatform. Neem vervolg
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
