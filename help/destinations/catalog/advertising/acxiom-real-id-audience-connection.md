@@ -1,155 +1,199 @@
 ---
-title: Audioverbinding van acxiom Real-ID
-description: Gebruik de  [!DNL Acxiom Real ID Audience Connection]  bestemming om publiek met  [!DNL Acxiom's Real ID]  technologie te verbeteren en publiek aan veelvoudige platforms, zoals  [!DNL Altice],  [!DNL Ampersand],  [!DNL Comcast], en meer te activeren.
-exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-source-git-commit: 2be649980ecff5931ae61060ff43f6c98abe16d2
+title: Acxiom Real ID&trade Poortverbinding
+description: Gebruik de  [!DNL Acxiom Real ID&trade; Audience Connection]  bestemming om publiek over platforms zoals  [!DNL Altice] te verbeteren en te activeren,  [!DNL Ampersand], en  [!DNL Comcast].
+source-git-commit: 3aefb36bbf525a5eebe3a9330e25587501167a64
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 3%
+source-wordcount: '1186'
+ht-degree: 0%
 
 ---
 
-# [!DNL Acxiom Real ID Audience Connection]-bestemming
+
+# [!DNL Acxiom Real ID™ Audience Connection] doel
+
+Gebruik de [!DNL Acxiom Real ID Audience Connection] bestemming om publiek met [!DNL Acxiom] [ Echte ID™ ](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren. Vervolgens activeert u deze soorten publiek op verschillende platformen, zoals [!DNL Altice] , [!DNL Ampersand] , [!DNL Comcast] en meer.
 
 >[!NOTE]
 >
->Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Acxiom] . Voor om het even welke onderzoeken of updateverzoeken, direct contactAcxiom [&#x200B; &#x200B;](mailto:acxiom-adobe-help@acxiom.com).
+>Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Acxiom] . Voor om het even welke onderzoeken of updateverzoeken, contact [!DNL Acxiom] direct in [ acxiom-adobe-help@acxiom.com ](mailto:acxiom-adobe-help@acxiom.com).
 
-Gebruik de [!DNL Acxiom Real ID Audience Connection]-bestemming om uw doelgroepen te verbeteren met [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/)-technologie en doelgroepen activeren op meerdere platforms, zoals [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] en meer.
-
-Deze zelfstudie bevat instructies voor het maken van een [!DNL Acxiom Real ID Audience Connection] -doelconnector via de gebruikersinterface van [!DNL Adobe Experience Platform] . Deze schakelaar bouwt en verdeelt publiek aan geselecteerde bestemmingen.
+Voer de volgende stappen uit om een [!DNL Acxiom Real ID Audience Connection] doelconnector te maken met behulp van de gebruikersinterface van [!DNL Adobe Experience Platform] . Gebruik deze schakelaar om publiek aan geselecteerde bestemmingen te bouwen en te verspreiden.
 
 ## Gebruiksscenario&#39;s {#use-cases}
 
-Deze connector ondersteunt clients waarvan de werkelijke identiteit van Acxiom als id in [!DNL Real-Time CDP] is geladen. Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Acxiom Real ID Audience Connection] bestemming zou moeten gebruiken, is hier een geval van het steekproefgebruik dat de klanten van [!DNL Adobe Experience Platform] door deze schakelaar kunnen oplossen.
+Gebruik dit doel als u [!DNL Real ID] van [!DNL Acxiom] als id in [!DNL Real-Time CDP] hebt geladen. De volgende gebruiksgevallen laten zien hoe u het doel van [!DNL Acxiom Real ID Audience Connection] kunt gebruiken.
 
-### Soorten publiek vanuit Experience Platform naar uw Acxiom-account verzenden {#send-audiences}
+### Soorten publiek verzenden vanuit [!DNL Experience Platform] naar uw [!DNL Acxiom] -account {#send-audiences}
 
-Gebruik deze doelconnector als u een marketingprofessional bent die publiek van [!DNL Experience Platform] naar uw [!DNL Acxiom] -account wil sturen voor aanschaf via meerdere kanalen.
+Gebruik deze doelconnector om soorten publiek van [!DNL Experience Platform] naar uw [!DNL Acxiom] -account te verzenden voor aanschaf via meerdere kanalen.
 
-Zo is de afdeling Marketing Operations van een wereldwijd merk voor financiële diensten geïnteresseerd in de aanschaf van klanten via meerdere reclameplatforms via verschillende kanalen. Ze kunnen de doelconnector van [!DNL Acxiom Real ID Audience Connection] gebruiken om een publiek van [!DNL Experience Platform] naar [!DNL Acxiom] te sturen, het publiek met [!DNL Acxiom's Real ID] -technologie te verbeteren en het publiek naar meerdere platforms te activeren, zoals [!DNL Altice] , [!DNL Ampersand], [!DNL Comcast] en meer.
-
+Zo is de afdeling Marketing Operations van een wereldwijd merk voor financiële diensten geïnteresseerd in de aanschaf van klanten via meerdere reclameplatforms via verschillende kanalen. Ze kunnen de doelconnector van [!DNL Acxiom Real ID Audience Connection] gebruiken om een publiek van [!DNL Experience Platform] naar [!DNL Acxiom] te sturen, het publiek te verbeteren met de technologie van [!DNL Acxiom] s [!DNL Real ID] en het publiek te activeren op meerdere platforms, zoals [!DNL Altice] , [!DNL Ampersand] , [!DNL Comcast] en meer.
 
 ## Vereisten {#prerequisites}
 
-* **Bevestig Voorwaarden van Gebruik:** alvorens u een nieuwe [!DNL Acxiom Real ID Audience Connection] bestemming kunt vormen, moet u [!DNL Acxiom's] Overeenkomst van de Voorwaarden van het Gebruik lezen en ondertekenen. U ontvangt de koppeling naar de overeenkomst zodra de uitgevoerde verkooporder is voltooid.
-* **ken uw organisatie-identiteitskaart van Adobe:** Uw [!DNL Adobe] organisatie - identiteitskaart is nodig om uw Voorwaarden van de Overeenkomst van de Gebruiker te voltooien. Zie [!DNL Adobe's] *Organisaties in Experience Cloud* onderwerp voor details op hoe te [&#x200B; uw organisatie identiteitskaart &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) bekijken.
-* **verkrijg vergunning voor [!DNL Acxiom's Real ID] product:** Zodra een vergunning wordt verkregen, maak Echte identiteitskaart van Acxiom beschikbaar binnen [!DNL Real-Time CDP]. Zie [&#x200B; Verbetering van Gegevens van Acxiom &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) voor meer informatie.
+Voordat u het doel van [!DNL Acxiom Real ID Audience Connection] configureert, moet u aan de volgende voorwaarden voldoen.
 
+* **Bevestig termijnen van gebruik:** lees en onderteken [!DNL Acxiom] de Overeenkomst van het Gebruik van de Voorwaarden. U ontvangt de koppeling naar de overeenkomst zodra de uitgevoerde verkooporder is voltooid. Totdat u de overeenkomst ondertekent, wordt de [!DNL Acxiom Real ID Audience Connection] -doelkaart niet weergegeven in de [!DNL Experience Platform] -doelcatalogus. Nadat u de overeenkomst hebt geaccepteerd en ondertekend, voltooit [!DNL Adobe] de installatie en wordt de [!DNL Acxiom Real ID Audience Connection] -doelkaart zichtbaar.
+* **weet uw [!DNL Adobe] organisatie identiteitskaart:** Uw [!DNL Adobe] organisatie identiteitskaart is nodig om uw Overeenkomst van het Gebruik te voltooien. Zie *Organisaties van 0} {in Experience Cloud* onderwerp voor details op hoe te [ uw organisatie identiteitskaart ](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) bekijken.[!DNL Adobe]
+* **verkrijg een vergunning voor [!DNL Acxiom] [!DNL Real ID] product:** nadat u een vergunning verkrijgt, maak [!DNL Acxiom] [!DNL Real ID] beschikbaar binnen [!DNL Real-Time CDP]. Zie [ Verbetering van Gegevens van Acxiom ](/help/destinations/catalog/data-partner/acxiom-data-enhancement.md) voor details.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Het doel van [!DNL Acxiom's Real ID Audience Connection] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/identity/features/namespaces).
+De [!DNL Real ID] Audience Connection-bestemming van [!DNL Acxiom] ondersteunt de volgende identiteitsbewerkingen. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
-|---------------|----------------|----------------|
-| Real ID | [!DNL Acxiom Real ID] | Selecteer deze doelidentiteit wanneer uw bronidentiteit een Acxiom Real-ID-naamruimte is. |
-| extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
+| --------------- | ----------- | -------------- |
+| [!DNL Real ID] | [!DNL Real ID] | Wijs een bronveld toe aan deze doelidentiteit. Het bronveld kan een [!DNL Acxiom] [!DNL Real ID] of een aangepaste id zijn. |
+
+{style="table-layout:auto"}
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
 In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
-|---------------|----------------|----------------|
-| Segmentatieservice | Ja | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#x200B; &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/home). |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
+| --------------- | --------- | ----------- |
+| [!DNL Segmentation Service] | Ja | Het publiek produceerde door de [!DNL Experience Platform] [ Dienst van de Segmentatie ](/help/segmentation/home.md). |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li>de douane uploadt publiek [ ingevoerde ](/help/segmentation/ui/audience-portal.md#import-audience) in [!DNL Experience Platform] van Csv- dossiers,</li><li>gelijksoortige doelgroepen,</li><li>federaal publiek,</li><li>publiek dat wordt gegenereerd in andere [!DNL Experience Platform] -toepassingen, zoals [!DNL Adobe Journey Optimizer] ,</li><li>en meer.</li></ul> |
 
 {style="table-layout:auto"}
 
-Ondersteund publiek per type publieksgegevens:
+### Ondersteunde doelgroepen per gegevenstype {#supported-audiences-data-type}
+
+In de volgende tabel wordt beschreven welke soorten publieksgegevens u naar dit doel kunt exporteren.
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
-|--------------------|-----------|-------------|-----------|
-| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
-| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| -------------------- | --------- | ----------- | --------- |
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantprofielen. Gebruik deze om specifieke groepen mensen te kiezen voor marketingcampagnes. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+
+{style="table-layout:auto"}
+
+## Type en frequentie exporteren {#export-type-frequency}
+
+In de volgende tabel staan het exporttype en de exportfrequentie van de bestemming.
+
+| Item | Type | Notities |
+| ---- | ---- | ----- |
+| Exporttype | **[!UICONTROL Audience export]** | Exporteert alle leden van een publiek met de id&#39;s die in het doel [!DNL Acxiom Real ID Audience Connection] worden gebruikt. |
+| Exportfrequentie | **[!UICONTROL Batch]** | De bestemmingen van de partij voeren dossiers naar stroomafwaartse platforms in toename van drie, zes, acht, twaalf, of 24 uren uit. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
 ## Ondersteunde doelen {#supported-destinations}
 
-Het doel van [!DNL Acxiom's Real ID Audience Connection] ondersteunt momenteel activering van het publiek voor de volgende platforms.
+Activeer het publiek naar de volgende platformen via de bestemming [!DNL Acxiom Real ID Audience Connection] .
 
 * [!DNL Altice]
+* [[!DNL Amazon]](#amazon)
 * [!DNL Ampersand]
 * [!DNL Comcast]
 * [!DNL Cox]
+* [[!DNL Facebook]](#facebook)
 * [[!DNL LG Ads]](#lg-ads)
+* [[!DNL Pinterest]](#pinterest)
 * [!DNL Spectrum]
 * [!DNL Viant]
+* [[!DNL Vizio]](#vizio)
 
 ## Verbinden met de bestemming {#connect}
 
-Verificatie naar [!DNL Acxiom's Real ID Audience Connection] -doel wordt automatisch achter de schermen afgehandeld, voor uw gemak.
+[!DNL Experience Platform] handelt verificatie automatisch af voor uw [!DNL Acxiom Real ID Audience Connection] -doel.
+
+>[!IMPORTANT]
+>
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
 ## Doelspecifieke instellingen {#destination-settings}
 
-Voor sommige [!DNL Acxiom Real ID Audience Connection] -doelen is aanvullende informatie vereist. In de onderstaande secties vindt u gedetailleerde informatie over het configureren van deze opties.
+Voor sommige [!DNL Acxiom Real ID Audience Connection] -doelen is aanvullende informatie vereist. De volgende secties verstrekken gedetailleerde begeleiding op hoe te om deze opties te vormen.
+
+### [!DNL Amazon] {#amazon}
+
+Om details voor de bestemming te vormen, voltooi de volgende gebieden.
+
+* **[!UICONTROL Publisher Account ID]** : Voer de uitgevers-account-id in die aan dit doel is gekoppeld.
+
+  ![ Schermafbeelding van het [!DNL Amazon] paneel van bestemmingsdetails die het gebied van identiteitskaart van de Rekening van de Uitgever tonen.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_amazon_destination_details.png){zoomable="yes"}
+
+### [!DNL Facebook] {#facebook}
+
+Om details voor de bestemming te vormen, voltooi de volgende gebieden.
+
+* **[!UICONTROL Destination Account ID]** : Voer de id van de doelaccount voor deze bestemming in.
+
+  ![ Schermafbeelding van het [!DNL Facebook] paneel dat van bestemmingsdetails het gebied van identiteitskaart van de Rekening van de Bestemming toont.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_facebook_destination_details.png){zoomable="yes"}
 
 ### [!DNL LG Ads] {#lg-ads}
 
-Vul de onderstaande velden in om details voor de bestemming te configureren.
+Om details voor de bestemming te vormen, voltooi de volgende gebieden.
 
-* **Categorie van het Segment**: De doelcategorie of verticaal dat uw segment in valt. Voorbeeld: financiële diensten, auto&#39;s, gezondheid, enz.
+* **[!UICONTROL Segment Category]** : De doelcategorie of -verticaal waar uw segment in valt. Voorbeeld: financiële diensten, auto&#39;s of gezondheid.
 
-![&#x200B; LG voegt bestemmingsdetails &#x200B;](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_lg_ads_destination_details.png) toe
+  ![ Schermafbeelding van het [!DNL LG Ads] paneel dat van bestemmingsdetails het gebied van de Categorie van het Segment toont.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_lg_ads_destination_details.png){zoomable="yes"}
 
+### [!DNL Pinterest] {#pinterest}
+
+Om details voor de bestemming te vormen, voltooi de volgende gebieden.
+
+* **[!UICONTROL Destination Account ID]** : Voer de id van de doelaccount voor deze bestemming in.
+
+  ![ Schermafbeelding van het [!DNL Pinterest] paneel dat van bestemmingsdetails het gebied van identiteitskaart van de Rekening van de Bestemming toont.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_pinterest_destination_details.png){zoomable="yes"}
+
+### [!DNL Vizio] {#vizio}
+
+Om details voor de bestemming te vormen, voltooi de volgende gebieden.
+
+* **[!UICONTROL Advertiser Name]** : Voer de naam van de adverteerder voor dit doel in.
+
+  ![ Schermafbeelding van het [!DNL Vizio] paneel dat van bestemmingsdetails het Advertiser gebied van de Naam toont.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_vizio_destination_details.png){zoomable="yes"}
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
+Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+
 >[!IMPORTANT]
-> 
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
-
-
-
-Lees [&#x200B; activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) voor instructies bij het activeren van publiek aan deze bestemming.
+>
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png){width="100" zoomable="yes"}
 
 >[!NOTE]
 >
 >Het doel [!DNL Acxiom Real ID Audience Connection] ondersteunt alleen het exporteren van volledige bestanden.
 
-
 ### Kenmerken en identiteiten toewijzen {#map}
 
-Als u wilt dat het doel van [!DNL Acxiom Real ID Audience Connection] de publieksgegevens correct ontvangt, moet u het bronveld van Experience Platform toewijzen aan het juiste doelveld van [!DNL Acxiom Real ID Audience Connection] .
+Wijs het bronveld van [!DNL Experience Platform] toe aan het juiste doelveld [!DNL Acxiom Real ID Audience Connection] zodat het doel van [!DNL Acxiom Real ID Audience Connection] de publieksgegevens correct kan ontvangen.
 
-[!DNL Acxiom Real ID Audience Connection] staat alleen toewijzing aan het volgende doelveld toe.
+Het doelveld **[!UICONTROL Real ID]** wordt automatisch vooraf ingevuld in de toewijzingsstap. Wijs het bronveld toe: Een aangepaste id-naamruimte of een werkelijke [!DNL Acxiom] [!DNL Real ID] die is opgeslagen in uw profielschema.
 
 | Veldnaam | Beschrijving | Vereist |
-|--------------------|------------|--------|
-| Real ID | Een Real ID is een unieke 36-byte alfa-numerieke id (ID) uit de gedeponeerde identiteitsresolutiegrafiek van Acxiom, vergelijkbaar met een primaire sleutel voor een relationele database. Het is een id die een persoon, huishouden of adres vertegenwoordigt. | Ja |
+| ---------- | ----------- | -------- |
+| [!DNL Real ID] | Een [!DNL Real ID] is een unieke alfanumerieke id van 36 bytes uit de grafiek met de resolutie van uw identiteit van [!DNL Acxiom] . Het is een id die een persoon, huishouden of adres vertegenwoordigt. | Ja |
 
 {style="table-layout:auto"}
 
-Voer in de kolom **[!UICONTROL Source Field]** de naam in van het bronkenmerk dat u wilt toewijzen aan het corresponderende doelveld, of selecteer het pijlpictogram om het **[!UICONTROL Select source field]** -scherm te openen. Selecteer vervolgens **[!UICONTROL Next]** .
-![&#x200B; het scherm van de Toewijzing &#x200B;](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
+Voer in de kolom **[!UICONTROL Source Field]** de naam in van het bronkenmerk dat u wilt toewijzen aan het doelveld van **[!UICONTROL Real ID]** . Of selecteer **[!UICONTROL Select source field]** om door beschikbare bronvelden te bladeren. Selecteer vervolgens **[!UICONTROL Next]** .
 
+![ Schermafbeelding van het kaartscherm die de [!UICONTROL Source Field] kolom en het [!UICONTROL Select source field] paneel tonen.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png){zoomable="yes"}
 
-Als u niet [!DNL Adobe's] standaardschema gebruikt, zie de [&#x200B; gids UI van de Dienst van de Vraag &#x200B;](../../../query-service/ui/overview.md) documentatie voor informatie over hoe te om de vraagdienst te gebruiken om het [!DNL Adobe] standaardschema met uw gebiedsnamen te bevolken.
+Als u niet het standaardschema van [!DNL Adobe] gebruikt, zie de [ gids UI van de Dienst van de Vraag ](/help/query-service/ui/overview.md) om het [!DNL Adobe] standaardschema met uw gebiedsnamen te bevolken.
 
+### Uw bestemming bekijken {#review}
 
-### Controleren {#review}
+Nadat u alle stappen hebt uitgevoerd, controleert u de status van de doelverbinding en de publieksgegevens voordat u deze activeert. Het geselecteerde publiek verschijnt in een lijst. Elk publiek is een aparte aanroep van de [!DNL Acxiom Real ID Audience Connection] API.
 
-Nadat u alle bovenstaande stappen hebt uitgevoerd, hebt u de gelegenheid om de status en de publieksgegevens van uw doelverbinding te bekijken voordat u deze activeert (verspreidt). Het geselecteerde publiek wordt onder in een lijst weergegeven. Elk publiek zal een afzonderlijke vraag aan [!DNL Acxiom Real ID Audience Connection] API zijn.
+Wanneer de resultaten er goed uitzien, selecteert u **[!UICONTROL Finish]** om de bestemming te activeren.
 
-Als u tevreden bent met de resultaten, selecteert u **[!UICONTROL Finish]** om uw bestemming te activeren.
-
-![&#x200B; herzie uw publiek &#x200B;](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_review_audience.png)
-
-
-## Gegevensgebruik en -beheer {#data-usage-governance}
-
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-platform/data-governance/home).
+![ Schermafbeelding van het scherm van het Overzicht die de status van de bestemmingsverbinding en de geselecteerde soorten publiek tonen vóór activering.](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_review_audience.png){zoomable="yes"}
 
 ## Problemen oplossen {#troubleshooting}
 
 Als uw doelvertegenwoordiger uw publiek niet kan vinden, neemt u contact op met uw [!DNL Adobe] -vertegenwoordiger voor hulp.
 
-U moet de volgende informatie aan uw [!DNL Adobe] vertegenwoordiger verstrekken:
+Geef de volgende informatie op aan uw [!DNL Adobe] vertegenwoordiger:
 
 * Naam publiek
 * Doelnaam
@@ -159,3 +203,7 @@ U moet de volgende informatie aan uw [!DNL Adobe] vertegenwoordiger verstrekken:
 ## Volgende stappen {#next-steps}
 
 U hebt een publiek geactiveerd voor het geselecteerde doelplatform. Neem vervolgens contact op met de vertegenwoordiger van het doelplatform om uw campagne in te stellen.
+
+## Gegevensgebruik en -beheer {#data-usage-governance}
+
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
