@@ -1,19 +1,19 @@
 ---
 audience: user
-user-guide-title: Handleiding voor bestemmingen
-user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en meer.
+user-guide-title: Doelgids
+user-guide-description: Activeer uw bekende en onbekende gegevens voor publicatiecampagnes voor meerdere kanalen, e-mailcampagnes, gerichte advertenties en nog veel meer.
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+source-git-commit: 343f9e9fa01b06196106126235508059836e391c
 workflow-type: tm+mt
-source-wordcount: '1345'
-ht-degree: 2%
+source-wordcount: '1413'
+ht-degree: 0%
 
 ---
 
 
-# Bestemmingen {#destinations}
+# Doelen {#destinations}
 
 * [Overzicht van doelen](./home.md)
 * [Doeltypen en -categorieën](./destination-types.md)
@@ -24,7 +24,7 @@ ht-degree: 2%
    * [Identiteitsverwerking in de workflow voor doelactivering](./how-destinations-work/identity-handling.md)
    * [Levenscyclus van het publiek in het stromen bestemmingen](./how-destinations-work/audience-lifecycle-streaming-destinations.md)
 * API-zelfstudies {#api}
-   * [&#x200B; activeer gegevens aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [ activeer gegevens aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken ](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
    * [Verbind met op dossier-gebaseerde e-mailmarketing bestemmingen en activeer gegevens gebruikend de Dienst API van de Stroom](./api/connect-activate-batch-destinations.md)
    * [Het publiek activeren naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
@@ -33,7 +33,7 @@ ht-degree: 2%
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
    * [Doelgegevens verwijderen](./api/delete-destination-dataflow.md)
    * [Gegevensbestanden exporteren](/help/destinations/api/export-datasets.md)
-   * [&#x200B; Soort en filter API reacties voor bestemmingen &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=nl-NL#use-cases)
+   * [ Soort en filter API reacties voor bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI-hulplijnen {#ui}
    * [Werkruimte Doelen](./ui/destinations-workspace.md)
    * [Een nieuwe doelverbinding maken](./ui/connect-destination.md)
@@ -71,8 +71,8 @@ ht-degree: 2%
       * [(Verouderd) (V2) Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
       * [Marketo Engage Person Sync verbinding](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
-      * [&#x200B; het publiek dat van Experience Platform  deelt](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL)
-      * [&#x200B; Federated de verbinding van de Samenstelling van het publiek &#x200B;](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [Experience Platform-publiek delen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Federale verbinding Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising-bestemmingen{#advertising}
       * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
       * [Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
@@ -94,7 +94,7 @@ ht-degree: 2%
       * [DoubleClick Floodlight-extensie (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook Pixel Extension](./catalog/advertising/facebook-pixel.md)
       * [OneTag-extensie knipperen](./catalog/advertising/flashtalking.md)
-      * {hide-from-toc}[&#x200B; (Beta) FreeWheel-verbinding &#x200B;](./catalog/advertising/freewheel.md)
+      * {hide-from-toc}[ (Beta) FreeWheel-verbinding ](./catalog/advertising/freewheel.md)
       * [Google Ads-verbinding](./catalog/advertising/google-ads-destination.md)
       * [Google Ad Manager-verbinding](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360-verbinding](./catalog/advertising/google-ad-manager-360-connection.md)
@@ -116,6 +116,7 @@ ht-degree: 2%
       * [Pinterest-verbindingsupgrade](./catalog/advertising/pinterest-upgrade.md)
       * [PubMatic Connect-verbinding](./catalog/advertising/pubmatic.md)
       * [(Beta) Aangepaste Audience-verbinding bewerken](./catalog/advertising/reddit-custom-audience.md)
+      * [Rokt-verbinding](./catalog/advertising/rokt.md)
       * [Verbinding Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
       * [De Trade Desk CRM-verbinding](./catalog/advertising/tradedesk-emails.md)
@@ -192,7 +193,7 @@ ht-degree: 2%
    * Extensies labelen {#launch-extensions}
       * [Overzicht van de extensie Tag](./catalog/launch-extensions/overview.md)
    * Marketing automatiseren {#marketing-automation}
-      * [&#x200B; Profielen van de Deelnemer RainFocus &#x200B;](/help/destinations/catalog/marketing-automation/rainfocus.md)
+      * [ Profielen van de Deelnemer RainFocus ](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * Mobiele betrokkenheidsdoelen {#mobile-engagement}
       * [Overzicht van mobiele betrokkenheidsdoelen](./catalog/mobile-engagement/overview.md)
       * [Koppeling met kenmerken van het luchtschip](./catalog/mobile-engagement/airship-attributes.md)
@@ -223,7 +224,7 @@ ht-degree: 2%
       * [(Bedrijven) LinkedIn-verbinding voor passend publiek](./catalog/social/linkedin-b2b.md)
       * [Verbinding LinkedIn met soorten publiek](./catalog/social/linkedin.md)
       * [TikTok-verbinding](./catalog/social/tiktok.md)
-      * [[!DNL Twitter Custom Audiences]-verbinding](./catalog/social/twitter.md)
+      * [[!DNL Twitter Custom Audiences] verbinding](./catalog/social/twitter.md)
    * Streaming doelen {#streaming}
       * [HTTP API-verbinding](./catalog/streaming/http-destination.md)
       * [IP adres lijst van gewenste personen voor het stromen bestemmingen](./catalog/streaming/ip-address-allow-list.md)
@@ -248,7 +249,7 @@ ht-degree: 2%
    * [Overzicht](./destination-sdk/overview.md)
    * [Integratievereisten](./destination-sdk/integration-prerequisites.md)
    * [Aan de slag met Destination SDK](./destination-sdk/getting-started.md)
-   * [Woordenlijst](/help/destinations/destination-sdk/glossary.md)
+   * [Verklarende woordenlijst](/help/destinations/destination-sdk/glossary.md)
    * Functionaliteit {#functionality}
       * [Configuratieopties](./destination-sdk/functionality/configuration-options.md)
       * Bestemmingsservercomponenten {#destination-server}
@@ -278,7 +279,7 @@ ht-degree: 2%
       * [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](./destination-sdk/guides/configure-file-based-destination-instructions.md)
       * [Ter controle verzenden naar een bestemming die is geschreven in Destination SDK](./destination-sdk/guides/submit-destination.md)
       * Bestandsgebaseerde doelen configureren {#configure-file-based-destinations}
-         * [&#x200B; vorm dossier het formatteren opties &#x200B;](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [ vorm dossier het formatteren opties ](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [Een Amazon S3-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
          * [Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [Een Azure Blob-opslagbestemming configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
@@ -287,7 +288,7 @@ ht-degree: 2%
          * [Een SFTP-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Vorm een op dossier-gebaseerde bestemming om perspectiefpubliek uit te voeren](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Referentie voor API voor doelontwerp {#authoring-api}
-      * [&#x200B; Destination SDK (Authoring van de Bestemming) API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Referentie voor de Destination SDK-API (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Bestemmingsserverbewerkingen {#server-operations}
          * [Een doelserverconfiguratie maken](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [De configuratie van een doelserver ophalen](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
@@ -317,7 +318,7 @@ ht-degree: 2%
          * [Streaming doel testen met voorbeeldprofielen](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [Een sjabloon voor berichttransformatie maken en testen](./destination-sdk/testing-api/streaming-destinations/create-template.md)
       * API voor doeltesten op basis van bestanden {#batch-destinations}
-         * [&#x200B; Op dossier-gebaseerde bestemming het testen API overzicht &#x200B;](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+         * [ Op dossier-gebaseerde bestemming het testen API overzicht ](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
          * [Voorbeeldprofielen genereren op basis van een bronschema](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
          * [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
          * [Gedetailleerde activeringsresultaten weergeven](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
@@ -332,4 +333,4 @@ ht-degree: 2%
       * [Zelfbedieningssjabloon voor documentatie](./destination-sdk/docs-framework/self-service-template.md)
       * [Aanbevolen werkwijzen ontwerpen](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Veelgestelde vragen](./destinations-faq.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Opmerkingen bij de release van Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
