@@ -2,9 +2,9 @@
 title: Builds
 description: Leer meer over het concept van builds en hoe ze binnen Adobe Experience Platform werken.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 5b7e4d350a9e57ab4edf418642131d6bae598618
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Het is een samenstelling van de veranderingen u binnen uw bibliotheek specificee
 
 De build bestaat uit code-bestanden aan de clientzijde die naar elkaar verwijzen. Deze bestanden worden geleverd op de hostlocatie via de omgeving en host die u voor de bibliotheek hebt gekozen. De code die u op uw site implementeert, verwijst naar dezelfde locatie, zodat de bestanden kunnen worden geladen wanneer een gebruiker toegang verkrijgt tot uw site of toepassing.
 
-## Bestandsinhoud
+## Bestandsinhoud {#file-contents}
 
 Een bibliotheek definieert een discrete set tagbronnen (extensies, regels en gegevenselementen) die in de bibliotheek moeten worden opgenomen.
 
@@ -34,7 +34,7 @@ Builds worden verdeeld in het hoofdbibliotheekbestand en mogelijk veel kleinere 
 
 De kleinere bestanden bevatten code en configuratie voor afzonderlijke handelingen die naar wens op de pagina worden geladen. Wanneer een Regel wordt teweeggebracht en zijn Voorwaarden worden geëvalueerd zodat de Acties moeten worden uitgevoerd, worden de noodzakelijke code en de configuratie voor die specifieke actie teruggewonnen van één van de kleinere dossiers. Dit betekent dat alleen de code die nodig is om de vereiste handelingen uit te voeren, ooit op de pagina wordt geladen, waardoor de hoofdbibliotheek zo klein mogelijk wordt.
 
-## Bestandsindeling
+## Bestandsindeling {#file-format}
 
 De standaardbestandsindeling voor builds is een pakket bestanden met alle vereiste code voor extensies, gegevenselementen en regels die op de gewenste manier worden uitgevoerd.
 
@@ -48,7 +48,7 @@ Ongeacht de bestandsindeling wordt de build altijd geleverd op de locatie die do
 
 Om een bouwstijl te voltooien, selecteer een bibliotheek en selecteer de optie van de Bouwstijl die op dat niveau van het het publiceren proces beschikbaar is (Bouwstijl voor Ontwikkeling, Bouwstijl voor het Opvoeren, etc.
 
-## Miniatuur
+## Miniatuur {#minification}
 
 Minificatie verlaagt de bandbreedtekosten en verbetert de snelheid door gegevens te verwijderen die niet vereist zijn voor uitvoering vanuit een bestand.
 
@@ -72,6 +72,49 @@ Als u de niet-geminiaterde code wilt zien, verwijdert u .min uit de bestandsnaam
 
 Als een extensieontwikkelaar geminificeerde code met de extensie levert, biedt Experience Platform geen niet-geminiateerde code in de niet-geminiateerde build. Op dezelfde manier als een gebruiker van Experience Platform geminificeerde code in een doos van de douanecode zet, wordt die code nog geminiatuurd in niet-geminiateerde bouwstijlen. Experience Platform maakt niets uit.
 
-Voor meer informatie over minificatie, zie [&#x200B; dit stapelpadartikel &#x200B;](https://blog.stackpath.com/glossary/minification/).
+Voor meer informatie over minificatie, zie [ dit stapelpadartikel ](https://blog.stackpath.com/glossary/minification/).
 
 Wanneer het uitvoeren van een bouwstijl zal het eerst de niet-geminiateerde bibliotheek construeren, dan de volledige bibliotheek in één keer minieme.
+
+## Buildgegevens weergeven {#build-details}
+
+>[!IMPORTANT]
+>
+>Een bibliotheek slaat revisies van uw markeringsmiddelen op, maar a **bouwt** is een punt-in-tijd momentopname van die bibliotheek die de dossiers bevat die aan uw plaats worden geleverd.
+
+Bouwt en bouwt details kan van a **bibliotheek** of een **milieu** worden betreden om huidige levende bouwt te bekijken, en inspecteert wat een bouwstijl bevat (uitbreidingen, gegevenselementen, en regels).
+
+### Build-details weergeven vanuit een bibliotheek
+
+Open in de eigenschap tags de **[!UICONTROL Publishing Flow]** en selecteer een bibliotheek.
+
+![ het Publiceren stroom in de Inzamelingen UI die van Gegevens een bibliotheek benadrukken.](../publishing/images/builds/library.png)
+
+In het deelvenster Details kunt u het volgende controleren:
+
+* **[!UICONTROL Last Build Environment]** — Koppeling naar de omgeving die de laatste build heeft ontvangen. Wijst erop of deze bibliotheek de huidige bouwstijl voor dat milieu (**Huidige** of **niet huidig**) is.
+* **[!UICONTROL Current Builds]** — Bouwstenen die momenteel op hun milieu&#39;s leven. Voor gepubliceerde bibliotheken wordt de live productiebuild in deze sectie aangegeven door het pictogram met de bliksemflits.
+* Voor elke vermelde build kunt u het volgende weergeven:
+   * **[!UICONTROL Status]** - Toen de build werd gemaakt.
+   * **[!UICONTROL Environment]** - De omgeving waarin de build is geïmplementeerd.
+   * **[!UICONTROL User]** - Gebruiker die de build heeft gemaakt.
+
+![ details van de Bibliotheek die in het juiste detailspaneel ](../publishing/images/builds/library-details.png) worden getoond
+
+### Builds weergeven vanuit een omgeving
+
+Een build is gekoppeld aan een omgeving en de bibliotheek die aan die omgeving is gebouwd. De bouwstijl is wat eigenlijk de gecompileerde middelen bevat.
+
+Selecteer de **[!UICONTROL Environment]** in het deelvenster Details. In het deelvenster Omgevingsdetails wordt een lijst weergegeven met recente builds, de huidige live build en verwante bibliotheken.
+
+![ het detailspaneel van het Milieu die huidige bouwt benadrukken.](../publishing/images/builds/environment.png)
+
+Selecteer vervolgens een build om de details ervan te openen. Het bouwstijldetail toont de **Uitbreidingen**, **Elementen van Gegevens**, en **Regels** inbegrepen in die bouwstijl.
+
+![ bouwt details die uitbreidingen, gegevenselementen, en regels benadrukken.](../publishing/images/builds/build.png)
+
+>[!NOTE]
+>
+>Een build kan meer bevatten dan alleen de bronnen die in de bibliotheek worden vermeld. De **Uitbreidingen**, **Elementen van Gegevens**, en **Regels** verpakt in de bouwstijl omvatten de inhoud van de bibliotheek evenals stroomopwaartse inhoud. Het is de volledige momentopname die aan de plaats of app wordt gepubliceerd.
+
+In het deelvenster Details navigeert u terug naar de map **[!UICONTROL Environment]** of **[!UICONTROL Library]** .
