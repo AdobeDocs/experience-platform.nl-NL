@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[[!DNL Rokt] ](https://www.rokt.com) ontgrendelt waarde in e-commerce gebruikend AI-gedreven real-time besluitvorming om elke Transactie Moment™ relevanter te maken. Het biedt persoonlijke ervaringen en verbindt adverteerders met klanten met hoge bedoelingen. Verbind [!DNL Adobe Experience Platform] publiek met [!DNL Rokt] om campagneprestaties door slimmer richten, onderdrukking, en verpersoonlijking te verbeteren. Bereik de juiste klanten op het juiste moment en verlaag de verspilde uitgaven.
+[[!DNL Rokt] &#x200B;](https://www.rokt.com) ontgrendelt waarde in e-commerce gebruikend AI-gedreven real-time besluitvorming om elke Transactie Moment™ relevanter te maken. Het biedt persoonlijke ervaringen en verbindt adverteerders met klanten met hoge bedoelingen. Verbind [!DNL Adobe Experience Platform] publiek met [!DNL Rokt] om campagneprestaties door slimmer richten, onderdrukking, en verpersoonlijking te verbeteren. Bereik de juiste klanten op het juiste moment en verlaag de verspilde uitgaven.
 
 >[!IMPORTANT]
 >
@@ -35,14 +35,14 @@ Voorkom verspilde uitgaven en irrelevante ervaringen door het publiek te onderdr
 
 Voordat u de [!DNL Rokt] bestemming instelt in [!DNL Adobe Experience Platform] , moet u de volgende referenties aanvragen bij uw **[!DNL Rokt]accountmanager** :
 
-* **API Sleutel**: gebruik dit als **[!UICONTROL Username]** wanneer [ het voor authentiek verklaren van de bestemmingsverbinding ](#authenticate).
-* **API Geheim**: gebruik dit als **[!UICONTROL Password]** wanneer [ het voor authentiek verklaren van de bestemmingsverbinding ](#authenticate).
+* **API Sleutel**: gebruik dit als **[!UICONTROL Username]** wanneer [&#x200B; het voor authentiek verklaren van de bestemmingsverbinding &#x200B;](#authenticate).
+* **API Geheim**: gebruik dit als **[!UICONTROL Password]** wanneer [&#x200B; het voor authentiek verklaren van de bestemmingsverbinding &#x200B;](#authenticate).
 
 Uw accountmanager van [!DNL Rokt] zal deze gegevens op het [!DNL Rokt] -platform beschikbaar stellen voordat u het programma instelt. Neem contact op met uw accountmanager als u deze nog niet hebt ontvangen.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Rokt] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
+[!DNL Rokt] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [&#x200B; identiteiten &#x200B;](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -63,7 +63,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Ja | Soorten publiek dat wordt gegenereerd via de [!DNL Experience Platform] [[!DNL Segmentation Service]](/help/segmentation/home.md) . |
-| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](/help/segmentation/ui/audience-portal.md#import-audience) in [!DNL Experience Platform] van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere [!DNL Experience Platform] -toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
+| Alle andere doelgroepen | Ja | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [&#x200B; diverse publieksoorsprong &#x200B;](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [&#x200B; ingevoerde &#x200B;](/help/segmentation/ui/audience-portal.md#import-audience) in [!DNL Experience Platform] van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere [!DNL Experience Platform] -toepassingen, zoals [!DNL Adobe Journey Optimizer] , </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -71,10 +71,10 @@ Ondersteund publiek per type publieksgegevens:
 
 | Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario&#39;s |
 |--------------------|-----------|-------------|-----------|
-| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantprofielen. Gebruik deze schema&#39;s om specifieke groepen mensen te kiezen voor marketingcampagnes. | Frequente kopers, winkeliers |
-| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
-| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
-| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
+| [&#x200B; het publiek van Mensen &#x200B;](/help/segmentation/types/people-audiences.md) | Ja | Gebaseerd op klantprofielen. Gebruik deze schema&#39;s om specifieke groepen mensen te kiezen voor marketingcampagnes. | Frequente kopers, winkeliers |
+| [&#x200B; publiek van de Rekening &#x200B;](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [&#x200B; Het publiek van het Vooruitzicht &#x200B;](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [&#x200B; de uitvoer van de Dataset &#x200B;](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het [!DNL Adobe Experience Platform] Data Lake. | Rapportage, workflows voor gegevenswetenschap |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 |---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail, telefoon, mobiele advertentie-id of andere) die in de [!DNL Rokt] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in [!DNL Experience Platform] wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar [!DNL Rokt]. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in [!DNL Experience Platform] wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar [!DNL Rokt]. Lees meer over [&#x200B; het stromen bestemmingen &#x200B;](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -93,9 +93,9 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](/help/destinations/ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
+Om met deze bestemming te verbinden, volg de stappen die in het [&#x200B; leerprogramma van de bestemmingsconfiguratie &#x200B;](/help/destinations/ui/connect-destination.md) worden beschreven. In vormen bestemmingswerkschema, vul de gebieden in die in de twee hieronder secties worden vermeld.
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -104,7 +104,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 * **[!UICONTROL Username]** : Uw API-sleutel, verstrekt door uw [!DNL Rokt] accountmanager.
 * **[!UICONTROL Password]** : Uw API-geheim, opgegeven door uw [!DNL Rokt] -accountmanager.
 
-  ![ het [!DNL Rokt] scherm van de bestemmingsconfiguratie in [!DNL Experience Platform], met rekeningsdetails, authentificatievelden, en bestemmingsdetails die worden gevuld.](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
+  ![&#x200B; het [!DNL Rokt] scherm van de bestemmingsconfiguratie in [!DNL Experience Platform], met rekeningsdetails, authentificatievelden, en bestemmingsdetails die worden gevuld.](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -115,7 +115,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
-U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [ het intekenen aan bestemmingsalarm gebruikend UI ](/help/destinations/ui/alerts.md).
+U kunt alarm toelaten om berichten over de status van dataflow aan uw bestemming te ontvangen. Selecteer een waarschuwing in de lijst om u te abonneren op meldingen over de status van uw gegevensstroom. Voor meer informatie over alarm, zie de gids bij [&#x200B; het intekenen aan bestemmingsalarm gebruikend UI &#x200B;](/help/destinations/ui/alerts.md).
 
 Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -123,10 +123,10 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 >[!IMPORTANT]
 >
->* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
+>* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [&#x200B; toegangsbeheertoestemmingen &#x200B;](/help/access-control/home.md#permissions) nodig. Lees het [&#x200B; overzicht van de toegangscontrole &#x200B;](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [&#x200B; toegangsbeheertoestemming &#x200B;](/help/access-control/home.md#permissions) nodig. <br> ![&#x200B; Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [&#x200B; activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
@@ -146,7 +146,7 @@ Het doel [!DNL Rokt] ondersteunt het toewijzen van naamruimten van [!DNL Experie
 
 Hier volgt een voorbeeld van een volledige toewijzing:
 
-![ de afbeeldingsstap van het [!DNL Rokt] werkschema van de bestemmingsactivering in [!DNL Experience Platform], met bron en gevormde gebieden van de doelidentiteit.](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png)
+![&#x200B; de afbeeldingsstap van het [!DNL Rokt] werkschema van de bestemmingsactivering in [!DNL Experience Platform], met bron en gevormde gebieden van de doelidentiteit.](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png)
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ Nadat u de toewijzingsstap hebt voltooid, configureert u een publieksprogramma v
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
+Alle [!DNL Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Experience Platform] gegevensbeheer afdwingt, lees het [&#x200B; overzicht van het Beleid van Gegevens &#x200B;](/help/data-governance/home.md).
 
 ## Aanvullende bronnen {#additional-resources}
 

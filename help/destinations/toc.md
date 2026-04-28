@@ -24,7 +24,7 @@ ht-degree: 0%
    * [Identiteitsverwerking in de workflow voor doelactivering](./how-destinations-work/identity-handling.md)
    * [Levenscyclus van het publiek in het stromen bestemmingen](./how-destinations-work/audience-lifecycle-streaming-destinations.md)
 * API-zelfstudies {#api}
-   * [ activeer gegevens aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken ](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [&#x200B; activeer gegevens aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken &#x200B;](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Verbinding maken met streaming doelen en gegevens activeren met de Flow Service API](./api/streaming-destinations.md)
    * [Verbind met op dossier-gebaseerde e-mailmarketing bestemmingen en activeer gegevens gebruikend de Dienst API van de Stroom](./api/connect-activate-batch-destinations.md)
    * [Het publiek activeren naar batchbestemmingen via de API voor ad-hocactivering](./api/ad-hoc-activation-api.md)
@@ -33,7 +33,7 @@ ht-degree: 0%
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
    * [Doelgegevens verwijderen](./api/delete-destination-dataflow.md)
    * [Gegevensbestanden exporteren](/help/destinations/api/export-datasets.md)
-   * [ Soort en filter API reacties voor bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
+   * [&#x200B; Soort en filter API reacties voor bestemmingen &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI-hulplijnen {#ui}
    * [Werkruimte Doelen](./ui/destinations-workspace.md)
    * [Een nieuwe doelverbinding maken](./ui/connect-destination.md)
@@ -94,7 +94,7 @@ ht-degree: 0%
       * [DoubleClick Floodlight-extensie (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook Pixel Extension](./catalog/advertising/facebook-pixel.md)
       * [OneTag-extensie knipperen](./catalog/advertising/flashtalking.md)
-      * {hide-from-toc}[ (Beta) FreeWheel-verbinding ](./catalog/advertising/freewheel.md)
+      * {hide-from-toc}[&#x200B; (Beta) FreeWheel-verbinding &#x200B;](./catalog/advertising/freewheel.md)
       * [Google Ads-verbinding](./catalog/advertising/google-ads-destination.md)
       * [Google Ad Manager-verbinding](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360-verbinding](./catalog/advertising/google-ad-manager-360-connection.md)
@@ -193,7 +193,7 @@ ht-degree: 0%
    * Extensies labelen {#launch-extensions}
       * [Overzicht van de extensie Tag](./catalog/launch-extensions/overview.md)
    * Marketing automatiseren {#marketing-automation}
-      * [ Profielen van de Deelnemer RainFocus ](/help/destinations/catalog/marketing-automation/rainfocus.md)
+      * [&#x200B; Profielen van de Deelnemer RainFocus &#x200B;](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * Mobiele betrokkenheidsdoelen {#mobile-engagement}
       * [Overzicht van mobiele betrokkenheidsdoelen](./catalog/mobile-engagement/overview.md)
       * [Koppeling met kenmerken van het luchtschip](./catalog/mobile-engagement/airship-attributes.md)
@@ -279,7 +279,7 @@ ht-degree: 0%
       * [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](./destination-sdk/guides/configure-file-based-destination-instructions.md)
       * [Ter controle verzenden naar een bestemming die is geschreven in Destination SDK](./destination-sdk/guides/submit-destination.md)
       * Bestandsgebaseerde doelen configureren {#configure-file-based-destinations}
-         * [ vorm dossier het formatteren opties ](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [&#x200B; vorm dossier het formatteren opties &#x200B;](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [Een Amazon S3-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
          * [Een Amazon S3-bestemming configureren met aangepaste bestandsnaam en opmaakopties](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [Een Azure Blob-opslagbestemming configureren met aangepaste opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
@@ -318,7 +318,7 @@ ht-degree: 0%
          * [Streaming doel testen met voorbeeldprofielen](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [Een sjabloon voor berichttransformatie maken en testen](./destination-sdk/testing-api/streaming-destinations/create-template.md)
       * API voor doeltesten op basis van bestanden {#batch-destinations}
-         * [ Op dossier-gebaseerde bestemming het testen API overzicht ](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+         * [&#x200B; Op dossier-gebaseerde bestemming het testen API overzicht &#x200B;](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
          * [Voorbeeldprofielen genereren op basis van een bronschema](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
          * [Bestandsgebaseerde bestemming testen met voorbeeldprofielen](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
          * [Gedetailleerde activeringsresultaten weergeven](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
