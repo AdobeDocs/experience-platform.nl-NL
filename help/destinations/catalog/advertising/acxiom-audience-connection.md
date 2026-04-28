@@ -34,7 +34,7 @@ Zo is de afdeling Marketing Operations van een wereldwijd merk voor financiële 
 Voordat u het doel van [!DNL Acxiom Audience Connection] configureert, moet u aan de volgende voorwaarden voldoen.
 
 * **Bevestig termijnen van gebruik:** lees en onderteken [!DNL Acxiom] de Overeenkomst van het Gebruik van de Voorwaarden. U ontvangt de koppeling naar de overeenkomst zodra de uitgevoerde verkooporder is voltooid. Totdat u de overeenkomst ondertekent, wordt de [!DNL Acxiom Audience Connection] -doelkaart niet weergegeven in de [!DNL Experience Platform] -doelcatalogus. Nadat u de overeenkomst hebt geaccepteerd en ondertekend, voltooit [!DNL Adobe] de installatie en wordt de [!DNL Acxiom Audience Connection] -doelkaart zichtbaar.
-* **weet uw [!DNL Adobe] organisatie identiteitskaart:** Uw [!DNL Adobe] organisatie identiteitskaart is nodig om uw Overeenkomst van het Gebruik te voltooien. Zie *Organisaties van 0&rbrace; &lbrace;in Experience Cloud* onderwerp voor details op hoe te [&#x200B; uw organisatie identiteitskaart &#x200B;](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) bekijken.[!DNL Adobe]
+* **weet uw [!DNL Adobe] organisatie identiteitskaart:** Uw [!DNL Adobe] organisatie identiteitskaart is nodig om uw Overeenkomst van het Gebruik te voltooien. Zie *Organisaties van 0&rbrace; &lbrace;in Experience Cloud* onderwerp voor details op hoe te [&#x200B; uw organisatie identiteitskaart &#x200B;](https://experienceleague.adobe.com/nl/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255) bekijken.[!DNL Adobe]
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
