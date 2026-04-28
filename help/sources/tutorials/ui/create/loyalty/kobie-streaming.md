@@ -3,15 +3,20 @@ title: Gegevens via de gebruikersinterface streamen van Kobie naar Experience Pl
 description: Leer hoe u gegevens van Kobie naar Adobe Experience Platform kunt streamen met behulp van de gebruikersinterface.
 hide: true
 hidefromtoc: true
+badge: Beta
 exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
-source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
+source-git-commit: 90b197a632a5210c4502094de665cab53b76378b
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
 
 # Gegevens van [!DNL Kobie Streaming Events] naar Experience Platform streamen met de gebruikersinterface
+
+>[!AVAILABILITY]
+>
+>De bron [!DNL Kobie Streaming Events] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [!DNL Kobie Alchemy Loyalty Cloud (KALC)] is een hoogst configureerbaar, veilig, en scalable platform MACH dat zich aan uw loyaliteitsstrategie aanpast - het versnellen van tijd aan waarde, het verbeteren van efficiency, en het beschermen van uw merk met onderneming-rang bestuur. Dankzij naadloze integratie tussen CDP&#39;s, CRM&#39;s, CMS en meer biedt [!DNL KALC] marketers de mogelijkheid om realtime personalisatie te leveren voor elk kanaal en tegelijk de flexibiliteit en traceerbaarheid te bieden die nodig zijn om te evolueren naarmate uw merkloyaliteit groeit.
 
@@ -25,10 +30,10 @@ Lees deze handleiding voor het maken van verbinding en het streamen van gegevens
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde raamwerk waarmee Experience Platform gegevens voor klantervaring organiseert.
+   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [ Zelfstudie van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : Verstrekt een verenigd, real-time consumentenprofiel dat op bijeengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 
 ## Navigeren door de catalogus met bronnen
 
@@ -40,13 +45,13 @@ Als u gegevens wilt streamen vanuit [!DNL Kobie] , selecteert u de **[!UICONTROL
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-![&#x200B; de broncatalogus in UI met de Kobie die kaart van Gebeurtenissen stroomt die.](../../../../images/tutorials/create/kobie/catalog.png)
+![ de broncatalogus in UI met de Kobie die kaart van Gebeurtenissen stroomt die.](../../../../images/tutorials/create/kobie/catalog.png)
 
 ## Gegevens selecteren
 
 Gebruik vervolgens de interface van *[!UICONTROL Select data]* om een voorbeeld-JSON-bestand te uploaden om uw bronschema te definiëren. Tijdens deze stap kunt u de voorvertoningsinterface gebruiken om de bestandsstructuur van de laadbewerking weer te geven. Selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![&#x200B; de uitgezochte gegevensstap van het bronwerkschema &#x200B;](../../../../images/tutorials/create/kobie/select-data.png)
+![ de uitgezochte gegevensstap van het bronwerkschema ](../../../../images/tutorials/create/kobie/select-data.png)
 
 ## Gegevens gegevensstroom
 
@@ -66,8 +71,8 @@ Tijdens deze stap, kunt u of een bestaande dataset gebruiken of een nieuwe datas
 
 Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan tijdens deze stap, kunt u **[!UICONTROL Profile dataset]** van een knevel voorzien om uw gegevens voor de opname van het Profiel toe te laten. U kunt deze stap ook gebruiken om **[!UICONTROL Error diagnostics]** en **[!UICONTROL Partial ingestion]** in te schakelen.
 
-* **[!UICONTROL Error diagnostics]**: Selecteer **[!UICONTROL Error diagnostics]** om de bron de instructie te geven foutdiagnostiek te produceren waarnaar u later kunt verwijzen bij het controleren van de gegevenssetactiviteit en de status van de gegevensstroom.
-* **[!UICONTROL Partial ingestion]**: Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren tot een bepaalde configureerbare drempel. Met deze functie kunt u al uw nauwkeurige gegevens in Experience Platform opnemen, terwijl al uw onjuiste gegevens afzonderlijk worden opgeslagen met informatie over waarom deze niet geldig zijn.
+* **[!UICONTROL Error diagnostics]** : Selecteer **[!UICONTROL Error diagnostics]** om de bron op te dragen foutdiagnostiek te produceren die u later kunt gebruiken bij het controleren van de gegevenssetactiviteit en de status van de gegevensstroom.
+* **[!UICONTROL Partial ingestion]** : Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren, tot een bepaalde configureerbare drempel. Met deze functie kunt u al uw nauwkeurige gegevens in Experience Platform opnemen, terwijl al uw onjuiste gegevens afzonderlijk worden opgeslagen met informatie over waarom deze niet geldig zijn.
 
 +++
 
@@ -75,39 +80,39 @@ Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan 
 
 Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegrip van een naam, een facultatieve beschrijving, en waakzame configuraties dan verstrekken.
 
-![&#x200B; de dataflow detailinterface &#x200B;](../../../../images/tutorials/create/kobie/dataflow-details.png)
+![ de dataflow detailinterface ](../../../../images/tutorials/create/kobie/dataflow-details.png)
 
 | Dataflow-configuraties | Beschrijving |
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom. Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan waarschuwingen op basis van gebeurtenissen produceren waarop gebruikers zich kunnen abonneren. Met deze opties kan een actieve gegevensstroom deze waarschuwingen activeren.  Voor meer informatie, lees het [&#x200B; alarm overzicht &#x200B;](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan waarschuwingen op basis van gebeurtenissen produceren waarop gebruikers zich kunnen abonneren. Met deze opties kan een actieve gegevensstroom deze waarschuwingen activeren.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer deze waarschuwing om een melding te ontvangen wanneer uw dataflow-run begint.</li><li>**de Succes van de Looppas van Gegevensstroom van Bronnen**: Selecteer deze waarschuwing als u een melding wilt ontvangen als uw gegevensstroom zonder fouten eindigt.</li><li>**de Mislukking van de Looppas van Gegevensstroom van bronnen**: Selecteer deze waarschuwing als u een melding wilt ontvangen als de uitvoering van de gegevensstroom eindigt met fouten.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Toewijzing
 
-Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren. Voor meer informatie, lees de [&#x200B; kaartgids in UI &#x200B;](../../../../../data-prep/ui/mapping.md).
+Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren. Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md).
 
-![&#x200B; de afbeeldingsstap van het werkschema &#x200B;](../../../../images/tutorials/create/kobie/mapping.png)
+![ de afbeeldingsstap van het werkschema ](../../../../images/tutorials/create/kobie/mapping.png)
 
 ## Controleren
 
 De stap *[!UICONTROL Review]* wordt weergegeven, zodat u de details van de gegevensstroom kunt bekijken voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
-* **[!UICONTROL Connection]**: geeft de accountnaam, het bronplatform en de bronnaam weer.
-* **[!UICONTROL Assign dataset and map fields]**: toont de doeldataset en het schema dat de dataset volgt.
+* **[!UICONTROL Connection]** : Hier worden de naam van de account, het bronplatform en de bronnaam weergegeven.
+* **[!UICONTROL Assign dataset and map fields]** : Toont de doeldataset en het schema dat de dataset aansluit.
 
 Selecteer **[!UICONTROL Finish]** nadat u hebt bevestigd dat de details juist zijn.
 
-![&#x200B; de revisiestap in het bronwerkschema.](../../../../images/tutorials/create/kobie/review.png)
+![ de revisiestap in het bronwerkschema.](../../../../images/tutorials/create/kobie/review.png)
 
 ## De URL van het streamingeindpunt ophalen
 
 Als de verbinding is gemaakt, wordt de pagina met brondetails weergegeven. Deze pagina bevat details van de zojuist gemaakte verbinding, waaronder eerder uitgevoerde dataflows, ID en URL van het streamingeindpunt.
 
-![&#x200B; het stromen eindpunt URL.](../../../../images/tutorials/create/kobie/streaming-endpoint.png)
+![ het stromen eindpunt URL.](../../../../images/tutorials/create/kobie/streaming-endpoint.png)
 
 ## Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie het leerprogramma op [&#x200B; controlerekeningen en dataflows in UI &#x200B;](../../monitor-streaming.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamepercentages, succes, en fouten te zien. Voor meer informatie over hoe te om dataflow te controleren, zie het leerprogramma op [ controlerekeningen en dataflows in UI ](../../monitor-streaming.md).
